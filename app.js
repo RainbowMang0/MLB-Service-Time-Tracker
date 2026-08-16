@@ -1,0 +1,245 @@
+(() => {
+  "use strict";
+
+  const DATA_URL = "data/service_time.json";
+
+  // Embedded fallback so the page still shows something meaningful if
+  // opened directly from disk (file://) where fetch() of a local JSON file
+  // is blocked by the browser, or if data/service_time.json hasn't been
+  // generated yet. The real deployed site (served over http/https by
+  // GitHub Pages or any static host) will always prefer the live fetch.
+  const FALLBACK_DATA = {
+    generated_at: null,
+    source: "EMBEDDED FALLBACK SAMPLE (fetch of data/service_time.json failed)",
+    disclaimer:
+      "Could not load data/service_time.json, so this page is showing a small embedded sample instead. " +
+      "Service time figures are always estimates derived from public transaction records, never official figures.",
+    player_count: 3,
+    players: [
+      {
+        id: 1, name: "Sample Player A", team: "Sample Team", position: "SP",
+        service_time: "3.045", service_days_total: 688,
+        free_agent_eligible: false, arbitration_eligible: true, super_two_candidate: false,
+        on_40_man: true, last_updated: "2026-08-15",
+      },
+      {
+        id: 2, name: "Sample Player B", team: "Sample Team", position: "OF",
+        service_time: "6.010", service_days_total: 1042,
+        free_agent_eligible: true, arbitration_eligible: true, super_two_candidate: false,
+        on_40_man: true, last_updated: "2026-08-15",
+      },
+      {
+        id: 3, name: "Sample Player C", team: "Another Team", position: "C",
+        service_time: "1.020", service_days_total: 192,
+        free_agent_eligible: false, arbitration_eligible: false, super_two_candidate: false,
+        on_40_man: false, last_updated: "2026-08-15",
+      },
+    ],
+  };
+
+  let allPlayers = [];
+  let sortKey = "service_days_total";
+  let sortDir = "desc";
+
+  const el = (id) => document.getElementById(id);
+
+  function classify(p) {
+    if (p.free_agent_eligible) return { label: "Free Agent Eligible", cls: "badge-good" };
+    if (p.super_two_candidate) return { label: "Possible Super Two", cls: "badge-serious" };
+    if (p.arbitration_eligible) return { label: "Arbitration Eligible", cls: "badge-warning" };
+    return { label: "Pre-Arbitration", cls: "badge-neutral" };
+  }
+
+  function statusMatches(p, filterValue) {
+    if (!filterValue) return true;
+    if (filterValue === "fa") return !!p.free_agent_eligible;
+    if (filterValue === "super-two") return !!p.super_two_candidate;
+    if (filterValue === "arb") return !!p.arbitration_eligible && !p.free_agent_eligible;
+    if (filterValue === "pre-arb") {
+      return !p.free_agent_eligible && !p.arbitration_eligible && !p.super_two_candidate;
+    }
+    return true;
+  }
+
+  function renderStatTiles(players) {
+    const total = players.length;
+    const current = players.filter((p) => p.on_40_man).length;
+    const previous = total - current;
+    const fa = players.filter((p) => p.free_agent_eligible).length;
+    const arb = players.filter((p) => p.arbitration_eligible && !p.free_agent_eligible).length;
+    const superTwo = players.filter((p) => p.super_two_candidate).length;
+
+    const tiles = [
+      { label: "Tracked players", value: total, accent: "" },
+      { label: "Currently on a 40-man", value: current, accent: "" },
+      { label: "Previous players logged", value: previous, accent: "" },
+      { label: "Free agency eligible", value: fa, accent: "accent-good" },
+      { label: "Arbitration eligible", value: arb, accent: "accent-warning" },
+      { label: "Possible Super Two", value: superTwo, accent: "accent-serious" },
+    ];
+
+    el("stat-tiles").innerHTML = tiles
+      .map(
+        (t) => `
+      <div class="stat-tile ${t.accent}">
+        <div class="value">${t.value}</div>
+        <div class="label">${t.label}</div>
+      </div>`
+      )
+      .join("");
+  }
+
+  function populateTeamFilter(players) {
+    const teams = Array.from(new Set(players.map((p) => p.team).filter(Boolean))).sort();
+    const select = el("team-filter");
+    const current = select.value;
+    select.innerHTML =
+      '<option value="">All teams</option>' +
+      teams.map((t) => `<option value="${t}">${t}</option>`).join("");
+    select.value = current;
+  }
+
+  function getFilteredSorted() {
+    const q = el("search-input").value.trim().toLowerCase();
+    const team = el("team-filter").value;
+    const status = el("status-filter").value;
+    const rosterFilter = el("roster-filter").value;
+
+    let rows = allPlayers.filter((p) => {
+      if (q && !(`${p.name} ${p.team}`.toLowerCase().includes(q))) return false;
+      if (team && p.team !== team) return false;
+      if (!statusMatches(p, status)) return false;
+      if (rosterFilter === "current" && !p.on_40_man) return false;
+      if (rosterFilter === "previous" && p.on_40_man) return false;
+      return true;
+    });
+
+    rows.sort((a, b) => {
+      let av = a[sortKey];
+      let bv = b[sortKey];
+      if (typeof av === "boolean") { av = av ? 1 : 0; bv = bv ? 1 : 0; }
+      if (typeof av === "string") { av = av.toLowerCase(); bv = (bv || "").toLowerCase(); }
+      if (av < bv) return sortDir === "asc" ? -1 : 1;
+      if (av > bv) return sortDir === "asc" ? 1 : -1;
+      return 0;
+    });
+
+    return rows;
+  }
+
+  function renderTable() {
+    const rows = getFilteredSorted();
+    const tbody = el("players-tbody");
+
+    if (rows.length === 0) {
+      tbody.innerHTML = `<tr><td colspan="7" class="empty-state">No players match these filters.</td></tr>`;
+      return;
+    }
+
+    tbody.innerHTML = rows
+      .map((p) => {
+        const status = classify(p);
+        return `
+        <tr>
+          <td class="player-name">${p.name || "—"}</td>
+          <td>${p.team || "—"}</td>
+          <td>${p.position || "—"}</td>
+          <td class="num-col">${p.service_time || "—"}</td>
+          <td><span class="badge ${status.cls}">${status.label}</span></td>
+          <td><span class="pill ${p.on_40_man ? "pill-yes" : "pill-no"}">${p.on_40_man ? "Yes" : "No"}</span></td>
+          <td>${p.last_updated || "—"}</td>
+        </tr>`;
+      })
+      .join("");
+  }
+
+  function updateSortIndicators() {
+    document.querySelectorAll("#players-table thead th[data-key]").forEach((th) => {
+      if (th.dataset.key === sortKey) {
+        th.setAttribute("aria-sort", sortDir === "asc" ? "ascending" : "descending");
+      } else {
+        th.removeAttribute("aria-sort");
+      }
+    });
+  }
+
+  function wireSorting() {
+    document.querySelectorAll("#players-table thead th[data-key]").forEach((th) => {
+      th.addEventListener("click", () => {
+        const key = th.dataset.key;
+        // Sort service_time by its numeric day-count field for correctness.
+        const effectiveKey = key === "service_time" ? "service_days_total" : key;
+        if (sortKey === effectiveKey) {
+          sortDir = sortDir === "asc" ? "desc" : "asc";
+        } else {
+          sortKey = effectiveKey;
+          sortDir = key === "name" || key === "team" ? "asc" : "desc";
+        }
+        updateSortIndicators();
+        renderTable();
+      });
+    });
+  }
+
+  function wireFilters() {
+    ["search-input", "team-filter", "status-filter", "roster-filter"].forEach((id) => {
+      el(id).addEventListener("input", renderTable);
+      el(id).addEventListener("change", renderTable);
+    });
+  }
+
+  function wireThemeToggle() {
+    const root = document.documentElement;
+    const stored = localStorageSafeGet("mlb-service-time-theme");
+    if (stored) root.setAttribute("data-theme", stored);
+    el("theme-toggle").addEventListener("click", () => {
+      const current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+      const next = current === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      localStorageSafeSet("mlb-service-time-theme", next);
+    });
+  }
+
+  // NOTE: browser localStorage is used here (not inside a sandboxed
+  // artifact preview) purely for remembering the light/dark toggle across
+  // visits to the deployed site. Wrapped defensively in case it's
+  // unavailable (privacy mode, etc.).
+  function localStorageSafeGet(key) {
+    try { return window.localStorage.getItem(key); } catch (e) { return null; }
+  }
+  function localStorageSafeSet(key, value) {
+    try { window.localStorage.setItem(key, value); } catch (e) { /* ignore */ }
+  }
+
+  function renderMeta(data) {
+    el("disclaimer-text").textContent = data.disclaimer || "";
+    const footer = el("generated-at-footer");
+    if (data.generated_at) {
+      const d = new Date(data.generated_at);
+      footer.textContent = `Data last generated: ${d.toLocaleString()} · Source: ${data.source || "unknown"}`;
+    } else {
+      footer.textContent = `Source: ${data.source || "unknown"}`;
+    }
+  }
+
+  function init(data) {
+    allPlayers = data.players || [];
+    renderMeta(data);
+    renderStatTiles(allPlayers);
+    populateTeamFilter(allPlayers);
+    updateSortIndicators();
+    wireSorting();
+    wireFilters();
+    renderTable();
+  }
+
+  wireThemeToggle();
+
+  fetch(DATA_URL, { cache: "no-store" })
+    .then((r) => {
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.json();
+    })
+    .then(init)
+    .catch(() => init(FALLBACK_DATA));
+})();
