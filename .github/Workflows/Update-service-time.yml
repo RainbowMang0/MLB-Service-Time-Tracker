@@ -1,0 +1,90 @@
+name: Daily MLB Service Time Update
+
+# Runs every day at 8:00 AM US/Eastern (America/New_York) and refreshes
+# docs/data/service_time.json from the MLB Stats API, then commits the
+# result so GitHub Pages redeploys the site automatically.
+#
+# Why two cron entries: GitHub Actions cron is UTC-only, and US/Eastern
+# alternates between UTC-4 (EDT, roughly March-November) and UTC-5 (EST,
+# roughly November-March). Rather than hardcoding one offset and drifting
+# an hour twice a year, this fires at both 12:00 UTC and 13:00 UTC and lets
+# the "gate" step below check the *actual* Eastern wall-clock hour and
+# no-op unless it's really 8am there. Net effect: the update runs once a
+# day, at 8am Eastern, correct through DST changes, with no manual upkeep.
+
+on:
+  schedule:
+    - cron: "0 12 * * *"
+    - cron: "0 13 * * *"
+  workflow_dispatch: # lets you trigger a manual run from the Actions tab
+    inputs:
+      force:
+        description: "Run now regardless of the 8am ET gate (use this for the first-time real data pull)"
+        type: boolean
+        default: false
+      full_refresh:
+        description: "Ignore the transaction cache and re-pull each player's full history"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: service-time-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gate on 8am US/Eastern (or manual force)
+        id: gate
+        run: |
+          HOUR="$(TZ="America/New_York" date +%H)"
+          echo "Current Eastern hour: $HOUR"
+          if [ "${{ github.event.inputs.force }}" = "true" ]; then
+            echo "Manual force run requested -- skipping the 8am gate."
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          elif [ "$HOUR" = "08" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout
+        if: steps.gate.outputs.run == 'true'
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        if: steps.gate.outputs.run == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        if: steps.gate.outputs.run == 'true'
+        run: pip install -r requirements.txt
+
+      - name: Run service time update
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          if [ "${{ github.event.inputs.full_refresh }}" = "true" ]; then
+            python scripts/update_service_time.py --full-refresh
+          else
+            python scripts/update_service_time.py
+          fi
+
+      - name: Commit and push changes
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          git config user.name "mlb-service-time-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A docs/data/service_time.json
+          if [ -d data/cache ]; then git add -A data/cache; fi
+          if git diff --cached --quiet; then
+            echo "No data changes today -- nothing to commit."
+          else
+            git commit -m "chore: daily service time update ($(date -u +%F))"
+            git push
+          fi
