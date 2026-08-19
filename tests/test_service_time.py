@@ -120,6 +120,83 @@ def test_trade_does_not_stop_clock():
     )
 
 
+def test_pre_debut_events_do_not_start_the_clock():
+    """
+    Regression test built from Jacob Wilson's real transaction feed.
+
+    The /transactions endpoint returns a player's whole tracked history, so
+    his college team ("Grand Canyon Antelopes activated SS Jacob Wilson",
+    2023-02-08) and an All-Star roster both appear using the same verbs as
+    major league moves. Before the accrual_floor fix these started his clock
+    in Feb 2023 -- ~17 months before his actual debut -- and the pipeline
+    reported him at 3.000 years instead of ~2.048.
+    """
+    txns = [
+        Transaction(dt.date(2023, 2, 8), "Grand Canyon Antelopes activated SS Jacob Wilson."),
+        Transaction(dt.date(2023, 7, 31), "Lansing Lugnuts activated SS Jacob Wilson."),
+        Transaction(dt.date(2024, 3, 7), "Oakland Athletics Prospects activated SS Jacob Wilson."),
+        Transaction(dt.date(2024, 7, 19), "Oakland Athletics selected the contract of SS Jacob Wilson."),
+        Transaction(dt.date(2025, 7, 14), "American League All-Stars activated SS Jacob Wilson."),
+    ]
+    debut = dt.date(2024, 7, 19)
+    seasons = [
+        SeasonWindow(2024, dt.date(2024, 3, 28), dt.date(2024, 10, 1)),
+        SeasonWindow(2025, dt.date(2025, 3, 28), dt.date(2025, 10, 1)),
+    ]
+
+    intervals = build_global_active_intervals(txns, dt.date(2025, 10, 1), accrual_floor=debut)
+    check(
+        "pre-debut college/showcase events never start the clock",
+        all(start >= debut for start, _ in intervals),
+    )
+
+    unfloored = compute_service_time(txns, seasons)
+    floored = compute_service_time(txns, seasons, accrual_floor=debut)
+    check(
+        "accrual floor reduces credited time vs. unfiltered history",
+        floored.total_days < unfloored.total_days,
+    )
+    check(
+        "debut-year credit starts at the debut, not opening day",
+        floored.by_season[2024]["credited_days"] == (dt.date(2024, 10, 1) - debut).days + 1,
+    )
+
+
+def test_horizon_stops_at_today_not_end_of_season():
+    """
+    A player active right now must not be credited for the remainder of a
+    season that hasn't been played yet.
+    """
+    season = SeasonWindow(2026, dt.date(2026, 3, 28), dt.date(2026, 10, 1))
+    txns = [Transaction(dt.date(2026, 3, 28), "Athletics selected the contract of X")]
+    today = dt.date(2026, 8, 19)
+
+    to_today = compute_service_time(txns, [season], horizon_end=today)
+    to_season_end = compute_service_time(txns, [season])
+
+    check(
+        "open interval stops at today, not at season end",
+        to_today.total_days == (today - season.start).days + 1,
+    )
+    check(
+        "stopping at today credits fewer days than stopping at season end",
+        to_today.total_days < to_season_end.total_days,
+    )
+
+
+def test_never_debuted_player_has_no_service_time():
+    """A 40-man prospect with only minor league history accrues nothing."""
+    txns = [
+        Transaction(dt.date(2025, 3, 6), "activated LHP Gage Jump."),
+        Transaction(dt.date(2025, 7, 11), "American League Futures activated LHP Gage Jump."),
+    ]
+    seasons = [SeasonWindow(2025, dt.date(2025, 3, 28), dt.date(2025, 10, 1))]
+    result = compute_service_time(
+        txns, seasons, accrual_floor=dt.date(2026, 5, 26), horizon_end=dt.date(2026, 5, 26)
+    )
+    check("minor league activations alone yield 0.000", result.formatted == "0.000")
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -129,5 +206,8 @@ if __name__ == "__main__":
     test_arbitration_boundary()
     test_status_carries_across_seasons_with_no_new_transactions()
     test_trade_does_not_stop_clock()
+    test_pre_debut_events_do_not_start_the_clock()
+    test_horizon_stops_at_today_not_end_of_season()
+    test_never_debuted_player_has_no_service_time()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

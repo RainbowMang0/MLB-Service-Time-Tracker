@@ -171,6 +171,7 @@ def default_season_window(year: int) -> SeasonWindow:
 def build_global_active_intervals(
     transactions: list[Transaction],
     horizon_end: dt.date,
+    accrual_floor: dt.date | None = None,
 ) -> list[tuple[dt.date, dt.date]]:
     """
     Walk a player's ENTIRE chronological transaction history (not bounded to
@@ -187,6 +188,17 @@ def build_global_active_intervals(
 
     `horizon_end` caps an still-open ("currently active") interval, normally
     today's date or the end of the last season being considered.
+
+    `accrual_floor` is the earliest date at which this player could possibly
+    have been accruing MLB service time -- in practice their MLB debut date.
+    This matters because the /transactions endpoint returns a player's ENTIRE
+    tracked history, not just his major league one: high school showcases,
+    college teams, minor league affiliates, and All-Star/Futures Game rosters
+    all appear, and many are phrased with the same verbs as real major league
+    moves ("Grand Canyon Antelopes activated SS Jacob Wilson"). Without a
+    floor, those start the clock years early and the player is credited with
+    service time he never earned. Intervals are clipped to begin no earlier
+    than the floor, and intervals entirely before it are dropped.
     """
     txns = sorted(transactions, key=lambda t: t.date)
 
@@ -204,6 +216,14 @@ def build_global_active_intervals(
 
     if active_since is not None:
         intervals.append((active_since, horizon_end))
+
+    if accrual_floor is not None:
+        clipped: list[tuple[dt.date, dt.date]] = []
+        for start, end in intervals:
+            if end < accrual_floor:
+                continue  # entirely pre-debut (college, showcase, minors)
+            clipped.append((max(start, accrual_floor), end))
+        intervals = clipped
 
     return intervals
 
@@ -231,6 +251,7 @@ def compute_service_time(
     seasons: list[SeasonWindow],
     carry_in_active_first_season: bool = False,  # deprecated, kept for API compatibility; no-op
     horizon_end: dt.date | None = None,
+    accrual_floor: dt.date | None = None,
 ) -> ServiceTimeResult:
     """
     Compute total MLB service time across multiple seasons.
@@ -244,7 +265,9 @@ def compute_service_time(
     if horizon_end is None:
         horizon_end = ordered_seasons[-1].end if ordered_seasons else dt.date.today()
 
-    global_intervals = build_global_active_intervals(transactions, horizon_end)
+    global_intervals = build_global_active_intervals(
+        transactions, horizon_end, accrual_floor=accrual_floor
+    )
 
     total_days = 0
     by_season: dict[int, dict] = {}

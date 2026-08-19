@@ -107,22 +107,82 @@ def _season_windows_for(years: range) -> list[SeasonWindow]:
     return windows
 
 
+_MLB_TEAM_IDS: set[int] | None = None
+
+
+def mlb_team_ids() -> set[int]:
+    """The 30 major league club IDs, fetched once and reused."""
+    global _MLB_TEAM_IDS
+    if _MLB_TEAM_IDS is None:
+        _MLB_TEAM_IDS = {t["id"] for t in mlb.get_teams() if isinstance(t.get("id"), int)}
+    return _MLB_TEAM_IDS
+
+
+def _involves_mlb_club(txn: dict, mlb_ids: set[int]) -> bool:
+    """
+    True if this transaction involves an actual major league club.
+
+    The /transactions endpoint returns a player's whole tracked history --
+    high school showcases, college programs, minor league affiliates, and
+    All-Star/Futures Game rosters included. Those are phrased with the same
+    verbs as major league moves ("Grand Canyon Antelopes activated SS Jacob
+    Wilson", "American League Futures activated LHP Gage Jump"), so matching
+    on wording alone starts a player's service clock years before his debut.
+    """
+    seen_any_team = False
+    for key in ("team", "fromTeam", "toTeam"):
+        value = txn.get(key)
+        if isinstance(value, dict) and isinstance(value.get("id"), int):
+            seen_any_team = True
+            if value["id"] in mlb_ids:
+                return True
+    # No usable team IDs on the row at all -- we can't judge it here, so keep
+    # it and let the debut-date floor below do the filtering instead.
+    return not seen_any_team
+
+
 def build_player_record(roster_entry: dict, full_refresh: bool) -> dict:
     player_id = roster_entry["id"]
     raw_txns = _fetch_transactions_incremental(player_id, full_refresh)
+
+    mlb_ids = mlb_team_ids()
     transactions = [
-        Transaction(date=dt.date.fromisoformat(t["date"]), description=t["description"], team=t.get("team"))
+        Transaction(
+            date=dt.date.fromisoformat(t["date"]),
+            description=t["description"],
+            team=(t.get("team") or {}).get("name") if isinstance(t.get("team"), dict) else t.get("team"),
+        )
         for t in raw_txns
+        if _involves_mlb_club(t, mlb_ids)
     ]
 
     bio = mlb.get_player_bio(player_id)
     debut = bio.get("mlbDebutDate")
-    debut_year = dt.date.fromisoformat(debut).year if debut else MIN_TRANSACTION_YEAR
+    debut_date = dt.date.fromisoformat(debut) if debut else None
+
+    # Service time cannot start before a player's major league debut. For the
+    # rare player who reached an active roster without ever appearing in a
+    # game (so has no debut date), fall back to his earliest major-league-club
+    # transaction rather than crediting him from his college days.
+    accrual_floor = debut_date
+    if accrual_floor is None and transactions:
+        accrual_floor = min(t.date for t in transactions)
+
+    debut_year = debut_date.year if debut_date else MIN_TRANSACTION_YEAR
     first_year = max(debut_year, MIN_TRANSACTION_YEAR)
     years = range(first_year, TODAY.year + 1)
     seasons = _season_windows_for(years)
 
-    result = compute_service_time(transactions, seasons, carry_in_active_first_season=False)
+    result = compute_service_time(
+        transactions,
+        seasons,
+        carry_in_active_first_season=False,
+        accrual_floor=accrual_floor,
+        # Stop the clock at today, not at the end of the current season --
+        # otherwise every player currently on a roster is credited with the
+        # remaining weeks of a season that hasn't been played yet.
+        horizon_end=TODAY,
+    )
 
     return {
         "id": player_id,
