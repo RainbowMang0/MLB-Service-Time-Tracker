@@ -201,10 +201,30 @@ def build_player_record(roster_entry: dict, full_refresh: bool) -> dict:
     }
 
 
+# Real MLB person IDs are six digits; the bundled demo dataset uses 1001-1007.
+# Anything below this threshold is sample data that shipped with the project
+# and should never survive into a live run -- the merge logic deliberately
+# never deletes players, so without this the fake names persist forever as
+# "previous players."
+MIN_REAL_PLAYER_ID = 100000
+
+
+def _is_demo_record(player: dict) -> bool:
+    try:
+        return int(player.get("id", 0)) < MIN_REAL_PLAYER_ID
+    except (TypeError, ValueError):
+        return True
+
+
 def load_existing_db() -> dict[str, dict]:
     if OUTPUT_FILE.exists():
         data = json.loads(OUTPUT_FILE.read_text())
-        return {str(p["id"]): p for p in data.get("players", [])}
+        players = data.get("players", [])
+        kept = {str(p["id"]): p for p in players if not _is_demo_record(p)}
+        dropped = len(players) - len(kept)
+        if dropped:
+            print(f"Dropped {dropped} bundled demo player record(s).")
+        return kept
     return {}
 
 

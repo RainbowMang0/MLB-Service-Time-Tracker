@@ -197,6 +197,52 @@ def test_never_debuted_player_has_no_service_time():
     check("minor league activations alone yield 0.000", result.formatted == "0.000")
 
 
+def test_2020_season_is_prorated_to_a_full_year():
+    """
+    The 2020 season ran ~66 days instead of ~186. Per the MLB/MLBPA agreement,
+    service time that year was scaled by 186/B rather than credited as raw
+    days, so a player rostered all season earned a full year. Crediting raw
+    days instead leaves every 2020 participant roughly 0.6 years short.
+    """
+    season_2020 = SeasonWindow(2020, dt.date(2020, 7, 23), dt.date(2020, 9, 27))
+    txns = [Transaction(dt.date(2020, 7, 23), "Yankees selected the contract of X")]
+
+    result = compute_service_time(txns, [season_2020], horizon_end=dt.date(2020, 9, 27))
+    check(
+        "full 2020 season credits a full year (172 days)",
+        result.by_season[2020]["credited_days"] == 172,
+    )
+    check("full 2020 season formats as 1.000", result.formatted == "1.000")
+    check(
+        "raw 2020 days are still recorded unscaled for transparency",
+        result.by_season[2020]["raw_active_days"] == 67,
+    )
+
+
+def test_2020_partial_season_scales_proportionally():
+    """Half of 2020 on the roster should credit far more than its raw days."""
+    season_2020 = SeasonWindow(2020, dt.date(2020, 7, 23), dt.date(2020, 9, 27))
+    txns = [
+        Transaction(dt.date(2020, 8, 25), "Yankees selected the contract of X"),
+    ]
+    result = compute_service_time(txns, [season_2020], horizon_end=dt.date(2020, 9, 27))
+    raw = result.by_season[2020]["raw_active_days"]
+    credited = result.by_season[2020]["credited_days"]
+    check("partial 2020 stint is scaled up, not credited raw", credited > raw)
+    check("partial 2020 stint still falls short of a full year", credited < 172)
+
+
+def test_normal_season_is_not_prorated():
+    """Proration must apply to 2020 only and leave every other year alone."""
+    season = SeasonWindow(2021, dt.date(2021, 4, 1), dt.date(2021, 10, 3))
+    txns = [Transaction(dt.date(2021, 8, 1), "Yankees selected the contract of X")]
+    result = compute_service_time(txns, [season], horizon_end=dt.date(2021, 10, 3))
+    check(
+        "2021 credits raw days with no scaling",
+        result.by_season[2021]["credited_days"] == result.by_season[2021]["raw_active_days"],
+    )
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -209,5 +255,8 @@ if __name__ == "__main__":
     test_pre_debut_events_do_not_start_the_clock()
     test_horizon_stops_at_today_not_end_of_season()
     test_never_debuted_player_has_no_service_time()
+    test_2020_season_is_prorated_to_a_full_year()
+    test_2020_partial_season_scales_proportionally()
+    test_normal_season_is_not_prorated()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

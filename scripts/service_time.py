@@ -72,6 +72,25 @@ SUPER_TWO_MAX_YEARS = 3.000
 # lower bound purely to FLAG candidates for manual review.
 SUPER_TWO_HEURISTIC_MIN_DAYS = 86
 
+# --- Shortened seasons -----------------------------------------------------
+# The 2020 season ran roughly 66 days instead of the usual ~186. MLB and the
+# MLBPA agreed service time that year would be prorated rather than credited
+# as raw days: a player's actual days were scaled by 186/B (B = the season's
+# length), so someone rostered all season earned a full year rather than ~66
+# days. Without this, every player active in 2020 reads about 0.6 years low.
+NORMAL_SEASON_SPAN_DAYS = 186
+SHORTENED_SEASONS = {2020}
+
+
+def _prorate_shortened_season(season: "SeasonWindow", raw_days: int) -> int:
+    """Scale raw active days for a shortened season per the 2020 agreement."""
+    if season.year not in SHORTENED_SEASONS:
+        return raw_days
+    span = (season.end - season.start).days + 1
+    if span <= 0 or span >= NORMAL_SEASON_SPAN_DAYS:
+        return raw_days  # not actually shortened; leave untouched
+    return int(round(raw_days * NORMAL_SEASON_SPAN_DAYS / span))
+
 # Transaction description keywords (lower-cased substring match).
 ACTIVE_START_KEYWORDS = [
     "selected the contract",
@@ -279,10 +298,12 @@ def compute_service_time(
             if e >= season.start and s <= season.end
         ]
         days = sum(_overlap_days(iv, season.start, season.end) for iv in global_intervals)
-        credited_days = min(days, FULL_YEAR_DAYS)
+        prorated_days = _prorate_shortened_season(season, days)
+        credited_days = min(prorated_days, FULL_YEAR_DAYS)
         total_days += credited_days
         by_season[season.year] = {
             "raw_active_days": days,
+            "prorated_days": prorated_days,
             "credited_days": credited_days,
             "intervals": [(s.isoformat(), e.isoformat()) for s, e in season_intervals],
         }
