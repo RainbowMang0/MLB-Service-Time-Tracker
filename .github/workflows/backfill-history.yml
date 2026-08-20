@@ -1,0 +1,81 @@
+name: Backfill Historical Players
+
+# Manual-only. Adds players who are NOT on a 40-man roster today, going back
+# to 2009 (where the MLB transaction feed begins -- see the comments in
+# scripts/backfill_history.py for the measurements behind that year).
+#
+# This is deliberately batched and resumable rather than one long run:
+# GitHub Actions kills a job at six hours, and ~4,000 players at two API
+# calls each with polite rate limiting is slow enough to be worth protecting.
+# Each run processes a batch, commits its progress, and reports how many are
+# left. Re-trigger until it says zero remaining -- expect a handful of runs.
+#
+# Use the "status" option to check remaining work without processing anything.
+
+on:
+  workflow_dispatch:
+    inputs:
+      batch:
+        description: "How many players to process this run (0 = all remaining, may hit the 6h limit)"
+        required: false
+        default: "500"
+      status_only:
+        description: "Just report how much is left, change nothing"
+        type: boolean
+        default: false
+      retry_failed:
+        description: "Put previously failed players back in the queue"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  # Shares a group with the daily update: both write docs/data/service_time.json,
+  # and two jobs doing that at once would clobber each other.
+  group: service-time-update
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330 # just under the 6h ceiling, so we fail cleanly
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run backfill batch
+        run: |
+          ARGS=""
+          if [ "${{ github.event.inputs.status_only }}" = "true" ]; then
+            ARGS="$ARGS --status"
+          fi
+          if [ "${{ github.event.inputs.retry_failed }}" = "true" ]; then
+            ARGS="$ARGS --retry-failed"
+          fi
+          python scripts/backfill_history.py --batch "${{ github.event.inputs.batch }}" $ARGS
+
+      - name: Commit and push results
+        if: github.event.inputs.status_only != 'true'
+        run: |
+          git config user.name "mlb-service-time-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A docs/data/service_time.json
+          if [ -f data/backfill_state.json ]; then git add -A data/backfill_state.json; fi
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: historical backfill batch ($(date -u +%F))"
+            # The daily job may have pushed while this batch was running.
+            git pull --rebase --autostash || true
+            git push
+          fi

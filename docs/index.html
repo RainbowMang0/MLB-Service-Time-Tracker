@@ -46,6 +46,11 @@
         <option value="current">On a 40-man roster now</option>
         <option value="previous">Previous players only</option>
       </select>
+      <select id="history-filter" aria-label="Filter by data completeness">
+        <option value="">All records</option>
+        <option value="complete">Complete history only</option>
+        <option value="partial">Incomplete history only</option>
+      </select>
     </section>
 
     <section aria-label="Player service time table" class="table-wrap">
@@ -66,6 +71,12 @@
         </tbody>
       </table>
     </section>
+
+    <nav class="pagination" id="pagination" aria-label="Table pages">
+      <button type="button" id="page-prev" class="page-btn">‹ Prev</button>
+      <span id="page-status" class="page-status"></span>
+      <button type="button" id="page-next" class="page-btn">Next ›</button>
+    </nav>
 
     <footer class="page-footer">
       <p>

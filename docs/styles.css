@@ -154,6 +154,54 @@ html, body {
 .stat-tile.accent-good .value   { color: var(--status-good); }
 .stat-tile.accent-warning .value{ color: var(--status-warning); }
 .stat-tile.accent-serious .value{ color: var(--status-serious); }
+.stat-tile.accent-critical .value{ color: var(--status-critical); }
+
+/* --- Incomplete-history flag ------------------------------------------- */
+/* Marks players who debuted before the transaction feed begins, whose
+   service time is a floor rather than an estimate. Deliberately quiet --
+   it should read as a footnote, not an error. */
+.partial-flag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--status-critical);
+  border-bottom: 1px dotted var(--status-critical);
+  cursor: help;
+  margin-left: 0.4em;
+  text-decoration: none;
+}
+
+/* --- Pagination --------------------------------------------------------- */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.25rem 0 0.5rem;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  font: inherit;
+  font-size: 0.875rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  border: 1px solid var(--gridline);
+  background: var(--surface-1);
+  color: var(--text-primary);
+  cursor: pointer;
+  min-height: 40px; /* comfortable tap target on a tablet */
+}
+
+.page-btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+.page-btn:disabled { opacity: 0.4; cursor: default; }
+
+.page-status {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
 
 .controls {
   display: flex;

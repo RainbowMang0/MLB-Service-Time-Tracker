@@ -40,6 +40,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
 import fetch_mlb_data as mlb  # noqa: E402
 from service_time import (  # noqa: E402
+    TRANSACTION_COVERAGE_START_YEAR,
     SeasonWindow,
     Transaction,
     compute_service_time,
@@ -70,8 +71,17 @@ def _save_cached_transactions(player_id: int, txns: list[dict]) -> None:
     _cache_path(player_id).write_text(json.dumps(txns, indent=2, default=str))
 
 
-def _fetch_transactions_incremental(player_id: int, full_refresh: bool) -> list[dict]:
-    cached = [] if full_refresh else _load_cached_transactions(player_id)
+def _fetch_transactions_incremental(
+    player_id: int, full_refresh: bool, use_cache: bool = True
+) -> list[dict]:
+    """
+    Fetch a player's transactions, reusing the on-disk cache when allowed.
+
+    `use_cache=False` is for historical backfill: a retired player's service
+    time never changes, so caching ~4,000 of those histories would add tens of
+    megabytes to the repo in exchange for nothing.
+    """
+    cached = [] if (full_refresh or not use_cache) else _load_cached_transactions(player_id)
 
     if cached:
         last_date = max(dt.date.fromisoformat(t["date"]) for t in cached)
@@ -83,11 +93,19 @@ def _fetch_transactions_incremental(player_id: int, full_refresh: bool) -> list[
         return cached
 
     new_raw = mlb.get_player_transactions(player_id, start, TODAY)
+    # Team IDs are retained deliberately. The raw feed mixes in college,
+    # showcase, minor league and All-Star events phrased with the same verbs as
+    # major league moves, and the only reliable way to tell them apart is
+    # whether a real MLB club is involved. An earlier version of this function
+    # stored only the team NAME, which silently reduced that filter to a no-op.
     new_txns = [
         {
             "date": t.get("date"),
             "description": t.get("description", ""),
             "team": (t.get("toTeam") or {}).get("name") or (t.get("fromTeam") or {}).get("name"),
+            "team_id": (t.get("team") or {}).get("id"),
+            "from_team_id": (t.get("fromTeam") or {}).get("id"),
+            "to_team_id": (t.get("toTeam") or {}).get("id"),
         }
         for t in new_raw
         if t.get("date")
@@ -95,7 +113,8 @@ def _fetch_transactions_incremental(player_id: int, full_refresh: bool) -> list[
 
     merged = {t["date"] + "|" + t["description"]: t for t in (cached + new_txns)}
     result = sorted(merged.values(), key=lambda t: t["date"])
-    _save_cached_transactions(player_id, result)
+    if use_cache:
+        _save_cached_transactions(player_id, result)
     return result
 
 
@@ -129,21 +148,21 @@ def _involves_mlb_club(txn: dict, mlb_ids: set[int]) -> bool:
     Wilson", "American League Futures activated LHP Gage Jump"), so matching
     on wording alone starts a player's service clock years before his debut.
     """
-    seen_any_team = False
-    for key in ("team", "fromTeam", "toTeam"):
-        value = txn.get(key)
-        if isinstance(value, dict) and isinstance(value.get("id"), int):
-            seen_any_team = True
-            if value["id"] in mlb_ids:
-                return True
-    # No usable team IDs on the row at all -- we can't judge it here, so keep
-    # it and let the debut-date floor below do the filtering instead.
-    return not seen_any_team
+    ids = {txn.get("team_id"), txn.get("from_team_id"), txn.get("to_team_id")}
+    ids = {i for i in ids if isinstance(i, int)}
+    if not ids:
+        # Legacy cache entry written before team IDs were stored, or a row the
+        # feed gave us no team for. Can't judge it here, so keep it and let the
+        # debut-date floor do the filtering instead.
+        return True
+    return bool(ids & mlb_ids)
 
 
-def build_player_record(roster_entry: dict, full_refresh: bool) -> dict:
+def build_player_record(
+    roster_entry: dict, full_refresh: bool, use_cache: bool = True
+) -> dict:
     player_id = roster_entry["id"]
-    raw_txns = _fetch_transactions_incremental(player_id, full_refresh)
+    raw_txns = _fetch_transactions_incremental(player_id, full_refresh, use_cache=use_cache)
 
     mlb_ids = mlb_team_ids()
     transactions = [
@@ -197,8 +216,27 @@ def build_player_record(roster_entry: dict, full_refresh: bool) -> dict:
         "arbitration_eligible": result.is_arbitration_eligible,
         "super_two_candidate": result.is_super_two_candidate,
         "on_40_man": True,
+        "history_complete": _history_is_complete(debut_date, accrual_floor),
         "last_updated": TODAY.isoformat(),
     }
+
+
+def _history_is_complete(
+    debut_date: dt.date | None, accrual_floor: dt.date | None
+) -> bool:
+    """
+    False when the player's career began before the transaction feed did.
+
+    Such a player's early seasons are invisible to the API, so his computed
+    service time is a floor, not an estimate -- Justin Verlander (debut 2005)
+    or Clayton Kershaw (2008) will read years low no matter how carefully we
+    pull. Flagging it lets the site say so instead of quietly publishing a
+    number it knows is wrong.
+    """
+    reference = debut_date or accrual_floor
+    if reference is None:
+        return True  # no major league career at all; nothing is missing
+    return reference.year >= TRANSACTION_COVERAGE_START_YEAR
 
 
 # Real MLB person IDs are six digits; the bundled demo dataset uses 1001-1007.
@@ -272,9 +310,16 @@ def main() -> None:
         "source": "MLB Stats API (statsapi.mlb.com, unofficial public endpoint)",
         "disclaimer": (
             "Service time figures are ESTIMATES computed from public roster "
-            "transaction records, not official MLB/MLBPA figures."
+            "transaction records, not official MLB/MLBPA figures. Transaction "
+            f"coverage begins in {TRANSACTION_COVERAGE_START_YEAR}; players who "
+            "debuted earlier are marked as having incomplete history and their "
+            "figures are a floor, not an estimate."
         ),
+        "coverage_start_year": TRANSACTION_COVERAGE_START_YEAR,
         "player_count": len(db),
+        "incomplete_history_count": sum(
+            1 for p in db.values() if not p.get("history_complete", True)
+        ),
         "players": sorted(db.values(), key=lambda p: p.get("name") or ""),
     }
     OUTPUT_FILE.write_text(json.dumps(output, indent=2))

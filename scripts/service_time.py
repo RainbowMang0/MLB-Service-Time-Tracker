@@ -81,6 +81,20 @@ SUPER_TWO_HEURISTIC_MIN_DAYS = 86
 NORMAL_SEASON_SPAN_DAYS = 186
 SHORTENED_SEASONS = {2020}
 
+# --- Transaction coverage floor --------------------------------------------
+# Measured empirically against the live API by sampling six players per season
+# and counting transactions involving a major league club:
+#
+#     2005: 0    2006: 0    2007: 0    2008: 0
+#     2009: 17   2010: 17   2011: 20   2012: 33   2013: 43
+#
+# The feed switches on in 2009. Before that the endpoint returns essentially
+# nothing -- Jim Abbott was traded during 1995 and his feed is empty -- so a
+# player who debuted earlier can never have his full history reconstructed and
+# will always read low. We can't fix that, but we can be honest about it: any
+# player whose debut predates this year is flagged history_complete=false.
+TRANSACTION_COVERAGE_START_YEAR = 2009
+
 
 def _prorate_shortened_season(season: "SeasonWindow", raw_days: int) -> int:
     """Scale raw active days for a shortened season per the 2020 agreement."""

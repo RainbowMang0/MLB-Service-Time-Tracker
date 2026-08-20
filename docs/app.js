@@ -41,7 +41,23 @@
   let sortKey = "service_days_total";
   let sortDir = "desc";
 
+  // The dataset grows from ~1,400 rostered players to ~5,300 once the
+  // historical backfill lands. Rendering that many <tr> nodes at once makes
+  // the page unusable on an iPad, so the table is paged.
+  const PAGE_SIZE = 100;
+  let currentPage = 1;
+  let coverageStartYear = 2009;
+
   const el = (id) => document.getElementById(id);
+
+  // Player and team names come from an external API and are injected via
+  // innerHTML, so escape them rather than trusting the feed.
+  const esc = (value) =>
+    String(value == null ? "" : value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
 
   function classify(p) {
     if (p.free_agent_eligible) return { label: "Free Agent Eligible", cls: "badge-good" };
@@ -61,6 +77,18 @@
     return true;
   }
 
+  // history_complete is false when a player debuted before the transaction
+  // feed begins (2009). Those figures are a floor, not an estimate, and the
+  // table says so rather than publishing a number known to be low.
+  const isComplete = (p) => p.history_complete !== false;
+
+  function historyMatches(p, filterValue) {
+    if (!filterValue) return true;
+    if (filterValue === "complete") return isComplete(p);
+    if (filterValue === "partial") return !isComplete(p);
+    return true;
+  }
+
   function renderStatTiles(players) {
     const total = players.length;
     const current = players.filter((p) => p.on_40_man).length;
@@ -68,6 +96,7 @@
     const fa = players.filter((p) => p.free_agent_eligible).length;
     const arb = players.filter((p) => p.arbitration_eligible && !p.free_agent_eligible).length;
     const superTwo = players.filter((p) => p.super_two_candidate).length;
+    const partial = players.filter((p) => !isComplete(p)).length;
 
     const tiles = [
       { label: "Tracked players", value: total, accent: "" },
@@ -77,6 +106,9 @@
       { label: "Arbitration eligible", value: arb, accent: "accent-warning" },
       { label: "Possible Super Two", value: superTwo, accent: "accent-serious" },
     ];
+    if (partial > 0) {
+      tiles.push({ label: "Incomplete history", value: partial, accent: "accent-critical" });
+    }
 
     el("stat-tiles").innerHTML = tiles
       .map(
@@ -95,7 +127,7 @@
     const current = select.value;
     select.innerHTML =
       '<option value="">All teams</option>' +
-      teams.map((t) => `<option value="${t}">${t}</option>`).join("");
+      teams.map((t) => `<option value="${esc(t)}">${esc(t)}</option>`).join("");
     select.value = current;
   }
 
@@ -104,6 +136,7 @@
     const team = el("team-filter").value;
     const status = el("status-filter").value;
     const rosterFilter = el("roster-filter").value;
+    const historyFilter = el("history-filter") ? el("history-filter").value : "";
 
     let rows = allPlayers.filter((p) => {
       if (q && !(`${p.name} ${p.team}`.toLowerCase().includes(q))) return false;
@@ -111,6 +144,7 @@
       if (!statusMatches(p, status)) return false;
       if (rosterFilter === "current" && !p.on_40_man) return false;
       if (rosterFilter === "previous" && p.on_40_man) return false;
+      if (!historyMatches(p, historyFilter)) return false;
       return true;
     });
 
@@ -133,24 +167,74 @@
 
     if (rows.length === 0) {
       tbody.innerHTML = `<tr><td colspan="7" class="empty-state">No players match these filters.</td></tr>`;
+      renderPagination(0, 0);
       return;
     }
 
-    tbody.innerHTML = rows
+    const pageCount = Math.max(1, Math.ceil(rows.length / PAGE_SIZE));
+    if (currentPage > pageCount) currentPage = pageCount;
+    if (currentPage < 1) currentPage = 1;
+    const start = (currentPage - 1) * PAGE_SIZE;
+    const pageRows = rows.slice(start, start + PAGE_SIZE);
+
+    tbody.innerHTML = pageRows
       .map((p) => {
         const status = classify(p);
+        const partial = !isComplete(p)
+          ? ` <abbr class="partial-flag" title="Debuted before ${coverageStartYear}, when the transaction feed begins. Earlier seasons are invisible to the data source, so this figure is a floor, not an estimate.">partial</abbr>`
+          : "";
         return `
         <tr>
-          <td class="player-name">${p.name || "—"}</td>
-          <td>${p.team || "—"}</td>
-          <td>${p.position || "—"}</td>
-          <td class="num-col">${p.service_time || "—"}</td>
+          <td class="player-name">${esc(p.name) || "—"}${partial}</td>
+          <td>${esc(p.team) || "—"}</td>
+          <td>${esc(p.position) || "—"}</td>
+          <td class="num-col">${esc(p.service_time) || "—"}</td>
           <td><span class="badge ${status.cls}">${status.label}</span></td>
           <td><span class="pill ${p.on_40_man ? "pill-yes" : "pill-no"}">${p.on_40_man ? "Yes" : "No"}</span></td>
-          <td>${p.last_updated || "—"}</td>
+          <td>${esc(p.last_updated) || "—"}</td>
         </tr>`;
       })
       .join("");
+
+    renderPagination(rows.length, pageCount);
+  }
+
+  function renderPagination(totalRows, pageCount) {
+    const status = el("page-status");
+    const prev = el("page-prev");
+    const next = el("page-next");
+    if (!status || !prev || !next) return;
+
+    if (totalRows === 0) {
+      status.textContent = "";
+      prev.disabled = true;
+      next.disabled = true;
+      return;
+    }
+
+    const start = (currentPage - 1) * PAGE_SIZE + 1;
+    const end = Math.min(currentPage * PAGE_SIZE, totalRows);
+    status.textContent = `${start}–${end} of ${totalRows} players · page ${currentPage} of ${pageCount}`;
+    prev.disabled = currentPage <= 1;
+    next.disabled = currentPage >= pageCount;
+  }
+
+  function wirePagination() {
+    const prev = el("page-prev");
+    const next = el("page-next");
+    if (!prev || !next) return;
+    prev.addEventListener("click", () => {
+      if (currentPage > 1) {
+        currentPage--;
+        renderTable();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    });
+    next.addEventListener("click", () => {
+      currentPage++;
+      renderTable();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   }
 
   function updateSortIndicators() {
@@ -175,6 +259,7 @@
           sortKey = effectiveKey;
           sortDir = key === "name" || key === "team" ? "asc" : "desc";
         }
+        currentPage = 1;
         updateSortIndicators();
         renderTable();
       });
@@ -182,10 +267,19 @@
   }
 
   function wireFilters() {
-    ["search-input", "team-filter", "status-filter", "roster-filter"].forEach((id) => {
-      el(id).addEventListener("input", renderTable);
-      el(id).addEventListener("change", renderTable);
-    });
+    // Any filter change invalidates the current page number -- landing the
+    // user on "page 7 of 2" after narrowing a search is disorienting.
+    const onFilterChange = () => {
+      currentPage = 1;
+      renderTable();
+    };
+    ["search-input", "team-filter", "status-filter", "roster-filter", "history-filter"]
+      .forEach((id) => {
+        const node = el(id);
+        if (!node) return;
+        node.addEventListener("input", onFilterChange);
+        node.addEventListener("change", onFilterChange);
+      });
   }
 
   function wireThemeToggle() {
@@ -224,12 +318,14 @@
 
   function init(data) {
     allPlayers = data.players || [];
+    if (data.coverage_start_year) coverageStartYear = data.coverage_start_year;
     renderMeta(data);
     renderStatTiles(allPlayers);
     populateTeamFilter(allPlayers);
     updateSortIndicators();
     wireSorting();
     wireFilters();
+    wirePagination();
     renderTable();
   }
 
