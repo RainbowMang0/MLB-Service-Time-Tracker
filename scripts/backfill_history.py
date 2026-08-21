@@ -226,6 +226,7 @@ def main() -> None:
     save_state(state)
 
     report_implausible(db)
+    report_impossible_totals(db)
 
     remaining = len(todo) - len(batch)
     print(f"\nAdded {added} players. {remaining} still remaining.")
@@ -262,6 +263,66 @@ def report_implausible(db: dict[str, dict]) -> None:
     )
     for p in bad[:10]:
         print(f"     {p.get('name')}: {p.get('service_time')} (debut {p.get('mlb_debut')})")
+    if len(bad) > 10:
+        print(f"     ... and {len(bad) - 10} more")
+
+
+def max_creditable_days(player: dict) -> int | None:
+    """
+    The most service time this player's record could legitimately show.
+
+    No transaction exists before TRANSACTION_COVERAGE_START_YEAR (measured: 3
+    rows out of 64,643 in the cache predate it), so no service can be credited
+    before then either. Accrual also stops at `accrual_ceiling`. That bounds
+    the total at 172 days per season in between -- a bound the arithmetic
+    cannot legitimately exceed, whatever the transaction feed says.
+
+    Returns None when the record predates this field or is still accruing.
+    """
+    ceiling = player.get("accrual_ceiling")
+    if not ceiling:
+        return None
+    debut = player.get("mlb_debut")
+    first = max(
+        int(debut[:4]) if debut else TRANSACTION_COVERAGE_START_YEAR,
+        TRANSACTION_COVERAGE_START_YEAR,
+    )
+    seasons = int(ceiling[:4]) - first + 1
+    return max(seasons, 0) * 172
+
+
+def report_impossible_totals(db: dict[str, dict]) -> None:
+    """
+    Flag records crediting more service time than their own season window allows.
+
+    This catches the class of bug where an interval is left open across years
+    the player spent outside MLB -- the clock keeps running because the move
+    that ended his tenure ("elected free agency", a jump to an independent or
+    foreign league) is not a recognized stop. Lew Ford surfaced it: 1,085 days
+    credited against a 2009-2013 window that caps at 860.
+
+    Unlike the >=20-year heuristic this is an invariant, not a guess, so a hit
+    here is always a real defect.
+    """
+    bad = []
+    for p in db.values():
+        cap = max_creditable_days(p)
+        if cap is not None and p.get("service_days_total", 0) > cap:
+            bad.append((p, cap))
+    if not bad:
+        return
+    bad.sort(key=lambda x: x[1] - x[0]["service_days_total"])
+    print(
+        f"\n!! WARNING: {len(bad)} record(s) credit more service time than their "
+        "season window allows -- the clock ran through years spent outside MLB:"
+    )
+    for p, cap in bad[:10]:
+        excess = p["service_days_total"] - cap
+        print(
+            f"     {p.get('name')}: {p.get('service_time')} "
+            f"({p['service_days_total']}d vs {cap}d max, +{excess}d) "
+            f"debut={p.get('mlb_debut')} last_played={p.get('last_played')}"
+        )
     if len(bad) > 10:
         print(f"     ... and {len(bad) - 10} more")
 
