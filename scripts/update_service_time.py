@@ -159,8 +159,19 @@ def _involves_mlb_club(txn: dict, mlb_ids: set[int]) -> bool:
 
 
 def build_player_record(
-    roster_entry: dict, full_refresh: bool, use_cache: bool = True
+    roster_entry: dict,
+    full_refresh: bool,
+    use_cache: bool = True,
+    horizon_end: dt.date | None = None,
 ) -> dict:
+    """
+    `horizon_end` defaults to today (the normal daily-update behavior). Pass
+    a past date to compute what this player's service time WOULD HAVE READ
+    as of that date -- e.g. a prior Opening Day, for validating against a
+    fixed reference figure like Baseball Reference's `s.YYYY` snapshot. See
+    validate_service_time.py.
+    """
+    horizon_end = horizon_end or TODAY
     player_id = roster_entry["id"]
     raw_txns = _fetch_transactions_incremental(player_id, full_refresh, use_cache=use_cache)
 
@@ -189,7 +200,7 @@ def build_player_record(
 
     debut_year = debut_date.year if debut_date else MIN_TRANSACTION_YEAR
     first_year = max(debut_year, MIN_TRANSACTION_YEAR)
-    years = range(first_year, TODAY.year + 1)
+    years = range(first_year, horizon_end.year + 1)
     seasons = _season_windows_for(years)
 
     result = compute_service_time(
@@ -197,10 +208,11 @@ def build_player_record(
         seasons,
         carry_in_active_first_season=False,
         accrual_floor=accrual_floor,
-        # Stop the clock at today, not at the end of the current season --
-        # otherwise every player currently on a roster is credited with the
-        # remaining weeks of a season that hasn't been played yet.
-        horizon_end=TODAY,
+        # Stop the clock at horizon_end (today, for the daily job) rather than
+        # at the end of the current season -- otherwise every player currently
+        # on a roster is credited with the remaining weeks of a season that
+        # hasn't been played yet.
+        horizon_end=horizon_end,
     )
 
     return {

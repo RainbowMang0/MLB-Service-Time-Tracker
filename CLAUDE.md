@@ -40,8 +40,9 @@ scripts/fetch_mlb_data.py      thin statsapi.mlb.com client, polite rate limitin
 scripts/service_time.py        the service-time math + all domain rules
 scripts/update_service_time.py daily job: 40-man rosters -> compute -> merge -> JSON
 scripts/backfill_history.py    resumable backfill of non-rostered players (2009+)
+scripts/validate_service_time.py  --as-of validation against known Baseball Reference figures
 scripts/generate_demo_data.py  bundled sample data generator (no network)
-tests/test_service_time.py     22 tests, no pytest needed: `python tests/test_service_time.py`
+tests/test_service_time.py     24 tests, no pytest needed: `python tests/test_service_time.py`
 docs/                          the static site (index.html, styles.css, app.js)
 docs/data/service_time.json    the only data file the frontend reads
 data/cache/transactions/       per-player transaction cache (rostered players only)
@@ -155,11 +156,27 @@ hasn't been played. The daily job passes `horizon_end=TODAY`.
    cheap: state is committed per batch and a retry resumes.
 2. **Then run the daily workflow once with `full_refresh` checked**, to
    rebuild the cache with team IDs and activate the MLB-club filter.
-3. **Validate.** Compute service time as of a past Opening Day and compare
-   against Baseball Reference's `s.YYYY` figures, which are a fixed target
-   rather than a moving one. A `--as-of YYYY-MM-DD` flag was discussed for
-   exactly this and is not yet built. That's the highest-value next feature —
-   right now nothing systematically checks these numbers.
+3. **Validate.** `scripts/validate_service_time.py` now exists:
+   `build_player_record()` takes a `horizon_end` override, so it can compute
+   what a player's service time WOULD HAVE READ as of a past date (e.g. a
+   prior Opening Day) rather than only "as of today." Compare that against
+   Baseball Reference's `s.YYYY` figures, which are a fixed target rather
+   than a moving one. Doing this required a real bug fix along the way:
+   `build_global_active_intervals()` previously only used `horizon_end` to
+   cap the trailing *open* interval — a stop transaction (option/DFA/release)
+   dated *after* `horizon_end` would still truncate an earlier interval that,
+   as of that date, hadn't ended yet. It now drops every transaction dated
+   after `horizon_end` before building intervals at all. Covered by a new
+   regression test (`test_as_of_past_date_ignores_later_transactions`).
+
+   **Still needed:** the reference file (`data/reference_service_time.json`)
+   ships empty — copy `data/reference_service_time.example.json`, fill in a
+   handful of well-known players' `s.YYYY` figures by hand from their
+   Baseball Reference pages (deliberately not scraped), and run
+   `python scripts/validate_service_time.py`. Nothing has actually been
+   checked against a real external number yet; this just makes doing so
+   possible. Requires network access to the live MLB Stats API, so it can't
+   run in this offline sandbox — run it locally or from a Codespace/Action.
 
 ### Known limitations
 

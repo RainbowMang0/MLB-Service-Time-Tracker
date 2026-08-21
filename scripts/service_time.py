@@ -232,8 +232,17 @@ def build_global_active_intervals(
     floor, those start the clock years early and the player is credited with
     service time he never earned. Intervals are clipped to begin no earlier
     than the floor, and intervals entirely before it are dropped.
+
+    Transactions dated after `horizon_end` are ignored entirely, not just
+    excluded from the trailing open interval. This matters for computing
+    service time "as of" a past date (e.g. a prior Opening Day) from a
+    transaction list that also contains later history: without it, a stop
+    transaction (option, DFA, release) dated after `horizon_end` would still
+    truncate an interval that, as of `horizon_end`, hadn't ended yet.
     """
-    txns = sorted(transactions, key=lambda t: t.date)
+    txns = sorted(
+        (t for t in transactions if t.date <= horizon_end), key=lambda t: t.date
+    )
 
     intervals: list[tuple[dt.date, dt.date]] = []
     active_since: dt.date | None = None

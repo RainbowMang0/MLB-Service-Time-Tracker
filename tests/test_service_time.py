@@ -184,6 +184,39 @@ def test_horizon_stops_at_today_not_end_of_season():
     )
 
 
+def test_as_of_past_date_ignores_later_transactions():
+    """
+    Regression test for the --as-of validation feature (validate_service_time.py).
+
+    Computing service time "as of" a past date requires a transaction list
+    that also contains LATER history (the same list the live API would
+    return today), with everything after horizon_end ignored -- not just
+    excluded from the trailing open interval. Before this fix, a stop
+    transaction (option/DFA/release) dated after horizon_end would still
+    truncate an interval that, as of horizon_end, hadn't ended yet.
+    """
+    season = SeasonWindow(2021, dt.date(2021, 4, 1), dt.date(2021, 10, 3))
+    as_of = dt.date(2021, 4, 15)
+    txns = [
+        Transaction(dt.date(2021, 4, 1), "Yankees selected the contract of X"),
+        # Happens AFTER as_of -- should not exist yet from as_of's perspective.
+        Transaction(dt.date(2021, 6, 1), "Yankees optioned X to Triple-A"),
+        Transaction(dt.date(2021, 8, 1), "Yankees recalled X from Triple-A"),
+    ]
+
+    as_of_result = compute_service_time(txns, [season], horizon_end=as_of)
+    check(
+        "as-of computation credits through the as-of date, unaffected by later transactions",
+        as_of_result.by_season[2021]["raw_active_days"] == (as_of - season.start).days + 1,
+    )
+
+    full_result = compute_service_time(txns, [season], horizon_end=season.end)
+    check(
+        "later transactions still apply when horizon_end is not restricted",
+        full_result.by_season[2021]["raw_active_days"] == 61 + 64,  # Apr1-May31, Aug1-Oct3
+    )
+
+
 def test_never_debuted_player_has_no_service_time():
     """A 40-man prospect with only minor league history accrues nothing."""
     txns = [
@@ -253,6 +286,7 @@ if __name__ == "__main__":
     test_status_carries_across_seasons_with_no_new_transactions()
     test_trade_does_not_stop_clock()
     test_pre_debut_events_do_not_start_the_clock()
+    test_as_of_past_date_ignores_later_transactions()
     test_horizon_stops_at_today_not_end_of_season()
     test_never_debuted_player_has_no_service_time()
     test_2020_season_is_prorated_to_a_full_year()
