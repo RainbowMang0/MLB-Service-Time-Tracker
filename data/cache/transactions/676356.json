@@ -2,241 +2,385 @@
   {
     "date": "2019-07-12",
     "description": "Los Angeles Dodgers signed OF Jonny Deluca.",
-    "team": "Los Angeles Dodgers"
+    "team": "Los Angeles Dodgers",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 119
   },
   {
     "date": "2019-07-19",
     "description": "CF Jonny Deluca assigned to AZL Dodgers Mota.",
-    "team": "AZL Dodgers 2"
+    "team": "AZL Dodgers 2",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 2690
   },
   {
     "date": "2019-09-11",
     "description": "CF Jonny Deluca assigned to Great Lakes Loons from AZL Dodgers Mota.",
-    "team": "Great Lakes Loons"
+    "team": "Great Lakes Loons",
+    "team_id": null,
+    "from_team_id": 2690,
+    "to_team_id": 456
   },
   {
     "date": "2019-09-11",
     "description": "CF Jonny Deluca assigned to Great Lakes Loons.",
-    "team": "Great Lakes Loons"
+    "team": "Great Lakes Loons",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 456
   },
   {
     "date": "2021-02-12",
     "description": "OF Jonny Deluca assigned to Rancho Cucamonga Quakes.",
-    "team": "Rancho Cucamonga Quakes"
+    "team": "Rancho Cucamonga Quakes",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 526
   },
   {
     "date": "2021-02-12",
     "description": "CF Jonny Deluca assigned to Rancho Cucamonga Quakes.",
-    "team": "Rancho Cucamonga Quakes"
+    "team": "Rancho Cucamonga Quakes",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 526
   },
   {
     "date": "2021-07-22",
     "description": "Great Lakes Loons activated OF Jonny Deluca.",
-    "team": "Great Lakes Loons"
+    "team": "Great Lakes Loons",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 456
   },
   {
     "date": "2021-07-22",
     "description": "OF Jonny Deluca assigned to Great Lakes Loons from Rancho Cucamonga Quakes.",
-    "team": "Great Lakes Loons"
+    "team": "Great Lakes Loons",
+    "team_id": null,
+    "from_team_id": 526,
+    "to_team_id": 456
   },
   {
     "date": "2022-03-26",
     "description": "OF Jonny Deluca roster status changed by Los Angeles Dodgers.",
-    "team": "Los Angeles Dodgers"
+    "team": "Los Angeles Dodgers",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 119
   },
   {
     "date": "2022-03-27",
     "description": "OF Jonny Deluca assigned to Los Angeles Dodgers.",
-    "team": "Los Angeles Dodgers"
+    "team": "Los Angeles Dodgers",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 119
   },
   {
     "date": "2022-07-04",
     "description": "Tulsa Drillers activated OF Jonny DeLuca.",
-    "team": "Tulsa Drillers"
+    "team": "Tulsa Drillers",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 260
   },
   {
     "date": "2022-07-04",
     "description": "OF Jonny DeLuca assigned to Tulsa Drillers from Great Lakes Loons.",
-    "team": "Tulsa Drillers"
+    "team": "Tulsa Drillers",
+    "team_id": null,
+    "from_team_id": 456,
+    "to_team_id": 260
   },
   {
     "date": "2022-08-07",
     "description": "Tulsa Drillers placed OF Jonny DeLuca on the 7-day injured list.",
-    "team": "Tulsa Drillers"
+    "team": "Tulsa Drillers",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 260
   },
   {
     "date": "2022-09-26",
     "description": "Tulsa Drillers activated OF Jonny DeLuca from the 7-day injured list.",
-    "team": "Tulsa Drillers"
+    "team": "Tulsa Drillers",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 260
   },
   {
     "date": "2022-11-15",
     "description": "Los Angeles Dodgers activated OF Jonny DeLuca.",
-    "team": "Los Angeles Dodgers"
+    "team": "Los Angeles Dodgers",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 119
   },
   {
     "date": "2022-11-15",
     "description": "Los Angeles Dodgers selected the contract of OF Jonny DeLuca from Tulsa Drillers.",
-    "team": "Los Angeles Dodgers"
+    "team": "Los Angeles Dodgers",
+    "team_id": null,
+    "from_team_id": 260,
+    "to_team_id": 119
   },
   {
     "date": "2023-03-15",
     "description": "Los Angeles Dodgers optioned OF Jonny DeLuca to Tulsa Drillers.",
-    "team": "Tulsa Drillers"
+    "team": "Tulsa Drillers",
+    "team_id": null,
+    "from_team_id": 119,
+    "to_team_id": 260
   },
   {
     "date": "2023-05-16",
     "description": "OF Jonny DeLuca assigned to Oklahoma City Dodgers from Tulsa Drillers.",
-    "team": "Oklahoma City Comets"
+    "team": "Oklahoma City Comets",
+    "team_id": null,
+    "from_team_id": 260,
+    "to_team_id": 238
   },
   {
     "date": "2023-06-04",
     "description": "Los Angeles Dodgers recalled OF Jonny DeLuca from Oklahoma City Dodgers.",
-    "team": "Los Angeles Dodgers"
+    "team": "Los Angeles Dodgers",
+    "team_id": null,
+    "from_team_id": 238,
+    "to_team_id": 119
   },
   {
     "date": "2023-07-14",
     "description": "Oklahoma City Dodgers activated OF Jonny Deluca.",
-    "team": "Oklahoma City Comets"
+    "team": "Oklahoma City Comets",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 238
   },
   {
     "date": "2023-07-14",
     "description": "Los Angeles Dodgers optioned OF Jonny Deluca to Oklahoma City Dodgers.",
-    "team": "Oklahoma City Comets"
+    "team": "Oklahoma City Comets",
+    "team_id": null,
+    "from_team_id": 119,
+    "to_team_id": 238
   },
   {
     "date": "2023-07-19",
     "description": "Los Angeles Dodgers recalled OF Jonny Deluca from Oklahoma City Dodgers.",
-    "team": "Los Angeles Dodgers"
+    "team": "Los Angeles Dodgers",
+    "team_id": null,
+    "from_team_id": 238,
+    "to_team_id": 119
   },
   {
     "date": "2023-07-26",
     "description": "Los Angeles Dodgers placed OF Jonny Deluca on the 10-day injured list. Right hamstring strain.",
-    "team": "Los Angeles Dodgers"
+    "team": "Los Angeles Dodgers",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 119
   },
   {
     "date": "2023-08-24",
     "description": "Los Angeles Dodgers sent OF Jonny Deluca on a rehab assignment to Oklahoma City Dodgers.",
-    "team": "Oklahoma City Comets"
+    "team": "Oklahoma City Comets",
+    "team_id": null,
+    "from_team_id": 119,
+    "to_team_id": 238
   },
   {
     "date": "2023-08-31",
     "description": "Los Angeles Dodgers activated OF Jonny Deluca from the 10-day injured list.",
-    "team": "Los Angeles Dodgers"
+    "team": "Los Angeles Dodgers",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 119
   },
   {
     "date": "2023-08-31",
     "description": "Los Angeles Dodgers optioned OF Jonny Deluca to Oklahoma City Dodgers.",
-    "team": "Oklahoma City Comets"
+    "team": "Oklahoma City Comets",
+    "team_id": null,
+    "from_team_id": 119,
+    "to_team_id": 238
   },
   {
     "date": "2023-10-02",
     "description": "OF Jonny Deluca roster status changed by Los Angeles Dodgers.",
-    "team": "Los Angeles Dodgers"
+    "team": "Los Angeles Dodgers",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 119
   },
   {
     "date": "2023-10-02",
     "description": "Los Angeles Dodgers recalled OF Jonny Deluca from Oklahoma City Dodgers.",
-    "team": "Los Angeles Dodgers"
+    "team": "Los Angeles Dodgers",
+    "team_id": null,
+    "from_team_id": 238,
+    "to_team_id": 119
   },
   {
     "date": "2023-10-12",
     "description": "Los Angeles Dodgers activated OF Jonny Deluca.",
-    "team": "Los Angeles Dodgers"
+    "team": "Los Angeles Dodgers",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 119
   },
   {
     "date": "2023-12-16",
     "description": "Los Angeles Dodgers traded RHP Ryan Pepiot and OF Jonny DeLuca to Tampa Bay Rays for RHP Tyler Glasnow, CF Manuel Margot and cash.",
-    "team": "Tampa Bay Rays"
+    "team": "Tampa Bay Rays",
+    "team_id": null,
+    "from_team_id": 119,
+    "to_team_id": 139
   },
   {
     "date": "2024-03-27",
     "description": "Tampa Bay Rays placed OF Jonny DeLuca on the 10-day injured list. Broken right hand.",
-    "team": "Tampa Bay Rays"
+    "team": "Tampa Bay Rays",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 139
   },
   {
     "date": "2024-04-25",
     "description": "Tampa Bay Rays sent OF Jonny DeLuca on a rehab assignment to Durham Bulls.",
-    "team": "Durham Bulls"
+    "team": "Durham Bulls",
+    "team_id": null,
+    "from_team_id": 139,
+    "to_team_id": 234
   },
   {
     "date": "2024-05-03",
     "description": "Tampa Bay Rays activated OF Jonny DeLuca from the 10-day injured list.",
-    "team": "Tampa Bay Rays"
+    "team": "Tampa Bay Rays",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 139
   },
   {
     "date": "2025-04-08",
     "description": "Tampa Bay Rays placed RF Jonny DeLuca on the 10-day injured list retroactive to April 7, 2025. Right shoulder strain.",
-    "team": "Tampa Bay Rays"
+    "team": "Tampa Bay Rays",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 139
   },
   {
     "date": "2025-05-24",
     "description": "Tampa Bay Rays sent CF Jonny DeLuca on a rehab assignment to FCL Rays.",
-    "team": "FCL Rays"
+    "team": "FCL Rays",
+    "team_id": null,
+    "from_team_id": 139,
+    "to_team_id": 2003
   },
   {
     "date": "2025-05-27",
     "description": "Tampa Bay Rays placed CF Jonny DeLuca on the 60-day injured list. Right shoulder strain.",
-    "team": "Tampa Bay Rays"
+    "team": "Tampa Bay Rays",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 139
   },
   {
     "date": "2025-07-12",
     "description": "CF Jonny DeLuca assigned to FCL Rays.",
-    "team": "FCL Rays"
+    "team": "FCL Rays",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 2003
   },
   {
     "date": "2025-07-18",
     "description": "Tampa Bay Rays sent CF Jonny DeLuca on a rehab assignment to Durham Bulls.",
-    "team": "Durham Bulls"
+    "team": "Durham Bulls",
+    "team_id": null,
+    "from_team_id": 139,
+    "to_team_id": 234
   },
   {
     "date": "2025-07-25",
     "description": "Tampa Bay Rays activated CF Jonny DeLuca from the 60-day injured list.",
-    "team": "Tampa Bay Rays"
+    "team": "Tampa Bay Rays",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 139
   },
   {
     "date": "2025-08-08",
     "description": "Tampa Bay Rays placed CF Jonny DeLuca on the 10-day injured list retroactive to August 7, 2025. Left hamstring strain.",
-    "team": "Tampa Bay Rays"
+    "team": "Tampa Bay Rays",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 139
   },
   {
     "date": "2025-08-27",
     "description": "Tampa Bay Rays sent CF Jonny DeLuca on a rehab assignment to Durham Bulls.",
-    "team": "Durham Bulls"
+    "team": "Durham Bulls",
+    "team_id": null,
+    "from_team_id": 139,
+    "to_team_id": 234
   },
   {
     "date": "2025-09-13",
     "description": "Tampa Bay Rays placed CF Jonny DeLuca on the 60-day injured list. Left hamstring strain.",
-    "team": "Tampa Bay Rays"
+    "team": "Tampa Bay Rays",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 139
   },
   {
     "date": "2025-11-03",
     "description": "Tampa Bay Rays activated CF Jonny DeLuca from the 60-day injured list.",
-    "team": "Tampa Bay Rays"
+    "team": "Tampa Bay Rays",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 139
   },
   {
     "date": "2026-04-15",
     "description": "CF Jonny DeLuca changed number to 42.",
-    "team": "Tampa Bay Rays"
+    "team": "Tampa Bay Rays",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 139
   },
   {
     "date": "2026-04-16",
     "description": "CF Jonny DeLuca changed number to 21.",
-    "team": "Tampa Bay Rays"
+    "team": "Tampa Bay Rays",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 139
   },
   {
     "date": "2026-05-24",
     "description": "Tampa Bay Rays placed RF Jonny DeLuca on the 10-day injured list retroactive to May 23, 2026. Right hamstring strain.",
-    "team": "Tampa Bay Rays"
+    "team": "Tampa Bay Rays",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 139
   },
   {
     "date": "2026-06-12",
     "description": "Tampa Bay Rays sent RF Jonny DeLuca on a rehab assignment to Durham Bulls.",
-    "team": "Durham Bulls"
+    "team": "Durham Bulls",
+    "team_id": null,
+    "from_team_id": 139,
+    "to_team_id": 234
   },
   {
     "date": "2026-06-19",
     "description": "Tampa Bay Rays activated RF Jonny DeLuca from the 10-day injured list.",
-    "team": "Tampa Bay Rays"
+    "team": "Tampa Bay Rays",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 139
   }
 ]

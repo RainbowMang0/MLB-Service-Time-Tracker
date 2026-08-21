@@ -2,201 +2,321 @@
   {
     "date": "2015-03-19",
     "description": "Houston Astros signed free agent RHP Cristian Javier to a minor league contract.",
-    "team": "Houston Astros"
+    "team": "Houston Astros",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 117
   },
   {
     "date": "2015-06-08",
     "description": "RHP Cristian Javier assigned to DSL Astros Blue.",
-    "team": "DSL Astros Blue"
+    "team": "DSL Astros Blue",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 601
   },
   {
     "date": "2015-06-20",
     "description": "RHP Cristian Javier assigned to DSL Astros Orange from DSL Astros Blue.",
-    "team": "DSL Astros Orange"
+    "team": "DSL Astros Orange",
+    "team_id": null,
+    "from_team_id": 601,
+    "to_team_id": 5005
   },
   {
     "date": "2015-07-24",
     "description": "RHP Cristian Javier assigned to DSL Astros Blue from DSL Astros Orange.",
-    "team": "DSL Astros Blue"
+    "team": "DSL Astros Blue",
+    "team_id": null,
+    "from_team_id": 5005,
+    "to_team_id": 601
   },
   {
     "date": "2016-06-03",
     "description": "RHP Cristian Javier assigned to DSL Astros Orange from DSL Astros Blue.",
-    "team": "DSL Astros Orange"
+    "team": "DSL Astros Orange",
+    "team_id": null,
+    "from_team_id": 601,
+    "to_team_id": 5005
   },
   {
     "date": "2016-06-23",
     "description": "RHP Cristian Javier assigned to GCL Astros.",
-    "team": "FCL Astros"
+    "team": "FCL Astros",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 1998
   },
   {
     "date": "2016-07-28",
     "description": "RHP Cristian Javier assigned to Greeneville Astros from GCL Astros.",
-    "team": "Greeneville Flyboys"
+    "team": "Greeneville Flyboys",
+    "team_id": null,
+    "from_team_id": 1998,
+    "to_team_id": 413
   },
   {
     "date": "2017-05-25",
     "description": "RHP Cristian Javier assigned to Buies Creek Astros from Greeneville Astros.",
-    "team": "Fayetteville Woodpeckers"
+    "team": "Fayetteville Woodpeckers",
+    "team_id": null,
+    "from_team_id": 413,
+    "to_team_id": 3712
   },
   {
     "date": "2017-06-19",
     "description": "RHP Cristian Javier assigned to Tri-City ValleyCats from Buies Creek Astros.",
-    "team": "Tri-City ValleyCats"
+    "team": "Tri-City ValleyCats",
+    "team_id": null,
+    "from_team_id": 3712,
+    "to_team_id": 577
   },
   {
     "date": "2017-06-29",
     "description": "RHP Cristian Javier assigned to Buies Creek Astros from Tri-City ValleyCats.",
-    "team": "Fayetteville Woodpeckers"
+    "team": "Fayetteville Woodpeckers",
+    "team_id": null,
+    "from_team_id": 577,
+    "to_team_id": 3712
   },
   {
     "date": "2017-07-02",
     "description": "RHP Cristian Javier assigned to Tri-City ValleyCats from Buies Creek Astros.",
-    "team": "Tri-City ValleyCats"
+    "team": "Tri-City ValleyCats",
+    "team_id": null,
+    "from_team_id": 3712,
+    "to_team_id": 577
   },
   {
     "date": "2017-07-19",
     "description": "RHP Cristian Javier assigned to Quad Cities River Bandits from Tri-City ValleyCats.",
-    "team": "Quad Cities River Bandits"
+    "team": "Quad Cities River Bandits",
+    "team_id": null,
+    "from_team_id": 577,
+    "to_team_id": 565
   },
   {
     "date": "2018-06-12",
     "description": "RHP Cristian Javier assigned to Buies Creek Astros from Quad Cities River Bandits.",
-    "team": "Fayetteville Woodpeckers"
+    "team": "Fayetteville Woodpeckers",
+    "team_id": null,
+    "from_team_id": 565,
+    "to_team_id": 3712
   },
   {
     "date": "2019-02-24",
     "description": "RHP Cristian Javier assigned to Houston Astros.",
-    "team": "Houston Astros"
+    "team": "Houston Astros",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 117
   },
   {
     "date": "2019-05-15",
     "description": "RHP Cristian Javier assigned to Corpus Christi Hooks from Fayetteville Woodpeckers.",
-    "team": "Corpus Christi Hooks"
+    "team": "Corpus Christi Hooks",
+    "team_id": null,
+    "from_team_id": 3712,
+    "to_team_id": 482
   },
   {
     "date": "2019-08-23",
     "description": "RHP Cristian Javier assigned to Round Rock Express from Corpus Christi Hooks.",
-    "team": "Round Rock Express"
+    "team": "Round Rock Express",
+    "team_id": null,
+    "from_team_id": 482,
+    "to_team_id": 102
   },
   {
     "date": "2019-11-20",
     "description": "Houston Astros selected the contract of Cristian Javier from Round Rock Express.",
-    "team": "Houston Astros"
+    "team": "Houston Astros",
+    "team_id": null,
+    "from_team_id": 102,
+    "to_team_id": 117
   },
   {
     "date": "2020-03-06",
     "description": "Houston Astros optioned RHP Cristian Javier to Round Rock Express.",
-    "team": "Round Rock Express"
+    "team": "Round Rock Express",
+    "team_id": null,
+    "from_team_id": 117,
+    "to_team_id": 102
   },
   {
     "date": "2020-07-23",
     "description": "Houston Astros recalled RHP Cristian Javier from Round Rock Express.",
-    "team": "Houston Astros"
+    "team": "Houston Astros",
+    "team_id": null,
+    "from_team_id": 102,
+    "to_team_id": 117
   },
   {
     "date": "2021-04-10",
     "description": "Houston Astros optioned P Cristian Javier to Astros Alternate Training Site.",
-    "team": "Astros Alternate Training Site"
+    "team": "Astros Alternate Training Site",
+    "team_id": null,
+    "from_team_id": 117,
+    "to_team_id": 3252
   },
   {
     "date": "2021-04-22",
     "description": "Houston Astros recalled RHP Cristian Javier, , ,  and  from Astros Alternate Training Site.",
-    "team": "Houston Astros"
+    "team": "Houston Astros",
+    "team_id": null,
+    "from_team_id": 3252,
+    "to_team_id": 117
   },
   {
     "date": "2023-02-09",
     "description": "Dominican Republic activated RHP Cristian Javier.",
-    "team": "Dominican Republic"
+    "team": "Dominican Republic",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 805
   },
   {
     "date": "2024-04-21",
     "description": "Houston Astros placed RHP Cristian Javier on the 15-day injured list retroactive to April 18, 2024. Neck discomfort.",
-    "team": "Houston Astros"
+    "team": "Houston Astros",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 117
   },
   {
     "date": "2024-05-04",
     "description": "Houston Astros sent RHP Cristian Javier on a rehab assignment to Corpus Christi Hooks.",
-    "team": "Corpus Christi Hooks"
+    "team": "Corpus Christi Hooks",
+    "team_id": null,
+    "from_team_id": 117,
+    "to_team_id": 482
   },
   {
     "date": "2024-05-11",
     "description": "Houston Astros activated RHP Cristian Javier from the 15-day injured list.",
-    "team": "Houston Astros"
+    "team": "Houston Astros",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 117
   },
   {
     "date": "2024-05-27",
     "description": "Houston Astros placed RHP Cristian Javier on the 15-day injured list retroactive to May 24, 2024. Right forearm discomfort.",
-    "team": "Houston Astros"
+    "team": "Houston Astros",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 117
   },
   {
     "date": "2024-06-16",
     "description": "Houston Astros transferred RHP Cristian Javier from the 15-day injured list to the 60-day injured list. Right forearm discomfort.",
-    "team": "Houston Astros"
+    "team": "Houston Astros",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 117
   },
   {
     "date": "2024-11-04",
     "description": "Houston Astros activated RHP Cristian Javier from the 60-day injured list.",
-    "team": "Houston Astros"
+    "team": "Houston Astros",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 117
   },
   {
     "date": "2025-03-27",
     "description": "Houston Astros placed RHP Cristian Javier on the 15-day injured list retroactive to March 24, 2025. Recovery from Tommy John surgery.",
-    "team": "Houston Astros"
+    "team": "Houston Astros",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 117
   },
   {
     "date": "2025-04-01",
     "description": "Houston Astros transferred RHP Cristian Javier from the 15-day injured list to the 60-day injured list. Recovery from Tommy John surgery.",
-    "team": "Houston Astros"
+    "team": "Houston Astros",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 117
   },
   {
     "date": "2025-07-12",
     "description": "Houston Astros sent RHP Cristian Javier on a rehab assignment to FCL Astros.",
-    "team": "FCL Astros"
+    "team": "FCL Astros",
+    "team_id": null,
+    "from_team_id": 117,
+    "to_team_id": 1998
   },
   {
     "date": "2025-07-18",
     "description": "Houston Astros sent RHP Cristian Javier on a rehab assignment to Corpus Christi Hooks.",
-    "team": "Corpus Christi Hooks"
+    "team": "Corpus Christi Hooks",
+    "team_id": null,
+    "from_team_id": 117,
+    "to_team_id": 482
   },
   {
     "date": "2025-07-24",
     "description": "Houston Astros sent RHP Cristian Javier on a rehab assignment to Sugar Land Space Cowboys.",
-    "team": "Sugar Land Space Cowboys"
+    "team": "Sugar Land Space Cowboys",
+    "team_id": null,
+    "from_team_id": 117,
+    "to_team_id": 5434
   },
   {
     "date": "2025-08-11",
     "description": "Houston Astros activated RHP Cristian Javier from the 60-day injured list.",
-    "team": "Houston Astros"
+    "team": "Houston Astros",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 117
   },
   {
     "date": "2026-04-09",
     "description": "Houston Astros placed RHP Cristian Javier on the 15-day injured list. Grade two right shoulder strain.",
-    "team": "Houston Astros"
+    "team": "Houston Astros",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 117
   },
   {
     "date": "2026-04-10",
     "description": "Houston Astros placed RHP Cristian Javier on the 15-day injured list retroactive to April 9, 2026. Grade two right shoulder strain.",
-    "team": "Houston Astros"
+    "team": "Houston Astros",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 117
   },
   {
     "date": "2026-04-20",
     "description": "Houston Astros transferred RHP Cristian Javier from the 15-day injured list to the 60-day injured list. Grade two right shoulder strain.",
-    "team": "Houston Astros"
+    "team": "Houston Astros",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 117
   },
   {
     "date": "2026-06-03",
     "description": "Houston Astros sent RHP Cristian Javier on a rehab assignment to Corpus Christi Hooks.",
-    "team": "Corpus Christi Hooks"
+    "team": "Corpus Christi Hooks",
+    "team_id": null,
+    "from_team_id": 117,
+    "to_team_id": 482
   },
   {
     "date": "2026-06-09",
     "description": "Houston Astros sent RHP Cristian Javier on a rehab assignment to Sugar Land Space Cowboys.",
-    "team": "Sugar Land Space Cowboys"
+    "team": "Sugar Land Space Cowboys",
+    "team_id": null,
+    "from_team_id": 117,
+    "to_team_id": 5434
   },
   {
     "date": "2026-07-03",
     "description": "Houston Astros activated RHP Cristian Javier from the 60-day injured list.",
-    "team": "Houston Astros"
+    "team": "Houston Astros",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 117
   }
 ]

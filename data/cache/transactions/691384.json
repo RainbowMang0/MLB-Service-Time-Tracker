@@ -2,146 +2,233 @@
   {
     "date": "2019-07-02",
     "description": "Boston Red Sox signed free agent RHP Luis Perales to a minor league contract.",
-    "team": "Boston Red Sox"
+    "team": "Boston Red Sox",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 111
   },
   {
     "date": "2021-07-10",
     "description": "RHP Luis Perales assigned to DSL Red Sox Red.",
-    "team": "DSL Red Sox Red"
+    "team": "DSL Red Sox Red",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 627
   },
   {
     "date": "2022-06-03",
     "description": "RHP Luis Perales assigned to FCL Red Sox from DSL Red Sox Red.",
-    "team": "FCL Red Sox"
+    "team": "FCL Red Sox",
+    "team_id": null,
+    "from_team_id": 627,
+    "to_team_id": 471
   },
   {
     "date": "2022-08-18",
     "description": "Salem Red Sox activated RHP Luis Perales.",
-    "team": "Salem RidgeYaks"
+    "team": "Salem RidgeYaks",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 414
   },
   {
     "date": "2022-08-18",
     "description": "RHP Luis Perales assigned to Salem Red Sox from FCL Red Sox.",
-    "team": "Salem RidgeYaks"
+    "team": "Salem RidgeYaks",
+    "team_id": null,
+    "from_team_id": 471,
+    "to_team_id": 414
   },
   {
     "date": "2023-07-14",
     "description": "Greenville Drive activated RHP Luis Perales.",
-    "team": "Greenville Drive"
+    "team": "Greenville Drive",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 428
   },
   {
     "date": "2023-07-14",
     "description": "RHP Luis Perales assigned to Greenville Drive from Salem Red Sox.",
-    "team": "Greenville Drive"
+    "team": "Greenville Drive",
+    "team_id": null,
+    "from_team_id": 414,
+    "to_team_id": 428
   },
   {
     "date": "2023-11-14",
     "description": "Boston Red Sox selected the contract of RHP Luis Perales from Greenville Drive.",
-    "team": "Boston Red Sox"
+    "team": "Boston Red Sox",
+    "team_id": null,
+    "from_team_id": 428,
+    "to_team_id": 111
   },
   {
     "date": "2024-03-08",
     "description": "Boston Red Sox optioned RHP Luis Perales to Worcester Red Sox.",
-    "team": "Worcester Red Sox"
+    "team": "Worcester Red Sox",
+    "team_id": null,
+    "from_team_id": 111,
+    "to_team_id": 533
   },
   {
     "date": "2024-03-30",
     "description": "RHP Luis Perales assigned to Greenville Drive from Worcester Red Sox.",
-    "team": "Greenville Drive"
+    "team": "Greenville Drive",
+    "team_id": null,
+    "from_team_id": 533,
+    "to_team_id": 428
   },
   {
     "date": "2024-05-26",
     "description": "RHP Luis Perales assigned to Portland Sea Dogs from Greenville Drive.",
-    "team": "Portland Sea Dogs"
+    "team": "Portland Sea Dogs",
+    "team_id": null,
+    "from_team_id": 428,
+    "to_team_id": 546
   },
   {
     "date": "2024-06-09",
     "description": "Portland Sea Dogs placed RHP Luis Perales on the 7-day injured list.",
-    "team": "Portland Sea Dogs"
+    "team": "Portland Sea Dogs",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 546
   },
   {
     "date": "2024-06-29",
     "description": "Portland Sea Dogs placed RHP Luis Perales on the full-season injured list.",
-    "team": "Portland Sea Dogs"
+    "team": "Portland Sea Dogs",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 546
   },
   {
     "date": "2024-10-01",
     "description": "Boston Red Sox recalled RHP Luis Perales from Portland Sea Dogs.",
-    "team": "Boston Red Sox"
+    "team": "Boston Red Sox",
+    "team_id": null,
+    "from_team_id": 546,
+    "to_team_id": 111
   },
   {
     "date": "2025-03-07",
     "description": "Portland Sea Dogs placed RHP Luis Perales on the 60-day injured list.",
-    "team": "Portland Sea Dogs"
+    "team": "Portland Sea Dogs",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 546
   },
   {
     "date": "2025-03-07",
     "description": "Boston Red Sox optioned RHP Luis Perales to Portland Sea Dogs.",
-    "team": "Portland Sea Dogs"
+    "team": "Portland Sea Dogs",
+    "team_id": null,
+    "from_team_id": 111,
+    "to_team_id": 546
   },
   {
     "date": "2025-09-10",
     "description": "RHP Luis Perales assigned to Salt River Rafters.",
-    "team": "Salt River Rafters"
+    "team": "Salt River Rafters",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 527
   },
   {
     "date": "2025-09-13",
     "description": "Portland Sea Dogs activated RHP Luis Perales from the 60-day injured list.",
-    "team": "Portland Sea Dogs"
+    "team": "Portland Sea Dogs",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 546
   },
   {
     "date": "2025-09-16",
     "description": "RHP Luis Perales assigned to Worcester Red Sox from Portland Sea Dogs.",
-    "team": "Worcester Red Sox"
+    "team": "Worcester Red Sox",
+    "team_id": null,
+    "from_team_id": 546,
+    "to_team_id": 533
   },
   {
     "date": "2025-09-29",
     "description": "Boston Red Sox recalled RHP Luis Perales from Worcester Red Sox.",
-    "team": "Boston Red Sox"
+    "team": "Boston Red Sox",
+    "team_id": null,
+    "from_team_id": 533,
+    "to_team_id": 111
   },
   {
     "date": "2025-09-30",
     "description": "RHP Luis Perales roster status changed by Boston Red Sox.",
-    "team": "Boston Red Sox"
+    "team": "Boston Red Sox",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 111
   },
   {
     "date": "2025-10-03",
     "description": "Boston Red Sox activated RHP Luis Perales.",
-    "team": "Boston Red Sox"
+    "team": "Boston Red Sox",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 111
   },
   {
     "date": "2025-11-08",
     "description": "American League Fall Stars placed RHP Luis Perales on the reserve list.",
-    "team": "American League Fall Stars"
+    "team": "American League Fall Stars",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 1310
   },
   {
     "date": "2025-12-15",
     "description": "Boston Red Sox traded RHP Luis Perales to Washington Nationals for LHP Jake Bennett.",
-    "team": "Washington Nationals"
+    "team": "Washington Nationals",
+    "team_id": null,
+    "from_team_id": 111,
+    "to_team_id": 120
   },
   {
     "date": "2026-03-05",
     "description": "RHP Luis Perales assigned to Washington Nationals Prospects.",
-    "team": "Washington Nationals Prospects"
+    "team": "Washington Nationals Prospects",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 370
   },
   {
     "date": "2026-03-08",
     "description": "Rochester Red Wings activated RHP Luis Perales.",
-    "team": "Rochester Red Wings"
+    "team": "Rochester Red Wings",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 534
   },
   {
     "date": "2026-03-08",
     "description": "Washington Nationals optioned RHP Luis Perales to Rochester Red Wings.",
-    "team": "Rochester Red Wings"
+    "team": "Rochester Red Wings",
+    "team_id": null,
+    "from_team_id": 120,
+    "to_team_id": 534
   },
   {
     "date": "2026-05-22",
     "description": "Rochester Red Wings placed RHP Luis Perales on the 7-day injured list.",
-    "team": "Rochester Red Wings"
+    "team": "Rochester Red Wings",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 534
   },
   {
     "date": "2026-05-30",
     "description": "Rochester Red Wings activated RHP Luis Perales from the 7-day injured list.",
-    "team": "Rochester Red Wings"
+    "team": "Rochester Red Wings",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 534
   }
 ]
