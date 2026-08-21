@@ -394,6 +394,50 @@ def test_major_league_signing_starts_the_clock_minor_league_does_not():
     )
 
 
+def test_injured_list_placement_restarts_a_stopped_clock():
+    """
+    A player on his club's major league IL is accruing by definition. Listing
+    an IL placement as merely non-stopping is enough for a player who was
+    already active, but does nothing for one whose clock had already stopped.
+
+    Measured against MLB's own 2018 rosters this was the largest remaining
+    error: Ben Heller spent the season on the 60-day IL and was under-credited
+    on every one of the 27 sampled dates -- 27 of the 37 total.
+    """
+    seasons = [
+        SeasonWindow(y, dt.date(y, 3, 30), dt.date(y, 10, 1)) for y in (2017, 2018)
+    ]
+    txns = [
+        Transaction(dt.date(2017, 4, 5), "Yankees recalled RHP X from Scranton."),
+        Transaction(dt.date(2017, 6, 1), "Yankees optioned RHP X to Scranton."),
+        # Back on a MAJOR LEAGUE list: accruing again, even though no recall
+        # or activation ever follows.
+        Transaction(dt.date(2018, 3, 30), "Yankees transferred RHP X to the 60-day injured list."),
+    ]
+    result = compute_service_time(txns, seasons, horizon_end=dt.date(2018, 10, 1))
+    check(
+        "60-day IL transfer restarts a clock stopped by an option",
+        result.by_season[2018]["credited_days"] == 172,
+    )
+
+    # ...and the option itself must still stop it.
+    stopped = compute_service_time(
+        txns[:2], [seasons[0]], horizon_end=dt.date(2017, 10, 1)
+    )
+    check(
+        "an option still stops the clock",
+        stopped.by_season[2017]["credited_days"] < 172,
+    )
+
+    # A rehab assignment is not an IL placement and must not start anything.
+    check(
+        "rehab assignment does not start a stopped clock",
+        not __import__("service_time")._is_active_start(
+            "Houston Astros sent RHP X on a rehab assignment to Sugar Land."
+        ),
+    )
+
+
 def test_never_debuted_player_has_no_service_time():
     """A 40-man prospect with only minor league history accrues nothing."""
     txns = [
@@ -470,6 +514,7 @@ if __name__ == "__main__":
     test_impossible_total_is_detected()
     test_real_feed_wording_is_matched()
     test_major_league_signing_starts_the_clock_minor_league_does_not()
+    test_injured_list_placement_restarts_a_stopped_clock()
     test_never_debuted_player_has_no_service_time()
     test_2020_season_is_prorated_to_a_full_year()
     test_2020_partial_season_scales_proportionally()
