@@ -1,0 +1,75 @@
+name: Validate Service Time
+
+# Read-only. Measures accuracy; changes no data and commits nothing.
+#
+# Two independent checks, because they can fail in different ways:
+#
+#   rosters  -- compares computed intervals against MLB's own historical
+#               rosters. Broad (thousands of player-date judgements) and
+#               needs no hand-entered data, but it validates the pipeline
+#               against the same source it is built on, so a systematic
+#               misreading of MLB's semantics would pass.
+#
+#   reference -- compares finished figures against known Baseball Reference
+#               numbers in data/reference_service_time.json. Narrow (a
+#               handful of players, hand-entered) but genuinely independent,
+#               which is exactly what the roster check cannot be.
+#
+# Run both before a mass backfill.
+
+on:
+  workflow_dispatch:
+    inputs:
+      check:
+        description: "Which check to run"
+        type: choice
+        required: true
+        default: rosters
+        options:
+          - rosters
+          - reference
+      team:
+        description: "rosters: MLB team id (147 = Yankees)"
+        required: false
+        default: "147"
+      season:
+        description: "rosters: season year"
+        required: false
+        default: "2018"
+      interval:
+        description: "rosters: days between sampled dates"
+        required: false
+        default: "7"
+
+# Read-only, so deliberately outside the service-time-update concurrency
+# group -- safe to run while a backfill batch is going.
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run check
+        run: |
+          case "${{ github.event.inputs.check }}" in
+            reference)
+              python scripts/validate_service_time.py
+              ;;
+            *)
+              python scripts/validate_against_rosters.py \
+                --team "${{ github.event.inputs.team }}" \
+                --season "${{ github.event.inputs.season }}" \
+                --interval "${{ github.event.inputs.interval }}"
+              ;;
+          esac
