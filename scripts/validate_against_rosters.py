@@ -63,6 +63,24 @@ sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
 import fetch_mlb_data as mlb  # noqa: E402
 from service_time import Transaction, build_global_active_intervals  # noqa: E402
+from update_service_time import _involves_mlb_club, mlb_team_ids  # noqa: E402
+
+
+def flatten(t: dict) -> dict:
+    """
+    Raw API row -> the shape the pipeline's MLB-club filter expects.
+
+    The filter has to run here too. Without it the validator scores a
+    DIFFERENT model than the one that actually ships: the raw feed carries
+    minor league and exhibition rows phrased with the same verbs, so
+    affiliate "activated" rows open intervals the real pipeline discards,
+    and the measurement over-credits relative to production.
+    """
+    return {
+        "team_id": (t.get("team") or {}).get("id"),
+        "from_team_id": (t.get("fromTeam") or {}).get("id"),
+        "to_team_id": (t.get("toTeam") or {}).get("id"),
+    }
 
 # Truth comes from ROSTER MEMBERSHIP, not from interpreting status codes.
 # ============================================================================
@@ -189,6 +207,7 @@ def main() -> None:
             debuts[pid] = None
 
     # --- our model ---------------------------------------------------------
+    club_ids = mlb_team_ids()
     over = under = agree = 0
     per_player: dict[int, list[int]] = collections.defaultdict(lambda: [0, 0, 0])
 
@@ -202,7 +221,7 @@ def main() -> None:
         txns = [
             Transaction(date=dt.date.fromisoformat(t["date"]), description=t.get("description", ""))
             for t in raw
-            if t.get("date")
+            if t.get("date") and _involves_mlb_club(flatten(t), club_ids)
         ]
         intervals = build_global_active_intervals(txns, end, accrual_floor=floor)
 
