@@ -253,6 +253,13 @@ def build_player_record(
         "team_id": roster_entry.get("teamId"),
         "position": roster_entry.get("position"),
         "mlb_debut": debut,
+        # Persisted so a suspect number can be checked directly instead of
+        # reverse-engineered. Without it there is no way to tell from the
+        # published data where a retired player's clock was stopped, which is
+        # exactly the diagnosis that stalled on Lew Ford (see
+        # report_impossible_totals in backfill_history.py).
+        "last_played": last_played,
+        "accrual_ceiling": accrual_ceiling.isoformat() if accrual_ceiling else None,
         "service_time": result.formatted,
         "service_days_total": result.total_days,
         "free_agent_eligible": result.is_free_agent_eligible,

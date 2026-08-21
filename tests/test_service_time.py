@@ -278,6 +278,31 @@ def test_active_player_is_unaffected_by_free_agency_elections():
     )
 
 
+def test_impossible_total_is_detected():
+    """
+    A record cannot credit more service time than its own season window allows.
+
+    Transaction coverage starts in 2009, so nothing accrues before then, and
+    accrual stops at the ceiling. Lew Ford's backfilled record showed 1,085
+    days against a 2009-2013 window that caps at 5 * 172 = 860 -- proof that
+    his clock ran through the years he spent in independent ball, where the
+    move that ended his MLB tenure was never recognized as a stop.
+    """
+    sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "scripts"))
+    from backfill_history import max_creditable_days
+
+    ford = {"mlb_debut": "2003-05-29", "accrual_ceiling": "2013-10-01"}
+    check("coverage floor bounds the window, not the debut", max_creditable_days(ford) == 5 * 172)
+
+    ok = {"mlb_debut": "2004-04-05", "accrual_ceiling": "2018-10-01"}
+    check("a full 2009-2018 career caps at ten seasons", max_creditable_days(ok) == 10 * 172)
+
+    check(
+        "a still-accruing record has no bound to check",
+        max_creditable_days({"mlb_debut": "2020-01-01", "accrual_ceiling": None}) is None,
+    )
+
+
 def test_never_debuted_player_has_no_service_time():
     """A 40-man prospect with only minor league history accrues nothing."""
     txns = [
@@ -351,6 +376,7 @@ if __name__ == "__main__":
     test_retired_player_clock_stops_at_final_season()
     test_active_player_is_unaffected_by_free_agency_elections()
     test_horizon_stops_at_today_not_end_of_season()
+    test_impossible_total_is_detected()
     test_never_debuted_player_has_no_service_time()
     test_2020_season_is_prorated_to_a_full_year()
     test_2020_partial_season_scales_proportionally()

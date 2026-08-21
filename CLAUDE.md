@@ -42,7 +42,7 @@ scripts/update_service_time.py daily job: 40-man rosters -> compute -> merge -> 
 scripts/backfill_history.py    resumable backfill of non-rostered players (2009+)
 scripts/validate_service_time.py  --as-of validation against known Baseball Reference figures
 scripts/generate_demo_data.py  bundled sample data generator (no network)
-tests/test_service_time.py     24 tests, no pytest needed: `python tests/test_service_time.py`
+tests/test_service_time.py     32 tests, no pytest needed: `python tests/test_service_time.py`
 docs/                          the static site (index.html, styles.css, app.js)
 docs/data/service_time.json    the only data file the frontend reads
 data/cache/transactions/       per-player transaction cache (rostered players only)
@@ -145,7 +145,62 @@ keeps accruing while on the active roster or IL after his final appearance.
 The original bug was caught only by eyeballing the last five lines of a
 500-line log.
 
-### 5. The clock stops at today, not at season end
+**Verified live on 2026-08-21.** Re-running batch 1 with the fix:
+
+| | before | after |
+|---|---|---|
+| retired players ≥20.000 yrs | 3 | 0 |
+| retired players ≥15.000 yrs | 246 | 0 |
+| rostered players changed | — | 0 of 1,356 |
+
+Guzman 20.030 → 3.052, Mauer 17.137 → 9.159, Hoffman 17.142 → 1.164 (a
+partial-history floor — only his 2009-10 seasons are visible). The batch also
+ran in 14.6 min vs 31, because capping the season range cuts API calls.
+
+### 5. A minor league club "activating" a player is NOT proof he left the majors
+
+The tempting fix for finding #6 below is to stop treating non-MLB
+transactions as noise to discard and start treating them as evidence: if
+Durham activates you, you are not on an MLB active roster. Measured over the
+1,356 cached histories, this removes 55,749 days from 343 players (25% of
+them) — because **rehab assignments** look identical. A player on the MLB
+injured list sent to Triple-A on rehab is still accruing service time, and
+the affiliate still "activates" him. Vladimir Guerrero Jr. loses 3.84 years,
+Goldschmidt 3.84, Lindor 3.50, Bobby Witt Jr. 3.74. Don't do this either.
+
+(Exhibition entities — All-Star, Futures, Fall Stars, "X Prospects", college
+and high school workouts — are separately identifiable by name, 2,401 rows.
+They are not clubs at all and must never be read as roster assignments.)
+
+### 6. OPEN: the clock still bridges gaps spent outside MLB
+
+`accrual_ceiling` (finding #4) stops a retired player's clock at the end of
+his career. It does **not** close a gap in the *middle* of one. A player who
+leaves MLB for independent ball, Japan, or a long minor league stretch, and
+whose departure is phrased in a way no stop keyword matches, keeps accruing
+across the years he was gone.
+
+Lew Ford is the known case: credited 1,085 days (6.053) when his 2009-2013
+window caps at 5 × 172 = **860**. That is not a judgement call about his
+career — coverage begins in 2009 (measured again 2026-08-21: 3 of 64,643
+cached rows predate it), so days simply cannot exist before then.
+
+Both obvious fixes are measured and harmful — the free-agency stop keyword
+(finding #4) and the minor-league-activation stop (finding #5). No safe fix
+is known yet. What exists instead is detection:
+`report_impossible_totals()` in `backfill_history.py` enforces the invariant
+`credited_days <= 172 × (ceiling_year − max(debut_year, 2009) + 1)` and
+flags every violation. Unlike the ≥20-year heuristic this is an invariant,
+not a guess, so a hit is always a real defect.
+
+Records now carry `last_played` and `accrual_ceiling` so a suspect number can
+be checked directly. Diagnosing Ford stalled precisely because they weren't
+stored.
+
+**Prevalence is unknown** — it can only be measured by re-running a batch
+with the instrumented code and reading the warning block.
+
+### 7. The clock stops at today, not at season end
 
 `horizon_end` defaults to the last season's end date. Left alone, every
 currently-rostered player is credited for the remaining weeks of a season that
@@ -160,7 +215,11 @@ hasn't been played. The daily job passes `horizon_end=TODAY`.
   passed everything. The debut floor masked it. Fixed; cached entries written
   before the fix lack IDs and are treated as unjudgeable (kept). **A
   `--full-refresh` run is needed to fully realize the filter.** As of this
-  writing that has not been done.
+  writing that has not been done — **measured 2026-08-21: 0 of 64,643 cached
+  rows carry a team ID**, so the MLB-club filter is still a complete no-op for
+  every one of the 1,356 rostered players, and only the debut floor is
+  protecting them. The backfill is unaffected (it fetches fresh with
+  `use_cache=False`, so its rows do have IDs).
 - **Demo players persisted forever.** The merge logic never deletes players,
   so seven bundled sample records ("Sample City Marlins") survived into live
   data. `MIN_REAL_PLAYER_ID = 100000` filters them; real MLB person IDs are
@@ -174,31 +233,27 @@ hasn't been played. The daily job passes `horizon_end=TODAY`.
 ## Current state
 
 - Daily workflow works and has run unattended successfully.
-- ~1,363 players in the database (40-man rosters + previous players).
+- 1,856 players in the database (1,356 rostered + 500 backfilled).
 - 2020 proration, debut floor, demo purge, pagination, and
   `history_complete` flagging are all committed and live.
-- 22 tests passing.
+- 32 tests passing.
 
 ### Immediate next steps
 
-0. **URGENT — main is publishing bad data.** The first backfill batch ran
-   (commit `6fee343`) and added 500 retired players, 246 of whom have
-   impossible service times (see finding #4). That commit is live on the
-   site right now. It touches exactly two files — the data and
-   `backfill_state.json` — so `git revert 6fee343` cleans it up completely.
-   The state file must go too, or those 500 players stay in `processed_ids`,
-   get skipped on the re-run, and keep their wrong numbers forever.
-   Order of operations: revert → merge the accrual-ceiling fix → re-run the
-   backfill from batch 1.
+0. **Measure how common finding #6 is.** Re-run backfill batch 1 with the
+   instrumented code and read the `!! WARNING: N record(s) credit more
+   service time than their season window allows` block. That number is
+   currently unknown and decides whether #6 is a curiosity or a rewrite.
+   The 1,000 players already backfilled predate `last_played` /
+   `accrual_ceiling`, so they cannot be checked in place — they need
+   re-running (delete their ids from `processed_ids`, or revert the two
+   batch commits and start over; ~15 min per batch).
 
 1. **Run the historical backfill.** Actions → "Backfill Historical Players" →
    batch 500 → re-trigger until it reports zero remaining. ~4,000 players to
-   add, ~8 runs. The first batch was run on 2026-08-21 and surfaced the
-   retired-player bug in finding #4; the fix is in, but the fix itself has
-   **not yet been exercised against the live API** — check the first
-   corrected batch's log for the ≥20.000-year warning before turning the
-   remaining ~7 runs loose. Failures are cheap: state is committed per batch
-   and a retry resumes.
+   add, ~8 runs. Two batches are done (1,000 players). The accrual-ceiling fix
+   is verified live (finding #4); the open question is #6. Failures are cheap:
+   state is committed per batch and a retry resumes.
 2. **Then run the daily workflow once with `full_refresh` checked**, to
    rebuild the cache with team IDs and activate the MLB-club filter.
 3. **Validate.** `scripts/validate_service_time.py` now exists:
