@@ -62,7 +62,44 @@ not toy cases — several were written directly from live API output.
 
 These cost real debugging. Don't re-litigate them without new evidence.
 
-### 1. Transaction coverage begins in 2009
+### 1. Transaction coverage is SPARSE before 2009, not absent
+
+⚠️ **Corrected 2026-08-21.** The original claim below — that the feed returns
+nothing before 2009 — is wrong. `scripts/probe_coverage.py` run against the
+live API returned 10 major-league transactions from 2005-2008 across five
+players:
+
+```
+2005-01-13 | Pittsburgh Pirates purchased Jack Wilson.
+2006-08-11 | Minnesota Twins activated LF Lew Ford from the 15-day disabled list.
+2007-09-04 | Minnesota Twins activated LF Lew Ford.
+2008-05-27 | Pittsburgh Pirates activated SS Jack Wilson from the 15-day disabled list.
+```
+
+The volume is thin — Lew Ford has one row in 2006 and one in 2007 — so
+pre-2009 history is **partial**, not complete, and not absent either. The
+honest model is "sparse and thinning as you go back", not a hard cutoff.
+
+The original zeros were a sampling artifact: the six-players-per-season
+sample, and the 3-of-64,643 cache measurement, both drew on players who
+simply had no professional existence before 2009, so zero rows was the
+expected result either way and proved nothing.
+
+**What this invalidated** (all built on the hard-cutoff premise):
+- `report_impossible_totals()` — its bound assumes no pre-2009 accrual, so
+  its hits are false positives. Lew Ford's 1,085 days are real Minnesota
+  seasons, not a defect.
+- `history_complete: false` for every pre-2009 debut — too pessimistic. The
+  UI flags genuinely-good figures as "partial".
+- The "no data" display treatment for 0.000 records — same premise.
+- Finding #6's gap-bridging concern — probably never existed.
+
+Still true: a pre-2009 career reads **low**, because coverage thins rather
+than stops. `history_complete` wants to become a graded signal (how much of
+this player's career is actually visible?) rather than a boolean keyed to a
+year. Not yet done.
+
+### 1b. The original (superseded) measurement
 
 The `/transactions` endpoint returns nothing usable before 2009. Measured by
 sampling six players per season and counting transactions involving a major
@@ -75,9 +112,8 @@ league club:
 Jim Abbott was traded during 1995; his feed is empty. This is not a rate-limit
 or query-shape problem — the data does not exist.
 
-⚠️ **This finding is now in doubt — see finding #9.** The sample may have
-consisted of players who had no pre-2009 existence to report, which would
-make the zeros an artifact of the sample rather than of the feed.
+(Kept for the record. The zeros are real but mean "these players had no
+pre-2009 history", not "the feed has no pre-2009 history".)
 
 **Consequence:** a player who debuted before 2009 can never have his full
 history reconstructed and will always read low. Those records carry
@@ -178,13 +214,17 @@ Goldschmidt 3.84, Lindor 3.50, Bobby Witt Jr. 3.74. Don't do this either.
 and high school workouts — are separately identifiable by name, 2,401 rows.
 They are not clubs at all and must never be read as roster assignments.)
 
-### 6. OPEN: the clock still bridges gaps spent outside MLB
+### 6. LIKELY NOT REAL: the clock "bridging gaps" spent outside MLB
 
 `accrual_ceiling` (finding #4) stops a retired player's clock at the end of
 his career. It does **not** close a gap in the *middle* of one. A player who
 leaves MLB for independent ball, Japan, or a long minor league stretch, and
 whose departure is phrased in a way no stop keyword matches, keeps accruing
 across the years he was gone.
+
+⚠️ **Superseded 2026-08-21.** This whole finding rested on the hard-2009
+cutoff, which finding #1 disproves. The evidence for it evaporated; keep it
+only so the reasoning is not repeated from scratch.
 
 Lew Ford was the presumed case: credited 1,085 days (6.053) against a
 window that, assuming coverage starts in 2009, caps at 688. **On closer
@@ -344,44 +384,3 @@ hasn't been played. The daily job passes `horizon_end=TODAY`.
 - Verify with checksums after any file transfer. It has caught real corruption.
 - `.github` and other dot-directories are invisible in iPadOS Files and get
   silently skipped by folder uploads. This ate an afternoon once.
-
-### 9. OPEN: does the feed actually carry pre-2009 history?
-
-Finding #1 says coverage begins in 2009. Three independent observations from
-2026-08-21 suggest it is wrong, or at least overstated:
-
-- The cache holds transactions dated **2006-07-02** and **2008-06-24**
-  (minor league signings for Albert Suárez and Ildemaro Vargas) and
-  **2008-07-21** for Kyle Higashioka. The endpoint clearly can return
-  pre-2009 rows.
-- Only 3 of 64,643 cached rows predate 2009 — but that sample is biased.
-  Nearly every cached player is currently rostered, so debuted well after
-  2009 and had no professional transactions before then. Zero pre-2009 rows
-  is what you would expect either way, so it is not evidence.
-- The backfill arithmetic only works if pre-2009 seasons are being credited.
-  Lew Ford: 1,085 days against a 2009-2012 window capping at 688. Angel
-  Guzman: 568 days, which is exactly 172 × 3 + 52 — four seasons beginning
-  in 2006, his debut year. And Ford's 1,085 days (6.31 years) lands close to
-  his real career service time, which requires his 2003-2007 Minnesota
-  seasons to be counted.
-
-**Why it matters.** If the feed does cover pre-2009:
-- `report_impossible_totals()` is wrong and its hits are false positives.
-- `history_complete: false` is too pessimistic for many players, and the UI
-  is flagging good figures as "partial".
-- The "no data" treatment of 0.000 records may be mislabelling some players.
-- Finding #6 (gap bridging) may be much smaller than feared, or not real.
-
-**How to settle it in one query** — needs live API access, which the sandbox
-does not have (statsapi.mlb.com is blocked by egress policy):
-
-**Actions → "Probe Transaction Coverage" → Run workflow.** That runs
-`scripts/probe_coverage.py`, which queries the flagged players year by year
-and prints a verdict. It exists as a workflow because the sandbox cannot
-reach statsapi.mlb.com — the egress proxy 403s that host — while Actions
-runners can. The job only reads, commits nothing, and is deliberately
-outside the update concurrency group, so it is safe to run at any time.
-
-The distinction that matters is **major-league** rows, not any rows: a 2006
-minor league signing does not show that a player's MLB roster history is
-visible. The probe counts them separately.
