@@ -233,6 +233,8 @@ def build_player_record(
     # on the active roster or the IL through the end of the year.
     accrual_ceiling = seasons[-1].end if (career_end is not None and seasons) else None
 
+    missing = _missing_seasons(debut_date, transactions)
+
     result = compute_service_time(
         transactions,
         seasons,
@@ -266,27 +268,47 @@ def build_player_record(
         "arbitration_eligible": result.is_arbitration_eligible,
         "super_two_candidate": result.is_super_two_candidate,
         "on_40_man": True,
-        "history_complete": _history_is_complete(debut_date, accrual_floor),
+        # Kept as a boolean for the frontend, but now derived per player from
+        # what the feed actually shows rather than from a cutoff year.
+        "history_complete": missing == 0,
+        "missing_seasons": missing,
+        "first_transaction": (
+            min(t.date for t in transactions).isoformat() if transactions else None
+        ),
         "last_updated": TODAY.isoformat(),
     }
 
 
-def _history_is_complete(
-    debut_date: dt.date | None, accrual_floor: dt.date | None
-) -> bool:
+def _missing_seasons(
+    debut_date: dt.date | None, transactions: list[Transaction]
+) -> int:
     """
-    False when the player's career began before the transaction feed did.
+    How many of this player's seasons are invisible to the transaction feed.
 
-    Such a player's early seasons are invisible to the API, so his computed
-    service time is a floor, not an estimate -- Justin Verlander (debut 2005)
-    or Clayton Kershaw (2008) will read years low no matter how carefully we
-    pull. Flagging it lets the site say so instead of quietly publishing a
-    number it knows is wrong.
+    Measured per player rather than assumed from a cutoff year. The old
+    version returned `debut.year >= 2009`, on the premise that the feed
+    carries nothing before 2009. `scripts/probe_coverage.py` disproved that
+    (finding #1): pre-2009 rows exist, they are just sparse -- "Minnesota
+    Twins activated LF Lew Ford from the 15-day disabled list", 2006-08-11.
+    So a fixed year flags plenty of perfectly good figures as "partial" and
+    tells you nothing about how much is actually missing.
+
+    What matters is whether we can see the *front* of a player's career. If
+    his earliest major-league transaction lands in his debut season, we have
+    him from the beginning and his total is a real estimate. If it lands
+    years later, everything before that is unrecoverable and his total is a
+    floor -- and now we can say by how much.
+
+    Returns 0 when nothing is missing (including for a player who never
+    reached the majors, where there is nothing to miss).
     """
-    reference = debut_date or accrual_floor
-    if reference is None:
-        return True  # no major league career at all; nothing is missing
-    return reference.year >= TRANSACTION_COVERAGE_START_YEAR
+    if debut_date is None:
+        return 0
+    if not transactions:
+        # He debuted, but we can see none of it.
+        return max(0, TODAY.year - debut_date.year + 1)
+    first_seen = min(t.date for t in transactions)
+    return max(0, first_seen.year - debut_date.year)
 
 
 # Real MLB person IDs are six digits; the bundled demo dataset uses 1001-1007.
