@@ -41,6 +41,7 @@ scripts/service_time.py        the service-time math + all domain rules
 scripts/update_service_time.py daily job: 40-man rosters -> compute -> merge -> JSON
 scripts/backfill_history.py    resumable backfill of non-rostered players (2009+)
 scripts/validate_service_time.py  --as-of validation against known Baseball Reference figures
+scripts/probe_coverage.py      live API probe for finding #9 (run via Actions)
 scripts/generate_demo_data.py  bundled sample data generator (no network)
 tests/test_service_time.py     45 tests, no pytest needed: `python tests/test_service_time.py`
 docs/                          the static site (index.html, styles.css, app.js)
@@ -49,6 +50,7 @@ data/cache/transactions/       per-player transaction cache (rostered players on
 data/backfill_state.json       resumable backfill progress
 .github/workflows/update-service-time.yml   daily 8am ET
 .github/workflows/backfill-history.yml      manual, batched
+.github/workflows/probe-coverage.yml        manual, read-only diagnostic
 ```
 
 **Run the tests after touching `service_time.py`.** They encode real findings,
@@ -373,11 +375,13 @@ Finding #1 says coverage begins in 2009. Three independent observations from
 **How to settle it in one query** — needs live API access, which the sandbox
 does not have (statsapi.mlb.com is blocked by egress policy):
 
-```
-curl "https://statsapi.mlb.com/api/v1/transactions?playerId=434671\
-&startDate=2005-01-01&endDate=2008-12-31"
-```
+**Actions → "Probe Transaction Coverage" → Run workflow.** That runs
+`scripts/probe_coverage.py`, which queries the flagged players year by year
+and prints a verdict. It exists as a workflow because the sandbox cannot
+reach statsapi.mlb.com — the egress proxy 403s that host — while Actions
+runners can. The job only reads, commits nothing, and is deliberately
+outside the update concurrency group, so it is safe to run at any time.
 
-434671 is Angel Guzman (debut 2006). If major-league rows come back for
-2006-2008, finding #1 is wrong and several things above need revisiting.
-Try a couple of pre-2009 debuts before concluding either way.
+The distinction that matters is **major-league** rows, not any rows: a 2006
+minor league signing does not show that a player's MLB roster history is
+visible. The probe counts them separately.
