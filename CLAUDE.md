@@ -389,11 +389,35 @@ entirely — he had re-signed with the Yankees as a free agent, so the same
 fix caught him. Minor league deals stay excluded by the explicit
 "...to a minor league contract" wording (828 cached rows vs 534 major).
 
-**Still short of the gate** (93.7% vs ≥95%, 2.6% vs ≤2% over). What is left
-is again concentrated in a handful of players, so it is diagnosable rather
-than diffuse:
-- under: David Huff (16), Shawn Kelley (12) — 28 of 43
-- over: José Ramírez (13), Austin Romine (11) — 24 of 31
+**Fix 2 (shipped): the validator must apply the MLB-club filter.** It was
+building intervals straight from the raw feed, so it scored a *different
+model than production* — affiliate "activated" rows opened intervals the
+real pipeline discards. 2014 again, before → after:
+
+| | before | after |
+|---|---|---|
+| agree | 93.7% | **96.2%** |
+| over-credit | 2.6% | **0.2%** |
+| under-credit | 3.7% | 3.7% |
+
+29 of the 31 over-credits were the validator's own artefact. José Ramírez
+and Austin Romine disappeared entirely — they were never pipeline defects.
+
+**2014 now passes the gate.** Over-crediting, the failure mode behind every
+earlier revert, is down to 0.2%.
+
+The lesson generalises: a measurement that does not run the same code as
+production measures the wrong thing, and tuning against it would have meant
+"fixing" two players who were never broken.
+
+What remains is under-crediting, still concentrated: David Huff (16),
+Shawn Kelley (12), Dean Anna (5), Slade Heathcott (4) — 37 of 43. And in
+2018, Ben Heller (27), on the 60-day IL all season where the roster says
+accruing and the model credits nothing. That IL case is the strongest
+remaining candidate: a player on a major league injured list is accruing by
+definition, but an IL placement currently only avoids stopping the clock —
+it never starts one, so a player optioned and then moved to the 60-day IL
+stays stopped.
 
 **Fix 2 (not yet attempted): carry-in.** If the first transaction seen for a
 player is a STOP, he must have been active before it, so the interval should
