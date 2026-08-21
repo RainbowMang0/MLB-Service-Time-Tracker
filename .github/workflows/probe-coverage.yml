@@ -1,0 +1,44 @@
+name: Probe Transaction Coverage
+
+# Diagnostic only -- reads from the API, writes nothing, commits nothing.
+#
+# Settles finding #9 in CLAUDE.md: does /transactions carry pre-2009 history?
+# This has to run here because the development sandbox cannot reach
+# statsapi.mlb.com (the egress proxy 403s that host), while Actions runners
+# can. Run it, then read the log; the last lines print a verdict.
+
+on:
+  workflow_dispatch:
+    inputs:
+      players:
+        description: "Space-separated player names in quotes, or blank for the flagged set"
+        required: false
+        default: ""
+
+# Deliberately NOT in the service-time-update concurrency group: this job
+# only reads, so it cannot clobber the data file and is safe to run at any
+# time, including while a backfill batch is going.
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Probe
+        run: |
+          if [ -n "${{ github.event.inputs.players }}" ]; then
+            python scripts/probe_coverage.py ${{ github.event.inputs.players }}
+          else
+            python scripts/probe_coverage.py
+          fi
