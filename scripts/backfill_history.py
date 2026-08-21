@@ -271,11 +271,25 @@ def max_creditable_days(player: dict) -> int | None:
     """
     The most service time this player's record could legitimately show.
 
-    No transaction exists before TRANSACTION_COVERAGE_START_YEAR (measured: 3
-    rows out of 64,643 in the cache predate it), so no service can be credited
-    before then either. Accrual also stops at `accrual_ceiling`. That bounds
-    the total at 172 days per season in between -- a bound the arithmetic
-    cannot legitimately exceed, whatever the transaction feed says.
+    CAUTION -- this bound is only as good as TRANSACTION_COVERAGE_START_YEAR,
+    and that premise is in doubt. It assumes nothing accrues before 2009
+    because nothing is reported before 2009. The cache appears to agree (3
+    rows out of 64,643 predate it) but that sample is biased: almost every
+    cached player is currently rostered and so debuted well after 2009, and
+    had no professional transactions at all before then.
+
+    Against the backfill the bound produces what look like false positives.
+    Lew Ford is credited 1,085 days against a 2009-2012 window that this
+    caps at 688 -- but 1,085 days is 6.31 years, close to his real career
+    total, which is only reachable by crediting his 2003-2007 Minnesota
+    seasons. Angel Guzman's 568 days is exactly 172*3 + 52, i.e. four
+    seasons starting in 2006. Both suggest the feed does carry pre-2009
+    history for players who were active then, and that the bound is wrong
+    rather than the records.
+
+    Resolving it needs one live query: fetch a pre-2009 player's
+    /transactions and see whether major-league rows come back for those
+    years. Until then treat a hit here as "worth a look", not as proof.
 
     Returns None when the record predates this field or is still accruing.
     """

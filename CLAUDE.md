@@ -73,6 +73,10 @@ league club:
 Jim Abbott was traded during 1995; his feed is empty. This is not a rate-limit
 or query-shape problem — the data does not exist.
 
+⚠️ **This finding is now in doubt — see finding #9.** The sample may have
+consisted of players who had no pre-2009 existence to report, which would
+make the zeros an artifact of the sample rather than of the feed.
+
 **Consequence:** a player who debuted before 2009 can never have his full
 history reconstructed and will always read low. Those records carry
 `history_complete: false` and the UI flags them "partial". `Justin Verlander`
@@ -180,18 +184,22 @@ leaves MLB for independent ball, Japan, or a long minor league stretch, and
 whose departure is phrased in a way no stop keyword matches, keeps accruing
 across the years he was gone.
 
-Lew Ford is the known case: credited 1,085 days (6.053) when his 2009-2013
-window caps at 5 × 172 = **860**. That is not a judgement call about his
-career — coverage begins in 2009 (measured again 2026-08-21: 3 of 64,643
-cached rows predate it), so days simply cannot exist before then.
+Lew Ford was the presumed case: credited 1,085 days (6.053) against a
+window that, assuming coverage starts in 2009, caps at 688. **On closer
+inspection he is probably correct** — 1,085 days is 6.31 years, close to
+his real career total, reachable only by crediting his 2003-2007 Minnesota
+seasons. See finding #9. The gap-bridging concern below may therefore be
+smaller than it first appeared, or may not be real at all.
 
 Both obvious fixes are measured and harmful — the free-agency stop keyword
 (finding #4) and the minor-league-activation stop (finding #5). No safe fix
 is known yet. What exists instead is detection:
-`report_impossible_totals()` in `backfill_history.py` enforces the invariant
-`credited_days <= 172 × (ceiling_year − max(debut_year, 2009) + 1)` and
-flags every violation. Unlike the ≥20-year heuristic this is an invariant,
-not a guess, so a hit is always a real defect.
+`report_impossible_totals()` in `backfill_history.py` checks
+`credited_days <= 172 × (ceiling_year − max(debut_year, 2009) + 1)`.
+
+**That check is currently unreliable — see finding #9.** It assumes no
+pre-2009 accrual, and its hits on the backfill look like false positives.
+Treat a hit as "worth a look", not as proof.
 
 Records now carry `last_played` and `accrual_ceiling` so a suspect number can
 be checked directly. Diagnosing Ford stalled precisely because they weren't
@@ -334,3 +342,42 @@ hasn't been played. The daily job passes `horizon_end=TODAY`.
 - Verify with checksums after any file transfer. It has caught real corruption.
 - `.github` and other dot-directories are invisible in iPadOS Files and get
   silently skipped by folder uploads. This ate an afternoon once.
+
+### 9. OPEN: does the feed actually carry pre-2009 history?
+
+Finding #1 says coverage begins in 2009. Three independent observations from
+2026-08-21 suggest it is wrong, or at least overstated:
+
+- The cache holds transactions dated **2006-07-02** and **2008-06-24**
+  (minor league signings for Albert Suárez and Ildemaro Vargas) and
+  **2008-07-21** for Kyle Higashioka. The endpoint clearly can return
+  pre-2009 rows.
+- Only 3 of 64,643 cached rows predate 2009 — but that sample is biased.
+  Nearly every cached player is currently rostered, so debuted well after
+  2009 and had no professional transactions before then. Zero pre-2009 rows
+  is what you would expect either way, so it is not evidence.
+- The backfill arithmetic only works if pre-2009 seasons are being credited.
+  Lew Ford: 1,085 days against a 2009-2012 window capping at 688. Angel
+  Guzman: 568 days, which is exactly 172 × 3 + 52 — four seasons beginning
+  in 2006, his debut year. And Ford's 1,085 days (6.31 years) lands close to
+  his real career service time, which requires his 2003-2007 Minnesota
+  seasons to be counted.
+
+**Why it matters.** If the feed does cover pre-2009:
+- `report_impossible_totals()` is wrong and its hits are false positives.
+- `history_complete: false` is too pessimistic for many players, and the UI
+  is flagging good figures as "partial".
+- The "no data" treatment of 0.000 records may be mislabelling some players.
+- Finding #6 (gap bridging) may be much smaller than feared, or not real.
+
+**How to settle it in one query** — needs live API access, which the sandbox
+does not have (statsapi.mlb.com is blocked by egress policy):
+
+```
+curl "https://statsapi.mlb.com/api/v1/transactions?playerId=434671\
+&startDate=2005-01-01&endDate=2008-12-31"
+```
+
+434671 is Angel Guzman (debut 2006). If major-league rows come back for
+2006-2008, finding #1 is wrong and several things above need revisiting.
+Try a couple of pre-2009 debuts before concluding either way.
