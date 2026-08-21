@@ -319,6 +319,76 @@ hasn't been played. The daily job passes `horizon_end=TODAY`.
   `history_complete` flagging are all committed and live.
 - 45 tests passing.
 
+## Validation — the process, and the current number
+
+Every bug in this project was found by a human noticing a number looked
+silly. That works at 20 players and fails at 4,000. As of 2026-08-21 there
+is a real gate.
+
+### Ground truth exists
+
+`/teams/{id}/roster?rosterType=40Man&date=YYYY-MM-DD` **honours the date**
+and returns the roster as it stood, with a per-player status. Verified: the
+2012-06-15 Yankees come back as Alex Rodriguez, Andruw Jones and Andy
+Pettitte, with zero overlap against today's roster. Service time is days on
+an active roster or major league IL, so the thing this project estimates is
+directly observable one date at a time.
+
+Rebuilding careers this way is far too expensive (30 clubs × ~186 days × N
+seasons). Sampling is cheap: one club-season at a 7-day interval is ~27
+calls and yields ~1,100 player-date judgements.
+
+### The number (2026-08-21, Yankees 2018, weekly)
+
+| | |
+|---|---|
+| agree | 95.3% |
+| model OVER-credits | 1.3% |
+| model UNDER-credits | 3.4% |
+
+Over-crediting — the failure mode that produced every embarrassment so far —
+is small. Of the 38 under-credits, **27 are one player**, Ben Heller, on the
+60-day IL through 2018: the roster says accruing, the model credits nothing.
+Excluding him, under-crediting is ~1%.
+
+Run it: Actions → "Validate Service Time" → rosters.
+
+### Never hardcode what the data can tell you
+
+The first version of the roster validator hardcoded status codes and got
+`RM` wrong — guessed "restricted list, accruing"; it is what an **optioned**
+player gets, and there is no `OPT` code in the feed at all. A fifth of the
+sample was inverted and it reported 23.3% under-crediting that did not
+exist. Agreement went 76.7% → 95.3% once fixed.
+
+That is the same failure as DFA-as-a-stop, free-agency-as-a-stop, and the
+2009 cutoff: **a plausible belief about MLB's vocabulary, encoded, wrong.**
+
+So codes are now calibrated per run from evidence. The lever needs no
+external data: *a player cannot earn major league service time before his
+major league debut*, so any code seen before a player's `mlbDebutDate`
+cannot mean accruing. Only `A` and the injured-list shape (`D7`/`D10`/`D15`/
+`D60`) are assumed a priori. Anything unclassified is excluded from the
+comparison and its share is reported, so a partial mapping cannot quietly
+skew the result.
+
+Apply the same instinct to any new rule: prefer a check the data can settle
+over a belief about what MLB means.
+
+### Gate before a mass backfill
+
+1. **Roster accuracy** — agreement ≥95% and over-crediting ≤2%, on at least
+   two different club-seasons (one recent, one pre-2019 for disabled-list
+   era wording).
+2. **Baseball Reference spot-check** — `data/reference_service_time.json`
+   still ships empty. Actions → "Validate Service Time" → reference. This is
+   the only *independent* check: the roster comparison validates the
+   pipeline against the same source it is built on, so a systematic
+   misreading of MLB's semantics passes it. Needs figures entered by hand.
+3. **Tests green** — `python tests/test_service_time.py`.
+
+---
+
 ### Immediate next steps
 
 0. **Measure how common finding #6 is.** Re-run backfill batch 1 with the
