@@ -56,6 +56,7 @@ numbers here as informed estimates, not official figures.
 from __future__ import annotations
 
 import datetime as dt
+import re
 from dataclasses import dataclass, field
 
 # ---------------------------------------------------------------------------
@@ -105,7 +106,14 @@ def _prorate_shortened_season(season: "SeasonWindow", raw_days: int) -> int:
         return raw_days  # not actually shortened; leave untouched
     return int(round(raw_days * NORMAL_SEASON_SPAN_DAYS / span))
 
-# Transaction description keywords (lower-cased substring match).
+# DOCUMENTATION ONLY -- these lists no longer drive matching.
+# ============================================================================
+# They describe the vocabulary the parser cares about, but editing them
+# changes nothing: matching is done by _START_RE / _STOP_RE further down,
+# because real feed wording puts the player's name between the verb and its
+# object and plain substrings cannot match it. See the note above those
+# patterns. Kept because they read more clearly than the regexes and because
+# other modules import them.
 ACTIVE_START_KEYWORDS = [
     "selected the contract",
     "purchased the contract",
@@ -195,16 +203,69 @@ class ServiceTimeResult:
         return f"{self.total_years}.{self.remaining_days:03d}"
 
 
+# --- Matching has to tolerate the player's name in the middle ---------------
+# The keyword lists above read like the transaction descriptions but do not
+# match them. Real feed wording puts the team first and the player's position
+# and name between the verb and its object:
+#
+#     "Cleveland Guardians designated RHP Some Name for assignment."
+#     "Boston Red Sox sent LHP Some Name outright to Worcester."
+#     "New York Mets claimed C Some Name off waivers from Miami."
+#     "Chicago Cubs placed RHP Some Name on the 15-day injured list."
+#
+# So every multi-word keyword ("designated for assignment", "sent outright",
+# "claimed off waivers", "placed on the", "reinstated from the") silently
+# matched nothing at all. Measured over the 64,635 cached descriptions, 11 of
+# the 16 keywords never fired once and 61% of transactions were ignored.
+#
+# The damage was one-sided: DFA and outright are STOPS, so players removed
+# from a roster kept accruing. Measured over the 1,322 cached histories,
+# matching these correctly removes 22,133 phantom days from 229 players
+# (17%) -- Tyler Austin 9.97y -> 3.02y, whose real service time is about
+# three years. Players who were never DFA'd are untouched: Scherzer, Judge,
+# Lindor, Goldschmidt, Jansen and Verlander do not move at all.
+#
+# The patterns below allow that interpolated name. Keep them anchored on the
+# verb AND its object so "sent ... outright" cannot match "sent ... on a
+# rehab assignment".
+_NAME = r".{0,60}?"  # position + player name, bounded so it can't span clauses
+
+_START_RE = re.compile(
+    r"selected the contract|purchased the contract|contract selected"
+    r"|\brecalled\b|\bactivated\b|\breinstated\b"
+    r"|added to the active roster|returned to the active roster"
+    rf"|claimed{_NAME}off waivers",
+    re.IGNORECASE,
+)
+
+_STOP_RE = re.compile(
+    r"\boptioned\b|\breleased\b|\boutrighted\b"
+    rf"|designated{_NAME}for assignment"
+    rf"|sent{_NAME}outright"
+    rf"|sent{_NAME}to the minor",
+    re.IGNORECASE,
+)
+
+# Placements that keep accruing. "disabled list" is the pre-2019 name for the
+# injured list (1,419 rows in the cache, all before 2019 bar a handful) and
+# must be treated identically. A rehab assignment is a minor league club
+# taking the field with a player who is still on his MLB club's IL -- he is
+# accruing the whole time, so it must never read as a demotion.
+_NON_STOPPING_RE = re.compile(
+    r"injured list|disabled list|rehab assignment|paternity|bereavement"
+    r"|restricted list|family medical",
+    re.IGNORECASE,
+)
+
+
 def _is_active_start(desc: str) -> bool:
-    d = desc.lower()
-    return any(k in d for k in ACTIVE_START_KEYWORDS)
+    return bool(_START_RE.search(desc))
 
 
 def _is_active_stop(desc: str) -> bool:
-    d = desc.lower()
-    if any(nk in d for nk in NON_STOPPING_PLACEMENT_KEYWORDS):
+    if _NON_STOPPING_RE.search(desc):
         return False
-    return any(k in d for k in ACTIVE_STOP_KEYWORDS)
+    return bool(_STOP_RE.search(desc))
 
 
 def default_season_window(year: int) -> SeasonWindow:

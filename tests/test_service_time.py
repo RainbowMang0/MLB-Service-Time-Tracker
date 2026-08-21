@@ -303,6 +303,56 @@ def test_impossible_total_is_detected():
     )
 
 
+def test_real_feed_wording_is_matched():
+    """
+    The feed puts the player's position and name between a verb and its
+    object, so plain substring keywords never matched. Measured over the
+    64,635 cached descriptions, 11 of 16 keywords never fired once and 61%
+    of transactions were ignored -- including DFA and outright, which are
+    STOPS, so players removed from a roster kept accruing.
+
+    Every string here is a real template taken from the cached feed.
+    """
+    from service_time import _is_active_start, _is_active_stop
+
+    stops = [
+        "Cleveland Guardians designated RHP Some Name for assignment.",
+        "Boston Red Sox sent LHP Some Name outright to Worcester Red Sox.",
+        "Chicago Cubs optioned RHP Some Name to Iowa Cubs.",
+        "Miami Marlins released C Some Name.",
+    ]
+    for d in stops:
+        check(f"stop: {d[:38]}...", _is_active_stop(d))
+
+    starts = [
+        "New York Mets recalled RHP Some Name from Syracuse Mets.",
+        "Texas Rangers selected the contract of LHP Some Name.",
+        "Seattle Mariners claimed C Some Name off waivers from Miami Marlins.",
+        "Atlanta Braves activated RHP Some Name from the 15-day injured list.",
+    ]
+    for d in starts:
+        check(f"start: {d[:38]}...", _is_active_start(d))
+
+    # Placements and rehab stints keep accruing: a player on the IL is still
+    # earning service time, and a rehab assignment means his MLB club still
+    # holds him -- the affiliate fielding him is not a demotion.
+    accruing = [
+        "Chicago Cubs placed RHP Some Name on the 15-day injured list.",
+        "Detroit Tigers placed LHP Some Name on the 15-day disabled list.",
+        "Houston Astros sent RHP Some Name on a rehab assignment to Sugar Land.",
+        "Chicago White Sox placed C Some Name on the paternity list.",
+    ]
+    for d in accruing:
+        check(f"not a stop: {d[:34]}...", not _is_active_stop(d))
+
+    # "sent ... outright" must not be confused with "sent ... on a rehab
+    # assignment"; both start with the same verb.
+    check(
+        "rehab assignment is not read as an outright",
+        not _is_active_stop("Houston Astros sent RHP Some Name on a rehab assignment to Sugar Land."),
+    )
+
+
 def test_never_debuted_player_has_no_service_time():
     """A 40-man prospect with only minor league history accrues nothing."""
     txns = [
@@ -377,6 +427,7 @@ if __name__ == "__main__":
     test_active_player_is_unaffected_by_free_agency_elections()
     test_horizon_stops_at_today_not_end_of_season()
     test_impossible_total_is_detected()
+    test_real_feed_wording_is_matched()
     test_never_debuted_player_has_no_service_time()
     test_2020_season_is_prorated_to_a_full_year()
     test_2020_partial_season_scales_proportionally()

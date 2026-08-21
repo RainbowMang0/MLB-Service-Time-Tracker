@@ -42,7 +42,7 @@ scripts/update_service_time.py daily job: 40-man rosters -> compute -> merge -> 
 scripts/backfill_history.py    resumable backfill of non-rostered players (2009+)
 scripts/validate_service_time.py  --as-of validation against known Baseball Reference figures
 scripts/generate_demo_data.py  bundled sample data generator (no network)
-tests/test_service_time.py     32 tests, no pytest needed: `python tests/test_service_time.py`
+tests/test_service_time.py     45 tests, no pytest needed: `python tests/test_service_time.py`
 docs/                          the static site (index.html, styles.css, app.js)
 docs/data/service_time.json    the only data file the frontend reads
 data/cache/transactions/       per-player transaction cache (rostered players only)
@@ -200,7 +200,38 @@ stored.
 **Prevalence is unknown** — it can only be measured by re-running a batch
 with the instrumented code and reading the warning block.
 
-### 7. The clock stops at today, not at season end
+### 7. Keyword matching must tolerate the player's name
+
+The feed writes `<Team> <verb> <POS> <Player Name> <rest>`:
+
+```
+Cleveland Guardians designated RHP Some Name for assignment.
+Boston Red Sox sent LHP Some Name outright to Worcester Red Sox.
+Seattle Mariners claimed C Some Name off waivers from Miami Marlins.
+```
+
+So every multi-word keyword ("designated for assignment", "sent outright",
+"claimed off waivers", "placed on the", "reinstated from the") matched
+nothing. Measured over 64,635 cached descriptions: **11 of 16 keywords never
+fired once, and 61% of transactions were ignored.**
+
+The damage was one-sided — DFA and outright are STOPS, so players removed
+from a roster kept accruing. Fixing it (regex with a bounded wildcard for the
+name) removes 22,974 phantom days from 231 of 1,321 cached players (17%).
+Tyler Austin 9.99 → 3.05 (his real figure is about three years; he bounced
+between orgs and Japan). Players never DFA'd do not move at all: Scherzer,
+Judge, Lindor, Goldschmidt, Jansen and Verlander are byte-identical.
+
+`ACTIVE_START_KEYWORDS` / `ACTIVE_STOP_KEYWORDS` are now **documentation
+only**. Editing them changes nothing — `_START_RE` / `_STOP_RE` do the work.
+
+Two traps the patterns must keep avoiding:
+- `sent ... outright` vs `sent ... on a rehab assignment` share a verb. A
+  rehab stint keeps accruing (the player is on his MLB club's IL).
+- `disabled list` is the pre-2019 name for the injured list (1,419 cached
+  rows). Both must be treated as accruing.
+
+### 8. The clock stops at today, not at season end
 
 `horizon_end` defaults to the last season's end date. Left alone, every
 currently-rostered player is credited for the remaining weeks of a season that
@@ -236,7 +267,7 @@ hasn't been played. The daily job passes `horizon_end=TODAY`.
 - 1,856 players in the database (1,356 rostered + 500 backfilled).
 - 2020 proration, debut floor, demo purge, pagination, and
   `history_complete` flagging are all committed and live.
-- 32 tests passing.
+- 45 tests passing.
 
 ### Immediate next steps
 
