@@ -121,11 +121,29 @@ def main() -> None:
     args = parser.parse_args()
 
     cases = load_reference(args.reference)
+    # Skip the README block and any row whose figure has not been entered yet,
+    # so the file can be filled in a few players at a time.
+    pending = [c for c in cases if "player_id" in c and not c.get("expected")]
+    cases = [c for c in cases if "player_id" in c and c.get("expected")]
+
     if not cases:
-        print(f"{args.reference} is empty -- nothing to validate.")
+        print(
+            f"No figures entered yet in {args.reference} "
+            f"({len(pending)} row(s) awaiting one).\n\n"
+            "Open each player's Baseball Reference page, read the service-time\n"
+            "figure for the row's `as_of` season (shown as s.YYYY), and paste it\n"
+            "into `expected` as e.g. \"7.045\". Rows left null are skipped, so\n"
+            "filling in even three or four makes this check meaningful.\n\n"
+            "This is the only check that is independent of MLB's own data --\n"
+            "the roster comparison validates the pipeline against the same\n"
+            "source it is built on."
+        )
         return
 
-    print(f"Validating {len(cases)} case(s) from {args.reference} (tolerance: {args.tolerance_days}d)...\n")
+    print(f"Validating {len(cases)} case(s) from {args.reference} (tolerance: {args.tolerance_days}d).")
+    if pending:
+        print(f"({len(pending)} row(s) still awaiting a figure -- skipped.)")
+    print()
 
     passed = 0
     failed = 0
