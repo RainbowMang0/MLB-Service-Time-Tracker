@@ -132,6 +132,25 @@ ACTIVE_STOP_KEYWORDS = [
     "transferred to the 60-day",  # still technically counts, handled specially
 ]
 
+# --- Why "elected free agency" is NOT a stop keyword ------------------------
+# It is by far the most common way a player's roster tenure ends: 799 rows
+# across the 1,356 cached transaction histories, phrased "RHP Some Name
+# elected free agency." Adding it here looks obviously correct and is
+# actively harmful, because there is no matching START keyword for the
+# re-signing that usually follows -- the feed says "Team signed free agent
+# RHP Some Name", and "signed" cannot be a start keyword since minor league
+# deals ("...to a minor league contract", 350+ rows) use the same verb.
+#
+# Measured over those 1,356 cached players: treating it as a stop drops 272
+# currently-rostered players' totals, because their clock stops at the first
+# free agency election and never restarts. Max Scherzer loses 628 days (3.6
+# years), Kenley Jansen 473, Nick Martinez 1,249. Every one of those is wrong.
+#
+# The retired-player problem this appears to solve (a career-ending election
+# leaving an interval open forever) is handled instead by `accrual_ceiling`,
+# which targets only players who are actually done playing. See
+# build_global_active_intervals().
+
 # Some "placed on the ... list" transactions still accrue service time
 # (paternity, bereavement, restricted, and the 10/15/60-day injured list all
 # count). Only a genuine optional assignment/outright/DFA/release should stop
@@ -205,6 +224,7 @@ def build_global_active_intervals(
     transactions: list[Transaction],
     horizon_end: dt.date,
     accrual_floor: dt.date | None = None,
+    accrual_ceiling: dt.date | None = None,
 ) -> list[tuple[dt.date, dt.date]]:
     """
     Walk a player's ENTIRE chronological transaction history (not bounded to
@@ -232,8 +252,31 @@ def build_global_active_intervals(
     floor, those start the clock years early and the player is credited with
     service time he never earned. Intervals are clipped to begin no earlier
     than the floor, and intervals entirely before it are dropped.
+
+    Transactions dated after `horizon_end` are ignored entirely, not just
+    excluded from the trailing open interval. This matters for computing
+    service time "as of" a past date (e.g. a prior Opening Day) from a
+    transaction list that also contains later history: without it, a stop
+    transaction (option, DFA, release) dated after `horizon_end` would still
+    truncate an interval that, as of `horizon_end`, hadn't ended yet.
+
+    `accrual_ceiling` is the mirror image of `accrual_floor`: the latest date
+    at which this player could still have been accruing, in practice the end
+    of the last season he appeared in. It exists because a career does not
+    always end with a transaction this parser recognizes -- a player's final
+    roster move is very often "elected free agency", which is deliberately
+    NOT a stop keyword (see ACTIVE_STOP_KEYWORDS), so the interval it leaves
+    open would otherwise run all the way to `horizon_end` and credit a
+    retired player for every season since. Lowering the horizon to the
+    ceiling closes that interval at the right place and drops the later
+    transactions along with it.
     """
-    txns = sorted(transactions, key=lambda t: t.date)
+    if accrual_ceiling is not None:
+        horizon_end = min(horizon_end, accrual_ceiling)
+
+    txns = sorted(
+        (t for t in transactions if t.date <= horizon_end), key=lambda t: t.date
+    )
 
     intervals: list[tuple[dt.date, dt.date]] = []
     active_since: dt.date | None = None
@@ -285,6 +328,7 @@ def compute_service_time(
     carry_in_active_first_season: bool = False,  # deprecated, kept for API compatibility; no-op
     horizon_end: dt.date | None = None,
     accrual_floor: dt.date | None = None,
+    accrual_ceiling: dt.date | None = None,
 ) -> ServiceTimeResult:
     """
     Compute total MLB service time across multiple seasons.
@@ -299,7 +343,10 @@ def compute_service_time(
         horizon_end = ordered_seasons[-1].end if ordered_seasons else dt.date.today()
 
     global_intervals = build_global_active_intervals(
-        transactions, horizon_end, accrual_floor=accrual_floor
+        transactions,
+        horizon_end,
+        accrual_floor=accrual_floor,
+        accrual_ceiling=accrual_ceiling,
     )
 
     total_days = 0

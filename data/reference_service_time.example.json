@@ -1,0 +1,18 @@
+[
+  {
+    "_comment": "This is a TEMPLATE, not real data. Copy this file to reference_service_time.json, commit it once filled in (it's just player IDs/dates/figures, nothing sensitive), and replace every row with a real figure you looked up yourself on a player's Baseball Reference page.",
+    "_how_to_fill_this_in": [
+      "1. Pick a player whose service time is well-established and unlikely to be a grievance/manipulation edge case.",
+      "2. Go to their Baseball Reference page and find the service time snapshot for the season you want to check, e.g. the 's.2021' figure shown for that Opening Day.",
+      "3. Add a row below with their MLB Stats API player_id (visible in this project's URLs or via https://statsapi.mlb.com/api/v1/people/search?names=Full+Name), the as_of date (that season's Opening Day), and the expected figure exactly as B-R shows it (e.g. \"5.014\").",
+      "4. Run: python scripts/validate_service_time.py"
+    ]
+  },
+  {
+    "player_id": 0,
+    "name": "REPLACE ME",
+    "as_of": "2021-04-01",
+    "expected": "0.000",
+    "source": "baseball-reference.com player page, s.2021 snapshot -- REPLACE with a real player and figure"
+  }
+]

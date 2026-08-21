@@ -40,8 +40,9 @@ scripts/fetch_mlb_data.py      thin statsapi.mlb.com client, polite rate limitin
 scripts/service_time.py        the service-time math + all domain rules
 scripts/update_service_time.py daily job: 40-man rosters -> compute -> merge -> JSON
 scripts/backfill_history.py    resumable backfill of non-rostered players (2009+)
+scripts/validate_service_time.py  --as-of validation against known Baseball Reference figures
 scripts/generate_demo_data.py  bundled sample data generator (no network)
-tests/test_service_time.py     22 tests, no pytest needed: `python tests/test_service_time.py`
+tests/test_service_time.py     24 tests, no pytest needed: `python tests/test_service_time.py`
 docs/                          the static site (index.html, styles.css, app.js)
 docs/data/service_time.json    the only data file the frontend reads
 data/cache/transactions/       per-player transaction cache (rostered players only)
@@ -112,7 +113,39 @@ The `186/B` formula comes from contemporaneous reporting of the agreement, not
 from MLB's ledger. It reproduces Judge's known figure, which is decent
 evidence — but if a 2020-era player looks wrong, check here first.
 
-### 4. The clock stops at today, not at season end
+### 4. A retired player's clock has to be stopped explicitly
+
+Found the hard way: the first live backfill batch credited **246 of 500**
+retired players with 15+ years of service. Angel Guzman, who last pitched in
+2010, read 20.030. Joe Mauer read 17.137.
+
+Careers do not reliably end with a transaction this parser recognizes. The
+overwhelmingly common final move is `"elected free agency"` (799 rows across
+the 1,356 cached histories), which is *not* a stop keyword — so the interval
+it leaves open runs all the way to `horizon_end`, i.e. today.
+
+**The obvious fix is wrong.** Adding `"elected free agency"` to
+`ACTIVE_STOP_KEYWORDS` breaks 272 *currently rostered* players, because
+there is no matching start keyword for the re-signing that follows — the feed
+says "Team signed free agent RHP X", and `"signed"` can't be a start keyword
+since minor league deals use the same verb. Measured over the cached
+histories: Max Scherzer −628 days (3.6 years), Nick Martinez −1,249, Kenley
+Jansen −473. Don't do it.
+
+Instead `accrual_ceiling` caps accrual at the **end of the last season the
+player appeared in** (`lastPlayedDate` from the bio endpoint, falling back to
+his final transaction date if the API omits it). It is the exact mirror of
+`accrual_floor` and applies only when `currently_rostered=False`, so the
+daily job is provably unaffected — the ceiling is `None` there.
+
+End of *season*, not last game, because service time is roster time: a player
+keeps accruing while on the active roster or IL after his final appearance.
+
+`backfill_history.py` now also warns loudly about any record ≥20.000 years.
+The original bug was caught only by eyeballing the last five lines of a
+500-line log.
+
+### 5. The clock stops at today, not at season end
 
 `horizon_end` defaults to the last season's end date. Left alone, every
 currently-rostered player is credited for the remaining weeks of a season that
@@ -148,18 +181,47 @@ hasn't been played. The daily job passes `horizon_end=TODAY`.
 
 ### Immediate next steps
 
+0. **URGENT — main is publishing bad data.** The first backfill batch ran
+   (commit `6fee343`) and added 500 retired players, 246 of whom have
+   impossible service times (see finding #4). That commit is live on the
+   site right now. It touches exactly two files — the data and
+   `backfill_state.json` — so `git revert 6fee343` cleans it up completely.
+   The state file must go too, or those 500 players stay in `processed_ids`,
+   get skipped on the re-run, and keep their wrong numbers forever.
+   Order of operations: revert → merge the accrual-ceiling fix → re-run the
+   backfill from batch 1.
+
 1. **Run the historical backfill.** Actions → "Backfill Historical Players" →
    batch 500 → re-trigger until it reports zero remaining. ~4,000 players to
-   add, ~8 runs. This code has been tested against a stubbed API but **never
-   against the live one** — the first batch is its real trial. Failures are
-   cheap: state is committed per batch and a retry resumes.
+   add, ~8 runs. The first batch was run on 2026-08-21 and surfaced the
+   retired-player bug in finding #4; the fix is in, but the fix itself has
+   **not yet been exercised against the live API** — check the first
+   corrected batch's log for the ≥20.000-year warning before turning the
+   remaining ~7 runs loose. Failures are cheap: state is committed per batch
+   and a retry resumes.
 2. **Then run the daily workflow once with `full_refresh` checked**, to
    rebuild the cache with team IDs and activate the MLB-club filter.
-3. **Validate.** Compute service time as of a past Opening Day and compare
-   against Baseball Reference's `s.YYYY` figures, which are a fixed target
-   rather than a moving one. A `--as-of YYYY-MM-DD` flag was discussed for
-   exactly this and is not yet built. That's the highest-value next feature —
-   right now nothing systematically checks these numbers.
+3. **Validate.** `scripts/validate_service_time.py` now exists:
+   `build_player_record()` takes a `horizon_end` override, so it can compute
+   what a player's service time WOULD HAVE READ as of a past date (e.g. a
+   prior Opening Day) rather than only "as of today." Compare that against
+   Baseball Reference's `s.YYYY` figures, which are a fixed target rather
+   than a moving one. Doing this required a real bug fix along the way:
+   `build_global_active_intervals()` previously only used `horizon_end` to
+   cap the trailing *open* interval — a stop transaction (option/DFA/release)
+   dated *after* `horizon_end` would still truncate an earlier interval that,
+   as of that date, hadn't ended yet. It now drops every transaction dated
+   after `horizon_end` before building intervals at all. Covered by a new
+   regression test (`test_as_of_past_date_ignores_later_transactions`).
+
+   **Still needed:** the reference file (`data/reference_service_time.json`)
+   ships empty — copy `data/reference_service_time.example.json`, fill in a
+   handful of well-known players' `s.YYYY` figures by hand from their
+   Baseball Reference pages (deliberately not scraped), and run
+   `python scripts/validate_service_time.py`. Nothing has actually been
+   checked against a real external number yet; this just makes doing so
+   possible. Requires network access to the live MLB Stats API, so it can't
+   run in this offline sandbox — run it locally or from a Codespace/Action.
 
 ### Known limitations
 

@@ -184,6 +184,100 @@ def test_horizon_stops_at_today_not_end_of_season():
     )
 
 
+def test_as_of_past_date_ignores_later_transactions():
+    """
+    Regression test for the --as-of validation feature (validate_service_time.py).
+
+    Computing service time "as of" a past date requires a transaction list
+    that also contains LATER history (the same list the live API would
+    return today), with everything after horizon_end ignored -- not just
+    excluded from the trailing open interval. Before this fix, a stop
+    transaction (option/DFA/release) dated after horizon_end would still
+    truncate an interval that, as of horizon_end, hadn't ended yet.
+    """
+    season = SeasonWindow(2021, dt.date(2021, 4, 1), dt.date(2021, 10, 3))
+    as_of = dt.date(2021, 4, 15)
+    txns = [
+        Transaction(dt.date(2021, 4, 1), "Yankees selected the contract of X"),
+        # Happens AFTER as_of -- should not exist yet from as_of's perspective.
+        Transaction(dt.date(2021, 6, 1), "Yankees optioned X to Triple-A"),
+        Transaction(dt.date(2021, 8, 1), "Yankees recalled X from Triple-A"),
+    ]
+
+    as_of_result = compute_service_time(txns, [season], horizon_end=as_of)
+    check(
+        "as-of computation credits through the as-of date, unaffected by later transactions",
+        as_of_result.by_season[2021]["raw_active_days"] == (as_of - season.start).days + 1,
+    )
+
+    full_result = compute_service_time(txns, [season], horizon_end=season.end)
+    check(
+        "later transactions still apply when horizon_end is not restricted",
+        full_result.by_season[2021]["raw_active_days"] == 61 + 64,  # Apr1-May31, Aug1-Oct3
+    )
+
+
+def test_retired_player_clock_stops_at_final_season():
+    """
+    Regression test from the first live backfill batch, which credited 246 of
+    500 retired players with 15+ years of service.
+
+    A career usually ends with "elected free agency", which is deliberately
+    NOT a stop keyword (see the note in service_time.py -- treating it as one
+    breaks 272 active players). So the final interval stays open and, without
+    a ceiling, runs to horizon_end: Angel Guzman, who last pitched in 2010,
+    came out at 20.030 years.
+    """
+    seasons = [
+        SeasonWindow(y, dt.date(y, 3, 30), dt.date(y, 10, 1)) for y in range(2009, 2027)
+    ]
+    txns = [
+        Transaction(dt.date(2009, 4, 10), "Cubs recalled RHP Angel Guzman."),
+        Transaction(dt.date(2010, 11, 3), "RHP Angel Guzman elected free agency."),
+    ]
+    today = dt.date(2026, 8, 21)
+
+    uncapped = compute_service_time(txns, seasons, horizon_end=today)
+    check(
+        "without a ceiling a retired player accrues absurd service time",
+        uncapped.total_years >= 15,
+    )
+
+    capped = compute_service_time(
+        txns, seasons, horizon_end=today, accrual_ceiling=dt.date(2010, 10, 1)
+    )
+    # Two seasons on the roster, each capped at the 172-day maximum.
+    check("accrual ceiling stops the clock at the final season", capped.total_days == 344)
+    check("retired player credited 2.000 years, not 20.030", capped.formatted == "2.000")
+    check(
+        "no season after the ceiling is credited",
+        all(s["credited_days"] == 0 for y, s in capped.by_season.items() if y > 2010),
+    )
+
+
+def test_active_player_is_unaffected_by_free_agency_elections():
+    """
+    The other half of the same finding: a player who elects free agency and
+    re-signs must keep accruing. There is no start keyword for the re-signing
+    ("Team signed free agent RHP X" -- "signed" can't be one, minor league
+    deals use it too), so if the election ever became a stop keyword this
+    player would freeze at his first election and never restart.
+    """
+    seasons = [
+        SeasonWindow(y, dt.date(y, 3, 30), dt.date(y, 10, 1)) for y in range(2021, 2024)
+    ]
+    txns = [
+        Transaction(dt.date(2021, 3, 30), "Mets selected the contract of RHP X."),
+        Transaction(dt.date(2021, 11, 3), "RHP X elected free agency."),
+        Transaction(dt.date(2021, 12, 1), "Rangers signed free agent RHP X."),
+    ]
+    result = compute_service_time(txns, seasons, horizon_end=dt.date(2023, 10, 1))
+    check(
+        "free agency election does not stop an active player's clock",
+        result.formatted == "3.000",
+    )
+
+
 def test_never_debuted_player_has_no_service_time():
     """A 40-man prospect with only minor league history accrues nothing."""
     txns = [
@@ -253,6 +347,9 @@ if __name__ == "__main__":
     test_status_carries_across_seasons_with_no_new_transactions()
     test_trade_does_not_stop_clock()
     test_pre_debut_events_do_not_start_the_clock()
+    test_as_of_past_date_ignores_later_transactions()
+    test_retired_player_clock_stops_at_final_season()
+    test_active_player_is_unaffected_by_free_agency_elections()
     test_horizon_stops_at_today_not_end_of_season()
     test_never_debuted_player_has_no_service_time()
     test_2020_season_is_prorated_to_a_full_year()
