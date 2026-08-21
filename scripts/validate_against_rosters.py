@@ -64,29 +64,55 @@ sys.path.insert(0, str(pathlib.Path(__file__).parent))
 import fetch_mlb_data as mlb  # noqa: E402
 from service_time import Transaction, build_global_active_intervals  # noqa: E402
 
-# Status codes that mean the player is earning service time that day: on the
-# active roster, or on a major league injured/bereavement/paternity list.
-# Derived from observed values -- extend only with evidence from a real run.
-ACCRUING_CODES = {
-    "A",  # Active
-    "D7", "D10", "D15", "D60",  # injured lists (7/10/15/60-day)
-    "DL",  # legacy disabled list
-    "BRV",  # bereavement
-    "PL",  # paternity
-    "FME",  # family medical emergency
-    "RM",  # restricted -- still on a major league list
-}
+# Status codes are NOT hardcoded from assumption -- they are calibrated from
+# the data on every run. See calibrate_codes().
+#
+# The first version of this script did hardcode them, and got it wrong in a
+# way that produced a confident, plausible, completely misleading number.
+# "RM" was guessed to mean the restricted list (accruing). It is in fact what
+# an optioned player gets -- there is no "OPT" code in the feed at all -- so a
+# fifth of the sample was inverted and the run reported 23.3% under-crediting
+# that did not exist. Guessing at MLB's semantics is the single most reliable
+# way to break this project.
+#
+# Only these two are safe a priori, because their meaning is unambiguous:
+CERTAIN_ACCRUING = {"A"}  # Active
+# ...and anything matching the injured-list shape (D7/D10/D15/D60), since a
+# player on his club's major league IL is accruing by definition.
+IL_CODE_PREFIX = "D"
 
-# Codes that mean he is NOT accruing: in the minors, or gone.
-NON_ACCRUING_CODES = {
-    "OPT",  # optioned to the minors
-    "MIN",  # minor league
-    "RES",  # reserve / inactive
-    "DES",  # designated for assignment
-    "REL",  # released
-    "SU",  # suspended
-    "NRI",  # non-roster invitee
-}
+
+def calibrate_codes(
+    observations: list[tuple[str, dt.date, dt.date | None]],
+) -> tuple[set[str], set[str], dict[str, int]]:
+    """
+    Work out which status codes mean "accruing" from evidence, not assumption.
+
+    The lever is the debut date: a player cannot be earning major league
+    service time before he has ever played in the majors. So any code seen on
+    a date earlier than that player's mlbDebutDate cannot be an accruing code.
+    That single rule is enough to classify the codes that matter, and it uses
+    only data the pipeline already fetches.
+
+    `observations` is (code, date, debut_date) per player-date.
+
+    Returns (accruing, non_accruing, pre_debut_counts).
+    """
+    seen: set[str] = set()
+    pre_debut: dict[str, int] = collections.Counter()
+
+    for code, date, debut in observations:
+        seen.add(code)
+        if debut is not None and date < debut:
+            pre_debut[code] += 1
+
+    non_accruing = {c for c in seen if pre_debut.get(c)}
+    accruing = set()
+    for c in seen - non_accruing:
+        if c in CERTAIN_ACCRUING or (c.startswith(IL_CODE_PREFIX) and c[1:].isdigit()):
+            accruing.add(c)
+
+    return accruing, non_accruing, dict(pre_debut)
 
 
 def sample_dates(season_start: dt.date, season_end: dt.date, interval: int) -> list[dt.date]:
@@ -109,11 +135,10 @@ def main() -> None:
     print(f"Team {args.team}, season {args.season}: {start} to {end}")
     print(f"Sampling {len(dates)} dates every {args.interval} days.\n")
 
-    # --- ground truth ------------------------------------------------------
-    truth: dict[int, dict[dt.date, bool]] = collections.defaultdict(dict)
+    # --- collect raw roster observations -----------------------------------
+    raw_obs: list[tuple[int, dt.date, str]] = []
     names: dict[int, str] = {}
     codes = collections.Counter()
-    unrecognised = collections.Counter()
 
     for d in dates:
         try:
@@ -132,23 +157,50 @@ def main() -> None:
             names[pid] = person.get("fullName", "?")
             code = ((entry.get("status") or {}).get("code") or "").upper()
             codes[code] += 1
-            if code in ACCRUING_CODES:
-                truth[pid][d] = True
-            elif code in NON_ACCRUING_CODES:
-                truth[pid][d] = False
-            else:
-                unrecognised[code] += 1
-                # Deliberately not guessed: left out of the comparison.
+            raw_obs.append((pid, d, code))
+
+    print(f"{len(raw_obs)} roster observations across {len(names)} players.")
+    print(f"status codes seen: {dict(codes.most_common())}\n")
+
+    # --- bios (needed for calibration and for the model) -------------------
+    debuts: dict[int, dt.date | None] = {}
+    for pid in names:
+        try:
+            bio = mlb.get_player_bio(pid)
+            dd = bio.get("mlbDebutDate")
+            debuts[pid] = dt.date.fromisoformat(dd) if dd else None
+        except Exception:
+            debuts[pid] = None
+
+    # --- calibrate what the codes mean -------------------------------------
+    accruing, non_accruing, pre_debut = calibrate_codes(
+        [(code, d, debuts.get(pid)) for pid, d, code in raw_obs]
+    )
+    print("code calibration (from debut dates, not assumption):")
+    for c in sorted(codes):
+        if c in non_accruing:
+            print(f"  {c:<5} NOT accruing -- seen {pre_debut[c]}x before a player's MLB debut")
+        elif c in accruing:
+            why = "Active" if c in CERTAIN_ACCRUING else "injured-list shape"
+            print(f"  {c:<5} accruing ({why})")
+        else:
+            print(f"  {c:<5} UNCLASSIFIED -- excluded from the comparison")
+    unclassified = {c: n for c, n in codes.items() if c not in accruing and c not in non_accruing}
+    if unclassified:
+        share = sum(unclassified.values()) / max(sum(codes.values()), 1)
+        print(f"!! {share:.1%} of observations are unclassified {unclassified}. "
+              "The accuracy figure below covers only the rest.")
+    print()
+
+    truth: dict[int, dict[dt.date, bool]] = collections.defaultdict(dict)
+    for pid, d, code in raw_obs:
+        if code in accruing:
+            truth[pid][d] = True
+        elif code in non_accruing:
+            truth[pid][d] = False
 
     print(f"Collected {sum(len(v) for v in truth.values())} player-date judgements "
-          f"across {len(truth)} players.")
-    print(f"status codes seen: {dict(codes.most_common())}")
-    if unrecognised:
-        share = sum(unrecognised.values()) / max(sum(codes.values()), 1)
-        print(f"!! UNRECOGNISED codes {dict(unrecognised)} -- {share:.1%} of the sample, "
-              "excluded from the comparison. Extend ACCRUING/NON_ACCRUING_CODES "
-              "before trusting the accuracy figure.")
-    print()
+          f"across {len(truth)} players.\n")
 
     # --- our model ---------------------------------------------------------
     over = under = agree = 0
@@ -157,12 +209,10 @@ def main() -> None:
     for pid, by_date in truth.items():
         try:
             raw = mlb.get_player_transactions(pid, dt.date(2005, 1, 1), end)
-            bio = mlb.get_player_bio(pid)
         except Exception as exc:
             print(f"  {names.get(pid)}: FAILED ({exc})", file=sys.stderr)
             continue
-        debut = bio.get("mlbDebutDate")
-        floor = dt.date.fromisoformat(debut) if debut else None
+        floor = debuts.get(pid)
         txns = [
             Transaction(date=dt.date.fromisoformat(t["date"]), description=t.get("description", ""))
             for t in raw
