@@ -163,6 +163,7 @@ def build_player_record(
     full_refresh: bool,
     use_cache: bool = True,
     horizon_end: dt.date | None = None,
+    currently_rostered: bool = True,
 ) -> dict:
     """
     `horizon_end` defaults to today (the normal daily-update behavior). Pass
@@ -170,6 +171,11 @@ def build_player_record(
     as of that date -- e.g. a prior Opening Day, for validating against a
     fixed reference figure like Baseball Reference's `s.YYYY` snapshot. See
     validate_service_time.py.
+
+    `currently_rostered` must be False for a player who is no longer on any
+    40-man roster (i.e. every player the historical backfill processes).
+    Without it their service clock never stops -- see the accrual-ceiling
+    block below.
     """
     horizon_end = horizon_end or TODAY
     player_id = roster_entry["id"]
@@ -198,16 +204,41 @@ def build_player_record(
     if accrual_floor is None and transactions:
         accrual_floor = min(t.date for t in transactions)
 
+    # A player who is done playing has to have his clock stopped explicitly.
+    # Careers usually end with "elected free agency", which is deliberately not
+    # a stop keyword (adding it would wreck 272 active players -- see the note
+    # in service_time.py), so the final interval is left open and would
+    # otherwise run to today: the first backfill batch credited Angel Guzman,
+    # who last pitched in 2010, with 20.030 years. Cap accrual at the end of
+    # the last season he appeared in. `lastPlayedDate` is the authoritative
+    # source; his final transaction is the fallback if the API omits it.
+    last_played = bio.get("lastPlayedDate")
+    career_end: dt.date | None = None
+    if not currently_rostered:
+        if last_played:
+            career_end = dt.date.fromisoformat(last_played)
+        elif transactions:
+            career_end = max(t.date for t in transactions)
+
     debut_year = debut_date.year if debut_date else MIN_TRANSACTION_YEAR
     first_year = max(debut_year, MIN_TRANSACTION_YEAR)
-    years = range(first_year, horizon_end.year + 1)
+    last_year = horizon_end.year
+    if career_end is not None:
+        last_year = min(last_year, max(career_end.year, first_year))
+    years = range(first_year, last_year + 1)
     seasons = _season_windows_for(years)
+
+    # End of his final season, not his final game: service time is roster
+    # time, so a player keeps accruing after his last appearance if he stays
+    # on the active roster or the IL through the end of the year.
+    accrual_ceiling = seasons[-1].end if (career_end is not None and seasons) else None
 
     result = compute_service_time(
         transactions,
         seasons,
         carry_in_active_first_season=False,
         accrual_floor=accrual_floor,
+        accrual_ceiling=accrual_ceiling,
         # Stop the clock at horizon_end (today, for the daily job) rather than
         # at the end of the current season -- otherwise every player currently
         # on a roster is credited with the remaining weeks of a season that

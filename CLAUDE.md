@@ -113,7 +113,39 @@ The `186/B` formula comes from contemporaneous reporting of the agreement, not
 from MLB's ledger. It reproduces Judge's known figure, which is decent
 evidence — but if a 2020-era player looks wrong, check here first.
 
-### 4. The clock stops at today, not at season end
+### 4. A retired player's clock has to be stopped explicitly
+
+Found the hard way: the first live backfill batch credited **246 of 500**
+retired players with 15+ years of service. Angel Guzman, who last pitched in
+2010, read 20.030. Joe Mauer read 17.137.
+
+Careers do not reliably end with a transaction this parser recognizes. The
+overwhelmingly common final move is `"elected free agency"` (799 rows across
+the 1,356 cached histories), which is *not* a stop keyword — so the interval
+it leaves open runs all the way to `horizon_end`, i.e. today.
+
+**The obvious fix is wrong.** Adding `"elected free agency"` to
+`ACTIVE_STOP_KEYWORDS` breaks 272 *currently rostered* players, because
+there is no matching start keyword for the re-signing that follows — the feed
+says "Team signed free agent RHP X", and `"signed"` can't be a start keyword
+since minor league deals use the same verb. Measured over the cached
+histories: Max Scherzer −628 days (3.6 years), Nick Martinez −1,249, Kenley
+Jansen −473. Don't do it.
+
+Instead `accrual_ceiling` caps accrual at the **end of the last season the
+player appeared in** (`lastPlayedDate` from the bio endpoint, falling back to
+his final transaction date if the API omits it). It is the exact mirror of
+`accrual_floor` and applies only when `currently_rostered=False`, so the
+daily job is provably unaffected — the ceiling is `None` there.
+
+End of *season*, not last game, because service time is roster time: a player
+keeps accruing while on the active roster or IL after his final appearance.
+
+`backfill_history.py` now also warns loudly about any record ≥20.000 years.
+The original bug was caught only by eyeballing the last five lines of a
+500-line log.
+
+### 5. The clock stops at today, not at season end
 
 `horizon_end` defaults to the last season's end date. Left alone, every
 currently-rostered player is credited for the remaining weeks of a season that
@@ -149,11 +181,24 @@ hasn't been played. The daily job passes `horizon_end=TODAY`.
 
 ### Immediate next steps
 
+0. **URGENT — main is publishing bad data.** The first backfill batch ran
+   (commit `6fee343`) and added 500 retired players, 246 of whom have
+   impossible service times (see finding #4). That commit is live on the
+   site right now. It touches exactly two files — the data and
+   `backfill_state.json` — so `git revert 6fee343` cleans it up completely.
+   The state file must go too, or those 500 players stay in `processed_ids`,
+   get skipped on the re-run, and keep their wrong numbers forever.
+   Order of operations: revert → merge the accrual-ceiling fix → re-run the
+   backfill from batch 1.
+
 1. **Run the historical backfill.** Actions → "Backfill Historical Players" →
    batch 500 → re-trigger until it reports zero remaining. ~4,000 players to
-   add, ~8 runs. This code has been tested against a stubbed API but **never
-   against the live one** — the first batch is its real trial. Failures are
-   cheap: state is committed per batch and a retry resumes.
+   add, ~8 runs. The first batch was run on 2026-08-21 and surfaced the
+   retired-player bug in finding #4; the fix is in, but the fix itself has
+   **not yet been exercised against the live API** — check the first
+   corrected batch's log for the ≥20.000-year warning before turning the
+   remaining ~7 runs loose. Failures are cheap: state is committed per batch
+   and a retry resumes.
 2. **Then run the daily workflow once with `full_refresh` checked**, to
    rebuild the cache with team IDs and activate the MLB-club filter.
 3. **Validate.** `scripts/validate_service_time.py` now exists:

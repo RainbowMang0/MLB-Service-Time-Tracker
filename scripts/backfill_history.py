@@ -198,7 +198,13 @@ def main() -> None:
         try:
             # use_cache=False: these players are done playing, so there is no
             # incremental update to make and nothing worth storing on disk.
-            record = build_player_record(entry, full_refresh=True, use_cache=False)
+            # currently_rostered=False: and because they ARE done playing,
+            # their service clock has to be capped at their final season
+            # rather than running to today. Omitting this credited half of the
+            # first backfill batch with 15+ years of phantom service time.
+            record = build_player_record(
+                entry, full_refresh=True, use_cache=False, currently_rostered=False
+            )
             record["on_40_man"] = False
             db[str(pid)] = record
             processed.add(pid)
@@ -219,12 +225,45 @@ def main() -> None:
     state["failed_ids"] = sorted(failed)
     save_state(state)
 
+    report_implausible(db)
+
     remaining = len(todo) - len(batch)
     print(f"\nAdded {added} players. {remaining} still remaining.")
     if remaining:
         print("Run this again (or re-trigger the workflow) to continue.")
     else:
         print("Backfill complete.")
+
+
+# Only 33 players in MLB history have reached 20 years of service, and none of
+# them are reconstructible from a feed that starts in 2009. Anything at or above
+# this is a bug, not a career.
+IMPLAUSIBLE_SERVICE_YEARS = 20
+
+
+def report_implausible(db: dict[str, dict]) -> None:
+    """
+    Shout if the database contains service times that cannot be real.
+
+    The first backfill batch credited 246 of 500 retired players with 15+
+    years because their clock never stopped, and that was only caught by
+    eyeballing the last five lines of a 500-line log. A systemic error should
+    announce itself.
+    """
+    bad = sorted(
+        (p for p in db.values() if p.get("service_days_total", 0) >= IMPLAUSIBLE_SERVICE_YEARS * 172),
+        key=lambda p: -p["service_days_total"],
+    )
+    if not bad:
+        return
+    print(
+        f"\n!! WARNING: {len(bad)} player(s) at or above {IMPLAUSIBLE_SERVICE_YEARS}.000 "
+        "years -- almost certainly a bug, not a career:"
+    )
+    for p in bad[:10]:
+        print(f"     {p.get('name')}: {p.get('service_time')} (debut {p.get('mlb_debut')})")
+    if len(bad) > 10:
+        print(f"     ... and {len(bad) - 10} more")
 
 
 def write_db(db: dict[str, dict]) -> None:
