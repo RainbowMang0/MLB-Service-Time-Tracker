@@ -258,7 +258,26 @@ _NON_STOPPING_RE = re.compile(
 )
 
 
+# --- Signing a major league contract starts the clock -----------------------
+# A player who signs as a free agent and goes straight onto the active roster
+# never receives an "activated" or "recalled" row, so without this his clock
+# never opens. Measured against MLB's own 2014 rosters, this was the single
+# largest error in the pipeline: Masahiro Tanaka, who signed in January 2014
+# and spent the season on the Yankees' active roster, was credited zero days
+# (under-credited on 27 of 28 sampled dates).
+#
+# The distinction that makes this safe is that the feed marks minor league
+# deals explicitly. Across the 1,356 cached histories: 534 major league free
+# agent signings, 828 that say "to a minor league contract". Only the former
+# may start an MLB clock -- a minor league deal must never.
+_SIGNING_RE = re.compile(r"signed free agent|signed as a free agent", re.IGNORECASE)
+_MINOR_LEAGUE_DEAL_RE = re.compile(r"minor league (?:contract|deal)", re.IGNORECASE)
+
+
 def _is_active_start(desc: str) -> bool:
+    if _SIGNING_RE.search(desc):
+        # A major league signing starts the clock; a minor league one does not.
+        return not _MINOR_LEAGUE_DEAL_RE.search(desc)
     return bool(_START_RE.search(desc))
 
 

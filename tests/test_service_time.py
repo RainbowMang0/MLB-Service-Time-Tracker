@@ -353,6 +353,47 @@ def test_real_feed_wording_is_matched():
     )
 
 
+def test_major_league_signing_starts_the_clock_minor_league_does_not():
+    """
+    Measured against MLB's own 2014 rosters, this was the single largest
+    error in the pipeline. Masahiro Tanaka signed in January 2014 and spent
+    the season on the Yankees' active roster, but a signing produces no
+    "activated" or "recalled" row, so his clock never opened and he was
+    credited zero days -- wrong on 27 of 28 sampled dates.
+
+    What makes it safe to fix is that the feed marks minor league deals
+    explicitly: 534 major league free agent signings in the cache against
+    828 that say "to a minor league contract". Only the former may start an
+    MLB clock.
+    """
+    from service_time import _is_active_start
+
+    check(
+        "major league free agent signing starts the clock",
+        _is_active_start("New York Yankees signed free agent RHP Masahiro Tanaka."),
+    )
+    check(
+        "minor league contract does NOT start the clock",
+        not _is_active_start(
+            "Chicago Cubs signed free agent RHP Some Name to a minor league contract."
+        ),
+    )
+
+    season = SeasonWindow(2014, dt.date(2014, 3, 22), dt.date(2014, 9, 28))
+    signed = [Transaction(dt.date(2014, 1, 22), "New York Yankees signed free agent RHP X.")]
+    minors = [
+        Transaction(dt.date(2014, 1, 22), "New York Yankees signed free agent RHP X to a minor league contract.")
+    ]
+    check(
+        "signing then sitting on the roster accrues the season",
+        compute_service_time(signed, [season], horizon_end=season.end).total_days == 172,
+    )
+    check(
+        "a minor league deal alone accrues nothing",
+        compute_service_time(minors, [season], horizon_end=season.end).total_days == 0,
+    )
+
+
 def test_never_debuted_player_has_no_service_time():
     """A 40-man prospect with only minor league history accrues nothing."""
     txns = [
@@ -428,6 +469,7 @@ if __name__ == "__main__":
     test_horizon_stops_at_today_not_end_of_season()
     test_impossible_total_is_detected()
     test_real_feed_wording_is_matched()
+    test_major_league_signing_starts_the_clock_minor_league_does_not()
     test_never_debuted_player_has_no_service_time()
     test_2020_season_is_prorated_to_a_full_year()
     test_2020_partial_season_scales_proportionally()
