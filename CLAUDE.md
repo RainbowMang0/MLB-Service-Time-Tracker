@@ -450,6 +450,29 @@ skew the result.
 Apply the same instinct to any new rule: prefer a check the data can settle
 over a belief about what MLB means.
 
+### Gate status (2026-08-21)
+
+| | agree | over-credit | under-credit |
+|---|---|---|---|
+| Yankees 2014 | 96.2% | 0.2% | 3.7% |
+| Yankees 2018 | 96.5% | 0.2% | 3.3% |
+
+**Both pass** (≥95% agreement, ≤2% over-crediting), in two different eras —
+2014 for "disabled list" wording, 2018 for "injured list". Tests green at 49.
+
+Over-crediting, which caused every revert on 2026-08-21 (20-year phantom
+careers, 246 of 500 retired players over 15 years), is down to 0.2%.
+
+**The remaining error is under-crediting and it is one known case.** Ben
+Heller is 27 of the 37 under-credits in 2018: on the 60-day IL all season,
+where the roster says accruing and the model credits nothing. A player on a
+major league injured list accrues by definition, but an IL placement
+currently only *avoids stopping* the clock — it never *starts* one. So a
+player who is optioned and then moved to the 60-day IL stays stopped.
+
+That is the next fix, and it is a well-formed hypothesis with a measurable
+test. Expect it to raise agreement another point or two.
+
 ### Gate before a mass backfill
 
 1. **Roster accuracy** — agreement ≥95% and over-crediting ≤2%, on at least
