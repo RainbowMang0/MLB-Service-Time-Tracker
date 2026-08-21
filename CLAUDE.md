@@ -454,11 +454,17 @@ over a belief about what MLB means.
 
 | | agree | over-credit | under-credit |
 |---|---|---|---|
-| Yankees 2014 | 96.2% | 0.2% | 3.7% |
-| Yankees 2018 | 96.5% | 0.2% | 3.3% |
+| Yankees 2014 | **96.5%** | 0.2% | 3.3% |
+| Yankees 2018 | **99.0%** | 0.2% | 0.8% |
 
-**Both pass** (≥95% agreement, ≤2% over-crediting), in two different eras —
-2014 for "disabled list" wording, 2018 for "injured list". Tests green at 49.
+**Both pass comfortably** (≥95% agreement, ≤2% over-crediting), in two
+different eras — 2014 for "disabled list" wording, 2018 for "injured list".
+Tests green at 52.
+
+2018 is 11 wrong judgements out of 1,116. The IL fix took it from 96.5% to
+99.0% and Ben Heller from under=27 to under=1. Notably it touched 20% of
+players and added 15,029 days while over-crediting stayed flat at 0.2% —
+a change that was merely inflating numbers would have pushed that up.
 
 Over-crediting, which caused every revert on 2026-08-21 (20-year phantom
 careers, 246 of 500 retired players over 15 years), is down to 0.2%.
@@ -470,8 +476,14 @@ major league injured list accrues by definition, but an IL placement
 currently only *avoids stopping* the clock — it never *starts* one. So a
 player who is optioned and then moved to the 60-day IL stays stopped.
 
-That is the next fix, and it is a well-formed hypothesis with a measurable
-test. Expect it to raise agreement another point or two.
+That fix is now shipped and measured (see above): 2018 went 96.5% → 99.0%,
+2014 went 96.2% → 96.5%.
+
+What is left is small and concentrated in 2014: David Huff (16 of 39
+under-credits, agree=0), Shawn Kelley (8), Dean Anna (5), Slade Heathcott
+(4). Huff is the only one worth a look — he was claimed off waivers and
+bounced between clubs mid-season, so he is probably a waiver-claim
+carry-in case rather than a new class of bug.
 
 ### Gate before a mass backfill
 
