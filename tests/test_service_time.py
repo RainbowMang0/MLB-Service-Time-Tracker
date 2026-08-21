@@ -438,6 +438,50 @@ def test_injured_list_placement_restarts_a_stopped_clock():
     )
 
 
+def test_missing_seasons_is_measured_per_player_not_assumed_from_a_year():
+    """
+    history_complete used to be `debut.year >= 2009`, on the premise that the
+    feed carries nothing earlier. probe_coverage.py disproved that (finding
+    #1): pre-2009 rows exist, they are just sparse. So the cutoff flagged
+    good figures as "partial" and said nothing about how much was missing.
+
+    What matters is whether the FRONT of a career is visible.
+    """
+    sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "scripts"))
+    import update_service_time as u
+
+    def txns(*years):
+        return [Transaction(dt.date(y, 6, 1), "Team recalled X.") for y in years]
+
+    # Modern player, seen from his debut season: nothing missing.
+    check(
+        "debut season visible -> 0 missing",
+        u._missing_seasons(dt.date(2016, 8, 13), txns(2016, 2018)) == 0,
+    )
+
+    # THE CASE THE OLD RULE GOT WRONG: a pre-2009 debut whose own debut
+    # season IS in the feed. Complete, despite being "before the cutoff".
+    check(
+        "pre-2009 debut with visible debut season -> 0 missing",
+        u._missing_seasons(dt.date(2003, 5, 29), txns(2003, 2006, 2012)) == 0,
+    )
+
+    # Genuinely missing the front of a career, and by a countable amount.
+    check(
+        "first sighting six years after debut -> 6 missing",
+        u._missing_seasons(dt.date(2003, 5, 29), txns(2009, 2012)) == 6,
+    )
+
+    # Never reached the majors: nothing to be missing.
+    check("no debut -> 0 missing", u._missing_seasons(None, txns(2024)) == 0)
+
+    # Debuted but entirely invisible.
+    check(
+        "debut with no visible transactions -> everything missing",
+        u._missing_seasons(dt.date(2005, 4, 1), []) > 0,
+    )
+
+
 def test_never_debuted_player_has_no_service_time():
     """A 40-man prospect with only minor league history accrues nothing."""
     txns = [
@@ -515,6 +559,7 @@ if __name__ == "__main__":
     test_real_feed_wording_is_matched()
     test_major_league_signing_starts_the_clock_minor_league_does_not()
     test_injured_list_placement_restarts_a_stopped_clock()
+    test_missing_seasons_is_measured_per_player_not_assumed_from_a_year()
     test_never_debuted_player_has_no_service_time()
     test_2020_season_is_prorated_to_a_full_year()
     test_2020_partial_season_scales_proportionally()

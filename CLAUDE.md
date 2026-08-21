@@ -43,7 +43,7 @@ scripts/backfill_history.py    resumable backfill of non-rostered players (2009+
 scripts/validate_service_time.py  --as-of validation against known Baseball Reference figures
 scripts/probe_coverage.py      live API probe for finding #9 (run via Actions)
 scripts/generate_demo_data.py  bundled sample data generator (no network)
-tests/test_service_time.py     45 tests, no pytest needed: `python tests/test_service_time.py`
+tests/test_service_time.py     57 tests, no pytest needed: `python tests/test_service_time.py`
 docs/                          the static site (index.html, styles.css, app.js)
 docs/data/service_time.json    the only data file the frontend reads
 data/cache/transactions/       per-player transaction cache (rostered players only)
@@ -95,9 +95,19 @@ expected result either way and proved nothing.
 - Finding #6's gap-bridging concern — probably never existed.
 
 Still true: a pre-2009 career reads **low**, because coverage thins rather
-than stops. `history_complete` wants to become a graded signal (how much of
-this player's career is actually visible?) rather than a boolean keyed to a
-year. Not yet done.
+than stops.
+
+**Addressed 2026-08-21.** `history_complete` is no longer a boolean keyed to
+a cutoff year. `_missing_seasons()` measures it per player: if the earliest
+major-league transaction we can see lands in his debut season, the front of
+his career is visible and the figure is a real estimate; if it lands later,
+everything before that is unrecoverable and we now report *how many* seasons
+are missing. Records carry `missing_seasons` and `first_transaction`, and the
+UI shows "−N seasons" instead of a bare "partial".
+
+The cutoff rule flagged good figures as partial simply for debuting before
+2009 — a 2003 debut whose 2003 transactions are in the feed is complete, and
+now reads that way.
 
 ### 1b. The original (superseded) measurement
 
@@ -294,13 +304,14 @@ hasn't been played. The daily job passes `horizon_end=TODAY`.
 - **Cache stored team names, not IDs.** The MLB-club filter checked for team
   objects with IDs, but the cache wrote a name string, so the filter silently
   passed everything. The debut floor masked it. Fixed; cached entries written
-  before the fix lack IDs and are treated as unjudgeable (kept). **A
-  `--full-refresh` run is needed to fully realize the filter.** As of this
-  writing that has not been done — **measured 2026-08-21: 0 of 64,643 cached
-  rows carry a team ID**, so the MLB-club filter is still a complete no-op for
-  every one of the 1,356 rostered players, and only the debut floor is
-  protecting them. The backfill is unaffected (it fetches fresh with
-  `use_cache=False`, so its rows do have IDs).
+  before the fix lack IDs and are treated as unjudgeable (kept). A
+  `--full-refresh` run was needed to fully realize the filter, and for a long
+  time it had never been done: measured 2026-08-21, **0 of 64,643 cached rows
+  carried a team ID**, so the filter was a complete no-op for every rostered
+  player and only the debut floor protected them.
+  **RESOLVED 2026-08-21** — a `full_refresh` run rebuilt the cache and
+  **64,703 of 64,775 rows (99%) now carry an id**. The filter is live. (The
+  backfill was never affected: it fetches fresh with `use_cache=False`.)
 - **Demo players persisted forever.** The merge logic never deletes players,
   so seven bundled sample records ("Sample City Marlins") survived into live
   data. `MIN_REAL_PLAYER_ID = 100000` filters them; real MLB person IDs are
@@ -319,7 +330,7 @@ hasn't been played. The daily job passes `horizon_end=TODAY`.
   every batch passing the invariant gate.
 - 2020 proration, debut floor, demo purge, pagination, and
   `history_complete` flagging are all committed and live.
-- 45 tests passing.
+- 57 tests passing.
 
 ## Validation — the process, and the current number
 

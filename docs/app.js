@@ -185,8 +185,17 @@
     tbody.innerHTML = pageRows
       .map((p) => {
         const status = classify(p);
+        // How much of the career is missing, measured per player. A bare
+        // "partial" flag keyed to a cutoff year said nothing about the size
+        // of the gap -- and flagged plenty of complete figures, since the
+        // feed does carry some pre-2009 history.
+        const gap = Number(p.missing_seasons) || 0;
         const partial = !isComplete(p)
-          ? ` <abbr class="partial-flag" title="Debuted before ${coverageStartYear}, when the transaction feed begins. Earlier seasons are invisible to the data source, so this figure is a floor, not an estimate.">partial</abbr>`
+          ? ` <abbr class="partial-flag" title="The transaction feed's coverage of this player starts ${
+              gap ? `${gap} season${gap === 1 ? "" : "s"} after his debut` : "after his debut"
+            }. Those earlier seasons are invisible to the data source, so this figure is a floor, not an estimate.">${
+              gap ? `−${gap} season${gap === 1 ? "" : "s"}` : "partial"
+            }</abbr>`
           : "";
         // A player whose whole career predates the transaction feed has no
         // visible days at all. "0.000" would read as a measured figure when
