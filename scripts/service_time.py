@@ -274,10 +274,34 @@ _SIGNING_RE = re.compile(r"signed free agent|signed as a free agent", re.IGNOREC
 _MINOR_LEAGUE_DEAL_RE = re.compile(r"minor league (?:contract|deal)", re.IGNORECASE)
 
 
+# --- Going on a major league IL STARTS the clock, it does not merely fail to
+# --- stop it ----------------------------------------------------------------
+# A player on his club's major league injured list is accruing service time by
+# definition. Until now an IL placement was only listed as non-stopping, which
+# is enough for a player who was already active but does nothing for one whose
+# clock had already stopped. So a player optioned to the minors and later
+# transferred to the 60-day IL stayed stopped, when in fact the transfer put
+# him back on a major league list and he should have been accruing again.
+#
+# Measured against MLB's own 2018 rosters, this was the largest single
+# remaining error: Ben Heller spent the season on the 60-day IL and was
+# under-credited on 27 of 27 sampled dates, 27 of the 37 total.
+#
+# Affiliate placements (a Triple-A club's own injured list) are excluded by
+# the MLB-club filter in update_service_time, so only real major league lists
+# reach this. 6,607 such rows across the cached histories.
+_IL_PLACEMENT_RE = re.compile(
+    rf"(?:placed|transferred){_NAME}(?:on|to) the [\w\- ]*?(?:injured|disabled) list",
+    re.IGNORECASE,
+)
+
+
 def _is_active_start(desc: str) -> bool:
     if _SIGNING_RE.search(desc):
         # A major league signing starts the clock; a minor league one does not.
         return not _MINOR_LEAGUE_DEAL_RE.search(desc)
+    if _IL_PLACEMENT_RE.search(desc):
+        return True
     return bool(_START_RE.search(desc))
 
 
