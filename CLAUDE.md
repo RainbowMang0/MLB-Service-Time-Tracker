@@ -297,6 +297,8 @@ hasn't been played. The daily job passes `horizon_end=TODAY`.
   with commands interleaved into data. Deliver code as files through GitHub's
   web uploader, or as small pastes. If they've moved to a desktop, this no
   longer applies.
+- **Keep summaries short.** Lead with the result and the decision needed.
+  Detail belongs in this file and in commit messages, not in chat.
 - Prefer `git apply` patches over hand-editing: they fail loudly and safely.
 - Verify with checksums after any file transfer. It has caught real corruption.
 - `.github` and other dot-directories are invisible in iPadOS Files and get
