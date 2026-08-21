@@ -2,21 +2,29 @@ name: Probe Transaction Coverage
 
 # Diagnostic only -- reads from the API, writes nothing, commits nothing.
 #
-# Settles finding #9 in CLAUDE.md: does /transactions carry pre-2009 history?
-# This has to run here because the development sandbox cannot reach
-# statsapi.mlb.com (the egress proxy 403s that host), while Actions runners
-# can. Run it, then read the log; the last lines print a verdict.
+# The development sandbox cannot reach statsapi.mlb.com (the egress proxy
+# 403s that host), so questions that need the live API get answered here
+# instead. Run the relevant probe, then read the log; each one prints a
+# verdict at the end.
 
 on:
   workflow_dispatch:
     inputs:
+      probe:
+        description: "Which probe to run"
+        type: choice
+        required: true
+        default: coverage
+        options:
+          - coverage # does /transactions carry pre-2009 history? (finding #1)
+          - roster-history # can we read a club's roster as of a past date?
       players:
-        description: "Space-separated player names in quotes, or blank for the flagged set"
+        description: "coverage probe only: space-separated names in quotes, blank for the flagged set"
         required: false
         default: ""
 
-# Deliberately NOT in the service-time-update concurrency group: this job
-# only reads, so it cannot clobber the data file and is safe to run at any
+# Deliberately NOT in the service-time-update concurrency group: these jobs
+# only read, so they cannot clobber the data file and are safe to run at any
 # time, including while a backfill batch is going.
 
 jobs:
@@ -37,8 +45,15 @@ jobs:
 
       - name: Probe
         run: |
-          if [ -n "${{ github.event.inputs.players }}" ]; then
-            python scripts/probe_coverage.py ${{ github.event.inputs.players }}
-          else
-            python scripts/probe_coverage.py
-          fi
+          case "${{ github.event.inputs.probe }}" in
+            roster-history)
+              python scripts/probe_roster_history.py
+              ;;
+            *)
+              if [ -n "${{ github.event.inputs.players }}" ]; then
+                python scripts/probe_coverage.py ${{ github.event.inputs.players }}
+              else
+                python scripts/probe_coverage.py
+              fi
+              ;;
+          esac
