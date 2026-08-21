@@ -314,7 +314,9 @@ hasn't been played. The daily job passes `horizon_end=TODAY`.
 ## Current state
 
 - Daily workflow works and has run unattended successfully.
-- 1,856 players in the database (1,356 rostered + 500 backfilled).
+- **5,568 players in the database (1,356 rostered + 4,212 backfilled). The
+  historical backfill is COMPLETE** as of 2026-08-21 — 9 batches, 0 failures,
+  every batch passing the invariant gate.
 - 2020 proration, debut floor, demo purge, pagination, and
   `history_complete` flagging are all committed and live.
 - 45 tests passing.
