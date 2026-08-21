@@ -338,18 +338,47 @@ Rebuilding careers this way is far too expensive (30 clubs × ~186 days × N
 seasons). Sampling is cheap: one club-season at a 7-day interval is ~27
 calls and yields ~1,100 player-date judgements.
 
-### The number (2026-08-21, Yankees 2018, weekly)
+### The numbers (2026-08-21, Yankees, weekly sampling)
 
-| | |
-|---|---|
-| agree | 95.3% |
-| model OVER-credits | 1.3% |
-| model UNDER-credits | 3.4% |
+| | 2018 | 2014 |
+|---|---|---|
+| agree | 95.3% | **88.6%** |
+| model OVER-credits | 1.3% | **2.6%** |
+| model UNDER-credits | 3.4% | **8.7%** |
 
-Over-crediting — the failure mode that produced every embarrassment so far —
-is small. Of the 38 under-credits, **27 are one player**, Ben Heller, on the
-60-day IL through 2018: the roster says accruing, the model credits nothing.
-Excluding him, under-crediting is ~1%.
+**2014 fails the gate on both counts, so the mass backfill is blocked.**
+
+Over-crediting — the failure mode behind every earlier embarrassment — is
+small in both. The problem is UNDER-crediting, and it is concentrated:
+
+- 2018: 27 of 38 under-credits are Ben Heller alone, on the 60-day IL all
+  season, where the roster says accruing and the model credits nothing.
+- 2014: 55 of 103 are two players. **Ichiro Suzuki (under=28, agree=0)** was
+  on the active roster all year and gets zero days — he arrived by trade in
+  2012 and stayed, and "traded" is not a start keyword. **Masahiro Tanaka
+  (under=27)** signed as a free agent in January 2014 and went straight onto
+  the active roster; "signed free agent" is not a start keyword either.
+
+### The carry-in problem (the main remaining defect)
+
+`build_global_active_intervals()` only ever opens an interval on an explicit
+start keyword. A player who is *already* on a roster when the window opens,
+or who joins by trade or by signing a major league contract, never gets one —
+so he accrues nothing until some future recall or activation happens to fire.
+
+This is worse in the backfill population than in the daily one: veterans and
+older eras are exactly where players sit on rosters for years without a
+transaction the parser recognises.
+
+`compute_service_time()` still carries a `carry_in_active_first_season`
+parameter, currently a documented no-op. This is what it was for.
+
+Candidate fixes, both now **measurable** rather than guesswork — run the
+roster check before and after:
+- treat a major league free agent signing as a start, while continuing to
+  exclude "...to a minor league contract" (~350 cached rows)
+- infer carry-in: if the first transaction seen for a player is a STOP, he
+  must have been active beforehand, so open the interval at the window start
 
 Run it: Actions → "Validate Service Time" → rosters.
 
