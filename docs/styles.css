@@ -160,6 +160,14 @@ html, body {
 /* Marks players who debuted before the transaction feed begins, whose
    service time is a floor rather than an estimate. Deliberately quiet --
    it should read as a footnote, not an error. */
+.no-data {
+  color: var(--text-muted, #8b949e);
+  font-style: italic;
+  border-bottom: 1px dotted currentColor;
+  cursor: help;
+  text-decoration: none;
+}
+
 .partial-flag {
   font-size: 0.7rem;
   font-weight: 600;

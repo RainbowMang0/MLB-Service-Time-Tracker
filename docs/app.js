@@ -60,6 +60,11 @@
       .replace(/"/g, "&quot;");
 
   function classify(p) {
+    // No reconstructable history at all -- calling these players
+    // "Pre-Arbitration" is flatly wrong (Arthur Rhodes pitched 20 seasons).
+    if (p.service_days_total === 0 && p.history_complete === false) {
+      return { label: "Unknown", cls: "badge-neutral" };
+    }
     if (p.free_agent_eligible) return { label: "Free Agent Eligible", cls: "badge-good" };
     if (p.super_two_candidate) return { label: "Possible Super Two", cls: "badge-serious" };
     if (p.arbitration_eligible) return { label: "Arbitration Eligible", cls: "badge-warning" };
@@ -183,12 +188,23 @@
         const partial = !isComplete(p)
           ? ` <abbr class="partial-flag" title="Debuted before ${coverageStartYear}, when the transaction feed begins. Earlier seasons are invisible to the data source, so this figure is a floor, not an estimate.">partial</abbr>`
           : "";
+        // A player whose whole career predates the transaction feed has no
+        // visible days at all. "0.000" would read as a measured figure when
+        // it actually means "no data" -- Alan Embree pitched 16 seasons and
+        // still computes to zero. Show nothing rather than a false zero.
+        // A complete-history player at 0.000 really did accrue nothing (a
+        // 40-man prospect who never reached an active roster), so that one
+        // stays.
+        const noData = p.service_days_total === 0 && !isComplete(p);
+        const serviceCell = noData
+          ? `<abbr class="no-data" title="This player's entire career predates ${coverageStartYear}, when the transaction feed begins, so no service time can be reconstructed. This is missing data, not zero service time.">no data</abbr>`
+          : esc(p.service_time) || "—";
         return `
         <tr>
           <td class="player-name">${esc(p.name) || "—"}${partial}</td>
           <td>${esc(p.team) || "—"}</td>
           <td>${esc(p.position) || "—"}</td>
-          <td class="num-col">${esc(p.service_time) || "—"}</td>
+          <td class="num-col">${serviceCell}</td>
           <td><span class="badge ${status.cls}">${status.label}</span></td>
           <td><span class="pill ${p.on_40_man ? "pill-yes" : "pill-no"}">${p.on_40_man ? "Yes" : "No"}</span></td>
           <td>${esc(p.last_updated) || "—"}</td>
