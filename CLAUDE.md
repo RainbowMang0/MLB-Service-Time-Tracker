@@ -373,12 +373,34 @@ transaction the parser recognises.
 `compute_service_time()` still carries a `carry_in_active_first_season`
 parameter, currently a documented no-op. This is what it was for.
 
-Candidate fixes, both now **measurable** rather than guesswork — run the
-roster check before and after:
-- treat a major league free agent signing as a start, while continuing to
-  exclude "...to a minor league contract" (~350 cached rows)
-- infer carry-in: if the first transaction seen for a player is a STOP, he
-  must have been active beforehand, so open the interval at the window start
+**Fix 1 (shipped): a major league free agent signing starts the clock.**
+Measured on Yankees 2014, before → after:
+
+| | before | after |
+|---|---|---|
+| agree | 88.6% | 93.7% |
+| over-credit | 2.6% | 2.6% |
+| under-credit | 8.7% | 3.7% |
+
+Under-crediting more than halved (103 → 43) and over-crediting did not move
+at all (31 → 31), which is what you want from a change that only adds
+intervals. Tanaka went under=27 → under=2, and Ichiro dropped off the list
+entirely — he had re-signed with the Yankees as a free agent, so the same
+fix caught him. Minor league deals stay excluded by the explicit
+"...to a minor league contract" wording (828 cached rows vs 534 major).
+
+**Still short of the gate** (93.7% vs ≥95%, 2.6% vs ≤2% over). What is left
+is again concentrated in a handful of players, so it is diagnosable rather
+than diffuse:
+- under: David Huff (16), Shawn Kelley (12) — 28 of 43
+- over: José Ramírez (13), Austin Romine (11) — 24 of 31
+
+**Fix 2 (not yet attempted): carry-in.** If the first transaction seen for a
+player is a STOP, he must have been active before it, so the interval should
+open at the window start. This is what the vestigial
+`carry_in_active_first_season` parameter was for. Measure it the same way —
+one change, one before/after run — rather than bundling it with anything
+else.
 
 Run it: Actions → "Validate Service Time" → rosters.
 
