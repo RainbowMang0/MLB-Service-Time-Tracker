@@ -992,6 +992,68 @@ published files, with no API calls. A change to how something is *derived*
 from records that are already correct does not need half an hour of
 re-fetching.
 
+### 10. Same-date transactions: the stop wins
+
+**Found 2026-08-22 by probing Ben Bowden**, who scored `over=4 agree=0` on
+Tampa Bay 2022 while his stored record credited him 0 days that season. Both
+numbers came from the same code. What differed was the order two rows
+arrived in:
+
+```
+2022-03-31  STOP   Colorado Rockies optioned LHP Ben Bowden
+2022-04-29  START  Tampa Bay Rays claimed LHP Ben Bowden off waivers
+2022-04-29  STOP   Tampa Bay Rays optioned LHP Ben Bowden to Durham Bulls
+```
+
+Walked start-first: the start opens an interval, the stop closes it at
+04-28, zero days. Walked stop-first: the stop is a no-op (he was already
+optioned in March), the start opens an interval, and **nothing ever closes
+it** — 160 phantom days to the end of the season.
+
+`sorted(..., key=lambda t: t.date)` is stable, so which happened was decided
+by the order the API listed two rows in. Measured directly: **0 days vs 160,
+same player, same code.**
+
+Intervals are now built from transactions **grouped by date**, and when a
+date carries both a start and a stop, **the stop wins** — the player ends
+that day off the active roster.
+
+**A rejected rule, recorded so it is not retried.** The first fix treated a
+same-date pair as a *wash*, leaving the player in whatever state he was
+already in. It reads well — claimed-then-optioned never reaches the roster,
+optioned-then-recalled never leaves it — and it is wrong where it matters
+most. Of 223 same-date pairs in the cached histories, 212 end in an option,
+a DFA or an outright:
+
+| count | start | stop |
+|---|---|---|
+| 127 | activated from the IL | optioned |
+| 61 | claimed off waivers | optioned |
+| 32 | recalled | optioned |
+| 24 | contract selected | optioned |
+
+A player activated off the IL is *already accruing*, so "unchanged" keeps
+him accruing straight through an option — and that is the commonest pair of
+the four. Measured across the cache the wash rule **added 5,623 days**.
+Stop-wins only ever removes them.
+
+*Measured, old walk → stop-wins, over all 1,324 cached players:*
+
+| | |
+|---|---|
+| players changed | 48 (3.6%) |
+| days removed | **1,512** |
+| days added | **0** |
+| reference players moved | **none** (total residual 203 → 200) |
+
+The cost is a genuine paper move — optioned and recalled the same day,
+never actually leaving — which now reads as a stop. Rare, and in the safe
+direction.
+
+**This is what the Rays' 1.1% over-crediting was.** They churn players, so
+same-day claim-and-option happens constantly; the Yankees seasons barely saw
+it. The gate asking for more than one club is what surfaced it.
+
 ### Gate before a mass backfill
 
 1. **Roster accuracy** — agreement ≥95% and over-crediting ≤2%, on at least

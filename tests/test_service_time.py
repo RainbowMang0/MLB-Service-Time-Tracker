@@ -907,6 +907,83 @@ def test_latest_complete_season_is_measured_not_assumed():
     check("a finished season is", S.latest_complete_season(done, 2026) == 2026)
 
 
+# --- same-date transactions ----------------------------------------------
+#
+# From Ben Bowden, Tampa Bay 2022, who scored over=4 agree=0 on the roster
+# check while his stored record credited him 0 days that season. Both
+# numbers came from the same code; what differed was the order two rows
+# dated 2022-04-29 arrived in.
+
+
+def _bowden_rows():
+    return {
+        "recall": Transaction(dt.date(2021, 10, 5), "Colorado Rockies recalled LHP X from Albuquerque Isotopes."),
+        "option": Transaction(dt.date(2022, 3, 31), "Colorado Rockies optioned LHP X to Albuquerque Isotopes."),
+        "claim": Transaction(dt.date(2022, 4, 29), "Tampa Bay Rays claimed LHP X off waivers from Colorado Rockies."),
+        "sent_down": Transaction(dt.date(2022, 4, 29), "Tampa Bay Rays optioned LHP X to Durham Bulls."),
+    }
+
+
+def test_same_date_start_and_stop_do_not_depend_on_feed_order():
+    r = _bowden_rows()
+    horizon = dt.date(2022, 10, 5)
+    floor = dt.date(2021, 4, 2)
+    a = build_global_active_intervals(
+        [r["recall"], r["option"], r["claim"], r["sent_down"]], horizon, accrual_floor=floor
+    )
+    b = build_global_active_intervals(
+        [r["recall"], r["option"], r["sent_down"], r["claim"]], horizon, accrual_floor=floor
+    )
+    check("feed order does not change the intervals", a == b)
+
+
+def test_claimed_and_optioned_the_same_day_credits_nothing():
+    """He never reaches the active roster, so the day is not service time."""
+    r = _bowden_rows()
+    intervals = build_global_active_intervals(
+        [r["recall"], r["option"], r["claim"], r["sent_down"]],
+        dt.date(2022, 10, 5),
+        accrual_floor=dt.date(2021, 4, 2),
+    )
+    in_2022 = [iv for iv in intervals if iv[1] >= dt.date(2022, 4, 7)]
+    check("nothing is credited after the same-day claim and option", in_2022 == [])
+
+
+def test_activated_off_the_il_then_optioned_stops_the_clock():
+    """
+    The commonest same-date pair in the data (127 of 223), and the one that
+    killed the "a pair is a wash" rule. He is already accruing on the IL, so
+    leaving him unchanged keeps him accruing through an option -- measured
+    across the cache, that added 5,623 days.
+    """
+    txns = [
+        Transaction(dt.date(2025, 4, 1), "Cincinnati Reds recalled LHP X from Louisville Bats."),
+        Transaction(dt.date(2025, 5, 21), "Cincinnati Reds activated LHP X from the 15-day injured list."),
+        Transaction(dt.date(2025, 5, 21), "Cincinnati Reds optioned LHP X to Louisville Bats."),
+    ]
+    intervals = build_global_active_intervals(
+        txns, dt.date(2025, 10, 1), accrual_floor=dt.date(2025, 4, 1)
+    )
+    check(
+        "the option ends the interval on the day it is dated",
+        intervals == [(dt.date(2025, 4, 1), dt.date(2025, 5, 20))],
+    )
+    check("and nothing reopens afterwards", len(intervals) == 1)
+
+
+def test_no_interval_ever_ends_before_it_starts():
+    """
+    The old walk could emit (2022-04-29, 2022-04-28). Harmless where it was
+    guarded, but a signal that the state machine had been driven somewhere
+    it should not go.
+    """
+    r = _bowden_rows()
+    intervals = build_global_active_intervals(
+        list(r.values()), dt.date(2022, 10, 5), accrual_floor=dt.date(2021, 4, 2)
+    )
+    check("every interval is well formed", all(s <= e for s, e in intervals))
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -948,5 +1025,9 @@ if __name__ == "__main__":
     test_qualifying_season_follows_the_season_being_played()
     test_qualifying_season_falls_back_early_in_a_season()
     test_latest_complete_season_is_measured_not_assumed()
+    test_same_date_start_and_stop_do_not_depend_on_feed_order()
+    test_claimed_and_optioned_the_same_day_credits_nothing()
+    test_activated_off_the_il_then_optioned_stops_the_clock()
+    test_no_interval_ever_ends_before_it_starts()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)
