@@ -49,6 +49,8 @@ from service_time import (  # noqa: E402
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "docs" / "data"
 OUTPUT_FILE = DATA_DIR / "service_time.json"
+# What the browser actually downloads. See write_index().
+INDEX_FILE = DATA_DIR / "index.json"
 CACHE_DIR = ROOT / "data" / "cache" / "transactions"
 
 MIN_TRANSACTION_YEAR = 2005  # don't bother reaching back further than this
@@ -279,6 +281,79 @@ def build_player_record(
     }
 
 
+def write_index(db: dict[str, dict]) -> None:
+    """
+    Emit the compact file the frontend downloads.
+
+    `service_time.json` is the database: every field, one object per player,
+    and the pipeline's own source of truth on the next run. At 5,568 players
+    it is 2.8 MB, and the page was fetching all of it on every visit for a
+    table that reads eleven fields.
+
+    This writes a derived view instead, 0.17 MB (94% smaller), by removing
+    everything the browser does not need:
+
+      * fields the table never reads (id, team_id, mlb_debut, last_played,
+        accrual_ceiling, first_transaction)
+      * fields that are pure functions of service_days_total, recomputed in
+        the browser instead of shipped. Verified against all 5,568 records:
+        service_time, free_agent_eligible, super_two_candidate and
+        arbitration_eligible each reproduce exactly, 0 mismatches.
+      * the key names themselves -- rows are arrays, which at 5,568 players
+        is the single biggest saving
+      * repeated team and position strings, replaced by indexes into lookup
+        tables (33 teams, 12 positions)
+
+    `missing` is the number of seasons of a player's career the feed cannot
+    see: 0 means complete, -1 means incomplete by an unknown amount (a record
+    written before missing_seasons existed).
+    """
+    players = sorted(db.values(), key=lambda p: p.get("name") or "")
+    teams = sorted({p.get("team") or "" for p in players})
+    positions = sorted({p.get("position") or "" for p in players})
+    team_ix = {t: i for i, t in enumerate(teams)}
+    pos_ix = {p: i for i, p in enumerate(positions)}
+
+    rows = []
+    for p in players:
+        missing = p.get("missing_seasons")
+        if missing is None:
+            # Legacy record: we know completeness but not the size of the gap.
+            missing = 0 if p.get("history_complete", True) else -1
+        rows.append([
+            # The id is the only stable identity: the dataset contains two
+            # different Luis Perdomos, both Padres pitchers, and two different
+            # Daniel Robertsons. Name+team+position is NOT unique.
+            p.get("id"),
+            p.get("name") or "",
+            team_ix[p.get("team") or ""],
+            pos_ix[p.get("position") or ""],
+            p.get("service_days_total", 0),
+            1 if p.get("on_40_man") else 0,
+            missing,
+        ])
+
+    payload = {
+        "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+        "source": "MLB Stats API (statsapi.mlb.com, unofficial public endpoint)",
+        "disclaimer": (
+            "Service time figures are ESTIMATES computed from public roster "
+            "transaction records, not official MLB/MLBPA figures. Where the "
+            "transaction feed cannot see the start of a player's career, his "
+            "figure is a floor rather than an estimate and the table says so."
+        ),
+        "player_count": len(rows),
+        "teams": teams,
+        "positions": positions,
+        # Self-documenting, so the row layout is readable without the code.
+        "fields": ["id", "name", "team", "position", "days", "on_40_man", "missing_seasons"],
+        "players": rows,
+    }
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    INDEX_FILE.write_text(json.dumps(payload, separators=(",", ":")))
+    print(f"Wrote compact index for {len(rows)} players to {INDEX_FILE}")
+
+
 def _missing_seasons(
     debut_date: dt.date | None, transactions: list[Transaction]
 ) -> int:
@@ -396,6 +471,7 @@ def main() -> None:
     }
     OUTPUT_FILE.write_text(json.dumps(output, indent=2))
     print(f"Wrote {len(db)} player records to {OUTPUT_FILE}")
+    write_index(db)
 
 
 if __name__ == "__main__":
