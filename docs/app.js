@@ -1,7 +1,58 @@
 (() => {
   "use strict";
 
-  const DATA_URL = "data/service_time.json";
+  // The compact index is what the browser downloads: 0.21 MB against 2.84 MB
+  // for the full database, because it drops fields the table never reads,
+  // recomputes everything derivable from the day count, and stores rows as
+  // arrays with team/position lookup tables instead of repeating key and team
+  // strings 5,568 times.
+  //
+  // service_time.json is still the database and still published -- it is the
+  // pipeline's own source of truth on the next run, and anyone who wants the
+  // full records can fetch it. It is just no longer on the page's critical
+  // path. The fallback below keeps older deployments working.
+  const DATA_URL = "data/index.json";
+  const FULL_DATA_URL = "data/service_time.json";
+
+  const FULL_YEAR_DAYS = 172;
+  // Matches SUPER_TWO_HEURISTIC_MIN_DAYS in scripts/service_time.py.
+  const SUPER_TWO_MIN_DAYS = 86;
+
+  /**
+   * Rebuild the player objects the rest of this file expects.
+   *
+   * Everything here is a pure function of the day count, verified against all
+   * 5,568 records at build time with zero mismatches -- so shipping these
+   * fields would be shipping the same information twice.
+   */
+  function hydrate(payload) {
+    const teams = payload.teams || [];
+    const positions = payload.positions || [];
+    return (payload.players || []).map((row) => {
+      const [id, name, teamIx, posIx, days, on40, missing] = row;
+      const years = Math.floor(days / FULL_YEAR_DAYS);
+      const rem = days % FULL_YEAR_DAYS;
+      const frac = years + rem / FULL_YEAR_DAYS;
+      const superTwo = frac >= 2 && frac < 3 && rem >= SUPER_TWO_MIN_DAYS;
+      return {
+        id,
+        name,
+        team: teams[teamIx] || null,
+        position: positions[posIx] || null,
+        service_time: `${years}.${String(rem).padStart(3, "0")}`,
+        service_days_total: days,
+        free_agent_eligible: frac >= 6,
+        super_two_candidate: superTwo,
+        arbitration_eligible: frac >= 3 || superTwo,
+        on_40_man: on40 === 1,
+        // missing_seasons: 0 complete, -1 incomplete by an unknown amount
+        // (a record written before the field existed).
+        history_complete: missing === 0,
+        missing_seasons: missing > 0 ? missing : 0,
+        last_updated: payload.generated_at ? payload.generated_at.slice(0, 10) : null,
+      };
+    });
+  }
 
   // Embedded fallback so the page still shows something meaningful if
   // opened directly from disk (file://) where fetch() of a local JSON file
@@ -342,7 +393,11 @@
   }
 
   function init(data) {
-    allPlayers = data.players || [];
+    // The compact index stores rows as arrays; the full database and the
+    // embedded fallback store them as objects. Detect which arrived rather
+    // than assuming, so an older service_time.json still renders.
+    const rows = data.players || [];
+    allPlayers = Array.isArray(rows[0]) ? hydrate(data) : rows;
     if (data.coverage_start_year) coverageStartYear = data.coverage_start_year;
     renderMeta(data);
     renderStatTiles(allPlayers);
@@ -356,11 +411,17 @@
 
   wireThemeToggle();
 
-  fetch(DATA_URL, { cache: "no-store" })
-    .then((r) => {
+  const fetchJson = (url) =>
+    fetch(url, { cache: "no-store" }).then((r) => {
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.json();
-    })
+    });
+
+  // Prefer the compact index; fall back to the full database so a deployment
+  // that hasn't regenerated index.json yet still works, then to the embedded
+  // sample for file:// use.
+  fetchJson(DATA_URL)
+    .catch(() => fetchJson(FULL_DATA_URL))
     .then(init)
     .catch(() => init(FALLBACK_DATA));
 })();

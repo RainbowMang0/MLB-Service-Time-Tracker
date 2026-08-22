@@ -57,6 +57,7 @@ import fetch_mlb_data as mlb  # noqa: E402
 from service_time import TRANSACTION_COVERAGE_START_YEAR  # noqa: E402
 from update_service_time import (  # noqa: E402
     DATA_DIR,
+    write_index,
     OUTPUT_FILE,
     TODAY,
     build_player_record,
@@ -361,6 +362,7 @@ def write_db(db: dict[str, dict]) -> None:
     }
     OUTPUT_FILE.write_text(json.dumps(output, indent=2))
     print(f"Wrote {len(db)} player records to {OUTPUT_FILE}")
+    write_index(db)
 
 
 if __name__ == "__main__":
