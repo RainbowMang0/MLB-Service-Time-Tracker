@@ -413,6 +413,45 @@ downloads was frozen at whatever was last committed by hand while the
 database updated daily underneath it. Both now stage `docs/data` whole,
 which also covers `profiles/`.
 
+## Eligibility is a statement about current players only
+
+Spotted by the owner from the numbers alone: **1,475 "free agency eligible"
+and 1,279 "arbitration eligible" against 1,359 players on a 40-man roster.**
+Not an arithmetic bug — a category error, twice over.
+
+| | all 5,568 | on a 40-man | no longer rostered |
+|---|---|---|---|
+| free agency eligible | 1,475 | **301** | 1,174 |
+| arbitration eligible | 1,279 | **371** | 908 |
+
+1. **The tiles counted the whole database.** 1,174 of those "free agency
+   eligible" are retired men who crossed 6.000 years years ago. The flag is
+   really "accrued 6.000+ years"; for an active player that is the same
+   statement, for a retired one it is not.
+2. **The tiles ignored the filters.** `renderStatTiles(allPlayers)` ran once
+   at load, so filtering the table to current players left the header
+   describing a different population than the rows beneath it. That is what
+   made it look like arithmetic.
+
+Now: census tiles (tracked / on a 40-man / previous) stay whole-database,
+because that is what they are for. Every eligibility figure — free agency,
+arbitration, Super Two — counts rostered players only, and the status column
+reads "Not on a roster" rather than an eligibility badge for everyone else.
+The status filters follow the same rule.
+
+### And no club is published for a player who is not rostered
+
+The stored `team` for a non-rostered player is the last club we saw him
+with, which is **stale by construction**. Printing it next to his name
+asserts a roster spot he does not hold.
+
+The table's payload no longer carries it — `write_index()` blanks it for
+anyone off a 40-man, so the browser cannot show it even by accident, and the
+team filter offers only clubs someone is actually on. The database keeps the
+field, and **the profile's per-season club column is untouched**: those are
+dated facts about which club he was with in a given year, which is exactly
+the right place for that information.
+
 ## Current state
 
 As of 2026-08-22, after the carry-in regeneration:

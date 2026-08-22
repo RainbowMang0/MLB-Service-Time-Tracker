@@ -457,7 +457,17 @@ def write_index(db: dict[str, dict], super_two_cutoff: dict | None = None) -> No
     written before missing_seasons existed).
     """
     players = sorted(db.values(), key=lambda p: p.get("name") or "")
-    teams = sorted({p.get("team") or "" for p in players})
+
+    # A club is published for rostered players only. What is stored for
+    # everyone else is the last club we saw them with, which is stale by
+    # construction -- printing it next to a retired player's name asserts a
+    # roster spot he does not hold. The database keeps it (the profile's
+    # season rows need per-year clubs, which ARE dated facts); the table's
+    # payload does not carry it.
+    def _team(p: dict) -> str:
+        return (p.get("team") or "") if p.get("on_40_man") else ""
+
+    teams = sorted({_team(p) for p in players})
     positions = sorted({p.get("position") or "" for p in players})
     team_ix = {t: i for i, t in enumerate(teams)}
     pos_ix = {p: i for i, p in enumerate(positions)}
@@ -474,7 +484,7 @@ def write_index(db: dict[str, dict], super_two_cutoff: dict | None = None) -> No
             # Daniel Robertsons. Name+team+position is NOT unique.
             p.get("id"),
             p.get("name") or "",
-            team_ix[p.get("team") or ""],
+            team_ix[_team(p)],
             pos_ix[p.get("position") or ""],
             p.get("service_days_total", 0),
             1 if p.get("on_40_man") else 0,

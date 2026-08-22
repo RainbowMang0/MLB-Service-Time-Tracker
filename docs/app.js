@@ -132,6 +132,15 @@
       .replace(/"/g, "&quot;");
 
   function classify(p) {
+    // Eligibility is a statement about a player's CURRENT contractual
+    // situation, so it only means anything for someone on a 40-man roster.
+    // "Free agency eligible" applied to a man who last played in 2013 is a
+    // category error -- he is not eligible for anything, he is finished. All
+    // the flag really says about him is that he accrued 6.000+ years, which
+    // the service-time column already shows.
+    if (!p.on_40_man) {
+      return { label: "Not on a roster", cls: "badge-neutral" };
+    }
     // No reconstructable history at all -- calling these players
     // "Pre-Arbitration" is flatly wrong (Arthur Rhodes pitched 20 seasons).
     if (p.service_days_total === 0 && p.history_complete === false) {
@@ -150,6 +159,10 @@
 
   function statusMatches(p, filterValue) {
     if (!filterValue) return true;
+    if (filterValue === "not-rostered") return !p.on_40_man;
+    // Every other status is an eligibility one, and those apply to current
+    // players only -- see classify().
+    if (!p.on_40_man) return false;
     if (filterValue === "fa") return !!p.free_agent_eligible;
     if (filterValue === "super-two") return !!p.super_two_candidate;
     if (filterValue === "arb") return !!p.arbitration_eligible && !p.free_agent_eligible;
@@ -173,23 +186,45 @@
 
   function renderStatTiles(players) {
     const total = players.length;
-    const current = players.filter((p) => p.on_40_man).length;
+    const rostered = players.filter((p) => p.on_40_man);
+    const current = rostered.length;
     const previous = total - current;
-    const fa = players.filter((p) => p.free_agent_eligible).length;
-    const arb = players.filter((p) => p.arbitration_eligible && !p.free_agent_eligible).length;
-    const superTwo = players.filter((p) => p.super_two_candidate).length;
+    // Counted over rostered players only. Across the whole database these
+    // read absurdly: 1,475 "free agency eligible" against 1,359 players on a
+    // 40-man, because 1,174 of them are retired men who crossed 6.000 years
+    // years ago. The tiles sat above a table that could be filtered to
+    // current players, so the header described a different population than
+    // the rows under it.
+    const fa = rostered.filter((p) => p.free_agent_eligible).length;
+    const arb = rostered.filter((p) => p.arbitration_eligible && !p.free_agent_eligible).length;
+    const superTwo = rostered.filter((p) => p.super_two_candidate).length;
     const partial = players.filter((p) => !isComplete(p)).length;
 
     const tiles = [
       { label: "Tracked players", value: total, accent: "" },
       { label: "Currently on a 40-man", value: current, accent: "" },
       { label: "Previous players logged", value: previous, accent: "" },
-      { label: "Free agency eligible", value: fa, accent: "accent-good" },
-      { label: "Arbitration eligible", value: arb, accent: "accent-warning" },
+      {
+        label: "Free agency eligible",
+        value: fa,
+        accent: "accent-good",
+        title: "Players currently on a 40-man roster with 6.000+ years of service. "
+          + "Players who have left the majors are not counted: eligibility is a "
+          + "statement about a current contract, and most of this database is "
+          + "retired players.",
+      },
+      {
+        label: "Arbitration eligible",
+        value: arb,
+        accent: "accent-warning",
+        title: "Players currently on a 40-man roster with 3.000+ years of service "
+          + "(or on the Super Two track), not yet at 6.000.",
+      },
       {
         label: superTwoCutoff
           ? `Super Two track (≥ ${superTwoCutoff.cutoff})`
           : "Possible Super Two",
+        // rostered-only, same reason as the two tiles above
         value: superTwo,
         accent: "accent-serious",
         title: superTwoCutoff
@@ -220,7 +255,12 @@
   }
 
   function populateTeamFilter(players) {
-    const teams = Array.from(new Set(players.map((p) => p.team).filter(Boolean))).sort();
+    // Only clubs someone is actually rostered on. A retired player's stored
+    // club is his last known one, which is stale by construction -- offering
+    // it as a filter would imply a roster he is not on.
+    const teams = Array.from(
+      new Set(players.filter((p) => p.on_40_man).map((p) => p.team).filter(Boolean))
+    ).sort();
     const select = el("team-filter");
     const current = select.value;
     select.innerHTML =
@@ -306,7 +346,7 @@
           <td class="player-name"><button type="button" class="player-link" data-player-id="${esc(
             p.id
           )}">${esc(p.name) || "—"}</button>${partial}</td>
-          <td>${esc(p.team) || "—"}</td>
+          <td>${p.on_40_man ? esc(p.team) || "—" : "—"}</td>
           <td>${esc(p.position) || "—"}</td>
           <td class="num-col">${serviceCell}</td>
           <td><span class="badge ${status.cls}">${status.label}</span></td>
@@ -562,9 +602,9 @@
       <header class="profile-header">
         <h2 id="profile-title">${esc(profile.name)}</h2>
         <p class="profile-sub">
-          ${esc(profile.team) || "No current club"}${
-            profile.position ? ` · ${esc(profile.position)}` : ""
-          } · ${profile.on_40_man ? "On a 40-man roster" : "Not on a 40-man roster"}
+          ${profile.on_40_man ? `${esc(profile.team) || "No current club"} · ` : ""}${
+            profile.position ? `${esc(profile.position)} · ` : ""
+          }${profile.on_40_man ? "On a 40-man roster" : "Not on a 40-man roster"}
         </p>
       </header>
       <dl class="profile-facts">
