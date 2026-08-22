@@ -421,8 +421,10 @@ As of 2026-08-22, after the carry-in regeneration:
 - **Carry-in is on.** It cleared the roster gate in both eras with
   over-crediting flat at 0.2%, and cut the total error across the eighteen
   Baseball Reference figures from 1,662 days to about 200.
-- **Reference check: 16 passed, 0 failed, 2 known gaps** (Scherzer and
-  Verlander, both reading high by roughly half a presumed season).
+- **Reference check: 17 passed, 0 failed, 2 known gaps** — all 19 rows now
+  have figures (Lindor entered 2026-08-22 at 10.113, we read 10.113). The
+  two gaps are Scherzer and Verlander, both reading high by roughly half a
+  presumed season.
 - **76 tests passing.**
 
 What the data is made of, measured across all 29,740 accruing seasons:
@@ -445,7 +447,6 @@ Payload: table index 0.21 MB; 64 profile shards, ~9 KB each gzipped.
   regressions the fix caused.
 - **José Ramírez, +8 days offline / −1 live** — the offline figure was the
   estimated season windows, not the model. Nothing to chase.
-- **Francisco Lindor** is the one reference row still without a figure.
 - The 2014 roster sample's remaining under-credits are concentrated in
   David Huff (16 of 39), who was claimed off waivers and bounced between
   clubs mid-season — probably a waiver-claim carry-in case.
@@ -763,7 +764,7 @@ validator. B-R shows a single dated snapshot in the bio block, e.g.
 (2026-01-26), which works because **service time does not accrue between the
 World Series and Opening Day** — the exact day need not match B-R's label.
 
-Still blank: Francisco Lindor.
+All 19 rows now carry a figure.
 
 #### Verlander is not a pre-2009 problem — he is the carry-in problem
 
