@@ -15,6 +15,10 @@ name: Validate Service Time
 #               comes from season breakdowns already in the database, so this
 #               validates exactly what the site publishes.
 #
+#   player    -- everything the model knows about ONE player in one season,
+#               next to what the rosters say, day by day. The rosters check
+#               names its worst players; this one explains them.
+#
 #   reference -- compares finished figures against known Baseball Reference
 #               numbers in data/reference_service_time.json. Narrow (a
 #               handful of players, hand-entered) but genuinely independent,
@@ -38,6 +42,7 @@ on:
           - rosters
           - reference
           - super-two
+          - player
       team:
         description: "rosters: MLB team id (147 = Yankees)"
         required: false
@@ -50,6 +55,10 @@ on:
         description: "rosters: days between sampled dates"
         required: false
         default: "7"
+      player_id:
+        description: "player: MLB person id to diagnose (e.g. 641386)"
+        required: false
+        default: ""
       carry_in:
         description: "rosters: carry-in rule (both = A/B in one run)"
         type: choice
@@ -87,6 +96,13 @@ jobs:
               ;;
             super-two)
               python scripts/validate_super_two.py
+              ;;
+            player)
+              python scripts/probe_player.py \
+                --player "${{ github.event.inputs.player_id }}" \
+                --team "${{ github.event.inputs.team }}" \
+                --season "${{ github.event.inputs.season }}" \
+                --interval "${{ github.event.inputs.interval }}"
               ;;
             *)
               python scripts/validate_against_rosters.py \
