@@ -464,25 +464,31 @@ exposed is a player who left an MLB roster in a way the feed never recorded —
 overwhelmingly a pre-2009 coverage problem, since 2009+ demotions are
 reliably present.
 
-**Offline evidence, before the live run.** Against the three Baseball
-Reference figures, as of 2026-01-26:
+**Offline evidence, before the live run.** All eighteen Baseball Reference
+figures, as of 2026-01-26, scored both ways. Only three players move at all:
 
 | player | B-R | carry-in off | carry-in on |
 |---|---|---|---|
-| Aaron Judge | 9.051 | 9.050 (−1d) | 9.050 (**−1d, unchanged**) |
-| Max Scherzer | 17.079 | 17.000 (−79d) | 17.156 (**+77d**) |
 | Justin Verlander | 20.002 | 11.000 (−1550d) | 20.090 (**+88d**) |
+| Max Scherzer | 17.079 | 17.000 (−79d) | 17.156 (**+77d**) |
+| Juan Soto | 7.134 | 7.135 (+1d) | 7.140 (**+6d**) |
+| *the other 15* | | | **byte-identical** |
 
-Verlander goes from 9 years wrong to 88 days wrong. Judge does not move at
-all, which is the property that matters most: where the feed is complete,
-carry-in is inert.
+Total absolute error across the eighteen: **1,662 days → 203 days.**
+
+The fifteen unchanged players are the property that matters most: where the
+feed is complete, carry-in is inert. It only fires where the feed is silent,
+which is exactly where the old default was guessing wrong.
 
 Scherzer is the predicted cost, and worth understanding rather than tuning
 away. He was optioned down and recalled during 2008; neither move is in the
 feed, so carry-in credits his whole 2008 (155 days) instead of the 79 he
-earned. An under-credit became a slightly smaller over-credit. Both his and
-Verlander's residuals are pre-2009 seasons — nothing in the well-covered era
-moved in the wrong direction.
+earned. An under-credit became a slightly smaller over-credit.
+
+Soto (+1d → +6d) is the one modern player it touches, and the five days are
+the only movement in the well-covered era in either direction. Watch him if
+a later measurement suggests carry-in over-credits generally; on this
+evidence he is noise.
 
 A tempting refinement, **rejected**: start the presumption at the later of
 the debut and the 2009 season, to avoid the sparse era entirely. Measured, it
@@ -567,25 +573,47 @@ carry-in case rather than a new class of bug.
 
 ### The first independent check (2026-08-22)
 
-Three Baseball Reference figures are in, and they are the first numbers in
-this project checked against a source that is not MLB's own transaction feed.
+Eighteen Baseball Reference figures are in — the first numbers in this
+project checked against a source that is not MLB's own transaction feed.
+All are the 01/26 snapshot, compared against what the model computes as of
+2026-01-26.
 
-| player | B-R (01/26) | ours | delta | own `missing_seasons` |
-|---|---|---|---|---|
-| Aaron Judge | 9.051 | 9.050 | **−1d** | 0 |
-| Max Scherzer | 17.079 | 17.000 | −79d | 1 |
-| Justin Verlander | 20.002 | 11.000 | **−1550d** | 10 |
+| player | B-R | ours | off by |
+|---|---|---|---|
+| Shohei Ohtani | 8.000 | 8.000 | **0** |
+| Pete Alonso | 7.000 | 7.000 | **0** |
+| Aaron Judge | 9.051 | 9.050 | −1 |
+| Jacob deGrom | 11.139 | 11.140 | +1 |
+| Mookie Betts | 11.070 | 11.071 | +1 |
+| Rafael Devers | 8.070 | 8.069 | −1 |
+| Juan Soto | 7.134 | 7.135 | +1 |
+| Nolan Arenado | 12.155 | 12.157 | +2 |
+| Gerrit Cole | 12.111 | 12.113 | +2 |
+| Vladimir Guerrero Jr. | 6.157 | 6.159 | +2 |
+| Bo Bichette | 6.063 | 6.065 | +2 |
+| Paul Goldschmidt | 14.059 | 14.062 | +3 |
+| Kenley Jansen | 15.073 | 15.070 | −3 |
+| Carlos Correa | 10.119 | 10.116 | −3 |
+| Corey Seager | 10.032 | 10.029 | −3 |
+| José Ramírez | 11.074 | 11.082 | +8 |
+| Max Scherzer | 17.079 | 17.000 | −79 |
+| Justin Verlander | 20.002 | 11.000 | −1550 |
 
-**Judge is the headline: one day off over a nine-year career.** Where the
-transaction feed is complete, the math is right. That is the first evidence
-for it that does not come from MLB.
+**Sixteen of eighteen land within three days**, two of them exactly, across
+careers of six to fifteen years. That is the first evidence for this
+project's math that does not come from MLB.
 
-The other two read low by close to exactly what their own records already
-declare missing, which is the flag working as designed — so
-`validate_service_time.py` now scores three ways, not two: `ok`, `GAP` (reads
-low and `missing_seasons > 0`), and `FAIL`. A GAP is the documented coverage
-limit, not a regression. Reading *high* is always a FAIL: missing history
-cannot inflate a figure.
+Two caveats on reading the small residuals. These were computed offline from
+the transaction cache using *estimated* season windows (Mar 28 – Oct 1),
+because the sandbox cannot reach the API; the live run uses real ones, so a
+±1-3 day residual is as likely to be the estimate as the model. And a
+matching total is weaker evidence than it looks — errors in opposite
+directions cancel. The roster check, which compares day by day, is what
+catches that; the two checks are complementary and neither replaces the
+other.
+
+José Ramírez (+8) is the only modern figure outside the noise and is worth a
+look on its own. Scherzer and Verlander are the carry-in story below.
 
 **How to read the B-R page.** There is no per-season `s.YYYY` column — that
 was a wrong assumption baked into the first version of this file and the
@@ -593,6 +621,8 @@ validator. B-R shows a single dated snapshot in the bio block, e.g.
 "9.051 (01/26)". `as_of` on every row is therefore one offseason date
 (2026-01-26), which works because **service time does not accrue between the
 World Series and Opening Day** — the exact day need not match B-R's label.
+
+Still blank: Francisco Lindor.
 
 #### Verlander is not a pre-2009 problem — he is the carry-in problem
 
@@ -631,11 +661,12 @@ revert in this project. Measure it on Yankees 2014 + 2018 before believing it.
 1. **Roster accuracy** — agreement ≥95% and over-crediting ≤2%, on at least
    two different club-seasons (one recent, one pre-2019 for disabled-list
    era wording).
-2. **Baseball Reference spot-check** — 3 of 19 figures entered as of
-   2026-08-22 (Judge, Scherzer, Verlander). Actions → "Validate Service
-   Time" → reference. This is the only *independent* check: the roster
-   comparison validates the pipeline against the same source it is built on,
-   so a systematic misreading of MLB's semantics passes it. See "The first
+2. **Baseball Reference spot-check** — 18 of 19 figures entered as of
+   2026-08-22 (all but Lindor); 16 land within three days offline. Actions →
+   "Validate Service Time" → reference confirms it against real season
+   windows. This is the only *independent* check: the roster comparison
+   validates the pipeline against the same source it is built on, so a
+   systematic misreading of MLB's semantics passes it. See "The first
    independent check" below.
 3. **Tests green** — `python tests/test_service_time.py`.
 
@@ -672,8 +703,8 @@ revert in this project. Measure it on Yankees 2014 + 2018 before believing it.
    after `horizon_end` before building intervals at all. Covered by a new
    regression test (`test_as_of_past_date_ignores_later_transactions`).
 
-   **Status:** the reference file has 19 rows, 3 with figures entered
-   (2026-08-22). Fill in more by hand from the players' Baseball Reference
+   **Status:** the reference file has 19 rows, 18 with figures entered
+   (2026-08-22); only Lindor is blank. Fill in the rest by hand from the players' Baseball Reference
    pages — deliberately not scraped — and run
    `python scripts/validate_service_time.py`. Requires network access to the
    live MLB Stats API, so it can't run in this offline sandbox — run it from
