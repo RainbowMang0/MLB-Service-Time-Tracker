@@ -329,6 +329,7 @@ def build_global_active_intervals(
     horizon_end: dt.date,
     accrual_floor: dt.date | None = None,
     accrual_ceiling: dt.date | None = None,
+    presume_active_from: dt.date | None = None,
 ) -> list[tuple[dt.date, dt.date]]:
     """
     Walk a player's ENTIRE chronological transaction history (not bounded to
@@ -374,16 +375,58 @@ def build_global_active_intervals(
     retired player for every season since. Lowering the horizon to the
     ceiling closes that interval at the right place and drops the later
     transactions along with it.
+
+    `presume_active_from` (the "carry-in" rule) treats the player as already
+    on a roster at that date -- in practice his MLB debut -- rather than
+    waiting for a start transaction to open the first interval. Without it,
+    a player is presumed OFF the roster until the feed explicitly says he is
+    on it, which silently zeroes out anyone who simply stayed put:
+
+        Justin Verlander debuted 2005-07-04 and sat on Detroit's roster
+        without being optioned, DFA'd, released or injured until 2015. His
+        first major-league transaction of ANY kind is 2015-04-08. Ten
+        seasons -- six of them inside the era where coverage is known to be
+        good -- produced no interval at all, and he read 11.000 against a
+        published 20.002.
+
+    This is the exact mirror of `accrual_ceiling`, which already presumes a
+    player stayed on the roster to the end of his last season rather than
+    demanding a transaction to prove it.
+
+    The risk is over-crediting, which is the failure mode behind every revert
+    in this project, so note what bounds it. `accrual_floor` stops the
+    presumption before the debut; `accrual_ceiling` stops it after the last
+    season played; and in between, any option, DFA, release or outright in
+    the feed closes the interval normally. What is left exposed is a player
+    who left an MLB roster in a way the feed does not record -- which is
+    mostly a pre-2009 coverage problem, since 2009+ demotions are reliably
+    present. Max Scherzer is the live example: he was optioned down and
+    recalled during 2008, neither move is in the feed, so carry-in credits
+    his whole 2008 rather than the 79 days he earned.
+
+    Transactions dated before `presume_active_from` are dropped: nothing that
+    happened before a player's major league debut can bear on whether he was
+    on a major league roster after it, and leaving them in would let a
+    pre-debut stop close the carried-in interval before it began.
     """
     if accrual_ceiling is not None:
         horizon_end = min(horizon_end, accrual_ceiling)
 
+    if presume_active_from is not None and presume_active_from > horizon_end:
+        presume_active_from = None
+
     txns = sorted(
-        (t for t in transactions if t.date <= horizon_end), key=lambda t: t.date
+        (
+            t
+            for t in transactions
+            if t.date <= horizon_end
+            and (presume_active_from is None or t.date >= presume_active_from)
+        ),
+        key=lambda t: t.date,
     )
 
     intervals: list[tuple[dt.date, dt.date]] = []
-    active_since: dt.date | None = None
+    active_since: dt.date | None = presume_active_from
 
     for t in txns:
         if _is_active_start(t.description):
@@ -429,10 +472,11 @@ def days_in_intervals(intervals: list[tuple[dt.date, dt.date]]) -> int:
 def compute_service_time(
     transactions: list[Transaction],
     seasons: list[SeasonWindow],
-    carry_in_active_first_season: bool = False,  # deprecated, kept for API compatibility; no-op
+    presume_active_from_debut: bool = False,
     horizon_end: dt.date | None = None,
     accrual_floor: dt.date | None = None,
     accrual_ceiling: dt.date | None = None,
+    carry_in_active_first_season: bool | None = None,  # deprecated alias
 ) -> ServiceTimeResult:
     """
     Compute total MLB service time across multiple seasons.
@@ -441,7 +485,19 @@ def compute_service_time(
     transaction history and then intersected with each season's date
     window -- this correctly handles players who go multiple seasons
     without a new transaction because they simply never leave the roster.
+
+    `presume_active_from_debut` enables the carry-in rule: the player is
+    treated as on a roster from `accrual_floor` (his debut) onward instead of
+    accruing nothing until some start transaction happens to fire. See
+    build_global_active_intervals for what bounds the risk. It requires a
+    floor -- with no debut date there is no defensible place to start
+    presuming, so it is silently inert.
+
+    `carry_in_active_first_season` is the old name for this. It spent a long
+    time as a documented no-op; if passed it is honoured as an alias.
     """
+    if carry_in_active_first_season is not None:
+        presume_active_from_debut = carry_in_active_first_season
     ordered_seasons = sorted(seasons, key=lambda s: s.year)
     if horizon_end is None:
         horizon_end = ordered_seasons[-1].end if ordered_seasons else dt.date.today()
@@ -451,6 +507,7 @@ def compute_service_time(
         horizon_end,
         accrual_floor=accrual_floor,
         accrual_ceiling=accrual_ceiling,
+        presume_active_from=accrual_floor if presume_active_from_debut else None,
     )
 
     total_days = 0

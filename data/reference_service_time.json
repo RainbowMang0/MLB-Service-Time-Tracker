@@ -5,25 +5,34 @@
       "  Actions -> 'Validate Service Time' -> check: reference",
       "Rows left as null are skipped, so partial completion is fine.",
       "",
-      "WHERE THE NUMBER COMES FROM: open the player's Baseball Reference page",
-      "and read the service-time figure for the given `as_of` season -- shown",
-      "as 's.2024'. Enter it exactly as displayed, e.g. \"7.045\" (years.days,",
-      "days zero-padded to 3). Nothing is scraped: these are entered by hand on",
-      "purpose, both to respect B-R's terms and because a handful of",
-      "hand-checked figures is enough to catch a systemic error.",
+      "WHERE THE NUMBER COMES FROM: open the player's Baseball Reference page.",
+      "In the bio block at the top, next to Service Time, B-R shows ONE dated",
+      "snapshot -- e.g. '9.051 (01/26)' -- not a per-season s.YYYY column. Read",
+      "that figure and enter it exactly as displayed, e.g. \"9.051\" (years.days,",
+      "days zero-padded to 3).",
       "",
-      "`ours_at_generation` is what THIS project computed as of today, for",
-      "reference only. It is NOT the as_of figure and is not used by the",
-      "validator -- do not copy it into `expected`, that would make the check",
-      "vacuous."
+      "ABOUT `as_of`: it is set to an offseason date matching B-R's snapshot",
+      "label. Service time does not accrue between the end of the World Series",
+      "and Opening Day, so any date in that window gives the same figure -- the",
+      "exact day does not have to match B-R's to the day. If B-R's label moves",
+      "to a new offseason, update `as_of` on every row to match.",
+      "",
+      "Nothing is scraped: these are entered by hand on purpose, both to respect",
+      "B-R's terms and because a handful of hand-checked figures is enough to",
+      "catch a systemic error.",
+      "",
+      "`ours_at_generation` is what THIS project computed as of the day the file",
+      "was generated, for reference only. It is NOT the as_of figure and is not",
+      "used by the validator -- do not copy it into `expected`, that would make",
+      "the check vacuous."
     ]
   },
   {
     "player_id": 592450,
     "name": "Aaron Judge",
-    "as_of": "2024-03-28",
-    "expected": null,
-    "source": "baseball-reference.com player page, s.2024 snapshot",
+    "as_of": "2026-01-26",
+    "expected": "9.051",
+    "source": "baseball-reference.com player page, service-time snapshot labelled 01/26",
     "mlb_debut": "2016-08-13",
     "history_complete": true,
     "ours_at_generation": "10.028"
@@ -31,9 +40,9 @@
   {
     "player_id": 596019,
     "name": "Francisco Lindor",
-    "as_of": "2024-03-28",
+    "as_of": "2026-01-26",
     "expected": null,
-    "source": "baseball-reference.com player page, s.2024 snapshot",
+    "source": "baseball-reference.com player page, service-time snapshot labelled 01/26",
     "mlb_debut": "2015-06-14",
     "history_complete": true,
     "ours_at_generation": "11.090"
@@ -41,9 +50,9 @@
   {
     "player_id": 502671,
     "name": "Paul Goldschmidt",
-    "as_of": "2024-03-28",
-    "expected": null,
-    "source": "baseball-reference.com player page, s.2024 snapshot",
+    "as_of": "2026-01-26",
+    "expected": "14.059",
+    "source": "baseball-reference.com player page, service-time snapshot labelled 01/26",
     "mlb_debut": "2011-08-01",
     "history_complete": true,
     "ours_at_generation": "15.036"
@@ -51,9 +60,9 @@
   {
     "player_id": 445276,
     "name": "Kenley Jansen",
-    "as_of": "2024-03-28",
-    "expected": null,
-    "source": "baseball-reference.com player page, s.2024 snapshot",
+    "as_of": "2026-01-26",
+    "expected": "15.073",
+    "source": "baseball-reference.com player page, service-time snapshot labelled 01/26",
     "mlb_debut": "2010-07-24",
     "history_complete": true,
     "ours_at_generation": "16.049"
@@ -61,9 +70,9 @@
   {
     "player_id": 594798,
     "name": "Jacob deGrom",
-    "as_of": "2024-03-28",
-    "expected": null,
-    "source": "baseball-reference.com player page, s.2024 snapshot",
+    "as_of": "2026-01-26",
+    "expected": "11.139",
+    "source": "baseball-reference.com player page, service-time snapshot labelled 01/26",
     "mlb_debut": "2014-05-15",
     "history_complete": true,
     "ours_at_generation": "12.114"
@@ -71,9 +80,9 @@
   {
     "player_id": 571448,
     "name": "Nolan Arenado",
-    "as_of": "2024-03-28",
-    "expected": null,
-    "source": "baseball-reference.com player page, s.2024 snapshot",
+    "as_of": "2026-01-26",
+    "expected": "12.155",
+    "source": "baseball-reference.com player page, service-time snapshot labelled 01/26",
     "mlb_debut": "2013-04-28",
     "history_complete": true,
     "ours_at_generation": "13.133"
@@ -81,9 +90,9 @@
   {
     "player_id": 605141,
     "name": "Mookie Betts",
-    "as_of": "2024-03-28",
-    "expected": null,
-    "source": "baseball-reference.com player page, s.2024 snapshot",
+    "as_of": "2026-01-26",
+    "expected": "11.070",
+    "source": "baseball-reference.com player page, service-time snapshot labelled 01/26",
     "mlb_debut": "2014-06-29",
     "history_complete": true,
     "ours_at_generation": "12.045"
@@ -91,9 +100,9 @@
   {
     "player_id": 621043,
     "name": "Carlos Correa",
-    "as_of": "2024-03-28",
-    "expected": null,
-    "source": "baseball-reference.com player page, s.2024 snapshot",
+    "as_of": "2026-01-26",
+    "expected": "10.119",
+    "source": "baseball-reference.com player page, service-time snapshot labelled 01/26",
     "mlb_debut": "2015-06-08",
     "history_complete": true,
     "ours_at_generation": "11.096"
@@ -101,19 +110,19 @@
   {
     "player_id": 608369,
     "name": "Corey Seager",
-    "as_of": "2024-03-28",
-    "expected": null,
-    "source": "baseball-reference.com player page, s.2024 snapshot",
+    "as_of": "2026-01-26",
+    "expected": "10.032",
+    "source": "baseball-reference.com player page, service-time snapshot labelled 01/26",
     "mlb_debut": "2015-09-03",
     "history_complete": true,
     "ours_at_generation": "11.009"
   },
   {
     "player_id": 608070,
-    "name": "Jos\u00e9 Ram\u00edrez",
-    "as_of": "2024-03-28",
-    "expected": null,
-    "source": "baseball-reference.com player page, s.2024 snapshot",
+    "name": "José Ramírez",
+    "as_of": "2026-01-26",
+    "expected": "11.074",
+    "source": "baseball-reference.com player page, service-time snapshot labelled 01/26",
     "mlb_debut": "2013-09-01",
     "history_complete": true,
     "ours_at_generation": "12.050"
@@ -121,9 +130,9 @@
   {
     "player_id": 543037,
     "name": "Gerrit Cole",
-    "as_of": "2024-03-28",
-    "expected": null,
-    "source": "baseball-reference.com player page, s.2024 snapshot",
+    "as_of": "2026-01-26",
+    "expected": "12.111",
+    "source": "baseball-reference.com player page, service-time snapshot labelled 01/26",
     "mlb_debut": "2013-06-11",
     "history_complete": true,
     "ours_at_generation": "13.089"
@@ -131,9 +140,9 @@
   {
     "player_id": 646240,
     "name": "Rafael Devers",
-    "as_of": "2024-03-28",
-    "expected": null,
-    "source": "baseball-reference.com player page, s.2024 snapshot",
+    "as_of": "2026-01-26",
+    "expected": "8.070",
+    "source": "baseball-reference.com player page, service-time snapshot labelled 01/26",
     "mlb_debut": "2017-07-25",
     "history_complete": true,
     "ours_at_generation": "9.046"
@@ -141,9 +150,9 @@
   {
     "player_id": 665742,
     "name": "Juan Soto",
-    "as_of": "2024-03-28",
-    "expected": null,
-    "source": "baseball-reference.com player page, s.2024 snapshot",
+    "as_of": "2026-01-26",
+    "expected": "7.134",
+    "source": "baseball-reference.com player page, service-time snapshot labelled 01/26",
     "mlb_debut": "2018-05-15",
     "history_complete": true,
     "ours_at_generation": "8.117"
@@ -151,9 +160,9 @@
   {
     "player_id": 660271,
     "name": "Shohei Ohtani",
-    "as_of": "2024-03-28",
-    "expected": null,
-    "source": "baseball-reference.com player page, s.2024 snapshot",
+    "as_of": "2026-01-26",
+    "expected": "8.000",
+    "source": "baseball-reference.com player page, service-time snapshot labelled 01/26",
     "mlb_debut": "2018-03-29",
     "history_complete": true,
     "ours_at_generation": "8.149"
@@ -161,9 +170,9 @@
   {
     "player_id": 624413,
     "name": "Pete Alonso",
-    "as_of": "2024-03-28",
-    "expected": null,
-    "source": "baseball-reference.com player page, s.2024 snapshot",
+    "as_of": "2026-01-26",
+    "expected": "7.000",
+    "source": "baseball-reference.com player page, service-time snapshot labelled 01/26",
     "mlb_debut": "2019-03-28",
     "history_complete": true,
     "ours_at_generation": "7.149"
@@ -171,9 +180,9 @@
   {
     "player_id": 665489,
     "name": "Vladimir Guerrero Jr.",
-    "as_of": "2024-03-28",
-    "expected": null,
-    "source": "baseball-reference.com player page, s.2024 snapshot",
+    "as_of": "2026-01-26",
+    "expected": "6.157",
+    "source": "baseball-reference.com player page, service-time snapshot labelled 01/26",
     "mlb_debut": "2019-04-26",
     "history_complete": true,
     "ours_at_generation": "7.134"
@@ -181,9 +190,9 @@
   {
     "player_id": 666182,
     "name": "Bo Bichette",
-    "as_of": "2024-03-28",
-    "expected": null,
-    "source": "baseball-reference.com player page, s.2024 snapshot",
+    "as_of": "2026-01-26",
+    "expected": "6.063",
+    "source": "baseball-reference.com player page, service-time snapshot labelled 01/26",
     "mlb_debut": "2019-07-29",
     "history_complete": true,
     "ours_at_generation": "7.040"
@@ -191,9 +200,9 @@
   {
     "player_id": 453286,
     "name": "Max Scherzer",
-    "as_of": "2024-03-28",
-    "expected": null,
-    "source": "baseball-reference.com player page, s.2024 snapshot",
+    "as_of": "2026-01-26",
+    "expected": "17.079",
+    "source": "baseball-reference.com player page, service-time snapshot labelled 01/26",
     "mlb_debut": "2008-04-29",
     "history_complete": false,
     "ours_at_generation": "16.104"
@@ -201,9 +210,9 @@
   {
     "player_id": 434378,
     "name": "Justin Verlander",
-    "as_of": "2024-03-28",
-    "expected": null,
-    "source": "baseball-reference.com player page, s.2024 snapshot",
+    "as_of": "2026-01-26",
+    "expected": "20.002",
+    "source": "baseball-reference.com player page, service-time snapshot labelled 01/26",
     "mlb_debut": "2005-07-04",
     "history_complete": false,
     "ours_at_generation": "11.091"

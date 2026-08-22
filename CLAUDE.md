@@ -432,12 +432,85 @@ definition, but an IL placement currently only avoids stopping the clock —
 it never starts one, so a player optioned and then moved to the 60-day IL
 stays stopped.
 
-**Fix 2 (not yet attempted): carry-in.** If the first transaction seen for a
-player is a STOP, he must have been active before it, so the interval should
-open at the window start. This is what the vestigial
-`carry_in_active_first_season` parameter was for. Measure it the same way —
-one change, one before/after run — rather than bundling it with anything
-else.
+**Fix 3 (built 2026-08-22, AWAITING MEASUREMENT): carry-in.**
+
+The original sketch — "if the first transaction seen is a STOP, open the
+interval at the window start" — turned out to be too narrow. It does not
+catch Verlander at all, because his first transaction is an IL placement,
+which is a *start*. The general statement is stronger and simpler:
+
+> **A player is presumed to be on a roster from his major league debut until
+> the feed says otherwise.**
+
+That is the exact mirror of `accrual_ceiling`, which already presumes a
+player stayed rostered to the end of his last season rather than demanding a
+transaction to prove it. The default was asymmetric: presumed-off at the
+front, presumed-on at the back.
+
+Implemented as `presume_active_from` in `build_global_active_intervals()`,
+surfaced as `presume_active_from_debut` on `compute_service_time()`. The
+vestigial `carry_in_active_first_season` parameter is now a deprecated alias
+for it rather than a no-op.
+
+**It is OFF by default**, behind one switch — the `PRESUME_ACTIVE_FROM_DEBUT`
+env var, honoured by the daily job, the backfill and the roster validator
+together, so what the validator scores is what production would produce.
+
+*What bounds the over-crediting risk* (the failure mode behind every revert
+here): `accrual_floor` blocks the presumption before the debut,
+`accrual_ceiling` blocks it after the last season played, and in between any
+option, DFA, release or outright closes the interval normally. What is left
+exposed is a player who left an MLB roster in a way the feed never recorded —
+overwhelmingly a pre-2009 coverage problem, since 2009+ demotions are
+reliably present.
+
+**Offline evidence, before the live run.** All eighteen Baseball Reference
+figures, as of 2026-01-26, scored both ways. Only three players move at all:
+
+| player | B-R | carry-in off | carry-in on |
+|---|---|---|---|
+| Justin Verlander | 20.002 | 11.000 (−1550d) | 20.090 (**+88d**) |
+| Max Scherzer | 17.079 | 17.000 (−79d) | 17.156 (**+77d**) |
+| Juan Soto | 7.134 | 7.135 (+1d) | 7.140 (**+6d**) |
+| *the other 15* | | | **byte-identical** |
+
+Total absolute error across the eighteen: **1,662 days → 203 days.**
+
+The fifteen unchanged players are the property that matters most: where the
+feed is complete, carry-in is inert. It only fires where the feed is silent,
+which is exactly where the old default was guessing wrong.
+
+Scherzer is the predicted cost, and worth understanding rather than tuning
+away. He was optioned down and recalled during 2008; neither move is in the
+feed, so carry-in credits his whole 2008 (155 days) instead of the 79 he
+earned. An under-credit became a slightly smaller over-credit.
+
+Soto (+1d → +6d) is the one modern player it touches, and the five days are
+the only movement in the well-covered era in either direction. Watch him if
+a later measurement suggests carry-in over-credits generally; on this
+evidence he is noise.
+
+A tempting refinement, **rejected**: start the presumption at the later of
+the debut and the 2009 season, to avoid the sparse era entirely. Measured, it
+gives Verlander 17.000 — three years short — and leaves Scherzer unchanged.
+It trades a fixed 9-year error for a fixed 3-year one to avoid an 88-day one.
+
+**Whole-population dry run** over all 1,324 cached 40-man players: 27 changed
+(2%), 4,336 days added, **0 days removed** — carry-in can only add, and the
+run confirms it does. The movers are the right shape: Shea Langeliers
+1.547 → 4.134 (Oakland's everyday catcher since 2022), Mitch Spence
+0.198 → 1.802. Both read absurdly low before.
+
+**Still required before this is turned on:** Actions → "Validate Service
+Time" → rosters, with `carry_in: both`, on Yankees 2014 *and* 2018. The
+validator now scores both variants from a single fetch and prints the A/B
+plus a pass/fail against the gate, so the two halves cannot drift apart. Turn
+it on only if agreement stays ≥95% and over-crediting stays ≤2% with it on.
+
+Note why the roster check nearly missed this and the Baseball Reference check
+caught it immediately: sampling one club-season makes a carry-in player look
+like a handful of missing days, while a career total makes nine years
+unmissable. Breadth and independence are different virtues.
 
 Run it: Actions → "Validate Service Time" → rosters.
 
@@ -498,16 +571,103 @@ under-credits, agree=0), Shawn Kelley (8), Dean Anna (5), Slade Heathcott
 bounced between clubs mid-season, so he is probably a waiver-claim
 carry-in case rather than a new class of bug.
 
+### The first independent check (2026-08-22)
+
+Eighteen Baseball Reference figures are in — the first numbers in this
+project checked against a source that is not MLB's own transaction feed.
+All are the 01/26 snapshot, compared against what the model computes as of
+2026-01-26.
+
+| player | B-R | ours | off by |
+|---|---|---|---|
+| Shohei Ohtani | 8.000 | 8.000 | **0** |
+| Pete Alonso | 7.000 | 7.000 | **0** |
+| Aaron Judge | 9.051 | 9.050 | −1 |
+| Jacob deGrom | 11.139 | 11.140 | +1 |
+| Mookie Betts | 11.070 | 11.071 | +1 |
+| Rafael Devers | 8.070 | 8.069 | −1 |
+| Juan Soto | 7.134 | 7.135 | +1 |
+| Nolan Arenado | 12.155 | 12.157 | +2 |
+| Gerrit Cole | 12.111 | 12.113 | +2 |
+| Vladimir Guerrero Jr. | 6.157 | 6.159 | +2 |
+| Bo Bichette | 6.063 | 6.065 | +2 |
+| Paul Goldschmidt | 14.059 | 14.062 | +3 |
+| Kenley Jansen | 15.073 | 15.070 | −3 |
+| Carlos Correa | 10.119 | 10.116 | −3 |
+| Corey Seager | 10.032 | 10.029 | −3 |
+| José Ramírez | 11.074 | 11.082 | +8 |
+| Max Scherzer | 17.079 | 17.000 | −79 |
+| Justin Verlander | 20.002 | 11.000 | −1550 |
+
+**Sixteen of eighteen land within three days**, two of them exactly, across
+careers of six to fifteen years. That is the first evidence for this
+project's math that does not come from MLB.
+
+Two caveats on reading the small residuals. These were computed offline from
+the transaction cache using *estimated* season windows (Mar 28 – Oct 1),
+because the sandbox cannot reach the API; the live run uses real ones, so a
+±1-3 day residual is as likely to be the estimate as the model. And a
+matching total is weaker evidence than it looks — errors in opposite
+directions cancel. The roster check, which compares day by day, is what
+catches that; the two checks are complementary and neither replaces the
+other.
+
+José Ramírez (+8) is the only modern figure outside the noise and is worth a
+look on its own. Scherzer and Verlander are the carry-in story below.
+
+**How to read the B-R page.** There is no per-season `s.YYYY` column — that
+was a wrong assumption baked into the first version of this file and the
+validator. B-R shows a single dated snapshot in the bio block, e.g.
+"9.051 (01/26)". `as_of` on every row is therefore one offseason date
+(2026-01-26), which works because **service time does not accrue between the
+World Series and Opening Day** — the exact day need not match B-R's label.
+
+Still blank: Francisco Lindor.
+
+#### Verlander is not a pre-2009 problem — he is the carry-in problem
+
+The tempting read is "pre-2009 debut, thin coverage, expected." It is wrong,
+and the size of the gap is what gives it away: his 2005-2008 seasons are
+worth about 3.5 years, but he is short by 9.
+
+His first major-league transaction of any kind is **2015-04-08** — a disabled
+list placement. There is nothing before it. He was on Detroit's roster
+continuously from 2006, never optioned, never DFA'd, never released, and not
+injured until 2015, so the feed has no reason to say anything about him. Six
+of his ten invisible seasons (2009-2014) sit squarely inside the era where
+coverage is known to be good.
+
+`build_global_active_intervals()` only ever opens an interval on an explicit
+start, so he accrues nothing until that 2015 IL placement fires. 2015-2025 is
+eleven seasons at the 172-day cap = 11.000 exactly, which is what we print.
+
+This is the carry-in defect described above, now measured on a single player:
+**9 years.** It is worst exactly where it is least visible — durable veterans
+who sit on a roster for a decade without a transaction the parser recognises.
+The roster validator only sampled Yankees 2014 and 2018, single seasons where
+a carry-in player looks like a handful of missing days; a career total makes
+it unmissable. That is the argument for this check existing.
+
+The fix and its risk are unchanged from the carry-in note above: opening the
+interval at the window start when the first transaction seen is a stop (or,
+for Verlander, when a player has a debut but no transactions for years after
+it) would credit him correctly — but `accrual_floor` is the only thing
+stopping the same rule from crediting a career minor leaguer for every year
+between his cup of coffee and his next recall. Over-crediting caused every
+revert in this project. Measure it on Yankees 2014 + 2018 before believing it.
+
 ### Gate before a mass backfill
 
 1. **Roster accuracy** — agreement ≥95% and over-crediting ≤2%, on at least
    two different club-seasons (one recent, one pre-2019 for disabled-list
    era wording).
-2. **Baseball Reference spot-check** — `data/reference_service_time.json`
-   still ships empty. Actions → "Validate Service Time" → reference. This is
-   the only *independent* check: the roster comparison validates the
-   pipeline against the same source it is built on, so a systematic
-   misreading of MLB's semantics passes it. Needs figures entered by hand.
+2. **Baseball Reference spot-check** — 18 of 19 figures entered as of
+   2026-08-22 (all but Lindor); 16 land within three days offline. Actions →
+   "Validate Service Time" → reference confirms it against real season
+   windows. This is the only *independent* check: the roster comparison
+   validates the pipeline against the same source it is built on, so a
+   systematic misreading of MLB's semantics passes it. See "The first
+   independent check" below.
 3. **Tests green** — `python tests/test_service_time.py`.
 
 ---
@@ -534,8 +694,8 @@ carry-in case rather than a new class of bug.
    `build_player_record()` takes a `horizon_end` override, so it can compute
    what a player's service time WOULD HAVE READ as of a past date (e.g. a
    prior Opening Day) rather than only "as of today." Compare that against
-   Baseball Reference's `s.YYYY` figures, which are a fixed target rather
-   than a moving one. Doing this required a real bug fix along the way:
+   Baseball Reference's dated snapshot figure, which is a fixed target
+   rather than a moving one. Doing this required a real bug fix along the way:
    `build_global_active_intervals()` previously only used `horizon_end` to
    cap the trailing *open* interval — a stop transaction (option/DFA/release)
    dated *after* `horizon_end` would still truncate an earlier interval that,
@@ -543,14 +703,12 @@ carry-in case rather than a new class of bug.
    after `horizon_end` before building intervals at all. Covered by a new
    regression test (`test_as_of_past_date_ignores_later_transactions`).
 
-   **Still needed:** the reference file (`data/reference_service_time.json`)
-   ships empty — copy `data/reference_service_time.example.json`, fill in a
-   handful of well-known players' `s.YYYY` figures by hand from their
-   Baseball Reference pages (deliberately not scraped), and run
-   `python scripts/validate_service_time.py`. Nothing has actually been
-   checked against a real external number yet; this just makes doing so
-   possible. Requires network access to the live MLB Stats API, so it can't
-   run in this offline sandbox — run it locally or from a Codespace/Action.
+   **Status:** the reference file has 19 rows, 18 with figures entered
+   (2026-08-22); only Lindor is blank. Fill in the rest by hand from the players' Baseball Reference
+   pages — deliberately not scraped — and run
+   `python scripts/validate_service_time.py`. Requires network access to the
+   live MLB Stats API, so it can't run in this offline sandbox — run it from
+   Actions → "Validate Service Time" → reference.
 
 ### Known limitations
 

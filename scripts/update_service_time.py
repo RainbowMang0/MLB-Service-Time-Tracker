@@ -33,6 +33,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import os
 import pathlib
 import sys
 
@@ -55,6 +56,19 @@ CACHE_DIR = ROOT / "data" / "cache" / "transactions"
 
 MIN_TRANSACTION_YEAR = 2005  # don't bother reaching back further than this
 TODAY = dt.date.today()
+
+# The carry-in rule: presume a player is on a roster from his debut onward
+# rather than crediting him nothing until a start transaction happens to fire.
+# See build_global_active_intervals in service_time.py for why, and for what
+# bounds the over-crediting risk.
+#
+# Kept behind a single switch on purpose. This project's rule is one change,
+# one before/after measurement -- flipping it here changes the daily job, the
+# backfill and the roster validator together, so the number the validator
+# reports is the number production would produce. Do not hardcode it True
+# until Yankees 2014 and 2018 both still pass the gate (>=95% agreement,
+# <=2% over-crediting) with it on.
+PRESUME_ACTIVE_FROM_DEBUT = os.environ.get("PRESUME_ACTIVE_FROM_DEBUT", "") == "1"
 
 
 def _cache_path(player_id: int) -> pathlib.Path:
@@ -166,6 +180,7 @@ def build_player_record(
     use_cache: bool = True,
     horizon_end: dt.date | None = None,
     currently_rostered: bool = True,
+    presume_active_from_debut: bool | None = None,
 ) -> dict:
     """
     `horizon_end` defaults to today (the normal daily-update behavior). Pass
@@ -180,6 +195,8 @@ def build_player_record(
     block below.
     """
     horizon_end = horizon_end or TODAY
+    if presume_active_from_debut is None:
+        presume_active_from_debut = PRESUME_ACTIVE_FROM_DEBUT
     player_id = roster_entry["id"]
     raw_txns = _fetch_transactions_incremental(player_id, full_refresh, use_cache=use_cache)
 
@@ -240,7 +257,7 @@ def build_player_record(
     result = compute_service_time(
         transactions,
         seasons,
-        carry_in_active_first_season=False,
+        presume_active_from_debut=presume_active_from_debut,
         accrual_floor=accrual_floor,
         accrual_ceiling=accrual_ceiling,
         # Stop the clock at horizon_end (today, for the daily job) rather than

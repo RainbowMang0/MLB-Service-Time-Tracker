@@ -63,7 +63,11 @@ sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
 import fetch_mlb_data as mlb  # noqa: E402
 from service_time import Transaction, build_global_active_intervals  # noqa: E402
-from update_service_time import _involves_mlb_club, mlb_team_ids  # noqa: E402
+from update_service_time import (  # noqa: E402
+    PRESUME_ACTIVE_FROM_DEBUT,
+    _involves_mlb_club,
+    mlb_team_ids,
+)
 
 
 def flatten(t: dict) -> dict:
@@ -136,12 +140,23 @@ def main() -> None:
     ap.add_argument("--team", type=int, required=True, help="MLB team id, e.g. 147")
     ap.add_argument("--season", type=int, required=True)
     ap.add_argument("--interval", type=int, default=7, help="days between samples")
+    ap.add_argument(
+        "--carry-in",
+        choices=("off", "on", "both"),
+        default="both" if not PRESUME_ACTIVE_FROM_DEBUT else "on",
+        help="Carry-in rule: treat a player as rostered from his debut rather "
+             "than crediting nothing until a start transaction fires. 'both' "
+             "scores each way from the same fetched data and prints an A/B.",
+    )
     args = ap.parse_args()
+
+    variants = {"off": ["off"], "on": ["on"], "both": ["off", "on"]}[args.carry_in]
 
     start, end = mlb.get_season_window(args.season)
     dates = sample_dates(start, end, args.interval)
     print(f"Team {args.team}, season {args.season}: {start} to {end}")
-    print(f"Sampling {len(dates)} dates every {args.interval} days.\n")
+    print(f"Sampling {len(dates)} dates every {args.interval} days.")
+    print(f"carry-in variants scored: {', '.join(variants)}\n")
 
     # --- observe rosters ---------------------------------------------------
     truth: dict[int, dict[dt.date, bool]] = collections.defaultdict(dict)
@@ -207,9 +222,15 @@ def main() -> None:
             debuts[pid] = None
 
     # --- our model ---------------------------------------------------------
+    # Each variant is scored from the SAME fetched transactions, so running
+    # both costs no extra API calls -- and it removes the main way an A/B
+    # goes wrong, which is two runs that differ by something other than the
+    # change under test.
     club_ids = mlb_team_ids()
-    over = under = agree = 0
-    per_player: dict[int, list[int]] = collections.defaultdict(lambda: [0, 0, 0])
+    tallies = {v: [0, 0, 0] for v in variants}  # variant -> [agree, over, under]
+    per_player = {
+        v: collections.defaultdict(lambda: [0, 0, 0]) for v in variants
+    }
 
     for pid, by_date in truth.items():
         try:
@@ -223,35 +244,62 @@ def main() -> None:
             for t in raw
             if t.get("date") and _involves_mlb_club(flatten(t), club_ids)
         ]
-        intervals = build_global_active_intervals(txns, end, accrual_floor=floor)
 
-        for d, actually_accruing in by_date.items():
-            model_says = any(s <= d <= e for s, e in intervals)
-            if model_says == actually_accruing:
-                agree += 1
-                per_player[pid][0] += 1
-            elif model_says and not actually_accruing:
-                over += 1
-                per_player[pid][1] += 1
-            else:
-                under += 1
-                per_player[pid][2] += 1
+        for variant in variants:
+            intervals = build_global_active_intervals(
+                txns,
+                end,
+                accrual_floor=floor,
+                presume_active_from=floor if variant == "on" else None,
+            )
+            for d, actually_accruing in by_date.items():
+                model_says = any(s <= d <= e for s, e in intervals)
+                if model_says == actually_accruing:
+                    tallies[variant][0] += 1
+                    per_player[variant][pid][0] += 1
+                elif model_says and not actually_accruing:
+                    tallies[variant][1] += 1
+                    per_player[variant][pid][1] += 1
+                else:
+                    tallies[variant][2] += 1
+                    per_player[variant][pid][2] += 1
 
-    total = agree + over + under
-    if not total:
-        raise SystemExit("No comparisons made.")
+    def report(variant: str) -> tuple[float, float, float]:
+        agree, over, under = tallies[variant]
+        total = agree + over + under
+        if not total:
+            raise SystemExit("No comparisons made.")
+        print("=" * 70)
+        print(f"carry-in: {'ON' if variant == 'on' else 'off'}")
+        print(f"AGREE          {agree:>6}  ({agree/total:.1%})")
+        print(f"MODEL OVER     {over:>6}  ({over/total:.1%})   credited a day the roster says he was not")
+        print(f"MODEL UNDER    {under:>6}  ({under/total:.1%})   missed a day the roster says he was")
+        print()
+        worst = sorted(per_player[variant].items(), key=lambda kv: -(kv[1][1] + kv[1][2]))[:12]
+        print("worst players (over / under / agree):")
+        for pid, (a, o, u) in worst:
+            if o or u:
+                print(f"  {names.get(pid, pid):<26} over={o:<3} under={u:<3} agree={a}")
+        print()
+        return agree / total, over / total, under / total
 
-    print("=" * 70)
-    print(f"AGREE          {agree:>6}  ({agree/total:.1%})")
-    print(f"MODEL OVER     {over:>6}  ({over/total:.1%})   credited a day the roster says he was not")
-    print(f"MODEL UNDER    {under:>6}  ({under/total:.1%})   missed a day the roster says he was")
-    print()
+    scores = {v: report(v) for v in variants}
 
-    worst = sorted(per_player.items(), key=lambda kv: -(kv[1][1] + kv[1][2]))[:12]
-    print("worst players (over / under / agree):")
-    for pid, (a, o, u) in worst:
-        if o or u:
-            print(f"  {names.get(pid, pid):<26} over={o:<3} under={u:<3} agree={a}")
+    if len(variants) == 2:
+        (a0, o0, u0), (a1, o1, u1) = scores["off"], scores["on"]
+        print("=" * 70)
+        print("A/B -- carry-in off -> on")
+        print(f"  agreement     {a0:.1%} -> {a1:.1%}   ({a1-a0:+.1%})")
+        print(f"  over-credit   {o0:.1%} -> {o1:.1%}   ({o1-o0:+.1%})")
+        print(f"  under-credit  {u0:.1%} -> {u1:.1%}   ({u1-u0:+.1%})")
+        print()
+        print("Gate: agreement >=95% AND over-crediting <=2%.")
+        print(f"  off  {'PASS' if a0 >= 0.95 and o0 <= 0.02 else 'FAIL'}")
+        print(f"  on   {'PASS' if a1 >= 0.95 and o1 <= 0.02 else 'FAIL'}")
+        print()
+        print("Carry-in only ADDS accruing days, so under-crediting should fall")
+        print("and over-crediting is the number to watch. A change that merely")
+        print("inflates figures shows up as over-crediting rising with it.")
 
 
 if __name__ == "__main__":
