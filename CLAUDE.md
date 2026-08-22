@@ -373,6 +373,28 @@ fetches a single shard, and the table load is untouched for the visitors who
 never open a profile. Modulo rather than a name or team prefix because it
 spreads evenly and never changes — a traded player stays in his shard.
 
+### `missing_seasons` means something different now
+
+Carry-in changed what the flag describes, and the first regenerated batch
+made it obvious. Miguel Cabrera debuted 2003-06-20, his first recorded
+roster move is 2011-08-26, so `missing_seasons` is 8 — but **six of those
+eight seasons are now credited**, presumed from his debut. Only 2003 and
+2004 are absent, because `MIN_TRANSACTION_YEAR = 2005` is where the pipeline
+starts computing at all. He reads 19.000 against a real 21.000: short by the
+two absent seasons, not by eight.
+
+So the flag now conflates two different things, and the UI separates them
+rather than the pipeline, because both are derivable in the browser:
+
+* **presumed** — seasons with `src: "presumed"`. Credited, but from the
+  debut date rather than from transactions. Less certain, not missing.
+* **absent** — `first season row year − debut year`. Not counted at all.
+  This is the part that makes a total a genuine floor.
+
+Do not "fix" this by making the flag smaller. The eight seasons really are
+the ones the feed cannot speak to; what changed is that six of them are now
+estimated instead of dropped, and the profile says which.
+
 ### The invariant
 
 `write_profiles()` checks that each player's season rows sum to his published

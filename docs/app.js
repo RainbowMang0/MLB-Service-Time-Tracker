@@ -255,9 +255,9 @@
         // feed does carry some pre-2009 history.
         const gap = Number(p.missing_seasons) || 0;
         const partial = !isComplete(p)
-          ? ` <abbr class="partial-flag" title="The transaction feed's coverage of this player starts ${
-              gap ? `${gap} season${gap === 1 ? "" : "s"} after his debut` : "after his debut"
-            }. Those earlier seasons are invisible to the data source, so this figure is a floor, not an estimate.">${
+          ? ` <abbr class="partial-flag" title="The first roster move on record for this player is ${
+              gap ? `${gap} season${gap === 1 ? "" : "s"} after his debut` : "later than his debut"
+            }. Those seasons are filled in by presuming he was on a roster from his debut rather than read from transactions, so this figure is less certain than most — and a floor if any of his career predates the data. Open his profile to see which seasons.">${
               gap ? `−${gap} season${gap === 1 ? "" : "s"}` : "partial"
             }</abbr>`
           : "";
@@ -494,12 +494,39 @@
       })
       .join("");
 
-    const missing = Number(profile.missing_seasons) || 0;
-    const gapNote = missing
-      ? `<p class="profile-gap">The transaction feed's first record for this player is
-         ${esc(profile.first_transaction) || "later than his debut"}, which is
-         ${missing} season${missing === 1 ? "" : "s"} after he debuted. Those seasons are
-         presumed rather than read, so this total is best treated as a floor.</p>`
+    // Two different things get conflated if you only look at missing_seasons,
+    // and they deserve different words. Miguel Cabrera debuted in 2003 and
+    // his first recorded roster move is 2011, so the flag says 8 -- but six
+    // of those seasons ARE credited now (presumed from his debut) and only
+    // 2003-04 are absent entirely, because they fall before the earliest
+    // season the pipeline computes. He reads 19.000 against a real 21.000:
+    // short by the two absent seasons, not by eight.
+    const presumedCount = seasons.filter((s) => s.src === "presumed").length;
+    const debutYear = profile.mlb_debut ? Number(profile.mlb_debut.slice(0, 4)) : null;
+    const firstYear = seasons.length ? Number(seasons[0].y) : null;
+    const absentCount =
+      debutYear && firstYear && firstYear > debutYear ? firstYear - debutYear : 0;
+
+    const notes = [];
+    if (presumedCount) {
+      notes.push(
+        `The first roster move on record for him is
+         ${esc(profile.first_transaction) || "later than his debut"}.
+         ${presumedCount} season${presumedCount === 1 ? " is" : "s are"} credited by
+         presuming he stayed on a roster from his debut rather than by reading
+         transactions — marked "Presumed from debut" below.`
+      );
+    }
+    if (absentCount) {
+      notes.push(
+        `${absentCount} season${absentCount === 1 ? "" : "s"} before ${firstYear}
+         ${absentCount === 1 ? "is" : "are"} not counted at all: the transaction
+         data does not reach that far back. This total is a floor by roughly
+         that much.`
+      );
+    }
+    const gapNote = notes.length
+      ? `<p class="profile-gap">${notes.join(" ")}</p>`
       : "";
 
     body.innerHTML = `
