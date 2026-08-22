@@ -413,13 +413,45 @@ which also covers `profiles/`.
 
 ## Current state
 
-- Daily workflow works and has run unattended successfully.
-- **5,568 players in the database (1,356 rostered + 4,212 backfilled). The
-  historical backfill is COMPLETE** as of 2026-08-21 — 9 batches, 0 failures,
-  every batch passing the invariant gate.
-- 2020 proration, debut floor, demo purge, pagination, and
-  `history_complete` flagging are all committed and live.
-- 57 tests passing.
+As of 2026-08-22, after the carry-in regeneration:
+
+- **5,568 players, every one with a season-by-season profile.** Zero
+  invariant violations (each player's season rows sum exactly to his
+  published total).
+- **Carry-in is on.** It cleared the roster gate in both eras with
+  over-crediting flat at 0.2%, and cut the total error across the eighteen
+  Baseball Reference figures from 1,662 days to about 200.
+- **Reference check: 16 passed, 0 failed, 2 known gaps** (Scherzer and
+  Verlander, both reading high by roughly half a presumed season).
+- **76 tests passing.**
+
+What the data is made of, measured across all 29,740 accruing seasons:
+
+| | share |
+|---|---|
+| `read` — driven by transactions in that season | **76.7%** |
+| `presumed` — from the debut, before any transaction | 13.7% |
+| `carry` — status carried forward from an earlier season | 9.7% |
+
+Only **0.4% of accruing seasons have no club identified**, down from 15%
+before the stat-splits hydrate. Exactly one player is at or above 20.000
+years (Verlander), which is correct.
+
+Payload: table index 0.21 MB; 64 profile shards, ~9 KB each gzipped.
+
+### Still open
+
+- **Juan Soto, +6 days** — diagnosed (see above), accepted, not worth the
+  regressions the fix caused.
+- **José Ramírez, +8 days offline / −1 live** — the offline figure was the
+  estimated season windows, not the model. Nothing to chase.
+- **Francisco Lindor** is the one reference row still without a figure.
+- The 2014 roster sample's remaining under-credits are concentrated in
+  David Huff (16 of 39), who was claimed off waivers and bounced between
+  clubs mid-season — probably a waiver-claim carry-in case.
+- Backfilled players were recomputed with `--recompute-stale`. Any future
+  rules change needs the same treatment: the normal queue only looks for
+  players it does not already have.
 
 ## Validation — the process, and the current number
 
