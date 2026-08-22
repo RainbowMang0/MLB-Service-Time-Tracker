@@ -40,6 +40,7 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
 import fetch_mlb_data as mlb  # noqa: E402
+import super_two  # noqa: E402
 from service_time import (  # noqa: E402
     TRANSACTION_COVERAGE_START_YEAR,
     SeasonWindow,
@@ -426,7 +427,7 @@ def build_player_record(
     }
 
 
-def write_index(db: dict[str, dict]) -> None:
+def write_index(db: dict[str, dict], super_two_cutoff: dict | None = None) -> None:
     """
     Emit the compact file the frontend downloads.
 
@@ -442,8 +443,10 @@ def write_index(db: dict[str, dict]) -> None:
         accrual_ceiling, first_transaction)
       * fields that are pure functions of service_days_total, recomputed in
         the browser instead of shipped. Verified against all 5,568 records:
-        service_time, free_agent_eligible, super_two_candidate and
-        arbitration_eligible each reproduce exactly, 0 mismatches.
+        service_time, free_agent_eligible and
+        arbitration_eligible each reproduced exactly, 0 mismatches. Super
+        Two is the exception and now ships as a flag: it depends on the
+        league-wide 2-3 year class, not on one player's day count.
       * the key names themselves -- rows are arrays, which at 5,568 players
         is the single biggest saving
       * repeated team and position strings, replaced by indexes into lookup
@@ -476,6 +479,11 @@ def write_index(db: dict[str, dict]) -> None:
             p.get("service_days_total", 0),
             1 if p.get("on_40_man") else 0,
             missing,
+            # Super Two is the one status the browser cannot derive from the
+            # day count: it depends on where a player ranks in the league-wide
+            # 2-3 year class and on how many days he accrued last season. So
+            # it ships as a flag rather than being recomputed client-side.
+            1 if p.get("super_two_candidate") else 0,
         ])
 
     payload = {
@@ -491,7 +499,11 @@ def write_index(db: dict[str, dict]) -> None:
         "teams": teams,
         "positions": positions,
         # Self-documenting, so the row layout is readable without the code.
-        "fields": ["id", "name", "team", "position", "days", "on_40_man", "missing_seasons"],
+        "super_two_cutoff": super_two_cutoff,
+        "fields": [
+            "id", "name", "team", "position", "days", "on_40_man",
+            "missing_seasons", "super_two",
+        ],
         "players": rows,
     }
     DATA_DIR.mkdir(parents=True, exist_ok=True)
@@ -659,12 +671,28 @@ def main() -> None:
         default=None,
         help="Only process the first N roster players (useful for local testing).",
     )
+    parser.add_argument(
+        "--recompute-derived",
+        action="store_true",
+        help=(
+            "Skip the API entirely: reload the stored database, redo the "
+            "derived post-passes (Super Two, index, profiles) and rewrite the "
+            "published files. For a change to how something is DERIVED from "
+            "records that are already correct -- no point spending half an "
+            "hour re-fetching transactions that have not changed."
+        ),
+    )
     args = parser.parse_args()
 
     print(f"[{dt.datetime.now().isoformat(timespec='seconds')}] Starting service-time update...")
 
     db = load_existing_db()
     print(f"Loaded existing database with {len(db)} previously-seen players.")
+
+    if args.recompute_derived:
+        print("Recomputing derived data only -- no API calls, no record changes.")
+        _write_outputs(db)
+        return
 
     roster = mlb.get_all_40man_players()
     print(f"Fetched {len(roster)} players currently on a 40-man roster.")
@@ -688,7 +716,29 @@ def main() -> None:
         if pid not in current_ids:
             record["on_40_man"] = False
 
+    _write_outputs(db)
+
+
+def _write_outputs(db: dict[str, dict]) -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Super Two needs the whole population, so it can only be settled once
+    # every record exists -- see scripts/super_two.py. This replaces the flat
+    # 86-day flag that compute_service_time() sets per player without any
+    # league context.
+    cutoff = super_two.apply_super_two(
+        db, super_two.latest_complete_season(db, TODAY.year)
+    )
+    if cutoff:
+        print(
+            f"Super Two cutoff after {cutoff['season']}: {cutoff['cutoff']} "
+            f"({cutoff['class_size']} in the 2-3 year class, top "
+            f"{cutoff['qualifying_count']} qualify); "
+            f"{cutoff['projected_candidates']} players currently project above it"
+        )
+    else:
+        print("Super Two: class too small to measure a cutoff; heuristic flags kept.")
+
     output = {
         "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "source": "MLB Stats API (statsapi.mlb.com, unofficial public endpoint)",
@@ -701,6 +751,7 @@ def main() -> None:
         ),
         "coverage_start_year": TRANSACTION_COVERAGE_START_YEAR,
         "player_count": len(db),
+        "super_two_cutoff": cutoff,
         "incomplete_history_count": sum(
             1 for p in db.values() if not p.get("history_complete", True)
         ),
@@ -708,7 +759,7 @@ def main() -> None:
     }
     OUTPUT_FILE.write_text(json.dumps(output, indent=2))
     print(f"Wrote {len(db)} player records to {OUTPUT_FILE}")
-    write_index(db)
+    write_index(db, cutoff)
     write_profiles(db)
 
 

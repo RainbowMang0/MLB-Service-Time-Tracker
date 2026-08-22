@@ -54,6 +54,7 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
 import fetch_mlb_data as mlb  # noqa: E402
+import super_two  # noqa: E402
 from service_time import TRANSACTION_COVERAGE_START_YEAR  # noqa: E402
 from update_service_time import (  # noqa: E402
     DATA_DIR,
@@ -402,7 +403,14 @@ def write_db(db: dict[str, dict]) -> None:
     }
     OUTPUT_FILE.write_text(json.dumps(output, indent=2))
     print(f"Wrote {len(db)} player records to {OUTPUT_FILE}")
-    write_index(db)
+    # Same post-pass as the daily job: Super Two depends on the whole
+    # population, so it has to be settled after the batch is merged in.
+    cutoff = super_two.apply_super_two(
+        db, super_two.latest_complete_season(db, TODAY.year)
+    )
+    if cutoff:
+        print(f"Super Two cutoff after {cutoff['season']}: {cutoff['cutoff']}")
+    write_index(db, cutoff)
     write_profiles(db)
 
 

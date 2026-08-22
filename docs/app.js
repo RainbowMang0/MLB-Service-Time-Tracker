@@ -21,8 +21,10 @@
   const profileShardCache = new Map();
 
   const FULL_YEAR_DAYS = 172;
-  // Matches SUPER_TWO_HEURISTIC_MIN_DAYS in scripts/service_time.py.
-  const SUPER_TWO_MIN_DAYS = 86;
+  // Set from the payload. Super Two is no longer guessed at in the browser:
+  // it depends on where a player ranks in the league-wide 2-3 year class, so
+  // the pipeline computes it (see scripts/super_two.py) and ships a flag.
+  let superTwoCutoff = null;
 
   /**
    * Rebuild the player objects the rest of this file expects.
@@ -35,11 +37,17 @@
     const teams = payload.teams || [];
     const positions = payload.positions || [];
     return (payload.players || []).map((row) => {
-      const [id, name, teamIx, posIx, days, on40, missing] = row;
+      const [id, name, teamIx, posIx, days, on40, missing, superTwoFlag] = row;
       const years = Math.floor(days / FULL_YEAR_DAYS);
       const rem = days % FULL_YEAR_DAYS;
       const frac = years + rem / FULL_YEAR_DAYS;
-      const superTwo = frac >= 2 && frac < 3 && rem >= SUPER_TWO_MIN_DAYS;
+      // Older payloads have no flag; fall back to the historical heuristic so
+      // a deployment that has not regenerated yet still renders something
+      // sensible rather than marking everyone ineligible.
+      const superTwo =
+        superTwoFlag === undefined
+          ? frac >= 2 && frac < 3 && rem >= 86
+          : superTwoFlag === 1;
       return {
         id,
         name,
@@ -130,7 +138,12 @@
       return { label: "Unknown", cls: "badge-neutral" };
     }
     if (p.free_agent_eligible) return { label: "Free Agent Eligible", cls: "badge-good" };
-    if (p.super_two_candidate) return { label: "Possible Super Two", cls: "badge-serious" };
+    if (p.super_two_candidate) {
+      return {
+        label: superTwoCutoff ? `Super Two track` : "Possible Super Two",
+        cls: "badge-serious",
+      };
+    }
     if (p.arbitration_eligible) return { label: "Arbitration Eligible", cls: "badge-warning" };
     return { label: "Pre-Arbitration", cls: "badge-neutral" };
   }
@@ -173,7 +186,23 @@
       { label: "Previous players logged", value: previous, accent: "" },
       { label: "Free agency eligible", value: fa, accent: "accent-good" },
       { label: "Arbitration eligible", value: arb, accent: "accent-warning" },
-      { label: "Possible Super Two", value: superTwo, accent: "accent-serious" },
+      {
+        label: superTwoCutoff
+          ? `Super Two track (≥ ${superTwoCutoff.cutoff})`
+          : "Possible Super Two",
+        value: superTwo,
+        accent: "accent-serious",
+        title: superTwoCutoff
+          ? `The Super Two cutoff after the ${superTwoCutoff.season} season was ` +
+            `${superTwoCutoff.cutoff}, measured from this project's own data: ` +
+            `${superTwoCutoff.class_size} players finished that year between 2.000 and ` +
+            `3.000 years, and the top 22% of them (${superTwoCutoff.qualifying_count}) ` +
+            `qualified for arbitration a year early. These players are currently at or ` +
+            `above that line. Next offseason's cutoff will differ — it has moved between ` +
+            `2.126 and 2.136 over the last four years — so a player near the line could ` +
+            `land either side.`
+          : "",
+      },
     ];
     if (partial > 0) {
       tiles.push({ label: "Incomplete history", value: partial, accent: "accent-critical" });
@@ -182,7 +211,7 @@
     el("stat-tiles").innerHTML = tiles
       .map(
         (t) => `
-      <div class="stat-tile ${t.accent}">
+      <div class="stat-tile ${t.accent}"${t.title ? ` title="${esc(t.title)}"` : ""}>
         <div class="value">${t.value}</div>
         <div class="label">${t.label}</div>
       </div>`
@@ -661,6 +690,7 @@
     const rows = data.players || [];
     allPlayers = Array.isArray(rows[0]) ? hydrate(data) : rows;
     if (data.coverage_start_year) coverageStartYear = data.coverage_start_year;
+    superTwoCutoff = data.super_two_cutoff || null;
     renderMeta(data);
     renderStatTiles(allPlayers);
     populateTeamFilter(allPlayers);

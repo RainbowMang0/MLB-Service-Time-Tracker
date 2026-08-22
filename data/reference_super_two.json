@@ -1,0 +1,59 @@
+[
+  {
+    "_README": [
+      "Published Super Two cutoffs, entered by hand. This is to super_two.py",
+      "what data/reference_service_time.json is to the service-time math: the",
+      "only check that does not come from this project's own data.",
+      "",
+      "WHY IT MATTERS HERE PARTICULARLY: the computed cutoffs land in the",
+      "2.11-2.14 band with no tuning, which looks like confirmation and is",
+      "not. Every serious bug in this project so far has been a plausible",
+      "belief about MLB's rules, encoded, wrong -- and a number that lands",
+      "where you expected is exactly how those survived. A published figure",
+      "is the only thing that can actually settle it.",
+      "",
+      "WHERE TO FIND THEM: MLB Trade Rumors reports the cutoff each",
+      "offseason, usually in a post titled something like 'Super Two Cutoff",
+      "Set At X'. Enter it exactly as published, e.g. \"2.132\".",
+      "",
+      "`season` is the season the class finished, NOT the offseason label. A",
+      "cutoff reported in November 2025 for the 2025-26 arbitration class has",
+      "season 2025 here.",
+      "",
+      "Rows with `published` left null are skipped, so partial completion is",
+      "fine. `ours` is filled in by the validator at run time and is not",
+      "input -- do not paste computed values into `published`, that would",
+      "make the check vacuous."
+    ]
+  },
+  {
+    "season": 2025,
+    "published": null,
+    "source": "MLB Trade Rumors offseason report",
+    "note": ""
+  },
+  {
+    "season": 2024,
+    "published": null,
+    "source": "MLB Trade Rumors offseason report",
+    "note": ""
+  },
+  {
+    "season": 2023,
+    "published": null,
+    "source": "MLB Trade Rumors offseason report",
+    "note": ""
+  },
+  {
+    "season": 2022,
+    "published": null,
+    "source": "MLB Trade Rumors offseason report",
+    "note": ""
+  },
+  {
+    "season": 2021,
+    "published": null,
+    "source": "MLB Trade Rumors offseason report",
+    "note": ""
+  }
+]

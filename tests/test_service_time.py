@@ -767,6 +767,93 @@ def test_profile_rows_sum_to_the_published_total():
     )
 
 
+# --- Super Two -----------------------------------------------------------
+#
+# Written from the rule, not from the old heuristic. The heuristic treated
+# "86 days into your third year" as the whole test; 86 days is really a
+# secondary condition on top of a top-22% ranking of the league-wide class,
+# which is only computable now that the database holds every player.
+
+
+def _s2_player(pid, name, rows):
+    return {"id": pid, "name": name, "seasons": [{"y": y, "d": d} for y, d in rows],
+            "service_days_total": sum(d for _, d in rows)}
+
+
+def _s2_league(n, year=2025):
+    """n players spread evenly across the 2.000-3.000 band."""
+    db = {}
+    for i in range(n):
+        # 345..514, so every player accrues at least one day in `year` and is
+        # therefore in that year's class.
+        days = 2 * 172 + 1 + (i * 169) // max(n - 1, 1)
+        db[str(i)] = _s2_player(i, f"P{i:03d}", [(year - 2, 172), (year - 1, 172), (year, days - 344)])
+    return db
+
+
+def test_super_two_cutoff_is_the_top_22_percent_boundary():
+    import super_two as S  # noqa: PLC0415
+
+    db = _s2_league(100)
+    cutoff = S.compute_cutoff(db, 2025)
+    check("all 100 players form the class", cutoff["class_size"] == 100)
+    check("22 of 100 qualify", cutoff["qualifying_count"] == 22)
+    ranked = S.build_class(db, 2025)
+    check(
+        "the cutoff is the 22nd-ranked player's service time",
+        cutoff["cutoff_days"] == ranked[21][0],
+    )
+
+
+def test_super_two_class_excludes_players_who_did_not_play_that_year():
+    """A retired player sitting at 2.5 years is not in this year's class."""
+    import super_two as S  # noqa: PLC0415
+
+    db = _s2_league(60)
+    db["retired"] = _s2_player(9001, "Retired Guy", [(2014, 172), (2015, 172), (2016, 100)])
+    cutoff = S.compute_cutoff(db, 2025)
+    check("the retired player is not counted in the class", cutoff["class_size"] == 60)
+
+
+def test_super_two_requires_86_days_in_the_preceding_season():
+    import super_two as S  # noqa: PLC0415
+
+    db = _s2_league(100)
+    # Top of the band, but only a cup of coffee last year.
+    db["brief"] = _s2_player(9002, "Brief Stint", [(2023, 172), (2024, 172), (2025, 60)])
+    S.apply_super_two(db, 2025)
+    check(
+        "a player above the cutoff with <86 days last season is not flagged",
+        db["brief"]["super_two_candidate"] is False,
+    )
+
+
+def test_super_two_flags_only_the_two_to_three_year_band():
+    import super_two as S  # noqa: PLC0415
+
+    db = _s2_league(100)
+    db["veteran"] = _s2_player(9003, "Veteran", [(2023, 172), (2024, 172), (2025, 172), (2022, 172)])
+    S.apply_super_two(db, 2025)
+    check(
+        "a player past 3.000 is not a Super Two candidate",
+        db["veteran"]["super_two_candidate"] is False,
+    )
+    check(
+        "but he is plainly arbitration eligible",
+        db["veteran"]["arbitration_eligible"] is True,
+    )
+
+
+def test_super_two_declines_to_guess_from_a_tiny_population():
+    """
+    A partial dataset would otherwise produce a confident-looking cutoff
+    drawn through a handful of players.
+    """
+    import super_two as S  # noqa: PLC0415
+
+    check("no cutoff from 10 players", S.compute_cutoff(_s2_league(10), 2025) is None)
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -800,5 +887,10 @@ if __name__ == "__main__":
     test_season_provenance_is_classified_three_ways()
     test_season_teams_prefer_stats_then_transactions_then_carry_forward()
     test_profile_rows_sum_to_the_published_total()
+    test_super_two_cutoff_is_the_top_22_percent_boundary()
+    test_super_two_class_excludes_players_who_did_not_play_that_year()
+    test_super_two_requires_86_days_in_the_preceding_season()
+    test_super_two_flags_only_the_two_to_three_year_band()
+    test_super_two_declines_to_guess_from_a_tiny_population()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

@@ -10,6 +10,11 @@ name: Validate Service Time
 #               against the same source it is built on, so a systematic
 #               misreading of MLB's semantics would pass.
 #
+#   super-two -- compares the computed Super Two cutoff against published
+#               figures in data/reference_super_two.json. Offline: the cutoff
+#               comes from season breakdowns already in the database, so this
+#               validates exactly what the site publishes.
+#
 #   reference -- compares finished figures against known Baseball Reference
 #               numbers in data/reference_service_time.json. Narrow (a
 #               handful of players, hand-entered) but genuinely independent,
@@ -32,6 +37,7 @@ on:
         options:
           - rosters
           - reference
+          - super-two
       team:
         description: "rosters: MLB team id (147 = Yankees)"
         required: false
@@ -78,6 +84,9 @@ jobs:
           case "${{ github.event.inputs.check }}" in
             reference)
               python scripts/validate_service_time.py
+              ;;
+            super-two)
+              python scripts/validate_super_two.py
               ;;
             *)
               python scripts/validate_against_rosters.py \

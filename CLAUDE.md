@@ -41,6 +41,8 @@ scripts/service_time.py        the service-time math + all domain rules
 scripts/update_service_time.py daily job: 40-man rosters -> compute -> merge -> JSON
 scripts/backfill_history.py    resumable backfill of non-rostered players (2009+)
 scripts/validate_service_time.py  --as-of validation against known Baseball Reference figures
+scripts/super_two.py           the real Super Two cutoff, from the whole population
+scripts/validate_super_two.py  --  checked against published cutoffs (offline)
 scripts/probe_coverage.py      live API probe for finding #9 (run via Actions)
 scripts/generate_demo_data.py  bundled sample data generator (no network)
 tests/test_service_time.py     57 tests, no pytest needed: `python tests/test_service_time.py`
@@ -674,10 +676,22 @@ over a belief about what MLB means.
 
 | | agree | over-credit | under-credit |
 |---|---|---|---|
+| Cleveland 2011 | **99.9%** | 0.1% | 0.0% |
 | Yankees 2014 | **96.8%** | 0.2% | 3.1% |
 | Yankees 2018 | **99.0%** | 0.2% | 0.8% |
+| Tampa Bay 2022 | **97.8%** | 1.1% | 1.0% |
 
-(Both with carry-in on, 2026-08-22. Before carry-in: 96.5% and 99.0%.)
+All with carry-in on, 2026-08-22. Four club-seasons, three organizations,
+three decades. Cleveland 2011 is the best result the project has produced:
+one wrong judgement in 1,083.
+
+**The Yankees-only sample was optimistic about over-crediting.** Tampa Bay
+2022 comes in at 1.1%, five times the 0.2% both Yankees seasons showed —
+still inside the gate, but the honest figure for over-crediting is nearer
+1% than 0.2%. The Rays option players relentlessly, which is exactly the
+traffic that exposes it (Ben Bowden over=4/agree=0, Luke Bard over=3).
+Sampling one club had been flattering the number; this is why the gate asks
+for more than one.
 
 **Both pass comfortably** (≥95% agreement, ≤2% over-crediting), in two
 different eras — 2014 for "disabled list" wording, 2018 for "injured list".
@@ -845,6 +859,57 @@ Recorded instead as `accepted_delta: 6` on his reference row, with the
 diagnosis in a `note`. It is compared **exactly**, not as a widened
 tolerance — if the residual drifts, the row fails again.
 
+### Super Two, computed rather than guessed (2026-08-22)
+
+This was a documented limitation for a good reason. The rule is not a fixed
+threshold:
+
+> at least two but less than three years of service, **86+ days in the
+> immediately preceding season**, and **ranked in the top 22%** by total
+> service of the class of players with two-to-three years.
+
+"Top 22% of the class" needs the whole class, which MLB does not publish, so
+the code flagged candidates on a flat 86-day proxy and said it was not
+authoritative.
+
+**Completing the database ended that.** 5,568 players each carrying a season
+breakdown *is* the league-wide population. `scripts/super_two.py` computes
+the class and the boundary directly, for any past season, with no extra API
+calls:
+
+| season | cutoff | class | top 22% |
+|---|---|---|---|
+| 2025 | **2.136** | 206 | 45 |
+| 2024 | 2.128 | 201 | 44 |
+| 2023 | 2.126 | 177 | 38 |
+| 2022 | 2.130 | 187 | 41 |
+| 2021 | 2.112 | 226 | 49 |
+
+These land in the band where reported cutoffs have historically fallen, with
+no tuning of any kind. **That is encouraging and it is not evidence** — every
+serious bug here has been a plausible belief that landed where someone
+expected. `data/reference_super_two.json` takes published cutoffs by hand,
+same as the Baseball Reference file, and is the only thing that can settle
+it. Actions → "Validate Service Time" → super-two.
+
+**Two different questions, and the code answers the second.** The 2025 cutoff
+is a historical fact about a class that has since moved on — those players
+are mostly past 3.000 now, and flagging them today would report a decision
+already made. What a reader wants is "is this player on track?", which is a
+projection: current service time compared against the most recent measured
+boundary. The threshold has moved 2.112–2.136 over five years, so a player
+within a few days of it could land either side. Still far better than a flat
+86-day proxy.
+
+The 86-day condition is now checked *exactly* from the season rows, in its
+correct role — a second test on top of the ranking, not the whole rule.
+
+**`--recompute-derived`** was added alongside: reload the stored database,
+redo the derived post-passes (Super Two, index, profiles) and rewrite the
+published files, with no API calls. A change to how something is *derived*
+from records that are already correct does not need half an hour of
+re-fetching.
+
 ### Gate before a mass backfill
 
 1. **Roster accuracy** — agreement ≥95% and over-crediting ≤2%, on at least
@@ -901,8 +966,6 @@ tolerance — if the residual drifts, the row fails again.
 
 ### Known limitations
 
-- Super Two status is *flagged as a candidate* only. The real cutoff requires
-  league-wide data the API doesn't expose.
 - No handling for paternity/bereavement edge cases beyond keyword matching.
 - Service-time-manipulation grievance outcomes (e.g. Kris Bryant) are invisible
   to public transaction data.
