@@ -88,6 +88,18 @@
       <p id="generated-at-footer"></p>
     </footer>
 
+    <!-- Player profile. Hidden until a name in the table is clicked; the
+         season detail behind it is fetched on demand from a sharded file so
+         the table's own payload stays small. -->
+    <div class="profile-overlay" id="profile-overlay" role="dialog" aria-modal="true"
+         aria-labelledby="profile-title" hidden>
+      <div class="profile-panel">
+        <button type="button" id="profile-close" class="profile-close"
+                aria-label="Close player profile">&times;</button>
+        <div id="profile-body"></div>
+      </div>
+    </div>
+
   </div>
 
   <script src="app.js"></script>

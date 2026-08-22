@@ -45,7 +45,9 @@ scripts/probe_coverage.py      live API probe for finding #9 (run via Actions)
 scripts/generate_demo_data.py  bundled sample data generator (no network)
 tests/test_service_time.py     57 tests, no pytest needed: `python tests/test_service_time.py`
 docs/                          the static site (index.html, styles.css, app.js)
-docs/data/service_time.json    the only data file the frontend reads
+docs/data/service_time.json    the database: every field, one object per player
+docs/data/index.json           what the browser downloads for the table (0.21 MB)
+docs/data/profiles/NN.json     per-player season detail, sharded by id % 64
 data/cache/transactions/       per-player transaction cache (rostered players only)
 data/backfill_state.json       resumable backfill progress
 .github/workflows/update-service-time.yml   daily 8am ET
@@ -322,6 +324,71 @@ hasn't been played. The daily job passes `horizon_end=TODAY`.
 
 ---
 
+## Player profiles
+
+Clicking a name in the table opens a profile: debut date, every season, the
+club(s) he was with, days credited, and a running total.
+
+**The data was already there.** `compute_service_time()` has always returned a
+`by_season` breakdown and the pipeline always threw it away. Persisting it
+costs no extra API call.
+
+### The three things that took thought
+
+**1. Which club, in a season with no transactions.** Measured: **15% of
+accruing seasons have no transaction naming a club** — a player who simply
+plays all year generates none (Aaron Judge 2017 and 2024 are blank). Three
+sources, in descending authority:
+
+1. Year-by-year stat splits, **hydrated onto the `/people` call the pipeline
+   already makes** (`BIO_SEASON_TEAMS_HYDRATE`), so it is free rather than a
+   second request per player. Filtered against the 30 club ids, because
+   splits can carry minor league lines.
+2. Transactions dated inside the season, destination club first.
+3. The last known club, carried forward. A club change produces a
+   transaction, so a silent season almost always means he stayed put.
+
+(1) is silent for a season in which a player never appeared — injured all
+year — which is exactly where (3) earns its place.
+
+**2. Say how each season is known.** After carry-in the seasons behind a
+total differ a lot in confidence, and a profile that presented them as equal
+would overstate what this project can see. Each row carries `src`:
+
+| | meaning |
+|---|---|
+| `read` | transactions in this season drove it directly |
+| `carry` | no transactions this season; status carried forward |
+| `presumed` | earlier than his first transaction of any kind — pure debut presumption, and what `missing_seasons` counts |
+
+Verlander's profile is the argument for this existing: 2005-2014 all read
+"Presumed from debut" with no club, then 2015 onward switch to real clubs and
+real transactions. The page shows you *why* his figure is what it is instead
+of asking you to trust it.
+
+**3. Do not undo the payload work.** The full breakdown for 5,568 players is
+~0.9 MB, four times the compact index that was deliberately cut to 0.21 MB.
+So profiles are **sharded by `player_id % 64`** into ~12 KB files: opening one
+fetches a single shard, and the table load is untouched for the visitors who
+never open a profile. Modulo rather than a name or team prefix because it
+spreads evenly and never changes — a traded player stays in his shard.
+
+### The invariant
+
+`write_profiles()` checks that each player's season rows sum to his published
+total, and warns loudly per player if not. If they disagreed, the profile
+would contradict the table it was opened from and a reader would rightly stop
+trusting both. It fired immediately in the sandbox (estimated season windows
+against real stored totals), which is how it earned its place.
+
+### Bug found on the way
+
+**The workflows never staged `index.json`.** Both jobs ran
+`git add -A docs/data/service_time.json`, so the file the browser actually
+downloads was frozen at whatever was last committed by hand while the
+database updated daily underneath it. Both now stage `docs/data` whole,
+which also covers `profiles/`.
+
 ## Current state
 
 - Daily workflow works and has run unattended successfully.
@@ -432,7 +499,7 @@ definition, but an IL placement currently only avoids stopping the clock —
 it never starts one, so a player optioned and then moved to the 60-day IL
 stays stopped.
 
-**Fix 3 (built 2026-08-22, AWAITING MEASUREMENT): carry-in.**
+**Fix 3 (shipped 2026-08-22): carry-in.**
 
 The original sketch — "if the first transaction seen is a STOP, open the
 interval at the window start" — turned out to be too narrow. It does not
@@ -452,9 +519,11 @@ surfaced as `presume_active_from_debut` on `compute_service_time()`. The
 vestigial `carry_in_active_first_season` parameter is now a deprecated alias
 for it rather than a no-op.
 
-**It is OFF by default**, behind one switch — the `PRESUME_ACTIVE_FROM_DEBUT`
-env var, honoured by the daily job, the backfill and the roster validator
-together, so what the validator scores is what production would produce.
+**It is ON**, behind one switch — the `PRESUME_ACTIVE_FROM_DEBUT` env var,
+honoured by the daily job, the backfill and the roster validator together, so
+what the validator scores is what production produces. Set it to `0` to score
+the old behaviour; the switch stays precisely because it is what makes the
+A/B possible.
 
 *What bounds the over-crediting risk* (the failure mode behind every revert
 here): `accrual_floor` blocks the presumption before the debut,
@@ -501,11 +570,21 @@ run confirms it does. The movers are the right shape: Shea Langeliers
 1.547 → 4.134 (Oakland's everyday catcher since 2022), Mitch Spence
 0.198 → 1.802. Both read absurdly low before.
 
-**Still required before this is turned on:** Actions → "Validate Service
-Time" → rosters, with `carry_in: both`, on Yankees 2014 *and* 2018. The
-validator now scores both variants from a single fetch and prints the A/B
-plus a pass/fail against the gate, so the two halves cannot drift apart. Turn
-it on only if agreement stays ≥95% and over-crediting stays ≤2% with it on.
+**Measured live, 2026-08-22, and it cleared the gate in both eras:**
+
+| | agreement | over-credit | under-credit |
+|---|---|---|---|
+| Yankees 2014 | 96.5% → **96.8%** | 0.2% → **0.2%** | 3.3% → 3.1% |
+| Yankees 2018 | 99.0% → **99.0%** | 0.2% → **0.2%** | 0.8% → 0.8% |
+
+**Over-crediting did not move at all in either season.** That is the number
+that decided it — a change that merely inflated figures would have pushed it
+up. 2018 is untouched end to end, which is the same result as the reference
+players: carry-in fires only where the feed is silent.
+
+The gain looks small here and is enormous on career totals (Verlander,
+−1550d → +88d) for the reason described below: a single-season roster sample
+cannot see a defect that lives in the *years before* the sampled season.
 
 Note why the roster check nearly missed this and the Baseball Reference check
 caught it immediately: sampling one club-season makes a carry-in player look
@@ -540,8 +619,10 @@ over a belief about what MLB means.
 
 | | agree | over-credit | under-credit |
 |---|---|---|---|
-| Yankees 2014 | **96.5%** | 0.2% | 3.3% |
+| Yankees 2014 | **96.8%** | 0.2% | 3.1% |
 | Yankees 2018 | **99.0%** | 0.2% | 0.8% |
+
+(Both with carry-in on, 2026-08-22. Before carry-in: 96.5% and 99.0%.)
 
 **Both pass comfortably** (≥95% agreement, ≤2% over-crediting), in two
 different eras — 2014 for "disabled list" wording, 2018 for "injured list".
@@ -580,40 +661,46 @@ All are the 01/26 snapshot, compared against what the model computes as of
 
 | player | B-R | ours | off by |
 |---|---|---|---|
+| Aaron Judge | 9.051 | 9.051 | **0** |
+| Paul Goldschmidt | 14.059 | 14.059 | **0** |
+| Carlos Correa | 10.119 | 10.119 | **0** |
+| Corey Seager | 10.032 | 10.032 | **0** |
 | Shohei Ohtani | 8.000 | 8.000 | **0** |
 | Pete Alonso | 7.000 | 7.000 | **0** |
-| Aaron Judge | 9.051 | 9.050 | −1 |
-| Jacob deGrom | 11.139 | 11.140 | +1 |
-| Mookie Betts | 11.070 | 11.071 | +1 |
+| Vladimir Guerrero Jr. | 6.157 | 6.157 | **0** |
+| Bo Bichette | 6.063 | 6.063 | **0** |
+| Kenley Jansen | 15.073 | 15.072 | −1 |
+| José Ramírez | 11.074 | 11.073 | −1 |
 | Rafael Devers | 8.070 | 8.069 | −1 |
+| Nolan Arenado | 12.155 | 12.156 | +1 |
+| Gerrit Cole | 12.111 | 12.112 | +1 |
 | Juan Soto | 7.134 | 7.135 | +1 |
-| Nolan Arenado | 12.155 | 12.157 | +2 |
-| Gerrit Cole | 12.111 | 12.113 | +2 |
-| Vladimir Guerrero Jr. | 6.157 | 6.159 | +2 |
-| Bo Bichette | 6.063 | 6.065 | +2 |
-| Paul Goldschmidt | 14.059 | 14.062 | +3 |
-| Kenley Jansen | 15.073 | 15.070 | −3 |
-| Carlos Correa | 10.119 | 10.116 | −3 |
-| Corey Seager | 10.032 | 10.029 | −3 |
-| José Ramírez | 11.074 | 11.082 | +8 |
-| Max Scherzer | 17.079 | 17.000 | −79 |
-| Justin Verlander | 20.002 | 11.000 | −1550 |
+| Jacob deGrom | 11.139 | 11.137 | −2 |
+| Mookie Betts | 11.070 | 11.068 | −2 |
+| Max Scherzer | 17.079 | 16.169 | −82 (GAP, 1 season) |
+| Justin Verlander | 20.002 | 11.000 | −1550 (GAP, 10 seasons) |
 
-**Sixteen of eighteen land within three days**, two of them exactly, across
-careers of six to fifteen years. That is the first evidence for this
-project's math that does not come from MLB.
+**Eight are exact and all sixteen non-gap figures land within two days**,
+across careers of six to fifteen years. Verdict: 16 passed, 0 failed, 2 known
+gaps. That is the first evidence for this project's math that does not come
+from MLB.
 
-Two caveats on reading the small residuals. These were computed offline from
-the transaction cache using *estimated* season windows (Mar 28 – Oct 1),
-because the sandbox cannot reach the API; the live run uses real ones, so a
-±1-3 day residual is as likely to be the estimate as the model. And a
-matching total is weaker evidence than it looks — errors in opposite
-directions cancel. The roster check, which compares day by day, is what
-catches that; the two checks are complementary and neither replaces the
-other.
+Both gaps are the model's own `missing_seasons` flag doing its job — each
+reads low by roughly the seasons it already declares it cannot see. The
+validator scores three ways for this reason: `ok`, `GAP` (low, with
+`missing_seasons > 0`) and `FAIL`. Reading *high* is always a FAIL, since
+missing history cannot inflate a figure.
 
-José Ramírez (+8) is the only modern figure outside the noise and is worth a
-look on its own. Scherzer and Verlander are the carry-in story below.
+**Do not tune against offline numbers.** These were first computed in the
+sandbox from the transaction cache with *estimated* season windows
+(Mar 28 – Oct 1), because the sandbox cannot reach the API. That put José
+Ramírez at +8 and made him look like the one modern outlier worth chasing.
+With real season windows he is −1, and the residuals collapse to ≤2 days
+across the board. The estimate was the error, not the model.
+
+Also note a matching total is weaker evidence than it looks — errors in
+opposite directions cancel. The roster check compares day by day and catches
+that; the two checks are complementary and neither replaces the other.
 
 **How to read the B-R page.** There is no per-season `s.YYYY` column — that
 was a wrong assumption baked into the first version of this file and the
@@ -661,10 +748,10 @@ revert in this project. Measure it on Yankees 2014 + 2018 before believing it.
 1. **Roster accuracy** — agreement ≥95% and over-crediting ≤2%, on at least
    two different club-seasons (one recent, one pre-2019 for disabled-list
    era wording).
-2. **Baseball Reference spot-check** — 18 of 19 figures entered as of
-   2026-08-22 (all but Lindor); 16 land within three days offline. Actions →
-   "Validate Service Time" → reference confirms it against real season
-   windows. This is the only *independent* check: the roster comparison
+2. **Baseball Reference spot-check** — **PASSING** as of 2026-08-22: 18 of
+   19 figures entered (all but Lindor), 16 passed, 0 failed, 2 known gaps,
+   8 of them exact. Actions → "Validate Service Time" → reference. This is
+   the only *independent* check: the roster comparison
    validates the pipeline against the same source it is built on, so a
    systematic misreading of MLB's semantics passes it. See "The first
    independent check" below.

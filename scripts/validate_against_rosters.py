@@ -143,7 +143,7 @@ def main() -> None:
     ap.add_argument(
         "--carry-in",
         choices=("off", "on", "both"),
-        default="both" if not PRESUME_ACTIVE_FROM_DEBUT else "on",
+        default="both",
         help="Carry-in rule: treat a player as rostered from his debut rather "
              "than crediting nothing until a start transaction fires. 'both' "
              "scores each way from the same fetched data and prints an A/B.",
