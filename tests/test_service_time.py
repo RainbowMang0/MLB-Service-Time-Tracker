@@ -669,17 +669,34 @@ def test_carry_in_is_inert_without_a_debut_date():
     )
 
 
-def test_carry_in_is_off_by_default():
+def test_carry_in_must_be_asked_for_at_the_api_level():
     """
-    It stays behind a switch until Yankees 2014 and 2018 both clear the gate
-    with it on. Over-crediting caused every revert in this project.
+    compute_service_time() itself stays conservative: no presumption unless
+    the caller opts in. The pipeline opts in (see the next test); a direct
+    caller has to say so.
     """
     seasons = _verlander_shaped_seasons(2015, 2016)
     debut = dt.date(2015, 4, 10)
     result = compute_service_time(
         [], seasons, horizon_end=dt.date(2016, 10, 1), accrual_floor=debut
     )
-    check("carry-in is off unless asked for", result.total_days == 0)
+    check("compute_service_time does not presume unless asked", result.total_days == 0)
+
+
+def test_pipeline_has_carry_in_on():
+    """
+    Turned on 2026-08-22 after clearing the roster gate in both eras
+    (2014: 96.5% -> 96.8% agreement; 2018: 99.0% -> 99.0%), with
+    over-crediting flat at 0.2% in both -- the number that decided it.
+
+    Set PRESUME_ACTIVE_FROM_DEBUT=0 to score the old behaviour.
+    """
+    import update_service_time  # noqa: PLC0415 -- import here to keep this test optional
+
+    check(
+        "the pipeline presumes a player is rostered from his debut",
+        update_service_time.PRESUME_ACTIVE_FROM_DEBUT is True,
+    )
 
 
 if __name__ == "__main__":
@@ -710,6 +727,7 @@ if __name__ == "__main__":
     test_carry_in_ignores_pre_debut_transactions()
     test_carry_in_still_respects_the_accrual_ceiling()
     test_carry_in_is_inert_without_a_debut_date()
-    test_carry_in_is_off_by_default()
+    test_carry_in_must_be_asked_for_at_the_api_level()
+    test_pipeline_has_carry_in_on()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

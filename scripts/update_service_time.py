@@ -62,13 +62,21 @@ TODAY = dt.date.today()
 # See build_global_active_intervals in service_time.py for why, and for what
 # bounds the over-crediting risk.
 #
-# Kept behind a single switch on purpose. This project's rule is one change,
-# one before/after measurement -- flipping it here changes the daily job, the
-# backfill and the roster validator together, so the number the validator
-# reports is the number production would produce. Do not hardcode it True
-# until Yankees 2014 and 2018 both still pass the gate (>=95% agreement,
-# <=2% over-crediting) with it on.
-PRESUME_ACTIVE_FROM_DEBUT = os.environ.get("PRESUME_ACTIVE_FROM_DEBUT", "") == "1"
+# ON since 2026-08-22, after clearing the gate in both eras. Measured live:
+#
+#                    agreement        over-credit     under-credit
+#   Yankees 2014     96.5% -> 96.8%   0.2% -> 0.2%    3.3% -> 3.1%
+#   Yankees 2018     99.0% -> 99.0%   0.2% -> 0.2%    0.8% -> 0.8%
+#
+# Over-crediting -- the failure mode behind every revert in this project --
+# did not move at all in either season, which is the number that decided it.
+# 2018 is untouched end to end: carry-in fires only where the feed is silent.
+#
+# The switch stays, because it is what makes the A/B possible: set
+# PRESUME_ACTIVE_FROM_DEBUT=0 to score the old behaviour. It drives the daily
+# job, the backfill and the roster validator together, so what the validator
+# reports is what production produces.
+PRESUME_ACTIVE_FROM_DEBUT = os.environ.get("PRESUME_ACTIVE_FROM_DEBUT", "1") != "0"
 
 
 def _cache_path(player_id: int) -> pathlib.Path:
