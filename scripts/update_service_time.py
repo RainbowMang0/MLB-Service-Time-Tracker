@@ -61,6 +61,18 @@ CACHE_DIR = ROOT / "data" / "cache" / "transactions"
 MIN_TRANSACTION_YEAR = 2005  # don't bother reaching back further than this
 TODAY = dt.date.today()
 
+# Stamped on every record. BUMP THIS whenever a change to the service-time
+# rules would give a stored player a different figure -- it is what tells the
+# backfill's --recompute-all which records are computed from stale rules.
+#
+# Nothing else works as a marker. `last_updated` is today for every record
+# the moment any job runs, and the presence of a season breakdown (what
+# --recompute-stale keys on) says nothing about WHICH rules produced it.
+#
+#   1  first version stamped, after same-date transactions were fixed to
+#      group by date with the stop winning
+SERVICE_TIME_RULES_VERSION = 1
+
 # The carry-in rule: presume a player is on a roster from his debut onward
 # rather than crediting him nothing until a start transaction happens to fire.
 # See build_global_active_intervals in service_time.py for why, and for what
@@ -424,6 +436,7 @@ def build_player_record(
             min((t.date.year for t in transactions), default=None),
         ),
         "last_updated": TODAY.isoformat(),
+        "rules_version": SERVICE_TIME_RULES_VERSION,
     }
 
 

@@ -31,6 +31,10 @@ on:
         description: "Recompute stored players whose records predate the current rules"
         type: boolean
         default: false
+      recompute_all:
+        description: "Recompute every non-rostered player (after a service-time rules change)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -68,6 +72,9 @@ jobs:
           fi
           if [ "${{ github.event.inputs.recompute_stale }}" = "true" ]; then
             ARGS="$ARGS --recompute-stale"
+          fi
+          if [ "${{ github.event.inputs.recompute_all }}" = "true" ]; then
+            ARGS="$ARGS --recompute-all"
           fi
           python scripts/backfill_history.py --batch "${{ github.event.inputs.batch }}" $ARGS
 

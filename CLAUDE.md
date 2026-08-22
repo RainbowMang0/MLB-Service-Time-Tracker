@@ -718,7 +718,11 @@ over a belief about what MLB means.
 | Cleveland 2011 | **99.9%** | 0.1% | 0.0% |
 | Yankees 2014 | **96.8%** | 0.2% | 3.1% |
 | Yankees 2018 | **99.0%** | 0.2% | 0.8% |
-| Tampa Bay 2022 | **97.8%** | 1.1% | 1.0% |
+| Tampa Bay 2022 | **98.6%** | 0.4% | 1.0% |
+
+Tampa Bay was 97.8% / 1.1% before the same-date fix (finding #10); Yankees
+2014 came back byte-identical, which is what a fix for a defect that season
+did not have should do.
 
 All with carry-in on, 2026-08-22. Four club-seasons, three organizations,
 three decades. Cleveland 2011 is the best result the project has produced:
@@ -1053,6 +1057,28 @@ direction.
 **This is what the Rays' 1.1% over-crediting was.** They churn players, so
 same-day claim-and-option happens constantly; the Yankees seasons barely saw
 it. The gate asking for more than one club is what surfaced it.
+
+*Measured live after the fix:* Tampa Bay 2022 **97.8% → 98.6%** agreement,
+over-crediting **1.1% → 0.4%**, with Bowden, Luke Bard and Angel Perdomo all
+gone from the worst-players list. Yankees 2014 came back **byte-identical**.
+
+### Recomputing after a rules change: `rules_version`
+
+A rules change has no natural completion marker, and the two obvious ones
+both fail:
+
+* **a missing season breakdown** (what `--recompute-stale` keys on) says
+  nothing about *which* rules produced the breakdown that is there.
+* **`last_updated`** is stamped with today's date by any job that touches a
+  record, so a morning backfill makes the whole database look freshly
+  computed under rules that changed at lunchtime. Tried, and it queued zero
+  players.
+
+Every record now carries `rules_version`, and `--recompute-all` rebuilds any
+record not stamped with the current one. **Bump
+`SERVICE_TIME_RULES_VERSION` in `update_service_time.py` whenever a change
+would give a stored player a different figure.** That keeps the recompute
+resumable across batches, which matters for a job that takes hours.
 
 ### Gate before a mass backfill
 

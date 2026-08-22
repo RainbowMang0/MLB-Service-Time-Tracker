@@ -58,6 +58,7 @@ import super_two  # noqa: E402
 from service_time import TRANSACTION_COVERAGE_START_YEAR  # noqa: E402
 from update_service_time import (  # noqa: E402
     DATA_DIR,
+    SERVICE_TIME_RULES_VERSION,
     write_index,
     write_profiles,
     OUTPUT_FILE,
@@ -131,6 +132,32 @@ def enumerate_players(start_year: int, end_year: int) -> dict[int, dict]:
 # ---------------------------------------------------------------------------
 
 
+def _needs_recompute(record: dict, args) -> bool:
+    """
+    Which stored records this run should rebuild.
+
+    --recompute-stale keys on a missing season breakdown, which is a real
+    completion marker: it makes the run idempotent and resumable with no
+    bookkeeping. A change to the service-time RULES has no such marker --
+    every record already has a breakdown, it is just computed from the old
+    rules.
+
+    --recompute-all keys on `rules_version` instead: a record stamped with
+    the current version was computed under the current rules and is done.
+    That keeps the property that matters for a job which takes hours and
+    runs in batches -- interrupt it anywhere, re-run, and it picks up what is
+    left rather than starting over.
+
+    `last_updated` was tried first and is useless for this: any job that runs
+    stamps today's date on everything it touches, so the morning's backfill
+    makes the whole database look freshly computed under rules that changed
+    at lunchtime.
+    """
+    if args.recompute_all:
+        return record.get("rules_version") != SERVICE_TIME_RULES_VERSION
+    return not record.get("seasons")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -156,6 +183,17 @@ def main() -> None:
         help="Put previously failed players back in the queue.",
     )
     parser.add_argument(
+        "--recompute-all",
+        action="store_true",
+        help=(
+            "Recompute EVERY non-rostered player, whether or not his record "
+            "looks current. --recompute-stale keys on a missing season "
+            "breakdown, which cannot see a change to the service-time rules "
+            "themselves: every record already has one. Use this after a rules "
+            "change, and expect it to take as long as the original backfill."
+        ),
+    )
+    parser.add_argument(
         "--recompute-stale",
         action="store_true",
         help=(
@@ -178,7 +216,7 @@ def main() -> None:
 
     print(f"Database currently holds {len(db)} players.")
 
-    if args.recompute_stale:
+    if args.recompute_stale or args.recompute_all:
         # Recompute mode. The normal queue is "players we do not have", which
         # by construction cannot pick up a rules change -- every affected
         # player is already in the database.
@@ -201,10 +239,13 @@ def main() -> None:
                 "position": rec.get("position"),
             }
             for pid, rec in db.items()
-            if not rec.get("on_40_man") and not rec.get("seasons")
+            if not rec.get("on_40_man") and _needs_recompute(rec, args)
         }
         todo = sorted(everyone)
-        print(f"{len(todo)} non-rostered record(s) predate the current pipeline.")
+        label = "queued for a full recompute" if args.recompute_all else (
+            "predate the current pipeline"
+        )
+        print(f"{len(todo)} non-rostered record(s) {label}.")
     else:
         print(f"Enumerating players {args.start_year}-{TODAY.year}...")
         everyone = enumerate_players(args.start_year, TODAY.year)
