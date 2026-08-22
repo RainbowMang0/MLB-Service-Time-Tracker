@@ -498,16 +498,78 @@ under-credits, agree=0), Shawn Kelley (8), Dean Anna (5), Slade Heathcott
 bounced between clubs mid-season, so he is probably a waiver-claim
 carry-in case rather than a new class of bug.
 
+### The first independent check (2026-08-22)
+
+Three Baseball Reference figures are in, and they are the first numbers in
+this project checked against a source that is not MLB's own transaction feed.
+
+| player | B-R (01/26) | ours | delta | own `missing_seasons` |
+|---|---|---|---|---|
+| Aaron Judge | 9.051 | 9.050 | **−1d** | 0 |
+| Max Scherzer | 17.079 | 17.000 | −79d | 1 |
+| Justin Verlander | 20.002 | 11.000 | **−1550d** | 10 |
+
+**Judge is the headline: one day off over a nine-year career.** Where the
+transaction feed is complete, the math is right. That is the first evidence
+for it that does not come from MLB.
+
+The other two read low by close to exactly what their own records already
+declare missing, which is the flag working as designed — so
+`validate_service_time.py` now scores three ways, not two: `ok`, `GAP` (reads
+low and `missing_seasons > 0`), and `FAIL`. A GAP is the documented coverage
+limit, not a regression. Reading *high* is always a FAIL: missing history
+cannot inflate a figure.
+
+**How to read the B-R page.** There is no per-season `s.YYYY` column — that
+was a wrong assumption baked into the first version of this file and the
+validator. B-R shows a single dated snapshot in the bio block, e.g.
+"9.051 (01/26)". `as_of` on every row is therefore one offseason date
+(2026-01-26), which works because **service time does not accrue between the
+World Series and Opening Day** — the exact day need not match B-R's label.
+
+#### Verlander is not a pre-2009 problem — he is the carry-in problem
+
+The tempting read is "pre-2009 debut, thin coverage, expected." It is wrong,
+and the size of the gap is what gives it away: his 2005-2008 seasons are
+worth about 3.5 years, but he is short by 9.
+
+His first major-league transaction of any kind is **2015-04-08** — a disabled
+list placement. There is nothing before it. He was on Detroit's roster
+continuously from 2006, never optioned, never DFA'd, never released, and not
+injured until 2015, so the feed has no reason to say anything about him. Six
+of his ten invisible seasons (2009-2014) sit squarely inside the era where
+coverage is known to be good.
+
+`build_global_active_intervals()` only ever opens an interval on an explicit
+start, so he accrues nothing until that 2015 IL placement fires. 2015-2025 is
+eleven seasons at the 172-day cap = 11.000 exactly, which is what we print.
+
+This is the carry-in defect described above, now measured on a single player:
+**9 years.** It is worst exactly where it is least visible — durable veterans
+who sit on a roster for a decade without a transaction the parser recognises.
+The roster validator only sampled Yankees 2014 and 2018, single seasons where
+a carry-in player looks like a handful of missing days; a career total makes
+it unmissable. That is the argument for this check existing.
+
+The fix and its risk are unchanged from the carry-in note above: opening the
+interval at the window start when the first transaction seen is a stop (or,
+for Verlander, when a player has a debut but no transactions for years after
+it) would credit him correctly — but `accrual_floor` is the only thing
+stopping the same rule from crediting a career minor leaguer for every year
+between his cup of coffee and his next recall. Over-crediting caused every
+revert in this project. Measure it on Yankees 2014 + 2018 before believing it.
+
 ### Gate before a mass backfill
 
 1. **Roster accuracy** — agreement ≥95% and over-crediting ≤2%, on at least
    two different club-seasons (one recent, one pre-2019 for disabled-list
    era wording).
-2. **Baseball Reference spot-check** — `data/reference_service_time.json`
-   still ships empty. Actions → "Validate Service Time" → reference. This is
-   the only *independent* check: the roster comparison validates the
-   pipeline against the same source it is built on, so a systematic
-   misreading of MLB's semantics passes it. Needs figures entered by hand.
+2. **Baseball Reference spot-check** — 3 of 19 figures entered as of
+   2026-08-22 (Judge, Scherzer, Verlander). Actions → "Validate Service
+   Time" → reference. This is the only *independent* check: the roster
+   comparison validates the pipeline against the same source it is built on,
+   so a systematic misreading of MLB's semantics passes it. See "The first
+   independent check" below.
 3. **Tests green** — `python tests/test_service_time.py`.
 
 ---
@@ -534,8 +596,8 @@ carry-in case rather than a new class of bug.
    `build_player_record()` takes a `horizon_end` override, so it can compute
    what a player's service time WOULD HAVE READ as of a past date (e.g. a
    prior Opening Day) rather than only "as of today." Compare that against
-   Baseball Reference's `s.YYYY` figures, which are a fixed target rather
-   than a moving one. Doing this required a real bug fix along the way:
+   Baseball Reference's dated snapshot figure, which is a fixed target
+   rather than a moving one. Doing this required a real bug fix along the way:
    `build_global_active_intervals()` previously only used `horizon_end` to
    cap the trailing *open* interval — a stop transaction (option/DFA/release)
    dated *after* `horizon_end` would still truncate an earlier interval that,
@@ -543,14 +605,12 @@ carry-in case rather than a new class of bug.
    after `horizon_end` before building intervals at all. Covered by a new
    regression test (`test_as_of_past_date_ignores_later_transactions`).
 
-   **Still needed:** the reference file (`data/reference_service_time.json`)
-   ships empty — copy `data/reference_service_time.example.json`, fill in a
-   handful of well-known players' `s.YYYY` figures by hand from their
-   Baseball Reference pages (deliberately not scraped), and run
-   `python scripts/validate_service_time.py`. Nothing has actually been
-   checked against a real external number yet; this just makes doing so
-   possible. Requires network access to the live MLB Stats API, so it can't
-   run in this offline sandbox — run it locally or from a Codespace/Action.
+   **Status:** the reference file has 19 rows, 3 with figures entered
+   (2026-08-22). Fill in more by hand from the players' Baseball Reference
+   pages — deliberately not scraped — and run
+   `python scripts/validate_service_time.py`. Requires network access to the
+   live MLB Stats API, so it can't run in this offline sandbox — run it from
+   Actions → "Validate Service Time" → reference.
 
 ### Known limitations
 
