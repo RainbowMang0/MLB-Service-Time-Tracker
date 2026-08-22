@@ -24,7 +24,12 @@
       "`ours_at_generation` is what THIS project computed as of the day the file",
       "was generated, for reference only. It is NOT the as_of figure and is not",
       "used by the validator -- do not copy it into `expected`, that would make",
-      "the check vacuous."
+      "the check vacuous.",
+      "",
+      "`accepted_delta` (optional): a diagnosed discrepancy that has been",
+      "judged not worth chasing. Compared EXACTLY, not as a widened",
+      "tolerance -- if the residual drifts the row fails again. Any row",
+      "using it must carry a `note` saying why."
     ]
   },
   {
@@ -155,7 +160,9 @@
     "source": "baseball-reference.com player page, service-time snapshot labelled 01/26",
     "mlb_debut": "2018-05-15",
     "history_complete": true,
-    "ours_at_generation": "8.117"
+    "ours_at_generation": "8.117",
+    "accepted_delta": 6,
+    "note": "MLB's mlbDebutDate for Soto is 2018-05-15, but the feed says his contract was selected on 2018-05-20 ('Washington Nationals selected the contract of LF Juan Soto from Harrisburg Senators'); the 05-15 row is a plain 'assigned to' with no start wording. Baseball Reference counts from the 20th, we accrue from the debut date, hence 5 days plus 1 of ordinary rounding. Scoping carry-in to skip a start the feed can see was tried and measured: it does not fix Soto (his 05-15 row is not a start) and it costs deGrom 87 days and Ohtani 56, because their first debut-season start transaction comes after they were already rostered. Reverted; 6 days on a 7-year career is not worth that."
   },
   {
     "player_id": 660271,

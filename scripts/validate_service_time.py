@@ -101,13 +101,30 @@ def load_reference(path: pathlib.Path) -> list[dict]:
 def validate_one(case: dict, tolerance_days: int) -> tuple[str, str]:
     """Returns (verdict, message) where verdict is 'ok', 'gap' or 'fail'.
 
-    'gap' is for a player whose own record already declares missing seasons
-    (`missing_seasons > 0`: the feed shows nothing for the front of his
-    career) and who reads LOW by roughly that much. That is the documented
-    limitation doing exactly what it says, not a regression, so it is
-    reported separately and does not fail the run. Reading HIGH is always a
-    failure -- missing history cannot inflate a figure, and over-crediting is
-    the failure mode behind every revert in this project's history.
+    'gap' is for a player whose own record declares missing seasons
+    (`missing_seasons > 0`), meaning the feed shows nothing for the front of
+    his career and the carry-in rule presumes it from his debut date.
+
+    That classification used to apply only when such a player read LOW, on
+    the reasoning that missing history cannot inflate a figure. Carry-in made
+    that premise false: those seasons are now CREDITED, so the presumption
+    can over-credit as easily as the old default under-credited. Max Scherzer
+    went from -82d to +77d when it was turned on -- his 2008 option and
+    recall are both absent from the feed, so a presumed season is credited
+    whole. Same limitation, opposite sign.
+
+    So a gap player is judged in either direction, but not without bound: the
+    presumption cannot be wrong by more than the seasons it presumes, so
+    anything beyond `missing_seasons` full years is a real failure. A player
+    with complete history is held to the tolerance in both directions --
+    that is the regression detector, and the sixteen complete-history
+    reference players are what it guards.
+
+    `accepted_delta` on a reference row is an explicit, written-down
+    exception for a discrepancy that has been diagnosed and judged not worth
+    chasing. It is compared exactly, not as a widened tolerance: if the
+    residual drifts, the row fails again. A row using it must carry a `note`
+    saying why.
     """
     player_id = case["player_id"]
     as_of = dt.date.fromisoformat(case["as_of"])
@@ -119,10 +136,12 @@ def validate_one(case: dict, tolerance_days: int) -> tuple[str, str]:
     actual_days = record["service_days_total"]
     delta = actual_days - expected_days
     missing = record.get("missing_seasons", 0)
+    accepted = int(case.get("accepted_delta") or 0)
+    residual = delta - accepted
 
-    if abs(delta) <= tolerance_days:
+    if abs(residual) <= tolerance_days:
         verdict = "ok"
-    elif delta < 0 and missing > 0:
+    elif missing > 0 and abs(delta) <= missing * FULL_YEAR_DAYS:
         verdict = "gap"
     else:
         verdict = "fail"
@@ -134,9 +153,11 @@ def validate_one(case: dict, tolerance_days: int) -> tuple[str, str]:
         f"({expected_days}d), got {record['service_time']} ({actual_days}d), "
         f"delta {delta:+d}d"
     )
+    if accepted:
+        msg += f"  [accepted {accepted:+d}d, residual {residual:+d}d: {case.get('note', 'no note')}]"
     if missing:
         msg += (
-            f"  [{missing} season(s) not visible in the feed"
+            f"  [{missing} season(s) presumed from debut, not read"
             f"; first transaction {record.get('first_transaction')}]"
         )
     return verdict, msg
@@ -187,10 +208,12 @@ def main() -> None:
     print(f"\n{tally['ok']} passed, {tally['fail']} failed, {tally['gap']} known gap(s)")
     if tally["gap"]:
         print(
-            "A 'GAP' row reads low by roughly the seasons its own record says\n"
-            "are missing from the transaction feed. That is the known coverage\n"
-            "limit, not a regression -- but a large gap on a player who should\n"
-            "be fully visible is worth investigating."
+            "A 'GAP' row is off by no more than the seasons its own record says\n"
+            "are presumed from the debut date rather than read from the feed.\n"
+            "That is the known coverage limit, in either direction -- carry-in\n"
+            "credits those seasons, so it can over-credit as easily as the old\n"
+            "default under-credited. A discrepancy on a player with complete\n"
+            "history is a FAIL, and that is the regression detector."
         )
     sys.exit(1 if tally["fail"] else 0)
 

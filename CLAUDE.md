@@ -765,6 +765,53 @@ stopping the same rule from crediting a career minor leaguer for every year
 between his cup of coffee and his next recall. Over-crediting caused every
 revert in this project. Measure it on Yankees 2014 + 2018 before believing it.
 
+### Reading the reference check after carry-in
+
+Turning carry-in on flipped the sign of the two known gaps, and the
+validator's verdict rule had to catch up. Live, 2026-08-22:
+
+| player | B-R | before carry-in | after |
+|---|---|---|---|
+| Justin Verlander | 20.002 | 11.000 (−1550d) | 20.091 (**+89d**) |
+| Max Scherzer | 17.079 | 16.169 (−82d) | 17.152 (**+73d**) |
+
+The old rule said reading HIGH is always a failure, on the reasoning that
+missing history cannot inflate a figure. **Carry-in makes that premise
+false**: those seasons are now credited, so a presumption can over-credit as
+easily as the old default under-credited. Same limitation, opposite sign.
+
+The rule now judges a `missing_seasons > 0` player in either direction, but
+bounded — the presumption cannot be wrong by more than the seasons it
+presumes, so beyond `missing_seasons × 172` it is a real failure. A player
+with complete history is held to the tolerance both ways, and those sixteen
+are what actually guards against regressions.
+
+#### Juan Soto: a 6-day residual, diagnosed and accepted
+
+He is the only complete-history player outside tolerance, and the cause is
+exact: **MLB's `mlbDebutDate` for him is 2018-05-15, but the feed says his
+contract was selected on 2018-05-20.** The 05-15 row is a plain "assigned
+to", with no start wording. B-R counts from the 20th; we accrue from the
+debut date. Five days, plus one of ordinary rounding.
+
+**The obvious fix was tried and measured, and is harmful.** Scoping carry-in
+so it never overrides a start the feed can see:
+
+| | before | after |
+|---|---|---|
+| Juan Soto | +6d | +6d (**unchanged** — his 05-15 row is not a start) |
+| Jacob deGrom | +1d | **−87d** |
+| Shohei Ohtani | +0d | **−56d** |
+
+deGrom and Ohtani were already on a roster before their first debut-season
+*start* transaction fired, so deferring to it threw away the front of their
+first year. Reverted. This is the same shape as the free-agency stop keyword
+and the minor-league-activation stop: a plausible rule, measured, wrong.
+
+Recorded instead as `accepted_delta: 6` on his reference row, with the
+diagnosis in a `note`. It is compared **exactly**, not as a widened
+tolerance — if the residual drifts, the row fails again.
+
 ### Gate before a mass backfill
 
 1. **Roster accuracy** — agreement ≥95% and over-crediting ≤2%, on at least
