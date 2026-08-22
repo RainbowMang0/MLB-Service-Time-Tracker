@@ -541,6 +541,147 @@ def test_normal_season_is_not_prorated():
     )
 
 
+# --- carry-in ------------------------------------------------------------
+#
+# Written from a live discrepancy, not invented. Justin Verlander debuted
+# 2005-07-04 and his first major-league transaction of any kind is
+# 2015-04-08 -- he sat on Detroit's roster for a decade without being
+# optioned, DFA'd, released or injured, so the feed had nothing to say about
+# him. Ten seasons produced no interval and he read 11.000 against a
+# published 20.002.
+
+
+def _verlander_shaped_seasons(first: int, last: int) -> list[SeasonWindow]:
+    return [
+        SeasonWindow(y, dt.date(y, 3, 28), dt.date(y, 10, 1))
+        for y in range(first, last + 1)
+    ]
+
+
+def test_carry_in_credits_a_player_who_simply_never_left_the_roster():
+    seasons = _verlander_shaped_seasons(2005, 2008)
+    debut = dt.date(2005, 7, 4)
+    txns = [
+        Transaction(dt.date(2008, 4, 8), "Detroit Tigers placed RHP X on the 15-day disabled list."),
+    ]
+    horizon = dt.date(2008, 10, 1)
+
+    without = compute_service_time(
+        txns, seasons, horizon_end=horizon, accrual_floor=debut
+    )
+    with_carry_in = compute_service_time(
+        txns, seasons, horizon_end=horizon, accrual_floor=debut,
+        presume_active_from_debut=True,
+    )
+
+    check(
+        "without carry-in, a decade on the roster credits only from the first "
+        "transaction",
+        without.by_season[2006]["credited_days"] == 0,
+    )
+    check(
+        "carry-in credits the seasons between debut and first transaction",
+        with_carry_in.by_season[2006]["credited_days"] == 172,
+    )
+    check(
+        "carry-in does not credit before the debut date",
+        with_carry_in.by_season[2005]["credited_days"]
+        < with_carry_in.by_season[2006]["credited_days"],
+    )
+    check(
+        "carry-in raises the total, and only the total it should",
+        with_carry_in.total_days > without.total_days,
+    )
+
+
+def test_carry_in_is_closed_by_the_first_stop_it_meets():
+    """The presumption is a default, not a floor -- a demotion still ends it."""
+    seasons = _verlander_shaped_seasons(2010, 2012)
+    debut = dt.date(2010, 4, 5)
+    txns = [
+        Transaction(dt.date(2011, 5, 1), "Detroit Tigers optioned RHP X to Toledo Mud Hens."),
+    ]
+    result = compute_service_time(
+        txns, seasons, horizon_end=dt.date(2012, 10, 1), accrual_floor=debut,
+        presume_active_from_debut=True,
+    )
+    check(
+        "carry-in accrues up to the option",
+        result.by_season[2010]["credited_days"] == 172,
+    )
+    check(
+        "carry-in stops at the option and does not resume on its own",
+        result.by_season[2012]["credited_days"] == 0,
+    )
+
+
+def test_carry_in_ignores_pre_debut_transactions():
+    """
+    A pre-debut stop must not close the carried-in interval before it opens.
+    The feed carries a player's whole tracked history, so college and minor
+    league rows sit in front of the debut; they cannot bear on whether he was
+    on a major league roster afterwards.
+    """
+    seasons = _verlander_shaped_seasons(2015, 2016)
+    debut = dt.date(2015, 6, 1)
+    txns = [
+        Transaction(dt.date(2015, 4, 2), "Toledo Mud Hens optioned RHP X to Erie SeaWolves."),
+    ]
+    result = compute_service_time(
+        txns, seasons, horizon_end=dt.date(2016, 10, 1), accrual_floor=debut,
+        presume_active_from_debut=True,
+    )
+    check(
+        "a pre-debut stop does not cancel carry-in",
+        result.by_season[2016]["credited_days"] == 172,
+    )
+
+
+def test_carry_in_still_respects_the_accrual_ceiling():
+    """A retired player's clock must still stop at his last season."""
+    seasons = _verlander_shaped_seasons(2012, 2014)
+    debut = dt.date(2012, 4, 10)
+    result = compute_service_time(
+        [], seasons, horizon_end=dt.date(2014, 10, 1), accrual_floor=debut,
+        accrual_ceiling=dt.date(2013, 10, 1),
+        presume_active_from_debut=True,
+    )
+    check(
+        "carry-in accrues up to the ceiling",
+        result.by_season[2013]["credited_days"] == 172,
+    )
+    check(
+        "carry-in does not run past the ceiling",
+        result.by_season[2014]["credited_days"] == 0,
+    )
+
+
+def test_carry_in_is_inert_without_a_debut_date():
+    """No debut means no defensible place to start presuming."""
+    seasons = _verlander_shaped_seasons(2015, 2016)
+    result = compute_service_time(
+        [], seasons, horizon_end=dt.date(2016, 10, 1), accrual_floor=None,
+        presume_active_from_debut=True,
+    )
+    check(
+        "carry-in credits nothing when there is no debut date",
+        result.total_days == 0,
+    )
+
+
+def test_carry_in_is_off_by_default():
+    """
+    It stays behind a switch until Yankees 2014 and 2018 both clear the gate
+    with it on. Over-crediting caused every revert in this project.
+    """
+    seasons = _verlander_shaped_seasons(2015, 2016)
+    debut = dt.date(2015, 4, 10)
+    result = compute_service_time(
+        [], seasons, horizon_end=dt.date(2016, 10, 1), accrual_floor=debut
+    )
+    check("carry-in is off unless asked for", result.total_days == 0)
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -564,5 +705,11 @@ if __name__ == "__main__":
     test_2020_season_is_prorated_to_a_full_year()
     test_2020_partial_season_scales_proportionally()
     test_normal_season_is_not_prorated()
+    test_carry_in_credits_a_player_who_simply_never_left_the_roster()
+    test_carry_in_is_closed_by_the_first_stop_it_meets()
+    test_carry_in_ignores_pre_debut_transactions()
+    test_carry_in_still_respects_the_accrual_ceiling()
+    test_carry_in_is_inert_without_a_debut_date()
+    test_carry_in_is_off_by_default()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

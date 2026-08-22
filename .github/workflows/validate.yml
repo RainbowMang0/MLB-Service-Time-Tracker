@@ -16,6 +16,10 @@ name: Validate Service Time
 #               which is exactly what the roster check cannot be.
 #
 # Run both before a mass backfill.
+#
+# The rosters check scores the carry-in rule both ways from a single fetch
+# (carry_in: both), so an A/B costs one run and cannot drift between the two
+# halves. See build_global_active_intervals in scripts/service_time.py.
 
 on:
   workflow_dispatch:
@@ -40,6 +44,15 @@ on:
         description: "rosters: days between sampled dates"
         required: false
         default: "7"
+      carry_in:
+        description: "rosters: carry-in rule (both = A/B in one run)"
+        type: choice
+        required: false
+        default: both
+        options:
+          - both
+          - "off"
+          - "on"
 
 # Read-only, so deliberately outside the service-time-update concurrency
 # group -- safe to run while a backfill batch is going.
@@ -70,6 +83,7 @@ jobs:
               python scripts/validate_against_rosters.py \
                 --team "${{ github.event.inputs.team }}" \
                 --season "${{ github.event.inputs.season }}" \
-                --interval "${{ github.event.inputs.interval }}"
+                --interval "${{ github.event.inputs.interval }}" \
+                --carry-in "${{ github.event.inputs.carry_in }}"
               ;;
           esac

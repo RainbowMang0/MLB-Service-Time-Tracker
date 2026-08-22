@@ -432,12 +432,79 @@ definition, but an IL placement currently only avoids stopping the clock —
 it never starts one, so a player optioned and then moved to the 60-day IL
 stays stopped.
 
-**Fix 2 (not yet attempted): carry-in.** If the first transaction seen for a
-player is a STOP, he must have been active before it, so the interval should
-open at the window start. This is what the vestigial
-`carry_in_active_first_season` parameter was for. Measure it the same way —
-one change, one before/after run — rather than bundling it with anything
-else.
+**Fix 3 (built 2026-08-22, AWAITING MEASUREMENT): carry-in.**
+
+The original sketch — "if the first transaction seen is a STOP, open the
+interval at the window start" — turned out to be too narrow. It does not
+catch Verlander at all, because his first transaction is an IL placement,
+which is a *start*. The general statement is stronger and simpler:
+
+> **A player is presumed to be on a roster from his major league debut until
+> the feed says otherwise.**
+
+That is the exact mirror of `accrual_ceiling`, which already presumes a
+player stayed rostered to the end of his last season rather than demanding a
+transaction to prove it. The default was asymmetric: presumed-off at the
+front, presumed-on at the back.
+
+Implemented as `presume_active_from` in `build_global_active_intervals()`,
+surfaced as `presume_active_from_debut` on `compute_service_time()`. The
+vestigial `carry_in_active_first_season` parameter is now a deprecated alias
+for it rather than a no-op.
+
+**It is OFF by default**, behind one switch — the `PRESUME_ACTIVE_FROM_DEBUT`
+env var, honoured by the daily job, the backfill and the roster validator
+together, so what the validator scores is what production would produce.
+
+*What bounds the over-crediting risk* (the failure mode behind every revert
+here): `accrual_floor` blocks the presumption before the debut,
+`accrual_ceiling` blocks it after the last season played, and in between any
+option, DFA, release or outright closes the interval normally. What is left
+exposed is a player who left an MLB roster in a way the feed never recorded —
+overwhelmingly a pre-2009 coverage problem, since 2009+ demotions are
+reliably present.
+
+**Offline evidence, before the live run.** Against the three Baseball
+Reference figures, as of 2026-01-26:
+
+| player | B-R | carry-in off | carry-in on |
+|---|---|---|---|
+| Aaron Judge | 9.051 | 9.050 (−1d) | 9.050 (**−1d, unchanged**) |
+| Max Scherzer | 17.079 | 17.000 (−79d) | 17.156 (**+77d**) |
+| Justin Verlander | 20.002 | 11.000 (−1550d) | 20.090 (**+88d**) |
+
+Verlander goes from 9 years wrong to 88 days wrong. Judge does not move at
+all, which is the property that matters most: where the feed is complete,
+carry-in is inert.
+
+Scherzer is the predicted cost, and worth understanding rather than tuning
+away. He was optioned down and recalled during 2008; neither move is in the
+feed, so carry-in credits his whole 2008 (155 days) instead of the 79 he
+earned. An under-credit became a slightly smaller over-credit. Both his and
+Verlander's residuals are pre-2009 seasons — nothing in the well-covered era
+moved in the wrong direction.
+
+A tempting refinement, **rejected**: start the presumption at the later of
+the debut and the 2009 season, to avoid the sparse era entirely. Measured, it
+gives Verlander 17.000 — three years short — and leaves Scherzer unchanged.
+It trades a fixed 9-year error for a fixed 3-year one to avoid an 88-day one.
+
+**Whole-population dry run** over all 1,324 cached 40-man players: 27 changed
+(2%), 4,336 days added, **0 days removed** — carry-in can only add, and the
+run confirms it does. The movers are the right shape: Shea Langeliers
+1.547 → 4.134 (Oakland's everyday catcher since 2022), Mitch Spence
+0.198 → 1.802. Both read absurdly low before.
+
+**Still required before this is turned on:** Actions → "Validate Service
+Time" → rosters, with `carry_in: both`, on Yankees 2014 *and* 2018. The
+validator now scores both variants from a single fetch and prints the A/B
+plus a pass/fail against the gate, so the two halves cannot drift apart. Turn
+it on only if agreement stays ≥95% and over-crediting stays ≤2% with it on.
+
+Note why the roster check nearly missed this and the Baseball Reference check
+caught it immediately: sampling one club-season makes a carry-in player look
+like a handful of missing days, while a career total makes nine years
+unmissable. Breadth and independence are different virtues.
 
 Run it: Actions → "Validate Service Time" → rosters.
 
