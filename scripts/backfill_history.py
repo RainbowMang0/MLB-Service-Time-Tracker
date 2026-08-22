@@ -154,6 +154,16 @@ def main() -> None:
         action="store_true",
         help="Put previously failed players back in the queue.",
     )
+    parser.add_argument(
+        "--recompute-stale",
+        action="store_true",
+        help=(
+            "Recompute non-rostered players whose stored record predates the "
+            "current pipeline (no season breakdown). Use after a change to the "
+            "service-time rules, which the normal queue cannot see: it skips "
+            "anyone already in the database."
+        ),
+    )
     args = parser.parse_args()
 
     print(f"[{dt.datetime.now().isoformat(timespec='seconds')}] Backfill starting...")
@@ -166,23 +176,52 @@ def main() -> None:
         failed = set()
 
     print(f"Database currently holds {len(db)} players.")
-    print(f"Enumerating players {args.start_year}-{TODAY.year}...")
-    everyone = enumerate_players(args.start_year, TODAY.year)
+
+    if args.recompute_stale:
+        # Recompute mode. The normal queue is "players we do not have", which
+        # by construction cannot pick up a rules change -- every affected
+        # player is already in the database.
+        #
+        # Completion is marked by the record itself carrying a `seasons`
+        # breakdown, not by the state file. That makes the run idempotent and
+        # self-verifying: interrupt it anywhere and re-running picks up
+        # exactly what is left, with no bookkeeping to get out of step.
+        #
+        # Rostered players are excluded because the daily job owns them and
+        # recomputing them here with currently_rostered=False would cap their
+        # clocks at their last season -- the exact bug that credited half of
+        # the first backfill batch with phantom service time, in reverse.
+        everyone = {
+            int(pid): {
+                "id": int(pid),
+                "fullName": rec.get("name"),
+                "team": rec.get("team"),
+                "teamId": rec.get("team_id"),
+                "position": rec.get("position"),
+            }
+            for pid, rec in db.items()
+            if not rec.get("on_40_man") and not rec.get("seasons")
+        }
+        todo = sorted(everyone)
+        print(f"{len(todo)} non-rostered record(s) predate the current pipeline.")
+    else:
+        print(f"Enumerating players {args.start_year}-{TODAY.year}...")
+        everyone = enumerate_players(args.start_year, TODAY.year)
 
     # Skip anyone we already have a record for, already processed, or gave up
     # on. The daily job owns rostered players; this one fills in the rest.
-    todo = [
-        pid
-        for pid in everyone
-        if str(pid) not in db and pid not in processed and pid not in failed
-    ]
-    todo.sort()
+        todo = [
+            pid
+            for pid in everyone
+            if str(pid) not in db and pid not in processed and pid not in failed
+        ]
+        todo.sort()
 
-    print(
-        f"\n{len(everyone)} players in range | {len(db)} already recorded | "
-        f"{len(processed)} previously backfilled | {len(failed)} failed | "
-        f"{len(todo)} remaining"
-    )
+        print(
+            f"\n{len(everyone)} players in range | {len(db)} already recorded | "
+            f"{len(processed)} previously backfilled | {len(failed)} failed | "
+            f"{len(todo)} remaining"
+        )
 
     if args.status:
         return

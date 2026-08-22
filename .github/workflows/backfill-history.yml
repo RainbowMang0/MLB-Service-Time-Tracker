@@ -27,6 +27,10 @@ on:
         description: "Put previously failed players back in the queue"
         type: boolean
         default: false
+      recompute_stale:
+        description: "Recompute stored players whose records predate the current rules"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -61,6 +65,9 @@ jobs:
           fi
           if [ "${{ github.event.inputs.retry_failed }}" = "true" ]; then
             ARGS="$ARGS --retry-failed"
+          fi
+          if [ "${{ github.event.inputs.recompute_stale }}" = "true" ]; then
+            ARGS="$ARGS --recompute-stale"
           fi
           python scripts/backfill_history.py --batch "${{ github.event.inputs.batch }}" $ARGS
 
