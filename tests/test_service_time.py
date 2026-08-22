@@ -854,6 +854,59 @@ def test_super_two_declines_to_guess_from_a_tiny_population():
     check("no cutoff from 10 players", S.compute_cutoff(_s2_league(10), 2025) is None)
 
 
+def test_qualifying_season_follows_the_season_being_played():
+    """
+    The 86-day test looks at the season preceding the offseason being
+    projected -- which is the one in progress, not the one the cutoff came
+    from. Anthony Kay is the case: nothing in 2025, 151 days in 2026.
+    """
+    import super_two as S  # noqa: PLC0415
+
+    db = _s2_league(100, year=2025)
+    for record in db.values():
+        record["seasons"].append({"y": 2026, "d": 151})
+    check(
+        "with the current season well under way, it is the one tested",
+        S.qualifying_season(db, 2025) == 2026,
+    )
+
+
+def test_qualifying_season_falls_back_early_in_a_season():
+    """
+    Switching in April would empty the list rather than project it, since
+    nobody has 86 days yet.
+    """
+    import super_two as S  # noqa: PLC0415
+
+    db = _s2_league(100, year=2025)
+    for record in db.values():
+        record["seasons"].append({"y": 2026, "d": 12})   # two weeks in
+    check(
+        "an infant season is not used for the 86-day test",
+        S.qualifying_season(db, 2025) == 2025,
+    )
+
+
+def test_latest_complete_season_is_measured_not_assumed():
+    """
+    `today_year - 1` goes stale every offseason and would publish a cutoff a
+    full season out of date. A season is finished when somebody has banked
+    the 172-day cap in it.
+    """
+    import super_two as S  # noqa: PLC0415
+
+    mid = _s2_league(100, year=2025)
+    for record in mid.values():
+        record["seasons"].append({"y": 2026, "d": 100})
+    check("a half-played season is not treated as complete",
+          S.latest_complete_season(mid, 2026) == 2025)
+
+    done = _s2_league(100, year=2025)
+    for record in done.values():
+        record["seasons"].append({"y": 2026, "d": 172})
+    check("a finished season is", S.latest_complete_season(done, 2026) == 2026)
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -892,5 +945,8 @@ if __name__ == "__main__":
     test_super_two_requires_86_days_in_the_preceding_season()
     test_super_two_flags_only_the_two_to_three_year_band()
     test_super_two_declines_to_guess_from_a_tiny_population()
+    test_qualifying_season_follows_the_season_being_played()
+    test_qualifying_season_falls_back_early_in_a_season()
+    test_latest_complete_season_is_measured_not_assumed()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

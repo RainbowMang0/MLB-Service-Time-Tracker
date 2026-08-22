@@ -943,6 +943,49 @@ within a few days of it could land either side. Still far better than a flat
 The 86-day condition is now checked *exactly* from the season rows, in its
 correct role — a second test on top of the ranking, not the whole rule.
 
+**Which season the 86 days are counted in matters**, and the first version
+got it wrong. The rule says "the immediately preceding season" — preceding
+the offseason where eligibility is decided. For a projection about the NEXT
+offseason that is the season being played now, not the one the cutoff came
+from.
+
+Anthony Kay is the case that exposed it (spotted by the owner): 2.155 and on
+a 40-man, above the 2.136 line, but not flagged. His breakdown says why — he
+sat at 2.004 after 2023, accrued **nothing** in 2024 or 2025, then came back
+for 151 days in 2026. Tested against 2025 he has zero days and fails; tested
+against 2026 he clears 86 comfortably, which is the right answer to "is he
+on track".
+
+`qualifying_season()` now picks the season being played, falling back to the
+reference season early on — in April nobody has 86 days yet, and switching
+then would empty the list rather than project it. Which season is far enough
+along is *measured* (has anyone reached 86 days in it?) rather than assumed
+from the calendar. Six players moved, all correctly:
+
+| | 2025 | 2026 | |
+|---|---|---|---|
+| Anthony Kay | 0 | 151 | added |
+| Ron Marinaccio | 31 | 137 | added |
+| José Herrera | 157 | 0 | dropped |
+| Josh Winckowski | 130 | 0 | dropped |
+| Bo Naylor | 172 | 45 | dropped |
+| Logan Allen (671106) | 172 | 60 | dropped |
+
+**A mid-season consequence to accept:** Logan Allen at 60 days could still
+cross 86 before the season ends, so the flag is not his final answer — it
+flips on the day he crosses. That is the honest behaviour for a live
+projection, and it resolves exactly once the season is over.
+
+`latest_complete_season()` was fixed alongside for the same reason: it
+returned `today_year - 1` unconditionally, which goes stale every offseason
+and would quietly publish a cutoff a full season out of date. It now checks
+whether anyone has reached the 172-day cap in the current year.
+
+*Two Logan Allens, both Cleveland pitchers.* The first pass at this diff
+keyed on name and printed the wrong one's figures (1.079, not even in the
+band). Same collision as the two Luis Perdomos — **never key this dataset by
+name.**
+
 **`--recompute-derived`** was added alongside: reload the stored database,
 redo the derived post-passes (Super Two, index, profiles) and rewrite the
 published files, with no API calls. A change to how something is *derived*

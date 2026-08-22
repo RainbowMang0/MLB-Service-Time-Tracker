@@ -232,10 +232,13 @@
             `${superTwoCutoff.cutoff}, measured from this project's own data: ` +
             `${superTwoCutoff.class_size} players finished that year between 2.000 and ` +
             `3.000 years, and the top 22% of them (${superTwoCutoff.qualifying_count}) ` +
-            `qualified for arbitration a year early. These players are currently at or ` +
-            `above that line. Next offseason's cutoff will differ — it has moved between ` +
-            `2.126 and 2.136 over the last four years — so a player near the line could ` +
-            `land either side.`
+            `qualified for arbitration a year early. Listed here are players at or above ` +
+            `that line who have also accrued 86+ days in ` +
+            `${superTwoCutoff.qualifying_season || superTwoCutoff.season}, the second ` +
+            `half of the rule. While that season is still being played a player can ` +
+            `cross 86 days and join this list. Next offseason's cutoff will differ — it ` +
+            `has moved between 2.126 and 2.136 over the last four years — so a player ` +
+            `near the line could land either side.`
           : "",
       },
     ];

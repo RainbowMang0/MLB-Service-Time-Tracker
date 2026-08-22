@@ -145,15 +145,61 @@ def compute_cutoff(db: dict[str, dict], year: int) -> dict | None:
     }
 
 
+def _max_days_in(db: dict[str, dict], year: int) -> int:
+    """
+    The most service any single player accrued in `year`.
+
+    A cheap, data-derived read on how far a season has actually progressed --
+    no calendar assumptions, no season-window lookup. Credited days are
+    capped at 172, so this maxes out exactly when somebody has banked a full
+    year.
+    """
+    return max(
+        (_days_in(record.get("seasons") or [], year) for record in db.values()),
+        default=0,
+    )
+
+
 def latest_complete_season(db: dict[str, dict], today_year: int) -> int:
     """
-    The most recent season every record has finished accruing for.
+    The most recent season the cutoff can be measured from.
 
-    The current season is excluded because it is still running: a cutoff
-    drawn through a half-played year would move every day and would not be
-    the figure anyone means by "the Super Two cutoff".
+    A cutoff drawn through a half-played year would move every day and would
+    not be the figure anyone means by "the Super Two cutoff", so the season
+    has to be finished. Whether it is gets measured rather than assumed: if
+    somebody has reached the 172-day cap this year, the year has run its
+    course. Assuming `today_year - 1` unconditionally would go stale every
+    offseason, quietly publishing a cutoff a full season out of date.
     """
+    if _max_days_in(db, today_year) >= FULL_YEAR_DAYS:
+        return today_year
     return today_year - 1
+
+
+def qualifying_season(db: dict[str, dict], reference_year: int) -> int:
+    """
+    Which season the 86-day condition is tested against.
+
+    The rule says "the immediately preceding season" -- preceding the
+    offseason in which eligibility is decided. For the projection this makes
+    (see apply_super_two), that offseason is the NEXT one, so the season that
+    matters is the one being played now, not the one the cutoff came from.
+
+    Anthony Kay is why this is not the same thing. He sat at 2.004 after
+    2023, accrued nothing at all in 2024 or 2025, then came back and banked
+    151 days in 2026. Tested against 2025 he has zero days and fails; tested
+    against 2026 he clears 86 comfortably. The second is the right answer to
+    "is he on track for next offseason".
+
+    Early in a season nobody has 86 days yet, and switching then would empty
+    the list rather than project it -- so the current season is only used
+    once someone has actually reached 86 days in it. Measured, not assumed
+    from the calendar.
+    """
+    current = reference_year + 1
+    if _max_days_in(db, current) >= SUPER_TWO_MIN_PRECEDING_SEASON_DAYS:
+        return current
+    return reference_year
 
 
 def apply_super_two(db: dict[str, dict], reference_year: int) -> dict | None:
@@ -181,8 +227,9 @@ def apply_super_two(db: dict[str, dict], reference_year: int) -> dict | None:
 
       * his service time right now is in [2.000, 3.000)
       * it is at or above the most recent measured cutoff
-      * he accrued 86+ days in `reference_year`, the rule's own second test,
-        which is now checked exactly rather than approximated
+      * he accrued 86+ days in the season the next offseason will look back
+        on -- see qualifying_season(). The rule's own second test, now
+        checked exactly rather than approximated.
 
     The threshold moves a little year to year (2.126 to 2.136 across the last
     four), so a player sitting within a few days of it could land either
@@ -194,15 +241,16 @@ def apply_super_two(db: dict[str, dict], reference_year: int) -> dict | None:
         return None
 
     cutoff_days = cutoff["cutoff_days"]
+    season_tested = qualifying_season(db, reference_year)
     eligible = 0
     for record in db.values():
         service = int(record.get("service_days_total") or 0)
         seasons = record.get("seasons") or []
-        in_reference_year = _days_in(seasons, reference_year)
+        in_tested_season = _days_in(seasons, season_tested)
         is_super_two = (
             2 * FULL_YEAR_DAYS <= service < 3 * FULL_YEAR_DAYS
             and service >= cutoff_days
-            and in_reference_year >= SUPER_TWO_MIN_PRECEDING_SEASON_DAYS
+            and in_tested_season >= SUPER_TWO_MIN_PRECEDING_SEASON_DAYS
         )
         record["super_two_candidate"] = is_super_two
         record["arbitration_eligible"] = (
@@ -211,4 +259,5 @@ def apply_super_two(db: dict[str, dict], reference_year: int) -> dict | None:
         eligible += is_super_two
 
     cutoff["projected_candidates"] = eligible
+    cutoff["qualifying_season"] = season_tested
     return cutoff
