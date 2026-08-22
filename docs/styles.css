@@ -314,3 +314,169 @@ tbody tr:hover { background: var(--accent-wash); }
   .page-header { flex-direction: row; align-items: center; }
   .subtitle { display: none; }
 }
+
+/* --- player profile ----------------------------------------------------- */
+
+.player-link {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: var(--accent);
+  cursor: pointer;
+  text-align: left;
+  border-bottom: 1px solid transparent;
+}
+.player-link:hover,
+.player-link:focus-visible {
+  border-bottom-color: var(--accent);
+  outline: none;
+}
+
+body.profile-open { overflow: hidden; }
+
+.profile-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3vh 1rem;
+  background: rgba(11, 11, 11, 0.55);
+  overflow-y: auto;
+}
+.profile-overlay[hidden] { display: none; }
+
+.profile-panel {
+  position: relative;
+  width: min(56rem, 100%);
+  /* A flex item defaults to min-width:auto, so a wide season table would
+     stretch the panel past the viewport instead of scrolling inside it.
+     This is what keeps the last column reachable on a phone. */
+  min-width: 0;
+  max-width: 100%;
+  background: var(--surface-1);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem 1.5rem 1.25rem;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+}
+
+.profile-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.65rem;
+  background: none;
+  border: 0;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+.profile-close:hover { color: var(--text-primary); }
+
+.profile-header h2 { margin: 0 0 0.15rem; font-size: 1.4rem; }
+.profile-sub { margin: 0 0 1rem; color: var(--text-secondary); font-size: 0.9rem; }
+
+.profile-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  margin: 0 0 1.1rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--gridline);
+  border-bottom: 1px solid var(--gridline);
+}
+.profile-facts div { margin: 0; }
+.profile-facts dt {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+}
+.profile-facts dd { margin: 0; font-variant-numeric: tabular-nums; }
+.profile-total { font-size: 1.35rem; font-weight: 600; }
+
+.profile-gap,
+.profile-empty,
+.profile-loading {
+  margin: 0 0 1rem;
+  padding: 0.7rem 0.85rem;
+  border-radius: 6px;
+  background: var(--status-warning-wash);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.profile-loading { background: var(--accent-wash); }
+
+.season-table-wrap {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  /* The last column is the first thing to go on a narrow screen, so let the
+     table scroll inside the panel rather than clipping it. */
+  overflow-x: auto;
+}
+
+.season-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.season-table th,
+.season-table td {
+  padding: 0.4rem 0.6rem;
+  border-bottom: 1px solid var(--gridline);
+  text-align: left;
+}
+.season-table th {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+.season-table .num-col { text-align: right; font-variant-numeric: tabular-nums; }
+.season-table tr.season-empty td { color: var(--text-muted); }
+.season-zero { color: var(--text-muted); }
+
+.season-note {
+  cursor: help;
+  color: var(--accent);
+  text-decoration: none;
+  border: 0;
+}
+
+.src-pill {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  white-space: nowrap;
+  cursor: help;
+  border: 1px solid transparent;
+}
+.src-read { background: var(--status-good-wash); color: var(--status-good); }
+.src-carry { background: var(--accent-wash); color: var(--accent); }
+.src-presumed { background: var(--status-warning-wash); color: var(--status-warning); }
+
+.profile-foot {
+  margin: 0.9rem 0 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.src-short { display: none; }
+
+@media (max-width: 640px) {
+  .src-full { display: none; }
+  .src-short { display: inline; }
+  .profile-panel { padding: 1.15rem 0.85rem 1rem; }
+  .profile-facts { gap: 1rem; }
+  /* Five columns in ~330px. Everything gives a little so the "how do we
+     know this" column stays on screen -- it is the column that keeps the
+     numbers honest, and hiding it would be the wrong trade. */
+  .season-table { font-size: 0.72rem; }
+  .season-table th, .season-table td { padding: 0.3rem 0.25rem; }
+  .src-pill { padding: 0.05rem 0.3rem; font-size: 0.66rem; }
+}

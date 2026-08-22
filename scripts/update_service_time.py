@@ -52,6 +52,9 @@ DATA_DIR = ROOT / "docs" / "data"
 OUTPUT_FILE = DATA_DIR / "service_time.json"
 # What the browser actually downloads. See write_index().
 INDEX_FILE = DATA_DIR / "index.json"
+# Per-player season detail, sharded. See write_profiles().
+PROFILE_DIR = DATA_DIR / "profiles"
+PROFILE_SHARDS = 64
 CACHE_DIR = ROOT / "data" / "cache" / "transactions"
 
 MIN_TRANSACTION_YEAR = 2005  # don't bother reaching back further than this
@@ -182,6 +185,89 @@ def _involves_mlb_club(txn: dict, mlb_ids: set[int]) -> bool:
     return bool(ids & mlb_ids)
 
 
+def _season_teams(
+    year: int,
+    from_bio: dict[int, list[int]],
+    from_txns: dict[int, list[int]],
+    carried: list[int],
+) -> list[int]:
+    """
+    Which major league club(s) a player was with in a given season.
+
+    Three sources in descending order of authority:
+
+      1. His year-by-year stat splits, hydrated onto the bio call. This is
+         MLB saying where he played, and it is free -- see
+         get_player_bio().
+      2. Transactions dated inside the season. Reliable when they exist.
+      3. The club he was last known to be with. A club change produces a
+         transaction, so a season with no rows at all overwhelmingly means
+         he stayed put.
+
+    (1) is silent for a season in which he never appeared -- a player on the
+    injured list all year has no stat line -- which is exactly where (3)
+    earns its place.
+    """
+    return from_bio.get(year) or from_txns.get(year) or list(carried)
+
+
+def _build_seasons(
+    by_season: dict[int, dict],
+    transactions: list[Transaction],
+    season_teams_bio: dict[int, list[int]],
+    txn_team_ids: dict[int, list[int]],
+    first_txn_year: int | None,
+) -> list[dict]:
+    """
+    The per-season rows behind a player's total, for his profile page.
+
+    `src` records HOW each season is known, because after the carry-in rule
+    (see service_time.py) the seasons differ a lot in confidence and the
+    profile should say so rather than present them all as equal:
+
+      "read"     -- transactions inside this season drove it directly.
+      "carry"    -- no transactions this season; status carried forward from
+                    an earlier one. A club change would have produced a row,
+                    so this is a safe inference, not a guess.
+      "presumed" -- earlier than the player's first transaction of any kind.
+                    Pure debut presumption, and the least certain: this is
+                    what `missing_seasons` counts. Justin Verlander's
+                    2005-2014 are all of this kind.
+    """
+    years_with_txns = {t.date.year for t in transactions}
+    rows = []
+    carried: list[int] = []
+    for year in sorted(by_season):
+        detail = by_season[year]
+        if year in years_with_txns:
+            src = "read"
+        elif first_txn_year is not None and year < first_txn_year:
+            src = "presumed"
+        else:
+            src = "carry"
+        teams = _season_teams(year, season_teams_bio, txn_team_ids, carried)
+        if teams:
+            carried = teams
+        rows.append(
+            {
+                "y": year,
+                "d": detail["credited_days"],
+                # Kept separate so a profile can show WHY a season credits
+                # less than its raw days: the 172-day cap, or 2020's
+                # proration, both of which are invisible in the total alone.
+                "raw": detail["raw_active_days"],
+                # 2020 only. The season ran ~66 days instead of ~186 and the
+                # agreement scaled service time by 186/B, so raw days alone
+                # make that year look like a two-month career. Carried so the
+                # profile can show the scaling instead of an unexplained jump.
+                "pro": detail["prorated_days"],
+                "t": teams,
+                "src": src,
+            }
+        )
+    return rows
+
+
 def build_player_record(
     roster_entry: dict,
     full_refresh: bool,
@@ -219,7 +305,31 @@ def build_player_record(
         if _involves_mlb_club(t, mlb_ids)
     ]
 
+    # Clubs named by the transactions themselves, per season. Destination
+    # first: "Team A sent X to Team B" is evidence about where he ended up.
+    txn_team_ids: dict[int, list[int]] = {}
+    for t in raw_txns:
+        if not _involves_mlb_club(t, mlb_ids):
+            continue
+        for key in ("to_team_id", "team_id", "from_team_id"):
+            tid = t.get(key)
+            if tid in mlb_ids:
+                year = int(t["date"][:4])
+                if tid not in txn_team_ids.setdefault(year, []):
+                    txn_team_ids[year].append(tid)
+                break
+
     bio = mlb.get_player_bio(player_id)
+
+    # Filtered against the 30 clubs rather than trusted as-is: year-by-year
+    # splits can carry minor league lines, and only /teams knows which ids
+    # are major league ones.
+    season_teams_bio = {
+        year: [tid for tid in ids if tid in mlb_ids]
+        for year, ids in mlb.season_teams_from_bio(bio).items()
+    }
+    season_teams_bio = {y: ids for y, ids in season_teams_bio.items() if ids}
+
     debut = bio.get("mlbDebutDate")
     debut_date = dt.date.fromisoformat(debut) if debut else None
 
@@ -302,6 +412,16 @@ def build_player_record(
         "first_transaction": (
             min(t.date for t in transactions).isoformat() if transactions else None
         ),
+        # The season-by-season breakdown behind the total. compute_service_time
+        # has always produced this and the pipeline always threw it away; it is
+        # what a player profile page is made of, and it costs no extra API call.
+        "seasons": _build_seasons(
+            result.by_season,
+            transactions,
+            season_teams_bio,
+            txn_team_ids,
+            min((t.date.year for t in transactions), default=None),
+        ),
         "last_updated": TODAY.isoformat(),
     }
 
@@ -377,6 +497,98 @@ def write_index(db: dict[str, dict]) -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     INDEX_FILE.write_text(json.dumps(payload, separators=(",", ":")))
     print(f"Wrote compact index for {len(rows)} players to {INDEX_FILE}")
+
+
+def write_profiles(db: dict[str, dict]) -> None:
+    """
+    Per-player season detail, for the profile page.
+
+    Sharded rather than shipped whole. The full season breakdown for 5,568
+    players is about 0.9 MB -- four times the compact table index, which was
+    deliberately cut to 0.21 MB so the page loads fast. Bundling it back in
+    would undo that for a view most visitors never open.
+
+    So it is split into PROFILE_SHARDS buckets by `player_id % 64`, giving
+    ~14 KB per file: opening a profile fetches one shard, and the table load
+    is untouched. Modulo rather than a name or team prefix because it spreads
+    evenly and never changes -- a player who is traded stays in his shard.
+
+    Team ids are resolved to names here rather than in the browser, since a
+    shard is small and self-contained; the id is kept alongside for linking.
+    """
+    players = list(db.values())
+    team_names: dict[int, str] = {}
+    for p in players:
+        tid, tname = p.get("team_id"), p.get("team")
+        if tid and tname:
+            team_names.setdefault(int(tid), tname)
+
+    shards: dict[int, dict[str, dict]] = {}
+    mismatches: list[tuple] = []
+    with_seasons = 0
+    for p in players:
+        pid = p.get("id")
+        if pid is None:
+            continue
+        seasons = p.get("seasons")
+        if not seasons:
+            # A record written before profiles existed. Skipped rather than
+            # faked: the profile page says "not yet computed" and the next
+            # full run fills it in.
+            continue
+        with_seasons += 1
+        # The seasons ARE the total -- if they disagree, the profile page
+        # would show a running total that lands somewhere other than the
+        # figure in the table, and the first person to notice would rightly
+        # stop trusting both. Cheap to check, so check every player.
+        season_sum = sum(int(row.get("d") or 0) for row in seasons)
+        if season_sum != int(p.get("service_days_total") or 0):
+            mismatches.append((p.get("name"), pid, season_sum, p.get("service_days_total")))
+        shards.setdefault(int(pid) % PROFILE_SHARDS, {})[str(pid)] = {
+            "id": pid,
+            "name": p.get("name"),
+            "team": p.get("team"),
+            "position": p.get("position"),
+            "mlb_debut": p.get("mlb_debut"),
+            "last_played": p.get("last_played"),
+            "service_time": p.get("service_time"),
+            "days": p.get("service_days_total", 0),
+            "on_40_man": bool(p.get("on_40_man")),
+            "missing_seasons": p.get("missing_seasons", 0),
+            "first_transaction": p.get("first_transaction"),
+            "seasons": seasons,
+        }
+
+    PROFILE_DIR.mkdir(parents=True, exist_ok=True)
+    existing = {f.name for f in PROFILE_DIR.glob("*.json")}
+    written = set()
+    for bucket in range(PROFILE_SHARDS):
+        name = f"{bucket:02d}.json"
+        path = PROFILE_DIR / name
+        payload = {
+            "teams": {str(k): v for k, v in sorted(team_names.items())},
+            "players": shards.get(bucket, {}),
+        }
+        path.write_text(json.dumps(payload, separators=(",", ":")))
+        written.add(name)
+
+    for stale in existing - written:
+        (PROFILE_DIR / stale).unlink()
+
+    if mismatches:
+        print(
+            f"!! WARNING: {len(mismatches)} player(s) whose season rows do not sum "
+            f"to their published total. The profile page would contradict the table."
+        )
+        for name, pid, got, want in mismatches[:10]:
+            print(f"   {name} ({pid}): seasons sum to {got}, total says {want}")
+
+    total = sum(f.stat().st_size for f in PROFILE_DIR.glob("*.json"))
+    print(
+        f"Wrote {PROFILE_SHARDS} profile shards for {with_seasons} players "
+        f"({total / 1e6:.2f} MB total, ~{total / PROFILE_SHARDS / 1e3:.0f} KB each) "
+        f"to {PROFILE_DIR}"
+    )
 
 
 def _missing_seasons(
@@ -497,6 +709,7 @@ def main() -> None:
     OUTPUT_FILE.write_text(json.dumps(output, indent=2))
     print(f"Wrote {len(db)} player records to {OUTPUT_FILE}")
     write_index(db)
+    write_profiles(db)
 
 
 if __name__ == "__main__":

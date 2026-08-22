@@ -699,6 +699,74 @@ def test_pipeline_has_carry_in_on():
     )
 
 
+# --- player profiles -----------------------------------------------------
+
+
+def test_season_provenance_is_classified_three_ways():
+    """
+    A profile has to say how each season is known. After carry-in, seasons
+    behind a total differ a lot in confidence and presenting them as equal
+    would overstate what the feed can actually see.
+    """
+    import update_service_time as U  # noqa: PLC0415
+
+    by_season = {y: {"credited_days": 172, "raw_active_days": 188, "prorated_days": 188}
+                 for y in range(2013, 2017)}
+    txns = [
+        Transaction(dt.date(2015, 4, 8), "Detroit Tigers placed RHP X on the 15-day disabled list."),
+    ]
+    rows = U._build_seasons(by_season, txns, {}, {2015: [116]}, 2015)
+    src = {r["y"]: r["src"] for r in rows}
+
+    check("a season earlier than any transaction is 'presumed'", src[2013] == "presumed")
+    check("a season with transactions is 'read'", src[2015] == "read")
+    check("a later silent season is 'carried'", src[2016] == "carry")
+
+
+def test_season_teams_prefer_stats_then_transactions_then_carry_forward():
+    """
+    15% of accruing seasons have no transaction naming a club -- a player who
+    simply plays all year generates none. Stat splits fill those in; failing
+    that, the last known club carries forward, because changing clubs would
+    have produced a transaction.
+    """
+    import update_service_time as U  # noqa: PLC0415
+
+    by_season = {y: {"credited_days": 172, "raw_active_days": 172, "prorated_days": 172}
+                 for y in (2020, 2021, 2022)}
+    txns = [Transaction(dt.date(2020, 4, 1), "New York Yankees recalled RF X.")]
+    rows = U._build_seasons(
+        by_season,
+        txns,
+        {2022: [111]},        # stat splits say Boston in 2022
+        {2020: [147]},        # a transaction says the Yankees in 2020
+        2020,
+    )
+    teams = {r["y"]: r["t"] for r in rows}
+
+    check("a transaction names the club for its own season", teams[2020] == [147])
+    check("a silent season carries the last known club forward", teams[2021] == [147])
+    check("stat splits win over carry-forward", teams[2022] == [111])
+
+
+def test_profile_rows_sum_to_the_published_total():
+    """
+    The invariant write_profiles() enforces. If the seasons disagreed with
+    the total, the profile page would contradict the table it was opened
+    from, and a reader would rightly stop trusting both.
+    """
+    import update_service_time as U  # noqa: PLC0415
+
+    season = SeasonWindow(2023, dt.date(2023, 3, 30), dt.date(2023, 10, 1))
+    txns = [Transaction(dt.date(2023, 5, 1), "New York Yankees recalled RF X.")]
+    result = compute_service_time(txns, [season], horizon_end=dt.date(2023, 10, 1))
+    rows = U._build_seasons(result.by_season, txns, {}, {}, 2023)
+    check(
+        "season rows sum to the total",
+        sum(r["d"] for r in rows) == result.total_days,
+    )
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -729,5 +797,8 @@ if __name__ == "__main__":
     test_carry_in_is_inert_without_a_debut_date()
     test_carry_in_must_be_asked_for_at_the_api_level()
     test_pipeline_has_carry_in_on()
+    test_season_provenance_is_classified_three_ways()
+    test_season_teams_prefer_stats_then_transactions_then_carry_forward()
+    test_profile_rows_sum_to_the_published_total()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

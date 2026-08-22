@@ -45,7 +45,9 @@ scripts/probe_coverage.py      live API probe for finding #9 (run via Actions)
 scripts/generate_demo_data.py  bundled sample data generator (no network)
 tests/test_service_time.py     57 tests, no pytest needed: `python tests/test_service_time.py`
 docs/                          the static site (index.html, styles.css, app.js)
-docs/data/service_time.json    the only data file the frontend reads
+docs/data/service_time.json    the database: every field, one object per player
+docs/data/index.json           what the browser downloads for the table (0.21 MB)
+docs/data/profiles/NN.json     per-player season detail, sharded by id % 64
 data/cache/transactions/       per-player transaction cache (rostered players only)
 data/backfill_state.json       resumable backfill progress
 .github/workflows/update-service-time.yml   daily 8am ET
@@ -321,6 +323,71 @@ hasn't been played. The daily job passes `horizon_end=TODAY`.
   work. Now guarded.
 
 ---
+
+## Player profiles
+
+Clicking a name in the table opens a profile: debut date, every season, the
+club(s) he was with, days credited, and a running total.
+
+**The data was already there.** `compute_service_time()` has always returned a
+`by_season` breakdown and the pipeline always threw it away. Persisting it
+costs no extra API call.
+
+### The three things that took thought
+
+**1. Which club, in a season with no transactions.** Measured: **15% of
+accruing seasons have no transaction naming a club** — a player who simply
+plays all year generates none (Aaron Judge 2017 and 2024 are blank). Three
+sources, in descending authority:
+
+1. Year-by-year stat splits, **hydrated onto the `/people` call the pipeline
+   already makes** (`BIO_SEASON_TEAMS_HYDRATE`), so it is free rather than a
+   second request per player. Filtered against the 30 club ids, because
+   splits can carry minor league lines.
+2. Transactions dated inside the season, destination club first.
+3. The last known club, carried forward. A club change produces a
+   transaction, so a silent season almost always means he stayed put.
+
+(1) is silent for a season in which a player never appeared — injured all
+year — which is exactly where (3) earns its place.
+
+**2. Say how each season is known.** After carry-in the seasons behind a
+total differ a lot in confidence, and a profile that presented them as equal
+would overstate what this project can see. Each row carries `src`:
+
+| | meaning |
+|---|---|
+| `read` | transactions in this season drove it directly |
+| `carry` | no transactions this season; status carried forward |
+| `presumed` | earlier than his first transaction of any kind — pure debut presumption, and what `missing_seasons` counts |
+
+Verlander's profile is the argument for this existing: 2005-2014 all read
+"Presumed from debut" with no club, then 2015 onward switch to real clubs and
+real transactions. The page shows you *why* his figure is what it is instead
+of asking you to trust it.
+
+**3. Do not undo the payload work.** The full breakdown for 5,568 players is
+~0.9 MB, four times the compact index that was deliberately cut to 0.21 MB.
+So profiles are **sharded by `player_id % 64`** into ~12 KB files: opening one
+fetches a single shard, and the table load is untouched for the visitors who
+never open a profile. Modulo rather than a name or team prefix because it
+spreads evenly and never changes — a traded player stays in his shard.
+
+### The invariant
+
+`write_profiles()` checks that each player's season rows sum to his published
+total, and warns loudly per player if not. If they disagreed, the profile
+would contradict the table it was opened from and a reader would rightly stop
+trusting both. It fired immediately in the sandbox (estimated season windows
+against real stored totals), which is how it earned its place.
+
+### Bug found on the way
+
+**The workflows never staged `index.json`.** Both jobs ran
+`git add -A docs/data/service_time.json`, so the file the browser actually
+downloads was frozen at whatever was last committed by hand while the
+database updated daily underneath it. Both now stage `docs/data` whole,
+which also covers `profiles/`.
 
 ## Current state
 

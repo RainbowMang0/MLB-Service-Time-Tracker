@@ -86,10 +86,59 @@ def get_all_40man_players(season: int | None = None) -> list[dict]:
     return list(players.values())
 
 
-def get_player_bio(player_id: int) -> dict:
+# Season-by-season stats hydrated onto the /people call we already make, so
+# knowing which club a player was with in a given season costs no extra
+# request. The alternative -- deriving it from the transaction feed -- leaves
+# 15% of accruing seasons unattributed, because a player who simply plays all
+# year generates no transaction at all (Aaron Judge 2017 and 2024).
+BIO_SEASON_TEAMS_HYDRATE = "stats(group=[hitting,pitching],type=yearByYear)"
+
+
+def get_player_bio(player_id: int, with_season_teams: bool = True) -> dict:
+    """
+    The player's bio block. With `with_season_teams` (the default) it also
+    carries a `stats` array of year-by-year splits, each naming the club --
+    see season_teams_from_bio().
+
+    The hydrate is best-effort: if it fails or comes back without people, we
+    fall back to the plain call rather than lose the debut date, which the
+    whole pipeline depends on.
+    """
+    if with_season_teams:
+        try:
+            data = _get(f"/people/{player_id}", {"hydrate": BIO_SEASON_TEAMS_HYDRATE})
+            people = data.get("people", [])
+            if people:
+                return people[0]
+        except Exception:  # pragma: no cover - network path
+            pass
     data = _get(f"/people/{player_id}")
     people = data.get("people", [])
     return people[0] if people else {}
+
+
+def season_teams_from_bio(bio: dict) -> dict[int, list[int]]:
+    """
+    {season year -> [club ids]} from a bio hydrated by get_player_bio().
+
+    Returns raw team ids without judging them. Callers must filter against
+    the 30 major league club ids: a player's year-by-year splits can include
+    minor league lines, and this module has no business deciding which ids
+    are major league ones when the /teams endpoint says so directly.
+    """
+    out: dict[int, set[int]] = {}
+    for group in bio.get("stats") or []:
+        for split in group.get("splits") or []:
+            season = split.get("season")
+            team_id = (split.get("team") or {}).get("id")
+            if season is None or team_id is None:
+                continue
+            try:
+                year = int(season)
+            except (TypeError, ValueError):
+                continue
+            out.setdefault(year, set()).add(team_id)
+    return {year: sorted(ids) for year, ids in out.items()}
 
 
 def get_player_transactions(

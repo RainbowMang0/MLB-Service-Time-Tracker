@@ -13,6 +13,12 @@
   // path. The fallback below keeps older deployments working.
   const DATA_URL = "data/index.json";
   const FULL_DATA_URL = "data/service_time.json";
+  // Per-player season detail, sharded by `id % 64` (see write_profiles() in
+  // scripts/update_service_time.py). Opening a profile fetches one ~12 KB
+  // file instead of the ~0.9 MB the whole breakdown would cost, so the table
+  // load is unaffected for the visitors who never open one.
+  const PROFILE_SHARDS = 64;
+  const profileShardCache = new Map();
 
   const FULL_YEAR_DAYS = 172;
   // Matches SUPER_TWO_HEURISTIC_MIN_DAYS in scripts/service_time.py.
@@ -98,8 +104,15 @@
   const PAGE_SIZE = 100;
   let currentPage = 1;
   let coverageStartYear = 2009;
+  let lastFocused = null;
 
   const el = (id) => document.getElementById(id);
+
+  const fetchJson = (url) =>
+    fetch(url, { cache: "no-store" }).then((r) => {
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.json();
+    });
 
   // Player and team names come from an external API and are injected via
   // innerHTML, so escape them rather than trusting the feed.
@@ -261,7 +274,9 @@
           : esc(p.service_time) || "—";
         return `
         <tr>
-          <td class="player-name">${esc(p.name) || "—"}${partial}</td>
+          <td class="player-name"><button type="button" class="player-link" data-player-id="${esc(
+            p.id
+          )}">${esc(p.name) || "—"}</button>${partial}</td>
           <td>${esc(p.team) || "—"}</td>
           <td>${esc(p.position) || "—"}</td>
           <td class="num-col">${serviceCell}</td>
@@ -381,6 +396,226 @@
     try { window.localStorage.setItem(key, value); } catch (e) { /* ignore */ }
   }
 
+  // --- player profile -----------------------------------------------------
+
+  // How a season's days are known. After the carry-in rule (a player is
+  // presumed rostered from his debut until the feed says otherwise) the
+  // seasons behind a total differ a lot in confidence, and a profile that
+  // presented them as equally solid would be overstating what this project
+  // can actually see.
+  const SOURCE_LABELS = {
+    read: {
+      label: "From transactions",
+      short: "Read",
+      cls: "src-read",
+      title: "Roster moves recorded in this season drove the calculation directly.",
+    },
+    carry: {
+      label: "Carried forward",
+      short: "Carried",
+      cls: "src-carry",
+      title:
+        "No roster moves were recorded this season, so his status was carried " +
+        "forward from an earlier one. Changing clubs produces a transaction, " +
+        "so a silent season almost always means he stayed put.",
+    },
+    presumed: {
+      label: "Presumed from debut",
+      short: "Presumed",
+      cls: "src-presumed",
+      title:
+        "This season is earlier than the first transaction of any kind on " +
+        "record for him. He is presumed to have been on a roster from his " +
+        "debut. This is the least certain kind of season and the one counted " +
+        "by the missing-seasons flag.",
+    },
+  };
+
+  const formatDays = (days) => {
+    const years = Math.floor(days / FULL_YEAR_DAYS);
+    return `${years}.${String(days % FULL_YEAR_DAYS).padStart(3, "0")}`;
+  };
+
+  function loadProfileShard(playerId) {
+    const bucket = String(playerId % PROFILE_SHARDS).padStart(2, "0");
+    if (!profileShardCache.has(bucket)) {
+      profileShardCache.set(
+        bucket,
+        fetchJson(`data/profiles/${bucket}.json`).catch(() => null)
+      );
+    }
+    return profileShardCache.get(bucket);
+  }
+
+  function seasonNote(season) {
+    // Explains a season whose credited days differ from the days he was
+    // actually on a roster. Without this the numbers look arbitrary: a
+    // player rostered all year reads 172 against 188 days, and 2020 reads
+    // 172 against 66.
+    const raw = Number(season.raw) || 0;
+    const pro = season.pro == null ? raw : Number(season.pro);
+    const credited = Number(season.d) || 0;
+    if (pro !== raw) {
+      return `${raw} days on a roster, scaled to ${pro} because the ${season.y} season was shortened`;
+    }
+    if (raw > credited && credited === FULL_YEAR_DAYS) {
+      return `${raw} days on a roster; a season credits at most ${FULL_YEAR_DAYS}`;
+    }
+    return "";
+  }
+
+  function renderProfile(profile, teams) {
+    const body = el("profile-body");
+    if (!body) return;
+
+    const seasons = profile.seasons || [];
+    let running = 0;
+    const rows = seasons
+      .map((season) => {
+        running += Number(season.d) || 0;
+        const src = SOURCE_LABELS[season.src] || SOURCE_LABELS.read;
+        const clubs = (season.t || [])
+          .map((id) => esc(teams[String(id)] || `Club ${id}`))
+          .join(", ");
+        const note = seasonNote(season);
+        const dayCell = Number(season.d) === 0
+          ? `<span class="season-zero">0</span>`
+          : String(season.d);
+        return `
+          <tr${Number(season.d) === 0 ? ' class="season-empty"' : ""}>
+            <td class="num-col">${esc(season.y)}</td>
+            <td>${clubs || "—"}</td>
+            <td class="num-col">${dayCell}${
+              note ? ` <abbr class="season-note" title="${esc(note)}">*</abbr>` : ""
+            }</td>
+            <td class="num-col">${formatDays(running)}</td>
+            <td><span class="src-pill ${src.cls}" title="${esc(src.title)}"><span class="src-full">${src.label}</span><span class="src-short">${src.short}</span></span></td>
+          </tr>`;
+      })
+      .join("");
+
+    const missing = Number(profile.missing_seasons) || 0;
+    const gapNote = missing
+      ? `<p class="profile-gap">The transaction feed's first record for this player is
+         ${esc(profile.first_transaction) || "later than his debut"}, which is
+         ${missing} season${missing === 1 ? "" : "s"} after he debuted. Those seasons are
+         presumed rather than read, so this total is best treated as a floor.</p>`
+      : "";
+
+    body.innerHTML = `
+      <header class="profile-header">
+        <h2 id="profile-title">${esc(profile.name)}</h2>
+        <p class="profile-sub">
+          ${esc(profile.team) || "No current club"}${
+            profile.position ? ` · ${esc(profile.position)}` : ""
+          } · ${profile.on_40_man ? "On a 40-man roster" : "Not on a 40-man roster"}
+        </p>
+      </header>
+      <dl class="profile-facts">
+        <div><dt>Service time</dt><dd class="profile-total">${esc(profile.service_time)}</dd></div>
+        <div><dt>Total days</dt><dd>${esc(profile.days)}</dd></div>
+        <div><dt>MLB debut</dt><dd>${esc(profile.mlb_debut) || "—"}</dd></div>
+        <div><dt>Last played</dt><dd>${esc(profile.last_played) || "Active"}</dd></div>
+      </dl>
+      ${gapNote}
+      <div class="season-table-wrap">
+        <table class="season-table">
+          <thead>
+            <tr>
+              <th scope="col">Season</th>
+              <th scope="col">Club</th>
+              <th scope="col">Days</th>
+              <th scope="col"><span class="src-full">Running total</span><span class="src-short">Total</span></th>
+              <th scope="col"><span class="src-full">How this season is known</span><span class="src-short">Source</span></th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+      <p class="profile-foot">
+        172 days credit a full year. A season can credit at most 172 no matter how
+        many days a player spends on a roster, so the running total advances by at
+        most 1.000 per year. Hover a starred figure or a label in the last column
+        for detail.
+      </p>`;
+  }
+
+  function openProfile(playerId) {
+    const overlay = el("profile-overlay");
+    const body = el("profile-body");
+    if (!overlay || !body) return;
+
+    lastFocused = document.activeElement;
+    overlay.hidden = false;
+    document.body.classList.add("profile-open");
+    body.innerHTML = `<p class="profile-loading">Loading…</p>`;
+    const closeBtn = el("profile-close");
+    if (closeBtn) closeBtn.focus();
+
+    loadProfileShard(playerId).then((shard) => {
+      const profile = shard && shard.players ? shard.players[String(playerId)] : null;
+      if (!profile) {
+        // Expected for players whose records predate the profile build. Say
+        // so plainly rather than showing an empty table.
+        const known = allPlayers.find((p) => p.id === playerId);
+        body.innerHTML = `
+          <header class="profile-header">
+            <h2 id="profile-title">${esc(known ? known.name : "Player")}</h2>
+          </header>
+          <p class="profile-empty">
+            No season breakdown has been computed for this player yet. Profiles are
+            written by the daily job and the historical backfill; this one will
+            appear after the next full run.
+          </p>`;
+        return;
+      }
+      renderProfile(profile, (shard && shard.teams) || {});
+    });
+  }
+
+  function closeProfile() {
+    const overlay = el("profile-overlay");
+    if (!overlay || overlay.hidden) return;
+    overlay.hidden = true;
+    document.body.classList.remove("profile-open");
+    if (window.location.hash.startsWith("#player/")) {
+      history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
+    if (lastFocused && lastFocused.focus) lastFocused.focus();
+  }
+
+  function wireProfile() {
+    const tbody = el("players-tbody");
+    if (tbody) {
+      tbody.addEventListener("click", (event) => {
+        const trigger = event.target.closest("[data-player-id]");
+        if (!trigger) return;
+        const id = Number(trigger.getAttribute("data-player-id"));
+        if (!Number.isFinite(id)) return;
+        history.replaceState(null, "", `#player/${id}`);
+        openProfile(id);
+      });
+    }
+    const closeBtn = el("profile-close");
+    if (closeBtn) closeBtn.addEventListener("click", closeProfile);
+    const overlay = el("profile-overlay");
+    if (overlay) {
+      overlay.addEventListener("click", (event) => {
+        if (event.target === overlay) closeProfile();
+      });
+    }
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeProfile();
+    });
+  }
+
+  // Deep link: /#player/592450 opens straight to a profile, so one can be
+  // shared or bookmarked.
+  function openProfileFromHash() {
+    const match = /^#player\/(\d+)$/.exec(window.location.hash || "");
+    if (match) openProfile(Number(match[1]));
+  }
+
   function renderMeta(data) {
     el("disclaimer-text").textContent = data.disclaimer || "";
     const footer = el("generated-at-footer");
@@ -406,16 +641,12 @@
     wireSorting();
     wireFilters();
     wirePagination();
+    wireProfile();
     renderTable();
+    openProfileFromHash();
   }
 
   wireThemeToggle();
-
-  const fetchJson = (url) =>
-    fetch(url, { cache: "no-store" }).then((r) => {
-      if (!r.ok) throw new Error(`HTTP ${r.status}`);
-      return r.json();
-    });
 
   // Prefer the compact index; fall back to the full database so a deployment
   // that hasn't regenerated index.json yet still works, then to the embedded

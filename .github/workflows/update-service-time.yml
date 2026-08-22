@@ -80,7 +80,12 @@ jobs:
         run: |
           git config user.name "mlb-service-time-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add -A docs/data/service_time.json
+          # The whole data directory, not just service_time.json: the job
+          # also writes index.json (what the browser downloads) and the
+          # profiles/ shards. Staging only the database left the compact
+          # index frozen at whatever was last committed by hand, so the
+          # site would have quietly served stale figures forever.
+          git add -A docs/data
           if [ -d data/cache ]; then git add -A data/cache; fi
           if git diff --cached --quiet; then
             echo "No data changes today -- nothing to commit."
