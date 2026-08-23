@@ -399,6 +399,9 @@ def build_player_record(
         # five-year veteran. A man who has not debuted has no major league
         # service time to presume.
         presume_active_from_debut=presume_active_from_debut and debut_date is not None,
+        # Seasons MLB's own splits say he appeared in. Without this the
+        # presumption has nothing to bound it -- see compute_service_time.
+        seasons_with_appearances=set(season_teams_bio),
         accrual_floor=accrual_floor,
         accrual_ceiling=accrual_ceiling,
         # Stop the clock at horizon_end (today, for the daily job) rather than

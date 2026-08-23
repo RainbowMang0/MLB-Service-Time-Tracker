@@ -1006,6 +1006,56 @@ def test_a_player_who_never_debuted_gets_no_presumed_service():
     check("an undebuted prospect accrues nothing", result.total_days == 0)
 
 
+def test_an_inferred_season_needs_something_to_corroborate_it():
+    """
+    Erick Almonte: debuted 2001, ~30 major league games, no transaction of
+    any kind until 2011. Carry-in credited him 2005-2010 at the full cap --
+    six seasons with no stat line and no transaction in any of them, 6.064
+    years. Measured across the database: 57 players, 112 seasons, 112
+    player-years.
+    """
+    seasons = [SeasonWindow(y, dt.date(y, 3, 28), dt.date(y, 10, 1)) for y in range(2005, 2009)]
+    txns = [Transaction(dt.date(2008, 6, 1), "Milwaukee Brewers recalled SS X from Triple-A.")]
+    debut = dt.date(2001, 9, 4)
+    kw = dict(horizon_end=dt.date(2008, 10, 1), accrual_floor=debut,
+              presume_active_from_debut=True)
+
+    unbounded = compute_service_time(txns, seasons, **kw)
+    check(
+        "without evidence the presumption credits every silent season",
+        unbounded.by_season[2005]["credited_days"] == 172,
+    )
+
+    bounded = compute_service_time(txns, seasons, seasons_with_appearances=set(), **kw)
+    check(
+        "with the guard, a season with no appearance and no transaction is dropped",
+        bounded.by_season[2005]["credited_days"] == 0,
+    )
+    check(
+        "the season that does have a transaction is still credited",
+        bounded.by_season[2008]["credited_days"] > 0,
+    )
+
+
+def test_an_appearance_alone_is_enough_to_keep_a_presumed_season():
+    """
+    Verlander's 2005-2014 are presumed with no transactions, but his splits
+    place him on Detroit in every one. The guard must not touch him.
+    """
+    seasons = [SeasonWindow(y, dt.date(y, 3, 28), dt.date(y, 10, 1)) for y in range(2006, 2010)]
+    result = compute_service_time(
+        [], seasons,
+        seasons_with_appearances={2006, 2007, 2008, 2009},
+        horizon_end=dt.date(2009, 10, 1),
+        accrual_floor=dt.date(2005, 7, 4),
+        presume_active_from_debut=True,
+    )
+    check(
+        "a presumed season backed by an appearance is credited in full",
+        all(result.by_season[y]["credited_days"] == 172 for y in range(2006, 2010)),
+    )
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -1052,5 +1102,7 @@ if __name__ == "__main__":
     test_activated_off_the_il_then_optioned_stops_the_clock()
     test_no_interval_ever_ends_before_it_starts()
     test_a_player_who_never_debuted_gets_no_presumed_service()
+    test_an_inferred_season_needs_something_to_corroborate_it()
+    test_an_appearance_alone_is_enough_to_keep_a_presumed_season()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

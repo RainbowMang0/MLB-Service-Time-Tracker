@@ -1089,6 +1089,41 @@ needed for this one.
 (`accrual_floor` blocks pre-debut accrual) stopped being a guard the moment
 carry-in started treating the floor as a starting gun rather than a wall.
 
+### 12. An inferred season needs something to corroborate it
+
+**Found in the same pre-backfill audit.** Carry-in presumes a player is on a
+roster from his debut until the feed says otherwise. For a player whose feed
+is silent for years, that presumption had nothing bounding it at all.
+
+Erick Almonte debuted in 2001, played about thirty major league games, and
+has no transaction of any kind until 2011. He was credited **2005 through
+2010 at the full 172-day cap** — six consecutive seasons with no stat line
+and no transaction in any of them — for **6.064 years**.
+
+Measured across the database: **57 players, 112 seasons, 19,264 days — 112
+player-years.** By year:
+
+| 2005 | 2006 | 2007 | 2008 | 2009 | 2010 |
+|---|---|---|---|---|---|
+| 57 | 27 | 16 | 7 | 4 | 1 |
+
+A season is now credited nothing when **all three** hold: no transaction is
+dated inside it, MLB's own year-by-year splits show no appearance in it, and
+the only reason he looked active was an interval carried or presumed in from
+elsewhere.
+
+**This is evidence-based, not era-based**, and the distinction matters given
+finding #1. Nothing in the rule mentions a cutoff year; 96% of what it
+removes falls in 2005-2008 because that is where evidence is thinnest, which
+is a *result* rather than an assumption. Verlander and Scherzer keep every
+presumed season — their splits place them on a club in all of them —
+and **no reference player moves at all** (total residual unchanged at 200
+days).
+
+The accepted cost is a player who spent a whole season on the injured list
+without one dated transaction. Rare enough that it does not appear in the
+modern era at all: one season in 2010, four in 2009, none after.
+
 ### Recomputing after a rules change: `rules_version`
 
 A rules change has no natural completion marker, and the two obvious ones

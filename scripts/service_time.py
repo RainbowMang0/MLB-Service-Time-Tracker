@@ -523,6 +523,7 @@ def compute_service_time(
     horizon_end: dt.date | None = None,
     accrual_floor: dt.date | None = None,
     accrual_ceiling: dt.date | None = None,
+    seasons_with_appearances: set[int] | None = None,
     carry_in_active_first_season: bool | None = None,  # deprecated alias
 ) -> ServiceTimeResult:
     """
@@ -542,6 +543,32 @@ def compute_service_time(
 
     `carry_in_active_first_season` is the old name for this. It spent a long
     time as a documented no-op; if passed it is honoured as an alias.
+
+    `seasons_with_appearances` is the set of seasons in which MLB's own
+    year-by-year splits show the player appearing. When given, a season is
+    credited NOTHING if all three hold: no transaction is dated inside it,
+    he has no appearance in it, and the only reason he looked active was an
+    interval carried or presumed in from elsewhere.
+
+    That guard exists because the presumption is unbounded without it.
+    Erick Almonte debuted in 2001, played about thirty major league games,
+    and had no transaction of any kind until 2011 -- so carry-in credited
+    him 2005 through 2010 at the full 172-day cap, six consecutive seasons
+    with no stat line and no transaction in any of them, for 6.064 years.
+    Measured across the database: 57 players, 112 seasons, 19,264 days --
+    112 player-years -- and 96% of it falls in 2005-2008, exactly where the
+    transaction feed is thinnest.
+
+    Note what this does NOT do. It is evidence-based, not era-based: nothing
+    here mentions a cutoff year, and the concentration in the sparse era is
+    a result rather than an assumption. Verlander and Scherzer keep every
+    presumed season, because their splits place them on a club in all of
+    them -- no reference player moves at all.
+
+    The accepted cost is a player who spent a whole season on the injured
+    list without a single dated transaction: no appearance, nothing to
+    corroborate him, and his year is dropped. Rare enough not to show up in
+    the modern era at all (one season in 2010, four in 2009, none after).
     """
     if carry_in_active_first_season is not None:
         presume_active_from_debut = carry_in_active_first_season
@@ -559,6 +586,7 @@ def compute_service_time(
 
     total_days = 0
     by_season: dict[int, dict] = {}
+    years_with_transactions = {t.date.year for t in transactions}
 
     for season in ordered_seasons:
         season_intervals = [
@@ -567,6 +595,14 @@ def compute_service_time(
             if e >= season.start and s <= season.end
         ]
         days = sum(_overlap_days(iv, season.start, season.end) for iv in global_intervals)
+        if (
+            seasons_with_appearances is not None
+            and days > 0
+            and season.year not in years_with_transactions
+            and season.year not in seasons_with_appearances
+        ):
+            # Nothing in this season says he was on a major league roster.
+            days = 0
         prorated_days = _prorate_shortened_season(season, days)
         credited_days = min(prorated_days, FULL_YEAR_DAYS)
         total_days += credited_days
