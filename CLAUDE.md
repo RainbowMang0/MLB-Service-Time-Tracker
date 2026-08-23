@@ -494,9 +494,28 @@ Only **0.0% of accruing seasons have no club identified**.
 Payload: table index 0.21 MB; database 8.8 MB (not downloaded by the
 browser); 64 profile shards, 3.5 MB in total, one fetched per profile opened.
 
-⚠️ **The accuracy figures below predate finding #14.** Both gates need
-re-running against the recomputed database — the reference check first, since
-it is the independent one.
+**Both gates re-run against the fully recomputed database, 2026-08-23.**
+
+| | agree | over-credit | under-credit |
+|---|---|---|---|
+| Cleveland 2011 | **99.9%** | 0.1% | 0.0% |
+| Yankees 2014 | **96.8%** | 0.2% | 3.1% |
+| Yankees 2018 | **99.1%** | 0.1% | 0.8% |
+| Tampa Bay 2022 | **98.6%** | 0.4% | 1.0% |
+
+Baseball Reference: **17 passed, 0 failed, 2 known gaps** (Scherzer +73d,
+Verlander +89d, both bounded by the seasons their own records declare
+presumed). Nine figures exact to the day. Soto still +6, matching his
+accepted delta exactly.
+
+**Every one of these is unchanged from before finding #14, and that is the
+result to want.** #14 removed 1,823 days from rostered players and ~44,500
+across the database, so a naive reading expects movement here. There should
+be none: Rule 5 returns and affiliate returns happen to fringe roster
+players, no gate club-season contains one, and all nineteen reference
+players are established veterans. A gate that *moved* would have been
+evidence the rule was reaching too far. Yankees 2018 improved a hair
+(99.0 → 99.1, over-crediting 0.2% → 0.1%); nothing else shifted.
 
 ### Still open
 
@@ -727,7 +746,22 @@ skew the result.
 Apply the same instinct to any new rule: prefer a check the data can settle
 over a belief about what MLB means.
 
-### Gate status (2026-08-21)
+### Gate status (2026-08-23, after the rules-version-2 recompute)
+
+| | agree | over-credit | under-credit |
+|---|---|---|---|
+| Cleveland 2011 | **99.9%** | 0.1% | 0.0% |
+| Yankees 2014 | **96.8%** | 0.2% | 3.1% |
+| Yankees 2018 | **99.1%** | 0.1% | 0.8% |
+| Tampa Bay 2022 | **98.6%** | 0.4% | 1.0% |
+
+What remains is under-crediting, still concentrated in a handful of players
+rather than spread thin: David Huff (16 of Yankees 2014's 36, `agree=0`),
+Shawn Kelley (8), A.J. Cole (8 of Yankees 2018's 9), Josh Lowe (6) and Luke
+Raley (5) on the 2022 Rays. Over-crediting — the failure mode behind every
+revert in this project — is 0.1-0.4% across all four.
+
+### Gate status (2026-08-21, before findings #13 and #14)
 
 | | agree | over-credit | under-credit |
 |---|---|---|---|
