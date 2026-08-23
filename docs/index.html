@@ -11,10 +11,25 @@
 
     <header class="page-header">
       <div class="page-header-inner">
-        <h1>MLB Service Time Tracker</h1>
+        <h1>
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+            <circle cx="16" cy="16" r="14" class="bm-ball" />
+            <path d="M7.2 5.6c3.6 3 5.4 6.5 5.4 10.4s-1.8 7.4-5.4 10.4" class="bm-seam" />
+            <path d="M24.8 5.6c-3.6 3-5.4 6.5-5.4 10.4s1.8 7.4 5.4 10.4" class="bm-seam" />
+          </svg>
+          <span>MLB Service Time Tracker</span>
+        </h1>
         <p class="subtitle">Estimated MLB service time for current 40-man roster players, plus a running log of previous players.</p>
       </div>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" type="button">◐</button>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" />
+        </svg>
+        <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4.2" />
+          <path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.2 5.2l1.9 1.9M16.9 16.9l1.9 1.9M18.8 5.2l-1.9 1.9M7.1 16.9l-1.9 1.9" />
+        </svg>
+      </button>
     </header>
 
     <div class="disclaimer-banner" id="disclaimer-banner">
@@ -22,7 +37,9 @@
       <span id="disclaimer-text">Loading data…</span>
     </div>
 
-    <section class="stat-tiles" id="stat-tiles" aria-label="Summary statistics"></section>
+    <p class="census" id="stat-census"></p>
+
+    <section class="stat-tiles" id="stat-tiles" aria-label="Eligibility summary"></section>
 
     <section class="controls" aria-label="Filters">
       <input
@@ -61,14 +78,12 @@
             <th data-key="name" scope="col">Player</th>
             <th data-key="team" scope="col">Team</th>
             <th data-key="position" scope="col">Pos</th>
-            <th data-key="service_time" scope="col" class="num-col" aria-sort="descending">Service Time</th>
+            <th data-key="service_time" scope="col" class="num-col svc-col" aria-sort="descending">Service Time</th>
             <th data-key="status" scope="col">Status</th>
-            <th data-key="on_40_man" scope="col">40-Man?</th>
-            <th data-key="last_updated" scope="col">Last Updated</th>
           </tr>
         </thead>
         <tbody id="players-tbody">
-          <tr><td colspan="7" class="empty-state">Loading player data…</td></tr>
+          <tr><td colspan="5" class="empty-state">Loading player data…</td></tr>
         </tbody>
       </table>
     </section>

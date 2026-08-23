@@ -41,12 +41,12 @@ html, body {
 @media (prefers-color-scheme: dark) {
   :root:where(:not([data-theme="light"])) .viz-root {
     color-scheme: dark;
-    --page-plane:      #0d0d0d;
-    --surface-1:       #1a1a19;
-    --text-primary:    #ffffff;
+    --page-plane:      #131313;
+    --surface-1:       #1c1c1b;
+    --text-primary:    #f0efe9;
     --text-secondary:  #c3c2b7;
     --text-muted:      #898781;
-    --gridline:        #2c2c2a;
+    --gridline:        #2e2e2c;
     --baseline:        #383835;
     --border:          rgba(255,255,255,0.10);
     --accent:          #3987e5;
@@ -62,12 +62,12 @@ html, body {
 }
 :root[data-theme="dark"] .viz-root {
   color-scheme: dark;
-  --page-plane:      #0d0d0d;
-  --surface-1:       #1a1a19;
-  --text-primary:    #ffffff;
+  --page-plane:      #131313;
+  --surface-1:       #1c1c1b;
+  --text-primary:    #f0efe9;
   --text-secondary:  #c3c2b7;
   --text-muted:      #898781;
-  --gridline:        #2c2c2a;
+  --gridline:        #2e2e2c;
   --baseline:        #383835;
   --border:          rgba(255,255,255,0.10);
   --accent:          #3987e5;
@@ -90,8 +90,24 @@ html, body {
 }
 .page-header-inner h1 {
   margin: 0 0 4px;
-  font-size: 1.5rem;
-  letter-spacing: -0.01em;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand-mark { width: 30px; height: 30px; flex: none; }
+.bm-ball {
+  fill: none;
+  stroke: var(--text-primary);
+  stroke-width: 1.6;
+}
+.bm-seam {
+  fill: none;
+  stroke: var(--status-critical);
+  stroke-width: 1.6;
+  stroke-linecap: round;
 }
 .subtitle {
   margin: 0;
@@ -111,6 +127,28 @@ html, body {
   flex: none;
 }
 .theme-toggle:hover { border-color: var(--accent); }
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.theme-toggle .icon { width: 17px; height: 17px; }
+.icon-moon { fill: currentColor; stroke: none; }
+.icon-sun  { fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; }
+
+/* Which glyph to show mirrors the token blocks above: the button offers the
+   theme you would switch TO, and under the default "system" setting that is
+   only knowable from prefers-color-scheme. */
+.icon-sun { display: none; }
+.icon-moon { display: inline-block; }
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .theme-toggle .icon-sun  { display: inline-block; }
+  :root:where(:not([data-theme="light"])) .theme-toggle .icon-moon { display: none; }
+}
+:root[data-theme="dark"]  .theme-toggle .icon-sun  { display: inline-block; }
+:root[data-theme="dark"]  .theme-toggle .icon-moon { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-sun  { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-moon { display: inline-block; }
 
 .disclaimer-banner {
   margin: 0 clamp(16px, 4vw, 40px) 20px;
@@ -155,6 +193,23 @@ html, body {
 .stat-tile.accent-warning .value{ color: var(--status-warning); }
 .stat-tile.accent-serious .value{ color: var(--status-serious); }
 .stat-tile.accent-critical .value{ color: var(--status-critical); }
+/* Incomplete history is a coverage caveat, not a failure. It used to render
+   in the same red as a critical status, which read as an error on a figure
+   that is merely a floor. */
+.stat-tile.accent-muted .value { color: var(--text-secondary); }
+.stat-tile.accent-muted { background: transparent; border-style: dashed; }
+
+/* Census counts describe the whole database; the eligibility tiles describe
+   the players on a 40-man today. They are different kinds of fact and used
+   to be seven identical tiles all shouting at once. */
+.census {
+  margin: 0 clamp(16px, 4vw, 40px) 14px;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+.census b { color: var(--text-primary); font-weight: 650; }
+.census .sep { color: var(--text-muted); margin: 0 0.5em; }
 
 /* --- Incomplete-history flag ------------------------------------------- */
 /* Marks players who debuted before the transaction feed begins, whose
@@ -168,13 +223,15 @@ html, body {
   text-decoration: none;
 }
 
+/* Quiet by design. In red it read as an error on the row; what it actually
+   says is that some of the figure is presumed rather than read, which is a
+   footnote about confidence. */
 .partial-flag {
   font-size: 0.7rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--status-critical);
-  border-bottom: 1px dotted var(--status-critical);
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+  border-bottom: 1px dotted var(--text-muted);
   cursor: help;
   margin-left: 0.4em;
   text-decoration: none;
@@ -254,8 +311,14 @@ thead th {
   white-space: nowrap;
 }
 thead th:hover { color: var(--text-primary); }
-thead th[aria-sort="ascending"]::after { content: " ▲"; }
-thead th[aria-sort="descending"]::after { content: " ▼"; }
+/* A permanent, faint caret on every sortable column, so the table advertises
+   that it sorts instead of only confirming it after a click. */
+thead th[data-key]::after {
+  content: " ▾";
+  opacity: 0.25;
+}
+thead th[aria-sort="ascending"]::after  { content: " ▴"; opacity: 1; color: var(--accent); }
+thead th[aria-sort="descending"]::after { content: " ▾"; opacity: 1; color: var(--accent); }
 
 tbody td {
   padding: 10px 12px;
@@ -267,7 +330,82 @@ tbody tr:hover { background: var(--accent-wash); }
 
 .num-col, td.num-col { font-variant-numeric: tabular-nums; text-align: right; }
 
+/* --- Service time: the number is the product ---------------------------
+   It used to render at the same size and weight as the club name two
+   columns to its left. It is now the largest thing in the row, with the
+   years and the days typographically separated, over a track that encodes
+   the same value against the two thresholds that give it meaning:
+   3.000 (arbitration) and 6.000 (free agency).
+
+   The track is deliberately coarse -- 4px, no gradient, no sub-pixel
+   precision. These are estimates and a hairline-accurate bar would imply a
+   measurement this project cannot make. */
+.svc-col { min-width: 132px; }
+.svc {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  width: 108px;
+}
+.svc-num { font-variant-numeric: tabular-nums; line-height: 1; white-space: nowrap; }
+.svc-years {
+  font-size: 1.2rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+.svc-days { font-size: 0.8rem; font-weight: 500; color: var(--text-muted); }
+.svc-track {
+  /* Spans, so they need blockifying: width and height do not apply to an
+     inline box and the meter rendered as a hairline without this. */
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--gridline);
+}
+.svc-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--text-muted);
+  width: calc(var(--pct, 0) * 1%);
+}
+/* The 3.000 arbitration line, at the midpoint of a 0-6.000 track. Drawn
+   after the fill so it stays visible across it. */
+.svc-track::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  bottom: -2px;
+  width: 1px;
+  background: var(--baseline);
+}
+.svc-fill.f-good    { background: var(--status-good); }
+.svc-fill.f-warning { background: var(--status-warning); }
+.svc-fill.f-serious { background: var(--status-serious); }
+.svc-fill.f-accent  { background: var(--accent); }
+.svc-none { color: var(--text-muted); }
+
 .player-name { font-weight: 600; }
+
+/* --- 3. Club identity ---------------------------------------------------
+   A club's primary color as a stripe down the row. Identity only: the club
+   is still named in text beside it, because a color alone is unreadable to
+   anyone who cannot distinguish it, and several clubs share a navy. */
+tbody td.player-name {
+  border-left: 3px solid var(--club, transparent);
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .viz-root tbody td.player-name {
+    border-left-color: var(--club-d, var(--club, transparent));
+  }
+}
+:root[data-theme="dark"] .viz-root tbody td.player-name {
+  border-left-color: var(--club-d, var(--club, transparent));
+}
 
 .badge {
   display: inline-flex;
@@ -313,6 +451,12 @@ tbody tr:hover { background: var(--accent-wash); }
 @media (max-width: 640px) {
   .page-header { flex-direction: row; align-items: center; }
   .subtitle { display: none; }
+  .page-header-inner h1 { font-size: 1.25rem; }
+  .brand-mark { width: 24px; height: 24px; }
+  .svc-col { min-width: 96px; }
+  .svc { width: 78px; }
+  .svc-years { font-size: 1.05rem; }
+  .census { font-size: 0.78rem; }
 }
 
 /* --- player profile ----------------------------------------------------- */
@@ -413,6 +557,118 @@ body.profile-open { overflow: hidden; }
 }
 .profile-loading { background: var(--accent-wash); }
 
+/* --- 7. Career strip ----------------------------------------------------
+   The season table below it is accurate and it opens as twenty-two rows of
+   digits. This says the same thing in one glance: how much each season was
+   worth, which club it was with, and -- crucially -- which seasons are
+   presumed rather than read. Verlander's ten hatched bars followed by
+   eleven solid ones is the whole argument for the source column, made
+   visible.  */
+.career-strip {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 86px;
+  margin: 0 0 1.1rem;
+  padding: 18px 2px 0;
+  border-bottom: 1px solid var(--baseline);
+}
+.cs-season {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+  position: relative;
+  cursor: help;
+}
+.cs-bar {
+  height: calc(var(--h, 0) * 1%);
+  min-height: 2px;
+  border-radius: 2px 2px 0 0;
+  background: var(--club, var(--accent));
+}
+/* A season with no credited days still gets a row in the table; here it is
+   a baseline tick, so the gap in a career is visible as a gap. */
+.cs-season.cs-zero .cs-bar { background: var(--gridline); height: 2px; }
+/* Same lightened twin the row stripes use: several primaries are navies
+   that disappear against a dark plane. */
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .viz-root .cs-bar {
+    background-color: var(--club-d, var(--accent));
+  }
+}
+:root[data-theme="dark"] .viz-root .cs-bar {
+  background-color: var(--club-d, var(--accent));
+}
+/* Hatching, not a different hue: presumed seasons are the same quantity
+   held with less confidence, and a separate color would read as a separate
+   category of thing. */
+.cs-season.cs-presumed .cs-bar {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.55) 0 2px,
+    transparent 2px 5px
+  );
+  opacity: 0.75;
+}
+.cs-year {
+  font-size: 0.58rem;
+  color: var(--text-muted);
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  padding-top: 3px;
+}
+/* Where the running total crossed 3.000 and 6.000 -- the two dates that
+   actually change what a player is entitled to. */
+.cs-cross {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  color: var(--accent);
+}
+.cs-cross::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 1px;
+  height: 6px;
+  background: var(--accent);
+}
+.career-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin: -0.7rem 0 1.1rem;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+.career-legend span { display: inline-flex; align-items: center; gap: 0.3rem; }
+.career-legend i {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: var(--text-secondary);
+  display: inline-block;
+}
+.career-legend i.lg-zero { height: 2px; background: var(--baseline); border-radius: 0; }
+.career-legend i.lg-presumed {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.55) 0 2px,
+    transparent 2px 5px
+  );
+  opacity: 0.75;
+}
+
 .season-table-wrap {
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -479,4 +735,8 @@ body.profile-open { overflow: hidden; }
   .season-table { font-size: 0.72rem; }
   .season-table th, .season-table td { padding: 0.3rem 0.25rem; }
   .src-pill { padding: 0.05rem 0.3rem; font-size: 0.66rem; }
+  .career-strip { height: 66px; gap: 1px; }
+  /* Two-digit years collide below about twelve seasons of width. The bars
+     still carry the shape, which is what the strip is for. */
+  .cs-year { display: none; }
 }

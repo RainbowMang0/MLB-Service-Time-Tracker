@@ -21,6 +21,74 @@
   const profileShardCache = new Map();
 
   const FULL_YEAR_DAYS = 172;
+
+  // --- club identity -------------------------------------------------------
+  // Keyed by MLB team id, which never changes; the NAMES do. The profile
+  // shards carry the club as it was called at the time ("Cleveland Indians",
+  // "Oakland Athletics") while the table's index carries the current name
+  // ("Cleveland Guardians", "Athletics"), so both spellings are listed and a
+  // renamed club keeps its color in a 2015 season row.
+  //
+  // Color is identity, never the only signal for anything: the club is named
+  // in text beside the stripe, several clubs share a navy, and nothing here
+  // encodes a quantity.
+  const CLUBS = {
+    108: { c: "#BA0021", n: ["Los Angeles Angels", "Los Angeles Angels of Anaheim"] },
+    109: { c: "#A71930", n: ["Arizona Diamondbacks"] },
+    110: { c: "#DF4601", n: ["Baltimore Orioles"] },
+    111: { c: "#BD3039", n: ["Boston Red Sox"] },
+    112: { c: "#0E3386", n: ["Chicago Cubs"] },
+    113: { c: "#C6011F", n: ["Cincinnati Reds"] },
+    114: { c: "#0C2340", n: ["Cleveland Guardians", "Cleveland Indians"] },
+    115: { c: "#33006F", n: ["Colorado Rockies"] },
+    116: { c: "#FA4616", n: ["Detroit Tigers"] },
+    117: { c: "#EB6E1F", n: ["Houston Astros"] },
+    118: { c: "#004687", n: ["Kansas City Royals"] },
+    119: { c: "#005A9C", n: ["Los Angeles Dodgers"] },
+    120: { c: "#AB0003", n: ["Washington Nationals"] },
+    121: { c: "#002D72", n: ["New York Mets"] },
+    133: { c: "#003831", n: ["Athletics", "Oakland Athletics"] },
+    134: { c: "#FDB827", n: ["Pittsburgh Pirates"] },
+    135: { c: "#7F6E5A", n: ["San Diego Padres"] },
+    136: { c: "#005C5C", n: ["Seattle Mariners"] },
+    137: { c: "#FD5A1E", n: ["San Francisco Giants"] },
+    138: { c: "#C41E3A", n: ["St. Louis Cardinals"] },
+    139: { c: "#092C5C", n: ["Tampa Bay Rays"] },
+    140: { c: "#003278", n: ["Texas Rangers"] },
+    141: { c: "#134A8E", n: ["Toronto Blue Jays"] },
+    142: { c: "#002B5C", n: ["Minnesota Twins"] },
+    143: { c: "#E81828", n: ["Philadelphia Phillies"] },
+    144: { c: "#CE1141", n: ["Atlanta Braves"] },
+    145: { c: "#5A5A5A", n: ["Chicago White Sox"] },
+    146: { c: "#00A3E0", n: ["Miami Marlins"] },
+    147: { c: "#003087", n: ["New York Yankees"] },
+    158: { c: "#12284B", n: ["Milwaukee Brewers"] },
+  };
+
+  const CLUB_BY_NAME = (() => {
+    const map = new Map();
+    Object.keys(CLUBS).forEach((id) => {
+      CLUBS[id].n.forEach((name) => map.set(name, CLUBS[id].c));
+    });
+    return map;
+  })();
+
+  // Several primaries are navies that vanish against a dark plane, so each
+  // color ships with a lightened twin and the stylesheet picks per theme.
+  function lighten(hex, amount) {
+    const m = /^#?([0-9a-f]{6})$/i.exec(hex || "");
+    if (!m) return hex;
+    const n = parseInt(m[1], 16);
+    const mix = (c) => Math.round(c + (255 - c) * amount);
+    const r = mix((n >> 16) & 255);
+    const g = mix((n >> 8) & 255);
+    const b = mix(n & 255);
+    return `#${((1 << 24) | (r << 16) | (g << 8) | b).toString(16).slice(1)}`;
+  }
+
+  const clubStyle = (color) =>
+    color ? `--club:${color};--club-d:${lighten(color, 0.45)}` : "";
+
   // Set from the payload. Super Two is no longer guessed at in the browser:
   // it depends on where a player ranks in the league-wide 2-3 year class, so
   // the pipeline computes it (see scripts/super_two.py) and ships a flag.
@@ -200,10 +268,20 @@
     const superTwo = rostered.filter((p) => p.super_two_candidate).length;
     const partial = players.filter((p) => !isComplete(p)).length;
 
+    // Census first, and quietly: these describe the whole database, which is
+    // mostly retired players, and they used to sit in tiles identical to the
+    // eligibility ones. Seven equal tiles meant three different kinds of fact
+    // all shouting at the same volume.
+    const census = el("stat-census");
+    if (census) {
+      const n = (v) => v.toLocaleString();
+      census.innerHTML =
+        `<b>${n(total)}</b> players tracked` +
+        `<span class="sep">·</span><b>${n(current)}</b> on a 40-man roster` +
+        `<span class="sep">·</span><b>${n(previous)}</b> previously rostered`;
+    }
+
     const tiles = [
-      { label: "Tracked players", value: total, accent: "" },
-      { label: "Currently on a 40-man", value: current, accent: "" },
-      { label: "Previous players logged", value: previous, accent: "" },
       {
         label: "Free agency eligible",
         value: fa,
@@ -243,14 +321,23 @@
       },
     ];
     if (partial > 0) {
-      tiles.push({ label: "Incomplete history", value: partial, accent: "accent-critical" });
+      tiles.push({
+        label: "Incomplete history",
+        value: partial,
+        // Muted, not critical red. This is a statement about how far back the
+        // transaction feed reaches, not an error in the figures.
+        accent: "accent-muted",
+        title: "Players whose first recorded roster move is later than their debut. "
+          + "Those seasons are presumed rather than read, so the figure is less "
+          + "certain — and a floor if any of the career predates the data.",
+      });
     }
 
     el("stat-tiles").innerHTML = tiles
       .map(
         (t) => `
       <div class="stat-tile ${t.accent}"${t.title ? ` title="${esc(t.title)}"` : ""}>
-        <div class="value">${t.value}</div>
+        <div class="value">${t.value.toLocaleString()}</div>
         <div class="label">${t.label}</div>
       </div>`
       )
@@ -307,7 +394,7 @@
     const tbody = el("players-tbody");
 
     if (rows.length === 0) {
-      tbody.innerHTML = `<tr><td colspan="7" class="empty-state">No players match these filters.</td></tr>`;
+      tbody.innerHTML = `<tr><td colspan="5" class="empty-state">No players match these filters.</td></tr>`;
       renderPagination(0, 0);
       return;
     }
@@ -330,7 +417,7 @@
           ? ` <abbr class="partial-flag" title="The first roster move on record for this player is ${
               gap ? `${gap} season${gap === 1 ? "" : "s"} after his debut` : "later than his debut"
             }. Those seasons are filled in by presuming he was on a roster from his debut rather than read from transactions, so this figure is less certain than most — and a floor if any of his career predates the data. Open his profile to see which seasons.">${
-              gap ? `−${gap} season${gap === 1 ? "" : "s"}` : "partial"
+              gap ? `${gap} presumed` : "partial"
             }</abbr>`
           : "";
         // A player whose whole career predates the transaction feed has no
@@ -341,20 +428,44 @@
         // 40-man prospect who never reached an active roster), so that one
         // stays.
         const noData = p.service_days_total === 0 && !isComplete(p);
+
+        // The meter. Scaled 0 -> 6.000, the point at which the clock stops
+        // mattering, with the fill colored by the same status shown one
+        // column over so the bar and the badge cannot disagree.
+        const pct = Math.max(
+          0,
+          Math.min(1, p.service_days_total / (6 * FULL_YEAR_DAYS))
+        ) * 100;
+        const fillCls = !p.on_40_man
+          ? ""
+          : p.free_agent_eligible
+          ? "f-good"
+          : p.super_two_candidate
+          ? "f-serious"
+          : p.arbitration_eligible
+          ? "f-warning"
+          : "";
+        const [years, days] = String(p.service_time || "0.000").split(".");
         const serviceCell = noData
           ? `<abbr class="no-data" title="This player's entire career predates ${coverageStartYear}, when the transaction feed begins, so no service time can be reconstructed. This is missing data, not zero service time.">no data</abbr>`
-          : esc(p.service_time) || "—";
+          : `<span class="svc">
+               <span class="svc-num"><span class="svc-years">${esc(years)}</span><span class="svc-days">.${esc(days)}</span></span>
+               <span class="svc-track" style="--pct:${pct.toFixed(1)}"><span class="svc-fill ${fillCls}"></span></span>
+             </span>`;
+
+        // A club is only published for a rostered player (a retired man's
+        // stored club is stale by construction), so the stripe appears on
+        // exactly the rows that assert one.
+        const club = p.on_40_man ? CLUB_BY_NAME.get(p.team) : null;
         return `
         <tr>
-          <td class="player-name"><button type="button" class="player-link" data-player-id="${esc(
+          <td class="player-name" style="${clubStyle(club)}"><button type="button" class="player-link" data-player-id="${esc(
             p.id
           )}">${esc(p.name) || "—"}</button>${partial}</td>
           <td>${p.on_40_man ? esc(p.team) || "—" : "—"}</td>
           <td>${esc(p.position) || "—"}</td>
-          <td class="num-col">${serviceCell}</td>
+          <td class="num-col svc-col">${serviceCell}</td>
           <td><span class="badge ${status.cls}">${status.label}</span></td>
-          <td><span class="pill ${p.on_40_man ? "pill-yes" : "pill-no"}">${p.on_40_man ? "Yes" : "No"}</span></td>
-          <td>${esc(p.last_updated) || "—"}</td>
         </tr>`;
       })
       .join("");
@@ -400,9 +511,15 @@
     });
   }
 
+  // The service-time column sorts by its numeric day count, so its data-key
+  // and the active sort key are deliberately different names. Comparing them
+  // raw meant the column the table was ALREADY sorted by lost its marker at
+  // load -- the one column that most needs it.
+  const sortKeyFor = (key) => (key === "service_time" ? "service_days_total" : key);
+
   function updateSortIndicators() {
     document.querySelectorAll("#players-table thead th[data-key]").forEach((th) => {
-      if (th.dataset.key === sortKey) {
+      if (sortKeyFor(th.dataset.key) === sortKey) {
         th.setAttribute("aria-sort", sortDir === "asc" ? "ascending" : "descending");
       } else {
         th.removeAttribute("aria-sort");
@@ -415,7 +532,7 @@
       th.addEventListener("click", () => {
         const key = th.dataset.key;
         // Sort service_time by its numeric day-count field for correctness.
-        const effectiveKey = key === "service_time" ? "service_days_total" : key;
+        const effectiveKey = sortKeyFor(key);
         if (sortKey === effectiveKey) {
           sortDir = sortDir === "asc" ? "desc" : "asc";
         } else {
@@ -536,6 +653,84 @@
     return "";
   }
 
+  /**
+   * The career at a glance: one bar per season, height by days credited,
+   * colored by club, hatched where the season is presumed rather than read.
+   *
+   * The season table below it is the record and it opens as twenty-plus rows
+   * of digits. Verlander's ten hatched bars followed by eleven solid ones is
+   * the argument for the source column made visible in one look -- and the
+   * two crossing markers say where the total actually changed what he was
+   * entitled to.
+   */
+  function careerStrip(seasons, teams) {
+    if (!seasons.length) return "";
+
+    let running = 0;
+    let markedArb = false;
+    let markedFa = false;
+
+    const cells = seasons.map((season) => {
+      const days = Number(season.d) || 0;
+      running += days;
+
+      let cross = "";
+      if (!markedArb && running >= 3 * FULL_YEAR_DAYS) {
+        markedArb = true;
+        cross = `<span class="cs-cross">3.000</span>`;
+      }
+      // Both can land in the same season for a player credited a long
+      // presumed stretch; free agency is the one worth showing.
+      if (!markedFa && running >= 6 * FULL_YEAR_DAYS) {
+        markedFa = true;
+        cross = `<span class="cs-cross">6.000</span>`;
+      }
+
+      const clubIds = season.t || [];
+      const club = clubIds.length
+        ? CLUB_BY_NAME.get(teams[String(clubIds[clubIds.length - 1])]) ||
+          (CLUBS[clubIds[clubIds.length - 1]] || {}).c
+        : null;
+      const clubNames = clubIds
+        .map((id) => teams[String(id)] || `Club ${id}`)
+        .join(", ");
+
+      const src = SOURCE_LABELS[season.src] || SOURCE_LABELS.read;
+      const cls = [
+        "cs-season",
+        days === 0 ? "cs-zero" : "",
+        season.src === "presumed" ? "cs-presumed" : "",
+      ].filter(Boolean).join(" ");
+
+      const title = `${season.y} · ${clubNames || "no club identified"} · ` +
+        `${days} day${days === 1 ? "" : "s"} · ${src.label} · running total ${formatDays(running)}`;
+
+      return `<span class="${cls}" style="${clubStyle(club)}" title="${esc(title)}">
+        ${cross}
+        <span class="cs-bar" style="--h:${((days / FULL_YEAR_DAYS) * 100).toFixed(1)}"></span>
+        <span class="cs-year">${esc(String(season.y).slice(2))}</span>
+      </span>`;
+    }).join("");
+
+    const anyPresumed = seasons.some((s) => s.src === "presumed");
+    const anyZero = seasons.some((s) => (Number(s.d) || 0) === 0);
+    // Describes the encoding rather than keying colors: the bars are colored
+    // by club, so a legend swatch in any one color would be a false key.
+    const legend = [
+      `<span>Bar height = days credited (full = ${FULL_YEAR_DAYS})</span>`,
+      `<span>Color = club</span>`,
+      anyPresumed ? `<span><i class="lg-presumed"></i>presumed from debut</span>` : "",
+      anyZero ? `<span><i class="lg-zero"></i>no days credited</span>` : "",
+    ].filter(Boolean).join("");
+
+    return `
+      <div class="career-strip" role="img"
+           aria-label="Career strip: ${seasons.length} seasons from ${seasons[0].y} to ${
+             seasons[seasons.length - 1].y
+           }, each bar the days credited that season.">${cells}</div>
+      <div class="career-legend">${legend}</div>`;
+  }
+
   function renderProfile(profile, teams) {
     const body = el("profile-body");
     if (!body) return;
@@ -616,6 +811,7 @@
         <div><dt>MLB debut</dt><dd>${esc(profile.mlb_debut) || "—"}</dd></div>
         <div><dt>Last played</dt><dd>${esc(profile.last_played) || "Active"}</dd></div>
       </dl>
+      ${careerStrip(seasons, teams)}
       ${gapNote}
       <div class="season-table-wrap">
         <table class="season-table">
