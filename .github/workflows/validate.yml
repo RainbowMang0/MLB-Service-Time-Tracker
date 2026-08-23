@@ -19,6 +19,12 @@ name: Validate Service Time
 #               next to what the rosters say, day by day. The rosters check
 #               names its worst players; this one explains them.
 #
+#   published -- do the three published files agree with each other? The
+#               index and the profile shards are DERIVED from the database,
+#               and they are the only two a visitor ever reads, so a bad
+#               derivation ships wrong numbers while every other check --
+#               all of which read the database -- passes. Offline.
+#
 #   reference -- compares finished figures against known Baseball Reference
 #               numbers in data/reference_service_time.json. Narrow (a
 #               handful of players, hand-entered) but genuinely independent,
@@ -43,6 +49,7 @@ on:
           - reference
           - super-two
           - player
+          - published
       team:
         description: "rosters: MLB team id (147 = Yankees)"
         required: false
@@ -96,6 +103,9 @@ jobs:
               ;;
             super-two)
               python scripts/validate_super_two.py
+              ;;
+            published)
+              python scripts/validate_published.py
               ;;
             player)
               python scripts/probe_player.py \
