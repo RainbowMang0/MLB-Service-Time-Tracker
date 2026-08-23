@@ -397,7 +397,27 @@ tbody tr:hover { background: var(--accent-wash); }
    is still named in text beside it, because a color alone is unreadable to
    anyone who cannot distinguish it, and several clubs share a navy. */
 tbody td.player-name {
-  border-left: 3px solid var(--club, transparent);
+  border-left: 4px solid var(--club, transparent);
+}
+/* The same color again, next to the club name -- where the eye already is
+   when it is looking for the club. A 4px stripe at the far left of a wide
+   row is easy to miss. */
+.club-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  margin-right: 7px;
+  background: var(--club, transparent);
+  vertical-align: baseline;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .viz-root .club-dot {
+    background: var(--club-d, var(--club, transparent));
+  }
+}
+:root[data-theme="dark"] .viz-root .club-dot {
+  background: var(--club-d, var(--club, transparent));
 }
 @media (prefers-color-scheme: dark) {
   :root:where(:not([data-theme="light"])) .viz-root tbody td.player-name {

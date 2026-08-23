@@ -33,36 +33,36 @@
   // in text beside the stripe, several clubs share a navy, and nothing here
   // encodes a quantity.
   const CLUBS = {
-    108: { c: "#BA0021", n: ["Los Angeles Angels", "Los Angeles Angels of Anaheim"] },
-    109: { c: "#A71930", n: ["Arizona Diamondbacks"] },
-    110: { c: "#DF4601", n: ["Baltimore Orioles"] },
-    111: { c: "#BD3039", n: ["Boston Red Sox"] },
-    112: { c: "#0E3386", n: ["Chicago Cubs"] },
-    113: { c: "#C6011F", n: ["Cincinnati Reds"] },
-    114: { c: "#0C2340", n: ["Cleveland Guardians", "Cleveland Indians"] },
-    115: { c: "#33006F", n: ["Colorado Rockies"] },
-    116: { c: "#FA4616", n: ["Detroit Tigers"] },
-    117: { c: "#EB6E1F", n: ["Houston Astros"] },
-    118: { c: "#004687", n: ["Kansas City Royals"] },
-    119: { c: "#005A9C", n: ["Los Angeles Dodgers"] },
-    120: { c: "#AB0003", n: ["Washington Nationals"] },
-    121: { c: "#002D72", n: ["New York Mets"] },
-    133: { c: "#003831", n: ["Athletics", "Oakland Athletics"] },
-    134: { c: "#FDB827", n: ["Pittsburgh Pirates"] },
-    135: { c: "#7F6E5A", n: ["San Diego Padres"] },
-    136: { c: "#005C5C", n: ["Seattle Mariners"] },
-    137: { c: "#FD5A1E", n: ["San Francisco Giants"] },
-    138: { c: "#C41E3A", n: ["St. Louis Cardinals"] },
-    139: { c: "#092C5C", n: ["Tampa Bay Rays"] },
-    140: { c: "#003278", n: ["Texas Rangers"] },
-    141: { c: "#134A8E", n: ["Toronto Blue Jays"] },
-    142: { c: "#002B5C", n: ["Minnesota Twins"] },
-    143: { c: "#E81828", n: ["Philadelphia Phillies"] },
-    144: { c: "#CE1141", n: ["Atlanta Braves"] },
-    145: { c: "#5A5A5A", n: ["Chicago White Sox"] },
-    146: { c: "#00A3E0", n: ["Miami Marlins"] },
-    147: { c: "#003087", n: ["New York Yankees"] },
-    158: { c: "#12284B", n: ["Milwaukee Brewers"] },
+    108: { c: "#B8001E", n: ["Los Angeles Angels", "Los Angeles Angels of Anaheim"] },
+    109: { c: "#CB0033", n: ["Arizona Diamondbacks"] },
+    110: { c: "#D43400", n: ["Baltimore Orioles"] },
+    111: { c: "#F00032", n: ["Boston Red Sox"] },
+    112: { c: "#2264F9", n: ["Chicago Cubs"] },
+    113: { c: "#CC001D", n: ["Cincinnati Reds"] },
+    114: { c: "#325C91", n: ["Cleveland Guardians", "Cleveland Indians"] },
+    115: { c: "#772CE9", n: ["Colorado Rockies"] },
+    116: { c: "#EA5400", n: ["Detroit Tigers"] },
+    117: { c: "#FF942D", n: ["Houston Astros"] },
+    118: { c: "#068BFF", n: ["Kansas City Royals"] },
+    119: { c: "#0088F1", n: ["Los Angeles Dodgers"] },
+    120: { c: "#A00000", n: ["Washington Nationals"] },
+    121: { c: "#055FDB", n: ["New York Mets"] },
+    133: { c: "#006E61", n: ["Athletics", "Oakland Athletics"] },
+    134: { c: "#EEA900", n: ["Pittsburgh Pirates"] },
+    135: { c: "#8B5420", n: ["San Diego Padres"] },
+    136: { c: "#009393", n: ["Seattle Mariners"] },
+    137: { c: "#FF5C1F", n: ["San Francisco Giants"] },
+    138: { c: "#E0003A", n: ["St. Louis Cardinals"] },
+    139: { c: "#8ECAFF", n: ["Tampa Bay Rays"] },
+    140: { c: "#5196FF", n: ["Texas Rangers"] },
+    141: { c: "#62A6FF", n: ["Toronto Blue Jays"] },
+    142: { c: "#3680DC", n: ["Minnesota Twins"] },
+    143: { c: "#FF102A", n: ["Philadelphia Phillies"] },
+    144: { c: "#EE0048", n: ["Atlanta Braves"] },
+    145: { c: "#6B6862", n: ["Chicago White Sox"] },
+    146: { c: "#00B2F7", n: ["Miami Marlins"] },
+    147: { c: "#0037C4", n: ["New York Yankees"] },
+    158: { c: "#FFC900", n: ["Milwaukee Brewers"] },
   };
 
   const CLUB_BY_NAME = (() => {
@@ -73,8 +73,10 @@
     return map;
   })();
 
-  // Several primaries are navies that vanish against a dark plane, so each
-  // color ships with a lightened twin and the stylesheet picks per theme.
+  // The dark-theme twin. Small now: the palette below already sits in a
+  // mid-lightness band, where it used to be full of near-black navies that
+  // needed a large lift to be seen at all. Lifting these as hard would wash
+  // them out instead.
   function lighten(hex, amount) {
     const m = /^#?([0-9a-f]{6})$/i.exec(hex || "");
     if (!m) return hex;
@@ -87,7 +89,7 @@
   }
 
   const clubStyle = (color) =>
-    color ? `--club:${color};--club-d:${lighten(color, 0.45)}` : "";
+    color ? `--club:${color};--club-d:${lighten(color, 0.16)}` : "";
 
   // Set from the payload. Super Two is no longer guessed at in the browser:
   // it depends on where a player ranks in the league-wide 2-3 year class, so
@@ -487,7 +489,11 @@
           <td class="player-name" style="${clubStyle(club)}"><button type="button" class="player-link" data-player-id="${esc(
             p.id
           )}">${esc(p.name) || "—"}</button>${partial}</td>
-          <td>${p.on_40_man ? esc(p.team) || "—" : "—"}</td>
+          <td>${
+            p.on_40_man
+              ? `${club ? `<span class="club-dot" style="${clubStyle(club)}"></span>` : ""}${esc(p.team) || "—"}`
+              : "—"
+          }</td>
           <td>${esc(p.position) || "—"}</td>
           <td class="num-col svc-col">${serviceCell}</td>
           <td><span class="badge ${status.cls}">${status.label}</span></td>
