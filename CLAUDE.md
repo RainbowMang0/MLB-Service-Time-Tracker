@@ -464,33 +464,39 @@ the right place for that information.
 
 ## Current state
 
-As of 2026-08-22, after the carry-in regeneration:
+As of 2026-08-23, mid-recompute under rules version 2 (finding #14):
 
-- **5,568 players, every one with a season-by-season profile.** Zero
-  invariant violations (each player's season rows sum exactly to his
-  published total).
-- **Carry-in is on.** It cleared the roster gate in both eras with
-  over-crediting flat at 0.2%, and cut the total error across the eighteen
-  Baseball Reference figures from 1,662 days to about 200.
-- **Reference check: 17 passed, 0 failed, 2 known gaps** — all 19 rows now
-  have figures (Lindor entered 2026-08-22 at 10.113, we read 10.113). The
-  two gaps are Scherzer and Verlander, both reading high by roughly half a
-  presumed season.
-- **76 tests passing.**
+- **5,569 players, every one with a season-by-season profile.**
+  Zero invariant violations — each player's season rows sum exactly to his
+  published total.
+- **1,360 on a 40-man**, all recomputed under rules version 2.
+  The other 4,209 are being recomputed in
+  batches; until that finishes the database is a *mix* of rules versions, which
+  `rules_version` on each record makes visible.
+- **0 invariant violations**, 1 player at or
+  above 20.000 years (Verlander), which is correct.
+- **123 tests passing.**
+- **28 players read exactly 0.000** and are hidden from the table by default —
+  27 have never played a major league game (prospects added to a 40-man to
+  protect them from the Rule 5 draft) and are reachable through the "Yet to
+  accrue a day" filter.
 
-What the data is made of, measured across all 29,740 accruing seasons:
+What the data is made of, across all 29,147 accruing seasons:
 
 | | share |
 |---|---|
-| `read` — driven by transactions in that season | **76.7%** |
-| `presumed` — from the debut, before any transaction | 13.7% |
-| `carry` — status carried forward from an earlier season | 9.7% |
+| `read` — driven by transactions in that season | **79.3%** |
+| `presumed` — from the debut, before any transaction | 12.2% |
+| `carry` — status carried forward from an earlier season | 8.5% |
 
-Only **0.4% of accruing seasons have no club identified**, down from 15%
-before the stat-splits hydrate. Exactly one player is at or above 20.000
-years (Verlander), which is correct.
+Only **0.0% of accruing seasons have no club identified**.
 
-Payload: table index 0.21 MB; 64 profile shards, ~9 KB each gzipped.
+Payload: table index 0.21 MB; database 8.8 MB (not downloaded by the
+browser); 64 profile shards, 3.5 MB in total, one fetched per profile opened.
+
+⚠️ **The accuracy figures below predate finding #14.** Both gates need
+re-running against the recomputed database — the reference check first, since
+it is the independent one.
 
 ### Still open
 
@@ -1179,6 +1185,68 @@ strength of that minor league signing. At most 218 players are affected (the
 non-rostered players still accruing in the current season); the recompute
 will produce the real figure. No reference player can move — all nineteen
 are on a 40-man, and the ceiling only applies off it.
+
+### 14. A Rule 5 return does not close the clock
+
+**Found 2026-08-23 by probing Christian Cairo**, who read 172 days — a full
+credited year — for a 2025 season he spent entirely in the minors.
+
+```
+2024-12-11  mlb  START  Atlanta Braves activated SS Christian Cairo.
+2024-12-11  mlb    .    Atlanta Braves purchased contract of SS Christian Cairo
+                        from Cleveland Guardians in the Rule 5 Draft
+2025-03-20  mlb    .    SS Christian Cairo returned to Cleveland Guardians
+                        from Atlanta Braves.
+```
+
+The Rule 5 selection opens an interval with "activated". Being **returned**
+to his original organization is phrased with a verb the parser did not know,
+so nothing closed it and the interval ran to the horizon. The roster probe
+confirms it independently: he was on nobody's 40-man on any of 28 sampled
+dates in 2025.
+
+**The direction was measured, not assumed** — the lesson of findings #4, #5
+and #10, where a plausible reading of MLB's vocabulary was encoded and was
+wrong. Of the 53 `returned to` rows in the 65,109-row cache:
+
+| count | shape | meaning |
+|---|---|---|
+| 18 | returned to an MLB club **from an MLB club** | Rule 5 return |
+| 34 | returned to a minor league club **from MLB** | assignment ends |
+| **0** | returned to an MLB club **from a minor club** | would be a START |
+
+In every one the player *leaves* the club named after "from". There is no
+case in the corpus where this wording puts a player **on** a major league
+roster, so it is unambiguously a stop. A negative lookahead keeps it off
+`returned to the active roster`, which is a start — no such row exists today,
+but the two readings are one word apart.
+
+**Measured live, rostered population, before → after:**
+
+| | |
+|---|---|
+| players changed | 34 of 1,360 (2.5%) |
+| credited days removed | **1,823** |
+| credited days added | **0** |
+
+Brewer Hicklen 2.060 → 0.035, Jacob Latz 4.167 → 2.145, Brendon Little
+3.049 → 2.011, Cairo 1.000 → 0.002. Only-removes is the expected shape for a
+rule that can only *close* an interval, and the opposite of the reverted
+fixes in #4 and #5, which both added days.
+
+⚠️ **Two measurement traps hit while confirming this**, both worth avoiding
+again:
+
+1. The first sandbox pass reported **zero** players changed. The script
+   filtered transactions with a regex for nested `"id"` keys, but the cache
+   stores `team_id` / `from_team_id` / `to_team_id` **flat**, so every row was
+   dropped and every player fell through as having no transactions. Use
+   `_involves_mlb_club` from the pipeline, never a hand-rolled filter.
+2. The sandbox predicted 3,337 days removed; the pipeline removed 1,823. Both
+   are right. The sandbox summed **raw interval days**; the pipeline credits
+   only days inside a season window, capped at 172. Interval days and
+   credited days are not the same unit — compare like with like, or compare
+   only the *direction*.
 
 ### Recomputing after a rules change: `rules_version`
 
