@@ -1250,6 +1250,44 @@ resumable across batches, which matters for a job that takes hours.
 - The frontend loads the entire JSON at once. Fine at ~5,300 players; if the
   dataset grows much beyond that, split the file and lazy-load history.
 
+### Deliberately not done
+
+**Player photos — rejected on copyright grounds (2026-08-23).** MLB's image
+CDN is keyed by the same person id already stored, so a profile headshot
+would have cost one `<img>` tag: no pipeline change, no storage, no API call,
+nothing added to the table payload. It is the licensing that decides it.
+Those are MLB's copyrighted photographs, and the owner's decision was to keep
+the project clear of any copyright question rather than rely on the fact that
+fan sites usually go unchallenged.
+
+Worth understanding *why* it is a real risk rather than a theoretical one:
+the service-time figures are this project's own reconstruction from public
+transaction text and are defensible as such. Photographs are not — they would
+be someone else's work republished. That distinction is the whole reason the
+Baseball Reference figures are hand-entered rather than scraped, and it
+applies here for the same reason.
+
+It also interacts with advertising: photos on a free fan page is the
+low-risk combination; the same photos beside ad units is commercial use of a
+league's images and a much easier complaint to make. Photos and ads are close
+to mutually exclusive, and the project has both turned off.
+
+`scripts/probe_headshots.py` existed briefly to measure how many of the 5,569
+players actually have a photo (the CDN answers 200 with a silhouette rather
+than 404, so it compared response bytes against a known-silhouette
+reference). It was removed with this decision. If photos are ever
+reconsidered, that measurement is the first thing to redo — four fifths of
+this database is retired players.
+
+**Advertising — not now (2026-08-23).** Display ads on a niche sports site
+return roughly $3-10 per 1,000 pageviews, and AdSense does not pay out below
+$100. At this project's traffic that is years to a first payment, against a
+mandatory cookie-consent banner, several hundred KB of third-party
+JavaScript on a page whose entire payload is 0.21 MB, and a grey area in
+GitHub Pages' terms about commercial use. Revisit above ~10,000 pageviews a
+month; until then a GitHub Sponsors link costs nothing and carries none of
+it.
+
 ---
 
 ## Working style notes
