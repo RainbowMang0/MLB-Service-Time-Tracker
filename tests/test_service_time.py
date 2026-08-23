@@ -1101,6 +1101,54 @@ def test_the_ceiling_stops_a_player_who_left_for_the_minors():
     )
 
 
+def test_a_rule_5_return_closes_the_interval():
+    """
+    Finding #14, from Christian Cairo. A Rule 5 selection opens an interval
+    with "activated"; being returned to the original club is phrased with a
+    verb the parser did not know, so nothing closed it and he was credited a
+    full season spent entirely in the minors.
+    """
+    seasons = [SeasonWindow(y, dt.date(y, 3, 28), dt.date(y, 10, 1)) for y in (2025, 2026)]
+    txns = [
+        Transaction(dt.date(2024, 12, 11), "Atlanta Braves activated SS X."),
+        Transaction(dt.date(2025, 3, 20), "SS X returned to Cleveland Guardians from Atlanta Braves."),
+    ]
+    result = compute_service_time(
+        txns, seasons, horizon_end=dt.date(2026, 8, 23), accrual_floor=dt.date(2024, 12, 1)
+    )
+    check("a Rule 5 return ends the stint", result.by_season[2025]["credited_days"] == 0)
+    check("and nothing accrues afterwards", result.by_season[2026]["credited_days"] == 0)
+
+
+def test_returned_to_an_affiliate_is_also_a_stop():
+    """The commoner shape: an assignment ends and he goes back down."""
+    check(
+        "returned to a minor league club is a stop",
+        is_active_stop("RHP X returned to Durham Bulls from Tampa Bay Rays."),
+    )
+    check(
+        "and it is not read as a start",
+        not is_active_start("RHP X returned to Durham Bulls from Tampa Bay Rays."),
+    )
+
+
+def test_returned_to_the_active_roster_is_still_a_start():
+    """
+    The stop rule and this start are one word apart, so the negative
+    lookahead that separates them is worth a test of its own.
+    """
+    desc = "Boston Red Sox returned to the active roster LHP X."
+    check("returning to the active roster is a start", is_active_start(desc))
+    check("and must not read as a stop", not is_active_stop(desc))
+
+
+def test_recalled_from_an_affiliate_is_not_a_return():
+    """'from <affiliate>' appears in 5,189 recall rows and must stay a start."""
+    desc = "Chicago Cubs recalled C X from Iowa Cubs."
+    check("a recall is a start", is_active_start(desc))
+    check("and not a stop", not is_active_stop(desc))
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -1151,5 +1199,9 @@ if __name__ == "__main__":
     test_an_appearance_alone_is_enough_to_keep_a_presumed_season()
     test_a_minor_league_signing_does_not_extend_a_career()
     test_the_ceiling_stops_a_player_who_left_for_the_minors()
+    test_a_rule_5_return_closes_the_interval()
+    test_returned_to_an_affiliate_is_also_a_stop()
+    test_returned_to_the_active_roster_is_still_a_start()
+    test_recalled_from_an_affiliate_is_not_a_return()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

@@ -138,6 +138,9 @@ ACTIVE_STOP_KEYWORDS = [
     "sent to the minor",
     "placed on the",  # e.g. "placed on the paternity list" -- see note below
     "transferred to the 60-day",  # still technically counts, handled specially
+    "returned to",  # "returned to <club> from <club>": Rule 5 returns and
+                    # ended assignments. Always a departure -- see the note
+                    # below _STOP_RE.
 ]
 
 # --- Why "elected free agency" is NOT a stop keyword ------------------------
@@ -242,9 +245,46 @@ _STOP_RE = re.compile(
     r"\boptioned\b|\breleased\b|\boutrighted\b"
     rf"|designated{_NAME}for assignment"
     rf"|sent{_NAME}outright"
-    rf"|sent{_NAME}to the minor",
+    rf"|sent{_NAME}to the minor"
+    # "<Player> returned to <club A> from <club B>" -- see the note below.
+    r"|returned to (?!the active roster).{0,60}?\bfrom\b",
     re.IGNORECASE,
 )
+
+# --- Why "returned to X from Y" is a stop (finding #14) ---------------------
+# Found 2026-08-23 by probing Christian Cairo, who read 172 days for a 2025
+# season he spent entirely in the minors. His feed:
+#
+#   2024-12-11  Atlanta Braves activated SS Christian Cairo.          <- START
+#   2024-12-11  Atlanta Braves purchased contract ... in the Rule 5 Draft
+#   2025-03-20  SS Christian Cairo returned to Cleveland Guardians
+#               from Atlanta Braves.                                  <- nothing
+#
+# A Rule 5 selection opens an interval that nothing ever closes, because
+# being returned to your original organization is phrased with a verb the
+# parser did not know. The interval ran to the horizon and credited him a
+# full season.
+#
+# The direction is unambiguous, and it was measured rather than assumed. Of
+# the 53 "returned to" rows in the 65,109-row cache:
+#
+#     18   returned to an MLB club from an MLB club   (Rule 5 return)
+#     34   returned to a minor league club from MLB   (assignment ends)
+#      0   returned to an MLB club from a minor club  <- would be a START
+#
+# In every one the player LEAVES the club named after "from", and that club
+# is a major league one in 52 of 53 (the 53rd involves no MLB club at all and
+# is dropped by the club filter before it gets here). There is no case where
+# this wording puts a player ON a major league roster, so it is always a stop.
+#
+# The negative lookahead keeps it off "returned to the active roster", which
+# is a START -- no such row exists in the cache today, but the two readings
+# are one word apart and the guard costs nothing.
+#
+# Measured over the 1,364 cached rostered players: 34 changed (2.5%), 3,337
+# days removed, 0 added. Only-removes is the expected shape for a rule that
+# can only close an interval. Jacob Latz -4.34 years, Brewer Hicklen -4.23,
+# Brendon Little -3.31, Cairo -2.15.
 
 # Placements that keep accruing. "disabled list" is the pre-2019 name for the
 # injured list (1,419 rows in the cache, all before 2019 bar a handful) and

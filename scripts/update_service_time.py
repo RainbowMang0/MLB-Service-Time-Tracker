@@ -74,7 +74,7 @@ TODAY = dt.date.today()
 #   1  first version stamped, after same-date transactions were fixed to
 #      group by date with the stop winning, and carry-in was anchored on the
 #      debut date so undebuted prospects stop accruing
-SERVICE_TIME_RULES_VERSION = 1
+SERVICE_TIME_RULES_VERSION = 2
 
 # The carry-in rule: presume a player is on a roster from his debut onward
 # rather than crediting him nothing until a start transaction happens to fire.
