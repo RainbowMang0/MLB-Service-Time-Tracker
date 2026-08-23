@@ -81,17 +81,11 @@ jobs:
       - name: Commit and push results
         if: github.event.inputs.status_only != 'true'
         run: |
-          git config user.name "mlb-service-time-bot"
-          git config user.email "actions@users.noreply.github.com"
           # See the note in update-service-time.yml: index.json and the
           # profiles/ shards live here too and must be committed with it.
-          git add -A docs/data
-          if [ -f data/backfill_state.json ]; then git add -A data/backfill_state.json; fi
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "chore: historical backfill batch ($(date -u +%F))"
-            # The daily job may have pushed while this batch was running.
-            git pull --rebase --autostash || true
-            git push
-          fi
+          # The daily job may have pushed while this batch was running --
+          # commit_data.sh rebuilds on top of the remote tip rather than
+          # discarding the batch.
+          scripts/commit_data.sh \
+            "chore: historical backfill batch ($(date -u +%F))" \
+            docs/data data/backfill_state.json

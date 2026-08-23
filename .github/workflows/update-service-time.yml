@@ -78,18 +78,15 @@ jobs:
       - name: Commit and push changes
         if: steps.gate.outputs.run == 'true'
         run: |
-          git config user.name "mlb-service-time-bot"
-          git config user.email "actions@users.noreply.github.com"
           # The whole data directory, not just service_time.json: the job
           # also writes index.json (what the browser downloads) and the
           # profiles/ shards. Staging only the database left the compact
           # index frozen at whatever was last committed by hand, so the
           # site would have quietly served stale figures forever.
-          git add -A docs/data
-          if [ -d data/cache ]; then git add -A data/cache; fi
-          if git diff --cached --quiet; then
-            echo "No data changes today -- nothing to commit."
-          else
-            git commit -m "chore: daily service time update ($(date -u +%F))"
-            git push
-          fi
+          #
+          # commit_data.sh, not a plain push: this job is half an hour of
+          # API calls and a push rejected by a concurrent commit to main
+          # throws all of it away. See the header of that script.
+          scripts/commit_data.sh \
+            "chore: daily service time update ($(date -u +%F))" \
+            docs/data data/cache
