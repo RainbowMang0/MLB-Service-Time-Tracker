@@ -1149,6 +1149,51 @@ def test_recalled_from_an_affiliate_is_not_a_return():
     check("and not a stop", not is_active_stop(desc))
 
 
+def test_an_empty_roster_fetch_is_refused():
+    """
+    The failure this guard exists for: main() flags everyone not seen in
+    today's fetch as off a 40-man, so an empty fetch silently republishes the
+    whole database with nobody rostered.
+    """
+    from update_service_time import check_run_is_sane
+
+    check("an empty fetch is refused", check_run_is_sane(0, 1360, 0))
+    check("and so is a badly short one", check_run_is_sane(120, 1360, 0))
+    check(
+        "a normal day passes",
+        not check_run_is_sane(1360, 1359, 3),
+    )
+
+
+def test_a_roster_that_collapses_overnight_is_refused():
+    """A real day of transactions moves a handful of players, not a third."""
+    from update_service_time import check_run_is_sane
+
+    check("a 60% collapse is refused", check_run_is_sane(950, 1360, 0))
+    check(
+        "ordinary churn is not",
+        not check_run_is_sane(1355, 1360, 0),
+    )
+
+
+def test_widespread_build_failures_are_refused():
+    """
+    Per-player failures are swallowed so one bad record cannot lose a run --
+    which means a systemic outage looks like a normal run with a quieter log.
+    """
+    from update_service_time import check_run_is_sane
+
+    check("a 30% failure rate is refused", check_run_is_sane(1360, 1360, 400))
+    check("a couple of bad records are not", not check_run_is_sane(1360, 1360, 5))
+
+
+def test_the_guard_is_inert_on_a_first_run():
+    """Nothing stored yet means no previous roster to compare against."""
+    from update_service_time import check_run_is_sane
+
+    check("a healthy first run passes", not check_run_is_sane(1360, 0, 0))
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -1203,5 +1248,9 @@ if __name__ == "__main__":
     test_returned_to_an_affiliate_is_also_a_stop()
     test_returned_to_the_active_roster_is_still_a_start()
     test_recalled_from_an_affiliate_is_not_a_return()
+    test_an_empty_roster_fetch_is_refused()
+    test_a_roster_that_collapses_overnight_is_refused()
+    test_widespread_build_failures_are_refused()
+    test_the_guard_is_inert_on_a_first_run()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

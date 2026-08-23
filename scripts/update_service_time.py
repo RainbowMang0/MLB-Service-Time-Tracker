@@ -764,6 +764,14 @@ def main() -> None:
             "hour re-fetching transactions that have not changed."
         ),
     )
+    parser.add_argument(
+        "--ignore-sanity",
+        action="store_true",
+        help=(
+            "Publish even if the run looks anomalous (see check_run_is_sane). "
+            "For the day the guard is wrong, not for getting past it."
+        ),
+    )
     args = parser.parse_args()
 
     print(f"[{dt.datetime.now().isoformat(timespec='seconds')}] Starting service-time update...")
@@ -781,7 +789,10 @@ def main() -> None:
     if args.limit:
         roster = roster[: args.limit]
 
+    previous_rostered = sum(1 for p in db.values() if p.get("on_40_man"))
+
     current_ids = set()
+    failures = 0
     for i, entry in enumerate(roster, 1):
         pid = str(entry["id"])
         current_ids.add(pid)
@@ -790,7 +801,30 @@ def main() -> None:
             db[pid] = record
             print(f"  [{i}/{len(roster)}] {record['name']}: {record['service_time']}")
         except Exception as exc:  # keep going even if one player fails
+            failures += 1
             print(f"  [{i}/{len(roster)}] FAILED for player {pid}: {exc}", file=sys.stderr)
+
+    # Checked BEFORE the de-flagging pass below and before anything is
+    # written, because both are destructive: the pass rewrites every record
+    # in the database and the write replaces a good published file.
+    problems = [] if args.limit else check_run_is_sane(
+        len(roster), previous_rostered, failures
+    )
+    if problems and not args.ignore_sanity:
+        print("\n!! REFUSING TO PUBLISH THIS RUN:", file=sys.stderr)
+        for problem in problems:
+            print(f"     - {problem}", file=sys.stderr)
+        print(
+            "\n   Nothing was written, so the published data is unchanged and\n"
+            "   still correct. Re-run once the API is healthy, or pass\n"
+            "   --ignore-sanity if this really is what the day looks like.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+    if problems:
+        print("\n!! Sanity checks failed but --ignore-sanity was passed:", file=sys.stderr)
+        for problem in problems:
+            print(f"     - {problem}", file=sys.stderr)
 
     # Players no longer on a 40-man roster stay in the DB (the "previous
     # players" log) but get flagged as such.
@@ -799,6 +833,58 @@ def main() -> None:
             record["on_40_man"] = False
 
     _write_outputs(db)
+
+
+# Sanity bounds for a daily run. Every one of them describes a failure that
+# publishes CONFIDENTLY WRONG data rather than crashing, which is the only
+# kind worth a gate: a crash leaves yesterday's good file in place, a silent
+# success overwrites it.
+MIN_EXPECTED_ROSTER = 900      # 30 clubs x 40 = 1,200 nominal, with slack
+MAX_ROSTER_SHRINK = 0.25       # vs. what the stored database already knows
+MAX_FAILURE_RATE = 0.10        # per-player build failures are swallowed
+
+
+def check_run_is_sane(
+    roster_size: int, previous_rostered: int, failures: int
+) -> list[str]:
+    """
+    Reasons this run must NOT be published, or an empty list.
+
+    THE FAILURE THIS EXISTS FOR: main() flags every player not seen in
+    today's roster fetch as no longer on a 40-man. If that fetch comes back
+    empty -- an API hiccup, a changed endpoint, a rate limit answered with an
+    empty list rather than an error -- the loop simply does not run, nobody
+    lands in current_ids, and all 5,569 records get on_40_man=False. The job
+    then reports success and publishes a site claiming nobody in baseball is
+    on a roster, over the top of a database that was correct.
+
+    Nothing in the pipeline would have caught that. Every bug in this project
+    so far was found by a human noticing a number looked silly, which works
+    at 20 players and fails at 5,569 -- and fails completely at 3am.
+
+    Per-player failures are swallowed by design so one bad record cannot lose
+    a whole run, but that same design means a systemic outage looks like a
+    normal run with a quieter log.
+    """
+    problems = []
+    if roster_size < MIN_EXPECTED_ROSTER:
+        problems.append(
+            f"only {roster_size} players came back from the 40-man fetch, "
+            f"below the {MIN_EXPECTED_ROSTER} floor (30 clubs carry ~1,200)"
+        )
+    if previous_rostered and roster_size < previous_rostered * (1 - MAX_ROSTER_SHRINK):
+        problems.append(
+            f"the roster shrank from {previous_rostered} to {roster_size}, "
+            f"more than the {MAX_ROSTER_SHRINK:.0%} a real day of transactions "
+            "could account for"
+        )
+    if roster_size and failures / roster_size > MAX_FAILURE_RATE:
+        problems.append(
+            f"{failures} of {roster_size} players failed to build "
+            f"({failures / roster_size:.0%}), above the "
+            f"{MAX_FAILURE_RATE:.0%} tolerance"
+        )
+    return problems
 
 
 def _write_outputs(db: dict[str, dict]) -> None:
