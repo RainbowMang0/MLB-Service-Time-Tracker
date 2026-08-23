@@ -762,11 +762,39 @@
       <div class="career-legend">${legend}</div>`;
   }
 
+  /**
+   * Drop leading season rows that credit nothing AND name no club.
+   *
+   * The pipeline computes every season from a fixed earliest year, so a
+   * prospect signed in 2022 carries seventeen rows back to 2005 that say
+   * nothing at all -- his profile opened as a wall of zeros. 90 players carry
+   * 620 such rows.
+   *
+   * DISPLAY ONLY. The rows stay in the data and the absent-season arithmetic
+   * below still reads the full array, because trimming changes what "absent"
+   * means: Andy Tracy debuted in 2000 with 2005-2007 crediting zero, so five
+   * seasons (2000-2004) are genuinely absent and 2005-2007 are counted-as-
+   * zero. Trimming and then subtracting would call it eight. 57 players
+   * would have been mis-described that way.
+   */
+  function trimLeadingEmpty(seasons) {
+    let i = 0;
+    while (
+      i < seasons.length - 1 &&
+      Number(seasons[i].d || 0) === 0 &&
+      !((seasons[i].t || []).length)
+    ) {
+      i += 1;
+    }
+    return { rows: seasons.slice(i), hidden: i };
+  }
+
   function renderProfile(profile, teams) {
     const body = el("profile-body");
     if (!body) return;
 
-    const seasons = profile.seasons || [];
+    const allSeasons = profile.seasons || [];
+    const { rows: seasons, hidden: hiddenSeasons } = trimLeadingEmpty(allSeasons);
     let running = 0;
     const rows = seasons
       .map((season) => {
@@ -799,9 +827,16 @@
     // 2003-04 are absent entirely, because they fall before the earliest
     // season the pipeline computes. He reads 19.000 against a real 21.000:
     // short by the two absent seasons, not by eight.
-    const presumedCount = seasons.filter((s) => s.src === "presumed").length;
+    // Only seasons that actually credit days: the note says they "are
+    // credited by presuming he stayed on a roster", and a presumed season
+    // worth zero days is not credited at all. Every one of the 27 players who
+    // has never debuted carried a dozen or more of these.
+    const presumedCount = seasons.filter(
+      (s) => s.src === "presumed" && Number(s.d || 0) > 0
+    ).length;
     const debutYear = profile.mlb_debut ? Number(profile.mlb_debut.slice(0, 4)) : null;
-    const firstYear = seasons.length ? Number(seasons[0].y) : null;
+    // Deliberately the UNTRIMMED first row -- see trimLeadingEmpty().
+    const firstYear = allSeasons.length ? Number(allSeasons[0].y) : null;
     const absentCount =
       debutYear && firstYear && firstYear > debutYear ? firstYear - debutYear : 0;
 
@@ -826,6 +861,13 @@
     const gapNote = notes.length
       ? `<p class="profile-gap">${notes.join(" ")}</p>`
       : "";
+    const trimNote = hiddenSeasons
+      ? `<p class="profile-trim">${hiddenSeasons} earlier season${
+          hiddenSeasons === 1 ? "" : "s"
+        } with no roster activity and no club on record ${
+          hiddenSeasons === 1 ? "is" : "are"
+        } not shown.</p>`
+      : "";
 
     body.innerHTML = `
       <header class="profile-header">
@@ -840,10 +882,17 @@
         <div><dt>Service time</dt><dd class="profile-total">${esc(profile.service_time)}</dd></div>
         <div><dt>Total days</dt><dd>${esc(profile.days)}</dd></div>
         <div><dt>MLB debut</dt><dd>${esc(profile.mlb_debut) || "—"}</dd></div>
-        <div><dt>Last played</dt><dd>${esc(profile.last_played) || "Active"}</dd></div>
+        <div><dt>Last played</dt><dd>${
+          profile.last_played
+            ? esc(profile.last_played)
+            : profile.mlb_debut
+            ? "Active"
+            : "—"
+        }</dd></div>
       </dl>
       ${careerStrip(seasons, teams)}
       ${gapNote}
+      ${trimNote}
       <div class="season-table-wrap">
         <table class="season-table">
           <thead>

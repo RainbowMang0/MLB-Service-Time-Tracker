@@ -736,6 +736,12 @@ body.profile-open { overflow: hidden; }
 .src-carry { background: var(--accent-wash); color: var(--accent); }
 .src-presumed { background: var(--status-warning-wash); color: var(--status-warning); }
 
+.profile-trim {
+  margin: -0.5rem 0 1rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
 .profile-foot {
   margin: 0.9rem 0 0;
   font-size: 0.78rem;
