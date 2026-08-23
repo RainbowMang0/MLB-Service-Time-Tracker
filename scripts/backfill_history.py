@@ -54,13 +54,11 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
 import fetch_mlb_data as mlb  # noqa: E402
-import super_two  # noqa: E402
 from service_time import TRANSACTION_COVERAGE_START_YEAR  # noqa: E402
 from update_service_time import (  # noqa: E402
     DATA_DIR,
     SERVICE_TIME_RULES_VERSION,
-    write_index,
-    write_profiles,
+    _write_outputs,
     OUTPUT_FILE,
     TODAY,
     build_player_record,
@@ -425,34 +423,32 @@ def report_impossible_totals(db: dict[str, dict]) -> None:
 
 
 def write_db(db: dict[str, dict]) -> None:
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
-    incomplete = sum(1 for p in db.values() if not p.get("history_complete", True))
-    output = {
-        "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
-        "source": "MLB Stats API (statsapi.mlb.com, unofficial public endpoint)",
-        "disclaimer": (
-            "Service time figures are ESTIMATES computed from public roster "
-            "transaction records, not official MLB/MLBPA figures. Transaction "
-            f"coverage begins in {TRANSACTION_COVERAGE_START_YEAR}; players who "
-            "debuted earlier are marked as having incomplete history and their "
-            "figures are a floor, not an estimate."
-        ),
-        "coverage_start_year": TRANSACTION_COVERAGE_START_YEAR,
-        "player_count": len(db),
-        "incomplete_history_count": incomplete,
-        "players": sorted(db.values(), key=lambda p: p.get("name") or ""),
-    }
-    OUTPUT_FILE.write_text(json.dumps(output, indent=2))
-    print(f"Wrote {len(db)} player records to {OUTPUT_FILE}")
-    # Same post-pass as the daily job: Super Two depends on the whole
-    # population, so it has to be settled after the batch is merged in.
-    cutoff = super_two.apply_super_two(
-        db, super_two.latest_complete_season(db, TODAY.year)
-    )
-    if cutoff:
-        print(f"Super Two cutoff after {cutoff['season']}: {cutoff['cutoff']}")
-    write_index(db, cutoff)
-    write_profiles(db)
+    """
+    Publish the database and everything derived from it.
+
+    DELEGATES to the daily job rather than repeating it. This function used to
+    build its own payload and write the files in its own order, and the order
+    was wrong:
+
+        OUTPUT_FILE.write_text(...)      # database written FIRST
+        cutoff = apply_super_two(db)     # flags recomputed AFTER
+        write_index(db, cutoff)          # index written with the new flags
+
+    apply_super_two() mutates every record's `super_two_candidate` and
+    `arbitration_eligible`, so the database on disk kept the PREVIOUS run's
+    flags while the index got the current ones. 110 players disagreed between
+    the two published files, found by scripts/validate_published.py on its
+    first real run.
+
+    The site itself was fine -- the browser reads the index, which was the
+    correct one -- but the database is the pipeline's own input on the next
+    run, so the staleness propagated forward. Its payload was also missing
+    `super_two_cutoff` entirely, which the daily job's includes.
+
+    Two copies of a publish path is what allowed them to drift, so there is
+    now one.
+    """
+    _write_outputs(db)
 
 
 if __name__ == "__main__":
