@@ -74,6 +74,10 @@ TODAY = dt.date.today()
 #   1  first version stamped, after same-date transactions were fixed to
 #      group by date with the stop winning, and carry-in was anchored on the
 #      debut date so undebuted prospects stop accruing
+#   2  "returned to <club> from <club>" reads as a stop (finding #14). A Rule
+#      5 selection opened an interval that nothing closed, crediting players
+#      full seasons spent in the minors. 3,337 days removed across 34 of the
+#      1,364 cached rostered players; none added.
 SERVICE_TIME_RULES_VERSION = 2
 
 # The carry-in rule: presume a player is on a roster from his debut onward
