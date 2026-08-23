@@ -19,6 +19,11 @@ name: Validate Service Time
 #               next to what the rosters say, day by day. The rosters check
 #               names its worst players; this one explains them.
 #
+#   headshots -- does MLB's image CDN actually hold a photo for the players
+#               in this database, and for what share of them? Answers a
+#               design question -- is a profile photo worth adding -- with a
+#               measurement instead of an assumption.
+#
 #   reference -- compares finished figures against known Baseball Reference
 #               numbers in data/reference_service_time.json. Narrow (a
 #               handful of players, hand-entered) but genuinely independent,
@@ -43,6 +48,7 @@ on:
           - reference
           - super-two
           - player
+          - headshots
       team:
         description: "rosters: MLB team id (147 = Yankees)"
         required: false
@@ -96,6 +102,9 @@ jobs:
               ;;
             super-two)
               python scripts/validate_super_two.py
+              ;;
+            headshots)
+              python scripts/probe_headshots.py --sample 60
               ;;
             player)
               python scripts/probe_player.py \
