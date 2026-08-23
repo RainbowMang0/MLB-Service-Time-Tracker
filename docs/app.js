@@ -970,7 +970,9 @@
     const body = el("profile-body");
     if (!overlay || !body) return;
 
-    lastFocused = document.activeElement;
+    // Only when it was closed: opening a second profile over an open one
+    // would otherwise record the close button as the place to return to.
+    if (overlay.hidden) lastFocused = document.activeElement;
     overlay.hidden = false;
     document.body.classList.add("profile-open");
     body.innerHTML = `<p class="profile-loading">Loading…</p>`;
@@ -1017,7 +1019,9 @@
         if (!trigger) return;
         const id = Number(trigger.getAttribute("data-player-id"));
         if (!Number.isFinite(id)) return;
-        history.replaceState(null, "", `#player/${id}`);
+        // pushState, not replaceState: this is what gives Back something to
+        // pop, which the hashchange listener below turns into a close.
+        history.pushState(null, "", `#player/${id}`);
         openProfile(id);
       });
     }
@@ -1075,6 +1079,24 @@
     if (match) openProfile(Number(match[1]));
   }
 
+  // Without this the hash was only ever read once, at load. Two consequences,
+  // both real: pasting a second player's link while the first was open did
+  // nothing at all, and Back left the profile sitting open over the table.
+  //
+  // Note pushState and replaceState do NOT fire hashchange, so closing via
+  // the button (which strips the hash with replaceState) cannot re-enter
+  // this and close twice.
+  function wireHashNavigation() {
+    window.addEventListener("hashchange", () => {
+      const match = /^#player\/(\d+)$/.exec(window.location.hash || "");
+      if (match) {
+        openProfile(Number(match[1]));
+      } else {
+        closeProfile();
+      }
+    });
+  }
+
   function renderMeta(data) {
     el("disclaimer-text").textContent = data.disclaimer || "";
     const footer = el("generated-at-footer");
@@ -1102,6 +1124,7 @@
     wireFilters();
     wirePagination();
     wireProfile();
+    wireHashNavigation();
     renderTable();
     openProfileFromHash();
   }
