@@ -210,6 +210,7 @@ html, body {
 }
 .census b { color: var(--text-primary); font-weight: 650; }
 .census .sep { color: var(--text-muted); margin: 0 0.5em; }
+.census-note { color: var(--text-muted); }
 
 /* --- Incomplete-history flag ------------------------------------------- */
 /* Marks players who debuted before the transaction feed begins, whose

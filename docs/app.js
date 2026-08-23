@@ -214,6 +214,13 @@
     if (p.service_days_total === 0 && p.history_complete === false) {
       return { label: "Unknown", cls: "badge-neutral" };
     }
+    // On a 40-man, never accrued a day. "Pre-Arbitration" implied a clock
+    // that has not started: these are prospects added to the 40-man to
+    // protect them from the Rule 5 draft, who have never been on an active
+    // major league roster.
+    if (p.service_days_total === 0) {
+      return { label: "Yet to debut", cls: "badge-neutral" };
+    }
     if (p.free_agent_eligible) return { label: "Free Agent Eligible", cls: "badge-good" };
     if (p.super_two_candidate) {
       return {
@@ -225,7 +232,16 @@
     return { label: "Pre-Arbitration", cls: "badge-neutral" };
   }
 
+  // A player who has never accrued a day has nothing this site measures. He
+  // is kept in the database -- he is really on a 40-man and will appear the
+  // day he debuts -- but he is off the table unless asked for, because a
+  // page of 0.000 rows is the first thing an ascending sort shows and it
+  // reads as a defect rather than as a squad of prospects.
+  const hasService = (p) => Number(p.service_days_total) > 0;
+
   function statusMatches(p, filterValue) {
+    if (filterValue === "no-service") return !hasService(p);
+    if (!hasService(p)) return false;
     if (!filterValue) return true;
     if (filterValue === "not-rostered") return !p.on_40_man;
     // Every other status is an eligibility one, and those apply to current
@@ -275,10 +291,19 @@
     const census = el("stat-census");
     if (census) {
       const n = (v) => v.toLocaleString();
+      // The yet-to-debut count is stated because the table hides those rows.
+      // Without it the census would say 1,360 are on a 40-man while the table
+      // paged through 1,333, which is the same kind of silent mismatch that
+      // made the eligibility tiles look like an arithmetic bug.
+      const yetToDebut = players.filter((p) => !hasService(p)).length;
       census.innerHTML =
         `<b>${n(total)}</b> players tracked` +
         `<span class="sep">·</span><b>${n(current)}</b> on a 40-man roster` +
-        `<span class="sep">·</span><b>${n(previous)}</b> previously rostered`;
+        `<span class="sep">·</span><b>${n(previous)}</b> previously rostered` +
+        (yetToDebut
+          ? `<span class="sep">·</span><b>${n(yetToDebut)}</b> yet to accrue a day` +
+            ` <span class="census-note">(not listed below)</span>`
+          : "");
     }
 
     const tiles = [
