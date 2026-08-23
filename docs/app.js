@@ -1012,7 +1012,41 @@
       });
     }
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") closeProfile();
+      if (event.key === "Escape") {
+        closeProfile();
+        return;
+      }
+      if (event.key !== "Tab") return;
+
+      // The panel is marked role="dialog" aria-modal="true", which tells a
+      // screen reader the rest of the page is inert -- but the browser does
+      // not enforce that for the Tab key. Focus escaped on the very first
+      // Tab, into a page the user could not see past the overlay. Keep it
+      // inside, which is what the markup already claims.
+      const overlay = el("profile-overlay");
+      if (!overlay || overlay.hidden) return;
+      const panel = overlay.querySelector(".profile-panel");
+      if (!panel) return;
+
+      const items = Array.from(
+        panel.querySelectorAll(
+          'a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        )
+      ).filter((node) => !node.disabled && node.offsetParent !== null);
+      if (!items.length) return;
+
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (!panel.contains(document.activeElement)) {
+        event.preventDefault();
+        first.focus();
+      } else if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
     });
   }
 
