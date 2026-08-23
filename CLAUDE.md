@@ -1325,8 +1325,34 @@ resumable across batches, which matters for a job that takes hours.
 - No handling for paternity/bereavement edge cases beyond keyword matching.
 - Service-time-manipulation grievance outcomes (e.g. Kris Bryant) are invisible
   to public transaction data.
-- The frontend loads the entire JSON at once. Fine at ~5,300 players; if the
-  dataset grows much beyond that, split the file and lazy-load history.
+- Elih Villanueva debuted and last played on 2011-06-15 — a one-game career —
+  and reads 0.000 with `src: "read"`. A player who appeared in a game was
+  rostered that day, so at least one day is owed him: a one-day call-up whose
+  interval comes out empty. One record; `report_debuted_but_empty()` in the
+  daily job now names anyone in this class.
+
+### Frontend performance is measured and is fine — do not "optimize" it
+
+The old note here said the frontend "loads the entire JSON at once" and
+should be split if the dataset grew. **That was fixed and the note went
+stale**: the browser downloads a 0.21 MB compact index, not the 8.8 MB
+database, and a player's season detail comes from one of 64 shards fetched
+only when a profile is opened.
+
+Measured 2026-08-23 at a 4× CPU throttle (a rough stand-in for the owner's
+iPad against a desktop runner), over the full 5,541-row table:
+
+| | |
+|---|---|
+| one search keystroke | **18 ms** |
+| typing 8 characters | 96 ms total |
+| sort by name | 41 ms |
+| sort by status | 50 ms |
+| next page | 127 ms |
+
+Every one is inside the interactive budget with room to spare. Filtering and
+re-sorting all 5,569 players on each keystroke *sounds* like it should be
+slow and is not. Re-measure before believing otherwise.
 
 ### Deliberately not done
 
