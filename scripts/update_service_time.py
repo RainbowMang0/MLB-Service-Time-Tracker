@@ -70,7 +70,8 @@ TODAY = dt.date.today()
 # --recompute-stale keys on) says nothing about WHICH rules produced it.
 #
 #   1  first version stamped, after same-date transactions were fixed to
-#      group by date with the stop winning
+#      group by date with the stop winning, and carry-in was anchored on the
+#      debut date so undebuted prospects stop accruing
 SERVICE_TIME_RULES_VERSION = 1
 
 # The carry-in rule: presume a player is on a roster from his debut onward
@@ -388,7 +389,16 @@ def build_player_record(
     result = compute_service_time(
         transactions,
         seasons,
-        presume_active_from_debut=presume_active_from_debut,
+        # Carry-in anchors on the DEBUT, never on the floor's fallback.
+        # Those are the same date for anyone who has played, but for a player
+        # with no debut the floor falls back to his earliest major-league-club
+        # transaction -- which for a prospect is the day the club signed or
+        # drafted him. Presuming from that credited 34 players who have never
+        # appeared in a major league game, one of them 5.000 years: Leandro
+        # Lopez, signed 2021-01-15, still without a debut, read as a
+        # five-year veteran. A man who has not debuted has no major league
+        # service time to presume.
+        presume_active_from_debut=presume_active_from_debut and debut_date is not None,
         accrual_floor=accrual_floor,
         accrual_ceiling=accrual_ceiling,
         # Stop the clock at horizon_end (today, for the daily job) rather than

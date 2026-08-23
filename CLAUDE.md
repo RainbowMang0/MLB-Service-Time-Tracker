@@ -1062,6 +1062,33 @@ it. The gate asking for more than one club is what surfaced it.
 over-crediting **1.1% → 0.4%**, with Bowden, Luke Bard and Angel Perdomo all
 gone from the worst-players list. Yankees 2014 came back **byte-identical**.
 
+### 11. Carry-in must anchor on the debut, not on the floor
+
+**Found 2026-08-22 while auditing the database before a full recompute.**
+34 players had no `mlbDebutDate` at all — they have never appeared in a
+major league game — and were credited service time anyway. Robinson Ortiz
+read **8.124 years**. Leandro Lopez, signed 2021-01-15 and still without a
+debut, read 5.000. Across the 34: **29,112 days, 169 player-years, all of it
+phantom.**
+
+The cause is two reasonable decisions colliding. `accrual_floor` falls back
+to a player's earliest major-league-club transaction when he has no debut
+date — sensible on its own, and there to stop crediting anyone from his
+college days. Carry-in then presumed he was on a roster from the floor. For
+a prospect that floor is the day the club signed or drafted him, so the
+presumption ran from his signing to today.
+
+Carry-in now anchors on the **debut date specifically**, never on the
+floor's fallback. The two are the same date for anyone who has played; for
+anyone who has not, there is no major league service time to presume.
+
+All 34 are on 40-man rosters, so the daily job clears them; no backfill
+needed for this one.
+
+*The general lesson, again:* the guard that made the fallback safe
+(`accrual_floor` blocks pre-debut accrual) stopped being a guard the moment
+carry-in started treating the floor as a starting gun rather than a wall.
+
 ### Recomputing after a rules change: `rules_version`
 
 A rules change has no natural completion marker, and the two obvious ones

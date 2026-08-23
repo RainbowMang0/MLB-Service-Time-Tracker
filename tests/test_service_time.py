@@ -984,6 +984,28 @@ def test_no_interval_ever_ends_before_it_starts():
     check("every interval is well formed", all(s <= e for s, e in intervals))
 
 
+def test_a_player_who_never_debuted_gets_no_presumed_service():
+    """
+    The floor falls back to a player's earliest major-league-club
+    transaction when he has no debut date -- for a prospect that is the day
+    he was signed or drafted. Carry-in must not anchor there: 34 players who
+    have never appeared in a major league game were credited service time,
+    one of them 5.000 years.
+    """
+    import update_service_time as U  # noqa: PLC0415
+
+    seasons = [SeasonWindow(y, dt.date(y, 3, 28), dt.date(y, 10, 1)) for y in range(2021, 2026)]
+    signed = [Transaction(dt.date(2021, 1, 15), "Texas Rangers signed free agent RHP X to a minor league contract.")]
+    # What build_player_record passes when there is no debut: floor falls back
+    # to the signing, and carry-in is disabled because debut_date is None.
+    result = compute_service_time(
+        signed, seasons, horizon_end=dt.date(2025, 10, 1),
+        accrual_floor=dt.date(2021, 1, 15),
+        presume_active_from_debut=False,
+    )
+    check("an undebuted prospect accrues nothing", result.total_days == 0)
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -1029,5 +1051,6 @@ if __name__ == "__main__":
     test_claimed_and_optioned_the_same_day_credits_nothing()
     test_activated_off_the_il_then_optioned_stops_the_clock()
     test_no_interval_ever_ends_before_it_starts()
+    test_a_player_who_never_debuted_gets_no_presumed_service()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)
