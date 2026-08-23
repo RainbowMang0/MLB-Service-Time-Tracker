@@ -1,4 +1,4 @@
-# MLB Service Time Tracker
+# Big League Service Time Tracker
 
 A small static website that tracks estimated MLB service time for players
 currently on a 40-man roster, and keeps a running log of players once they

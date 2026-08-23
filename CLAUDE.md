@@ -1,9 +1,19 @@
-# MLB Service Time Tracker — project context
+# Big League Service Time Tracker — project context
 
 Handoff notes for Claude Code. This file captures decisions, hard-won
 empirical findings, and open work so a fresh session doesn't have to
 rediscover any of it.
 
+- **Name:** "Big League Service Time Tracker" (renamed 2026-08-23). The repo
+  and the Pages URL still say `MLB-Service-Time-Tracker` -- renaming a repo
+  changes the live URL and breaks every existing link, so that was left
+  alone deliberately. The rename is about the *product name*: "MLB Service
+  Time Tracker" reads like an official MLB product, and MLB is a trademark.
+  Descriptive uses of "MLB" stay everywhere they are accurate -- "MLB Stats
+  API", "estimated MLB service time", "not an official MLB/MLBPA figure" --
+  because that is honest attribution, and stripping it would make the site
+  less clear rather than safer. The footer now also states plainly that the
+  project is not affiliated with or endorsed by MLB or the MLBPA.
 - **Repo:** `RainbowMang0/MLB-Service-Time-Tracker`
 - **Live site:** https://rainbowmang0.github.io/MLB-Service-Time-Tracker/
 - **Hosting:** GitHub Pages, `main` branch, `/docs` folder
