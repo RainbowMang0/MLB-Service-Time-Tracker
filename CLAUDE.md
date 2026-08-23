@@ -1248,6 +1248,70 @@ again:
    credited days are not the same unit — compare like with like, or compare
    only the *direction*.
 
+### 15. OPEN: roster time before a player's first game is discarded
+
+**Found 2026-08-23 by probing Daniel Fields**, surfaced by
+`report_debuted_but_empty()` after the rules-version-2 recompute. He debuted
+2015-06-04 and reads **0.000**. His 2015:
+
+```
+2015-06-02  mlb  START  Detroit Tigers recalled Daniel Fields from Toledo Mud Hens.
+2015-06-04  mlb  STOP   Detroit Tigers optioned CF Daniel Fields to Toledo Mud Hens.
+```
+
+He was on the roster from 06-02 and earned two or three days. He is credited
+none, and `build_global_active_intervals` returns no intervals at all.
+
+**The cause is not `accrual_floor`.** Relaxing the floor changes nothing,
+because carry-in drops the transaction before the builder ever sees it:
+
+```python
+if t.date <= horizon_end
+and (presume_active_from is None or t.date >= presume_active_from)
+```
+
+Every row dated before the debut is filtered out. That guard is right for a
+pre-debut **stop** — the reason it exists — but it also discards the
+**start** that actually put him on the roster.
+
+**Prevalence is high and the cost per player is small.** Of the 1,331 cached
+rostered players with a debut date, **744 (56%) have an MLB roster start
+before their debut**, almost always one day before:
+
+```
+A.J. Puk            debut 2019-08-21   selected 2019-08-20   (+1d)
+Andrew Vaughn       debut 2021-04-02   selected 2021-04-01   (+1d)
+Alec Burleson       debut 2022-09-08   recalled 2022-09-07   (+1d)
+```
+
+Service time is roster time, not playing time, so each of those days is
+genuinely owed. It only becomes visible as a **zero** when the whole stint
+falls before the first game, as Fields's did.
+
+⚠️ **The obvious fix is dangerous and must not be shipped without
+measurement.** Moving the floor back to the earliest pre-debut start would
+have used this row for Andrew Vaughn:
+
+```
+2019-06-28   Chicago White Sox signed 1B Andrew Vaughn.
+```
+
+His draft signing, two years before his debut, named an MLB club and reads
+as a start. That is finding #2 all over again, and the debut floor is
+precisely what stops it.
+
+A safe fix has to distinguish a roster move (selected / recalled /
+activated) from a signing, and probably bound how far before the debut it
+will reach. Both are heuristics with magic numbers, which is the shape of
+every rule this project has had to revert. **Measure on the cached
+population before believing any of it**, and note that the Baseball
+Reference residuals are currently mixed (±1-2 days, 8 exact), *not* a clean
+systematic under-credit — so whatever is happening is not simply "everyone
+is short by a day".
+
+Two players currently read 0.000 because of this, both reported by
+`report_debuted_but_empty()`: Elih Villanueva and Daniel Fields.
+
 ### Recomputing after a rules change: `rules_version`
 
 A rules change has no natural completion marker, and the two obvious ones
