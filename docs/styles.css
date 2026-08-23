@@ -468,6 +468,8 @@ tbody td.player-name {
   max-width: 80ch;
 }
 .page-footer p { margin: 0 0 6px; }
+.page-footer a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+.page-footer a:hover, .page-footer a:focus-visible { border-bottom-color: var(--accent); }
 
 @media (max-width: 640px) {
   .page-header { flex-direction: row; align-items: center; }

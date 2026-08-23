@@ -4,6 +4,19 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Big League Service Time Tracker</title>
+
+<!-- Shared links were rendering as a bare URL, which for a niche project is
+     the main way anyone finds it. No og:image: there is no artwork to point
+     at, and a broken image reference is worse than a text-only card. -->
+<meta name="description" content="Estimated major league service time for every player on a 40-man roster, plus a historical log of players who have dropped off one. Reconstructed daily from public roster transactions — 172 days credits a year, 3.000 reaches arbitration, 6.000 reaches free agency." />
+<meta name="theme-color" content="#f9f9f7" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#131313" media="(prefers-color-scheme: dark)" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Big League Service Time Tracker" />
+<meta property="og:description" content="Estimated major league service time for every player on a 40-man roster, plus a historical log of previous players. Reconstructed daily from public roster transactions." />
+<meta property="og:url" content="https://rainbowmang0.github.io/MLB-Service-Time-Tracker/" />
+<meta name="twitter:card" content="summary" />
+
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -99,8 +112,12 @@
       <p>
         Data source: MLB Stats API (public, unofficial endpoint). Service time is
         computed from public roster transaction records and is an estimate, not
-        an official MLB/MLBPA figure. See the project README for methodology and
-        known limitations.
+        an official MLB/MLBPA figure. The
+        <a href="https://github.com/RainbowMang0/MLB-Service-Time-Tracker#readme"
+           rel="noopener">project README</a>
+        documents the methodology and the known limitations, and the
+        <a href="https://github.com/RainbowMang0/MLB-Service-Time-Tracker"
+           rel="noopener">source code</a> is public.
       </p>
       <p>
         This is an independent project. It is not affiliated with, endorsed by,
