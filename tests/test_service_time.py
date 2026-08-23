@@ -1194,6 +1194,29 @@ def test_the_guard_is_inert_on_a_first_run():
     check("a healthy first run passes", not check_run_is_sane(1360, 0, 0))
 
 
+def test_a_debuted_player_credited_nothing_is_reported():
+    """
+    A player who appeared in a major league game was on a roster that day, so
+    zero credited days means an interval failed to open. Elih Villanueva
+    debuted and last played on 2011-06-15 and reads zero.
+    """
+    from update_service_time import report_debuted_but_empty
+
+    db = {
+        "1": {"name": "Debuted But Empty", "mlb_debut": "2011-06-15", "service_days_total": 0},
+        "2": {"name": "Normal", "mlb_debut": "2011-06-15", "service_days_total": 40},
+        # Correctly zero: his whole career predates the computed window.
+        "3": {"name": "Too Early", "mlb_debut": "1998-04-01", "service_days_total": 0},
+        # Never debuted, so nothing is owed him.
+        "4": {"name": "Never Debuted", "mlb_debut": None, "service_days_total": 0},
+    }
+    found = {p["name"] for p in report_debuted_but_empty(db)}
+    check("the empty debut is reported", "Debuted But Empty" in found)
+    check("a normal player is not", "Normal" not in found)
+    check("nor is a pre-window career", "Too Early" not in found)
+    check("nor is a player who never debuted", "Never Debuted" not in found)
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -1252,5 +1275,6 @@ if __name__ == "__main__":
     test_a_roster_that_collapses_overnight_is_refused()
     test_widespread_build_failures_are_refused()
     test_the_guard_is_inert_on_a_first_run()
+    test_a_debuted_player_credited_nothing_is_reported()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

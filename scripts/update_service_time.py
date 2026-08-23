@@ -929,6 +929,51 @@ def _write_outputs(db: dict[str, dict]) -> None:
     print(f"Wrote {len(db)} player records to {OUTPUT_FILE}")
     write_index(db, cutoff)
     write_profiles(db)
+    report_debuted_but_empty(db)
+
+
+def report_debuted_but_empty(db: dict[str, dict]) -> list[dict]:
+    """
+    Players who reached the major leagues inside the window this pipeline
+    computes, and were still credited nothing.
+
+    A player who appeared in a major league game was on a major league roster
+    that day, so at least one day is owed him. Zero means an interval failed
+    to open or closed too early.
+
+    The debut year matters: a man who debuted in 1998 and was finished by
+    2003 correctly reads zero, because nothing before MIN_TRANSACTION_YEAR is
+    computed at all. Only a debut inside the window makes zero a defect.
+
+    Found by Elih Villanueva, whose whole career was 2011-06-15 -- he debuted
+    and last played on the same day. His season row reads src "read", so the
+    feed did have transactions for him; the one-day interval just came out
+    empty. One record today, which is why this reports rather than fails: it
+    is a signal that a class of interval bug exists, not a reason to throw
+    away a thirty-minute run.
+    """
+    suspects = [
+        p for p in db.values()
+        if p.get("mlb_debut")
+        and int(p["mlb_debut"][:4]) >= MIN_TRANSACTION_YEAR
+        and int(p.get("service_days_total") or 0) == 0
+    ]
+    if not suspects:
+        return []
+    print(
+        f"\n!! {len(suspects)} player(s) debuted inside the computed window "
+        f"(>= {MIN_TRANSACTION_YEAR}) and credited 0 days. A player who "
+        "appeared in a game was rostered that day, so each of these is an "
+        "interval that never opened or closed too early:"
+    )
+    for p in sorted(suspects, key=lambda x: x.get("mlb_debut") or "")[:20]:
+        print(
+            f"     {p.get('name'):<26} debut {p.get('mlb_debut')}"
+            f"  last played {p.get('last_played') or '(still active)'}"
+        )
+    if len(suspects) > 20:
+        print(f"     ... and {len(suspects) - 20} more")
+    return suspects
 
 
 if __name__ == "__main__":
