@@ -154,7 +154,7 @@ job would report success.
    its results.
 3. **Settings → Pages** → *Deploy from a branch*, branch `main`, folder
    `/docs`.
-4. **Actions → "Daily MLB Service Time Update" → Run workflow**, with
+4. **Actions → "Daily Service Time Update" → Run workflow**, with
    **force** checked. The workflow otherwise only does real work at 8am
    Eastern, so an unforced manual run outside that window completes instantly
    without fetching anything.

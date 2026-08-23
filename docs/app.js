@@ -415,7 +415,12 @@
     const historyFilter = el("history-filter") ? el("history-filter").value : "";
 
     let rows = allPlayers.filter((p) => {
-      if (q && !(`${p.name} ${p.team}`.toLowerCase().includes(q))) return false;
+      // `${p.team}` stringifies null into the haystack, so a search for
+      // "null" matched all 4,208 players who are not on a roster -- the club
+      // is deliberately blank for them.
+      if (q && !`${p.name || ""} ${p.team || ""}`.toLowerCase().includes(q)) {
+        return false;
+      }
       if (team && p.team !== team) return false;
       if (!statusMatches(p, status)) return false;
       if (rosterFilter === "current" && !p.on_40_man) return false;
