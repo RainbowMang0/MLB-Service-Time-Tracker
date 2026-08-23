@@ -296,6 +296,16 @@ _IL_PLACEMENT_RE = re.compile(
 )
 
 
+def is_active_start(desc: str) -> bool:
+    """Public alias: does this description put a player ON a major league roster?"""
+    return _is_active_start(desc)
+
+
+def is_active_stop(desc: str) -> bool:
+    """Public alias: does this description take him OFF one?"""
+    return _is_active_stop(desc)
+
+
 def _is_active_start(desc: str) -> bool:
     if _SIGNING_RE.search(desc):
         # A major league signing starts the clock; a minor league one does not.

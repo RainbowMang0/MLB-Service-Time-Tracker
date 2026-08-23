@@ -1124,6 +1124,52 @@ The accepted cost is a player who spent a whole season on the injured list
 without one dated transaction. Rare enough that it does not appear in the
 modern era at all: one season in 2010, four in 2009, none after.
 
+### 13. Finding #6 was real: the clock does bridge a gap spent in the minors
+
+**Confirmed 2026-08-22 by probing Aaron Sanchez.** Finding #6 above — a
+player's clock running through years he spent outside MLB — was marked
+"LIKELY NOT REAL" and superseded. It is real. It was being looked for in the
+wrong place.
+
+His accrual interval, live:
+
+```
+2022-10-03 .. 2026-09-27      <- four years, one open interval
+```
+
+He last pitched in the majors in 2022. What the feed shows since:
+
+```
+2024-08-06   Buffalo Bisons released RHP Aaron Sanchez
+2026-01-27   Kansas City Royals signed him to a MINOR LEAGUE contract
+2026-06-23   Omaha Storm Chasers released RHP Aaron Sanchez
+```
+
+**Both releases are by minor league clubs**, so the MLB-club filter drops
+them and nothing ever closes his interval. The Kansas City row survives the
+filter — it names a major league club — so `career_end`, which fell back to
+"his last transaction of any kind", landed in 2026 and the ceiling never
+bit.
+
+The ceiling was doing exactly what it was written to do. The fallback under
+it was wrong: **a minor league signing is not evidence of a major league
+roster spot.** It now asks when the feed last put him on one, from two
+sources already fetched:
+
+* the last season his year-by-year splits show an appearance
+* the last transaction that is actually a roster event — a start or a stop —
+  which still covers a man who was rostered without appearing
+
+`lastPlayedDate` remains authoritative when the API supplies it; this only
+replaces the fallback for the 1,058 non-rostered players who lack it.
+
+**Scope is not measurable from the stored data**, because the stored data
+has the same blind spot: Sanchez's 2026 season reads `src: "read"` on the
+strength of that minor league signing. At most 218 players are affected (the
+non-rostered players still accruing in the current season); the recompute
+will produce the real figure. No reference player can move — all nineteen
+are on a 40-man, and the ceiling only applies off it.
+
 ### Recomputing after a rules change: `rules_version`
 
 A rules change has no natural completion marker, and the two obvious ones

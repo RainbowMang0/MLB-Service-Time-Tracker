@@ -11,6 +11,8 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "scripts"))
 
 from service_time import (  # noqa: E402
     SeasonWindow,
+    is_active_start,
+    is_active_stop,
     Transaction,
     compute_service_time,
     days_in_intervals,
@@ -1056,6 +1058,49 @@ def test_an_appearance_alone_is_enough_to_keep_a_presumed_season():
     )
 
 
+def test_a_minor_league_signing_does_not_extend_a_career():
+    """
+    Aaron Sanchez, no lastPlayedDate, last major league appearance 2022:
+
+      2024-08-06  Buffalo Bisons released RHP Aaron Sanchez
+      2026-01-27  Kansas City Royals signed him to a MINOR LEAGUE contract
+      2026-06-23  Omaha Storm Chasers released RHP Aaron Sanchez
+
+    Both releases are by minor league clubs, so the club filter drops them
+    and nothing closes his interval. The Kansas City row names a major
+    league club and survives, so the old "last transaction of any kind"
+    fallback put his career end in 2026 -- one open interval from 2022 to
+    today, four years of phantom service.
+
+    A minor league signing is not a roster event, so it must not be what
+    decides when a career ended.
+    """
+    kc = "Kansas City Royals signed free agent RHP X to a minor league contract and invited him to spring training."
+    check("a minor league signing is not a start", is_active_start(kc) is False)
+    check("nor a stop", is_active_stop(kc) is False)
+
+    recall = "Toronto Blue Jays recalled RHP X from Buffalo Bisons."
+    check("an actual roster move still reads as one", is_active_start(recall) is True)
+
+
+def test_the_ceiling_stops_a_player_who_left_for_the_minors():
+    """The interval must not outlive the last major league roster evidence."""
+    seasons = [SeasonWindow(y, dt.date(y, 3, 28), dt.date(y, 10, 1)) for y in range(2022, 2027)]
+    txns = [Transaction(dt.date(2022, 4, 23), "Toronto Blue Jays recalled RHP X from Buffalo Bisons.")]
+    result = compute_service_time(
+        txns, seasons,
+        horizon_end=dt.date(2026, 8, 22),
+        accrual_floor=dt.date(2014, 7, 23),
+        accrual_ceiling=dt.date(2022, 10, 1),   # end of his last major league season
+        presume_active_from_debut=True,
+    )
+    check("he is credited in his last major league season", result.by_season[2022]["credited_days"] > 0)
+    check(
+        "and nothing at all afterwards",
+        all(result.by_season[y]["credited_days"] == 0 for y in range(2023, 2027)),
+    )
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -1104,5 +1149,7 @@ if __name__ == "__main__":
     test_a_player_who_never_debuted_gets_no_presumed_service()
     test_an_inferred_season_needs_something_to_corroborate_it()
     test_an_appearance_alone_is_enough_to_keep_a_presumed_season()
+    test_a_minor_league_signing_does_not_extend_a_career()
+    test_the_ceiling_stops_a_player_who_left_for_the_minors()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

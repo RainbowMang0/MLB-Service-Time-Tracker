@@ -43,6 +43,8 @@ import fetch_mlb_data as mlb  # noqa: E402
 import super_two  # noqa: E402
 from service_time import (  # noqa: E402
     TRANSACTION_COVERAGE_START_YEAR,
+    is_active_start,
+    is_active_stop,
     SeasonWindow,
     Transaction,
     compute_service_time,
@@ -363,13 +365,53 @@ def build_player_record(
     # who last pitched in 2010, with 20.030 years. Cap accrual at the end of
     # the last season he appeared in. `lastPlayedDate` is the authoritative
     # source; his final transaction is the fallback if the API omits it.
+    #
+    # `lastPlayedDate` is authoritative WHEN THE API SUPPLIES IT, and the
+    # fallback used to be "his final transaction of any kind". That fallback
+    # is badly wrong for a player who leaves MLB for the minors:
+    #
+    #   Aaron Sanchez, no lastPlayedDate, last major league appearance 2022.
+    #     2024-08-06  Buffalo Bisons released RHP Aaron Sanchez
+    #     2026-01-27  Kansas City Royals signed him to a MINOR LEAGUE contract
+    #     2026-06-23  Omaha Storm Chasers released RHP Aaron Sanchez
+    #
+    #   Both releases are by minor league clubs, so the MLB-club filter drops
+    #   them and nothing ever closes his interval. The Kansas City row is
+    #   kept (it names a major league club), so the old fallback put his
+    #   career end in 2026 and the ceiling never bit. He carried one open
+    #   interval from 2022-10-03 to today: FOUR YEARS of phantom service.
+    #
+    # This is finding #6 -- the clock bridging a gap spent outside MLB --
+    # which the notes had marked "likely not real". It is real; it was just
+    # being looked for in the wrong place.
+    #
+    # The fallback now asks when the feed last put him on a MAJOR LEAGUE
+    # roster, from two sources that are already fetched:
+    #
+    #   * the last season his year-by-year splits show an appearance
+    #   * the last transaction that is actually a roster event (a start or a
+    #     stop), which covers a man who was rostered without appearing
+    #
+    # A minor league signing is neither, so it no longer extends a career.
     last_played = bio.get("lastPlayedDate")
     career_end: dt.date | None = None
     if not currently_rostered:
         if last_played:
             career_end = dt.date.fromisoformat(last_played)
-        elif transactions:
-            career_end = max(t.date for t in transactions)
+        else:
+            candidates = []
+            if season_teams_bio:
+                candidates.append(dt.date(max(season_teams_bio), 12, 31))
+            roster_events = [
+                t.date for t in transactions
+                if is_active_start(t.description) or is_active_stop(t.description)
+            ]
+            if roster_events:
+                candidates.append(max(roster_events))
+            if candidates:
+                career_end = max(candidates)
+            elif transactions:
+                career_end = max(t.date for t in transactions)
 
     debut_year = debut_date.year if debut_date else MIN_TRANSACTION_YEAR
     first_year = max(debut_year, MIN_TRANSACTION_YEAR)
