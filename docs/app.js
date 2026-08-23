@@ -241,6 +241,27 @@
   // reads as a defect rather than as a squad of prospects.
   const hasService = (p) => Number(p.service_days_total) > 0;
 
+  /**
+   * Where a player sits on the clock, for sorting the Status column.
+   *
+   * The column has a data-key and so has always LOOKED sortable -- a caret,
+   * a hover state, an aria-sort after clicking. It did nothing: `status` is
+   * computed by classify() and is not a field on a player, so every
+   * comparison read undefined against undefined, returned 0, and left the
+   * order untouched.
+   *
+   * The order below follows classify()'s own branch order, so the column
+   * sorts into exactly the groups it displays.
+   */
+  function statusRank(p) {
+    if (!p.on_40_man) return 5;
+    if (!hasService(p)) return 4;
+    if (p.free_agent_eligible) return 0;
+    if (p.super_two_candidate) return 1;
+    if (p.arbitration_eligible) return 2;
+    return 3;
+  }
+
   function statusMatches(p, filterValue) {
     if (filterValue === "no-service") return !hasService(p);
     if (!hasService(p)) return false;
@@ -404,8 +425,18 @@
     });
 
     rows.sort((a, b) => {
-      let av = a[sortKey];
-      let bv = b[sortKey];
+      let av;
+      let bv;
+      if (sortKey === "status") {
+        av = statusRank(a);
+        bv = statusRank(b);
+        // Within a group, most service time first -- the useful reading of
+        // "show me everyone approaching free agency".
+        if (av === bv) return b.service_days_total - a.service_days_total;
+      } else {
+        av = a[sortKey];
+        bv = b[sortKey];
+      }
       if (typeof av === "boolean") { av = av ? 1 : 0; bv = bv ? 1 : 0; }
       if (typeof av === "string") { av = av.toLowerCase(); bv = (bv || "").toLowerCase(); }
       if (av < bv) return sortDir === "asc" ? -1 : 1;
@@ -568,7 +599,8 @@
           sortDir = sortDir === "asc" ? "desc" : "asc";
         } else {
           sortKey = effectiveKey;
-          sortDir = key === "name" || key === "team" ? "asc" : "desc";
+          sortDir =
+            key === "name" || key === "team" || key === "status" ? "asc" : "desc";
         }
         currentPage = 1;
         updateSortIndicators();
