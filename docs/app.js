@@ -525,13 +525,13 @@
           <td class="player-name" style="${clubStyle(club)}"><button type="button" class="player-link" data-player-id="${esc(
             p.id
           )}">${esc(p.name) || "—"}</button>${partial}</td>
+          <td class="num-col svc-col">${serviceCell}</td>
           <td>${
             p.on_40_man
               ? `${club ? `<span class="club-dot" style="${clubStyle(club)}"></span>` : ""}${esc(p.team) || "—"}`
               : "—"
           }</td>
           <td>${esc(p.position) || "—"}</td>
-          <td class="num-col svc-col">${serviceCell}</td>
           <td><span class="badge ${status.cls}">${status.label}</span></td>
         </tr>`;
       })
