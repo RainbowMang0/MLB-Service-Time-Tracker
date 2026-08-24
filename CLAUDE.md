@@ -50,12 +50,17 @@ scripts/fetch_mlb_data.py      thin statsapi.mlb.com client, polite rate limitin
 scripts/service_time.py        the service-time math + all domain rules
 scripts/update_service_time.py daily job: 40-man rosters -> compute -> merge -> JSON
 scripts/backfill_history.py    resumable backfill of non-rostered players (2009+)
-scripts/validate_service_time.py  --as-of validation against known Baseball Reference figures
 scripts/super_two.py           the real Super Two cutoff, from the whole population
-scripts/validate_super_two.py  --  checked against published cutoffs (offline)
-scripts/probe_coverage.py      live API probe for finding #9 (run via Actions)
-scripts/generate_demo_data.py  bundled sample data generator (no network)
-tests/test_service_time.py     57 tests, no pytest needed: `python tests/test_service_time.py`
+scripts/commit_data.sh         commits generated data, surviving a concurrent push
+
+scripts/validate_service_time.py   --as-of, against hand-entered Baseball Reference figures
+scripts/validate_against_rosters.py  day-by-day against MLB's own historical rosters
+scripts/validate_super_two.py      against published cutoffs (offline)
+scripts/validate_published.py      do the three published files agree? (offline)
+scripts/probe_player.py            everything the model knows about one player
+scripts/probe_coverage.py          live API probe for finding #1 (run via Actions)
+scripts/generate_demo_data.py      bundled sample data generator (no network)
+tests/test_service_time.py     123 tests, no pytest needed: `python tests/test_service_time.py`
 docs/                          the static site (index.html, styles.css, app.js)
 docs/data/service_time.json    the database: every field, one object per player
 docs/data/index.json           what the browser downloads for the table (0.21 MB)
@@ -64,6 +69,8 @@ data/cache/transactions/       per-player transaction cache (rostered players on
 data/backfill_state.json       resumable backfill progress
 .github/workflows/update-service-time.yml   daily 8am ET
 .github/workflows/backfill-history.yml      manual, batched
+.github/workflows/validate.yml              manual: rosters | reference | super-two
+                                            | player | published
 .github/workflows/probe-coverage.yml        manual, read-only diagnostic
 ```
 
@@ -1382,41 +1389,43 @@ resumable across batches, which matters for a job that takes hours.
 
 ### Immediate next steps
 
-0. **Measure how common finding #6 is.** Re-run backfill batch 1 with the
-   instrumented code and read the `!! WARNING: N record(s) credit more
-   service time than their season window allows` block. That number is
-   currently unknown and decides whether #6 is a curiosity or a rewrite.
-   The 1,000 players already backfilled predate `last_played` /
-   `accrual_ceiling`, so they cannot be checked in place — they need
-   re-running (delete their ids from `processed_ids`, or revert the two
-   batch commits and start over; ~15 min per batch).
+**Everything the previous version of this section listed is done** (the mass
+backfill, the `full_refresh` cache rebuild, the Lindor reference figure, and
+finding #6, which finding #13 resolved). As of 2026-08-23 the database is
+complete and both gates are green, so what follows is genuinely open work
+rather than a queue.
 
-1. **Run the historical backfill.** Actions → "Backfill Historical Players" →
-   batch 500 → re-trigger until it reports zero remaining. ~4,000 players to
-   add, ~8 runs. Two batches are done (1,000 players). The accrual-ceiling fix
-   is verified live (finding #4); the open question is #6. Failures are cheap:
-   state is committed per batch and a retry resumes.
-2. **Then run the daily workflow once with `full_refresh` checked**, to
-   rebuild the cache with team IDs and activate the MLB-club filter.
-3. **Validate.** `scripts/validate_service_time.py` now exists:
-   `build_player_record()` takes a `horizon_end` override, so it can compute
-   what a player's service time WOULD HAVE READ as of a past date (e.g. a
-   prior Opening Day) rather than only "as of today." Compare that against
-   Baseball Reference's dated snapshot figure, which is a fixed target
-   rather than a moving one. Doing this required a real bug fix along the way:
-   `build_global_active_intervals()` previously only used `horizon_end` to
-   cap the trailing *open* interval — a stop transaction (option/DFA/release)
-   dated *after* `horizon_end` would still truncate an earlier interval that,
-   as of that date, hadn't ended yet. It now drops every transaction dated
-   after `horizon_end` before building intervals at all. Covered by a new
-   regression test (`test_as_of_past_date_ignores_later_transactions`).
+1. **Finding #15 — roster time before a debut.** The best-understood
+   remaining defect: 56% of players are short by about a day, and two read a
+   hard 0.000. The mechanism is known and written up; what is missing is a
+   safe rule and a measurement of it. Note the trap recorded there — the
+   obvious fix credits Andrew Vaughn two years from a draft signing. Needs
+   `SERVICE_TIME_RULES_VERSION` → 3 and a full recompute (about 2.5 hours in
+   four batches), so it is worth batching with any other rules change.
 
-   **Status:** the reference file has 19 rows, 18 with figures entered
-   (2026-08-22); only Lindor is blank. Fill in the rest by hand from the players' Baseball Reference
-   pages — deliberately not scraped — and run
-   `python scripts/validate_service_time.py`. Requires network access to the
-   live MLB Stats API, so it can't run in this offline sandbox — run it from
-   Actions → "Validate Service Time" → reference.
+2. **Diagnose David Huff.** He is the single largest remaining
+   under-credit — 16 of Yankees 2014's 36 wrong judgements, with `agree=0`,
+   meaning the model never once agrees with the roster about him. He was
+   claimed off waivers and bounced between clubs mid-season. One player
+   accounting for 44% of a club-season's error usually means one more
+   identifiable rule, not noise. `Actions → Validate Service Time → player`,
+   id 453307, team 147, season 2014.
+
+3. **Fill `data/reference_super_two.json`.** Every row is still `published:
+   null`, so `validate_super_two.py` reports the computed cutoffs and passes
+   nothing. The figures land in the 2.11-2.14 band where reported cutoffs
+   historically fall, which is encouraging and is *not* evidence — that is
+   exactly the shape of every belief this project has had to revert. Needs
+   published MLBTR cutoffs entered by hand.
+
+4. **Owner decisions, recorded rather than pending:** no LICENSE file (so
+   the code is readable but not reusable); advertising deferred until
+   ~10,000 pageviews a month; player photos declined on copyright grounds.
+   See "Deliberately not done".
+
+5. **There is no analytics on the site**, so its traffic is unknown. That is
+   the input every question about advertising depends on. A privacy-friendly
+   counter would answer it without a consent banner.
 
 ### Known limitations
 
