@@ -1353,6 +1353,66 @@ is short by a day".
 Two players currently read 0.000 because of this, both reported by
 `report_debuted_but_empty()`: Elih Villanueva and Daniel Fields.
 
+### 16. OPEN: a trade is invisible to the parser
+
+**Found 2026-08-24 by probing David Huff**, the largest single error left in
+the roster gate — 16 of Yankees 2014's 36 wrong judgements, with `agree=0`:
+the model never once agreed with the roster about him.
+
+```
+2014-06-06  mlb  STOP   San Francisco Giants designated LHP David Huff for assignment.
+2014-06-11  mlb    .    San Francisco Giants traded LHP David Huff to New York Yankees for cash.
+```
+
+The DFA closes his interval on 06-05. The trade that put him on the Yankees
+is not a start keyword, so nothing reopens it, and he is credited nothing for
+a season MLB's own roster shows him **active** (`A`) on every sampled date
+from 06-14 to 09-27.
+
+CLAUDE.md already noted this shape for Ichiro in 2012 — "he arrived by trade
+and stayed, and *traded* is not a start keyword" — where it was masked
+because he later re-signed as a free agent and that *is* a start. Huff has no
+such second event, so it is fully exposed.
+
+**Measured over the 65,160-row cache:**
+
+| | |
+|---|---|
+| `traded` rows | **1,258**, across 751 players (over half the rostered population) |
+| surviving the MLB-club filter | 1,239 |
+| currently read as a start | **0** |
+| currently read as a stop | **0** |
+
+So 1,239 roster-relevant rows are invisible to the parser entirely.
+
+⚠️ **"traded = START" is NOT a safe rule**, and the measurement says why.
+Of those rows, grouped by what happened in the ten days before:
+
+| | |
+|---|---|
+| after a DFA — a start is correct (Huff's shape) | 166 |
+| after an option — a start is **wrong**, he goes to the new club's minors | 60 |
+| neither | 1,013 |
+
+A blanket start keyword fixes the 166 and breaks at least the 60. The 1,013
+depend on what state the player was in, which this measurement does not
+resolve — a trade of an already-active player is a harmless no-op, a trade of
+an outrighted one is not. So the damage is *at least* 60 and not bounded by
+it.
+
+The distinction that matters is **why the clock was stopped**: a DFA'd player
+who is traded joins the new club's 40-man, an optioned player who is traded
+reports to the new club's affiliate. `build_global_active_intervals` tracks
+only active/not-active, not the reason, so a correct rule needs the state
+machine to carry the last stop's *kind*. That is a real change, and it needs
+`SERVICE_TIME_RULES_VERSION` → 3, a full recompute and a re-run of both
+gates.
+
+**Direction is under-crediting**, which is the safe side, and the gates pass
+without it — so this is the best-understood remaining defect rather than an
+urgent one. It is worth batching with finding #15, since both need the same
+recompute.
+
 ### Recomputing after a rules change: `rules_version`
 
 A rules change has no natural completion marker, and the two obvious ones
@@ -1403,13 +1463,11 @@ rather than a queue.
    `SERVICE_TIME_RULES_VERSION` → 3 and a full recompute (about 2.5 hours in
    four batches), so it is worth batching with any other rules change.
 
-2. **Diagnose David Huff.** He is the single largest remaining
-   under-credit — 16 of Yankees 2014's 36 wrong judgements, with `agree=0`,
-   meaning the model never once agrees with the roster about him. He was
-   claimed off waivers and bounced between clubs mid-season. One player
-   accounting for 44% of a club-season's error usually means one more
-   identifiable rule, not noise. `Actions → Validate Service Time → player`,
-   id 453307, team 147, season 2014.
+2. **Finding #16 — a trade is invisible to the parser.** Diagnosed
+   2026-08-24 (David Huff); 1,239 roster-relevant `traded` rows read as
+   neither a start nor a stop. The naive fix is measured and harmful — see
+   the finding. A correct one needs the interval builder to track *why* the
+   clock stopped, so it pairs naturally with #15 and the same recompute.
 
 3. **Fill `data/reference_super_two.json`.** Every row is still `published:
    null`, so `validate_super_two.py` reports the computed cutoffs and passes
