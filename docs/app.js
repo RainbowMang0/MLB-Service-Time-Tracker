@@ -91,6 +91,20 @@
   const clubStyle = (color) =>
     color ? `--club:${color};--club-d:${lighten(color, 0.16)}` : "";
 
+  // Every rostered player also has a static page at /p/<id>-<slug>.html.
+  // The table links to it with a real href so a crawler can follow it --
+  // hash routing is invisible to search engines, which is why those pages
+  // exist at all. Clicking still opens the overlay; the link is the
+  // fallback, and middle-click or "open in new tab" now work too.
+  const playerSlug = (name) =>
+    String(name || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "") || "player";
+
+  const playerHref = (p) =>
+    p.on_40_man ? `p/${p.id}-${playerSlug(p.name)}.html` : null;
+
   // Set from the payload. Super Two is no longer guessed at in the browser:
   // it depends on where a player ranks in the league-wide 2-3 year class, so
   // the pipeline computes it (see scripts/super_two.py) and ships a flag.
@@ -520,11 +534,14 @@
         // stored club is stale by construction), so the stripe appears on
         // exactly the rows that assert one.
         const club = p.on_40_man ? CLUB_BY_NAME.get(p.team) : null;
+        const href = playerHref(p);
         return `
         <tr>
-          <td class="player-name" style="${clubStyle(club)}"><button type="button" class="player-link" data-player-id="${esc(
-            p.id
-          )}">${esc(p.name) || "—"}</button>${partial}</td>
+          <td class="player-name" style="${clubStyle(club)}">${
+            href
+              ? `<a class="player-link" href="${esc(href)}" data-player-id="${esc(p.id)}">${esc(p.name) || "—"}</a>`
+              : `<button type="button" class="player-link" data-player-id="${esc(p.id)}">${esc(p.name) || "—"}</button>`
+          }${partial}</td>
           <td class="num-col svc-col">${serviceCell}</td>
           <td>${
             p.on_40_man
@@ -1017,6 +1034,12 @@
       tbody.addEventListener("click", (event) => {
         const trigger = event.target.closest("[data-player-id]");
         if (!trigger) return;
+        // Let the browser have modified clicks: ctrl/cmd/shift/middle should
+        // open the static page in a tab, not the overlay.
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) {
+          return;
+        }
+        event.preventDefault();
         const id = Number(trigger.getAttribute("data-player-id"));
         if (!Number.isFinite(id)) return;
         // pushState, not replaceState: this is what gives Back something to

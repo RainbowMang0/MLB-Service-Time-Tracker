@@ -89,4 +89,4 @@ jobs:
           # throws all of it away. See the header of that script.
           scripts/commit_data.sh \
             "chore: daily service time update ($(date -u +%F))" \
-            docs/data data/cache
+            docs/data docs/p docs/sitemap.xml docs/robots.txt data/cache

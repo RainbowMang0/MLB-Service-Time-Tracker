@@ -41,6 +41,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
 import fetch_mlb_data as mlb  # noqa: E402
 import super_two  # noqa: E402
+from write_player_pages import write_player_pages  # noqa: E402
 from service_time import (  # noqa: E402
     roster_start_before_debut,
     TRANSACTION_COVERAGE_START_YEAR,
@@ -950,6 +951,9 @@ def _write_outputs(db: dict[str, dict]) -> None:
     print(f"Wrote {len(db)} player records to {OUTPUT_FILE}")
     write_index(db, cutoff)
     write_profiles(db)
+    # Crawlable static pages. Hash routing is invisible to search engines, so
+    # without these no player could be found by searching for him.
+    write_player_pages(db, output["generated_at"])
     report_debuted_but_empty(db)
 
 

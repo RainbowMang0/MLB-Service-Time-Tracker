@@ -88,4 +88,4 @@ jobs:
           # discarding the batch.
           scripts/commit_data.sh \
             "chore: historical backfill batch ($(date -u +%F))" \
-            docs/data data/backfill_state.json
+            docs/data docs/p docs/sitemap.xml docs/robots.txt data/backfill_state.json
