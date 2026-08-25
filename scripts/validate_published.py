@@ -35,6 +35,8 @@ WHAT IS CHECKED
   * every player has a profile, in the shard his id actually maps to
   * each profile's total matches the database
   * each profile's season rows sum to that total
+  * every absolute URL in every published page matches the site's own
+    SITE_URL, and every internal link resolves to a file that exists
 
 Offline: reads only what is on disk, so it validates exactly what would be
 served. Exits non-zero on any disagreement.
@@ -47,6 +49,7 @@ from __future__ import annotations
 import glob
 import json
 import pathlib
+import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -130,8 +133,71 @@ def check_published() -> list[str]:
     return problems
 
 
+def check_links() -> list[str]:
+    """Every published URL points at this site, and every internal link resolves.
+
+    This is the check that makes a domain move safe. SITE_URL is derived from
+    docs/CNAME, so the generated pages follow a new domain automatically -- but
+    a canonical or og:url left behind in a HAND-EDITED file does not, and a
+    stale canonical is worse than none: it tells a search engine the real page
+    lives at a URL that no longer serves it.
+
+    The link half catches the other silent failure: slug() and playerSlug()
+    drifting apart, or a club page linking to a player who has dropped off a
+    40-man. Both produce a 404 that nothing else would notice.
+    """
+    sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+    from write_player_pages import SITE_URL
+
+    problems: list[str] = []
+    docs = pathlib.Path(__file__).resolve().parents[1] / "docs"
+    site_root = f"{SITE_URL}/"
+
+    # 1. Hand-edited files that carry an absolute URL of their own.
+    for name in ("index.html",):
+        page = docs / name
+        if not page.exists():
+            continue
+        for url in re.findall(r'(?:og:url" content|rel="canonical" href)="([^"]+)"',
+                              page.read_text()):
+            if not url.startswith(site_root):
+                problems.append(
+                    f"docs/{name}: og:url/canonical is {url!r}, but the site is "
+                    f"served from {site_root!r} -- update it by hand "
+                    "(generated pages follow docs/CNAME on their own)"
+                )
+
+    # 2. Generated pages: absolute URLs must be ours, relative links must resolve.
+    generated = sorted(docs.glob("p/*.html")) + sorted(docs.glob("t/*.html"))
+    missing_targets: set[str] = set()
+    foreign = 0
+    for page in generated:
+        text = page.read_text()
+        for url in re.findall(r'(?:href|content)="(https?://[^"]+)"', text):
+            if url.startswith("https://github.com/"):
+                continue  # the methodology link, deliberately off-site
+            if not url.startswith(site_root):
+                foreign += 1
+                if foreign <= 5:
+                    problems.append(f"{page.relative_to(docs.parent)}: foreign URL {url!r}")
+        for href in re.findall(r'href="((?!https?:|#|mailto:)[^"]+)"', text):
+            target = (page.parent / href).resolve()
+            if target.is_dir() or href.endswith("/"):
+                continue  # "../" is the index; the server resolves it
+            if not target.exists():
+                missing_targets.add(f"{page.relative_to(docs.parent)} -> {href}")
+
+    for broken in sorted(missing_targets)[:10]:
+        problems.append(f"dead internal link: {broken}")
+    if len(missing_targets) > 10:
+        problems.append(f"... and {len(missing_targets) - 10} more dead internal links")
+
+    print(f"pages {len(generated)} | dead links {len(missing_targets)} | site {site_root}")
+    return problems
+
+
 def main() -> None:
-    problems = check_published()
+    problems = check_published() + check_links()
     if not problems:
         print("\nAll three published files agree.")
         return

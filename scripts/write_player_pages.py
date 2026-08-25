@@ -40,12 +40,52 @@ import json
 import pathlib
 import re
 import unicodedata
+import urllib.parse
 import shutil
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 PAGE_DIR = DOCS / "p"
-SITE_URL = "https://rainbowmang0.github.io/MLB-Service-Time-Tracker"
+CLUB_DIR = DOCS / "t"
+
+DEFAULT_SITE_URL = "https://rainbowmang0.github.io/MLB-Service-Time-Tracker"
+
+
+def _site_url() -> str:
+    """Where this site is served from.
+
+    Read from docs/CNAME when it exists, because that is the file GitHub Pages
+    itself reads to decide the domain -- so the two can never disagree. Moving
+    to a custom domain is then exactly one action, `echo example.com >
+    docs/CNAME`, with no source edit to forget: every canonical URL, og:url,
+    sitemap entry and JSON-LD url below is derived from this.
+
+    A CNAME holds a bare hostname, never a scheme or a path. GitHub Pages
+    serves a custom domain from the root, which is why _base_path() collapses
+    to "/" for one and stays "/MLB-Service-Time-Tracker/" without.
+    """
+    cname = DOCS / "CNAME"
+    if cname.exists():
+        host = cname.read_text().strip().splitlines()[0].strip().rstrip("/")
+        if host:
+            return f"https://{host}"
+    return DEFAULT_SITE_URL
+
+
+def _base_path(site_url: str) -> str:
+    """The absolute path prefix the site is served under, with a trailing slash.
+
+    404.html needs this: GitHub Pages serves it for unknown paths anywhere on
+    the site, including under /p/, so its links cannot be relative. A custom
+    domain is served from the root, so this collapses to "/" the moment
+    docs/CNAME appears.
+    """
+    path = urllib.parse.urlsplit(site_url).path.rstrip("/")
+    return f"{path}/" if path else "/"
+
+
+SITE_URL = _site_url()
+BASE_PATH = _base_path(SITE_URL)
 
 FULL_YEAR_DAYS = 172
 
@@ -148,6 +188,149 @@ def _season_rows(player: dict, team_names: dict[int, str]) -> str:
     )
 
 
+CLUB_DIR_NAME = "t"
+
+
+def club_path(club: str) -> str:
+    return f"{CLUB_DIR_NAME}/{slug(club)}.html"
+
+
+def _crumbs(*trail: tuple[str, str | None]) -> str:
+    """Breadcrumb markup. Each item is (label, href); href None = current page."""
+    parts = []
+    for label, href in trail:
+        parts.append(f'<a href="{href}">{label}</a>' if href else f"<b>{label}</b>")
+    return '<nav class="crumbs">' + '<span>/</span>'.join(parts) + "</nav>"
+
+
+def _breadcrumb_ld(trail: list[tuple[str, str]]) -> dict:
+    return {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": i, "name": name, "item": url}
+            for i, (name, url) in enumerate(trail, start=1)
+        ],
+    }
+
+
+def _ld_script(graph: list[dict]) -> str:
+    payload = json.dumps(
+        {"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False
+    ).replace("</", "<\\/")  # </script> in a string would end the block early
+    return f'<script type="application/ld+json">{payload}</script>'
+
+
+def render_club(club: str, players: list[dict], generated_at: str) -> str:
+    """A club's 40-man roster, by service time.
+
+    These exist so the player pages are not crawl leaves. Before them, every
+    page was reachable only from the index and linked only back to it, which
+    is the flattest possible structure and gives a crawler no reason to treat
+    any of it as a coherent section. It is also the query people actually
+    type -- "phillies arbitration eligible" is far commoner than any single
+    player's name.
+    """
+    name = html.escape(club)
+    url = f"{SITE_URL}/{club_path(club)}"
+    total = len(players)
+    fa = sum(1 for p in players if p.get("free_agent_eligible"))
+    arb = sum(1 for p in players if p.get("arbitration_eligible"))
+    s2 = sum(1 for p in players if p.get("super_two_candidate"))
+
+    # Not "all N players on the 40-man": a club's 40-man can hold more than 40,
+    # because players on the 60-day IL stay on it without counting against the
+    # limit. The count is real -- it is what MLB's own roster endpoint returns
+    # -- but phrased as a total it reads like a contradiction.
+    desc = (
+        f"Estimated major league service time for the {club} 40-man roster — "
+        f"{total} players, {fa} free agency eligible, {arb} arbitration eligible. "
+        "Reconstructed from public roster transactions; not an official "
+        "MLB/MLBPA figure."
+    )
+
+    rows = "".join(
+        f"<tr><td><a href=\"../{page_path(p)}\">{html.escape(p.get('name') or '')}</a></td>"
+        f"<td>{html.escape(p.get('position') or '—')}</td>"
+        f"<td class='n'>{html.escape(p.get('service_time') or '0.000')}</td>"
+        f"<td class='n'>{p.get('service_days_total', 0)}</td>"
+        f"<td>{html.escape(_status(p))}</td></tr>"
+        for p in sorted(
+            players, key=lambda p: (-int(p.get("service_days_total") or 0), p.get("name") or "")
+        )
+    )
+
+    graph = [
+        {
+            "@type": "SportsTeam",
+            "name": club,
+            "url": url,
+            "description": desc,
+        },
+        _breadcrumb_ld([
+            ("Big League Service Time Tracker", f"{SITE_URL}/"),
+            (club, url),
+        ]),
+    ]
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{name} service time — 40-man roster | Big League Service Time Tracker</title>
+<meta name="description" content="{html.escape(desc)}" />
+<link rel="canonical" href="{url}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{name} — service time, 40-man roster" />
+<meta property="og:description" content="{html.escape(desc)}" />
+<meta property="og:url" content="{url}" />
+<meta name="twitter:card" content="summary" />
+{_ld_script(graph)}
+<link rel="stylesheet" href="../styles.css" />
+<link rel="stylesheet" href="../page.css" />
+<script>
+  try {{
+    var t = localStorage.getItem("mlb-service-time-theme");
+    if (t) document.documentElement.setAttribute("data-theme", t);
+  }} catch (e) {{}}
+</script>
+</head>
+<body>
+<div class="viz-root"><div class="wrap">
+  {_crumbs(("All players", "../"), (name, None))}
+  <h1>{name} — service time</h1>
+  <p class="subtitle">Every player on the 40-man roster, most service time first.</p>
+
+  <div class="facts">
+    <div><span>Players tracked</span><b class="big">{total}</b></div>
+    <div><span>Free agency eligible</span>{fa}</div>
+    <div><span>Arbitration eligible</span>{arb}</div>
+    <div><span>Super Two track</span>{s2}</div>
+  </div>
+
+  <table><thead><tr><th>Player</th><th>Pos</th><th class="n">Service time</th>
+  <th class="n">Days</th><th>Status</th></tr></thead><tbody>{rows}</tbody></table>
+
+  <p class="foot">
+    172 days credit a full year, so a season adds at most 1.000 no matter how
+    long a player is on a roster. 3.000 years reaches salary arbitration and
+    6.000 reaches free agency.
+    <br /><br />
+    These figures are <strong>estimates</strong> reconstructed from public
+    roster transaction records. They are not official MLB or MLBPA figures —
+    those are not published. See the
+    <a href="https://github.com/RainbowMang0/MLB-Service-Time-Tracker#readme">methodology</a>.
+    Last updated {html.escape(generated_at[:10])}.
+    <br /><br />
+    Independent project, not affiliated with or endorsed by Major League
+    Baseball or the MLBPA.
+  </p>
+</div></div>
+</body>
+</html>
+"""
+
+
 def _jsonld(player: dict, name: str, url: str, service: str) -> str:
     """Structured data for the page.
 
@@ -169,20 +352,27 @@ def _jsonld(player: dict, name: str, url: str, service: str) -> str:
             "public roster transactions. Not an official MLB/MLBPA figure."
         ),
     }]
-    data = {
-        "@context": "https://schema.org",
+    person = {
         "@type": "Person",
         "name": player.get("name") or "Player",
         "url": url,
         "additionalProperty": props,
     }
-    if player.get("team"):
-        data["affiliation"] = {"@type": "SportsTeam", "name": player["team"]}
+    trail = [("Big League Service Time Tracker", f"{SITE_URL}/")]
+    club = player.get("team")
+    if club and player.get("on_40_man"):
+        person["affiliation"] = {
+            "@type": "SportsTeam",
+            "name": club,
+            "url": f"{SITE_URL}/{club_path(club)}",
+        }
+        trail.append((club, f"{SITE_URL}/{club_path(club)}"))
+    elif club:
+        person["affiliation"] = {"@type": "SportsTeam", "name": club}
     if player.get("position"):
-        data["jobTitle"] = player["position"]
-    # </script> inside a JSON string would end the block early; escape the slash.
-    payload = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
-    return f'<script type="application/ld+json">{payload}</script>'
+        person["jobTitle"] = player["position"]
+    trail.append((player.get("name") or "Player", url))
+    return _ld_script([person, _breadcrumb_ld(trail)])
 
 
 def render(player: dict, team_names: dict[int, str], generated_at: str) -> str:
@@ -196,6 +386,12 @@ def render(player: dict, team_names: dict[int, str], generated_at: str) -> str:
     missing = int(player.get("missing_seasons") or 0)
 
     jsonld = _jsonld(player, name, url, service)
+
+    trail: list[tuple[str, str | None]] = [("All players", "../")]
+    if club and player.get("on_40_man"):
+        trail.append((club, f"../{club_path(player['team'])}"))
+    trail.append((name, None))
+    crumbs = _crumbs(*trail)
 
     caveat = ""
     if missing:
@@ -230,27 +426,11 @@ def render(player: dict, team_names: dict[int, str], generated_at: str) -> str:
     if (t) document.documentElement.setAttribute("data-theme", t);
   }} catch (e) {{}}
 </script>
-<style>
-  .wrap {{ max-width: 60rem; margin: 0 auto; padding: 24px clamp(16px,4vw,40px) 48px; }}
-  .big {{ font-size: 2.6rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1; }}
-  .facts {{ display: flex; flex-wrap: wrap; gap: 1.75rem; margin: 1rem 0 1.4rem;
-           padding: 0.9rem 0; border-top: 1px solid var(--gridline);
-           border-bottom: 1px solid var(--gridline); }}
-  .facts div span {{ display: block; font-size: 0.7rem; text-transform: uppercase;
-                    letter-spacing: 0.05em; color: var(--text-muted); }}
-  table {{ width: 100%; border-collapse: collapse; font-size: 0.9rem; }}
-  th, td {{ text-align: left; padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--gridline); }}
-  td.n, th.n {{ text-align: right; font-variant-numeric: tabular-nums; }}
-  .caveat {{ background: var(--status-warning-wash); color: var(--text-secondary);
-            padding: 0.7rem 0.85rem; border-radius: 6px; font-size: 0.85rem; }}
-  .back {{ display: inline-block; margin-bottom: 1rem; color: var(--accent);
-          text-decoration: none; }}
-  .foot {{ margin-top: 1.5rem; font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }}
-</style>
+<link rel="stylesheet" href="../page.css" />
 </head>
 <body>
 <div class="viz-root"><div class="wrap">
-  <a class="back" href="../index.html">← All players</a>
+  {crumbs}
   <h1>{name}</h1>
   <p class="subtitle">{club}{' · ' if club and position else ''}{position} · {html.escape(_status(player))}</p>
 
@@ -300,25 +480,51 @@ def write_player_pages(db: dict[str, dict], generated_at: str | None = None) -> 
 
     # Rebuilt wholesale: a player who drops off a 40-man must lose his page,
     # not keep serving a stale one.
-    if PAGE_DIR.exists():
-        shutil.rmtree(PAGE_DIR)
-    PAGE_DIR.mkdir(parents=True, exist_ok=True)
+    for directory in (PAGE_DIR, CLUB_DIR):
+        if directory.exists():
+            shutil.rmtree(directory)
+        directory.mkdir(parents=True, exist_ok=True)
 
     for player in published:
         (DOCS / page_path(player)).write_text(render(player, team_names, generated_at))
 
-    _write_sitemap(published, generated_at)
+    clubs = _write_club_pages(published, generated_at)
+
+    _write_page_css()
+    _write_sitemap(published, clubs, generated_at)
     _write_robots()
+    _write_404()
     total_kb = sum((DOCS / page_path(p)).stat().st_size for p in published) / 1024
     print(
-        f"Wrote {len(published)} player pages ({total_kb / 1024:.1f} MB) to {PAGE_DIR}"
+        f"Wrote {len(published)} player pages ({total_kb / 1024:.1f} MB) to {PAGE_DIR} "
+        f"and {len(clubs)} club pages to {CLUB_DIR}"
     )
     return published
 
 
-def _write_sitemap(published: list[dict], generated_at: str) -> None:
+def _write_club_pages(published: list[dict], generated_at: str) -> list[str]:
+    """One page per club with someone on its 40-man. Returns the club names."""
+    by_club: dict[str, list[dict]] = {}
+    for player in published:
+        club = player.get("team")
+        if club:
+            by_club.setdefault(club, []).append(player)
+
+    for club, players in by_club.items():
+        (DOCS / club_path(club)).write_text(render_club(club, players, generated_at))
+    return sorted(by_club)
+
+
+def _write_sitemap(published: list[dict], clubs: list[str], generated_at: str) -> None:
     day = generated_at[:10]
     urls = [f"  <url><loc>{SITE_URL}/</loc><lastmod>{day}</lastmod><priority>1.0</priority></url>"]
+    # Clubs above players: they are the hubs, and a crawler that samples the
+    # sitemap rather than reading all of it should see them first.
+    urls += [
+        f"  <url><loc>{SITE_URL}/{club_path(c)}</loc><lastmod>{day}</lastmod>"
+        f"<priority>0.8</priority></url>"
+        for c in clubs
+    ]
     urls += [
         f"  <url><loc>{SITE_URL}/{page_path(p)}</loc><lastmod>{day}</lastmod></url>"
         for p in published
@@ -329,6 +535,95 @@ def _write_sitemap(published: list[dict], generated_at: str) -> None:
         + "\n".join(urls)
         + "\n</urlset>\n"
     )
+
+
+PAGE_CSS = """/* GENERATED by scripts/write_player_pages.py -- edit that, not this.
+
+Shared by every static page (player, club, 404). It used to be inlined into
+each of the 1,358 player pages, which cost ~1.4 KB apiece and, worse, could
+not be cached: clicking from one player to another re-downloaded the same
+rules every time. As a real file the browser fetches it once. */
+
+.wrap { max-width: 60rem; margin: 0 auto; padding: 24px clamp(16px,4vw,40px) 48px; }
+.wrap--narrow { max-width: 40rem; padding-top: 15vh; }
+.big { font-size: 2.6rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1; }
+.facts { display: flex; flex-wrap: wrap; gap: 1.75rem; margin: 1rem 0 1.4rem;
+         padding: 0.9rem 0; border-top: 1px solid var(--gridline);
+         border-bottom: 1px solid var(--gridline); }
+.facts div span { display: block; font-size: 0.7rem; text-transform: uppercase;
+                  letter-spacing: 0.05em; color: var(--text-muted); }
+.crumbs { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem; }
+.crumbs a { color: var(--accent); text-decoration: none; }
+.crumbs a:hover { text-decoration: underline; }
+.crumbs span { padding: 0 0.35rem; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+th, td { text-align: left; padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--gridline); }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+td a { color: var(--accent); text-decoration: none; }
+td a:hover { text-decoration: underline; }
+.caveat { background: var(--status-warning-wash); color: var(--text-secondary);
+          padding: 0.7rem 0.85rem; border-radius: 6px; font-size: 0.85rem; }
+.back { display: inline-block; margin-bottom: 1rem; color: var(--accent);
+        text-decoration: none; }
+.foot { margin-top: 1.5rem; font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
+h1 { letter-spacing: -0.02em; }
+.wrap--narrow h1 { font-size: 2.2rem; margin: 0 0 0.6rem; }
+.wrap--narrow p { color: var(--text-secondary); line-height: 1.7; }
+.wrap--narrow a { color: var(--accent); }
+.actions { margin-top: 1.6rem; }
+"""
+
+
+def _write_page_css() -> None:
+    (DOCS / "page.css").write_text(PAGE_CSS)
+
+
+def _write_404() -> None:
+    """The page GitHub Pages serves for any unknown path.
+
+    Generated rather than hand-written for one reason: it is served for paths
+    under /p/ as well as at the root, so its links must be site-absolute, and a
+    hand-maintained absolute path is exactly the thing that silently breaks on
+    a domain move. Derived from BASE_PATH, it cannot.
+    """
+    (DOCS / "404.html").write_text(f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Page not found | Big League Service Time Tracker</title>
+<meta name="robots" content="noindex" />
+<!-- GENERATED by scripts/write_player_pages.py -- edit that, not this.
+     Every URL here is site-absolute on purpose: this file is served for bad
+     paths under /p/ too, where a relative "styles.css" would resolve against
+     /p/ and 404 in turn, leaving an unstyled error page. -->
+<link rel="stylesheet" href="{BASE_PATH}styles.css" />
+<link rel="stylesheet" href="{BASE_PATH}page.css" />
+<script>
+  /* Same theme carry as the player pages; see the note there. */
+  try {{
+    var t = localStorage.getItem("mlb-service-time-theme");
+    if (t) document.documentElement.setAttribute("data-theme", t);
+  }} catch (e) {{}}
+</script>
+</head>
+<body>
+<div class="viz-root"><div class="wrap wrap--narrow">
+  <h1>That page isn't here.</h1>
+  <p>
+    The link may be old, or it may point to a player who has since come off a
+    40-man roster &mdash; pages are published for current players and are
+    removed when a player drops off.
+  </p>
+  <p>
+    Every player this project tracks, current or not, is in the searchable
+    table on the main page.
+  </p>
+  <p class="actions"><a href="{BASE_PATH}">&larr; Search all players</a></p>
+</div></div>
+</body>
+</html>
+""")
 
 
 def _write_robots() -> None:

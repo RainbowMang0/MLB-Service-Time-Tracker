@@ -57,18 +57,21 @@ scripts/commit_data.sh         commits generated data, surviving a concurrent pu
 scripts/validate_service_time.py   --as-of, against hand-entered Baseball Reference figures
 scripts/validate_against_rosters.py  day-by-day against MLB's own historical rosters
 scripts/validate_super_two.py      against published cutoffs (offline)
-scripts/validate_published.py      do the three published files agree? (offline)
+scripts/validate_published.py      published files agree + every URL/link resolves (offline)
 scripts/probe_player.py            everything the model knows about one player
 scripts/probe_coverage.py          live API probe for finding #1 (run via Actions)
 scripts/generate_demo_data.py      bundled sample data generator (no network)
-tests/test_service_time.py     139 tests, no pytest needed: `python tests/test_service_time.py`
+tests/test_service_time.py     147 tests, no pytest needed: `python tests/test_service_time.py`
 docs/                          the static site (index.html, styles.css, app.js)
 docs/data/service_time.json    the database: every field, one object per player
 docs/data/index.json           what the browser downloads for the table (0.22 MB)
 docs/data/profiles/NN.json     per-player season detail, sharded by id % 64
 docs/p/<id>-<slug>.html        one static page per rostered player (generated)
+docs/t/<club-slug>.html        one hub page per club, its 40-man by service time
+docs/page.css                  shared by every static page (generated)
+docs/404.html                  generated; site-absolute URLs, see below
 docs/sitemap.xml, robots.txt   generated alongside the pages
-docs/404.html                  hand-written; site-absolute URLs only (see below)
+docs/CNAME                     if present, sets the site's domain AND its URLs
 data/cache/transactions/       per-player transaction cache (rostered players only)
 data/backfill_state.json       resumable backfill progress
 .github/workflows/update-service-time.yml   daily 8am ET
@@ -483,7 +486,7 @@ and #16), with every rostered player published as a crawlable static page.
   sum exactly to his published total.
 - **1,358 on a 40-man.** Each has a static page at
   `docs/p/<id>-<slug>.html`, listed in `docs/sitemap.xml`.
-- **139 tests passing.**
+- **147 tests passing.**
 - 1 player at or above 20.000 years (Verlander, 21.073), which is correct.
 - **27 players read exactly 0.000** and are hidden from the table by
   default — all 27 have never played a major league game (prospects added
@@ -1610,12 +1613,13 @@ genuinely open work rather than a queue.
    answer it without a consent banner; both are one script tag and neither
    sets a cookie. **Needs an owner decision on which.**
 
-3. **A custom domain.** `rainbowmang0.github.io/MLB-Service-Time-Tracker/`
-   is a weak URL for a product called Big League Service Time Tracker, and
-   the repo name cannot change without breaking every existing link (see the
-   top of this file). A domain solves both — GitHub Pages serves it from a
-   `CNAME` file and the sitemap's `SITE_URL` constant is the only code that
-   would need updating. **Needs an owner decision.**
+3. **A custom domain — owner is acquiring one.** The code side is done:
+   write the hostname to `docs/CNAME`, regenerate, and every generated URL
+   follows it. `validate_published.py` names the one remaining hand edit
+   (`og:url` in `docs/index.html`). Point the domain's DNS at GitHub Pages
+   and enable HTTPS in the repo's Pages settings; then re-submit the sitemap
+   in Search Console, because the old and new hostnames are different
+   properties.
 
 4. **Fill `data/reference_super_two.json`.** Every row is still `published:
    null`, so `validate_super_two.py` reports the computed cutoffs and passes
@@ -1692,8 +1696,10 @@ Non-rostered players have no page, so they stay a `<button>` — a link to a
 `write_player_pages.py` builds the *filename*; `playerSlug()` in `app.js`
 builds the *href*. A disagreement between them is a 404 on every affected
 player, and it is silent — nothing in the pipeline would notice. They are
-cross-checked against all 5,571 names (0 mismatches); redo that check after
-touching either.
+cross-checked against all 5,571 names (0 mismatches), and
+`validate_published.py` now resolves every internal link on every generated
+page against the filesystem, so a drift fails the check rather than shipping
+1,358 quiet 404s.
 
 ### Accents are transliterated, not stripped
 
@@ -1708,18 +1714,66 @@ base letter behind (`garcía` → `garcia`), with a small explicit map for the
 characters NFKD will not decompose (`ø`, `ł`, `æ`, `ß`, `đ`, `þ`). Verified
 identical across all 5,571 names in Python and in Node.
 
-### `docs/404.html` and the one thing that breaks it
+### Moving to a domain is one file: `docs/CNAME`
+
+`SITE_URL` is **derived from `docs/CNAME`**, the same file GitHub Pages reads
+to decide the domain — so the two can never disagree. `echo example.com >
+docs/CNAME`, rerun the pipeline, and every canonical, `og:url`, sitemap entry
+and JSON-LD `url` follows. `BASE_PATH` collapses from
+`/MLB-Service-Time-Tracker/` to `/` at the same time, because a custom domain
+is served from the root and a project page is not.
+
+**One hand edit remains** and it is deliberately not automated:
+`docs/index.html` is hand-maintained and carries its own absolute `og:url`.
+`validate_published.py` fails loudly and names it, so the switch cannot ship
+half-done. Everything else is generated. Dry-run the whole thing by writing a
+CNAME, regenerating, running the validator, then deleting it again.
+
+A stale canonical is worse than no canonical: it tells a search engine the
+real page lives at a URL that no longer serves it.
+
+### `docs/404.html` is generated, for one specific reason
 
 GitHub Pages serves `404.html` for any unknown path on the site — including
 paths under `/p/`, which is exactly where a stale or mistyped player URL
-lands. **So every URL in that file has to be site-absolute.** A relative
+lands. **So every URL in it has to be site-absolute.** A relative
 `styles.css` resolves against `/p/` for a bad player URL, 404s in turn, and
-leaves an unstyled error page. There are four such links and the file says
-so at the top; they all lose the `/MLB-Service-Time-Tracker` prefix if the
-project ever moves to a custom domain.
+leaves an unstyled error page.
+
+It used to be hand-written, which made those absolute paths the one thing
+guaranteed to break on a domain move. It is now generated from `BASE_PATH`,
+so it cannot.
 
 It is `noindex`, and it names the real reason a link goes stale: pages exist
 for current players only and are removed when a player drops off a 40-man.
+
+### Club pages, so the player pages are not crawl leaves
+
+Every player page used to be reachable only from the index and to link only
+back to it — the flattest possible structure, and one that gives a crawler no
+reason to treat any of it as a coherent section.
+
+`docs/t/<club-slug>.html` is one page per club: its whole 40-man, sorted by
+service time, with free-agency / arbitration / Super Two counts. Player pages
+link up to their club, club pages link down to each player, and both carry
+`BreadcrumbList` JSON-LD. 30 files, 0.3 MB.
+
+They are also the query people actually type. "Phillies arbitration eligible"
+is a far commoner search than any single player's name.
+
+**A wording trap:** a 40-man roster can hold more than 40 — players on the
+60-day IL stay on it without counting against the limit, and the Phillies
+page reads 45. The count is exactly what MLB's roster endpoint returns, but
+"all 45 players on the 40-man" reads like a contradiction, so the copy says
+"45 players" without the "all".
+
+### The page CSS is a real file now
+
+It was inlined into each of the 1,358 player pages: ~1.4 KB apiece, and
+worse, uncacheable — clicking from one player to another re-downloaded the
+same rules every time. `docs/page.css` is generated alongside the pages and
+fetched once. Total page payload went **7.0 MB → 6.5 MB** even after adding
+breadcrumbs, a richer JSON-LD graph and 30 club pages.
 
 ### The theme has to be carried by hand
 
@@ -1739,7 +1793,8 @@ Both jobs passed only `docs/data` to `commit_data.sh`, which would have left
 `docs/p`, `sitemap.xml` and `robots.txt` generated but never committed — the
 exact shape of the earlier bug where `index.json` sat frozen while the
 database updated daily underneath it. Caught before shipping; both now name
-`docs/data docs/p docs/sitemap.xml docs/robots.txt` explicitly.
+`docs/data docs/p docs/t docs/page.css docs/404.html docs/sitemap.xml
+docs/robots.txt` explicitly.
 
 **Add every new generated path to both workflows.** The paths are listed by
 hand rather than staging `docs` wholesale, so that `index.html`, `app.js` and

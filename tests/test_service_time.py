@@ -1320,6 +1320,40 @@ def test_a_player_page_is_only_published_for_a_rostered_player():
     check("a record with no flag at all is not", not _should_publish({}))
 
 
+def test_the_site_url_follows_docs_cname():
+    """
+    Moving to a custom domain must not need a source edit. GitHub Pages reads
+    docs/CNAME to decide the domain, so the generator reads the same file --
+    the two cannot then disagree, and every canonical, og:url, sitemap entry
+    and JSON-LD url follows automatically.
+    """
+    import write_player_pages as w
+    check("a custom domain is served from the root", w._base_path("https://example.com") == "/")
+    check("a trailing slash does not double", w._base_path("https://example.com/") == "/")
+    check(
+        "a project page keeps its path prefix",
+        w._base_path("https://user.github.io/Repo-Name") == "/Repo-Name/",
+    )
+
+
+def test_a_club_page_path_is_derived_the_same_way_as_a_player_page():
+    """
+    Club pages are the hubs the player pages link up to, so a crawler sees a
+    section rather than 1,358 leaves hanging off the index.
+    """
+    from write_player_pages import club_path
+    check("club paths live under /t/", club_path("Philadelphia Phillies") == "t/philadelphia-phillies.html")
+    check("and transliterate like player slugs", club_path("Montréal Expos") == "t/montreal-expos.html")
+
+
+def test_a_breadcrumb_marks_the_current_page_as_the_last_step():
+    from write_player_pages import _crumbs
+    out = _crumbs(("All players", "../"), ("Club", "../t/club.html"), ("Player", None))
+    check("earlier steps are links", '<a href="../">All players</a>' in out)
+    check("the current page is not a link", "<b>Player</b>" in out)
+    check("and it is the last one", out.rstrip().endswith("<b>Player</b></nav>"))
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -1386,5 +1420,8 @@ if __name__ == "__main__":
     test_a_trade_out_of_an_option_does_not()
     test_a_slug_transliterates_an_accent_rather_than_dropping_it()
     test_a_player_page_is_only_published_for_a_rostered_player()
+    test_the_site_url_follows_docs_cname()
+    test_a_club_page_path_is_derived_the_same_way_as_a_player_page()
+    test_a_breadcrumb_marks_the_current_page_as_the_last_step()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)
