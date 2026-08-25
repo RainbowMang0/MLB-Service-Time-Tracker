@@ -167,8 +167,12 @@ def check_links() -> list[str]:
                     "(generated pages follow docs/CNAME on their own)"
                 )
 
-    # 2. Generated pages: absolute URLs must be ours, relative links must resolve.
-    generated = sorted(docs.glob("p/*.html")) + sorted(docs.glob("t/*.html"))
+    # 2. Every page: absolute URLs must be ours, relative links must resolve.
+    #    index.html is in here because it carries the one hand-written link into
+    #    the generated section ("t/"), and a hand-written link is exactly the
+    #    kind that rots without anyone noticing.
+    generated = ([docs / "index.html"] + sorted(docs.glob("p/*.html"))
+                 + sorted(docs.glob("t/*.html")))
     missing_targets: set[str] = set()
     foreign = 0
     for page in generated:
@@ -181,9 +185,12 @@ def check_links() -> list[str]:
                 if foreign <= 5:
                     problems.append(f"{page.relative_to(docs.parent)}: foreign URL {url!r}")
         for href in re.findall(r'href="((?!https?:|#|mailto:)[^"]+)"', text):
-            target = (page.parent / href).resolve()
-            if target.is_dir() or href.endswith("/"):
-                continue  # "../" is the index; the server resolves it
+            target = (page.parent / href.split("#")[0]).resolve()
+            # A directory href is served by its index.html, so that is what has
+            # to exist -- "t/" resolving to a directory with nothing in it would
+            # be a 404 for a visitor and this check would have passed it.
+            if href.endswith("/") or target.is_dir():
+                target = target / "index.html"
             if not target.exists():
                 missing_targets.add(f"{page.relative_to(docs.parent)} -> {href}")
 

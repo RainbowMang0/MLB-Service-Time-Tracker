@@ -61,13 +61,14 @@ scripts/validate_published.py      published files agree + every URL/link resolv
 scripts/probe_player.py            everything the model knows about one player
 scripts/probe_coverage.py          live API probe for finding #1 (run via Actions)
 scripts/generate_demo_data.py      bundled sample data generator (no network)
-tests/test_service_time.py     147 tests, no pytest needed: `python tests/test_service_time.py`
+tests/test_service_time.py     150 tests, no pytest needed: `python tests/test_service_time.py`
 docs/                          the static site (index.html, styles.css, app.js)
 docs/data/service_time.json    the database: every field, one object per player
 docs/data/index.json           what the browser downloads for the table (0.22 MB)
 docs/data/profiles/NN.json     per-player season detail, sharded by id % 64
 docs/p/<id>-<slug>.html        one static page per rostered player (generated)
 docs/t/<club-slug>.html        one hub page per club, its 40-man by service time
+docs/t/index.html              the club directory; the homepage's one link in
 docs/page.css                  shared by every static page (generated)
 docs/404.html                  generated; site-absolute URLs, see below
 docs/sitemap.xml, robots.txt   generated alongside the pages
@@ -486,7 +487,7 @@ and #16), with every rostered player published as a crawlable static page.
   sum exactly to his published total.
 - **1,358 on a 40-man.** Each has a static page at
   `docs/p/<id>-<slug>.html`, listed in `docs/sitemap.xml`.
-- **147 tests passing.**
+- **150 tests passing.**
 - 1 player at or above 20.000 years (Verlander, 21.073), which is correct.
 - **27 players read exactly 0.000** and are hidden from the table by
   default — all 27 have never played a major league game (prospects added
@@ -1760,6 +1761,18 @@ link up to their club, club pages link down to each player, and both carry
 
 They are also the query people actually type. "Phillies arbitration eligible"
 is a far commoner search than any single player's name.
+
+**`docs/t/index.html` is the directory**, and it exists so the hubs are one
+hop from the homepage rather than three. Before it, a club page was reachable
+only through a player page — index → player → club, exactly backwards for
+pages meant to *be* the section hubs.
+
+It is also why `index.html` carries **one** hand-written link, `t/`, rather
+than 30 club links. A hand-maintained file holding 30 slugs would silently
+404 one of them the first time a club renamed, and the Athletics have already
+done that once. `validate_published.py` resolves that link too — a directory
+href is checked against the `index.html` that actually serves it, so an empty
+`t/` fails rather than passing as "a directory exists".
 
 **A wording trap:** a 40-man roster can hold more than 40 — players on the
 60-day IL stay on it without counting against the limit, and the Phillies

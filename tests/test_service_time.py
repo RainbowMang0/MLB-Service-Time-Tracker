@@ -1354,6 +1354,22 @@ def test_a_breadcrumb_marks_the_current_page_as_the_last_step():
     check("and it is the last one", out.rstrip().endswith("<b>Player</b></nav>"))
 
 
+def test_the_club_directory_is_reachable_in_one_hop():
+    """
+    The club hubs were only reachable through a player page, so a crawler
+    landing on the homepage had to go index -> player -> club to find them --
+    backwards for pages meant to BE the section hubs. index.html carries one
+    hand-written link to the generated directory at t/, and it is the only
+    hand-written link into the generated section: 30 club slugs in a
+    hand-maintained file would 404 silently the first time a club renamed.
+    """
+    docs = pathlib.Path(__file__).resolve().parents[1] / "docs"
+    index = (docs / "index.html").read_text()
+    check('the homepage links to the club directory', 'href="t/"' in index)
+    check("the homepage declares a canonical URL", 'rel="canonical"' in index)
+    check("the directory is a real file", (docs / "t" / "index.html").exists())
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -1423,5 +1439,6 @@ if __name__ == "__main__":
     test_the_site_url_follows_docs_cname()
     test_a_club_page_path_is_derived_the_same_way_as_a_player_page()
     test_a_breadcrumb_marks_the_current_page_as_the_last_step()
+    test_the_club_directory_is_reachable_in_one_hop()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

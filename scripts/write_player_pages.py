@@ -220,6 +220,100 @@ def _ld_script(graph: list[dict]) -> str:
     return f'<script type="application/ld+json">{payload}</script>'
 
 
+def render_club_index(by_club: dict[str, list[dict]], generated_at: str) -> str:
+    """The club directory at /t/.
+
+    This exists so the club hubs are reachable from the homepage in ONE hop.
+    They were only reachable through a player page, which meant a crawler
+    landing on the index had to go index -> player -> club to find them --
+    exactly backwards for pages meant to be section hubs.
+
+    It is also the one link index.html has to carry by hand. A generated
+    directory page means that link is "t/" and never changes; hand-writing 30
+    club links there would put 30 slugs in a hand-maintained file, and a club
+    rename would silently 404 one of them.
+    """
+    url = f"{SITE_URL}/{CLUB_DIR_NAME}/"
+    total = sum(len(v) for v in by_club.values())
+    desc = (
+        f"Estimated major league service time for all {total} players on a 40-man "
+        f"roster, by club — who reaches free agency, who reaches arbitration, and "
+        "who is on the Super Two track. Reconstructed from public roster "
+        "transactions; not an official MLB/MLBPA figure."
+    )
+
+    rows = "".join(
+        f"<tr><td><a href=\"{slug(club)}.html\">{html.escape(club)}</a></td>"
+        f"<td class='n'>{len(players)}</td>"
+        f"<td class='n'>{sum(1 for p in players if p.get('free_agent_eligible'))}</td>"
+        f"<td class='n'>{sum(1 for p in players if p.get('arbitration_eligible'))}</td>"
+        f"<td class='n'>{sum(1 for p in players if p.get('super_two_candidate'))}</td></tr>"
+        for club, players in sorted(by_club.items())
+    )
+
+    graph = [
+        {"@type": "CollectionPage", "name": "Service time by club", "url": url,
+         "description": desc},
+        _breadcrumb_ld([
+            ("Big League Service Time Tracker", f"{SITE_URL}/"),
+            ("By club", url),
+        ]),
+    ]
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Service time by club — all 30 teams | Big League Service Time Tracker</title>
+<meta name="description" content="{html.escape(desc)}" />
+<link rel="canonical" href="{url}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Service time by club — all 30 teams" />
+<meta property="og:description" content="{html.escape(desc)}" />
+<meta property="og:url" content="{url}" />
+<meta name="twitter:card" content="summary" />
+{_ld_script(graph)}
+<link rel="stylesheet" href="../styles.css" />
+<link rel="stylesheet" href="../page.css" />
+<script>
+  try {{
+    var t = localStorage.getItem("mlb-service-time-theme");
+    if (t) document.documentElement.setAttribute("data-theme", t);
+  }} catch (e) {{}}
+</script>
+</head>
+<body>
+<div class="viz-root"><div class="wrap">
+  {_crumbs(("All players", "../"), ("By club", None))}
+  <h1>Service time by club</h1>
+  <p class="subtitle">Every 40-man roster, and who on it reaches arbitration and free agency.</p>
+
+  <table><thead><tr><th>Club</th><th class="n">Players</th>
+  <th class="n">Free agency</th><th class="n">Arbitration</th>
+  <th class="n">Super Two</th></tr></thead><tbody>{rows}</tbody></table>
+
+  <p class="foot">
+    172 days credit a full year, so a season adds at most 1.000 no matter how
+    long a player is on a roster. 3.000 years reaches salary arbitration and
+    6.000 reaches free agency. Eligibility counts describe players currently
+    on a 40-man roster.
+    <br /><br />
+    These figures are <strong>estimates</strong> reconstructed from public
+    roster transaction records. They are not official MLB or MLBPA figures —
+    those are not published. See the
+    <a href="https://github.com/RainbowMang0/MLB-Service-Time-Tracker#readme">methodology</a>.
+    Last updated {html.escape(generated_at[:10])}.
+    <br /><br />
+    Independent project, not affiliated with or endorsed by Major League
+    Baseball or the MLBPA.
+  </p>
+</div></div>
+</body>
+</html>
+"""
+
+
 def render_club(club: str, players: list[dict], generated_at: str) -> str:
     """A club's 40-man roster, by service time.
 
@@ -512,6 +606,7 @@ def _write_club_pages(published: list[dict], generated_at: str) -> list[str]:
 
     for club, players in by_club.items():
         (DOCS / club_path(club)).write_text(render_club(club, players, generated_at))
+    (CLUB_DIR / "index.html").write_text(render_club_index(by_club, generated_at))
     return sorted(by_club)
 
 
@@ -520,6 +615,10 @@ def _write_sitemap(published: list[dict], clubs: list[str], generated_at: str) -
     urls = [f"  <url><loc>{SITE_URL}/</loc><lastmod>{day}</lastmod><priority>1.0</priority></url>"]
     # Clubs above players: they are the hubs, and a crawler that samples the
     # sitemap rather than reading all of it should see them first.
+    urls.append(
+        f"  <url><loc>{SITE_URL}/{CLUB_DIR_NAME}/</loc><lastmod>{day}</lastmod>"
+        f"<priority>0.9</priority></url>"
+    )
     urls += [
         f"  <url><loc>{SITE_URL}/{club_path(c)}</loc><lastmod>{day}</lastmod>"
         f"<priority>0.8</priority></url>"
