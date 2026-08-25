@@ -39,6 +39,7 @@ import html
 import json
 import pathlib
 import re
+import unicodedata
 import shutil
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -55,9 +56,31 @@ SOURCE_LABEL = {
 }
 
 
+# Characters NFKD does not decompose into letter + combining mark. Without
+# these, "Jose Berrios" is fine but a slug for a player whose name carries one
+# would drop the letter entirely rather than transliterate it.
+_TRANSLITERATE = str.maketrans({
+    "\u00f8": "o", "\u00d8": "O",   # o-slash
+    "\u0142": "l", "\u0141": "L",   # l-stroke
+    "\u00e6": "ae", "\u00c6": "AE",
+    "\u00df": "ss",
+    "\u0111": "d", "\u0110": "D",
+    "\u00fe": "th", "\u00de": "Th",
+})
+
+
 def slug(name: str) -> str:
-    """A stable, readable URL fragment. The id is what identifies a player."""
-    s = re.sub(r"[^a-z0-9]+", "-", (name or "").lower()).strip("-")
+    """A stable, readable URL fragment. The id is what identifies a player.
+
+    Accents are transliterated rather than dropped: a quarter of this league
+    has one, and "adolis-garc-a" is a worse URL than "adolis-garcia" for both
+    a reader and a search engine. NFKD splits an accented letter into letter
+    plus combining mark, so discarding the marks leaves the ASCII letter
+    behind; _TRANSLITERATE covers the handful NFKD will not split.
+    """
+    folded = unicodedata.normalize("NFKD", (name or "").translate(_TRANSLITERATE))
+    ascii_only = "".join(c for c in folded if not unicodedata.combining(c))
+    s = re.sub(r"[^a-z0-9]+", "-", ascii_only.lower()).strip("-")
     return s or "player"
 
 
@@ -125,6 +148,43 @@ def _season_rows(player: dict, team_names: dict[int, str]) -> str:
     )
 
 
+def _jsonld(player: dict, name: str, url: str, service: str) -> str:
+    """Structured data for the page.
+
+    Deliberately conservative. schema.org has no vocabulary for service time,
+    so it goes in as a named `PropertyValue` rather than being forced into a
+    field that means something else -- a search engine that does not
+    understand it ignores it, which is the correct outcome, and one that does
+    is not misled about what it is.
+
+    The `description` repeats the estimate caveat for the same reason the
+    visible page does: this markup can be surfaced on its own.
+    """
+    props = [{
+        "@type": "PropertyValue",
+        "name": "Estimated MLB service time",
+        "value": service,
+        "description": (
+            f"{player.get('service_days_total', 0)} days credited, estimated from "
+            "public roster transactions. Not an official MLB/MLBPA figure."
+        ),
+    }]
+    data = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": player.get("name") or "Player",
+        "url": url,
+        "additionalProperty": props,
+    }
+    if player.get("team"):
+        data["affiliation"] = {"@type": "SportsTeam", "name": player["team"]}
+    if player.get("position"):
+        data["jobTitle"] = player["position"]
+    # </script> inside a JSON string would end the block early; escape the slash.
+    payload = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
+    return f'<script type="application/ld+json">{payload}</script>'
+
+
 def render(player: dict, team_names: dict[int, str], generated_at: str) -> str:
     name = html.escape(player.get("name") or "Player")
     service = html.escape(player.get("service_time") or "0.000")
@@ -134,6 +194,8 @@ def render(player: dict, team_names: dict[int, str], generated_at: str) -> str:
     position = html.escape(player.get("position") or "")
     debut = html.escape(player.get("mlb_debut") or "—")
     missing = int(player.get("missing_seasons") or 0)
+
+    jsonld = _jsonld(player, name, url, service)
 
     caveat = ""
     if missing:
@@ -156,7 +218,18 @@ def render(player: dict, team_names: dict[int, str], generated_at: str) -> str:
 <meta property="og:description" content="{desc}" />
 <meta property="og:url" content="{url}" />
 <meta name="twitter:card" content="summary" />
+{jsonld}
 <link rel="stylesheet" href="../styles.css" />
+<script>
+  /* Carry the theme the visitor chose on the main table. In <head> and inline
+     so it runs before first paint -- deferred, it would flash the wrong theme.
+     styles.css already honours prefers-color-scheme on its own; this is only
+     for an explicit override. */
+  try {{
+    var t = localStorage.getItem("mlb-service-time-theme");
+    if (t) document.documentElement.setAttribute("data-theme", t);
+  }} catch (e) {{}}
+</script>
 <style>
   .wrap {{ max-width: 60rem; margin: 0 auto; padding: 24px clamp(16px,4vw,40px) 48px; }}
   .big {{ font-size: 2.6rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1; }}

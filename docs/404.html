@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Page not found | Big League Service Time Tracker</title>
+<meta name="robots" content="noindex" />
+<!--
+  GitHub Pages serves this file for any unknown path on the site, including
+  paths under /p/. So every URL here MUST be site-absolute: a relative
+  "styles.css" would resolve against /p/ for a bad player URL and 404 in turn,
+  leaving an unstyled error page. If the project ever moves to a custom domain,
+  the /MLB-Service-Time-Tracker prefix comes out of all four of them.
+-->
+<link rel="stylesheet" href="/MLB-Service-Time-Tracker/styles.css" />
+<style>
+  .wrap { max-width: 40rem; margin: 0 auto; padding: 15vh clamp(16px,5vw,40px) 48px; }
+  h1 { font-size: 2.2rem; letter-spacing: -0.02em; margin: 0 0 0.6rem; }
+  p { color: var(--text-secondary); line-height: 1.7; }
+  a { color: var(--accent); }
+  .actions { margin-top: 1.6rem; }
+</style>
+<script>
+    // Match whatever theme the visitor chose on the main site. Wrapped because
+    // localStorage throws outright in some privacy modes, and an error here
+    // would be an error page that fails to render.
+    try {
+      var t = localStorage.getItem("mlb-service-time-theme");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+</script>
+</head>
+<body>
+  <div class="wrap">
+    <h1>That page isn't here.</h1>
+    <p>
+      The link may be old, or it may point to a player who has since come off a
+      40-man roster — pages are published for current players and are removed
+      when a player drops off.
+    </p>
+    <p>
+      Every player this project tracks, current or not, is in the searchable
+      table on the main page.
+    </p>
+    <p class="actions">
+      <a href="/MLB-Service-Time-Tracker/">← Search all players</a>
+    </p>
+  </div>
+</body>
+</html>

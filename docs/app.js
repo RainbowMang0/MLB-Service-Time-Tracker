@@ -96,8 +96,22 @@
   // hash routing is invisible to search engines, which is why those pages
   // exist at all. Clicking still opens the overlay; the link is the
   // fallback, and middle-click or "open in new tab" now work too.
+  // Must stay byte-for-byte in step with slug() in scripts/write_player_pages.py:
+  // this builds the href, that builds the file, and a disagreement is a 404.
+  // Accents are transliterated, not dropped -- NFKD splits an accented letter
+  // into letter + combining mark, so removing the marks leaves ASCII behind.
+  const SLUG_TRANSLITERATE = {
+    "\u00f8": "o", "\u00d8": "O", "\u0142": "l", "\u0141": "L",
+    "\u00e6": "ae", "\u00c6": "AE", "\u00df": "ss",
+    "\u0111": "d", "\u0110": "D", "\u00fe": "th", "\u00de": "Th",
+  };
+
   const playerSlug = (name) =>
     String(name || "")
+      .replace(/[\u00f8\u00d8\u0142\u0141\u00e6\u00c6\u00df\u0111\u0110\u00fe\u00de]/g,
+              (c) => SLUG_TRANSLITERATE[c])
+      .normalize("NFKD")
+      .replace(/[\u0300-\u036f]/g, "")
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/^-|-$/g, "") || "player";

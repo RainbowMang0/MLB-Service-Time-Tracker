@@ -51,6 +51,7 @@ scripts/service_time.py        the service-time math + all domain rules
 scripts/update_service_time.py daily job: 40-man rosters -> compute -> merge -> JSON
 scripts/backfill_history.py    resumable backfill of non-rostered players (2009+)
 scripts/super_two.py           the real Super Two cutoff, from the whole population
+scripts/write_player_pages.py  static crawlable page per rostered player + sitemap
 scripts/commit_data.sh         commits generated data, surviving a concurrent push
 
 scripts/validate_service_time.py   --as-of, against hand-entered Baseball Reference figures
@@ -60,11 +61,14 @@ scripts/validate_published.py      do the three published files agree? (offline)
 scripts/probe_player.py            everything the model knows about one player
 scripts/probe_coverage.py          live API probe for finding #1 (run via Actions)
 scripts/generate_demo_data.py      bundled sample data generator (no network)
-tests/test_service_time.py     123 tests, no pytest needed: `python tests/test_service_time.py`
+tests/test_service_time.py     139 tests, no pytest needed: `python tests/test_service_time.py`
 docs/                          the static site (index.html, styles.css, app.js)
 docs/data/service_time.json    the database: every field, one object per player
-docs/data/index.json           what the browser downloads for the table (0.21 MB)
+docs/data/index.json           what the browser downloads for the table (0.22 MB)
 docs/data/profiles/NN.json     per-player season detail, sharded by id % 64
+docs/p/<id>-<slug>.html        one static page per rostered player (generated)
+docs/sitemap.xml, robots.txt   generated alongside the pages
+docs/404.html                  hand-written; site-absolute URLs only (see below)
 data/cache/transactions/       per-player transaction cache (rostered players only)
 data/backfill_state.json       resumable backfill progress
 .github/workflows/update-service-time.yml   daily 8am ET
@@ -471,71 +475,74 @@ the right place for that information.
 
 ## Current state
 
-As of 2026-08-23, mid-recompute under rules version 2 (finding #14):
+As of 2026-08-25, fully recomputed under **rules version 3** (findings #15
+and #16), with every rostered player published as a crawlable static page.
 
-- **5,569 players, every one with a season-by-season profile.**
-  Zero invariant violations — each player's season rows sum exactly to his
-  published total.
-- **1,360 on a 40-man**, all recomputed under rules version 2.
-  The other 4,209 are being recomputed in
-  batches; until that finishes the database is a *mix* of rules versions, which
-  `rules_version` on each record makes visible.
-- **0 invariant violations**, 1 player at or
-  above 20.000 years (Verlander), which is correct.
-- **123 tests passing.**
-- **28 players read exactly 0.000** and are hidden from the table by default —
-  27 have never played a major league game (prospects added to a 40-man to
-  protect them from the Rule 5 draft) and are reachable through the "Yet to
-  accrue a day" filter.
+- **5,571 players, every one with a season-by-season profile**, all stamped
+  `rules_version: 3`. Zero invariant violations — each player's season rows
+  sum exactly to his published total.
+- **1,358 on a 40-man.** Each has a static page at
+  `docs/p/<id>-<slug>.html`, listed in `docs/sitemap.xml`.
+- **139 tests passing.**
+- 1 player at or above 20.000 years (Verlander, 21.073), which is correct.
+- **27 players read exactly 0.000** and are hidden from the table by
+  default — all 27 have never played a major league game (prospects added
+  to a 40-man to protect them from the Rule 5 draft) and are reachable
+  through the "Yet to accrue a day" filter. The two *debuted* players who
+  read 0.000 before v3 — Daniel Fields and Elih Villanueva — are fixed by
+  finding #15 and now read 0.003 and 0.001.
 
-What the data is made of, across all 29,147 accruing seasons:
+What the data is made of, across all 28,988 accruing seasons:
 
 | | share |
 |---|---|
-| `read` — driven by transactions in that season | **79.3%** |
-| `presumed` — from the debut, before any transaction | 12.2% |
-| `carry` — status carried forward from an earlier season | 8.5% |
+| `read` — driven by transactions in that season | **79.4%** |
+| `presumed` — from the debut, before any transaction | 12.3% |
+| `carry` — status carried forward from an earlier season | 8.4% |
 
 Only **0.0% of accruing seasons have no club identified**.
 
-Payload: table index 0.21 MB; database 8.8 MB (not downloaded by the
-browser); 64 profile shards, 3.5 MB in total, one fetched per profile opened.
+Payload: table index 0.22 MB; database 9.1 MB (not downloaded by the
+browser); 64 profile shards, 3.4 MB in total, one fetched per profile
+opened; 1,358 player pages, 7.1 MB, one fetched per crawl or direct link.
 
-**Both gates re-run against the fully recomputed database, 2026-08-23.**
+**All four gate club-seasons plus the Baseball Reference check re-run
+against the fully recomputed v3 database, 2026-08-25.**
 
-| | agree | over-credit | under-credit |
-|---|---|---|---|
-| Cleveland 2011 | **99.9%** | 0.1% | 0.0% |
-| Yankees 2014 | **96.8%** | 0.2% | 3.1% |
-| Yankees 2018 | **99.1%** | 0.1% | 0.8% |
-| Tampa Bay 2022 | **98.6%** | 0.4% | 1.0% |
+| | agree | over-credit | under-credit | vs. v2 |
+|---|---|---|---|---|
+| Cleveland 2011 | **99.9%** | 0.1% | 0.0% | unchanged |
+| Yankees 2014 | **98.8%** | 0.2% | 1.0% | 96.8% → 98.8% |
+| Yankees 2018 | **99.8%** | 0.1% | 0.1% | 99.1% → 99.8% |
+| Tampa Bay 2022 | **98.6%** | 0.4% | 1.0% | unchanged |
 
 Baseball Reference: **17 passed, 0 failed, 2 known gaps** (Scherzer +73d,
 Verlander +89d, both bounded by the seasons their own records declare
-presumed). Nine figures exact to the day. Soto still +6, matching his
+presumed). **Twelve figures exact to the day**, up from nine, and the other
+five are all ±1. Total absolute residual across the seventeen
+complete-history players: **11 days → 4 days.** Soto still +6, matching his
 accepted delta exactly.
 
-**Every one of these is unchanged from before finding #14, and that is the
-result to want.** #14 removed 1,823 days from rostered players and ~44,500
-across the database, so a naive reading expects movement here. There should
-be none: Rule 5 returns and affiliate returns happen to fringe roster
-players, no gate club-season contains one, and all nineteen reference
-players are established veterans. A gate that *moved* would have been
-evidence the rule was reaching too far. Yankees 2018 improved a hair
-(99.0 → 99.1, over-crediting 0.2% → 0.1%); nothing else shifted.
+**Over-crediting did not move in any of the four club-seasons**, which was
+the condition #15 and #16 were held to before shipping — 2% was the agreed
+revert line, and it stayed at 0.1–0.4%. The two seasons that improved are
+the two that contained the defects (David Huff in 2014, A.J. Cole in 2018);
+the two that were already clean came back identical.
 
 ### Still open
 
 - **Juan Soto, +6 days** — diagnosed (see above), accepted, not worth the
   regressions the fix caused.
-- **José Ramírez, +8 days offline / −1 live** — the offline figure was the
-  estimated season windows, not the model. Nothing to chase.
-- The 2014 roster sample's remaining under-credits are concentrated in
-  David Huff (16 of 39), who was claimed off waivers and bounced between
-  clubs mid-season — probably a waiver-claim carry-in case.
-- Backfilled players were recomputed with `--recompute-stale`. Any future
-  rules change needs the same treatment: the normal queue only looks for
-  players it does not already have.
+- **Scherzer +73d and Verlander +89d** — both GAP rows, bounded by the
+  seasons their own records declare presumed. Not defects; the known limit
+  of what the feed can see.
+- What remains in the roster gate is thin and scattered rather than
+  concentrated: Yankees 2014's worst is now Slade Heathcott at `under=4`,
+  Yankees 2018's is Ben Heller at `under=1`. There is no longer a single
+  player worth naming as the next bug.
+- Any future rules change needs `SERVICE_TIME_RULES_VERSION` bumped and a
+  `--recompute-all` pass; the normal queue only looks for players it does
+  not already have.
 
 ## Validation — the process, and the current number
 
@@ -752,6 +759,21 @@ skew the result.
 
 Apply the same instinct to any new rule: prefer a check the data can settle
 over a belief about what MLB means.
+
+### Gate status (2026-08-25, after the rules-version-3 recompute)
+
+| | agree | over-credit | under-credit |
+|---|---|---|---|
+| Cleveland 2011 | **99.9%** | 0.1% | 0.0% |
+| Yankees 2014 | **98.8%** | 0.2% | 1.0% |
+| Yankees 2018 | **99.8%** | 0.1% | 0.1% |
+| Tampa Bay 2022 | **98.6%** | 0.4% | 1.0% |
+
+Findings #15 and #16 shipped together. Over-crediting is flat across all
+four; under-crediting fell by two thirds in the two seasons that had any,
+and the two that were already clean came back byte-identical. Worst
+remaining players are Slade Heathcott (`under=4`, 2014) and Ben Heller
+(`under=1`, 2018) — nothing concentrated enough to name as the next bug.
 
 ### Gate status (2026-08-23, after the rules-version-2 recompute)
 
@@ -1289,7 +1311,11 @@ again:
    credited days are not the same unit — compare like with like, or compare
    only the *direction*.
 
-### 15. OPEN: roster time before a player's first game is discarded
+### 15. RESOLVED: roster time before a player's first game is discarded
+
+**Shipped 2026-08-25 as rules version 3.** The finding as originally written
+follows; the rule that fixed it, and its measurement, are at the end.
+
 
 **Found 2026-08-23 by probing Daniel Fields**, surfaced by
 `report_debuted_but_empty()` after the rules-version-2 recompute. He debuted
@@ -1353,7 +1379,65 @@ is short by a day".
 Two players currently read 0.000 because of this, both reported by
 `report_debuted_but_empty()`: Elih Villanueva and Daniel Fields.
 
-### 16. OPEN: a trade is invisible to the parser
+#### The rule, and why it is narrower than the mechanism
+
+`roster_start_before_debut()` in `service_time.py` moves `accrual_floor`
+back to the earliest transaction before the debut that is **both** a roster
+move and inside a bounded window:
+
+```python
+PRE_DEBUT_ROSTER_WINDOW_DAYS = 45
+_ROSTER_MOVE_RE = (selected/purchased the contract | recalled | activated
+                   | reinstated | added to the active roster
+                   | returned to the active roster | claimed off waivers)
+```
+
+Two guards, and both are load-bearing:
+
+* **A signing is not a roster move.** This is what stops Andrew Vaughn's
+  2019 draft signing — the trap recorded above — from reaching back two
+  years. `signed`, `assigned to`, `drafted` and `traded` are all absent from
+  the pattern on purpose.
+* **45 days.** A club selects a contract a day or two before the debut, not
+  a season before. The window is deliberately far wider than the +1d that
+  744 of 1,331 players actually show, so it is a backstop rather than a
+  tuning knob: nothing in the cached population sits between 45 days and a
+  year, so the exact number is not a magic constant the result depends on.
+
+`compute_service_time()` derives `presume_active_from` from `accrual_floor`,
+so carry-in and the floor move together — the guard that was discarding the
+start now no longer sees it as pre-debut.
+
+**Measured, rostered population, before → after:** the rules-v3 recompute
+credited about 2,900 days across the two rules together, and every one of
+them is on the *front* of a career. Both zeros are gone: Daniel Fields reads
+0.003, Elih Villanueva 0.001 — a one-game career now credited the one day
+his appearance proves he was rostered.
+
+⚠️ **A measurement trap hit while confirming this, worth recording.** The
+first check compared yesterday's published file to today's, saw all nine
+exact Baseball Reference players at +1, and concluded the rule was
+over-crediting by a day league-wide. **It was not.** The two files were
+generated a day apart and *every accruing player gains a day* in between.
+The proof is in the split: accruing players had median +1 (764 of them
+exactly +1), non-accruing players median 0 (3 at +1, i.e. the real movers).
+Never diff two data files generated on different days and read the
+difference as a rules change — recompute both under the same `horizon_end`,
+or diff only the non-accruing population.
+
+**The independent check is what settled it.** Under v3 the Baseball
+Reference comparison went from 9 exact to **12 exact of 17**, with the
+remaining five at ±1 day: deGrom −2 → **0**, Jansen −1 → **0**, Devers −1 →
+**0**, Betts −2 → −1. Total absolute residual across the seventeen
+complete-history players: **11 days → 4 days.** That is the shape a correct
+front-of-career fix should have — it moves players toward B-R rather than
+uniformly up.
+
+### 16. RESOLVED: a trade is invisible to the parser
+
+**Shipped 2026-08-25 as rules version 3, alongside #15.** The finding as
+originally written follows; the rule and its measurement are at the end.
+
 
 **Found 2026-08-24 by probing David Huff**, the largest single error left in
 the roster gate — 16 of Yankees 2014's 36 wrong judgements, with `agree=0`:
@@ -1413,6 +1497,62 @@ without it — so this is the best-understood remaining defect rather than an
 urgent one. It is worth batching with finding #15, since both need the same
 recompute.
 
+#### The rule: a trade restarts the clock only after a DFA
+
+The measurement above says a blanket start keyword is wrong, and it names
+the distinguishing fact — **why the clock was stopped**. So the interval
+walk now carries that:
+
+```python
+last_stop_kind = None          # "dfa" | "other" | None
+...
+if has_stop:
+    last_stop_kind = "dfa" if any(_DFA_RE.search(r.description) for r in rows) else "other"
+    ...close the interval...
+elif has_start:
+    if active_since is None: active_since = day
+elif has_trade and active_since is None and last_stop_kind == "dfa":
+    active_since = day         # Huff's shape: DFA'd, then traded onto a 40-man
+    last_stop_kind = None
+```
+
+Note the `elif` chain: a trade is consulted **only** when the date carries
+neither a start nor a stop, so it can never override an explicit roster
+move on the same day, and stop-wins (finding #10) is untouched. And it fires
+only when the player is *currently stopped* — a trade of an already-active
+player stays the no-op it should be, which is what makes the 1,013
+"neither" rows safe.
+
+The 60 option-then-trade rows the naive rule would have broken are excluded
+by construction: their `last_stop_kind` is `"other"`, so the branch never
+runs.
+
+**Measured live on the roster gate**, which is the check this was diagnosed
+from:
+
+| club-season | before (v2) | after (v3) |
+|---|---|---|
+| Yankees 2014 | 96.8% / 0.2% over / 3.1% under | **98.8% / 0.2% / 1.0%** |
+| Yankees 2018 | 99.1% / 0.1% / 0.8% | **99.8% / 0.1% / 0.1%** |
+| Tampa Bay 2022 | 98.6% / 0.4% / 1.0% | **98.6% / 0.4% / 1.0%** |
+| Cleveland 2011 | 99.9% / 0.1% / 0.0% | **99.9% / 0.1% / 0.0%** |
+
+**David Huff is gone from the worst-players list entirely** — he was
+`under=16, agree=0`, the single largest error in the gate, and the model now
+agrees with the roster about him. A.J. Cole, 8 of Yankees 2018's 9
+under-credits, likewise: he was traded to the Yankees mid-2018.
+
+**Over-crediting did not move in any of the four.** That was the condition
+this change was held to before shipping — a rule that merely inflated
+figures would have pushed it up, and 2% was the agreed revert line. It
+stayed at 0.1–0.4%, exactly where v2 left it, while under-crediting fell by
+two thirds in the two seasons that had any.
+
+The two unchanged club-seasons are as much the result as the two that moved:
+Cleveland 2011 and Tampa Bay 2022 came back **identical**, which is what a
+rule that fires only on a specific DFA-then-trade shape should do to seasons
+that do not contain one.
+
 ### Recomputing after a rules change: `rules_version`
 
 A rules change has no natural completion marker, and the two obvious ones
@@ -1449,52 +1589,163 @@ resumable across batches, which matters for a job that takes hours.
 
 ### Immediate next steps
 
-**Everything the previous version of this section listed is done** (the mass
-backfill, the `full_refresh` cache rebuild, the Lindor reference figure, and
-finding #6, which finding #13 resolved). As of 2026-08-23 the database is
-complete and both gates are green, so what follows is genuinely open work
-rather than a queue.
+**Findings #15 and #16 are shipped as rules version 3, the database is fully
+recomputed, and all four gate club-seasons plus the Baseball Reference check
+are green.** Every rostered player also has a crawlable page. What follows is
+genuinely open work rather than a queue.
 
-1. **Finding #15 — roster time before a debut.** The best-understood
-   remaining defect: 56% of players are short by about a day, and two read a
-   hard 0.000. The mechanism is known and written up; what is missing is a
-   safe rule and a measurement of it. Note the trap recorded there — the
-   obvious fix credits Andrew Vaughn two years from a draft signing. Needs
-   `SERVICE_TIME_RULES_VERSION` → 3 and a full recompute (about 2.5 hours in
-   four batches), so it is worth batching with any other rules change.
+1. **Widen player pages to non-rostered players** — a one-line change to
+   `_should_publish()` in `scripts/write_player_pages.py`. Deliberately
+   deferred: the owner's call was to publish the 1,358 current players
+   first and see how they index before adding 4,213 retired ones. Note the
+   trade-off — retired players are four fifths of the database and the
+   long-tail search traffic ("how much service time did X have"), but they
+   are also where the estimates are weakest, so they arrive with the
+   `presumed`/`absent` caveats doing more work.
 
-2. **Finding #16 — a trade is invisible to the parser.** Diagnosed
-   2026-08-24 (David Huff); 1,239 roster-relevant `traded` rows read as
-   neither a start nor a stop. The naive fix is measured and harmful — see
-   the finding. A correct one needs the interval builder to track *why* the
-   clock stopped, so it pairs naturally with #15 and the same recompute.
+2. **There is no analytics on the site**, so its traffic is unknown — and it
+   is now the *blocking* unknown, because the pages exist but nothing can
+   say whether they are found. It is also the input every question about
+   advertising depends on. Cloudflare Web Analytics or GoatCounter would
+   answer it without a consent banner; both are one script tag and neither
+   sets a cookie. **Needs an owner decision on which.**
 
-3. **Fill `data/reference_super_two.json`.** Every row is still `published:
+3. **A custom domain.** `rainbowmang0.github.io/MLB-Service-Time-Tracker/`
+   is a weak URL for a product called Big League Service Time Tracker, and
+   the repo name cannot change without breaking every existing link (see the
+   top of this file). A domain solves both — GitHub Pages serves it from a
+   `CNAME` file and the sitemap's `SITE_URL` constant is the only code that
+   would need updating. **Needs an owner decision.**
+
+4. **Fill `data/reference_super_two.json`.** Every row is still `published:
    null`, so `validate_super_two.py` reports the computed cutoffs and passes
    nothing. The figures land in the 2.11-2.14 band where reported cutoffs
    historically fall, which is encouraging and is *not* evidence — that is
    exactly the shape of every belief this project has had to revert. Needs
    published MLBTR cutoffs entered by hand.
 
-4. **Owner decisions, recorded rather than pending:** no LICENSE file (so
+5. **Owner decisions, recorded rather than pending:** no LICENSE file (so
    the code is readable but not reusable); advertising deferred until
    ~10,000 pageviews a month; player photos declined on copyright grounds.
    See "Deliberately not done".
-
-5. **There is no analytics on the site**, so its traffic is unknown. That is
-   the input every question about advertising depends on. A privacy-friendly
-   counter would answer it without a consent banner.
 
 ### Known limitations
 
 - No handling for paternity/bereavement edge cases beyond keyword matching.
 - Service-time-manipulation grievance outcomes (e.g. Kris Bryant) are invisible
   to public transaction data.
-- Elih Villanueva debuted and last played on 2011-06-15 — a one-game career —
-  and reads 0.000 with `src: "read"`. A player who appeared in a game was
-  rostered that day, so at least one day is owed him: a one-day call-up whose
-  interval comes out empty. One record; `report_debuted_but_empty()` in the
-  daily job now names anyone in this class.
+- ~~Elih Villanueva reads 0.000~~ — **fixed by finding #15.** He debuted and
+  last played on 2011-06-15, a one-game career, and now reads 0.001: the one
+  day his appearance proves he was rostered. `report_debuted_but_empty()` in
+  the daily job names anyone still in this class, and as of 2026-08-25 it
+  names nobody.
+
+## Discoverability: every rostered player has a real page
+
+**Shipped 2026-08-25.** Until then the whole site was one URL. A profile
+opened behind a `#` fragment, which no search engine follows, so a person
+googling "Bo Bichette service time" could not land on the answer this
+project computes — the single thing it exists to publish.
+
+`scripts/write_player_pages.py` writes one static HTML file per rostered
+player to `docs/p/<id>-<slug>.html`, plus `sitemap.xml` and `robots.txt`. It
+runs from `_write_outputs()`, so the daily job and the backfill both keep it
+current with no extra step.
+
+### Why static files and not a routing shim
+
+The tempting cheap fix is to let `app.js` read a path like `/p/592450` and
+render the profile client-side. **It cannot work on GitHub Pages**, which
+returns a genuine HTTP 404 for a path with no file behind it. A crawler sees
+the 404 and stops; there is no JavaScript running to rescue it. Static files
+are not the heavyweight option here, they are the only option.
+
+The cost is bounded and was measured before committing to it: 1,358 files,
+7.1 MB, written in about two seconds. They are rebuilt **wholesale** —
+`shutil.rmtree` then regenerate — so a player who drops off a 40-man loses
+his page rather than leaving a stale one to be indexed forever.
+
+### Rostered players only, deliberately
+
+`_should_publish()` gates on `on_40_man`. Retired players are four fifths of
+the database and would be four fifths of the pages; the owner's call was to
+publish current players first and see how they index. Widening it is one
+line — see "Immediate next steps".
+
+### Three things the pages have to get right
+
+**1. Each page must stand alone.** A crawler and a first-time visitor both
+arrive with no context, so every page carries the player's figure in its
+`<title>`, a meta description, JSON-LD, and — the part that is easy to skip
+— the same "this is an estimate, not an official MLB/MLBPA figure" caveat
+the main site carries. A page that presents the number without it would be
+the one page a stranger ever reads.
+
+**2. The table must link with a real `href`.** A crawler follows links, not
+click handlers. `playerHref()` emits `<a href="p/...">` for rostered players
+and the click handler still opens the overlay, so nothing changes for a
+person browsing the table while middle-click and "open in new tab" now work.
+Non-rostered players have no page, so they stay a `<button>` — a link to a
+404 is worse than no link.
+
+**3. The two slug functions must never drift.** `slug()` in
+`write_player_pages.py` builds the *filename*; `playerSlug()` in `app.js`
+builds the *href*. A disagreement between them is a 404 on every affected
+player, and it is silent — nothing in the pipeline would notice. They are
+cross-checked against all 5,571 names (0 mismatches); redo that check after
+touching either.
+
+### Accents are transliterated, not stripped
+
+The first version ran `[^a-z0-9]+ -> "-"` over the raw name, which turned
+"Adolis García" into `adolis-garc-a` and "Agustín Ramírez" into
+`agust-n-ram-rez` — the accented letter vanishing entirely rather than
+degrading to ASCII. Roughly a quarter of a 40-man roster has an accent in
+the name, so this was not an edge case.
+
+Both functions now NFKD-normalize and drop combining marks, which leaves the
+base letter behind (`garcía` → `garcia`), with a small explicit map for the
+characters NFKD will not decompose (`ø`, `ł`, `æ`, `ß`, `đ`, `þ`). Verified
+identical across all 5,571 names in Python and in Node.
+
+### `docs/404.html` and the one thing that breaks it
+
+GitHub Pages serves `404.html` for any unknown path on the site — including
+paths under `/p/`, which is exactly where a stale or mistyped player URL
+lands. **So every URL in that file has to be site-absolute.** A relative
+`styles.css` resolves against `/p/` for a bad player URL, 404s in turn, and
+leaves an unstyled error page. There are four such links and the file says
+so at the top; they all lose the `/MLB-Service-Time-Tracker` prefix if the
+project ever moves to a custom domain.
+
+It is `noindex`, and it names the real reason a link goes stale: pages exist
+for current players only and are removed when a player drops off a 40-man.
+
+### The theme has to be carried by hand
+
+`styles.css` honours `prefers-color-scheme` on its own, so a visitor who
+never touched the toggle sees the right theme everywhere. An *explicit*
+choice lives in `localStorage` under `mlb-service-time-theme`, and a static
+page does not load `app.js` — so the player pages and `404.html` each carry
+a four-line inline script that reads that key and stamps `data-theme`.
+
+It is inline and in `<head>` deliberately: deferred or external, it would
+run after first paint and flash the wrong theme on every click through from
+the table.
+
+### The workflows had to stage more than `docs/data`
+
+Both jobs passed only `docs/data` to `commit_data.sh`, which would have left
+`docs/p`, `sitemap.xml` and `robots.txt` generated but never committed — the
+exact shape of the earlier bug where `index.json` sat frozen while the
+database updated daily underneath it. Caught before shipping; both now name
+`docs/data docs/p docs/sitemap.xml docs/robots.txt` explicitly.
+
+**Add every new generated path to both workflows.** The paths are listed by
+hand rather than staging `docs` wholesale, so that `index.html`, `app.js` and
+`styles.css` — which are hand-edited — are never swept into an automated
+commit. That is the right trade, but it means a new output file is invisible
+until someone remembers to list it.
 
 ### Frontend performance is measured and is fine — do not "optimize" it
 

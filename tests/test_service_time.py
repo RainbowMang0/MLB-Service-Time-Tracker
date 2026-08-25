@@ -1290,6 +1290,36 @@ def test_a_trade_out_of_an_option_does_not():
     check("an optioned player stays off the roster", len(intervals) == 1)
 
 
+def test_a_slug_transliterates_an_accent_rather_than_dropping_it():
+    """
+    The href in app.js and the filename here are built by two different
+    functions in two different languages. If they disagree the link 404s and
+    nothing in the pipeline notices, so the shared rule is pinned here.
+
+    The first version stripped the accented letter outright -- "Adolis
+    García" became "adolis-garc-a" -- which is a bad URL for a quarter of a
+    40-man roster.
+    """
+    from write_player_pages import slug
+    check("an acute accent degrades to its base letter", slug("Adolis García") == "adolis-garcia")
+    check("so does a tilde", slug("Andrés Muñoz") == "andres-munoz")
+    check("and a character NFKD will not split", slug("Jack Sløgren") == "jack-slogren")
+    check("punctuation still becomes a separator", slug("A.J. Puk") == "a-j-puk")
+    check("a nameless record still gets a slug", slug("") == "player")
+
+
+def test_a_player_page_is_only_published_for_a_rostered_player():
+    """
+    A link to a page that does not exist is worse than no link: app.js emits
+    an <a> only when on_40_man is true, and this is the other half of that
+    agreement.
+    """
+    from write_player_pages import _should_publish
+    check("a rostered player is published", _should_publish({"on_40_man": True}))
+    check("a former player is not", not _should_publish({"on_40_man": False}))
+    check("a record with no flag at all is not", not _should_publish({}))
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -1354,5 +1384,7 @@ if __name__ == "__main__":
     test_the_pre_debut_window_is_bounded()
     test_a_trade_out_of_a_dfa_reopens_the_clock()
     test_a_trade_out_of_an_option_does_not()
+    test_a_slug_transliterates_an_accent_rather_than_dropping_it()
+    test_a_player_page_is_only_published_for_a_rostered_player()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)
