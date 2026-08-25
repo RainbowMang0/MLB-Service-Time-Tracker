@@ -374,6 +374,92 @@ def default_season_window(year: int) -> SeasonWindow:
     )
 
 
+# --- Finding #15: roster time before a player's first game --------------
+# Service time is roster time, not playing time. A player selected or
+# recalled on Monday who first appears on Tuesday earned Monday. 726 of the
+# 1,331 cached players with a debut date have such a row, and carry-in threw
+# every one of them away by dropping transactions dated before the debut.
+#
+# The window is measured, not chosen. The gap between that roster move and
+# the debut is BIMODAL across the cache:
+#
+#     1-10 days    ~400 players   on the roster days before the first game
+#    31-98 days       0 players   nothing at all
+#   99-985 days    ~300 players   a different thing entirely -- a genuine
+#                                 earlier roster stint in which he never
+#                                 appeared, sometimes years before
+#
+# 45 days sits inside the empty band, so it separates the two populations
+# rather than cutting through either. The second population may well be owed
+# service time too, but it is a different question and needs its own
+# measurement.
+#
+# SIGNINGS ARE EXCLUDED, and that is the whole safety property. Andrew Vaughn
+# was drafted and signed by the White Sox on 2019-06-28 and debuted
+# 2021-04-02; "Chicago White Sox signed 1B Andrew Vaughn" names a major
+# league club and reads as a start. Reaching back to it would credit him two
+# phantom years -- finding #2 all over again. Only an actual roster move
+# counts here.
+PRE_DEBUT_ROSTER_WINDOW_DAYS = 45
+
+_ROSTER_MOVE_RE = re.compile(
+    r"selected the contract|purchased the contract|contract selected"
+    r"|\brecalled\b|\bactivated\b|\breinstated\b"
+    r"|added to the active roster|returned to the active roster"
+    rf"|claimed{_NAME}off waivers",
+    re.IGNORECASE,
+)
+
+
+def roster_start_before_debut(
+    transactions: list[Transaction],
+    debut: dt.date | None,
+    window_days: int = PRE_DEBUT_ROSTER_WINDOW_DAYS,
+) -> dt.date | None:
+    """
+    The earliest major league ROSTER MOVE in the days just before `debut`,
+    or None. Callers use it as the accrual floor in place of the debut.
+
+    Deliberately not `_is_active_start`: that also matches a major league
+    signing, and a draft signing two years before a debut is exactly the
+    over-credit this window exists to avoid.
+    """
+    if debut is None:
+        return None
+    earliest = debut - dt.timedelta(days=window_days)
+    dates = [
+        t.date
+        for t in transactions
+        if earliest <= t.date < debut and _ROSTER_MOVE_RE.search(t.description)
+    ]
+    return min(dates) if dates else None
+
+
+# --- Finding #16: a trade after a DFA puts a player on the new roster ----
+# 1,258 "traded" rows across 751 cached players, and the parser read every
+# one as neither a start nor a stop. David Huff was designated for assignment
+# by San Francisco on 2014-06-06 and traded to the Yankees on 06-11; the DFA
+# closed his clock and nothing reopened it, so he was credited nothing for a
+# season MLB's roster shows him active in from mid-June onward. 16 of Yankees
+# 2014's 36 wrong judgements were him alone.
+#
+# "traded = START" is NOT the rule, and the measurement is why. Grouped by
+# what happened in the ten days before each trade:
+#
+#     166  after a DFA      a start is correct -- he joins the new 40-man
+#      60  after an option  a start is WRONG -- he reports to the affiliate
+#   1,013  neither          usually already active, where a start is a no-op
+#
+# So what matters is WHY the clock stopped, and the walk below now carries
+# the last stop's kind. A trade reopens an interval only out of a DFA.
+_TRADE_RE = re.compile(r"\btraded\b", re.IGNORECASE)
+_DFA_RE = re.compile(rf"designated{_NAME}for assignment", re.IGNORECASE)
+
+
+def is_trade(desc: str) -> bool:
+    return bool(_TRADE_RE.search(desc))
+
+
 def build_global_active_intervals(
     transactions: list[Transaction],
     horizon_end: dt.date,
@@ -521,18 +607,31 @@ def build_global_active_intervals(
     for t in txns:
         by_date.setdefault(t.date, []).append(t)
 
+    # Why the clock last stopped, which decides whether a later trade
+    # reopens it. See the finding #16 note above.
+    last_stop_kind: str | None = None
+
     for day in sorted(by_date):
         rows = by_date[day]
         has_start = any(_is_active_start(r.description) for r in rows)
         has_stop = any(_is_active_stop(r.description) for r in rows)
+        has_trade = any(is_trade(r.description) for r in rows)
 
         if has_stop:
+            last_stop_kind = (
+                "dfa" if any(_DFA_RE.search(r.description) for r in rows) else "other"
+            )
             if active_since is not None:
                 intervals.append((active_since, day - dt.timedelta(days=1)))
                 active_since = None
         elif has_start:
             if active_since is None:
                 active_since = day
+        elif has_trade and active_since is None and last_stop_kind == "dfa":
+            # A DFA'd player who is traded joins the new club's 40-man; an
+            # optioned one reports to its affiliate. Only the first reopens.
+            active_since = day
+            last_stop_kind = None
 
     if active_since is not None:
         intervals.append((active_since, horizon_end))

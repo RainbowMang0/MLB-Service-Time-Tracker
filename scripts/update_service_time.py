@@ -42,6 +42,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).parent))
 import fetch_mlb_data as mlb  # noqa: E402
 import super_two  # noqa: E402
 from service_time import (  # noqa: E402
+    roster_start_before_debut,
     TRANSACTION_COVERAGE_START_YEAR,
     is_active_start,
     is_active_stop,
@@ -78,7 +79,13 @@ TODAY = dt.date.today()
 #      5 selection opened an interval that nothing closed, crediting players
 #      full seasons spent in the minors. 3,337 days removed across 34 of the
 #      1,364 cached rostered players; none added.
-SERVICE_TIME_RULES_VERSION = 2
+#   3  findings #15 and #16 together. #15: roster time before a player's
+#      first game is credited -- the floor reaches back to an actual roster
+#      move (never a signing) within 45 days of the debut. #16: a trade out
+#      of a DFA reopens the clock, because a DFA'd player who is traded joins
+#      the new club's 40-man. Measured over the 1,365 cached players: 483
+#      changed (35%), 5,982 interval-days added, 6 removed.
+SERVICE_TIME_RULES_VERSION = 3
 
 # The carry-in rule: presume a player is on a roster from his debut onward
 # rather than crediting him nothing until a start transaction happens to fire.
@@ -360,6 +367,20 @@ def build_player_record(
     accrual_floor = debut_date
     if accrual_floor is None and transactions:
         accrual_floor = min(t.date for t in transactions)
+
+    # Finding #15: service time is roster time, not playing time. A player
+    # selected or recalled days before his first game earned those days, and
+    # clipping to the debut threw them away -- 726 of 1,331 cached players
+    # have such a row. roster_start_before_debut() reaches back only to an
+    # actual roster move, never a signing, and only inside a 45-day window
+    # measured from the cache's own bimodal distribution. Both the floor and
+    # the carry-in presumption move together: leaving the presumption at the
+    # debut would open the interval after the floor and credit nothing extra
+    # -- compute_service_time derives the presumption FROM the floor, so
+    # moving the floor moves both together.
+    roster_start = roster_start_before_debut(transactions, debut_date)
+    if roster_start is not None:
+        accrual_floor = roster_start
 
     # A player who is done playing has to have his clock stopped explicitly.
     # Careers usually end with "elected free agency", which is deliberately not

@@ -13,6 +13,7 @@ from service_time import (  # noqa: E402
     SeasonWindow,
     is_active_start,
     is_active_stop,
+    roster_start_before_debut,
     Transaction,
     compute_service_time,
     days_in_intervals,
@@ -1217,6 +1218,78 @@ def test_a_debuted_player_credited_nothing_is_reported():
     check("nor is a player who never debuted", "Never Debuted" not in found)
 
 
+def test_roster_days_before_the_first_game_are_credited():
+    """
+    Finding #15. Daniel Fields was recalled 2015-06-02 and optioned 06-04;
+    his debut is the 4th. Clipping to the debut threw the whole stint away
+    and he read 0.000.
+    """
+    seasons = [SeasonWindow(2015, dt.date(2015, 4, 5), dt.date(2015, 10, 4))]
+    txns = [
+        Transaction(dt.date(2015, 6, 2), "Detroit Tigers recalled Daniel Fields from Toledo Mud Hens."),
+        Transaction(dt.date(2015, 6, 4), "Detroit Tigers optioned CF Daniel Fields to Toledo Mud Hens."),
+    ]
+    debut = dt.date(2015, 6, 4)
+    floor = roster_start_before_debut(txns, debut) or debut
+    check("the recall is found", floor == dt.date(2015, 6, 2))
+    result = compute_service_time(
+        txns, seasons, horizon_end=dt.date(2015, 10, 4),
+        accrual_floor=floor, presume_active_from_debut=True,
+    )
+    check("and those days are credited", result.by_season[2015]["credited_days"] == 2)
+
+
+def test_a_draft_signing_never_moves_the_floor():
+    """
+    The trap in finding #15. Andrew Vaughn was signed 2019-06-28 and debuted
+    2021-04-02; reaching back to a signing would credit him two phantom years.
+    """
+    txns = [Transaction(dt.date(2019, 6, 28), "Chicago White Sox signed 1B Andrew Vaughn.")]
+    check(
+        "a signing is not a roster move",
+        roster_start_before_debut(txns, dt.date(2021, 4, 2)) is None,
+    )
+
+
+def test_the_pre_debut_window_is_bounded():
+    """A roster move long before the debut is a different phenomenon."""
+    far = [Transaction(dt.date(2021, 4, 1), "Oakland Athletics recalled RHP X from Las Vegas Aviators.")]
+    check("far outside the window is ignored",
+          roster_start_before_debut(far, dt.date(2024, 6, 16)) is None)
+    near = [Transaction(dt.date(2024, 6, 1), "Oakland Athletics recalled RHP X from Las Vegas Aviators.")]
+    check("just inside it is taken",
+          roster_start_before_debut(near, dt.date(2024, 6, 16)) == dt.date(2024, 6, 1))
+
+
+def test_a_trade_out_of_a_dfa_reopens_the_clock():
+    """
+    Finding #16, from David Huff: DFA'd by San Francisco 2014-06-06, traded
+    to the Yankees 06-11, and MLB's roster shows him active from mid-June.
+    """
+    txns = [
+        Transaction(dt.date(2014, 5, 12), "San Francisco Giants activated LHP David Huff from the 15-day disabled list."),
+        Transaction(dt.date(2014, 6, 6), "San Francisco Giants designated LHP David Huff for assignment."),
+        Transaction(dt.date(2014, 6, 11), "San Francisco Giants traded LHP David Huff to New York Yankees for cash."),
+    ]
+    intervals = build_global_active_intervals(txns, dt.date(2014, 10, 1))
+    check("the trade reopens the interval", len(intervals) == 2)
+    check("starting on the trade date", intervals[1][0] == dt.date(2014, 6, 11))
+
+
+def test_a_trade_out_of_an_option_does_not():
+    """
+    The measured counter-case: 60 of the cache's trades follow an option, and
+    an optioned player who is traded reports to the new club's affiliate.
+    """
+    txns = [
+        Transaction(dt.date(2014, 5, 12), "San Francisco Giants activated LHP X from the 15-day disabled list."),
+        Transaction(dt.date(2014, 6, 6), "San Francisco Giants optioned LHP X to Fresno Grizzlies."),
+        Transaction(dt.date(2014, 6, 11), "San Francisco Giants traded LHP X to New York Yankees for cash."),
+    ]
+    intervals = build_global_active_intervals(txns, dt.date(2014, 10, 1))
+    check("an optioned player stays off the roster", len(intervals) == 1)
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -1276,5 +1349,10 @@ if __name__ == "__main__":
     test_widespread_build_failures_are_refused()
     test_the_guard_is_inert_on_a_first_run()
     test_a_debuted_player_credited_nothing_is_reported()
+    test_roster_days_before_the_first_game_are_credited()
+    test_a_draft_signing_never_moves_the_floor()
+    test_the_pre_debut_window_is_bounded()
+    test_a_trade_out_of_a_dfa_reopens_the_clock()
+    test_a_trade_out_of_an_option_does_not()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)
