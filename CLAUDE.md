@@ -344,6 +344,22 @@ hasn't been played. The daily job passes `horizon_end=TODAY`.
   **RESOLVED 2026-08-21** — a `full_refresh` run rebuilt the cache and
   **64,703 of 64,775 rows (99%) now carry an id**. The filter is live. (The
   backfill was never affected: it fetches fresh with `use_cache=False`.)
+- **The validator and the probe did not apply finding #15.** Found
+  2026-08-26. `update_service_time.py` moves `accrual_floor` back to a
+  pre-debut roster move; `validate_against_rosters.py` and
+  `probe_player.py` both passed a bare `mlbDebutDate`. So from the moment
+  rules v3 shipped, **the gate scored a model the site does not publish** —
+  and #15 moves the floor for 56% of players, so this was not a rounding
+  matter. It surfaced when the probe reported Braxton Fulford MODEL UNDER on
+  two days his published record already credits.
+  This is the same shape as "Fix 2" in the validation notes, where the
+  validator built intervals without the MLB-club filter and consequently
+  blamed José Ramírez and Austin Romine for defects they never had. **Any
+  check must construct the floor the same way the pipeline does.**
+  Both now do. Re-measured, the gate moved *up* — 2014 98.8% → 99.1%, Tampa
+  Bay 98.6% → 98.7%, the other two identical, over-crediting unchanged in all
+  four. The old numbers were pessimistic rather than flattering, which is the
+  safe direction, but a gate that is wrong in either direction is not a gate.
 - **Demo players persisted forever.** The merge logic never deletes players,
   so seven bundled sample records ("Sample City Marlins") survived into live
   data. `MIN_REAL_PLAYER_ID = 100000` filters them; real MLB person IDs are
@@ -519,9 +535,13 @@ against the fully recomputed v3 database, 2026-08-25.**
 | | agree | over-credit | under-credit | vs. v2 |
 |---|---|---|---|---|
 | Cleveland 2011 | **99.9%** | 0.1% | 0.0% | unchanged |
-| Yankees 2014 | **98.8%** | 0.2% | 1.0% | 96.8% → 98.8% |
+| Yankees 2014 | **99.1%** | 0.2% | 0.8% | 96.8% → 99.1% |
 | Yankees 2018 | **99.8%** | 0.1% | 0.1% | 99.1% → 99.8% |
-| Tampa Bay 2022 | **98.6%** | 0.4% | 1.0% | unchanged |
+| Tampa Bay 2022 | **98.7%** | 0.4% | 0.9% | 98.6% → 98.7% |
+
+*(Re-measured 2026-08-26 after the validator was fixed to apply finding #15 —
+see the bug history. The first v3 numbers were slightly pessimistic: 2014 read
+98.8% and Tampa Bay 98.6%.)*
 
 Baseball Reference: **17 passed, 0 failed, 2 known gaps** (Scherzer +73d,
 Verlander +89d, both bounded by the seasons their own records declare
@@ -547,6 +567,10 @@ the two that were already clean came back identical.
   concentrated: Yankees 2014's worst is now Slade Heathcott at `under=4`,
   Yankees 2018's is Ben Heller at `under=1`. There is no longer a single
   player worth naming as the next bug.
+- **Braxton Fulford, +1 day against MLB's rosters and −3 against Baseball
+  Reference** — finding #17. The +1 is one recall the roster never reflects;
+  the −3 is on the far side of MLB's own roster data and cannot be reached
+  from public sources. Neither is worth a rules change.
 - Any future rules change needs `SERVICE_TIME_RULES_VERSION` bumped and a
   `--recompute-all` pass; the normal queue only looks for players it does
   not already have.
@@ -767,20 +791,35 @@ skew the result.
 Apply the same instinct to any new rule: prefer a check the data can settle
 over a belief about what MLB means.
 
-### Gate status (2026-08-25, after the rules-version-3 recompute)
+### Gate status (2026-08-26, rules version 3, validator corrected)
 
 | | agree | over-credit | under-credit |
 |---|---|---|---|
 | Cleveland 2011 | **99.9%** | 0.1% | 0.0% |
-| Yankees 2014 | **98.8%** | 0.2% | 1.0% |
+| Yankees 2014 | **99.1%** | 0.2% | 0.8% |
 | Yankees 2018 | **99.8%** | 0.1% | 0.1% |
-| Tampa Bay 2022 | **98.6%** | 0.4% | 1.0% |
+| Tampa Bay 2022 | **98.7%** | 0.4% | 0.9% |
+
+These supersede the 2026-08-25 figures below, which were measured before the
+validator applied finding #15 and so scored a model the site does not publish.
+The correction moves agreement **up** in the two seasons it touches and leaves
+over-crediting identical in all four — the old numbers were pessimistic, which
+is the safe direction for a gate to be wrong in, but they were still wrong.
 
 Findings #15 and #16 shipped together. Over-crediting is flat across all
 four; under-crediting fell by two thirds in the two seasons that had any,
 and the two that were already clean came back byte-identical. Worst
 remaining players are Slade Heathcott (`under=4`, 2014) and Ben Heller
 (`under=1`, 2018) — nothing concentrated enough to name as the next bug.
+
+### Gate status (2026-08-25, first v3 run — superseded, see above)
+
+| | agree | over-credit | under-credit |
+|---|---|---|---|
+| Cleveland 2011 | 99.9% | 0.1% | 0.0% |
+| Yankees 2014 | 98.8% | 0.2% | 1.0% |
+| Yankees 2018 | 99.8% | 0.1% | 0.1% |
+| Tampa Bay 2022 | 98.6% | 0.4% | 1.0% |
 
 ### Gate status (2026-08-23, after the rules-version-2 recompute)
 
@@ -1559,6 +1598,59 @@ The two unchanged club-seasons are as much the result as the two that moved:
 Cleveland 2011 and Tampa Bay 2022 came back **identical**, which is what a
 rule that fires only on a specific DFA-then-trade shape should do to seasons
 that do not contain one.
+
+### 17. A one-day recall the roster never reflects, and a gap B-R can see that we cannot
+
+**Raised 2026-08-26 by the owner**, comparing Braxton Fulford against Baseball
+Reference: B-R has him at **97 days** entering 2026, we publish **94** for his
+2025.
+
+Probed day by day against MLB's own historical rosters (`probe_player.py`,
+interval 1, the whole 2025 season). MLB's roster endpoint says he was accruing
+on exactly three stretches:
+
+```
+2025-04-14 .. 2025-04-24   11 days   (contract selected 04-14; debut 04-16)
+2025-06-06 .. 2025-06-30   25 days
+2025-08-03 .. 2025-09-28   57 days
+                          ---------
+                           93 days
+```
+
+So there are **three different numbers**, and it is worth being clear which is
+which:
+
+| source | 2025 | |
+|---|---|---|
+| MLB's own historical 40-man rosters | **93** | day-by-day ground truth |
+| what we publish | **94** | +1 |
+| Baseball Reference | **97** | +4 over MLB's rosters |
+
+**Our +1 is a single day: 2025-04-26.** He was recalled 04-26 and optioned
+again 04-27, and the roster snapshot for 04-26 shows him *not* on the active
+roster. The feed says he was recalled; the roster says he never arrived.
+
+⚠️ **Do not "fix" this by treating short recalls as paper moves.** Measured
+over the 1,368 cached rostered players, a start followed by a stop with
+nothing between happens **793 times at one day**, 313 at two, 270 at three.
+The overwhelming majority are real — the 26th man, a spot starter, a bullpen
+shuttle — and each is a day genuinely earned. Transaction *shape* cannot tell
+a phantom recall from a real one-day call-up; only roster truth can, and
+over-crediting across the four gate club-seasons is 0.1–0.4%, so whatever
+this is, it is not systemic. This is the same trap as findings #4, #5 and #10:
+a plausible reading of MLB's vocabulary that measurement refuses.
+
+**The B-R gap is the more interesting number and we cannot close it.** B-R is
+4 days above MLB's *own* roster endpoint, not just above us. Nothing in the
+public data reaches those days. The likeliest explanation is that B-R has the
+official MLBPA ledger, which is exactly the thing this project exists to
+approximate because it is not published. Recorded, not chased.
+
+**A methodology note for the next time this comes up:** the first probe run
+reported two *under*-credits on 04-14 and 04-15 that did not exist. That was
+the validator bug in the bug history above, not a defect in the data. Check
+that a probe applies the same floor as the pipeline before believing what it
+says about a player.
 
 ### Recomputing after a rules change: `rules_version`
 
