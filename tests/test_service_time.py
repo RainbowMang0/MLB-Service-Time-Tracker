@@ -1428,6 +1428,46 @@ def test_a_missing_lastmod_manifest_degrades_to_the_old_behaviour():
     check("an unknown path also reads today", tracker.of("p/never-seen.html") == "2026-08-26")
 
 
+def test_a_disagreement_is_labelled_by_the_moves_around_it():
+    """
+    A gate summary saying "0.4% over-credited" names no rule to change. The
+    sweep labels each disagreeing date by the roster move on either side, so
+    a repeated shape becomes visible across players.
+
+    Fulford's disputed 2025-04-26 is the worked example: recalled that day,
+    optioned the next, and MLB's roster says he never arrived.
+    """
+    sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "scripts"))
+    import validate_against_rosters as v
+
+    check("an option is recognised", v.shape_of("Rockies optioned C X to Albuquerque.") == "optioned")
+    check("a DFA is not an option", v.shape_of("Giants designated LHP X for assignment.") == "DFA")
+    check(
+        "coming off the IL is distinguished from going on it",
+        v.shape_of("Yankees activated RHP X from the 60-day injured list.") == "activated-IL"
+        and v.shape_of("Yankees placed RHP X on the 10-day injured list.") == "placed-IL",
+    )
+    check(
+        "a Rule 5 return is not a plain activation",
+        v.shape_of("SS X returned to Cleveland Guardians from Atlanta Braves.") == "rule-5-return",
+    )
+    check("an unknown verb falls through", v.shape_of("Club did something novel.") == "other")
+
+    txns = [
+        Transaction(dt.date(2025, 4, 25), "Rockies optioned C X to Albuquerque Isotopes."),
+        Transaction(dt.date(2025, 4, 26), "Rockies recalled C X from Albuquerque Isotopes."),
+        Transaction(dt.date(2025, 4, 27), "Rockies optioned C X to Albuquerque Isotopes."),
+    ]
+    prev_s, next_s = v.classify(txns, dt.date(2025, 4, 26))
+    check("the move on the day itself reads +0d", prev_s == "recalled+0d")
+    check("the move that undoes it reads -1d", next_s == "optioned-1d")
+
+    before_everything = v.classify(txns, dt.date(2025, 1, 1))
+    check("a date before any move says so", before_everything[0] == "(nothing before)")
+    after_everything = v.classify(txns, dt.date(2025, 12, 1))
+    check("a date after every move says so", after_everything[1] == "(nothing after)")
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -1500,5 +1540,6 @@ if __name__ == "__main__":
     test_the_club_directory_is_reachable_in_one_hop()
     test_lastmod_moves_only_when_a_page_actually_changes()
     test_a_missing_lastmod_manifest_degrades_to_the_old_behaviour()
+    test_a_disagreement_is_labelled_by_the_moves_around_it()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

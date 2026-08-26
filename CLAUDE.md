@@ -64,7 +64,7 @@ scripts/probe_player.py            everything the model knows about one player
 scripts/make_reference_worksheet.py  which players are worth hand-checking vs B-R
 scripts/probe_coverage.py          live API probe for finding #1 (run via Actions)
 scripts/generate_demo_data.py      bundled sample data generator (no network)
-tests/test_service_time.py     157 tests, no pytest needed: `python tests/test_service_time.py`
+tests/test_service_time.py     166 tests, no pytest needed: `python tests/test_service_time.py`
 docs/                          the static site (index.html, styles.css, app.js)
 docs/data/service_time.json    the database: every field, one object per player
 docs/data/index.json           what the browser downloads for the table (0.22 MB)
@@ -507,7 +507,7 @@ and #16), with every rostered player published as a crawlable static page.
   sum exactly to his published total.
 - **1,358 on a 40-man.** Each has a static page at
   `docs/p/<id>-<slug>.html`, listed in `docs/sitemap.xml`.
-- **157 tests passing.**
+- **166 tests passing.**
 - 1 player at or above 20.000 years (Verlander, 21.073), which is correct.
 - **27 players read exactly 0.000** and are hidden from the table by
   default — all 27 have never played a major league game (prospects added
