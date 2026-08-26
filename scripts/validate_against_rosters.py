@@ -147,10 +147,38 @@ def flatten(t: dict) -> dict:
 
 IL_CODE_PREFIX = "D"
 
+# Lists a player can be on that keep him off the ACTIVE roster while he keeps
+# accruing service time. Found 2026-08-26 while chasing Zach Agnos, whose 2025
+# includes three days on the bereavement list: the truth source was scoring
+# those as not accruing and marking us OVER for days we credit correctly.
+#
+# ⚠️ This is an a-priori addition, which this script otherwise avoids on
+# purpose -- see "Never hardcode what the data can tell you" in CLAUDE.md,
+# where a guessed meaning for RM inverted a fifth of a sample. The difference
+# is that these three are not guesses: the CBA is explicit that a player on
+# the Bereavement/Family Medical Emergency List or the Paternity Leave List
+# counts against the 40-man, does NOT count against the active roster, and
+# continues to accrue service time.
+#
+# Deliberately NOT included: the restricted list and the suspended list, which
+# also keep a player off the active roster and do NOT accrue. Anything not
+# named here stays not-accruing and is reported in off_roster_codes, so a
+# common unclassified code cannot hide.
+ACCRUING_INACTIVE_CODES = {
+    "BRV",  # bereavement
+    "FME",  # family medical emergency
+    "PL",   # paternity leave
+}
+
 
 def is_il_code(code: str) -> bool:
     """D7 / D10 / D15 / D60 -- a major league injured list, which accrues."""
     return code.startswith(IL_CODE_PREFIX) and code[1:].isdigit()
+
+
+def accrues_off_active_roster(code: str) -> bool:
+    """On the 40-man, off the active roster, and still earning service time."""
+    return is_il_code(code) or code in ACCRUING_INACTIVE_CODES
 
 
 def sample_dates(season_start: dt.date, season_end: dt.date, interval: int) -> list[dt.date]:
@@ -252,6 +280,8 @@ def main() -> None:
     names: dict[int, str] = {}
     codes = collections.Counter()
     off_roster_codes = collections.Counter()
+    # Off the active roster but still accruing -- bereavement and the like.
+    accruing_inactive = collections.Counter()
 
     # Cached across the whole sweep. A player recurs in many club-seasons of
     # the same club, and his transactions and debut do not change between
@@ -306,8 +336,10 @@ def main() -> None:
                 codes[code] += 1
                 if pid in active_ids:
                     truth[pid][d] = True
-                elif is_il_code(code):
+                elif accrues_off_active_roster(code):
                     truth[pid][d] = True
+                    if code in ACCRUING_INACTIVE_CODES:
+                        accruing_inactive[code] += 1
                 else:
                     truth[pid][d] = False
                     off_roster_codes[code] += 1
@@ -385,7 +417,11 @@ def main() -> None:
     print(f"status codes seen: {dict(codes.most_common())}")
     print(f"treated as NOT accruing (off active roster, not IL): "
           f"{dict(off_roster_codes.most_common())}")
-    print("  (truth is roster membership + IL shape; codes are reported, not interpreted)\n")
+    if accruing_inactive:
+        print(f"off the active roster but STILL ACCRUING (CBA): "
+              f"{dict(accruing_inactive.most_common())}")
+    print("  (truth is roster membership + IL shape; codes are reported, not interpreted,\n"
+          "   except the bereavement/paternity set -- see ACCRUING_INACTIVE_CODES)\n")
 
     scores = {v: report(v) for v in variants}
 

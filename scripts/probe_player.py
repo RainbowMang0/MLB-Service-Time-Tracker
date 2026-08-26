@@ -51,7 +51,11 @@ from service_time import (  # noqa: E402
     roster_start_before_debut,
 )
 from update_service_time import _involves_mlb_club, mlb_team_ids  # noqa: E402
-from validate_against_rosters import flatten, is_il_code, sample_dates  # noqa: E402
+from validate_against_rosters import (  # noqa: E402
+    accrues_off_active_roster,
+    flatten,
+    sample_dates,
+)
 
 
 def _verb(description: str) -> str:
@@ -154,7 +158,10 @@ def main() -> None:
             continue
 
         code = ((entry.get("status") or {}).get("code") or "").upper()
-        truth = args.player in active_ids or is_il_code(code)
+        # Same rule as the sweep: the active roster, a major league IL, or
+        # one of the lists that keeps a player off the active roster while
+        # he goes on accruing (bereavement, family medical, paternity).
+        truth = args.player in active_ids or accrues_off_active_roster(code)
         model = any(s <= d <= e for s, e in variants["on"])
         if model == truth:
             verdict, _ = "agree", agree

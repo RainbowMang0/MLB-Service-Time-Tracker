@@ -1468,6 +1468,45 @@ def test_a_disagreement_is_labelled_by_the_moves_around_it():
     check("a date after every move says so", after_everything[1] == "(nothing after)")
 
 
+def test_bereavement_and_paternity_accrue_but_the_restricted_list_does_not():
+    """
+    Found 2026-08-26 chasing Zach Agnos, whose 2025 includes three days on the
+    bereavement list. The CBA is explicit: a player on the Bereavement/Family
+    Medical Emergency or Paternity Leave list counts against the 40-man, does
+    NOT count against the active roster, and keeps accruing service time.
+
+    Our model already got this right by accident -- neither placement is a
+    start or a stop, so an open interval simply continues. The TRUTH SOURCE
+    had it wrong, scoring those days as not accruing and marking us OVER for
+    days we credit correctly.
+    """
+    sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "scripts"))
+    from validate_against_rosters import accrues_off_active_roster
+
+    for code in ("BRV", "FME", "PL"):
+        check(f"{code} accrues", accrues_off_active_roster(code))
+    for code in ("D7", "D10", "D15", "D60"):
+        check(f"{code} accrues", accrues_off_active_roster(code))
+    # The lists that look similar and do NOT accrue must stay excluded.
+    for code in ("RM", "RL", "SU", "DEC", ""):
+        check(f"{code or '(blank)'} does not accrue", not accrues_off_active_roster(code))
+
+
+def test_a_bereavement_placement_does_not_stop_the_clock():
+    """The model side of the same rule, pinned so a future stop keyword cannot
+    quietly swallow it."""
+    txns = [
+        Transaction(dt.date(2025, 4, 20), "Colorado Rockies selected the contract of RHP X from Albuquerque Isotopes."),
+        Transaction(dt.date(2025, 6, 3), "Colorado Rockies placed RHP X on the bereavement list."),
+        Transaction(dt.date(2025, 6, 6), "Colorado Rockies activated RHP X from the bereavement list."),
+        Transaction(dt.date(2025, 6, 15), "Colorado Rockies optioned RHP X to Albuquerque Isotopes."),
+    ]
+    intervals = build_global_active_intervals(txns, dt.date(2025, 9, 28))
+    check("one unbroken interval across the bereavement days", len(intervals) == 1)
+    check("it opens at the contract selection", intervals[0][0] == dt.date(2025, 4, 20))
+    check("and closes the day before the option", intervals[0][1] == dt.date(2025, 6, 14))
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -1541,5 +1580,7 @@ if __name__ == "__main__":
     test_lastmod_moves_only_when_a_page_actually_changes()
     test_a_missing_lastmod_manifest_degrades_to_the_old_behaviour()
     test_a_disagreement_is_labelled_by_the_moves_around_it()
+    test_bereavement_and_paternity_accrue_but_the_restricted_list_does_not()
+    test_a_bereavement_placement_does_not_stop_the_clock()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)
