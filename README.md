@@ -4,7 +4,7 @@ Estimated major league service time for every player on a 40-man roster,
 plus a historical log of players who have since dropped off one. Rebuilt
 every morning at 8am US/Eastern by a GitHub Actions job.
 
-**Live site:** https://rainbowmang0.github.io/MLB-Service-Time-Tracker/
+**Live site:** https://bigleagueservicetime.com
 
 Service time is what decides when a player reaches salary arbitration and
 free agency. 172 days credits a full year; 3.000 years reaches arbitration,

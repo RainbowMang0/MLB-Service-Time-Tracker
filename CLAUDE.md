@@ -15,7 +15,9 @@ rediscover any of it.
   less clear rather than safer. The footer now also states plainly that the
   project is not affiliated with or endorsed by MLB or the MLBPA.
 - **Repo:** `RainbowMang0/MLB-Service-Time-Tracker`
-- **Live site:** https://rainbowmang0.github.io/MLB-Service-Time-Tracker/
+- **Live site:** https://bigleagueservicetime.com (custom domain, live
+  2026-08-26). The `github.io` URL redirects to it. `docs/CNAME` holds the
+  hostname and *derives* every published URL — see "Moving to a domain".
 - **Hosting:** GitHub Pages, `main` branch, `/docs` folder
 - **Owner is not a full-time developer.** Explain the *why*, not just the
   command. Prior web experience, ~5 years stale.
@@ -1638,13 +1640,13 @@ genuinely open work rather than a queue.
    answer it without a consent banner; both are one script tag and neither
    sets a cookie. **Needs an owner decision on which.**
 
-3. **A custom domain — owner is acquiring one.** The code side is done:
-   write the hostname to `docs/CNAME`, regenerate, and every generated URL
-   follows it. `validate_published.py` names the one remaining hand edit
-   (`og:url` in `docs/index.html`). Point the domain's DNS at GitHub Pages
-   and enable HTTPS in the repo's Pages settings; then re-submit the sitemap
-   in Search Console, because the old and new hostnames are different
-   properties.
+3. **~~A custom domain~~ — DONE 2026-08-26.** `bigleagueservicetime.com`,
+   bought at Porkbun, apex on GitHub's four A records plus a `www` CNAME.
+   `docs/CNAME` drove the switch and the validator caught the one hand edit
+   (`og:url` and `canonical` in `docs/index.html`) exactly as designed.
+   Remaining: tick **Enforce HTTPS** in Settings → Pages once the certificate
+   provisions, then verify the property in Search Console and submit
+   `https://bigleagueservicetime.com/sitemap.xml`.
 
 4. **Fill `data/reference_super_two.json`.** Every row is still `published:
    null`, so `validate_super_two.py` reports the computed cutoffs and passes
