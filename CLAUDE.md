@@ -840,7 +840,41 @@ skew the result.
 Apply the same instinct to any new rule: prefer a check the data can settle
 over a belief about what MLB means.
 
-### Gate status (2026-08-26, rules version 3, validator corrected)
+### Gate status (2026-08-26, rules version 4 — CURRENT)
+
+Twelve club-seasons in one sweep (Cleveland, Yankees, Tampa Bay x 2011, 2014,
+2018, 2022), 13,678 player-date judgements across 562 players:
+
+```
+AGREE        13,511  (98.8%)
+MODEL OVER       42  ( 0.3%)
+MODEL UNDER     125  ( 0.9%)
+```
+
+The four gate club-seasons, v3 → v4:
+
+| | v3 | v4 |
+|---|---|---|
+| Cleveland 2011 | 99.9% / 0.1% / 0.0% | **100.0% / 0.0% / 0.0%** |
+| Yankees 2014 | 99.1% / 0.2% / 0.8% | 99.1% / 0.2% / 0.8% |
+| Yankees 2018 | 99.8% / 0.1% / 0.1% | 99.8% / 0.1% / 0.1% |
+| Tampa Bay 2022 | 98.7% / 0.4% / 0.9% | **98.9% / 0.2% / 0.9%** |
+
+**Over-crediting did not rise anywhere, and fell where finding #19 fired.**
+Cleveland 2011 is now perfect — 1,083 judgements, not one wrong. Tampa Bay's
+over-crediting halved. The two that contained no claim-then-recall came back
+byte-identical, which is what a narrow rule should do.
+
+**Baseball Reference under v4: 17 passed, 0 failed, 2 known gaps** — identical
+to v3, Scherzer +73d and Verlander +89d, both bounded by their own declared
+presumed seasons. No complete-history player moved, which is the regression
+detector reporting no regression.
+
+The other eight club-seasons in the sweep, for context: Yankees 2011 and Rays
+2014 also came back perfect; the worst is Cleveland 2022 at 94.7% (0.9% over,
+4.4% under), driven by Carlos Vargas and Cody Morris alone.
+
+### Gate status (2026-08-26, rules version 3 — superseded by v4 above)
 
 | | agree | over-credit | under-credit |
 |---|---|---|---|
