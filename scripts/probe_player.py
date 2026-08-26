@@ -48,6 +48,7 @@ from service_time import (  # noqa: E402
     _is_active_start,
     _is_active_stop,
     build_global_active_intervals,
+    roster_start_before_debut,
 )
 from update_service_time import _involves_mlb_club, mlb_team_ids  # noqa: E402
 from validate_against_rosters import flatten, is_il_code, sample_dates  # noqa: E402
@@ -100,10 +101,19 @@ def main() -> None:
 
     print(f"\n  {len(kept)} of {len(raw)} rows involve a major league club.\n")
 
+    # The pipeline's floor, not the bare debut date: finding #15 moves it back
+    # to a roster move in the 45 days before a player's first game. Computing
+    # it differently here would diagnose a model the site does not publish.
+    floor = debut_date
+    roster_start = roster_start_before_debut(kept, debut_date)
+    if roster_start is not None:
+        floor = roster_start
+        print(f"  floor moved back to {floor} by a pre-debut roster move (finding #15).\n")
+
     variants = {
-        "off": build_global_active_intervals(kept, end, accrual_floor=debut_date),
+        "off": build_global_active_intervals(kept, end, accrual_floor=floor),
         "on": build_global_active_intervals(
-            kept, end, accrual_floor=debut_date, presume_active_from=debut_date
+            kept, end, accrual_floor=floor, presume_active_from=floor
         ),
     }
     for label, intervals in variants.items():

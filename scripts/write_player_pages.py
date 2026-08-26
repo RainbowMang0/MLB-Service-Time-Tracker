@@ -275,6 +275,7 @@ def render_club_index(by_club: dict[str, list[dict]], generated_at: str) -> str:
 <meta property="og:url" content="{url}" />
 <meta name="twitter:card" content="summary" />
 {_ld_script(graph)}
+<link rel="icon" href="{BASE_PATH}favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="../styles.css" />
 <link rel="stylesheet" href="../page.css" />
 <script>
@@ -381,6 +382,7 @@ def render_club(club: str, players: list[dict], generated_at: str) -> str:
 <meta property="og:url" content="{url}" />
 <meta name="twitter:card" content="summary" />
 {_ld_script(graph)}
+<link rel="icon" href="{BASE_PATH}favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="../styles.css" />
 <link rel="stylesheet" href="../page.css" />
 <script>
@@ -510,6 +512,7 @@ def render(player: dict, team_names: dict[int, str], generated_at: str) -> str:
 <meta property="og:url" content="{url}" />
 <meta name="twitter:card" content="summary" />
 {jsonld}
+<link rel="icon" href="{BASE_PATH}favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="../styles.css" />
 <script>
   /* Carry the theme the visitor chose on the main table. In <head> and inline
@@ -777,6 +780,7 @@ def _write_404() -> None:
      Every URL here is site-absolute on purpose: this file is served for bad
      paths under /p/ too, where a relative "styles.css" would resolve against
      /p/ and 404 in turn, leaving an unstyled error page. -->
+<link rel="icon" href="{BASE_PATH}favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="{BASE_PATH}styles.css" />
 <link rel="stylesheet" href="{BASE_PATH}page.css" />
 <script>

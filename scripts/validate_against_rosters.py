@@ -62,7 +62,11 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
 import fetch_mlb_data as mlb  # noqa: E402
-from service_time import Transaction, build_global_active_intervals  # noqa: E402
+from service_time import (  # noqa: E402
+    Transaction,
+    build_global_active_intervals,
+    roster_start_before_debut,
+)
 from update_service_time import (  # noqa: E402
     PRESUME_ACTIVE_FROM_DEBUT,
     _involves_mlb_club,
@@ -115,9 +119,10 @@ def flatten(t: dict) -> dict:
 # Anything on the 40-man that is neither on the active roster nor IL-shaped
 # is not accruing. Whatever its code happens to mean is irrelevant.
 #
-# NOTE the second failure above is not just a bug in this script: it means
-# `accrual_floor = mlbDebutDate` in the pipeline is also slightly wrong, and
-# under-counts players who sat on a roster before debuting. See CLAUDE.md.
+# NOTE the second failure above was not just a bug in this script: it meant
+# `accrual_floor = mlbDebutDate` in the pipeline under-counted players who sat
+# on a roster before debuting. That is finding #15, fixed in rules version 3,
+# and this script applies the same rule -- see the floor computed below.
 
 IL_CODE_PREFIX = "D"
 
@@ -238,12 +243,22 @@ def main() -> None:
         except Exception as exc:
             print(f"  {names.get(pid)}: FAILED ({exc})", file=sys.stderr)
             continue
-        floor = debuts.get(pid)
         txns = [
             Transaction(date=dt.date.fromisoformat(t["date"]), description=t.get("description", ""))
             for t in raw
             if t.get("date") and _involves_mlb_club(flatten(t), club_ids)
         ]
+
+        # Same floor the pipeline computes, including finding #15: a contract
+        # selected a day or two before a player's first game put him on the
+        # roster then, and those days are owed. Skipping it here would score a
+        # DIFFERENT MODEL than production -- the exact mistake that made this
+        # script's first version blame Jose Ramirez and Austin Romine for
+        # defects they never had. See "Fix 2" in CLAUDE.md.
+        floor = debuts.get(pid)
+        roster_start = roster_start_before_debut(txns, floor)
+        if roster_start is not None:
+            floor = roster_start
 
         for variant in variants:
             intervals = build_global_active_intervals(

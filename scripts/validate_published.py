@@ -147,7 +147,7 @@ def check_links() -> list[str]:
     40-man. Both produce a 404 that nothing else would notice.
     """
     sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-    from write_player_pages import SITE_URL
+    from write_player_pages import BASE_PATH, SITE_URL
 
     problems: list[str] = []
     docs = pathlib.Path(__file__).resolve().parents[1] / "docs"
@@ -171,8 +171,9 @@ def check_links() -> list[str]:
     #    index.html is in here because it carries the one hand-written link into
     #    the generated section ("t/"), and a hand-written link is exactly the
     #    kind that rots without anyone noticing.
-    generated = ([docs / "index.html"] + sorted(docs.glob("p/*.html"))
-                 + sorted(docs.glob("t/*.html")))
+    generated = ([docs / "index.html", docs / "404.html"]
+                 + sorted(docs.glob("p/*.html")) + sorted(docs.glob("t/*.html")))
+    generated = [p for p in generated if p.exists()]
     missing_targets: set[str] = set()
     foreign = 0
     for page in generated:
@@ -185,11 +186,24 @@ def check_links() -> list[str]:
                 if foreign <= 5:
                     problems.append(f"{page.relative_to(docs.parent)}: foreign URL {url!r}")
         for href in re.findall(r'href="((?!https?:|#|mailto:)[^"]+)"', text):
-            target = (page.parent / href.split("#")[0]).resolve()
+            clean = href.split("#")[0].split("?")[0]
+            if not clean:
+                continue
+            if clean.startswith("/"):
+                # A site-absolute href resolves against the SITE root, not the
+                # filesystem root. Joining it onto a path with pathlib silently
+                # discards the left side, so "/favicon.svg" would be looked for
+                # at the top of the disk and reported dead on every page.
+                # BASE_PATH is "/" on a custom domain and "/<repo>/" on a
+                # project page; either way what follows it is relative to docs/.
+                rel = clean[len(BASE_PATH):] if clean.startswith(BASE_PATH) else clean[1:]
+                target = (docs / rel).resolve() if rel else docs
+            else:
+                target = (page.parent / clean).resolve()
             # A directory href is served by its index.html, so that is what has
             # to exist -- "t/" resolving to a directory with nothing in it would
             # be a 404 for a visitor and this check would have passed it.
-            if href.endswith("/") or target.is_dir():
+            if clean.endswith("/") or target.is_dir():
                 target = target / "index.html"
             if not target.exists():
                 missing_targets.add(f"{page.relative_to(docs.parent)} -> {href}")

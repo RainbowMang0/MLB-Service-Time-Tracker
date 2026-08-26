@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- The header brand mark, standalone. A favicon is fetched without the
+       site's stylesheet, so the colours that live in CSS variables there are
+       literal here, and the dark-mode swap is a media query inside the file.
+       Stroke widths are heavier than the header's 1.6: at 16px a hairline
+       disappears into the tab. -->
+  <style>
+    .ball { fill: none; stroke: #0b0b0b; stroke-width: 2.4; }
+    .seam { fill: none; stroke: #d03b3b; stroke-width: 2.4; stroke-linecap: round; }
+    @media (prefers-color-scheme: dark) {
+      .ball { stroke: #f0efe9; }
+      .seam { stroke: #e66767; }
+    }
+  </style>
+  <circle cx="16" cy="16" r="13" class="ball" />
+  <path d="M7.2 5.6c3.6 3 5.4 6.5 5.4 10.4s-1.8 7.4-5.4 10.4" class="seam" />
+  <path d="M24.8 5.6c-3.6 3-5.4 6.5-5.4 10.4s1.8 7.4 5.4 10.4" class="seam" />
+</svg>
