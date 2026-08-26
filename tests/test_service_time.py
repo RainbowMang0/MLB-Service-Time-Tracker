@@ -18,6 +18,7 @@ from service_time import (  # noqa: E402
     compute_service_time,
     days_in_intervals,
     build_global_active_intervals,
+    claim_then_recall_windows,
 )
 
 PASS = 0
@@ -1588,6 +1589,65 @@ def test_the_roster_sweep_runs_end_to_end_without_touching_the_network():
     check("a multi-club sweep parses", "Sweeping 1 club-season(s)" in text)
 
 
+def test_a_waiver_claim_followed_straight_by_a_recall_is_a_minor_league_stint():
+    """
+    Finding #19, from Josh Walker: claimed by Baltimore 2025-08-21, and the very
+    next major league move is "recalled from Norfolk Tides" 39 days later. He
+    cannot be recalled FROM Norfolk unless he was AT Norfolk, so the claim put
+    him on the 40-man and sent him down; those 39 days are phantom.
+
+    This is the feed's own words rather than a belief about MLB's vocabulary,
+    which is what separates it from the rules findings #4 and #5 had to revert.
+    """
+    txns = [
+        Transaction(dt.date(2025, 8, 19), "Philadelphia Phillies designated LHP X for assignment."),
+        Transaction(dt.date(2025, 8, 21), "Baltimore Orioles claimed LHP X off waivers from Philadelphia Phillies."),
+        Transaction(dt.date(2025, 9, 29), "Baltimore Orioles recalled LHP X from Norfolk Tides."),
+    ]
+    windows = claim_then_recall_windows(txns)
+    check("the claim-to-recall window is found", windows == [(dt.date(2025, 8, 21), dt.date(2025, 9, 29))])
+
+
+def test_a_claim_with_a_move_in_between_is_not_the_same_shape():
+    """
+    The rule fires only when NOTHING sits between the claim and the recall.
+    With an option in between the days are already handled correctly, and with
+    anything else in between "he was down the whole time" stops being the only
+    available reading.
+    """
+    txns = [
+        Transaction(dt.date(2025, 8, 21), "Orioles claimed LHP X off waivers from Phillies."),
+        Transaction(dt.date(2025, 8, 25), "Orioles optioned LHP X to Norfolk Tides."),
+        Transaction(dt.date(2025, 9, 29), "Orioles recalled LHP X from Norfolk Tides."),
+    ]
+    check("an intervening option suppresses it", claim_then_recall_windows(txns) == [])
+
+    played = [
+        Transaction(dt.date(2025, 8, 21), "Orioles claimed LHP X off waivers from Phillies."),
+        Transaction(dt.date(2025, 9, 1), "Orioles placed LHP X on the 15-day injured list."),
+        Transaction(dt.date(2025, 9, 29), "Orioles recalled LHP X from Norfolk Tides."),
+    ]
+    check("so does anything else", claim_then_recall_windows(played) == [])
+
+
+def test_the_broad_version_of_the_recall_rule_stays_rejected():
+    """
+    Recorded as a test because the broad reading is the tempting one and it is
+    measurably wrong. Caleb Ferguson's interval runs from 2019 across his Tommy
+    John year -- spent on the 60-day IL, which ACCRUES -- to a recall in 2022.
+    Closing any interval that straddles any recall deletes about three years he
+    earned. The narrow rule must not fire on this shape.
+    """
+    txns = [
+        Transaction(dt.date(2019, 8, 6), "Los Angeles Dodgers activated LHP X."),
+        Transaction(dt.date(2020, 9, 16), "Los Angeles Dodgers placed LHP X on the 10-day injured list."),
+        Transaction(dt.date(2022, 5, 16), "Los Angeles Dodgers recalled LHP X from Oklahoma City Dodgers."),
+    ]
+    check("no claim, so no window", claim_then_recall_windows(txns) == [])
+    intervals = build_global_active_intervals(txns, dt.date(2022, 9, 30))
+    check("the long interval survives untouched", intervals[0][0] == dt.date(2019, 8, 6))
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -1664,5 +1724,8 @@ if __name__ == "__main__":
     test_bereavement_and_paternity_accrue_but_the_restricted_list_does_not()
     test_a_bereavement_placement_does_not_stop_the_clock()
     test_the_roster_sweep_runs_end_to_end_without_touching_the_network()
+    test_a_waiver_claim_followed_straight_by_a_recall_is_a_minor_league_stint()
+    test_a_claim_with_a_move_in_between_is_not_the_same_shape()
+    test_the_broad_version_of_the_recall_rule_stays_rejected()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

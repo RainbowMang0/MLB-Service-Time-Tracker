@@ -452,6 +452,40 @@ def roster_start_before_debut(
 #
 # So what matters is WHY the clock stopped, and the walk below now carries
 # the last stop's kind. A trade reopens an interval only out of a DFA.
+# Finding #19: a waiver claim that never put the player on the active roster.
+#
+# "Recalled FROM <minor league club>" is proof of where he was the day before,
+# and it is the feed's own words rather than an assumption about MLB's
+# vocabulary -- a player cannot be recalled from Norfolk unless he was at
+# Norfolk. So when a claim's very next major league move is a recall, the claim
+# put him on the 40-man and sent him down, and the days in between are phantom.
+#
+# ⚠️ The BROAD version of this -- close any interval that straddles any recall
+# -- was measured and is catastrophically wrong. Caleb Ferguson's interval runs
+# 2019-08-06 to 2022-05-16 across his Tommy John year, which he spent on the
+# 60-day IL and therefore ACCRUING, and truncating at the recall deletes about
+# three legitimate years. Patrick Corbin loses a whole real season the same way.
+# The narrow rule fires only when nothing at all sits between the claim and the
+# recall, which is what makes "he was in the minors the whole time" the only
+# reading left.
+_CLAIM_RE = re.compile(rf"claimed{_NAME}off waivers", re.IGNORECASE)
+_RECALL_RE = re.compile(r"\brecalled\b", re.IGNORECASE)
+
+
+def claim_then_recall_windows(
+    transactions: list[Transaction],
+) -> list[tuple[dt.date, dt.date]]:
+    """(claim date, recall date) pairs with no major league move in between."""
+    rows = sorted(transactions, key=lambda t: t.date)
+    out = []
+    for i, t in enumerate(rows[:-1]):
+        nxt = rows[i + 1]
+        if _CLAIM_RE.search(t.description) and _RECALL_RE.search(nxt.description):
+            if nxt.date > t.date:
+                out.append((t.date, nxt.date))
+    return out
+
+
 _TRADE_RE = re.compile(r"\btraded\b", re.IGNORECASE)
 _DFA_RE = re.compile(rf"designated{_NAME}for assignment", re.IGNORECASE)
 
