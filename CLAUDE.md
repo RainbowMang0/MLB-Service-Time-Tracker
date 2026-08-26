@@ -1599,13 +1599,37 @@ are green.** Every rostered player also has a crawlable page. What follows is
 genuinely open work rather than a queue.
 
 1. **Widen player pages to non-rostered players** — a one-line change to
-   `_should_publish()` in `scripts/write_player_pages.py`. Deliberately
-   deferred: the owner's call was to publish the 1,358 current players
-   first and see how they index before adding 4,213 retired ones. Note the
-   trade-off — retired players are four fifths of the database and the
-   long-tail search traffic ("how much service time did X have"), but they
-   are also where the estimates are weakest, so they arrive with the
-   `presumed`/`absent` caveats doing more work.
+   `_should_publish()` in `scripts/write_player_pages.py`.
+
+   **Asked and decided 2026-08-26: hold until there is traffic data.** Not a
+   forgotten item — revisit it 2-4 weeks after the domain and Search Console
+   are live, when there is an answer to "do these pages rank at all?"
+
+   The measurement the decision was made on:
+
+   | | rostered (published) | non-rostered (would add) |
+   |---|---|---|
+   | players | 1,358 | **4,213** |
+   | page payload | 6.5 MB | ~20 MB projected |
+   | declare missing seasons | 0% | **27%** (1,148 players) |
+   | accruing seasons that are `presumed` | 0% | **16%** |
+
+   So it is four fifths of the database and the whole long-tail of search
+   ("how much service time did X have"), and it is also where the estimates
+   are weakest — the `presumed`/`absent` caveats do far more work on these
+   pages than on any current player's.
+
+   **Why waiting costs nothing and publishing early might.** The change stays
+   one line however long it sits. But pages are rebuilt wholesale, so
+   reversing means withdrawing thousands of URLs a crawler has already seen,
+   and a young site does not want to teach Google that its URLs disappear.
+   Publishing is the hard-to-undo direction; waiting is free.
+
+   A third option was on the table and is worth remembering: publish only the
+   ~3,065 non-rostered players whose records declare **no** missing seasons.
+   That keeps the weakest estimates unpublished at the cost of a slightly
+   less trivial `_should_publish()` and a line explaining why some players
+   have no page.
 
 2. **There is no analytics on the site**, so its traffic is unknown — and it
    is now the *blocking* unknown, because the pages exist but nothing can
