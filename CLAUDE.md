@@ -1804,11 +1804,57 @@ Flores Jr. (over=13, agree=0), Kyle Hurt (under=14), Adael Amador (under=13),
 Ryan Feltner (under=12), Sam Hilliard (under=11) — each one player whose state
 is wrong for a stretch of weeks, and no two sharing a signature.
 
-**So the honest conclusion: the remaining error is not systematic.** It is the
-residue of a feed that does not record every roster move, and the way to
-improve a specific number is to probe that specific player, which is what
-findings #13, #14, #16 and #17 each were. There is no longer a rule change
-waiting to be found by looking at aggregates.
+**So the aggregate conclusion: there is no systematic error visible at the
+aggregate level.** But the sweep's *worst individual player* was worth
+following, and that is where the rule came from — see below.
+
+#### The rule it did produce: a claim straight to a recall is a minor league stint
+
+Bernardo Flores Jr. came back `over=13, agree=0` — never once agreeing, which
+is the exact signature that found David Huff and became finding #16. Following
+that thread through the cache turned up the shape:
+
+```
+2025-08-21  Baltimore Orioles claimed LHP Josh Walker off waivers.
+2025-09-29  Baltimore Orioles recalled LHP Josh Walker from Norfolk Tides.
+```
+
+**He cannot be recalled FROM Norfolk unless he was AT Norfolk.** So when a
+waiver claim's very next major league move is a recall, the claim put him on
+the 40-man and sent him down, and every day in between is phantom. This is the
+feed's own words rather than a belief about MLB's vocabulary — the distinction
+that separates it from the rules findings #4 and #5 had to revert.
+
+**Confirmed against MLB's own rosters at one-day resolution, before shipping:**
+
+| player | season | agree | over | under |
+|---|---|---|---|---|
+| Josh Walker | 2025 | **0** | **39** | 0 |
+| Cole Sulser | 2023 | **0** | **59** | 0 |
+
+Ninety-eight phantom days across two players, zero agreement on any of them,
+exactly the windows the rule predicts.
+
+Measured over the 1,368 cached rostered players: **16 changed (1.2%), 301
+credited days removed, 0 added.** Only-removes is the expected shape for a
+rule that can only close an interval, and it means over-crediting can only
+fall.
+
+⚠️ **The BROAD version is catastrophically wrong and is pinned as a test.**
+Closing any interval that straddles any recall removes 2,848 days from 53
+players — but Caleb Ferguson's interval runs 2019 to 2022 across his Tommy
+John year, which he spent on the 60-day IL and therefore **accruing**, so it
+deletes about three legitimate years. Patrick Corbin loses a whole real season
+the same way. The shipped rule fires only when nothing at all sits between the
+claim and the recall, and only trims the interval the claim itself opened.
+
+Shipped as `SERVICE_TIME_RULES_VERSION = 4`.
+
+**The general lesson, which is the opposite of what the aggregate suggested:**
+the sweep's own summary says there is no shape worth chasing, and it is right
+about shapes — but the *worst single player* is still a lead, because a
+player who never agrees has a mechanism behind him. Aggregates rule out
+systematic error; individual outliers are where the remaining rules live.
 
 #### A flaw the run exposed in the diagnostic itself
 
