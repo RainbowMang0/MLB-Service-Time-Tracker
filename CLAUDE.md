@@ -61,6 +61,7 @@ scripts/validate_against_rosters.py  day-by-day against MLB's own historical ros
 scripts/validate_super_two.py      against published cutoffs (offline)
 scripts/validate_published.py      published files agree + every URL/link resolves (offline)
 scripts/probe_player.py            everything the model knows about one player
+scripts/make_reference_worksheet.py  which players are worth hand-checking vs B-R
 scripts/probe_coverage.py          live API probe for finding #1 (run via Actions)
 scripts/generate_demo_data.py      bundled sample data generator (no network)
 tests/test_service_time.py     157 tests, no pytest needed: `python tests/test_service_time.py`
@@ -768,6 +769,54 @@ like a handful of missing days, while a career total makes nine years
 unmissable. Breadth and independence are different virtues.
 
 Run it: Actions → "Validate Service Time" → rosters.
+
+### Why Baseball Reference is not scraped, and what is done instead
+
+**Asked 2026-08-26: "check Baseball Reference's numbers against all the
+players you can." Declined, and worth recording why, because it is a
+reasonable-sounding request that will come up again.**
+
+Three separate reasons, and each is sufficient on its own:
+
+1. **B-R's terms prohibit automated extraction.** This is the same line the
+   project already drew over player photographs — the service-time figures
+   are this project's own reconstruction and defensible as such; someone
+   else's data or images republished are not.
+2. **It is the project's own recorded decision.** The reference figures are
+   hand-entered "both to respect B-R's terms and because a handful of
+   hand-checked figures is enough to catch a systemic error."
+3. **B-R is not the best oracle available anyway.** Finding #17 measured it
+   sitting **4 days above MLB's own roster endpoint** on Braxton Fulford. The
+   likeliest reading is that B-R has the official MLBPA ledger — the
+   unpublished thing this project exists to approximate. Tuning toward B-R
+   past the point where MLB's own rosters agree would be tuning toward a
+   source we cannot see and cannot check.
+
+**What is used instead: MLB's historical 40-man rosters, swept wide.** They
+are free, unlimited, sanctioned, and give day-level truth rather than a career
+total. `validate_against_rosters.py` now takes comma-separated `--team` and
+`--season` lists and crosses them, caching each player's transactions across
+the whole sweep, so dozens of club-seasons cost one fetch per player.
+
+**And it classifies the errors rather than only counting them.** A summary
+saying "0.4% over-credited" names no rule to change, which is where every
+previous round stalled. Each disagreeing player-date is labelled by the roster
+move on either side of it — Fulford's disputed day reads
+`recalled+0d / optioned-1d` — and the labels are counted. A shape that
+dominates is a candidate rule. **A long tail of singletons is not**: it is the
+residue of a feed that does not record everything, and chasing it is precisely
+how findings #4, #5 and #10 shipped plausible rules that measurement then
+refused.
+
+**For widening the independent check, effort is the constraint, so spend it
+well.** `make_reference_worksheet.py` picks the players whose figures would
+actually discriminate: on a 40-man, complete history (a player with missing
+seasons scores GAP and so cannot fail), ranked by *churn* — the number of
+roster moves the parser had to classify — and spread across service-time bands
+and debut eras. Aaron Judge matching exercises almost none of
+`service_time.py`; Rob Zastryzny with 81 moves exercises option boundaries,
+DFA, outright, waiver claims, trades and IL transitions at once. `--json`
+emits rows prefilled with everything except the figure itself.
 
 ### Never hardcode what the data can tell you
 
