@@ -1701,6 +1701,48 @@ the validator bug in the bug history above, not a defect in the data. Check
 that a probe applies the same floor as the pipeline before believing what it
 says about a player.
 
+### 18. The truth source was wrong about bereavement and paternity days
+
+**Found 2026-08-26 by the owner, chasing Zach Agnos.** His 2025 contains a
+placement most players' histories do not:
+
+```
+2025-06-03  mlb    .    Colorado Rockies placed RHP Zach Agnos on the bereavement list.
+2025-06-06  mlb  START  Colorado Rockies activated RHP Zach Agnos from the bereavement list.
+```
+
+The CBA is explicit, and this is sourced rather than inferred: a player on the
+**Bereavement / Family Medical Emergency list** or the **Paternity Leave
+list** counts against the 40-man, does **not** count against the active
+roster, and **continues to accrue service time**.
+
+**Our model already had this right, and it is worth saying how**: neither
+placement is a start or a stop, so an open interval simply runs across them.
+Nothing had to be added.
+
+**The checker had it wrong.** `validate_against_rosters.py` treated anything
+off the active roster and not IL-shaped as not accruing, so those days scored
+as MODEL OVER — the gate marking us wrong for days we credit correctly. The
+codes had been visible in its own output all along: `BRV` in Cleveland 2011,
+`FME` and `PL` in Tampa Bay 2022, each sitting in the "treated as NOT
+accruing" line.
+
+`ACCRUING_INACTIVE_CODES = {"BRV", "FME", "PL"}` now joins the IL shapes, and
+`probe_player.py` shares the same predicate so the two cannot drift apart the
+way the floor rule did (see the bug history).
+
+⚠️ **This is an a-priori addition to a script that refuses them on purpose.**
+"Never hardcode what the data can tell you" is right there in this file, and a
+guessed meaning for `RM` once inverted a fifth of a sample. The difference is
+the source: the CBA states this, the feed does not have to be interrogated for
+it. The **restricted list and suspended list are deliberately excluded** —
+they look identical from the roster endpoint's point of view and do *not*
+accrue — and every unclassified code still reports in `off_roster_codes`, so a
+common one cannot hide.
+
+Effect on the gate is small, one or two judgements per club-season, but in the
+direction of scoring a right answer as right.
+
 ### Recomputing after a rules change: `rules_version`
 
 A rules change has no natural completion marker, and the two obvious ones
@@ -1804,7 +1846,10 @@ genuinely open work rather than a queue.
 
 ### Known limitations
 
-- No handling for paternity/bereavement edge cases beyond keyword matching.
+- ~~No handling for paternity/bereavement edge cases~~ — **resolved by
+  finding #18.** Those placements are neither a start nor a stop, so an open
+  interval runs across them, which is exactly what the CBA requires. What was
+  actually wrong was the *checker*, and it is fixed.
 - Service-time-manipulation grievance outcomes (e.g. Kris Bryant) are invisible
   to public transaction data.
 - ~~Elih Villanueva reads 0.000~~ — **fixed by finding #15.** He debuted and
