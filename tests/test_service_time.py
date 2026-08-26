@@ -1370,6 +1370,64 @@ def test_the_club_directory_is_reachable_in_one_hop():
     check("the directory is a real file", (docs / "t" / "index.html").exists())
 
 
+def test_lastmod_moves_only_when_a_page_actually_changes():
+    """
+    Every sitemap URL used to claim today's date, every day. Between the World
+    Series and Opening Day nothing changes at all, so that is five months of
+    1,390 daily lies -- the textbook unreliable-lastmod pattern that Google
+    answers by ignoring lastmod for the whole site.
+
+    The footer stamp moves daily on every page regardless, so it has to be
+    stripped before hashing or nothing would ever compare equal.
+    """
+    import write_player_pages as w
+
+    page = "<h1>X</h1><p>1092 days</p><p>Last updated 2026-08-25.</p>"
+    same_day_later = "<h1>X</h1><p>1092 days</p><p>Last updated 2026-08-26.</p>"
+    real_change = "<h1>X</h1><p>1093 days</p><p>Last updated 2026-08-26.</p>"
+
+    check(
+        "the daily footer stamp is not content",
+        w._content_key(page) == w._content_key(same_day_later),
+    )
+    check(
+        "a changed figure is content",
+        w._content_key(page) != w._content_key(real_change),
+    )
+
+    tracker = w._LastMod("2026-08-25")
+    tracker.previous = {}
+    tracker.record("p/x.html", page)
+    check("a page with no history is dated today", tracker.of("p/x.html") == "2026-08-25")
+
+    tomorrow = w._LastMod("2026-08-26")
+    tomorrow.previous = dict(tracker.current)
+    tomorrow.record("p/x.html", same_day_later)
+    check(
+        "an unchanged page keeps its old date",
+        tomorrow.of("p/x.html") == "2026-08-25",
+    )
+
+    moved = w._LastMod("2026-08-26")
+    moved.previous = dict(tracker.current)
+    moved.record("p/x.html", real_change)
+    check("a changed page is redated", moved.of("p/x.html") == "2026-08-26")
+
+
+def test_a_missing_lastmod_manifest_degrades_to_the_old_behaviour():
+    """
+    The manifest is just a cache. Losing it must not be able to publish a date
+    that is wrong in a harmful direction -- "everything changed today" is the
+    behaviour this replaced, so it is a safe floor.
+    """
+    import write_player_pages as w
+    tracker = w._LastMod("2026-08-26")
+    tracker.previous = {}
+    tracker.record("p/x.html", "<p>anything</p>")
+    check("falls back to today", tracker.of("p/x.html") == "2026-08-26")
+    check("an unknown path also reads today", tracker.of("p/never-seen.html") == "2026-08-26")
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -1440,5 +1498,7 @@ if __name__ == "__main__":
     test_a_club_page_path_is_derived_the_same_way_as_a_player_page()
     test_a_breadcrumb_marks_the_current_page_as_the_last_step()
     test_the_club_directory_is_reachable_in_one_hop()
+    test_lastmod_moves_only_when_a_page_actually_changes()
+    test_a_missing_lastmod_manifest_degrades_to_the_old_behaviour()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

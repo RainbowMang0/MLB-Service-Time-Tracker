@@ -35,6 +35,7 @@ these are an addition rather than a replacement.
 from __future__ import annotations
 
 import datetime as dt
+import hashlib
 import html
 import json
 import pathlib
@@ -558,6 +559,66 @@ def render(player: dict, team_names: dict[int, str], generated_at: str) -> str:
 """
 
 
+LASTMOD_PATH = DOCS / "data" / "page_lastmod.json"
+
+# The footer stamp moves every day on every page whether or not anything about
+# the player changed, so it has to come out before hashing or every page looks
+# modified daily -- which is precisely the lie this is here to stop telling.
+_VOLATILE_RE = re.compile(r"Last updated \d{4}-\d{2}-\d{2}\.")
+
+
+def _content_key(page_html: str) -> str:
+    stable = _VOLATILE_RE.sub("Last updated.", page_html)
+    return hashlib.sha256(stable.encode("utf-8")).hexdigest()[:16]
+
+
+class _LastMod:
+    """Per-URL <lastmod> that reflects when a page's CONTENT last changed.
+
+    Every URL previously claimed today's date, every day. In season roughly
+    half the roster genuinely does change daily -- an accruing player gains a
+    day -- but the other half does not, and between the World Series and
+    Opening Day *nothing* does. A sitemap that claims 1,390 daily changes
+    through a five-month offseason is the textbook case of the unreliable
+    lastmod that Google responds to by ignoring lastmod for the whole site.
+
+    So: hash each rendered page with the daily footer stamp removed, and only
+    move the date when the hash actually moves. Hashing the rendered HTML
+    rather than the record behind it means a template change counts too, which
+    it should -- the page really did change.
+
+    A missing or unreadable manifest degrades to "everything changed today",
+    which is exactly the old behaviour and never wrong in a harmful direction.
+    """
+
+    def __init__(self, today: str) -> None:
+        self.today = today
+        try:
+            self.previous = json.loads(LASTMOD_PATH.read_text())
+        except (OSError, ValueError):
+            self.previous = {}
+        self.current: dict[str, dict[str, str]] = {}
+
+    def record(self, rel_path: str, page_html: str) -> str:
+        key = _content_key(page_html)
+        was = self.previous.get(rel_path)
+        day = was["lastmod"] if was and was.get("hash") == key else self.today
+        self.current[rel_path] = {"hash": key, "lastmod": day}
+        return day
+
+    def of(self, rel_path: str) -> str:
+        return self.current.get(rel_path, {}).get("lastmod", self.today)
+
+    def save(self) -> None:
+        # Only what is still published: a player who drops off a 40-man loses
+        # his page, and his entry here would otherwise accumulate forever.
+        LASTMOD_PATH.parent.mkdir(parents=True, exist_ok=True)
+        LASTMOD_PATH.write_text(json.dumps(self.current, indent=0, sort_keys=True))
+
+    def changed(self) -> int:
+        return sum(1 for v in self.current.values() if v["lastmod"] == self.today)
+
+
 def write_player_pages(db: dict[str, dict], generated_at: str | None = None) -> list[dict]:
     """Regenerate docs/p/ from scratch and return the players published."""
     generated_at = generated_at or dt.datetime.now(dt.timezone.utc).isoformat()
@@ -579,24 +640,33 @@ def write_player_pages(db: dict[str, dict], generated_at: str | None = None) -> 
             shutil.rmtree(directory)
         directory.mkdir(parents=True, exist_ok=True)
 
-    for player in published:
-        (DOCS / page_path(player)).write_text(render(player, team_names, generated_at))
+    lastmod = _LastMod(generated_at[:10])
 
-    clubs = _write_club_pages(published, generated_at)
+    for player in published:
+        page = render(player, team_names, generated_at)
+        rel = page_path(player)
+        (DOCS / rel).write_text(page)
+        lastmod.record(rel, page)
+
+    clubs = _write_club_pages(published, generated_at, lastmod)
 
     _write_page_css()
-    _write_sitemap(published, clubs, generated_at)
+    _write_sitemap(published, clubs, generated_at, lastmod)
+    lastmod.save()
     _write_robots()
     _write_404()
     total_kb = sum((DOCS / page_path(p)).stat().st_size for p in published) / 1024
     print(
         f"Wrote {len(published)} player pages ({total_kb / 1024:.1f} MB) to {PAGE_DIR} "
-        f"and {len(clubs)} club pages to {CLUB_DIR}"
+        f"and {len(clubs)} club pages to {CLUB_DIR}; "
+        f"{lastmod.changed()} of {len(lastmod.current)} changed content today"
     )
     return published
 
 
-def _write_club_pages(published: list[dict], generated_at: str) -> list[str]:
+def _write_club_pages(
+    published: list[dict], generated_at: str, lastmod: "_LastMod"
+) -> list[str]:
     """One page per club with someone on its 40-man. Returns the club names."""
     by_club: dict[str, list[dict]] = {}
     for player in published:
@@ -605,27 +675,38 @@ def _write_club_pages(published: list[dict], generated_at: str) -> list[str]:
             by_club.setdefault(club, []).append(player)
 
     for club, players in by_club.items():
-        (DOCS / club_path(club)).write_text(render_club(club, players, generated_at))
-    (CLUB_DIR / "index.html").write_text(render_club_index(by_club, generated_at))
+        page = render_club(club, players, generated_at)
+        rel = club_path(club)
+        (DOCS / rel).write_text(page)
+        lastmod.record(rel, page)
+
+    directory = render_club_index(by_club, generated_at)
+    (CLUB_DIR / "index.html").write_text(directory)
+    lastmod.record(f"{CLUB_DIR_NAME}/index.html", directory)
     return sorted(by_club)
 
 
-def _write_sitemap(published: list[dict], clubs: list[str], generated_at: str) -> None:
+def _write_sitemap(
+    published: list[dict], clubs: list[str], generated_at: str, lastmod: "_LastMod"
+) -> None:
     day = generated_at[:10]
     urls = [f"  <url><loc>{SITE_URL}/</loc><lastmod>{day}</lastmod><priority>1.0</priority></url>"]
     # Clubs above players: they are the hubs, and a crawler that samples the
     # sitemap rather than reading all of it should see them first.
     urls.append(
-        f"  <url><loc>{SITE_URL}/{CLUB_DIR_NAME}/</loc><lastmod>{day}</lastmod>"
+        f"  <url><loc>{SITE_URL}/{CLUB_DIR_NAME}/</loc>"
+        f"<lastmod>{lastmod.of(f'{CLUB_DIR_NAME}/index.html')}</lastmod>"
         f"<priority>0.9</priority></url>"
     )
     urls += [
-        f"  <url><loc>{SITE_URL}/{club_path(c)}</loc><lastmod>{day}</lastmod>"
+        f"  <url><loc>{SITE_URL}/{club_path(c)}</loc>"
+        f"<lastmod>{lastmod.of(club_path(c))}</lastmod>"
         f"<priority>0.8</priority></url>"
         for c in clubs
     ]
     urls += [
-        f"  <url><loc>{SITE_URL}/{page_path(p)}</loc><lastmod>{day}</lastmod></url>"
+        f"  <url><loc>{SITE_URL}/{page_path(p)}</loc>"
+        f"<lastmod>{lastmod.of(page_path(p))}</lastmod></url>"
         for p in published
     ]
     (DOCS / "sitemap.xml").write_text(

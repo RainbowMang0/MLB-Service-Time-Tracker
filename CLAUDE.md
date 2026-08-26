@@ -63,11 +63,12 @@ scripts/validate_published.py      published files agree + every URL/link resolv
 scripts/probe_player.py            everything the model knows about one player
 scripts/probe_coverage.py          live API probe for finding #1 (run via Actions)
 scripts/generate_demo_data.py      bundled sample data generator (no network)
-tests/test_service_time.py     150 tests, no pytest needed: `python tests/test_service_time.py`
+tests/test_service_time.py     157 tests, no pytest needed: `python tests/test_service_time.py`
 docs/                          the static site (index.html, styles.css, app.js)
 docs/data/service_time.json    the database: every field, one object per player
 docs/data/index.json           what the browser downloads for the table (0.22 MB)
 docs/data/profiles/NN.json     per-player season detail, sharded by id % 64
+docs/data/page_lastmod.json    per-page content hash, so sitemap lastmod is honest
 docs/p/<id>-<slug>.html        one static page per rostered player (generated)
 docs/t/<club-slug>.html        one hub page per club, its 40-man by service time
 docs/t/index.html              the club directory; the homepage's one link in
@@ -489,7 +490,7 @@ and #16), with every rostered player published as a crawlable static page.
   sum exactly to his published total.
 - **1,358 on a 40-man.** Each has a static page at
   `docs/p/<id>-<slug>.html`, listed in `docs/sitemap.xml`.
-- **150 tests passing.**
+- **157 tests passing.**
 - 1 player at or above 20.000 years (Verlander, 21.073), which is correct.
 - **27 players read exactly 0.000** and are hidden from the table by
   default — all 27 have never played a major league game (prospects added
@@ -1805,6 +1806,36 @@ href is checked against the `index.html` that actually serves it, so an empty
 page reads 45. The count is exactly what MLB's roster endpoint returns, but
 "all 45 players on the 40-man" reads like a contradiction, so the copy says
 "45 players" without the "all".
+
+### `lastmod` has to mean something or it means nothing
+
+Every sitemap URL used to carry today's date, every day. In season that is
+roughly half true — an accruing player really does gain a day — but the other
+half of the roster does not move, and between the World Series and Opening Day
+*nothing* does. A sitemap claiming 1,390 daily changes through a five-month
+offseason is the textbook unreliable-`lastmod`, and Google's documented
+response is to ignore `lastmod` for the whole site.
+
+So each rendered page is hashed and the date only moves when the hash does.
+`docs/data/page_lastmod.json` holds `{path: {hash, lastmod}}`.
+
+Three decisions worth keeping:
+
+* **Hash the rendered HTML, not the record.** A template change really does
+  change the page, and hashing the underlying figures would miss it.
+* **Strip the footer stamp first.** "Last updated YYYY-MM-DD" moves on every
+  page every day, so without `_VOLATILE_RE` nothing would ever compare equal
+  and the whole thing would be an expensive no-op.
+* **A missing manifest degrades to "everything changed today"** — which is
+  exactly the old behaviour, so losing the file can never publish a date that
+  is wrong in a harmful direction.
+
+It lives under `docs/data/`, which both workflows already stage, so this
+needed no workflow change — unlike every other generated path.
+
+Verified by simulating the next day's run: with identical data, 0 of 1,389
+pages moved; with one player given a day, exactly 2 moved — his page and his
+club's.
 
 ### The page CSS is a real file now
 
