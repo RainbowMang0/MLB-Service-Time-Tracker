@@ -423,6 +423,25 @@ def main() -> None:
     print("  (truth is roster membership + IL shape; codes are reported, not interpreted,\n"
           "   except the bereavement/paternity set -- see ACCRUING_INACTIVE_CODES)\n")
 
+    def report(variant: str) -> tuple[float, float, float]:
+        agree, over, under = tallies[variant]
+        total = agree + over + under
+        if not total:
+            raise SystemExit("No comparisons made.")
+        print("=" * 70)
+        print(f"carry-in: {'ON' if variant == 'on' else 'off'}")
+        print(f"AGREE          {agree:>6}  ({agree/total:.1%})")
+        print(f"MODEL OVER     {over:>6}  ({over/total:.1%})   credited a day the roster says he was not")
+        print(f"MODEL UNDER    {under:>6}  ({under/total:.1%})   missed a day the roster says he was")
+        print()
+        worst = sorted(per_player[variant].items(), key=lambda kv: -(kv[1][1] + kv[1][2]))[:15]
+        print("worst players (over / under / agree):")
+        for pid, (a, o, u) in worst:
+            if o or u:
+                print(f"  {names.get(pid, pid):<26} over={o:<3} under={u:<3} agree={a}")
+        print()
+        return agree / total, over / total, under / total
+
     scores = {v: report(v) for v in variants}
 
     # --- the actionable half ------------------------------------------------

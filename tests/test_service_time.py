@@ -1507,6 +1507,77 @@ def test_a_bereavement_placement_does_not_stop_the_clock():
     check("and closes the day before the option", intervals[0][1] == dt.date(2025, 6, 14))
 
 
+def test_the_roster_sweep_runs_end_to_end_without_touching_the_network():
+    """
+    A 32-club-season sweep spent 26 minutes on live API calls and then threw
+    all of it away on a NameError in its final line, because the reporting
+    function had been deleted in a refactor and nothing exercised that path
+    offline.
+
+    So the whole of main() -- collection, scoring, the per-variant report and
+    the error-shape breakdown -- runs here against a fake feed. It is fast and
+    it is the only thing standing between a refactor and another wasted run.
+    """
+    sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "scripts"))
+    import io
+    import contextlib
+    import validate_against_rosters as v
+
+    season_start, season_end = dt.date(2024, 3, 28), dt.date(2024, 4, 30)
+
+    optioned_on = dt.date(2024, 4, 16)
+
+    class FakeMLB:
+        @staticmethod
+        def get_season_window(year):
+            return season_start, season_end
+
+        @staticmethod
+        def _get(path, params):
+            # One player: on the active roster from Opening Day until he is
+            # optioned, on the 40-man but inactive afterwards. An absolute date,
+            # not a day-of-month -- the window crosses a month boundary.
+            day = dt.date.fromisoformat(params["date"])
+            active = day < optioned_on
+            entry = {"person": {"id": 1, "fullName": "Test Player"},
+                     "status": {"code": "A" if active else "RM"}}
+            if params["rosterType"] == "active" and not active:
+                return {"roster": []}
+            return {"roster": [entry]}
+
+        @staticmethod
+        def get_player_transactions(pid, start, end):
+            return [
+                {"date": "2024-03-28", "description": "Club selected the contract of RHP Test Player.",
+                 "team_id": 147},
+                {"date": "2024-04-16", "description": "Club optioned RHP Test Player to Somewhere.",
+                 "team_id": 147},
+            ]
+
+        @staticmethod
+        def get_player_bio(pid):
+            return {"mlbDebutDate": "2024-03-28"}
+
+    original_mlb, original_ids, original_argv = v.mlb, v.mlb_team_ids, sys.argv
+    try:
+        v.mlb = FakeMLB
+        v.mlb_team_ids = lambda: {147}
+        sys.argv = ["validate_against_rosters.py", "--team", "147", "--season", "2024",
+                    "--interval", "1", "--carry-in", "on"]
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            v.main()
+        text = out.getvalue()
+    finally:
+        v.mlb, v.mlb_team_ids, sys.argv = original_mlb, original_ids, original_argv
+
+    check("it reports a carry-in variant", "carry-in: ON" in text)
+    check("it reaches the agreement line", "AGREE" in text)
+    check("it reaches the over/under lines", "MODEL OVER" in text and "MODEL UNDER" in text)
+    check("the fake feed is scored perfectly", "(100.0%)" in text)
+    check("a multi-club sweep parses", "Sweeping 1 club-season(s)" in text)
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -1582,5 +1653,6 @@ if __name__ == "__main__":
     test_a_disagreement_is_labelled_by_the_moves_around_it()
     test_bereavement_and_paternity_accrue_but_the_restricted_list_does_not()
     test_a_bereavement_placement_does_not_stop_the_clock()
+    test_the_roster_sweep_runs_end_to_end_without_touching_the_network()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)
