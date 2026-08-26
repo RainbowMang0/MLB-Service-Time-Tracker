@@ -64,7 +64,7 @@ scripts/probe_player.py            everything the model knows about one player
 scripts/make_reference_worksheet.py  which players are worth hand-checking vs B-R
 scripts/probe_coverage.py          live API probe for finding #1 (run via Actions)
 scripts/generate_demo_data.py      bundled sample data generator (no network)
-tests/test_service_time.py     186 tests, no pytest needed: `python tests/test_service_time.py`
+tests/test_service_time.py     189 tests, no pytest needed: `python tests/test_service_time.py`
 docs/                          the static site (index.html, styles.css, app.js)
 docs/data/service_time.json    the database: every field, one object per player
 docs/data/index.json           what the browser downloads for the table (0.22 MB)
@@ -507,7 +507,7 @@ and #16), with every rostered player published as a crawlable static page.
   sum exactly to his published total.
 - **1,358 on a 40-man.** Each has a static page at
   `docs/p/<id>-<slug>.html`, listed in `docs/sitemap.xml`.
-- **186 tests passing.**
+- **189 tests passing.**
 - 1 player at or above 20.000 years (Verlander, 21.073), which is correct.
 - **27 players read exactly 0.000** and are hidden from the table by
   default — all 27 have never played a major league game (prospects added
@@ -1769,6 +1769,64 @@ common one cannot hide.
 
 Effect on the gate is small, one or two judgements per club-season, but in the
 direction of scoring a right answer as right.
+
+### 19. Swept wide, and there is no systematic rule error left to find
+
+**Measured 2026-08-26**, after the owner asked for the figures to be made as
+accurate as the available information allows. Nine club-seasons — Rockies, Red
+Sox and Dodgers across 2021, 2024 and 2025, chosen because an earlier
+32-club-season sweep put their over-crediting highest — sampled weekly against
+MLB's own historical rosters:
+
+```
+11,078 player-date judgements across 408 players and 9 club-seasons
+AGREE        10,916  (98.5%)
+MODEL OVER       73  ( 0.7%)
+MODEL UNDER      89  ( 0.8%)
+```
+
+Inside the gate on both counts. **The interesting part is the shape breakdown,
+and its answer is that there is no shape to fix**:
+
+| | judgements | distinct shapes |
+|---|---|---|
+| MODEL OVER | 73 | **69** |
+| MODEL UNDER | 89 | **89** |
+
+Exactly one shape occurs more than once: `recalled+0d / optioned-1d`, five
+times — Braxton Fulford's case from finding #17, a recall reversed the next
+day that MLB's roster never reflects. Five judgements in 11,078 is 0.05%, and
+finding #17 already measured why transaction shape cannot separate those from
+the 793 genuine one-day call-ups in the cache. Still not a rule.
+
+Everything else is **per-player**, not per-pattern. The worst are Bernardo
+Flores Jr. (over=13, agree=0), Kyle Hurt (under=14), Adael Amador (under=13),
+Ryan Feltner (under=12), Sam Hilliard (under=11) — each one player whose state
+is wrong for a stretch of weeks, and no two sharing a signature.
+
+**So the honest conclusion: the remaining error is not systematic.** It is the
+residue of a feed that does not record every roster move, and the way to
+improve a specific number is to probe that specific player, which is what
+findings #13, #14, #16 and #17 each were. There is no longer a rule change
+waiting to be found by looking at aggregates.
+
+#### A flaw the run exposed in the diagnostic itself
+
+The "69 distinct shapes" is inflated, and the reason is worth keeping. The
+first classifier printed the **exact** day offset to the neighbouring move, so
+Rio Ruiz — wrong for two months, sampled weekly — produced nine separate rows
+(`waiver-claim+3d`, `+10d`, `+17d` ...) that were one defect. Sam Hilliard
+produced eleven.
+
+Offsets are now bucketed (`0d`, `1d`, `2-7d`, `8-30d`, `31-90d`, `90d+`) and
+each shape reports how many distinct **players** it covers, not just how many
+player-dates. A continuous error collapses to one row, which is what lets a
+genuinely repeated shape stand out from it.
+
+**The unit matters here the same way it did in finding #14**: player-dates are
+not defects. One player wrong for a month at weekly sampling is one defect
+worth four judgements, and counting the judgements makes a handful of players
+look like a pattern.
 
 ### Recomputing after a rules change: `rules_version`
 

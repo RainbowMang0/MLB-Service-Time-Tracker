@@ -227,21 +227,46 @@ def shape_of(description: str) -> str:
     return "other"
 
 
+def _gap_bucket(days: int) -> str:
+    """Coarse distance to the neighbouring move.
+
+    The first version of this printed the exact day count, and the output was
+    useless in a specific way worth remembering: a player whose status is wrong
+    for two months, sampled weekly, produced NINE "distinct shapes"
+    (waiver-claim+3d, +10d, +17d ...) that were one defect. Bucketing collapses
+    a continuous error back into one row, which is what makes a repeated shape
+    visible against the noise.
+    """
+    if days == 0:
+        return "0d"
+    if days == 1:
+        return "1d"
+    if days <= 7:
+        return "2-7d"
+    if days <= 30:
+        return "8-30d"
+    if days <= 90:
+        return "31-90d"
+    return "90d+"
+
+
 def classify(
     txns: list["Transaction"], day: "dt.date"
 ) -> tuple[str, str]:
     """Label a disagreeing date by the roster move before and after it.
 
-    Returned as "<shape>+<n>d" for the preceding move and "<shape>-<n>d" for
-    the following one, so a one-day round trip reads `recalled+0d / optioned-1d`
-    and is immediately recognisable across many players.
+    Returned as "<shape>+<bucket>" for the preceding move and "<shape>-<bucket>"
+    for the following one, so a one-day round trip reads
+    `recalled+0d / optioned-1d` and is recognisable across many players.
     """
     before = [t for t in txns if t.date <= day]
     after = [t for t in txns if t.date > day]
     prev = max(before, key=lambda t: t.date) if before else None
     nxt = min(after, key=lambda t: t.date) if after else None
-    prev_s = f"{shape_of(prev.description)}+{(day - prev.date).days}d" if prev else "(nothing before)"
-    next_s = f"{shape_of(nxt.description)}-{(nxt.date - day).days}d" if nxt else "(nothing after)"
+    prev_s = (f"{shape_of(prev.description)}+{_gap_bucket((day - prev.date).days)}"
+              if prev else "(nothing before)")
+    next_s = (f"{shape_of(nxt.description)}-{_gap_bucket((nxt.date - day).days)}"
+              if nxt else "(nothing after)")
     return prev_s, next_s
 
 
@@ -296,6 +321,7 @@ def main() -> None:
     per_season: dict[tuple[int, int], list[int]] = {}
     # Only the "on" variant is diagnosed: it is what production runs.
     shapes = {"over": collections.Counter(), "under": collections.Counter()}
+    shape_players = {"over": collections.defaultdict(set), "under": collections.defaultdict(set)}
     shape_examples: dict[tuple[str, str, str], list[str]] = collections.defaultdict(list)
 
     for team, season in pairs:
@@ -402,6 +428,7 @@ def main() -> None:
                             kind = "over" if idx == 1 else "under"
                             prev_s, next_s = classify(txns, d)
                             shapes[kind][(prev_s, next_s)] += 1
+                            shape_players[kind][(prev_s, next_s)].add(pid)
                             ex = shape_examples[(kind, prev_s, next_s)]
                             if len(ex) < 3:
                                 ex.append(f"{names.get(pid, pid)} {d}")
@@ -454,12 +481,14 @@ def main() -> None:
             if not counted:
                 continue
             total = sum(counted.values())
-            print(f"\n  MODEL {kind.upper()} -- {total} judgement(s), "
-                  f"{len(counted)} distinct shape(s):")
+            distinct_players = len({pid for pids in shape_players[kind].values() for pid in pids})
+            print(f"\n  MODEL {kind.upper()} -- {total} judgement(s) across "
+                  f"{distinct_players} player(s), {len(counted)} distinct shape(s):")
+            print(f"    {'days':>4} {'players':>8}  {'move before':<22} / {'move after':<22}")
             for (prev_s, next_s), n in counted.most_common(12):
-                share = n / total
+                npl = len(shape_players[kind][(prev_s, next_s)])
                 ex = ", ".join(shape_examples[(kind, prev_s, next_s)])
-                print(f"    {n:>4}  ({share:>5.1%})  {prev_s:<22} / {next_s:<22}  e.g. {ex}")
+                print(f"    {n:>4} {npl:>8}  {prev_s:<22} / {next_s:<22}  e.g. {ex}")
         print()
         print("  A shape that dominates is a candidate rule. A long tail of")
         print("  singletons is not -- it is the residue of a feed that does not")

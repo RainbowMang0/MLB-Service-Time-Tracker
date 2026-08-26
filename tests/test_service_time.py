@@ -1462,6 +1462,16 @@ def test_a_disagreement_is_labelled_by_the_moves_around_it():
     check("the move on the day itself reads +0d", prev_s == "recalled+0d")
     check("the move that undoes it reads -1d", next_s == "optioned-1d")
 
+    # The first version printed the exact day count, so one player wrong for two
+    # months and sampled weekly produced nine "distinct shapes" that were one
+    # defect. Buckets collapse a continuous error back into a single row.
+    check("a week and six weeks land in different buckets",
+          v._gap_bucket(7) == "2-7d" and v._gap_bucket(45) == "31-90d")
+    check("consecutive weekly samples of one stretch collapse",
+          len({v._gap_bucket(n) for n in (31, 38, 45, 52, 59)}) == 1)
+    check("but a same-day and a next-day move stay distinguishable",
+          v._gap_bucket(0) != v._gap_bucket(1))
+
     before_everything = v.classify(txns, dt.date(2025, 1, 1))
     check("a date before any move says so", before_everything[0] == "(nothing before)")
     after_everything = v.classify(txns, dt.date(2025, 12, 1))
