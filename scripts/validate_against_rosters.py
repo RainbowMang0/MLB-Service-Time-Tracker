@@ -48,6 +48,26 @@ Usage
     python scripts/validate_against_rosters.py --team 147 --season 2018
     python scripts/validate_against_rosters.py --team 147 --season 2018 --interval 14
 
+Sweeping many club-seasons
+--------------------------
+--team and --season both take comma-separated lists and are crossed, so
+
+    --team 147,139,114,115 --season 2014,2018,2022
+
+is sixteen club-seasons in one run. Players and their transactions are cached
+across the whole sweep, so a club sampled in three seasons costs one fetch per
+player rather than three.
+
+Breadth is worth more than depth here for one specific reason: a single
+club-season shows a defect that lives in the years BEFORE it as a handful of
+missing days, which is how the carry-in bug (nine years on Justin Verlander)
+nearly escaped. More clubs and more eras is the cheap way to find the shapes
+one club never produces -- Tampa Bay's relentless optioning is what exposed
+finding #10, which the Yankees seasons barely saw.
+
+The run also classifies every disagreement by the roster move on either side
+of it and prints the counts, because a percentage names no rule to change.
+
 Requires live API access, so run it via Actions -> "Validate Service Time".
 """
 
@@ -57,6 +77,7 @@ import argparse
 import collections
 import datetime as dt
 import pathlib
+import re
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
@@ -140,10 +161,73 @@ def sample_dates(season_start: dt.date, season_end: dt.date, interval: int) -> l
     return out
 
 
+# --- what SHAPE do we get wrong? --------------------------------------------
+#
+# A club-season summary says "0.4% over-credited" and stops there, which is
+# where every previous round of this stalled: a percentage names no rule to
+# change. So each disagreeing (player, date) is labelled with the roster move
+# on either side of it, and those labels are counted.
+#
+# A rule is worth writing when one label dominates. Findings #13, #14 and #16
+# were all found by hand this way, one player at a time; this does it over
+# whatever sample the run covers.
+
+_SHAPE_PATTERNS: list[tuple[str, str]] = [
+    ("recalled",        r"\brecalled\b"),
+    ("optioned",        r"\boptioned\b"),
+    ("selected",        r"selected the contract|purchased the contract|contract selected"),
+    ("activated-IL",    r"\bactivated\b.{0,40}(injured|disabled) list|reinstated"),
+    ("placed-IL",       r"placed .{0,40}(injured|disabled) list"),
+    ("DFA",             r"designated .{0,40}for assignment"),
+    ("outright",        r"sent .{0,40}outright|assigned .{0,40}outright"),
+    ("waiver-claim",    r"claimed .{0,40}off waivers"),
+    ("traded",          r"\btraded\b"),
+    ("released",        r"\breleased\b"),
+    ("free-agency",     r"elected free agency|signed as a free agent|signed free agent"),
+    ("rule-5-return",   r"returned to (?!the active roster)"),
+    ("activated",       r"\bactivated\b"),
+    ("assigned",        r"\bassigned\b"),
+    ("signed",          r"\bsigned\b"),
+]
+_SHAPE_RES = [(label, re.compile(pat, re.IGNORECASE)) for label, pat in _SHAPE_PATTERNS]
+
+
+def shape_of(description: str) -> str:
+    for label, rx in _SHAPE_RES:
+        if rx.search(description):
+            return label
+    return "other"
+
+
+def classify(
+    txns: list["Transaction"], day: "dt.date"
+) -> tuple[str, str]:
+    """Label a disagreeing date by the roster move before and after it.
+
+    Returned as "<shape>+<n>d" for the preceding move and "<shape>-<n>d" for
+    the following one, so a one-day round trip reads `recalled+0d / optioned-1d`
+    and is immediately recognisable across many players.
+    """
+    before = [t for t in txns if t.date <= day]
+    after = [t for t in txns if t.date > day]
+    prev = max(before, key=lambda t: t.date) if before else None
+    nxt = min(after, key=lambda t: t.date) if after else None
+    prev_s = f"{shape_of(prev.description)}+{(day - prev.date).days}d" if prev else "(nothing before)"
+    next_s = f"{shape_of(nxt.description)}-{(nxt.date - day).days}d" if nxt else "(nothing after)"
+    return prev_s, next_s
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--team", type=int, required=True, help="MLB team id, e.g. 147")
-    ap.add_argument("--season", type=int, required=True)
+    ap.add_argument(
+        "--team", required=True,
+        help="MLB team id, e.g. 147. Comma-separate for a sweep: 147,139,114",
+    )
+    ap.add_argument(
+        "--season", required=True,
+        help="Season year. Comma-separate for a sweep: 2014,2018. Every team is "
+             "crossed with every season, and club-seasons with no roster are skipped.",
+    )
     ap.add_argument("--interval", type=int, default=7, help="days between samples")
     ap.add_argument(
         "--carry-in",
@@ -157,148 +241,176 @@ def main() -> None:
 
     variants = {"off": ["off"], "on": ["on"], "both": ["off", "on"]}[args.carry_in]
 
-    start, end = mlb.get_season_window(args.season)
-    dates = sample_dates(start, end, args.interval)
-    print(f"Team {args.team}, season {args.season}: {start} to {end}")
-    print(f"Sampling {len(dates)} dates every {args.interval} days.")
-    print(f"carry-in variants scored: {', '.join(variants)}\n")
+    teams = [int(t) for t in str(args.team).split(",") if t.strip()]
+    seasons = [int(y) for y in str(args.season).split(",") if y.strip()]
+    pairs = [(t, y) for y in seasons for t in teams]
+    print(f"Sweeping {len(pairs)} club-season(s): "
+          f"teams {teams} x seasons {seasons}")
+    print(f"Sampling every {args.interval} days. carry-in scored: {', '.join(variants)}\n")
 
-    # --- observe rosters ---------------------------------------------------
-    truth: dict[int, dict[dt.date, bool]] = collections.defaultdict(dict)
+    club_ids = mlb_team_ids()
     names: dict[int, str] = {}
     codes = collections.Counter()
-    # Codes seen on players who are on the 40-man but NOT on the active
-    # roster and NOT IL-shaped. These are treated as not accruing. Reported
-    # so an unexpectedly common one (a paternity or bereavement list, say,
-    # which would actually accrue) cannot hide.
     off_roster_codes = collections.Counter()
 
-    for d in dates:
+    # Cached across the whole sweep. A player recurs in many club-seasons of
+    # the same club, and his transactions and debut do not change between
+    # them, so without this a 12-club-season run refetches the same player a
+    # dozen times and spends its budget on nothing.
+    txn_cache: dict[int, list[Transaction]] = {}
+    debut_cache: dict[int, dt.date | None] = {}
+    floor_cache: dict[int, dt.date | None] = {}
+
+    tallies = {v: [0, 0, 0] for v in variants}
+    per_player = {v: collections.defaultdict(lambda: [0, 0, 0]) for v in variants}
+    per_season: dict[tuple[int, int], list[int]] = {}
+    # Only the "on" variant is diagnosed: it is what production runs.
+    shapes = {"over": collections.Counter(), "under": collections.Counter()}
+    shape_examples: dict[tuple[str, str, str], list[str]] = collections.defaultdict(list)
+
+    for team, season in pairs:
         try:
-            active = mlb._get(
-                f"/teams/{args.team}/roster",
-                {"rosterType": "active", "date": d.isoformat()},
-            ).get("roster", [])
-            forty = mlb._get(
-                f"/teams/{args.team}/roster",
-                {"rosterType": "40Man", "date": d.isoformat()},
-            ).get("roster", [])
+            season_start, season_end = mlb.get_season_window(season)
         except Exception as exc:
-            print(f"  {d}: FAILED ({exc})", file=sys.stderr)
+            print(f"  season {season}: FAILED ({exc})", file=sys.stderr)
+            continue
+        dates = sample_dates(season_start, season_end, args.interval)
+
+        truth: dict[int, dict[dt.date, bool]] = collections.defaultdict(dict)
+        for d in dates:
+            try:
+                active = mlb._get(
+                    f"/teams/{team}/roster",
+                    {"rosterType": "active", "date": d.isoformat()},
+                ).get("roster", [])
+                forty = mlb._get(
+                    f"/teams/{team}/roster",
+                    {"rosterType": "40Man", "date": d.isoformat()},
+                ).get("roster", [])
+            except Exception as exc:
+                print(f"  {team} {d}: FAILED ({exc})", file=sys.stderr)
+                continue
+
+            active_ids = {
+                (e.get("person") or {}).get("id")
+                for e in active
+                if (e.get("person") or {}).get("id") is not None
+            }
+            for entry in forty:
+                person = entry.get("person") or {}
+                pid = person.get("id")
+                if pid is None:
+                    continue
+                names[pid] = person.get("fullName", "?")
+                code = ((entry.get("status") or {}).get("code") or "").upper()
+                codes[code] += 1
+                if pid in active_ids:
+                    truth[pid][d] = True
+                elif is_il_code(code):
+                    truth[pid][d] = True
+                else:
+                    truth[pid][d] = False
+                    off_roster_codes[code] += 1
+
+        if not truth:
+            print(f"  team {team} season {season}: no roster returned, skipped.")
             continue
 
-        active_ids = {
-            (e.get("person") or {}).get("id")
-            for e in active
-            if (e.get("person") or {}).get("id") is not None
-        }
+        season_tally = [0, 0, 0]
+        for pid, by_date in truth.items():
+            if pid not in txn_cache:
+                try:
+                    raw = mlb.get_player_transactions(pid, dt.date(2005, 1, 1), dt.date.today())
+                except Exception as exc:
+                    print(f"  {names.get(pid)}: FAILED ({exc})", file=sys.stderr)
+                    txn_cache[pid] = []
+                    raw = []
+                txn_cache[pid] = [
+                    Transaction(
+                        date=dt.date.fromisoformat(t["date"]),
+                        description=t.get("description", ""),
+                    )
+                    for t in raw
+                    if t.get("date") and _involves_mlb_club(flatten(t), club_ids)
+                ]
+                try:
+                    bio = mlb.get_player_bio(pid)
+                    dd = bio.get("mlbDebutDate")
+                    debut_cache[pid] = dt.date.fromisoformat(dd) if dd else None
+                except Exception:
+                    debut_cache[pid] = None
+                # Finding #15: the pipeline's floor, not the bare debut date.
+                floor = debut_cache[pid]
+                roster_start = roster_start_before_debut(txn_cache[pid], floor)
+                floor_cache[pid] = roster_start if roster_start is not None else floor
 
-        for entry in forty:
-            person = entry.get("person") or {}
-            pid = person.get("id")
-            if pid is None:
-                continue
-            names[pid] = person.get("fullName", "?")
-            code = ((entry.get("status") or {}).get("code") or "").upper()
-            codes[code] += 1
+            txns = txn_cache[pid]
+            floor = floor_cache[pid]
 
-            if pid in active_ids:
-                truth[pid][d] = True  # on the active roster: accruing, by definition
-            elif is_il_code(code):
-                truth[pid][d] = True  # major league IL: accruing, by definition
-            else:
-                truth[pid][d] = False
-                off_roster_codes[code] += 1
+            for variant in variants:
+                intervals = build_global_active_intervals(
+                    txns,
+                    season_end,
+                    accrual_floor=floor,
+                    presume_active_from=floor if variant == "on" else None,
+                )
+                for d, actually_accruing in by_date.items():
+                    model_says = any(a <= d <= b for a, b in intervals)
+                    if model_says == actually_accruing:
+                        idx = 0
+                    elif model_says and not actually_accruing:
+                        idx = 1
+                    else:
+                        idx = 2
+                    tallies[variant][idx] += 1
+                    per_player[variant][pid][idx] += 1
+                    if variant == "on":
+                        season_tally[idx] += 1
+                        if idx:
+                            kind = "over" if idx == 1 else "under"
+                            prev_s, next_s = classify(txns, d)
+                            shapes[kind][(prev_s, next_s)] += 1
+                            ex = shape_examples[(kind, prev_s, next_s)]
+                            if len(ex) < 3:
+                                ex.append(f"{names.get(pid, pid)} {d}")
 
-    print(f"{sum(len(v) for v in truth.values())} player-date judgements "
-          f"across {len(names)} players.")
+        per_season[(team, season)] = season_tally
+        tot = sum(season_tally) or 1
+        print(f"  team {team:>3} {season}: {len(truth):>3} players, "
+              f"agree {season_tally[0]/tot:.1%}  over {season_tally[1]/tot:.1%}  "
+              f"under {season_tally[2]/tot:.1%}")
+
+    print(f"\n{sum(sum(v) for v in per_season.values())} player-date judgements "
+          f"across {len(names)} players and {len(per_season)} club-season(s).")
     print(f"status codes seen: {dict(codes.most_common())}")
     print(f"treated as NOT accruing (off active roster, not IL): "
           f"{dict(off_roster_codes.most_common())}")
     print("  (truth is roster membership + IL shape; codes are reported, not interpreted)\n")
 
-    debuts: dict[int, dt.date | None] = {}
-    for pid in names:
-        try:
-            bio = mlb.get_player_bio(pid)
-            dd = bio.get("mlbDebutDate")
-            debuts[pid] = dt.date.fromisoformat(dd) if dd else None
-        except Exception:
-            debuts[pid] = None
-
-    # --- our model ---------------------------------------------------------
-    # Each variant is scored from the SAME fetched transactions, so running
-    # both costs no extra API calls -- and it removes the main way an A/B
-    # goes wrong, which is two runs that differ by something other than the
-    # change under test.
-    club_ids = mlb_team_ids()
-    tallies = {v: [0, 0, 0] for v in variants}  # variant -> [agree, over, under]
-    per_player = {
-        v: collections.defaultdict(lambda: [0, 0, 0]) for v in variants
-    }
-
-    for pid, by_date in truth.items():
-        try:
-            raw = mlb.get_player_transactions(pid, dt.date(2005, 1, 1), end)
-        except Exception as exc:
-            print(f"  {names.get(pid)}: FAILED ({exc})", file=sys.stderr)
-            continue
-        txns = [
-            Transaction(date=dt.date.fromisoformat(t["date"]), description=t.get("description", ""))
-            for t in raw
-            if t.get("date") and _involves_mlb_club(flatten(t), club_ids)
-        ]
-
-        # Same floor the pipeline computes, including finding #15: a contract
-        # selected a day or two before a player's first game put him on the
-        # roster then, and those days are owed. Skipping it here would score a
-        # DIFFERENT MODEL than production -- the exact mistake that made this
-        # script's first version blame Jose Ramirez and Austin Romine for
-        # defects they never had. See "Fix 2" in CLAUDE.md.
-        floor = debuts.get(pid)
-        roster_start = roster_start_before_debut(txns, floor)
-        if roster_start is not None:
-            floor = roster_start
-
-        for variant in variants:
-            intervals = build_global_active_intervals(
-                txns,
-                end,
-                accrual_floor=floor,
-                presume_active_from=floor if variant == "on" else None,
-            )
-            for d, actually_accruing in by_date.items():
-                model_says = any(s <= d <= e for s, e in intervals)
-                if model_says == actually_accruing:
-                    tallies[variant][0] += 1
-                    per_player[variant][pid][0] += 1
-                elif model_says and not actually_accruing:
-                    tallies[variant][1] += 1
-                    per_player[variant][pid][1] += 1
-                else:
-                    tallies[variant][2] += 1
-                    per_player[variant][pid][2] += 1
-
-    def report(variant: str) -> tuple[float, float, float]:
-        agree, over, under = tallies[variant]
-        total = agree + over + under
-        if not total:
-            raise SystemExit("No comparisons made.")
-        print("=" * 70)
-        print(f"carry-in: {'ON' if variant == 'on' else 'off'}")
-        print(f"AGREE          {agree:>6}  ({agree/total:.1%})")
-        print(f"MODEL OVER     {over:>6}  ({over/total:.1%})   credited a day the roster says he was not")
-        print(f"MODEL UNDER    {under:>6}  ({under/total:.1%})   missed a day the roster says he was")
-        print()
-        worst = sorted(per_player[variant].items(), key=lambda kv: -(kv[1][1] + kv[1][2]))[:12]
-        print("worst players (over / under / agree):")
-        for pid, (a, o, u) in worst:
-            if o or u:
-                print(f"  {names.get(pid, pid):<26} over={o:<3} under={u:<3} agree={a}")
-        print()
-        return agree / total, over / total, under / total
-
     scores = {v: report(v) for v in variants}
+
+    # --- the actionable half ------------------------------------------------
+    if "on" in variants and (shapes["over"] or shapes["under"]):
+        print("=" * 70)
+        print("WHAT SHAPE ARE THE DISAGREEMENTS? (carry-in on -- what production runs)")
+        print("  read as <move before>+<days since> / <move after>-<days until>")
+        for kind in ("over", "under"):
+            counted = shapes[kind]
+            if not counted:
+                continue
+            total = sum(counted.values())
+            print(f"\n  MODEL {kind.upper()} -- {total} judgement(s), "
+                  f"{len(counted)} distinct shape(s):")
+            for (prev_s, next_s), n in counted.most_common(12):
+                share = n / total
+                ex = ", ".join(shape_examples[(kind, prev_s, next_s)])
+                print(f"    {n:>4}  ({share:>5.1%})  {prev_s:<22} / {next_s:<22}  e.g. {ex}")
+        print()
+        print("  A shape that dominates is a candidate rule. A long tail of")
+        print("  singletons is not -- it is the residue of a feed that does not")
+        print("  record everything, and chasing it is how this project has")
+        print("  historically shipped a plausible rule that measurement refused.")
+        print()
 
     if len(variants) == 2:
         (a0, o0, u0), (a1, o1, u1) = scores["off"], scores["on"]

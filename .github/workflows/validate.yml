@@ -82,7 +82,9 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    # A wide rosters sweep is many club-seasons of API calls; single checks
+    # still finish in about a minute.
+    timeout-minutes: 320
     steps:
       - name: Checkout
         uses: actions/checkout@v4
