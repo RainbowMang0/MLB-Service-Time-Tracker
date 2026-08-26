@@ -500,6 +500,7 @@ def build_global_active_intervals(
     accrual_floor: dt.date | None = None,
     accrual_ceiling: dt.date | None = None,
     presume_active_from: dt.date | None = None,
+    claim_recall_is_minors: bool = True,
 ) -> list[tuple[dt.date, dt.date]]:
     """
     Walk a player's ENTIRE chronological transaction history (not bounded to
@@ -677,6 +678,22 @@ def build_global_active_intervals(
                 continue  # entirely pre-debut (college, showcase, minors)
             clipped.append((max(start, accrual_floor), end))
         intervals = clipped
+
+    # Finding #19: a waiver claim whose very next major league move is a recall
+    # never put the player on the active roster. Applied last, so it trims an
+    # interval the walk has already built rather than complicating the walk.
+    if claim_recall_is_minors:
+        for claim, recall in claim_then_recall_windows(transactions):
+            trimmed = []
+            for start, end in intervals:
+                # Only the interval the claim itself opened, and only when the
+                # recall falls inside it -- an interval that merely overlaps the
+                # window for some other reason is left alone.
+                if start == claim and start < recall <= end:
+                    trimmed.append((recall, end))
+                else:
+                    trimmed.append((start, end))
+            intervals = trimmed
 
     return intervals
 

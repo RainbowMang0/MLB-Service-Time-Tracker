@@ -1648,6 +1648,44 @@ def test_the_broad_version_of_the_recall_rule_stays_rejected():
     check("the long interval survives untouched", intervals[0][0] == dt.date(2019, 8, 6))
 
 
+def test_the_claim_recall_rule_is_wired_into_the_interval_walk():
+    """
+    The end-to-end shape, confirmed against MLB's own rosters before shipping:
+    Josh Walker 2025 scored agree=0, over=39, under=0 -- every day between the
+    claim and the recall shows RM (optioned) on the roster while we credited
+    all of them. Cole Sulser 2023 scored agree=0, over=59.
+    """
+    txns = [
+        Transaction(dt.date(2025, 8, 19), "Phillies designated LHP X for assignment."),
+        Transaction(dt.date(2025, 8, 21), "Orioles claimed LHP X off waivers from Phillies."),
+        Transaction(dt.date(2025, 9, 29), "Orioles recalled LHP X from Norfolk Tides."),
+    ]
+    on = build_global_active_intervals(txns, dt.date(2025, 10, 1))
+    off = build_global_active_intervals(txns, dt.date(2025, 10, 1),
+                                        claim_recall_is_minors=False)
+    check("the phantom stretch is gone", on == [(dt.date(2025, 9, 29), dt.date(2025, 10, 1))])
+    check("and the switch still scores the old behaviour",
+          off == [(dt.date(2025, 8, 21), dt.date(2025, 10, 1))])
+    check("which is exactly the 39 days the roster disputed",
+          (dt.date(2025, 9, 29) - dt.date(2025, 8, 21)).days == 39)
+
+
+def test_the_rule_only_trims_the_interval_the_claim_itself_opened():
+    """
+    Guard against the broad version creeping back. An interval opened by
+    something else that merely happens to contain a claim-recall window must
+    not be truncated -- that is the Caleb Ferguson failure, worth three years.
+    """
+    txns = [
+        Transaction(dt.date(2025, 4, 1), "Orioles selected the contract of LHP X."),
+        Transaction(dt.date(2025, 8, 21), "Orioles claimed LHP Y off waivers from Phillies."),
+        Transaction(dt.date(2025, 9, 29), "Orioles recalled LHP X from Norfolk Tides."),
+    ]
+    intervals = build_global_active_intervals(txns, dt.date(2025, 10, 1))
+    check("an interval opened earlier keeps its start",
+          intervals[0][0] == dt.date(2025, 4, 1))
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -1727,5 +1765,7 @@ if __name__ == "__main__":
     test_a_waiver_claim_followed_straight_by_a_recall_is_a_minor_league_stint()
     test_a_claim_with_a_move_in_between_is_not_the_same_shape()
     test_the_broad_version_of_the_recall_rule_stays_rejected()
+    test_the_claim_recall_rule_is_wired_into_the_interval_walk()
+    test_the_rule_only_trims_the_interval_the_claim_itself_opened()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

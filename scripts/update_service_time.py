@@ -86,7 +86,7 @@ TODAY = dt.date.today()
 #      of a DFA reopens the clock, because a DFA'd player who is traded joins
 #      the new club's 40-man. Measured over the 1,365 cached players: 483
 #      changed (35%), 5,982 interval-days added, 6 removed.
-SERVICE_TIME_RULES_VERSION = 3
+SERVICE_TIME_RULES_VERSION = 4
 
 # The carry-in rule: presume a player is on a roster from his debut onward
 # rather than crediting him nothing until a start transaction happens to fire.
