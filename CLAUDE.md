@@ -1701,6 +1701,33 @@ the validator bug in the bug history above, not a defect in the data. Check
 that a probe applies the same floor as the pipeline before believing what it
 says about a player.
 
+#### Zach Agnos: the same shape, and this time we are exactly right
+
+**Raised 2026-08-26 by the owner**, a second B-R discrepancy found the same
+way. Probed day by day against MLB's rosters at interval 1, both his seasons,
+with the bereavement fix (finding #18) already in place:
+
+| season | compared days | agree | over | under |
+|---|---|---|---|---|
+| 2025 | 162 | **162** | 0 | 0 |
+| 2026 | 187 | **187** | 0 | 0 |
+
+**349 compared days, not one disagreement.** Our 293 days (1.121) is exactly
+what MLB's own historical rosters say, including the three bereavement days
+in June 2025 that the checker used to score against us.
+
+So the pattern from Fulford repeats and is now two for two: **where B-R
+differs from us, we match MLB's own roster endpoint.** That does not make B-R
+wrong — the likeliest reading is still that B-R has the official MLBPA ledger,
+which records things the public feed does not — but it does mean the gap is
+not reachable from public data, and that tuning toward it would be tuning
+toward a source that cannot be checked.
+
+The practical rule this gives future sessions: **when a B-R discrepancy comes
+in, probe the player against MLB's rosters first.** If we match the rosters,
+the disagreement is B-R's extra information and there is nothing to fix. Only
+a disagreement with the rosters is a defect in this project.
+
 ### 18. The truth source was wrong about bereavement and paternity days
 
 **Found 2026-08-26 by the owner, chasing Zach Agnos.** His 2025 contains a
