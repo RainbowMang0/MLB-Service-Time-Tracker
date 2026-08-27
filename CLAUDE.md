@@ -1964,6 +1964,36 @@ not defects. One player wrong for a month at weekly sampling is one defect
 worth four judgements, and counting the judgements makes a handful of players
 look like a pattern.
 
+### A long backfill can starve the daily job — sequence them
+
+**Found 2026-08-27 during the rules-v5 recompute.** The daily update and the
+backfill share `concurrency: group: service-time-update`, which is right:
+both write `docs/data/service_time.json` and two writers would clobber each
+other.
+
+But the daily job also gates on the clock:
+
+```yaml
+HOUR="$(TZ="America/New_York" date +%H)"
+... elif [ "$HOUR" = "08" ]; then run=true
+```
+
+Two cron entries (12:00 and 13:00 UTC) cover the EDT/EST shift, and the gate
+lets exactly the one that lands on 8am Eastern through. That is sound on its
+own — but **queue the daily run behind a multi-hour backfill and it starts
+outside its window, gates itself out, and the day is silently skipped.** It
+reports success in about 80 seconds, which looks exactly like the normal
+second-cron no-op, so nothing draws attention to it.
+
+That is what happened here: a 1,600-player recompute batch held the group
+through the 8am slot, and the day's rostered figures were never refreshed.
+
+**So schedule recompute batches to clear the 8am Eastern window**, or force a
+run afterwards (`workflow_dispatch` with `force: true` bypasses the gate).
+A skipped day is not corrupting — the next run catches up — but during a
+rules change it leaves the rostered players, the only ones with pages, on the
+old rules while the backfill advances everyone else.
+
 ### Recomputing after a rules change: `rules_version`
 
 A rules change has no natural completion marker, and the two obvious ones
