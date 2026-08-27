@@ -840,7 +840,34 @@ skew the result.
 Apply the same instinct to any new rule: prefer a check the data can settle
 over a belief about what MLB means.
 
-### Gate status (2026-08-26, rules version 4 — CURRENT)
+### Gate status (2026-08-27, rules version 5 — CURRENT)
+
+Same twelve club-seasons, same 13,678 judgements across 562 players:
+
+```
+AGREE        13,516  (98.8%)   was 13,511
+MODEL OVER       37  ( 0.3%)   was 42
+MODEL UNDER     125  ( 0.9%)   unchanged
+```
+
+**Strictly better and nothing regressed**: five over-credits became
+agreements, under-crediting did not move a single judgement, and no
+club-season got worse. That is the only shape a rule which can only *close*
+an interval is allowed to have.
+
+**Baseball Reference under v5: 17 passed, 0 failed, 2 known gaps** — identical
+to v3 and v4. Scherzer +73d, Verlander +89d, no complete-history player moved.
+
+What v5 did NOT fix, and why that is correct: Nick Maronde still reads
+`over=12, agree=0` on the same `traded / recalled` shape. The rule only trims
+the interval the arrival itself *opened*, and his was already open when the
+trade happened — so `start == arrival` is false and nothing is touched. That
+conservatism is what protects Caleb Ferguson's Tommy John year, and the price
+is that trades into an already-open interval stay uncorrected. Widening it is
+the same broad-rule trap; do not, without roster truth on the specific
+players.
+
+### Gate status (2026-08-26, rules version 4 — superseded by v5 above)
 
 Twelve club-seasons in one sweep (Cleveland, Yankees, Tampa Bay x 2011, 2014,
 2018, 2022), 13,678 player-date judgements across 562 players:
