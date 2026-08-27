@@ -470,20 +470,49 @@ def roster_start_before_debut(
 # reading left.
 _CLAIM_RE = re.compile(rf"claimed{_NAME}off waivers", re.IGNORECASE)
 _RECALL_RE = re.compile(r"\brecalled\b", re.IGNORECASE)
+# A waiver claim and a trade both move a player onto the new club's 40-man
+# without saying whether he reported to the majors or the affiliate. The recall
+# that follows answers it.
+_ARRIVAL_RE = re.compile(
+    rf"claimed{_NAME}off waivers|\btraded\b", re.IGNORECASE
+)
 
 
-def claim_then_recall_windows(
+def minor_league_stint_windows(
     transactions: list[Transaction],
 ) -> list[tuple[dt.date, dt.date]]:
-    """(claim date, recall date) pairs with no major league move in between."""
-    rows = sorted(transactions, key=lambda t: t.date)
+    """(arrival date, recall date) pairs with no major league move in between.
+
+    An arrival is a waiver claim or a trade -- both put a player on the new
+    club's 40-man and neither says which roster he reported to. When the very
+    next major league row is a RECALL, the feed answers it: he was in the
+    minors, because that is the only place a recall can come from.
+
+    The "nothing in between" constraint is what makes that the only available
+    reading, and it is also what stops the Caleb Ferguson failure -- see the
+    broad-rule warning in build_global_active_intervals.
+    """
+    # Grouped by date, not row by row. Yohan Ramirez was activated AND recalled
+    # from Indianapolis on the same day, so a row-by-row walk fired or did not
+    # depending on which of the two the API happened to list first -- the exact
+    # sort-order dependence finding #10 was about. A recall anywhere in the next
+    # date's rows proves where he was, whatever else shares that date.
+    by_date: dict[dt.date, list[str]] = {}
+    for t in transactions:
+        by_date.setdefault(t.date, []).append(t.description)
+
+    dates = sorted(by_date)
     out = []
-    for i, t in enumerate(rows[:-1]):
-        nxt = rows[i + 1]
-        if _CLAIM_RE.search(t.description) and _RECALL_RE.search(nxt.description):
-            if nxt.date > t.date:
-                out.append((t.date, nxt.date))
+    for day, nxt_day in zip(dates, dates[1:]):
+        arrived = any(_ARRIVAL_RE.search(d) for d in by_date[day])
+        recalled = any(_RECALL_RE.search(d) for d in by_date[nxt_day])
+        if arrived and recalled:
+            out.append((day, nxt_day))
     return out
+
+
+# Old name, kept so nothing that imported it breaks.
+claim_then_recall_windows = minor_league_stint_windows
 
 
 _TRADE_RE = re.compile(r"\btraded\b", re.IGNORECASE)
@@ -683,13 +712,13 @@ def build_global_active_intervals(
     # never put the player on the active roster. Applied last, so it trims an
     # interval the walk has already built rather than complicating the walk.
     if claim_recall_is_minors:
-        for claim, recall in claim_then_recall_windows(transactions):
+        for arrival, recall in minor_league_stint_windows(transactions):
             trimmed = []
             for start, end in intervals:
                 # Only the interval the claim itself opened, and only when the
                 # recall falls inside it -- an interval that merely overlaps the
                 # window for some other reason is left alone.
-                if start == claim and start < recall <= end:
+                if start == arrival and start < recall <= end:
                     trimmed.append((recall, end))
                 else:
                     trimmed.append((start, end))

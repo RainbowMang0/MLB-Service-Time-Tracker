@@ -19,6 +19,7 @@ from service_time import (  # noqa: E402
     days_in_intervals,
     build_global_active_intervals,
     claim_then_recall_windows,
+    minor_league_stint_windows,
 )
 
 PASS = 0
@@ -1686,6 +1687,66 @@ def test_the_rule_only_trims_the_interval_the_claim_itself_opened():
           intervals[0][0] == dt.date(2025, 4, 1))
 
 
+def test_a_trade_straight_to_a_recall_is_also_a_minor_league_stint():
+    """
+    Finding #19 extended to trades, confirmed by roster truth first: Yohan
+    Ramirez was traded to Cleveland 2022-05-16 and recalled from Columbus
+    2022-06-23, and a one-day probe of Cleveland 2022 scored him
+    agree=11, over=38, under=0 -- 38 phantom days, exactly the window.
+
+    A trade and a waiver claim are the same situation: both put a player on the
+    new club's 40-man without saying which roster he reported to. The recall
+    answers it.
+    """
+    txns = [
+        Transaction(dt.date(2022, 5, 13), "Seattle Mariners designated RHP X for assignment."),
+        Transaction(dt.date(2022, 5, 16), "Seattle Mariners traded RHP X to Cleveland Guardians."),
+        Transaction(dt.date(2022, 6, 23), "Cleveland Guardians recalled RHP X from Columbus Clippers."),
+    ]
+    check("the trade-to-recall window is found",
+          minor_league_stint_windows(txns) == [(dt.date(2022, 5, 16), dt.date(2022, 6, 23))])
+    intervals = build_global_active_intervals(txns, dt.date(2022, 10, 5))
+    check("and the 38 phantom days are gone",
+          intervals == [(dt.date(2022, 6, 23), dt.date(2022, 10, 5))])
+    check("the window is exactly 38 days",
+          (dt.date(2022, 6, 23) - dt.date(2022, 5, 16)).days == 38)
+
+
+def test_the_stint_window_does_not_depend_on_row_order():
+    """
+    Ramirez was ACTIVATED and RECALLED from Indianapolis on the same day. A
+    row-by-row walk fired or did not depending on which the API listed first --
+    the sort-order dependence finding #10 was about, worth 160 days there.
+    Grouping by date removes it: a recall anywhere in the next date's rows
+    proves where he was, whatever shares that date.
+    """
+    base = [
+        Transaction(dt.date(2022, 7, 8), "Cleveland Guardians traded RHP X to Pittsburgh Pirates."),
+        Transaction(dt.date(2022, 8, 3), "Pittsburgh Pirates activated RHP X."),
+        Transaction(dt.date(2022, 8, 3), "Pittsburgh Pirates recalled RHP X from Indianapolis Indians."),
+    ]
+    swapped = [base[0], base[2], base[1]]
+    expected = [(dt.date(2022, 7, 8), dt.date(2022, 8, 3))]
+    check("found with activated listed first", minor_league_stint_windows(base) == expected)
+    check("and with recalled listed first", minor_league_stint_windows(swapped) == expected)
+
+
+def test_a_trade_onto_an_active_roster_is_untouched():
+    """
+    The counter-case, and the reason the rule needs "nothing in between":
+    David Huff was DFA'd, traded to the Yankees, and MLB's roster shows him
+    ACTIVE from mid-June. No recall follows, so finding #16's reopening must
+    survive intact.
+    """
+    txns = [
+        Transaction(dt.date(2014, 6, 6), "San Francisco Giants designated LHP David Huff for assignment."),
+        Transaction(dt.date(2014, 6, 11), "San Francisco Giants traded LHP David Huff to New York Yankees for cash."),
+    ]
+    check("no recall, so no window", minor_league_stint_windows(txns) == [])
+    intervals = build_global_active_intervals(txns, dt.date(2014, 10, 1))
+    check("the trade still reopens the clock", intervals[-1][0] == dt.date(2014, 6, 11))
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -1767,5 +1828,8 @@ if __name__ == "__main__":
     test_the_broad_version_of_the_recall_rule_stays_rejected()
     test_the_claim_recall_rule_is_wired_into_the_interval_walk()
     test_the_rule_only_trims_the_interval_the_claim_itself_opened()
+    test_a_trade_straight_to_a_recall_is_also_a_minor_league_stint()
+    test_the_stint_window_does_not_depend_on_row_order()
+    test_a_trade_onto_an_active_roster_is_untouched()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

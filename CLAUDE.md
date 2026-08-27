@@ -64,7 +64,7 @@ scripts/probe_player.py            everything the model knows about one player
 scripts/make_reference_worksheet.py  which players are worth hand-checking vs B-R
 scripts/probe_coverage.py          live API probe for finding #1 (run via Actions)
 scripts/generate_demo_data.py      bundled sample data generator (no network)
-tests/test_service_time.py     189 tests, no pytest needed: `python tests/test_service_time.py`
+tests/test_service_time.py     205 tests, no pytest needed: `python tests/test_service_time.py`
 docs/                          the static site (index.html, styles.css, app.js)
 docs/data/service_time.json    the database: every field, one object per player
 docs/data/index.json           what the browser downloads for the table (0.22 MB)
@@ -1883,6 +1883,35 @@ the same way. The shipped rule fires only when nothing at all sits between the
 claim and the recall, and only trims the interval the claim itself opened.
 
 Shipped as `SERVICE_TIME_RULES_VERSION = 4`.
+
+#### Extended to trades, and the same-day trap avoided (rules version 5)
+
+The v4 gate's own shape breakdown named the next one immediately:
+`traded+... / recalled-...` was **24 of the 42 remaining over-credits (57%)**,
+across Nick Maronde (`over=12, agree=0` — the never-agrees signature again),
+Austin Meadows and Yohan Ramírez.
+
+It is the same situation: a trade, like a waiver claim, puts a player on the
+new club's 40-man without saying which roster he reported to. A recall
+answers it.
+
+**Confirmed against MLB's rosters before wiring**, as #19 was:
+
+```
+Yohan Ramírez, Cleveland 2022:  agree 11 | over 38 | under 0
+```
+
+Traded 2022-05-16, recalled from Columbus 2022-06-23 — 38 days, and the
+offline measurement had predicted exactly −38 for him. Combined with the
+claim case: **31 of 1,370 cached players (2.3%), 687 credited days removed, 0
+added.**
+
+⚠️ **A same-day trap, caught while shipping.** Ramírez was `activated` AND
+`recalled from Indianapolis` on the same date. A row-by-row walk fired or did
+not depending on which the API listed first — precisely the sort-order
+dependence of finding #10, which was worth 160 days there. Detection is now
+grouped **by date**: a recall anywhere in the next date's rows proves where he
+was, whatever shares that date. Both orderings are pinned as a test.
 
 **The general lesson, which is the opposite of what the aggregate suggested:**
 the sweep's own summary says there is no shape worth chasing, and it is right
