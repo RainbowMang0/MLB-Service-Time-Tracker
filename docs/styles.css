@@ -32,6 +32,9 @@ html, body {
   --status-serious:  #c85a35;
   --status-serious-wash: #fbe6dc;
   --status-critical: #d03b3b;
+  --glass-surface:   rgba(255,255,255,0.55);
+  --glass-border:    rgba(255,255,255,0.4);
+  --glass-shadow:    rgba(11,11,11,0.08);
 
   background: var(--page-plane);
   color: var(--text-primary);
@@ -58,6 +61,9 @@ html, body {
     --status-serious:  #ec835a;
     --status-serious-wash: #3c2216;
     --status-critical: #e66767;
+    --glass-surface:   rgba(28,28,27,0.55);
+    --glass-border:    rgba(255,255,255,0.08);
+    --glass-shadow:    rgba(0,0,0,0.35);
   }
 }
 :root[data-theme="dark"] .viz-root {
@@ -79,6 +85,9 @@ html, body {
   --status-serious:  #ec835a;
   --status-serious-wash: #3c2216;
   --status-critical: #e66767;
+  --glass-surface:   rgba(28,28,27,0.55);
+  --glass-border:    rgba(255,255,255,0.08);
+  --glass-shadow:    rgba(0,0,0,0.35);
 }
 
 .page-header {
@@ -116,8 +125,10 @@ html, body {
   max-width: 60ch;
 }
 .theme-toggle {
-  border: 1px solid var(--border);
-  background: var(--surface-1);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-surface);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
   color: var(--text-primary);
   border-radius: 999px;
   width: 36px;
@@ -125,6 +136,7 @@ html, body {
   font-size: 1rem;
   cursor: pointer;
   flex: none;
+  box-shadow: 0 2px 10px var(--glass-shadow);
 }
 .theme-toggle:hover { border-color: var(--accent); }
 .theme-toggle {
@@ -171,10 +183,13 @@ html, body {
   margin: 0 clamp(16px, 4vw, 40px) 24px;
 }
 .stat-tile {
-  background: var(--surface-1);
-  border: 1px solid var(--border);
-  border-radius: 10px;
+  background: var(--glass-surface);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
   padding: 14px 16px;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 4px 18px var(--glass-shadow);
 }
 .stat-tile .value {
   font-size: 1.6rem;
@@ -300,7 +315,9 @@ table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
 thead th {
   position: sticky;
   top: 0;
-  background: var(--surface-1);
+  background: var(--glass-surface);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
   text-align: left;
   padding: 10px 12px;
   color: var(--text-muted);
@@ -542,10 +559,12 @@ body.profile-open { overflow: hidden; }
      This is what keeps the last column reachable on a phone. */
   min-width: 0;
   max-width: 100%;
-  background: var(--surface-1);
+  background: var(--glass-surface);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
   color: var(--text-primary);
-  border: 1px solid var(--border);
-  border-radius: 10px;
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
   padding: 1.5rem 1.5rem 1.25rem;
   box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
 }
