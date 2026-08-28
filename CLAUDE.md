@@ -499,24 +499,30 @@ the right place for that information.
 
 ## Current state
 
-As of 2026-08-25, fully recomputed under **rules version 3** (findings #15
-and #16), with every rostered player published as a crawlable static page.
+As of 2026-08-28, **the whole database is recomputed under rules version 5**
+(findings #19 and its trade extension), with every rostered player published
+as a crawlable static page.
 
-- **5,571 players, every one with a season-by-season profile**, all stamped
-  `rules_version: 3`. Zero invariant violations — each player's season rows
-  sum exactly to his published total.
-- **1,358 on a 40-man.** Each has a static page at
+The v5 recompute finished in four batches over 2026-08-27/28. **Every one of
+the 5,574 records is stamped `rules_version: 5`** — no record is left on an
+older ruleset, which is the condition `--recompute-all` exists to reach.
+
+- **5,574 players, every one with a season-by-season profile.** Zero
+  invariant violations — each player's season rows sum exactly to his
+  published total.
+- **1,366 on a 40-man.** Each has a static page at
   `docs/p/<id>-<slug>.html`, listed in `docs/sitemap.xml`.
-- **189 tests passing.**
-- 1 player at or above 20.000 years (Verlander, 21.073), which is correct.
-- **27 players read exactly 0.000** and are hidden from the table by
-  default — all 27 have never played a major league game (prospects added
-  to a 40-man to protect them from the Rule 5 draft) and are reachable
-  through the "Yet to accrue a day" filter. The two *debuted* players who
-  read 0.000 before v3 — Daniel Fields and Elih Villanueva — are fixed by
-  finding #15 and now read 0.003 and 0.001.
+- **205 tests passing.**
+- 1 player at or above 20.000 years (Verlander, 21.075), which is correct.
+- **26 players read exactly 0.000** and are hidden from the table by
+  default, reachable through the "Yet to accrue a day" filter. 25 have never
+  played a major league game (prospects added to a 40-man to protect them
+  from the Rule 5 draft). **The 26th is Elih Villanueva, who did debut** —
+  see finding #20, which also corrects the claim this section used to make
+  that finding #15 had fixed him. Daniel Fields, the other pre-v3 zero,
+  reads 0.002.
 
-What the data is made of, across all 28,988 accruing seasons:
+What the data is made of, across all 28,994 accruing seasons:
 
 | | share |
 |---|---|
@@ -528,7 +534,12 @@ Only **0.0% of accruing seasons have no club identified**.
 
 Payload: table index 0.22 MB; database 9.1 MB (not downloaded by the
 browser); 64 profile shards, 3.4 MB in total, one fetched per profile
-opened; 1,358 player pages, 7.1 MB, one fetched per crawl or direct link.
+opened; 1,366 player pages, 6.4 MB, and 30 club pages plus their directory
+at 0.3 MB, one fetched per crawl or direct link.
+
+**Sequencing note, learned the hard way during this recompute** — a batch
+that spans 12:00 UTC silently costs a day of rostered figures. See "A long
+backfill can starve the daily job".
 
 **All four gate club-seasons plus the Baseball Reference check re-run
 against the fully recomputed v3 database, 2026-08-25.**
@@ -572,9 +583,15 @@ the two that were already clean came back identical.
   Reference** — finding #17. The +1 is one recall the roster never reflects;
   the −3 is on the far side of MLB's own roster data and cannot be reached
   from public sources. Neither is worth a rules change.
+- **Elih Villanueva, 0.000 for a one-game career** — finding #20. Same shape
+  as Fulford: we match MLB's own rosters exactly (they never list him), and
+  the day he certainly earned is not reachable from either public source.
+  The only fix would be a new rule flooring credited days at one on the
+  strength of the debut date. Not shipped, and worth one day per player.
 - Any future rules change needs `SERVICE_TIME_RULES_VERSION` bumped and a
   `--recompute-all` pass; the normal queue only looks for players it does
-  not already have.
+  not already have. **Schedule the batches clear of 12:00 UTC** — see "A
+  long backfill can starve the daily job".
 
 ## Validation — the process, and the current number
 
@@ -2095,9 +2112,13 @@ resumable across batches, which matters for a job that takes hours.
 
 ### Immediate next steps
 
-**Findings #15 and #16 are shipped as rules version 3, the database is fully
-recomputed, and all four gate club-seasons plus the Baseball Reference check
-are green.** Every rostered player also has a crawlable page. What follows is
+**Rules version 5 is shipped and the whole database is recomputed under it
+as of 2026-08-28** — all 5,574 records, none left on an older ruleset. Both
+gates were green on v5 before the recompute (12 club-seasons at 98.8%
+agreement / 0.3% over-crediting; Baseball Reference 17 passed, 0 failed, 2
+known gaps), and the recompute changed rules for non-rostered players only,
+so neither gate moves: every reference player is on a 40-man and was already
+v5. Every rostered player also has a crawlable page. What follows is
 genuinely open work rather than a queue.
 
 1. **Widen player pages to non-rostered players** — a one-line change to
@@ -2229,7 +2250,8 @@ Non-rostered players have no page, so they stay a `<button>` — a link to a
 `write_player_pages.py` builds the *filename*; `playerSlug()` in `app.js`
 builds the *href*. A disagreement between them is a 404 on every affected
 player, and it is silent — nothing in the pipeline would notice. They are
-cross-checked against all 5,571 names (0 mismatches), and
+cross-checked against every distinct name in the database (5,539 of them
+across 5,574 players; 0 mismatches, re-verified 2026-08-28), and
 `validate_published.py` now resolves every internal link on every generated
 page against the filesystem, so a drift fails the check rather than shipping
 1,358 quiet 404s.
@@ -2286,7 +2308,8 @@ the name, so this was not an edge case.
 Both functions now NFKD-normalize and drop combining marks, which leaves the
 base letter behind (`garcía` → `garcia`), with a small explicit map for the
 characters NFKD will not decompose (`ø`, `ł`, `æ`, `ß`, `đ`, `þ`). Verified
-identical across all 5,571 names in Python and in Node.
+identical across all 5,539 distinct names in Python and in Node
+(re-verified 2026-08-28 after the v5 recompute).
 
 ### Moving to a domain is one file: `docs/CNAME`
 
