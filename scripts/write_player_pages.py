@@ -152,6 +152,27 @@ def _status(player: dict) -> str:
     return "Pre-arbitration"
 
 
+def _plain_figure(service: str) -> str:
+    """"21.075" -> "21 years and 75 days".
+
+    The stored figure is the industry's Y.DDD notation, which is precise and
+    which nobody outside baseball reads on sight -- and "service time" pages
+    are found by people who have just learned the term. Spelling it out once,
+    in the sentence under the heading, is what makes the page answer the
+    question it was searched for.
+    """
+    years, _, days = str(service or "0.000").partition(".")
+    try:
+        y, d = int(years), int(days or 0)
+    except ValueError:
+        return f"{service} years"
+    yl = f"{y} year{'' if y == 1 else 's'}"
+    dl = f"{d} day{'' if d == 1 else 's'}"
+    if y and d:
+        return f"{yl} and {dl}"
+    return dl if not y else yl
+
+
 def _description(player: dict) -> str:
     name = player.get("name") or "This player"
     service = player.get("service_time") or "0.000"
@@ -484,6 +505,32 @@ def render(player: dict, team_names: dict[int, str], generated_at: str) -> str:
 
     jsonld = _jsonld(player, name, url, service)
 
+    # The figure as a sentence, directly under the heading. A crawler's snippet
+    # and a first-time reader both take the first paragraph; the facts grid
+    # below states 21.075 without saying what that notation means.
+    total_days = int(player.get("service_days_total") or 0)
+    if total_days:
+        lede = (
+            f"{name} has an estimated <b>{_plain_figure(service)}</b> of major league "
+            f"service time — {service} in the notation clubs use, from {total_days} "
+            f"day{'' if total_days == 1 else 's'} credited on a major league roster."
+        )
+    else:
+        # "0 days ... from 0 days credited" reads like a broken template. These
+        # are prospects added to a 40-man to protect them from the Rule 5 draft.
+        # The second sentence is conditional because _should_publish() may later
+        # widen to non-rostered players, for whom it would simply be false.
+        roster_note = (
+            " He is on a 40-man roster but has not been on a major league active "
+            "roster or injured list."
+            if player.get("on_40_man")
+            else ""
+        )
+        lede = (
+            f"{name} has <b>yet to accrue a day</b> of major league service "
+            f"time.{roster_note}"
+        )
+
     trail: list[tuple[str, str | None]] = [("All players", "../")]
     if club and player.get("on_40_man"):
         trail.append((club, f"../{club_path(player['team'])}"))
@@ -529,8 +576,9 @@ def render(player: dict, team_names: dict[int, str], generated_at: str) -> str:
 <body>
 <div class="viz-root"><div class="wrap">
   {crumbs}
-  <h1>{name}</h1>
+  <h1>{name} service time</h1>
   <p class="subtitle">{club}{' · ' if club and position else ''}{position} · {html.escape(_status(player))}</p>
+  <p class="lede">{lede}</p>
 
   <div class="facts">
     <div><span>Service time</span><b class="big">{service}</b></div>
@@ -744,6 +792,9 @@ th, td { text-align: left; padding: 0.45rem 0.6rem; border-bottom: 1px solid var
 td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
 td a { color: var(--accent); text-decoration: none; }
 td a:hover { text-decoration: underline; }
+.lede { font-size: 1.05rem; line-height: 1.6; color: var(--text-secondary);
+        margin: 0.9rem 0 0; max-width: 62ch; }
+.lede b { color: var(--text-primary); font-weight: 650; }
 .caveat { background: var(--status-warning-wash); color: var(--text-secondary);
           padding: 0.7rem 0.85rem; border-radius: 6px; font-size: 0.85rem; }
 .back { display: inline-block; margin-bottom: 1rem; color: var(--accent);

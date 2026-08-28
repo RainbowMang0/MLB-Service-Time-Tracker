@@ -499,24 +499,30 @@ the right place for that information.
 
 ## Current state
 
-As of 2026-08-25, fully recomputed under **rules version 3** (findings #15
-and #16), with every rostered player published as a crawlable static page.
+As of 2026-08-28, **the whole database is recomputed under rules version 5**
+(findings #19 and its trade extension), with every rostered player published
+as a crawlable static page.
 
-- **5,571 players, every one with a season-by-season profile**, all stamped
-  `rules_version: 3`. Zero invariant violations — each player's season rows
-  sum exactly to his published total.
-- **1,358 on a 40-man.** Each has a static page at
+The v5 recompute finished in four batches over 2026-08-27/28. **Every one of
+the 5,574 records is stamped `rules_version: 5`** — no record is left on an
+older ruleset, which is the condition `--recompute-all` exists to reach.
+
+- **5,574 players, every one with a season-by-season profile.** Zero
+  invariant violations — each player's season rows sum exactly to his
+  published total.
+- **1,366 on a 40-man.** Each has a static page at
   `docs/p/<id>-<slug>.html`, listed in `docs/sitemap.xml`.
-- **189 tests passing.**
-- 1 player at or above 20.000 years (Verlander, 21.073), which is correct.
-- **27 players read exactly 0.000** and are hidden from the table by
-  default — all 27 have never played a major league game (prospects added
-  to a 40-man to protect them from the Rule 5 draft) and are reachable
-  through the "Yet to accrue a day" filter. The two *debuted* players who
-  read 0.000 before v3 — Daniel Fields and Elih Villanueva — are fixed by
-  finding #15 and now read 0.003 and 0.001.
+- **205 tests passing.**
+- 1 player at or above 20.000 years (Verlander, 21.075), which is correct.
+- **26 players read exactly 0.000** and are hidden from the table by
+  default, reachable through the "Yet to accrue a day" filter. 25 have never
+  played a major league game (prospects added to a 40-man to protect them
+  from the Rule 5 draft). **The 26th is Elih Villanueva, who did debut** —
+  see finding #20, which also corrects the claim this section used to make
+  that finding #15 had fixed him. Daniel Fields, the other pre-v3 zero,
+  reads 0.002.
 
-What the data is made of, across all 28,988 accruing seasons:
+What the data is made of, across all 28,994 accruing seasons:
 
 | | share |
 |---|---|
@@ -528,7 +534,12 @@ Only **0.0% of accruing seasons have no club identified**.
 
 Payload: table index 0.22 MB; database 9.1 MB (not downloaded by the
 browser); 64 profile shards, 3.4 MB in total, one fetched per profile
-opened; 1,358 player pages, 7.1 MB, one fetched per crawl or direct link.
+opened; 1,366 player pages, 6.4 MB, and 30 club pages plus their directory
+at 0.3 MB, one fetched per crawl or direct link.
+
+**Sequencing note, learned the hard way during this recompute** — a batch
+that spans 12:00 UTC silently costs a day of rostered figures. See "A long
+backfill can starve the daily job".
 
 **All four gate club-seasons plus the Baseball Reference check re-run
 against the fully recomputed v3 database, 2026-08-25.**
@@ -572,9 +583,15 @@ the two that were already clean came back identical.
   Reference** — finding #17. The +1 is one recall the roster never reflects;
   the −3 is on the far side of MLB's own roster data and cannot be reached
   from public sources. Neither is worth a rules change.
+- **Elih Villanueva, 0.000 for a one-game career** — finding #20. Same shape
+  as Fulford: we match MLB's own rosters exactly (they never list him), and
+  the day he certainly earned is not reachable from either public source.
+  The only fix would be a new rule flooring credited days at one on the
+  strength of the debut date. Not shipped, and worth one day per player.
 - Any future rules change needs `SERVICE_TIME_RULES_VERSION` bumped and a
   `--recompute-all` pass; the normal queue only looks for players it does
-  not already have.
+  not already have. **Schedule the batches clear of 12:00 UTC** — see "A
+  long backfill can starve the daily job".
 
 ## Validation — the process, and the current number
 
@@ -1566,9 +1583,15 @@ start now no longer sees it as pre-debut.
 
 **Measured, rostered population, before → after:** the rules-v3 recompute
 credited about 2,900 days across the two rules together, and every one of
-them is on the *front* of a career. Both zeros are gone: Daniel Fields reads
-0.003, Elih Villanueva 0.001 — a one-game career now credited the one day
-his appearance proves he was rostered.
+them is on the *front* of a career. Daniel Fields reads 0.002.
+
+⚠️ **This paragraph used to claim Elih Villanueva was fixed to 0.001 too.
+That was never true of the published data** — see finding #20. He has read
+0.000 at every commit from 2026-08-22 onward, through rules v2, v3, v4 and
+v5. Finding #15 cannot reach him: his contract was selected *on* his debut
+date, not before it, so there is no pre-debut roster move for
+`roster_start_before_debut()` to move the floor back to. The claim was
+recorded without checking it against the file.
 
 ⚠️ **A measurement trap hit while confirming this, worth recording.** The
 first check compared yesterday's published file to today's, saw all nine
@@ -1964,6 +1987,65 @@ not defects. One player wrong for a month at weekly sampling is one defect
 worth four judgements, and counting the judgements makes a handful of players
 look like a pattern.
 
+### 20. A one-day career, and the two rules that each correctly delete it
+
+**Found 2026-08-28** by `report_debuted_but_empty()` naming Elih Villanueva
+after the v5 recompute — a report CLAUDE.md claimed named nobody. Probed
+against MLB's own rosters at interval 1 across his whole 2011.
+
+His entire major league transaction history is three rows, and the two that
+matter share a date:
+
+```
+2011-01-13  mlb    .    Florida Marlins invited non-roster RHP Elih Villanueva to spring training.
+2011-06-15  mlb  START  Florida Marlins selected the contract of RHP Elih Villanueva from New Orleans Zephyrs.
+2011-06-15  mlb  STOP   Florida Marlins optioned RHP Elih Villanueva to New Orleans Zephyrs.
+```
+
+He debuted, pitched, and was optioned, all on 2011-06-15. **Stop-wins
+(finding #10) is what zeroes him**: a date carrying both a start and a stop
+ends with the player off the roster, so the interval never opens. The probe
+confirms it directly — `ACCRUAL INTERVALS: (none)`, under carry-in both off
+and on.
+
+**Finding #15 cannot reach him**, which is the part the old note got wrong.
+`roster_start_before_debut()` moves the floor back to a roster move *before*
+the debut; his selection is *on* his debut, so there is nothing to move the
+floor to. He has read 0.000 at every commit since 2026-08-22, through rules
+v2, v3, v4 and v5 — the claim that #15 fixed him to 0.001 was recorded
+without being checked against the published file, and the "names nobody"
+line inherited the error.
+
+**And MLB's own rosters do not contradict us.** All 182 sampled dates in
+2011 come back "not on this club's 40-man" — including 2011-06-15 itself:
+
+```
+agree 0 | over 0 | under 0 | 182 date(s) he was not on this club's 40-man
+```
+
+So by the rule finding #17 established — *probe against MLB's rosters
+first, and only a disagreement with the rosters is a defect here* — this is
+not a defect. The roster endpoint simply never reflects his one day.
+
+**What is nonetheless true is that he earned a day.** He appeared in a major
+league game, and a player who appears is on the active roster that day. So
+this is a genuine limit rather than a clean result: the transaction feed and
+the roster endpoint both fail to show a stint that certainly happened.
+
+⚠️ **Do not fix this by weakening stop-wins.** That rule exists because the
+alternative was measured: treating a same-date pair as a wash **added 5,623
+days** across the cache, and Ben Bowden alone went from 0 to 160 phantom
+days. 212 of 223 same-date pairs end in an option, a DFA or an outright.
+Stop-wins is right; it is simply also right to zero here.
+
+**The narrow fix, if one is ever wanted**, is not a change to interval
+logic at all: *a player's debut date is proof he was rostered that day*, so
+it could floor his credited days at one. That is a new rule, it needs the
+usual measurement (how many players carry a same-date start-and-stop on
+their debut, and what does it do to the gates), and it is worth one day per
+player. **Not shipped, and not obviously worth shipping** — recorded so the
+next session does not re-derive the diagnosis from scratch.
+
 ### A long backfill can starve the daily job — sequence them
 
 **Found 2026-08-27 during the rules-v5 recompute.** The daily update and the
@@ -2030,9 +2112,13 @@ resumable across batches, which matters for a job that takes hours.
 
 ### Immediate next steps
 
-**Findings #15 and #16 are shipped as rules version 3, the database is fully
-recomputed, and all four gate club-seasons plus the Baseball Reference check
-are green.** Every rostered player also has a crawlable page. What follows is
+**Rules version 5 is shipped and the whole database is recomputed under it
+as of 2026-08-28** — all 5,574 records, none left on an older ruleset. Both
+gates were green on v5 before the recompute (12 club-seasons at 98.8%
+agreement / 0.3% over-crediting; Baseball Reference 17 passed, 0 failed, 2
+known gaps), and the recompute changed rules for non-rostered players only,
+so neither gate moves: every reference player is on a 40-man and was already
+v5. Every rostered player also has a crawlable page. What follows is
 genuinely open work rather than a queue.
 
 1. **Widen player pages to non-rostered players** — a one-line change to
@@ -2103,11 +2189,14 @@ genuinely open work rather than a queue.
   actually wrong was the *checker*, and it is fixed.
 - Service-time-manipulation grievance outcomes (e.g. Kris Bryant) are invisible
   to public transaction data.
-- ~~Elih Villanueva reads 0.000~~ — **fixed by finding #15.** He debuted and
-  last played on 2011-06-15, a one-game career, and now reads 0.001: the one
-  day his appearance proves he was rostered. `report_debuted_but_empty()` in
-  the daily job names anyone still in this class, and as of 2026-08-25 it
-  names nobody.
+- **Elih Villanueva reads 0.000 and still does** — see finding #20. He
+  debuted and last played on 2011-06-15, a one-game career, and the
+  contract selection and the option that ended it share that single date,
+  so stop-wins (finding #10) leaves no interval to credit.
+  `report_debuted_but_empty()` in the daily job names anyone in this class,
+  and it names him. *This entry previously said finding #15 had fixed him
+  to 0.001 and that the report named nobody; neither was ever true of the
+  published data.*
 
 ## Discoverability: every rostered player has a real page
 
@@ -2161,10 +2250,52 @@ Non-rostered players have no page, so they stay a `<button>` — a link to a
 `write_player_pages.py` builds the *filename*; `playerSlug()` in `app.js`
 builds the *href*. A disagreement between them is a 404 on every affected
 player, and it is silent — nothing in the pipeline would notice. They are
-cross-checked against all 5,571 names (0 mismatches), and
+cross-checked against every distinct name in the database (5,539 of them
+across 5,574 players; 0 mismatches, re-verified 2026-08-28), and
 `validate_published.py` now resolves every internal link on every generated
 page against the filesystem, so a drift fails the check rather than shipping
 1,358 quiet 404s.
+
+### The page has to name the statistic, and say the figure in words
+
+**Shipped 2026-08-28.** Two changes, both aimed at the one search this
+project exists to answer — "*&lt;player&gt;* service time".
+
+**The `<h1>` was the player's name alone.** The `<title>` already read
+"Justin Verlander — service time", but the most important heading on the
+page did not contain the term the page is searched for. It now reads
+"Justin Verlander service time", matching both the query and the title.
+
+**And the page led with the facts grid**, which states `21.075` and never
+says what that notation means. Y.DDD is precise, it is what front offices
+use, and it is unreadable to exactly the person who just googled the term
+and landed here. A sentence under the heading now spells it out:
+
+> Justin Verlander has an estimated **21 years and 75 days** of major
+> league service time — 21.075 in the notation clubs use, from 3687 days
+> credited on a major league roster.
+
+The Y.DDD figure stays on the page; it is now *explained* rather than
+assumed. `_plain_figure()` does the conversion and is singular-correct at
+both ends (`1.001` → "1 year and 1 day", `0.001` → "1 day").
+
+**A player with no service time gets a different sentence**, because the
+template otherwise produced "an estimated 0 days of major league service
+time (0.000), from 0 days credited" — which reads like a bug rather than a
+fact. Its second clause ("he is on a 40-man roster but…") is *conditional
+on `on_40_man`*, so widening `_should_publish()` to non-rostered players —
+the open decision above — cannot make the page assert something false.
+
+### `--recompute-derived` is reachable from a workflow now
+
+`update_service_time.py` has had the flag since the Super Two work — reload
+the stored database, redo the derived passes, rewrite the published files,
+no API calls — and **no workflow could reach it**, so a change to a *page
+template* cost a full 30-minute re-fetch of transactions that had not
+changed. The daily workflow now takes a `recompute_derived` input.
+
+It still honours the 8am gate, so a manual run needs `force: true`
+alongside it.
 
 ### Accents are transliterated, not stripped
 
@@ -2177,7 +2308,8 @@ the name, so this was not an edge case.
 Both functions now NFKD-normalize and drop combining marks, which leaves the
 base letter behind (`garcía` → `garcia`), with a small explicit map for the
 characters NFKD will not decompose (`ø`, `ł`, `æ`, `ß`, `đ`, `þ`). Verified
-identical across all 5,571 names in Python and in Node.
+identical across all 5,539 distinct names in Python and in Node
+(re-verified 2026-08-28 after the v5 recompute).
 
 ### Moving to a domain is one file: `docs/CNAME`
 

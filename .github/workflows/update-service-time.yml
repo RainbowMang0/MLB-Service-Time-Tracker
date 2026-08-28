@@ -26,6 +26,10 @@ on:
         description: "Ignore the transaction cache and re-pull each player's full history"
         type: boolean
         default: false
+      recompute_derived:
+        description: "Rewrite the published files from the stored database, no API calls (use after a template or derived-data change)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -69,7 +73,12 @@ jobs:
       - name: Run service time update
         if: steps.gate.outputs.run == 'true'
         run: |
-          if [ "${{ github.event.inputs.full_refresh }}" = "true" ]; then
+          if [ "${{ github.event.inputs.recompute_derived }}" = "true" ]; then
+            # Template or derived-data change only: the stored records are
+            # already correct, so re-fetching every player's transactions
+            # would buy nothing and cost half an hour of API calls.
+            python scripts/update_service_time.py --recompute-derived
+          elif [ "${{ github.event.inputs.full_refresh }}" = "true" ]; then
             python scripts/update_service_time.py --full-refresh
           else
             python scripts/update_service_time.py
