@@ -1566,9 +1566,15 @@ start now no longer sees it as pre-debut.
 
 **Measured, rostered population, before → after:** the rules-v3 recompute
 credited about 2,900 days across the two rules together, and every one of
-them is on the *front* of a career. Both zeros are gone: Daniel Fields reads
-0.003, Elih Villanueva 0.001 — a one-game career now credited the one day
-his appearance proves he was rostered.
+them is on the *front* of a career. Daniel Fields reads 0.002.
+
+⚠️ **This paragraph used to claim Elih Villanueva was fixed to 0.001 too.
+That was never true of the published data** — see finding #20. He has read
+0.000 at every commit from 2026-08-22 onward, through rules v2, v3, v4 and
+v5. Finding #15 cannot reach him: his contract was selected *on* his debut
+date, not before it, so there is no pre-debut roster move for
+`roster_start_before_debut()` to move the floor back to. The claim was
+recorded without checking it against the file.
 
 ⚠️ **A measurement trap hit while confirming this, worth recording.** The
 first check compared yesterday's published file to today's, saw all nine
@@ -1964,6 +1970,65 @@ not defects. One player wrong for a month at weekly sampling is one defect
 worth four judgements, and counting the judgements makes a handful of players
 look like a pattern.
 
+### 20. A one-day career, and the two rules that each correctly delete it
+
+**Found 2026-08-28** by `report_debuted_but_empty()` naming Elih Villanueva
+after the v5 recompute — a report CLAUDE.md claimed named nobody. Probed
+against MLB's own rosters at interval 1 across his whole 2011.
+
+His entire major league transaction history is three rows, and the two that
+matter share a date:
+
+```
+2011-01-13  mlb    .    Florida Marlins invited non-roster RHP Elih Villanueva to spring training.
+2011-06-15  mlb  START  Florida Marlins selected the contract of RHP Elih Villanueva from New Orleans Zephyrs.
+2011-06-15  mlb  STOP   Florida Marlins optioned RHP Elih Villanueva to New Orleans Zephyrs.
+```
+
+He debuted, pitched, and was optioned, all on 2011-06-15. **Stop-wins
+(finding #10) is what zeroes him**: a date carrying both a start and a stop
+ends with the player off the roster, so the interval never opens. The probe
+confirms it directly — `ACCRUAL INTERVALS: (none)`, under carry-in both off
+and on.
+
+**Finding #15 cannot reach him**, which is the part the old note got wrong.
+`roster_start_before_debut()` moves the floor back to a roster move *before*
+the debut; his selection is *on* his debut, so there is nothing to move the
+floor to. He has read 0.000 at every commit since 2026-08-22, through rules
+v2, v3, v4 and v5 — the claim that #15 fixed him to 0.001 was recorded
+without being checked against the published file, and the "names nobody"
+line inherited the error.
+
+**And MLB's own rosters do not contradict us.** All 182 sampled dates in
+2011 come back "not on this club's 40-man" — including 2011-06-15 itself:
+
+```
+agree 0 | over 0 | under 0 | 182 date(s) he was not on this club's 40-man
+```
+
+So by the rule finding #17 established — *probe against MLB's rosters
+first, and only a disagreement with the rosters is a defect here* — this is
+not a defect. The roster endpoint simply never reflects his one day.
+
+**What is nonetheless true is that he earned a day.** He appeared in a major
+league game, and a player who appears is on the active roster that day. So
+this is a genuine limit rather than a clean result: the transaction feed and
+the roster endpoint both fail to show a stint that certainly happened.
+
+⚠️ **Do not fix this by weakening stop-wins.** That rule exists because the
+alternative was measured: treating a same-date pair as a wash **added 5,623
+days** across the cache, and Ben Bowden alone went from 0 to 160 phantom
+days. 212 of 223 same-date pairs end in an option, a DFA or an outright.
+Stop-wins is right; it is simply also right to zero here.
+
+**The narrow fix, if one is ever wanted**, is not a change to interval
+logic at all: *a player's debut date is proof he was rostered that day*, so
+it could floor his credited days at one. That is a new rule, it needs the
+usual measurement (how many players carry a same-date start-and-stop on
+their debut, and what does it do to the gates), and it is worth one day per
+player. **Not shipped, and not obviously worth shipping** — recorded so the
+next session does not re-derive the diagnosis from scratch.
+
 ### A long backfill can starve the daily job — sequence them
 
 **Found 2026-08-27 during the rules-v5 recompute.** The daily update and the
@@ -2103,11 +2168,14 @@ genuinely open work rather than a queue.
   actually wrong was the *checker*, and it is fixed.
 - Service-time-manipulation grievance outcomes (e.g. Kris Bryant) are invisible
   to public transaction data.
-- ~~Elih Villanueva reads 0.000~~ — **fixed by finding #15.** He debuted and
-  last played on 2011-06-15, a one-game career, and now reads 0.001: the one
-  day his appearance proves he was rostered. `report_debuted_but_empty()` in
-  the daily job names anyone still in this class, and as of 2026-08-25 it
-  names nobody.
+- **Elih Villanueva reads 0.000 and still does** — see finding #20. He
+  debuted and last played on 2011-06-15, a one-game career, and the
+  contract selection and the option that ended it share that single date,
+  so stop-wins (finding #10) leaves no interval to credit.
+  `report_debuted_but_empty()` in the daily job names anyone in this class,
+  and it names him. *This entry previously said finding #15 had fixed him
+  to 0.001 and that the report named nobody; neither was ever true of the
+  published data.*
 
 ## Discoverability: every rostered player has a real page
 
@@ -2165,6 +2233,47 @@ cross-checked against all 5,571 names (0 mismatches), and
 `validate_published.py` now resolves every internal link on every generated
 page against the filesystem, so a drift fails the check rather than shipping
 1,358 quiet 404s.
+
+### The page has to name the statistic, and say the figure in words
+
+**Shipped 2026-08-28.** Two changes, both aimed at the one search this
+project exists to answer — "*&lt;player&gt;* service time".
+
+**The `<h1>` was the player's name alone.** The `<title>` already read
+"Justin Verlander — service time", but the most important heading on the
+page did not contain the term the page is searched for. It now reads
+"Justin Verlander service time", matching both the query and the title.
+
+**And the page led with the facts grid**, which states `21.075` and never
+says what that notation means. Y.DDD is precise, it is what front offices
+use, and it is unreadable to exactly the person who just googled the term
+and landed here. A sentence under the heading now spells it out:
+
+> Justin Verlander has an estimated **21 years and 75 days** of major
+> league service time — 21.075 in the notation clubs use, from 3687 days
+> credited on a major league roster.
+
+The Y.DDD figure stays on the page; it is now *explained* rather than
+assumed. `_plain_figure()` does the conversion and is singular-correct at
+both ends (`1.001` → "1 year and 1 day", `0.001` → "1 day").
+
+**A player with no service time gets a different sentence**, because the
+template otherwise produced "an estimated 0 days of major league service
+time (0.000), from 0 days credited" — which reads like a bug rather than a
+fact. Its second clause ("he is on a 40-man roster but…") is *conditional
+on `on_40_man`*, so widening `_should_publish()` to non-rostered players —
+the open decision above — cannot make the page assert something false.
+
+### `--recompute-derived` is reachable from a workflow now
+
+`update_service_time.py` has had the flag since the Super Two work — reload
+the stored database, redo the derived passes, rewrite the published files,
+no API calls — and **no workflow could reach it**, so a change to a *page
+template* cost a full 30-minute re-fetch of transactions that had not
+changed. The daily workflow now takes a `recompute_derived` input.
+
+It still honours the 8am gate, so a manual run needs `force: true`
+alongside it.
 
 ### Accents are transliterated, not stripped
 
