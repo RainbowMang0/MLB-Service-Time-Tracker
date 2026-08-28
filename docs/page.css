@@ -22,6 +22,9 @@ th, td { text-align: left; padding: 0.45rem 0.6rem; border-bottom: 1px solid var
 td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
 td a { color: var(--accent); text-decoration: none; }
 td a:hover { text-decoration: underline; }
+.lede { font-size: 1.05rem; line-height: 1.6; color: var(--text-secondary);
+        margin: 0.9rem 0 0; max-width: 62ch; }
+.lede b { color: var(--text-primary); font-weight: 650; }
 .caveat { background: var(--status-warning-wash); color: var(--text-secondary);
           padding: 0.7rem 0.85rem; border-radius: 6px; font-size: 0.85rem; }
 .back { display: inline-block; margin-bottom: 1rem; color: var(--accent);
