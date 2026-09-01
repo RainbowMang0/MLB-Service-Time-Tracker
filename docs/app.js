@@ -666,20 +666,18 @@
     const stored = localStorageSafeGet("mlb-service-time-theme");
     if (stored) root.setAttribute("data-theme", stored);
     el("theme-toggle").addEventListener("click", () => {
-      // The default is "system", which sets no attribute at all -- so
-      // reading only the attribute treated a dark-by-system page as light
-      // and the first click set it to the theme it was already showing.
-      // Nothing happened, and the user had to click twice. The icon was
-      // right about the effective theme all along (it follows
-      // prefers-color-scheme in CSS); the button was not.
+      // What the page is showing RIGHT NOW, which is what the button has to
+      // toggle away from. Get this wrong and the first click sets the theme
+      // already on screen, nothing happens, and it takes two clicks -- a bug
+      // this button has had once already.
+      //
+      // With no attribute set the answer is DARK, because dark is now the
+      // site's default rather than something inherited from the OS. This
+      // used to consult prefers-color-scheme; doing so now would tell a
+      // visitor on a light-themed OS that the page is light when it is
+      // showing dark, and bring the double-click back.
       const explicit = root.getAttribute("data-theme");
-      const current =
-        explicit === "dark" || explicit === "light"
-          ? explicit
-          : window.matchMedia &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light";
+      const current = explicit === "light" ? "light" : "dark";
       const next = current === "dark" ? "light" : "dark";
       root.setAttribute("data-theme", next);
       localStorageSafeSet("mlb-service-time-theme", next);

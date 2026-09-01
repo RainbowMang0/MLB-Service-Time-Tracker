@@ -9,8 +9,10 @@
      the main way anyone finds it. No og:image: there is no artwork to point
      at, and a broken image reference is worse than a text-only card. -->
 <meta name="description" content="Estimated major league service time for every player on a 40-man roster, plus a historical log of players who have dropped off one. Reconstructed daily from public roster transactions — 172 days credits a year, 3.000 reaches arbitration, 6.000 reaches free agency." />
-<meta name="theme-color" content="#f9f9f7" media="(prefers-color-scheme: light)" />
-<meta name="theme-color" content="#131313" media="(prefers-color-scheme: dark)" />
+<!-- One value, not a prefers-color-scheme pair: the site is dark whatever
+     the visitor's OS says, so browser chrome that followed the OS would
+     mismatch the page it frames. #0a0c10 is --page-plane. -->
+<meta name="theme-color" content="#0a0c10" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Big League Service Time Tracker" />
 <meta property="og:description" content="Estimated major league service time for every player on a 40-man roster, plus a historical log of previous players. Reconstructed daily from public roster transactions." />

@@ -13,29 +13,60 @@ html, body {
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
+/* ---------------------------------------------------------------------
+   TELEMETRY. This site's data already behaves like an instrument -- the
+   service-time meter is a gauge with a tick at the 3.000 threshold -- so
+   the visual language leans into that rather than bolting ornament on
+   top: monospaced figures, hairlines, wide-tracked micro-labels, and a
+   glow reserved for the values that matter.
+
+   All of it is CSS. No webfont, no canvas, no library: --mono is a system
+   stack, so a technical numeral costs nothing to download. That matters
+   on a page whose whole payload is 0.22 MB.
+   --------------------------------------------------------------------- */
+:root {
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, "Cascadia Mono",
+          "JetBrains Mono", Menlo, Consolas, monospace;
+}
+
+/* DARK IS THE DEFAULT. The telemetry look -- the grid ground, the lit
+   gauges, the tile filaments -- is built for a dark plane and does
+   noticeably less work on a light one, so dark is the site's identity
+   rather than a preference it inherits from the visitor's OS.
+
+   Light is therefore no longer reached by prefers-color-scheme at all;
+   it is an explicit choice, [data-theme="light"], remembered in
+   localStorage. Anyone who wants it is one click away and stays there.
+
+   color-scheme matters as much as the tokens: without it the browser
+   still paints <select> and <input> chrome, scrollbars and form focus
+   rings from the light palette, and they sit on the dark plane looking
+   like a rendering fault. */
 .viz-root {
-  color-scheme: light;
-  --page-plane:      #f9f9f7;
-  --surface-1:       #fcfcfb;
-  --text-primary:    #0b0b0b;
-  --text-secondary:  #52514e;
+  color-scheme: dark;
+  --page-plane:      #0a0c10;
+  --surface-1:       #12161d;
+  --text-primary:    #e9eef5;
+  --text-secondary:  #9fb0c4;
   --text-muted:      #898781;
-  --gridline:        #e1e0d9;
-  --baseline:        #c3c2b7;
-  --border:          rgba(11,11,11,0.10);
-  --accent:          #2a78d6;
-  --accent-wash:     #eaf2fc;
+  --gridline:        #1e242e;
+  --baseline:        #2b333f;
+  --border:          rgba(255,255,255,0.10);
+  --accent:          #3987e5;
+  --accent-wash:     #16283d;
   --status-good:     #0ca30c;
-  --status-good-wash:#e6f6e6;
-  --status-warning:  #b3790f;
-  --status-warning-wash: #fdf1da;
-  --status-serious:  #c85a35;
-  --status-serious-wash: #fbe6dc;
-  --status-critical: #d03b3b;
-  --glass-surface:   rgba(255,255,255,0.45);
-  --glass-border:    rgba(255,255,255,0.4);
-  --glass-shadow:    rgba(11,11,11,0.08);
-  --accent-glow:     rgba(42,120,214,0.16);
+  --status-good-wash:#123512;
+  --status-warning:  #fab219;
+  --status-warning-wash: #3a2c0c;
+  --status-serious:  #ec835a;
+  --status-serious-wash: #3c2216;
+  --status-critical: #e66767;
+  --glass-surface:   rgba(18,22,29,0.55);
+  --glass-border:    rgba(255,255,255,0.08);
+  --glass-shadow:    rgba(0,0,0,0.35);
+  --accent-glow:     rgba(57,135,229,0.22);
+  --grid-line:       rgba(120,170,235,0.055);
+  --grid-step:       46px;
 
   background: var(--page-plane);
   color: var(--text-primary);
@@ -61,59 +92,47 @@ html, body {
   z-index: -1;
   pointer-events: none;
   background:
+    /* The grid reads as a measuring surface -- graph paper, an instrument
+       face -- and it is two repeating-linear-gradients, so it costs no
+       image request and no memory. Kept far below the glow's intensity:
+       it should register as texture, not as a pattern you look at. */
+    repeating-linear-gradient(to right,
+      var(--grid-line) 0 1px, transparent 1px var(--grid-step)),
+    repeating-linear-gradient(to bottom,
+      var(--grid-line) 0 1px, transparent 1px var(--grid-step)),
     radial-gradient(760px circle at 90% -10%, var(--accent-glow), transparent 60%),
     radial-gradient(520px circle at 8% 18%, var(--accent-glow), transparent 55%);
+  /* Fades the grid out down the page so it frames the masthead and then
+     gets out of the table's way. */
+  -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 40vh, transparent 88vh);
+  mask-image: linear-gradient(to bottom, #000 0, #000 40vh, transparent 88vh);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:where(:not([data-theme="light"])) .viz-root {
-    color-scheme: dark;
-    --page-plane:      #131313;
-    --surface-1:       #1c1c1b;
-    --text-primary:    #f0efe9;
-    --text-secondary:  #c3c2b7;
-    --text-muted:      #898781;
-    --gridline:        #2e2e2c;
-    --baseline:        #383835;
-    --border:          rgba(255,255,255,0.10);
-    --accent:          #3987e5;
-    --accent-wash:     #16283d;
-    --status-good:     #0ca30c;
-    --status-good-wash:#123512;
-    --status-warning:  #fab219;
-    --status-warning-wash: #3a2c0c;
-    --status-serious:  #ec835a;
-    --status-serious-wash: #3c2216;
-    --status-critical: #e66767;
-    --glass-surface:   rgba(28,28,27,0.45);
-    --glass-border:    rgba(255,255,255,0.08);
-    --glass-shadow:    rgba(0,0,0,0.35);
-    --accent-glow:     rgba(57,135,229,0.22);
-  }
-}
-:root[data-theme="dark"] .viz-root {
-  color-scheme: dark;
-  --page-plane:      #131313;
-  --surface-1:       #1c1c1b;
-  --text-primary:    #f0efe9;
-  --text-secondary:  #c3c2b7;
+:root[data-theme="light"] .viz-root {
+  color-scheme: light;
+  --page-plane:      #f9f9f7;
+  --surface-1:       #fcfcfb;
+  --text-primary:    #0b0b0b;
+  --text-secondary:  #52514e;
   --text-muted:      #898781;
-  --gridline:        #2e2e2c;
-  --baseline:        #383835;
-  --border:          rgba(255,255,255,0.10);
-  --accent:          #3987e5;
-  --accent-wash:     #16283d;
+  --gridline:        #e1e0d9;
+  --baseline:        #c3c2b7;
+  --border:          rgba(11,11,11,0.10);
+  --accent:          #2a78d6;
+  --accent-wash:     #eaf2fc;
   --status-good:     #0ca30c;
-  --status-good-wash:#123512;
-  --status-warning:  #fab219;
-  --status-warning-wash: #3a2c0c;
-  --status-serious:  #ec835a;
-  --status-serious-wash: #3c2216;
-  --status-critical: #e66767;
-  --glass-surface:   rgba(28,28,27,0.45);
-  --glass-border:    rgba(255,255,255,0.08);
-  --glass-shadow:    rgba(0,0,0,0.35);
-  --accent-glow:     rgba(57,135,229,0.22);
+  --status-good-wash:#e6f6e6;
+  --status-warning:  #b3790f;
+  --status-warning-wash: #fdf1da;
+  --status-serious:  #c85a35;
+  --status-serious-wash: #fbe6dc;
+  --status-critical: #d03b3b;
+  --glass-surface:   rgba(255,255,255,0.45);
+  --glass-border:    rgba(255,255,255,0.4);
+  --glass-shadow:    rgba(11,11,11,0.08);
+  --accent-glow:     rgba(42,120,214,0.16);
+  --grid-line:       rgba(11,11,11,0.035);
+  --grid-step:       46px;
 }
 
 /* ---------------------------------------------------------------------
@@ -144,6 +163,23 @@ html, body {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+/* The one place a gradient earns its keep. The colour is declared on the
+   element first, so a browser without background-clip:text renders solid
+   text rather than nothing -- the failure mode of this technique is an
+   invisible headline, and it is worth one extra line to rule out. */
+.page-header-inner h1 span {
+  color: var(--text-primary);
+  background: linear-gradient(
+    100deg,
+    var(--text-primary) 0%,
+    var(--text-primary) 45%,
+    color-mix(in srgb, var(--accent) 75%, var(--text-primary)) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .page-header-inner h1 span { color: transparent; }
 }
 .brand-mark {
   width: clamp(30px, 3.4vw, 44px);
@@ -207,23 +243,26 @@ html, body {
 /* Which glyph to show mirrors the token blocks above: the button offers the
    theme you would switch TO, and under the default "system" setting that is
    only knowable from prefers-color-scheme. */
-.icon-sun { display: none; }
-.icon-moon { display: inline-block; }
-@media (prefers-color-scheme: dark) {
-  :root:where(:not([data-theme="light"])) .theme-toggle .icon-sun  { display: inline-block; }
-  :root:where(:not([data-theme="light"])) .theme-toggle .icon-moon { display: none; }
-}
-:root[data-theme="dark"]  .theme-toggle .icon-sun  { display: inline-block; }
-:root[data-theme="dark"]  .theme-toggle .icon-moon { display: none; }
+/* The button shows the theme you would switch TO. Dark is the default, so
+   the sun is what shows until someone explicitly picks light. No
+   prefers-color-scheme here any more -- the effective theme no longer
+   depends on it, and a rule that still consulted it would light the wrong
+   glyph. */
+.icon-sun  { display: inline-block; }
+.icon-moon { display: none; }
 :root[data-theme="light"] .theme-toggle .icon-sun  { display: none; }
 :root[data-theme="light"] .theme-toggle .icon-moon { display: inline-block; }
 
 .disclaimer-banner {
+  position: relative;
   margin: 0 clamp(16px, 4vw, 40px) 20px;
-  padding: 10px 14px;
-  background: var(--accent-wash);
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  padding: 12px 16px 12px 18px;
+  background: var(--glass-surface);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  overflow: hidden;
   color: var(--text-secondary);
   font-size: 0.85rem;
   display: flex;
@@ -231,6 +270,17 @@ html, body {
   align-items: flex-start;
 }
 .disclaimer-icon { color: var(--accent); flex: none; }
+/* A lit edge on the caveat, in the accent rather than a warning colour:
+   this is the most important sentence on the site and it should read as
+   an instrument note, not an error. */
+.disclaimer-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent,
+    color-mix(in srgb, var(--accent) 80%, transparent), transparent);
+}
 
 .stat-tiles {
   display: grid;
@@ -239,6 +289,8 @@ html, body {
   margin: 0 clamp(16px, 4vw, 40px) 24px;
 }
 .stat-tile {
+  position: relative;
+  overflow: hidden;
   background: var(--glass-surface);
   border: 1px solid var(--glass-border);
   border-radius: 14px;
@@ -286,18 +338,40 @@ html, body {
 }
 
 .stat-tile .value {
-  font-size: 1.6rem;
+  font-family: var(--mono);
+  letter-spacing: -0.03em;
+  font-size: 2rem;
   font-weight: 600;
   font-variant-numeric: proportional-nums;
   line-height: 1.1;
 }
 .stat-tile .label {
   color: var(--text-muted);
-  font-size: 0.78rem;
+  font-family: var(--mono);
+  font-size: 0.68rem;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-top: 4px;
+  /* Wide tracking on a small mono label is the single most legible
+     "control panel" cue available, and it costs nothing. */
+  letter-spacing: 0.16em;
+  margin-top: 7px;
 }
+/* A filament along the top edge, in the tile's own status colour. This
+   is the detail that makes the row read as instrumentation: each panel
+   is lit by the thing it measures. */
+.stat-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: linear-gradient(to right,
+    transparent, color-mix(in srgb, var(--tile-hue, var(--accent)) 85%, transparent), transparent);
+}
+.stat-tile.accent-good    { --tile-hue: var(--status-good); }
+.stat-tile.accent-warning { --tile-hue: var(--status-warning); }
+.stat-tile.accent-serious { --tile-hue: var(--status-serious); }
+.stat-tile.accent-critical{ --tile-hue: var(--status-critical); }
+.stat-tile.accent-muted   { --tile-hue: var(--baseline); }
+
 .stat-tile.accent-good .value   { color: var(--status-good); }
 .stat-tile.accent-warning .value{ color: var(--status-warning); }
 .stat-tile.accent-serious .value{ color: var(--status-serious); }
@@ -317,7 +391,12 @@ html, body {
   font-size: 0.85rem;
   font-variant-numeric: tabular-nums;
 }
-.census b { color: var(--text-primary); font-weight: 650; }
+.census b {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-family: var(--mono);
+  letter-spacing: -0.02em;
+}
 .census .sep { color: var(--text-muted); margin: 0 0.5em; }
 .census-note { color: var(--text-muted); }
 
@@ -388,10 +467,12 @@ html, body {
 .controls select {
   font: inherit;
   font-size: 0.9rem;
-  padding: 8px 10px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--surface-1);
+  padding: 10px 12px;
+  border-radius: 9px;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  background: var(--glass-surface);
   color: var(--text-primary);
 }
 #search-input { flex: 1 1 220px; min-width: 180px; }
@@ -416,11 +497,26 @@ thead th:focus-visible {
 .controls select:focus { border-color: var(--accent); outline: none; }
 
 .table-wrap {
+  position: relative;
   margin: 0 clamp(16px, 4vw, 40px) 28px;
-  border: 1px solid var(--border);
-  border-radius: 10px;
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
   overflow: auto;
   background: var(--surface-1);
+  box-shadow: 0 8px 34px var(--glass-shadow);
+}
+/* Same filament as the stat tiles, so the table reads as another panel in
+   the same instrument rather than a separate widget. */
+.table-wrap::before {
+  content: "";
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 1px;
+  background: linear-gradient(to right, transparent,
+    color-mix(in srgb, var(--accent) 60%, transparent), transparent);
+  z-index: 3;
 }
 
 table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
@@ -432,11 +528,12 @@ thead th {
   backdrop-filter: blur(14px) saturate(180%);
   -webkit-backdrop-filter: blur(14px) saturate(180%);
   text-align: left;
-  padding: 10px 12px;
+  padding: 12px 12px;
   color: var(--text-muted);
-  font-size: 0.75rem;
+  font-family: var(--mono);
+  font-size: 0.66rem;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.16em;
   border-bottom: 1px solid var(--gridline);
   cursor: pointer;
   white-space: nowrap;
@@ -458,8 +555,18 @@ tbody td {
 }
 tbody tr:last-child td { border-bottom: none; }
 tbody tr:hover { background: var(--accent-wash); }
+/* The club stripe brightens with the row, so the hover reads as the row
+   being selected on a panel rather than merely tinted. */
+tbody tr:hover td.player-name {
+  box-shadow: inset 3px 0 10px -4px var(--club, var(--accent));
+}
 
-.num-col, td.num-col { font-variant-numeric: tabular-nums; text-align: right; }
+.num-col, td.num-col {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  letter-spacing: -0.02em;
+}
 
 /* --- Service time: the number is the product ---------------------------
    It used to render at the same size and weight as the club name two
@@ -479,13 +586,27 @@ tbody tr:hover { background: var(--accent-wash); }
   gap: 5px;
   width: 108px;
 }
-.svc-num { font-variant-numeric: tabular-nums; line-height: 1; white-space: nowrap; }
-.svc-years {
-  font-size: 1.2rem;
-  font-weight: 650;
-  letter-spacing: -0.02em;
+/* THE READOUT. Mono, so every figure in the column occupies the same
+   width and the decimal points stack into a line -- which is what makes a
+   table of numbers read as an instrument rather than as prose. */
+.svc-num {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  white-space: nowrap;
 }
-.svc-days { font-size: 0.8rem; font-weight: 500; color: var(--text-muted); }
+.svc-years {
+  font-size: 1.24rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+}
+.svc-days {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
 .svc-track {
   /* Spans, so they need blockifying: width and height do not apply to an
      inline box and the meter rendered as a hairline without this. */
@@ -514,10 +635,19 @@ tbody tr:hover { background: var(--accent-wash); }
   width: 1px;
   background: var(--baseline);
 }
-.svc-fill.f-good    { background: var(--status-good); }
-.svc-fill.f-warning { background: var(--status-warning); }
-.svc-fill.f-serious { background: var(--status-serious); }
-.svc-fill.f-accent  { background: var(--accent); }
+/* A gauge that is lit rather than painted. The bloom is the fill's own
+   colour at low alpha, so it can never introduce a hue the palette does
+   not already reserve for that status. */
+.svc-fill.f-good    { background: var(--status-good);
+                      box-shadow: 0 0 8px color-mix(in srgb, var(--status-good) 55%, transparent); }
+.svc-fill.f-warning { background: var(--status-warning);
+                      box-shadow: 0 0 8px color-mix(in srgb, var(--status-warning) 55%, transparent); }
+.svc-fill.f-serious { background: var(--status-serious);
+                      box-shadow: 0 0 8px color-mix(in srgb, var(--status-serious) 55%, transparent); }
+.svc-fill.f-accent  { background: var(--accent);
+                      box-shadow: 0 0 8px color-mix(in srgb, var(--accent) 55%, transparent); }
+/* The track reads as an etched channel rather than a grey bar. */
+.svc-track { background: color-mix(in srgb, var(--baseline) 45%, transparent); }
 .svc-none { color: var(--text-muted); }
 
 .player-name { font-weight: 600; }
@@ -562,16 +692,25 @@ tbody td.player-name {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 3px 9px;
-  border-radius: 999px;
-  font-size: 0.75rem;
+  padding: 4px 10px;
+  /* Squarer than a pill: a status readout, not a tag. */
+  border-radius: 6px;
+  font-size: 0.68rem;
   font-weight: 600;
+  font-family: var(--mono);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
   white-space: nowrap;
+  border: 1px solid transparent;
 }
-.badge-good    { color: var(--status-good);    background: var(--status-good-wash); }
-.badge-warning { color: var(--status-warning); background: var(--status-warning-wash); }
-.badge-serious { color: var(--status-serious); background: var(--status-serious-wash); }
-.badge-neutral { color: var(--text-secondary); background: var(--gridline); }
+.badge-good    { color: var(--status-good);    background: var(--status-good-wash);
+                 border-color: color-mix(in srgb, var(--status-good) 30%, transparent); }
+.badge-warning { color: var(--status-warning); background: var(--status-warning-wash);
+                 border-color: color-mix(in srgb, var(--status-warning) 30%, transparent); }
+.badge-serious { color: var(--status-serious); background: var(--status-serious-wash);
+                 border-color: color-mix(in srgb, var(--status-serious) 30%, transparent); }
+.badge-neutral { color: var(--text-secondary); background: var(--gridline);
+                 border-color: color-mix(in srgb, var(--baseline) 40%, transparent); }
 
 .pill {
   display: inline-block;
