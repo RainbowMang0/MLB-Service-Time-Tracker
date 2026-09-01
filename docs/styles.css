@@ -29,30 +29,43 @@ html, body {
           "JetBrains Mono", Menlo, Consolas, monospace;
 }
 
+/* DARK IS THE DEFAULT. The telemetry look -- the grid ground, the lit
+   gauges, the tile filaments -- is built for a dark plane and does
+   noticeably less work on a light one, so dark is the site's identity
+   rather than a preference it inherits from the visitor's OS.
+
+   Light is therefore no longer reached by prefers-color-scheme at all;
+   it is an explicit choice, [data-theme="light"], remembered in
+   localStorage. Anyone who wants it is one click away and stays there.
+
+   color-scheme matters as much as the tokens: without it the browser
+   still paints <select> and <input> chrome, scrollbars and form focus
+   rings from the light palette, and they sit on the dark plane looking
+   like a rendering fault. */
 .viz-root {
-  color-scheme: light;
-  --page-plane:      #f9f9f7;
-  --surface-1:       #fcfcfb;
-  --text-primary:    #0b0b0b;
-  --text-secondary:  #52514e;
+  color-scheme: dark;
+  --page-plane:      #0a0c10;
+  --surface-1:       #12161d;
+  --text-primary:    #e9eef5;
+  --text-secondary:  #9fb0c4;
   --text-muted:      #898781;
-  --gridline:        #e1e0d9;
-  --baseline:        #c3c2b7;
-  --border:          rgba(11,11,11,0.10);
-  --accent:          #2a78d6;
-  --accent-wash:     #eaf2fc;
+  --gridline:        #1e242e;
+  --baseline:        #2b333f;
+  --border:          rgba(255,255,255,0.10);
+  --accent:          #3987e5;
+  --accent-wash:     #16283d;
   --status-good:     #0ca30c;
-  --status-good-wash:#e6f6e6;
-  --status-warning:  #b3790f;
-  --status-warning-wash: #fdf1da;
-  --status-serious:  #c85a35;
-  --status-serious-wash: #fbe6dc;
-  --status-critical: #d03b3b;
-  --glass-surface:   rgba(255,255,255,0.45);
-  --glass-border:    rgba(255,255,255,0.4);
-  --glass-shadow:    rgba(11,11,11,0.08);
-  --accent-glow:     rgba(42,120,214,0.16);
-  --grid-line:       rgba(11,11,11,0.035);
+  --status-good-wash:#123512;
+  --status-warning:  #fab219;
+  --status-warning-wash: #3a2c0c;
+  --status-serious:  #ec835a;
+  --status-serious-wash: #3c2216;
+  --status-critical: #e66767;
+  --glass-surface:   rgba(18,22,29,0.55);
+  --glass-border:    rgba(255,255,255,0.08);
+  --glass-shadow:    rgba(0,0,0,0.35);
+  --accent-glow:     rgba(57,135,229,0.22);
+  --grid-line:       rgba(120,170,235,0.055);
   --grid-step:       46px;
 
   background: var(--page-plane);
@@ -95,57 +108,31 @@ html, body {
   mask-image: linear-gradient(to bottom, #000 0, #000 40vh, transparent 88vh);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:where(:not([data-theme="light"])) .viz-root {
-    color-scheme: dark;
-    --page-plane:      #0a0c10;
-    --surface-1:       #12161d;
-    --text-primary:    #e9eef5;
-    --text-secondary:  #9fb0c4;
-    --text-muted:      #898781;
-    --gridline:        #1e242e;
-    --baseline:        #2b333f;
-    --border:          rgba(255,255,255,0.10);
-    --accent:          #3987e5;
-    --accent-wash:     #16283d;
-    --status-good:     #0ca30c;
-    --status-good-wash:#123512;
-    --status-warning:  #fab219;
-    --status-warning-wash: #3a2c0c;
-    --status-serious:  #ec835a;
-    --status-serious-wash: #3c2216;
-    --status-critical: #e66767;
-    --glass-surface:   rgba(18,22,29,0.55);
-    --glass-border:    rgba(255,255,255,0.08);
-    --glass-shadow:    rgba(0,0,0,0.35);
-    --accent-glow:     rgba(57,135,229,0.22);
-    --grid-line:       rgba(120,170,235,0.055);
-  }
-}
-:root[data-theme="dark"] .viz-root {
-  color-scheme: dark;
-  --page-plane:      #0a0c10;
-  --surface-1:       #12161d;
-  --text-primary:    #e9eef5;
-  --text-secondary:  #9fb0c4;
+:root[data-theme="light"] .viz-root {
+  color-scheme: light;
+  --page-plane:      #f9f9f7;
+  --surface-1:       #fcfcfb;
+  --text-primary:    #0b0b0b;
+  --text-secondary:  #52514e;
   --text-muted:      #898781;
-  --gridline:        #1e242e;
-  --baseline:        #2b333f;
-  --border:          rgba(255,255,255,0.10);
-  --accent:          #3987e5;
-  --accent-wash:     #16283d;
+  --gridline:        #e1e0d9;
+  --baseline:        #c3c2b7;
+  --border:          rgba(11,11,11,0.10);
+  --accent:          #2a78d6;
+  --accent-wash:     #eaf2fc;
   --status-good:     #0ca30c;
-  --status-good-wash:#123512;
-  --status-warning:  #fab219;
-  --status-warning-wash: #3a2c0c;
-  --status-serious:  #ec835a;
-  --status-serious-wash: #3c2216;
-  --status-critical: #e66767;
-  --glass-surface:   rgba(18,22,29,0.55);
-  --glass-border:    rgba(255,255,255,0.08);
-  --glass-shadow:    rgba(0,0,0,0.35);
-  --accent-glow:     rgba(57,135,229,0.22);
-  --grid-line:       rgba(120,170,235,0.055);
+  --status-good-wash:#e6f6e6;
+  --status-warning:  #b3790f;
+  --status-warning-wash: #fdf1da;
+  --status-serious:  #c85a35;
+  --status-serious-wash: #fbe6dc;
+  --status-critical: #d03b3b;
+  --glass-surface:   rgba(255,255,255,0.45);
+  --glass-border:    rgba(255,255,255,0.4);
+  --glass-shadow:    rgba(11,11,11,0.08);
+  --accent-glow:     rgba(42,120,214,0.16);
+  --grid-line:       rgba(11,11,11,0.035);
+  --grid-step:       46px;
 }
 
 /* ---------------------------------------------------------------------
@@ -256,14 +243,13 @@ html, body {
 /* Which glyph to show mirrors the token blocks above: the button offers the
    theme you would switch TO, and under the default "system" setting that is
    only knowable from prefers-color-scheme. */
-.icon-sun { display: none; }
-.icon-moon { display: inline-block; }
-@media (prefers-color-scheme: dark) {
-  :root:where(:not([data-theme="light"])) .theme-toggle .icon-sun  { display: inline-block; }
-  :root:where(:not([data-theme="light"])) .theme-toggle .icon-moon { display: none; }
-}
-:root[data-theme="dark"]  .theme-toggle .icon-sun  { display: inline-block; }
-:root[data-theme="dark"]  .theme-toggle .icon-moon { display: none; }
+/* The button shows the theme you would switch TO. Dark is the default, so
+   the sun is what shows until someone explicitly picks light. No
+   prefers-color-scheme here any more -- the effective theme no longer
+   depends on it, and a rule that still consulted it would light the wrong
+   glyph. */
+.icon-sun  { display: inline-block; }
+.icon-moon { display: none; }
 :root[data-theme="light"] .theme-toggle .icon-sun  { display: none; }
 :root[data-theme="light"] .theme-toggle .icon-moon { display: inline-block; }
 
