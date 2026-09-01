@@ -726,7 +726,11 @@ class _LastMod:
         return sum(1 for v in self.current.values() if v["lastmod"] == self.today)
 
 
-def write_player_pages(db: dict[str, dict], generated_at: str | None = None) -> list[dict]:
+def write_player_pages(
+    db: dict[str, dict],
+    generated_at: str | None = None,
+    super_two_cutoff: dict | None = None,
+) -> list[dict]:
     """Regenerate docs/p/ from scratch and return the players published."""
     generated_at = generated_at or dt.datetime.now(dt.timezone.utc).isoformat()
 
@@ -758,7 +762,7 @@ def write_player_pages(db: dict[str, dict], generated_at: str | None = None) -> 
     clubs = _write_club_pages(published, generated_at, lastmod)
 
     _write_page_css()
-    explainer = render_explainer(generated_at)
+    explainer = render_explainer(generated_at, super_two_cutoff)
     (DOCS / EXPLAINER_PATH).write_text(explainer)
     lastmod.record(EXPLAINER_PATH, explainer)
     _write_sitemap(published, clubs, generated_at, lastmod)
@@ -877,12 +881,20 @@ td a:hover { text-decoration: underline; }
    the third column is prose, not a figure -- and the service-time column
    holds the number the whole site is about, so it leads. */
 .thresholds { margin: 1.2rem 0 0.4rem; }
+/* styles.css makes every thead sticky, which is right for a 5,578-row table
+   and wrong here: on a prose page the header detaches and floats over the
+   paragraphs below the table. */
+.thresholds thead th { position: static; }
 .thresholds td { vertical-align: top; line-height: 1.55; }
 .thresholds td:first-child { white-space: nowrap; font-size: 1.05rem; }
 .thresholds td:nth-child(2) { white-space: nowrap; color: var(--text-muted); }
 .thresholds td:last-child { font-size: 0.9rem; }
 .thr-note { display: inline-block; font-size: 0.72rem; color: var(--text-muted);
             white-space: normal; font-weight: 400; }
+.sources { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;
+           padding-left: 1.1rem; margin: 0.5rem 0 0.8rem; }
+.sources li { margin-bottom: 0.35rem; }
+.sources a { color: var(--accent); }
 .foot-note { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;
              margin: 0.2rem 0 0; }
 .foot-note a { color: var(--accent); }
@@ -915,7 +927,7 @@ def _write_page_css() -> None:
 EXPLAINER_PATH = "service-time.html"
 
 
-def render_explainer(generated_at: str) -> str:
+def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) -> str:
     """The page that explains what the number on every other page means.
 
     Every other page here PUBLISHES a service-time figure and assumes the
@@ -937,6 +949,24 @@ def render_explainer(generated_at: str) -> str:
     qualitatively, and points outward for current amounts.
     """
     url = f"{SITE_URL}/{EXPLAINER_PATH}"
+
+    # The Super Two line quotes THIS SITE's computed cutoff rather than a
+    # number typed into the prose. The threshold is not fixed -- it falls
+    # where the class falls, and super_two.py has measured it between 2.112
+    # and 2.137 across five seasons -- so a hardcoded figure would drift away
+    # from the badges on the pages beside it. With no cutoff to hand the row
+    # describes the rule and claims no number, rather than guessing one.
+    if super_two_cutoff and super_two_cutoff.get("cutoff"):
+        s2_fig = html.escape(str(super_two_cutoff["cutoff"]))
+        s2_days = f"{int(super_two_cutoff.get('cutoff_days') or 0):,}"
+        s2_season = super_two_cutoff.get("season")
+        s2_note = (
+            f" After the {s2_season} season the line fell at <b>{s2_fig}</b>, "
+            "which is what this site currently projects against."
+            if s2_season else ""
+        )
+    else:
+        s2_fig, s2_days, s2_note = "varies", "—", ""
     desc = (
         "What major league service time is, how a day is earned, and every "
         "threshold it unlocks — 172 days to a year, arbitration at 3.000, "
@@ -1066,7 +1096,7 @@ def render_explainer(generated_at: str) -> str:
   Days spent optioned to the minor leagues do not.</p>
 
   <h2>172 days make a year</h2>
-  <p>A season runs about 186 days, but the Basic Agreement sets a credited
+  <p>A season runs about 187 days, but the Basic Agreement sets a credited
   year at <b>172</b>. A player on a roster from Opening Day to the end of the
   season is credited <b>1.000</b> and no more, so those spare days leave a
   little room for a short trip to the minors without costing him the year.</p>
@@ -1093,12 +1123,12 @@ def render_explainer(generated_at: str) -> str:
         further 43 days adds to what a player will eventually draw.</td>
       </tr>
       <tr>
-        <td class="n"><b>~2.130</b></td><td class="n">~474</td>
+        <td class="n"><b>{s2_fig}</b></td><td class="n">{s2_days}</td>
         <td><b>Super Two.</b> A player between two and three years who ranks
         in the top 22% of that class, with 86+ days in the preceding season,
         reaches salary arbitration <b>a year early</b> — four trips through it
-        instead of three. The cutoff is not fixed; it falls where the class
-        falls, which is why it is shown as an estimate.</td>
+        instead of three. <b>The cutoff is not fixed</b>: it falls wherever
+        the class falls that year.{s2_note}</td>
       </tr>
       <tr>
         <td class="n"><b>3.000</b></td><td class="n">516</td>
@@ -1136,12 +1166,39 @@ def render_explainer(generated_at: str) -> str:
 
   <p class="foot-note">Pension and benefit amounts are renegotiated between
   the league and the players' association and are reported differently by
-  different sources, so no dollar figures are quoted here — the thresholds
-  above are the durable part. The
-  <a href="https://www.mlb.com/glossary/transactions/service-time">MLB
-  glossary</a> and the
-  <a href="https://www.mlbplayers.com/">MLB Players Association</a> are the
-  places to check current figures.</p>
+  different sources, so <b>no dollar figures are quoted here</b> — the
+  thresholds above are the durable part.</p>
+
+  <h2>Where these come from</h2>
+  <p class="foot-note">This site publishes its own reconstruction of service
+  time, so it owes you the provenance of the rules it reconstructs against.
+  The first four thresholds are the ones the pipeline itself computes; the
+  rest are not, and are sourced here.</p>
+  <ul class="sources">
+    <li><a href="https://www.mlb.com/glossary/transactions/service-time">MLB
+      glossary — Service time</a>: 172 days to a credited year, and the
+      length of a season.</li>
+    <li><a href="https://www.mlb.com/glossary/transactions/super-two">MLB
+      glossary — Super Two</a>: two-to-three years, 86+ days, top 22%.</li>
+    <li><a href="https://www.mlb.com/glossary/transactions/salary-arbitration">MLB
+      glossary — Salary arbitration</a> and
+      <a href="https://www.mlb.com/glossary/transactions/free-agency">Free
+      agency</a>: the 3.000 and 6.000 thresholds.</li>
+    <li><a href="https://www.mlb.com/glossary/transactions/10-and-5-rights">MLB
+      glossary — 10-and-5 rights</a>: ten years, five consecutive with the
+      current club, full trade veto.</li>
+    <li><a href="https://www.sportico.com/leagues/baseball/2025/mlb-lifetime-pass-golden-ticket-reward-program-service-1234854369/">Sportico</a>
+      and <a href="https://www.insidehook.com/sports/mlb-gold-card-free-baseball-lifetime-pass">InsideHook</a>
+      on the gold card: eight years, awarded by the Commissioner's Office,
+      regular-season admission for the holder and a guest.</li>
+    <li><a href="https://www.mlbplayers.com/">MLB Players Association</a> for
+      pension and benefit terms, including the 43-day quarter and the
+      ten-year maximum.</li>
+  </ul>
+  <p class="foot-note">Where sources disagreed, this page states the weaker
+  claim. One day of service is described as buying <i>access to the benefit
+  plan</i> because accounts differ on whether it confers coverage or the
+  right to buy in.</p>
 
   <h2>Why clubs pay attention to the calendar</h2>
   <p>Because 172 days make a year and a season is longer, a club that keeps a
