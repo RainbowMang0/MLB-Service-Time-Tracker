@@ -11,7 +11,8 @@ rules every time. As a real file the browser fetches it once. */
 .facts { display: flex; flex-wrap: wrap; gap: 1.75rem; margin: 1rem 0 1.4rem;
          padding: 0.9rem 0; border-top: 1px solid var(--gridline);
          border-bottom: 1px solid var(--gridline); }
-.facts div span { display: block; font-size: 0.7rem; text-transform: uppercase;
+.facts div span { display: block; font-size: 0.66rem; text-transform: uppercase;
+                  font-family: var(--mono);
                   letter-spacing: 0.05em; color: var(--text-muted); }
 .crumbs { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem; }
 .crumbs a { color: var(--accent); text-decoration: none; }
@@ -31,8 +32,10 @@ td a:hover { text-decoration: underline; }
    paragraphs below the table. */
 .thresholds thead th { position: static; }
 .thresholds td { vertical-align: top; line-height: 1.55; }
-.thresholds td:first-child { white-space: nowrap; font-size: 1.05rem; }
-.thresholds td:nth-child(2) { white-space: nowrap; color: var(--text-muted); }
+.thresholds td:first-child { white-space: nowrap; font-size: 1.05rem;
+                             font-family: var(--mono); letter-spacing: -0.02em; }
+.thresholds td:nth-child(2) { white-space: nowrap; color: var(--text-muted);
+                              font-family: var(--mono); font-size: 0.85rem; }
 .thresholds td:last-child { font-size: 0.9rem; }
 .thr-note { display: inline-block; font-size: 0.72rem; color: var(--text-muted);
             white-space: normal; font-weight: 400; }
