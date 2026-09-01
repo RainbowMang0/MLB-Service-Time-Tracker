@@ -22,6 +22,25 @@ th, td { text-align: left; padding: 0.45rem 0.6rem; border-bottom: 1px solid var
 td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
 td a { color: var(--accent); text-decoration: none; }
 td a:hover { text-decoration: underline; }
+/* The explainer's threshold table. Wider rows than the season tables --
+   the third column is prose, not a figure -- and the service-time column
+   holds the number the whole site is about, so it leads. */
+.thresholds { margin: 1.2rem 0 0.4rem; }
+.thresholds td { vertical-align: top; line-height: 1.55; }
+.thresholds td:first-child { white-space: nowrap; font-size: 1.05rem; }
+.thresholds td:nth-child(2) { white-space: nowrap; color: var(--text-muted); }
+.thresholds td:last-child { font-size: 0.9rem; }
+.thr-note { display: inline-block; font-size: 0.72rem; color: var(--text-muted);
+            white-space: normal; font-weight: 400; }
+.foot-note { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;
+             margin: 0.2rem 0 0; }
+.foot-note a { color: var(--accent); }
+.wrap h2 { font-size: 1.15rem; margin: 1.8rem 0 0.5rem; letter-spacing: -0.01em; }
+.wrap p { line-height: 1.7; }
+@media (max-width: 640px) {
+  .thresholds td:nth-child(2) { display: none; }
+  .thresholds thead th:nth-child(2) { display: none; }
+}
 .lede { font-size: 1.05rem; line-height: 1.6; color: var(--text-secondary);
         margin: 0.9rem 0 0; max-width: 62ch; }
 .lede b { color: var(--text-primary); font-weight: 650; }
