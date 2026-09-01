@@ -34,7 +34,7 @@
           </svg>
           <span>Big League Service Time Tracker</span>
         </h1>
-        <p class="subtitle">Estimated MLB service time for current 40-man roster players, plus a running log of previous players.</p>
+        <p class="subtitle">Estimated MLB service time for current 40-man roster players, plus a running log of previous players. <a href="service-time.html">What is service time?</a></p>
       </div>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" type="button">
         <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -76,8 +76,14 @@
         <option value="no-service">Yet to accrue a day</option>
       </select>
       <select id="roster-filter" aria-label="Filter by roster status">
+        <!-- "current" is the DEFAULT deliberately. Sorted by service time
+             descending, the combined view opens on a screen of retired
+             players: no club, no eligibility badge, and a stat row above it
+             that counts only rostered players -- so the header described a
+             different population than the rows beneath it. The historical
+             log is one dropdown away. -->
+        <option value="current" selected>On a 40-man roster now</option>
         <option value="">Current + previous players</option>
-        <option value="current">On a 40-man roster now</option>
         <option value="previous">Previous players only</option>
       </select>
       <select id="history-filter" aria-label="Filter by data completeness">

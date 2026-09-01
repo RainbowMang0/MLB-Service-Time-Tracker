@@ -537,6 +537,17 @@ tbody td.player-name {
   .stat-tile .value { font-size: 1.25rem; }
   .stat-tile .label { font-size: 0.68rem; margin-top: 2px; }
 
+  /* On a phone the name column was so tight that "Justin Verlander" and
+     "Zack Greinke" both wrapped to two lines, and the team beside them
+     clipped mid-word ("Toronto B lays"). The table scrolls horizontally
+     anyway, so the fix is to stop squeezing column one rather than to add
+     more scrolling: Pos is the least informative column and gives up its
+     width, and a player's name no longer wraps. Player and Service Time --
+     the pair this site exists to show -- stay side by side. */
+  thead th:nth-child(4), tbody td:nth-child(4) { display: none; }
+  tbody td.player-name { min-width: 8.5rem; }
+  tbody td.player-name .player-link { white-space: nowrap; }
+
   /* Five stacked full-width controls was 218px of filters above the data.
      Search stays full width; the four selects pair up. */
   .controls { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
