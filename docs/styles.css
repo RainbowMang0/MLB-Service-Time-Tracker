@@ -662,30 +662,28 @@ tbody td.player-name {
 /* The same color again, next to the club name -- where the eye already is
    when it is looking for the club. A 4px stripe at the far left of a wide
    row is easy to miss. */
+/* --club-d is the LIGHTENED twin, and it is now the default for the same
+   reason dark is: several club primaries are navies that vanish against
+   #0a0c10. These used to key off prefers-color-scheme, which was correct
+   while the page followed the OS and became a bug the moment it stopped:
+   a visitor on a light-themed OS got a dark page wearing the raw navy.
+   Light is the exception now, exactly as it is for the tokens. */
 .club-dot {
   display: inline-block;
   width: 9px;
   height: 9px;
   border-radius: 999px;
   margin-right: 7px;
-  background: var(--club, transparent);
+  background: var(--club-d, var(--club, transparent));
   vertical-align: baseline;
 }
-@media (prefers-color-scheme: dark) {
-  :root:where(:not([data-theme="light"])) .viz-root .club-dot {
-    background: var(--club-d, var(--club, transparent));
-  }
+tbody td.player-name { border-left-color: var(--club-d, var(--club, transparent)); }
+
+:root[data-theme="light"] .viz-root .club-dot {
+  background: var(--club, transparent);
 }
-:root[data-theme="dark"] .viz-root .club-dot {
-  background: var(--club-d, var(--club, transparent));
-}
-@media (prefers-color-scheme: dark) {
-  :root:where(:not([data-theme="light"])) .viz-root tbody td.player-name {
-    border-left-color: var(--club-d, var(--club, transparent));
-  }
-}
-:root[data-theme="dark"] .viz-root tbody td.player-name {
-  border-left-color: var(--club-d, var(--club, transparent));
+:root[data-theme="light"] .viz-root tbody td.player-name {
+  border-left-color: var(--club, transparent);
 }
 
 .badge {
@@ -941,15 +939,10 @@ body.profile-open { overflow: hidden; }
 /* A season with no credited days still gets a row in the table; here it is
    a baseline tick, so the gap in a career is visible as a gap. */
 .cs-season.cs-zero .cs-bar { background: var(--gridline); height: 2px; }
-/* Same lightened twin the row stripes use: several primaries are navies
-   that disappear against a dark plane. */
-@media (prefers-color-scheme: dark) {
-  :root:where(:not([data-theme="light"])) .viz-root .cs-bar {
-    background-color: var(--club-d, var(--accent));
-  }
-}
-:root[data-theme="dark"] .viz-root .cs-bar {
-  background-color: var(--club-d, var(--accent));
+/* Same lightened twin, defaulted the same way -- see the club-dot note. */
+.cs-bar { background-color: var(--club-d, var(--accent)); }
+:root[data-theme="light"] .viz-root .cs-bar {
+  background-color: var(--club, var(--accent));
 }
 /* Hatching, not a different hue: presumed seasons are the same quantity
    held with less confidence, and a separate color would read as a separate
