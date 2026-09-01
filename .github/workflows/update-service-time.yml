@@ -42,23 +42,71 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Gate on 8am US/Eastern (or manual force)
+      # Checkout comes FIRST because the gate below reads the database to
+      # decide whether today's update has already happened.
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # THE GATE, and why it is not "is it 8am in New York".
+      #
+      # It used to be exactly that: run only when the Eastern hour reads 08,
+      # with two cron entries covering the EDT/EST shift. That assumes a
+      # scheduled workflow starts when it is scheduled, and GitHub does not
+      # promise this -- under load, runs are queued and start late. Measured
+      # 2026-09-01 over the eight scheduled runs since 2026-08-28: every one
+      # started between 3h12m and 9h54m late, so the Eastern hour read 12 to
+      # 18 and the gate rejected all eight. Each reported SUCCESS in under
+      # ten seconds, because a gated-out job skips every later step and skips
+      # are not failures. The rostered figures sat five days stale while the
+      # workflow reported success daily -- found only because a player was
+      # spotted with three days of service time who plainly had more.
+      #
+      # So the gate no longer asks what time it is. It asks whether the work
+      # has been done, which is the question it always meant:
+      #
+      #   run  <=>  it is 8am Eastern or later  AND  the records were not
+      #             already refreshed today
+      #
+      # "8am Eastern or later" keeps the original intent -- give the previous
+      # day's transactions time to settle -- while tolerating any delay. The
+      # second half makes the job idempotent, so the two cron entries cannot
+      # both do the work, and self-correcting, so a delayed or missed run is
+      # simply picked up by the next fire.
+      #
+      # The dates are compared in UTC on purpose. `last_updated` is stamped
+      # with the RUNNER's date (TODAY = dt.date.today() in
+      # update_service_time.py), and the runner is UTC -- so comparing it
+      # against an Eastern date would disagree every evening once UTC has
+      # rolled over and Eastern has not.
+      - name: Gate -- 8am Eastern or later, and not already done today
         id: gate
         run: |
-          HOUR="$(TZ="America/New_York" date +%H)"
-          echo "Current Eastern hour: $HOUR"
           if [ "${{ github.event.inputs.force }}" = "true" ]; then
-            echo "Manual force run requested -- skipping the 8am gate."
+            echo "Manual force run requested -- skipping the gate."
             echo "run=true" >> "$GITHUB_OUTPUT"
-          elif [ "$HOUR" = "08" ]; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "run=false" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
 
-      - name: Checkout
-        if: steps.gate.outputs.run == 'true'
-        uses: actions/checkout@v4
+          HOUR="$(TZ="America/New_York" date +%H)"
+          TODAY_UTC="$(date -u +%F)"
+          LAST="$(python3 -c "
+          import json
+          d = json.load(open('docs/data/service_time.json'))
+          seen = [p.get('last_updated') for p in d['players'] if p.get('on_40_man')]
+          print(max([x for x in seen if x], default=''))
+          ")"
+          echo "Eastern hour $HOUR | today (UTC) $TODAY_UTC | rostered last_updated $LAST"
+
+          if [ "$LAST" = "$TODAY_UTC" ]; then
+            echo "Already refreshed today -- nothing to do."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          elif [ "$((10#$HOUR))" -ge 8 ]; then
+            echo "Due, and it is 8am Eastern or later. Running."
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Due, but it is before 8am Eastern. Waiting for the next fire."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Set up Python
         if: steps.gate.outputs.run == 'true'

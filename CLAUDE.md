@@ -2046,6 +2046,77 @@ their debut, and what does it do to the gates), and it is worth one day per
 player. **Not shipped, and not obviously worth shipping** — recorded so the
 next session does not re-derive the diagnosis from scratch.
 
+### A scheduled run does not start when it is scheduled
+
+**Found 2026-09-01 by the owner**, who noticed Mason Adams reading 3 days of
+service time when he had plainly been up longer. He was not wrong and neither
+was the arithmetic: his record said `last_updated: 2026-08-27`, he debuted
+2026-08-25, and 3 days is exactly right *as of the 27th*. **All 1,366 rostered
+players carried that same date.** Nothing had refreshed them for five days.
+
+The daily job gated on the Eastern hour reading exactly `08`. That assumes a
+scheduled workflow starts when it is scheduled, and **GitHub does not promise
+this** — scheduled runs queue under load and start late. Every scheduled run
+since 2026-08-28:
+
+| started (UTC) | Eastern hour | late by | outcome |
+|---|---|---|---|
+| 08-28 21:47 | 17 | 8h47m | skipped |
+| 08-28 22:54 | 18 | 9h54m | skipped |
+| 08-29 16:19 | 12 | 3h19m | skipped |
+| 08-29 17:00 | 13 | 4h00m | skipped |
+| 08-30 16:12 | 12 | 3h12m | skipped |
+| 08-30 17:13 | 13 | 4h13m | skipped |
+| 08-31 18:53 | 14 | 5h53m | skipped |
+| 08-31 19:24 | 15 | 6h24m | skipped |
+
+**Eight for eight, and every one reported SUCCESS in under ten seconds**,
+because a gated-out job marks its remaining steps `skipped` and a skip is not
+a failure. The Actions tab showed a green run every day while the site served
+five-day-old figures.
+
+⚠️ **This is NOT the concurrency finding above.** That one is a backfill
+holding the group across the window. This one needs no backfill at all and
+would have recurred indefinitely. Both produce the same symptom — an ~80
+second "successful" run that does nothing — which is exactly why the symptom
+is not diagnostic on its own. Check `last_updated` on the rostered players,
+not the workflow's conclusion.
+
+⚠️ **A `--recompute-derived` run masks it in the commit log.** Those runs
+commit as `chore: daily service time update (DATE)` like any other, but they
+rewrite derived files without touching records — so `last_updated` stays put
+while the log looks healthy. Two such runs on 08-28 and 09-01 sat on top of
+this outage. **The commit log is not evidence the data refreshed.**
+
+#### The fix: ask whether the work is done, not what time it is
+
+```
+run  <=>  it is 8am Eastern or later  AND  the records were not already
+          refreshed today
+```
+
+"8am Eastern **or later**" keeps the original intent — give the previous day's
+transactions time to settle — while tolerating any delay. The second half
+makes the job **idempotent** (the two cron entries cannot both do the work)
+and **self-correcting** (a delayed or missed run is picked up by the next
+fire, instead of being lost).
+
+This is the same instinct as "never hardcode what the data can tell you": the
+old gate encoded a belief about when the runner would start, and the database
+can simply be asked whether today's work has happened.
+
+The gate therefore runs **after** checkout, since it reads the database. Dates
+compare in **UTC** on purpose: `last_updated` is stamped with the runner's
+date (`TODAY = dt.date.today()`, and the runner is UTC), so comparing it
+against an Eastern date would disagree every evening once UTC has rolled over
+and Eastern has not.
+
+Verified by extracting the gate step out of the YAML and running it against
+faked clocks and databases — including the two cases the old gate got wrong
+(due at 12:00 and at 18:00 local), idempotence, the before-8am case, and
+`force`. A block scalar's indentation and an embedded `python3 -c` are easy to
+get subtly wrong; run the step, do not read it.
+
 ### A long backfill can starve the daily job — sequence them
 
 **Found 2026-08-27 during the rules-v5 recompute.** The daily update and the
