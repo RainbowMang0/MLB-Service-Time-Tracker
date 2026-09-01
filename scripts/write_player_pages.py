@@ -319,8 +319,9 @@ def render_club_index(by_club: dict[str, list[dict]], generated_at: str) -> str:
   <p class="foot">
     172 days credit a full year, so a season adds at most 1.000 no matter how
     long a player is on a roster. 3.000 years reaches salary arbitration and
-    6.000 reaches free agency. Eligibility counts describe players currently
-    on a 40-man roster.
+    6.000 reaches free agency —
+    <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
+    Eligibility counts describe players currently on a 40-man roster.
     <br /><br />
     These figures are <strong>estimates</strong> reconstructed from public
     roster transaction records. They are not official MLB or MLBPA figures —
@@ -483,7 +484,8 @@ def render_club(club: str, players: list[dict], generated_at: str) -> str:
   <p class="foot">
     172 days credit a full year, so a season adds at most 1.000 no matter how
     long a player is on a roster. 3.000 years reaches salary arbitration and
-    6.000 reaches free agency.
+    6.000 reaches free agency —
+    <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
     <br /><br />
     These figures are <strong>estimates</strong> reconstructed from public
     roster transaction records. They are not official MLB or MLBPA figures —
@@ -645,7 +647,8 @@ def render(player: dict, team_names: dict[int, str], generated_at: str) -> str:
   <p class="foot">
     172 days credit a full year, so a season adds at most 1.000 no matter how
     long a player is on a roster. 3.000 years reaches salary arbitration and
-    6.000 reaches free agency.
+    6.000 reaches free agency —
+    <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
     <br /><br />
     This figure is an <strong>estimate</strong> reconstructed from public roster
     transaction records. It is not an official MLB or MLBPA figure — those are
@@ -755,6 +758,9 @@ def write_player_pages(db: dict[str, dict], generated_at: str | None = None) -> 
     clubs = _write_club_pages(published, generated_at, lastmod)
 
     _write_page_css()
+    explainer = render_explainer(generated_at)
+    (DOCS / EXPLAINER_PATH).write_text(explainer)
+    lastmod.record(EXPLAINER_PATH, explainer)
     _write_sitemap(published, clubs, generated_at, lastmod)
     lastmod.save()
     _write_robots()
@@ -800,6 +806,13 @@ def _write_sitemap(
     urls.append(
         f"  <url><loc>{SITE_URL}/{CLUB_DIR_NAME}/</loc>"
         f"<lastmod>{lastmod.of(f'{CLUB_DIR_NAME}/index.html')}</lastmod>"
+        f"<priority>0.9</priority></url>"
+    )
+    # The explainer is a hub too: it is what "what is mlb service time"
+    # should land on, and every player page links into it.
+    urls.append(
+        f"  <url><loc>{SITE_URL}/{EXPLAINER_PATH}</loc>"
+        f"<lastmod>{lastmod.of(EXPLAINER_PATH)}</lastmod>"
         f"<priority>0.9</priority></url>"
     )
     urls += [
@@ -860,6 +873,25 @@ th, td { text-align: left; padding: 0.45rem 0.6rem; border-bottom: 1px solid var
 td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
 td a { color: var(--accent); text-decoration: none; }
 td a:hover { text-decoration: underline; }
+/* The explainer's threshold table. Wider rows than the season tables --
+   the third column is prose, not a figure -- and the service-time column
+   holds the number the whole site is about, so it leads. */
+.thresholds { margin: 1.2rem 0 0.4rem; }
+.thresholds td { vertical-align: top; line-height: 1.55; }
+.thresholds td:first-child { white-space: nowrap; font-size: 1.05rem; }
+.thresholds td:nth-child(2) { white-space: nowrap; color: var(--text-muted); }
+.thresholds td:last-child { font-size: 0.9rem; }
+.thr-note { display: inline-block; font-size: 0.72rem; color: var(--text-muted);
+            white-space: normal; font-weight: 400; }
+.foot-note { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;
+             margin: 0.2rem 0 0; }
+.foot-note a { color: var(--accent); }
+.wrap h2 { font-size: 1.15rem; margin: 1.8rem 0 0.5rem; letter-spacing: -0.01em; }
+.wrap p { line-height: 1.7; }
+@media (max-width: 640px) {
+  .thresholds td:nth-child(2) { display: none; }
+  .thresholds thead th:nth-child(2) { display: none; }
+}
 .lede { font-size: 1.05rem; line-height: 1.6; color: var(--text-secondary);
         margin: 0.9rem 0 0; max-width: 62ch; }
 .lede b { color: var(--text-primary); font-weight: 650; }
@@ -879,6 +911,264 @@ h1 { letter-spacing: -0.02em; }
 def _write_page_css() -> None:
     (DOCS / "page.css").write_text(PAGE_CSS)
 
+
+EXPLAINER_PATH = "service-time.html"
+
+
+def render_explainer(generated_at: str) -> str:
+    """The page that explains what the number on every other page means.
+
+    Every other page here PUBLISHES a service-time figure and assumes the
+    reader knows what one is. This is the page that says so, and it is a
+    landing page in its own right -- "what is MLB service time" is a real
+    search, and a far commoner one than any single player's name.
+
+    ON SOURCING. The thresholds in the table are the durable, CBA-derived
+    facts, and the four this project actually computes (172, Super Two,
+    3.000, 6.000) are the same constants the pipeline uses -- so the page
+    cannot drift from the site's own arithmetic without the arithmetic
+    changing too.
+
+    Deliberately NO DOLLAR FIGURES. Pension amounts are renegotiated and
+    reported differently by different sources, and this page's prose is not
+    regenerated when the data is -- so a number typed here would rot quietly
+    while the figures beside it stayed current. The page states the
+    THRESHOLD, which is the stable part, describes the benefit
+    qualitatively, and points outward for current amounts.
+    """
+    url = f"{SITE_URL}/{EXPLAINER_PATH}"
+    desc = (
+        "What major league service time is, how a day is earned, and every "
+        "threshold it unlocks — 172 days to a year, arbitration at 3.000, "
+        "free agency at 6.000, the gold card at 8.000 and a full pension at "
+        "10.000."
+    )
+
+    # FAQPage rather than Article: these are the questions people actually
+    # type, and the markup can surface the answer directly in a result.
+    faq = {
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is MLB service time?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": (
+                        "Major league service time counts the days a player "
+                        "spends on a major league active roster or injured "
+                        "list. It is roster time, not playing time — a player "
+                        "who never leaves the bench earns the same day as the "
+                        "one who pitches a complete game. 172 days make one "
+                        "credited year."
+                    ),
+                },
+            },
+            {
+                "@type": "Question",
+                "name": "Why is a service-time year 172 days and not a full season?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": (
+                        "A major league season runs about 186 days, but the "
+                        "Basic Agreement sets a credited year at 172. A player "
+                        "on a roster all season is credited 1.000 and no more, "
+                        "so the extra days give a little slack for a short "
+                        "trip to the minors."
+                    ),
+                },
+            },
+            {
+                "@type": "Question",
+                "name": "What does a figure like 6.031 mean?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": (
+                        "It is years and days, not a decimal. 6.031 is six "
+                        "credited years and 31 days — 6 × 172 + 31 = 1,063 "
+                        "days. Because a year is 172 days, the part after the "
+                        "point never reaches 172."
+                    ),
+                },
+            },
+            {
+                "@type": "Question",
+                "name": "When does a player reach free agency?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": (
+                        "At six credited years — 6.000, or 1,032 days on a "
+                        "major league roster. Arbitration eligibility "
+                        "generally arrives at 3.000, and a Super Two player "
+                        "reaches it a year early."
+                    ),
+                },
+            },
+        ],
+    }
+
+    graph = [
+        {
+            "@type": "WebPage",
+            "name": "What is MLB service time?",
+            "url": url,
+            "description": desc,
+        },
+        faq,
+        _breadcrumb_ld([
+            ("Big League Service Time Tracker", f"{SITE_URL}/"),
+            ("What is service time?", url),
+        ]),
+    ]
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>What is MLB service time? Every threshold explained | Big League Service Time Tracker</title>
+<meta name="description" content="{html.escape(desc)}" />
+<link rel="canonical" href="{url}" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="What is MLB service time? Every threshold explained" />
+<meta property="og:description" content="{html.escape(desc)}" />
+<meta property="og:url" content="{url}" />
+<meta name="twitter:card" content="summary" />
+{_ld_script(graph)}
+<link rel="icon" href="{BASE_PATH}favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="{BASE_PATH}styles.css" />
+<link rel="stylesheet" href="{BASE_PATH}page.css" />
+<script>
+  try {{
+    var t = localStorage.getItem("mlb-service-time-theme");
+    if (t) document.documentElement.setAttribute("data-theme", t);
+  }} catch (e) {{}}
+</script>
+</head>
+<body>
+<div class="viz-root"><div class="wrap">
+  {_crumbs(("All players", BASE_PATH), ("What is service time?", None))}
+
+  <h1>What is MLB service time?</h1>
+  <p class="lede">Major league service time is the currency of a baseball
+  career. It decides when a player can negotiate his salary, when he can
+  choose his employer, and what he is owed after he stops playing — and
+  almost none of it depends on how well he plays.</p>
+
+  <h2>It is roster time, not playing time</h2>
+  <p>A player earns a day of service for each day he spends on a major
+  league <b>active roster or injured list</b>. He does not have to appear in
+  the game. A reliever who never warms up and the starter who throws a
+  shutout earn exactly the same day.</p>
+  <p>Days on the injured list count, which surprises people — the reasoning
+  is that an injured major leaguer is still a major leaguer. Days on the
+  <b>bereavement, family medical emergency and paternity lists</b> count too.
+  Days spent optioned to the minor leagues do not.</p>
+
+  <h2>172 days make a year</h2>
+  <p>A season runs about 186 days, but the Basic Agreement sets a credited
+  year at <b>172</b>. A player on a roster from Opening Day to the end of the
+  season is credited <b>1.000</b> and no more, so those spare days leave a
+  little room for a short trip to the minors without costing him the year.</p>
+  <p>That is also why figures here look like <b>6.031</b> rather than 6.18.
+  It is <b>years and days</b>, not a decimal: 6.031 means six credited years
+  and 31 more days, or 1,063 days in total. The part after the point never
+  reaches 172.</p>
+
+  <h2>Every threshold, and what it unlocks</h2>
+  <p>Service time is a ratchet: it only goes up, and each of these is
+  permanent once reached.</p>
+
+  <table class="thresholds">
+    <thead><tr><th>Service time</th><th>Days</th><th>What it unlocks</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="n"><b>0.001</b></td><td class="n">1</td>
+        <td>Access to the players' benefit plan. One day on a major league
+        roster is the entry point.</td>
+      </tr>
+      <tr>
+        <td class="n"><b>0.043</b></td><td class="n">43</td>
+        <td>One quarter of a year, and the first step toward a pension. Each
+        further 43 days adds to what a player will eventually draw.</td>
+      </tr>
+      <tr>
+        <td class="n"><b>~2.130</b></td><td class="n">~474</td>
+        <td><b>Super Two.</b> A player between two and three years who ranks
+        in the top 22% of that class, with 86+ days in the preceding season,
+        reaches salary arbitration <b>a year early</b> — four trips through it
+        instead of three. The cutoff is not fixed; it falls where the class
+        falls, which is why it is shown as an estimate.</td>
+      </tr>
+      <tr>
+        <td class="n"><b>3.000</b></td><td class="n">516</td>
+        <td><b>Salary arbitration.</b> Until now the club has set his salary
+        near the league minimum. From here he can argue for a raise before an
+        arbitration panel, and his pay starts to track his performance.</td>
+      </tr>
+      <tr>
+        <td class="n"><b>6.000</b></td><td class="n">1,032</td>
+        <td><b>Free agency.</b> The big one. He can sign with any club that
+        wants him, for the first time in his career.</td>
+      </tr>
+      <tr>
+        <td class="n"><b>8.000</b></td><td class="n">1,376</td>
+        <td><b>The gold card.</b> A lifetime pass admitting the holder and a
+        guest to any regular-season major league game, at any ballpark.
+        Postseason games are excluded.</td>
+      </tr>
+      <tr>
+        <td class="n"><b>10.000</b></td><td class="n">1,720</td>
+        <td><b>The maximum pension.</b> Ten years reaches the top of the
+        scale. Fewer than one player in ten ever gets there.</td>
+      </tr>
+      <tr>
+        <td class="n"><b>10.000</b><br /><span class="thr-note">+ 5 straight
+        with one club</span></td><td class="n">1,720</td>
+        <td><b>10-and-5 rights.</b> Ten years of service with the last five
+        consecutive at his current club, and he can <b>veto any trade</b>. It
+        arrives automatically — it does not have to be negotiated into a
+        contract. Leave the club and come back, and the five-year clock
+        restarts.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="foot-note">Pension and benefit amounts are renegotiated between
+  the league and the players' association and are reported differently by
+  different sources, so no dollar figures are quoted here — the thresholds
+  above are the durable part. The
+  <a href="https://www.mlb.com/glossary/transactions/service-time">MLB
+  glossary</a> and the
+  <a href="https://www.mlbplayers.com/">MLB Players Association</a> are the
+  places to check current figures.</p>
+
+  <h2>Why clubs pay attention to the calendar</h2>
+  <p>Because 172 days make a year and a season is longer, a club that keeps a
+  player in the minors for the first couple of weeks of his rookie season
+  leaves him at 0.171 rather than 1.000 — and pushes his free agency back by
+  a full year. The practice is called <b>service-time manipulation</b>, it is
+  legal, it is contested, and it is the reason a prospect's call-up date is
+  news.</p>
+
+  <h2>What this site publishes</h2>
+  <p>MLB and the players' association keep the official ledger and <b>do not
+  publish it</b>. Every figure on this site is reconstructed from public
+  roster transactions and is an <b>estimate</b>, not an official
+  MLB/MLBPA figure. Where the record cannot see the start of a career, the
+  player's page says so and the number is a floor rather than an estimate.</p>
+
+  <p class="actions"><a href="{BASE_PATH}">Look up a player &rarr;</a></p>
+
+  <p class="foot">
+    Updated {generated_at[:10]}. Not affiliated with or endorsed by Major
+    League Baseball or the MLBPA.
+  </p>
+</div></div>
+{ANALYTICS}
+</body>
+</html>
+"""
 
 def _write_404() -> None:
     """The page GitHub Pages serves for any unknown path.
