@@ -26,12 +26,20 @@ td a:hover { text-decoration: underline; }
    the third column is prose, not a figure -- and the service-time column
    holds the number the whole site is about, so it leads. */
 .thresholds { margin: 1.2rem 0 0.4rem; }
+/* styles.css makes every thead sticky, which is right for a 5,578-row table
+   and wrong here: on a prose page the header detaches and floats over the
+   paragraphs below the table. */
+.thresholds thead th { position: static; }
 .thresholds td { vertical-align: top; line-height: 1.55; }
 .thresholds td:first-child { white-space: nowrap; font-size: 1.05rem; }
 .thresholds td:nth-child(2) { white-space: nowrap; color: var(--text-muted); }
 .thresholds td:last-child { font-size: 0.9rem; }
 .thr-note { display: inline-block; font-size: 0.72rem; color: var(--text-muted);
             white-space: normal; font-weight: 400; }
+.sources { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;
+           padding-left: 1.1rem; margin: 0.5rem 0 0.8rem; }
+.sources li { margin-bottom: 0.35rem; }
+.sources a { color: var(--accent); }
 .foot-note { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;
              margin: 0.2rem 0 0; }
 .foot-note a { color: var(--accent); }
