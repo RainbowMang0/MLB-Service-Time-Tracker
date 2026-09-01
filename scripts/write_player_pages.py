@@ -338,6 +338,56 @@ def render_club_index(by_club: dict[str, list[dict]], generated_at: str) -> str:
 """
 
 
+# The club pages were a plain table while the main table had a meter and
+# coloured status pills, so the two read as different sites -- and the club
+# pages are the ones search traffic lands on ("phillies arbitration
+# eligible" beats any single player's name). These reproduce app.js's
+# conventions exactly, against the same styles.css the pages already load,
+# so the bar and the badge cannot disagree across the two surfaces.
+
+def _svc_cell(player: dict) -> str:
+    """The service-time meter, scaled 0 -> 6.000 as on the main table.
+
+    6.000 is the scale ceiling because that is where the clock stops
+    mattering, and the fill takes its colour from the same status the badge
+    shows one column over.
+    """
+    days = int(player.get("service_days_total") or 0)
+    pct = max(0.0, min(1.0, days / (6 * FULL_YEAR_DAYS))) * 100
+    if player.get("free_agent_eligible"):
+        fill = "f-good"
+    elif player.get("super_two_candidate"):
+        fill = "f-serious"
+    elif player.get("arbitration_eligible"):
+        fill = "f-warning"
+    else:
+        fill = ""
+    years, _, dd = str(player.get("service_time") or "0.000").partition(".")
+    return (
+        "<span class='svc'>"
+        f"<span class='svc-num'><span class='svc-years'>{html.escape(years)}</span>"
+        f"<span class='svc-days'>.{html.escape(dd)}</span></span>"
+        f"<span class='svc-track' style='--pct:{pct:.1f}'>"
+        f"<span class='svc-fill {fill}'></span></span>"
+        "</span>"
+    )
+
+
+def _status_badge(player: dict) -> str:
+    """Same wording and same badge class as app.js's statusOf()."""
+    if not player.get("service_days_total"):
+        label, cls = "Yet to debut", "badge-neutral"
+    elif player.get("free_agent_eligible"):
+        label, cls = "Free Agent Eligible", "badge-good"
+    elif player.get("super_two_candidate"):
+        label, cls = "Super Two Track", "badge-serious"
+    elif player.get("arbitration_eligible"):
+        label, cls = "Arbitration Eligible", "badge-warning"
+    else:
+        label, cls = "Pre-Arbitration", "badge-neutral"
+    return f"<span class='badge {cls}'>{label}</span>"
+
+
 def render_club(club: str, players: list[dict], generated_at: str) -> str:
     """A club's 40-man roster, by service time.
 
@@ -369,9 +419,9 @@ def render_club(club: str, players: list[dict], generated_at: str) -> str:
     rows = "".join(
         f"<tr><td><a href=\"../{page_path(p)}\">{html.escape(p.get('name') or '')}</a></td>"
         f"<td>{html.escape(p.get('position') or '—')}</td>"
-        f"<td class='n'>{html.escape(p.get('service_time') or '0.000')}</td>"
+        f"<td class='n svc-col'>{_svc_cell(p)}</td>"
         f"<td class='n'>{p.get('service_days_total', 0)}</td>"
-        f"<td>{html.escape(_status(p))}</td></tr>"
+        f"<td>{_status_badge(p)}</td></tr>"
         for p in sorted(
             players, key=lambda p: (-int(p.get("service_days_total") or 0), p.get("name") or "")
         )
@@ -422,9 +472,9 @@ def render_club(club: str, players: list[dict], generated_at: str) -> str:
 
   <div class="facts">
     <div><span>Players tracked</span><b class="big">{total}</b></div>
-    <div><span>Free agency eligible</span>{fa}</div>
-    <div><span>Arbitration eligible</span>{arb}</div>
-    <div><span>Super Two track</span>{s2}</div>
+    <div><span>Free agency eligible</span><b class="big">{fa}</b></div>
+    <div><span>Arbitration eligible</span><b class="big">{arb}</b></div>
+    <div><span>Super Two track</span><b class="big">{s2}</b></div>
   </div>
 
   <table><thead><tr><th>Player</th><th>Pos</th><th class="n">Service time</th>

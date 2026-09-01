@@ -76,8 +76,14 @@
         <option value="no-service">Yet to accrue a day</option>
       </select>
       <select id="roster-filter" aria-label="Filter by roster status">
+        <!-- "current" is the DEFAULT deliberately. Sorted by service time
+             descending, the combined view opens on a screen of retired
+             players: no club, no eligibility badge, and a stat row above it
+             that counts only rostered players -- so the header described a
+             different population than the rows beneath it. The historical
+             log is one dropdown away. -->
+        <option value="current" selected>On a 40-man roster now</option>
         <option value="">Current + previous players</option>
-        <option value="current">On a 40-man roster now</option>
         <option value="previous">Previous players only</option>
       </select>
       <select id="history-filter" aria-label="Filter by data completeness">
