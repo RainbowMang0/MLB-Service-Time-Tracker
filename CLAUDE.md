@@ -2046,6 +2046,77 @@ their debut, and what does it do to the gates), and it is worth one day per
 player. **Not shipped, and not obviously worth shipping** — recorded so the
 next session does not re-derive the diagnosis from scratch.
 
+### A scheduled run does not start when it is scheduled
+
+**Found 2026-09-01 by the owner**, who noticed Mason Adams reading 3 days of
+service time when he had plainly been up longer. He was not wrong and neither
+was the arithmetic: his record said `last_updated: 2026-08-27`, he debuted
+2026-08-25, and 3 days is exactly right *as of the 27th*. **All 1,366 rostered
+players carried that same date.** Nothing had refreshed them for five days.
+
+The daily job gated on the Eastern hour reading exactly `08`. That assumes a
+scheduled workflow starts when it is scheduled, and **GitHub does not promise
+this** — scheduled runs queue under load and start late. Every scheduled run
+since 2026-08-28:
+
+| started (UTC) | Eastern hour | late by | outcome |
+|---|---|---|---|
+| 08-28 21:47 | 17 | 8h47m | skipped |
+| 08-28 22:54 | 18 | 9h54m | skipped |
+| 08-29 16:19 | 12 | 3h19m | skipped |
+| 08-29 17:00 | 13 | 4h00m | skipped |
+| 08-30 16:12 | 12 | 3h12m | skipped |
+| 08-30 17:13 | 13 | 4h13m | skipped |
+| 08-31 18:53 | 14 | 5h53m | skipped |
+| 08-31 19:24 | 15 | 6h24m | skipped |
+
+**Eight for eight, and every one reported SUCCESS in under ten seconds**,
+because a gated-out job marks its remaining steps `skipped` and a skip is not
+a failure. The Actions tab showed a green run every day while the site served
+five-day-old figures.
+
+⚠️ **This is NOT the concurrency finding above.** That one is a backfill
+holding the group across the window. This one needs no backfill at all and
+would have recurred indefinitely. Both produce the same symptom — an ~80
+second "successful" run that does nothing — which is exactly why the symptom
+is not diagnostic on its own. Check `last_updated` on the rostered players,
+not the workflow's conclusion.
+
+⚠️ **A `--recompute-derived` run masks it in the commit log.** Those runs
+commit as `chore: daily service time update (DATE)` like any other, but they
+rewrite derived files without touching records — so `last_updated` stays put
+while the log looks healthy. Two such runs on 08-28 and 09-01 sat on top of
+this outage. **The commit log is not evidence the data refreshed.**
+
+#### The fix: ask whether the work is done, not what time it is
+
+```
+run  <=>  it is 8am Eastern or later  AND  the records were not already
+          refreshed today
+```
+
+"8am Eastern **or later**" keeps the original intent — give the previous day's
+transactions time to settle — while tolerating any delay. The second half
+makes the job **idempotent** (the two cron entries cannot both do the work)
+and **self-correcting** (a delayed or missed run is picked up by the next
+fire, instead of being lost).
+
+This is the same instinct as "never hardcode what the data can tell you": the
+old gate encoded a belief about when the runner would start, and the database
+can simply be asked whether today's work has happened.
+
+The gate therefore runs **after** checkout, since it reads the database. Dates
+compare in **UTC** on purpose: `last_updated` is stamped with the runner's
+date (`TODAY = dt.date.today()`, and the runner is UTC), so comparing it
+against an Eastern date would disagree every evening once UTC has rolled over
+and Eastern has not.
+
+Verified by extracting the gate step out of the YAML and running it against
+faked clocks and databases — including the two cases the old gate got wrong
+(due at 12:00 and at 18:00 local), idempotence, the before-8am case, and
+`force`. A block scalar's indentation and an embedded `python3 -c` are easy to
+get subtly wrong; run the step, do not read it.
+
 ### A long backfill can starve the daily job — sequence them
 
 **Found 2026-08-27 during the rules-v5 recompute.** The daily update and the
@@ -2154,20 +2225,52 @@ genuinely open work rather than a queue.
    less trivial `_should_publish()` and a line explaining why some players
    have no page.
 
-2. **There is no analytics on the site**, so its traffic is unknown — and it
-   is now the *blocking* unknown, because the pages exist but nothing can
-   say whether they are found. It is also the input every question about
-   advertising depends on. Cloudflare Web Analytics or GoatCounter would
-   answer it without a consent banner; both are one script tag and neither
-   sets a cookie. **Needs an owner decision on which.**
+2. **~~There is no analytics on the site~~ — DONE 2026-09-01.**
+   **Cloudflare Web Analytics**, on every page.
+
+   **Why Cloudflare and not GoatCounter**, which was the other shortlisted
+   option: GoatCounter's free tier is **non-commercial only**, and this
+   project defers advertising until ~10,000 pageviews a month — so it would
+   force a licensing decision at exactly the point the site starts working.
+   Staying clear of a terms question is the same call already made twice
+   here, over player photographs and over scraping Baseball Reference.
+   Cloudflare's free tier carries no such clause and no pageview cap. Both
+   are cookieless, which is what kept them ahead of Google Analytics: no
+   consent banner.
+
+   **It lands in five places, and the fifth is the trap.** The four
+   generated templates (player, club, club directory, 404) share the
+   `ANALYTICS` constant in `write_player_pages.py`. `docs/index.html` is
+   hand-maintained and **cannot read that constant**, so it carries its own
+   copy of the same token — change one and you must change the other. This
+   is the same shape as the bug that left `index.json` frozen while the
+   database updated underneath it. Coverage was counted rather than assumed:
+   1,366 of 1,366 player pages, 31 of 31 club pages, 404 and index.
+
+   The token is public by design — it names the site to the beacon and
+   authorises nothing — so it lives in the source, not in a secret.
+
+   **Read it alongside Search Console, not against it.** Cloudflare counts
+   browser visits; Search Console counts Google searches. A crawler that
+   does not run JavaScript is invisible to the first, a direct visit is
+   invisible to the second. They will disagree permanently and neither is
+   wrong.
 
 3. **~~A custom domain~~ — DONE 2026-08-26.** `bigleagueservicetime.com`,
    bought at Porkbun, apex on GitHub's four A records plus a `www` CNAME.
    `docs/CNAME` drove the switch and the validator caught the one hand edit
    (`og:url` and `canonical` in `docs/index.html`) exactly as designed.
-   Remaining: tick **Enforce HTTPS** in Settings → Pages once the certificate
-   provisions, then verify the property in Search Console and submit
-   `https://bigleagueservicetime.com/sitemap.xml`.
+   **Enforce HTTPS** is ticked (confirmed 2026-09-01), and the site is
+   verified in Google Search Console as a **Domain** property (DNS TXT at
+   Porkbun) with `https://bigleagueservicetime.com/sitemap.xml` submitted —
+   Success, ~1,398 discovered pages, 2026-09-01.
+
+   ⚠️ **A Domain property, not a URL-prefix one**, and the difference bites:
+   a Domain property covers every subdomain and both schemes at once, so
+   Search Console does **not** prefill the domain in the sitemap box and
+   wants the full URL. It can also only ever be verified by DNS. A
+   URL-prefix property prefills, accepts easier verification, and silently
+   splits data across `www`/non-`www`/http/https as separate properties.
 
 4. **Fill `data/reference_super_two.json`.** Every row is still `published:
    null`, so `validate_super_two.py` reports the computed cutoffs and passes
