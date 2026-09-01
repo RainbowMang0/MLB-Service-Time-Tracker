@@ -499,20 +499,22 @@ the right place for that information.
 
 ## Current state
 
-As of 2026-08-28, **the whole database is recomputed under rules version 5**
+As of 2026-09-01, **the whole database is recomputed under rules version 5**
 (findings #19 and its trade extension), with every rostered player published
 as a crawlable static page.
 
 The v5 recompute finished in four batches over 2026-08-27/28. **Every one of
-the 5,574 records is stamped `rules_version: 5`** — no record is left on an
+the 5,578 records is stamped `rules_version: 5`** — no record is left on an
 older ruleset, which is the condition `--recompute-all` exists to reach.
 
-- **5,574 players, every one with a season-by-season profile.** Zero
+- **5,578 players, every one with a season-by-season profile.** Zero
   invariant violations — each player's season rows sum exactly to his
   published total.
-- **1,366 on a 40-man.** Each has a static page at
-  `docs/p/<id>-<slug>.html`, listed in `docs/sitemap.xml`.
+- **1,364 on a 40-man.** Each has a static page at
+  `docs/p/<id>-<slug>.html`, listed in `docs/sitemap.xml`. (The count moves
+  by a player or two most days; that is roster churn, not drift.)
 - **205 tests passing.**
+- **Super Two cutoff currently 2.137**, computed from the whole population.
 - 1 player at or above 20.000 years (Verlander, 21.075), which is correct.
 - **26 players read exactly 0.000** and are hidden from the table by
   default, reachable through the "Yet to accrue a day" filter. 25 have never
@@ -522,7 +524,7 @@ older ruleset, which is the condition `--recompute-all` exists to reach.
   that finding #15 had fixed him. Daniel Fields, the other pre-v3 zero,
   reads 0.002.
 
-What the data is made of, across all 28,994 accruing seasons:
+What the data is made of, across all 29,000 accruing seasons:
 
 | | share |
 |---|---|
@@ -534,8 +536,9 @@ Only **0.0% of accruing seasons have no club identified**.
 
 Payload: table index 0.22 MB; database 9.1 MB (not downloaded by the
 browser); 64 profile shards, 3.4 MB in total, one fetched per profile
-opened; 1,366 player pages, 6.4 MB, and 30 club pages plus their directory
-at 0.3 MB, one fetched per crawl or direct link.
+opened; 1,364 player pages, 6.8 MB, and 30 club pages plus their directory
+at 0.3 MB, one fetched per crawl or direct link. Plus
+`docs/service-time.html`, the explainer.
 
 **Sequencing note, learned the hard way during this recompute** — a batch
 that spans 12:00 UTC silently costs a day of rostered figures. See "A long
@@ -2183,8 +2186,8 @@ resumable across batches, which matters for a job that takes hours.
 
 ### Immediate next steps
 
-**Rules version 5 is shipped and the whole database is recomputed under it
-as of 2026-08-28** — all 5,574 records, none left on an older ruleset. Both
+**Rules version 5 is shipped and the whole database is recomputed under it**
+— all 5,578 records, none left on an older ruleset. Both
 gates were green on v5 before the recompute (12 club-seasons at 98.8%
 agreement / 0.3% over-crediting; Baseball Reference 17 passed, 0 failed, 2
 known gaps), and the recompute changed rules for non-rostered players only,
@@ -2274,12 +2277,26 @@ genuinely open work rather than a queue.
 
 4. **Fill `data/reference_super_two.json`.** Every row is still `published:
    null`, so `validate_super_two.py` reports the computed cutoffs and passes
-   nothing. The figures land in the 2.11-2.14 band where reported cutoffs
+   nothing. **This is the largest genuinely-open item.** The figures land in the 2.11-2.14 band where reported cutoffs
    historically fall, which is encouraging and is *not* evidence — that is
    exactly the shape of every belief this project has had to revert. Needs
    published MLBTR cutoffs entered by hand.
 
-5. **Owner decisions, recorded rather than pending:** no LICENSE file (so
+5. **Traffic data does not exist yet.** Cloudflare Web Analytics and the
+   Search Console sitemap both went live 2026-09-01, so there is no baseline
+   and no query data. A reminder is scheduled for 2026-09-22 to check the
+   Performance tab — that is the first point at which item 1 above can be
+   decided on evidence rather than guesswork. **Do not draw conclusions from
+   analytics before then**; near-zero traffic in the first fortnight is the
+   expected result, not a signal.
+
+6. **Consider consolidating the service-time math.** See "Where the
+   service-time math actually lives" — `FULL_YEAR_DAYS` is declared in four
+   files and the eligibility rules exist in both Python and JS. Not urgent
+   while the pipeline is the only writer, but any change to a threshold
+   currently has to be made twice.
+
+7. **Owner decisions, recorded rather than pending:** no LICENSE file (so
    the code is readable but not reusable); advertising deferred until
    ~10,000 pageviews a month; player photos declined on copyright grounds.
    See "Deliberately not done".
@@ -2300,6 +2317,188 @@ genuinely open work rather than a queue.
   and it names him. *This entry previously said finding #15 had fixed him
   to 0.001 and that the report named nobody; neither was ever true of the
   published data.*
+
+## The look: a telemetry instrument, dark by default
+
+**Shipped 2026-09-01.** Until then the site was a competent but unremarkable
+data table. The brief was "make it futuristic without overloading it", and
+the direction chosen was not ornament bolted on top: **this site's data
+already behaves like an instrument** — the service-time meter is a gauge
+with a tick at the 3.000 threshold — so the visual language leans into that.
+
+Everything below is CSS. **No webfont, no canvas, no library, no new network
+request.** That is a deliberate constraint, not an accident: the payload is
+0.22 MB and the interaction budget is measured, so ornament does not get to
+spend either.
+
+### The pieces
+
+* **Monospaced figures.** Every number is a readout: the service-time
+  column, the stat tiles, the census line, the days column, the threshold
+  table on the explainer. `--mono` is a **system stack**
+  (`ui-monospace, "SF Mono", …`), so it downloads nothing. Mono is what
+  makes a column of figures stack into a line instead of ragging like
+  prose, and a stacked decimal point is most of the difference between a
+  table and an instrument.
+* **A lit gauge.** `.svc-fill` carries a `box-shadow` bloom in its own
+  status colour over an etched channel. The bloom is derived from the fill
+  with `color-mix`, so it **cannot introduce a hue the palette does not
+  already reserve for that status** — the rule that status colours mean
+  eligibility state still holds.
+* **Wide-tracked micro-labels.** Small mono uppercase at `0.16em` on tile
+  labels and table headers. The cheapest legible "control panel" cue there
+  is.
+* **Filaments.** A 1px gradient along the top edge of each stat tile, tinted
+  by that tile's own status (`--tile-hue`), and the same along the table
+  panel — so the panels read as parts of one instrument rather than separate
+  widgets. The disclaimer gets a lit *left* edge in the accent, not a
+  warning colour: it is the most important sentence on the site and should
+  read as an instrument note, not an error.
+* **A grid ground.** Two `repeating-linear-gradient`s on `.viz-root::before`,
+  masked to fade out by `88vh` so it frames the masthead and then gets out
+  of the table's way. No image request, no memory.
+* **One gradient**, on the masthead, fading toward the accent. The colour is
+  declared on the element *before* `background-clip`, because the failure
+  mode of that technique is an invisible headline.
+
+### Dark is the default, and that is four changes not one
+
+The look is built for a dark plane, so dark is the site's **identity**
+rather than something inherited from the visitor's OS. Light is an explicit
+choice, `[data-theme="light"]`, remembered in `localStorage`.
+
+`styles.css` now contains **zero `prefers-color-scheme` rules**. That is the
+property that matters: there is exactly one source of truth for the theme,
+the `data-theme` attribute, which is what makes a whole class of bug
+impossible rather than merely fixed.
+
+Flipping the default required four things to move together, and three are
+easy to miss:
+
+1. **The tokens.** `.viz-root` carries the dark ramp; `[data-theme="light"]`
+   carries the light one. The `prefers-color-scheme` block was *deleted*,
+   not inverted.
+2. **`color-scheme: dark`.** Without it the browser keeps painting
+   `<select>` and `<input>` chrome, scrollbars and form focus rings from the
+   light palette, and they sit on the dark plane looking like a rendering
+   fault.
+3. **The toggle's idea of the current theme.** It inferred "what is on
+   screen" from `prefers-color-scheme` when no attribute was set. With dark
+   as the default that is wrong for anyone on a light-themed OS — the button
+   thinks the page is light while it is showing dark, sets it to light, and
+   nothing appears to happen. That is the **double-click bug this button has
+   already had once**. It now answers `"dark"` when there is no explicit
+   choice.
+4. **The toggle's glyph**, which offers the theme you would switch *to*. The
+   sun shows by default.
+
+`<meta name="theme-color">` is a single `#0a0c10`, not a
+`prefers-color-scheme` pair: chrome that followed the OS would frame a dark
+page in light trim.
+
+⚠️ **A regression this caused, worth knowing because the same trap is still
+live for any new colour rule.** Three rules keyed the *lightened* club
+colour (`--club-d`) off `prefers-color-scheme`: the club dot, the row
+stripe, and the career-strip bars. Correct while the page followed the OS;
+wrong the moment it stopped. Measured, Yankees, both showing a dark page:
+
+```
+OS dark    dot rgb(41, 87, 205)    <- --club-d, the lightened twin
+OS light   dot rgb(0, 55, 196)     <- --club, raw navy on near-black
+```
+
+Which is exactly the failure the comment above those rules already described
+— *"several primaries are navies that disappear against a dark plane"* —
+reintroduced by the change that made the plane always dark. `--club-d` is
+now the default and light is the exception, matching the tokens.
+
+**Anything that varies by theme must key on `[data-theme="light"]`, never on
+`prefers-color-scheme`.**
+
+### Performance was measured, not assumed
+
+This adds blur, shadow and a gradient ground to a table of 5,578 rows, so it
+was measured under the same condition recorded earlier in this file — the
+full database at a 4× CPU throttle:
+
+| | |
+|---|---|
+| keystroke latency, median | **7.4 ms** (budget: the 18 ms recorded before) |
+| added download weight | **zero** — system mono stack |
+| horizontal overflow at 390px | none |
+
+Everything animated is `transform`/`opacity`, which composite on the GPU and
+cannot trigger reflow. All motion sits inside
+`@media (prefers-reduced-motion: no-preference)`.
+
+### Two bugs the design pass surfaced
+
+Both were invisible until something else changed, which is the pattern worth
+remembering:
+
+* **`.player-link` never reset `text-decoration`.** A rostered player renders
+  as `<a>` and a non-rostered one as `<button>`, so the anchor carried the
+  browser's default underline and the button did not — the two looked
+  different for no reason. Invisible until the table started defaulting to
+  rostered players, which made every visible row an anchor.
+* **The explainer link was inside `.subtitle`**, which is `display: none` on
+  phones to get the table above the fold. So on mobile — where most of this
+  traffic will be — `/service-time.html` was unreachable from the homepage.
+  It is its own element now (`.header-link`).
+
+## The table opens on current players
+
+**Changed 2026-09-01.** Sorted by service time descending, the combined view
+opened on a full screen of *retired* players — Cabrera, Greinke, Pujols,
+Molina — each with `—` for a club and a grey "Not on a roster" badge. Three
+things were wrong at once, and none of them was styling:
+
+* a site that describes itself as tracking current 40-man players led with a
+  wall of players who are not on one;
+* the four stat tiles count rostered players only, so the header described a
+  **different population** than the rows beneath it — the same category
+  error already fixed once in the counting, still present in what the page
+  opened on;
+* every visual system here (club colour, row stripe, status pills, meter
+  fill) is inert for a retired player, so the first screen showed none of it.
+
+The default is now `roster-filter = "current"`, set in `docs/index.html`. The
+historical log is one dropdown away and is still what makes this a log
+rather than a snapshot.
+
+## Club pages carry the same instrument as the main table
+
+They rendered service time as bare text and status as grey prose while the
+main table had the meter and coloured badges, so the two read as different
+sites — and these are the pages search traffic actually lands on. `_svc_cell()`
+and `_status_badge()` in `write_player_pages.py` reproduce `app.js`'s
+conventions exactly: same 0→6.000 scale, same fill classes, same badge
+wording, against the same `styles.css` the pages already load.
+
+⚠️ **That is duplicated logic, added knowingly.** The thresholds and labels
+now exist in both Python and JS. It was the right call for consistency and
+it is real debt: see "Where the service-time math actually lives".
+
+## Where the service-time math actually lives
+
+**Audited 2026-09-01.** Not in one place — in four. Anyone planning to
+extract a single engine should start here:
+
+| where | what |
+|---|---|
+| `scripts/service_time.py` | the accrual engine. Imports only stdlib — no framework, no DB |
+| `scripts/super_two.py` | Super Two class and cutoff |
+| `docs/app.js:138-160` | **re-derives eligibility in the browser** — `free_agent_eligible: frac >= 6`, `arbitration_eligible: frac >= 3 \|\| superTwo`, plus a Super Two fallback heuristic |
+| `scripts/write_player_pages.py` | `_fmt()`, `_status()`, `_status_badge()`, `_svc_cell()` |
+
+Concretely: **`FULL_YEAR_DAYS = 172` is declared in four files**, and the
+days→`Y.DDD` conversion is implemented **five times**.
+
+The browser one is the load-bearing problem: the compact index ships raw
+days rather than the eligibility booleans, so `app.js` has to compute them —
+a second implementation of the CBA rules, in a second language. Any change
+to an eligibility threshold has to be made in both or the table and the
+pages will disagree.
 
 ## Discoverability: every rostered player has a real page
 
