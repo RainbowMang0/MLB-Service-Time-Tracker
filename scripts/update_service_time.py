@@ -953,7 +953,7 @@ def _write_outputs(db: dict[str, dict]) -> None:
     write_profiles(db)
     # Crawlable static pages. Hash routing is invisible to search engines, so
     # without these no player could be found by searching for him.
-    write_player_pages(db, output["generated_at"])
+    write_player_pages(db, output["generated_at"], super_two_cutoff=cutoff)
     report_debuted_but_empty(db)
 
 

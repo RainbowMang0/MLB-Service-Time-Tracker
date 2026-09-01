@@ -34,7 +34,12 @@
           </svg>
           <span>Big League Service Time Tracker</span>
         </h1>
-        <p class="subtitle">Estimated MLB service time for current 40-man roster players, plus a running log of previous players. <a href="service-time.html">What is service time?</a></p>
+        <p class="subtitle">Estimated MLB service time for current 40-man roster players, plus a running log of previous players.</p>
+        <!-- Its own element, not part of .subtitle: the subtitle is
+             display:none on phones to get the table above the fold, and
+             the explainer must stay reachable there -- mobile is where
+             most of this traffic will be. -->
+        <p class="header-link"><a href="service-time.html">What is service time?</a></p>
       </div>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" type="button">
         <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
