@@ -2154,20 +2154,52 @@ genuinely open work rather than a queue.
    less trivial `_should_publish()` and a line explaining why some players
    have no page.
 
-2. **There is no analytics on the site**, so its traffic is unknown — and it
-   is now the *blocking* unknown, because the pages exist but nothing can
-   say whether they are found. It is also the input every question about
-   advertising depends on. Cloudflare Web Analytics or GoatCounter would
-   answer it without a consent banner; both are one script tag and neither
-   sets a cookie. **Needs an owner decision on which.**
+2. **~~There is no analytics on the site~~ — DONE 2026-09-01.**
+   **Cloudflare Web Analytics**, on every page.
+
+   **Why Cloudflare and not GoatCounter**, which was the other shortlisted
+   option: GoatCounter's free tier is **non-commercial only**, and this
+   project defers advertising until ~10,000 pageviews a month — so it would
+   force a licensing decision at exactly the point the site starts working.
+   Staying clear of a terms question is the same call already made twice
+   here, over player photographs and over scraping Baseball Reference.
+   Cloudflare's free tier carries no such clause and no pageview cap. Both
+   are cookieless, which is what kept them ahead of Google Analytics: no
+   consent banner.
+
+   **It lands in five places, and the fifth is the trap.** The four
+   generated templates (player, club, club directory, 404) share the
+   `ANALYTICS` constant in `write_player_pages.py`. `docs/index.html` is
+   hand-maintained and **cannot read that constant**, so it carries its own
+   copy of the same token — change one and you must change the other. This
+   is the same shape as the bug that left `index.json` frozen while the
+   database updated underneath it. Coverage was counted rather than assumed:
+   1,366 of 1,366 player pages, 31 of 31 club pages, 404 and index.
+
+   The token is public by design — it names the site to the beacon and
+   authorises nothing — so it lives in the source, not in a secret.
+
+   **Read it alongside Search Console, not against it.** Cloudflare counts
+   browser visits; Search Console counts Google searches. A crawler that
+   does not run JavaScript is invisible to the first, a direct visit is
+   invisible to the second. They will disagree permanently and neither is
+   wrong.
 
 3. **~~A custom domain~~ — DONE 2026-08-26.** `bigleagueservicetime.com`,
    bought at Porkbun, apex on GitHub's four A records plus a `www` CNAME.
    `docs/CNAME` drove the switch and the validator caught the one hand edit
    (`og:url` and `canonical` in `docs/index.html`) exactly as designed.
-   Remaining: tick **Enforce HTTPS** in Settings → Pages once the certificate
-   provisions, then verify the property in Search Console and submit
-   `https://bigleagueservicetime.com/sitemap.xml`.
+   **Enforce HTTPS** is ticked (confirmed 2026-09-01), and the site is
+   verified in Google Search Console as a **Domain** property (DNS TXT at
+   Porkbun) with `https://bigleagueservicetime.com/sitemap.xml` submitted —
+   Success, ~1,398 discovered pages, 2026-09-01.
+
+   ⚠️ **A Domain property, not a URL-prefix one**, and the difference bites:
+   a Domain property covers every subdomain and both schemes at once, so
+   Search Console does **not** prefill the domain in the sitemap box and
+   wants the full URL. It can also only ever be verified by DNS. A
+   URL-prefix property prefills, accepts easier verification, and silently
+   splits data across `www`/non-`www`/http/https as separate properties.
 
 4. **Fill `data/reference_super_two.json`.** Every row is still `published:
    null`, so `validate_super_two.py` reports the computed cutoffs and passes
