@@ -1,0 +1,446 @@
+{
+ "season": 2026,
+ "generated_at": "2026-09-02",
+ "source": "MLB Stats API (statsapi.mlb.com) /schedule, venue location hydrated",
+ "note": "`state` on each game is the jurisdiction the game is PLAYED in, which is what duty-day allocation turns on -- not the club's own home state. A null state means the venue could not be resolved to a jurisdiction (an international series); the tool asks rather than guessing.",
+ "clubs": [
+  {
+   "team_id": 2710,
+   "team": null,
+   "home_state": null,
+   "spring_states": [],
+   "games": 7
+  },
+  {
+   "team_id": 2711,
+   "team": null,
+   "home_state": null,
+   "spring_states": [],
+   "games": 7
+  },
+  {
+   "team_id": 4612,
+   "team": null,
+   "home_state": null,
+   "spring_states": [],
+   "games": 5
+  },
+  {
+   "team_id": 4613,
+   "team": null,
+   "home_state": null,
+   "spring_states": [],
+   "games": 5
+  },
+  {
+   "team_id": 4614,
+   "team": null,
+   "home_state": null,
+   "spring_states": [],
+   "games": 3
+  },
+  {
+   "team_id": 4615,
+   "team": null,
+   "home_state": null,
+   "spring_states": [],
+   "games": 5
+  },
+  {
+   "team_id": 4616,
+   "team": null,
+   "home_state": null,
+   "spring_states": [],
+   "games": 5
+  },
+  {
+   "team_id": 4617,
+   "team": null,
+   "home_state": null,
+   "spring_states": [],
+   "games": 3
+  },
+  {
+   "team_id": 4618,
+   "team": null,
+   "home_state": null,
+   "spring_states": [],
+   "games": 3
+  },
+  {
+   "team_id": 4619,
+   "team": null,
+   "home_state": null,
+   "spring_states": [],
+   "games": 3
+  },
+  {
+   "team_id": 4944,
+   "team": null,
+   "home_state": null,
+   "spring_states": [],
+   "games": 3
+  },
+  {
+   "team_id": 4945,
+   "team": null,
+   "home_state": null,
+   "spring_states": [],
+   "games": 3
+  },
+  {
+   "team_id": 4946,
+   "team": null,
+   "home_state": null,
+   "spring_states": [],
+   "games": 3
+  },
+  {
+   "team_id": 4947,
+   "team": null,
+   "home_state": null,
+   "spring_states": [],
+   "games": 3
+  },
+  {
+   "team_id": 5513,
+   "team": null,
+   "home_state": null,
+   "spring_states": [],
+   "games": 7
+  },
+  {
+   "team_id": 5517,
+   "team": null,
+   "home_state": null,
+   "spring_states": [],
+   "games": 7
+  },
+  {
+   "team_id": 5521,
+   "team": null,
+   "home_state": null,
+   "spring_states": [],
+   "games": 7
+  },
+  {
+   "team_id": 5525,
+   "team": null,
+   "home_state": null,
+   "spring_states": [],
+   "games": 7
+  },
+  {
+   "team_id": 5528,
+   "team": null,
+   "home_state": null,
+   "spring_states": [],
+   "games": 5
+  },
+  {
+   "team_id": 5529,
+   "team": null,
+   "home_state": null,
+   "spring_states": [],
+   "games": 5
+  },
+  {
+   "team_id": 5532,
+   "team": null,
+   "home_state": null,
+   "spring_states": [],
+   "games": 5
+  },
+  {
+   "team_id": 5533,
+   "team": null,
+   "home_state": null,
+   "spring_states": [],
+   "games": 5
+  },
+  {
+   "team_id": 109,
+   "team": "Arizona Diamondbacks",
+   "home_state": "AZ",
+   "spring_states": [
+    "AZ"
+   ],
+   "games": 194
+  },
+  {
+   "team_id": 133,
+   "team": "Athletics",
+   "home_state": null,
+   "spring_states": [
+    "AZ",
+    "NV"
+   ],
+   "games": 193
+  },
+  {
+   "team_id": 144,
+   "team": "Atlanta Braves",
+   "home_state": "GA",
+   "spring_states": [
+    "FL"
+   ],
+   "games": 196
+  },
+  {
+   "team_id": 110,
+   "team": "Baltimore Orioles",
+   "home_state": "MD",
+   "spring_states": [
+    "DC",
+    "FL",
+    "MD"
+   ],
+   "games": 196
+  },
+  {
+   "team_id": 111,
+   "team": "Boston Red Sox",
+   "home_state": "MA",
+   "spring_states": [
+    "FL"
+   ],
+   "games": 195
+  },
+  {
+   "team_id": 112,
+   "team": "Chicago Cubs",
+   "home_state": "IL",
+   "spring_states": [
+    "AZ"
+   ],
+   "games": 196
+  },
+  {
+   "team_id": 145,
+   "team": "Chicago White Sox",
+   "home_state": "IL",
+   "spring_states": [
+    "AZ"
+   ],
+   "games": 196
+  },
+  {
+   "team_id": 113,
+   "team": "Cincinnati Reds",
+   "home_state": "OH",
+   "spring_states": [
+    "AZ",
+    "WI"
+   ],
+   "games": 196
+  },
+  {
+   "team_id": 114,
+   "team": "Cleveland Guardians",
+   "home_state": "OH",
+   "spring_states": [
+    "AZ"
+   ],
+   "games": 197
+  },
+  {
+   "team_id": 115,
+   "team": "Colorado Rockies",
+   "home_state": "CO",
+   "spring_states": [
+    "AZ"
+   ],
+   "games": 195
+  },
+  {
+   "team_id": 116,
+   "team": "Detroit Tigers",
+   "home_state": "MI",
+   "spring_states": [
+    "AZ",
+    "FL"
+   ],
+   "games": 192
+  },
+  {
+   "team_id": 117,
+   "team": "Houston Astros",
+   "home_state": "TX",
+   "spring_states": [
+    "FL"
+   ],
+   "games": 191
+  },
+  {
+   "team_id": 118,
+   "team": "Kansas City Royals",
+   "home_state": "MO",
+   "spring_states": [
+    "AZ",
+    "TX"
+   ],
+   "games": 194
+  },
+  {
+   "team_id": 108,
+   "team": "Los Angeles Angels",
+   "home_state": "CA",
+   "spring_states": [
+    "AZ",
+    "CA",
+    "NV"
+   ],
+   "games": 195
+  },
+  {
+   "team_id": 119,
+   "team": "Los Angeles Dodgers",
+   "home_state": "CA",
+   "spring_states": [
+    "AZ",
+    "CA"
+   ],
+   "games": 194
+  },
+  {
+   "team_id": 146,
+   "team": "Miami Marlins",
+   "home_state": "FL",
+   "spring_states": [
+    "FL"
+   ],
+   "games": 190
+  },
+  {
+   "team_id": 158,
+   "team": "Milwaukee Brewers",
+   "home_state": null,
+   "spring_states": [
+    "AZ",
+    "WI"
+   ],
+   "games": 195
+  },
+  {
+   "team_id": 142,
+   "team": "Minnesota Twins",
+   "home_state": null,
+   "spring_states": [
+    "FL"
+   ],
+   "games": 192
+  },
+  {
+   "team_id": 121,
+   "team": "New York Mets",
+   "home_state": "NY",
+   "spring_states": [
+    "FL"
+   ],
+   "games": 193
+  },
+  {
+   "team_id": 147,
+   "team": "New York Yankees",
+   "home_state": "NY",
+   "spring_states": [
+    "AZ",
+    "FL"
+   ],
+   "games": 198
+  },
+  {
+   "team_id": 143,
+   "team": "Philadelphia Phillies",
+   "home_state": "PA",
+   "spring_states": [
+    "FL"
+   ],
+   "games": 192
+  },
+  {
+   "team_id": 134,
+   "team": "Pittsburgh Pirates",
+   "home_state": "PA",
+   "spring_states": [
+    "FL"
+   ],
+   "games": 195
+  },
+  {
+   "team_id": 135,
+   "team": "San Diego Padres",
+   "home_state": "CA",
+   "spring_states": [
+    "AZ"
+   ],
+   "games": 193
+  },
+  {
+   "team_id": 137,
+   "team": "San Francisco Giants",
+   "home_state": "CA",
+   "spring_states": [
+    "AZ"
+   ],
+   "games": 194
+  },
+  {
+   "team_id": 136,
+   "team": "Seattle Mariners",
+   "home_state": "WA",
+   "spring_states": [
+    "AZ"
+   ],
+   "games": 193
+  },
+  {
+   "team_id": 138,
+   "team": "St. Louis Cardinals",
+   "home_state": "MO",
+   "spring_states": [
+    "FL"
+   ],
+   "games": 194
+  },
+  {
+   "team_id": 139,
+   "team": "Tampa Bay Rays",
+   "home_state": "FL",
+   "spring_states": [
+    "FL"
+   ],
+   "games": 194
+  },
+  {
+   "team_id": 140,
+   "team": "Texas Rangers",
+   "home_state": "TX",
+   "spring_states": [
+    "AZ",
+    "TX"
+   ],
+   "games": 192
+  },
+  {
+   "team_id": 141,
+   "team": "Toronto Blue Jays",
+   "home_state": "CA-ON",
+   "spring_states": [
+    "FL"
+   ],
+   "games": 192
+  },
+  {
+   "team_id": 120,
+   "team": "Washington Nationals",
+   "home_state": "DC",
+   "spring_states": [
+    "DC",
+    "FL",
+    "MD"
+   ],
+   "games": 191
+  }
+ ]
+}
