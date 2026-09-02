@@ -1,0 +1,131 @@
+{
+  "version": "2026.1",
+  "jurisdiction_scope": "United States (state and local) + Canada",
+
+  "_what_this_file_is": [
+    "The vocabulary of day types, and what each one is presumed to be for",
+    "allocation purposes. It is NOT a per-state rule table -- that is",
+    "2026-states.json. This file answers 'what kind of day is this?' and",
+    "states answer 'does that kind of day count here?'.",
+    "",
+    "THE ALLOCATION FORMULA",
+    "  (duty days in state / total duty days) * allocable income",
+    "",
+    "The denominator is the thing people get wrong. It is TOTAL duty days for",
+    "the year, not days in the season, and every state's numerator is measured",
+    "against that same denominator. So a day misclassified anywhere moves",
+    "every state's number, not just one.",
+    "",
+    "STATUS DISCIPLINE",
+    "Each treatment carries a status. 'settled' means the treatment is",
+    "consistent across the guidance this project has seen. 'contested' means",
+    "states genuinely differ and the per-state override in 2026-states.json",
+    "governs. 'unverified' means nobody has checked -- the engine counts the",
+    "day but flags the return as needing review, and the UI must say so.",
+    "A day type is never silently assumed."
+  ],
+
+  "default_denominator": {
+    "definition": "Total duty days from the first day of spring training through the last day of the championship season (plus any postseason duty days), as classified below.",
+    "status": "settled",
+    "note": "Offseason days are excluded from both numerator and denominator. Where a state defines the period differently, it overrides here."
+  },
+
+  "day_types": {
+    "game_home": {
+      "label": "Home game",
+      "counts_as_duty_day": true,
+      "jurisdiction": "home_venue_state",
+      "status": "settled"
+    },
+    "game_road": {
+      "label": "Road game",
+      "counts_as_duty_day": true,
+      "jurisdiction": "road_venue_state",
+      "status": "settled"
+    },
+    "travel_day": {
+      "label": "Team travel day",
+      "counts_as_duty_day": true,
+      "jurisdiction": "destination_state",
+      "status": "contested",
+      "note": "Widely treated as a duty day, but states differ on WHICH state a travel day is sourced to -- origin, destination, or split. Destination is used as the default because it is the commonest treatment seen; a state that says otherwise overrides it. This is a real per-state question and a genuine source of disagreement with a preparer."
+    },
+    "off_day_in_state": {
+      "label": "Off day spent in a road state",
+      "counts_as_duty_day": true,
+      "jurisdiction": "state_present",
+      "status": "contested",
+      "note": "An off day in the middle of a road trip is generally a duty day sourced to the state the player is in. Confirm per state."
+    },
+    "off_day_home": {
+      "label": "Off day at home",
+      "counts_as_duty_day": true,
+      "jurisdiction": "home_venue_state",
+      "status": "contested"
+    },
+    "spring_training": {
+      "label": "Spring training",
+      "counts_as_duty_day": true,
+      "jurisdiction": "spring_training_state",
+      "status": "contested",
+      "note": "Spring training days are generally duty days, which is why the Arizona/Florida split matters so much: an identical player earns a different allocation depending on which league his club trains in. Whether a given state counts them, and from which date, must be confirmed per state."
+    },
+    "injured_list_with_team": {
+      "label": "Injured list, travelling with the club",
+      "counts_as_duty_day": true,
+      "jurisdiction": "state_present",
+      "status": "contested",
+      "note": "A player on the IL is still earning salary and is generally still accruing duty days. Where he is physically present is what drives the sourcing, which is why it is a per-day question rather than a per-stint one."
+    },
+    "injured_list_rehab": {
+      "label": "Rehab assignment",
+      "counts_as_duty_day": true,
+      "jurisdiction": "state_present",
+      "status": "unverified",
+      "note": "A rehab assignment puts a player physically in a minor league city while he remains on the MLB club's payroll and IL. The correct sourcing is exactly the kind of thing that differs by state and is worth a preparer's attention. Counted, and flagged."
+    },
+    "optional_assignment": {
+      "label": "Optional assignment (in the minors)",
+      "counts_as_duty_day": true,
+      "jurisdiction": "state_present",
+      "status": "unverified",
+      "note": "Days on optional assignment are paid at a different rate and under a different contract. Whether they belong in the same duty-day denominator as MLB days is a question for a preparer; they are tracked separately so the allocation can be run either way."
+    },
+    "non_team_appearance": {
+      "label": "Endorsement, appearance or other non-team work",
+      "counts_as_duty_day": false,
+      "jurisdiction": "state_present",
+      "status": "unverified",
+      "note": "Deliberately NOT in the team-salary duty-day count: this income is usually allocated on its own basis rather than through the team's duty-day fraction. Logged separately so it is visible to a preparer rather than lost."
+    },
+    "offseason": {
+      "label": "Offseason",
+      "counts_as_duty_day": false,
+      "jurisdiction": "none",
+      "status": "settled"
+    }
+  },
+
+  "allocable_income": {
+    "definition": "Salary and other compensation allocated across duty days.",
+    "status": "unverified",
+    "note": "What belongs in the allocable base -- signing bonus, performance bonuses, incentive payments, deferred money -- is treated differently by different states and is one of the questions most worth asking a preparer. This tool allocates the salary figure the player enters and says plainly what it did; it does not decide what should have been in that figure."
+  },
+
+  "sources": {
+    "_status": "SEEDED, NOT VERIFIED",
+    "_note": [
+      "The treatments above describe the common framework for duty-day",
+      "allocation in professional baseball. They have NOT been read off any",
+      "state's primary guidance by the author of this file.",
+      "",
+      "Before this tool tells anyone a dollar figure, a preparer who does",
+      "athlete returns should review this file and the per-state table, and",
+      "each entry's status should be updated to record who checked it and",
+      "against what. Until then the UI reports day counts and allocation",
+      "percentages -- which are useful, checkable, and rate-independent --",
+      "and withholds liability estimates."
+    ]
+  }
+}

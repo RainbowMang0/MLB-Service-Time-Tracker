@@ -35,10 +35,12 @@ import datetime as dt
 import json
 import os
 import pathlib
+import shutil
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
+import cba  # noqa: E402
 import fetch_mlb_data as mlb  # noqa: E402
 import super_two  # noqa: E402
 from write_player_pages import write_player_pages  # noqa: E402
@@ -55,6 +57,15 @@ from service_time import (  # noqa: E402
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "docs" / "data"
 OUTPUT_FILE = DATA_DIR / "service_time.json"
+# The CBA agreement in force. Every threshold this pipeline publishes comes
+# from here rather than from a literal -- see scripts/cba.py.
+_RULES = cba.default()
+# config/ is the source of truth for rulesets, but it sits outside docs/ and
+# GitHub Pages serves docs/ as the site root, so the browser cannot reach it.
+# publish_config() copies it in. Source stays canonical; this is a build
+# artifact like everything else under docs/data.
+CONFIG_SRC = ROOT / "config"
+CONFIG_OUT = DATA_DIR / "config"
 # What the browser actually downloads. See write_index().
 INDEX_FILE = DATA_DIR / "index.json"
 # Per-player season detail, sharded. See write_profiles().
@@ -604,6 +615,30 @@ def write_index(db: dict[str, dict], super_two_cutoff: dict | None = None) -> No
         "positions": positions,
         # Self-documenting, so the row layout is readable without the code.
         "super_two_cutoff": super_two_cutoff,
+        # The CBA thresholds the browser needs to turn a day count into a
+        # status. These used to be literals in docs/app.js -- a second copy of
+        # the CBA rules, in a second language, which had to be edited in step
+        # with the Python or the table and the static pages would disagree.
+        #
+        # Shipping them here rather than making the browser fetch the ruleset
+        # keeps the page to one request, and means app.js has no fallback to
+        # fall back TO: if this block is missing the page says so instead of
+        # quietly computing against a stale constant.
+        "rules": {
+            "version": _RULES.version,
+            "full_year_days": _RULES.require("service_time.days_per_credited_year"),
+            "free_agency_years": _RULES.require("free_agency.credited_years_required"),
+            "arbitration_years": _RULES.require("arbitration.standard_years_required"),
+            "super_two_min_years": _RULES.require(
+                "arbitration.super_two.service_range_years"
+            )[0],
+            "super_two_max_years": _RULES.require(
+                "arbitration.super_two.service_range_years"
+            )[1],
+            "super_two_min_days": _RULES.require(
+                "arbitration.super_two.heuristic_min_days"
+            ),
+        },
         "fields": [
             "id", "name", "team", "position", "days", "on_40_man",
             "missing_seasons", "super_two",
@@ -909,8 +944,39 @@ def check_run_is_sane(
     return problems
 
 
+def publish_config() -> list[pathlib.Path]:
+    """
+    Copy config/ into docs/data/config/ so the browser can read the rulesets.
+
+    The duty-day tool runs entirely client-side, which means it needs the tax
+    rules table and the day-type rules as fetchable files. They live in
+    config/ because that is where a human edits them and where the Python
+    reads them; this publishes a copy under the site root.
+
+    Copied wholesale rather than filtered: a ruleset that exists but was not
+    published would give the browser a different answer than the pipeline,
+    which is the exact failure this project already had once when index.json
+    sat frozen while the database updated underneath it.
+    """
+    written: list[pathlib.Path] = []
+    if not CONFIG_SRC.exists():
+        print(f"  !! no config/ directory at {CONFIG_SRC}; nothing published")
+        return written
+
+    if CONFIG_OUT.exists():
+        shutil.rmtree(CONFIG_OUT)  # rebuilt wholesale, like the player pages
+    for src in sorted(CONFIG_SRC.rglob("*.json")):
+        dest = CONFIG_OUT / src.relative_to(CONFIG_SRC)
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(src, dest)
+        written.append(dest)
+    print(f"Published {len(written)} config file(s) to {CONFIG_OUT}")
+    return written
+
+
 def _write_outputs(db: dict[str, dict]) -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
+    publish_config()
 
     # Super Two needs the whole population, so it can only be settled once
     # every record exists -- see scripts/super_two.py. This replaces the flat

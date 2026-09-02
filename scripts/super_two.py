@@ -63,25 +63,41 @@ from __future__ import annotations
 
 import math
 
-FULL_YEAR_DAYS = 172
+import cba
+
+# Every threshold below comes from the CBA ruleset in config/cba/ rather than
+# being a literal, for the reason set out in scripts/cba.py: the agreement
+# expires 2026-12-01 and the Super Two percentile is exactly the sort of value
+# a successor agreement changes. The module-level names stay bound to the
+# agreement in force so existing callers are unaffected.
+_DEFAULT_RULES = cba.default()
+
+FULL_YEAR_DAYS = _DEFAULT_RULES.require("service_time.days_per_credited_year")
 
 # CBA: top 22% of the two-to-three-year class.
-SUPER_TWO_TOP_FRACTION = 0.22
+SUPER_TWO_TOP_FRACTION = _DEFAULT_RULES.require(
+    "arbitration.super_two.top_percentile"
+) / 100.0
 
 # CBA: and at least 86 days of service in the immediately preceding season.
 # Note this is the SAME number the old heuristic used, but in its correct
 # role. The heuristic treated "86 days into your third year" as the whole
 # test; it is really a secondary condition on top of the 22% ranking.
-SUPER_TWO_MIN_PRECEDING_SEASON_DAYS = 86
+SUPER_TWO_MIN_PRECEDING_SEASON_DAYS = _DEFAULT_RULES.require(
+    "arbitration.super_two.minimum_prior_season_days"
+)
 
 # Below this the population is too thin for a 22% boundary to mean anything
 # -- an early or partial dataset would produce a confident-looking cutoff
 # from a handful of players. Fall back to the flat heuristic and say so.
-MIN_CLASS_SIZE = 50
+MIN_CLASS_SIZE = _DEFAULT_RULES.require("arbitration.super_two.minimum_class_size")
 
 
-def format_service(days: int) -> str:
-    return f"{days // FULL_YEAR_DAYS}.{days % FULL_YEAR_DAYS:03d}"
+def format_service(days: int, ruleset: "cba.Ruleset | None" = None) -> str:
+    full_year = (ruleset or _DEFAULT_RULES).require(
+        "service_time.days_per_credited_year"
+    )
+    return f"{days // full_year}.{days % full_year:03d}"
 
 
 def _service_through(seasons: list[dict], year: int) -> int:
@@ -95,11 +111,20 @@ def _days_in(seasons: list[dict], year: int) -> int:
     return 0
 
 
-def build_class(db: dict[str, dict], year: int) -> list[tuple[int, int, dict]]:
+def build_class(
+    db: dict[str, dict], year: int, ruleset: "cba.Ruleset | None" = None
+) -> list[tuple[int, int, dict]]:
     """
     (service_days_through_year, days_in_year, record) for the 2-3 year class
     at the end of `year`, ranked by service descending.
+
+    The class boundaries are the ruleset's, not literals: a successor
+    agreement could define the class over a different service range.
     """
+    rules = ruleset or _DEFAULT_RULES
+    full_year = rules.require("service_time.days_per_credited_year")
+    low_years, high_years = rules.require("arbitration.super_two.service_range_years")
+    low_days, high_days = low_years * full_year, high_years * full_year
     members = []
     for record in db.values():
         seasons = record.get("seasons")
@@ -109,24 +134,30 @@ def build_class(db: dict[str, dict], year: int) -> list[tuple[int, int, dict]]:
         if in_year <= 0:
             continue
         through = _service_through(seasons, year)
-        if 2 * FULL_YEAR_DAYS <= through < 3 * FULL_YEAR_DAYS:
+        if low_days <= through < high_days:
             members.append((through, in_year, record))
     members.sort(key=lambda m: (-m[0], m[2].get("name") or ""))
     return members
 
 
-def compute_cutoff(db: dict[str, dict], year: int) -> dict | None:
+def compute_cutoff(
+    db: dict[str, dict], year: int, ruleset: "cba.Ruleset | None" = None
+) -> dict | None:
     """
     The Super Two cutoff for the offseason after `year`, or None if the
     class is too small to draw a boundary through.
     """
-    members = build_class(db, year)
-    if len(members) < MIN_CLASS_SIZE:
+    rules = ruleset or _DEFAULT_RULES
+    top_fraction = rules.require("arbitration.super_two.top_percentile") / 100.0
+    min_class_size = rules.require("arbitration.super_two.minimum_class_size")
+
+    members = build_class(db, year, rules)
+    if len(members) < min_class_size:
         return None
 
     # floor(): the 22% is a share of the class, and a fractional player
     # rounds down rather than admitting one more.
-    qualifying_count = math.floor(len(members) * SUPER_TWO_TOP_FRACTION)
+    qualifying_count = math.floor(len(members) * top_fraction)
     if qualifying_count < 1:
         return None
 

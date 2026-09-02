@@ -59,19 +59,35 @@ import datetime as dt
 import re
 from dataclasses import dataclass, field
 
+import cba
+
 # ---------------------------------------------------------------------------
 # Constants
 # ---------------------------------------------------------------------------
+# These are no longer literals. Every threshold below is read from the CBA
+# ruleset in config/cba/, because the 2022 agreement expires 2026-12-01 and
+# service time, arbitration and free agency are the central issues in the
+# dispute -- any of them could move. See scripts/cba.py.
+#
+# The module-level names are kept because other scripts import them, and they
+# are bound to the DEFAULT ruleset so that behaviour is unchanged for every
+# existing caller. Anything that needs to compute under a DIFFERENT agreement
+# passes `ruleset=` to compute_service_time() rather than reading these.
 
-FULL_YEAR_DAYS = 172  # days of service credited for a full year
-FREE_AGENCY_YEARS = 6.000
-ARBITRATION_YEARS = 3.000
-SUPER_TWO_MIN_YEARS = 2.000
-SUPER_TWO_MAX_YEARS = 3.000
+_DEFAULT_RULES = cba.default()
+
+FULL_YEAR_DAYS = _DEFAULT_RULES.require("service_time.days_per_credited_year")
+FREE_AGENCY_YEARS = _DEFAULT_RULES.require("free_agency.credited_years_required")
+ARBITRATION_YEARS = _DEFAULT_RULES.require("arbitration.standard_years_required")
+SUPER_TWO_MIN_YEARS, SUPER_TWO_MAX_YEARS = _DEFAULT_RULES.require(
+    "arbitration.super_two.service_range_years"
+)
 # Historically the Super Two cutoff has fallen in roughly the 2.115-2.140
 # range (~86-140 days into a player's third year). We use a conservative
 # lower bound purely to FLAG candidates for manual review.
-SUPER_TWO_HEURISTIC_MIN_DAYS = 86
+SUPER_TWO_HEURISTIC_MIN_DAYS = _DEFAULT_RULES.require(
+    "arbitration.super_two.heuristic_min_days"
+)
 
 # --- Shortened seasons -----------------------------------------------------
 # The 2020 season ran roughly 66 days instead of the usual ~186. MLB and the
@@ -79,8 +95,8 @@ SUPER_TWO_HEURISTIC_MIN_DAYS = 86
 # as raw days: a player's actual days were scaled by 186/B (B = the season's
 # length), so someone rostered all season earned a full year rather than ~66
 # days. Without this, every player active in 2020 reads about 0.6 years low.
-NORMAL_SEASON_SPAN_DAYS = 186
-SHORTENED_SEASONS = {2020}
+NORMAL_SEASON_SPAN_DAYS = _DEFAULT_RULES.require("service_time.normal_season_span_days")
+SHORTENED_SEASONS = set(_DEFAULT_RULES.shortened_seasons())
 
 # --- Transaction coverage floor --------------------------------------------
 # Measured empirically against the live API by sampling six players per season
@@ -97,14 +113,24 @@ SHORTENED_SEASONS = {2020}
 TRANSACTION_COVERAGE_START_YEAR = 2009
 
 
-def _prorate_shortened_season(season: "SeasonWindow", raw_days: int) -> int:
-    """Scale raw active days for a shortened season per the 2020 agreement."""
-    if season.year not in SHORTENED_SEASONS:
+def _prorate_shortened_season(
+    season: "SeasonWindow", raw_days: int, ruleset: "cba.Ruleset | None" = None
+) -> int:
+    """Scale raw active days for a shortened season per the 2020 agreement.
+
+    Which seasons are shortened, and what span they scale to, come from the
+    ruleset -- a future agreement could prorate a season the same way, and
+    that should be a config edit rather than a code change.
+    """
+    rules = ruleset or _DEFAULT_RULES
+    shortened = rules.shortened_seasons()
+    if season.year not in shortened:
         return raw_days
+    normal_span = shortened[season.year]
     span = (season.end - season.start).days + 1
-    if span <= 0 or span >= NORMAL_SEASON_SPAN_DAYS:
+    if span <= 0 or span >= normal_span:
         return raw_days  # not actually shortened; leave untouched
-    return int(round(raw_days * NORMAL_SEASON_SPAN_DAYS / span))
+    return int(round(raw_days * normal_span / span))
 
 # DOCUMENTATION ONLY -- these lists no longer drive matching.
 # ============================================================================
@@ -754,6 +780,7 @@ def compute_service_time(
     accrual_ceiling: dt.date | None = None,
     seasons_with_appearances: set[int] | None = None,
     carry_in_active_first_season: bool | None = None,  # deprecated alias
+    ruleset: "cba.Ruleset | None" = None,
 ) -> ServiceTimeResult:
     """
     Compute total MLB service time across multiple seasons.
@@ -798,7 +825,24 @@ def compute_service_time(
     list without a single dated transaction: no appearance, nothing to
     corroborate him, and his year is dropped. Rare enough not to show up in
     the modern era at all (one season in 2010, four in 2009, none after).
+
+    `ruleset` is the CBA agreement to compute under, from config/cba/. It
+    defaults to the agreement currently in force, so every existing caller is
+    unaffected. Pass a different one to run a player under a successor
+    agreement and diff the two -- which is the point of the whole exercise
+    once the 2022 agreement expires on 2026-12-01.
     """
+    rules = ruleset or _DEFAULT_RULES
+    full_year_days = rules.require("service_time.days_per_credited_year")
+    max_per_season = rules.require("service_time.max_days_creditable_per_season")
+    fa_years = rules.require("free_agency.credited_years_required")
+    arb_years = rules.require("arbitration.standard_years_required")
+    s2_enabled = rules.require("arbitration.super_two.enabled")
+    s2_min_years, s2_max_years = rules.require(
+        "arbitration.super_two.service_range_years"
+    )
+    s2_min_days = rules.require("arbitration.super_two.heuristic_min_days")
+
     if carry_in_active_first_season is not None:
         presume_active_from_debut = carry_in_active_first_season
     ordered_seasons = sorted(seasons, key=lambda s: s.year)
@@ -832,8 +876,8 @@ def compute_service_time(
         ):
             # Nothing in this season says he was on a major league roster.
             days = 0
-        prorated_days = _prorate_shortened_season(season, days)
-        credited_days = min(prorated_days, FULL_YEAR_DAYS)
+        prorated_days = _prorate_shortened_season(season, days, rules)
+        credited_days = min(prorated_days, max_per_season)
         total_days += credited_days
         by_season[season.year] = {
             "raw_active_days": days,
@@ -842,20 +886,21 @@ def compute_service_time(
             "intervals": [(s.isoformat(), e.isoformat()) for s, e in season_intervals],
         }
 
-    total_years, remaining_days = divmod(total_days, FULL_YEAR_DAYS)
-    fractional_years = total_years + remaining_days / FULL_YEAR_DAYS
+    total_years, remaining_days = divmod(total_days, full_year_days)
+    fractional_years = total_years + remaining_days / full_year_days
 
-    is_super_two_candidate = (
-        SUPER_TWO_MIN_YEARS <= fractional_years < SUPER_TWO_MAX_YEARS
-        and remaining_days >= SUPER_TWO_HEURISTIC_MIN_DAYS
+    is_super_two_candidate = bool(
+        s2_enabled
+        and s2_min_years <= fractional_years < s2_max_years
+        and remaining_days >= s2_min_days
     )
 
     return ServiceTimeResult(
         total_years=total_years,
         remaining_days=remaining_days,
         total_days=total_days,
-        is_free_agent_eligible=fractional_years >= FREE_AGENCY_YEARS,
-        is_arbitration_eligible=(fractional_years >= ARBITRATION_YEARS) or is_super_two_candidate,
+        is_free_agent_eligible=fractional_years >= fa_years,
+        is_arbitration_eligible=(fractional_years >= arb_years) or is_super_two_candidate,
         is_super_two_candidate=is_super_two_candidate,
         by_season=by_season,
     )

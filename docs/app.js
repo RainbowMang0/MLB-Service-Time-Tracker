@@ -20,7 +20,38 @@
   const PROFILE_SHARDS = 64;
   const profileShardCache = new Map();
 
-  const FULL_YEAR_DAYS = 172;
+  // --- CBA thresholds -----------------------------------------------------
+  // These used to be literals here: 172, and 3/6 years inline at each call
+  // site. That was a second implementation of the CBA rules, in a second
+  // language, which had to be edited in step with scripts/service_time.py or
+  // the table and the static pages would disagree with each other.
+  //
+  // They now arrive in the `rules` block of index.json, stamped there by the
+  // pipeline from config/cba/. There is deliberately NO fallback: an index
+  // without the block is a deployment mismatch, and computing against a
+  // guessed 172 would hide it. See applyRules().
+  let FULL_YEAR_DAYS = null;
+  let FREE_AGENCY_YEARS = null;
+  let ARBITRATION_YEARS = null;
+  let SUPER_TWO_MIN_YEARS = null;
+  let SUPER_TWO_MAX_YEARS = null;
+  let SUPER_TWO_MIN_DAYS = null;
+
+  function applyRules(payload) {
+    const r = payload && payload.rules;
+    if (!r || typeof r.full_year_days !== "number") {
+      throw new Error(
+        "index.json carries no CBA rules block. The data files were built by " +
+          "a pipeline older than this page; re-run the daily update."
+      );
+    }
+    FULL_YEAR_DAYS = r.full_year_days;
+    FREE_AGENCY_YEARS = r.free_agency_years;
+    ARBITRATION_YEARS = r.arbitration_years;
+    SUPER_TWO_MIN_YEARS = r.super_two_min_years;
+    SUPER_TWO_MAX_YEARS = r.super_two_max_years;
+    SUPER_TWO_MIN_DAYS = r.super_two_min_days;
+  }
 
   // --- club identity -------------------------------------------------------
   // Keyed by MLB team id, which never changes; the NAMES do. The profile
@@ -132,6 +163,7 @@
    * fields would be shipping the same information twice.
    */
   function hydrate(payload) {
+    applyRules(payload);
     const teams = payload.teams || [];
     const positions = payload.positions || [];
     return (payload.players || []).map((row) => {
@@ -144,7 +176,9 @@
       // sensible rather than marking everyone ineligible.
       const superTwo =
         superTwoFlag === undefined
-          ? frac >= 2 && frac < 3 && rem >= 86
+          ? frac >= SUPER_TWO_MIN_YEARS &&
+            frac < SUPER_TWO_MAX_YEARS &&
+            rem >= SUPER_TWO_MIN_DAYS
           : superTwoFlag === 1;
       return {
         id,
@@ -153,9 +187,9 @@
         position: positions[posIx] || null,
         service_time: `${years}.${String(rem).padStart(3, "0")}`,
         service_days_total: days,
-        free_agent_eligible: frac >= 6,
+        free_agent_eligible: frac >= FREE_AGENCY_YEARS,
         super_two_candidate: superTwo,
-        arbitration_eligible: frac >= 3 || superTwo,
+        arbitration_eligible: frac >= ARBITRATION_YEARS || superTwo,
         on_40_man: on40 === 1,
         // missing_seasons: 0 complete, -1 incomplete by an unknown amount
         // (a record written before the field existed).
@@ -525,7 +559,7 @@
         // column over so the bar and the badge cannot disagree.
         const pct = Math.max(
           0,
-          Math.min(1, p.service_days_total / (6 * FULL_YEAR_DAYS))
+          Math.min(1, p.service_days_total / (FREE_AGENCY_YEARS * FULL_YEAR_DAYS))
         ) * 100;
         const fillCls = !p.on_40_man
           ? ""
@@ -785,13 +819,13 @@
       running += days;
 
       let cross = "";
-      if (!markedArb && running >= 3 * FULL_YEAR_DAYS) {
+      if (!markedArb && running >= ARBITRATION_YEARS * FULL_YEAR_DAYS) {
         markedArb = true;
         cross = `<span class="cs-cross">3.000</span>`;
       }
       // Both can land in the same season for a player credited a long
       // presumed stretch; free agency is the one worth showing.
-      if (!markedFa && running >= 6 * FULL_YEAR_DAYS) {
+      if (!markedFa && running >= FREE_AGENCY_YEARS * FULL_YEAR_DAYS) {
         markedFa = true;
         cross = `<span class="cs-cross">6.000</span>`;
       }
@@ -987,10 +1021,10 @@
         </table>
       </div>
       <p class="profile-foot">
-        172 days credit a full year. A season can credit at most 172 no matter how
-        many days a player spends on a roster, so the running total advances by at
-        most 1.000 per year. Hover a starred figure or a label in the last column
-        for detail.
+        ${FULL_YEAR_DAYS} days credit a full year. A season can credit at most
+        ${FULL_YEAR_DAYS} no matter how many days a player spends on a roster, so
+        the running total advances by at most 1.000 per year. Hover a starred
+        figure or a label in the last column for detail.
       </p>`;
   }
 

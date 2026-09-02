@@ -25,6 +25,11 @@ name: Validate Service Time
 #               derivation ships wrong numbers while every other check --
 #               all of which read the database -- passes. Offline.
 #
+#   tests     -- both unit suites: python tests/test_service_time.py (the
+#               service-time engine and the CBA rulesets) and node --test
+#               tests/duty_days.test.cjs (the duty-day allocation engine).
+#               Offline, seconds, and neither needs anything installed.
+#
 #   reference -- compares finished figures against known Baseball Reference
 #               numbers in data/reference_service_time.json. Narrow (a
 #               handful of players, hand-entered) but genuinely independent,
@@ -50,6 +55,7 @@ on:
           - super-two
           - player
           - published
+          - tests
       team:
         description: "rosters: MLB team id (147 = Yankees)"
         required: false
@@ -97,6 +103,15 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Set up Node
+        # Only the duty-day engine needs it, and only its tests. The engine
+        # itself ships to the browser as a plain script -- no npm, no build
+        # step, and node's built-in test runner needs no packages either.
+        if: github.event.inputs.check == 'tests'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
       - name: Run check
         run: |
           case "${{ github.event.inputs.check }}" in
@@ -105,6 +120,10 @@ jobs:
               ;;
             super-two)
               python scripts/validate_super_two.py
+              ;;
+            tests)
+              python tests/test_service_time.py
+              node --test tests/duty_days.test.cjs
               ;;
             published)
               python scripts/validate_published.py

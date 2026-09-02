@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Duty Day Tracker — jock tax allocation</title>
+
+<meta name="description" content="Log every duty day by state across a season and see how a salary allocates across the jurisdictions that tax it. Free, runs entirely in your browser, nothing you enter is uploaded. An organizational tool, not tax advice." />
+<meta name="theme-color" content="#0a0c10" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Duty Day Tracker" />
+<meta property="og:description" content="Log duty days by state, see how a salary allocates, and export a worksheet for your CPA. Runs entirely in your browser." />
+<link rel="canonical" href="https://bigleagueservicetime.com/taxes.html" />
+<meta property="og:url" content="https://bigleagueservicetime.com/taxes.html" />
+<meta name="twitter:card" content="summary" />
+
+<!-- In <head> and inline, deliberately: deferred or external it would run
+     after first paint and flash the wrong theme on every click through from
+     the table. Same four lines as every generated page. -->
+<script>
+  try {
+    var t = localStorage.getItem("mlb-service-time-theme");
+    if (t) document.documentElement.setAttribute("data-theme", t);
+  } catch (e) {}
+</script>
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="taxes.css" />
+</head>
+<body>
+  <div class="viz-root" id="root">
+
+    <header class="page-header">
+      <div class="page-header-inner">
+        <h1>
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+            <circle cx="16" cy="16" r="14" class="bm-ball" />
+            <path d="M7.2 5.6c3.6 3 5.4 6.5 5.4 10.4s-1.8 7.4-5.4 10.4" class="bm-seam" />
+            <path d="M24.8 5.6c-3.6 3-5.4 6.5-5.4 10.4s1.8 7.4 5.4 10.4" class="bm-seam" />
+          </svg>
+          <span>Duty Day Tracker</span>
+        </h1>
+        <p class="subtitle">Log where you worked, day by day, and see how a season's salary allocates across the states that tax it.</p>
+        <p class="header-link"><a href="./">Service time tracker</a> · <a href="neutrality.html">Neutrality</a></p>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" />
+        </svg>
+        <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4.2" />
+          <path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.2 5.2l1.9 1.9M16.9 16.9l1.9 1.9M18.8 5.2l-1.9 1.9M7.1 16.9l-1.9 1.9" />
+        </svg>
+      </button>
+    </header>
+
+    <!-- Required by the brief on every page and every export. Deliberately
+         above the tool rather than in a footer. -->
+    <div class="disclaimer-banner">
+      <span class="disclaimer-icon" aria-hidden="true">ⓘ</span>
+      <span><strong>This is an organizational tool, not tax advice.</strong> It counts days and shows how a salary allocates across them. It is not prepared by a tax professional, it does not know your circumstances, and it should be reviewed by a qualified preparer before it informs any filing.</span>
+    </div>
+
+    <div class="privacy-note">
+      <strong>Nothing you type here leaves your device.</strong> There is no account, no server and no upload — this page does the arithmetic in your browser and saves your season in this browser's own storage. Clearing site data erases it, so use <b>Export</b> to keep a copy.
+    </div>
+
+    <main class="tax-main">
+
+      <!-- 1. Profile -->
+      <section class="panel" id="panel-profile">
+        <h2><span class="step-n">1</span> Your season</h2>
+        <div class="field-grid">
+          <label>Season
+            <select id="in-season"></select>
+          </label>
+          <label>Club
+            <select id="in-club"><option value="">Loading…</option></select>
+          </label>
+          <label>Home state
+            <select id="in-home-state"></select>
+          </label>
+          <label>Domicile <span class="hint" title="The state you are a resident of for tax purposes. Usually where you live in the offseason.">?</span>
+            <select id="in-domicile"></select>
+          </label>
+          <label>Salary to allocate
+            <input type="number" id="in-income" min="0" step="1000" placeholder="e.g. 780000" inputmode="numeric" />
+          </label>
+          <label>Spring training state
+            <select id="in-spring-state"></select>
+          </label>
+          <label>Spring starts
+            <input type="date" id="in-spring-start" />
+          </label>
+          <label>Spring ends
+            <input type="date" id="in-spring-end" />
+          </label>
+        </div>
+        <p class="panel-note" id="schedule-status">Pick a club to load its schedule.</p>
+        <div class="panel-actions">
+          <button type="button" id="btn-build" class="btn btn-primary">Propose my season from the schedule</button>
+          <button type="button" id="btn-blank" class="btn">Start a blank season</button>
+        </div>
+      </section>
+
+      <!-- 2. Confirmation -->
+      <section class="panel" id="panel-days" hidden>
+        <h2><span class="step-n">2</span> Confirm your days</h2>
+        <p class="panel-note">
+          Every day below is a <em>proposal</em> from the schedule until you confirm it. Game days are usually right. Off days, IL stints and rehab assignments are the ones only you know — those are what the bulk edit is for.
+        </p>
+
+        <div class="confirm-summary" id="confirm-summary"></div>
+
+        <!-- `open` by default, deliberately. For a blank season -- which is
+             the minor league path and the path for any season with no
+             published schedule -- this is the ONLY way to enter anything, and
+             collapsed it reads as an advanced option rather than the main
+             control. It is also what corrects an IL stint, which is the
+             commonest correction there is. -->
+        <details class="bulk-edit" open>
+          <summary>Bulk edit a stretch of days</summary>
+          <div class="field-grid">
+            <label>From <input type="date" id="bulk-from" /></label>
+            <label>To <input type="date" id="bulk-to" /></label>
+            <label>Classify as
+              <select id="bulk-type"></select>
+            </label>
+            <label>Jurisdiction
+              <select id="bulk-jurisdiction"></select>
+            </label>
+          </div>
+          <div class="panel-actions">
+            <button type="button" id="btn-bulk-apply" class="btn btn-primary">Apply to that stretch</button>
+            <button type="button" id="btn-confirm-all" class="btn">Confirm every remaining day as proposed</button>
+          </div>
+          <p class="panel-note bulk-warn">
+            “Confirm every remaining day” accepts the schedule's guess for days you have not reviewed. It is a shortcut, and the export will still record how many days were confirmed that way.
+          </p>
+        </details>
+
+        <div class="month-grid" id="calendar"></div>
+      </section>
+
+      <!-- 3. Allocation -->
+      <section class="panel" id="panel-alloc" hidden>
+        <h2><span class="step-n">3</span> Where the money lands</h2>
+        <div class="tiles" id="alloc-tiles"></div>
+        <div class="table-scroll">
+          <table class="alloc-table" id="alloc-table">
+            <thead>
+              <tr>
+                <th>Jurisdiction</th>
+                <th class="num">Duty days</th>
+                <th class="num">Share</th>
+                <th class="num">Allocated salary</th>
+                <th class="num">Estimated tax</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div id="alloc-warnings" class="warn-list"></div>
+      </section>
+
+      <!-- 4. Export -->
+      <section class="panel" id="panel-export" hidden>
+        <h2><span class="step-n">4</span> Hand it to your CPA</h2>
+        <p class="panel-note">
+          The worksheet is the actual deliverable: allocation methodology, per-state totals, and day-by-day support your preparer can check line by line.
+        </p>
+        <div class="panel-actions">
+          <button type="button" id="btn-print" class="btn btn-primary">Print / save as PDF</button>
+          <button type="button" id="btn-csv-summary" class="btn">CSV — per-state summary</button>
+          <button type="button" id="btn-csv-days" class="btn">CSV — day-by-day support</button>
+          <button type="button" id="btn-export-json" class="btn">Export my season (JSON)</button>
+          <label class="btn btn-file">Import a season
+            <input type="file" id="in-import" accept="application/json" hidden />
+          </label>
+          <button type="button" id="btn-reset" class="btn btn-danger">Delete this season</button>
+        </div>
+        <p class="panel-note">
+          Export the JSON if you want this season on another device or kept somewhere safer than a browser cache. It is also what you would import if this ever moves to real accounts.
+        </p>
+      </section>
+    </main>
+
+    <!-- The printable worksheet. Hidden on screen; the print stylesheet
+         hides everything else and shows only this. Print-to-PDF rather than a
+         PDF library: no dependency, no build step, and the browser already
+         does it well. -->
+    <div id="print-worksheet" class="print-only" aria-hidden="true"></div>
+
+    <footer class="page-footer">
+      <p>
+        Not affiliated with or endorsed by MLB or the MLBPA. This tool is an
+        estimate and an organizational aid, not tax advice, and not a
+        substitute for a qualified preparer.
+      </p>
+      <p><a href="./">Service time tracker</a> · <a href="neutrality.html">Neutrality</a> · <a href="service-time.html">What is service time?</a></p>
+    </footer>
+  </div>
+
+  <script src="duty-days.js"></script>
+  <script src="taxes.js"></script>
+  <!-- Cloudflare Web Analytics. The token is public by design and names the
+       site to the beacon. FIVE places carry it: the four generated templates
+       share the ANALYTICS constant in write_player_pages.py, and this file
+       and index.html each carry their own copy. Change one, change all. --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b1a0b70a9b8944a9892a99bc56e22e15"}'></script>
+</body>
+</html>

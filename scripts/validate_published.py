@@ -154,7 +154,7 @@ def check_links() -> list[str]:
     site_root = f"{SITE_URL}/"
 
     # 1. Hand-edited files that carry an absolute URL of their own.
-    for name in ("index.html",):
+    for name in ("index.html", "taxes.html", "neutrality.html"):
         page = docs / name
         if not page.exists():
             continue
@@ -171,7 +171,8 @@ def check_links() -> list[str]:
     #    index.html is in here because it carries the one hand-written link into
     #    the generated section ("t/"), and a hand-written link is exactly the
     #    kind that rots without anyone noticing.
-    generated = ([docs / "index.html", docs / "404.html"]
+    generated = ([docs / "index.html", docs / "404.html",
+                  docs / "taxes.html", docs / "neutrality.html"]
                  + sorted(docs.glob("p/*.html")) + sorted(docs.glob("t/*.html")))
     generated = [p for p in generated if p.exists()]
     missing_targets: set[str] = set()
@@ -217,8 +218,76 @@ def check_links() -> list[str]:
     return problems
 
 
+def check_config_published() -> list[str]:
+    """The rulesets the browser fetches must exist and match config/.
+
+    docs/data/config/ is a published COPY of config/ (see publish_config() in
+    update_service_time.py), because config/ sits outside docs/ and GitHub
+    Pages will not serve it. A copy that drifts from its source is the same
+    failure this project already had when index.json sat frozen while the
+    database updated underneath it -- the duty-day tool would compute against
+    a different tax table than the one in the repo, and nothing would say so.
+
+    Also asserts that no jurisdiction carries a tax rate without being marked
+    verified. That invariant is what keeps a guessed rate from reaching a
+    user; it is checked in the JS tests too, and it is worth checking on both
+    sides of the fence.
+    """
+    problems: list[str] = []
+    root = pathlib.Path(__file__).resolve().parents[1]
+    src_dir = root / "config"
+    out_dir = root / "docs" / "data" / "config"
+
+    if not src_dir.exists():
+        return ["config/ is missing entirely"]
+    if not out_dir.exists():
+        return [
+            "docs/data/config/ is missing -- the duty-day tool cannot load its "
+            "rules. Run update_service_time.py (any mode) to publish it."
+        ]
+
+    sources = sorted(src_dir.rglob("*.json"))
+    for src in sources:
+        dest = out_dir / src.relative_to(src_dir)
+        if not dest.exists():
+            problems.append(f"{src.relative_to(root)} is not published to docs/data/config/")
+        elif dest.read_bytes() != src.read_bytes():
+            problems.append(
+                f"{dest.relative_to(root)} differs from {src.relative_to(root)} "
+                "-- the published copy is stale"
+            )
+
+    for extra in sorted(out_dir.rglob("*.json")):
+        if not (src_dir / extra.relative_to(out_dir)).exists():
+            problems.append(
+                f"{extra.relative_to(root)} is published but has no source in config/"
+            )
+
+    states_path = src_dir / "tax" / "2026-states.json"
+    if states_path.exists():
+        states = json.loads(states_path.read_text())
+        for code, j in states.get("jurisdictions", {}).items():
+            if not isinstance(j.get("rate_for_estimate"), (int, float)):
+                continue
+            if j.get("has_wage_income_tax") is False:
+                continue  # a structural zero, not a rate anyone looked up
+            status = j.get("status")
+            if status not in ("verified", "estimate_unverified"):
+                problems.append(
+                    f"tax jurisdiction {code} carries a rate but its status is "
+                    f"{status!r} -- a rate must declare which tier it came from"
+                )
+            elif status == "estimate_unverified" and not j.get("source"):
+                problems.append(
+                    f"tax jurisdiction {code} is on the estimate tier but records "
+                    "no source -- an unverified number must at least say where "
+                    "it came from"
+                )
+    return problems
+
+
 def main() -> None:
-    problems = check_published() + check_links()
+    problems = check_published() + check_links() + check_config_published()
     if not problems:
         print("\nAll three published files agree.")
         return

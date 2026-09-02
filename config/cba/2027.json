@@ -1,0 +1,77 @@
+{
+  "version": "2027",
+  "label": "Successor agreement — NOT YET NEGOTIATED",
+  "status": "placeholder",
+  "usable": false,
+
+  "_why_this_file_exists": [
+    "The 2022 agreement expires 11:59 PM ET on 2026-12-01. Service time,",
+    "arbitration and free agency are central to the dispute, so any of the",
+    "values in 2022.json could move.",
+    "",
+    "This file is a valid, loadable ruleset that deliberately refuses to",
+    "compute. Every value is null and `usable` is false, so scripts/cba.py",
+    "raises rather than quietly crediting a player zero days under an",
+    "agreement that does not exist yet. Fill the values in, set `usable` to",
+    "true, populate `sources`, and the whole site is current the same day.",
+    "",
+    "Do NOT copy 2022.json's values in here as a starting point. A ruleset",
+    "that looks populated but is guessed is worse than one that refuses."
+  ],
+
+  "effective_start": null,
+  "effective_end": null,
+
+  "service_time": {
+    "days_per_credited_year": null,
+    "max_days_creditable_per_season": null,
+    "normal_season_span_days": null,
+    "shortened_seasons": {}
+  },
+
+  "free_agency": {
+    "credited_years_required": null
+  },
+
+  "arbitration": {
+    "standard_years_required": null,
+    "super_two": {
+      "enabled": null,
+      "service_range_years": null,
+      "top_percentile": null,
+      "minimum_prior_season_days": null,
+      "minimum_class_size": null,
+      "heuristic_min_days": null,
+      "cutoff_note": null
+    },
+    "max_arb_years_standard": null,
+    "max_arb_years_super_two": null
+  },
+
+  "options": {
+    "standard_option_years": null,
+    "days_to_burn_option_year": null,
+    "fourth_option_conditions": null,
+    "max_optional_assignments_per_season": null
+  },
+
+  "rule_5": {
+    "protected_seasons_if_signed_at_18_or_younger": null,
+    "protected_seasons_if_signed_at_19_or_older": null
+  },
+
+  "salary": {
+    "mlb_minimum": null,
+    "mlb_minimum_year": null,
+    "mlb_minimum_schedule": {},
+    "pre_arb_bonus_pool": null
+  },
+
+  "roster": {
+    "active_roster": null,
+    "active_roster_september": null,
+    "reserve_list": null
+  },
+
+  "sources": {}
+}
