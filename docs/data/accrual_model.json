@@ -1,0 +1,99 @@
+{
+ "generated_at": "2026-09-02",
+ "source": "Measured from this project's own database: every player-season transition where the player was in the majors in the first season.",
+ "method": "For each player-season in which a player accrued at least one day, record what he accrued the FOLLOWING season. Banded by cumulative credited service at the start of that following season. Excludes prorated seasons, the current unfinished season, and seasons credited by debut presumption rather than transactions.",
+ "caveats": [
+  "This is what comparable players DID, not a forecast for any individual. A player's own health, role and club decide his year.",
+  "It is measured from estimated service time, so it inherits every limitation of the estimates behind it.",
+  "Bands with a small sample are marked enough_data: false and should not be presented as a distribution."
+ ],
+ "full_year_days": 172,
+ "transitions": 16333,
+ "min_band_sample": 100,
+ "bands": [
+  {
+   "band": 0,
+   "label": "0.000-1.000",
+   "sample": 6197,
+   "enough_data": true,
+   "p20": 32,
+   "p50": 124,
+   "p80": 172,
+   "mean": 106.8,
+   "share_full_year": 0.356,
+   "share_zero": 0.074
+  },
+  {
+   "band": 1,
+   "label": "1.000-2.000",
+   "sample": 2137,
+   "enough_data": true,
+   "p20": 61,
+   "p50": 172,
+   "p80": 172,
+   "mean": 128.8,
+   "share_full_year": 0.555,
+   "share_zero": 0.055
+  },
+  {
+   "band": 2,
+   "label": "2.000-3.000",
+   "sample": 1677,
+   "enough_data": true,
+   "p20": 82,
+   "p50": 172,
+   "p80": 172,
+   "mean": 136.4,
+   "share_full_year": 0.636,
+   "share_zero": 0.055
+  },
+  {
+   "band": 3,
+   "label": "3.000-4.000",
+   "sample": 1325,
+   "enough_data": true,
+   "p20": 108,
+   "p50": 172,
+   "p80": 172,
+   "mean": 143.3,
+   "share_full_year": 0.705,
+   "share_zero": 0.037
+  },
+  {
+   "band": 4,
+   "label": "4.000-5.000",
+   "sample": 1317,
+   "enough_data": true,
+   "p20": 151,
+   "p50": 172,
+   "p80": 172,
+   "mean": 149.7,
+   "share_full_year": 0.77,
+   "share_zero": 0.035
+  },
+  {
+   "band": 5,
+   "label": "5.000-6.000",
+   "sample": 1041,
+   "enough_data": true,
+   "p20": 172,
+   "p50": 172,
+   "p80": 172,
+   "mean": 155.5,
+   "share_full_year": 0.816,
+   "share_zero": 0.022
+  },
+  {
+   "band": 6,
+   "label": "6.000+",
+   "sample": 2639,
+   "enough_data": true,
+   "p20": 172,
+   "p50": 172,
+   "p80": 172,
+   "mean": 156.4,
+   "share_full_year": 0.818,
+   "share_zero": 0.016
+  }
+ ]
+}

@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contract Clock — thresholds, projections and offer value</title>
+
+<meta name="description" content="Where a player stands against arbitration and free agency, when comparable players crossed those lines, and what a contract offer guarantees in present-value and net terms. Free, runs entirely in your browser." />
+<meta name="theme-color" content="#0a0c10" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Contract Clock" />
+<meta property="og:description" content="Threshold projections from measured league history, present value of an offer, and the same player under two CBAs." />
+<link rel="canonical" href="https://bigleagueservicetime.com/contract.html" />
+<meta property="og:url" content="https://bigleagueservicetime.com/contract.html" />
+<meta name="twitter:card" content="summary" />
+
+<script>
+  try {
+    var t = localStorage.getItem("mlb-service-time-theme");
+    if (t) document.documentElement.setAttribute("data-theme", t);
+  } catch (e) {}
+</script>
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="taxes.css" />
+</head>
+<body>
+  <div class="viz-root" id="root">
+
+    <header class="page-header">
+      <div class="page-header-inner">
+        <h1>
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+            <circle cx="16" cy="16" r="14" class="bm-ball" />
+            <path d="M7.2 5.6c3.6 3 5.4 6.5 5.4 10.4s-1.8 7.4-5.4 10.4" class="bm-seam" />
+            <path d="M24.8 5.6c-3.6 3-5.4 6.5-5.4 10.4s1.8 7.4 5.4 10.4" class="bm-seam" />
+          </svg>
+          <span>Contract Clock</span>
+        </h1>
+        <p class="subtitle">Where a player stands against the thresholds, when comparable players crossed them, and what an offer guarantees after discounting and deductions.</p>
+        <p class="header-link"><a href="./">Service time tracker</a> · <a href="taxes.html">Duty days</a> · <a href="neutrality.html">Neutrality</a></p>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" type="button">
+        <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" />
+        </svg>
+        <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4.2" />
+          <path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.2 5.2l1.9 1.9M16.9 16.9l1.9 1.9M18.8 5.2l-1.9 1.9M7.1 16.9l-1.9 1.9" />
+        </svg>
+      </button>
+    </header>
+
+    <div class="disclaimer-banner">
+      <span class="disclaimer-icon" aria-hidden="true">ⓘ</span>
+      <span><strong>This reports figures. It does not tell anyone what to do.</strong> Service time here is an estimate reconstructed from public transaction records, not an official MLB/MLBPA figure. Nothing on this page is financial, tax or legal advice, and no part of it is a substitute for a qualified professional or an agent.</span>
+    </div>
+
+    <div class="privacy-note">
+      <strong>Nothing you type here leaves your device.</strong> No account, no server, no upload. Figures are computed in your browser and nothing is saved anywhere but this browser.
+    </div>
+
+    <main class="tax-main">
+
+      <!-- 1. The clock -->
+      <section class="panel">
+        <h2><span class="step-n">1</span> The clock</h2>
+        <div class="field-grid">
+          <label>Find a player
+            <input type="text" id="in-player" list="player-list" placeholder="Start typing a name…" autocomplete="off" />
+            <datalist id="player-list"></datalist>
+          </label>
+          <label>Or enter service time
+            <input type="text" id="in-service" placeholder="e.g. 2.100" inputmode="decimal" />
+          </label>
+          <label>Current season
+            <input type="number" id="in-season" min="2000" max="2100" />
+          </label>
+        </div>
+        <p class="panel-note" id="clock-status">Loading players…</p>
+        <div class="tiles" id="clock-tiles"></div>
+      </section>
+
+      <!-- 2. Projection -->
+      <section class="panel" id="panel-projection" hidden>
+        <h2><span class="step-n">2</span> When comparable players crossed the line</h2>
+        <p class="panel-note" id="projection-basis"></p>
+        <div class="table-scroll">
+          <table class="alloc-table" id="projection-table">
+            <thead>
+              <tr>
+                <th>Threshold</th>
+                <th class="num">Days remaining</th>
+                <th>Slower than most<br /><span class="th-sub">20th percentile</span></th>
+                <th>Typical<br /><span class="th-sub">median</span></th>
+                <th>Faster than most<br /><span class="th-sub">80th percentile</span></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="warn-list" id="projection-notes"></div>
+      </section>
+
+      <!-- 3. Ruleset comparison -->
+      <section class="panel" id="panel-rulesets" hidden>
+        <h2><span class="step-n">3</span> The same player under two agreements</h2>
+        <p class="panel-note">
+          The 2022 Basic Agreement expires 11:59pm ET on 1 December 2026, and service time, arbitration and free agency are central to the dispute. This runs the same service time under two rulesets and shows the difference. Edit the second column to model a proposal.
+        </p>
+        <div class="field-grid">
+          <label>Compare against
+            <select id="in-ruleset-b"></select>
+          </label>
+          <label>Days per credited year
+            <input type="number" id="in-b-fyd" min="1" max="365" />
+          </label>
+          <label>Years to arbitration
+            <input type="number" id="in-b-arb" min="0" max="15" step="0.5" />
+          </label>
+          <label>Years to free agency
+            <input type="number" id="in-b-fa" min="0" max="15" step="0.5" />
+          </label>
+        </div>
+        <div class="table-scroll">
+          <table class="alloc-table" id="ruleset-table">
+            <thead>
+              <tr>
+                <th>Threshold</th>
+                <th>Under 2022</th>
+                <th>Under the comparison</th>
+                <th class="num">Difference</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="panel-note" id="ruleset-note"></p>
+      </section>
+
+      <!-- 4. Offer -->
+      <section class="panel">
+        <h2><span class="step-n">4</span> What an offer guarantees</h2>
+        <p class="panel-note">
+          Enter the years of an offer. Money that is not guaranteed — club options, vesting years, incentives — belongs in the “guaranteed” column as “no”, and is reported separately rather than added to the total.
+        </p>
+
+        <div class="table-scroll">
+          <table class="alloc-table" id="offer-table">
+            <thead>
+              <tr><th>Season</th><th class="num">Amount ($)</th><th>Guaranteed</th><th>Note</th><th></th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="panel-actions">
+          <button type="button" id="btn-add-year" class="btn">Add a year</button>
+        </div>
+
+        <h3 class="sub-h">Your assumptions</h3>
+        <p class="panel-note">
+          Every rate below is <b>yours</b>, not this site's. None is looked up, verified or supplied by the tool — they are here so the arithmetic is visible and you can change any of it.
+        </p>
+        <div class="field-grid">
+          <label>Discount rate <span class="hint" title="What a dollar next year is worth to you today. Deferred money is worth less than money now; this is the rate that expresses how much less.">?</span>
+            <input type="number" id="in-discount" min="0" max="0.3" step="0.005" value="0.05" />
+          </label>
+          <label>Agent commission
+            <input type="number" id="in-agent" min="0" max="0.15" step="0.005" value="0.04" />
+          </label>
+          <label>Federal effective rate
+            <input type="number" id="in-federal" min="0" max="0.6" step="0.01" value="0.35" />
+          </label>
+          <label>State effective rate
+            <input type="number" id="in-state" min="0" max="0.2" step="0.005" value="0" />
+          </label>
+          <label>Dues and other ($)
+            <input type="number" id="in-dues" min="0" step="1000" value="0" />
+          </label>
+        </div>
+
+        <div class="tiles" id="offer-tiles"></div>
+        <div class="table-scroll">
+          <table class="alloc-table" id="offer-detail">
+            <thead>
+              <tr><th>Season</th><th class="num">Amount</th><th class="num">Years out</th><th class="num">Discount factor</th><th class="num">Present value</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="warn-list" id="offer-notes"></div>
+      </section>
+
+      <!-- What is deliberately absent -->
+      <section class="panel panel-absent">
+        <h2>What this page does not compute, and why</h2>
+        <p class="panel-note">
+          There is no modelled outcome for declining an offer, no projected arbitration salary, and no comparable-player set. All three need league-wide salary data, and this project has none.
+        </p>
+        <p class="panel-note">
+          The service-time database has never held salaries. Published arbitration projections are someone else's work, and republishing them is the same line this project already drew over Baseball Reference's figures and over MLB's photographs. No free, permitted, machine-readable salary source has been found.
+        </p>
+        <p class="panel-note">
+          A breakeven figure assembled from invented salaries would be the most confident-looking and least defensible number on this site, so the branch is absent rather than approximated. What is here instead rests on facts you supply or on figures the database already holds.
+        </p>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p>
+        Not affiliated with or endorsed by MLB or the MLBPA. Service time figures
+        are estimates, not official MLB/MLBPA figures. Nothing here is financial,
+        tax or legal advice.
+      </p>
+      <p><a href="./">Service time tracker</a> · <a href="taxes.html">Duty days</a> · <a href="neutrality.html">Neutrality</a> · <a href="service-time.html">What is service time?</a></p>
+    </footer>
+  </div>
+
+  <script src="contract.js"></script>
+  <script src="contract-page.js"></script>
+  <!-- Cloudflare Web Analytics; see the note in taxes.html. --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b1a0b70a9b8944a9892a99bc56e22e15"}'></script>
+</body>
+</html>

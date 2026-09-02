@@ -976,6 +976,7 @@ EXPLAINER_PATH = "service-time.html"
 # as a generated page's.
 HAND_WRITTEN_PAGES = [
     ("taxes.html", "0.9"),
+    ("contract.html", "0.9"),
     ("neutrality.html", "0.5"),
 ]
 

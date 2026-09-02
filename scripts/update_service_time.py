@@ -40,6 +40,7 @@ import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
+import accrual_model  # noqa: E402
 import cba  # noqa: E402
 import fetch_mlb_data as mlb  # noqa: E402
 import super_two  # noqa: E402
@@ -1017,10 +1018,34 @@ def _write_outputs(db: dict[str, dict]) -> None:
     print(f"Wrote {len(db)} player records to {OUTPUT_FILE}")
     write_index(db, cutoff)
     write_profiles(db)
+    # The empirical accrual distribution behind the contract page's threshold
+    # projections. Derived from the database, so it belongs with the other
+    # derived passes and is refreshed by --recompute-derived like the rest.
+    _write_accrual_model(db)
     # Crawlable static pages. Hash routing is invisible to search engines, so
     # without these no player could be found by searching for him.
     write_player_pages(db, output["generated_at"], super_two_cutoff=cutoff)
     report_debuted_but_empty(db)
+
+
+def _write_accrual_model(db: dict[str, dict]) -> None:
+    """Measure how many days comparable players accrued the following season.
+
+    The contract page projects threshold crossings from this rather than from
+    an assumption of full seasons -- see scripts/accrual_model.py for why that
+    distinction matters and what the population is conditioned on.
+    """
+    model = accrual_model.build(
+        list(db.values()),
+        TODAY.year,
+        _RULES.require("service_time.days_per_credited_year"),
+    )
+    accrual_model.OUT_PATH.write_text(json.dumps(model, indent=1) + "\n", encoding="utf-8")
+    bands = sum(1 for b in model["bands"] if b.get("enough_data"))
+    print(
+        f"Wrote accrual model: {model['transitions']:,} player-season transitions, "
+        f"{bands} of {len(model['bands'])} bands with enough data"
+    )
 
 
 def report_debuted_but_empty(db: dict[str, dict]) -> list[dict]:

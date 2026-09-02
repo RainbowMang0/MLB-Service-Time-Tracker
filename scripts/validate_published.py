@@ -154,7 +154,7 @@ def check_links() -> list[str]:
     site_root = f"{SITE_URL}/"
 
     # 1. Hand-edited files that carry an absolute URL of their own.
-    for name in ("index.html", "taxes.html", "neutrality.html"):
+    for name in ("index.html", "taxes.html", "contract.html", "neutrality.html"):
         page = docs / name
         if not page.exists():
             continue
@@ -172,7 +172,8 @@ def check_links() -> list[str]:
     #    the generated section ("t/"), and a hand-written link is exactly the
     #    kind that rots without anyone noticing.
     generated = ([docs / "index.html", docs / "404.html",
-                  docs / "taxes.html", docs / "neutrality.html"]
+                  docs / "taxes.html", docs / "contract.html",
+                  docs / "neutrality.html"]
                  + sorted(docs.glob("p/*.html")) + sorted(docs.glob("t/*.html")))
     generated = [p for p in generated if p.exists()]
     missing_targets: set[str] = set()

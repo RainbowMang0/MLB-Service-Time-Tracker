@@ -490,3 +490,60 @@
   .panel { padding: 14px; }
   .panel-actions .btn { flex: 1 1 auto; }
 }
+
+/* --- contract page additions ---------------------------------------------
+   Shared with taxes.css rather than a third stylesheet: the two paid-section
+   pages are one instrument and should not drift apart the way the club pages
+   drifted from the main table. */
+
+.sub-h {
+  margin: 22px 0 0;
+  font-size: 0.78rem;
+  font-family: var(--mono);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* A qualifier under a table cell's headline value: the season a player would
+   cross in is the answer, the rate behind it is the working. */
+.cell-sub {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.th-sub {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  text-transform: none;
+}
+
+/* Inputs living inside a table row. Sized to the column so a five-column
+   offer table still fits a phone once the container scrolls. */
+.cell-in {
+  font: inherit;
+  font-size: 0.82rem;
+  width: 100%;
+  min-width: 90px;
+  padding: 5px 7px;
+  color: var(--text-primary);
+  background: var(--page-plane);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.cell-in.num { font-family: var(--mono); text-align: right; }
+.cell-in:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+.btn-sm { padding: 4px 9px; font-size: 0.76rem; }
+
+/* The panel that says what is deliberately not computed. Muted rather than
+   alarming: it is a scope statement, not a failure. */
+.panel-absent { border-style: dashed; }
+.panel-absent::before { opacity: 0.35; }

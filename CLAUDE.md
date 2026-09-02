@@ -51,6 +51,7 @@ time, which *does* count toward service time). The niche is real.
 scripts/fetch_mlb_data.py      thin statsapi.mlb.com client, polite rate limiting
 scripts/service_time.py        the service-time math + all domain rules
 scripts/cba.py                 loads config/cba/*.json; every threshold comes from here
+scripts/accrual_model.py       measures next-season accrual from the DB; feeds the projections
 scripts/fetch_schedules.py     club schedules + the STATE each game is played in
 scripts/update_service_time.py daily job: 40-man rosters -> compute -> merge -> JSON
 scripts/backfill_history.py    resumable backfill of non-rostered players (2009+)
@@ -71,10 +72,13 @@ config/cba/2027.json           valid placeholder that REFUSES to compute
 config/tax/duty-day-rules.json day types and whether each counts as a duty day
 config/tax/2026-states.json    52 jurisdictions; 9 verified, 43 unverified with null rates
 tests/test_service_time.py     230 tests, no pytest needed: `python tests/test_service_time.py`
-tests/duty_days.test.cjs       21 tests, no npm needed: `node --test tests/duty_days.test.cjs`
+tests/duty_days.test.cjs       27 tests, no npm needed: `node --test tests/duty_days.test.cjs`
+tests/contract.test.cjs        20 tests, incl. the advice-vocabulary lint
 docs/                          the static site (index.html, styles.css, app.js)
 docs/taxes.html/.js/.css       the Duty Day Tracker (hand-written, client-side only)
 docs/duty-days.js              the duty-day allocation engine; pure, runs in node too
+docs/contract.html/.js         the Contract Clock (contract.js is the engine, contract-page.js the UI)
+docs/data/accrual_model.json   p20/p50/p80 next-season days, by service band
 docs/neutrality.html           the neutrality statement (hand-written)
 docs/data/service_time.json    the database: every field, one object per player
 docs/data/index.json           what the browser downloads for the table (0.22 MB)
@@ -2887,6 +2891,128 @@ match moves **1 page, the one that was actually broken.**
 Hand-written pages are now content-hashed from disk too (`HAND_WRITTEN_PAGES`),
 so `taxes.html` and `neutrality.html` get an honest `lastmod` rather than
 today's date forever.
+
+---
+
+# The third tool: the contract clock (`/contract.html`)
+
+**Shipped 2026-09-02.** Phase 2 of the brief. Built free and client-side like
+the duty-day tool, and — more importantly — built around one blunt fact.
+
+## The thing that decides the whole shape: there is no salary data
+
+The brief's Module B (projected arbitration salaries, net) and Module C (the
+extension analyzer, with a modelled decline branch, breakeven and a comp set)
+both need league-wide salary data. **This project has none, and no permitted
+source has been found.**
+
+* The service-time database has never held salaries.
+* Published arbitration projections are someone else's work. Republishing
+  them is the same line already drawn over Baseball Reference's figures and
+  over MLB's photographs.
+* No free, machine-readable, permitted salary source turned up.
+
+So the **decline branch is absent, not approximated.** No modelled arb path,
+no free-agent outcome, no breakeven, no comps. A breakeven number assembled
+from invented salaries would be the most confident-looking and least
+defensible figure on the site, and it would be aimed at the single highest-
+stakes decision a player makes.
+
+`valueOffer()` ships `declineModelled: false` in its result and the page
+carries a panel saying so in plain words. A caller cannot present the accept
+side as a comparison by omission.
+
+**If salary data is ever licensed, that is the unlock for Modules B and C.**
+Nothing else is blocking them.
+
+## What IS built, and what each rests on
+
+| module | status | rests on |
+|---|---|---|
+| A — clock | **built** | the existing database |
+| B — money | **partial** | the user's own numbers; no arb projection |
+| C — extension analyzer | **accept side only** | the offer the user types |
+| D — ruleset comparison | **built** | config/cba/, already there |
+
+### Projections are measured, not assumed
+
+The obvious way to answer "when do I reach free agency?" is to assume a full
+season every year. That produces the most optimistic possible date and
+presents it as the answer.
+
+`scripts/accrual_model.py` measures it instead. For every player-season in
+the database where a player was in the majors, it records what he accrued
+**the following** season, banded by cumulative service. **16,333 transitions**
+across two decades:
+
+| band | n | p20 | p50 | p80 | full yr | zero |
+|---|---|---|---|---|---|---|
+| 0.000-1.000 | 6,197 | 32 | 124 | 172 | 36% | 7% |
+| 1.000-2.000 | 2,137 | 61 | 172 | 172 | 56% | 6% |
+| 2.000-3.000 | 1,677 | 82 | 172 | 172 | 64% | 6% |
+| 3.000-4.000 | 1,325 | 108 | 172 | 172 | 70% | 4% |
+| 4.000-5.000 | 1,317 | 151 | 172 | 172 | 77% | 4% |
+| 5.000-6.000 | 1,041 | 172 | 172 | 172 | 82% | 2% |
+| 6.000+ | 2,639 | 172 | 172 | 172 | 82% | 2% |
+
+The gradient is survivorship and it is the whole point: a player at 5-6 years
+is one who kept a job, so his band is flat at the cap. A player at 0-1 has a
+p20 of 32 days. **A 2.100 player projects to free agency in 2030 on the
+median and 2034 at p20** — a four-year spread that a full-season assumption
+would have hidden entirely.
+
+Three exclusions, each for a reason: prorated seasons (2020's counts are not
+comparable), the current unfinished season (it would understate every band),
+and `presumed` seasons (credited from the debut date, so they cluster at the
+cap by construction and would bias every band upward exactly where the feed
+is thinnest).
+
+⚠️ **Conditioned on being in the majors the previous season**, which is the
+question a reader is actually asking. Including players already out of
+baseball would drag every band toward zero and answer a question nobody
+asked.
+
+A band below `MIN_BAND_SAMPLE` (100) reports `enough_data: false` and the page
+refuses to project rather than drawing a distribution through a handful of
+careers — the same instinct as `MIN_CLASS_SIZE` in `super_two.py`.
+
+### "Never recommend" is a test, not a promise
+
+§3.4 of the brief is a hard line: the tool reports and never says take it,
+decline it, or you should. Copy review is easy to promise and easy to forget,
+so `tests/contract.test.cjs` greps the engine and the page for directive
+vocabulary and fails on a hit.
+
+⚠️ **The banned-phrase list lives in the test and only there.** The first run
+failed on `docs/contract.js`'s own header comment, which had helpfully spelled
+the phrases out. The lint was right. Comments are checked too, deliberately: a
+phrase in a comment today is a phrase in the UI after one refactor.
+
+Disclaimers are exempted by context (`not ... advice`), because "this is not
+financial advice" must not trip a check for advice.
+
+### Details worth not rediscovering
+
+* **`2.100` is 2 years and 100 days, not 2.1 years.** The page parses and
+  rejects accordingly, and says so when parsing fails. It is the commonest
+  way to misread the notation.
+* **A zero accrual rate reports "not reached at this rate", never a year.**
+  A band whose p20 is 0 would otherwise render free agency in 2125.
+  `seasonsToReach()` returns null and the null propagates to the cell.
+* **A season is capped at the credited maximum**, so no rate of accrual buys
+  a shortcut. 200 days still credits 172.
+* **Non-guaranteed money is reported separately, never added.** A club option
+  in the total would overstate an offer by exactly the amount most likely to
+  vanish.
+* **Present value is exposed with a user-set rate**, defaulting to 5%, because
+  the right rate is a judgement about the reader's alternatives rather than a
+  fact the tool knows. Deferred money without PV adjustment misleads.
+* **Every deduction rate is the user's input**, and the result says so
+  (`allRatesAreUserInputs`). The engine holds no federal bracket table, no
+  agent-commission figure and no dues schedule, and does not pretend to — the
+  same rule that governs the tax table.
+* **Comparing against `2027.json` refuses** rather than returning a delta
+  against nulls, which would be a large and meaningless number.
 
 ## Discoverability: every rostered player has a real page
 
