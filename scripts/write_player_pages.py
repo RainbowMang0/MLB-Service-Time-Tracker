@@ -43,6 +43,11 @@ import re
 import unicodedata
 import urllib.parse
 import shutil
+import sys
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+
+import cba  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
@@ -88,7 +93,13 @@ def _base_path(site_url: str) -> str:
 SITE_URL = _site_url()
 BASE_PATH = _base_path(SITE_URL)
 
-FULL_YEAR_DAYS = 172
+# From the CBA ruleset, not a literal -- see scripts/cba.py. This file draws
+# the same service-time meter as docs/app.js, so the two must agree on what a
+# full year is, and the only way to guarantee that is for both to read it from
+# config/cba/ rather than each keeping a copy.
+_RULES = cba.default()
+FULL_YEAR_DAYS = _RULES.require("service_time.days_per_credited_year")
+FREE_AGENCY_YEARS = _RULES.require("free_agency.credited_years_required")
 
 SOURCE_LABEL = {
     "read": "From transactions",
@@ -354,7 +365,7 @@ def _svc_cell(player: dict) -> str:
     shows one column over.
     """
     days = int(player.get("service_days_total") or 0)
-    pct = max(0.0, min(1.0, days / (6 * FULL_YEAR_DAYS))) * 100
+    pct = max(0.0, min(1.0, days / (FREE_AGENCY_YEARS * FULL_YEAR_DAYS))) * 100
     if player.get("free_agent_eligible"):
         fill = "f-good"
     elif player.get("super_two_candidate"):
@@ -671,7 +682,21 @@ LASTMOD_PATH = DOCS / "data" / "page_lastmod.json"
 # The footer stamp moves every day on every page whether or not anything about
 # the player changed, so it has to come out before hashing or every page looks
 # modified daily -- which is precisely the lie this is here to stop telling.
-_VOLATILE_RE = re.compile(r"Last updated \d{4}-\d{2}-\d{2}\.")
+#
+# Two wordings, not one. The generated pages say "Last updated <date>"; the
+# hand-written explainer (docs/service-time.html) says "Updated <date>", and
+# the original pattern did not match it -- so that one page reported a content
+# change every single day and carried a fresh sitemap lastmod for it. A
+# sitemap that cries wolf on one URL is the same failure as one that cries
+# wolf on all of them, just quieter. Anchoring on the optional "Last " prefix
+# covers both.
+#
+# The replacement string stays exactly "Last updated." -- not something
+# neutral like "updated." -- because the stable text is what gets hashed, so
+# changing it would rehash all 1,396 pages and bump every sitemap lastmod to
+# today for no reason. Keeping it means this fix moves the one page that was
+# actually broken and leaves the other 1,395 alone.
+_VOLATILE_RE = re.compile(r"(?:Last u|U)pdated \d{4}-\d{2}-\d{2}\.")
 
 
 def _content_key(page_html: str) -> str:
@@ -819,6 +844,21 @@ def _write_sitemap(
         f"<lastmod>{lastmod.of(EXPLAINER_PATH)}</lastmod>"
         f"<priority>0.9</priority></url>"
     )
+    # Hand-written pages. They are not generated, so nothing here can render
+    # them -- but they still need an honest lastmod, which means hashing what
+    # is actually on disk. A page missing from docs/ is skipped rather than
+    # published as a URL that 404s.
+    for path, priority in HAND_WRITTEN_PAGES:
+        source = DOCS / path
+        if not source.exists():
+            print(f"  !! {path} is listed in the sitemap but not present; skipped")
+            continue
+        lastmod.record(path, source.read_text(encoding="utf-8"))
+        urls.append(
+            f"  <url><loc>{SITE_URL}/{path}</loc>"
+            f"<lastmod>{lastmod.of(path)}</lastmod>"
+            f"<priority>{priority}</priority></url>"
+        )
     urls += [
         f"  <url><loc>{SITE_URL}/{club_path(c)}</loc>"
         f"<lastmod>{lastmod.of(club_path(c))}</lastmod>"
@@ -928,6 +968,16 @@ def _write_page_css() -> None:
 
 
 EXPLAINER_PATH = "service-time.html"
+
+# Pages that are hand-written rather than generated, but still belong in the
+# sitemap. Listed by hand for the same reason the workflows list their paths
+# by hand: sweeping docs/ wholesale would publish anything that happened to be
+# sitting there. Each is content-hashed from disk so its lastmod is as honest
+# as a generated page's.
+HAND_WRITTEN_PAGES = [
+    ("taxes.html", "0.9"),
+    ("neutrality.html", "0.5"),
+]
 
 
 def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) -> str:

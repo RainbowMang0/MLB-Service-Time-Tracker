@@ -1,0 +1,183 @@
+{
+  "version": "2022",
+  "label": "2022-2026 Basic Agreement",
+  "effective_start": "2022-03-10",
+  "effective_end": "2026-12-01T23:59:00-05:00",
+
+  "service_time": {
+    "days_per_credited_year": 172,
+    "max_days_creditable_per_season": 172,
+    "normal_season_span_days": 186,
+    "shortened_seasons": {
+      "2020": {
+        "scale_to_span_days": 186,
+        "note": "2020 ran ~66 days. Service was prorated by 186/B rather than credited raw, so a player rostered all season earned a full year."
+      }
+    }
+  },
+
+  "free_agency": {
+    "credited_years_required": 6.0
+  },
+
+  "arbitration": {
+    "standard_years_required": 3.0,
+    "super_two": {
+      "enabled": true,
+      "service_range_years": [2.0, 3.0],
+      "top_percentile": 22,
+      "minimum_prior_season_days": 86,
+      "minimum_class_size": 50,
+      "heuristic_min_days": 86,
+      "cutoff_note": "The real cutoff is set annually by the class, not by a fixed threshold. scripts/super_two.py computes it from the whole population; heuristic_min_days is only a flag for candidates when a computed cutoff is unavailable."
+    },
+    "max_arb_years_standard": 3,
+    "max_arb_years_super_two": 4
+  },
+
+  "options": {
+    "standard_option_years": 3,
+    "days_to_burn_option_year": 20,
+    "fourth_option_conditions": "UNVERIFIED — a fourth option year is available in limited cases, generally tied to the player having accumulated fewer than five full professional seasons when the first three were used. Exact condition must be read off the CBA text before anything depends on this.",
+    "max_optional_assignments_per_season": 5
+  },
+
+  "rule_5": {
+    "protected_seasons_if_signed_at_18_or_younger": 5,
+    "protected_seasons_if_signed_at_19_or_older": 4
+  },
+
+  "salary": {
+    "mlb_minimum": 780000,
+    "mlb_minimum_year": 2026,
+    "mlb_minimum_schedule": {
+      "2022": 700000,
+      "2023": 720000,
+      "2024": 740000,
+      "2025": 760000,
+      "2026": 780000
+    },
+    "pre_arb_bonus_pool": 50000000
+  },
+
+  "roster": {
+    "active_roster": 26,
+    "active_roster_september": 28,
+    "reserve_list": 40,
+    "note": "The brief's schema called the 40 an 'expanded_roster'. Those are two different things: the active roster expands to 28 in September, while 40 is the reserve list (the '40-man') and does not change. Modelled separately here on purpose."
+  },
+
+  "sources": {
+    "_legend": {
+      "verified": "Corroborated by this project's own measurement — the roster gate against MLB's historical 40-man rosters, and/or the hand-entered Baseball Reference figures. See CLAUDE.md.",
+      "documented": "Consistently and widely reported, and consistent with observed data, but NOT read off the CBA text by the author of this file.",
+      "unverified": "Not checked. Nothing may depend on this value until someone reads it off the CBA text and changes this status."
+    },
+    "service_time.days_per_credited_year": {
+      "status": "verified",
+      "note": "172 reproduces 12-of-17 exact matches against hand-entered Baseball Reference figures, with the other five within a day. See CLAUDE.md, 'The first independent check'."
+    },
+    "service_time.max_days_creditable_per_season": {
+      "status": "verified",
+      "note": "Same evidence: a player rostered a whole season reads exactly 1.000, not 1.014."
+    },
+    "service_time.normal_season_span_days": {
+      "status": "documented",
+      "note": "186 is the value that reproduces Aaron Judge's known 2020-era figure via the 186/B proration. The brief suggested 187 as 'typical_season_length_days'; 186 is kept because it is the number this project measured against a real player. Changing it changes published output."
+    },
+    "service_time.shortened_seasons.2020": {
+      "status": "documented",
+      "note": "The 186/B agreement comes from contemporaneous reporting of the March 2020 MLB/MLBPA agreement, not from the ledger. It reproduces Judge's known figure."
+    },
+    "free_agency.credited_years_required": {
+      "status": "verified",
+      "note": "6.000 years. Universally reported and consistent with every reference player in data/reference_service_time.json."
+    },
+    "arbitration.standard_years_required": {
+      "status": "verified",
+      "note": "3.000 years. Same evidence."
+    },
+    "arbitration.super_two.enabled": {
+      "status": "verified",
+      "note": "Super Two exists under this agreement. Present as a switch so a successor that abolishes it is a config edit, not a code change."
+    },
+    "arbitration.super_two.top_percentile": {
+      "status": "documented",
+      "note": "Top 22% of the two-to-three-year class. Raised from 17% in an earlier agreement. scripts/super_two.py computes cutoffs of 2.112-2.136 across 2021-2025 from this value, which land in the band where reported cutoffs historically fall — encouraging, and explicitly NOT treated as proof. See CLAUDE.md, 'Super Two, computed rather than guessed'."
+    },
+    "arbitration.super_two.minimum_prior_season_days": {
+      "status": "documented",
+      "note": "86 days in the immediately preceding season, as a second condition on top of the ranking."
+    },
+    "arbitration.super_two.service_range_years": {
+      "status": "documented",
+      "note": "At least two but fewer than three years of credited service."
+    },
+    "arbitration.super_two.minimum_class_size": {
+      "status": "project_defined",
+      "note": "NOT a CBA value. This project's own floor, below which a 22% boundary is too thin to mean anything. Lives here so it is versioned alongside the rule it guards."
+    },
+    "arbitration.super_two.heuristic_min_days": {
+      "status": "project_defined",
+      "note": "NOT a CBA value. The fallback flag used when no computed cutoff is available."
+    },
+    "arbitration.max_arb_years_standard": {
+      "status": "documented"
+    },
+    "arbitration.max_arb_years_super_two": {
+      "status": "documented",
+      "note": "A Super Two player gets a fourth trip through arbitration."
+    },
+    "options.standard_option_years": {
+      "status": "documented",
+      "note": "Three option years. Not consumed by any engine code yet."
+    },
+    "options.days_to_burn_option_year": {
+      "status": "unverified",
+      "note": "20 days on optional assignment is the commonly cited threshold for an option year to be charged. NOT verified against the CBA text and NOT consumed by any engine code. Do not surface an options count in the UI until this is checked."
+    },
+    "options.fourth_option_conditions": {
+      "status": "unverified"
+    },
+    "options.max_optional_assignments_per_season": {
+      "status": "unverified",
+      "note": "A five-per-season cap on optional assignments was introduced in this agreement. Not verified against the text."
+    },
+    "rule_5.protected_seasons_if_signed_at_18_or_younger": {
+      "status": "documented",
+      "note": "Not consumed by any engine code yet."
+    },
+    "rule_5.protected_seasons_if_signed_at_19_or_older": {
+      "status": "documented",
+      "note": "Not consumed by any engine code yet."
+    },
+    "salary.mlb_minimum": {
+      "status": "documented",
+      "note": "The final year of the schedule below. Not consumed by any engine code yet; the duty-day tool takes the player's own salary as an input rather than assuming the minimum."
+    },
+    "salary.mlb_minimum_year": {
+      "status": "documented",
+      "note": "Which season salary.mlb_minimum refers to. Kept explicit so a stale minimum cannot be read as a current one."
+    },
+    "salary.mlb_minimum_schedule": {
+      "status": "documented",
+      "note": "The agreement set a rising minimum across its term. Widely reported; not read off the text."
+    },
+    "salary.pre_arb_bonus_pool": {
+      "status": "documented",
+      "note": "$50M annual pool distributed to pre-arbitration players on performance criteria."
+    },
+    "roster.active_roster": {
+      "status": "documented",
+      "note": "26 from 2022, up from 25."
+    },
+    "roster.active_roster_september": {
+      "status": "documented",
+      "note": "28 in September, not 40. See the note on the roster block."
+    },
+    "roster.reserve_list": {
+      "status": "verified",
+      "note": "40. This project reads 40-man rosters directly from MLB's own roster endpoint every day."
+    }
+  }
+}

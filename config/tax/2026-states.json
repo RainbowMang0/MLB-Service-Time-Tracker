@@ -1,0 +1,1152 @@
+{
+  "tax_year": 2026,
+  "version": "2026.1",
+  "_what_this_file_is": [
+    "Per-jurisdiction rules for allocating a player's salary across the",
+    "states he works in. Roughly 41 states plus DC tax nonresident",
+    "athletes; the ones that do not are seeded verified below because a",
+    "state having no wage income tax is a structural fact rather than a",
+    "rate lookup.",
+    "",
+    "EVERYTHING ELSE IS status: unverified AND HAS NULL RATES, ON PURPOSE.",
+    "",
+    "The brief's instruction was: do not invent these values, seed what",
+    "can be verified from primary sources, mark the rest unverified so the",
+    "UI can suppress them, because a wrong tax number is worse than a",
+    "missing one. That is what this file does.",
+    "",
+    "What the tool still does with an unverified state: counts the duty",
+    "days, computes the allocation percentage, and puts both in the CPA",
+    "export. That is the laborious, error-prone part and it does not",
+    "depend on a rate. What it withholds is the dollar liability.",
+    "",
+    "TO VERIFY A STATE: fill in top_marginal_rate / bracket_structure,",
+    "any duty_day_overrides that differ from config/tax/duty-day-rules.json,",
+    "reciprocity, resident-credit mechanics and filing threshold; record",
+    "where each came from in `source`; set status to 'verified'. The UI",
+    "picks it up with no code change."
+  ],
+  "allocation_formula": "(duty days in jurisdiction / total duty days) * allocable income",
+  "jurisdictions": {
+    "AL": {
+      "code": "AL",
+      "name": "Alabama",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "AK": {
+      "code": "AK",
+      "name": "Alaska",
+      "has_wage_income_tax": false,
+      "taxes_nonresident_athletes": false,
+      "allocation_method": "n/a",
+      "top_marginal_rate": 0.0,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "verified",
+      "note": "No individual income tax on wages, so duty days here generate no state liability. Days are still counted: they sit in the denominator and therefore reduce every other state's share.",
+      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup."
+    },
+    "AZ": {
+      "code": "AZ",
+      "name": "Arizona",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "AR": {
+      "code": "AR",
+      "name": "Arkansas",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "CA": {
+      "code": "CA",
+      "name": "California",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "CO": {
+      "code": "CO",
+      "name": "Colorado",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "CT": {
+      "code": "CT",
+      "name": "Connecticut",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "DE": {
+      "code": "DE",
+      "name": "Delaware",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "DC": {
+      "code": "DC",
+      "name": "District of Columbia",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "FL": {
+      "code": "FL",
+      "name": "Florida",
+      "has_wage_income_tax": false,
+      "taxes_nonresident_athletes": false,
+      "allocation_method": "n/a",
+      "top_marginal_rate": 0.0,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "verified",
+      "note": "No individual income tax on wages, so duty days here generate no state liability. Days are still counted: they sit in the denominator and therefore reduce every other state's share.",
+      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup."
+    },
+    "GA": {
+      "code": "GA",
+      "name": "Georgia",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "HI": {
+      "code": "HI",
+      "name": "Hawaii",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "ID": {
+      "code": "ID",
+      "name": "Idaho",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "IL": {
+      "code": "IL",
+      "name": "Illinois",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "IN": {
+      "code": "IN",
+      "name": "Indiana",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": true,
+        "known_jurisdictions": [
+          "(Indiana counties levy a local income tax add-on)"
+        ],
+        "rates": null,
+        "status": "unverified"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "IA": {
+      "code": "IA",
+      "name": "Iowa",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "KS": {
+      "code": "KS",
+      "name": "Kansas",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "KY": {
+      "code": "KY",
+      "name": "Kentucky",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "LA": {
+      "code": "LA",
+      "name": "Louisiana",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "ME": {
+      "code": "ME",
+      "name": "Maine",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "MD": {
+      "code": "MD",
+      "name": "Maryland",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": true,
+        "known_jurisdictions": [
+          "(Maryland counties levy a local income tax add-on)"
+        ],
+        "rates": null,
+        "status": "unverified"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "MA": {
+      "code": "MA",
+      "name": "Massachusetts",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "MI": {
+      "code": "MI",
+      "name": "Michigan",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": true,
+        "known_jurisdictions": [
+          "Detroit"
+        ],
+        "rates": null,
+        "status": "unverified"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "MN": {
+      "code": "MN",
+      "name": "Minnesota",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "MS": {
+      "code": "MS",
+      "name": "Mississippi",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "MO": {
+      "code": "MO",
+      "name": "Missouri",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": true,
+        "known_jurisdictions": [
+          "Kansas City",
+          "St. Louis"
+        ],
+        "rates": null,
+        "status": "unverified"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "MT": {
+      "code": "MT",
+      "name": "Montana",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "NE": {
+      "code": "NE",
+      "name": "Nebraska",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "NV": {
+      "code": "NV",
+      "name": "Nevada",
+      "has_wage_income_tax": false,
+      "taxes_nonresident_athletes": false,
+      "allocation_method": "n/a",
+      "top_marginal_rate": 0.0,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "verified",
+      "note": "No individual income tax on wages, so duty days here generate no state liability. Days are still counted: they sit in the denominator and therefore reduce every other state's share.",
+      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup."
+    },
+    "NH": {
+      "code": "NH",
+      "name": "New Hampshire",
+      "has_wage_income_tax": false,
+      "taxes_nonresident_athletes": false,
+      "allocation_method": "n/a",
+      "top_marginal_rate": 0.0,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "verified",
+      "note": "New Hampshire taxed interest and dividends, not wages, and that tax has been repealed. No wage income tax either way. No individual income tax on wages, so duty days here generate no state liability. Days are still counted: they sit in the denominator and therefore reduce every other state's share.",
+      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup."
+    },
+    "NJ": {
+      "code": "NJ",
+      "name": "New Jersey",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "NM": {
+      "code": "NM",
+      "name": "New Mexico",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "NY": {
+      "code": "NY",
+      "name": "New York",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": true,
+        "known_jurisdictions": [
+          "New York City"
+        ],
+        "rates": null,
+        "status": "unverified"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "NC": {
+      "code": "NC",
+      "name": "North Carolina",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "ND": {
+      "code": "ND",
+      "name": "North Dakota",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "OH": {
+      "code": "OH",
+      "name": "Ohio",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": true,
+        "known_jurisdictions": [
+          "Cleveland",
+          "Cincinnati",
+          "Columbus"
+        ],
+        "rates": null,
+        "status": "unverified"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "OK": {
+      "code": "OK",
+      "name": "Oklahoma",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "OR": {
+      "code": "OR",
+      "name": "Oregon",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "PA": {
+      "code": "PA",
+      "name": "Pennsylvania",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": true,
+        "known_jurisdictions": [
+          "Philadelphia",
+          "Pittsburgh"
+        ],
+        "rates": null,
+        "status": "unverified"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "RI": {
+      "code": "RI",
+      "name": "Rhode Island",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "SC": {
+      "code": "SC",
+      "name": "South Carolina",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "SD": {
+      "code": "SD",
+      "name": "South Dakota",
+      "has_wage_income_tax": false,
+      "taxes_nonresident_athletes": false,
+      "allocation_method": "n/a",
+      "top_marginal_rate": 0.0,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "verified",
+      "note": "No individual income tax on wages, so duty days here generate no state liability. Days are still counted: they sit in the denominator and therefore reduce every other state's share.",
+      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup."
+    },
+    "TN": {
+      "code": "TN",
+      "name": "Tennessee",
+      "has_wage_income_tax": false,
+      "taxes_nonresident_athletes": false,
+      "allocation_method": "n/a",
+      "top_marginal_rate": 0.0,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "verified",
+      "note": "Tennessee's Hall tax applied to interest and dividends, not wages, and has been repealed. No individual income tax on wages, so duty days here generate no state liability. Days are still counted: they sit in the denominator and therefore reduce every other state's share.",
+      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup."
+    },
+    "TX": {
+      "code": "TX",
+      "name": "Texas",
+      "has_wage_income_tax": false,
+      "taxes_nonresident_athletes": false,
+      "allocation_method": "n/a",
+      "top_marginal_rate": 0.0,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "verified",
+      "note": "No individual income tax on wages, so duty days here generate no state liability. Days are still counted: they sit in the denominator and therefore reduce every other state's share.",
+      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup."
+    },
+    "UT": {
+      "code": "UT",
+      "name": "Utah",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "VT": {
+      "code": "VT",
+      "name": "Vermont",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "VA": {
+      "code": "VA",
+      "name": "Virginia",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "WA": {
+      "code": "WA",
+      "name": "Washington",
+      "has_wage_income_tax": false,
+      "taxes_nonresident_athletes": false,
+      "allocation_method": "n/a",
+      "top_marginal_rate": 0.0,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "verified",
+      "note": "Washington levies no tax on wage income. It does have a capital gains excise tax, which is a separate question from duty-day wage allocation. No individual income tax on wages, so duty days here generate no state liability. Days are still counted: they sit in the denominator and therefore reduce every other state's share.",
+      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup."
+    },
+    "WV": {
+      "code": "WV",
+      "name": "West Virginia",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "WI": {
+      "code": "WI",
+      "name": "Wisconsin",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+    },
+    "WY": {
+      "code": "WY",
+      "name": "Wyoming",
+      "has_wage_income_tax": false,
+      "taxes_nonresident_athletes": false,
+      "allocation_method": "n/a",
+      "top_marginal_rate": 0.0,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "verified",
+      "note": "No individual income tax on wages, so duty days here generate no state liability. Days are still counted: they sit in the denominator and therefore reduce every other state's share.",
+      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup."
+    },
+    "CA-ON": {
+      "code": "CA-ON",
+      "name": "Ontario, Canada",
+      "country": "CA",
+      "has_wage_income_tax": true,
+      "taxes_nonresident_athletes": null,
+      "allocation_method": null,
+      "top_marginal_rate": null,
+      "bracket_structure": null,
+      "duty_day_overrides": {},
+      "local_taxes": {
+        "applies": false,
+        "known_jurisdictions": [],
+        "rates": null,
+        "status": "none_known"
+      },
+      "reciprocity_with": null,
+      "resident_credit": null,
+      "filing_threshold": null,
+      "status": "unverified",
+      "note": "Toronto is a road series for every American League club and several National League ones. Days worked in Canada raise federal and provincial obligations and a treaty question, none of which this tool models. It is listed so the days are visible in the export and in the denominator rather than quietly disappearing. This one in particular is a conversation with a preparer, not a number to estimate."
+    }
+  }
+}

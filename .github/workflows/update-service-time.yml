@@ -118,6 +118,23 @@ jobs:
         if: steps.gate.outputs.run == 'true'
         run: pip install -r requirements.txt
 
+      - name: Fetch team schedules
+        # One API call, and it feeds the duty-day tool at
+        # docs/taxes.html: that page runs entirely in the browser, so the
+        # schedule has to already be sitting there as a static file.
+        #
+        # Daily rather than once a season, because games genuinely move --
+        # rainouts, doubleheaders and postseason dates all rewrite the
+        # calendar, and a duty day in the wrong state is a wrong allocation.
+        #
+        # Skipped under --recompute-derived, which promises to make no API
+        # calls at all. Failure is non-fatal on purpose: the service-time
+        # pipeline is the primary job here and must not be lost to a schedule
+        # endpoint having a bad morning.
+        if: steps.gate.outputs.run == 'true' && github.event.inputs.recompute_derived != 'true'
+        continue-on-error: true
+        run: python scripts/fetch_schedules.py --season "$(date -u +%Y)"
+
       - name: Run service time update
         if: steps.gate.outputs.run == 'true'
         run: |

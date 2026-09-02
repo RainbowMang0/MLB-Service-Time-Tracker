@@ -9,7 +9,10 @@ import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "scripts"))
 
+import cba  # noqa: E402
 from service_time import (  # noqa: E402
+    FULL_YEAR_DAYS,
+    SHORTENED_SEASONS,
     SeasonWindow,
     is_active_start,
     is_active_stop,
@@ -1747,6 +1750,185 @@ def test_a_trade_onto_an_active_roster_is_untouched():
     check("the trade still reopens the clock", intervals[-1][0] == dt.date(2014, 6, 11))
 
 
+# ===========================================================================
+# CBA rulesets (config/cba/) -- see scripts/cba.py
+# ===========================================================================
+
+
+def _alt_ruleset(mutate):
+    """A copy of the 2022 ruleset with one value changed, for A/B tests."""
+    import copy
+    import json as _json
+    import pathlib as _pathlib
+
+    path = _pathlib.Path(__file__).resolve().parents[1] / "config" / "cba" / "2022.json"
+    data = copy.deepcopy(_json.loads(path.read_text()))
+    mutate(data)
+    return cba.Ruleset(data, "test", path)
+
+
+def test_the_default_ruleset_reproduces_the_constants_the_engine_shipped_with():
+    """
+    The whole refactor is only safe if the default ruleset is exactly what was
+    hardcoded before. These five numbers are the ones published output depends
+    on; if any drifts, every figure on the site moves.
+    """
+    rules = cba.default()
+    check("172 days per credited year", rules.require("service_time.days_per_credited_year") == 172)
+    check("6.000 years to free agency", rules.require("free_agency.credited_years_required") == 6.0)
+    check("3.000 years to arbitration", rules.require("arbitration.standard_years_required") == 3.0)
+    check("Super Two class is 2.000-3.000", rules.require("arbitration.super_two.service_range_years") == [2.0, 3.0])
+    check("186-day normal season span", rules.require("service_time.normal_season_span_days") == 186)
+    check("2020 is the only prorated season", rules.shortened_seasons() == {2020: 186})
+    check("module constants agree with the ruleset", FULL_YEAR_DAYS == 172 and SHORTENED_SEASONS == {2020})
+
+
+def test_an_engine_function_computes_under_the_ruleset_it_is_given():
+    """
+    The brief's rule is computeEligibility(player, ruleset), never
+    computeEligibility(player). Proof that the parameter is live rather than
+    decorative: the same player under a ruleset with a different full-year
+    length must produce a different figure.
+    """
+    season = SeasonWindow(2023, dt.date(2023, 3, 30), dt.date(2023, 10, 1))
+    txns = [Transaction(dt.date(2023, 3, 30), "Team selected the contract of X")]
+
+    default_result = compute_service_time(txns, [season])
+    check("under the real agreement a full season is 1.000", default_result.formatted == "1.000")
+
+    def shorten_year(d):
+        d["service_time"]["days_per_credited_year"] = 100
+        d["service_time"]["max_days_creditable_per_season"] = 100
+
+    alt = compute_service_time(txns, [season], ruleset=_alt_ruleset(shorten_year))
+    check("a 100-day credited year caps the same season at 100", alt.total_days == 100)
+    check("and still formats as one full year", alt.formatted == "1.000")
+
+
+def test_free_agency_and_arbitration_thresholds_come_from_the_ruleset():
+    """A successor agreement moving free agency to 5 years must need no code."""
+    seasons = [
+        SeasonWindow(y, dt.date(y, 4, 1), dt.date(y, 9, 30)) for y in range(2018, 2023)
+    ]
+    txns = [Transaction(dt.date(2018, 4, 1), "Team selected the contract of X")]
+
+    five_years = compute_service_time(txns, seasons)
+    check("five credited years is not free agency under the 2022 rules", not five_years.is_free_agent_eligible)
+
+    def fa_at_five(d):
+        d["free_agency"]["credited_years_required"] = 5.0
+
+    alt = compute_service_time(txns, seasons, ruleset=_alt_ruleset(fa_at_five))
+    check("the same player IS a free agent under a 5-year ruleset", alt.is_free_agent_eligible)
+
+
+def test_super_two_can_be_switched_off_by_a_ruleset():
+    """
+    Owners have proposed changes to arbitration. A successor agreement that
+    abolishes Super Two must be expressible as config, not a code change.
+    """
+    seasons = [SeasonWindow(y, dt.date(y, 4, 1), dt.date(y, 9, 30)) for y in (2022, 2023)]
+    seasons.append(SeasonWindow(2024, dt.date(2024, 4, 1), dt.date(2024, 7, 15)))
+    txns = [Transaction(dt.date(2022, 4, 1), "Team selected the contract of X")]
+
+    with_s2 = compute_service_time(txns, seasons)
+    check("a 2.106 player is flagged Super Two under the 2022 rules", with_s2.is_super_two_candidate)
+
+    def disable(d):
+        d["arbitration"]["super_two"]["enabled"] = False
+
+    alt = compute_service_time(txns, seasons, ruleset=_alt_ruleset(disable))
+    check("disabled in config, the same player is not", not alt.is_super_two_candidate)
+    check("and he is no longer arbitration eligible either", not alt.is_arbitration_eligible)
+
+
+def test_the_2027_placeholder_refuses_to_compute():
+    """
+    A ruleset nobody has negotiated must not quietly credit anyone zero days.
+    This is the same instinct as marking a tax state "unverified": a missing
+    number is safe, a wrong one is not.
+    """
+    placeholder = cba.load("2027")
+    check("the placeholder loads", placeholder.version == "2027")
+    check("but reports itself unusable", not placeholder.usable)
+
+    raised = False
+    try:
+        placeholder.require("free_agency.credited_years_required")
+    except cba.UnusableRuleset:
+        raised = True
+    check("and raises rather than returning a value", raised)
+
+    raised = False
+    try:
+        compute_service_time([], [SeasonWindow(2026, dt.date(2026, 4, 1), dt.date(2026, 9, 30))], ruleset=placeholder)
+    except cba.UnusableRuleset:
+        raised = True
+    check("computing under it raises too", raised)
+
+
+def test_a_value_nobody_has_checked_cannot_be_published_by_accident():
+    """
+    Option counts are in the ruleset for shape, but no human has read them off
+    the CBA text. require_verified() is what stops them reaching a page.
+    """
+    rules = cba.default()
+    check("the option burn threshold is present", rules.get("options.days_to_burn_option_year") == 20)
+    check("and is marked unverified", rules.status("options.days_to_burn_option_year") == "unverified")
+
+    raised = False
+    try:
+        rules.require_verified("options.days_to_burn_option_year")
+    except cba.UnverifiedRulesetValue:
+        raised = True
+    check("so require_verified refuses it", raised)
+    check("while a verified value passes", rules.require_verified("service_time.days_per_credited_year") == 172)
+    check("only the option values are unverified today", rules.unverified_paths() == [
+        "options.days_to_burn_option_year",
+        "options.fourth_option_conditions",
+        "options.max_optional_assignments_per_season",
+    ])
+
+
+def test_every_ruleset_value_carries_a_source():
+    """
+    The brief asks for a `sources` field. This is what makes it real: a value
+    added later without provenance fails the suite rather than shipping
+    silently. Structural containers and notes are exempt; leaves are not.
+    """
+    import json as _json
+    import pathlib as _pathlib
+
+    path = _pathlib.Path(__file__).resolve().parents[1] / "config" / "cba" / "2022.json"
+    data = _json.loads(path.read_text())
+    sources = data.get("sources", {})
+
+    skip_top = {"version", "label", "effective_start", "effective_end", "sources", "usable", "status"}
+    missing = []
+
+    def walk(node, prefix):
+        for key, value in node.items():
+            if key.startswith("_") or key in ("note", "cutoff_note"):
+                continue
+            path_key = f"{prefix}.{key}" if prefix else key
+            if path_key in sources:
+                continue  # documented at this level; children are covered
+            if isinstance(value, dict):
+                walk(value, path_key)
+            else:
+                missing.append(path_key)
+
+    for key, value in data.items():
+        if key in skip_top:
+            continue
+        if isinstance(value, dict):
+            walk(value, key)
+        elif key not in sources:
+            missing.append(key)
+
+    check(f"every 2022 value has a sources entry (missing: {missing})", not missing)
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -1831,5 +2013,12 @@ if __name__ == "__main__":
     test_a_trade_straight_to_a_recall_is_also_a_minor_league_stint()
     test_the_stint_window_does_not_depend_on_row_order()
     test_a_trade_onto_an_active_roster_is_untouched()
+    test_the_default_ruleset_reproduces_the_constants_the_engine_shipped_with()
+    test_an_engine_function_computes_under_the_ruleset_it_is_given()
+    test_free_agency_and_arbitration_thresholds_come_from_the_ruleset()
+    test_super_two_can_be_switched_off_by_a_ruleset()
+    test_the_2027_placeholder_refuses_to_compute()
+    test_a_value_nobody_has_checked_cannot_be_published_by_accident()
+    test_every_ruleset_value_carries_a_source()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

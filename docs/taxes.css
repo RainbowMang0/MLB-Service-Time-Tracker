@@ -1,0 +1,480 @@
+/*
+ * taxes.css -- the Duty Day Tracker.
+ *
+ * Layered on top of styles.css rather than replacing it: the page-header,
+ * disclaimer banner, footer, theme toggle and every colour token come from
+ * there, so the two sections of the site read as one instrument.
+ *
+ * Two rules inherited from styles.css that must not be broken here:
+ *   1. Anything that varies by theme keys on [data-theme="light"], NEVER on
+ *      prefers-color-scheme. Dark is the site's identity, not the OS's.
+ *   2. Figures are mono (--mono). A column of numbers has to stack.
+ */
+
+.tax-main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 16px 48px;
+}
+
+/* --- privacy note ---------------------------------------------------------
+   Sits directly under the disclaimer because it is the other thing a player
+   needs to know before typing a salary into a web page. Lit left edge in the
+   accent, matching the disclaimer's treatment: an instrument note, not a
+   warning. */
+.privacy-note {
+  max-width: 1120px;
+  margin: 0 auto 20px;
+  padding: 10px 14px;
+  border-left: 2px solid var(--accent);
+  background: var(--accent-wash);
+  color: var(--text-secondary);
+  font-size: 0.86rem;
+  line-height: 1.5;
+  border-radius: 0 4px 4px 0;
+}
+
+/* --- panels --------------------------------------------------------------- */
+
+.panel {
+  position: relative;
+  margin: 0 0 22px;
+  padding: 18px;
+  background: var(--glass-surface);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* The filament along the top edge, as on the stat tiles and table panel. */
+.panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--accent) 55%, transparent),
+    transparent
+  );
+}
+
+.panel h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 6px;
+  font-size: 1.02rem;
+  letter-spacing: 0.01em;
+}
+
+.step-n {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--accent-wash);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.76rem;
+}
+
+.panel-note {
+  margin: 8px 0 0;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+.bulk-warn { color: var(--text-muted); }
+
+.panel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+/* --- form ----------------------------------------------------------------- */
+
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.field-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.field-grid input,
+.field-grid select {
+  font: inherit;
+  font-family: inherit;
+  font-size: 0.9rem;
+  letter-spacing: normal;
+  text-transform: none;
+  padding: 7px 9px;
+  color: var(--text-primary);
+  background: var(--page-plane);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+}
+
+.field-grid input:focus-visible,
+.field-grid select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.field-grid input[type="number"] { font-family: var(--mono); }
+
+.hint {
+  display: inline-grid;
+  place-items: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  cursor: help;
+  font-size: 0.62rem;
+}
+
+/* --- buttons -------------------------------------------------------------- */
+
+.btn {
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 8px 14px;
+  color: var(--text-primary);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.btn:hover { border-color: var(--accent); }
+.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+.btn-primary {
+  background: var(--accent-wash);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  color: var(--accent);
+}
+
+.btn-danger:hover { border-color: var(--status-critical); color: var(--status-critical); }
+.btn-file { display: inline-flex; align-items: center; }
+
+/* --- confirmation --------------------------------------------------------- */
+
+.confirm-summary { margin-top: 14px; font-size: 0.88rem; }
+.confirm-summary p { margin: 8px 0 0; color: var(--text-secondary); }
+.confirm-summary b { color: var(--text-primary); font-family: var(--mono); }
+.confirm-summary .warn { color: var(--status-warning); }
+
+.confirm-bar {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--gridline);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.confirm-fill {
+  height: 100%;
+  background: var(--status-good);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--status-good) 55%, transparent);
+  transition: width 0.2s ease;
+}
+
+.bulk-edit {
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.bulk-edit summary {
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+/* --- calendar ------------------------------------------------------------- */
+
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.month h3 {
+  margin: 0 0 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.month-count {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+}
+
+.day {
+  display: grid;
+  gap: 1px;
+  padding: 4px 2px;
+  min-height: 38px;
+  align-content: center;
+  justify-items: center;
+  font: inherit;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--page-plane);
+  color: var(--text-secondary);
+}
+
+.day:hover { border-color: var(--accent); }
+.day:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+.dnum { font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted); }
+.djur { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.04em; }
+
+/* A duty day is lit; a non-counting day is not. Confirmation is carried by
+   the border, so the two signals never collide -- a day can be a duty day and
+   still unconfirmed, which is the state that matters most. */
+.day.counts { background: var(--accent-wash); color: var(--text-primary); }
+.day.no-count { opacity: 0.45; }
+.day.confirmed { border-color: color-mix(in srgb, var(--status-good) 60%, transparent); }
+.day.proposed { border-style: dashed; }
+
+/* --- allocation ----------------------------------------------------------- */
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin: 14px 0 18px;
+}
+
+.tile {
+  position: relative;
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--page-plane);
+  overflow: hidden;
+}
+
+.tile::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0.5;
+}
+
+.tile-partial::before { background: linear-gradient(90deg, transparent, var(--status-warning), transparent); }
+
+.tile-label {
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.tile-value { font-family: var(--mono); font-size: 1.24rem; color: var(--text-primary); }
+
+.table-scroll { overflow-x: auto; }
+
+.alloc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+}
+
+.alloc-table th,
+.alloc-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--gridline);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.alloc-table thead th {
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-bottom-color: var(--baseline);
+}
+
+.alloc-table .num { text-align: right; font-family: var(--mono); }
+
+.pill {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 1px 5px;
+  border-radius: 3px;
+  background: var(--accent-wash);
+  color: var(--accent);
+}
+
+.status {
+  font-size: 0.74rem;
+  padding: 2px 7px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.st-ok { background: var(--status-good-wash); color: var(--status-good); }
+.st-notax { background: var(--status-good-wash); color: var(--status-good); }
+.st-unverified { background: var(--status-warning-wash); color: var(--status-warning); }
+.st-unknown { background: var(--status-serious-wash); color: var(--status-serious); }
+
+.warn-list { margin-top: 14px; }
+.warn-list ul { margin: 0; padding-left: 18px; }
+.warn-list li {
+  color: var(--text-secondary);
+  font-size: 0.83rem;
+  line-height: 1.55;
+  margin-bottom: 5px;
+}
+
+/* --- the printable worksheet ---------------------------------------------
+   Hidden on screen entirely. On paper it is the ONLY thing shown: the whole
+   point is a document a CPA can read without the app around it. Printed in
+   black on white regardless of theme -- a dark-mode PDF would waste a
+   cartridge and read badly. */
+
+.print-only { display: none; }
+
+@media print {
+  .page-header,
+  .disclaimer-banner,
+  .privacy-note,
+  .tax-main,
+  .page-footer,
+  .theme-toggle {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block;
+    color: #000;
+    background: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 10.5pt;
+    line-height: 1.4;
+  }
+
+  .viz-root::before { display: none; }
+  .viz-root { background: #fff; }
+
+  .print-only h1 { font-size: 16pt; margin: 0 0 2pt; }
+  .print-only h2 {
+    font-size: 12pt;
+    margin: 16pt 0 4pt;
+    border-bottom: 1px solid #000;
+    padding-bottom: 2pt;
+  }
+
+  .ws-meta { color: #444; font-size: 9pt; margin: 0 0 10pt; }
+
+  .ws-disclaimer {
+    border: 1.5pt solid #000;
+    padding: 7pt 9pt;
+    margin: 10pt 0;
+    font-size: 9.5pt;
+  }
+
+  .ws-formula {
+    font-family: "Courier New", monospace;
+    padding: 5pt 8pt;
+    background: #f0f0f0;
+    margin: 6pt 0;
+  }
+
+  .ws-warn {
+    border-left: 3pt solid #000;
+    padding: 5pt 8pt;
+    margin: 8pt 0;
+    font-size: 9.5pt;
+  }
+
+  .ws-kv,
+  .ws-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6pt 0;
+  }
+
+  .ws-kv th,
+  .ws-kv td,
+  .ws-table th,
+  .ws-table td {
+    border: 0.5pt solid #999;
+    padding: 3pt 5pt;
+    text-align: left;
+    font-size: 9.5pt;
+  }
+
+  .ws-kv th { width: 42%; background: #f0f0f0; }
+  .ws-table thead th,
+  .ws-table tfoot th { background: #f0f0f0; font-weight: bold; }
+  .ws-table .num { text-align: right; font-family: "Courier New", monospace; }
+
+  /* The day table runs to a few hundred rows; repeating the header on every
+     printed page is what makes it usable as support rather than a wall. */
+  .ws-table thead { display: table-header-group; }
+  .ws-table tr { page-break-inside: avoid; }
+  .ws-days { font-size: 8.5pt; }
+
+  @page { margin: 14mm; }
+}
+
+/* --- narrow screens -------------------------------------------------------
+   Most of this traffic is a phone in a clubhouse. Nothing may scroll the body
+   sideways; wide tables scroll inside their own container. */
+@media (max-width: 640px) {
+  .tax-main { padding: 0 10px 32px; }
+  .month-grid { grid-template-columns: 1fr; }
+  .panel { padding: 14px; }
+  .panel-actions .btn { flex: 1 1 auto; }
+}
