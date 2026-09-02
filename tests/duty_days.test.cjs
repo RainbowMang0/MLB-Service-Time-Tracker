@@ -103,18 +103,21 @@ test("apportioning across zero duty days does not divide by zero", () => {
 // The refusal to guess -- the point of the whole design
 // -------------------------------------------------------------------------
 
-test("an unverified state gets days and a share but NO liability", () => {
-  const days = [day("2026-04-01", "game_road", "PA")];
+test("a state with no rate at all gets days and a share but NO liability", () => {
+  // Idaho: nobody has entered a rate, from either tier. The allocation is
+  // still complete and still useful -- it is the rate that is missing, not
+  // the arithmetic.
+  const days = [day("2026-04-01", "game_road", "ID")];
   const result = DD.allocate(days, {
     allocableIncome: 172000,
     rules: RULES,
     states: STATES,
   });
-  const pa = result.rows[0];
-  assert.equal(pa.dutyDays, 1);
-  assert.equal(pa.allocatedIncome, 172000);
-  assert.equal(pa.liability, null, "no liability from an unverified rate");
-  assert.equal(pa.liabilityWithheldBecause, "rules_unverified");
+  const row = result.rows[0];
+  assert.equal(row.dutyDays, 1);
+  assert.equal(row.allocatedIncome, 172000);
+  assert.equal(row.liability, null, "no liability without a rate");
+  assert.equal(row.liabilityWithheldBecause, "no_rate_on_file");
   assert.equal(result.liabilityIsPartial, true);
 });
 
@@ -131,18 +134,93 @@ test("a no-wage-tax state gets a real, confident zero", () => {
   assert.equal(tx.liabilityWithheldBecause, null);
 });
 
-test("every jurisdiction with a rate on file is one somebody verified", () => {
-  // The invariant that keeps a guessed rate from ever reaching a user: if a
-  // rate exists, its status must say a human established it.
+test("every rate on file declares which tier it came from", () => {
+  // The invariant that keeps an unlabelled rate from reaching a user. A rate
+  // may exist in one of exactly two states: verified (a person read it off
+  // the jurisdiction's own guidance) or estimate_unverified (compiled from
+  // secondary sources, and labelled that way everywhere it surfaces). There
+  // is no third option, and in particular no rate with a bare "unverified".
   for (const [code, j] of Object.entries(STATES.jurisdictions)) {
-    if (typeof j.top_marginal_rate === "number") {
-      assert.equal(
-        j.status,
-        "verified",
-        `${code} carries a rate but is not marked verified`
+    if (typeof j.rate_for_estimate === "number" && j.has_wage_income_tax !== false) {
+      assert.ok(
+        ["verified", "estimate_unverified"].includes(j.status),
+        `${code} carries a rate but its status is ${j.status}`
       );
+      assert.ok(j.source || j.status === "verified", `${code} has a rate but no source`);
     }
   }
+});
+
+test("an estimate-tier rate produces a number, flagged as an estimate", () => {
+  // This is the thing the owner asked for: a real but incomplete answer,
+  // rather than a blank. It must arrive labelled.
+  const days = [day("2026-04-01", "game_road", "IL")];
+  const result = DD.allocate(days, {
+    allocableIncome: 100000,
+    rules: RULES,
+    states: STATES,
+  });
+  const il = result.rows[0];
+  assert.equal(il.liability, 4950, "4.95% of the allocated salary");
+  assert.equal(il.liabilityBasis, "estimated_rate");
+  assert.equal(result.liabilityUsesEstimatedRates, true);
+  assert.match(il.warnings.join(" "), /rough figure from secondary sources/);
+});
+
+test("a jurisdiction whose sources disagreed gets no number at all", () => {
+  // Georgia: two summaries gave 5.19% and 5.49% the same day. Picking one
+  // would be a coin flip presented as a figure.
+  const days = [day("2026-04-01", "game_road", "GA")];
+  const result = DD.allocate(days, {
+    allocableIncome: 100000,
+    rules: RULES,
+    states: STATES,
+  });
+  assert.equal(result.rows[0].liability, null);
+  assert.equal(result.rows[0].liabilityWithheldBecause, "conflicting_sources");
+});
+
+test("a no-tax state's zero is still a verified zero, not an estimate", () => {
+  const result = DD.allocate([day("2026-04-01", "game_home", "TX")], {
+    allocableIncome: 100000,
+    rules: RULES,
+    states: STATES,
+  });
+  assert.equal(result.rows[0].liabilityBasis, "no_wage_income_tax");
+  assert.equal(result.liabilityUsesEstimatedRates, false);
+});
+
+test("a no-tax domicile means there is no credit to offset, and vice versa", () => {
+  // Getting this backwards matters more than it looks: most players domicile
+  // in Florida or Texas precisely because there is no state tax there, and
+  // telling such a player his home state will credit him would be exactly
+  // wrong. The engine exposes the fact; the UI picks the sentence.
+  const fl = STATES.jurisdictions.FL;
+  const mn = STATES.jurisdictions.MN;
+  assert.equal(fl.has_wage_income_tax, false, "no credit is available from Florida");
+  assert.equal(mn.has_wage_income_tax, true, "Minnesota does give a resident credit");
+});
+
+test("the total always declares it is before the resident credit", () => {
+  // The biggest single reason the sum is not a tax bill: a domicile state
+  // generally credits tax paid elsewhere, so adding per-state liabilities
+  // double-counts. It is a property of the result so no caller can render
+  // the total without having been told.
+  const result = DD.allocate([day("2026-04-01", "game_road", "NY")], {
+    allocableIncome: 100000,
+    rules: RULES,
+    states: STATES,
+  });
+  assert.equal(result.beforeResidentCredit, true);
+});
+
+test("New York uses the band a major league salary is actually in", () => {
+  // 9.65%, not the 10.9% headline rate that does not begin until $25M.
+  // Using the headline number would overstate essentially every player.
+  const ny = STATES.jurisdictions.NY;
+  assert.equal(ny.rate_for_estimate, 0.0965);
+  assert.equal(ny.top_marginal_rate, 0.109);
+  assert.ok(ny.rate_for_estimate < ny.top_marginal_rate);
 });
 
 test("a local-tax state warns even though it cannot compute the local tax", () => {
@@ -323,7 +401,8 @@ test("a realistic split season reconciles and reports what it withheld", () => {
   assert.equal(tx.liability, 0);
   assert.equal(tx.isDomicile, true);
 
-  assert.equal(result.jurisdictionsEstimated, 1, "only Texas can be estimated");
-  assert.equal(result.jurisdictionsWithheld, 2, "NY and PA are unverified");
-  assert.equal(result.liabilityIsPartial, true);
+  assert.equal(result.jurisdictionsEstimated, 3, "TX confidently, NY and PA on estimate rates");
+  assert.equal(result.jurisdictionsWithheld, 0);
+  assert.equal(result.liabilityUsesEstimatedRates, true, "so the total is a rough figure");
+  assert.equal(result.beforeResidentCredit, true);
 });

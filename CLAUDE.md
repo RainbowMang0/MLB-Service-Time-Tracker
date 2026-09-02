@@ -2233,11 +2233,16 @@ relies on it is listed at 0 below — those are gating items, not polish.
       agent-regulation concern (those regimes largely turn on compensation)
       but does not remove the question.
 
-   c. **Verify states one at a time, highest-traffic first.** The schema is
-      done; filling a state is data entry plus a source. Order that pays
-      off fastest: the owner's own domicile, his club's home state, then the
-      states his club visits most. Each verified state turns an allocation
-      percentage into a dollar figure with no code change.
+   c. **Upgrade states from the estimate tier to verified, highest-traffic
+      first.** 14 already produce a rough number; verifying one means reading
+      the rate off the state's own guidance and changing its status. Order
+      that pays off fastest: the owner's own domicile, his club's home state,
+      then the states his club visits most. Georgia needs doing first — its
+      sources conflicted, so it produces nothing at all today.
+
+      ⚠️ The estimate rates were compiled from web-search summaries, NOT read
+      off any primary source, because this environment blocks all of them.
+      Treat every one as needing a second pair of eyes.
 
    d. **The schedule fetch has never run live** — the build sandbox blocks
       `statsapi.mlb.com`. Watch the first daily run, and check
@@ -2712,10 +2717,63 @@ against them, and produces a worksheet for a CPA. Entirely in the browser.
 (duty days in jurisdiction / total duty days) * allocable income
 ```
 
-### The thing it will not do
+### Rates: three tiers, because "verified" has to keep meaning something
 
-**It does not estimate tax for a jurisdiction whose rules nobody has
-verified.** 43 of 52 jurisdictions in `config/tax/2026-states.json` carry
+**Changed 2026-09-02, after the owner asked for rough estimates.** The first
+version refused to produce any dollar figure for an unverified jurisdiction.
+The owner pushed back, correctly — the brief's own §10 asks for "a real but
+incomplete answer" and warns that a crippled demo damages trust.
+
+The refusal had been stated too broadly. The actual blocker was narrower: the
+build environment blocks every primary source at the network egress layer —
+state revenue sites, the IRS, the Tax Foundation, Wikipedia, all of them — so
+there were no rates to use at all. Web *search* works; web *fetch* does not.
+
+So rates now come in three tiers, and the tier is carried in the data:
+
+| tier | what it means | produces a number? |
+|---|---|---|
+| `verified` | a person read it off the jurisdiction's own guidance | yes |
+| `estimate_unverified` | compiled from web-search summaries of secondary tax sites | **yes, labelled as rough everywhere** |
+| `conflicting_sources` / no rate | sources disagreed, or nobody has entered one | no |
+
+14 jurisdictions are on the estimate tier, covering nearly every ballpark:
+AZ CA CO DC IL MA MD MI MN MO NY OH PA WI. The nine no-wage-tax states stay
+`verified` because that is structural rather than a rate lookup.
+
+**Georgia is deliberately left with no rate at all.** Two search summaries
+returned 5.19% and 5.49% on the same day. That single disagreement is the
+best argument for the tier system existing, and picking one would have been a
+coin flip presented as a figure.
+
+⚠️ **`rate_for_estimate` is not the headline top rate, and must not be
+"corrected" to it.** New York's 10.9% does not begin until $25M; the band
+almost every major league salary sits in is 9.65%. Storing the headline rate
+would overstate essentially every player. Same shape in Massachusetts (5%
+flat plus the 4% surtax above $1,107,750) and California (12.3% plus the 1%
+MHST over $1M).
+
+### Three things the estimate does not do, all of which move the number
+
+1. **No resident credit.** A domicile state generally credits tax paid to
+   other states, so summing per-state liabilities overstates the real total.
+   The tool says so wherever a total appears.
+
+   ⚠️ **And it must not say so when the domicile has no income tax.** A
+   player domiciled in Florida or Texas — which is most of them, and for this
+   exact reason — has no home-state tax for a credit to offset, so for him the
+   sum is *closer* to the truth, not further from it. The first version of
+   this warning told a Florida player his home state would credit him, which
+   is precisely backwards. Both branches are pinned by a test.
+2. **No local or city tax.** Philadelphia, Pittsburgh, the Ohio
+   municipalities, Detroit, NYC and the Maryland counties all levy on top.
+   Flagged per jurisdiction, never calculated.
+3. **One marginal rate, not a bracket walk.** Fine for a major league salary
+   in the top band; wrong for a minor league one.
+
+### The thing it still will not do
+
+**It does not invent a rate for a jurisdiction that has none.** 43 of 52 jurisdictions in `config/tax/2026-states.json` carry
 `status: "unverified"` and null rates. For those the tool still counts the
 days and computes the allocation percentage — the laborious, rate-independent
 work a preparer actually wants — and reports the liability as `null` with a
@@ -2727,8 +2785,10 @@ state's tax system rather than a rate-table lookup, stable across years, and
 the one class of entry that could be established with confidence here.
 
 An invariant pins it, checked on both sides of the fence (a JS test and
-`validate_published.py`): **if a jurisdiction carries a rate, its status must
-say a human verified it.**
+`validate_published.py`): **a jurisdiction carrying a rate must declare which
+tier it came from — `verified` or `estimate_unverified` — and an estimate-tier
+entry must record its source.** There is no third option, and in particular no
+rate sitting under a bare `unverified`.
 
 This follows the project's oldest rule — a missing number is safe, a wrong one
 is not — and the brief said the same thing independently.

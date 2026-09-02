@@ -267,10 +267,21 @@ def check_config_published() -> list[str]:
     if states_path.exists():
         states = json.loads(states_path.read_text())
         for code, j in states.get("jurisdictions", {}).items():
-            if isinstance(j.get("top_marginal_rate"), (int, float)) and j.get("status") != "verified":
+            if not isinstance(j.get("rate_for_estimate"), (int, float)):
+                continue
+            if j.get("has_wage_income_tax") is False:
+                continue  # a structural zero, not a rate anyone looked up
+            status = j.get("status")
+            if status not in ("verified", "estimate_unverified"):
                 problems.append(
-                    f"tax jurisdiction {code} carries a rate but is not marked "
-                    "verified -- an unchecked rate must never be publishable"
+                    f"tax jurisdiction {code} carries a rate but its status is "
+                    f"{status!r} -- a rate must declare which tier it came from"
+                )
+            elif status == "estimate_unverified" and not j.get("source"):
+                problems.append(
+                    f"tax jurisdiction {code} is on the estimate tier but records "
+                    "no source -- an unverified number must at least say where "
+                    "it came from"
                 )
     return problems
 

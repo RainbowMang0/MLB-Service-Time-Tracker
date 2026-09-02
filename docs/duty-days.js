@@ -291,16 +291,28 @@
       // of any other state says.
       return { liability: 0, basis: "no_wage_income_tax", reason: null };
     }
-    if (jurisdiction.status !== "verified") {
-      return { liability: null, basis: null, reason: "rules_unverified" };
+    if (jurisdiction.status === "conflicting_sources") {
+      // Two sources gave different rates. Picking one would be a coin flip
+      // presented as a figure.
+      return { liability: null, basis: null, reason: "conflicting_sources" };
     }
-    const rate = jurisdiction.top_marginal_rate;
+
+    const rate = jurisdiction.rate_for_estimate;
     if (typeof rate !== "number") {
       return { liability: null, basis: null, reason: "no_rate_on_file" };
     }
+
+    // Two tiers, and the caller must be able to tell them apart. `verified`
+    // means a person read the rate off the state's own guidance. `estimate`
+    // means it was compiled from secondary sources -- useful for orienting a
+    // conversation with a preparer, not for filing. Both produce a number;
+    // only one of them produces a number anybody should lean on.
+    const basis =
+      jurisdiction.status === "verified" ? "verified_rate" : "estimated_rate";
+
     return {
       liability: Math.round(allocatedIncome * rate * 100) / 100,
-      basis: "top_marginal_rate",
+      basis,
       reason: null,
     };
   }
@@ -333,7 +345,15 @@
       if (!j) {
         warnings.push(`No rules on file for jurisdiction "${key}".`);
       } else {
-        if (j.status !== "verified" && j.has_wage_income_tax !== false) {
+        if (j.status === "estimate_unverified") {
+          warnings.push(
+            `${j.name}: the rate used is a rough figure from secondary sources, not read off ${j.name}'s own guidance. Treat it as an order of magnitude.`
+          );
+        } else if (j.status === "conflicting_sources") {
+          warnings.push(
+            `${j.name}: sources disagreed about the rate, so none is used. Days and allocation are still shown.`
+          );
+        } else if (j.status !== "verified" && j.has_wage_income_tax !== false) {
           warnings.push(
             `${j.name}: rules are unverified, so no liability is estimated. Days and allocation are still shown.`
           );
@@ -373,6 +393,7 @@
 
     const estimated = rows.filter((r) => r.liability !== null);
     const withheld = rows.filter((r) => r.liability === null);
+    const onEstimatedRates = rows.filter((r) => r.liabilityBasis === "estimated_rate");
 
     return {
       schemaVersion: SCHEMA_VERSION,
@@ -387,8 +408,18 @@
       jurisdictionsEstimated: estimated.length,
       jurisdictionsWithheld: withheld.length,
       // Deliberately explicit rather than derived in the UI: a reader has to
-      // be able to see at a glance that the total is partial.
+      // be able to see at a glance what kind of number this is.
       liabilityIsPartial: withheld.length > 0,
+      // True as soon as ANY row used a secondary-source rate. The whole total
+      // is then a rough figure, not just that row -- which is why this is a
+      // property of the result rather than something the UI infers per row.
+      liabilityUsesEstimatedRates: onEstimatedRates.length > 0,
+      jurisdictionsOnEstimatedRates: onEstimatedRates.length,
+      // The single biggest reason this sum is not a tax bill. A domicile state
+      // generally credits tax paid to other states, so adding per-state
+      // liabilities double-counts. Stated as a flag so no caller can present
+      // the total without it.
+      beforeResidentCredit: true,
     };
   }
 

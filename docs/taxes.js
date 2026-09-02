@@ -390,16 +390,23 @@
       <div class="tile"><span class="tile-label">Duty days</span><span class="tile-value">${result.totalDutyDays.toLocaleString()}</span></div>
       <div class="tile"><span class="tile-label">Jurisdictions</span><span class="tile-value">${result.rows.length}</span></div>
       <div class="tile"><span class="tile-label">Salary allocated</span><span class="tile-value">${money(result.totalAllocated)}</span></div>
-      <div class="tile ${result.liabilityIsPartial ? "tile-partial" : ""}">
-        <span class="tile-label">Estimated tax${result.liabilityIsPartial ? " (partial)" : ""}</span>
+      <div class="tile ${result.liabilityIsPartial || result.liabilityUsesEstimatedRates ? "tile-partial" : ""}">
+        <span class="tile-label">Rough state tax${result.liabilityIsPartial ? " (partial)" : ""}</span>
         <span class="tile-value">${money(result.estimatedLiability)}</span>
+        <span class="tile-foot">before home-state credit</span>
       </div>`;
 
     const tbody = $("alloc-table").querySelector("tbody");
     tbody.innerHTML = result.rows
       .map((r) => {
         let statusText, statusClass;
-        if (r.liabilityWithheldBecause === "rules_unverified") {
+        if (r.liabilityBasis === "estimated_rate") {
+          statusText = "Rough estimate — rate not verified";
+          statusClass = "st-estimate";
+        } else if (r.liabilityWithheldBecause === "conflicting_sources") {
+          statusText = "Sources disagreed — no estimate";
+          statusClass = "st-unverified";
+        } else if (r.liabilityWithheldBecause === "rules_unverified") {
           statusText = "Rules not verified — no estimate";
           statusClass = "st-unverified";
         } else if (r.liabilityWithheldBecause === "no_rate_on_file") {
@@ -412,7 +419,7 @@
           statusText = "No wage income tax";
           statusClass = "st-notax";
         } else {
-          statusText = "Estimated at top marginal rate";
+          statusText = "Verified rate";
           statusClass = "st-ok";
         }
         return `<tr>
@@ -427,6 +434,39 @@
       .join("");
 
     const warnings = [];
+    // Ordered deliberately: the resident credit is the single biggest reason
+    // this sum is not a tax bill, so it goes first and appears whenever there
+    // is a number at all.
+    if (result.estimatedLiability > 0) {
+      const dom = STATES.jurisdictions[season.profile.domicile] || null;
+      // Whether the resident credit applies at all depends on the domicile,
+      // and getting this backwards matters: a player domiciled in Florida or
+      // Texas has no home-state tax for a credit to offset, so for him the
+      // sum is much closer to the real total. Telling him it overstates would
+      // be wrong in exactly the case most players are in.
+      if (dom && dom.has_wage_income_tax === false) {
+        warnings.push(
+          `<b>This is a rough figure.</b> You are domiciled in ${dom.name}, which has no ` +
+            `wage income tax — so there is no resident credit to offset these, and the ` +
+            `column above is closer to a real state total than it would be otherwise. ` +
+            `It still excludes city and local taxes, and applies one marginal rate per ` +
+            `state rather than walking brackets.`
+        );
+      } else {
+        warnings.push(
+          `<b>This is a rough figure, and it is a sum before your home-state credit.</b> ` +
+            `${dom ? dom.name : "Your domicile state"} generally credits you for tax paid ` +
+            `to other states, so adding the column above overstates what you actually pay — ` +
+            `often substantially. It also excludes city and local taxes, and applies one ` +
+            `marginal rate rather than walking brackets.`
+        );
+      }
+    }
+    if (result.liabilityUsesEstimatedRates) {
+      warnings.push(
+        `${result.jurisdictionsOnEstimatedRates} of ${result.rows.length} jurisdictions used a rate compiled from secondary sources rather than read off that state's own guidance. Good enough to orient a conversation with your CPA; not good enough to file on.`
+      );
+    }
     if (result.liabilityIsPartial) {
       warnings.push(
         `<b>The estimated tax total is partial and understates your liability.</b> ` +
@@ -517,8 +557,22 @@
         <tfoot><tr><th>Total</th><th class="num">${result.totalDutyDays}</th><th class="num">100%</th><th class="num">${money(result.totalAllocated)}</th><th class="num">${money(result.estimatedLiability)}${result.liabilityIsPartial ? " (partial)" : ""}</th></tr></tfoot>
       </table>
       ${
+        result.estimatedLiability > 0
+          ? `<p class="ws-warn"><b>The tax column is a rough figure, not a liability.</b>
+             It is a sum <i>before</i> any resident credit: the player's domicile state
+             generally credits tax paid to other states, so adding these rows overstates
+             the true total, often substantially. It excludes city and local taxes
+             entirely, and applies a single marginal rate per jurisdiction rather than
+             walking brackets.${
+               result.liabilityUsesEstimatedRates
+                 ? ` ${result.jurisdictionsOnEstimatedRates} of ${result.rows.length} rates were compiled from secondary sources rather than read off the jurisdiction's own guidance.`
+                 : ""
+             }</p>`
+          : ""
+      }
+      ${
         result.liabilityIsPartial
-          ? `<p class="ws-warn"><b>The tax column is incomplete.</b> ${result.jurisdictionsWithheld} of ${result.rows.length} jurisdictions have no verified rate in this tool, so no tax was estimated for them and the total above understates the liability. Duty days and allocated salary are complete for every jurisdiction.</p>`
+          ? `<p class="ws-warn"><b>The tax column is also incomplete.</b> ${result.jurisdictionsWithheld} of ${result.rows.length} jurisdictions have no verified rate in this tool, so no tax was estimated for them and the total above understates the liability. Duty days and allocated salary are complete for every jurisdiction.</p>`
           : ""
       }
 

@@ -69,7 +69,8 @@
       "filing_threshold": null,
       "status": "verified",
       "note": "No individual income tax on wages, so duty days here generate no state liability. Days are still counted: they sit in the denominator and therefore reduce every other state's share.",
-      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup."
+      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup.",
+      "rate_for_estimate": 0.0
     },
     "AZ": {
       "code": "AZ",
@@ -77,7 +78,7 @@
       "has_wage_income_tax": true,
       "taxes_nonresident_athletes": null,
       "allocation_method": null,
-      "top_marginal_rate": null,
+      "top_marginal_rate": 0.025,
       "bracket_structure": null,
       "duty_day_overrides": {},
       "local_taxes": {
@@ -89,8 +90,10 @@
       "reciprocity_with": null,
       "resident_credit": null,
       "filing_threshold": null,
-      "status": "unverified",
-      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+      "status": "estimate_unverified",
+      "note": "Flat. Cactus League spring training state. ESTIMATE TIER: compiled from web-search summaries of secondary tax sites, not read off state guidance. Good enough to orient a conversation with a preparer; not good enough to file on.",
+      "rate_for_estimate": 0.025,
+      "source": "web search summary, 2026-09-02; primary sources unreachable from the build environment"
     },
     "AR": {
       "code": "AR",
@@ -119,7 +122,7 @@
       "has_wage_income_tax": true,
       "taxes_nonresident_athletes": null,
       "allocation_method": null,
-      "top_marginal_rate": null,
+      "top_marginal_rate": 0.133,
       "bracket_structure": null,
       "duty_day_overrides": {},
       "local_taxes": {
@@ -131,8 +134,10 @@
       "reciprocity_with": null,
       "resident_credit": null,
       "filing_threshold": null,
-      "status": "unverified",
-      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+      "status": "estimate_unverified",
+      "note": "12.3% top regular rate plus the 1% Mental Health Services Tax on income over $1M, so 13.3% for essentially any major league salary. ESTIMATE TIER: compiled from web-search summaries of secondary tax sites, not read off state guidance. Good enough to orient a conversation with a preparer; not good enough to file on.",
+      "rate_for_estimate": 0.133,
+      "source": "web search summary, 2026-09-02; primary sources unreachable from the build environment"
     },
     "CO": {
       "code": "CO",
@@ -140,7 +145,7 @@
       "has_wage_income_tax": true,
       "taxes_nonresident_athletes": null,
       "allocation_method": null,
-      "top_marginal_rate": null,
+      "top_marginal_rate": 0.044,
       "bracket_structure": null,
       "duty_day_overrides": {},
       "local_taxes": {
@@ -152,8 +157,10 @@
       "reciprocity_with": null,
       "resident_credit": null,
       "filing_threshold": null,
-      "status": "unverified",
-      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+      "status": "estimate_unverified",
+      "note": "Flat. ESTIMATE TIER: compiled from web-search summaries of secondary tax sites, not read off state guidance. Good enough to orient a conversation with a preparer; not good enough to file on.",
+      "rate_for_estimate": 0.044,
+      "source": "web search summary, 2026-09-02; primary sources unreachable from the build environment"
     },
     "CT": {
       "code": "CT",
@@ -203,7 +210,7 @@
       "has_wage_income_tax": true,
       "taxes_nonresident_athletes": null,
       "allocation_method": null,
-      "top_marginal_rate": null,
+      "top_marginal_rate": 0.1075,
       "bracket_structure": null,
       "duty_day_overrides": {},
       "local_taxes": {
@@ -215,8 +222,10 @@
       "reciprocity_with": null,
       "resident_credit": null,
       "filing_threshold": null,
-      "status": "unverified",
-      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+      "status": "estimate_unverified",
+      "note": "Graduated, 4%-10.75%; top band assumed. ESTIMATE TIER: compiled from web-search summaries of secondary tax sites, not read off state guidance. Good enough to orient a conversation with a preparer; not good enough to file on.",
+      "rate_for_estimate": 0.1075,
+      "source": "web search summary, 2026-09-02; primary sources unreachable from the build environment"
     },
     "FL": {
       "code": "FL",
@@ -238,7 +247,8 @@
       "filing_threshold": null,
       "status": "verified",
       "note": "No individual income tax on wages, so duty days here generate no state liability. Days are still counted: they sit in the denominator and therefore reduce every other state's share.",
-      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup."
+      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup.",
+      "rate_for_estimate": 0.0
     },
     "GA": {
       "code": "GA",
@@ -258,8 +268,9 @@
       "reciprocity_with": null,
       "resident_credit": null,
       "filing_threshold": null,
-      "status": "unverified",
-      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+      "status": "conflicting_sources",
+      "note": "Search summaries gave BOTH 5.19% and 5.49% for 2026 on the same day. Two secondary sources disagreeing is exactly the reason this tier is not called verified. Left unset until someone reads the statute.",
+      "rate_for_estimate": null
     },
     "HI": {
       "code": "HI",
@@ -309,7 +320,7 @@
       "has_wage_income_tax": true,
       "taxes_nonresident_athletes": null,
       "allocation_method": null,
-      "top_marginal_rate": null,
+      "top_marginal_rate": 0.0495,
       "bracket_structure": null,
       "duty_day_overrides": {},
       "local_taxes": {
@@ -321,8 +332,10 @@
       "reciprocity_with": null,
       "resident_credit": null,
       "filing_threshold": null,
-      "status": "unverified",
-      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+      "status": "estimate_unverified",
+      "note": "Flat. ESTIMATE TIER: compiled from web-search summaries of secondary tax sites, not read off state guidance. Good enough to orient a conversation with a preparer; not good enough to file on.",
+      "rate_for_estimate": 0.0495,
+      "source": "web search summary, 2026-09-02; primary sources unreachable from the build environment"
     },
     "IN": {
       "code": "IN",
@@ -458,7 +471,7 @@
       "has_wage_income_tax": true,
       "taxes_nonresident_athletes": null,
       "allocation_method": null,
-      "top_marginal_rate": null,
+      "top_marginal_rate": 0.0575,
       "bracket_structure": null,
       "duty_day_overrides": {},
       "local_taxes": {
@@ -472,8 +485,10 @@
       "reciprocity_with": null,
       "resident_credit": null,
       "filing_threshold": null,
-      "status": "unverified",
-      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+      "status": "estimate_unverified",
+      "note": "State rate only. Maryland counties levy a local income tax on top, which is NOT included here and is material. ESTIMATE TIER: compiled from web-search summaries of secondary tax sites, not read off state guidance. Good enough to orient a conversation with a preparer; not good enough to file on.",
+      "rate_for_estimate": 0.0575,
+      "source": "web search summary, 2026-09-02; primary sources unreachable from the build environment"
     },
     "MA": {
       "code": "MA",
@@ -481,7 +496,7 @@
       "has_wage_income_tax": true,
       "taxes_nonresident_athletes": null,
       "allocation_method": null,
-      "top_marginal_rate": null,
+      "top_marginal_rate": 0.09,
       "bracket_structure": null,
       "duty_day_overrides": {},
       "local_taxes": {
@@ -493,8 +508,10 @@
       "reciprocity_with": null,
       "resident_credit": null,
       "filing_threshold": null,
-      "status": "unverified",
-      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+      "status": "estimate_unverified",
+      "note": "5% flat plus the 4% 'millionaires' surtax on income above $1,107,750 in 2026 (indexed annually). The surtax is marginal, not a cliff, so 9% is the rate on the portion above that line only. ESTIMATE TIER: compiled from web-search summaries of secondary tax sites, not read off state guidance. Good enough to orient a conversation with a preparer; not good enough to file on.",
+      "rate_for_estimate": 0.09,
+      "source": "web search summary, 2026-09-02; primary sources unreachable from the build environment"
     },
     "MI": {
       "code": "MI",
@@ -502,7 +519,7 @@
       "has_wage_income_tax": true,
       "taxes_nonresident_athletes": null,
       "allocation_method": null,
-      "top_marginal_rate": null,
+      "top_marginal_rate": 0.0425,
       "bracket_structure": null,
       "duty_day_overrides": {},
       "local_taxes": {
@@ -516,8 +533,10 @@
       "reciprocity_with": null,
       "resident_credit": null,
       "filing_threshold": null,
-      "status": "unverified",
-      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+      "status": "estimate_unverified",
+      "note": "Flat. Detroit's city income tax is NOT included. ESTIMATE TIER: compiled from web-search summaries of secondary tax sites, not read off state guidance. Good enough to orient a conversation with a preparer; not good enough to file on.",
+      "rate_for_estimate": 0.0425,
+      "source": "web search summary, 2026-09-02; primary sources unreachable from the build environment"
     },
     "MN": {
       "code": "MN",
@@ -525,7 +544,7 @@
       "has_wage_income_tax": true,
       "taxes_nonresident_athletes": null,
       "allocation_method": null,
-      "top_marginal_rate": null,
+      "top_marginal_rate": 0.0985,
       "bracket_structure": null,
       "duty_day_overrides": {},
       "local_taxes": {
@@ -537,8 +556,10 @@
       "reciprocity_with": null,
       "resident_credit": null,
       "filing_threshold": null,
-      "status": "unverified",
-      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+      "status": "estimate_unverified",
+      "note": "Graduated, 5.35%-9.85%; top band assumed. ESTIMATE TIER: compiled from web-search summaries of secondary tax sites, not read off state guidance. Good enough to orient a conversation with a preparer; not good enough to file on.",
+      "rate_for_estimate": 0.0985,
+      "source": "web search summary, 2026-09-02; primary sources unreachable from the build environment"
     },
     "MS": {
       "code": "MS",
@@ -567,7 +588,7 @@
       "has_wage_income_tax": true,
       "taxes_nonresident_athletes": null,
       "allocation_method": null,
-      "top_marginal_rate": null,
+      "top_marginal_rate": 0.047,
       "bracket_structure": null,
       "duty_day_overrides": {},
       "local_taxes": {
@@ -582,8 +603,10 @@
       "reciprocity_with": null,
       "resident_credit": null,
       "filing_threshold": null,
-      "status": "unverified",
-      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+      "status": "estimate_unverified",
+      "note": "Graduated, 0%-4.7%; top band assumed. ESTIMATE TIER: compiled from web-search summaries of secondary tax sites, not read off state guidance. Good enough to orient a conversation with a preparer; not good enough to file on.",
+      "rate_for_estimate": 0.047,
+      "source": "web search summary, 2026-09-02; primary sources unreachable from the build environment"
     },
     "MT": {
       "code": "MT",
@@ -647,7 +670,8 @@
       "filing_threshold": null,
       "status": "verified",
       "note": "No individual income tax on wages, so duty days here generate no state liability. Days are still counted: they sit in the denominator and therefore reduce every other state's share.",
-      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup."
+      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup.",
+      "rate_for_estimate": 0.0
     },
     "NH": {
       "code": "NH",
@@ -669,7 +693,8 @@
       "filing_threshold": null,
       "status": "verified",
       "note": "New Hampshire taxed interest and dividends, not wages, and that tax has been repealed. No wage income tax either way. No individual income tax on wages, so duty days here generate no state liability. Days are still counted: they sit in the denominator and therefore reduce every other state's share.",
-      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup."
+      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup.",
+      "rate_for_estimate": 0.0
     },
     "NJ": {
       "code": "NJ",
@@ -719,7 +744,7 @@
       "has_wage_income_tax": true,
       "taxes_nonresident_athletes": null,
       "allocation_method": null,
-      "top_marginal_rate": null,
+      "top_marginal_rate": 0.109,
       "bracket_structure": null,
       "duty_day_overrides": {},
       "local_taxes": {
@@ -733,8 +758,10 @@
       "reciprocity_with": null,
       "resident_credit": null,
       "filing_threshold": null,
-      "status": "unverified",
-      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+      "status": "estimate_unverified",
+      "note": "Graduated. 9.65% applies from $1,077,550 (single), which is the band almost every major league salary sits in. The 10.9% headline top rate does not begin until $25M and would overstate nearly every player. ESTIMATE TIER: compiled from web-search summaries of secondary tax sites, not read off state guidance. Good enough to orient a conversation with a preparer; not good enough to file on.",
+      "rate_for_estimate": 0.0965,
+      "source": "web search summary, 2026-09-02; primary sources unreachable from the build environment"
     },
     "NC": {
       "code": "NC",
@@ -784,7 +811,7 @@
       "has_wage_income_tax": true,
       "taxes_nonresident_athletes": null,
       "allocation_method": null,
-      "top_marginal_rate": null,
+      "top_marginal_rate": 0.0275,
       "bracket_structure": null,
       "duty_day_overrides": {},
       "local_taxes": {
@@ -800,8 +827,10 @@
       "reciprocity_with": null,
       "resident_credit": null,
       "filing_threshold": null,
-      "status": "unverified",
-      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+      "status": "estimate_unverified",
+      "note": "Flat 2.75% on non-business income above $26,050 from 2026-01-01. Ohio municipal income taxes are NOT included and are material. ESTIMATE TIER: compiled from web-search summaries of secondary tax sites, not read off state guidance. Good enough to orient a conversation with a preparer; not good enough to file on.",
+      "rate_for_estimate": 0.0275,
+      "source": "web search summary, 2026-09-02; primary sources unreachable from the build environment"
     },
     "OK": {
       "code": "OK",
@@ -851,7 +880,7 @@
       "has_wage_income_tax": true,
       "taxes_nonresident_athletes": null,
       "allocation_method": null,
-      "top_marginal_rate": null,
+      "top_marginal_rate": 0.0307,
       "bracket_structure": null,
       "duty_day_overrides": {},
       "local_taxes": {
@@ -866,8 +895,10 @@
       "reciprocity_with": null,
       "resident_credit": null,
       "filing_threshold": null,
-      "status": "unverified",
-      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+      "status": "estimate_unverified",
+      "note": "Flat. Local wage taxes (Philadelphia, Pittsburgh) are NOT included and are material for games in those cities. ESTIMATE TIER: compiled from web-search summaries of secondary tax sites, not read off state guidance. Good enough to orient a conversation with a preparer; not good enough to file on.",
+      "rate_for_estimate": 0.0307,
+      "source": "web search summary, 2026-09-02; primary sources unreachable from the build environment"
     },
     "RI": {
       "code": "RI",
@@ -931,7 +962,8 @@
       "filing_threshold": null,
       "status": "verified",
       "note": "No individual income tax on wages, so duty days here generate no state liability. Days are still counted: they sit in the denominator and therefore reduce every other state's share.",
-      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup."
+      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup.",
+      "rate_for_estimate": 0.0
     },
     "TN": {
       "code": "TN",
@@ -953,7 +985,8 @@
       "filing_threshold": null,
       "status": "verified",
       "note": "Tennessee's Hall tax applied to interest and dividends, not wages, and has been repealed. No individual income tax on wages, so duty days here generate no state liability. Days are still counted: they sit in the denominator and therefore reduce every other state's share.",
-      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup."
+      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup.",
+      "rate_for_estimate": 0.0
     },
     "TX": {
       "code": "TX",
@@ -975,7 +1008,8 @@
       "filing_threshold": null,
       "status": "verified",
       "note": "No individual income tax on wages, so duty days here generate no state liability. Days are still counted: they sit in the denominator and therefore reduce every other state's share.",
-      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup."
+      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup.",
+      "rate_for_estimate": 0.0
     },
     "UT": {
       "code": "UT",
@@ -1060,7 +1094,8 @@
       "filing_threshold": null,
       "status": "verified",
       "note": "Washington levies no tax on wage income. It does have a capital gains excise tax, which is a separate question from duty-day wage allocation. No individual income tax on wages, so duty days here generate no state liability. Days are still counted: they sit in the denominator and therefore reduce every other state's share.",
-      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup."
+      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup.",
+      "rate_for_estimate": 0.0
     },
     "WV": {
       "code": "WV",
@@ -1089,7 +1124,7 @@
       "has_wage_income_tax": true,
       "taxes_nonresident_athletes": null,
       "allocation_method": null,
-      "top_marginal_rate": null,
+      "top_marginal_rate": 0.0765,
       "bracket_structure": null,
       "duty_day_overrides": {},
       "local_taxes": {
@@ -1101,8 +1136,10 @@
       "reciprocity_with": null,
       "resident_credit": null,
       "filing_threshold": null,
-      "status": "unverified",
-      "note": "Rates and duty-day treatment NOT verified. The engine counts duty days and computes this state's allocation percentage, which is rate-independent and useful on its own, but it will not produce a liability estimate until someone fills in the rate structure and changes this status."
+      "status": "estimate_unverified",
+      "note": "Graduated; 7.65% top band assumed. ESTIMATE TIER: compiled from web-search summaries of secondary tax sites, not read off state guidance. Good enough to orient a conversation with a preparer; not good enough to file on.",
+      "rate_for_estimate": 0.0765,
+      "source": "web search summary, 2026-09-02; primary sources unreachable from the build environment"
     },
     "WY": {
       "code": "WY",
@@ -1124,7 +1161,8 @@
       "filing_threshold": null,
       "status": "verified",
       "note": "No individual income tax on wages, so duty days here generate no state liability. Days are still counted: they sit in the denominator and therefore reduce every other state's share.",
-      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup."
+      "source": "Structural feature of the state's tax system, stable across years. Not a rate-table lookup.",
+      "rate_for_estimate": 0.0
     },
     "CA-ON": {
       "code": "CA-ON",
@@ -1148,5 +1186,29 @@
       "status": "unverified",
       "note": "Toronto is a road series for every American League club and several National League ones. Days worked in Canada raise federal and provincial obligations and a treaty question, none of which this tool models. It is listed so the days are visible in the export and in the denominator rather than quietly disappearing. This one in particular is a conversation with a preparer, not a number to estimate."
     }
-  }
+  },
+  "_estimate_tier": [
+    "Some jurisdictions now carry `rate_for_estimate` with status",
+    "'estimate_unverified'. Those produce a ROUGH figure, clearly labelled as",
+    "such everywhere it appears.",
+    "",
+    "How that differs from 'verified': a verified entry means a person read the",
+    "number off the state's own guidance and recorded where. An estimate entry",
+    "means it was compiled from web-search summaries of secondary tax sites,",
+    "because every primary source was unreachable from the build environment.",
+    "",
+    "Georgia is left with NO rate and status 'conflicting_sources' because two",
+    "summaries disagreed (5.19% vs 5.49%) on the same day. That single",
+    "disagreement is the honest argument for this whole tier existing.",
+    "",
+    "THREE THINGS THE ESTIMATE DOES NOT DO, all of which move the number:",
+    "  1. No resident credit. Your domicile state generally credits tax paid to",
+    "     other states, so summing per-state liabilities OVERSTATES the real",
+    "     total, often substantially. The tool reports the sum before any credit",
+    "     and says so.",
+    "  2. No local or city tax. Philadelphia, Pittsburgh, the Ohio",
+    "     municipalities, Detroit, NYC and the Maryland counties all levy on top.",
+    "  3. One marginal rate, not a bracket walk. Fine for a major league salary",
+    "     sitting in the top band; wrong for a minor league one."
+  ]
 }
