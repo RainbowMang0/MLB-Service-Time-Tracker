@@ -66,9 +66,29 @@ def check_published() -> list[str]:
     idx = json.loads(INDEX_FILE.read_text())
     teams = idx["teams"]
 
+    # Read the row through the payload's OWN `fields` list rather than
+    # unpacking a fixed arity. write_index() ships that list precisely so the
+    # layout is self-describing, and this function ignored it -- so adding the
+    # `has_page` flag broke the validator with "too many values to unpack"
+    # rather than reporting anything about the data. A checker that has to be
+    # edited every time a column is appended will eventually be edited wrongly.
+    fields = idx.get("fields") or [
+        "id", "name", "team", "position", "days", "on_40_man",
+        "missing_seasons", "super_two",
+    ]
+    if len(fields) < 8:
+        return [f"index `fields` lists only {len(fields)} columns; expected at least 8"]
+
     seen = set()
     for row in idx["players"]:
-        pid, name, team_ix, _pos_ix, days, on40, _missing, super_two = row
+        if len(row) != len(fields):
+            problems.append(
+                f"index row has {len(row)} values against {len(fields)} declared fields"
+            )
+            continue
+        r = dict(zip(fields, row))
+        pid, name, team_ix = r["id"], r["name"], r["team"]
+        days, on40, super_two = r["days"], r["on_40_man"], r["super_two"]
         seen.add(pid)
         rec = db.get(pid)
         if rec is None:

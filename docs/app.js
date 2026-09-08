@@ -156,8 +156,17 @@
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/^-|-$/g, "") || "player";
 
+  // Which players HAVE a static page is decided by _should_publish() in
+  // scripts/write_player_pages.py, and the index ships the answer as a flag
+  // rather than letting this file re-derive it. The rule now depends on a
+  // player's credited-season count, which the compact index deliberately does
+  // not carry -- and a second copy of the rule in JS is exactly the drift the
+  // CBA thresholds were consolidated to stop. Older payloads have no flag, so
+  // fall back to the rule as it was when they were written.
   const playerHref = (p) =>
-    p.on_40_man ? `p/${p.id}-${playerSlug(p.name)}.html` : null;
+    (p.has_page === undefined ? p.on_40_man : p.has_page)
+      ? `p/${p.id}-${playerSlug(p.name)}.html`
+      : null;
 
   // Set from the payload. Super Two is no longer guessed at in the browser:
   // it depends on where a player ranks in the league-wide 2-3 year class, so
@@ -175,7 +184,7 @@
     const teams = payload.teams || [];
     const positions = payload.positions || [];
     return (payload.players || []).map((row) => {
-      const [id, name, teamIx, posIx, days, on40, missing, superTwoFlag] = row;
+      const [id, name, teamIx, posIx, days, on40, missing, superTwoFlag, hasPage] = row;
       const years = Math.floor(days / FULL_YEAR_DAYS);
       const rem = days % FULL_YEAR_DAYS;
       const frac = years + rem / FULL_YEAR_DAYS;
@@ -199,6 +208,7 @@
         super_two_candidate: superTwo,
         arbitration_eligible: frac >= ARBITRATION_YEARS || superTwo,
         on_40_man: on40 === 1,
+        has_page: hasPage === undefined ? undefined : hasPage === 1,
         // missing_seasons: 0 complete, -1 incomplete by an unknown amount
         // (a record written before the field existed).
         history_complete: missing === 0,

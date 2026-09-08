@@ -180,9 +180,39 @@ def page_path(player: dict) -> str:
     return f"p/{player['id']}-{slug(player.get('name'))}.html"
 
 
+def _credited_seasons(player: dict) -> int:
+    return sum(1 for s in (player.get("seasons") or []) if s.get("d"))
+
+
+def _is_alumnus(player: dict) -> bool:
+    """A previously-rostered player whose figure is as solid as a current one.
+
+    Widened 2026-09-08 from "rostered players only", but NOT to everybody. The
+    non-rostered population is 4,222 players and its data is measurably weaker
+    than the 40-man's: 27% declare missing seasons and 16% of their credited
+    seasons are `presumed` from the debut rather than read from transactions.
+
+    Two conditions, and both are about whether the page can stand on its own:
+
+      * `missing_seasons == 0` -- the feed can see the FRONT of his career, so
+        the total is a real estimate rather than a floor.
+      * more than one credited season -- a single-season page is a handful of
+        numbers wrapped in boilerplate, and a median player page already
+        carries only ~28 distinct words of its own.
+
+    That is 2,466 of the 4,222. The remaining 1,756 lean on presumed data and
+    stay unpublished until there is evidence these index at all -- which is
+    what sitemap-alumni.xml exists to measure.
+    """
+    return (
+        not player.get("on_40_man")
+        and int(player.get("missing_seasons") or 0) == 0
+        and _credited_seasons(player) > 1
+    )
+
+
 def _should_publish(player: dict) -> bool:
-    # Rostered players only -- see the module docstring.
-    return bool(player.get("on_40_man"))
+    return bool(player.get("on_40_man")) or _is_alumnus(player)
 
 
 def _fmt(days: int) -> str:
@@ -245,13 +275,30 @@ def _plain_figure(service: str) -> str:
     return dl if not y else yl
 
 
+def _club_phrase(player: dict) -> str:
+    """"with the Braves" for a current player, "last with" for a former one.
+
+    A non-rostered player's stored `team` is the last club we saw him with, and
+    it is stale by construction -- the table's payload blanks it for exactly
+    that reason. A page cannot blank it (his club IS most of what identifies
+    him), so it says plainly which kind of fact it is. Without this, widening
+    publication to 2,466 former players would have put "Player X ... with the
+    Atlanta Braves" on every one of them, asserting a roster spot none of them
+    holds.
+    """
+    club = player.get("team")
+    if not club:
+        return ""
+    return f"with {club}" if player.get("on_40_man") else f"last with {club}"
+
+
 def _description(player: dict) -> str:
     name = player.get("name") or "This player"
     service = player.get("service_time") or "0.000"
-    club = player.get("team") or "his club"
+    where = _club_phrase(player) or "in the major leagues"
     return (
         f"{name} has an estimated {service} years of major league service time "
-        f"with {club} — {player.get('service_days_total', 0)} days credited. "
+        f"{where} — {player.get('service_days_total', 0)} days credited. "
         f"{_status(player)}. Reconstructed from public roster transactions; "
         "not an official MLB/MLBPA figure."
     )
@@ -630,6 +677,10 @@ def render(player: dict, team_names: dict[int, str], generated_at: str) -> str:
     url = f"{SITE_URL}/{page_path(player)}"
     desc = html.escape(_description(player))
     club = html.escape(player.get("team") or "")
+    # Past tense for a former player -- see _club_phrase().
+    club_label = club if not club else (
+        club if player.get("on_40_man") else f"Last with {club}"
+    )
     position = html.escape(player.get("position") or "")
     debut = html.escape(player.get("mlb_debut") or "—")
     missing = int(player.get("missing_seasons") or 0)
@@ -682,6 +733,11 @@ def render(player: dict, team_names: dict[int, str], generated_at: str) -> str:
     trail: list[tuple[str, str | None]] = [("All players", "../")]
     if club and player.get("on_40_man"):
         trail.append((club, f"../{club_path(player['team'])}"))
+    elif not player.get("on_40_man"):
+        # A published alumnus is not on any club page -- his stored club is
+        # stale -- so the alumni directory is his one route back up, and the
+        # one place that links down to him. Without this he is an orphan.
+        trail.append(("Previous players", f"../{ALUMNI_DIR_NAME}/"))
     trail.append((name, None))
     crumbs = _crumbs(*trail)
 
@@ -726,7 +782,7 @@ def render(player: dict, team_names: dict[int, str], generated_at: str) -> str:
 <div class="viz-root"><div class="wrap">
   {crumbs}
   <h1>{name} service time</h1>
-  <p class="subtitle">{club}{' · ' if club and position else ''}{position} · {html.escape(_status(player))}</p>
+  <p class="subtitle">{club_label}{' · ' if club_label and position else ''}{position} · {html.escape(_status(player))}</p>
   <p class="lede">{lede}</p>
 
   <div class="facts">
@@ -913,12 +969,14 @@ def write_player_pages(
         lastmod.record(rel, page)
 
     clubs = _write_club_pages(published, generated_at, lastmod)
+    alumni = [p for p in published if not p.get("on_40_man")]
+    alumni_pages = _write_alumni_pages(alumni, generated_at, lastmod) if alumni else []
 
     _write_page_css()
     explainer = render_explainer(generated_at, super_two_cutoff)
     (DOCS / EXPLAINER_PATH).write_text(explainer)
     lastmod.record(EXPLAINER_PATH, explainer)
-    _write_sitemap(published, clubs, generated_at, lastmod)
+    _write_sitemap(published, clubs, alumni_pages, generated_at, lastmod)
     lastmod.save()
     _write_robots()
     _write_404()
@@ -934,11 +992,20 @@ def write_player_pages(
 def _write_club_pages(
     published: list[dict], generated_at: str, lastmod: "_LastMod"
 ) -> list[str]:
-    """One page per club with someone on its 40-man. Returns the club names."""
+    """One page per club with someone on its 40-man. Returns the club names.
+
+    ⚠️ ROSTERED PLAYERS ONLY, and the filter is explicit rather than implied by
+    the caller. `published` used to be exactly the 40-man, so grouping it by
+    club was the same thing; since _should_publish() widened to alumni it is
+    not. A retired player's stored `team` is the last club we saw him with,
+    which is stale by construction -- listing him on that club's 40-man page
+    would assert a roster spot he does not hold, which is the same category
+    error already fixed once in the table's payload.
+    """
     by_club: dict[str, list[dict]] = {}
     for player in published:
         club = player.get("team")
-        if club:
+        if club and player.get("on_40_man"):
             by_club.setdefault(club, []).append(player)
 
     for club, players in by_club.items():
@@ -953,8 +1020,206 @@ def _write_club_pages(
     return sorted(by_club)
 
 
+ALUMNI_DIR_NAME = "alumni"
+ALUMNI_DIR = DOCS / ALUMNI_DIR_NAME
+
+_SUFFIXES = {"jr", "jr.", "sr", "sr.", "ii", "iii", "iv", "v"}
+
+
+def _surname_initial(name: str) -> str:
+    """First letter of the surname, for an A-Z directory.
+
+    Suffixes are skipped so "Ken Griffey Jr." files under G, not J. Anything
+    that does not fold to a letter goes under '#' rather than being dropped --
+    a player who cannot be filed is a player nobody can reach.
+    """
+    parts = [p for p in slug(name).split("-") if p and p not in _SUFFIXES]
+    if not parts:
+        return "#"
+    first = parts[-1][:1].upper()
+    return first if first.isalpha() else "#"
+
+
+def _alumni_letters(alumni: list[dict]) -> dict[str, list[dict]]:
+    out: dict[str, list[dict]] = {}
+    for p in alumni:
+        out.setdefault(_surname_initial(p.get("name") or ""), []).append(p)
+    for players in out.values():
+        players.sort(key=lambda p: (_surname_initial(p.get("name") or ""),
+                                    (p.get("name") or "").split()[-1:],
+                                    p.get("name") or ""))
+    return dict(sorted(out.items()))
+
+
+def _alumni_shell(title: str, desc: str, url: str, crumbs: str,
+                  heading: str, sub: str, body: str, generated_at: str,
+                  graph: list[dict], depth: str = "../") -> str:
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{html.escape(title)}</title>
+<meta name="description" content="{html.escape(desc)}" />
+<link rel="canonical" href="{url}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{html.escape(heading)}" />
+<meta property="og:description" content="{html.escape(desc)}" />
+<meta property="og:url" content="{url}" />
+<meta name="twitter:card" content="summary" />
+{_ld_script(graph)}
+<link rel="icon" href="{BASE_PATH}favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="{depth}styles.css" />
+<link rel="stylesheet" href="{depth}page.css" />
+<script>
+  try {{
+    var t = localStorage.getItem("mlb-service-time-theme");
+    if (t) document.documentElement.setAttribute("data-theme", t);
+  }} catch (e) {{}}
+</script>
+</head>
+<body>
+<div class="viz-root"><div class="wrap">
+  {crumbs}
+  <h1>{html.escape(heading)}</h1>
+  <p class="subtitle">{sub}</p>
+  {body}
+  <p class="foot">
+    {_threshold_sentence()}
+    <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
+    <br /><br />
+    These figures are <strong>estimates</strong> reconstructed from public
+    roster transaction records. They are not official MLB or MLBPA figures —
+    those are not published. See the
+    <a href="https://github.com/RainbowMang0/MLB-Service-Time-Tracker#readme">methodology</a>.
+    Last updated {html.escape(generated_at[:10])}.
+    <br /><br />
+    Independent project, not affiliated with or endorsed by Major League
+    Baseball or the MLBPA.
+  </p>
+</div></div>
+{ANALYTICS}
+</body>
+</html>
+"""
+
+
+def _write_alumni_pages(
+    alumni: list[dict], generated_at: str, lastmod: "_LastMod"
+) -> list[str]:
+    """An A-Z directory for players no longer on a 40-man. Returns rel paths.
+
+    WHY THIS HAS TO EXIST. Club pages list the 40-man only, so a published
+    alumnus has no inbound internal link at all -- a pure orphan reachable
+    only from the sitemap, which is the worst possible starting position for a
+    page whose whole purpose is to be found. Search Console already reports 782
+    pages "Discovered - currently not indexed"; adding 2,466 orphans to that
+    queue would prove nothing about whether these pages are worth indexing.
+
+    So: home -> alumni/ -> letter page -> player, the same depth the 40-man
+    pages sit at through the club directory.
+    """
+    by_letter = _alumni_letters(alumni)
+    if ALUMNI_DIR.exists():
+        shutil.rmtree(ALUMNI_DIR)
+    ALUMNI_DIR.mkdir(parents=True, exist_ok=True)
+
+    written: list[str] = []
+    total = len(alumni)
+
+    for letter, players in by_letter.items():
+        fname = ("num" if letter == "#" else letter.lower()) + ".html"
+        rel = f"{ALUMNI_DIR_NAME}/{fname}"
+        url = f"{SITE_URL}/{rel}"
+        desc = (
+            f"Estimated major league service time for {len(players)} players "
+            f"whose surname begins with {letter} and who are no longer on a "
+            "40-man roster. Reconstructed from public roster transactions; not "
+            "an official MLB/MLBPA figure."
+        )
+        rows = "".join(
+            f"<tr><td><a href=\"../{page_path(p)}\">{html.escape(p.get('name') or '')}</a></td>"
+            f"<td class='n svc-col'>{_svc_cell(p)}</td>"
+            f"<td class='n'>{p.get('service_days_total', 0)}</td>"
+            f"<td>{html.escape((p.get('mlb_debut') or '—')[:4])}</td>"
+            f"<td>{html.escape((p.get('last_played') or '—')[:4])}</td></tr>"
+            for p in players
+        )
+        nav = " ".join(
+            f'<a href="{("num" if l == "#" else l.lower())}.html">{l}</a>'
+            if l != letter else f"<b>{l}</b>"
+            for l in by_letter
+        )
+        body = (
+            f'<p class="crumbs">{nav}</p>'
+            "<table><thead><tr><th>Player</th><th class=\"n\">Service time</th>"
+            "<th class=\"n\">Days</th><th>Debut</th><th>Last played</th>"
+            f"</tr></thead><tbody>{rows}</tbody></table>"
+        )
+        graph = [
+            {"@type": "CollectionPage", "name": f"Previous players — {letter}",
+             "url": url, "description": desc},
+            _breadcrumb_ld([
+                ("Big League Service Time Tracker", f"{SITE_URL}/"),
+                ("Previous players", f"{SITE_URL}/{ALUMNI_DIR_NAME}/"),
+                (letter, url),
+            ]),
+        ]
+        page = _alumni_shell(
+            f"Previous players — {letter} | Big League Service Time Tracker",
+            desc, url,
+            _crumbs(("All players", "../"), ("Previous players", "./"), (letter, None)),
+            f"Previous players — {letter}",
+            f"{len(players)} players no longer on a 40-man roster, by surname.",
+            body, generated_at, graph,
+        )
+        (DOCS / rel).write_text(page, encoding="utf-8")
+        lastmod.record(rel, page)
+        written.append(rel)
+
+    # The directory itself.
+    rel = f"{ALUMNI_DIR_NAME}/index.html"
+    url = f"{SITE_URL}/{ALUMNI_DIR_NAME}/"
+    desc = (
+        f"Estimated major league service time for {total:,} players who have "
+        "come off a 40-man roster, A to Z. Reconstructed from public roster "
+        "transactions; not an official MLB/MLBPA figure."
+    )
+    cards = "".join(
+        f"<tr><td><a href=\"{('num' if l == '#' else l.lower())}.html\">{l}</a></td>"
+        f"<td class='n'>{len(ps)}</td></tr>"
+        for l, ps in by_letter.items()
+    )
+    body = (
+        "<table><thead><tr><th>Surname</th><th class=\"n\">Players</th></tr>"
+        f"</thead><tbody>{cards}</tbody></table>"
+    )
+    graph = [
+        {"@type": "CollectionPage", "name": "Previous players", "url": url,
+         "description": desc},
+        _breadcrumb_ld([
+            ("Big League Service Time Tracker", f"{SITE_URL}/"),
+            ("Previous players", url),
+        ]),
+    ]
+    page = _alumni_shell(
+        "Previous players — service time A to Z | Big League Service Time Tracker",
+        desc, url,
+        _crumbs(("All players", "../"), ("Previous players", None)),
+        "Previous players",
+        f"{total:,} players who have come off a 40-man roster, by surname. "
+        "Their service time is final — it stopped when they did.",
+        body, generated_at, graph,
+    )
+    (ALUMNI_DIR / "index.html").write_text(page, encoding="utf-8")
+    lastmod.record(rel, page)
+    written.append(rel)
+    return written
+
+
 def _write_sitemap(
-    published: list[dict], clubs: list[str], generated_at: str, lastmod: "_LastMod"
+    published: list[dict], clubs: list[str], alumni_pages: list[str],
+    generated_at: str, lastmod: "_LastMod"
 ) -> None:
     day = generated_at[:10]
     urls = [f"  <url><loc>{SITE_URL}/</loc><lastmod>{day}</lastmod><priority>1.0</priority></url>"]
@@ -993,11 +1258,21 @@ def _write_sitemap(
         f"<priority>0.8</priority></url>"
         for c in clubs
     ]
-    player_urls = [
-        f"  <url><loc>{SITE_URL}/{page_path(p)}</loc>"
-        f"<lastmod>{lastmod.of(page_path(p))}</lastmod></url>"
-        for p in published
-    ]
+    def _url(rel, prio=None):
+        pr = f"<priority>{prio}</priority>" if prio else ""
+        return (f"  <url><loc>{SITE_URL}/{rel}</loc>"
+                f"<lastmod>{lastmod.of(rel)}</lastmod>{pr}</url>")
+
+    player_urls = [_url(page_path(p)) for p in published if p.get("on_40_man")]
+    # Alumni get their OWN sitemap, which is the whole point of publishing them
+    # as a measured batch: Search Console reports indexed-vs-submitted per
+    # sitemap, so in a fortnight this file answers "do retired-player pages
+    # index at all?" without confounding it with the 40-man pages.
+    alumni_urls = (
+        [_url(rel, "0.7") for rel in alumni_pages if rel.endswith("index.html")]
+        + [_url(rel, "0.6") for rel in alumni_pages if not rel.endswith("index.html")]
+        + [_url(page_path(p)) for p in published if not p.get("on_40_man")]
+    )
 
     # SPLIT BY SECTION, behind a sitemap index at the same URL.
     #
@@ -1013,6 +1288,8 @@ def _write_sitemap(
     _write_urlset("sitemap-core.xml", urls)
     _write_urlset("sitemap-clubs.xml", club_urls)
     _write_urlset("sitemap-players.xml", player_urls)
+    if alumni_urls:
+        _write_urlset("sitemap-alumni.xml", alumni_urls)
 
     newest = max([lastmod.today] + [lastmod.of(page_path(p)) for p in published])
     children = "\n".join(
@@ -1021,7 +1298,7 @@ def _write_sitemap(
             ("sitemap-core.xml", lastmod.today),
             ("sitemap-clubs.xml", lastmod.today),
             ("sitemap-players.xml", newest),
-        )
+        ) + ((("sitemap-alumni.xml", lastmod.today),) if alumni_urls else ())
     )
     (DOCS / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'

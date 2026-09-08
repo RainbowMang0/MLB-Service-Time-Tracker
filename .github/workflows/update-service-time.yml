@@ -163,6 +163,6 @@ jobs:
           # throws all of it away. See the header of that script.
           scripts/commit_data.sh \
             "chore: daily service time update ($(date -u +%F))" \
-            docs/data docs/p docs/t docs/page.css docs/404.html docs/service-time.html \
+            docs/data docs/p docs/t docs/alumni docs/page.css docs/404.html docs/service-time.html \
             docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-clubs.xml \
-            docs/sitemap-players.xml docs/robots.txt data/cache
+            docs/sitemap-players.xml docs/sitemap-alumni.xml docs/robots.txt data/cache

@@ -2406,10 +2406,13 @@ free, client-side, and store nothing server-side.
       defects surfaced and one is fixed; the other is recorded rather than
       fixed.
 
-1. **Widen player pages to non-rostered players** — a one-line change to
-   `_should_publish()` in `scripts/write_player_pages.py`.
+1. **~~Widen player pages to non-rostered players~~ — PARTLY DONE
+   2026-09-08.** The 2,466 alumni with complete history and more than one
+   credited season are published; the remaining **1,756 are still held**,
+   pending what `sitemap-alumni.xml` reports. See "Publication widened to
+   2,466 alumni". The measurement the original decision rested on:
 
-   **Asked and decided 2026-08-26: hold until there is traffic data.** Not a
+   *(superseded)* **Asked and decided 2026-08-26: hold until there is traffic data.** Not a
    forgotten item — revisit it 2-4 weeks after the domain and Search Console
    are live, when there is an answer to "do these pages rank at all?"
 
@@ -3526,6 +3529,62 @@ be re-submitted by hand, and `robots.txt` is unchanged.
 The next report then answers the question directly: club pages indexing while
 player pages do not is a statement about **thin templated pages**; both lagging
 equally is a statement about **site age**.
+
+### Publication widened to 2,466 alumni — as a measured batch, not all of them
+
+**Decided by the owner 2026-09-08**, replacing the "hold until there is traffic
+data" entry. The data arrived and it argued against publishing all 4,222: 782
+pages were already sitting un-indexed, and the non-rostered population is
+measurably the weaker half.
+
+| | published before | the 2,466 added | the 1,756 still held |
+|---|---|---|---|
+| declare missing seasons | 0% | **0%** | most of them |
+| credited seasons that are `presumed` | 0% | **0%** | 16% overall |
+| more than one credited season | — | **all** | many have one or none |
+
+`_is_alumnus()` is the rule: **not on a 40-man, `missing_seasons == 0`, and
+more than one credited season.** Both conditions are about whether the page can
+stand on its own — the feed can see the front of the career, and there is more
+than a single figure to show. Site went **1,370 → 3,836 pages, 6.9 → 19.2 MB**.
+
+**Three things had to move with it, and each would have quietly broken the
+experiment:**
+
+1. **Club pages must exclude them.** `_write_club_pages()` grouped `published`
+   by club, which was the 40-man by definition until it wasn't. A retired
+   player's stored `team` is stale by construction, so he would have been
+   listed on that club's 40-man page — the category error already fixed once in
+   the table's payload. The filter is explicit now, and pinned by a test.
+2. **They would otherwise be orphans.** With club pages excluding them, a
+   published alumnus has *no* inbound internal link — reachable only from the
+   sitemap, which is the worst possible start for a page whose whole purpose is
+   to be found, and would have made the experiment prove nothing. Hence
+   **`/alumni/`**: an A–Z directory by surname, 26 letter pages, linked from
+   `index.html`. That is the **second and last** hand-written link into the
+   generated section, and it exists for the same reason `t/` does — a stable
+   directory URL rather than thousands of slugs in a hand-maintained file.
+   Depth is now home → alumni/ → letter → player, matching the 40-man's
+   home → t/ → club → player. A test asserts zero orphans.
+3. **The page must not print a stale club as current.** The subtitle read
+   "Atlanta Braves · C" and the meta description "service time **with** Atlanta
+   Braves". `_club_phrase()` makes it "**Last with** Atlanta Braves" for anyone
+   off a 40-man. Verified across all 2,466: zero present-tense club claims.
+
+**`sitemap-alumni.xml` is the point of doing it this way.** Search Console
+reports indexed-vs-submitted per sitemap, so in a fortnight it answers the
+question directly — do retired-player pages index at all? — without
+confounding it with the 40-man. **Do not publish the remaining 1,756 until that
+file has reported.**
+
+⚠️ **`index.json` grew a `has_page` column**, because the browser cannot
+evaluate `_should_publish()` — the compact index carries no season breakdown,
+so it cannot count credited seasons. `playerHref()` reads the flag rather than
+re-deriving the rule, which would be exactly the drift the CBA thresholds were
+consolidated to stop. `validate_published.py` now reads rows through the
+payload's own `fields` list instead of unpacking a fixed arity — adding the
+column broke it with "too many values to unpack", and a checker that must be
+edited for every new column will eventually be edited wrongly.
 
 ### What the indexing numbers are actually measuring, and what was NOT changed
 

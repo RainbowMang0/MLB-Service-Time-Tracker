@@ -4,6 +4,7 @@ run directly with `python tests/test_service_time.py`.
 """
 
 import datetime as dt
+import json
 import pathlib
 import sys
 
@@ -1740,6 +1741,99 @@ def test_the_daily_service_time_tick_is_not_a_content_change():
         w._threshold_sentence = real
 
 
+def test_only_alumni_with_a_defensible_figure_are_published():
+    """
+    Widened 2026-09-08 from "rostered players only", but not to everybody.
+
+    The non-rostered population is 4,222 and its data is measurably weaker than
+    the 40-man's: 27% declare missing seasons and 16% of their credited seasons
+    are presumed from the debut rather than read. Publishing all of them would
+    have added the site's weakest pages to a queue Google was already behind on
+    -- 782 pages sat "Discovered - currently not indexed" the day this was
+    decided.
+
+    So the rule takes the 2,466 whose figures stand on their own: the feed can
+    see the FRONT of the career (missing_seasons == 0) and there is more than
+    one credited season to show. The remaining 1,756 wait for evidence that
+    these index at all.
+    """
+    import write_player_pages as w
+
+    rostered = {"on_40_man": True, "missing_seasons": 3, "seasons": []}
+    check("a rostered player is always published", w._should_publish(rostered))
+
+    good = {"on_40_man": False, "missing_seasons": 0,
+            "seasons": [{"y": 2019, "d": 172}, {"y": 2020, "d": 60}]}
+    check("a complete-history alumnus with 2 seasons is published",
+          w._should_publish(good) and w._is_alumnus(good))
+
+    gappy = {"on_40_man": False, "missing_seasons": 4,
+             "seasons": [{"y": 2019, "d": 172}, {"y": 2020, "d": 60}]}
+    check("...but one declaring missing seasons is NOT", not w._should_publish(gappy))
+
+    thin = {"on_40_man": False, "missing_seasons": 0, "seasons": [{"y": 2019, "d": 12}]}
+    check("...nor one with a single credited season", not w._should_publish(thin))
+
+    empty = {"on_40_man": False, "missing_seasons": 0,
+             "seasons": [{"y": 2019, "d": 0}, {"y": 2020, "d": 0}]}
+    check("...nor one credited nothing at all", not w._should_publish(empty))
+
+    check("a rostered player is never counted as an alumnus",
+          not w._is_alumnus(rostered))
+
+
+def test_a_published_alumnus_is_reachable_and_off_the_club_pages():
+    """
+    Two things that would each quietly break the experiment.
+
+    ORPHANS. Club pages list the 40-man only, so a published alumnus has no
+    inbound internal link unless something else provides one -- a page
+    reachable only from the sitemap is the worst possible starting position for
+    one whose entire purpose is to be found. The A-Z directory at /alumni/ is
+    that something, and index.html carries the one hand-written link into it.
+
+    STALE CLUBS. A retired player's stored `team` is the last club we saw him
+    with. Listing him on that club's 40-man page would assert a roster spot he
+    does not hold -- the category error already fixed once in the table's
+    payload, and _write_club_pages() now filters explicitly rather than
+    relying on `published` happening to be the 40-man.
+    """
+    import glob
+    import re
+
+    root = pathlib.Path(__file__).resolve().parents[1]
+    docs = root / "docs"
+    import write_player_pages as w
+
+    db = json.loads((docs / "data" / "service_time.json").read_text())["players"]
+    alumni = {str(p["id"]) for p in db if w._is_alumnus(p)}
+    check(f"the alumni batch is non-empty ({len(alumni)} players)", bool(alumni))
+
+    linked = set()
+    for f in glob.glob(str(docs / "alumni" / "*.html")):
+        linked |= set(re.findall(r'href="\.\./p/(\d+)-', pathlib.Path(f).read_text()))
+    check("every published alumnus is linked from a letter page",
+          not (alumni - linked))
+
+    check("the alumni directory exists", (docs / "alumni" / "index.html").exists())
+    check("the homepage links to it",
+          'href="alumni/"' in (docs / "index.html").read_text())
+
+    rostered_ids = {str(p["id"]) for p in db if p.get("on_40_man")}
+    on_club_pages = set()
+    for f in glob.glob(str(docs / "t" / "*.html")):
+        on_club_pages |= set(re.findall(r'href="\.\./p/(\d+)-', pathlib.Path(f).read_text()))
+    check("no retired player appears on a club page",
+          not (on_club_pages - rostered_ids))
+
+    idx = json.loads((docs / "data" / "index.json").read_text())
+    check("the index declares a has_page column", "has_page" in idx["fields"])
+    col = idx["fields"].index("has_page")
+    flagged = sum(1 for r in idx["players"] if r[col] == 1)
+    check(f"...and it counts the published pages ({flagged})",
+          flagged == sum(1 for p in db if w._should_publish(p)))
+
+
 def test_the_sitemap_is_an_index_split_by_section():
     """
     Search Console reports indexed-vs-submitted per sitemap, and one flat file
@@ -1755,7 +1849,8 @@ def test_the_sitemap_is_an_index_split_by_section():
     docs = pathlib.Path(__file__).resolve().parents[1] / "docs"
     index = (docs / "sitemap.xml").read_text()
     check("sitemap.xml is a sitemap index", "<sitemapindex" in index)
-    for child in ("sitemap-core.xml", "sitemap-clubs.xml", "sitemap-players.xml"):
+    for child in ("sitemap-core.xml", "sitemap-clubs.xml",
+                  "sitemap-players.xml", "sitemap-alumni.xml"):
         check(f"...it lists {child}", child in index)
         path = docs / child
         check(f"...and {child} exists as a urlset",
@@ -1767,7 +1862,8 @@ def test_the_sitemap_is_an_index_split_by_section():
         check(
             f"{name} stages the new sitemap files",
             all(c in body for c in
-                ("sitemap-core.xml", "sitemap-clubs.xml", "sitemap-players.xml")),
+                ("sitemap-core.xml", "sitemap-clubs.xml", "sitemap-players.xml",
+                 "sitemap-alumni.xml", "docs/alumni")),
         )
 
 
@@ -2424,6 +2520,8 @@ if __name__ == "__main__":
     test_nothing_published_claims_a_transaction_coverage_cutoff_year()
     test_a_debuted_player_is_never_described_as_never_having_been_up()
     test_the_daily_service_time_tick_is_not_a_content_change()
+    test_only_alumni_with_a_defensible_figure_are_published()
+    test_a_published_alumnus_is_reachable_and_off_the_club_pages()
     test_the_sitemap_is_an_index_split_by_section()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

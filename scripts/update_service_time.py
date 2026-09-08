@@ -44,7 +44,8 @@ import accrual_model  # noqa: E402
 import cba  # noqa: E402
 import fetch_mlb_data as mlb  # noqa: E402
 import super_two  # noqa: E402
-from write_player_pages import write_player_pages  # noqa: E402
+import write_player_pages  # noqa: E402
+from write_player_pages import write_player_pages as _write_pages  # noqa: E402
 from service_time import (  # noqa: E402
     roster_start_before_debut,
     is_active_start,
@@ -645,6 +646,17 @@ def write_index(db: dict[str, dict], super_two_cutoff: dict | None = None) -> No
             # 2-3 year class and on how many days he accrued last season. So
             # it ships as a flag rather than being recomputed client-side.
             1 if p.get("super_two_candidate") else 0,
+            # Does this player have a static page? The table links to one when
+            # he does, and renders a plain button when he does not, because a
+            # link to a 404 is worse than no link.
+            #
+            # Shipped as a flag rather than recomputed in the browser: the rule
+            # is _should_publish() in write_player_pages.py, and the browser
+            # cannot evaluate it -- the compact index carries no season
+            # breakdown, so it cannot count a player's credited seasons. A
+            # second copy of the rule in JS would be the exact drift the CBA
+            # thresholds were consolidated to stop.
+            1 if write_player_pages._should_publish(p) else 0,
         ])
 
     payload = {
@@ -666,7 +678,7 @@ def write_index(db: dict[str, dict], super_two_cutoff: dict | None = None) -> No
         "rules": _rules_block(),
         "fields": [
             "id", "name", "team", "position", "days", "on_40_man",
-            "missing_seasons", "super_two",
+            "missing_seasons", "super_two", "has_page",
         ],
         "players": rows,
     }
@@ -1071,7 +1083,7 @@ def _write_outputs(db: dict[str, dict]) -> None:
     _write_accrual_model(db)
     # Crawlable static pages. Hash routing is invisible to search engines, so
     # without these no player could be found by searching for him.
-    write_player_pages(db, output["generated_at"], super_two_cutoff=cutoff)
+    _write_pages(db, output["generated_at"], super_two_cutoff=cutoff)
     report_debuted_but_empty(db)
 
 
