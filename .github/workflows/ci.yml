@@ -1,0 +1,72 @@
+name: CI
+
+# Every offline check, on every push and pull request.
+#
+# WHY THIS EXISTS
+# ===============
+# Until 2026-09-08 nothing in this repository ran automatically. All four
+# workflows were `workflow_dispatch` or `schedule`, so the 307 tests only ever
+# ran when somebody remembered to open the Actions tab and pick "tests" from a
+# dropdown. A change could be committed, merged, and served to a live site
+# without a single test having run against it.
+#
+# That is the wrong way round for a project whose whole discipline is "pin the
+# finding as a test". A test nobody runs is a comment.
+#
+# Everything here is OFFLINE and read-only: no API calls, no data written, no
+# commits. It costs well under a minute and cannot fail for a reason outside
+# the repository -- which is what makes it safe to make required. The checks
+# that need statsapi.mlb.com (the roster gate, the Baseball Reference
+# comparison, a single-player probe) stay in validate.yml, on demand, because
+# they cost real API calls and their answer moves with the feed.
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      # No pip install. The engine and its tests are stdlib-only on purpose --
+      # `requests` is needed to TALK to the API and nothing offline touches it.
+      # If this step ever becomes necessary, something has grown a dependency
+      # it should not have.
+      - name: Service-time engine and CBA rulesets
+        run: python tests/test_service_time.py
+
+      - name: Duty-day allocation engine
+        run: node --test tests/duty_days.test.cjs
+
+      - name: Contract engine, and the advice-vocabulary lint
+        run: node --test tests/contract.test.cjs
+
+      # The three published files are derived from the database and are the
+      # only two a visitor ever reads, so a bad derivation ships wrong numbers
+      # while every check that reads the database still passes. This also
+      # resolves every internal link on every generated page, which is what
+      # catches the two slug functions drifting apart.
+      - name: Published files agree, and every link resolves
+        run: python scripts/validate_published.py

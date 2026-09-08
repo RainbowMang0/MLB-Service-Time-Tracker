@@ -25,9 +25,15 @@ name: Validate Service Time
 #               derivation ships wrong numbers while every other check --
 #               all of which read the database -- passes. Offline.
 #
-#   tests     -- both unit suites: python tests/test_service_time.py (the
-#               service-time engine and the CBA rulesets) and node --test
-#               tests/duty_days.test.cjs (the duty-day allocation engine).
+#   tests     -- all three unit suites: python tests/test_service_time.py (the
+#               service-time engine and the CBA rulesets), node --test
+#               tests/duty_days.test.cjs (the duty-day allocation engine) and
+#               node --test tests/contract.test.cjs (the contract engine and
+#               its advice-vocabulary lint).
+#
+# NOTE: the offline suites also run automatically on every push and pull
+# request -- see .github/workflows/ci.yml. This workflow is for the checks
+# that need the network, cost real API calls, or take arguments.
 #               Offline, seconds, and neither needs anything installed.
 #
 #   reference -- compares finished figures against known Baseball Reference
@@ -124,6 +130,12 @@ jobs:
             tests)
               python tests/test_service_time.py
               node --test tests/duty_days.test.cjs
+              # contract.test.cjs was missing here, and it is the one suite
+              # that guards a commitment rather than a calculation: it greps
+              # the contract engine and page for directive vocabulary ("take
+              # it", "you should") and fails on a hit, which is how the
+              # never-recommend rule is enforced rather than merely promised.
+              node --test tests/contract.test.cjs
               ;;
             published)
               python scripts/validate_published.py
