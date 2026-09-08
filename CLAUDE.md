@@ -3240,6 +3240,110 @@ financial advice" must not trip a check for advice.
 * **Comparing against `2027.json` refuses** rather than returning a delta
   against nulls, which would be a large and meaningless number.
 
+## The contract page audited (2026-09-08)
+
+Read end to end after the maintenance pass, on the question "what needs
+improving". **The engine is sound** — `contract.js` refuses what it cannot
+know, `netOf()` holds no rate table, `valueOffer()` ships
+`declineModelled: false`. Three real defects, all in the layer around it, and
+none in the arithmetic the tests already cover.
+
+### 1. The projection held one accrual band for the whole walk
+
+`seasonsToReach()` takes a flat per-season rate, and `project()` passed it the
+band the player is in **today**, for a path spanning up to a decade. The model
+is banded by cumulative service precisely *because* the rate rises with it:
+
+| band | p20 |
+|---|---|
+| 0.000-1.000 | 32 |
+| 2.000-3.000 | 82 |
+| 5.000-6.000 | 172 |
+
+A player who accrues a p20 season is, by the next spring, a player with more
+service and therefore in a band whose own p20 is higher. Holding the first
+band compounds a rookie's worst season across a career:
+
+| 0.086 player → free agency | seasons | renders as |
+|---|---|---|
+| one band held | **30** | 2056 |
+| re-banded | **12** | 2038 |
+
+**Thirty seasons is not a slow career, it is an arithmetic artefact**, and it
+sat in the leftmost column of the projection table. p50 and p80 move barely at
+all (6 → 6), which is exactly why nobody caught it — the bug is only visible in
+the band where the rates actually differ, and the eye goes to the median.
+
+`seasonsToReachBanded()` re-reads the band each season. `seasonsToReach()`
+stays, flat and exact, because `compareRulesets()` needs it and its tests pin
+it.
+
+⚠️ **A thin band stops the walk, it does not borrow a neighbour's rate.**
+`MIN_BAND_SAMPLE` exists so a band measured on a handful of careers refuses to
+project; walking *through* such a band on the adjacent band's number would
+defeat that precisely on the long paths, which cross the most bands.
+
+### 2. The player picker keyed on the name
+
+*"Never key this dataset by name"* is one of the oldest rules in this file —
+two Logan Allens, two Luis Perdomos — and the contract page did:
+
+```js
+const match = PLAYERS.find((p) => p.name === e.target.value);
+```
+
+**Two players called Max Muncy are on 40-man rosters right now:**
+
+| id | club | days | figure |
+|---|---|---|---|
+| 691777 | Athletics | 289 | 1.117 |
+| 571970 | Los Angeles Dodgers | 1,741 | 10.021 |
+
+`find()` returns the first, so a reader got an **eight-and-a-half-year error**
+inside a contract decision, silently. 36 names are duplicated across the whole
+database.
+
+Selection now goes through a label map built alongside the datalist
+(`buildPlayerList()` writes both, so they cannot drift), keyed on
+name-plus-club with the id appended if that ever collides. A *typed* name that
+is ambiguous refuses and names the candidates rather than picking one — the
+same instinct as everything else here: a missing answer is safe, a wrong one
+is not.
+
+### 3. The advice lint never read the file that writes the sentences
+
+`tests/contract.test.cjs` greps for directive vocabulary. Its file list was:
+
+```js
+["docs/contract.js", "docs/contract.html", "docs/contract.js"]
+```
+
+`docs/contract.js` twice, and **`docs/contract-page.js` not at all** — the UI
+file, which composes nearly every user-facing sentence on the page, and whose
+own header comment says *"the banned vocabulary is listed in
+tests/contract.test.cjs, which greps this file too."* It did not. The file
+passes clean now that it is actually read, so nothing had drifted through the
+hole — but a lint that does not read the UI is not a lint, and the list now
+asserts each file exists rather than silently filtering a typo away.
+
+### 4. The homepage linked to neither other tool
+
+`docs/index.html` carried exactly three internal links — `service-time.html`,
+`t/`, `alumni/` — and **not `contract.html` or `taxes.html`**. Both were in the
+sitemap and in every other page's footer, and unreachable from the one page
+that carries the site's inbound links. That is the precise profile of a page
+Search Console reports as *discovered — currently not indexed*, and it applied
+to two of the site's three tools.
+
+### What was deliberately NOT changed
+
+* **No new data source.** Modules B and C stay absent — see below.
+* **The offer panel's rates stay user inputs.** The tool holding a federal
+  bracket table or an agent-commission figure is the same failure as inventing
+  a state tax rate.
+* **No persistence and no export.** Real gaps (the duty-day tool has both),
+  but features rather than defects, and the owner's call.
+
 ## Discoverability: every rostered player has a real page
 
 **Shipped 2026-08-25.** Until then the whole site was one URL. A profile
