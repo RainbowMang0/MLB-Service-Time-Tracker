@@ -109,6 +109,11 @@
   // shape of the thing.
   // ---------------------------------------------------------------------
 
+  // A projection walk has to terminate. No major league career approaches
+  // this, so hitting it means the rate is too low to reach the target and
+  // the honest answer is "not at this rate" rather than a distant year.
+  const MAX_PROJECTED_SEASONS = 40;
+
   function bandFor(serviceDays, model, rules) {
     const band = Math.min(6, Math.floor(serviceDays / rules.full_year_days));
     return (model.bands || []).find((b) => b.band === band) || null;
@@ -128,8 +133,49 @@
     // Walk season by season rather than dividing, because a season is capped
     // at the credited maximum however many days a player is rostered.
     const capped = Math.min(perSeasonDays, rules.full_year_days);
-    while (days < targetDays && seasons < 40) {
+    while (days < targetDays && seasons < MAX_PROJECTED_SEASONS) {
       days += capped;
+      seasons += 1;
+    }
+    return days >= targetDays ? seasons : null;
+  }
+
+  /**
+   * The same walk, but re-reading the band on every season.
+   *
+   * WHY THIS EXISTS, and it is not a refinement -- the fixed-rate walk above
+   * is wrong for any path longer than one season. The model is banded by
+   * cumulative service precisely BECAUSE the rate changes as a player
+   * accrues: p20 runs 32 days in the 0-1 band and 172 in the 5-6 band. A
+   * player who accrues a p20 season is, by the next spring, a player with
+   * more service -- and therefore in a band whose own p20 is higher.
+   *
+   * Holding the first band for the whole path compounds a rookie's worst
+   * season across a decade and produces dates no career reaches. Measured
+   * against this model, a 0.086 player projected to free agency:
+   *
+   *     p20, one band held   30 seasons
+   *     p20, re-banded       12 seasons
+   *
+   * Thirty seasons is not a slow career, it is an arithmetic artefact, and
+   * it sat in the most prominent column of the projection table. p50 and p80
+   * barely move (6 -> 6), which is why it went unnoticed: the bug is only
+   * visible in the band where the rates actually differ.
+   *
+   * A band with too small a sample stops the walk rather than substituting a
+   * neighbour's rate -- MIN_BAND_SAMPLE exists so a thin band refuses, and
+   * borrowing around it here would defeat that.
+   */
+  function seasonsToReachBanded(serviceDays, targetDays, model, key, rules) {
+    if (serviceDays >= targetDays) return 0;
+    let days = serviceDays;
+    let seasons = 0;
+    while (days < targetDays && seasons < MAX_PROJECTED_SEASONS) {
+      const band = bandFor(days, model, rules);
+      if (!band || !band.enough_data) return null;
+      const rate = Math.min(band[key] || 0, rules.full_year_days);
+      if (rate <= 0) return null; // "never, at this rate"
+      days += rate;
       seasons += 1;
     }
     return days >= targetDays ? seasons : null;
@@ -169,7 +215,7 @@
       reached: serviceDays >= t.days,
       daysRemaining: Math.max(0, t.days - serviceDays),
       outcomes: scenarios.map((s) => {
-        const seasons = seasonsToReach(serviceDays, t.days, s.daysPerSeason, rules);
+        const seasons = seasonsToReachBanded(serviceDays, t.days, model, s.key, rules);
         return {
           ...s,
           seasons,
@@ -187,6 +233,9 @@
       targets: rows,
       basis: model.method,
       sample: band.sample,
+      // The whole measured population, not just this band's slice. The walk
+      // crosses bands, so the band's own sample no longer describes it.
+      model,
     };
   }
 
@@ -392,6 +441,7 @@
     clock,
     bandFor,
     seasonsToReach,
+    seasonsToReachBanded,
     project,
     presentValue,
     netOf,

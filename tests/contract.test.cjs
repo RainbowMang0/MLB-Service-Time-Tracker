@@ -267,11 +267,18 @@ test("no file in the contract module tells the reader what to do", () => {
     "you'd be better",
   ];
 
+  // contract-page.js is the file that writes almost every user-facing
+  // sentence on the page, and it was missing from this list while its own
+  // header comment claimed to be grepped by it -- docs/contract.js was
+  // listed twice instead. A lint that does not read the UI is not a lint.
   const files = [
     "docs/contract.js",
+    "docs/contract-page.js",
     "docs/contract.html",
-    "docs/contract.js",
-  ].filter((f) => fs.existsSync(path.join(ROOT, f)));
+  ];
+  for (const f of files) {
+    assert.ok(fs.existsSync(path.join(ROOT, f)), `${f} must exist to be linted`);
+  }
 
   const hits = [];
   for (const rel of files) {
@@ -289,4 +296,118 @@ test("no file in the contract module tells the reader what to do", () => {
     }
   }
   assert.deepEqual(hits, [], "advice vocabulary found in the contract module");
+});
+
+// -------------------------------------------------------------------------
+// The projection walk re-bands
+// -------------------------------------------------------------------------
+
+test("the projection re-reads the band each season instead of holding the first", () => {
+  // The measured rate rises with service -- p20 is 32 days in the 0-1 band and
+  // 172 in the 5-6 band -- so holding a rookie's slowest season across a whole
+  // career compounds an artefact. Measured against this model, a 0.086 player
+  // projected to free agency came out at 30 seasons held and 12 re-banded.
+  const rookie = 86;
+  const fa = 6 * RULES.full_year_days;
+  const band0 = MODEL.bands.find((b) => b.band === 0);
+
+  const held = CT.seasonsToReach(rookie, fa, band0.p20, RULES);
+  const banded = CT.seasonsToReachBanded(rookie, fa, MODEL, "p20", RULES);
+
+  assert.ok(banded < held, "re-banding cannot be slower than holding the worst band");
+  assert.ok(banded <= 15, `a projected career of ${banded} seasons is not a career`);
+
+  const p = CT.project(rookie, MODEL, RULES, 2026);
+  const row = p.targets.find((t) => t.key === "free_agency");
+  assert.equal(row.outcomes.find((o) => o.key === "p20").seasons, banded);
+});
+
+test("re-banding preserves the ordering the panel's column headings promise", () => {
+  for (const days of [0, 86, 172, 400, 900]) {
+    const p = CT.project(days, MODEL, RULES, 2026);
+    for (const t of p.targets) {
+      const [slow, mid, fast] = t.outcomes.map((o) => o.seasons);
+      if (slow === null || mid === null || fast === null) continue;
+      assert.ok(slow >= mid, `${t.key} at ${days}: p20 cannot beat p50`);
+      assert.ok(mid >= fast, `${t.key} at ${days}: p50 cannot beat p80`);
+    }
+  }
+});
+
+test("a thin band stops the walk rather than borrowing a neighbour's rate", () => {
+  // MIN_BAND_SAMPLE exists so a band with too few careers refuses. Walking
+  // through it on someone else's number would defeat that on the long paths,
+  // which are exactly the ones that cross the most bands.
+  const thin = {
+    ...MODEL,
+    bands: MODEL.bands.map((b) => (b.band === 3 ? { ...b, enough_data: false } : b)),
+  };
+  assert.equal(CT.seasonsToReachBanded(0, 6 * RULES.full_year_days, thin, "p50", RULES), null);
+});
+
+test("the flat walk is still exact, because the ruleset comparison relies on it", () => {
+  assert.equal(CT.seasonsToReach(0, 172 * 3, 200, RULES), 3);
+  assert.equal(CT.seasonsToReach(0, 172, 0, RULES), null);
+  assert.equal(CT.seasonsToReach(6 * 172, 6 * 172, 100, RULES), 0);
+});
+
+test("a projection reports the whole measured population, not one band's slice", () => {
+  const p = CT.project(86, MODEL, RULES, 2026);
+  assert.equal(p.model.transitions, MODEL.transitions);
+  assert.ok(p.model.transitions > p.band.sample, "the walk crosses bands");
+});
+
+// -------------------------------------------------------------------------
+// The player picker must never be keyed by name
+// -------------------------------------------------------------------------
+
+test("the contract page resolves a player without keying on his name", () => {
+  // "Never key this dataset by name" is one of the project's oldest rules --
+  // two Logan Allens, two Luis Perdomos, and 36 duplicated names in all. Two
+  // players called Max Muncy are on 40-man rosters right now, at 289 days and
+  // 1,741 days, so a name lookup on this page was an eight-and-a-half-year
+  // error inside a contract decision.
+  const src = fs.readFileSync(path.join(ROOT, "docs/contract-page.js"), "utf8");
+  assert.ok(
+    !/PLAYERS\.find\(\s*\(\s*p\s*\)\s*=>\s*p\.name\s*===/.test(src),
+    "a bare name lookup is back in contract-page.js"
+  );
+  assert.ok(src.includes("LABEL_TO_PLAYER"), "the datalist label map is gone");
+});
+
+test("the published index still contains the duplicate names this guards against", () => {
+  // If this ever fails the dataset changed, not the code -- but the guard
+  // above would then be resting on an assumption nobody rechecked.
+  const index = JSON.parse(
+    fs.readFileSync(path.join(ROOT, "docs/data/index.json"), "utf8")
+  );
+  const ix = (n) => index.fields.indexOf(n);
+  const rostered = index.players.filter((r) => r[ix("on_40_man")] === 1);
+  const seen = new Map();
+  for (const r of rostered) {
+    const n = r[ix("name")];
+    seen.set(n, (seen.get(n) || 0) + 1);
+  }
+  const dupes = [...seen].filter(([, c]) => c > 1);
+  assert.ok(dupes.length > 0, "expected at least one duplicated name on a 40-man");
+
+  // And the label the page builds for them must separate them.
+  const labels = new Set(
+    rostered.map((r) => `${r[ix("name")]} · ${index.teams[r[ix("team")]] || ""}`)
+  );
+  assert.equal(labels.size, rostered.length, "name-plus-club must be unique, or the id kicks in");
+});
+
+// -------------------------------------------------------------------------
+// Reachability
+// -------------------------------------------------------------------------
+
+test("the homepage links to the contract and duty-day tools", () => {
+  // Both were in the sitemap and in every other page's footer, and reachable
+  // from the homepage -- the page carrying every inbound link -- from nowhere.
+  // A tool a crawler can only find in the sitemap is the profile of the 782
+  // pages Search Console reported as discovered and not indexed.
+  const home = fs.readFileSync(path.join(ROOT, "docs/index.html"), "utf8");
+  assert.match(home, /href="contract\.html"/, "no homepage link to the contract tool");
+  assert.match(home, /href="taxes\.html"/, "no homepage link to the duty-day tool");
 });

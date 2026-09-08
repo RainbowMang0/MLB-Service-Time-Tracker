@@ -20,8 +20,18 @@
   let serviceDays = null;
   let currentSeason = new Date().getFullYear();
   let offerYears = [];
+  let LABEL_TO_PLAYER = new Map(); // datalist label -> player; never keyed by name alone
 
   const $ = (id) => document.getElementById(id);
+
+  // Names and clubs come from the published payload rather than from a
+  // visitor, so this is discipline rather than a live hole -- the same
+  // discipline app.js uses everywhere, and the one place it lapsed was a bug.
+  function esc(t) {
+    return String(t).replace(/[&<>"']/g, (c) =>
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])
+    );
+  }
 
   function money(n) {
     if (n === null || n === undefined || !isFinite(n)) return "—";
@@ -65,6 +75,57 @@
     const days = Number(m[2]);
     if (days >= RULES.full_year_days) return null;
     return years * RULES.full_year_days + days;
+  }
+
+  /**
+   * Resolve what was typed or picked into exactly one player.
+   *
+   * A datalist puts the option's `value` into the input, so the value is the
+   * id and the resolution is unambiguous. A reader who types a bare name gets
+   * one only if that name is unique -- with a duplicate we refuse and say so,
+   * rather than picking one and being silently wrong about which.
+   */
+  function playerFromInput(text) {
+    const raw = String(text || "").trim();
+    if (!raw) return null;
+    const picked = LABEL_TO_PLAYER.get(raw);
+    if (picked) return picked;
+    const byId = PLAYERS.find((p) => String(p.id) === raw);
+    if (byId) return byId;
+    const byName = PLAYERS.filter((p) => p.name.toLowerCase() === raw.toLowerCase());
+    if (byName.length === 1) return byName[0];
+    if (byName.length > 1) {
+      $("clock-status").textContent =
+        `${byName.length} players are called ${byName[0].name}. Pick one from the list rather than typing the name — ` +
+        byName.map((p) => `${p.club || "no club"} (${CT.formatService(p.days, RULES)})`).join(", ") + ".";
+    }
+    return null;
+  }
+
+  /**
+   * Build the datalist and the label lookup together, so they cannot drift.
+   *
+   * The option value is what the browser puts in the input, so it has to be
+   * readable -- an id in the box would look like a bug. Name-plus-club is
+   * unique across every 40-man today, but the whole point of this fix is not
+   * to rest on a string being unique, so a collision appends the id rather
+   * than letting two options resolve to one player.
+   */
+  function buildPlayerList(players) {
+    const counts = new Map();
+    for (const p of players) {
+      const base = p.name + (p.club ? " · " + p.club : "");
+      counts.set(base, (counts.get(base) || 0) + 1);
+    }
+    LABEL_TO_PLAYER = new Map();
+    const options = [];
+    for (const p of players) {
+      const base = p.name + (p.club ? " · " + p.club : "");
+      const label = counts.get(base) > 1 ? `${base} (#${p.id})` : base;
+      LABEL_TO_PLAYER.set(label, p);
+      options.push(`<option value="${esc(label)}"></option>`);
+    }
+    $("player-list").innerHTML = options.join("");
   }
 
   // -----------------------------------------------------------------------
@@ -117,17 +178,19 @@
 
     panel.hidden = false;
     $("projection-basis").innerHTML =
-      `Measured from <b>${p.sample.toLocaleString()}</b> player-seasons in this project's own database: ` +
-      `players who were in the majors with between ${p.band.label} years of service, and what they accrued the following season. ` +
-      `Median ${p.band.p50} days; ${Math.round(p.band.share_full_year * 100)}% reached a full credited year, ` +
-      `${Math.round(p.band.share_zero * 100)}% accrued none.`;
+      `Measured from <b>${p.model.transitions.toLocaleString()}</b> player-seasons in this project's own database: ` +
+      `what players in the majors actually accrued the following season, banded by the service they had already earned. ` +
+      `This player starts in the ${p.band.label} band (${p.band.sample.toLocaleString()} player-seasons, median ${p.band.p50} days; ` +
+      `${Math.round(p.band.share_full_year * 100)}% reached a full credited year, ${Math.round(p.band.share_zero * 100)}% accrued none) ` +
+      `and the walk moves him into the next band as he crosses it.`;
 
     const cell = (o) => {
       if (o.seasons === null) {
         return `<td><span class="status st-unverified">Not reached at this rate</span></td>`;
       }
       if (o.seasons === 0) return `<td><span class="status st-ok">Already reached</span></td>`;
-      return `<td><b>${o.season}</b><span class="cell-sub">${o.seasons} more season${o.seasons === 1 ? "" : "s"} · ${o.daysPerSeason} days/yr</span></td>`;
+      const rate = o.seasons === 1 ? `${o.daysPerSeason} days` : `from ${o.daysPerSeason} days/yr`;
+      return `<td><b>${o.season}</b><span class="cell-sub">${o.seasons} more season${o.seasons === 1 ? "" : "s"} · ${rate}</span></td>`;
     };
 
     $("projection-table").querySelector("tbody").innerHTML = p.targets
@@ -144,6 +207,7 @@
       "<ul>" +
       [
         "These are outcomes for a population, not probabilities for one player. What a given season holds depends on health, role and club decisions that nothing here can see.",
+        "The rate is re-read at each season from the band the player would then be in, because the measured rate rises with service. Holding a rookie's slowest season across a decade would produce a date no career reaches.",
         "The distribution is measured from estimated service time, so it carries every limitation of the estimates behind it.",
         "Seasons are capped at the credited maximum, so no rate of accrual can shorten the path below one credited year per season.",
       ]
@@ -296,13 +360,22 @@
       renderClock();
     });
 
+    // Resolved by ID, never by name. Two players on 40-man rosters share the
+    // name "Max Muncy" today (289 days and 1,741 days), and the database holds
+    // 36 duplicated names in all -- two Logan Allens, two Luis Perdomos. A
+    // name lookup silently returns whichever row comes first, which on this
+    // page is an eight-and-a-half-year error inside a contract decision.
+    //
+    // The datalist option's `value` therefore carries the id and its `label`
+    // carries what the reader sees, so a duplicate name is disambiguated by
+    // the club shown beside it.
     $("in-player").addEventListener("change", (e) => {
-      const match = PLAYERS.find((p) => p.name === e.target.value);
+      const match = playerFromInput(e.target.value);
       if (!match) return;
       serviceDays = match.days;
       $("in-service").value = CT.formatService(match.days, RULES);
       $("clock-status").textContent =
-        `${match.name} — ${CT.formatService(match.days, RULES)} as of the last daily update.` +
+        `${match.name}${match.club ? " · " + match.club : ""} — ${CT.formatService(match.days, RULES)} as of the last daily update.` +
         (match.on40 ? "" : " He is not on a 40-man roster; his figure is where his clock stopped.");
       renderClock();
     });
@@ -401,11 +474,16 @@
 
       const fields = index.fields || [];
       const ix = (n) => fields.indexOf(n);
+      const teams = index.teams || [];
       PLAYERS = (index.players || []).map((row) => ({
         id: row[ix("id")],
         name: row[ix("name")],
         days: row[ix("days")],
         on40: row[ix("on_40_man")] === 1,
+        // Blank for anyone off a 40-man: a non-rostered player's stored club
+        // is stale by construction, and the payload already blanks it.
+        club: teams[row[ix("team")]] || null,
+        hasPage: row[ix("has_page")] === 1,
       }));
     } catch (e) {
       $("clock-status").textContent =
@@ -418,9 +496,7 @@
     // Rostered players first: this page is about a decision in front of
     // someone, and a retired player's clock stopped years ago.
     const rostered = PLAYERS.filter((p) => p.on40).sort((a, b) => (a.name < b.name ? -1 : 1));
-    $("player-list").innerHTML = rostered
-      .map((p) => `<option value="${p.name.replace(/"/g, "&quot;")}"></option>`)
-      .join("");
+    buildPlayerList(rostered);
 
     $("in-ruleset-b").innerHTML = `
       <option value="same">Same as 2022 (no change)</option>
