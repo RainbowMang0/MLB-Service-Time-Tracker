@@ -189,9 +189,30 @@ def _fmt(days: int) -> str:
     return f"{days // FULL_YEAR_DAYS}.{days % FULL_YEAR_DAYS:03d}"
 
 
+def _debuted_but_empty(player: dict) -> bool:
+    """He reached the majors, and we credit him nothing.
+
+    A player who appears in a major league game is on the active roster that
+    day, so his debut date is proof of at least one day he is owed. When the
+    figure is nevertheless zero, the transaction record failed to reconstruct
+    a stint that certainly happened -- and the page must not describe him the
+    way it describes a prospect who has never been up.
+
+    Live example: Seth Lonsway, debut 2026-08-29, whose contract was selected
+    and who was optioned back on that same date. Stop-wins (finding #10)
+    correctly leaves no interval to credit, and finding #15 cannot reach him
+    because the selection is ON his debut rather than before it. The
+    arithmetic is defensible; a sentence claiming he "has not been on a major
+    league active roster" is not.
+    """
+    return bool(player.get("mlb_debut")) and not player.get("service_days_total")
+
+
 def _status(player: dict) -> str:
     if not player.get("on_40_man"):
         return "No longer on a 40-man roster"
+    if _debuted_but_empty(player):
+        return "Debuted, but no service time can be reconstructed"
     if not player.get("service_days_total"):
         return "Yet to accrue a day of major league service"
     if player.get("free_agent_eligible"):
@@ -625,14 +646,31 @@ def render(player: dict, team_names: dict[int, str], generated_at: str) -> str:
             f"service time — {service} in the notation clubs use, from {total_days} "
             f"day{'' if total_days == 1 else 's'} credited on a major league roster."
         )
+    elif _debuted_but_empty(player):
+        # He REACHED the majors and we credit him nothing, which is a different
+        # fact from never having been up and must not be described as one.
+        #
+        # The page used to say "he is on a 40-man roster but has not been on a
+        # major league active roster or injured list" -- flatly false for a man
+        # with a debut date, since appearing in a game requires being on the
+        # active roster. It asserted more than the arithmetic knows, which is
+        # the one thing a page publishing an estimate must never do.
+        lede = (
+            f"{name} made his major league debut on {debut}, but <b>no service "
+            "time can be reconstructed</b> for him from the public transaction "
+            "record. He is owed at least the day he appeared; the roster moves "
+            "that would prove it are not in the feed. This figure is a floor, "
+            "not a measurement."
+        )
     else:
         # "0 days ... from 0 days credited" reads like a broken template. These
-        # are prospects added to a 40-man to protect them from the Rule 5 draft.
+        # are prospects added to a 40-man to protect them from the Rule 5 draft
+        # -- no debut date, so nothing here contradicts the record.
         # The second sentence is conditional because _should_publish() may later
         # widen to non-rostered players, for whom it would simply be false.
         roster_note = (
-            " He is on a 40-man roster but has not been on a major league active "
-            "roster or injured list."
+            " He is on a 40-man roster but has not yet been on a major league "
+            "active roster or injured list."
             if player.get("on_40_man")
             else ""
         )

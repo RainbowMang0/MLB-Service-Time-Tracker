@@ -2132,6 +2132,92 @@ their debut, and what does it do to the gates), and it is worth one day per
 player. **Not shipped, and not obviously worth shipping** — recorded so the
 next session does not re-derive the diagnosis from scratch.
 
+### 21. Seth Lonsway is finding #20 again — and the class is now measured
+
+**Diagnosed 2026-09-08** after `report_debuted_but_empty()` named a second
+player. He is **not a new class of bug**: he is the identical shape to Elih
+Villanueva, and the engine is behaving correctly.
+
+His entire major league history, after the club filter, is five rows, and the
+two that matter share his debut date:
+
+```
+2026-08-29  mlb  START  San Francisco Giants selected the contract of LHP Seth Lonsway
+                        from Sacramento River Cats.
+2026-08-29  mlb  STOP   San Francisco Giants optioned LHP Seth Lonsway to Sacramento
+                        River Cats.
+```
+
+Reproduced directly with the pipeline's own walk, both ways:
+
+```
+roster_start_before_debut()  -> None
+accrual_floor                -> 2026-08-29
+carry-in OFF: ACCRUAL INTERVALS -> (none)
+carry-in ON : ACCRUAL INTERVALS -> (none)
+```
+
+**Stop-wins (finding #10) zeroes him** — a date carrying both a start and a
+stop ends with the player off the roster, so the interval never opens. **Finding
+#15 cannot reach him**, exactly as with Villanueva: the selection is *on* his
+debut, not before it, so there is no pre-debut roster move to move the floor
+back to. Both rules are right, and the zero is what they correctly produce.
+
+#### The measurement finding #20 asked for, now done
+
+Finding #20 recorded the narrow fix — floor a debuted player's credited days
+at one — as "not shipped, and not obviously worth shipping", pending a
+measurement nobody had taken. Taken now, over all 1,380 cached rostered
+players with a debut date, using `_involves_mlb_club` from the pipeline (never
+a hand-rolled filter — finding #14's trap):
+
+| | |
+|---|---|
+| carry a START **and** a STOP on the debut date itself | **2** |
+| ...of whom currently read 0.000 | **1** (Lonsway) |
+| the other | JoJo Romero, 5.103 — same shape, day invisible in the total |
+| **total days the proposed rule would add** | **2** |
+
+⚠️ **Scope limit, stated honestly:** the transaction cache holds rostered
+players only, so Villanueva — who is not on a 40-man — is *not* in that
+1,380. The true class is at least three. It is still tiny.
+
+**So the rule is now measurably not worth shipping**, which is a stronger
+statement than #20 could make. Two days, against a `rules_version` bump, a
+multi-hour recompute of all 5,592 records, and a re-run of both gates. The
+cost is enormous relative to the correction.
+
+#### What WAS wrong, and it was the prose
+
+The engine is defensible. The page was not. It said:
+
+> "He is on a 40-man roster but **has not been on a major league active roster
+> or injured list**."
+
+**Flatly false.** He debuted on 2026-08-29 — appearing in a game requires being
+on the active roster — so the page contradicted the `mlb_debut` field in its own
+record. It asserted more than the arithmetic knows, which is the one thing a
+site publishing an estimate must never do.
+
+`_debuted_but_empty()` now separates the two cases, and they read differently:
+
+* **debuted, credited nothing** — names the debut date, says the day is owed,
+  says plainly that the figure is a floor rather than a measurement.
+* **never came up** (no debut date — a prospect protected from the Rule 5
+  draft) — keeps the old wording, softened to "has not *yet* been".
+
+Pinned by `test_a_debuted_player_is_never_described_as_never_having_been_up()`,
+which checks both branches and that neither can borrow the other's sentence.
+
+**Still open, and it needs the network:** by the rule finding #17 established,
+the last step is to probe him against MLB's own historical rosters — Actions →
+Validate Service Time → `player`, id 675920, season 2026, interval 1. If the
+rosters never list him as active on 08-29, we match them and there is nothing
+to fix, exactly as with Villanueva. Only a disagreement with the rosters would
+be a defect here. **This session could not run it: the sandbox has no route to
+statsapi.mlb.com**, so the diagnosis above was done entirely from the committed
+transaction cache.
+
 ### A scheduled run does not start when it is scheduled
 
 **Found 2026-09-01 by the owner**, who noticed Mason Adams reading 3 days of
@@ -2432,6 +2518,13 @@ free, client-side, and store nothing server-side.
   actually wrong was the *checker*, and it is fixed.
 - Service-time-manipulation grievance outcomes (e.g. Kris Bryant) are invisible
   to public transaction data.
+- **Two players read 0.000 despite having debuted** — Elih Villanueva
+  (finding #20) and Seth Lonsway (finding #21), the same shape. Measured
+  2026-09-08: only 2 of 1,380 cached rostered players carry a same-date
+  start-and-stop on their debut, worth **2 days in total**, so the fix that
+  would credit them is measurably not worth a recompute. Their *pages* no
+  longer claim they have never been on a major league roster, which was the
+  part that was actually wrong.
 - **Elih Villanueva reads 0.000 and still does** — see finding #20. He
   debuted and last played on 2011-06-15, a one-game career, and the
   contract selection and the option that ended it share that single date,
@@ -3574,10 +3667,8 @@ rather than merely fixed.
 - **No accrual rule.** Not one line of the interval walk, the floor, the
   ceiling, carry-in, or stop-wins. No `rules_version` bump, so no recompute.
 - **`report_debuted_but_empty()` now names two players**, not one: Elih
-  Villanueva (finding #20, understood and accepted) and **Seth Lonsway**, who
-  debuted 2026-08-29. Lonsway is new and unexamined — pre-existing, not caused
-  by this pass. He is the next thing worth probing against MLB's rosters, per
-  the rule in finding #17.
+  Villanueva (finding #20) and **Seth Lonsway** — diagnosed the same day, see
+  finding #21 below. Not an accrual bug; the *page* was fixed, not the engine.
 - **The daily commit rewrites ~21,000 lines across ~1,550 files.** That is the
   page footers plus sitemap `lastmod`, and it is working as designed. `.git` is
   13 MB, so it is not yet a problem; noted only so nobody rediscovers it as one.

@@ -1614,6 +1614,67 @@ def test_nothing_published_claims_a_transaction_coverage_cutoff_year():
     )
 
 
+def test_a_debuted_player_is_never_described_as_never_having_been_up():
+    """
+    A player who appears in a major league game is on the active roster that
+    day, so a debut date is proof of at least one day he is owed. When the
+    figure is nevertheless zero, the page used to say:
+
+        "He is on a 40-man roster but has not been on a major league active
+         roster or injured list."
+
+    which is flatly false, and false in the one direction a site publishing an
+    estimate cannot afford -- it asserted more than the arithmetic knows.
+
+    Found 2026-09-08 on Seth Lonsway (debut 2026-08-29), whose contract was
+    selected and who was optioned back on that same date. Stop-wins (finding
+    #10) correctly leaves no interval, and finding #15 cannot reach him
+    because the selection is ON the debut rather than before it. The zero is
+    defensible; the sentence was not.
+
+    Note this pins the PROSE, not the figure. Whether the engine should floor
+    a debuted player at one day is a rules question, measured separately: two
+    of 1,380 cached rostered players carry a same-date start-and-stop on their
+    debut, worth two days in total.
+    """
+    import write_player_pages as w
+
+    debuted = {
+        "id": 675920,
+        "name": "Test Debutant", "mlb_debut": "2026-08-29", "on_40_man": True,
+        "service_days_total": 0, "service_time": "0.000", "team": "Some Club",
+        "seasons": [], "position": "P",
+    }
+    never_up = {
+        "id": 999001,
+        "name": "Test Prospect", "mlb_debut": None, "on_40_man": True,
+        "service_days_total": 0, "service_time": "0.000", "team": "Some Club",
+        "seasons": [], "position": "P",
+    }
+
+    check("a debuted player is recognised as such", w._debuted_but_empty(debuted))
+    check("a prospect who never came up is not", not w._debuted_but_empty(never_up))
+
+    page = w.render(debuted, {}, "2026-09-08T00:00:00+00:00")
+    check(
+        "his page does NOT claim he has never been on an active roster",
+        "has not been on a major league active roster" not in page
+        and "has not yet been on a major league active roster" not in page,
+    )
+    check("...it names the debut instead", "made his major league debut on 2026-08-29" in page)
+    check("...and calls the figure a floor", "floor" in page)
+
+    prospect_page = w.render(never_up, {}, "2026-09-08T00:00:00+00:00")
+    check(
+        "a genuine prospect IS still described as not yet up",
+        "has not yet been on a major league active roster" in prospect_page,
+    )
+    check(
+        "...and is not described as having debuted",
+        "made his major league debut" not in prospect_page,
+    )
+
+
 def test_lastmod_moves_only_when_a_page_actually_changes():
     """
     Every sitemap URL used to claim today's date, every day. Between the World
@@ -2265,5 +2326,6 @@ if __name__ == "__main__":
     test_an_estimated_season_window_stops_the_run_from_publishing()
     test_both_published_files_carry_the_cba_rules_block()
     test_nothing_published_claims_a_transaction_coverage_cutoff_year()
+    test_a_debuted_player_is_never_described_as_never_having_been_up()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)
