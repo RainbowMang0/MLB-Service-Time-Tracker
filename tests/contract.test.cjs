@@ -402,12 +402,14 @@ test("the published index still contains the duplicate names this guards against
 // Reachability
 // -------------------------------------------------------------------------
 
-test("the homepage links to the contract and duty-day tools", () => {
-  // Both were in the sitemap and in every other page's footer, and reachable
-  // from the homepage -- the page carrying every inbound link -- from nowhere.
-  // A tool a crawler can only find in the sitemap is the profile of the 782
-  // pages Search Console reported as discovered and not indexed.
+test("the homepage deliberately does not yet link the contract or duty-day tools", () => {
+  // Reverted 2026-09-08 at the owner's direction: neither tool is finished,
+  // and the contract tool in particular is missing the valuation work this
+  // is now being researched for. Linking from the homepage is the one
+  // hard-to-undo direction -- it teaches a crawler these URLs matter, and a
+  // young site should not point its only inbound authority at a tool it is
+  // about to change. Flip this test when the tools are ready.
   const home = fs.readFileSync(path.join(ROOT, "docs/index.html"), "utf8");
-  assert.match(home, /href="contract\.html"/, "no homepage link to the contract tool");
-  assert.match(home, /href="taxes\.html"/, "no homepage link to the duty-day tool");
+  assert.ok(!/href="contract\.html"/.test(home), "homepage links the contract tool before it is ready");
+  assert.ok(!/href="taxes\.html"/.test(home), "homepage links the duty-day tool before it is ready");
 });
