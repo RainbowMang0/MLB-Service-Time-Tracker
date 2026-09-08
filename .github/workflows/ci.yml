@@ -13,12 +13,15 @@ name: CI
 # That is the wrong way round for a project whose whole discipline is "pin the
 # finding as a test". A test nobody runs is a comment.
 #
-# Everything here is OFFLINE and read-only: no API calls, no data written, no
-# commits. It costs well under a minute and cannot fail for a reason outside
-# the repository -- which is what makes it safe to make required. The checks
-# that need statsapi.mlb.com (the roster gate, the Baseball Reference
-# comparison, a single-player probe) stay in validate.yml, on demand, because
-# they cost real API calls and their answer moves with the feed.
+# Everything here is OFFLINE and read-only: it makes no call to
+# statsapi.mlb.com, writes no data and commits nothing, so it costs well under
+# a minute and its answer depends only on the contents of this repository.
+# (The one external thing it does is install `requests` from PyPI -- see the
+# note on that step. Pip is cached, so the usual run does not reach the
+# network at all.) The checks that need the MLB API -- the roster gate, the
+# Baseball Reference comparison, a single-player probe -- stay in validate.yml,
+# on demand, because they cost real API calls and their answer moves with the
+# feed.
 
 on:
   push:
@@ -44,16 +47,29 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
 
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: "22"
 
-      # No pip install. The engine and its tests are stdlib-only on purpose --
-      # `requests` is needed to TALK to the API and nothing offline touches it.
-      # If this step ever becomes necessary, something has grown a dependency
-      # it should not have.
+      # ⚠️ This step exists because the first version of this file did NOT have
+      # it, on a comment asserting "the engine and its tests are stdlib-only on
+      # purpose". That was written without checking and is false: the suite
+      # imports backfill_history and update_service_time (to test the sanity
+      # guards and the season-window cache), both of which import
+      # fetch_mlb_data, which imports `requests` at module scope. Both of this
+      # workflow's first two runs died on ModuleNotFoundError in 7 seconds.
+      #
+      # The ENGINE is stdlib-only -- service_time.py and cba.py import nothing
+      # outside it, which is the property actually worth having. The tests are
+      # not, because they reach into the modules that talk to the API. One
+      # dependency, pinned in requirements.txt, installed in about five seconds.
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
       - name: Service-time engine and CBA rulesets
         run: python tests/test_service_time.py
 
