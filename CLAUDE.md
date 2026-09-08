@@ -3445,6 +3445,112 @@ Verified by simulating the next day's run: with identical data, 0 of 1,389
 pages moved; with one player given a day, exactly 2 moved — his page and his
 club's.
 
+### The truthful sitemap was still costing the crawl budget
+
+**Found 2026-09-08 from Search Console**, which reported **782 pages
+"Discovered — currently not indexed"** against ~620 indexed, eight days after
+the sitemap was submitted.
+
+The section above fixed a sitemap that *lied* — every URL claiming today's date
+whether or not anything moved. What it did not fix is that the truthful version
+is nearly as bad for a new domain. Measured across five consecutive daily
+commits:
+
+| commit | URLs claiming they changed that day |
+|---|---|
+| 09-03 | 1,141 of 1,406 |
+| 09-04 | 1,138 of 1,406 |
+| 09-05 | 1,143 of 1,407 |
+| 09-06 | 1,144 of 1,404 |
+| 09-07 | 1,143 of 1,405 |
+
+**81% of the site, every single day, and all of it true** — an accruing player
+gains a day, so his figure really does move. Diffed at N vs N+1 days, exactly
+sixteen lines change on a player page and every one is the same two numbers:
+
+```
+8.156 -> 8.157        1532 -> 1533
+```
+
+Same club, same status, same season rows, same words. Google asks that
+`lastmod` carry the last **significant** modification, and a counter ticking by
+one is not that — so an eight-day-old domain with a small crawl budget was
+spending it re-fetching 81% of the site daily while 782 pages had never been
+crawled once.
+
+**The fix is the judgement `_VOLATILE_RE` already makes about the footer date,
+extended to the figures that behave the same way.** `_content_key()` now
+normalises the Y.DDD figure, the spelled-out figure, the day counts and the
+meter percentage before hashing.
+
+*Simulated over all 1,370 player pages, one ordinary in-season day:*
+
+| | pages whose `lastmod` would move |
+|---|---|
+| before | **1,348** (98%) |
+| after | **4** (0%) |
+
+⚠️ **What still moves a date, deliberately** — and all six are pinned by
+`test_the_daily_service_time_tick_is_not_a_content_change()`: a status change
+(the badge text differs), a trade (the club name differs), a new season row
+(the YEAR is not normalised — only `<td class='n'>` day cells are), a name
+change, and any template edit (the surrounding markup is hashed as before).
+
+⚠️ **The first pass at the normalisation list missed one**, and the method is
+the point: rather than reading the template and reasoning about it, diff the
+*normalised* text at N vs N+1 and look at the residue. It was
+`_plain_figure()`'s "8 years and 156 days" in the lede. Do that rather than
+trusting a reading.
+
+**One-time cost, accepted:** changing what gets hashed rehashes every page
+once, so all 1,406 `lastmod`s move to today on the first run. They were all
+claiming today anyway, so nothing is lost.
+
+### The sitemap is split by section, behind an index
+
+Same date, same cause. Search Console reports indexed-vs-submitted **per
+sitemap**, and one flat file of 1,406 URLs cannot say *which* 782 pages went
+unindexed — which is exactly the question.
+
+```
+sitemap.xml            <- now a <sitemapindex>
+  sitemap-core.xml         6 URLs   home, explainer, taxes, contract, neutrality, t/
+  sitemap-clubs.xml       30 URLs
+  sitemap-players.xml  1,370 URLs
+```
+
+**`sitemap.xml` stays the entry point**, so the URL already submitted to Search
+Console keeps working and Google discovers the children itself — nothing has to
+be re-submitted by hand, and `robots.txt` is unchanged.
+
+The next report then answers the question directly: club pages indexing while
+player pages do not is a statement about **thin templated pages**; both lagging
+equally is a statement about **site age**.
+
+### What the indexing numbers are actually measuring, and what was NOT changed
+
+Two more things were measured and left alone, because both are the owner's call
+rather than a defect:
+
+* **Crawl depth and inbound links.** The homepage's static HTML contains
+  **exactly two internal links** — `service-time.html` and `t/` — because the
+  player table is rendered by `app.js` from `index.json`. So a crawler that
+  does not run JavaScript sees no player links at all, and every one of the
+  1,370 player pages sits **three hops from home with exactly one inbound
+  internal link** (from its club page). That is a weak signal, and it is the
+  classic profile of "Discovered — currently not indexed".
+* **Thin, near-duplicate pages.** Sampled over 200 player pages: median **199
+  words**, of which **98 distinct words are boilerplate present on every single
+  page**, leaving a median of **28 distinct words unique to a page**. 258 of
+  1,370 published pages (19%) have one credited season or none.
+
+Neither was touched. Adding teammate cross-links, or `noindex` on the thinnest
+pages, are real options with real trade-offs — and **the dominant variable is
+still that the site was eight days old when this was measured**. ~620 of 1,406
+indexed in the first week, on a new domain with no backlinks, is a normal
+result rather than a broken one. Re-read the split sitemap report before
+spending effort on either.
+
 ### The page CSS is a real file now
 
 It was inlined into each of the 1,358 player pages: ~1.4 KB apiece, and

@@ -781,8 +781,54 @@ LASTMOD_PATH = DOCS / "data" / "page_lastmod.json"
 _VOLATILE_RE = re.compile(r"(?:Last u|U)pdated \d{4}-\d{2}-\d{2}\.")
 
 
+# --- The daily tick is not a content change ---------------------------------
+# Measured 2026-09-08, after Search Console reported 782 pages "Discovered --
+# currently not indexed". Across five consecutive daily commits the sitemap
+# claimed 1,138-1,144 of ~1,405 URLs (81%) had changed THAT DAY, every day.
+#
+# It was telling the truth, and that is the problem. An accruing player gains a
+# day every day the season is on, so his figure really does move. Diffed at N
+# vs N+1 days, exactly sixteen lines change on a player page and every one of
+# them is the same two numbers -- the Y.DDD figure and the day count:
+#
+#     8.156 -> 8.157        1532 -> 1533
+#
+# Nothing structural moves: same club, same status, same season rows, same
+# words. Google asks that lastmod carry the date of the last *significant*
+# modification, and a counter ticking by one is not that. Meanwhile an
+# eight-day-old domain has a small crawl budget, and we were spending it asking
+# Google to re-fetch 81% of the site daily while 782 pages had never been
+# crawled once.
+#
+# This is the same judgement `_VOLATILE_RE` already makes about the footer date
+# -- that stamp also genuinely changes daily and is also normalised out --
+# extended to the two figures that behave the same way.
+#
+# WHAT STILL MOVES A DATE, deliberately: a status change (the badge text
+# differs), a trade (the club name differs), a new season row (the YEAR is not
+# normalised -- only `<td class='n'>` day cells are), and any template edit
+# (the surrounding markup and words are hashed as before). The four cases are
+# pinned by a test.
+_FIGURE_RE = re.compile(r"\b\d+\.\d{3}\b")               # 8.156, 21.075, 1.000
+_DAYS_PHRASE_RE = re.compile(r"[\d,]+ days credited")     # meta, JSON-LD, lede
+_DAYS_FACT_RE = re.compile(r"(<span>Days credited</span>)\d+")
+_DAYS_CELL_RE = re.compile(r"(<td class='n'>)\d+(</td>)")  # season + club tables
+_PCT_RE = re.compile(r"--pct:[\d.]+")                      # the meter fill
+# The same figure spelled out by _plain_figure() in the lede: "8 years and 156
+# days". Found by diffing the NORMALISED text at N vs N+1 days rather than by
+# reading the template -- the first pass at this list missed it, and the diff
+# is what said so.
+_PLAIN_FIGURE_RE = re.compile(r"<b>\d+ (?:year|day)s?(?: and \d+ days?)?</b>")
+
+
 def _content_key(page_html: str) -> str:
     stable = _VOLATILE_RE.sub("Last updated.", page_html)
+    stable = _PLAIN_FIGURE_RE.sub("<b><PLAIN></b>", stable)
+    stable = _FIGURE_RE.sub("<SVC>", stable)
+    stable = _DAYS_PHRASE_RE.sub("<DAYS> days credited", stable)
+    stable = _DAYS_FACT_RE.sub(r"\1<DAYS>", stable)
+    stable = _DAYS_CELL_RE.sub(r"\1<DAYS>\2", stable)
+    stable = _PCT_RE.sub("--pct:<PCT>", stable)
     return hashlib.sha256(stable.encode("utf-8")).hexdigest()[:16]
 
 
@@ -941,22 +987,58 @@ def _write_sitemap(
             f"<lastmod>{lastmod.of(path)}</lastmod>"
             f"<priority>{priority}</priority></url>"
         )
-    urls += [
+    club_urls = [
         f"  <url><loc>{SITE_URL}/{club_path(c)}</loc>"
         f"<lastmod>{lastmod.of(club_path(c))}</lastmod>"
         f"<priority>0.8</priority></url>"
         for c in clubs
     ]
-    urls += [
+    player_urls = [
         f"  <url><loc>{SITE_URL}/{page_path(p)}</loc>"
         f"<lastmod>{lastmod.of(page_path(p))}</lastmod></url>"
         for p in published
     ]
+
+    # SPLIT BY SECTION, behind a sitemap index at the same URL.
+    #
+    # Search Console reports indexed-vs-submitted PER SITEMAP, and with one flat
+    # file of 1,406 URLs "782 discovered, not indexed" says nothing about WHICH
+    # 782. Split, the next report answers it directly: if the 30 club pages
+    # index and the 1,370 player pages do not, that is a statement about thin
+    # templated pages; if both lag equally it is a statement about site age.
+    #
+    # sitemap.xml stays the entry point and becomes the index, so the URL
+    # already submitted to Search Console keeps working and Google discovers
+    # the children itself -- nothing has to be re-submitted by hand.
+    _write_urlset("sitemap-core.xml", urls)
+    _write_urlset("sitemap-clubs.xml", club_urls)
+    _write_urlset("sitemap-players.xml", player_urls)
+
+    newest = max([lastmod.today] + [lastmod.of(page_path(p)) for p in published])
+    children = "\n".join(
+        f"  <sitemap><loc>{SITE_URL}/{name}</loc><lastmod>{when}</lastmod></sitemap>"
+        for name, when in (
+            ("sitemap-core.xml", lastmod.today),
+            ("sitemap-clubs.xml", lastmod.today),
+            ("sitemap-players.xml", newest),
+        )
+    )
     (DOCS / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + children
+        + "\n</sitemapindex>\n",
+        encoding="utf-8",
+    )
+
+
+def _write_urlset(name: str, urls: list[str]) -> None:
+    (DOCS / name).write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + "\n".join(urls)
-        + "\n</urlset>\n"
+        + "\n</urlset>\n",
+        encoding="utf-8",
     )
 
 

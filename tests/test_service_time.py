@@ -1675,6 +1675,102 @@ def test_a_debuted_player_is_never_described_as_never_having_been_up():
     )
 
 
+def test_the_daily_service_time_tick_is_not_a_content_change():
+    """
+    Measured 2026-09-08, after Search Console reported 782 pages "Discovered --
+    currently not indexed". Across five consecutive daily commits the sitemap
+    claimed 1,138-1,144 of ~1,405 URLs had changed that day, every day.
+
+    It was telling the truth, and that was the problem: an accruing player
+    gains a day, so his figure really moves. Diffed at N vs N+1 days, the only
+    lines that change are the Y.DDD figure, the spelled-out figure and the day
+    count. Google asks lastmod to carry the last SIGNIFICANT change, and an
+    eight-day-old domain has a small crawl budget -- we were spending it asking
+    for 98% of the site to be re-fetched daily while 782 pages had never been
+    crawled once.
+
+    Simulated over all 1,370 player pages: 1,348 pages would have moved before,
+    4 after.
+
+    The four cases below are the whole contract. The first pass at the
+    normalisation list missed the spelled-out figure and case (b) caught it.
+    """
+    import copy
+    import write_player_pages as w
+
+    player = {
+        "id": 592450, "name": "Test Player", "team": "Some Club", "team_id": 137,
+        "position": "P", "mlb_debut": "2017-04-01", "service_time": "8.156",
+        "service_days_total": 1532, "on_40_man": True, "arbitration_eligible": True,
+        "seasons": [{"y": 2024, "d": 172, "raw": 172, "pro": 172, "t": [137], "src": "read"},
+                    {"y": 2025, "d": 156, "raw": 156, "pro": 156, "t": [137], "src": "read"}],
+    }
+    at = "2026-09-08T00:00:00+00:00"
+    key = lambda rec: w._content_key(w.render(rec, {137: "Some Club"}, at))
+    base = key(player)
+
+    def plus(days):
+        q = copy.deepcopy(player)
+        q["service_days_total"] += days
+        q["service_time"] = f"{q['service_days_total'] // 172}.{q['service_days_total'] % 172:03d}"
+        q["seasons"][-1]["d"] += days
+        return q
+
+    check("an identical page keeps its date", key(player) == base)
+    check("(a) one more day does NOT move the date", key(plus(1)) == base)
+    check("(b) thirty more days do not either", key(plus(30)) == base)
+
+    traded = copy.deepcopy(player); traded["team"] = "Another Club"
+    check("(c) a trade DOES move it", key(traded) != base)
+
+    promoted = copy.deepcopy(player); promoted["free_agent_eligible"] = True
+    check("(d) a status change DOES move it", key(promoted) != base)
+
+    extra = copy.deepcopy(player)
+    extra["seasons"] = extra["seasons"] + [
+        {"y": 2026, "d": 40, "raw": 40, "pro": 40, "t": [137], "src": "read"}
+    ]
+    check("(e) a new season row DOES move it", key(extra) != base)
+
+    real = w._threshold_sentence
+    try:
+        w._threshold_sentence = lambda: real() + " An added sentence."
+        check("(f) a template edit DOES move every page", key(player) != base)
+    finally:
+        w._threshold_sentence = real
+
+
+def test_the_sitemap_is_an_index_split_by_section():
+    """
+    Search Console reports indexed-vs-submitted per sitemap, and one flat file
+    of 1,406 URLs cannot say WHICH 782 pages went unindexed. Split by section,
+    the next report answers it: club pages indexing while player pages do not
+    is a statement about thin templated pages; both lagging equally is a
+    statement about the site's age.
+
+    sitemap.xml stays the entry point and becomes the index, so the URL already
+    submitted to Search Console keeps working and nothing has to be
+    re-submitted by hand.
+    """
+    docs = pathlib.Path(__file__).resolve().parents[1] / "docs"
+    index = (docs / "sitemap.xml").read_text()
+    check("sitemap.xml is a sitemap index", "<sitemapindex" in index)
+    for child in ("sitemap-core.xml", "sitemap-clubs.xml", "sitemap-players.xml"):
+        check(f"...it lists {child}", child in index)
+        path = docs / child
+        check(f"...and {child} exists as a urlset",
+              path.exists() and "<urlset" in path.read_text())
+
+    workflows = pathlib.Path(__file__).resolve().parents[1] / ".github" / "workflows"
+    for name in ("update-service-time.yml", "backfill-history.yml"):
+        body = (workflows / name).read_text()
+        check(
+            f"{name} stages the new sitemap files",
+            all(c in body for c in
+                ("sitemap-core.xml", "sitemap-clubs.xml", "sitemap-players.xml")),
+        )
+
+
 def test_lastmod_moves_only_when_a_page_actually_changes():
     """
     Every sitemap URL used to claim today's date, every day. Between the World
@@ -2327,5 +2423,7 @@ if __name__ == "__main__":
     test_both_published_files_carry_the_cba_rules_block()
     test_nothing_published_claims_a_transaction_coverage_cutoff_year()
     test_a_debuted_player_is_never_described_as_never_having_been_up()
+    test_the_daily_service_time_tick_is_not_a_content_change()
+    test_the_sitemap_is_an_index_split_by_section()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)
