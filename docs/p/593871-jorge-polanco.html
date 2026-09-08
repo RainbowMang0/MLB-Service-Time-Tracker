@@ -17,8 +17,9 @@
 <script>
   /* Carry the theme the visitor chose on the main table. In <head> and inline
      so it runs before first paint -- deferred, it would flash the wrong theme.
-     styles.css already honours prefers-color-scheme on its own; this is only
-     for an explicit override. */
+     Dark is the site's identity, not something inherited from the OS, so
+     styles.css contains no prefers-color-scheme rules at all and this is the
+     only thing that can produce a light page. */
   try {
     var t = localStorage.getItem("mlb-service-time-theme");
     if (t) document.documentElement.setAttribute("data-theme", t);
@@ -44,16 +45,14 @@
   <table><thead><tr><th>Season</th><th>Club</th><th>Days</th><th>Running total</th><th>How this season is known</th></tr></thead><tbody><tr><td>2014</td><td>Minnesota Twins</td><td class='n'>6</td><td class='n'>0.006</td><td>From transactions</td></tr><tr><td>2015</td><td>Minnesota Twins</td><td class='n'>4</td><td class='n'>0.010</td><td>From transactions</td></tr><tr><td>2016</td><td>Minnesota Twins</td><td class='n'>94</td><td class='n'>0.104</td><td>From transactions</td></tr><tr><td>2017</td><td>Minnesota Twins</td><td class='n'>172</td><td class='n'>1.104</td><td>From transactions</td></tr><tr><td>2018</td><td>Minnesota Twins</td><td class='n'>172</td><td class='n'>2.104</td><td>From transactions</td></tr><tr><td>2019</td><td>Minnesota Twins</td><td class='n'>172</td><td class='n'>3.104</td><td>Carried forward</td></tr><tr><td>2020</td><td>Minnesota Twins</td><td class='n'>172</td><td class='n'>4.104</td><td>Carried forward</td></tr><tr><td>2021</td><td>Minnesota Twins</td><td class='n'>172</td><td class='n'>5.104</td><td>Carried forward</td></tr><tr><td>2022</td><td>Minnesota Twins</td><td class='n'>172</td><td class='n'>6.104</td><td>From transactions</td></tr><tr><td>2023</td><td>Minnesota Twins</td><td class='n'>172</td><td class='n'>7.104</td><td>From transactions</td></tr><tr><td>2024</td><td>Seattle Mariners</td><td class='n'>172</td><td class='n'>8.104</td><td>From transactions</td></tr><tr><td>2025</td><td>Seattle Mariners</td><td class='n'>172</td><td class='n'>9.104</td><td>From transactions</td></tr><tr><td>2026</td><td>New York Mets</td><td class='n'>167</td><td class='n'>10.099</td><td>From transactions</td></tr></tbody></table>
 
   <p class="foot">
-    172 days credit a full year, so a season adds at most 1.000 no matter how
-    long a player is on a roster. 3.000 years reaches salary arbitration and
-    6.000 reaches free agency —
+    172 days credit a full year, so a season adds at most 1.000 no matter how long a player is on a roster. 3.000 years reaches salary arbitration and 6.000 reaches free agency —
     <a href="/service-time.html">what every threshold unlocks</a>.
     <br /><br />
     This figure is an <strong>estimate</strong> reconstructed from public roster
     transaction records. It is not an official MLB or MLBPA figure — those are
     not published. See the
     <a href="https://github.com/RainbowMang0/MLB-Service-Time-Tracker#readme">methodology</a>.
-    Last updated 2026-09-07.
+    Last updated 2026-09-08.
     <br /><br />
     Independent project, not affiliated with or endorsed by Major League
     Baseball or the MLBPA.

@@ -17,15 +17,17 @@ Key thresholds:
     than one full year of credit in a single season, even though a full
     season is a few days longer than 172).
   * 3.000 years  -> arbitration eligible ("arb-eligible").
-  * 2.000-2.172 years AND among the top ~22% in service time of all players
+  * 2.000-3.000 years AND among the top ~22% in service time of all players
     with between two and three years of service -> "Super Two", also
-    arbitration eligible a year early. Computing the real Super Two cutoff
-    requires league-wide data for the full 2-3 year bucket each off-season,
-    which MLB/the union does not publish in real time, so this tool only
-    FLAGS a player as a "possible Super Two" if they fall in the
-    historically common qualifying window (SUPER_TWO_HEURISTIC_MIN_DAYS+)
-    and otherwise reports plain accrued years. It should not be relied on
-    as an authoritative Super Two determination.
+    arbitration eligible a year early.
+
+    THIS MODULE ONLY FLAGS CANDIDATES. The real cutoff is not a fixed
+    threshold -- it falls wherever the class falls that year -- so what
+    happens here is a cheap per-player heuristic with no league context.
+    scripts/super_two.py computes the actual boundary from the whole
+    population and overwrites the flag in a later pass; see
+    apply_super_two() and the note in update_service_time._write_outputs().
+    Do not read this flag as authoritative on its own.
   * 6.000+ years -> free agency eligible.
 
 WHAT COUNTS / WHAT DOESN'T (approximated from transaction descriptions)
@@ -82,12 +84,6 @@ ARBITRATION_YEARS = _DEFAULT_RULES.require("arbitration.standard_years_required"
 SUPER_TWO_MIN_YEARS, SUPER_TWO_MAX_YEARS = _DEFAULT_RULES.require(
     "arbitration.super_two.service_range_years"
 )
-# Historically the Super Two cutoff has fallen in roughly the 2.115-2.140
-# range (~86-140 days into a player's third year). We use a conservative
-# lower bound purely to FLAG candidates for manual review.
-SUPER_TWO_HEURISTIC_MIN_DAYS = _DEFAULT_RULES.require(
-    "arbitration.super_two.heuristic_min_days"
-)
 
 # --- Shortened seasons -----------------------------------------------------
 # The 2020 season ran roughly 66 days instead of the usual ~186. MLB and the
@@ -95,21 +91,33 @@ SUPER_TWO_HEURISTIC_MIN_DAYS = _DEFAULT_RULES.require(
 # as raw days: a player's actual days were scaled by 186/B (B = the season's
 # length), so someone rostered all season earned a full year rather than ~66
 # days. Without this, every player active in 2020 reads about 0.6 years low.
-NORMAL_SEASON_SPAN_DAYS = _DEFAULT_RULES.require("service_time.normal_season_span_days")
+#
+# The span itself is read from the ruleset at the point of use, in
+# _prorate_shortened_season(). A module constant bound to the default agreement
+# would be the wrong number the moment a caller passes a different ruleset,
+# which is the whole reason config/cba/ exists.
 SHORTENED_SEASONS = set(_DEFAULT_RULES.shortened_seasons())
 
 # --- Transaction coverage floor --------------------------------------------
-# Measured empirically against the live API by sampling six players per season
-# and counting transactions involving a major league club:
+# ⚠️ THIS IS NOT A CUTOFF, and nothing about a player's completeness is keyed
+# to it any more. The original claim here -- that the feed returns nothing
+# before 2009 -- was DISPROVED by scripts/probe_coverage.py, which pulled real
+# major league rows from 2005-2008:
 #
-#     2005: 0    2006: 0    2007: 0    2008: 0
-#     2009: 17   2010: 17   2011: 20   2012: 33   2013: 43
+#     2005-01-13 | Pittsburgh Pirates purchased Jack Wilson.
+#     2006-08-11 | Minnesota Twins activated LF Lew Ford from the 15-day DL.
 #
-# The feed switches on in 2009. Before that the endpoint returns essentially
-# nothing -- Jim Abbott was traded during 1995 and his feed is empty -- so a
-# player who debuted earlier can never have his full history reconstructed and
-# will always read low. We can't fix that, but we can be honest about it: any
-# player whose debut predates this year is flagged history_complete=false.
+# The original zeros were a sampling artifact: the sampled players had no
+# professional existence before 2009, so zero rows was the expected result
+# either way and proved nothing. Coverage THINS as you go back; it does not
+# switch on. `_missing_seasons()` in update_service_time.py measures it per
+# player instead, which is why a 2003 debut whose 2003 rows are in the feed
+# now reads complete rather than "partial".
+#
+# What survives is a weak historical prior, used only where a genuinely
+# arbitrary earliest year is needed: backfill_history.py's --min-year default.
+# Nothing published to a reader may depend on it -- the disclaimer that used
+# to quote it was removed for exactly that reason.
 TRANSACTION_COVERAGE_START_YEAR = 2009
 
 
@@ -138,8 +146,13 @@ def _prorate_shortened_season(
 # changes nothing: matching is done by _START_RE / _STOP_RE further down,
 # because real feed wording puts the player's name between the verb and its
 # object and plain substrings cannot match it. See the note above those
-# patterns. Kept because they read more clearly than the regexes and because
-# other modules import them.
+# patterns.
+#
+# Kept purely because they read more clearly than the regexes do. NOTHING
+# IMPORTS THEM -- an earlier version of this note also claimed other modules
+# did, which was never true and would have stopped a maintainer from touching
+# them. If they ever stop matching what _START_RE / _STOP_RE actually do,
+# delete them rather than leaving documentation that lies.
 ACTIVE_START_KEYWORDS = [
     "selected the contract",
     "purchased the contract",
@@ -779,7 +792,6 @@ def compute_service_time(
     accrual_floor: dt.date | None = None,
     accrual_ceiling: dt.date | None = None,
     seasons_with_appearances: set[int] | None = None,
-    carry_in_active_first_season: bool | None = None,  # deprecated alias
     ruleset: "cba.Ruleset | None" = None,
 ) -> ServiceTimeResult:
     """
@@ -796,9 +808,6 @@ def compute_service_time(
     build_global_active_intervals for what bounds the risk. It requires a
     floor -- with no debut date there is no defensible place to start
     presuming, so it is silently inert.
-
-    `carry_in_active_first_season` is the old name for this. It spent a long
-    time as a documented no-op; if passed it is honoured as an alias.
 
     `seasons_with_appearances` is the set of seasons in which MLB's own
     year-by-year splits show the player appearing. When given, a season is
@@ -843,8 +852,6 @@ def compute_service_time(
     )
     s2_min_days = rules.require("arbitration.super_two.heuristic_min_days")
 
-    if carry_in_active_first_season is not None:
-        presume_active_from_debut = carry_in_active_first_season
     ordered_seasons = sorted(seasons, key=lambda s: s.year)
     if horizon_end is None:
         horizon_end = ordered_seasons[-1].end if ordered_seasons else dt.date.today()

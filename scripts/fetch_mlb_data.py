@@ -11,6 +11,8 @@ in service_time.py.
 from __future__ import annotations
 
 import datetime as dt
+import functools
+import sys
 import time
 from typing import Any
 
@@ -163,11 +165,33 @@ def get_player_transactions(
     return data.get("transactions", [])
 
 
+# Seasons whose window came from the fallback below rather than from the API.
+# Read by callers that need to know whether a run is trustworthy -- see
+# estimated_season_windows().
+_ESTIMATED_WINDOWS: set[int] = set()
+
+
+@functools.lru_cache(maxsize=None)
 def get_season_window(year: int) -> tuple[dt.date, dt.date]:
     """
     Returns (regular season start, regular season end) for a given year.
     Falls back to a hardcoded estimate if the seasons endpoint doesn't have
     the data (e.g. far-future seasons not yet scheduled).
+
+    MEMOISED, and that is not a micro-optimisation. The pipeline asks for a
+    window once per player per season of his career, so a daily run over
+    ~1,370 rostered players made 7,179 calls to fetch the same 22 distinct
+    answers -- 7,157 of them redundant, about 32 minutes of wall clock, and
+    7,000 needless requests a day against a free public endpoint this project
+    goes out of its way to be polite to. A season's start and end date do not
+    move within a run, so one call each is all that is correct.
+
+    THE FALLBACK IS LOUD ON PURPOSE. An estimated window is not a cosmetic
+    degradation: CLAUDE.md records that this exact estimate (Mar 28 - Oct 1)
+    put Jose Ramirez 8 days off and made him look like the one modern outlier
+    worth chasing, when the estimate was the error. A /seasons outage would
+    otherwise recompute every player against wrong windows and publish the
+    result with nothing saying so.
     """
     try:
         data = _get("/seasons", {"sportId": SPORT_ID_MLB, "season": year})
@@ -177,7 +201,19 @@ def get_season_window(year: int) -> tuple[dt.date, dt.date]:
             start = dt.date.fromisoformat(s["regularSeasonStartDate"])
             end = dt.date.fromisoformat(s["regularSeasonEndDate"])
             return start, end
-    except Exception:
-        pass
+    except Exception as exc:  # pragma: no cover - network path
+        print(f"  !! /seasons failed for {year}: {exc}", file=sys.stderr)
+    _ESTIMATED_WINDOWS.add(year)
+    print(
+        f"  !! ESTIMATING the {year} season window as Mar 28 - Oct 1. Every "
+        f"figure that depends on {year} is computed against a guess, not the "
+        "real schedule.",
+        file=sys.stderr,
+    )
     # Fallback estimate (late March - early October)
     return dt.date(year, 3, 28), dt.date(year, 10, 1)
+
+
+def estimated_season_windows() -> set[int]:
+    """Seasons this process had to estimate rather than fetch. Empty is healthy."""
+    return set(_ESTIMATED_WINDOWS)

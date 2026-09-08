@@ -1,11 +1,11 @@
 (() => {
   "use strict";
 
-  // The compact index is what the browser downloads: 0.21 MB against 2.84 MB
-  // for the full database, because it drops fields the table never reads,
-  // recomputes everything derivable from the day count, and stores rows as
-  // arrays with team/position lookup tables instead of repeating key and team
-  // strings 5,568 times.
+  // The compact index is what the browser downloads: 0.22 MB against 9.1 MB
+  // for the full database (measured 2026-09-08 at 5,592 players), because it
+  // drops fields the table never reads, recomputes everything derivable from
+  // the day count, and stores rows as arrays with team/position lookup tables
+  // instead of repeating key and team strings once per player.
   //
   // service_time.json is still the database and still published -- it is the
   // pipeline's own source of truth on the next run, and anyone who wants the
@@ -37,12 +37,21 @@
   let SUPER_TWO_MAX_YEARS = null;
   let SUPER_TWO_MIN_DAYS = null;
 
+  // Called on EVERY load path, not just the compact index. It used to be
+  // reached only from hydrate(), which runs for the array-shaped index and not
+  // for the object-shaped service_time.json fallback or the embedded sample --
+  // so both fallbacks left every threshold null and rendered nonsense rather
+  // than degrading: the meter read 100% for every player (days / (null*null)),
+  // formatDays() returned "Infinity.NaN", and the profile footer said "null
+  // days credit a full year". Every payload now carries a rules block, so a
+  // throw here means a genuine deployment mismatch and the caller falls
+  // through to the labelled sample.
   function applyRules(payload) {
     const r = payload && payload.rules;
     if (!r || typeof r.full_year_days !== "number") {
       throw new Error(
-        "index.json carries no CBA rules block. The data files were built by " +
-          "a pipeline older than this page; re-run the daily update."
+        "This data file carries no CBA rules block. The data files were built " +
+          "by a pipeline older than this page; re-run the daily update."
       );
     }
     FULL_YEAR_DAYS = r.full_year_days;
@@ -163,7 +172,6 @@
    * fields would be shipping the same information twice.
    */
   function hydrate(payload) {
-    applyRules(payload);
     const teams = payload.teams || [];
     const positions = payload.positions || [];
     return (payload.players || []).map((row) => {
@@ -211,6 +219,19 @@
     disclaimer:
       "Could not load data/service_time.json, so this page is showing a small embedded sample instead. " +
       "Service time figures are always estimates derived from public transaction records, never official figures.",
+    // This sample is the last resort, so it carries its own thresholds: it has
+    // to render without a data file, and applyRules() now runs on every path.
+    // Hardcoding them here is honest in a way it would not be anywhere else --
+    // the payload announces itself as a sample in the banner above the table.
+    rules: {
+      version: "sample",
+      full_year_days: 172,
+      free_agency_years: 6,
+      arbitration_years: 3,
+      super_two_min_years: 2,
+      super_two_max_years: 3,
+      super_two_min_days: 86,
+    },
     player_count: 3,
     players: [
       {
@@ -243,7 +264,6 @@
   // the page unusable on an iPad, so the table is paged.
   const PAGE_SIZE = 100;
   let currentPage = 1;
-  let coverageStartYear = 2009;
   let lastFocused = null;
 
   const el = (id) => document.getElementById(id);
@@ -341,9 +361,11 @@
     return true;
   }
 
-  // history_complete is false when a player debuted before the transaction
-  // feed begins (2009). Those figures are a floor, not an estimate, and the
-  // table says so rather than publishing a number known to be low.
+  // history_complete is false when the first roster move on record for a
+  // player is LATER than his debut, measured per player -- not keyed to a
+  // cutoff year, which is what it used to be and which flagged plenty of
+  // perfectly good figures. Those totals are a floor rather than an estimate,
+  // and the table says so rather than publishing a number known to be low.
   const isComplete = (p) => p.history_complete !== false;
 
   function historyMatches(p, filterValue) {
@@ -448,7 +470,7 @@
         (t) => `
       <div class="stat-tile ${t.accent}"${t.title ? ` title="${esc(t.title)}"` : ""}>
         <div class="value">${t.value.toLocaleString()}</div>
-        <div class="label">${t.label}</div>
+        <div class="label">${esc(t.label)}</div>
       </div>`
       )
       .join("");
@@ -545,10 +567,10 @@
               gap ? `${gap} presumed` : "partial"
             }</abbr>`
           : "";
-        // A player whose whole career predates the transaction feed has no
-        // visible days at all. "0.000" would read as a measured figure when
-        // it actually means "no data" -- Alan Embree pitched 16 seasons and
-        // still computes to zero. Show nothing rather than a false zero.
+        // A player the feed cannot see the start of, and who computes to zero,
+        // has no visible days at all. "0.000" would read as a measured figure
+        // when it actually means "no data" -- Alan Embree pitched 16 seasons
+        // and still computes to zero. Show nothing rather than a false zero.
         // A complete-history player at 0.000 really did accrue nothing (a
         // 40-man prospect who never reached an active roster), so that one
         // stays.
@@ -572,7 +594,7 @@
           : "";
         const [years, days] = String(p.service_time || "0.000").split(".");
         const serviceCell = noData
-          ? `<abbr class="no-data" title="This player's entire career predates ${coverageStartYear}, when the transaction feed begins, so no service time can be reconstructed. This is missing data, not zero service time.">no data</abbr>`
+          ? `<abbr class="no-data" title="The transaction feed carries no roster move for this player at all, so no service time can be reconstructed. Coverage thins the further back a career goes rather than stopping at a fixed year. This is missing data, not zero service time.">no data</abbr>`
           : `<span class="svc">
                <span class="svc-num"><span class="svc-years">${esc(years)}</span><span class="svc-days">.${esc(days)}</span></span>
                <span class="svc-track" style="--pct:${pct.toFixed(1)}"><span class="svc-fill ${fillCls}"></span></span>
@@ -659,9 +681,17 @@
     });
   }
 
+  // The header cells announce themselves as sortable -- they carry aria-sort
+  // and a caret -- but for a long time the only way to act on that was a
+  // mouse click, so a keyboard or screen-reader user was told a control
+  // existed and given no way to use it. That is a WCAG 2.1.1 (Keyboard)
+  // failure, and an advertised-but-unreachable control is worse than no
+  // control at all. Enter and Space now do what a click does; the markup
+  // carries tabindex and role="button" so the cell is reachable and announced
+  // as actionable rather than as plain text.
   function wireSorting() {
     document.querySelectorAll("#players-table thead th[data-key]").forEach((th) => {
-      th.addEventListener("click", () => {
+      const sortBy = () => {
         const key = th.dataset.key;
         // Sort service_time by its numeric day-count field for correctness.
         const effectiveKey = sortKeyFor(key);
@@ -675,6 +705,14 @@
         currentPage = 1;
         updateSortIndicators();
         renderTable();
+      };
+      th.addEventListener("click", sortBy);
+      th.addEventListener("keydown", (event) => {
+        // Space would otherwise scroll the page out from under the table.
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          sortBy();
+        }
       });
     });
   }
@@ -1178,12 +1216,14 @@
   }
 
   function init(data) {
+    // Thresholds first, and for every shape of payload: the meter, the career
+    // strip and every formatted figure below depend on them.
+    applyRules(data);
     // The compact index stores rows as arrays; the full database and the
     // embedded fallback store them as objects. Detect which arrived rather
     // than assuming, so an older service_time.json still renders.
     const rows = data.players || [];
     allPlayers = Array.isArray(rows[0]) ? hydrate(data) : rows;
-    if (data.coverage_start_year) coverageStartYear = data.coverage_start_year;
     superTwoCutoff = data.super_two_cutoff || null;
     renderMeta(data);
     renderStatTiles(allPlayers);

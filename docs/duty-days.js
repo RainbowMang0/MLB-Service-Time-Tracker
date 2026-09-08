@@ -142,7 +142,6 @@
     // venue; a date without one is an off day, and where the player actually
     // was on an off day is exactly the kind of thing only he knows -- so it
     // is proposed as "at home" and flagged for confirmation.
-    let lastState = homeState;
     for (const date of dateRange(seasonStart, seasonEnd)) {
       const game = byDate.get(date);
       if (game) {
@@ -154,7 +153,6 @@
           confirmed: false,
           source: "schedule:game",
         });
-        lastState = game.state;
         continue;
       }
       // No game. If the club is mid-road-trip -- the day before and after are
@@ -171,7 +169,6 @@
         confirmed: false,
         source: midTrip ? "proposed:mid_road_trip" : "proposed:off_day_home",
       });
-      if (midTrip) lastState = prev.state;
     }
 
     days.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));

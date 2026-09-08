@@ -97,9 +97,49 @@ BASE_PATH = _base_path(SITE_URL)
 # the same service-time meter as docs/app.js, so the two must agree on what a
 # full year is, and the only way to guarantee that is for both to read it from
 # config/cba/ rather than each keeping a copy.
+#
+# ⚠️ THE ARITHMETIC WAS NEVER THE PROBLEM. Until this pass the pipeline computed
+# from the ruleset while every sentence a reader actually sees said "172" as a
+# literal -- roughly twenty of them across the page footers, the explainer's
+# threshold table, its meta description and its FAQ structured data. The
+# project's headline claim is that filling in config/cba/2027.json makes the
+# whole site current the same day; that was true of the numbers and false of
+# the prose, which is the half a reader believes. Everything below is derived
+# so the two cannot drift apart.
 _RULES = cba.default()
 FULL_YEAR_DAYS = _RULES.require("service_time.days_per_credited_year")
 FREE_AGENCY_YEARS = _RULES.require("free_agency.credited_years_required")
+ARBITRATION_YEARS = _RULES.require("arbitration.standard_years_required")
+SEASON_SPAN_DAYS = _RULES.require("service_time.normal_season_span_days")
+SUPER_TWO_TOP_PERCENTILE = _RULES.require("arbitration.super_two.top_percentile")
+SUPER_TWO_MIN_PRIOR_DAYS = _RULES.require(
+    "arbitration.super_two.minimum_prior_season_days"
+)
+
+
+def _yrs(years: float) -> str:
+    """6.0 -> "6.000". The Y.DDD notation for a whole number of credited years."""
+    return f"{int(years)}.000"
+
+
+def _days_for(years: float) -> int:
+    """Credited years -> days, under the agreement in force."""
+    return int(round(years * FULL_YEAR_DAYS))
+
+
+def _threshold_sentence() -> str:
+    """The two-sentence rule-of-the-road that closes every generated page.
+
+    One string rather than three copies: it appeared verbatim at the foot of
+    the player pages, the club pages and the club directory, and each copy
+    hardcoded 172, 3.000 and 6.000 separately.
+    """
+    return (
+        f"{FULL_YEAR_DAYS} days credit a full year, so a season adds at most "
+        f"1.000 no matter how long a player is on a roster. {_yrs(ARBITRATION_YEARS)} "
+        f"years reaches salary arbitration and {_yrs(FREE_AGENCY_YEARS)} reaches "
+        "free agency —"
+    )
 
 SOURCE_LABEL = {
     "read": "From transactions",
@@ -328,9 +368,7 @@ def render_club_index(by_club: dict[str, list[dict]], generated_at: str) -> str:
   <th class="n">Super Two</th></tr></thead><tbody>{rows}</tbody></table>
 
   <p class="foot">
-    172 days credit a full year, so a season adds at most 1.000 no matter how
-    long a player is on a roster. 3.000 years reaches salary arbitration and
-    6.000 reaches free agency —
+    {_threshold_sentence()}
     <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
     Eligibility counts describe players currently on a 40-man roster.
     <br /><br />
@@ -386,13 +424,22 @@ def _svc_cell(player: dict) -> str:
 
 
 def _status_badge(player: dict) -> str:
-    """Same wording and same badge class as app.js's statusOf()."""
+    """Same wording and badge class as classify() in docs/app.js.
+
+    Club pages only ever list rostered players, so classify()'s "Not on a
+    roster" and "Unknown" branches have no counterpart here -- the branches
+    that DO exist must match it word for word, because a visitor moving between
+    the club page and the main table is looking at the same player.
+    """
     if not player.get("service_days_total"):
         label, cls = "Yet to debut", "badge-neutral"
     elif player.get("free_agent_eligible"):
         label, cls = "Free Agent Eligible", "badge-good"
     elif player.get("super_two_candidate"):
-        label, cls = "Super Two Track", "badge-serious"
+        # Lower-case "track", matching classify(). It read "Track" here, which
+        # is the sort of drift two independent copies of a label always
+        # produce -- see the test that now pins them together.
+        label, cls = "Super Two track", "badge-serious"
     elif player.get("arbitration_eligible"):
         label, cls = "Arbitration Eligible", "badge-warning"
     else:
@@ -493,9 +540,7 @@ def render_club(club: str, players: list[dict], generated_at: str) -> str:
   <th class="n">Days</th><th>Status</th></tr></thead><tbody>{rows}</tbody></table>
 
   <p class="foot">
-    172 days credit a full year, so a season adds at most 1.000 no matter how
-    long a player is on a roster. 3.000 years reaches salary arbitration and
-    6.000 reaches free agency —
+    {_threshold_sentence()}
     <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
     <br /><br />
     These figures are <strong>estimates</strong> reconstructed from public
@@ -629,8 +674,9 @@ def render(player: dict, team_names: dict[int, str], generated_at: str) -> str:
 <script>
   /* Carry the theme the visitor chose on the main table. In <head> and inline
      so it runs before first paint -- deferred, it would flash the wrong theme.
-     styles.css already honours prefers-color-scheme on its own; this is only
-     for an explicit override. */
+     Dark is the site's identity, not something inherited from the OS, so
+     styles.css contains no prefers-color-scheme rules at all and this is the
+     only thing that can produce a light page. */
   try {{
     var t = localStorage.getItem("mlb-service-time-theme");
     if (t) document.documentElement.setAttribute("data-theme", t);
@@ -656,9 +702,7 @@ def render(player: dict, team_names: dict[int, str], generated_at: str) -> str:
   {_season_rows(player, team_names)}
 
   <p class="foot">
-    172 days credit a full year, so a season adds at most 1.000 no matter how
-    long a player is on a roster. 3.000 years reaches salary arbitration and
-    6.000 reaches free agency —
+    {_threshold_sentence()}
     <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
     <br /><br />
     This figure is an <strong>estimate</strong> reconstructed from public roster
@@ -990,10 +1034,14 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
     search, and a far commoner one than any single player's name.
 
     ON SOURCING. The thresholds in the table are the durable, CBA-derived
-    facts, and the four this project actually computes (172, Super Two,
-    3.000, 6.000) are the same constants the pipeline uses -- so the page
-    cannot drift from the site's own arithmetic without the arithmetic
-    changing too.
+    facts, and the four this project actually computes (the credited year,
+    Super Two, arbitration, free agency) are read from config/cba/ -- the same
+    ruleset the pipeline computes against -- so the page cannot drift from the
+    site's own arithmetic without the arithmetic changing too. The gold card
+    and the pension maximum are NOT in the ruleset, because this project does
+    not compute them and the loader refuses to publish a value nobody has
+    verified; they are stated as page constants and sourced in the list below,
+    with only their day counts derived.
 
     Deliberately NO DOLLAR FIGURES. Pension amounts are renegotiated and
     reported differently by different sources, and this page's prose is not
@@ -1021,15 +1069,43 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
         )
     else:
         s2_fig, s2_days, s2_note = "varies", "—", ""
+
+    # Thresholds this project does NOT compute, so they are not in the CBA
+    # ruleset and must not be invented into it -- the loader's own rule is that
+    # a value nobody has verified may not be published. They are sourced in the
+    # page's own list (Sportico/InsideHook for the gold card, the MLBPA for the
+    # pension). Their DAY counts are still derived, because those follow from
+    # the credited-year length whatever the year threshold turns out to be.
+    GOLD_CARD_YEARS = 8
+    MAX_PENSION_YEARS = 10
+
     desc = (
         "What major league service time is, how a day is earned, and every "
-        "threshold it unlocks — 172 days to a year, arbitration at 3.000, "
-        "free agency at 6.000, the gold card at 8.000 and a full pension at "
-        "10.000."
+        f"threshold it unlocks — {FULL_YEAR_DAYS} days to a year, arbitration "
+        f"at {_yrs(ARBITRATION_YEARS)}, free agency at {_yrs(FREE_AGENCY_YEARS)}, "
+        f"the gold card at {_yrs(GOLD_CARD_YEARS)} and a full pension at "
+        f"{_yrs(MAX_PENSION_YEARS)}."
     )
+    # One worked example, computed rather than typed, so "6 x 172 + 31 = 1,063"
+    # cannot survive a change to what a credited year is worth.
+    eg_years, eg_days = int(FREE_AGENCY_YEARS), 31
+    eg_total = _days_for(eg_years) + eg_days
+    eg_fig = f"{eg_years}.{eg_days:03d}"
+    # A pension quarter is a quarter of a credited year, so it follows the
+    # credited year rather than being the fixed 43 it happens to be today.
+    quarter_days = FULL_YEAR_DAYS // 4
 
     # FAQPage rather than Article: these are the questions people actually
     # type, and the markup can surface the answer directly in a result.
+    #
+    # Every figure here is derived, for a reason beyond the usual one: this
+    # block and the visible prose below it used to be written independently and
+    # had already drifted apart -- the structured data said a season runs "about
+    # 186 days" while the paragraph on the same page said 187, and 186 is the
+    # project's own measured value (it is what reproduces Aaron Judge's figure
+    # through the 2020 proration, and it is what config/cba/2022.json holds).
+    # A search engine reads both. Deriving both from the ruleset is what makes
+    # a contradiction impossible rather than merely fixed.
     faq = {
         "@type": "FAQPage",
         "mainEntity": [
@@ -1043,35 +1119,40 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
                         "spends on a major league active roster or injured "
                         "list. It is roster time, not playing time — a player "
                         "who never leaves the bench earns the same day as the "
-                        "one who pitches a complete game. 172 days make one "
-                        "credited year."
+                        f"one who pitches a complete game. {FULL_YEAR_DAYS} days "
+                        "make one credited year."
                     ),
                 },
             },
             {
                 "@type": "Question",
-                "name": "Why is a service-time year 172 days and not a full season?",
+                "name": (
+                    f"Why is a service-time year {FULL_YEAR_DAYS} days and not "
+                    "a full season?"
+                ),
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "text": (
-                        "A major league season runs about 186 days, but the "
-                        "Basic Agreement sets a credited year at 172. A player "
-                        "on a roster all season is credited 1.000 and no more, "
-                        "so the extra days give a little slack for a short "
-                        "trip to the minors."
+                        f"A major league season runs about {SEASON_SPAN_DAYS} "
+                        "days, but the Basic Agreement sets a credited year at "
+                        f"{FULL_YEAR_DAYS}. A player on a roster all season is "
+                        "credited 1.000 and no more, so the extra days give a "
+                        "little slack for a short trip to the minors."
                     ),
                 },
             },
             {
                 "@type": "Question",
-                "name": "What does a figure like 6.031 mean?",
+                "name": f"What does a figure like {eg_fig} mean?",
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "text": (
-                        "It is years and days, not a decimal. 6.031 is six "
-                        "credited years and 31 days — 6 × 172 + 31 = 1,063 "
-                        "days. Because a year is 172 days, the part after the "
-                        "point never reaches 172."
+                        f"It is years and days, not a decimal. {eg_fig} is "
+                        f"{eg_years} credited years and {eg_days} days — "
+                        f"{eg_years} × {FULL_YEAR_DAYS} + {eg_days} = "
+                        f"{eg_total:,} days. Because a year is {FULL_YEAR_DAYS} "
+                        "days, the part after the point never reaches "
+                        f"{FULL_YEAR_DAYS}."
                     ),
                 },
             },
@@ -1081,10 +1162,12 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "text": (
-                        "At six credited years — 6.000, or 1,032 days on a "
-                        "major league roster. Arbitration eligibility "
-                        "generally arrives at 3.000, and a Super Two player "
-                        "reaches it a year early."
+                        f"At {int(FREE_AGENCY_YEARS)} credited years — "
+                        f"{_yrs(FREE_AGENCY_YEARS)}, or "
+                        f"{_days_for(FREE_AGENCY_YEARS):,} days on a major "
+                        "league roster. Arbitration eligibility generally "
+                        f"arrives at {_yrs(ARBITRATION_YEARS)}, and a Super Two "
+                        "player reaches it a year early."
                     ),
                 },
             },
@@ -1149,15 +1232,17 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
   <b>bereavement, family medical emergency and paternity lists</b> count too.
   Days spent optioned to the minor leagues do not.</p>
 
-  <h2>172 days make a year</h2>
-  <p>A season runs about 187 days, but the Basic Agreement sets a credited
-  year at <b>172</b>. A player on a roster from Opening Day to the end of the
-  season is credited <b>1.000</b> and no more, so those spare days leave a
-  little room for a short trip to the minors without costing him the year.</p>
-  <p>That is also why figures here look like <b>6.031</b> rather than 6.18.
-  It is <b>years and days</b>, not a decimal: 6.031 means six credited years
-  and 31 more days, or 1,063 days in total. The part after the point never
-  reaches 172.</p>
+  <h2>{FULL_YEAR_DAYS} days make a year</h2>
+  <p>A season runs about {SEASON_SPAN_DAYS} days, but the Basic Agreement sets
+  a credited year at <b>{FULL_YEAR_DAYS}</b>. A player on a roster from Opening
+  Day to the end of the season is credited <b>1.000</b> and no more, so those
+  spare days leave a little room for a short trip to the minors without costing
+  him the year.</p>
+  <p>That is also why figures here look like <b>{eg_fig}</b> rather than
+  {eg_years + eg_days / FULL_YEAR_DAYS:.2f}. It is <b>years and days</b>, not a
+  decimal: {eg_fig} means {eg_years} credited years and {eg_days} more days, or
+  {eg_total:,} days in total. The part after the point never reaches
+  {FULL_YEAR_DAYS}.</p>
 
   <h2>Every threshold, and what it unlocks</h2>
   <p>Service time is a ratchet: it only goes up, and each of these is
@@ -1172,43 +1257,49 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
         roster is the entry point.</td>
       </tr>
       <tr>
-        <td class="n"><b>0.043</b></td><td class="n">43</td>
+        <td class="n"><b>0.{quarter_days:03d}</b></td><td class="n">{quarter_days}</td>
         <td>One quarter of a year, and the first step toward a pension. Each
-        further 43 days adds to what a player will eventually draw.</td>
+        further {quarter_days} days adds to what a player will eventually
+        draw.</td>
       </tr>
       <tr>
         <td class="n"><b>{s2_fig}</b></td><td class="n">{s2_days}</td>
         <td><b>Super Two.</b> A player between two and three years who ranks
-        in the top 22% of that class, with 86+ days in the preceding season,
+        in the top {SUPER_TWO_TOP_PERCENTILE}% of that class, with
+        {SUPER_TWO_MIN_PRIOR_DAYS}+ days in the preceding season,
         reaches salary arbitration <b>a year early</b> — four trips through it
         instead of three. <b>The cutoff is not fixed</b>: it falls wherever
         the class falls that year.{s2_note}</td>
       </tr>
       <tr>
-        <td class="n"><b>3.000</b></td><td class="n">516</td>
+        <td class="n"><b>{_yrs(ARBITRATION_YEARS)}</b></td>
+        <td class="n">{_days_for(ARBITRATION_YEARS):,}</td>
         <td><b>Salary arbitration.</b> Until now the club has set his salary
         near the league minimum. From here he can argue for a raise before an
         arbitration panel, and his pay starts to track his performance.</td>
       </tr>
       <tr>
-        <td class="n"><b>6.000</b></td><td class="n">1,032</td>
+        <td class="n"><b>{_yrs(FREE_AGENCY_YEARS)}</b></td>
+        <td class="n">{_days_for(FREE_AGENCY_YEARS):,}</td>
         <td><b>Free agency.</b> The big one. He can sign with any club that
         wants him, for the first time in his career.</td>
       </tr>
       <tr>
-        <td class="n"><b>8.000</b></td><td class="n">1,376</td>
+        <td class="n"><b>{_yrs(GOLD_CARD_YEARS)}</b></td>
+        <td class="n">{_days_for(GOLD_CARD_YEARS):,}</td>
         <td><b>The gold card.</b> A lifetime pass admitting the holder and a
         guest to any regular-season major league game, at any ballpark.
         Postseason games are excluded.</td>
       </tr>
       <tr>
-        <td class="n"><b>10.000</b></td><td class="n">1,720</td>
+        <td class="n"><b>{_yrs(MAX_PENSION_YEARS)}</b></td>
+        <td class="n">{_days_for(MAX_PENSION_YEARS):,}</td>
         <td><b>The maximum pension.</b> Ten years reaches the top of the
         scale. Fewer than one player in ten ever gets there.</td>
       </tr>
       <tr>
-        <td class="n"><b>10.000</b><br /><span class="thr-note">+ 5 straight
-        with one club</span></td><td class="n">1,720</td>
+        <td class="n"><b>{_yrs(MAX_PENSION_YEARS)}</b><br /><span class="thr-note">+ 5 straight
+        with one club</span></td><td class="n">{_days_for(MAX_PENSION_YEARS):,}</td>
         <td><b>10-and-5 rights.</b> Ten years of service with the last five
         consecutive at his current club, and he can <b>veto any trade</b>. It
         arrives automatically — it does not have to be negotiated into a
@@ -1230,10 +1321,11 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
   rest are not, and are sourced here.</p>
   <ul class="sources">
     <li><a href="https://www.mlb.com/glossary/transactions/service-time">MLB
-      glossary — Service time</a>: 172 days to a credited year, and the
-      length of a season.</li>
+      glossary — Service time</a>: {FULL_YEAR_DAYS} days to a credited year,
+      and the length of a season.</li>
     <li><a href="https://www.mlb.com/glossary/transactions/super-two">MLB
-      glossary — Super Two</a>: two-to-three years, 86+ days, top 22%.</li>
+      glossary — Super Two</a>: two-to-three years,
+      {SUPER_TWO_MIN_PRIOR_DAYS}+ days, top {SUPER_TWO_TOP_PERCENTILE}%.</li>
     <li><a href="https://www.mlb.com/glossary/transactions/salary-arbitration">MLB
       glossary — Salary arbitration</a> and
       <a href="https://www.mlb.com/glossary/transactions/free-agency">Free
@@ -1255,10 +1347,10 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
   right to buy in.</p>
 
   <h2>Why clubs pay attention to the calendar</h2>
-  <p>Because 172 days make a year and a season is longer, a club that keeps a
-  player in the minors for the first couple of weeks of his rookie season
-  leaves him at 0.171 rather than 1.000 — and pushes his free agency back by
-  a full year. The practice is called <b>service-time manipulation</b>, it is
+  <p>Because {FULL_YEAR_DAYS} days make a year and a season is longer, a club
+  that keeps a player in the minors for the first couple of weeks of his rookie
+  season leaves him at 0.{FULL_YEAR_DAYS - 1:03d} rather than 1.000 — and pushes
+  his free agency back by a full year. The practice is called <b>service-time manipulation</b>, it is
   legal, it is contested, and it is the reason a prospect's call-up date is
   news.</p>
 

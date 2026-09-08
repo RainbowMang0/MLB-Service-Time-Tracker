@@ -48,6 +48,17 @@ Both are conversations, not code.
    the `rules` block in `index.json`. The 2022 agreement expires
    **2026-12-01** — filling in `config/cba/2027.json` makes the whole site
    current the same day.
+
+   ⚠️ **This was only half true until 2026-09-08, and the false half was the
+   half a reader sees.** The *arithmetic* came from the ruleset; the *prose*
+   did not. Roughly twenty literals — the footer on every generated page, the
+   explainer's whole threshold table and its day counts (516 / 1,032 / 1,376 /
+   1,720), its meta description, and its FAQ structured data — were typed. A
+   2027 ruleset would have recomputed every figure while every sentence
+   explaining them still said 172. All of it is derived now, and
+   `test_the_explainer_prose_follows_the_ruleset_not_a_literal()` is the
+   positive control: it renders the explainer under a hypothetical 165-day
+   agreement and fails if the string "172" survives anywhere in the page.
 2. **A number nobody verified never ships wearing the site's authority.**
    Tax rates carry a tier (`verified` / `estimate_unverified` /
    `conflicting_sources`), CBA values carry a `sources` status, and both are
@@ -58,6 +69,13 @@ Both are conversations, not code.
 
 **Recent history, newest first:**
 
+* 2026-09-08 — **maintenance pass.** Six real defects, none in the accrual
+  rules: the CBA prose was hardcoded (above); the daily job made 7,179 API
+  calls to fetch 22 season windows; both documented data fallbacks rendered
+  `Infinity.NaN`; table sorting was mouse-only; the published disclaimer still
+  asserted the 2009 coverage cutoff that finding #1 disproved; and the
+  explainer's structured data said a season is 186 days while its own visible
+  prose said 187. See "The 2026-09-08 maintenance pass" below.
 * 2026-09-08 — first live schedule run reviewed; 22 non-MLB spring opponents
   were leaking into the club list, now filtered.
 * 2026-09-02 — the contract clock (Phase 2), and rough tax estimates in a
@@ -2595,7 +2613,18 @@ table and the static pages would disagree.
 **There is now exactly one source: `config/cba/`.** See "CBA rules are
 versioned config" below. Nothing declares 172 any more; the Python reads it
 through `scripts/cba.py`, and the browser reads it out of the `rules` block
-that `write_index()` stamps into `index.json`.
+that `write_index()` stamps into `index.json` — and into `service_time.json`
+too since 2026-09-08, because the browser's documented fallback to the database
+was left computing against `null` thresholds until then.
+
+⚠️ **Completed 2026-09-08, and it was not complete before.** This section
+described the *arithmetic* accurately and said nothing about the *prose*, which
+was still ~20 hardcoded literals in the pages themselves — footers, the whole
+threshold table, meta descriptions, FAQ structured data. See "The 2026-09-08
+maintenance pass". The lesson worth carrying: consolidating constants is not
+finished when the code stops declaring them, only when the OUTPUT stops
+containing them, and the way to know is a positive control that renders under a
+different agreement and greps for the old number.
 
 The engine itself is still where it was, and still stdlib-only with no
 framework and no DB call:
@@ -3420,6 +3449,138 @@ month; until then a GitHub Sponsors link costs nothing and carries none of
 it.
 
 ---
+
+## The 2026-09-08 maintenance pass
+
+A full read of all ~16k lines, asked for as a health check rather than to fix
+anything specific. **Nothing was wrong with the accrual rules** — the gate and
+the reference check were not touched, no `rules_version` bump, no recompute.
+Every defect was in the layer *around* the engine: what the site says, how fast
+it says it, and who can operate it. Tests went 230 → 260, all still green
+alongside the 27 duty-day and 20 contract tests.
+
+The general shape, and the reason it is worth recording: **this project tests
+its arithmetic ferociously and had almost no tests on its presentation.** Five
+of the six defects below would have been caught by one.
+
+### 1. The daily job made 7,179 API calls to fetch 22 numbers
+
+`get_season_window()` was uncached, and `build_player_record()` asks for one
+window per season of a player's career. Measured over the live roster: **7,179
+calls per run, 7,157 of them redundant**, about 32 minutes of wall clock, and
+~7,000 needless daily requests against a free public endpoint that
+`fetch_mlb_data.py`'s own docstring says it is trying to be polite to.
+
+One `functools.lru_cache`. A season's start and end date cannot move within a
+run, so one call each was always the only correct number.
+
+This is most of the answer to "why does the daily job take half an hour", and
+it compounds in the backfill, which processes far longer careers.
+
+### 2. An estimated season window used to publish silently
+
+The same function falls back to a hardcoded **Mar 28 – Oct 1** when `/seasons`
+fails. That is right for a far-future season nobody has scheduled and dangerous
+for one already played — this file already records that exact estimate putting
+José Ramírez 8 days out and making him look like the one modern outlier worth
+chasing, *when the estimate was the error*.
+
+The daily job only ever asks for seasons that have happened, so a fallback
+there is an outage. It now warns on stderr, records the year, and
+`check_run_is_sane()` refuses to publish the run — joining the other guards
+that exist because "a silent success overwrites a good file, a crash does not".
+
+### 3. Both documented data fallbacks rendered `Infinity.NaN`
+
+`app.js` falls back index.json → service_time.json → embedded sample. But
+`applyRules()` was called from `hydrate()`, which runs **only** for the
+array-shaped index. Both object-shaped fallbacks therefore left every threshold
+`null`, and the page did not fail — it rendered nonsense:
+
+| | with rules | on the fallback |
+|---|---|---|
+| `formatDays(1042)` | `6.010` | **`Infinity.NaN`** |
+| meter, any player | correct | **100%** |
+| meter, 0 days | `0.0` | **`NaN`** |
+| profile footer | "172 days credit…" | **"null days credit…"** |
+
+`applyRules()` now runs on every path, `_rules_block()` is stamped into *both*
+published files, and the embedded sample carries its own thresholds — so the
+last resort is the only thing that hardcodes them, which is honest because the
+banner above it says it is a sample.
+
+**A fallback that renders nonsense is worse than no fallback**, because it
+looks like it worked.
+
+### 4. The table could only be sorted with a mouse
+
+The header cells carry `aria-sort` and a caret — they *announce* themselves as
+sortable — and the only way to act on that was a click. WCAG 2.1.1 Level A. An
+advertised-but-unreachable control is worse than no control.
+
+`tabindex="0"` plus an Enter/Space handler. **Not `role="button"`**, which was
+the first attempt and is wrong: it overrides the `th`'s implicit `columnheader`
+role, and `aria-sort` is only meaningful on a columnheader — that would have
+traded a keyboard bug for a semantics bug.
+
+`styles.css` already had a `thead th:focus-visible` ring. The stylesheet had
+been ready for this the whole time; the markup never delivered it.
+
+### 5. The site still published the 2009 coverage cutoff
+
+`service_time.json` carried `coverage_start_year: 2009` and a disclaimer
+reading "Transaction coverage begins in 2009". **Finding #1 disproved that** —
+`probe_coverage.py` returned real 2005-2008 major league rows, coverage thins
+rather than switching on, and `_missing_seasons()` has measured it per player
+since. `app.js` also defaulted `coverageStartYear = 2009` and used it in the
+"no data" tooltip, so the claim was live in the UI regardless of the file.
+
+Both published files now carry the same wording and neither names a year.
+`index.json` had already been corrected; the database had not, which is exactly
+the drift that comes of writing the same sentence twice.
+
+### 6. The explainer contradicted itself, in structured data
+
+Visible prose: "A season runs about **187** days". Its own FAQ JSON-LD, on the
+same page: "about **186** days". 186 is the project's measured value — it
+reproduces Judge's figure through the 2020 proration, it is what
+`config/cba/2022.json` holds, and this file records 187 being *explicitly
+rejected* when the brief proposed it. A search engine reads both.
+
+Both are derived from the ruleset now, which makes the contradiction impossible
+rather than merely fixed.
+
+### Smaller drift, all corrected
+
+- `SERVICE_TIME_RULES_VERSION = 5` with a changelog documenting only 1–3.
+- `"Super Two Track"` on club pages vs `"Super Two track"` in the table, under
+  a docstring claiming they matched — and citing `statusOf()`, which does not
+  exist (it is `classify()`).
+- Dead exports kept "because other modules import them"; nothing did.
+  `SUPER_TWO_HEURISTIC_MIN_DAYS`, `NORMAL_SEASON_SPAN_DAYS` and the deprecated
+  `carry_in_active_first_season` alias are gone. The keyword lists **stay** —
+  they are genuinely better documentation than the regexes — with the false
+  justification replaced by a true one.
+- Comments quoting a 2.84 MB database (it is 9.1 MB) and a 0.17 MB index (0.22).
+- 1,406 generated pages carrying "styles.css already honours
+  prefers-color-scheme on its own". It deliberately does not — that is the
+  whole point of the dark-default work, and the comment argued against it.
+- `renderStatTiles` interpolated a tile label unescaped. Only reachable content
+  is the computed Super Two cutoff, so not exploitable — but it was the one
+  place in `app.js` that skipped the `esc()` discipline used everywhere else.
+
+### What was deliberately NOT changed
+
+- **No accrual rule.** Not one line of the interval walk, the floor, the
+  ceiling, carry-in, or stop-wins. No `rules_version` bump, so no recompute.
+- **`report_debuted_but_empty()` now names two players**, not one: Elih
+  Villanueva (finding #20, understood and accepted) and **Seth Lonsway**, who
+  debuted 2026-08-29. Lonsway is new and unexamined — pre-existing, not caused
+  by this pass. He is the next thing worth probing against MLB's rosters, per
+  the rule in finding #17.
+- **The daily commit rewrites ~21,000 lines across ~1,550 files.** That is the
+  page footers plus sitemap `lastmod`, and it is working as designed. `.git` is
+  13 MB, so it is not yet a problem; noted only so nobody rediscovers it as one.
 
 ## Working style notes
 

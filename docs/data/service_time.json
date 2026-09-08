@@ -1,8 +1,16 @@
 {
-  "generated_at": "2026-09-07T17:57:33+00:00",
+  "generated_at": "2026-09-08T07:07:52+00:00",
   "source": "MLB Stats API (statsapi.mlb.com, unofficial public endpoint)",
-  "disclaimer": "Service time figures are ESTIMATES computed from public roster transaction records, not official MLB/MLBPA figures. Transaction coverage begins in 2009; players who debuted earlier are marked as having incomplete history and their figures are a floor, not an estimate.",
-  "coverage_start_year": 2009,
+  "disclaimer": "Service time figures are ESTIMATES computed from public roster transaction records, not official MLB/MLBPA figures. Where the transaction feed cannot see the start of a player's career, his figure is a floor rather than an estimate and the table says so.",
+  "rules": {
+    "version": "2022",
+    "full_year_days": 172,
+    "free_agency_years": 6.0,
+    "arbitration_years": 3.0,
+    "super_two_min_years": 2.0,
+    "super_two_max_years": 3.0,
+    "super_two_min_days": 86
+  },
   "player_count": 5592,
   "super_two_cutoff": {
     "season": 2025,

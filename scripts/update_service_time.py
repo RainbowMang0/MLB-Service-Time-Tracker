@@ -47,7 +47,6 @@ import super_two  # noqa: E402
 from write_player_pages import write_player_pages  # noqa: E402
 from service_time import (  # noqa: E402
     roster_start_before_debut,
-    TRANSACTION_COVERAGE_START_YEAR,
     is_active_start,
     is_active_stop,
     SeasonWindow,
@@ -98,6 +97,20 @@ TODAY = dt.date.today()
 #      of a DFA reopens the clock, because a DFA'd player who is traded joins
 #      the new club's 40-man. Measured over the 1,365 cached players: 483
 #      changed (35%), 5,982 interval-days added, 6 removed.
+#   4  finding #19: a waiver claim whose very next major league move is a
+#      recall never put the player on the active roster -- he cannot be
+#      recalled from Norfolk unless he was at Norfolk. 16 of 1,368 cached
+#      players changed, 301 credited days removed, 0 added. Cleveland 2011
+#      went to a perfect 1,083 of 1,083 judgements.
+#   5  the same reasoning extended from waiver claims to TRADES, which move a
+#      player onto a 40-man without saying which roster he reported to. 31 of
+#      1,370 changed, 687 days removed, 0 added. Detection is grouped by date
+#      so it cannot depend on the order the API lists two same-day rows in --
+#      the sort-order trap of finding #10, which was worth 160 days there.
+#
+# Only-removes is the expected shape for both 4 and 5: a rule that can only
+# CLOSE an interval must never add a day, and the measurement is what confirms
+# it did not.
 SERVICE_TIME_RULES_VERSION = 5
 
 # The carry-in rule: presume a player is on a roster from his debut onward
@@ -533,16 +546,48 @@ def build_player_record(
     }
 
 
+def _rules_block() -> dict:
+    """The CBA thresholds the browser needs to turn a day count into a status.
+
+    These used to be literals in docs/app.js -- a second implementation of the
+    CBA rules, in a second language, which had to be edited in step with the
+    Python or the table and the static pages would disagree.
+
+    Stamped into BOTH published data files, not just the compact index. app.js
+    falls back from index.json to service_time.json when an older deployment
+    has not regenerated the index yet, and that fallback used to leave every
+    threshold null: the meter read 100% for every player, formatDays() returned
+    "Infinity.NaN", and the profile footer said "null days credit a full year".
+    A fallback that renders nonsense is worse than no fallback, and shipping
+    this block in both files is what makes the documented one actually work.
+    """
+    return {
+        "version": _RULES.version,
+        "full_year_days": _RULES.require("service_time.days_per_credited_year"),
+        "free_agency_years": _RULES.require("free_agency.credited_years_required"),
+        "arbitration_years": _RULES.require("arbitration.standard_years_required"),
+        "super_two_min_years": _RULES.require(
+            "arbitration.super_two.service_range_years"
+        )[0],
+        "super_two_max_years": _RULES.require(
+            "arbitration.super_two.service_range_years"
+        )[1],
+        "super_two_min_days": _RULES.require(
+            "arbitration.super_two.heuristic_min_days"
+        ),
+    }
+
+
 def write_index(db: dict[str, dict], super_two_cutoff: dict | None = None) -> None:
     """
     Emit the compact file the frontend downloads.
 
     `service_time.json` is the database: every field, one object per player,
-    and the pipeline's own source of truth on the next run. At 5,568 players
-    it is 2.8 MB, and the page was fetching all of it on every visit for a
-    table that reads eleven fields.
+    and the pipeline's own source of truth on the next run. At 5,592 players it
+    is 9.1 MB, and the page was fetching all of it on every visit for a table
+    that reads eleven fields.
 
-    This writes a derived view instead, 0.17 MB (94% smaller), by removing
+    This writes a derived view instead, 0.22 MB (98% smaller), by removing
     everything the browser does not need:
 
       * fields the table never reads (id, team_id, mlb_debut, last_played,
@@ -616,30 +661,9 @@ def write_index(db: dict[str, dict], super_two_cutoff: dict | None = None) -> No
         "positions": positions,
         # Self-documenting, so the row layout is readable without the code.
         "super_two_cutoff": super_two_cutoff,
-        # The CBA thresholds the browser needs to turn a day count into a
-        # status. These used to be literals in docs/app.js -- a second copy of
-        # the CBA rules, in a second language, which had to be edited in step
-        # with the Python or the table and the static pages would disagree.
-        #
-        # Shipping them here rather than making the browser fetch the ruleset
-        # keeps the page to one request, and means app.js has no fallback to
-        # fall back TO: if this block is missing the page says so instead of
-        # quietly computing against a stale constant.
-        "rules": {
-            "version": _RULES.version,
-            "full_year_days": _RULES.require("service_time.days_per_credited_year"),
-            "free_agency_years": _RULES.require("free_agency.credited_years_required"),
-            "arbitration_years": _RULES.require("arbitration.standard_years_required"),
-            "super_two_min_years": _RULES.require(
-                "arbitration.super_two.service_range_years"
-            )[0],
-            "super_two_max_years": _RULES.require(
-                "arbitration.super_two.service_range_years"
-            )[1],
-            "super_two_min_days": _RULES.require(
-                "arbitration.super_two.heuristic_min_days"
-            ),
-        },
+        # Shipping the thresholds here rather than making the browser fetch the
+        # ruleset keeps the page to one request. See _rules_block().
+        "rules": _rules_block(),
         "fields": [
             "id", "name", "team", "position", "days", "on_40_man",
             "missing_seasons", "super_two",
@@ -925,6 +949,19 @@ def check_run_is_sane(
     normal run with a quieter log.
     """
     problems = []
+    # A season window this run had to guess at rather than fetch. Every day
+    # count for that season is then computed against Mar 28 - Oct 1 instead of
+    # the real schedule, which is the same estimate that once put Jose Ramirez
+    # 8 days out and made him look like a model defect. The daily job only ever
+    # asks for seasons that have already happened, so a fallback here is an
+    # outage, never a legitimately-unscheduled year.
+    estimated = mlb.estimated_season_windows()
+    if estimated:
+        problems.append(
+            "season windows were estimated rather than fetched for "
+            f"{', '.join(str(y) for y in sorted(estimated))} -- every figure "
+            "touching those seasons is computed against a guessed schedule"
+        )
     if roster_size < MIN_EXPECTED_ROSTER:
         problems.append(
             f"only {roster_size} players came back from the 40-man fetch, "
@@ -999,14 +1036,24 @@ def _write_outputs(db: dict[str, dict]) -> None:
     output = {
         "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "source": "MLB Stats API (statsapi.mlb.com, unofficial public endpoint)",
+        # NO COVERAGE CUTOFF YEAR. This used to read "Transaction coverage
+        # begins in 2009; players who debuted earlier are marked as having
+        # incomplete history" -- a claim this project's own probe disproved.
+        # scripts/probe_coverage.py returned real 2005-2008 major league rows
+        # ("Minnesota Twins activated LF Lew Ford from the 15-day disabled
+        # list", 2006-08-11), so coverage THINS going back rather than
+        # switching on in a particular year, and _missing_seasons() has
+        # measured it per player since. Publishing the old sentence meant the
+        # most prominent line on the site asserted something the pipeline
+        # behind it had stopped believing. Same wording as write_index() now,
+        # so the two files cannot describe the data differently.
         "disclaimer": (
             "Service time figures are ESTIMATES computed from public roster "
-            "transaction records, not official MLB/MLBPA figures. Transaction "
-            f"coverage begins in {TRANSACTION_COVERAGE_START_YEAR}; players who "
-            "debuted earlier are marked as having incomplete history and their "
-            "figures are a floor, not an estimate."
+            "transaction records, not official MLB/MLBPA figures. Where the "
+            "transaction feed cannot see the start of a player's career, his "
+            "figure is a floor rather than an estimate and the table says so."
         ),
-        "coverage_start_year": TRANSACTION_COVERAGE_START_YEAR,
+        "rules": _rules_block(),
         "player_count": len(db),
         "super_two_cutoff": cutoff,
         "incomplete_history_count": sum(

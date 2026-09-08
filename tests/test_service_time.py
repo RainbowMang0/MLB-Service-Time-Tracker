@@ -1375,6 +1375,245 @@ def test_the_club_directory_is_reachable_in_one_hop():
     check("the directory is a real file", (docs / "t" / "index.html").exists())
 
 
+def _render_explainer_under(overrides: dict) -> str:
+    """Render the explainer against a hypothetical successor agreement.
+
+    Writes a throwaway ruleset, points cba.DEFAULT_VERSION at it, reloads the
+    page generator so its module-level constants re-read, and renders. The
+    module is reloaded again on the way out so no other test sees the change.
+    """
+    import importlib
+    import json as _json
+
+    config_dir = pathlib.Path(__file__).resolve().parents[1] / "config" / "cba"
+    base = _json.loads((config_dir / "2022.json").read_text())
+    for path, value in overrides.items():
+        node = base
+        parts = path.split(".")
+        for part in parts[:-1]:
+            node = node[part]
+        node[parts[-1]] = value
+    scratch = config_dir / "9999.json"
+    scratch.write_text(_json.dumps(base))
+
+    import write_player_pages
+
+    real_default = cba.DEFAULT_VERSION
+    try:
+        cba.DEFAULT_VERSION = "9999"
+        cba.load.cache_clear()
+        importlib.reload(write_player_pages)
+        return write_player_pages.render_explainer(
+            "2026-01-01T00:00:00+00:00",
+            {"cutoff": "2.130", "cutoff_days": 470, "season": 2025},
+        )
+    finally:
+        scratch.unlink(missing_ok=True)
+        cba.DEFAULT_VERSION = real_default
+        cba.load.cache_clear()
+        importlib.reload(write_player_pages)
+
+
+def test_the_explainer_prose_follows_the_ruleset_not_a_literal():
+    """
+    The arithmetic was never the problem. The pipeline computed from
+    config/cba/ while roughly twenty sentences a READER sees said "172" as a
+    literal -- the page footers, the threshold table's day counts (516, 1,032,
+    1,376, 1,720), the meta description and the FAQ structured data. The
+    project's headline claim is that filling in config/cba/2027.json makes the
+    whole site current the same day; that was true of the numbers and false of
+    the prose, which is the half anybody actually believes.
+
+    The 2022 agreement expires 2026-12-01, so this is not hypothetical. The
+    check is a positive control: a parameter that changes nothing might simply
+    not be wired in.
+    """
+    import write_player_pages as w
+
+    live = w.render_explainer("2026-01-01T00:00:00+00:00", None)
+    check(
+        "under the agreement in force the explainer still says 172",
+        "172 days credit a full year" in live or "<h2>172 days make a year</h2>" in live,
+    )
+
+    moved = _render_explainer_under({
+        "service_time.days_per_credited_year": 165,
+        "service_time.max_days_creditable_per_season": 165,
+        "service_time.normal_season_span_days": 180,
+        "free_agency.credited_years_required": 5.0,
+    })
+    check("a changed credited year reaches the heading", "<h2>165 days make a year</h2>" in moved)
+    check("...and the season span", "A season runs about 180 days" in moved)
+    check("...and the free agency row (5 x 165 = 825)", ">825<" in moved)
+    check("...and the arbitration row (3 x 165 = 495)", ">495<" in moved)
+    check("...and the gold card row (8 x 165 = 1,320)", ">1,320<" in moved)
+    check("...and the service-time-manipulation example", "leaves him at 0.164" in moved)
+    check("NO stale 172 survives anywhere in the page", "172" not in moved)
+
+
+def test_the_structured_data_and_the_visible_prose_agree_on_a_season():
+    """
+    They did not. The FAQ JSON-LD said a season runs "about 186 days" while the
+    paragraph on the same page said 187 -- and a search engine reads both. 186
+    is the project's own measured value: it is what reproduces Aaron Judge's
+    figure through the 2020 proration, it is what config/cba/2022.json holds,
+    and CLAUDE.md records 187 being explicitly rejected when the brief proposed
+    it. Both are derived from the ruleset now, so they cannot disagree again.
+    """
+    import write_player_pages as w
+
+    html = w.render_explainer("2026-01-01T00:00:00+00:00", None)
+    span = cba.default().require("service_time.normal_season_span_days")
+    prose = f"A season runs about {span} days"
+    structured = f"A major league season runs about {span} days"
+    check(f"the visible prose says {span}", prose in html)
+    check(f"the structured data says {span} too", structured in html)
+    check("neither says 187", "187 days" not in html)
+
+
+def test_a_season_window_is_fetched_once_not_once_per_player():
+    """
+    The pipeline asks for a season window once per player per season of his
+    career, so a daily run over ~1,370 rostered players made 7,179 calls to
+    fetch the same 22 distinct answers. That is ~32 minutes of wall clock and
+    ~7,000 needless requests a day against a free public endpoint this project
+    goes out of its way to be polite to -- and a season's start and end date
+    cannot move within a run.
+    """
+    import fetch_mlb_data as mlb
+
+    calls = []
+
+    real_get = mlb._get
+    mlb.get_season_window.cache_clear()
+    try:
+        mlb._get = lambda path, params=None: (
+            calls.append(params.get("season")),
+            {"seasons": [{
+                "regularSeasonStartDate": f"{params['season']}-03-28",
+                "regularSeasonEndDate": f"{params['season']}-09-29",
+            }]},
+        )[1]
+        for _ in range(50):
+            for year in (2024, 2025, 2026):
+                mlb.get_season_window(year)
+    finally:
+        mlb._get = real_get
+        mlb.get_season_window.cache_clear()
+
+    check(
+        f"150 requests for 3 seasons cost 3 API calls, not 150 (got {len(calls)})",
+        len(calls) == 3,
+    )
+
+
+def test_an_estimated_season_window_stops_the_run_from_publishing():
+    """
+    get_season_window() falls back to a hardcoded Mar 28 - Oct 1 estimate when
+    /seasons cannot be reached. That is right for a far-future season nobody
+    has scheduled and dangerous for one that has already been played: CLAUDE.md
+    records this exact estimate putting Jose Ramirez 8 days out and making him
+    look like the one modern outlier worth chasing, when the estimate was the
+    error. The daily job only ever asks for seasons that have happened, so a
+    fallback there is an outage -- and it used to publish silently.
+    """
+    import fetch_mlb_data as mlb
+    import update_service_time as u
+
+    real_get = mlb._get
+    mlb.get_season_window.cache_clear()
+    mlb._ESTIMATED_WINDOWS.clear()
+    try:
+        clean = u.check_run_is_sane(1200, 1200, 0)
+        check("a healthy run has nothing to report", clean == [])
+
+        def boom(path, params=None):
+            raise RuntimeError("simulated /seasons outage")
+
+        mlb._get = boom
+        start, end = mlb.get_season_window(2025)
+        check("the fallback still returns a usable window", start.year == 2025)
+        check("...and records that it guessed", 2025 in mlb.estimated_season_windows())
+
+        problems = u.check_run_is_sane(1200, 1200, 0)
+        check("an estimated window refuses the run", len(problems) == 1)
+        check(
+            "...and the reason names the season",
+            problems and "2025" in problems[0],
+        )
+    finally:
+        mlb._get = real_get
+        mlb.get_season_window.cache_clear()
+        mlb._ESTIMATED_WINDOWS.clear()
+
+
+def test_both_published_files_carry_the_cba_rules_block():
+    """
+    docs/app.js falls back from index.json to service_time.json when a
+    deployment has not regenerated the index yet, and that fallback used to
+    leave every threshold null: applyRules() ran only on the array-shaped index
+    path. The meter then read 100% for every player, formatDays() returned
+    "Infinity.NaN", and the profile footer said "null days credit a full year".
+    A fallback that renders nonsense is worse than no fallback at all.
+    """
+    import update_service_time as u
+
+    block = u._rules_block()
+    for key in (
+        "version", "full_year_days", "free_agency_years", "arbitration_years",
+        "super_two_min_years", "super_two_max_years", "super_two_min_days",
+    ):
+        check(f"the rules block carries {key}", key in block)
+    check(
+        "full_year_days matches the ruleset",
+        block["full_year_days"] == cba.default().require(
+            "service_time.days_per_credited_year"
+        ),
+    )
+
+    docs = pathlib.Path(__file__).resolve().parents[1] / "docs"
+    app = (docs / "app.js").read_text()
+    check(
+        "app.js applies the rules on every load path, not just hydrate()",
+        "applyRules(data);" in app,
+    )
+    check(
+        "the embedded sample carries its own thresholds",
+        "rules: {" in app,
+    )
+
+
+def test_nothing_published_claims_a_transaction_coverage_cutoff_year():
+    """
+    The database's disclaimer -- the most prominent sentence the site renders
+    -- used to read "Transaction coverage begins in 2009; players who debuted
+    earlier are marked as having incomplete history". This project's own probe
+    disproved that: scripts/probe_coverage.py returned real 2005-2008 major
+    league rows, so coverage THINS going back rather than switching on, and
+    _missing_seasons() has measured completeness per player ever since.
+
+    Publishing the old sentence meant the site asserted something the pipeline
+    behind it had stopped believing. Both published files now describe the data
+    the same way, and neither names a year.
+    """
+    import update_service_time as u
+
+    src = pathlib.Path(u.__file__).read_text()
+    body = src.split("def _write_outputs")[1]
+    check(
+        "the database no longer publishes a coverage_start_year",
+        '"coverage_start_year"' not in body,
+    )
+    check(
+        "...and its disclaimer makes no cutoff claim",
+        "coverage begins in" not in body,
+    )
+    check(
+        "the two published files describe the data identically",
+        body.count("figure is a floor rather than an estimate") == 1,
+    )
+
+
 def test_lastmod_moves_only_when_a_page_actually_changes():
     """
     Every sitemap URL used to claim today's date, every day. Between the World
@@ -2020,5 +2259,11 @@ if __name__ == "__main__":
     test_the_2027_placeholder_refuses_to_compute()
     test_a_value_nobody_has_checked_cannot_be_published_by_accident()
     test_every_ruleset_value_carries_a_source()
+    test_the_explainer_prose_follows_the_ruleset_not_a_literal()
+    test_the_structured_data_and_the_visible_prose_agree_on_a_season()
+    test_a_season_window_is_fetched_once_not_once_per_player()
+    test_an_estimated_season_window_stops_the_run_from_publishing()
+    test_both_published_files_carry_the_cba_rules_block()
+    test_nothing_published_claims_a_transaction_coverage_cutoff_year()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)
