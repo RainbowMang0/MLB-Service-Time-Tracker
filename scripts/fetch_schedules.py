@@ -58,6 +58,10 @@ OUT_ROOT = pathlib.Path(__file__).resolve().parents[1] / "docs" / "data" / "sche
 # why the Arizona/Florida split matters so much to a player's allocation.
 GAME_TYPES = "S,R,F,D,L,W"
 
+# The 30 major league clubs. Stable ids -- MLB has not reassigned one, and the
+# Athletics' move changed the club's NAME, not its id (133).
+MLB_CLUB_IDS = frozenset(list(range(108, 122)) + list(range(133, 148)) + [158])
+
 # Non-US venues, mapped to the jurisdiction codes in config/tax/2026-states.json.
 # Kept explicit rather than derived: a silent fallback to a US state for a
 # foreign venue would put Canadian duty days into a US return.
@@ -168,7 +172,12 @@ def fetch_season(season: int) -> dict:
     return resp.json()
 
 
-def write_schedules(season: int, payload: dict, out_root: pathlib.Path = OUT_ROOT) -> dict:
+def write_schedules(
+    season: int,
+    payload: dict,
+    out_root: pathlib.Path = OUT_ROOT,
+    expect_all_clubs: bool = True,
+) -> dict:
     by_team = parse_schedule(payload)
     season_dir = out_root / str(season)
     season_dir.mkdir(parents=True, exist_ok=True)
@@ -179,7 +188,22 @@ def write_schedules(season: int, payload: dict, out_root: pathlib.Path = OUT_ROO
         stale.unlink()
 
     index = []
+    skipped_non_mlb = []
     for team_id, games in sorted(by_team.items()):
+        # MLB clubs only. Spring training puts major league clubs against
+        # college programmes, national teams and minor league affiliates, and
+        # those opponents come back from /schedule with their own team ids --
+        # 22 of them on the first live run. Publishing them gave the club
+        # dropdown entries with no name, so a player picking his club saw raw
+        # ids like "4612" mixed in with real ones.
+        #
+        # Filtered by id against the 30 clubs rather than by "does it have a
+        # name", because a name lookup that fails for any reason would then
+        # silently drop real clubs -- the same shape as the MLB-club filter in
+        # the transaction pipeline, and for the same reason.
+        if team_id not in MLB_CLUB_IDS:
+            skipped_non_mlb.append(team_id)
+            continue
         regular = [g for g in games if not g["spring"]]
         spring = [g for g in games if g["spring"]]
         home_states = {g["state"] for g in regular if g["home"] and g["state"]}
@@ -239,6 +263,20 @@ def write_schedules(season: int, payload: dict, out_root: pathlib.Path = OUT_ROO
 
     total_games = sum(c["games"] for c in index)
     print(f"  wrote {len(index)} clubs, {total_games} club-games -> {season_dir}")
+    if skipped_non_mlb:
+        print(
+            f"  skipped {len(skipped_non_mlb)} non-MLB opponent(s) from spring "
+            f"training: {' '.join(str(t) for t in skipped_non_mlb)}"
+        )
+    if expect_all_clubs and len(index) != len(MLB_CLUB_IDS):
+        # Loud, because a missing club is a player who cannot pick his own
+        # team, and it would otherwise only show up as an empty dropdown.
+        missing = sorted(MLB_CLUB_IDS - {c["team_id"] for c in index})
+        print(
+            f"  !! expected {len(MLB_CLUB_IDS)} clubs, wrote {len(index)}; "
+            f"missing ids: {missing}",
+            file=sys.stderr,
+        )
     return index_doc
 
 
@@ -273,7 +311,9 @@ def main() -> int:
         load_team_names()
         payload = fetch_season(args.season)
 
-    write_schedules(args.season, payload)
+    # A fixture is a partial payload by definition, so the
+    # missing-club check would be noise rather than a signal.
+    write_schedules(args.season, payload, expect_all_clubs=not args.fixture)
     return 0
 
 

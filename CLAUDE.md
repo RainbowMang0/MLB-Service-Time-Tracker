@@ -24,6 +24,55 @@ rediscover any of it.
 
 ---
 
+## Where the project stands — read this first (updated 2026-09-08)
+
+Three tools, all live, all free, all client-side. Nothing is paywalled and
+nothing is stored on a server.
+
+| | what it is | state |
+|---|---|---|
+| `/` | the service-time tracker | mature; 5,578 players, daily refresh, gates green |
+| `/taxes.html` | duty-day / jock-tax allocation | shipped 2026-09-02, **not yet reviewed by a CPA** |
+| `/contract.html` | contract clock, projections, offer value | shipped 2026-09-02 |
+| `/neutrality.html` | the neutrality statement | shipped 2026-09-02 |
+
+**The two things blocking promotion of the paid-section tools to anyone** are
+item 0a and 0b under "Immediate next steps": no tax professional has reviewed
+the duty-day methodology, and the MLBPA/club question has not been asked.
+Both are conversations, not code.
+
+**The three biggest architectural facts a new session needs:**
+
+1. **Every CBA threshold lives in `config/cba/`.** Nothing declares 172
+   anywhere. Python reads it via `scripts/cba.py`; the browser reads it from
+   the `rules` block in `index.json`. The 2022 agreement expires
+   **2026-12-01** — filling in `config/cba/2027.json` makes the whole site
+   current the same day.
+2. **A number nobody verified never ships wearing the site's authority.**
+   Tax rates carry a tier (`verified` / `estimate_unverified` /
+   `conflicting_sources`), CBA values carry a `sources` status, and both are
+   enforced by tests rather than promised in a comment.
+3. **There is no salary data and none may be scraped.** That is why the
+   contract tool has no arbitration projection, no breakeven and no comp set.
+   Licensing salary data is the single unlock for those.
+
+**Recent history, newest first:**
+
+* 2026-09-08 — first live schedule run reviewed; 22 non-MLB spring opponents
+  were leaking into the club list, now filtered.
+* 2026-09-02 — the contract clock (Phase 2), and rough tax estimates in a
+  labelled tier after the owner pushed back on the initial refusal.
+* 2026-09-02 — the duty-day tool, CBA rulesets as versioned config, and the
+  neutrality page.
+* 2026-09-01 — the dark instrument look, analytics, table defaults to current
+  players.
+
+Everything below is the accumulated detail. **The "measured, not assumed"
+findings are hard-won and several plausible-looking fixes have already been
+tried and reverted — do not re-litigate them without new evidence.**
+
+---
+
 ## What this is
 
 A static site that estimates MLB service time for every player on a 40-man
@@ -70,7 +119,7 @@ scripts/generate_demo_data.py      bundled sample data generator (no network)
 config/cba/2022.json           the agreement in force; every value carries a source
 config/cba/2027.json           valid placeholder that REFUSES to compute
 config/tax/duty-day-rules.json day types and whether each counts as a duty day
-config/tax/2026-states.json    52 jurisdictions; 9 verified, 43 unverified with null rates
+config/tax/2026-states.json    52 jurisdictions: 9 verified, 14 estimate-tier, 1 conflicting, 28 no rate
 tests/test_service_time.py     230 tests, no pytest needed: `python tests/test_service_time.py`
 tests/duty_days.test.cjs       27 tests, no npm needed: `node --test tests/duty_days.test.cjs`
 tests/contract.test.cjs        20 tests, incl. the advice-vocabulary lint
@@ -529,7 +578,7 @@ older ruleset, which is the condition `--recompute-all` exists to reach.
 - **1,364 on a 40-man.** Each has a static page at
   `docs/p/<id>-<slug>.html`, listed in `docs/sitemap.xml`. (The count moves
   by a player or two most days; that is roster churn, not drift.)
-- **230 tests passing** (plus 21 in the duty-day JS suite).
+- **230 Python tests, 27 duty-day JS tests, 20 contract JS tests** — all passing.
 - **Super Two cutoff currently 2.137**, computed from the whole population.
 - 1 player at or above 20.000 years (Verlander, 21.075), which is correct.
 - **26 players read exactly 0.000** and are hidden from the table by
@@ -2196,8 +2245,9 @@ resumable across batches, which matters for a job that takes hours.
    validates the pipeline against the same source it is built on, so a
    systematic misreading of MLB's semantics passes it. See "The first
    independent check" below.
-3. **Tests green** — `python tests/test_service_time.py` (230) and
-   `node --test tests/duty_days.test.cjs` (21). Both are also runnable from
+3. **Tests green** — `python tests/test_service_time.py` (230),
+   `node --test tests/duty_days.test.cjs` (27) and
+   `node --test tests/contract.test.cjs` (20). All three run from
    Actions → "Validate Service Time" → tests.
 
 ---
@@ -2213,22 +2263,21 @@ so neither gate moves: every reference player is on a 40-man and was already
 v5. Every rostered player also has a crawlable page. What follows is
 genuinely open work rather than a queue.
 
-**The duty-day tool shipped 2026-09-02** (see "The second tool" above). It is
-free, client-side and stores nothing server-side. What it needs before anyone
-relies on it is listed at 0 below — those are gating items, not polish.
+**Three tools are now live** (2026-09-02): the free service-time tracker,
+`/taxes.html` (duty days) and `/contract.html` (the contract clock). All are
+free, client-side, and store nothing server-side.
 
-0. **BEFORE THE DUTY-DAY TOOL IS PROMOTED TO ANYONE.** None of these block
-   the code, all of them block trusting it. In rough order of consequence:
+0. **BEFORE EITHER PAID-SECTION TOOL IS PROMOTED TO ANYONE.** None of these
+   block code, all of them block trusting it. In rough order of consequence:
 
    a. **A tax professional has not reviewed the methodology or the
       disclaimer wording.** Nobody has checked the duty-day classification
       defaults (travel days, in-state off days, spring training, rehab
-      assignments) against any state's primary guidance. The tool is built
-      to be honest about this — it refuses to estimate for 43 of 52
-      jurisdictions — but "honest about being unverified" is not the same as
-      "verified". A consult with a CPA who does athlete returns is the
-      single highest-value next step, and it doubles as validation of the
-      method rather than only a liability shield.
+      assignments) against any state's primary guidance. The tool is honest
+      about this, but "honest about being unverified" is not "verified". A
+      consult with a CPA who does athlete returns is the single
+      highest-value next step, and it doubles as validation of the method
+      rather than only a liability shield.
 
    b. **The MLBPA / club question has not been asked.** An active player
       operating a tool that models player compensation, distributed inside
@@ -2241,16 +2290,17 @@ relies on it is listed at 0 below — those are gating items, not polish.
       first.** 14 already produce a rough number; verifying one means reading
       the rate off the state's own guidance and changing its status. Order
       that pays off fastest: the owner's own domicile, his club's home state,
-      then the states his club visits most. Georgia needs doing first — its
-      sources conflicted, so it produces nothing at all today.
+      then the states his club visits most. **Georgia needs doing first** —
+      its sources conflicted, so it produces nothing at all today.
 
       ⚠️ The estimate rates were compiled from web-search summaries, NOT read
-      off any primary source, because this environment blocks all of them.
+      off any primary source, because that environment blocked all of them.
       Treat every one as needing a second pair of eyes.
 
-   d. **The schedule fetch has never run live** — the build sandbox blocks
-      `statsapi.mlb.com`. Watch the first daily run, and check
-      `docs/data/schedules/<year>/index.json` appears with 30 clubs.
+   d. **~~The schedule fetch has never run live~~ — IT HAS, and it worked.**
+      See "What the first live schedule run taught us" below. Two real
+      defects surfaced and one is fixed; the other is recorded rather than
+      fixed.
 
 1. **Widen player pages to non-rostered players** — a one-line change to
    `_should_publish()` in `scripts/write_player_pages.py`.
@@ -2347,11 +2397,9 @@ relies on it is listed at 0 below — those are gating items, not polish.
    analytics before then**; near-zero traffic in the first fortnight is the
    expected result, not a signal.
 
-6. **Consider consolidating the service-time math.** See "Where the
-   service-time math actually lives" — `FULL_YEAR_DAYS` is declared in four
-   files and the eligibility rules exist in both Python and JS. Not urgent
-   while the pipeline is the only writer, but any change to a threshold
-   currently has to be made twice.
+6. **~~Consolidate the service-time math~~ — DONE 2026-09-02.** Every
+   threshold now comes from `config/cba/`; nothing declares 172. See "Where
+   the service-time math actually lives".
 
 7. **Owner decisions, recorded rather than pending:** no LICENSE file (so
    the code is readable but not reusable); advertising deferred until
@@ -2622,7 +2670,7 @@ Five decisions were taken now specifically to keep the paid door open cheaply:
 3. **Export/import shipped on day one**, which is the migration path into an
    account that does not exist yet.
 4. **Rulesets are config**, so a server version would read the same files.
-5. **Tests are the port spec.** 21 of them, and they pin the behaviour that
+5. **Tests are the port spec.** 27 of them, and they pin the behaviour that
    would have to survive any move.
 
 ---
@@ -2777,11 +2825,12 @@ MHST over $1M).
 
 ### The thing it still will not do
 
-**It does not invent a rate for a jurisdiction that has none.** 43 of 52 jurisdictions in `config/tax/2026-states.json` carry
-`status: "unverified"` and null rates. For those the tool still counts the
-days and computes the allocation percentage — the laborious, rate-independent
-work a preparer actually wants — and reports the liability as `null` with a
-reason, with the partial total flagged in the UI and in the export.
+**It does not invent a rate for a jurisdiction that has none.** 28 of the 52
+jurisdictions have no rate from either tier, and Georgia has none because its
+sources conflicted. For those the tool still counts the days and computes the
+allocation percentage — the laborious, rate-independent work a preparer
+actually wants — and reports the liability as `null` with a reason, with the
+partial total flagged in the UI and in the export.
 
 Only **9 jurisdictions are seeded verified**: AK, FL, NH, NV, SD, TN, TX, WA,
 WY — the states with no wage income tax. That is a structural fact about a
@@ -2854,6 +2903,58 @@ in blocks `statsapi.mlb.com` at the network policy, so the parser was verified
 against a recorded fixture covering the Toronto, unresolvable-venue,
 doubleheader and spring-training cases. **The first live run needs watching**
 — it is the one part of this change that has not touched the real API.
+
+### What the first live schedule run taught us
+
+**Checked 2026-09-08**, six days after shipping. The daily job has run every
+day since (commits 09-02 through 09-07), and `fetch_schedules.py` — the one
+piece that had never touched the real API — worked. But the live payload was
+not the shape the fixture implied, and two things came back wrong.
+
+**1. 52 "clubs", not 30. FIXED.** Spring training puts major league clubs
+against college programmes, national teams and minor league affiliates, and
+those opponents come back from `/schedule` with their own team ids. All 22 of
+them got a published file and an index entry, with `team: null` — so the club
+dropdown on `/taxes.html` listed raw ids like `4612` beside real clubs.
+
+`MLB_CLUB_IDS` now filters the output, and a run that does not write exactly
+30 clubs says so loudly on stderr — a missing club is a player who cannot
+pick his own team, which would otherwise show up only as an oddly short
+dropdown. Filtered **by id, not by "does it have a name"**: a name lookup
+that failed for any reason would then silently drop real clubs, which is the
+same shape as the MLB-club filter in the transaction pipeline and wrong for
+the same reason.
+
+⚠️ **The fixture could not have caught this**, and that is the lesson. It was
+hand-built from four games between three real clubs, so it had no spring
+training opponent in it at all. A fixture written from an assumption about a
+payload tests the assumption, not the payload.
+
+**2. 110 games with no jurisdiction. NOT a defect.** Broken down:
+
+| count | venue | what it is |
+|---|---|---|
+| 92 | "AL Stadium" / "NL Stadium" | postseason placeholders, venue not yet known |
+| 14 | "TBD" | same |
+| 4 | Estadio Alfredo Harp Helú | the Mexico City Series, genuinely foreign |
+
+The engine handles all of them correctly — a null jurisdiction is published
+as null and the UI asks rather than guessing. The postseason placeholders are
+slightly untidy (they are not really scheduled games) but they are safe, and
+suppressing them would need a rule about which game types are real, which is
+more risk than the untidiness is worth.
+
+**3. Three clubs have no single home state, and that is correct.** The
+Athletics play home games at Sutter Health Park in Sacramento (75), Hohokam
+Stadium in Arizona (15) and Las Vegas Ballpark (8) — the relocation, mid-flight.
+Milwaukee and Minnesota each have a neutral-site series. `home_state` is null
+for those three and `home_states` carries the list.
+
+The UI degrades correctly: the player picks his own home state in the form and
+that takes precedence (`profile.homeState || doc.home_state`), so a null only
+means one field cannot be prefilled. Worth knowing before anyone "fixes"
+`home_state` by picking the commonest state — for an Athletic that would be
+right, and for a genuine two-park season it would quietly misplace duty days.
 
 ### `config/` is published, and the copy is checked
 
