@@ -82,9 +82,21 @@
         <div class="tiles" id="clock-tiles"></div>
       </section>
 
-      <!-- 2. Projection -->
+      <!-- 2. Where the leverage is -->
+      <section class="panel" id="panel-stage" hidden>
+        <h2><span class="step-n">2</span> What changes at each line</h2>
+        <p class="panel-note">
+          Service time decides a player's <b>bargaining position</b>, and that is
+          what moves at 3.000 and 6.000 — not his ability, which the clock says
+          nothing about.
+        </p>
+        <div class="tiles" id="stage-tiles"></div>
+        <div class="warn-list" id="stage-notes"></div>
+      </section>
+
+      <!-- 3. Projection -->
       <section class="panel" id="panel-projection" hidden>
-        <h2><span class="step-n">2</span> When comparable players crossed the line</h2>
+        <h2><span class="step-n">3</span> When comparable players crossed the line</h2>
         <p class="panel-note" id="projection-basis"></p>
         <div class="table-scroll">
           <table class="alloc-table" id="projection-table">
@@ -95,6 +107,7 @@
                 <th>Slower than most<br /><span class="th-sub">20th percentile</span></th>
                 <th>Typical<br /><span class="th-sub">median</span></th>
                 <th>Faster than most<br /><span class="th-sub">80th percentile</span></th>
+                <th>Age on arrival<br /><span class="th-sub">at the median</span></th>
               </tr>
             </thead>
             <tbody></tbody>
@@ -105,7 +118,7 @@
 
       <!-- 3. Ruleset comparison -->
       <section class="panel" id="panel-rulesets" hidden>
-        <h2><span class="step-n">3</span> The same player under two agreements</h2>
+        <h2><span class="step-n">4</span> The same player under two agreements</h2>
         <p class="panel-note">
           The 2022 Basic Agreement expires 11:59pm ET on 1 December 2026, and service time, arbitration and free agency are central to the dispute. This runs the same service time under two rulesets and shows the difference. Edit the second column to model a proposal.
         </p>
@@ -141,10 +154,24 @@
 
       <!-- 4. Offer -->
       <section class="panel">
-        <h2><span class="step-n">4</span> What an offer guarantees</h2>
+        <h2><span class="step-n">5</span> What an offer guarantees</h2>
         <p class="panel-note">
           Enter the years of an offer. Money that is not guaranteed — club options, vesting years, incentives — belongs in the “guaranteed” column as “no”, and is reported separately rather than added to the total.
         </p>
+        <div class="ex-ante-note">
+          <p><b>This values the offer as it looks now, not as it will look later.</b>
+          Economists call that the <i>ex ante</i> question — what could be
+          anticipated at signing — and it is a different question from whether a
+          player ends up having “earned” the money, which can only be answered
+          years afterwards.</p>
+          <p>Krautmann (2013) uses Jason Bay to make the distinction concrete: the
+          Mets signed him in 2010 for four years and $66M against a projection of
+          3.2 wins above replacement, which made the first year's $16.5M look
+          merited. A concussion ended his July and he finished at 0.7. The signing
+          was applauded in February and called a bust by August. <b>Both readings
+          are right, because they answer different questions.</b> This page only
+          ever answers the first one.</p>
+        </div>
 
         <div class="table-scroll">
           <table class="alloc-table" id="offer-table">

@@ -413,3 +413,89 @@ test("the homepage deliberately does not yet link the contract or duty-day tools
   assert.ok(!/href="contract\.html"/.test(home), "homepage links the contract tool before it is ready");
   assert.ok(!/href="taxes\.html"/.test(home), "homepage links the duty-day tool before it is ready");
 });
+
+// -------------------------------------------------------------------------
+// Career stage
+// -------------------------------------------------------------------------
+
+test("the stage reports the mechanism and never a share of value", () => {
+  // Published estimates of what a restricted player captures run from about
+  // a tenth of his value to essentially all of it, and Krautmann (1999) shows
+  // most of that spread is method: the same players come to $4.5M or $57M of
+  // surplus per team depending only on the approach. A range spanning that
+  // would read as a measurement. So the engine returns what is uncontested --
+  // the bargaining rights that change at each line -- and no number.
+  const R = { ...RULES };
+  for (const days of [0, 300, 516, 900, 1032, 1500]) {
+    const st = CT.stageOf(days, R, false);
+    const text = JSON.stringify(st);
+    assert.ok(st.rights && st.rights.length > 20, "every stage explains the mechanism");
+    assert.ok(
+      !/\b\d{1,3}\s?%|\bpercent\b/i.test(text),
+      `stage at ${days} days quotes a share of value: ${text}`
+    );
+  }
+});
+
+test("stage boundaries follow the ruleset, including Super Two", () => {
+  const R = RULES;
+  assert.equal(CT.stageOf(0, R, false).key, "pre_arbitration");
+  assert.equal(CT.stageOf(3 * 172 - 1, R, false).key, "pre_arbitration");
+  assert.equal(CT.stageOf(3 * 172, R, false).key, "arbitration");
+  assert.equal(CT.stageOf(6 * 172 - 1, R, false).key, "arbitration");
+  assert.equal(CT.stageOf(6 * 172, R, false).key, "free_agency");
+
+  // Super Two reaches arbitration early, and the stage says so -- the one
+  // case where the stage and the raw figure disagree.
+  const early = CT.stageOf(2 * 172 + 140, R, true);
+  assert.equal(early.key, "arbitration");
+  assert.equal(early.viaSuperTwo, true);
+  assert.equal(CT.stageOf(4 * 172, R, true).viaSuperTwo, false, "not via Super Two once past 3.000");
+});
+
+test("a five-year ruleset moves the stage boundary with it", () => {
+  const alt = { ...RULES, free_agency_years: 5 };
+  assert.equal(CT.stageOf(5 * 172, RULES, false).key, "arbitration");
+  assert.equal(CT.stageOf(5 * 172, alt, false).key, "free_agency");
+});
+
+// -------------------------------------------------------------------------
+// Age at a threshold
+// -------------------------------------------------------------------------
+
+test("age is attached to projected crossings, and refuses when unknown", () => {
+  // A player reaching free agency at 27 and one reaching it at 32 have
+  // identical clocks and very different futures. Fair (2008) puts peak
+  // performance at 26.5-28.3 depending on the measure, so the age at which a
+  // player arrives is the part the service clock cannot say.
+  const p = CT.withAges(CT.project(400, MODEL, RULES, 2026), 1999);
+  const fa = p.targets.find((t) => t.key === "free_agency");
+  for (const o of fa.outcomes) {
+    if (o.season === null) continue;
+    assert.equal(o.age, o.season - 1999, "age tracks the projected season");
+  }
+
+  // Unknown birth year must render as unknown, never as an age computed from
+  // a missing field -- the same discipline as a null tax rate.
+  const unknown = CT.withAges(CT.project(400, MODEL, RULES, 2026), null);
+  assert.ok(unknown.targets.every((t) => t.outcomes.every((o) => o.age === null)));
+  assert.equal(unknown.birthYear, null);
+});
+
+test("an implausible birth year yields no age rather than a wrong one", () => {
+  assert.equal(CT.ageInSeason(1890, 2026), null);
+  assert.equal(CT.ageInSeason(2020, 2026), null);
+  assert.equal(CT.ageInSeason(null, 2026), null);
+  assert.equal(CT.ageInSeason(1999, 2026), 27);
+});
+
+test("attaching ages cannot change a projected date", () => {
+  // withAges is a presentational join. If it could move a season it would be
+  // silently editing a measured projection.
+  const base = CT.project(400, MODEL, RULES, 2026);
+  const aged = CT.withAges(base, 1996);
+  assert.deepEqual(
+    aged.targets.map((t) => t.outcomes.map((o) => o.season)),
+    base.targets.map((t) => t.outcomes.map((o) => o.season))
+  );
+});

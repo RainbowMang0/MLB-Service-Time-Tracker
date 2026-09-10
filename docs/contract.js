@@ -109,6 +109,136 @@
   // shape of the thing.
   // ---------------------------------------------------------------------
 
+  // ---------------------------------------------------------------------
+  // Age at a threshold.
+  //
+  // Every threshold on this page is service-based; every valuation result in
+  // the literature is AGE-based, and the two come apart badly for a late
+  // debut. Fair (2008) estimates peak performance at 27.6 (OPS), 28.3 (OBP)
+  // and 26.5 (ERA) -- so pitchers peak about two years earlier than hitters
+  // and decline more than twice as fast. Solow & Krautmann (2020) forecast a
+  // contract's value by ageing the player through exactly that curve.
+  //
+  // A player reaching free agency at 27 and one reaching it at 32 have
+  // identical clocks and very different futures, and until now this tool
+  // could not tell them apart.
+  //
+  // Deliberately coarse: birth YEAR only, so the answer is "about 29", never
+  // a date of birth. Precision the page cannot use is a personal detail it
+  // has no business publishing.
+  // ---------------------------------------------------------------------
+
+  /**
+   * Approximate age in a given season. Null when the birth year is unknown --
+   * which is the honest answer for a record written before the pipeline
+   * stored it, and the caller must render it as such rather than compute an
+   * age from a missing field.
+   */
+  function ageInSeason(birthYear, season) {
+    if (!birthYear || !season) return null;
+    const age = season - birthYear;
+    // A plausibility gate rather than a guess: anything outside this is a bad
+    // record, and a wrong age is worse than no age.
+    if (age < 15 || age > 60) return null;
+    return age;
+  }
+
+  /**
+   * Attach an approximate age to each projected threshold crossing.
+   *
+   * Takes the result of project() and returns the same shape with `age` on
+   * every outcome. Separate from project() on purpose: the projection is
+   * measured from the accrual model and stands on its own, while this is a
+   * presentational join that must not be able to change a projected date.
+   */
+  function withAges(projection, birthYear) {
+    if (!projection || !projection.available) return projection;
+    return {
+      ...projection,
+      birthYear: birthYear || null,
+      targets: projection.targets.map((t) => ({
+        ...t,
+        outcomes: t.outcomes.map((o) => ({
+          ...o,
+          age: o.season === null ? null : ageInSeason(birthYear, o.season),
+        })),
+      })),
+    };
+  }
+
+  // ---------------------------------------------------------------------
+  // Career stage.
+  //
+  // The stage a player is in is what the labour-economics literature is
+  // actually about: it partitions players on exactly the thresholds this
+  // site already computes, and every source agrees the player's bargaining
+  // position -- not his ability -- is what changes at each line.
+  //
+  // WHAT THIS DELIBERATELY DOES NOT RETURN: a share of value. Published
+  // estimates of what a restricted player captures range from about a tenth
+  // to essentially all of it, and most of that spread is method rather than
+  // disagreement about baseball. Krautmann (1999) applies both dominant
+  // approaches to the same players and gets a per-team surplus of $4.5M or
+  // $57M depending only on which he uses; his own later reply (2013) explains
+  // why, and it is not that one is wrong -- the free-market approach answers
+  // "what determines a salary, ex ante" and the Scully approach answers "did
+  // he earn it, ex post". A range spanning that would read as a measurement.
+  //
+  // So this returns the MECHANISM, which is uncontested, and leaves the
+  // magnitude to the page's prose. See research/valuation-literature.md.
+  // ---------------------------------------------------------------------
+
+  const STAGES = [
+    {
+      key: "pre_arbitration",
+      label: "Pre-arbitration",
+      // What is true of his bargaining position, not of his worth.
+      rights: "No arbitration rights. Salary is set by the club at or near the league minimum, largely independent of performance.",
+      nextGain: "Arbitration rights",
+    },
+    {
+      key: "arbitration",
+      label: "Arbitration eligible",
+      rights: "Salary disputes go to binding final-offer arbitration, decided against the salaries of comparable players -- backward-looking, and driven by the comparison set rather than by projected future value.",
+      nextGain: "Free agency",
+    },
+    {
+      key: "free_agency",
+      label: "Free agency eligible",
+      rights: "Able to solicit offers from any club. This is the only stage with an open market.",
+      nextGain: null,
+    },
+  ];
+
+  /**
+   * Which stage a service figure sits in, and what changes at the next line.
+   *
+   * `superTwo` is passed in rather than derived: Super Two depends on the
+   * league-wide two-to-three-year class and a prior-season day count, which
+   * this engine cannot see. The site computes it upstream.
+   */
+  function stageOf(serviceDays, rules, superTwo) {
+    const arbDays = toDays(rules.arbitration_years, rules);
+    const faDays = toDays(rules.free_agency_years, rules);
+
+    let key = "pre_arbitration";
+    if (serviceDays >= faDays) key = "free_agency";
+    else if (serviceDays >= arbDays || superTwo) key = "arbitration";
+
+    const stage = STAGES.find((s) => s.key === key);
+    const next = clock(serviceDays, rules).next;
+
+    return {
+      ...stage,
+      // True only when the player is short of the standard three years and
+      // reached arbitration early. Worth surfacing: it is the one case where
+      // the stage and the raw figure disagree.
+      viaSuperTwo: key === "arbitration" && serviceDays < arbDays,
+      daysToNextStage: next ? next.daysRemaining : 0,
+      nextStageAt: next ? next.atService : null,
+    };
+  }
+
   // A projection walk has to terminate. No major league career approaches
   // this, so hitting it means the rate is too low to reach the target and
   // the honest answer is "not at this rate" rather than a distant year.
@@ -440,6 +570,10 @@
     toDays,
     clock,
     bandFor,
+    stageOf,
+    ageInSeason,
+    withAges,
+    STAGES,
     seasonsToReach,
     seasonsToReachBanded,
     project,

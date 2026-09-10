@@ -512,6 +512,17 @@ def build_player_record(
         "team_id": roster_entry.get("teamId"),
         "position": roster_entry.get("position"),
         "mlb_debut": debut,
+        # Age, not service time, is what the valuation literature is about.
+        # Fair (2008) estimates peak performance at 27.6 (OPS) / 28.3 (OBP) /
+        # 26.5 (ERA), and Solow & Krautmann (2020) forecast a contract's value
+        # by ageing the player through that curve -- so a 26-year-old rookie
+        # and a 22-year-old rookie have identical clocks and very different
+        # remaining value. See research/valuation-literature.md.
+        #
+        # It costs nothing to store: /people is already fetched for every
+        # player and its response has carried birthDate all along. We simply
+        # threw it away.
+        "birth_date": bio.get("birthDate"),
         # Persisted so a suspect number can be checked directly instead of
         # reverse-engineered. Without it there is no way to tell from the
         # published data where a retired player's clock was stopped, which is
@@ -577,6 +588,25 @@ def _rules_block() -> dict:
             "arbitration.super_two.heuristic_min_days"
         ),
     }
+
+
+def _birth_year(player: dict) -> int | None:
+    """
+    Birth YEAR from the stored ISO birth date, or None.
+
+    None is the honest answer for a record written before birth_date was
+    persisted, and the browser must render it as "age unknown" rather than
+    computing an age from a missing field -- the same discipline as the null
+    tax rates. Every rostered player picks one up on the next daily run; the
+    non-rostered ones only on a recompute.
+    """
+    raw = player.get("birth_date")
+    if not raw:
+        return None
+    try:
+        return int(str(raw)[:4])
+    except (TypeError, ValueError):
+        return None
 
 
 def write_index(db: dict[str, dict], super_two_cutoff: dict | None = None) -> None:
@@ -657,6 +687,11 @@ def write_index(db: dict[str, dict], super_two_cutoff: dict | None = None) -> No
             # second copy of the rule in JS would be the exact drift the CBA
             # thresholds were consolidated to stop.
             1 if write_player_pages._should_publish(p) else 0,
+            # Birth year, not the full date. The contract tool needs to say how
+            # old a player will be when he reaches a threshold, which only
+            # needs the year; shipping the exact birthday would add a personal
+            # detail to a 0.22 MB payload for no gain in what the page can say.
+            _birth_year(p),
         ])
 
     payload = {
@@ -678,7 +713,7 @@ def write_index(db: dict[str, dict], super_two_cutoff: dict | None = None) -> No
         "rules": _rules_block(),
         "fields": [
             "id", "name", "team", "position", "days", "on_40_man",
-            "missing_seasons", "super_two", "has_page",
+            "missing_seasons", "super_two", "has_page", "birth_year",
         ],
         "players": rows,
     }

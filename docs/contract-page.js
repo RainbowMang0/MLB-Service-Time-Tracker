@@ -21,6 +21,8 @@
   let currentSeason = new Date().getFullYear();
   let offerYears = [];
   let LABEL_TO_PLAYER = new Map(); // datalist label -> player; never keyed by name alone
+  let birthYear = null;            // null is a real answer: "age unknown"
+  let superTwo = false;
 
   const $ = (id) => document.getElementById(id);
 
@@ -135,6 +137,7 @@
   function renderClock() {
     if (serviceDays === null) {
       $("clock-tiles").innerHTML = "";
+      $("panel-stage").hidden = true;
       $("panel-projection").hidden = true;
       $("panel-rulesets").hidden = true;
       return;
@@ -157,12 +160,57 @@
     }
     $("clock-tiles").innerHTML = tiles.join("");
 
+    renderStage();
     renderProjection();
     renderRulesets();
   }
 
+  function renderStage() {
+    const panel = $("panel-stage");
+    if (serviceDays === null) { panel.hidden = true; return; }
+    panel.hidden = false;
+
+    const st = CT.stageOf(serviceDays, RULES, superTwo);
+    const stages = CT.STAGES;
+
+    $("stage-tiles").innerHTML = stages
+      .map((sg) => {
+        const here = sg.key === st.key;
+        const passed = stages.indexOf(sg) < stages.findIndex((x) => x.key === st.key);
+        return `<div class="tile ${here ? "" : "tile-partial"}">
+          <span class="tile-label">${esc(sg.label)}${here ? " · now" : passed ? " · passed" : ""}</span>
+          <span class="tile-value" style="font-size:.95rem;line-height:1.45;font-family:inherit;letter-spacing:0">${esc(sg.rights)}</span>
+          ${
+            here && st.nextStageAt
+              ? `<span class="tile-foot">${st.daysToNextStage} days to ${esc(st.nextGain || "")} at ${esc(st.nextStageAt)}</span>`
+              : here
+              ? `<span class="tile-foot">the last line on the clock</span>`
+              : ""
+          }
+        </div>`;
+      })
+      .join("");
+
+    const notes = [];
+    if (st.viaSuperTwo) {
+      notes.push(
+        "He reaches arbitration early as a <b>Super Two</b> — the top share of the two-to-three-year class by service time. That is the one case where the stage and the raw figure disagree, and it is worth a fourth arbitration year."
+      );
+    }
+    // The honest statement about magnitude, which is the part that is NOT
+    // settled. See research/valuation-literature.md -- this wording is the
+    // conclusion of that whole survey and should not be loosened.
+    notes.push(
+      "<b>How large is the gap between pay and value at each stage? Published research does not agree, and the disagreement is an order of magnitude.</b> Applying the two dominant methods to the same players, Krautmann (1999) reports a surplus of either $4.5M or $57M per club. His own later reply (2013) explains why they differ: one asks what determines a salary <i>at signing</i>, the other asks whether a player <i>earned</i> it afterwards. They are different questions, so this page reports the rights that change rather than a share of value."
+    );
+    notes.push(
+      "What is not in dispute is the ordering. Every source agrees restricted players are paid less relative to their value than free agents, and that the gap is widest at the front of the clock."
+    );
+    $("stage-notes").innerHTML = "<ul>" + notes.map((n) => `<li>${n}</li>`).join("") + "</ul>";
+  }
+
   function renderProjection() {
-    const p = CT.project(serviceDays, MODEL, RULES, currentSeason);
+    const p = CT.withAges(CT.project(serviceDays, MODEL, RULES, currentSeason), birthYear);
     const panel = $("panel-projection");
 
     if (!p.available) {
@@ -193,12 +241,25 @@
       return `<td><b>${o.season}</b><span class="cell-sub">${o.seasons} more season${o.seasons === 1 ? "" : "s"} · ${rate}</span></td>`;
     };
 
+    // Age at the MEDIAN outcome only. Three ages across three columns would
+    // be noise; the question a reader has is "how old will I be", and the
+    // median is the honest single answer to it.
+    const ageCell = (t) => {
+      const mid = t.outcomes.find((o) => o.key === "p50");
+      if (t.reached) return `<td class="num">—</td>`;
+      if (!mid || mid.age === null) {
+        return `<td class="num"><span class="status st-unverified">not known</span></td>`;
+      }
+      return `<td class="num"><b>${mid.age}</b></td>`;
+    };
+
     $("projection-table").querySelector("tbody").innerHTML = p.targets
       .map(
         (t) => `<tr>
           <td>${t.label}<span class="cell-sub">at ${CT.formatService(t.days, RULES)}</span></td>
           <td class="num">${t.reached ? "—" : t.daysRemaining}</td>
           ${t.outcomes.map(cell).join("")}
+          ${ageCell(t)}
         </tr>`
       )
       .join("");
@@ -208,6 +269,15 @@
       [
         "These are outcomes for a population, not probabilities for one player. What a given season holds depends on health, role and club decisions that nothing here can see.",
         "The rate is re-read at each season from the band the player would then be in, because the measured rate rises with service. Holding a rookie's slowest season across a decade would produce a date no career reaches.",
+        // The survivorship caveat. The aging-curve literature (Nguyen &
+        // Matthews 2024; Schuckers et al. 2023) shows curves fitted only on
+        // players still playing overestimate, and these bands condition on
+        // exactly that. Saying so is the difference between a measured claim
+        // and an overclaim.
+        "<b>These bands describe players who kept a job.</b> Each is measured from players who were still in the majors the following season, so a player who is about to lose his roster spot is not in the population — and the 20th-percentile column is not a floor. The flat top band, where every outcome is a full credited year, is that selection showing rather than a fact about durability.",
+        birthYear
+          ? "Age on arrival is approximate, from birth year only. It matters because the thresholds are about service time while the research on what a player is worth is about age: Fair (2008) puts peak performance between 26.5 and 28.3 depending on the measure, with pitchers peaking earlier and declining faster."
+          : "Age on arrival is not shown because this player's birth year is not in the published data yet. It fills in on the next daily update.",
         "The distribution is measured from estimated service time, so it carries every limitation of the estimates behind it.",
         "Seasons are capped at the credited maximum, so no rate of accrual can shorten the path below one credited year per season.",
       ]
@@ -356,6 +426,11 @@
         return;
       }
       serviceDays = days;
+      // A typed figure is not a player, so anything player-specific has to
+      // clear -- carrying the last player's birth year into a hand-entered
+      // number would silently report someone else's age.
+      birthYear = null;
+      superTwo = false;
       $("clock-status").textContent = `Showing ${CT.formatService(days, RULES)}.`;
       renderClock();
     });
@@ -373,6 +448,8 @@
       const match = playerFromInput(e.target.value);
       if (!match) return;
       serviceDays = match.days;
+      birthYear = match.birthYear;
+      superTwo = match.superTwo;
       $("in-service").value = CT.formatService(match.days, RULES);
       $("clock-status").textContent =
         `${match.name}${match.club ? " · " + match.club : ""} — ${CT.formatService(match.days, RULES)} as of the last daily update.` +
@@ -484,6 +561,10 @@
         // is stale by construction, and the payload already blanks it.
         club: teams[row[ix("team")]] || null,
         hasPage: row[ix("has_page")] === 1,
+        superTwo: row[ix("super_two")] === 1,
+        // -1 is the index() miss for a payload written before birth_year
+        // existed; treat that as unknown rather than reading row[-1].
+        birthYear: ix("birth_year") >= 0 ? row[ix("birth_year")] || null : null,
       }));
     } catch (e) {
       $("clock-status").textContent =
