@@ -144,8 +144,71 @@ to this project than any single level, because the shape is what a career-stage
 tool renders.
 
 **Krautmann, A. C., Gustafson, E., & Hadley, L. (2000). "Who pays for minor
-league training costs?"** *Contemporary Economic Policy* 18(1), 37–47. —
-`cited`
+league training costs?"** *Contemporary Economic Policy* 18(1), January 2000,
+37–47. — `verified`
+
+**Read in full 2026-09-10.** Citation confirmed exactly as recorded. And it
+does **not** say what the search summary said it said.
+
+### It contradicts Humphreys & Pyun on the arbitration stage — in sign
+
+This is the most important thing found so far, and it is not a nuance.
+
+| stage | Humphreys & Pyun (2015 wp) | Krautmann, Gustafson & Hadley (2000) |
+|---|---|---|
+| pre-arbitration | MER 0.887 — paid **11%** of MRP | surplus of **$475k/yr** extracted |
+| arbitration eligible | MER 0.753 — paid **25%** of MRP | surplus is **negative** — slightly **overpaid** |
+
+In their own words: "the average journeyman receives a wage that **slightly
+exceeds his value** (i.e. his surplus is negative)... the arbitration process
+insulates journeymen from the extraction of any surplus, **forcing owners to
+recover their investment in training exclusively from apprentices**."
+
+The conclusion presses it further — "the swelling **overpayment to journeymen**
+found in this analysis suggests that it is in the owners' interest to make the
+arbitration-eligible period as short as possible."
+
+⚠️ **So the arbitration figure is not merely uncertain, it is contested in
+sign.** The pre-arbitration finding is robust — both papers agree the gap is
+large and concentrated there. The arbitration finding is not, and **must not be
+published as a number.**
+
+Why they might differ, none of which is resolvable from here:
+* **Method.** Humphreys & Pyun use Scully's MRP; this paper benchmarks against
+  what the player *would have earned as a free agent* — the free-market-returns
+  approach Krautmann (1999) proposed precisely because he thinks Scully's
+  estimates are wrong. **Article #6 is the referee for this disagreement**, which
+  makes it far more important than its original ranking suggested.
+* **Era.** 1988–1994 versus 2000–2011.
+* **Population.** Hitters only (1,121 reserve-clause players: 659 apprentices,
+  462 journeymen) versus all position players.
+
+### The other findings, all `verified`
+
+* **The largest surplus comes from the players who cost the least to train.**
+  Above-average apprentices yield **$724,000**; below-average ones **$298,000** —
+  more than double. This is evidence *against* the training-cost hypothesis and
+  for what the authors call the availability hypothesis. **The paper's own title
+  question is answered "not really."**
+* **Clubs recoup only about half their training costs.** An average team
+  extracts roughly **$3M/yr** from its reserve-clause players against player
+  development expenses of about **$6M/yr**.
+* The authors report a surplus extracted from minority apprentices **10–15%
+  higher** than from white apprentices. Recorded because it is in the abstract;
+  it bears on the paper's standing, not on anything this tool would compute.
+
+### What this does to the recommendation
+
+The stage panel is **still worth building and its shape changes.** Publishable:
+that the gap is largest and best-evidenced in the pre-arbitration years, and
+that it narrows sharply at arbitration. Not publishable: any single figure for
+the arbitration stage, because two peer-reviewed sources disagree about whether
+it is positive at all.
+
+That is a better outcome than a clean number would have been. A tool that shows
+where the evidence is strong and says plainly where it runs out is doing the
+thing this project is for.
+
 
 **The most important paper here for how the tool should be worded.** It offers
 a competing explanation for the same gap: underpayment of restricted players
