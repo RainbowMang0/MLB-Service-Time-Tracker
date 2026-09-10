@@ -36,7 +36,29 @@ confidence, is the one failure mode this project cannot afford.
 ## 1. The frame the whole literature is built on
 
 **Scully, G. W. (1974). "Pay and Performance in Major League Baseball."**
-*American Economic Review* 64(5), 915–930. — `cited`
+*American Economic Review* **64(6)**, December 1974, 915–930. JSTOR 1815242. —
+`verified`
+
+**Read in full 2026-09-10.** ⚠️ Issue number corrected: **64(6), not 64(5).**
+
+Table 2 gives rates of monopsonistic exploitation by player quality, and the
+**gross** rate is remarkably flat:
+
+| | gross rate `(GMRP−S)/GMRP` | net rate `(NMRP−S)/NMRP` |
+|---|---|---|
+| mediocre hitter | .88 | 1.47 |
+| mediocre pitcher | .91 | 2.02 |
+| average hitter | .89 | .79 |
+| average pitcher | .89 | .80 |
+| star hitter | .89 | .85 |
+
+Two things worth carrying. The gross rate is **.88–.91 regardless of quality**,
+which is where the familiar "players get about 10–20% of their value" line comes
+from — and it is close to Blair, Humphreys & Pyun's 0.887 seventy years of
+baseball later. But **net MRP is negative for mediocre players** (hence rates
+above 1): once training costs and non-player inputs are subtracted, a mediocre
+player does not cover himself. Scully's own table therefore already contains the
+training-cost argument that article #3 later built on.
 
 The founding paper. Estimates a player's **marginal revenue product** (MRP) in
 two stages: a production function (performance → wins) and a revenue function
@@ -47,14 +69,73 @@ Reported finding (`abstract_only`): under the reserve clause, players received
 roughly **20% of their MRP**.
 
 **Krautmann, A. C. (1999). "What's Wrong with Scully-Estimates of a Player's
-Marginal Revenue Product."** *Economic Inquiry.* — `cited`
+Marginal Revenue Product."** *Economic Inquiry* 37(2), 369–381. — `verified`
 
-The standing methodological objection. Argues the Scully two-stage approach
-mis-estimates MRP and proposes deriving it instead from what the *free-agent
-market* actually pays for the same performance — the "free-market returns"
-approach. **This matters to us directly**: it means the two dominant methods
-disagree about the level of the numbers, so any figure this site publishes has
-to say which method produced it.
+**Read in full 2026-09-10, and it settles the central question in this file —
+against publishing any share-of-value figure at all.**
+
+### The two methods differ by a factor of twelve
+
+Krautmann applies both to the same population. Per team, surplus extracted from
+its reserve-clause players:
+
+| method | surplus per team |
+|---|---|
+| free-market returns (FMR) | **~$4.5 million** |
+| Scully | **over $57 million** |
+
+And for the arbitration-eligible journeyman specifically:
+
+| method | journeyman is paid |
+|---|---|
+| free-market returns | **~85% of his value** |
+| Scully | **~25% of his MRP** |
+
+**Same players, same data, same author — an order of magnitude apart.** The
+choice of method, not any fact about baseball, produces most of the spread this
+file has been trying to reconcile.
+
+### His falsification test, which is the persuasive part
+
+If clubs really extracted $57M a year from restricted players, that money
+should appear as franchise profit. Between 1990 and 1996 the average team's real
+accounting profit was about **$4 million**, with roughly **40% of franchises
+claiming losses**. The FMR figure (~$4.5M) is about enough to cover the $3–6M a
+team spends developing players; the Scully figure is not credible on its face.
+
+### Why Scully-method MRP is biased upward
+
+The method allocates team performance to rostered players in proportion to their
+share of at-bats, which "means that the marginal products of non-player inputs
+(e.g. coaches and managers) will be inappropriately apportioned to rostered
+players." Players are credited with the whole team's wins. He also shows the
+technique is "extremely sensitive to the manner in which marginal product is
+measured."
+
+### The state of the literature, in his own summary
+
+He documents the disagreement rather than hiding it, and it is worse than this
+file assumed:
+
+| source | claim |
+|---|---|
+| Scully (1989) | typical free agent paid ~**28%** of MRP |
+| Zimbalist (1992) | average free agent paid **23% MORE** than his marginal value |
+| Zimbalist (1992) | typical journeyman ~**60%** of MRP |
+| Krautmann et al. (1997) | journeymen **slightly overpaid** |
+
+Free agents at 28% versus +23% is not a range, it is a contradiction.
+
+### His own result
+
+> "the average apprentice receives about **25% of his MRP**, while the typical
+> journeyman receives a salary that is **essentially commensurate with his
+> value**."
+
+**This corroborates article #3 and isolates article #1.** Two independent
+Krautmann papers, seven years apart, agree the arbitration-eligible player is
+paid roughly what he is worth. Blair, Humphreys & Pyun's MER of 0.753 uses the
+method this paper argues is biased upward.
 
 ---
 
@@ -234,10 +315,20 @@ as `declineModelled: false`.
 ## 4. Aging — what the value curve does with age, not service
 
 **Fair, R. C. (2008). "Estimated Age Effects in Baseball."** *Journal of
-Quantitative Analysis in Sports* 4(1). — `cited`
-Nonlinear fixed-effects; players with 10+ full-time years, 1921–2004. Peak
-**28**. Aging effects **larger for pitchers than batters**, and larger in
-baseball than in track, swimming or chess.
+Quantitative Analysis in Sports* 4(1), Article 1. — `verified`
+
+**Read in full 2026-09-10.** ⚠️ **"Peak 28" was a rounding that hides the
+result.** The estimated peak ages are per measure:
+
+| measure | peak age | decline by 37 |
+|---|---|---|
+| OPS (batters) | **27.6** | 0.73%/yr (OBP) |
+| OBP (batters) | **28.3** | 0.73%/yr |
+| ERA (pitchers) | **26.5** | **1.72%/yr** |
+
+So **pitchers peak roughly two years earlier than hitters and decline more than
+twice as fast.** A single peak age for "a player" is not what this paper found,
+and for a tool that will be used by pitchers, the difference is the finding.
 
 **Bradbury, J. C. (2009). "Peak athletic performance and ageing: Evidence from
 baseball."** *Journal of Sports Sciences* 27(6), 599–610. — `cited`
@@ -426,16 +517,41 @@ are invisible to public transaction data, stands.
 Ordered by how much it improves the tool per unit of work, and **none of it
 requires salary data**.
 
-### 8a. Ship a stage panel — the one genuinely new thing here
+### 8a. The stage panel — REVISED after reading #4, #6 and #3
 
-The site already knows every player's stage exactly. The literature says the
-stage *is* the valuation story. So the clock can state, for the stage a player
-is in, **what share of his value the published research says a player at that
-stage captures** — as a sourced range with its disagreement visible, never a
-point estimate, and never in dollars.
+⚠️ **The original recommendation here was to publish the share-of-value figure
+for each stage as a sourced range. Reading the papers has killed that**, and it
+is worth recording why rather than quietly dropping it.
 
-This is publishable with **zero** salary data, it is the question the tool
-exists to answer, and no other free tool states it.
+Krautmann (1999) applies both dominant methods to the same players and gets a
+per-team surplus of **$4.5M or $57M** depending only on which he uses. On the
+arbitration stage the literature does not disagree about magnitude, it disagrees
+about **sign**: two Krautmann papers put the journeyman at roughly his full
+value, Blair/Humphreys/Pyun put him at 25% of it. And Krautmann's summary of the
+free-agent literature has Scully at 28% against Zimbalist at *plus* 23%.
+
+**A "range" that spans a contradiction is not a range.** Publishing "somewhere
+between 11% and 100%" would be worse than publishing nothing: it would look like
+a measurement.
+
+**What survives, and it is still worth shipping:**
+
+* **The ordering.** Every source in this file agrees restricted players are paid
+  less relative to their value than free agents, and that the gap is largest at
+  the front of the clock. Nobody disputes the direction.
+* **The mechanism.** *Why* the stages differ — no negotiating rights, then
+  final-offer arbitration against comparables, then an open market — is
+  documented, uncontested, and is the thing a reader actually wants to
+  understand. It needs no number at all.
+* **That the size is genuinely unsettled, and why.** A short, plain statement
+  that published estimates disagree by an order of magnitude depending on
+  method, with the two named. That is real information, it is unusual to say
+  out loud, and it is exactly the register this site already uses about its own
+  estimates.
+
+So the panel becomes **an explanation with a citation, not a figure with a
+range.** Less impressive, considerably more defensible, and still nothing else
+free states it.
 
 ### 8b. Say what the projection's population actually is
 
