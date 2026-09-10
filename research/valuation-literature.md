@@ -383,17 +383,58 @@ a fact about durability. Worth a sentence on the page.
 
 **Solow, J. L., & Krautmann, A. C. (2020). "Do You Get What You Pay for? Salary
 and Ex Ante Player Value in Major League Baseball."** *Journal of Sports
-Economics* 21(7), 705–722. — `cited`
+Economics* 21(7), 705–722. doi:10.1177/1527002520930259 — `verified`
 
-Method worth copying: value a contract on what could be **anticipated at
-signing** — forecast future productivity from recent performance *adjusted for
-aging*, convert to expected marginal revenue using **team-specific** win values,
-discount to present value. Explicitly rejects judging deals by hindsight.
+**Read in full 2026-09-10. This is the worked example of the method this tool
+should adopt, and it is buildable from papers already in hand.**
 
-Reported finding (`abstract_only`), over **106 long-term contracts**: the
-agreements smooth compensation, and imply **greater relative risk aversion for
-teams than for players** — teams often pay a **premium** for length, to hedge
-market volatility and the risk of being unable to replace the player.
+### The method, step by step
+
+1. Take the player's **recent performance at the date of signing** — not
+   afterwards. The paper's whole complaint is that hindsight assessments "suffer
+   from the use of perfect hindsight."
+2. **Forecast productivity across the contract horizon, adjusted for aging**,
+   using **Fair's (2008) two-horizon model** — improving before the peak,
+   declining after. **They set δ (peak) = 27.** ⚠️ Fair's own paper gives 27.6
+   for OPS, 28.3 for OBP and 26.5 for ERA; 27 is their round number for WAR.
+   **Article #7 is therefore a direct input to article #2** — you have both.
+3. Convert expected wins to revenue with a **team-specific value of a marginal
+   win**.
+4. **Discount to present value at the date of signing.**
+5. Cost = the **discounted stream of guaranteed salaries**. Surplus = benefit −
+   cost.
+
+Steps 4 and 5 are what `valueOffer()` already does.
+
+### The result, over 152 free-agent long-term contracts
+
+> "the average LTC implies a **loss of more than US$4.1 million per season**...
+> About **89% of all contracts yield negative returns**, both in total and on a
+> per year basis"
+
+135 of 152 contracts are negative; only 17 positive. Annual deficit by length
+(n): 3yr −$3.2M (62), 4yr −$3.3M (40), 5yr −$6.2M (23), 6yr −$4.7M (11),
+7yr −$6.1M (8), 8yr+ −$5.5M (8). Worst overall: **Alex Rodriguez's 2001 seven-year
+deal, −$76M**. Worst per year: **Carlos Lee, Houston 2007, −$11.9M/yr**. Best:
+**Jim Edmonds, Anaheim 1996, +$27M total, +$6.7M/yr**.
+
+### ✅ Two independent papers now agree, by different methods
+
+This is the strongest single conclusion in the file. **#13** (Walters, von Allmen
+& Krautmann) reaches "teams pay a premium for length" from a *bargaining* model
+over 106 contracts. **#2** reaches "teams overpay on average and more so for
+longer contracts" from an *ex ante revenue* model over 152 contracts. Different
+methods, different samples, same direction.
+
+**So the folk model — a player trades money for security, the club gets a
+discount — is contradicted by two independent lines of evidence.** That
+recommendation is now the best-supported thing in this survey.
+
+⚠️ **One honest caveat the authors state themselves**, and the tool must carry
+it: this counts **direct revenue from wins only**. "Some part of this is likely
+explained by benefits beyond the effect of games won" — a star sells tickets and
+merchandise beyond what his wins produce. So 89% negative is **not** proof that
+clubs are irrational, and must never be presented as such.
 
 **Walters, S. J. K., von Allmen, P., & Krautmann, A. C. (2017). "Risk Aversion
 and Wages: Evidence from the Baseball Labor Market."** *Atlantic Economic
