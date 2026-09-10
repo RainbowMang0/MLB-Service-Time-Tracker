@@ -60,8 +60,16 @@ to say which method produced it.
 
 ## 2. The single most useful result — NOW VERIFIED FROM THE PAPER
 
-**Humphreys, B. R., & Pyun, H. "Monopsony Exploitation in Professional Sport:
-Evidence from Major League Baseball Position Players, 2000–2011."** — `verified`
+**Blair, R. D., Humphreys, B. R., & Pyun, H. (2017). "Monopsony Exploitation in
+Professional Sport: Evidence from Major League Baseball Position Players,
+2000–2011."** *Managerial and Decision Economics* 38(5), July 2017, 676–688.
+doi:10.1002/mde.2793 — `verified`
+
+⚠️ **The published article has THREE authors — Roger D. Blair is first.** The
+2015 WVU working paper had two. Corroborated on IDEAS/RePEc and Wiley
+independently of the source that raised it. Cite it as **Blair, Humphreys &
+Pyun (2017)**; the figures below are the working paper's and must be attributed
+to that version.
 
 **Read in full 2026-09-10** from the WVU Economics Working Paper (No. 15-48,
 30 November 2015). ⚠️ **This is the working paper, not the published
@@ -237,8 +245,21 @@ baseball."** *Journal of Sports Sciences* 27(6), 599–610. — `cited`
 explicitly *later* than prior estimates. Different skills peak at different
 ages.
 
-**Bradbury, J. C. (2010). "Pay, productivity and aging in Major League
-Baseball."** *Journal of Productivity Analysis.* — `single_source`
+**Hakes, J. K., & Turner, C. (2011). "Pay, productivity and aging in Major
+League Baseball."** *Journal of Productivity Analysis* 35(1), 61–74.
+doi:10.1007/s11123-009-0152-8 — `cited`
+
+⚠️ **This was recorded here as Bradbury (2010). That was wrong on both the
+authors and the year** — it is Hakes & Turner, 2011. Corroborated on Springer,
+SSRN and RePEc. Free working-paper version: MPRA Paper 4326.
+
+Two reported findings, both directly useful: **the best players peak about two
+years later than marginal players**, with development and decline more
+pronounced at the highest ability levels; and **free agents are paid
+proportionately to production at all ability levels, while young players'
+salaries are suppressed by similar amounts.** That second one is a third
+independent voice on the stage question, and it agrees with Blair, Humphreys &
+Pyun about the front of the clock.
 
 ### The correction that matters most to us
 
@@ -283,16 +304,26 @@ agreements smooth compensation, and imply **greater relative risk aversion for
 teams than for players** — teams often pay a **premium** for length, to hedge
 market volatility and the risk of being unable to replace the player.
 
-**"Risk Aversion and Wages: Evidence from the Baseball Labor Market" (2017).**
-*Atlantic Economic Journal* 45(3). — `single_source`
-Reports a bargaining model over the same **106 long-term contracts** and the
-same risk-aversion conclusion, with an average premium of **~$571,000 per
-player-year, >$248M in total**.
+**Walters, S. J. K., von Allmen, P., & Krautmann, A. C. (2017). "Risk Aversion
+and Wages: Evidence from the Baseball Labor Market."** *Atlantic Economic
+Journal* 45(3), September 2017, 385–397. doi:10.1007/s11293-017-9545-7 —
+`cited`
 
-⚠️ **These two may be the same underlying work**, or one may be the other's
-precursor. The sample size and the finding are identical and the search results
-did not separate them. **Do not cite them as two independent confirmations
-until someone has both in hand.**
+✅ **The open question is resolved, and it resolves against the earlier note
+here.** These are **two distinct papers by different author teams**, sharing
+only Krautmann. Confirmed on Springer and RePEc.
+
+⚠️ **And the resolution reassigns the finding.** The bargaining model, the
+**106 long-term contracts**, the **greater relative risk aversion for teams
+than players**, and the **~$571,000 per player-year premium (>$248M total)**
+all belong to **this paper — Walters, von Allmen & Krautmann (2017)** — not to
+Solow & Krautmann (2020), which is where this file previously put them. The
+search summaries had bled one paper's content into the other's entry.
+
+**So the recommendation "do not imply an extension is a discount" rests on this
+paper, not on the one ranked #2.** That moves it up the reading order
+substantially. What Solow & Krautmann (2020) independently contributes is the
+*ex ante valuation method* above, which is a different and also useful thing.
 
 **Why this matters more than anything else in the file:** the intuitive story —
 *a player trades money for security, a club pays less for the certainty* — is
@@ -346,6 +377,24 @@ not scrape. That is now a sourced statement rather than an assertion.
 
 ---
 
+## 6b. A seventeenth work, surfaced by the cross-check
+
+**Krautmann, A. C. (2013). "What Is Right With Scully Estimates of a Player's
+Marginal Revenue Product."** *Journal of Sports Economics* 14(1), 97–105. —
+`cited`
+
+Not on the original list, and it should have been. Blair, Humphreys & Pyun cite
+"Krautmann (1999, 2013)" together, so this is the later instalment of the same
+methodological argument — and its title says it revises the 1999 position
+rather than repeating it.
+
+**This is now the referee for the central disagreement in this file.** The
+pre-arbitration finding is agreed by three independent papers; the arbitration
+finding is contested in sign between the Scully-method and free-agent-benchmark
+camps. Article #6 (Krautmann 1999) opened that argument and this closed it, or
+at least moved it. **Read both, in order, before publishing anything about the
+arbitration stage.**
+
 ## 7. What is NOT peer reviewed — and must not be treated as if it were
 
 **Dollars per WAR is industry convention, not published research.** —
@@ -396,7 +445,9 @@ Costs nothing and is the difference between a measured claim and an overclaim.
 
 ### 8c. Do not imply an extension is a discount
 
-§5 says the evidence points the other way on average. Whatever the offer panel
+§5 says the evidence points the other way on average — on the authority of
+**Walters, von Allmen & Krautmann (2017)**, which is where that finding actually
+lives. Whatever the offer panel
 grows into, it must not carry the folk model. The advice lint already guards
 the vocabulary; this is about the *premise*.
 
