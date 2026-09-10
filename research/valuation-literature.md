@@ -58,38 +58,77 @@ to say which method produced it.
 
 ---
 
-## 2. The single most useful result for this project
+## 2. The single most useful result — NOW VERIFIED FROM THE PAPER
 
-**Humphreys, B. R., & Pyun, H. (2017). "Monopsony Exploitation in Professional
-Sport: Evidence from Major League Baseball Position Players, 2000–2011."**
-*Managerial and Decision Economics* 38(5), 676–688. — `cited`
+**Humphreys, B. R., & Pyun, H. "Monopsony Exploitation in Professional Sport:
+Evidence from Major League Baseball Position Players, 2000–2011."** — `verified`
 
-This is the paper that answers the question as asked, because it reports the
-result **broken down by exactly the service-time classes this site already
-computes**. Monopsony Exploitation Ratio (MER), position players, 2001–2011
-(`abstract_only`):
+**Read in full 2026-09-10** from the WVU Economics Working Paper (No. 15-48,
+30 November 2015). ⚠️ **This is the working paper, not the published
+*Managerial and Decision Economics* 38(5) 2017 article.** Numbers can move
+between the two. Cite the working paper, or obtain the published version
+before citing that.
 
-| stage | MER | player's implied share of MRP |
-|---|---|---|
-| rookie / pre-arbitration | **0.89** | ~11% |
-| arbitration eligible | **0.75** | ~25% |
-| free agent | **0.21** | ~79% |
+### The MER definition, settled
 
-It also reports that recent CBAs reduced MERs **for free agents only**, leaving
-the restricted classes unchanged.
+The open question was whether the player's share is `MER` or `1 − MER`. The
+paper answers it in its own words (p. 17):
 
-⚠️ **The MER definition needs checking before any of this is quoted.** The
-"share of MRP" column above is `1 − MER`, which is the natural reading and is
-*not confirmed* — if MER is defined differently the column inverts. This is
-precisely the class of error that put `RM` in the roster validator.
+> "For rookie players, who are all subject to the reserve clause, the mean MER
+> is 0.887; **88.7% of each rookie player's MRP is expropriated** by the team
+> that owns his contract; **rookie players are paid only 11% of their MRP**."
 
-⚠️ **And note the disagreement with Scully.** Scully's ~20% for reserve-clause
-players and Humphreys & Pyun's ~11% for rookies are not the same number, and
-neither is the ~20% attributed below to Krautmann et al. Different eras,
-different methods, different definitions. **The honest published statement is a
-range and a direction, not a point estimate.**
+So **`1 − MER` is the player's share**, and every share figure previously
+recorded here was the right way up. A positive MER means paid below MRP; a
+negative MER means paid *above* it.
 
----
+### Table 4, transcribed exactly
+
+| group | N | mean MER | s.d. | min | max |
+|---|---|---|---|---|---|
+| **All players** | 3,851 | 0.504 | 0.712 | −10.27 | 0.994 |
+| Rookies | 742 | **0.887** | 0.204 | −1.346 | 0.994 |
+| Arbitration eligible | 1,161 | **0.753** | 0.283 | −1.743 | 0.989 |
+| Free agents | 1,948 | **0.209** | 0.872 | −10.27 | 0.988 |
+| CBA 2000–2002 | 950 | 0.556 | 0.598 | −4.50 | 0.994 |
+| CBA 2003–2006 | 1,284 | 0.526 | 0.706 | −10.27 | 0.989 |
+| CBA 2007–2011 | 1,617 | 0.456 | 0.773 | −7.87 | 0.987 |
+
+Player's share of MRP, as `1 − mean MER`: rookies **11%**, arbitration
+**25%**, free agents **79%**. The rookie figure is "remarkably close" (the
+paper's phrase) to Scully's 0.89 for 1968–69 — so the two sources that looked
+like they disagreed at ~11% vs ~20% **agree**; the ~20% attributed to Scully in
+search summaries was the wrong number for that comparison.
+
+### ⚠️ Three caveats that change what may be published
+
+1. **The free-agent mean is not a typical free agent.** Mean 0.209 against a
+   standard deviation of **0.872** and a minimum of **−10.27**. **409 of 1,948
+   free agents have a negative MER** — paid more than their MRP. The largest is
+   Jeff Bagwell's final season (2005). A single "79%" figure would misdescribe
+   a distribution this wide. The restricted groups are far tighter (s.d. 0.204
+   and 0.283, with only 7 of 742 and 25 of 1,161 negative), so **the
+   pre-arbitration and arbitration figures are the publishable ones and the
+   free-agent figure is not.**
+2. **Position players only, 2000–2011.** No pitchers. Fifteen years old at time
+   of reading, and it spans three expired CBAs.
+3. **The groups are close to ours but not identical.** The paper uses MLB
+   service time and defines a year as 172 days — the same unit this site
+   computes. Rookies are 1–2 years, arbitration eligible 3 to under 6. But its
+   own results section describes free agents as "seven or more years of
+   experience" while its setup says 6, an internal inconsistency typical of a
+   working paper. Check against the published version.
+
+### What it also reports
+
+MERs **fell across the three CBAs for free agents only**. For rookies they did
+not move at all: "Around 90% of the gross MRP of rookies is still exploited by
+teams," and the paper reads rising league minimums as tracking inflation rather
+than mitigating monopsony. It uses **gross** MRP throughout — Scully's net-MRP
+adjustment for training costs is not applied, because the training-cost data
+does not exist. That is the direct link to Krautmann, Gustafson & Hadley (2000)
+below, and it means this paper does **not** settle the exploitation-versus-
+training-cost question.
 
 ## 3. The rest of the stage-by-stage evidence
 
