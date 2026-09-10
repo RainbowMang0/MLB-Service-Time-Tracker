@@ -453,8 +453,26 @@ settlements for comparable players (`abstract_only`).
 **Miller, P. (2000). "An Analysis of Final Offers Chosen in Baseball's
 Arbitration System."** *Journal of Sports Economics.* — `single_source`
 
-**Fizel, J., et al. (2002). "Equity and arbitration in Major League
-Baseball."** *Managerial and Decision Economics.* — `cited`
+**Fizel, J., Krautmann, A. C., & Hadley, L. (2002). "Equity and Arbitration in
+Major League Baseball."** *Managerial and Decision Economics* 23(7), 427–435.
+doi:10.1002/mde.1090 — `verified`
+
+**Read 2026-09-10.** Citation and author order confirmed (Penn State-Erie,
+DePaul, Dayton). It is about **filing behaviour**, not valuation: applying
+equity theory, it tests whether an arbitration-eligible player is likelier to
+file, and to proceed to a hearing, when he believes he is underpaid **relative
+to his comparison other**. Bivariate probit, correcting for the two-stage
+selection.
+
+Peripheral to what this tool computes, with one exception worth keeping. Its
+note 7 records that "several analyses of players' salaries find **no significant
+difference between the salaries of free agents and arbitration-eligible
+players**" — a third, independent corroboration of the finding in #3 and #6 that
+the arbitration-eligible player is paid near his market value. And its
+description of the mechanism is directly usable: the CBA instructs arbitrators
+to weigh **comparable free agents as well as comparable arbitration-eligible
+players**, which is *why* arbitration salaries track the market and why the
+comparison set is the thing this project would need and does not have.
 
 **"Arbitrator bias and self-interest: Lessons from the baseball labor market."**
 *Journal of Labor Research* (2005). — `single_source`
@@ -468,23 +486,76 @@ not scrape. That is now a sourced statement rather than an assertion.
 
 ---
 
-## 6b. A seventeenth work, surfaced by the cross-check
+## 6b. Krautmann's own resolution — and it is better than a winner
 
 **Krautmann, A. C. (2013). "What Is Right With Scully Estimates of a Player's
-Marginal Revenue Product."** *Journal of Sports Economics* 14(1), 97–105. —
-`cited`
+Marginal Revenue Product: **Reply**."** *Journal of Sports Economics* 14(1),
+97–105. doi:10.1177/1527002511419299 — `verified`
 
-Not on the original list, and it should have been. Blair, Humphreys & Pyun cite
-"Krautmann (1999, 2013)" together, so this is the later instalment of the same
-methodological argument — and its title says it revises the 1999 position
-rather than repeating it.
+**Read in full 2026-09-10.** ⚠️ **It is a Comment/Reply, not a standalone
+article** — the full title ends in ": Reply", and it answers a companion piece
+in the same issue: **Bradbury, J. C. "What's right with Scully-estimates of a
+player's marginal revenue product," *Journal of Sports Economics* 14(1)**. That
+companion is an eighteenth work and is the other half of this exchange.
 
-**This is now the referee for the central disagreement in this file.** The
-pre-arbitration finding is agreed by three independent papers; the arbitration
-finding is contested in sign between the Scully-method and free-agent-benchmark
-camps. Article #6 (Krautmann 1999) opened that argument and this closed it, or
-at least moved it. **Read both, in order, before publishing anything about the
-arbitration stage.**
+### The resolution: two questions, not two answers
+
+Krautmann does **not** re-argue that Scully is wrong. He withdraws the framing:
+
+> "these two methods are **not competing** nor is one necessarily superior to
+> the other. Each method has its own merits in terms of answering **different
+> types of questions** related to a player's value."
+
+The dividing line is stated plainly, and it is the single most useful sentence
+found in this whole survey:
+
+> "this distinction between the **ex ante determination of salary** versus the
+> **ex post evaluation of value** is at the heart of what distinguishes the
+> free-market approach from the Scully approach."
+
+| the question you are asking | the method that answers it |
+|---|---|
+| What determines a player's salary? Is arbitration racially blind? | **free-market** (ex ante) |
+| Did the player "earn" his salary? What are the efficiency consequences of a long-term contract? | **Scully** (ex post) |
+
+### The example he uses, which is worth stealing
+
+The Mets signed Jason Bay in 2010 for 4 years and $66M. Baseball Prospectus
+projected 28 HR, 95 RBI, **3.2 WARP** — on which the $16.5M for 2010 looked
+merited. A concussion ended his July. Realized: 6 HR, 47 RBI, **0.7 WARP**.
+
+> "While the Bay signing was applauded by the New York media when he signed the
+> contract in February, by the end of August, the media characterized his
+> signing as just another bust."
+
+**Both verdicts are correct**, because they answer different questions. That is
+the clearest available illustration of why a contract tool must be explicit
+about which one it is doing.
+
+### ⚠️ This substantially revises §6 and §8a again
+
+Article #6 (1999) reads as "Scully overstates the gap by an order of magnitude."
+Read alone — as it was, two hours ago — it says the Scully-method figures should
+be discounted. **Its own author's later position is narrower**: the methods
+measure different things, and the 11%-versus-25% gap is partly two questions
+rather than one error.
+
+The order-of-magnitude spread in §6 is still real and still means **no single
+share figure is publishable**. But the reason is better than "the literature
+cannot agree": it is that *the question was never fully specified.*
+
+### And it settles which method this project's tool is doing
+
+**The Contract Clock values an offer at signing. That is ex ante, without
+qualification.** So the free-market approach is the one aligned with what it
+already does — and article #2, Solow & Krautmann (2020), is explicitly the ex
+ante method applied to long-term contracts. **#2 and #17 are one intellectual
+programme, and this tool is downstream of it.**
+
+A further lead from the text: for a thin superstar market, Solow & Krautmann
+(2011) model the salary as a **Nash bargain** between the player's alternative
+offer and the team's surplus over its next-best alternative — relevant if the
+offer panel ever grows.
 
 ## 7. What is NOT peer reviewed — and must not be treated as if it were
 
@@ -552,6 +623,22 @@ a measurement.
 So the panel becomes **an explanation with a citation, not a figure with a
 range.** Less impressive, considerably more defensible, and still nothing else
 free states it.
+
+**Sharpened again after #17.** Krautmann's own later position is that the
+methods answer different questions — ex ante "what sets his salary" versus ex
+post "did he earn it" — so the spread is not only disagreement, it is partly a
+question that was never specified. That gives the panel a better sentence than
+"nobody agrees":
+
+> Published estimates of what a restricted player captures range from about a
+> tenth to essentially all of his value. Most of that spread is method: one
+> family asks what determines a salary at signing, the other asks whether the
+> player earned it afterwards. **This page asks the first question**, so where
+> it cites a figure it cites that family — and it does not report a single
+> number, because the discipline has not settled on one.
+
+That is publishable, sourced, honest, and it tells the reader something true
+about how player valuation actually works.
 
 ### 8b. Say what the projection's population actually is
 
