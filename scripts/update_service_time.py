@@ -384,6 +384,21 @@ def build_player_record(
     }
     season_teams_bio = {y: ids for y, ids in season_teams_bio.items() if ids}
 
+    # The statline the /people hydrate has always returned and the pipeline has
+    # always discarded. Filtered to major league clubs for the same reason the
+    # season teams are: the splits carry minor league lines, and a Triple-A
+    # batting average on a page about major league service time would be wrong
+    # in a way nobody could see.
+    season_stats = {}
+    for year, groups in mlb.season_stats_from_bio(bio).items():
+        kept = {
+            g: {k: v for k, v in row.items() if k != "team_id"}
+            for g, row in groups.items()
+            if row.get("team_id") in mlb_ids
+        }
+        if kept:
+            season_stats[year] = kept
+
     debut = bio.get("mlbDebutDate")
     debut_date = dt.date.fromisoformat(debut) if debut else None
 
@@ -523,6 +538,12 @@ def build_player_record(
         # player and its response has carried birthDate all along. We simply
         # threw it away.
         "birth_date": bio.get("birthDate"),
+        # Season-by-season statline, keyed by year. Costs no extra API call --
+        # see season_stats_from_bio(). Stored on the record but NOT shipped in
+        # the compact table index: statlines are far larger than day counts and
+        # the index is 0.22 MB on purpose. They ride in the profile shards,
+        # which are fetched one at a time only when a profile is opened.
+        "season_stats": {str(y): v for y, v in sorted(season_stats.items())},
         # Persisted so a suspect number can be checked directly instead of
         # reverse-engineered. Without it there is no way to tell from the
         # published data where a retired player's clock was stopped, which is
@@ -787,6 +808,10 @@ def write_profiles(db: dict[str, dict]) -> None:
             "missing_seasons": p.get("missing_seasons", 0),
             "first_transaction": p.get("first_transaction"),
             "seasons": seasons,
+            # Empty for any record written before this shipped. The tab says
+            # "not yet collected" rather than rendering blank cells, and the
+            # next full run fills it in.
+            "season_stats": p.get("season_stats") or {},
         }
 
     PROFILE_DIR.mkdir(parents=True, exist_ok=True)

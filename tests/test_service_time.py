@@ -1676,6 +1676,102 @@ def test_a_debuted_player_is_never_described_as_never_having_been_up():
     )
 
 
+def test_statlines_are_read_from_the_bio_the_pipeline_already_fetches():
+    """
+    BIO_SEASON_TEAMS_HYDRATE has always asked for yearByYear hitting and
+    pitching, and season_teams_from_bio() read exactly one field out of each
+    split -- the team id -- discarding the statline unread. Third time this
+    project has found data it was already paying for, after by_season and
+    birthDate.
+    """
+    import fetch_mlb_data as mlb
+
+    bio = {
+        "stats": [
+            {
+                "group": {"displayName": "hitting"},
+                "splits": [
+                    {"season": "2024", "team": {"id": 147},
+                     "stat": {"gamesPlayed": 158, "homeRuns": 58, "ops": "1.159",
+                              "someFieldWeDidNotAskFor": 9}},
+                    {"season": "2025", "team": {"id": 147},
+                     "stat": {"gamesPlayed": 152, "avg": ".331"}},
+                ],
+            },
+            {
+                "group": {"displayName": "pitching"},
+                "splits": [
+                    {"season": "2024", "team": {"id": 147},
+                     "stat": {"era": "2.85", "wins": 14}},
+                ],
+            },
+            {"group": {"displayName": "fielding"},
+             "splits": [{"season": "2024", "team": {"id": 147}, "stat": {"assists": 5}}]},
+        ]
+    }
+    out = mlb.season_stats_from_bio(bio)
+
+    check("the statline is read at all", out[2024]["hitting"]["homeRuns"] == 58)
+    check("both groups are read", out[2024]["pitching"]["era"] == "2.85")
+    check("a group we did not ask for is ignored",
+          all("fielding" not in groups for groups in out.values()))
+    check("a key outside the whitelist is dropped",
+          "someFieldWeDidNotAskFor" not in out[2024]["hitting"])
+    # The whitelist is a guess: this sandbox cannot reach statsapi.mlb.com, so
+    # the key names were read off documentation rather than a live payload. A
+    # missing key must therefore thin the row, never raise.
+    check("a missing key thins the row rather than raising",
+          "ops" not in out[2025]["hitting"] and out[2025]["hitting"]["avg"] == ".331")
+    check("the team id rides along so the caller can filter it",
+          out[2024]["hitting"]["team_id"] == 147)
+
+
+def test_a_malformed_or_empty_bio_yields_no_statline_rather_than_an_error():
+    """
+    The hydrate is best-effort -- get_player_bio() already falls back to the
+    plain call when it fails. A bio without stats, or with nulls where objects
+    are expected, must produce an empty result and let the daily job continue.
+    """
+    import fetch_mlb_data as mlb
+
+    for bad in [
+        {},
+        {"stats": None},
+        {"stats": [{"group": None, "splits": None}]},
+        {"stats": [{"group": {"displayName": "hitting"}, "splits": [{"season": None, "stat": {}}]}]},
+        {"stats": [{"group": {"displayName": "hitting"}, "splits": [{"season": "abc", "stat": {"hits": 1}}]}]},
+    ]:
+        try:
+            check("malformed bio yields no statline", mlb.season_stats_from_bio(bad) == {})
+        except Exception as exc:  # noqa: BLE001
+            check(f"malformed bio raised {type(exc).__name__}", False)
+
+
+def test_the_stats_tab_states_that_war_and_salary_are_absent():
+    """
+    WAR is not a field MLB's API publishes -- bWAR and fWAR are
+    Baseball-Reference's and FanGraphs' own calculations, and neither site
+    permits automated extraction, which is the same line this project already
+    drew over B-R's service-time figures. Salary has no permitted source
+    either.
+
+    A stats table that simply lacks those columns would read as an oversight.
+    Saying so is the difference between a gap and a silence, and it is the
+    same discipline as the panel that explains why the contract tool has no
+    decline branch.
+    """
+    import re
+
+    ROOT = pathlib.Path(__file__).resolve().parents[1]
+    app = (ROOT / "docs" / "app.js").read_text()
+    for phrase in ["No WAR and no salary", "Baseball-Reference", "FanGraphs"]:
+        check(f"the stats tab names {phrase!r}", phrase in app)
+
+    # And it must not quietly grow a WAR column.
+    check("no WAR column is defined",
+          not re.search(r'\["war"|"WAR"\]', app, re.I))
+
+
 def test_the_site_nav_is_the_same_on_every_page():
     """
     The navigation lands in nine places -- four hand-written pages and five
@@ -2629,6 +2725,9 @@ if __name__ == "__main__":
     test_both_published_files_carry_the_cba_rules_block()
     test_nothing_published_claims_a_transaction_coverage_cutoff_year()
     test_a_debuted_player_is_never_described_as_never_having_been_up()
+    test_statlines_are_read_from_the_bio_the_pipeline_already_fetches()
+    test_a_malformed_or_empty_bio_yields_no_statline_rather_than_an_error()
+    test_the_stats_tab_states_that_war_and_salary_are_absent()
     test_the_site_nav_is_the_same_on_every_page()
     test_the_two_unfinished_tools_are_marked_in_the_nav()
     test_the_nav_marks_the_current_page_with_aria_current()
