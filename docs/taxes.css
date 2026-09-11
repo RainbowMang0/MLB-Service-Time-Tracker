@@ -570,3 +570,58 @@
   color: var(--text-secondary);
   max-width: 76ch;
 }
+
+/* --- the short answer -----------------------------------------------------
+   The default view of the contract page: three figures, big enough to read
+   at a glance and to survive a screenshot, which is how a number like this
+   actually travels. */
+.short-answer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+  margin: 16px 0 4px;
+}
+
+.big {
+  display: grid;
+  gap: 4px;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface-1);
+}
+
+.big-label {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.big-value {
+  font-family: var(--mono);
+  font-size: 1.9rem;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.big-foot {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--text-secondary);
+}
+
+/* A threshold already behind the player reads as settled rather than as a
+   missing number. */
+.big-done .big-value { font-size: 1.35rem; color: var(--accent); }
+
+.panel-lead { border-color: color-mix(in srgb, var(--accent) 28%, var(--border)); }
+.field-grid-lead { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+@media (max-width: 520px) {
+  .big-value { font-size: 1.6rem; }
+}

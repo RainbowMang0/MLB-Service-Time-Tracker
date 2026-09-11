@@ -517,3 +517,113 @@ test("attaching ages cannot change a projected date", () => {
     base.targets.map((t) => t.outcomes.map((o) => o.season))
   );
 });
+
+// -------------------------------------------------------------------------
+// The short answer
+// -------------------------------------------------------------------------
+
+test("the short answer never states what a player is worth", () => {
+  // This project cannot answer that and must not appear to. It needs two
+  // inputs the database does not have: a price of a win (no permitted salary
+  // source exists) and the player's own performance (the records store
+  // service time and nothing else -- no WAR, no OPS, not one performance
+  // field). Solow & Krautmann's method cannot even start here; its first step
+  // is "recent performance at the time of signing".
+  //
+  // The one dollar figure allowed is the league minimum, which is written
+  // into the agreement rather than estimated from anything.
+  const R = { ...RULES, mlb_minimum: 780000, mlb_minimum_year: 2026 };
+  const a = CT.shortAnswer(2 * 172 + 56, MODEL, R, 2026, { birthYear: 1999 });
+
+  const money = Object.entries(a).filter(
+    ([, v]) => typeof v === "number" && v > 100000
+  );
+  assert.deepEqual(
+    money.map(([k]) => k).sort(),
+    ["leagueMinimum"],
+    "the only dollar figure may be the league minimum"
+  );
+  assert.equal(a.leagueMinimum, 780000);
+});
+
+test("the short answer reports a spread, never a single date", () => {
+  // Same rule as the full projection: anything spanning more than one season
+  // renders as a distribution, because a single year would read as a fact.
+  const R = { ...RULES, mlb_minimum: 780000, mlb_minimum_year: 2026 };
+  const a = CT.shortAnswer(86, MODEL, R, 2026, { birthYear: 2003 });
+  assert.ok(a.freeAgency.season, "a median year");
+  assert.ok(a.freeAgency.earliest && a.freeAgency.latest, "and a spread around it");
+  assert.ok(
+    a.freeAgency.earliest <= a.freeAgency.season &&
+      a.freeAgency.season <= a.freeAgency.latest,
+    "the median sits inside the spread"
+  );
+});
+
+test("a reached threshold reports reached, not a year in the past", () => {
+  const R = { ...RULES, mlb_minimum: 780000 };
+  const a = CT.shortAnswer(7 * 172, MODEL, R, 2026, { birthYear: 1994 });
+  assert.equal(a.freeAgency.reached, true);
+  assert.equal(a.freeAgency.season, null, "no year once it is behind him");
+  assert.equal(a.arbitration.reached, true);
+  assert.equal(a.minimumSalarySeasons, 0);
+});
+
+test("minimum-salary seasons is a floor, and Super Two ends it", () => {
+  // A full credited year per season is the FASTEST route to arbitration, so
+  // this is the fewest minimum seasons a player could face. Understating it
+  // would be the flattering direction.
+  const R = RULES;
+  assert.equal(CT.minimumSeasons(0, R, false), 3);
+  assert.equal(CT.minimumSeasons(2 * 172, R, false), 1);
+  assert.equal(CT.minimumSeasons(3 * 172, R, false), 0);
+  // A Super Two is already arbitration eligible, whatever his raw figure.
+  assert.equal(CT.minimumSeasons(2 * 172 + 140, R, true), 0);
+});
+
+test("the short answer degrades rather than inventing when data is thin", () => {
+  const thin = { ...MODEL, bands: MODEL.bands.map((b) => ({ ...b, enough_data: false })) };
+  const a = CT.shortAnswer(400, thin, { ...RULES, mlb_minimum: 780000 }, 2026, {});
+  assert.equal(a.projectionAvailable, false);
+  assert.equal(a.arbitration, null, "no projection means no year, not a guess");
+  // The parts that do not depend on the model still answer. 400 days is
+  // 2.056, which is short of the 516 that 3.000 requires -- so this is the
+  // pre-arbitration stage, and the minimum-season count is still computable
+  // because it comes from the ruleset rather than from the accrual model.
+  assert.equal(a.stage, "pre_arbitration");
+  assert.equal(a.minimumSalarySeasons, 1);
+  assert.equal(a.service, "2.056");
+});
+
+test("typing a service figure clears the player it no longer describes", () => {
+  // The picker went on reading "Max Muncy · Athletics" beside an answer
+  // computed for a figure typed over it. A label naming the wrong player is
+  // worse than no label, and it is the same class of error as carrying the
+  // last player's birth year into a hand-entered number.
+  const src = fs.readFileSync(path.join(ROOT, "docs/contract-page.js"), "utf8");
+  const handler = /\$\("in-service"\)\.addEventListener[\s\S]*?\n    \}\);/.exec(src);
+  assert.ok(handler, "no in-service handler found");
+  for (const cleared of ['birthYear = null', "superTwo = false", '$("in-player").value = ""']) {
+    assert.ok(
+      handler[0].includes(cleared),
+      `typing a service figure must clear player state: ${cleared}`
+    );
+  }
+});
+
+test("the full tool is hidden by default and the choice is remembered", () => {
+  const html = fs.readFileSync(path.join(ROOT, "docs/contract.html"), "utf8");
+  assert.match(html, /<div id="advanced" hidden>/, "advanced block must start hidden");
+  assert.match(html, /aria-controls="advanced"/, "the toggle must name what it controls");
+  assert.match(html, /aria-expanded="false"/, "and report its state");
+
+  // The short answer must come before the advanced block in source order, so
+  // a reader (and a crawler) meets the simple question first.
+  assert.ok(
+    html.indexOf('id="panel-short"') < html.indexOf('<div id="advanced"'),
+    "the short answer must lead the page"
+  );
+
+  const js = fs.readFileSync(path.join(ROOT, "docs/contract-page.js"), "utf8");
+  assert.match(js, /ADVANCED_KEY/, "the choice is remembered");
+});

@@ -110,6 +110,88 @@
   // ---------------------------------------------------------------------
 
   // ---------------------------------------------------------------------
+  // The short answer.
+  //
+  // The full tool is five panels deep and answers a question most visitors
+  // are not asking. This answers the one they are: WHEN DO I GET PAID.
+  //
+  // It is deliberately not "what is this player worth", which this project
+  // cannot answer and should not pretend to. That needs two inputs, and the
+  // database has neither: a price of a win (no permitted salary source
+  // exists) and the player's own performance (the database stores service
+  // time and nothing else -- no WAR, no OPS, not one performance field). So
+  // Solow & Krautmann's method cannot even begin here; its first step is
+  // "recent performance at the time of signing".
+  //
+  // What CAN be stated is when the money becomes negotiable, and what a
+  // player earns until then -- because the league minimum is written into
+  // the agreement rather than estimated from anything. See
+  // research/valuation-literature.md.
+  // ---------------------------------------------------------------------
+
+  function shortAnswer(serviceDays, model, rules, currentSeason, opts) {
+    const o = opts || {};
+    const projection = withAges(
+      project(serviceDays, model, rules, currentSeason),
+      o.birthYear
+    );
+    const stage = stageOf(serviceDays, rules, o.superTwo);
+    const c = clock(serviceDays, rules);
+
+    const pick = (key) => {
+      if (!projection.available) return null;
+      const t = projection.targets.find((x) => x.key === key);
+      if (!t) return null;
+      const mid = t.outcomes.find((x) => x.key === "p50");
+      return {
+        reached: t.reached,
+        daysRemaining: t.daysRemaining,
+        season: t.reached ? null : mid ? mid.season : null,
+        age: t.reached ? null : mid ? mid.age : null,
+        // The spread, so a single year is never presented as a date.
+        earliest: t.reached ? null : outcomeSeason(t, "p80"),
+        latest: t.reached ? null : outcomeSeason(t, "p20"),
+      };
+    };
+
+    return {
+      service: c.service,
+      stage: stage.key,
+      stageLabel: stage.label,
+      viaSuperTwo: stage.viaSuperTwo,
+      arbitration: pick("arbitration"),
+      freeAgency: pick("free_agency"),
+      // Seasons still paid at the league minimum: the stretch before
+      // arbitration, which is the only window where pay is set rather than
+      // negotiated. Zero once he is arbitration eligible.
+      minimumSalarySeasons: minimumSeasons(serviceDays, rules, o.superTwo),
+      leagueMinimum: rules.mlb_minimum || null,
+      leagueMinimumYear: rules.mlb_minimum_year || null,
+      projectionAvailable: projection.available,
+    };
+  }
+
+  function outcomeSeason(target, key) {
+    const o = target.outcomes.find((x) => x.key === key);
+    return o ? o.season : null;
+  }
+
+  /**
+   * Whole seasons remaining before arbitration, at a full credited year each.
+   *
+   * A full year rather than the measured median on purpose: this is the
+   * BEST case for reaching arbitration soonest, so it is the FEWEST minimum
+   * seasons a player could face. Understating it would be the flattering
+   * direction, and the number is a floor either way.
+   */
+  function minimumSeasons(serviceDays, rules, superTwo) {
+    if (superTwo) return 0;
+    const arbDays = toDays(rules.arbitration_years, rules);
+    if (serviceDays >= arbDays) return 0;
+    return Math.ceil((arbDays - serviceDays) / rules.full_year_days);
+  }
+
+  // ---------------------------------------------------------------------
   // Age at a threshold.
   //
   // Every threshold on this page is service-based; every valuation result in
@@ -570,6 +652,8 @@
     toDays,
     clock,
     bandFor,
+    shortAnswer,
+    minimumSeasons,
     stageOf,
     ageInSeason,
     withAges,

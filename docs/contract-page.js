@@ -13,6 +13,7 @@
 
   const CT = window.ContractTools;
   const THEME_KEY = "mlb-service-time-theme";
+  const ADVANCED_KEY = "mlb-contract-advanced";
 
   let RULES = null; // the `rules` block from index.json
   let MODEL = null; // docs/data/accrual_model.json
@@ -137,6 +138,8 @@
   function renderClock() {
     if (serviceDays === null) {
       $("clock-tiles").innerHTML = "";
+      $("short-answer").innerHTML = "";
+      $("short-notes").innerHTML = "";
       $("panel-stage").hidden = true;
       $("panel-projection").hidden = true;
       $("panel-rulesets").hidden = true;
@@ -160,9 +163,91 @@
     }
     $("clock-tiles").innerHTML = tiles.join("");
 
+    renderShortAnswer();
     renderStage();
     renderProjection();
     renderRulesets();
+  }
+
+  // -----------------------------------------------------------------------
+  // The short answer -- the default view.
+  //
+  // Three figures and a sentence. Deliberately NOT "what is he worth": that
+  // needs a price of a win and the player's own performance, and the database
+  // holds neither. What it answers instead is when the money becomes
+  // negotiable, which is a question this project can answer exactly.
+  // -----------------------------------------------------------------------
+
+  function renderShortAnswer() {
+    const host = $("short-answer");
+    const notes = $("short-notes");
+    if (serviceDays === null) {
+      host.innerHTML = "";
+      notes.innerHTML = "";
+      return;
+    }
+
+    const a = CT.shortAnswer(serviceDays, MODEL, RULES, currentSeason, {
+      birthYear: birthYear,
+      superTwo: superTwo,
+    });
+
+    const when = (t, label) => {
+      if (!t) {
+        return `<div class="big"><span class="big-label">${label}</span>
+          <span class="big-value">—</span>
+          <span class="big-foot">not enough comparable careers to project</span></div>`;
+      }
+      if (t.reached) {
+        return `<div class="big big-done"><span class="big-label">${label}</span>
+          <span class="big-value">Already there</span>
+          <span class="big-foot">reached at ${esc(a.service)}</span></div>`;
+      }
+      const spread =
+        t.earliest && t.latest && t.earliest !== t.latest
+          ? `typically ${t.earliest}–${t.latest}`
+          : "";
+      const age = t.age ? `age ${t.age}` : "age not known";
+      return `<div class="big"><span class="big-label">${label}</span>
+        <span class="big-value">${t.season || "—"}</span>
+        <span class="big-foot">${age}${spread ? " · " + spread : ""}</span></div>`;
+    };
+
+    const min = a.leagueMinimum
+      ? "$" + a.leagueMinimum.toLocaleString("en-US")
+      : null;
+    const paid =
+      a.minimumSalarySeasons > 0 && min
+        ? `<div class="big"><span class="big-label">Until then, paid</span>
+             <span class="big-value">${min}</span>
+             <span class="big-foot">about the league minimum${
+               a.leagueMinimumYear ? " (" + a.leagueMinimumYear + ")" : ""
+             }, for roughly ${a.minimumSalarySeasons} more season${
+            a.minimumSalarySeasons === 1 ? "" : "s"
+          }</span></div>`
+        : `<div class="big"><span class="big-label">Salary is</span>
+             <span class="big-value">Negotiable</span>
+             <span class="big-foot">no longer set at the league minimum</span></div>`;
+
+    host.innerHTML =
+      when(a.arbitration, "Arbitration") + when(a.freeAgency, "Free agency") + paid;
+
+    const list = [];
+    if (a.viaSuperTwo) {
+      list.push(
+        "He reaches arbitration early as a <b>Super Two</b>, which is worth a fourth arbitration year."
+      );
+    }
+    list.push(
+      "The years are a <b>median</b> drawn from what comparable players actually accrued, not a schedule. The range beside each one is where most landed; health, role and club decisions move it and nothing here can see them."
+    );
+    list.push(
+      "<b>This does not say what the player is worth.</b> That needs a price of a win and his own performance record, and this project has neither — it stores service time and nothing else. The league minimum is quoted because it is written into the agreement rather than estimated."
+    );
+    list.push(
+      "Service time here is an estimate reconstructed from public transaction records, not an official MLB/MLBPA figure."
+    );
+    notes.innerHTML = "<ul>" + list.map((n) => `<li>${n}</li>`).join("") + "</ul>";
   }
 
   function renderStage() {
@@ -429,8 +514,14 @@
       // A typed figure is not a player, so anything player-specific has to
       // clear -- carrying the last player's birth year into a hand-entered
       // number would silently report someone else's age.
+      //
+      // The NAME has to clear too, and that was missed first time round: the
+      // picker went on reading "Max Muncy · Athletics" beside an answer
+      // computed for a figure someone had typed over it. A label that names
+      // the wrong player is worse than no label.
       birthYear = null;
       superTwo = false;
+      $("in-player").value = "";
       $("clock-status").textContent = `Showing ${CT.formatService(days, RULES)}.`;
       renderClock();
     });
@@ -512,6 +603,23 @@
     for (const id of ["in-discount", "in-agent", "in-federal", "in-state", "in-dues"]) {
       $(id).addEventListener("input", renderOffer);
     }
+
+    // The full tool. Hidden by default because five panels answer a question
+    // most visitors are not asking; the choice is remembered so someone who
+    // wants the detail is not asked twice.
+    const btn = $("btn-advanced");
+    const setAdvanced = (open) => {
+      $("advanced").hidden = !open;
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.textContent = open ? "Hide the full tool" : "Show the full tool";
+      safeSet(ADVANCED_KEY, open ? "1" : "0");
+    };
+    btn.addEventListener("click", () => {
+      setAdvanced($("advanced").hidden);
+      // Re-render on open: the advanced panels skip work while hidden.
+      if (!$("advanced").hidden && serviceDays !== null) renderClock();
+    });
+    if (safeGet(ADVANCED_KEY) === "1") setAdvanced(true);
   }
 
   function applyRulesetPreset() {

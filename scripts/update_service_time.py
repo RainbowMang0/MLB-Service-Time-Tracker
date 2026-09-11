@@ -587,6 +587,13 @@ def _rules_block() -> dict:
         "super_two_min_days": _RULES.require(
             "arbitration.super_two.heuristic_min_days"
         ),
+        # The league minimum is the one dollar figure this project can state as
+        # a FACT rather than an estimate: it is written into the agreement, not
+        # inferred from anything. It is what a pre-arbitration player is paid,
+        # which is a different question from what he is worth -- and the only
+        # one of the two this site can answer.
+        "mlb_minimum": _RULES.require("salary.mlb_minimum"),
+        "mlb_minimum_year": _RULES.require("salary.mlb_minimum_year"),
     }
 
 
