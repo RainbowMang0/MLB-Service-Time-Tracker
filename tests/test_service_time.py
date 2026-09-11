@@ -1676,6 +1676,116 @@ def test_a_debuted_player_is_never_described_as_never_having_been_up():
     )
 
 
+def test_the_site_nav_is_the_same_on_every_page():
+    """
+    The navigation lands in nine places -- four hand-written pages and five
+    generated templates -- and docs/index.html cannot read the Python that
+    builds it. That is the exact shape of the bug that left the analytics
+    token wrong in index.html while the four generated templates were right,
+    and of the one that froze index.json while the database moved underneath.
+
+    So the destination SET is asserted rather than trusted. Labels and href
+    style may legitimately differ (generated pages are BASE_PATH-absolute
+    because they are served from /p/, /t/ and /alumni/; hand-written pages are
+    relative because they are served from the root). What may not differ is
+    which sections a reader can reach.
+    """
+    import re
+    import write_player_pages as wpp
+
+    ROOT = pathlib.Path(__file__).resolve().parents[1]
+
+    def destinations(html):
+        m = re.search(r'<nav class="site-nav".*?</nav>', html, re.S)
+        assert m, "page carries no site nav"
+        hrefs = re.findall(r'href="([^"]+)"', m.group(0))
+        # Normalise the two href styles to the same key.
+        return {h.lstrip("/").replace("./", "") for h in hrefs}
+
+    expected = {h for h, _, _ in wpp.NAV_SECTIONS}
+
+    hand_written = [
+        "docs/index.html",
+        "docs/taxes.html",
+        "docs/contract.html",
+        "docs/neutrality.html",
+    ]
+    for rel in hand_written:
+        html = (ROOT / rel).read_text()
+        check(f"{rel} nav reaches every section", destinations(html) == expected)
+
+    # And the generated side, rendered rather than read off disk, so a
+    # template change is caught before it ships.
+    generated = [
+        wpp.render_club_index({"Atlanta Braves": []}, "2026-01-01"),
+        wpp.render_explainer("2026-01-01"),
+    ]
+    for html in generated:
+        check("generated nav reaches every section", destinations(html) == expected)
+
+
+def test_the_two_unfinished_tools_are_marked_in_the_nav():
+    """
+    The owner's decision on 2026-09-11 was a complete menu with the duty-day
+    and contract tools flagged, because neither is finished -- no tax
+    professional has reviewed the duty-day methodology, and the contract tool
+    is mid-build. A visitor should know before clicking, not after.
+
+    Pinned because the tag is the whole reason those two are allowed in the
+    menu at all: dropping it silently would restore exactly the homepage
+    promotion that was deliberately reverted on 2026-09-08.
+    """
+    import re
+    import write_player_pages as wpp
+
+    ROOT = pathlib.Path(__file__).resolve().parents[1]
+
+    tagged = {h for h, _, tag in wpp.NAV_SECTIONS if tag}
+    check("exactly the two unfinished tools carry a tag", tagged == {"contract.html", "taxes.html"})
+
+    for rel in ["docs/index.html", "docs/contract.html", "docs/taxes.html"]:
+        nav = re.search(r'<nav class="site-nav".*?</nav>', (ROOT / rel).read_text(), re.S)
+        assert nav, rel
+        block = nav.group(0)
+        for href in ("contract.html", "taxes.html"):
+            link = re.search(rf'<a href="[^"]*{re.escape(href)}"[^>]*>(.*?)</a>', block, re.S)
+            check(f"{rel}: {href} is in the nav", bool(link))
+            check(f"{rel}: {href} is marked in development",
+                  bool(link) and "nav-tag" in link.group(1))
+
+
+def test_the_nav_marks_the_current_page_with_aria_current():
+    """
+    The CSS keys the current-page underline off aria-current rather than a
+    hand-set class, so the accessible state and the visible state cannot
+    disagree. That only holds if aria-current is actually emitted.
+    """
+    import re
+
+    ROOT = pathlib.Path(__file__).resolve().parents[1]
+
+    cases = [
+        ("docs/contract.html", "contract.html"),
+        ("docs/taxes.html", "taxes.html"),
+        ("docs/neutrality.html", "neutrality.html"),
+    ]
+    for rel, href in cases:
+        block = re.search(r'<nav class="site-nav".*?</nav>', (ROOT / rel).read_text(), re.S).group(0)
+        current = re.findall(r'<a href="([^"]+)"[^>]*aria-current="page"', block)
+        check(f"{rel} marks itself current", current == [href])
+
+    # index.html is the site root, so its own entry is the empty href.
+    block = re.search(r'<nav class="site-nav".*?</nav>', (ROOT / "docs/index.html").read_text(), re.S).group(0)
+    check("index.html marks itself current",
+          bool(re.search(r'<a href="\./"[^>]*aria-current="page"', block)))
+
+    # Exactly one per page, or the underline appears twice.
+    for rel, _ in cases:
+        block = re.search(r'<nav class="site-nav".*?</nav>', (ROOT / rel).read_text(), re.S).group(0)
+        check(f"{rel} marks exactly one current page",
+              block.count('aria-current="page"') == 1)
+
+
 def test_the_daily_service_time_tick_is_not_a_content_change():
     """
     Measured 2026-09-08, after Search Console reported 782 pages "Discovered --
@@ -2519,6 +2629,9 @@ if __name__ == "__main__":
     test_both_published_files_carry_the_cba_rules_block()
     test_nothing_published_claims_a_transaction_coverage_cutoff_year()
     test_a_debuted_player_is_never_described_as_never_having_been_up()
+    test_the_site_nav_is_the_same_on_every_page()
+    test_the_two_unfinished_tools_are_marked_in_the_nav()
+    test_the_nav_marks_the_current_page_with_aria_current()
     test_the_daily_service_time_tick_is_not_a_content_change()
     test_only_alumni_with_a_defensible_figure_are_published()
     test_a_published_alumnus_is_reachable_and_off_the_club_pages()

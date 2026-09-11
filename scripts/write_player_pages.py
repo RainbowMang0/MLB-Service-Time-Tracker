@@ -93,6 +93,58 @@ def _base_path(site_url: str) -> str:
 SITE_URL = _site_url()
 BASE_PATH = _base_path(SITE_URL)
 
+# --------------------------------------------------------------------------
+# Site navigation.
+#
+# One definition, used by all four generated templates. The five hand-written
+# pages carry the same markup with relative hrefs, and
+# test_the_site_nav_is_the_same_on_every_page() asserts the destination sets
+# match -- this is the same "lands in N places and the Nth is the trap" shape
+# as the analytics token, which sat wrong in docs/index.html precisely because
+# a hand-maintained file cannot read a Python constant.
+#
+# `tag` marks a section a visitor should know about before clicking. The duty
+# day and contract tools work, but no tax professional has reviewed the
+# duty-day methodology and the contract tool is mid-build, so they say so.
+# Owner's decision, 2026-09-11.
+# --------------------------------------------------------------------------
+
+NAV_SECTIONS = [
+    ("", "Service time", None),
+    ("t/", "By club", None),
+    ("alumni/", "Previous players", None),
+    ("service-time.html", "What is service time?", None),
+    ("contract.html", "Contract clock", "in development"),
+    ("taxes.html", "Duty days", "in development"),
+    ("neutrality.html", "Neutrality", None),
+]
+
+
+def _site_nav(current: str | None = None) -> str:
+    """
+    The navigation strip.
+
+    `current` is a key from NAV_SECTIONS (the href fragment), and marks the
+    link with aria-current. The CSS keys off aria-current rather than a hand
+    set class, so the accessible state and the visible state cannot disagree.
+
+    Hrefs are BASE_PATH-absolute, not relative: these pages are served from
+    /p/, /t/ and /alumni/ as well as the root, so a relative href would
+    resolve differently per directory. BASE_PATH is derived from docs/CNAME,
+    so a domain move carries the nav with it.
+    """
+    items = []
+    for href, label, tag in NAV_SECTIONS:
+        mark = ' aria-current="page"' if current == href else ""
+        badge = f' <span class="nav-tag">{tag}</span>' if tag else ""
+        items.append(f'<a href="{BASE_PATH}{href}"{mark}>{label}{badge}</a>')
+    return (
+        '<nav class="site-nav" aria-label="Site sections">'
+        + "".join(items)
+        + "</nav>"
+    )
+
+
 # From the CBA ruleset, not a literal -- see scripts/cba.py. This file draws
 # the same service-time meter as docs/app.js, so the two must agree on what a
 # full year is, and the only way to guarantee that is for both to read it from
@@ -427,6 +479,7 @@ def render_club_index(by_club: dict[str, list[dict]], generated_at: str) -> str:
 </head>
 <body>
 <div class="viz-root"><div class="wrap">
+  {_site_nav("t/")}
   {_crumbs(("All players", "../"), ("By club", None))}
   <h1>Service time by club</h1>
   <p class="subtitle">Every 40-man roster, and who on it reaches arbitration and free agency.</p>
@@ -593,6 +646,7 @@ def render_club(club: str, players: list[dict], generated_at: str) -> str:
 </head>
 <body>
 <div class="viz-root"><div class="wrap">
+  {_site_nav("t/")}
   {_crumbs(("All players", "../"), (name, None))}
   <h1>{name} — service time</h1>
   <p class="subtitle">Every player on the 40-man roster, most service time first.</p>
@@ -739,7 +793,7 @@ def render(player: dict, team_names: dict[int, str], generated_at: str) -> str:
         # one place that links down to him. Without this he is an orphan.
         trail.append(("Previous players", f"../{ALUMNI_DIR_NAME}/"))
     trail.append((name, None))
-    crumbs = _crumbs(*trail)
+    crumbs = _site_nav() + _crumbs(*trail)
 
     caveat = ""
     if missing:
@@ -1168,7 +1222,7 @@ def _write_alumni_pages(
         page = _alumni_shell(
             f"Previous players — {letter} | Big League Service Time Tracker",
             desc, url,
-            _crumbs(("All players", "../"), ("Previous players", "./"), (letter, None)),
+            _site_nav("alumni/") + _crumbs(("All players", "../"), ("Previous players", "./"), (letter, None)),
             f"Previous players — {letter}",
             f"{len(players)} players no longer on a 40-man roster, by surname.",
             body, generated_at, graph,
@@ -1205,7 +1259,7 @@ def _write_alumni_pages(
     page = _alumni_shell(
         "Previous players — service time A to Z | Big League Service Time Tracker",
         desc, url,
-        _crumbs(("All players", "../"), ("Previous players", None)),
+        _site_nav("alumni/") + _crumbs(("All players", "../"), ("Previous players", None)),
         "Previous players",
         f"{total:,} players who have come off a 40-man roster, by surname. "
         "Their service time is final — it stopped when they did.",
@@ -1611,6 +1665,7 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
 </head>
 <body>
 <div class="viz-root"><div class="wrap">
+  {_site_nav("service-time.html")}
   {_crumbs(("All players", BASE_PATH), ("What is service time?", None))}
 
   <h1>What is MLB service time?</h1>

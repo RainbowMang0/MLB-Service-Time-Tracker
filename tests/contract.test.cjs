@@ -402,16 +402,34 @@ test("the published index still contains the duplicate names this guards against
 // Reachability
 // -------------------------------------------------------------------------
 
-test("the homepage deliberately does not yet link the contract or duty-day tools", () => {
-  // Reverted 2026-09-08 at the owner's direction: neither tool is finished,
-  // and the contract tool in particular is missing the valuation work this
-  // is now being researched for. Linking from the homepage is the one
-  // hard-to-undo direction -- it teaches a crawler these URLs matter, and a
-  // young site should not point its only inbound authority at a tool it is
-  // about to change. Flip this test when the tools are ready.
+test("the homepage links both tools, and both are marked in development", () => {
+  // History, because this line has moved twice and the reasons matter.
+  //
+  // 2026-09-08: a site-wide link to these two was added, then reverted at the
+  // owner's direction -- neither tool was finished, and pointing the site's
+  // only inbound authority at them is the hard-to-undo direction.
+  //
+  // 2026-09-11: the owner asked for a navigation menu and chose "all five
+  // sections, but mark the two". So the links are back BY DECISION, and the
+  // tag is the condition attached to that decision rather than decoration.
+  //
+  // This test therefore checks both halves together: the link may exist only
+  // while the marker does. Dropping the tag silently would restore exactly the
+  // unqualified promotion that was reverted, which is what the previous
+  // version of this test existed to catch -- and it did catch it.
   const home = fs.readFileSync(path.join(ROOT, "docs/index.html"), "utf8");
-  assert.ok(!/href="contract\.html"/.test(home), "homepage links the contract tool before it is ready");
-  assert.ok(!/href="taxes\.html"/.test(home), "homepage links the duty-day tool before it is ready");
+  const nav = /<nav class="site-nav"[\s\S]*?<\/nav>/.exec(home);
+  assert.ok(nav, "homepage carries no site nav");
+
+  for (const href of ["contract.html", "taxes.html"]) {
+    const link = new RegExp(`<a href="${href}"[^>]*>([\\s\\S]*?)</a>`).exec(nav[0]);
+    assert.ok(link, `homepage nav does not link ${href}`);
+    assert.match(
+      link[1],
+      /nav-tag/,
+      `${href} is linked from the homepage without the in-development marker`
+    );
+  }
 });
 
 // -------------------------------------------------------------------------

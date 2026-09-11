@@ -1087,3 +1087,118 @@ body.profile-open { overflow: hidden; }
      still carry the shape, which is what the strip is for. */
   .cs-year { display: none; }
 }
+
+/* --- site navigation -------------------------------------------------------
+   One strip across every page, hand-written and generated alike. The markup
+   is built by _site_nav() in write_player_pages.py for the four generated
+   templates and hand-copied into the five static pages; a test asserts the
+   destination set matches, because this is the same "lands in N places and
+   the Nth is the trap" shape as the analytics token.
+
+   No JavaScript and no hamburger: the whole site's constraint is that
+   ornament does not get to spend the interaction budget, and a disclosure
+   widget for six links would be a script, a state bug and a focus trap for
+   nothing. On a narrow screen the strip scrolls horizontally instead, which
+   needs no code and cannot break. */
+
+.site-nav {
+  display: flex;
+  gap: 2px;
+  align-items: stretch;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 0 18px;
+  padding: 0 0 1px;
+  border-bottom: 1px solid var(--glass-border);
+  /* The lit filament the tiles and table panel already carry, so the nav
+     reads as part of the same instrument rather than a bolted-on chrome. */
+  background:
+    linear-gradient(to right,
+      color-mix(in srgb, var(--accent) 22%, transparent),
+      transparent 60%) bottom left / 100% 1px no-repeat;
+}
+
+.site-nav::-webkit-scrollbar { display: none; }
+
+/* Alignment. On the four hand-written pages the nav is a direct child of
+   .viz-root, outside the header's own inset, so its first item sat 40px to
+   the left of the <h1> it belongs under. The generated pages already nest it
+   inside .wrap and are aligned, so this is scoped by structure rather than by
+   a page class -- the selector cannot match twice.
+
+   Same clamp() as .page-header's horizontal padding, so the two track each
+   other at every width instead of agreeing only at 1100px. */
+.viz-root > .site-nav {
+  padding-inline: clamp(16px, 4vw, 40px);
+}
+
+.site-nav a {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 10px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-family: var(--mono);
+  /* Tracking is what made this overflow: seven uppercase mono labels at
+     0.06em clipped "Neutrality" off the right edge at 1100px. */
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.12s ease, border-color 0.12s ease;
+}
+
+.site-nav a:hover { color: var(--text-primary); }
+.site-nav a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+  border-radius: 2px;
+}
+
+/* The current page. aria-current is the source of truth; the styling follows
+   it, so the two can never disagree the way a hand-set "active" class does. */
+.site-nav a[aria-current="page"] {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent);
+}
+
+/* "In development" on the two tools that are not finished. A visitor should
+   know before clicking, not after. Deliberately not a warning colour: these
+   work, they are simply unreviewed. */
+.nav-tag {
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  padding: 2px 5px;
+  border-radius: 3px;
+  color: var(--text-muted);
+  border: 1px solid var(--glass-border);
+  text-transform: uppercase;
+}
+
+.site-nav a:hover .nav-tag,
+.site-nav a[aria-current="page"] .nav-tag {
+  color: var(--text-secondary);
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+/* The strip fits seven items down to about 1150px, then clips one. Rather
+   than let a laptop or an iPad in landscape (1024) show a half-cut label,
+   it tightens once here and only scrolls on genuinely narrow screens. */
+@media (max-width: 1150px) {
+  .site-nav a { padding: 8px 7px; font-size: 0.73rem; letter-spacing: 0.01em; }
+  .nav-tag { font-size: 0.54rem; padding: 1px 4px; }
+}
+
+@media (max-width: 640px) {
+  .site-nav a { padding: 8px 10px; font-size: 0.76rem; }
+  /* The tag stays. Hiding it here was the first draft and it was wrong:
+     most of this traffic is on a phone, so suppressing "in development"
+     on mobile would remove the warning from exactly the readers who see
+     it. It shrinks instead. */
+  .nav-tag { font-size: 0.56rem; padding: 1px 4px; letter-spacing: 0.04em; }
+}
