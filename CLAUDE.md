@@ -3942,6 +3942,166 @@ rather than merely fixed.
   page footers plus sitemap `lastmod`, and it is working as designed. `.git` is
   13 MB, so it is not yet a problem; noted only so nobody rediscovers it as one.
 
+## The player profile vision, and what each part costs (2026-09-11)
+
+Owner's picture: a visitor clicks a name and gets a full profile — service
+time, current and past stats, past earnings, and a tab exploring future value.
+Assessed part by part, because the four parts have wildly different costs.
+
+| part | status | cost |
+|---|---|---|
+| service time, season by season | **built** | zero |
+| current and past stats | **already fetched and thrown away** | near zero |
+| past earnings | **blocked** | needs licensed salary data |
+| future value | **blocked** | needs the above, plus a price of a win |
+
+### Stats are already being fetched and discarded — verified 2026-09-11
+
+`BIO_SEASON_TEAMS_HYDRATE = "stats(group=[hitting,pitching],type=yearByYear)"`
+is hydrated onto the `/people` call the pipeline makes for **every** player.
+`season_teams_from_bio()` then reads exactly one field out of each split:
+
+```python
+team_id = (split.get("team") or {}).get("id")
+```
+
+**`split["stat"]` — the entire year-by-year statline — is never read.** We pay
+for it on every call and drop it on the floor.
+
+This is the third instance of the identical pattern in this project, and the
+first two both turned into features for free:
+
+* `by_season` — "The data was already there. `compute_service_time()` has
+  always returned a `by_season` breakdown and the pipeline always threw it
+  away." That became the player profiles.
+* `birthDate` — in the same `/people` response, discarded until 2026-09-10.
+* `split["stat"]` — this one.
+
+**So a stats tab costs no extra API call.** What it costs is payload: the
+profiles are already sharded at ~12 KB precisely because the full season
+breakdown was four times the table index, and statlines are much bigger than
+day counts. Any stats tab must go in its own shard, fetched only when the tab
+is opened, or it undoes the payload work.
+
+⚠️ **What is NOT yet verified:** exactly which fields `split["stat"]` carries.
+The sandbox has no route to statsapi.mlb.com, so the discard was confirmed by
+reading the code, not by inspecting a live payload. One live run answers it.
+Do not design the tab against an assumed field list — that is the trap the
+schedule fixture fell into (see "What the first live schedule run taught us").
+
+### Earnings and future value stay blocked, and the second reason is new
+
+Past earnings need salary data. Unchanged, and unchanged for the recorded
+reasons: no free permitted machine-readable source, and published projections
+are someone else's work.
+
+**Future value has a second, independent blocker measured 2026-09-11:** the
+stored records carry 20 fields and **not one is a performance or salary
+figure**. Solow & Krautmann's ex ante method cannot even begin — its first
+step is "recent performance at the time of signing". Persisting the statlines
+above would remove this second blocker; the price-of-a-win blocker would
+remain.
+
+---
+
+## Cartoon likenesses do NOT sidestep the photo problem — they are worse
+
+**Asked 2026-09-11: would a cartoon picture of a player avoid the legal issue,
+since it is not their actual photo?** Recorded because it is a reasonable
+question that will come up again, and the intuition behind it is backwards.
+
+*Not legal advice; this project has no lawyer. What follows is the reasoning,
+so a future session does not re-derive it — and so nobody ships an avatar on
+the strength of "it's only a drawing".*
+
+### It solves the smaller problem and leaves the bigger one untouched
+
+The 2026-08-23 photo decision was about **copyright**: MLB's photographs are
+someone else's work. A genuinely original drawing does avoid copying *that
+photograph*.
+
+But the risk that actually attaches to a player's face is the **right of
+publicity** — the commercial right in a person's name, image and likeness.
+That right protects **identifiability, not a medium.** A cartoon whose entire
+purpose is to be recognisably Aaron Judge is Aaron Judge's likeness. Changing
+the rendering does not change who it depicts, and being recognisable is the
+whole point of putting it on his profile.
+
+### The case law runs directly against the intuition
+
+* **Keller v. Electronic Arts** (9th Cir. 2013) and **Hart v. Electronic Arts**
+  (3d Cir. 2013) — EA used **non-photographic avatars** of college athletes.
+  Both courts rejected EA's First Amendment and transformative-use defenses.
+  Stylised did not mean safe; it was the closest thing to this exact idea and
+  it lost, twice, in two circuits.
+* **Comedy III Productions v. Gary Saderup** (Cal. 2001) — a **charcoal
+  drawing** of the Three Stooges was held not sufficiently transformative. A
+  hand-drawn artwork, by an artist, lost.
+
+### And it can ADD a copyright problem rather than remove one
+
+A drawing traced from, or an AI image generated from, an MLB photograph is
+plausibly a **derivative work** of that photograph. Do that and the project
+holds both risks at once — the publicity claim it never escaped, plus a
+copyright claim it had avoided by not using the photo at all.
+
+**So the honest ordering is: cartoon likeness > photograph > no image.** The
+reasoning that declined photos applies to cartoons *more* strongly, not less.
+
+### What is actually safe, and why the site is fine today
+
+**Facts are not copyrightable**, and service time, statlines, dates and
+transactions are facts. That is the ground this whole project stands on, and
+nothing above touches it.
+
+Visual richness without a likeness is available and partly built already:
+
+* **club colours**, already used for the dot, row stripe and career strip
+* **jersey number** and **position glyph**
+* an **initials monogram** or a generic, non-identifying silhouette
+* the **service-time meter itself**, which is the site's real visual signature
+
+Note also that MLB player NIL is licensed collectively through the MLBPA and
+MLB Players Inc. The existence of that channel is itself evidence the rights
+are asserted rather than ignored — and it is the same body item 0b under
+"Immediate next steps" says to call before promoting the paid-section tools.
+
+And the advertising interaction from the photo decision applies unchanged: a
+likeness on a free fan page is the low-risk end; the same likeness beside ad
+units is commercial use of a player's image and a far easier complaint to
+make.
+
+---
+
+## A recorded SEO opportunity: the free-agency question deserves its own URL
+
+**Noted 2026-09-11 at the owner's request, so it is not lost.**
+
+`/contract.html` now opens on the short answer — when a player reaches
+arbitration and free agency, how old he will be, and what he earns until then.
+That answers **"when is [player] a free agent"**, which is a high-volume search
+and a question no free tool answers well.
+
+**But it is buried.** It sits on a page titled "Contract Clock" at
+`/contract.html`, which is not a URL or a title anyone searching that phrase
+will match. The page cannot rank for a query its title does not contain.
+
+The opportunity is a **dedicated URL** — `/free-agency.html`, or better, a
+generated page per player — whose title, `<h1>` and content are the query
+itself. That is the same move that took the player pages from a `#` fragment
+nobody could land on to 3,834 crawlable URLs.
+
+Weigh it against what the indexing work already measured: **782 pages sat
+"Discovered — currently not indexed"**, and the diagnosis was thin, templated
+pages with weak internal linking. A per-player free-agency page would be
+thousands more thin pages on the same pattern, so this should wait on the
+split-sitemap report (see "The sitemap is split by section"). A **single**
+well-linked `/free-agency.html` carries none of that risk and is the sensible
+first step.
+
+**Do not act on this before `sitemap-alumni.xml` and `sitemap-players.xml`
+have reported.** Same discipline as the held 1,756 alumni.
+
 ## Working style notes
 
 - The owner has been working from an **iPad via GitHub Codespaces**. Safari's
