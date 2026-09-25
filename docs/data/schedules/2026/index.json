@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "generated_at": "2026-09-24",
+ "generated_at": "2026-09-25",
  "source": "MLB Stats API (statsapi.mlb.com) /schedule, venue location hydrated",
  "note": "`state` on each game is the jurisdiction the game is PLAYED in, which is what duty-day allocation turns on -- not the club's own home state. A null state means the venue could not be resolved to a jurisdiction (an international series); the tool asks rather than guessing.",
  "clubs": [
@@ -30,7 +30,7 @@
    "spring_states": [
     "FL"
    ],
-   "games": 196
+   "games": 199
   },
   {
    "team_id": 110,
@@ -146,7 +146,7 @@
     "AZ",
     "CA"
    ],
-   "games": 194
+   "games": 199
   },
   {
    "team_id": 146,
@@ -165,7 +165,7 @@
     "AZ",
     "WI"
    ],
-   "games": 195
+   "games": 200
   },
   {
    "team_id": 142,
