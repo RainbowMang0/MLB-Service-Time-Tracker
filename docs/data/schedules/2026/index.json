@@ -1,6 +1,6 @@
 {
  "season": 2026,
- "generated_at": "2026-09-08",
+ "generated_at": "2026-10-25",
  "source": "MLB Stats API (statsapi.mlb.com) /schedule, venue location hydrated",
  "note": "`state` on each game is the jurisdiction the game is PLAYED in, which is what duty-day allocation turns on -- not the club's own home state. A null state means the venue could not be resolved to a jurisdiction (an international series); the tool asks rather than guessing.",
  "clubs": [
@@ -30,7 +30,7 @@
    "spring_states": [
     "FL"
    ],
-   "games": 196
+   "games": 203
   },
   {
    "team_id": 110,
@@ -41,16 +41,16 @@
     "FL",
     "MD"
    ],
-   "games": 196
+   "games": 197
   },
   {
    "team_id": 111,
    "team": "Boston Red Sox",
-   "home_state": "MA",
+   "home_state": null,
    "spring_states": [
     "FL"
    ],
-   "games": 195
+   "games": 197
   },
   {
    "team_id": 112,
@@ -59,7 +59,7 @@
    "spring_states": [
     "AZ"
    ],
-   "games": 196
+   "games": 198
   },
   {
    "team_id": 145,
@@ -68,7 +68,7 @@
    "spring_states": [
     "AZ"
    ],
-   "games": 196
+   "games": 203
   },
   {
    "team_id": 113,
@@ -87,7 +87,7 @@
    "spring_states": [
     "AZ"
    ],
-   "games": 197
+   "games": 209
   },
   {
    "team_id": 115,
@@ -115,7 +115,7 @@
    "spring_states": [
     "FL"
    ],
-   "games": 191
+   "games": 193
   },
   {
    "team_id": 118,
@@ -146,7 +146,7 @@
     "AZ",
     "CA"
    ],
-   "games": 194
+   "games": 202
   },
   {
    "team_id": 146,
@@ -165,7 +165,7 @@
     "AZ",
     "WI"
    ],
-   "games": 195
+   "games": 210
   },
   {
    "team_id": 142,
@@ -193,7 +193,7 @@
     "AZ",
     "FL"
    ],
-   "games": 198
+   "games": 203
   },
   {
    "team_id": 143,
@@ -202,7 +202,7 @@
    "spring_states": [
     "FL"
    ],
-   "games": 192
+   "games": 195
   },
   {
    "team_id": 134,
@@ -220,7 +220,7 @@
    "spring_states": [
     "AZ"
    ],
-   "games": 193
+   "games": 199
   },
   {
    "team_id": 137,
@@ -256,7 +256,7 @@
    "spring_states": [
     "FL"
    ],
-   "games": 194
+   "games": 211
   },
   {
    "team_id": 140,
@@ -275,7 +275,7 @@
    "spring_states": [
     "FL"
    ],
-   "games": 192
+   "games": 193
   },
   {
    "team_id": 120,
