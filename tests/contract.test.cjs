@@ -267,11 +267,18 @@ test("no file in the contract module tells the reader what to do", () => {
     "you'd be better",
   ];
 
+  // contract-page.js is the file that writes almost every user-facing
+  // sentence on the page, and it was missing from this list while its own
+  // header comment claimed to be grepped by it -- docs/contract.js was
+  // listed twice instead. A lint that does not read the UI is not a lint.
   const files = [
     "docs/contract.js",
+    "docs/contract-page.js",
     "docs/contract.html",
-    "docs/contract.js",
-  ].filter((f) => fs.existsSync(path.join(ROOT, f)));
+  ];
+  for (const f of files) {
+    assert.ok(fs.existsSync(path.join(ROOT, f)), `${f} must exist to be linted`);
+  }
 
   const hits = [];
   for (const rel of files) {
@@ -289,4 +296,334 @@ test("no file in the contract module tells the reader what to do", () => {
     }
   }
   assert.deepEqual(hits, [], "advice vocabulary found in the contract module");
+});
+
+// -------------------------------------------------------------------------
+// The projection walk re-bands
+// -------------------------------------------------------------------------
+
+test("the projection re-reads the band each season instead of holding the first", () => {
+  // The measured rate rises with service -- p20 is 32 days in the 0-1 band and
+  // 172 in the 5-6 band -- so holding a rookie's slowest season across a whole
+  // career compounds an artefact. Measured against this model, a 0.086 player
+  // projected to free agency came out at 30 seasons held and 12 re-banded.
+  const rookie = 86;
+  const fa = 6 * RULES.full_year_days;
+  const band0 = MODEL.bands.find((b) => b.band === 0);
+
+  const held = CT.seasonsToReach(rookie, fa, band0.p20, RULES);
+  const banded = CT.seasonsToReachBanded(rookie, fa, MODEL, "p20", RULES);
+
+  assert.ok(banded < held, "re-banding cannot be slower than holding the worst band");
+  assert.ok(banded <= 15, `a projected career of ${banded} seasons is not a career`);
+
+  const p = CT.project(rookie, MODEL, RULES, 2026);
+  const row = p.targets.find((t) => t.key === "free_agency");
+  assert.equal(row.outcomes.find((o) => o.key === "p20").seasons, banded);
+});
+
+test("re-banding preserves the ordering the panel's column headings promise", () => {
+  for (const days of [0, 86, 172, 400, 900]) {
+    const p = CT.project(days, MODEL, RULES, 2026);
+    for (const t of p.targets) {
+      const [slow, mid, fast] = t.outcomes.map((o) => o.seasons);
+      if (slow === null || mid === null || fast === null) continue;
+      assert.ok(slow >= mid, `${t.key} at ${days}: p20 cannot beat p50`);
+      assert.ok(mid >= fast, `${t.key} at ${days}: p50 cannot beat p80`);
+    }
+  }
+});
+
+test("a thin band stops the walk rather than borrowing a neighbour's rate", () => {
+  // MIN_BAND_SAMPLE exists so a band with too few careers refuses. Walking
+  // through it on someone else's number would defeat that on the long paths,
+  // which are exactly the ones that cross the most bands.
+  const thin = {
+    ...MODEL,
+    bands: MODEL.bands.map((b) => (b.band === 3 ? { ...b, enough_data: false } : b)),
+  };
+  assert.equal(CT.seasonsToReachBanded(0, 6 * RULES.full_year_days, thin, "p50", RULES), null);
+});
+
+test("the flat walk is still exact, because the ruleset comparison relies on it", () => {
+  assert.equal(CT.seasonsToReach(0, 172 * 3, 200, RULES), 3);
+  assert.equal(CT.seasonsToReach(0, 172, 0, RULES), null);
+  assert.equal(CT.seasonsToReach(6 * 172, 6 * 172, 100, RULES), 0);
+});
+
+test("a projection reports the whole measured population, not one band's slice", () => {
+  const p = CT.project(86, MODEL, RULES, 2026);
+  assert.equal(p.model.transitions, MODEL.transitions);
+  assert.ok(p.model.transitions > p.band.sample, "the walk crosses bands");
+});
+
+// -------------------------------------------------------------------------
+// The player picker must never be keyed by name
+// -------------------------------------------------------------------------
+
+test("the contract page resolves a player without keying on his name", () => {
+  // "Never key this dataset by name" is one of the project's oldest rules --
+  // two Logan Allens, two Luis Perdomos, and 36 duplicated names in all. Two
+  // players called Max Muncy are on 40-man rosters right now, at 289 days and
+  // 1,741 days, so a name lookup on this page was an eight-and-a-half-year
+  // error inside a contract decision.
+  const src = fs.readFileSync(path.join(ROOT, "docs/contract-page.js"), "utf8");
+  assert.ok(
+    !/PLAYERS\.find\(\s*\(\s*p\s*\)\s*=>\s*p\.name\s*===/.test(src),
+    "a bare name lookup is back in contract-page.js"
+  );
+  assert.ok(src.includes("LABEL_TO_PLAYER"), "the datalist label map is gone");
+});
+
+test("the published index still contains the duplicate names this guards against", () => {
+  // If this ever fails the dataset changed, not the code -- but the guard
+  // above would then be resting on an assumption nobody rechecked.
+  const index = JSON.parse(
+    fs.readFileSync(path.join(ROOT, "docs/data/index.json"), "utf8")
+  );
+  const ix = (n) => index.fields.indexOf(n);
+  const rostered = index.players.filter((r) => r[ix("on_40_man")] === 1);
+  const seen = new Map();
+  for (const r of rostered) {
+    const n = r[ix("name")];
+    seen.set(n, (seen.get(n) || 0) + 1);
+  }
+  const dupes = [...seen].filter(([, c]) => c > 1);
+  assert.ok(dupes.length > 0, "expected at least one duplicated name on a 40-man");
+
+  // And the label the page builds for them must separate them.
+  const labels = new Set(
+    rostered.map((r) => `${r[ix("name")]} · ${index.teams[r[ix("team")]] || ""}`)
+  );
+  assert.equal(labels.size, rostered.length, "name-plus-club must be unique, or the id kicks in");
+});
+
+// -------------------------------------------------------------------------
+// Reachability
+// -------------------------------------------------------------------------
+
+test("the homepage links both tools, and both are marked in development", () => {
+  // History, because this line has moved twice and the reasons matter.
+  //
+  // 2026-09-08: a site-wide link to these two was added, then reverted at the
+  // owner's direction -- neither tool was finished, and pointing the site's
+  // only inbound authority at them is the hard-to-undo direction.
+  //
+  // 2026-09-11: the owner asked for a navigation menu and chose "all five
+  // sections, but mark the two". So the links are back BY DECISION, and the
+  // tag is the condition attached to that decision rather than decoration.
+  //
+  // This test therefore checks both halves together: the link may exist only
+  // while the marker does. Dropping the tag silently would restore exactly the
+  // unqualified promotion that was reverted, which is what the previous
+  // version of this test existed to catch -- and it did catch it.
+  const home = fs.readFileSync(path.join(ROOT, "docs/index.html"), "utf8");
+  const nav = /<nav class="site-nav"[\s\S]*?<\/nav>/.exec(home);
+  assert.ok(nav, "homepage carries no site nav");
+
+  for (const href of ["contract.html", "taxes.html"]) {
+    const link = new RegExp(`<a href="${href}"[^>]*>([\\s\\S]*?)</a>`).exec(nav[0]);
+    assert.ok(link, `homepage nav does not link ${href}`);
+    assert.match(
+      link[1],
+      /nav-tag/,
+      `${href} is linked from the homepage without the in-development marker`
+    );
+  }
+});
+
+// -------------------------------------------------------------------------
+// Career stage
+// -------------------------------------------------------------------------
+
+test("the stage reports the mechanism and never a share of value", () => {
+  // Published estimates of what a restricted player captures run from about
+  // a tenth of his value to essentially all of it, and Krautmann (1999) shows
+  // most of that spread is method: the same players come to $4.5M or $57M of
+  // surplus per team depending only on the approach. A range spanning that
+  // would read as a measurement. So the engine returns what is uncontested --
+  // the bargaining rights that change at each line -- and no number.
+  const R = { ...RULES };
+  for (const days of [0, 300, 516, 900, 1032, 1500]) {
+    const st = CT.stageOf(days, R, false);
+    const text = JSON.stringify(st);
+    assert.ok(st.rights && st.rights.length > 20, "every stage explains the mechanism");
+    assert.ok(
+      !/\b\d{1,3}\s?%|\bpercent\b/i.test(text),
+      `stage at ${days} days quotes a share of value: ${text}`
+    );
+  }
+});
+
+test("stage boundaries follow the ruleset, including Super Two", () => {
+  const R = RULES;
+  assert.equal(CT.stageOf(0, R, false).key, "pre_arbitration");
+  assert.equal(CT.stageOf(3 * 172 - 1, R, false).key, "pre_arbitration");
+  assert.equal(CT.stageOf(3 * 172, R, false).key, "arbitration");
+  assert.equal(CT.stageOf(6 * 172 - 1, R, false).key, "arbitration");
+  assert.equal(CT.stageOf(6 * 172, R, false).key, "free_agency");
+
+  // Super Two reaches arbitration early, and the stage says so -- the one
+  // case where the stage and the raw figure disagree.
+  const early = CT.stageOf(2 * 172 + 140, R, true);
+  assert.equal(early.key, "arbitration");
+  assert.equal(early.viaSuperTwo, true);
+  assert.equal(CT.stageOf(4 * 172, R, true).viaSuperTwo, false, "not via Super Two once past 3.000");
+});
+
+test("a five-year ruleset moves the stage boundary with it", () => {
+  const alt = { ...RULES, free_agency_years: 5 };
+  assert.equal(CT.stageOf(5 * 172, RULES, false).key, "arbitration");
+  assert.equal(CT.stageOf(5 * 172, alt, false).key, "free_agency");
+});
+
+// -------------------------------------------------------------------------
+// Age at a threshold
+// -------------------------------------------------------------------------
+
+test("age is attached to projected crossings, and refuses when unknown", () => {
+  // A player reaching free agency at 27 and one reaching it at 32 have
+  // identical clocks and very different futures. Fair (2008) puts peak
+  // performance at 26.5-28.3 depending on the measure, so the age at which a
+  // player arrives is the part the service clock cannot say.
+  const p = CT.withAges(CT.project(400, MODEL, RULES, 2026), 1999);
+  const fa = p.targets.find((t) => t.key === "free_agency");
+  for (const o of fa.outcomes) {
+    if (o.season === null) continue;
+    assert.equal(o.age, o.season - 1999, "age tracks the projected season");
+  }
+
+  // Unknown birth year must render as unknown, never as an age computed from
+  // a missing field -- the same discipline as a null tax rate.
+  const unknown = CT.withAges(CT.project(400, MODEL, RULES, 2026), null);
+  assert.ok(unknown.targets.every((t) => t.outcomes.every((o) => o.age === null)));
+  assert.equal(unknown.birthYear, null);
+});
+
+test("an implausible birth year yields no age rather than a wrong one", () => {
+  assert.equal(CT.ageInSeason(1890, 2026), null);
+  assert.equal(CT.ageInSeason(2020, 2026), null);
+  assert.equal(CT.ageInSeason(null, 2026), null);
+  assert.equal(CT.ageInSeason(1999, 2026), 27);
+});
+
+test("attaching ages cannot change a projected date", () => {
+  // withAges is a presentational join. If it could move a season it would be
+  // silently editing a measured projection.
+  const base = CT.project(400, MODEL, RULES, 2026);
+  const aged = CT.withAges(base, 1996);
+  assert.deepEqual(
+    aged.targets.map((t) => t.outcomes.map((o) => o.season)),
+    base.targets.map((t) => t.outcomes.map((o) => o.season))
+  );
+});
+
+// -------------------------------------------------------------------------
+// The short answer
+// -------------------------------------------------------------------------
+
+test("the short answer never states what a player is worth", () => {
+  // This project cannot answer that and must not appear to. It needs two
+  // inputs the database does not have: a price of a win (no permitted salary
+  // source exists) and the player's own performance (the records store
+  // service time and nothing else -- no WAR, no OPS, not one performance
+  // field). Solow & Krautmann's method cannot even start here; its first step
+  // is "recent performance at the time of signing".
+  //
+  // The one dollar figure allowed is the league minimum, which is written
+  // into the agreement rather than estimated from anything.
+  const R = { ...RULES, mlb_minimum: 780000, mlb_minimum_year: 2026 };
+  const a = CT.shortAnswer(2 * 172 + 56, MODEL, R, 2026, { birthYear: 1999 });
+
+  const money = Object.entries(a).filter(
+    ([, v]) => typeof v === "number" && v > 100000
+  );
+  assert.deepEqual(
+    money.map(([k]) => k).sort(),
+    ["leagueMinimum"],
+    "the only dollar figure may be the league minimum"
+  );
+  assert.equal(a.leagueMinimum, 780000);
+});
+
+test("the short answer reports a spread, never a single date", () => {
+  // Same rule as the full projection: anything spanning more than one season
+  // renders as a distribution, because a single year would read as a fact.
+  const R = { ...RULES, mlb_minimum: 780000, mlb_minimum_year: 2026 };
+  const a = CT.shortAnswer(86, MODEL, R, 2026, { birthYear: 2003 });
+  assert.ok(a.freeAgency.season, "a median year");
+  assert.ok(a.freeAgency.earliest && a.freeAgency.latest, "and a spread around it");
+  assert.ok(
+    a.freeAgency.earliest <= a.freeAgency.season &&
+      a.freeAgency.season <= a.freeAgency.latest,
+    "the median sits inside the spread"
+  );
+});
+
+test("a reached threshold reports reached, not a year in the past", () => {
+  const R = { ...RULES, mlb_minimum: 780000 };
+  const a = CT.shortAnswer(7 * 172, MODEL, R, 2026, { birthYear: 1994 });
+  assert.equal(a.freeAgency.reached, true);
+  assert.equal(a.freeAgency.season, null, "no year once it is behind him");
+  assert.equal(a.arbitration.reached, true);
+  assert.equal(a.minimumSalarySeasons, 0);
+});
+
+test("minimum-salary seasons is a floor, and Super Two ends it", () => {
+  // A full credited year per season is the FASTEST route to arbitration, so
+  // this is the fewest minimum seasons a player could face. Understating it
+  // would be the flattering direction.
+  const R = RULES;
+  assert.equal(CT.minimumSeasons(0, R, false), 3);
+  assert.equal(CT.minimumSeasons(2 * 172, R, false), 1);
+  assert.equal(CT.minimumSeasons(3 * 172, R, false), 0);
+  // A Super Two is already arbitration eligible, whatever his raw figure.
+  assert.equal(CT.minimumSeasons(2 * 172 + 140, R, true), 0);
+});
+
+test("the short answer degrades rather than inventing when data is thin", () => {
+  const thin = { ...MODEL, bands: MODEL.bands.map((b) => ({ ...b, enough_data: false })) };
+  const a = CT.shortAnswer(400, thin, { ...RULES, mlb_minimum: 780000 }, 2026, {});
+  assert.equal(a.projectionAvailable, false);
+  assert.equal(a.arbitration, null, "no projection means no year, not a guess");
+  // The parts that do not depend on the model still answer. 400 days is
+  // 2.056, which is short of the 516 that 3.000 requires -- so this is the
+  // pre-arbitration stage, and the minimum-season count is still computable
+  // because it comes from the ruleset rather than from the accrual model.
+  assert.equal(a.stage, "pre_arbitration");
+  assert.equal(a.minimumSalarySeasons, 1);
+  assert.equal(a.service, "2.056");
+});
+
+test("typing a service figure clears the player it no longer describes", () => {
+  // The picker went on reading "Max Muncy · Athletics" beside an answer
+  // computed for a figure typed over it. A label naming the wrong player is
+  // worse than no label, and it is the same class of error as carrying the
+  // last player's birth year into a hand-entered number.
+  const src = fs.readFileSync(path.join(ROOT, "docs/contract-page.js"), "utf8");
+  const handler = /\$\("in-service"\)\.addEventListener[\s\S]*?\n    \}\);/.exec(src);
+  assert.ok(handler, "no in-service handler found");
+  for (const cleared of ['birthYear = null', "superTwo = false", '$("in-player").value = ""']) {
+    assert.ok(
+      handler[0].includes(cleared),
+      `typing a service figure must clear player state: ${cleared}`
+    );
+  }
+});
+
+test("the full tool is hidden by default and the choice is remembered", () => {
+  const html = fs.readFileSync(path.join(ROOT, "docs/contract.html"), "utf8");
+  assert.match(html, /<div id="advanced" hidden>/, "advanced block must start hidden");
+  assert.match(html, /aria-controls="advanced"/, "the toggle must name what it controls");
+  assert.match(html, /aria-expanded="false"/, "and report its state");
+
+  // The short answer must come before the advanced block in source order, so
+  // a reader (and a crawler) meets the simple question first.
+  assert.ok(
+    html.indexOf('id="panel-short"') < html.indexOf('<div id="advanced"'),
+    "the short answer must lead the page"
+  );
+
+  const js = fs.readFileSync(path.join(ROOT, "docs/contract-page.js"), "utf8");
+  assert.match(js, /ADVANCED_KEY/, "the choice is remembered");
 });

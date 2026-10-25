@@ -13,6 +13,7 @@
 
   const CT = window.ContractTools;
   const THEME_KEY = "mlb-service-time-theme";
+  const ADVANCED_KEY = "mlb-contract-advanced";
 
   let RULES = null; // the `rules` block from index.json
   let MODEL = null; // docs/data/accrual_model.json
@@ -20,8 +21,20 @@
   let serviceDays = null;
   let currentSeason = new Date().getFullYear();
   let offerYears = [];
+  let LABEL_TO_PLAYER = new Map(); // datalist label -> player; never keyed by name alone
+  let birthYear = null;            // null is a real answer: "age unknown"
+  let superTwo = false;
 
   const $ = (id) => document.getElementById(id);
+
+  // Names and clubs come from the published payload rather than from a
+  // visitor, so this is discipline rather than a live hole -- the same
+  // discipline app.js uses everywhere, and the one place it lapsed was a bug.
+  function esc(t) {
+    return String(t).replace(/[&<>"']/g, (c) =>
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])
+    );
+  }
 
   function money(n) {
     if (n === null || n === undefined || !isFinite(n)) return "—";
@@ -67,6 +80,57 @@
     return years * RULES.full_year_days + days;
   }
 
+  /**
+   * Resolve what was typed or picked into exactly one player.
+   *
+   * A datalist puts the option's `value` into the input, so the value is the
+   * id and the resolution is unambiguous. A reader who types a bare name gets
+   * one only if that name is unique -- with a duplicate we refuse and say so,
+   * rather than picking one and being silently wrong about which.
+   */
+  function playerFromInput(text) {
+    const raw = String(text || "").trim();
+    if (!raw) return null;
+    const picked = LABEL_TO_PLAYER.get(raw);
+    if (picked) return picked;
+    const byId = PLAYERS.find((p) => String(p.id) === raw);
+    if (byId) return byId;
+    const byName = PLAYERS.filter((p) => p.name.toLowerCase() === raw.toLowerCase());
+    if (byName.length === 1) return byName[0];
+    if (byName.length > 1) {
+      $("clock-status").textContent =
+        `${byName.length} players are called ${byName[0].name}. Pick one from the list rather than typing the name — ` +
+        byName.map((p) => `${p.club || "no club"} (${CT.formatService(p.days, RULES)})`).join(", ") + ".";
+    }
+    return null;
+  }
+
+  /**
+   * Build the datalist and the label lookup together, so they cannot drift.
+   *
+   * The option value is what the browser puts in the input, so it has to be
+   * readable -- an id in the box would look like a bug. Name-plus-club is
+   * unique across every 40-man today, but the whole point of this fix is not
+   * to rest on a string being unique, so a collision appends the id rather
+   * than letting two options resolve to one player.
+   */
+  function buildPlayerList(players) {
+    const counts = new Map();
+    for (const p of players) {
+      const base = p.name + (p.club ? " · " + p.club : "");
+      counts.set(base, (counts.get(base) || 0) + 1);
+    }
+    LABEL_TO_PLAYER = new Map();
+    const options = [];
+    for (const p of players) {
+      const base = p.name + (p.club ? " · " + p.club : "");
+      const label = counts.get(base) > 1 ? `${base} (#${p.id})` : base;
+      LABEL_TO_PLAYER.set(label, p);
+      options.push(`<option value="${esc(label)}"></option>`);
+    }
+    $("player-list").innerHTML = options.join("");
+  }
+
   // -----------------------------------------------------------------------
   // Rendering
   // -----------------------------------------------------------------------
@@ -74,6 +138,9 @@
   function renderClock() {
     if (serviceDays === null) {
       $("clock-tiles").innerHTML = "";
+      $("short-answer").innerHTML = "";
+      $("short-notes").innerHTML = "";
+      $("panel-stage").hidden = true;
       $("panel-projection").hidden = true;
       $("panel-rulesets").hidden = true;
       return;
@@ -96,12 +163,139 @@
     }
     $("clock-tiles").innerHTML = tiles.join("");
 
+    renderShortAnswer();
+    renderStage();
     renderProjection();
     renderRulesets();
   }
 
+  // -----------------------------------------------------------------------
+  // The short answer -- the default view.
+  //
+  // Three figures and a sentence. Deliberately NOT "what is he worth": that
+  // needs a price of a win and the player's own performance, and the database
+  // holds neither. What it answers instead is when the money becomes
+  // negotiable, which is a question this project can answer exactly.
+  // -----------------------------------------------------------------------
+
+  function renderShortAnswer() {
+    const host = $("short-answer");
+    const notes = $("short-notes");
+    if (serviceDays === null) {
+      host.innerHTML = "";
+      notes.innerHTML = "";
+      return;
+    }
+
+    const a = CT.shortAnswer(serviceDays, MODEL, RULES, currentSeason, {
+      birthYear: birthYear,
+      superTwo: superTwo,
+    });
+
+    const when = (t, label) => {
+      if (!t) {
+        return `<div class="big"><span class="big-label">${label}</span>
+          <span class="big-value">—</span>
+          <span class="big-foot">not enough comparable careers to project</span></div>`;
+      }
+      if (t.reached) {
+        return `<div class="big big-done"><span class="big-label">${label}</span>
+          <span class="big-value">Already there</span>
+          <span class="big-foot">reached at ${esc(a.service)}</span></div>`;
+      }
+      const spread =
+        t.earliest && t.latest && t.earliest !== t.latest
+          ? `typically ${t.earliest}–${t.latest}`
+          : "";
+      const age = t.age ? `age ${t.age}` : "age not known";
+      return `<div class="big"><span class="big-label">${label}</span>
+        <span class="big-value">${t.season || "—"}</span>
+        <span class="big-foot">${age}${spread ? " · " + spread : ""}</span></div>`;
+    };
+
+    const min = a.leagueMinimum
+      ? "$" + a.leagueMinimum.toLocaleString("en-US")
+      : null;
+    const paid =
+      a.minimumSalarySeasons > 0 && min
+        ? `<div class="big"><span class="big-label">Until then, paid</span>
+             <span class="big-value">${min}</span>
+             <span class="big-foot">about the league minimum${
+               a.leagueMinimumYear ? " (" + a.leagueMinimumYear + ")" : ""
+             }, for roughly ${a.minimumSalarySeasons} more season${
+            a.minimumSalarySeasons === 1 ? "" : "s"
+          }</span></div>`
+        : `<div class="big"><span class="big-label">Salary is</span>
+             <span class="big-value">Negotiable</span>
+             <span class="big-foot">no longer set at the league minimum</span></div>`;
+
+    host.innerHTML =
+      when(a.arbitration, "Arbitration") + when(a.freeAgency, "Free agency") + paid;
+
+    const list = [];
+    if (a.viaSuperTwo) {
+      list.push(
+        "He reaches arbitration early as a <b>Super Two</b>, which is worth a fourth arbitration year."
+      );
+    }
+    list.push(
+      "The years are a <b>median</b> drawn from what comparable players actually accrued, not a schedule. The range beside each one is where most landed; health, role and club decisions move it and nothing here can see them."
+    );
+    list.push(
+      "<b>This does not say what the player is worth.</b> That needs a price of a win and his own performance record, and this project has neither — it stores service time and nothing else. The league minimum is quoted because it is written into the agreement rather than estimated."
+    );
+    list.push(
+      "Service time here is an estimate reconstructed from public transaction records, not an official MLB/MLBPA figure."
+    );
+    notes.innerHTML = "<ul>" + list.map((n) => `<li>${n}</li>`).join("") + "</ul>";
+  }
+
+  function renderStage() {
+    const panel = $("panel-stage");
+    if (serviceDays === null) { panel.hidden = true; return; }
+    panel.hidden = false;
+
+    const st = CT.stageOf(serviceDays, RULES, superTwo);
+    const stages = CT.STAGES;
+
+    $("stage-tiles").innerHTML = stages
+      .map((sg) => {
+        const here = sg.key === st.key;
+        const passed = stages.indexOf(sg) < stages.findIndex((x) => x.key === st.key);
+        return `<div class="tile ${here ? "" : "tile-partial"}">
+          <span class="tile-label">${esc(sg.label)}${here ? " · now" : passed ? " · passed" : ""}</span>
+          <span class="tile-value" style="font-size:.95rem;line-height:1.45;font-family:inherit;letter-spacing:0">${esc(sg.rights)}</span>
+          ${
+            here && st.nextStageAt
+              ? `<span class="tile-foot">${st.daysToNextStage} days to ${esc(st.nextGain || "")} at ${esc(st.nextStageAt)}</span>`
+              : here
+              ? `<span class="tile-foot">the last line on the clock</span>`
+              : ""
+          }
+        </div>`;
+      })
+      .join("");
+
+    const notes = [];
+    if (st.viaSuperTwo) {
+      notes.push(
+        "He reaches arbitration early as a <b>Super Two</b> — the top share of the two-to-three-year class by service time. That is the one case where the stage and the raw figure disagree, and it is worth a fourth arbitration year."
+      );
+    }
+    // The honest statement about magnitude, which is the part that is NOT
+    // settled. See research/valuation-literature.md -- this wording is the
+    // conclusion of that whole survey and should not be loosened.
+    notes.push(
+      "<b>How large is the gap between pay and value at each stage? Published research does not agree, and the disagreement is an order of magnitude.</b> Applying the two dominant methods to the same players, Krautmann (1999) reports a surplus of either $4.5M or $57M per club. His own later reply (2013) explains why they differ: one asks what determines a salary <i>at signing</i>, the other asks whether a player <i>earned</i> it afterwards. They are different questions, so this page reports the rights that change rather than a share of value."
+    );
+    notes.push(
+      "What is not in dispute is the ordering. Every source agrees restricted players are paid less relative to their value than free agents, and that the gap is widest at the front of the clock."
+    );
+    $("stage-notes").innerHTML = "<ul>" + notes.map((n) => `<li>${n}</li>`).join("") + "</ul>";
+  }
+
   function renderProjection() {
-    const p = CT.project(serviceDays, MODEL, RULES, currentSeason);
+    const p = CT.withAges(CT.project(serviceDays, MODEL, RULES, currentSeason), birthYear);
     const panel = $("panel-projection");
 
     if (!p.available) {
@@ -117,17 +311,31 @@
 
     panel.hidden = false;
     $("projection-basis").innerHTML =
-      `Measured from <b>${p.sample.toLocaleString()}</b> player-seasons in this project's own database: ` +
-      `players who were in the majors with between ${p.band.label} years of service, and what they accrued the following season. ` +
-      `Median ${p.band.p50} days; ${Math.round(p.band.share_full_year * 100)}% reached a full credited year, ` +
-      `${Math.round(p.band.share_zero * 100)}% accrued none.`;
+      `Measured from <b>${p.model.transitions.toLocaleString()}</b> player-seasons in this project's own database: ` +
+      `what players in the majors actually accrued the following season, banded by the service they had already earned. ` +
+      `This player starts in the ${p.band.label} band (${p.band.sample.toLocaleString()} player-seasons, median ${p.band.p50} days; ` +
+      `${Math.round(p.band.share_full_year * 100)}% reached a full credited year, ${Math.round(p.band.share_zero * 100)}% accrued none) ` +
+      `and the walk moves him into the next band as he crosses it.`;
 
     const cell = (o) => {
       if (o.seasons === null) {
         return `<td><span class="status st-unverified">Not reached at this rate</span></td>`;
       }
       if (o.seasons === 0) return `<td><span class="status st-ok">Already reached</span></td>`;
-      return `<td><b>${o.season}</b><span class="cell-sub">${o.seasons} more season${o.seasons === 1 ? "" : "s"} · ${o.daysPerSeason} days/yr</span></td>`;
+      const rate = o.seasons === 1 ? `${o.daysPerSeason} days` : `from ${o.daysPerSeason} days/yr`;
+      return `<td><b>${o.season}</b><span class="cell-sub">${o.seasons} more season${o.seasons === 1 ? "" : "s"} · ${rate}</span></td>`;
+    };
+
+    // Age at the MEDIAN outcome only. Three ages across three columns would
+    // be noise; the question a reader has is "how old will I be", and the
+    // median is the honest single answer to it.
+    const ageCell = (t) => {
+      const mid = t.outcomes.find((o) => o.key === "p50");
+      if (t.reached) return `<td class="num">—</td>`;
+      if (!mid || mid.age === null) {
+        return `<td class="num"><span class="status st-unverified">not known</span></td>`;
+      }
+      return `<td class="num"><b>${mid.age}</b></td>`;
     };
 
     $("projection-table").querySelector("tbody").innerHTML = p.targets
@@ -136,6 +344,7 @@
           <td>${t.label}<span class="cell-sub">at ${CT.formatService(t.days, RULES)}</span></td>
           <td class="num">${t.reached ? "—" : t.daysRemaining}</td>
           ${t.outcomes.map(cell).join("")}
+          ${ageCell(t)}
         </tr>`
       )
       .join("");
@@ -144,6 +353,16 @@
       "<ul>" +
       [
         "These are outcomes for a population, not probabilities for one player. What a given season holds depends on health, role and club decisions that nothing here can see.",
+        "The rate is re-read at each season from the band the player would then be in, because the measured rate rises with service. Holding a rookie's slowest season across a decade would produce a date no career reaches.",
+        // The survivorship caveat. The aging-curve literature (Nguyen &
+        // Matthews 2024; Schuckers et al. 2023) shows curves fitted only on
+        // players still playing overestimate, and these bands condition on
+        // exactly that. Saying so is the difference between a measured claim
+        // and an overclaim.
+        "<b>These bands describe players who kept a job.</b> Each is measured from players who were still in the majors the following season, so a player who is about to lose his roster spot is not in the population — and the 20th-percentile column is not a floor. The flat top band, where every outcome is a full credited year, is that selection showing rather than a fact about durability.",
+        birthYear
+          ? "Age on arrival is approximate, from birth year only. It matters because the thresholds are about service time while the research on what a player is worth is about age: Fair (2008) puts peak performance between 26.5 and 28.3 depending on the measure, with pitchers peaking earlier and declining faster."
+          : "Age on arrival is not shown because this player's birth year is not in the published data yet. It fills in on the next daily update.",
         "The distribution is measured from estimated service time, so it carries every limitation of the estimates behind it.",
         "Seasons are capped at the credited maximum, so no rate of accrual can shorten the path below one credited year per season.",
       ]
@@ -292,17 +511,39 @@
         return;
       }
       serviceDays = days;
+      // A typed figure is not a player, so anything player-specific has to
+      // clear -- carrying the last player's birth year into a hand-entered
+      // number would silently report someone else's age.
+      //
+      // The NAME has to clear too, and that was missed first time round: the
+      // picker went on reading "Max Muncy · Athletics" beside an answer
+      // computed for a figure someone had typed over it. A label that names
+      // the wrong player is worse than no label.
+      birthYear = null;
+      superTwo = false;
+      $("in-player").value = "";
       $("clock-status").textContent = `Showing ${CT.formatService(days, RULES)}.`;
       renderClock();
     });
 
+    // Resolved by ID, never by name. Two players on 40-man rosters share the
+    // name "Max Muncy" today (289 days and 1,741 days), and the database holds
+    // 36 duplicated names in all -- two Logan Allens, two Luis Perdomos. A
+    // name lookup silently returns whichever row comes first, which on this
+    // page is an eight-and-a-half-year error inside a contract decision.
+    //
+    // The datalist option's `value` therefore carries the id and its `label`
+    // carries what the reader sees, so a duplicate name is disambiguated by
+    // the club shown beside it.
     $("in-player").addEventListener("change", (e) => {
-      const match = PLAYERS.find((p) => p.name === e.target.value);
+      const match = playerFromInput(e.target.value);
       if (!match) return;
       serviceDays = match.days;
+      birthYear = match.birthYear;
+      superTwo = match.superTwo;
       $("in-service").value = CT.formatService(match.days, RULES);
       $("clock-status").textContent =
-        `${match.name} — ${CT.formatService(match.days, RULES)} as of the last daily update.` +
+        `${match.name}${match.club ? " · " + match.club : ""} — ${CT.formatService(match.days, RULES)} as of the last daily update.` +
         (match.on40 ? "" : " He is not on a 40-man roster; his figure is where his clock stopped.");
       renderClock();
     });
@@ -362,6 +603,23 @@
     for (const id of ["in-discount", "in-agent", "in-federal", "in-state", "in-dues"]) {
       $(id).addEventListener("input", renderOffer);
     }
+
+    // The full tool. Hidden by default because five panels answer a question
+    // most visitors are not asking; the choice is remembered so someone who
+    // wants the detail is not asked twice.
+    const btn = $("btn-advanced");
+    const setAdvanced = (open) => {
+      $("advanced").hidden = !open;
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.textContent = open ? "Hide the full tool" : "Show the full tool";
+      safeSet(ADVANCED_KEY, open ? "1" : "0");
+    };
+    btn.addEventListener("click", () => {
+      setAdvanced($("advanced").hidden);
+      // Re-render on open: the advanced panels skip work while hidden.
+      if (!$("advanced").hidden && serviceDays !== null) renderClock();
+    });
+    if (safeGet(ADVANCED_KEY) === "1") setAdvanced(true);
   }
 
   function applyRulesetPreset() {
@@ -401,11 +659,20 @@
 
       const fields = index.fields || [];
       const ix = (n) => fields.indexOf(n);
+      const teams = index.teams || [];
       PLAYERS = (index.players || []).map((row) => ({
         id: row[ix("id")],
         name: row[ix("name")],
         days: row[ix("days")],
         on40: row[ix("on_40_man")] === 1,
+        // Blank for anyone off a 40-man: a non-rostered player's stored club
+        // is stale by construction, and the payload already blanks it.
+        club: teams[row[ix("team")]] || null,
+        hasPage: row[ix("has_page")] === 1,
+        superTwo: row[ix("super_two")] === 1,
+        // -1 is the index() miss for a payload written before birth_year
+        // existed; treat that as unknown rather than reading row[-1].
+        birthYear: ix("birth_year") >= 0 ? row[ix("birth_year")] || null : null,
       }));
     } catch (e) {
       $("clock-status").textContent =
@@ -418,9 +685,7 @@
     // Rostered players first: this page is about a decision in front of
     // someone, and a retired player's clock stopped years ago.
     const rostered = PLAYERS.filter((p) => p.on40).sort((a, b) => (a.name < b.name ? -1 : 1));
-    $("player-list").innerHTML = rostered
-      .map((p) => `<option value="${p.name.replace(/"/g, "&quot;")}"></option>`)
-      .join("");
+    buildPlayerList(rostered);
 
     $("in-ruleset-b").innerHTML = `
       <option value="same">Same as 2022 (no change)</option>

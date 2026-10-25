@@ -384,6 +384,21 @@ def build_player_record(
     }
     season_teams_bio = {y: ids for y, ids in season_teams_bio.items() if ids}
 
+    # The statline the /people hydrate has always returned and the pipeline has
+    # always discarded. Filtered to major league clubs for the same reason the
+    # season teams are: the splits carry minor league lines, and a Triple-A
+    # batting average on a page about major league service time would be wrong
+    # in a way nobody could see.
+    season_stats = {}
+    for year, groups in mlb.season_stats_from_bio(bio).items():
+        kept = {
+            g: {k: v for k, v in row.items() if k != "team_id"}
+            for g, row in groups.items()
+            if row.get("team_id") in mlb_ids
+        }
+        if kept:
+            season_stats[year] = kept
+
     debut = bio.get("mlbDebutDate")
     debut_date = dt.date.fromisoformat(debut) if debut else None
 
@@ -512,6 +527,23 @@ def build_player_record(
         "team_id": roster_entry.get("teamId"),
         "position": roster_entry.get("position"),
         "mlb_debut": debut,
+        # Age, not service time, is what the valuation literature is about.
+        # Fair (2008) estimates peak performance at 27.6 (OPS) / 28.3 (OBP) /
+        # 26.5 (ERA), and Solow & Krautmann (2020) forecast a contract's value
+        # by ageing the player through that curve -- so a 26-year-old rookie
+        # and a 22-year-old rookie have identical clocks and very different
+        # remaining value. See research/valuation-literature.md.
+        #
+        # It costs nothing to store: /people is already fetched for every
+        # player and its response has carried birthDate all along. We simply
+        # threw it away.
+        "birth_date": bio.get("birthDate"),
+        # Season-by-season statline, keyed by year. Costs no extra API call --
+        # see season_stats_from_bio(). Stored on the record but NOT shipped in
+        # the compact table index: statlines are far larger than day counts and
+        # the index is 0.22 MB on purpose. They ride in the profile shards,
+        # which are fetched one at a time only when a profile is opened.
+        "season_stats": {str(y): v for y, v in sorted(season_stats.items())},
         # Persisted so a suspect number can be checked directly instead of
         # reverse-engineered. Without it there is no way to tell from the
         # published data where a retired player's clock was stopped, which is
@@ -576,7 +608,33 @@ def _rules_block() -> dict:
         "super_two_min_days": _RULES.require(
             "arbitration.super_two.heuristic_min_days"
         ),
+        # The league minimum is the one dollar figure this project can state as
+        # a FACT rather than an estimate: it is written into the agreement, not
+        # inferred from anything. It is what a pre-arbitration player is paid,
+        # which is a different question from what he is worth -- and the only
+        # one of the two this site can answer.
+        "mlb_minimum": _RULES.require("salary.mlb_minimum"),
+        "mlb_minimum_year": _RULES.require("salary.mlb_minimum_year"),
     }
+
+
+def _birth_year(player: dict) -> int | None:
+    """
+    Birth YEAR from the stored ISO birth date, or None.
+
+    None is the honest answer for a record written before birth_date was
+    persisted, and the browser must render it as "age unknown" rather than
+    computing an age from a missing field -- the same discipline as the null
+    tax rates. Every rostered player picks one up on the next daily run; the
+    non-rostered ones only on a recompute.
+    """
+    raw = player.get("birth_date")
+    if not raw:
+        return None
+    try:
+        return int(str(raw)[:4])
+    except (TypeError, ValueError):
+        return None
 
 
 def write_index(db: dict[str, dict], super_two_cutoff: dict | None = None) -> None:
@@ -657,6 +715,11 @@ def write_index(db: dict[str, dict], super_two_cutoff: dict | None = None) -> No
             # second copy of the rule in JS would be the exact drift the CBA
             # thresholds were consolidated to stop.
             1 if write_player_pages._should_publish(p) else 0,
+            # Birth year, not the full date. The contract tool needs to say how
+            # old a player will be when he reaches a threshold, which only
+            # needs the year; shipping the exact birthday would add a personal
+            # detail to a 0.22 MB payload for no gain in what the page can say.
+            _birth_year(p),
         ])
 
     payload = {
@@ -678,7 +741,7 @@ def write_index(db: dict[str, dict], super_two_cutoff: dict | None = None) -> No
         "rules": _rules_block(),
         "fields": [
             "id", "name", "team", "position", "days", "on_40_man",
-            "missing_seasons", "super_two", "has_page",
+            "missing_seasons", "super_two", "has_page", "birth_year",
         ],
         "players": rows,
     }
@@ -745,6 +808,10 @@ def write_profiles(db: dict[str, dict]) -> None:
             "missing_seasons": p.get("missing_seasons", 0),
             "first_transaction": p.get("first_transaction"),
             "seasons": seasons,
+            # Empty for any record written before this shipped. The tab says
+            # "not yet collected" rather than rendering blank cells, and the
+            # next full run fills it in.
+            "season_stats": p.get("season_stats") or {},
         }
 
     PROFILE_DIR.mkdir(parents=True, exist_ok=True)

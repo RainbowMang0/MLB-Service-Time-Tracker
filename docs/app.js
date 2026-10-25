@@ -950,6 +950,102 @@
     return { rows: seasons.slice(i), hidden: i };
   }
 
+  // -----------------------------------------------------------------------
+  // The stats tab.
+  //
+  // These statlines cost NO extra API call. The /people hydrate has always
+  // asked for yearByYear hitting and pitching, and the pipeline read one field
+  // out of each split -- the team id -- discarding the rest unread. Third time
+  // this project has found data it was already paying for: `by_season` became
+  // the profiles, `birthDate` became the age column, this is the statline.
+  //
+  // WHAT IS NOT HERE, AND WHY. No WAR: it is not a field MLB's API publishes.
+  // bWAR and fWAR are Baseball-Reference's and FanGraphs' own computed
+  // metrics, and both sites' terms prohibit automated extraction -- the same
+  // line this project already drew over B-R's service-time figures. No salary
+  // or earnings: no free, permitted, machine-readable source exists.
+  // -----------------------------------------------------------------------
+
+  // Column order is the order a box score uses, so the table reads the way a
+  // baseball reader expects rather than the way the JSON happens to arrive.
+  const HIT_COLS = [
+    ["gamesPlayed", "G"], ["atBats", "AB"], ["runs", "R"], ["hits", "H"],
+    ["doubles", "2B"], ["triples", "3B"], ["homeRuns", "HR"], ["rbi", "RBI"],
+    ["baseOnBalls", "BB"], ["strikeOuts", "SO"], ["stolenBases", "SB"],
+    ["avg", "AVG"], ["obp", "OBP"], ["slg", "SLG"], ["ops", "OPS"],
+  ];
+  const PIT_COLS = [
+    ["gamesPlayed", "G"], ["gamesStarted", "GS"], ["wins", "W"], ["losses", "L"],
+    ["saves", "SV"], ["inningsPitched", "IP"], ["hits", "H"],
+    ["earnedRuns", "ER"], ["homeRuns", "HR"], ["baseOnBalls", "BB"],
+    ["strikeOuts", "SO"], ["era", "ERA"], ["whip", "WHIP"],
+  ];
+
+  function statsTable(statsByYear, group, cols) {
+    const years = Object.keys(statsByYear)
+      .filter((y) => statsByYear[y] && statsByYear[y][group])
+      .sort();
+    if (!years.length) return "";
+
+    // Only columns some season actually carries. A table of empty columns
+    // implies the data is missing rather than inapplicable, and which keys a
+    // split returns is not something this project has verified against a live
+    // payload -- so the table renders what arrived.
+    const present = cols.filter(([key]) =>
+      years.some((y) => statsByYear[y][group][key] !== undefined)
+    );
+    if (!present.length) return "";
+
+    const head = present.map(([, label]) => `<th scope="col">${label}</th>`).join("");
+    const body = years
+      .map((y) => {
+        const row = statsByYear[y][group];
+        const cells = present
+          .map(([key]) => `<td class="num-col">${row[key] === undefined ? "—" : esc(row[key])}</td>`)
+          .join("");
+        return `<tr><td class="num-col">${esc(y)}</td>${cells}</tr>`;
+      })
+      .join("");
+
+    return `
+      <h3 class="stats-group">${group === "hitting" ? "Hitting" : "Pitching"}</h3>
+      <div class="season-table-wrap">
+        <table class="season-table stats-table">
+          <thead><tr><th scope="col">Season</th>${head}</tr></thead>
+          <tbody>${body}</tbody>
+        </table>
+      </div>`;
+  }
+
+  function renderStatsPanel(profile) {
+    const stats = profile.season_stats || {};
+    const tables =
+      statsTable(stats, "hitting", HIT_COLS) + statsTable(stats, "pitching", PIT_COLS);
+
+    if (!tables) {
+      return `
+        <p class="profile-empty">
+          No major league statline has been collected for this player yet.
+          Statistics are written by the daily job; a record computed before
+          they were collected fills in on the next run. A player who has never
+          appeared in a major league game will not have one at all.
+        </p>`;
+    }
+
+    return `
+      ${tables}
+      <p class="profile-foot">
+        Major league seasons only, as reported by the MLB Stats API. A player
+        traded mid-season shows the club he finished the year with rather than
+        a combined line, because averaging rate statistics across two clubs
+        would invent a figure neither club's record contains.
+        <b>No WAR and no salary.</b> WAR is not published by MLB's API — the
+        public versions are Baseball-Reference's and FanGraphs' own
+        calculations, and neither permits automated extraction. Earnings need
+        salary data this project has no permitted source for.
+      </p>`;
+  }
+
   function renderProfile(profile, teams) {
     const body = el("profile-body");
     if (!body) return;
@@ -1052,6 +1148,15 @@
         }</dd></div>
       </dl>
       ${careerStrip(seasons, teams)}
+
+      <div class="profile-tabs" role="tablist" aria-label="Player detail">
+        <button type="button" role="tab" id="tab-service" aria-controls="pane-service"
+                aria-selected="true" class="profile-tab">Service time</button>
+        <button type="button" role="tab" id="tab-stats" aria-controls="pane-stats"
+                aria-selected="false" tabindex="-1" class="profile-tab">Statistics</button>
+      </div>
+
+      <div id="pane-service" role="tabpanel" aria-labelledby="tab-service">
       ${gapNote}
       ${trimNote}
       <div class="season-table-wrap">
@@ -1073,7 +1178,50 @@
         ${FULL_YEAR_DAYS} no matter how many days a player spends on a roster, so
         the running total advances by at most 1.000 per year. Hover a starred
         figure or a label in the last column for detail.
-      </p>`;
+      </p>
+      </div>
+
+      <div id="pane-stats" role="tabpanel" aria-labelledby="tab-stats" hidden>
+        ${renderStatsPanel(profile)}
+      </div>`;
+
+    wireProfileTabs(body);
+  }
+
+  /**
+   * Tab switching, to the WAI-ARIA tabs pattern.
+   *
+   * Arrow keys move between tabs and only the selected tab is in the tab
+   * order, which is what distinguishes a tablist from a row of buttons. The
+   * site already shipped a control that announced itself as operable and was
+   * not -- the sortable table headers, mouse-only for months -- so a widget
+   * that claims role="tab" here has to behave like one.
+   */
+  function wireProfileTabs(body) {
+    const tabs = Array.from(body.querySelectorAll('[role="tab"]'));
+    if (!tabs.length) return;
+
+    const select = (tab) => {
+      for (const t of tabs) {
+        const on = t === tab;
+        t.setAttribute("aria-selected", on ? "true" : "false");
+        t.tabIndex = on ? 0 : -1;
+        const pane = body.querySelector("#" + t.getAttribute("aria-controls"));
+        if (pane) pane.hidden = !on;
+      }
+      tab.focus();
+    };
+
+    for (const tab of tabs) {
+      tab.addEventListener("click", () => select(tab));
+      tab.addEventListener("keydown", (e) => {
+        const i = tabs.indexOf(tab);
+        if (e.key === "ArrowRight") { e.preventDefault(); select(tabs[(i + 1) % tabs.length]); }
+        else if (e.key === "ArrowLeft") { e.preventDefault(); select(tabs[(i - 1 + tabs.length) % tabs.length]); }
+        else if (e.key === "Home") { e.preventDefault(); select(tabs[0]); }
+        else if (e.key === "End") { e.preventDefault(); select(tabs[tabs.length - 1]); }
+      });
+    }
   }
 
   function openProfile(playerId) {

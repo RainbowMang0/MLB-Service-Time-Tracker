@@ -143,6 +143,82 @@ def season_teams_from_bio(bio: dict) -> dict[int, list[int]]:
     return {year: sorted(ids) for year, ids in out.items()}
 
 
+# The statline keys worth publishing, per group. A WHITELIST rather than
+# "keep everything": the /people hydrate returns a wide object per season and
+# the profile shards are deliberately small (~12 KB), so shipping every field
+# for 5,592 players would undo the payload work that split them in the first
+# place.
+#
+# Keys are what MLB's yearByYear splits are documented to use. They are NOT
+# verified against a live payload -- this sandbox has no route to
+# statsapi.mlb.com -- so season_stats_from_bio() keeps whatever it FINDS and
+# never requires a key to be present. A missing key yields a thinner row, not
+# an exception, and a key we guessed wrong simply never appears.
+#
+# That is the lesson of the schedule fixture: a fixture written from an
+# assumption about a payload tests the assumption, not the payload.
+HITTING_KEYS = (
+    "gamesPlayed", "atBats", "runs", "hits", "doubles", "triples",
+    "homeRuns", "rbi", "baseOnBalls", "strikeOuts", "stolenBases",
+    "avg", "obp", "slg", "ops",
+)
+
+PITCHING_KEYS = (
+    "gamesPlayed", "gamesStarted", "wins", "losses", "saves",
+    "inningsPitched", "strikeOuts", "baseOnBalls", "hits", "earnedRuns",
+    "homeRuns", "era", "whip",
+)
+
+_STAT_KEYS = {"hitting": HITTING_KEYS, "pitching": PITCHING_KEYS}
+
+
+def season_stats_from_bio(bio: dict) -> dict[int, dict]:
+    """
+    {season year -> {"hitting": {...}, "pitching": {...}}} from a hydrated bio.
+
+    The pipeline has ALWAYS fetched this. BIO_SEASON_TEAMS_HYDRATE asks for
+    yearByYear hitting and pitching on the /people call made for every player,
+    and season_teams_from_bio() reads exactly one field out of each split --
+    the team id -- discarding the entire statline unread. This reads it.
+
+    Third time this project has found data it was already paying for and
+    throwing away: `by_season` became the profiles, `birthDate` became the age
+    column, and this is the statline.
+
+    Team ids are NOT filtered here, for the same reason season_teams_from_bio()
+    does not filter them: this module has no business deciding which ids are
+    major league ones. A split carrying a minor league team id is dropped by
+    the caller, which knows the 30 club ids.
+    """
+    out: dict[int, dict] = {}
+    for group in bio.get("stats") or []:
+        name = ((group.get("group") or {}).get("displayName") or "").lower()
+        keys = _STAT_KEYS.get(name)
+        if not keys:
+            continue
+        for split in group.get("splits") or []:
+            season = split.get("season")
+            stat = split.get("stat") or {}
+            team_id = (split.get("team") or {}).get("id")
+            if season is None or not stat:
+                continue
+            try:
+                year = int(season)
+            except (TypeError, ValueError):
+                continue
+            # Keep what is there; never require a key.
+            row = {k: stat[k] for k in keys if stat.get(k) not in (None, "")}
+            if not row:
+                continue
+            row["team_id"] = team_id
+            # A player traded mid-season has two splits in the same year. The
+            # later one wins rather than the two being summed: summing rate
+            # stats (avg, era, ops) is simply wrong, and this project would
+            # rather show one club's real line than an invented combined one.
+            out.setdefault(year, {})[name] = row
+    return out
+
+
 def get_player_transactions(
     player_id: int,
     start_date: dt.date,
