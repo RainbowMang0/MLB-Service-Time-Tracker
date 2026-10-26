@@ -4026,6 +4026,58 @@ The 2026-27 cutoff is not official yet — MLBTR's estimate has moved between
 the real figure lands, add it as a sixth row: it is the first one that will
 have been predicted before publication rather than checked afterwards.
 
+### And the page was calling that prediction a fact
+
+**Found 2026-10-26**, the same day, by reading the tile tooltip as a visitor
+would rather than as the author of the arithmetic behind it. It opened:
+
+> "The Super Two cutoff after the 2026 season **was** 2.127, measured from
+> this project's own data"
+
+**MLB has not published a 2026 cutoff.** It is announced in November, so for
+the whole stretch between the end of a season and that announcement the figure
+is a *prediction* — and the sentence stated it in the past tense, as MLB's
+number, in the same breath as admitting it came from ours.
+
+It then closed with *"Next offseason's cutoff will differ"*, which is worse in
+a subtler way: `super_two.py` computes the **latest complete** season, and
+right now that class is **exactly** the one the imminent offseason decides. So
+the sentence told the reader the figure was a stale proxy for a future
+boundary when it *is* that boundary. Both halves were backwards, and in
+opposite directions, which is why neither looked wrong on its own.
+
+**Which claim is true is now asked of the data**, never inferred from the
+calendar — the same discipline as `latest_complete_season()`. The
+discriminator is whether `super_two_published.by_season` carries the season we
+computed:
+
+| | reads |
+|---|---|
+| not published yet | "MLB has not set that cutoff yet … the figure above is a prediction, not a published number" |
+| published | "MLB published 2.140 for that season, so the figure above is this project's estimate of a number that is already known" |
+
+Both branches then cite the measured record — within a day once, up to twelve
+days out at worst — because a prediction that does not carry its own error bar
+is the thing this file has spent two months refusing to publish.
+
+⚠️ **A third tense error in the same string**, easy to miss because it reads
+as grammar rather than a claim: "the top 22% of them (38) **qualified** for
+arbitration a year early". Nobody has qualified — the line is not drawn. Now
+"**reach** arbitration a year early", stating the *rule* rather than an event,
+which is correct in both branches and needs no third conditional.
+
+⚠️ **The inner `esc()` calls were double-escaping.** `renderStatTiles()`
+escapes the whole `title` once at the render site, so the `esc(pub.low)` in
+the spread text was a second pass. Harmless on `"2.116"` and wrong in
+principle; removed rather than propagated. **Check where a string is escaped
+before escaping it again** — every other `title` in that array is built raw
+for exactly this reason.
+
+Pinned by `test_an_unpublished_cutoff_is_called_a_prediction_not_a_fact()`,
+which also asserts the live payload is *in* the prediction case: a cutoff
+computed for a season MLB has already announced would mean `super_two.py` is a
+season behind, which is its own bug.
+
 ## The player profile vision, and what each part costs (2026-09-11)
 
 Owner's picture: a visitor clicks a name and gets a full profile — service

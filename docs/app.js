@@ -401,20 +401,47 @@
    * hand-entered reference file. With no published figure the claim is
    * dropped entirely rather than rebuilt from our own estimates, which is
    * what made the old wording wrong in the first place.
+   *
+   * It also has to say which KIND of figure ours is, and that changes within
+   * the year. The season we compute is the latest COMPLETE one, so from the
+   * end of a season until MLB announces in November our figure is a
+   * prediction of a number that does not exist yet; after that it is a check
+   * against one that does. The tooltip said "the cutoff after the 2026
+   * season WAS 2.127" through the whole of that first window -- asserting a
+   * figure nobody had published as settled fact -- and then told the reader
+   * "next offseason's cutoff will differ", which framed the live prediction
+   * as a stale proxy for itself. Both halves were backwards.
+   *
+   * Takes the cutoff rather than reading the closure variable so the branch
+   * is testable and so the two cannot disagree about which season is meant.
    */
-  function superTwoSpread() {
+  function superTwoSpread(cutoff) {
     const pub = superTwoPublished;
     if (!pub || !pub.low || !pub.high || !pub.seasons) {
-      return "Next offseason's cutoff will differ, so a player near the line could land either side.";
+      return "MLB sets the official cutoff each offseason; the figure above is this project's own estimate of it.";
     }
     const [from, to] = pub.seasons;
+    // Whether ours is a PREDICTION or a CHECK is decided by whether MLB has
+    // published a figure for the season we computed -- asked of the data,
+    // never inferred from the date, for the same reason
+    // latest_complete_season() measures rather than assumes.
+    const published = (pub.by_season || {})[String(cutoff && cutoff.season)];
+    const record =
+      `Checked against the ${pub.count} seasons MLB has published ` +
+      `(${from}–${to}, which ranged ${pub.low} to ${pub.high}), this method came ` +
+      `within a day once and was up to twelve days out at worst.`;
+    if (published) {
+      return (
+        `MLB published ${published} for that season, so the figure above is this ` +
+        `project's estimate of a number that is already known. ${record} Next ` +
+        `offseason's cutoff will differ again, so a player near the line could ` +
+        `land either side.`
+      );
+    }
     return (
-      `Next offseason's cutoff will differ — the published cutoff ranged ` +
-      `${esc(pub.low)} to ${esc(pub.high)} across ${from}–${to} — so a player near ` +
-      `the line could land either side. The figure above is this project's own ` +
-      `estimate of that boundary, not the published one; checked against those ` +
-      `${pub.count} seasons it came within a day once and up to twelve days out ` +
-      `at worst, so treat it as approximate.`
+      `MLB has not set that cutoff yet — it is normally announced in November — ` +
+      `so the figure above is a prediction, not a published number. ${record} A ` +
+      `player within a couple of weeks of the line could land either side.`
     );
   }
 
@@ -481,11 +508,11 @@
         value: superTwo,
         accent: "accent-serious",
         title: superTwoCutoff
-          ? `The Super Two cutoff after the ${superTwoCutoff.season} season was ` +
-            `${superTwoCutoff.cutoff}, measured from this project's own data: ` +
+          ? `This project's own data puts the Super Two boundary after the ` +
+            `${superTwoCutoff.season} season at ${superTwoCutoff.cutoff}: ` +
             `${superTwoCutoff.class_size} players finished that year between 2.000 and ` +
             `3.000 years, and the top 22% of them (${superTwoCutoff.qualifying_count}) ` +
-            `qualified for arbitration a year early. Listed here are players at or above ` +
+            `reach arbitration a year early. Listed here are players at or above ` +
             `that line who have also accrued 86+ days in ` +
             `${superTwoCutoff.qualifying_season || superTwoCutoff.season}, the second ` +
             `half of the rule. ` +
@@ -496,7 +523,7 @@
               ? `While that season is still being played a player can cross 86 ` +
                 `days and join this list. `
               : `That season is complete, so this list no longer changes on it. `) +
-            superTwoSpread()
+            superTwoSpread(superTwoCutoff)
           : "",
       },
     ];

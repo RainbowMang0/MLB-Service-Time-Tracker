@@ -1810,6 +1810,52 @@ def test_the_super_two_prose_quotes_published_figures_not_our_own():
     check("index.json carries super_two_published", bool(ix.get("super_two_published")))
 
 
+def test_an_unpublished_cutoff_is_called_a_prediction_not_a_fact():
+    """
+    The season super_two.py computes is the latest COMPLETE one, so between
+    the end of a season and MLB's November announcement our cutoff is a
+    prediction of a figure that does not exist yet. The tooltip said
+
+        "The Super Two cutoff after the 2026 season WAS 2.127,
+         measured from this project's own data"
+
+    through the whole of that window -- MLB's number, past tense, asserted as
+    settled, in the same breath as admitting it came from our own data. And it
+    then closed with "Next offseason's cutoff will differ", which frames the
+    live prediction as a stale proxy for itself. Both halves were backwards.
+
+    Which claim is true is asked of the published history rather than inferred
+    from the calendar, the same discipline as latest_complete_season().
+    """
+    import update_service_time as u
+
+    ROOT = pathlib.Path(__file__).resolve().parents[1]
+    app = (ROOT / "docs" / "app.js").read_text()
+
+    check("no sentence asserts MLB's cutoff in the past tense",
+          "season was `" not in app and "Super Two cutoff after the" not in app)
+    check("the branch is keyed on the published history",
+          "pub.by_season || {})[String(cutoff" in app)
+    check("the unpublished branch says prediction",
+          "a prediction, not a published number" in app)
+    check("the published branch says the number is already known",
+          "a number that is already known" in app)
+    check("the rule is stated without tensing it to an event",
+          "reach arbitration a year early" in app)
+
+    # And the live payload must actually be in the prediction case: a cutoff
+    # computed for a season MLB has already published would mean super_two.py
+    # is a season behind, which is its own bug.
+    ix = json.loads((ROOT / "docs" / "data" / "index.json").read_text())
+    cut = ix.get("super_two_cutoff") or {}
+    hist = (ix.get("super_two_published") or {}).get("by_season") or {}
+    check("a cutoff is published for the table", bool(cut.get("cutoff")))
+    check("the computed season is the one not yet announced",
+          str(cut.get("season")) not in hist)
+    check("every published season precedes it",
+          all(int(y) < int(cut["season"]) for y in hist))
+
+
 def test_the_page_does_not_claim_a_finished_season_is_still_being_played():
     """
     "While that season is still being played a player can cross 86 days and
@@ -2800,6 +2846,7 @@ if __name__ == "__main__":
     test_a_malformed_or_empty_bio_yields_no_statline_rather_than_an_error()
     test_the_stats_tab_states_that_war_and_salary_are_absent()
     test_the_super_two_prose_quotes_published_figures_not_our_own()
+    test_an_unpublished_cutoff_is_called_a_prediction_not_a_fact()
     test_the_page_does_not_claim_a_finished_season_is_still_being_played()
     test_the_site_nav_is_the_same_on_every_page()
     test_the_two_unfinished_tools_are_marked_in_the_nav()
