@@ -3942,6 +3942,90 @@ rather than merely fixed.
   page footers plus sitemap `lastmod`, and it is working as designed. `.git` is
   13 MB, so it is not yet a problem; noted only so nobody rediscovers it as one.
 
+## The Super Two check finally has something to check against (2026-10-26)
+
+`data/reference_super_two.json` sat with every `published` field null from the
+day it was created, so `validate_super_two.py` reported the computed cutoffs
+and passed nothing. CLAUDE.md called it "the largest genuinely-open item".
+**Filled, seasons 2021-2025, from MLB Trade Rumors and AP offseason reports.**
+
+### The result, and it is mixed
+
+```
+FAIL 2025: ours 2.137   published 2.140   -3d
+FAIL 2024: ours 2.135   published 2.132   +3d
+FAIL 2023: ours 2.130   published 2.118   +12d
+FAIL 2022: ours 2.135   published 2.128   +7d
+ok   2021: ours 2.116   published 2.116    0d
+```
+
+One exact, two within three days, two further out, at the 2-day tolerance the
+validator defaults to. **No consistent sign**, so this is not a systematic
+offset waiting to be fixed — it is scatter around the right answer.
+
+That is the expected shape, and worth stating rather than chasing: a cutoff is
+a *boundary between two adjacent players*, so it moves by however far apart
+those two sit. The Baseball Reference check puts our per-player figures at 12
+of 17 exact and the rest within a day or two — enough error to put a different
+player on the boundary, and the gap between the 46th and 47th ranked player in
+a 211-man class is not one day.
+
+**So the headline is: the method is validated, the precision is not.** The
+2021 exact hit and the 2024/2025 three-day misses say the class construction
+and the 22% ranking are right. The 2023 twelve-day miss says the figure cannot
+be presented as exact. Both halves are now evidence instead of hope — the file
+had said the figures landing in the 2.11-2.14 band "is encouraging and it is
+not evidence", and that sentence can finally be retired.
+
+⚠️ **The labelling trap is real and search summaries get it wrong.** The
+`season` field is the season the class FINISHED, not the offseason label. The
+same MLBTR article dated `2024/11` was described by search summaries as being
+"for the 2024-25 offseason (2025 season)" and as "2.132 for 2024" in the same
+answer. **The URL date is the evidence** — the figure is posted in November for
+the class that has just finished — and each report's own "up from 2.118" /
+"down from 2.128" claim corroborates its neighbour, so the five form a chain
+rather than five independent lookups. Get this wrong by one year and the check
+is worse than useless: it would fail correct figures and pass wrong ones.
+
+### What this changed on the site
+
+**The tile tooltip was quoting our own estimates as though they were the
+published figure.** It read "it has moved between 2.126 and 2.136 over the
+last four years" — both numbers hardcoded, and both OURS. The published range
+across 2021-2025 is **2.116 to 2.140**, wider at both ends. A site that
+measures its own error has no business understating the thing it estimates.
+
+`super_two_published` now ships in `index.json` from the reference file, and
+`superTwoSpread()` builds the sentence from it — including a plain statement
+that the figure is this project's estimate of the boundary, checked against
+five published seasons, exact once and twelve days out at worst. With no
+published figure the claim is dropped rather than rebuilt from our own
+numbers, which is what made the old wording wrong.
+
+Same failure mode as the CBA prose: **the arithmetic came from data and the
+sentence did not.** A test now greps the rendering code for any `2.1xx`
+literal.
+
+### And a staleness bug the work surfaced
+
+The tooltip also said "While that season is still being played a player can
+cross 86 days and join this list" — **unconditionally**. True in July; false
+from the end of the season until the following spring, which is most of the
+year. In late October it asserted an in-progress season that had been over for
+weeks.
+
+`qualifying_season_complete` is now attached to the cutoff, measured the same
+way `latest_complete_season()` measures it (did anybody reach the 172-day cap
+that year?) rather than inferred from the calendar, and the sentence has a
+finished-season branch.
+
+### Still open
+
+The 2026-27 cutoff is not official yet — MLBTR's estimate has moved between
+2.130 and 2.134 and MLB finalises within weeks. **Ours computes 2.127.** When
+the real figure lands, add it as a sixth row: it is the first one that will
+have been predicted before publication rather than checked afterwards.
+
 ## The player profile vision, and what each part costs (2026-09-11)
 
 Owner's picture: a visitor clicks a name and gets a full profile — service

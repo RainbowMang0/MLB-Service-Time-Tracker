@@ -57,6 +57,9 @@ from service_time import (  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "docs" / "data"
+# Hand-entered published Super Two cutoffs -- the only independent check
+# super_two.py has. See validate_super_two.py.
+REFERENCE_SUPER_TWO = ROOT / "data" / "reference_super_two.json"
 OUTPUT_FILE = DATA_DIR / "service_time.json"
 # The CBA agreement in force. Every threshold this pipeline publishes comes
 # from here rather than from a literal -- see scripts/cba.py.
@@ -637,6 +640,44 @@ def _birth_year(player: dict) -> int | None:
         return None
 
 
+def _published_super_two_history() -> dict | None:
+    """
+    The PUBLISHED Super Two cutoffs, from data/reference_super_two.json.
+
+    Shipped so the page can describe how the real cutoff moves instead of
+    quoting this project's own computed figures back at the reader. app.js
+    used to say the cutoff "has moved between 2.126 and 2.136 over the last
+    four years" -- both literals were OUR estimates, and the published range
+    over 2021-2025 is wider than that on both ends (2.116 to 2.140). A site
+    that measures its own error has no business understating the thing it is
+    estimating.
+
+    Returns None when no figure has been entered, so the UI drops the claim
+    rather than inventing a range from one point.
+    """
+    try:
+        rows = json.loads(REFERENCE_SUPER_TWO.read_text())
+    except (OSError, ValueError):
+        return None
+
+    figures = {
+        int(r["season"]): str(r["published"])
+        for r in rows
+        if isinstance(r, dict) and r.get("season") and r.get("published")
+    }
+    if not figures:
+        return None
+
+    return {
+        "seasons": [min(figures), max(figures)],
+        "low": min(figures.values()),
+        "high": max(figures.values()),
+        "count": len(figures),
+        "by_season": {str(k): v for k, v in sorted(figures.items(), reverse=True)},
+        "source": "MLB Trade Rumors / Associated Press offseason reports, entered by hand",
+    }
+
+
 def write_index(db: dict[str, dict], super_two_cutoff: dict | None = None) -> None:
     """
     Emit the compact file the frontend downloads.
@@ -736,6 +777,8 @@ def write_index(db: dict[str, dict], super_two_cutoff: dict | None = None) -> No
         "positions": positions,
         # Self-documenting, so the row layout is readable without the code.
         "super_two_cutoff": super_two_cutoff,
+        # What was actually published, as distinct from what we compute.
+        "super_two_published": _published_super_two_history(),
         # Shipping the thresholds here rather than making the browser fetch the
         # ruleset keeps the page to one request. See _rules_block().
         "rules": _rules_block(),

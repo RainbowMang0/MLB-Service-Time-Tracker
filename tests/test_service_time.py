@@ -1772,6 +1772,77 @@ def test_the_stats_tab_states_that_war_and_salary_are_absent():
           not re.search(r'\["war"|"WAR"\]', app, re.I))
 
 
+def test_the_super_two_prose_quotes_published_figures_not_our_own():
+    """
+    The tile's tooltip told the reader the cutoff "has moved between 2.126 and
+    2.136 over the last four years". Both literals were THIS PROJECT'S OWN
+    computed cutoffs, quoted back as though they described the published
+    figure -- and the published range over 2021-2025 is 2.116 to 2.140, wider
+    at both ends. A site that measures its own error must not understate the
+    thing it is estimating.
+
+    Same failure as the CBA prose: the arithmetic came from data and the
+    sentence did not.
+    """
+    import re
+    import update_service_time as u
+
+    ROOT = pathlib.Path(__file__).resolve().parents[1]
+    app = (ROOT / "docs" / "app.js").read_text()
+
+    # No hardcoded cutoff literal in anything that RENDERS. Block comments are
+    # stripped first: the only remaining mentions sit in the comment recording
+    # why those two numbers were wrong, and a number in a comment cannot reach
+    # a reader. (The advice lint in the contract tests greps comments too, but
+    # that guards a PHRASE someone might paste into copy; this guards a value
+    # being interpolated, which a comment cannot do.)
+    code = re.sub(r'/\*.*?\*/', '', app, flags=re.S)
+    stray = re.findall(r'\b2\.1\d\d\b', code)
+    check("no Super Two cutoff literal survives in app.js", stray == [])
+
+    hist = u._published_super_two_history()
+    check("published history reaches the payload", bool(hist))
+    check("it spans more than one season", hist and hist["count"] >= 2)
+    check("the range comes from published figures",
+          hist and hist["low"] == "2.116" and hist["high"] == "2.140")
+
+    ix = json.loads((ROOT / "docs" / "data" / "index.json").read_text())
+    check("index.json carries super_two_published", bool(ix.get("super_two_published")))
+
+
+def test_the_page_does_not_claim_a_finished_season_is_still_being_played():
+    """
+    "While that season is still being played a player can cross 86 days and
+    join this list" was unconditional. True in July; false from the end of the
+    season until the following spring, which is most of the year -- so in late
+    October it asserted an in-progress season that had been over for weeks.
+
+    Whether the season is finished is MEASURED, the same way
+    latest_complete_season() measures it, rather than inferred from the
+    calendar.
+    """
+    import sys as _sys
+    _sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "scripts"))
+    import super_two
+
+    ROOT = pathlib.Path(__file__).resolve().parents[1]
+    app = (ROOT / "docs" / "app.js").read_text()
+    check("the in-progress sentence is conditional",
+          "qualifying_season_complete === false" in app)
+    check("and a finished season gets its own wording",
+          "no longer changes on it" in app)
+
+    # A season somebody completed is complete; one nobody has is not.
+    db = {
+        "1": {"id": 1, "seasons": [{"y": 2030, "d": super_two.FULL_YEAR_DAYS}]},
+        "2": {"id": 2, "seasons": [{"y": 2031, "d": 40}]},
+    }
+    check("a capped season reads complete",
+          super_two._max_days_in(db, 2030) >= super_two.FULL_YEAR_DAYS)
+    check("a part-played season does not",
+          super_two._max_days_in(db, 2031) < super_two.FULL_YEAR_DAYS)
+
+
 def test_the_site_nav_is_the_same_on_every_page():
     """
     The navigation lands in nine places -- four hand-written pages and five
@@ -2728,6 +2799,8 @@ if __name__ == "__main__":
     test_statlines_are_read_from_the_bio_the_pipeline_already_fetches()
     test_a_malformed_or_empty_bio_yields_no_statline_rather_than_an_error()
     test_the_stats_tab_states_that_war_and_salary_are_absent()
+    test_the_super_two_prose_quotes_published_figures_not_our_own()
+    test_the_page_does_not_claim_a_finished_season_is_still_being_played()
     test_the_site_nav_is_the_same_on_every_page()
     test_the_two_unfinished_tools_are_marked_in_the_nav()
     test_the_nav_marks_the_current_page_with_aria_current()

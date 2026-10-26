@@ -172,6 +172,9 @@
   // it depends on where a player ranks in the league-wide 2-3 year class, so
   // the pipeline computes it (see scripts/super_two.py) and ships a flag.
   let superTwoCutoff = null;
+  // The PUBLISHED cutoffs, for describing how the real boundary moves.
+  // Null on any payload without them, and superTwoSpread() drops the claim.
+  let superTwoPublished = null;
 
   /**
    * Rebuild the player objects the rest of this file expects.
@@ -385,6 +388,36 @@
     return true;
   }
 
+  /**
+   * How far the real cutoff moves, and how close ours has come to it.
+   *
+   * This sentence used to read "it has moved between 2.126 and 2.136 over the
+   * last four years" with both numbers hardcoded -- and both were OUR OWN
+   * computed cutoffs, quoted back at the reader as though they described the
+   * published figure. The actual published range over 2021-2025 is 2.116 to
+   * 2.140, wider at both ends.
+   *
+   * It now comes from `super_two_published` in the payload, which is the
+   * hand-entered reference file. With no published figure the claim is
+   * dropped entirely rather than rebuilt from our own estimates, which is
+   * what made the old wording wrong in the first place.
+   */
+  function superTwoSpread() {
+    const pub = superTwoPublished;
+    if (!pub || !pub.low || !pub.high || !pub.seasons) {
+      return "Next offseason's cutoff will differ, so a player near the line could land either side.";
+    }
+    const [from, to] = pub.seasons;
+    return (
+      `Next offseason's cutoff will differ — the published cutoff ranged ` +
+      `${esc(pub.low)} to ${esc(pub.high)} across ${from}–${to} — so a player near ` +
+      `the line could land either side. The figure above is this project's own ` +
+      `estimate of that boundary, not the published one; checked against those ` +
+      `${pub.count} seasons it came within a day once and up to twelve days out ` +
+      `at worst, so treat it as approximate.`
+    );
+  }
+
   function renderStatTiles(players) {
     const total = players.length;
     const rostered = players.filter((p) => p.on_40_man);
@@ -455,10 +488,15 @@
             `qualified for arbitration a year early. Listed here are players at or above ` +
             `that line who have also accrued 86+ days in ` +
             `${superTwoCutoff.qualifying_season || superTwoCutoff.season}, the second ` +
-            `half of the rule. While that season is still being played a player can ` +
-            `cross 86 days and join this list. Next offseason's cutoff will differ — it ` +
-            `has moved between 2.126 and 2.136 over the last four years — so a player ` +
-            `near the line could land either side.`
+            `half of the rule. ` +
+            // Only while the season is actually running. Unconditional, this
+            // told a reader in late October that a season finished weeks
+            // earlier was still being played.
+            (superTwoCutoff.qualifying_season_complete === false
+              ? `While that season is still being played a player can cross 86 ` +
+                `days and join this list. `
+              : `That season is complete, so this list no longer changes on it. `) +
+            superTwoSpread()
           : "",
       },
     ];
@@ -1383,6 +1421,7 @@
     const rows = data.players || [];
     allPlayers = Array.isArray(rows[0]) ? hydrate(data) : rows;
     superTwoCutoff = data.super_two_cutoff || null;
+    superTwoPublished = data.super_two_published || null;
     renderMeta(data);
     renderStatTiles(allPlayers);
     populateTeamFilter(allPlayers);

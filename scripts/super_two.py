@@ -291,4 +291,18 @@ def apply_super_two(db: dict[str, dict], reference_year: int) -> dict | None:
 
     cutoff["projected_candidates"] = eligible
     cutoff["qualifying_season"] = season_tested
+    # Is the season the 86-day test runs against actually finished?
+    #
+    # The page tells a reader that a player can still cross 86 days and join
+    # the list "while that season is still being played" -- true in July, and
+    # false from the moment the season ends, which is most of the year. It was
+    # unconditional, so in late October it asserted an in-progress season that
+    # had been over for weeks.
+    #
+    # Measured the same way latest_complete_season() measures it, rather than
+    # inferred from the calendar: if anybody reached the cap that year, the
+    # year has run its course.
+    cutoff["qualifying_season_complete"] = (
+        _max_days_in(db, season_tested) >= FULL_YEAR_DAYS
+    )
     return cutoff

@@ -23,37 +23,44 @@
       "Rows with `published` left null are skipped, so partial completion is",
       "fine. `ours` is filled in by the validator at run time and is not",
       "input -- do not paste computed values into `published`, that would",
-      "make the check vacuous."
+      "make the check vacuous.",
+      "",
+      "ENTERED 2026-10-26, seasons 2021-2025. The season/offseason labelling is the one thing to get right and search summaries get it wrong: several described an article dated 2024/11 as being 'for the 2025 season'. The URL date is the evidence -- the figure is posted in November for the class that has just finished that season -- and each report's own 'up from'/'down from' claim corroborates its neighbour, so the five form a chain rather than five independent guesses."
     ]
   },
   {
     "season": 2025,
-    "published": null,
-    "source": "MLB Trade Rumors offseason report",
-    "note": ""
+    "published": "2.140",
+    "source": "MLB Trade Rumors / Associated Press, offseason report",
+    "note": "Reported November 2025 (ESPN and AP, 34 Super Twos; Matt McLain last above the line). MLBTR had trailed it at 2.140 in mlbtraderumors.com/2025/10/super-two-cutoff-expected-to-be-around-2-140-years-of-service.html; the November figure is the official one.",
+    "entered": "2026-10-26"
   },
   {
     "season": 2024,
-    "published": null,
-    "source": "MLB Trade Rumors offseason report",
-    "note": ""
+    "published": "2.132",
+    "source": "MLB Trade Rumors / Associated Press, offseason report",
+    "note": "mlbtraderumors.com/2024/11/super-two-status-set-at-2-132-years-of-service.html -- reported as up from 2.118 the previous winter, which corroborates the 2023 row.",
+    "entered": "2026-10-26"
   },
   {
     "season": 2023,
-    "published": null,
-    "source": "MLB Trade Rumors offseason report",
-    "note": ""
+    "published": "2.118",
+    "source": "MLB Trade Rumors / Associated Press, offseason report",
+    "note": "mlbtraderumors.com/2023/11/super-two-status-set-at-2-118-years-of-service.html -- reported as down from 2.128, corroborating 2022.",
+    "entered": "2026-10-26"
   },
   {
     "season": 2022,
-    "published": null,
-    "source": "MLB Trade Rumors offseason report",
-    "note": ""
+    "published": "2.128",
+    "source": "MLB Trade Rumors / Associated Press, offseason report",
+    "note": "mlbtraderumors.com/2022/11/super-two-status-set-at-2-128-years-of-service.html -- Ronald Blum, Associated Press; reported as a slight increase on 2.116, corroborating 2021.",
+    "entered": "2026-10-26"
   },
   {
     "season": 2021,
-    "published": null,
-    "source": "MLB Trade Rumors offseason report",
-    "note": ""
+    "published": "2.116",
+    "source": "MLB Trade Rumors / Associated Press, offseason report",
+    "note": "mlbtraderumors.com/2021/11/super-two-status-set-at-2-116-years-of-service.html",
+    "entered": "2026-10-26"
   }
 ]

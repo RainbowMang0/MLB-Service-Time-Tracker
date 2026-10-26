@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T18:00:03+00:00",
+  "generated_at": "2026-10-26T14:25:20+00:00",
   "source": "MLB Stats API (statsapi.mlb.com, unofficial public endpoint)",
   "disclaimer": "Service time figures are ESTIMATES computed from public roster transaction records, not official MLB/MLBPA figures. Where the transaction feed cannot see the start of a player's career, his figure is a floor rather than an estimate and the table says so.",
   "rules": {
@@ -22,7 +22,8 @@
     "qualifying_count": 38,
     "method": "top 22% of the 176 players at 2.000-3.000 years after the 2026 season, who also accrued 86+ days that year",
     "projected_candidates": 33,
-    "qualifying_season": 2026
+    "qualifying_season": 2026,
+    "qualifying_season_complete": true
   },
   "incomplete_history_count": 1150,
   "players": [
