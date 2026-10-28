@@ -46,14 +46,28 @@ import pathlib
 
 CONFIG_DIR = pathlib.Path(__file__).resolve().parents[1] / "config" / "cba"
 
-# Hand-maintained Rookie of the Year full-year service credits. It sits beside
-# config/cba/ rather than inside it because it is cross-season reference data
-# (a list of settled facts), not a versioned ruleset -- the full-year VALUE it
-# grants comes from whichever ruleset is in force.
-ROY_AWARDS_PATH = CONFIG_DIR.parent / "roy_full_year_awards.json"
+# Hand-maintained Rookie of the Year full-year service credits. It lives IN
+# config/cba/ beside the rulesets -- it is CBA data -- but it is reference data
+# (a list of settled facts), not a versioned ruleset, so the full-year VALUE it
+# grants still comes from whichever ruleset is in force. Ruleset discovery
+# (available_versions, load's "available" list) must skip it; see
+# _ruleset_paths().
+ROY_AWARDS_FILENAME = "roy_full_year_awards.json"
+ROY_AWARDS_PATH = CONFIG_DIR / ROY_AWARDS_FILENAME
 
 # The agreement in force. Bump this when a successor is signed and filled in.
 DEFAULT_VERSION = "2022"
+
+
+def _ruleset_paths() -> list[pathlib.Path]:
+    """Every *.json in config/cba/ that is a ruleset -- i.e. not the ROY list.
+
+    A new ruleset is one JSON file dropped in here, so discovery globs the
+    directory; the one non-ruleset file that also lives here is filtered out by
+    name rather than by inspecting contents, so an empty or malformed ruleset
+    still shows up (and fails loudly) instead of silently vanishing.
+    """
+    return [p for p in CONFIG_DIR.glob("*.json") if p.name != ROY_AWARDS_FILENAME]
 
 
 class RulesetError(Exception):
@@ -205,8 +219,8 @@ class Ruleset:
 def load(version: str = DEFAULT_VERSION) -> Ruleset:
     """Load and cache one ruleset by version string."""
     path = CONFIG_DIR / f"{version}.json"
-    if not path.exists():
-        available = ", ".join(sorted(p.stem for p in CONFIG_DIR.glob("*.json"))) or "none"
+    if not path.exists() or path.name == ROY_AWARDS_FILENAME:
+        available = ", ".join(sorted(p.stem for p in _ruleset_paths())) or "none"
         raise MissingRulesetValue(
             f"no CBA ruleset {version!r} at {path} (available: {available})"
         )
@@ -221,13 +235,15 @@ def default() -> Ruleset:
 
 
 def available_versions() -> list[str]:
-    return sorted(p.stem for p in CONFIG_DIR.glob("*.json"))
+    """Ruleset versions in config/cba/. Excludes the ROY list, which lives in
+    the same directory but is not a ruleset."""
+    return sorted(p.stem for p in _ruleset_paths())
 
 
 # --- Rookie of the Year full-year credits ----------------------------------
 # The list of players the 2022 CBA's Prospect Promotion Incentive credited a
 # full service year (a top-two Rookie of the Year finish). See
-# config/roy_full_year_awards.json. Loaded here so the one place that reads
+# config/cba/roy_full_year_awards.json. Loaded here so the one place that reads
 # config also validates it, the same way a ruleset's sources are enforced.
 
 _ROY_REQUIRED_FIELDS = ("mlbam_id", "name", "season", "league", "finish", "source")

@@ -69,6 +69,20 @@ Both are conversations, not code.
 
 **Recent history, newest first:**
 
+* 2026-10-28 — **rules version 6: four accuracy fixes, the first that correct
+  the season WINDOW rather than the interval walk.** A Baseball Reference
+  audit of 20 players found veterans matched but partial-season players read
+  ~8 days high. Cause: the season window. (1) Windows now come from the
+  `/schedule` feed, so each season starts on the player's own club's first
+  game — the Seoul/Tokyo openers a week early, the rest on their real domestic
+  Opening Day — instead of the single overseas opener `/seasons` reports
+  applied to all 30 clubs. (2) A season ends on the last game actually played,
+  not `/seasons`' end (2023 said 10-02 for a makeup later cancelled; real last
+  day 10-01). (3) The 20-day optional-assignment rule credits a short option
+  back as service. (4) The Prospect Promotion Incentive credits a top-two ROY
+  finish a full year. **The engine is at v6 but the database is NOT yet
+  recomputed — the owner runs the full recompute.** See "Rules version 6"
+  below.
 * 2026-09-08 — **maintenance pass.** Six real defects, none in the accrual
   rules: the CBA prose was hardcoded (above); the daily job made 7,179 API
   calls to fetch 22 season windows; both documented data fallbacks rendered
@@ -136,9 +150,10 @@ scripts/probe_coverage.py          live API probe for finding #1 (run via Action
 scripts/generate_demo_data.py      bundled sample data generator (no network)
 config/cba/2022.json           the agreement in force; every value carries a source
 config/cba/2027.json           valid placeholder that REFUSES to compute
+config/cba/roy_full_year_awards.json  hand-maintained ROY full-year credits; NOT a ruleset (cba._ruleset_paths skips it)
 config/tax/duty-day-rules.json day types and whether each counts as a duty day
 config/tax/2026-states.json    52 jurisdictions: 9 verified, 14 estimate-tier, 1 conflicting, 28 no rate
-tests/test_service_time.py     230 tests, no pytest needed: `python tests/test_service_time.py`
+tests/test_service_time.py     388 tests, no pytest needed: `python tests/test_service_time.py`
 tests/duty_days.test.cjs       27 tests, no npm needed: `node --test tests/duty_days.test.cjs`
 tests/contract.test.cjs        20 tests, incl. the advice-vocabulary lint
 docs/                          the static site (index.html, styles.css, app.js)
@@ -596,7 +611,7 @@ older ruleset, which is the condition `--recompute-all` exists to reach.
 - **1,364 on a 40-man.** Each has a static page at
   `docs/p/<id>-<slug>.html`, listed in `docs/sitemap.xml`. (The count moves
   by a player or two most days; that is roster churn, not drift.)
-- **230 Python tests, 27 duty-day JS tests, 20 contract JS tests** — all passing.
+- **388 Python tests, 27 duty-day JS tests, 41 contract JS tests** — all passing.
 - **Super Two cutoff currently 2.137**, computed from the whole population.
 - 1 player at or above 20.000 years (Verlander, 21.075), which is correct.
 - **26 players read exactly 0.000** and are hidden from the table by
@@ -3941,6 +3956,131 @@ rather than merely fixed.
 - **The daily commit rewrites ~21,000 lines across ~1,550 files.** That is the
   page footers plus sitemap `lastmod`, and it is working as designed. `.git` is
   13 MB, so it is not yet a problem; noted only so nobody rediscovers it as one.
+
+## Rules version 6: the four accuracy fixes (finding #22, 2026-10-28)
+
+**Prompted by a Baseball Reference audit of 20 players.** Veterans matched;
+players with a partial season read **~8 days high**. The cause was new in kind:
+every earlier finding was about the interval walk — *which days* were inside a
+season — but this was the season WINDOW itself, the thing a day is measured
+against. ~586 of the 1,394 reproducible cached players change. The engine is
+stamped `SERVICE_TIME_RULES_VERSION = 6`; **the database is not yet recomputed,
+which is the owner's to run** (see "Recomputing after a rules change" and the
+workflow note below).
+
+Four fixes, two that can only remove days, one that can only add, one that
+raises to a cap:
+
+### 1. Season windows start at each club's OWN opener (fixes the ~8-days-high)
+
+`/seasons` reports one `regularSeasonStartDate` — the earliest game *anywhere*,
+which in a year with an international series is the overseas opener (2024 Seoul
+03-20, 2025 Tokyo 03-18, 2026 the 03-25 Oracle Park opener NYY/SF played). The
+old `get_season_window()` read that and applied it to all 30 clubs, so every
+non-overseas club was credited the week between the overseas opener and its own
+Opening Day. That is the audit's ~8 days exactly (2024: 03-28 − 03-20).
+
+`fetch_mlb_data.py` now derives windows from the `/schedule` feed
+(`_parse_season_schedule`, `SeasonSchedule`), memoised once per season — not
+per player, the same discipline the 7,179-calls note records. `club_openers`
+is each club's own first regular-season game; `get_club_season_start(year,
+club)` returns it. `get_season_window()` still returns a single
+`(domestic_opener, end)` for callers that do not know the club, where
+`domestic_opener` is the **modal** club opener (the standard Opening Day most
+clubs share; the overseas and early-domestic clubs are the outliers).
+
+**Club mapping — the defensible choice.** The window start must be the opener
+of the club the player was with *at Opening Day*. `build_player_record` derives
+that per season from `_opening_day_clubs()`: the ORIGIN club of the player's
+earliest transaction that season (from_team, then the acting team, then
+to_team), because for a trade "A traded X to B" the origin A is who he opened
+with. So a player who opened with an overseas club and was traded away in June
+keeps the early Seoul start; a player who opened domestic and was traded *to*
+an overseas-opener club never played the overseas series and does not inherit
+its early date. When no Opening Day club is identifiable (a silent season), it
+falls back to the carried-forward club, and failing that to the **latest** of
+his candidate clubs' openers — conservative, because over-crediting is the
+failure mode behind every revert here.
+
+⚠️ **The 2025-03-26 vs 03-27 puzzle, left alone deliberately.** B-Ref fit some
+2025 players at 03-26, a day before the 03-27 domestic opener, unexplained. Do
+NOT hack a date: each club gets its real first-game date from the feed, and a
+±1-day residual is within the audit tolerance. Hardcoding a date is exactly
+what finding #1's lesson warns against.
+
+### 2. A season ends on the last game ACTUALLY PLAYED
+
+2023's `/seasons` end was 2023-10-02 because of a Marlins-Mets makeup scheduled
+that day and later cancelled; the last game played was 10-01.
+`_parse_season_schedule` takes the max date among games whose `detailedState`
+is not Cancelled/Postponed. **No blanket rule against makeups** — the real
+2024-09-30 Mets-Braves makeup doubleheader was played, so it counts and 2024
+ends 09-30. A cancelled/postponed game is excluded from the END but NOT from a
+club's opener, because a rained-out Opening Day still had a roster that day.
+
+### 3. The 20-day optional-assignment rule
+
+Under the CBA a player optioned for FEWER than 20 days in a season is credited
+those days as Major League service (the Brett Baty case). The threshold lives
+in `config/cba/2022.json` as `options.days_to_burn_option_year`, now marked
+**verified** (sources: the Baseball America PPI piece and the MLB options
+glossary) and read via `require_verified` — a wrong threshold that credits days
+back is worse than a crash.
+
+**How a 20-day gap is detected** (`_optional_assignment_days` in
+`service_time.py`): per season, from the player's active intervals already
+clipped to the window, the days he was OFF the roster *because of an option*
+are the gaps whose opening day is itself an "optioned" transaction date — so a
+DFA/release/IL gap is never swept in. Three non-overlapping regions: between
+two intervals (first closed on an option), before the first interval (a spring
+option, counted from the club's Opening Day, within a 45-day lookback), and
+after the last interval (optioned and never recalled — counted to season end).
+If the season total is under 20 it is added to raw days before proration and
+the 172 cap, so a short option on an otherwise full season still cannot exceed
+a full year. **Validated**: on all 1,430 cached players this engine-internal
+rule reproduces the B-Ref-validated scratch simulation's post-process exactly.
+
+### 4. Rookie of the Year full-year credit (Prospect Promotion Incentive)
+
+A top-two ROY finish is credited a full service year.
+`config/cba/roy_full_year_awards.json` is a hand-maintained list of settled
+facts — each entry carries `mlbam_id` (the only stable key; never match by
+name), `name`, `season`, `league`, `finish` (1 or 2) and a `source`, and
+`cba.load_roy_full_year_awards()` refuses any entry missing a source or a
+1-or-2 finish, the same discipline as an unverified ruleset value. The engine
+(`compute_service_time`, `roy_full_year_seasons`) can only RAISE a season to
+the full-year value, which comes from the ruleset, never a literal.
+
+**The file lives IN `config/cba/` but is not a ruleset.** `cba._ruleset_paths()`
+filters it out of `available_versions()` and `load()`'s discovery by name, so
+it rides along in the published `docs/data/config/` mirror without being
+mistaken for an agreement. Six verified entries today (Harris II 2022, Rutschman
+2022, Bibee 2023, Skenes 2024, Kurtz 2025, Horton 2025), each id checked against
+`service_time.json`. The B-Ref audit rows for Skenes (2.000) and Kurtz (1.000)
+are the positive control: they only match with the ROY credit applied.
+
+### What this does to the daily job and the recompute
+
+* **A rules-version bump means the daily job alone does NOT update old records.**
+  The daily job (`update_service_time.py`, no flags) only *builds* the players
+  on today's 40-man; it stamps them `rules_version: 6` as it goes, so rostered
+  players converge onto v6 over a normal daily run (they are rebuilt every day).
+  **Non-rostered players stay on v5 until a backfill `--recompute-all` pass** —
+  `backfill_history.py` is what rebuilds records not stamped with the current
+  version. Both read `SERVICE_TIME_RULES_VERSION` from the same place.
+* So to realise v6 across the whole 5,600-player database the owner runs the
+  **backfill with `--recompute-all`**, in batches scheduled clear of the 12:00
+  UTC window (see "A long backfill can starve the daily job").
+* **One live-only risk, flagged like the schedule fetch was.** The sandbox
+  cannot reach `statsapi.mlb.com`, so `_parse_season_schedule` was verified
+  against synthetic payloads, not the real `/schedule` feed. If the `gameType=R`
+  call ever returns an unexpected shape, `get_season_window` degrades to
+  `/seasons` (the pre-fix overseas start, recorded in `degraded_season_windows()`
+  and warned loudly) rather than crashing — so a `/schedule` hiccup reintroduces
+  the old window for that season but does not halt the site. A total outage of
+  both endpoints still hits the hardcoded estimate, which `check_run_is_sane`
+  refuses to publish. **Watch the first live run's stderr for degraded/estimated
+  seasons.**
 
 ## The Super Two check finally has something to check against (2026-10-26)
 

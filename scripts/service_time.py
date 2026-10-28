@@ -915,7 +915,7 @@ def compute_service_time(
     credited a FULL year regardless of days accrued, because he finished first
     or second in Rookie of the Year voting (the 2022 CBA's Prospect Promotion
     Incentive). The list of who qualified is hand-maintained in
-    config/roy_full_year_awards.json and resolved per player by the caller; the
+    config/cba/roy_full_year_awards.json and resolved per player by the caller; the
     full-year VALUE comes from the ruleset, not a literal.
 
     `ruleset` is the CBA agreement to compute under, from config/cba/. It

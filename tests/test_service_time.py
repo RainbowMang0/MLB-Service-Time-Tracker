@@ -2763,6 +2763,371 @@ def test_every_ruleset_value_carries_a_source():
     check(f"every 2022 value has a sources entry (missing: {missing})", not missing)
 
 
+# ===========================================================================
+# rules version 6: schedule-derived windows, the 20-day option rule, and ROY
+# ===========================================================================
+
+
+def test_a_season_window_starts_at_each_clubs_own_opener():
+    """
+    Service time is credited from a club's OWN first regular-season game.
+    /seasons reports a single regularSeasonStartDate -- the earliest game
+    anywhere, i.e. the overseas opener -- and applying it to all 30 clubs
+    credited every non-overseas club a week of phantom days. The /schedule feed
+    gives each club its own opener instead.
+    """
+    import fetch_mlb_data as mlb
+
+    # The two Seoul clubs (119, 121) open a week early; four domestic clubs open
+    # on the modal date 03-28, so the domestic opener is unambiguous.
+    payload = {"dates": [
+        {"date": "2024-03-20", "games": [{
+            "gameType": "R", "status": {"detailedState": "Final"},
+            "teams": {"home": {"team": {"id": 119}}, "away": {"team": {"id": 121}}},
+        }]},
+        {"date": "2024-03-28", "games": [
+            {"gameType": "R", "status": {"detailedState": "Final"},
+             "teams": {"home": {"team": {"id": 147}}, "away": {"team": {"id": 111}}}},
+            {"gameType": "R", "status": {"detailedState": "Final"},
+             "teams": {"home": {"team": {"id": 135}}, "away": {"team": {"id": 158}}}},
+        ]},
+        {"date": "2024-09-29", "games": [{
+            "gameType": "R", "status": {"detailedState": "Final"},
+            "teams": {"home": {"team": {"id": 147}}, "away": {"team": {"id": 111}}},
+        }]},
+    ]}
+    sched = mlb._parse_season_schedule(2024, payload)
+    check("the overseas club keeps its early opener", sched.club_openers[119] == dt.date(2024, 3, 20))
+    check("a domestic club opens on its own day", sched.club_openers[147] == dt.date(2024, 3, 28))
+    check(
+        "the domestic (modal) opener is the one three clubs share, not the Seoul date",
+        sched.domestic_opener == dt.date(2024, 3, 28),
+    )
+
+    # And end-to-end through the fetch layer: get_club_season_start reads the
+    # club's own opener, the league window defaults to the domestic opener, and
+    # an unknown club falls back to it.
+    real_get = mlb._get
+    mlb.get_season_window.cache_clear()
+    mlb._SEASON_SCHEDULE.clear()
+    try:
+        mlb._get = lambda path, params=None: payload
+        check("get_club_season_start reads the overseas club's opener", mlb.get_club_season_start(2024, 119) == dt.date(2024, 3, 20))
+        check("...and a domestic club's own opener", mlb.get_club_season_start(2024, 147) == dt.date(2024, 3, 28))
+        check("an unknown club falls back to the domestic opener", mlb.get_club_season_start(2024, 999) == dt.date(2024, 3, 28))
+        check("the league window is (domestic opener, last game)", mlb.get_season_window(2024) == (dt.date(2024, 3, 28), dt.date(2024, 9, 29)))
+    finally:
+        mlb._get = real_get
+        mlb.get_season_window.cache_clear()
+        mlb._SEASON_SCHEDULE.clear()
+
+
+def test_a_season_ends_on_the_last_game_actually_played():
+    """
+    The 2023 /seasons end was 2023-10-02 because of a makeup game scheduled
+    that day and later cancelled; the last game actually played was 10-01. The
+    end is the latest game NOT cancelled/postponed -- which is also why the
+    real 2024-09-30 Mets-Braves makeup doubleheader keeps 2024 ending on 09-30,
+    with no blanket rule against makeups.
+    """
+    import fetch_mlb_data as mlb
+
+    completed_early_then_cancelled_makeup = {"dates": [
+        {"date": "2023-09-28", "games": [{
+            "gameType": "R", "status": {"detailedState": "Completed Early"},
+            "teams": {"home": {"team": {"id": 146}}, "away": {"team": {"id": 121}}},
+        }]},
+        {"date": "2023-10-01", "games": [{
+            "gameType": "R", "status": {"detailedState": "Final"},
+            "teams": {"home": {"team": {"id": 146}}, "away": {"team": {"id": 121}}},
+        }]},
+        {"date": "2023-10-02", "games": [{
+            "gameType": "R", "status": {"detailedState": "Cancelled"},
+            "teams": {"home": {"team": {"id": 146}}, "away": {"team": {"id": 121}}},
+        }]},
+    ]}
+    sched = mlb._parse_season_schedule(2023, completed_early_then_cancelled_makeup)
+    check("a cancelled makeup does not extend the season", sched.end == dt.date(2023, 10, 1))
+
+    makeup_doubleheader_played = {"dates": [
+        {"date": "2024-06-01", "games": [{
+            "gameType": "R", "status": {"detailedState": "Postponed"},
+            "teams": {"home": {"team": {"id": 144}}, "away": {"team": {"id": 121}}},
+        }]},
+        {"date": "2024-09-28", "games": [{
+            "gameType": "R", "status": {"detailedState": "Final"},
+            "teams": {"home": {"team": {"id": 144}}, "away": {"team": {"id": 121}}},
+        }]},
+        # The real 2024-09-30 Mets-Braves makeup doubleheader: two games, both
+        # actually played, so they count.
+        {"date": "2024-09-30", "games": [
+            {"gameType": "R", "status": {"detailedState": "Final"},
+             "teams": {"home": {"team": {"id": 144}}, "away": {"team": {"id": 121}}}},
+            {"gameType": "R", "status": {"detailedState": "Final"},
+             "teams": {"home": {"team": {"id": 144}}, "away": {"team": {"id": 121}}}},
+        ]},
+    ]}
+    sched2 = mlb._parse_season_schedule(2024, makeup_doubleheader_played)
+    check("a makeup doubleheader that was played does count", sched2.end == dt.date(2024, 9, 30))
+
+
+def test_a_short_option_under_twenty_days_counts_as_service():
+    """
+    The 20-day rule: a player optioned for fewer than 20 days in a season is
+    credited those days as Major League service (the Brett Baty case). A 10-day
+    option inside an otherwise-full window is credited back in full.
+    """
+    season = SeasonWindow(2023, dt.date(2023, 4, 1), dt.date(2023, 4, 30))  # 30 days
+    txns = [
+        Transaction(dt.date(2023, 4, 1), "Team selected the contract of X"),
+        Transaction(dt.date(2023, 4, 10), "Team optioned X to Triple-A"),
+        Transaction(dt.date(2023, 4, 20), "Team recalled X from Triple-A"),
+    ]
+    result = compute_service_time(txns, [season], horizon_end=season.end)
+    # On-roster days are 9 + 11 = 20; the 10-day option gap is under 20, so it
+    # is credited back, giving the full 30-day window.
+    check(
+        "a 10-day option is credited back as service",
+        result.by_season[2023]["credited_days"] == 30,
+    )
+    check(
+        "the credited gap is reflected in the raw day count",
+        result.by_season[2023]["raw_active_days"] == 30,
+    )
+
+
+def test_an_option_of_twenty_days_or_more_is_not_credited():
+    """The threshold is strict: 20 days or more does not count as service."""
+    season = SeasonWindow(2023, dt.date(2023, 4, 1), dt.date(2023, 5, 31))
+    txns = [
+        Transaction(dt.date(2023, 4, 1), "Team selected the contract of X"),
+        Transaction(dt.date(2023, 4, 11), "Team optioned X to Triple-A"),
+        Transaction(dt.date(2023, 5, 1), "Team recalled X from Triple-A"),  # 20-day gap
+    ]
+    result = compute_service_time(txns, [season], horizon_end=season.end)
+    # On-roster: Apr 1-10 (10) + May 1-31 (31) = 41. The 20-day gap stays off.
+    check(
+        "a 20-day option is NOT credited back",
+        result.by_season[2023]["credited_days"] == 41,
+    )
+
+
+def test_the_option_credit_is_capped_at_the_full_year():
+    """A short option on an otherwise full season cannot push past 172."""
+    season = SeasonWindow(2023, dt.date(2023, 3, 30), dt.date(2023, 10, 1))
+    window_len = (season.end - season.start).days + 1
+    txns = [
+        Transaction(dt.date(2023, 3, 30), "Team selected the contract of X"),
+        Transaction(dt.date(2023, 6, 1), "Team optioned X to Triple-A"),
+        Transaction(dt.date(2023, 6, 10), "Team recalled X from Triple-A"),  # 9-day gap
+    ]
+    result = compute_service_time(txns, [season], horizon_end=season.end)
+    check(
+        "the 9-day gap is credited back into the raw days",
+        result.by_season[2023]["raw_active_days"] == window_len,
+    )
+    check(
+        "...but the season is still capped at a full year",
+        result.by_season[2023]["credited_days"] == 172,
+    )
+
+
+def test_a_spring_option_counts_from_the_clubs_opening_day():
+    """
+    An option made in spring training (before the opener) counts from Opening
+    Day: the player was on the 40-man, optioned, and recalled during the season.
+    """
+    season = SeasonWindow(2023, dt.date(2023, 4, 1), dt.date(2023, 4, 30))
+    txns = [
+        Transaction(dt.date(2023, 3, 25), "Team optioned X to Triple-A"),  # spring
+        Transaction(dt.date(2023, 4, 11), "Team recalled X from Triple-A"),
+    ]
+    result = compute_service_time(txns, [season], horizon_end=season.end)
+    # On-roster Apr 11-30 = 20 days; the spring option is counted from Opening
+    # Day (Apr 1 -> Apr 11 = 10 days), under 20, so credited back -> 30.
+    check(
+        "a spring option is counted from Opening Day and credited back",
+        result.by_season[2023]["credited_days"] == 30,
+    )
+
+
+def test_an_option_never_recalled_counts_through_season_end():
+    """An option with no recall that season runs its days to the end of the
+    season -- so a late short option still qualifies."""
+    season = SeasonWindow(2023, dt.date(2023, 4, 1), dt.date(2023, 4, 30))
+    txns = [
+        Transaction(dt.date(2023, 4, 1), "Team selected the contract of X"),
+        Transaction(dt.date(2023, 4, 20), "Team optioned X to Triple-A"),  # 11 days left
+    ]
+    result = compute_service_time(txns, [season], horizon_end=season.end)
+    # On-roster Apr 1-19 = 19 days; the option runs Apr 20-30 = 11 days, under
+    # 20, credited back -> the full 30-day window.
+    check(
+        "an option never recalled, under 20 days, is credited to season end",
+        result.by_season[2023]["credited_days"] == 30,
+    )
+
+
+def test_a_dfa_gap_is_not_an_optional_assignment():
+    """Only an option is credited back -- a DFA/release gap is not, even when
+    it is short."""
+    season = SeasonWindow(2023, dt.date(2023, 4, 1), dt.date(2023, 4, 30))
+    txns = [
+        Transaction(dt.date(2023, 4, 1), "Team selected the contract of X"),
+        Transaction(dt.date(2023, 4, 10), "Team designated X for assignment"),
+        Transaction(dt.date(2023, 4, 20), "Team selected the contract of X"),
+    ]
+    result = compute_service_time(txns, [season], horizon_end=season.end)
+    # 9 + 11 = 20 on-roster days; the 10-day DFA gap is NOT an option, so it is
+    # not credited.
+    check(
+        "a short DFA gap is not credited back",
+        result.by_season[2023]["credited_days"] == 20,
+    )
+
+
+def test_a_roy_full_year_finish_raises_a_short_season():
+    """
+    The Prospect Promotion Incentive: a top-two Rookie of the Year finish is
+    credited a full year for that season, even on a short day count. The
+    full-year value comes from the ruleset, not a literal.
+    """
+    season = SeasonWindow(2024, dt.date(2024, 7, 1), dt.date(2024, 10, 1))  # ~93 days
+    txns = [Transaction(dt.date(2024, 7, 1), "Team selected the contract of X")]
+
+    short = compute_service_time(txns, [season], horizon_end=season.end)
+    check("without the award, a July call-up is a partial year", short.by_season[2024]["credited_days"] < 172)
+
+    full = compute_service_time(
+        txns, [season], horizon_end=season.end, roy_full_year_seasons={2024}
+    )
+    check("a ROY full-year finish raises the season to 172", full.by_season[2024]["credited_days"] == 172)
+    check("...and the formatted figure is a full year", full.formatted == "1.000")
+
+
+def test_roy_full_year_only_raises_never_lowers():
+    """The award can only raise a figure -- a player who already has a full
+    season is unaffected."""
+    season = SeasonWindow(2024, dt.date(2024, 3, 28), dt.date(2024, 9, 29))
+    txns = [Transaction(dt.date(2024, 3, 28), "Team selected the contract of X")]
+    full = compute_service_time(
+        txns, [season], horizon_end=season.end, roy_full_year_seasons={2024}
+    )
+    check("an already-full season stays at the cap", full.by_season[2024]["credited_days"] == 172)
+
+
+def test_the_roy_loader_rejects_an_unsourced_or_malformed_entry():
+    """Every ROY entry must carry a source and a 1-or-2 finish, the same way an
+    unverified ruleset value is refused -- a guessed full year is a number
+    nobody checked wearing the site's authority."""
+    import tempfile
+
+    def write(obj):
+        fh = tempfile.NamedTemporaryFile("w", suffix=".json", delete=False)
+        json.dump(obj, fh)
+        fh.close()
+        return fh.name
+
+    good = write({"awards": [{
+        "mlbam_id": 694973, "name": "Paul Skenes", "season": 2024,
+        "league": "NL", "finish": 1, "source": "https://example.com/skenes",
+    }]})
+    check("a well-formed, sourced entry loads", len(cba.load_roy_full_year_awards(good)) == 1)
+
+    no_source = write({"awards": [{
+        "mlbam_id": 1, "name": "X", "season": 2024, "league": "NL", "finish": 1,
+    }]})
+    raised = False
+    try:
+        cba.load_roy_full_year_awards(no_source)
+    except cba.RoyAwardError:
+        raised = True
+    check("an entry with no source is refused", raised)
+
+    bad_finish = write({"awards": [{
+        "mlbam_id": 1, "name": "X", "season": 2024, "league": "NL",
+        "finish": 3, "source": "https://example.com/x",
+    }]})
+    raised = False
+    try:
+        cba.load_roy_full_year_awards(bad_finish)
+    except cba.RoyAwardError:
+        raised = True
+    check("a third-place finish does not earn the full year", raised)
+
+
+def test_the_roy_list_is_not_treated_as_a_ruleset_version():
+    """The ROY list lives in config/cba/ beside the rulesets but is not one, so
+    ruleset discovery must skip it."""
+    check("roy_full_year_awards is not a ruleset version", "roy_full_year_awards" not in cba.available_versions())
+    check("the real rulesets are still discovered", "2022" in cba.available_versions())
+
+
+def test_a_traded_players_start_is_his_opening_day_club_not_the_latest_opener():
+    """
+    A traded player's season must start on the opener of the club he was with
+    at Opening Day -- the earliest club of the season by transaction date --
+    not the latest of his clubs' openers. So a player who opened with an
+    overseas club and was traded away keeps the early start, while one who
+    opened with a domestic club and was traded TO an overseas-opener club does
+    not inherit its early date.
+    """
+    import fetch_mlb_data as mlb
+    import update_service_time as u
+
+    # A synthetic season: club 119 opens early (Seoul-style), club 147 opens a
+    # week later on the modal date.
+    payload = {"dates": [
+        {"date": "2024-03-20", "games": [{
+            "gameType": "R", "status": {"detailedState": "Final"},
+            "teams": {"home": {"team": {"id": 119}}, "away": {"team": {"id": 135}}}}]},
+        {"date": "2024-03-28", "games": [{
+            "gameType": "R", "status": {"detailedState": "Final"},
+            "teams": {"home": {"team": {"id": 147}}, "away": {"team": {"id": 111}}}}]},
+        {"date": "2024-03-28", "games": [{
+            "gameType": "R", "status": {"detailedState": "Final"},
+            "teams": {"home": {"team": {"id": 135}}, "away": {"team": {"id": 111}}}}]},
+        {"date": "2024-09-29", "games": [{
+            "gameType": "R", "status": {"detailedState": "Final"},
+            "teams": {"home": {"team": {"id": 147}}, "away": {"team": {"id": 119}}}}]},
+    ]}
+    real_get = mlb._get
+    mlb.get_season_window.cache_clear()
+    mlb._SEASON_SCHEDULE.clear()
+    try:
+        mlb._get = lambda path, params=None: payload
+        mlb_ids = {119, 135, 147, 111}
+
+        # Case 1: opened with the overseas club (119), traded away to 147 in July.
+        traded_away = [
+            {"date": "2024-05-01", "description": "119 optioned X", "team_id": 119},
+            {"date": "2024-07-01", "description": "Club traded X", "from_team_id": 119, "to_team_id": 147},
+        ]
+        od1 = u._opening_day_clubs(traded_away, mlb_ids)
+        check("the Opening Day club is the origin of the earliest transaction", od1.get(2024) == 119)
+        start1 = u._opening_day_for(2024, od1.get(2024), [119, 147])
+        check("a player who opened overseas keeps the early start", start1 == dt.date(2024, 3, 20))
+
+        # Case 2: opened with a domestic club (147), traded TO the overseas-opener
+        # club (119) later -- he never played the overseas series.
+        traded_to_overseas = [
+            {"date": "2024-05-01", "description": "147 optioned X", "team_id": 147},
+            {"date": "2024-07-01", "description": "Club traded X", "from_team_id": 147, "to_team_id": 119},
+        ]
+        od2 = u._opening_day_clubs(traded_to_overseas, mlb_ids)
+        check("his Opening Day club is the domestic one he started with", od2.get(2024) == 147)
+        start2 = u._opening_day_for(2024, od2.get(2024), [147, 119])
+        check("he does NOT inherit the early overseas date", start2 == dt.date(2024, 3, 28))
+
+        # Fallback: no transactions -> the conservative latest opener.
+        start3 = u._opening_day_for(2024, None, [119, 147])
+        check("with no Opening Day club known, the latest opener is used", start3 == dt.date(2024, 3, 28))
+    finally:
+        mlb._get = real_get
+        mlb.get_season_window.cache_clear()
+        mlb._SEASON_SCHEDULE.clear()
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -2874,5 +3239,18 @@ if __name__ == "__main__":
     test_only_alumni_with_a_defensible_figure_are_published()
     test_a_published_alumnus_is_reachable_and_off_the_club_pages()
     test_the_sitemap_is_an_index_split_by_section()
+    test_a_season_window_starts_at_each_clubs_own_opener()
+    test_a_season_ends_on_the_last_game_actually_played()
+    test_a_short_option_under_twenty_days_counts_as_service()
+    test_an_option_of_twenty_days_or_more_is_not_credited()
+    test_the_option_credit_is_capped_at_the_full_year()
+    test_a_spring_option_counts_from_the_clubs_opening_day()
+    test_an_option_never_recalled_counts_through_season_end()
+    test_a_dfa_gap_is_not_an_optional_assignment()
+    test_a_roy_full_year_finish_raises_a_short_season()
+    test_roy_full_year_only_raises_never_lowers()
+    test_the_roy_loader_rejects_an_unsourced_or_malformed_entry()
+    test_the_roy_list_is_not_treated_as_a_ruleset_version()
+    test_a_traded_players_start_is_his_opening_day_club_not_the_latest_opener()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)
