@@ -1485,15 +1485,21 @@ def test_a_season_window_is_fetched_once_not_once_per_player():
 
     calls = []
 
+    def fake_schedule(year):
+        # A minimal /schedule payload: two clubs, one R game each on Opening Day.
+        return {"dates": [{"date": f"{year}-03-28", "games": [{
+            "gameType": "R",
+            "status": {"detailedState": "Final"},
+            "teams": {"home": {"team": {"id": 147}}, "away": {"team": {"id": 111}}},
+        }]}]}
+
     real_get = mlb._get
     mlb.get_season_window.cache_clear()
+    mlb._SEASON_SCHEDULE.clear()
     try:
         mlb._get = lambda path, params=None: (
             calls.append(params.get("season")),
-            {"seasons": [{
-                "regularSeasonStartDate": f"{params['season']}-03-28",
-                "regularSeasonEndDate": f"{params['season']}-09-29",
-            }]},
+            fake_schedule(params["season"]),
         )[1]
         for _ in range(50):
             for year in (2024, 2025, 2026):
@@ -1501,6 +1507,7 @@ def test_a_season_window_is_fetched_once_not_once_per_player():
     finally:
         mlb._get = real_get
         mlb.get_season_window.cache_clear()
+        mlb._SEASON_SCHEDULE.clear()
 
     check(
         f"150 requests for 3 seasons cost 3 API calls, not 150 (got {len(calls)})",
@@ -2688,18 +2695,30 @@ def test_a_value_nobody_has_checked_cannot_be_published_by_accident():
     the CBA text. require_verified() is what stops them reaching a page.
     """
     rules = cba.default()
-    check("the option burn threshold is present", rules.get("options.days_to_burn_option_year") == 20)
-    check("and is marked unverified", rules.status("options.days_to_burn_option_year") == "unverified")
+    check(
+        "the five-option-per-season cap is present",
+        rules.get("options.max_optional_assignments_per_season") == 5,
+    )
+    check(
+        "and is marked unverified",
+        rules.status("options.max_optional_assignments_per_season") == "unverified",
+    )
 
     raised = False
     try:
-        rules.require_verified("options.days_to_burn_option_year")
+        rules.require_verified("options.max_optional_assignments_per_season")
     except cba.UnverifiedRulesetValue:
         raised = True
     check("so require_verified refuses it", raised)
     check("while a verified value passes", rules.require_verified("service_time.days_per_credited_year") == 172)
-    check("only the option values are unverified today", rules.unverified_paths() == [
-        "options.days_to_burn_option_year",
+    # The 20-day optional-assignment threshold WAS unverified; it is now the
+    # one option value the engine consumes (the <20-day service credit), so it
+    # had to be verified against the CBA text before it could drive a figure.
+    check(
+        "the 20-day threshold the engine consumes is now verified",
+        rules.require_verified("options.days_to_burn_option_year") == 20,
+    )
+    check("only the remaining option shape-values are unverified today", rules.unverified_paths() == [
         "options.fourth_option_conditions",
         "options.max_optional_assignments_per_season",
     ])

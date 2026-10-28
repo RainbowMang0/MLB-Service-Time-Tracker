@@ -46,6 +46,12 @@ import pathlib
 
 CONFIG_DIR = pathlib.Path(__file__).resolve().parents[1] / "config" / "cba"
 
+# Hand-maintained Rookie of the Year full-year service credits. It sits beside
+# config/cba/ rather than inside it because it is cross-season reference data
+# (a list of settled facts), not a versioned ruleset -- the full-year VALUE it
+# grants comes from whichever ruleset is in force.
+ROY_AWARDS_PATH = CONFIG_DIR.parent / "roy_full_year_awards.json"
+
 # The agreement in force. Bump this when a successor is signed and filled in.
 DEFAULT_VERSION = "2022"
 
@@ -64,6 +70,10 @@ class MissingRulesetValue(RulesetError):
 
 class UnverifiedRulesetValue(RulesetError):
     """The value exists but its source status says nobody has checked it."""
+
+
+class RoyAwardError(RulesetError):
+    """A Rookie of the Year full-year entry is malformed or unsourced."""
 
 
 class Ruleset:
@@ -212,3 +222,61 @@ def default() -> Ruleset:
 
 def available_versions() -> list[str]:
     return sorted(p.stem for p in CONFIG_DIR.glob("*.json"))
+
+
+# --- Rookie of the Year full-year credits ----------------------------------
+# The list of players the 2022 CBA's Prospect Promotion Incentive credited a
+# full service year (a top-two Rookie of the Year finish). See
+# config/roy_full_year_awards.json. Loaded here so the one place that reads
+# config also validates it, the same way a ruleset's sources are enforced.
+
+_ROY_REQUIRED_FIELDS = ("mlbam_id", "name", "season", "league", "finish", "source")
+
+
+@functools.lru_cache(maxsize=None)
+def load_roy_full_year_awards(path: str | None = None) -> tuple[dict, ...]:
+    """Validated ROY full-year entries, or () if the file is absent.
+
+    Every entry must carry all of _ROY_REQUIRED_FIELDS, finish must be 1 or 2,
+    and `source` must be non-empty -- an unsourced full year is a number nobody
+    checked, which this project refuses the same way it refuses an unverified
+    ruleset value. Raises RoyAwardError on any malformed entry rather than
+    silently crediting or dropping it.
+    """
+    p = pathlib.Path(path) if path else ROY_AWARDS_PATH
+    if not p.exists():
+        return ()
+    data = json.loads(p.read_text(encoding="utf-8"))
+    awards = data.get("awards", [])
+    if not isinstance(awards, list):
+        raise RoyAwardError(f"'awards' in {p} must be a list")
+    validated: list[dict] = []
+    for i, entry in enumerate(awards):
+        if not isinstance(entry, dict):
+            raise RoyAwardError(f"ROY award #{i} in {p} is not an object")
+        missing = [f for f in _ROY_REQUIRED_FIELDS if not entry.get(f)]
+        if missing:
+            raise RoyAwardError(
+                f"ROY award #{i} in {p} (name {entry.get('name')!r}) is missing "
+                f"required field(s): {', '.join(missing)}"
+            )
+        if entry["finish"] not in (1, 2):
+            raise RoyAwardError(
+                f"ROY award #{i} in {p} has finish {entry['finish']!r}; only a "
+                "first- or second-place finish earns the full year"
+            )
+        validated.append(entry)
+    return tuple(validated)
+
+
+def roy_full_year_seasons_by_player(path: str | None = None) -> dict[int, set[int]]:
+    """{mlbam_id -> {season, ...}} from the validated ROY award list.
+
+    This is what the pipeline hands compute_service_time per player. Keyed on
+    the MLB person id because the dataset has distinct players sharing a name
+    (two Luis Perdomos, two Logan Allens) -- never match it by name.
+    """
+    out: dict[int, set[int]] = {}
+    for entry in load_roy_full_year_awards(path):
+        out.setdefault(int(entry["mlbam_id"]), set()).add(int(entry["season"]))
+    return out

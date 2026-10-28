@@ -133,8 +133,12 @@
       "note": "Three option years. Not consumed by any engine code yet."
     },
     "options.days_to_burn_option_year": {
-      "status": "unverified",
-      "note": "20 days on optional assignment is the commonly cited threshold for an option year to be charged. NOT verified against the CBA text and NOT consumed by any engine code. Do not surface an options count in the UI until this is checked."
+      "status": "verified",
+      "note": "20 days on optional assignment is the threshold with two faces: an option year is charged only once a player is optioned for 20+ days, and -- the same number -- a player optioned for FEWER than 20 days in a season is credited Major League service for those days. CONSUMED by scripts/service_time.py (compute_service_time) for that service credit. Sources: https://www.baseballamerica.com/stories/brett-baty-s-early-season-assignment-highlights-lesser-known-option-rule/ and https://www.mlb.com/glossary/transactions/minor-league-options",
+      "sources": [
+        "https://www.baseballamerica.com/stories/brett-baty-s-early-season-assignment-highlights-lesser-known-option-rule/",
+        "https://www.mlb.com/glossary/transactions/minor-league-options"
+      ]
     },
     "options.fourth_option_conditions": {
       "status": "unverified"

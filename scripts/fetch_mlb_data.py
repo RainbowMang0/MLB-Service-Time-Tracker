@@ -10,10 +10,12 @@ in service_time.py.
 
 from __future__ import annotations
 
+import collections
 import datetime as dt
 import functools
 import sys
 import time
+from dataclasses import dataclass
 from typing import Any
 
 import requests
@@ -241,34 +243,121 @@ def get_player_transactions(
     return data.get("transactions", [])
 
 
-# Seasons whose window came from the fallback below rather than from the API.
-# Read by callers that need to know whether a run is trustworthy -- see
-# estimated_season_windows().
+# Seasons whose window came from the HARDCODED estimate (a total outage of both
+# endpoints). Read by callers that need to know whether a run is trustworthy --
+# see estimated_season_windows(). An estimated window blocks publishing.
 _ESTIMATED_WINDOWS: set[int] = set()
 
+# Seasons that fell back from /schedule to /seasons. The window is real, but it
+# is the LEAGUE window -- the start is the (overseas) opener applied to every
+# club, and the end can include a cancelled makeup game. The per-club-opener
+# and real-season-end fixes do not apply to a degraded season, so it reads the
+# way it did before those fixes shipped. Loud, but not fatal: a transient
+# /schedule hiccup should not halt the daily site.
+_DEGRADED_WINDOWS: set[int] = set()
 
-@functools.lru_cache(maxsize=None)
-def get_season_window(year: int) -> tuple[dt.date, dt.date]:
+
+@dataclass
+class SeasonSchedule:
+    """What one regular season looked like, derived from the /schedule feed.
+
+    `club_openers` is the heart of it: service time is credited from a club's
+    OWN first regular-season game, and those differ. In 2024 the Dodgers and
+    Padres opened in Seoul on 03-20 while everyone else opened 03-28; in 2026
+    the Yankees and Giants opened 03-25 at Oracle Park while 22 clubs opened
+    03-26 and six opened 03-27. The /seasons endpoint reports a single
+    `regularSeasonStartDate` -- the earliest game anywhere, i.e. the overseas
+    opener -- and applying it to all 30 clubs credited everyone else a week of
+    phantom days (the ~8-days-high error the Baseball Reference audit found).
     """
-    Returns (regular season start, regular season end) for a given year.
-    Falls back to a hardcoded estimate if the seasons endpoint doesn't have
-    the data (e.g. far-future seasons not yet scheduled).
 
-    MEMOISED, and that is not a micro-optimisation. The pipeline asks for a
-    window once per player per season of his career, so a daily run over
-    ~1,370 rostered players made 7,179 calls to fetch the same 22 distinct
-    answers -- 7,157 of them redundant, about 32 minutes of wall clock, and
-    7,000 needless requests a day against a free public endpoint this project
-    goes out of its way to be polite to. A season's start and end date do not
-    move within a run, so one call each is all that is correct.
+    year: int
+    club_openers: dict[int, dt.date]  # club id -> that club's first R game
+    domestic_opener: dt.date  # the modal opener; the default for an unknown club
+    end: dt.date  # the last regular-season game actually on the calendar
+    source: str  # "schedule" | "seasons" | "estimate"
 
-    THE FALLBACK IS LOUD ON PURPOSE. An estimated window is not a cosmetic
-    degradation: CLAUDE.md records that this exact estimate (Mar 28 - Oct 1)
-    put Jose Ramirez 8 days off and made him look like the one modern outlier
-    worth chasing, when the estimate was the error. A /seasons outage would
-    otherwise recompute every player against wrong windows and publish the
-    result with nothing saying so.
+
+# year -> SeasonSchedule, populated as a side effect of get_season_window() so
+# the per-club openers are available to callers that know the player's club.
+_SEASON_SCHEDULE: dict[int, SeasonSchedule] = {}
+
+# A game with one of these states did NOT happen and is not on the calendar as
+# a real game. EXCLUDED from the season-end date -- this is the 2023 fix: the
+# /seasons end was 2023-10-02 because of a makeup game scheduled then and later
+# cancelled, while the last game actually played was 2023-10-01. NOT excluded
+# from a club's opener: a postponed Opening Day still had a roster that day, so
+# a player on it was still accruing (service time is roster time, not game
+# time). A made-up game simply appears again on its new date and is counted
+# there, which is why the real 2024-09-30 Mets-Braves makeup doubleheader keeps
+# 2024 ending on 2024-09-30 -- no blanket rule against makeups is needed.
+_NOT_PLAYED_STATES = frozenset({"Cancelled", "Canceled", "Postponed"})
+
+
+def _parse_season_schedule(year: int, payload: dict) -> SeasonSchedule | None:
+    """Build a SeasonSchedule from a /schedule payload, or None if it is empty.
+
+    Defensive about the shape because this is parsed from a live feed the
+    sandbox cannot reach: a missing field yields a thinner result, never an
+    exception.
     """
+    openers: dict[int, list[dt.date]] = {}
+    end_candidates: list[dt.date] = []
+    for block in payload.get("dates") or []:
+        try:
+            day = dt.date.fromisoformat(block.get("date"))
+        except (TypeError, ValueError):
+            continue
+        for game in block.get("games") or []:
+            # Regular season only. We ask the API for gameType=R, but double
+            # check: a spring game weeks earlier would otherwise pull a club's
+            # opener back into February.
+            if game.get("gameType") != "R":
+                continue
+            teams = game.get("teams") or {}
+            for side in ("home", "away"):
+                cid = ((teams.get(side) or {}).get("team") or {}).get("id")
+                if isinstance(cid, int):
+                    openers.setdefault(cid, []).append(day)
+            state = (game.get("status") or {}).get("detailedState") or ""
+            if state not in _NOT_PLAYED_STATES:
+                end_candidates.append(day)
+    if not openers or not end_candidates:
+        return None
+    club_openers = {cid: min(days) for cid, days in openers.items()}
+    # The modal opener is the standard league Opening Day; the overseas and
+    # early-domestic clubs are the minority outliers. It is only ever used as a
+    # default for a player whose club we could not identify.
+    domestic = collections.Counter(club_openers.values()).most_common(1)[0][0]
+    return SeasonSchedule(
+        year=year,
+        club_openers=club_openers,
+        domestic_opener=domestic,
+        end=max(end_candidates),
+        source="schedule",
+    )
+
+
+def _fetch_season_schedule(year: int) -> SeasonSchedule:
+    """The fallback chain behind get_season_window(). See it for the contract."""
+    # 1. /schedule -- per-club openers and the real last-played end date. This
+    #    is what the per-club-opener (fix) and the 2023-end (fix) both need.
+    try:
+        payload = _get(
+            "/schedule", {"sportId": SPORT_ID_MLB, "season": year, "gameType": "R"}
+        )
+        sched = _parse_season_schedule(year, payload)
+        if sched is not None:
+            return sched
+    except Exception as exc:  # pragma: no cover - network path
+        print(f"  !! /schedule failed for {year}: {exc}", file=sys.stderr)
+
+    # 2. /seasons -- a real window, but the LEAGUE one: the start is the
+    #    (overseas) opener applied to every club, and the end can include a
+    #    cancelled makeup. No per-club data, so the two schedule fixes do not
+    #    apply for this season. Degraded, not estimated -- the numbers are the
+    #    pre-fix numbers, which are wrong by at most a week and only for a
+    #    season whose /schedule call happened to fail.
     try:
         data = _get("/seasons", {"sportId": SPORT_ID_MLB, "season": year})
         seasons = data.get("seasons", [])
@@ -276,9 +365,21 @@ def get_season_window(year: int) -> tuple[dt.date, dt.date]:
             s = seasons[0]
             start = dt.date.fromisoformat(s["regularSeasonStartDate"])
             end = dt.date.fromisoformat(s["regularSeasonEndDate"])
-            return start, end
+            _DEGRADED_WINDOWS.add(year)
+            print(
+                f"  !! /schedule unavailable for {year}; fell back to /seasons. "
+                "Per-club openers and the real season-end are NOT applied for "
+                "this season -- it reads the way it did before those fixes.",
+                file=sys.stderr,
+            )
+            return SeasonSchedule(year, {}, start, end, "seasons")
     except Exception as exc:  # pragma: no cover - network path
         print(f"  !! /seasons failed for {year}: {exc}", file=sys.stderr)
+
+    # 3. Hardcoded estimate -- both endpoints are down. This is an OUTAGE, not a
+    #    far-future season: the daily job only asks for seasons that happened.
+    #    CLAUDE.md records this exact estimate (Mar 28 - Oct 1) putting Jose
+    #    Ramirez 8 days off, so it blocks publishing (see check_run_is_sane).
     _ESTIMATED_WINDOWS.add(year)
     print(
         f"  !! ESTIMATING the {year} season window as Mar 28 - Oct 1. Every "
@@ -286,10 +387,60 @@ def get_season_window(year: int) -> tuple[dt.date, dt.date]:
         "real schedule.",
         file=sys.stderr,
     )
-    # Fallback estimate (late March - early October)
-    return dt.date(year, 3, 28), dt.date(year, 10, 1)
+    return SeasonSchedule(year, {}, dt.date(year, 3, 28), dt.date(year, 10, 1), "estimate")
+
+
+@functools.lru_cache(maxsize=None)
+def get_season_window(year: int) -> tuple[dt.date, dt.date]:
+    """
+    Returns (default season start, regular season end) for a given year.
+
+    The START is the DOMESTIC opener -- the modal club opener, the day most
+    clubs begin -- which is the right default for a caller that does not know
+    the player's club. For the per-club date (the Seoul/Tokyo openers, the
+    2026 Oracle Park opener), use get_club_season_start(). The END is the last
+    regular-season game actually played, which is NOT what /seasons reports in
+    a year with a cancelled makeup game (2023: /seasons said 10-02, the last
+    game played was 10-01).
+
+    Both come from the /schedule feed now, not /seasons -- see
+    _fetch_season_schedule() for the fallback chain and SeasonSchedule for why
+    per-club openers matter.
+
+    MEMOISED, and that is not a micro-optimisation. The pipeline asks for a
+    window once per player per season of his career, so a daily run over
+    ~1,370 rostered players made 7,179 calls to fetch the same 22 distinct
+    answers -- 7,157 of them redundant. A season's dates do not move within a
+    run, so one call each is all that is correct. The per-season schedule is
+    stashed in _SEASON_SCHEDULE as a side effect so the per-club openers are
+    fetched the same once-per-season way.
+    """
+    sched = _fetch_season_schedule(year)
+    _SEASON_SCHEDULE[year] = sched
+    return sched.domestic_opener, sched.end
+
+
+def get_club_season_start(year: int, club_id: int | None) -> dt.date:
+    """That club's own first regular-season game date for the year.
+
+    Falls back to the domestic opener when the club is unknown, had no games
+    in the feed, or the season's schedule could only be fetched from /seasons
+    (which has no per-club data). Ensures the season is fetched and memoised
+    first, so this costs no extra API call beyond the one get_season_window()
+    already makes.
+    """
+    start, _ = get_season_window(year)  # populates _SEASON_SCHEDULE[year]
+    sched = _SEASON_SCHEDULE.get(year)
+    if sched is not None and club_id is not None and club_id in sched.club_openers:
+        return sched.club_openers[club_id]
+    return start
 
 
 def estimated_season_windows() -> set[int]:
     """Seasons this process had to estimate rather than fetch. Empty is healthy."""
     return set(_ESTIMATED_WINDOWS)
+
+
+def degraded_season_windows() -> set[int]:
+    """Seasons that fell back to /seasons, so the schedule fixes did not apply."""
+    return set(_DEGRADED_WINDOWS)
