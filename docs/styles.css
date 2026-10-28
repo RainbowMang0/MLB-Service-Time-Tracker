@@ -205,6 +205,17 @@ html, body {
   max-width: 62ch;
   text-wrap: pretty;
 }
+/* A quiet readout, not a headline -- mono ties it to every other figure on
+   the page (the census line, the stat tiles), and it has to survive the
+   640px breakpoint where .subtitle disappears, so it gets its own rule
+   rather than riding along with .subtitle's. */
+.updated-line {
+  margin: 2px 0 10px;
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.01em;
+}
 .header-link { margin: 6px 0 0; font-size: 0.92rem; }
 .header-link a {
   color: var(--accent);
@@ -742,6 +753,7 @@ tbody td.player-name { border-left-color: var(--club-d, var(--club, transparent)
   .page-header { flex-direction: row; align-items: center; }
   .subtitle { display: none; }
   .page-header-inner h1 { font-size: 1.25rem; }
+  .updated-line { margin: 0; font-size: 0.72rem; }
   .brand-mark { width: 24px; height: 24px; }
   .svc-col { min-width: 96px; }
   .svc { width: 78px; }
