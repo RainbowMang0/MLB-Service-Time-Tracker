@@ -2871,6 +2871,49 @@ def test_a_season_ends_on_the_last_game_actually_played():
     check("a makeup doubleheader that was played does count", sched2.end == dt.date(2024, 9, 30))
 
 
+def test_a_resumed_game_relisted_under_a_later_date_does_not_extend_the_season():
+    """
+    LIVE BUG, caught 2026-10-29 running against the real statsapi feed:
+    get_season_window(2023) still returned 2023-10-02 after the
+    cancelled-makeup fix above. The real cause is a different shape than a
+    cancelled makeup: the Marlins@Mets game suspended by rain on 2023-09-28
+    ("Completed Early") is RELISTED by the /schedule feed under the date it
+    finished resuming, 2023-10-02, with `resumedFrom` pointing back to when it
+    actually started. Both rows share the same gamePk and the same result --
+    it is one game, not two -- but the first version of this parser keyed the
+    played date off the surrounding date BUCKET, so the 10-02 relisting read
+    as a real game on 10-02 and pulled the season end a day past the real
+    last day played, 2023-10-01.
+
+    These fixtures are trimmed real /schedule payloads (tests/fixtures/), not
+    synthetic ones, specifically so this does not get re-broken by a change
+    that only synthetic tests would pass. They also carry a genuine
+    postponed-and-rescheduled game (716393: a Postponed stub on 2023-09-29,
+    replayed Final on 2023-09-30) as a decoy -- that one must still count on
+    its real makeup date, which is what tells a resumption apart from an
+    ordinary rainout reschedule (see the comment on _parse_season_schedule).
+    """
+    import fetch_mlb_data as mlb
+
+    fixtures = pathlib.Path(__file__).resolve().parent / "fixtures"
+    payload_2023 = json.loads((fixtures / "schedule_2023_end.json").read_text())
+    payload_2024 = json.loads((fixtures / "schedule_2024_end.json").read_text())
+
+    sched_2023 = mlb._parse_season_schedule(2023, payload_2023)
+    check(
+        "the resumed game's duplicate relisting does not push the season "
+        f"past its real last day (got {sched_2023.end})",
+        sched_2023.end == dt.date(2023, 10, 1),
+    )
+
+    sched_2024 = mlb._parse_season_schedule(2024, payload_2024)
+    check(
+        "2024 still ends on the real Mets-Braves makeup doubleheader date "
+        f"(got {sched_2024.end})",
+        sched_2024.end == dt.date(2024, 9, 30),
+    )
+
+
 def test_a_short_option_under_twenty_days_counts_as_service():
     """
     The 20-day rule: a player optioned for fewer than 20 days in a season is
@@ -3241,6 +3284,7 @@ if __name__ == "__main__":
     test_the_sitemap_is_an_index_split_by_section()
     test_a_season_window_starts_at_each_clubs_own_opener()
     test_a_season_ends_on_the_last_game_actually_played()
+    test_a_resumed_game_relisted_under_a_later_date_does_not_extend_the_season()
     test_a_short_option_under_twenty_days_counts_as_service()
     test_an_option_of_twenty_days_or_more_is_not_credited()
     test_the_option_credit_is_capped_at_the_full_year()

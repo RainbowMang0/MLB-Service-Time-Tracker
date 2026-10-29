@@ -300,28 +300,82 @@ def _parse_season_schedule(year: int, payload: dict) -> SeasonSchedule | None:
     Defensive about the shape because this is parsed from a live feed the
     sandbox cannot reach: a missing field yields a thinner result, never an
     exception.
+
+    ⚠️ LIVE BUG, caught 2026-10-29 by running this against the real feed
+    instead of a synthetic one: `get_season_window(2023)` still returned
+    2023-10-02 after the makeup-game fix above, because the suspended
+    Marlins@Mets game from 2023-09-28 (rain, "Completed Early") is RELISTED by
+    the API under the date it finished resuming -- 2023-10-02 -- with
+    `resumedFrom` pointing back to when it actually started. That relisting
+    carries the SAME gamePk and the SAME result as the original row; it is not
+    a second game. Keying the played date off the surrounding date BUCKET (as
+    the first version of this function did) reads that bucket as a real game
+    on 10-02 and pulls the season end forward a day past the last game anyone
+    actually played, 2023-10-01.
+
+    The date of record for a game is its `officialDate` field, not the bucket
+    it is filed under -- the two normally agree, but a resumed game's
+    duplicate listing is exactly the case where they do not (the duplicate's
+    own officialDate is still 2023-09-28). So every game's day is read from
+    `officialDate` now, falling back to the bucket date only if the field is
+    missing, and a row carrying `resumedFrom` is skipped entirely -- it
+    contributes nothing that the original listing did not already contribute.
+
+    This is NOT the same shape as a postponed-and-rescheduled game, which must
+    still count. A rainout carries `rescheduledFrom` (a different field) and
+    produces two REAL rows: a stub with `detailedState: "Postponed"` on the
+    original date (already excluded by _NOT_PLAYED_STATES below) and a genuine
+    `Final` game on the makeup date, which is the actual game and must count
+    normally. Skipping on `resumedFrom` specifically, rather than on "this
+    gamePk already appeared", is what tells the two apart: the postponed stub
+    and the makeup Final share a gamePk but neither carries `resumedFrom`.
     """
     openers: dict[int, list[dt.date]] = {}
     end_candidates: list[dt.date] = []
+    # Defense in depth against the resumed-game shape above, in case a future
+    # payload omits `resumedFrom` on the duplicate row: a gamePk that has
+    # already contributed one end candidate cannot contribute a second. This
+    # must key on having actually CONTRIBUTED (i.e. after the not-played-state
+    # check below), not merely "seen" -- a postponed stub is seen first and
+    # excluded by status, and gating on bare presence would wrongly suppress
+    # the real makeup game that follows it under the same gamePk.
+    counted_end_game_pks: set[int] = set()
     for block in payload.get("dates") or []:
-        try:
-            day = dt.date.fromisoformat(block.get("date"))
-        except (TypeError, ValueError):
-            continue
+        bucket_date = block.get("date")
         for game in block.get("games") or []:
             # Regular season only. We ask the API for gameType=R, but double
             # check: a spring game weeks earlier would otherwise pull a club's
             # opener back into February.
             if game.get("gameType") != "R":
                 continue
+            if game.get("resumedFrom"):
+                continue
+
+            # officialDate is the date of record for the game, used uniformly
+            # for both a club's opener and the season end -- not the bucket,
+            # which a resumed game's (now-skipped) duplicate listing shows can
+            # disagree with it.
+            official = game.get("officialDate") or bucket_date
+            try:
+                day = dt.date.fromisoformat(official)
+            except (TypeError, ValueError):
+                continue
+
             teams = game.get("teams") or {}
             for side in ("home", "away"):
                 cid = ((teams.get(side) or {}).get("team") or {}).get("id")
                 if isinstance(cid, int):
                     openers.setdefault(cid, []).append(day)
+
             state = (game.get("status") or {}).get("detailedState") or ""
-            if state not in _NOT_PLAYED_STATES:
-                end_candidates.append(day)
+            if state in _NOT_PLAYED_STATES:
+                continue
+            game_pk = game.get("gamePk")
+            if game_pk is not None:
+                if game_pk in counted_end_game_pks:
+                    continue
+                counted_end_game_pks.add(game_pk)
+            end_candidates.append(day)
     if not openers or not end_candidates:
         return None
     club_openers = {cid: min(days) for cid, days in openers.items()}

@@ -153,7 +153,7 @@ config/cba/2027.json           valid placeholder that REFUSES to compute
 config/cba/roy_full_year_awards.json  hand-maintained ROY full-year credits; NOT a ruleset (cba._ruleset_paths skips it)
 config/tax/duty-day-rules.json day types and whether each counts as a duty day
 config/tax/2026-states.json    52 jurisdictions: 9 verified, 14 estimate-tier, 1 conflicting, 28 no rate
-tests/test_service_time.py     388 tests, no pytest needed: `python tests/test_service_time.py`
+tests/test_service_time.py     390 tests, no pytest needed: `python tests/test_service_time.py`
 tests/duty_days.test.cjs       27 tests, no npm needed: `node --test tests/duty_days.test.cjs`
 tests/contract.test.cjs        20 tests, incl. the advice-vocabulary lint
 docs/                          the static site (index.html, styles.css, app.js)
@@ -611,7 +611,7 @@ older ruleset, which is the condition `--recompute-all` exists to reach.
 - **1,364 on a 40-man.** Each has a static page at
   `docs/p/<id>-<slug>.html`, listed in `docs/sitemap.xml`. (The count moves
   by a player or two most days; that is roster churn, not drift.)
-- **388 Python tests, 27 duty-day JS tests, 41 contract JS tests** — all passing.
+- **390 Python tests, 27 duty-day JS tests, 41 contract JS tests** — all passing.
 - **Super Two cutoff currently 2.137**, computed from the whole population.
 - 1 player at or above 20.000 years (Verlander, 21.075), which is correct.
 - **26 players read exactly 0.000** and are hidden from the table by
@@ -4018,6 +4018,43 @@ is not Cancelled/Postponed. **No blanket rule against makeups** — the real
 ends 09-30. A cancelled/postponed game is excluded from the END but NOT from a
 club's opener, because a rained-out Opening Day still had a roster that day.
 
+⚠️ **LIVE BUG, caught 2026-10-29 running this against the real statsapi
+feed, and fixed without touching the cancelled-makeup rule above.** Even with
+that rule in place, `get_season_window(2023)` still returned 2023-10-02. The
+real cause is a different shape than a cancelled makeup: the same Marlins@Mets
+game, suspended by rain on 2023-09-28 ("Completed Early"), is **relisted by the
+feed under the date play resumed** — 2023-10-02 — carrying `resumedFrom`
+pointing back to when it actually started. Both rows share the same `gamePk`
+and the same result; it is one game, not two. The first version of this parser
+keyed the played date off the surrounding date *bucket*, so the 10-02 relisting
+read as a real game on 10-02 and pulled the season end a day past the real
+last day played.
+
+The fix: every game's date of record is now its own `officialDate` field, not
+the bucket it is filed under — used uniformly for both a club's opener and the
+season end — and a row carrying `resumedFrom` is skipped entirely, since it
+contributes nothing the original listing did not already contribute. A second,
+defense-in-depth guard (`counted_end_game_pks`) refuses to let any `gamePk`
+contribute a second end-candidate, in case a future payload omits
+`resumedFrom` on the duplicate.
+
+**This is NOT the same shape as a genuine rainout-and-reschedule, which must
+still count**, and the fix had to avoid breaking it while fixing the above: a
+real postponed game carries `rescheduledFrom` (a different field, found in the
+same 2023 payload for a Phillies-Mets game rained out 09-29 and replayed
+09-30) and produces two *real* rows — a `Postponed` stub on the original date
+(already excluded by the makeup rule) and a genuine `Final` game on the makeup
+date, which must count normally. Gating the dedup guard on *having
+contributed* an end-candidate (not merely "seen") is what keeps it from
+wrongly suppressing that real makeup game, since the Postponed stub is seen
+first but excluded by status before it would ever mark the `gamePk`.
+
+Regression tests use **trimmed real `/schedule` payloads**
+(`tests/fixtures/schedule_2023_end.json`, `schedule_2024_end.json`), not
+synthetic ones, specifically because a synthetic payload is exactly what
+missed this the first time — see "What the first live schedule run taught us"
+for the same lesson learned once already about spring-training opponents.
+
 ### 3. The 20-day optional-assignment rule
 
 Under the CBA a player optioned for FEWER than 20 days in a season is credited
@@ -4071,16 +4108,19 @@ are the positive control: they only match with the ROY credit applied.
 * So to realise v6 across the whole 5,600-player database the owner runs the
   **backfill with `--recompute-all`**, in batches scheduled clear of the 12:00
   UTC window (see "A long backfill can starve the daily job").
-* **One live-only risk, flagged like the schedule fetch was.** The sandbox
-  cannot reach `statsapi.mlb.com`, so `_parse_season_schedule` was verified
-  against synthetic payloads, not the real `/schedule` feed. If the `gameType=R`
-  call ever returns an unexpected shape, `get_season_window` degrades to
-  `/seasons` (the pre-fix overseas start, recorded in `degraded_season_windows()`
-  and warned loudly) rather than crashing — so a `/schedule` hiccup reintroduces
+* **The live-only risk flagged above has now been checked, and it found a real
+  bug** — the resumed-game relisting documented in finding 2 above, caught
+  2026-10-29 and fixed. `_parse_season_schedule` is validated against trimmed
+  real payloads for 2023 and 2024 now, not only synthetic ones.
+  `get_club_season_start`'s per-club openers and the 2025/2026 windows were
+  re-checked against real data at the same time and are unaffected (2025
+  03-27–09-28, 2026 03-26–09-27, unchanged). If the `gameType=R` call ever
+  returns an unexpected shape, `get_season_window` still degrades to `/seasons`
+  (the pre-fix overseas start, recorded in `degraded_season_windows()` and
+  warned loudly) rather than crashing — so a `/schedule` hiccup reintroduces
   the old window for that season but does not halt the site. A total outage of
   both endpoints still hits the hardcoded estimate, which `check_run_is_sane`
-  refuses to publish. **Watch the first live run's stderr for degraded/estimated
-  seasons.**
+  refuses to publish.
 
 ## The Super Two check finally has something to check against (2026-10-26)
 
