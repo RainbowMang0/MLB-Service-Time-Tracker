@@ -2856,6 +2856,253 @@ def test_every_ruleset_value_carries_a_source():
     check(f"every 2022 value has a sources entry (missing: {missing})", not missing)
 
 
+def test_the_milestone_sentence_is_a_floor_derived_from_the_ruleset():
+    """
+    Added for the player-page indexing work: a plain-English sentence stating
+    where a player stands against the CBA thresholds, so each page says more
+    than a bare Y.DDD figure. Every threshold comes from config/cba/ the same
+    way `_threshold_sentence()` already does -- this pins that it states a
+    FLOOR (the fewest more seasons he could possibly need, at the maximum
+    creditable rate) rather than inventing a projection the engine itself does
+    not make. See docs/data/accrual_model.json for the real, probability-
+    weighted version of this question, which lives only in the browser.
+    """
+    import write_player_pages as w
+
+    check("0 days needed costs 0 seasons", w._min_seasons_to(0) == 0)
+    check("a negative balance (already past) costs 0 seasons", w._min_seasons_to(-5) == 0)
+    check("1 day still costs a whole season", w._min_seasons_to(1) == 1)
+    check("exactly one season's worth costs 1", w._min_seasons_to(w.FULL_YEAR_DAYS) == 1)
+    check("one day over a season rolls to 2", w._min_seasons_to(w.FULL_YEAR_DAYS + 1) == 2)
+
+    fa = {"on_40_man": True, "service_time": "9.000", "service_days_total": 9 * w.FULL_YEAR_DAYS,
+          "free_agent_eligible": True}
+    check("already free-agency eligible says so and projects nothing",
+          "already eligible for free agency" in w._milestone_sentence(fa))
+
+    arb = {"on_40_man": True, "service_time": "3.010", "service_days_total": 3 * w.FULL_YEAR_DAYS + 10,
+           "arbitration_eligible": True, "free_agent_eligible": False, "super_two_candidate": False}
+    sentence = w._milestone_sentence(arb)
+    check("an arbitration-eligible player is told what's left for free agency",
+          "arbitration-eligible" in sentence and "free agency" in sentence)
+    check("the free agency threshold in the sentence is the ruleset's own",
+          w._yrs(w.FREE_AGENCY_YEARS) in sentence)
+
+    s2 = dict(arb, super_two_candidate=True)
+    check("a Super Two candidate is named as such",
+          "Super Two track" in w._milestone_sentence(s2))
+
+    pre_arb = {"on_40_man": True, "service_time": "1.050", "service_days_total": 1 * w.FULL_YEAR_DAYS + 50,
+               "arbitration_eligible": False, "free_agent_eligible": False, "super_two_candidate": False}
+    sentence = w._milestone_sentence(pre_arb)
+    check("a pre-arbitration player is told what's left for arbitration",
+          "arbitration eligibility" in sentence)
+    check("the arbitration threshold in the sentence is the ruleset's own",
+          w._yrs(w.ARBITRATION_YEARS) in sentence)
+
+    retired_fa = {"on_40_man": False, "service_time": "9.000", "service_days_total": 9 * w.FULL_YEAR_DAYS,
+                  "free_agent_eligible": True, "arbitration_eligible": True}
+    check("a finished career is described as closed, not projected",
+          "His career closed" in w._milestone_sentence(retired_fa))
+
+    never_up = {"on_40_man": True, "service_time": "0.000", "service_days_total": 0}
+    check("a player who has never accrued still gets a defensible sentence",
+          "arbitration eligibility" in w._milestone_sentence(never_up))
+
+
+def test_the_milestone_sentence_follows_the_ruleset_not_a_literal():
+    """
+    Positive control, same shape as test_the_explainer_prose_follows_the_ruleset_not_a_literal():
+    a changed agreement must move the thresholds this sentence quotes.
+    """
+    import importlib
+    import json as _json
+
+    config_dir = pathlib.Path(__file__).resolve().parents[1] / "config" / "cba"
+    base = _json.loads((config_dir / "2022.json").read_text())
+    base["free_agency"]["credited_years_required"] = 5.0
+    base["arbitration"]["standard_years_required"] = 2.0
+    scratch = config_dir / "9998.json"
+    scratch.write_text(_json.dumps(base))
+
+    import write_player_pages
+
+    real_default = cba.DEFAULT_VERSION
+    try:
+        cba.DEFAULT_VERSION = "9998"
+        cba.load.cache_clear()
+        importlib.reload(write_player_pages)
+        pre_arb = {"on_40_man": True, "service_time": "1.050", "service_days_total": 222,
+                   "arbitration_eligible": False, "free_agent_eligible": False,
+                   "super_two_candidate": False}
+        sentence = write_player_pages._milestone_sentence(pre_arb)
+        check("a lowered arbitration threshold reaches the sentence", "2.000" in sentence)
+        check("the old 3.000 threshold does not survive", "3.000" not in sentence)
+    finally:
+        scratch.unlink(missing_ok=True)
+        cba.DEFAULT_VERSION = real_default
+        cba.load.cache_clear()
+        importlib.reload(write_player_pages)
+
+
+def test_teammates_are_linked_but_never_a_retired_players_stale_club():
+    """
+    A player's page links sideways to a handful of his current roster mates,
+    so a crawler following links has more than one path off each page.
+
+    The dangerous case is an alumnus: his stored `team` is the LAST club he
+    was with, which is stale by construction (see `_club_phrase()`). Looking
+    up "teammates" by that name against today's roster would list men who
+    were never on a roster with him at all -- the same category error already
+    fixed once in the table's payload and in `_write_club_pages()`. The
+    caller in write_player_pages() is responsible for passing `[]` for a
+    non-rostered player; this pins that `_teammates_block()` itself also
+    degrades safely if it is ever called some other way.
+    """
+    import write_player_pages as w
+
+    roster = [
+        {"id": 1, "name": "Me", "service_days_total": 100},
+        {"id": 2, "name": "Teammate A", "service_days_total": 900},
+        {"id": 3, "name": "Teammate B", "service_days_total": 50},
+    ]
+    block = w._teammates_block(roster[0], roster)
+    check("a player never lists himself as his own teammate", ">Me<" not in block)
+    check("real teammates are linked by filename, not full page_path",
+          'href="2-teammate-a.html"' in block and 'href="3-teammate-b.html"' in block)
+    check("the more tenured teammate is listed first",
+          block.index("Teammate A") < block.index("Teammate B"))
+    check("no service-time figure is printed next to a teammate's name "
+          "(it would move every teammate's own lastmod on every accruing day)",
+          "900" not in block and "50</" not in block and "50 " not in block)
+
+    check("no teammates at all renders nothing", w._teammates_block(roster[0], []) == "")
+
+    # The real guard against the stale-club trap lives in write_player_pages()
+    # itself (teammates = [] unless on_40_man), not in this helper -- so this
+    # only documents that a caller handing it zero teammates is always safe.
+    alumnus = {"id": 9, "name": "Retired Guy", "on_40_man": False}
+    check("an alumnus handed no teammates gets no section",
+          w._teammates_block(alumnus, []) == "")
+
+
+def test_key_players_on_a_club_page_are_grouped_by_threshold_not_by_day_count():
+    """
+    The club page highlights players by surfaces of ELIGIBILITY -- free
+    agency, Super Two, standard arbitration -- rather than by raw day count.
+    That is deliberate: a group's membership changes only when a threshold is
+    actually crossed, a real and infrequent event, never on an ordinary
+    accruing day. Ranking by day count instead would reorder the sentence on
+    nearly every accruing day, which is exactly the daily-tick problem
+    `_content_key()` exists to keep out of the sitemap -- see the fix to
+    `_svc_cell()`'s own hashing in this same change.
+    """
+    import write_player_pages as w
+
+    fa = {"id": 1, "name": "Zeta FA", "free_agent_eligible": True,
+          "arbitration_eligible": True, "super_two_candidate": False}
+    s2 = {"id": 2, "name": "Alpha S2", "free_agent_eligible": False,
+          "arbitration_eligible": True, "super_two_candidate": True}
+    arb = {"id": 3, "name": "Beta Arb", "free_agent_eligible": False,
+           "arbitration_eligible": True, "super_two_candidate": False}
+    pre = {"id": 4, "name": "Nobody Yet", "free_agent_eligible": False,
+           "arbitration_eligible": False, "super_two_candidate": False}
+
+    line = w._key_players_line([fa, s2, arb, pre])
+    check("a free-agency-eligible player is named", "Zeta FA" in line)
+    check("a Super Two candidate is named under its own heading", "Super Two track" in line)
+    check("...and not double-counted under arbitration", line.count("Alpha S2") == 1)
+    check("a standard-arbitration player is named", "Beta Arb" in line)
+    check("a pre-arbitration player is not mentioned at all", "Nobody Yet" not in line)
+    check("within a group, names are alphabetical, not by id or day count",
+          line.index("Alpha S2") < line.index("Beta Arb"))
+
+    check("a roster with nobody past pre-arb produces nothing",
+          w._key_players_line([pre]) == "")
+
+
+def test_the_svc_meter_split_figure_is_normalised_like_every_other_figure():
+    """
+    Found while checking that club/alumni lastmod values are sensible for
+    this change: `_svc_cell()` (the meter used only on club and alumni listing
+    pages) splits the Y.DDD figure across two <span>s so the years and the
+    days can be styled separately -- which means `_FIGURE_RE`'s single
+    \\d+\\.\\d{3} token never matches it. A single player's ordinary daily
+    accrual therefore changed a CLUB page's content hash every day, which is
+    the exact regression the whole `_content_key()` mechanism exists to
+    prevent on player pages -- it had just never been re-checked against the
+    listing pages that reuse this cell.
+    """
+    import write_player_pages as w
+
+    p1 = {"id": 1, "name": "A", "position": "P", "service_days_total": 1532,
+          "service_time": "8.156", "free_agent_eligible": False,
+          "arbitration_eligible": True, "super_two_candidate": False}
+    p2 = dict(p1, service_days_total=1533, service_time="8.157")
+
+    club1 = w.render_club("Some Club", [p1], "2026-01-01T00:00:00+00:00")
+    club2 = w.render_club("Some Club", [p2], "2026-01-01T00:00:00+00:00")
+    check("a club page's hash is unmoved by one player's ordinary +1 day",
+          w._content_key(club1) == w._content_key(club2))
+
+    traded = dict(p1); traded["free_agent_eligible"] = True
+    check("...but a real status change still moves it",
+          w._content_key(club1) != w.render_club("Some Club", [traded], "2026-01-01T00:00:00+00:00")
+          and w._content_key(club1) != w._content_key(w.render_club("Some Club", [traded], "2026-01-01T00:00:00+00:00")))
+
+
+def test_the_homepage_carries_real_links_into_a_handful_of_player_pages():
+    """
+    docs/index.html renders its player table client-side from index.json, so
+    a crawler that does not run JavaScript found no player link anywhere on
+    the one page carrying the site's own inbound links -- every player page
+    sat three hops from home with exactly one inbound link, from its club
+    page. `_update_homepage_key_players()` rewrites one marked region of the
+    otherwise hand-maintained homepage with a few real `<a href>` links,
+    regenerated every run so they can never go stale between one run and the
+    next.
+    """
+    import re
+    import write_player_pages as w
+
+    root = pathlib.Path(__file__).resolve().parents[1]
+    index_path = root / "docs" / "index.html"
+    original = index_path.read_text(encoding="utf-8")
+    check("the homepage carries the generated-region markers",
+          w._KEY_PLAYERS_START in original and w._KEY_PLAYERS_END in original)
+
+    try:
+        players = [
+            {"id": 101, "name": "Famous Vet", "service_days_total": 3000, "on_40_man": True},
+            {"id": 102, "name": "Bench Guy", "service_days_total": 5, "on_40_man": True},
+        ]
+        w._update_homepage_key_players(players)
+        updated = index_path.read_text(encoding="utf-8")
+        check("both picks appear as real hrefs", 'href="p/101-famous-vet.html"' in updated)
+        check("...both of them", 'href="p/102-bench-guy.html"' in updated)
+        check("the rest of the file is untouched",
+              updated.replace(updated[updated.index(w._KEY_PLAYERS_START):
+                                       updated.index(w._KEY_PLAYERS_END) + len(w._KEY_PLAYERS_END)], "X")
+              == original.replace(original[original.index(w._KEY_PLAYERS_START):
+                                            original.index(w._KEY_PLAYERS_END) + len(w._KEY_PLAYERS_END)], "X"))
+
+        # Re-running must replace, not accumulate -- a second run with a
+        # different pick should leave no trace of the first.
+        w._update_homepage_key_players([{"id": 999, "name": "Someone Else",
+                                          "service_days_total": 1, "on_40_man": True}])
+        twice = index_path.read_text(encoding="utf-8")
+        check("re-running replaces rather than appending",
+              "Famous Vet" not in twice and "Someone Else" in twice)
+        check("exactly one pair of markers survives", twice.count(w._KEY_PLAYERS_START) == 1)
+    finally:
+        index_path.write_text(original, encoding="utf-8")
+
+    check("_pick_key_players only selects currently-rostered players",
+          all(p.get("on_40_man") for p in w._pick_key_players(
+              [{"id": 1, "name": "On", "service_days_total": 5, "on_40_man": True},
+               {"id": 2, "name": "Off", "service_days_total": 9000, "on_40_man": False}])))
+
+
 # ===========================================================================
 # rules version 6: schedule-derived windows, the 20-day option rule, and ROY
 # ===========================================================================
@@ -3378,6 +3625,12 @@ if __name__ == "__main__":
     test_only_alumni_with_a_defensible_figure_are_published()
     test_a_published_alumnus_is_reachable_and_off_the_club_pages()
     test_the_sitemap_is_an_index_split_by_section()
+    test_the_milestone_sentence_is_a_floor_derived_from_the_ruleset()
+    test_the_milestone_sentence_follows_the_ruleset_not_a_literal()
+    test_teammates_are_linked_but_never_a_retired_players_stale_club()
+    test_key_players_on_a_club_page_are_grouped_by_threshold_not_by_day_count()
+    test_the_svc_meter_split_figure_is_normalised_like_every_other_figure()
+    test_the_homepage_carries_real_links_into_a_handful_of_player_pages()
     test_a_season_window_starts_at_each_clubs_own_opener()
     test_a_season_ends_on_the_last_game_actually_played()
     test_a_resumed_game_relisted_under_a_later_date_does_not_extend_the_season()

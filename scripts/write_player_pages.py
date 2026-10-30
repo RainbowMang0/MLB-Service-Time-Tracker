@@ -228,8 +228,16 @@ def slug(name: str) -> str:
     return s or "player"
 
 
+def _player_filename(player: dict) -> str:
+    """The filename alone, with no directory -- shared by page_path() below
+    and by the teammate links in render(), which live in the same directory
+    as the page linking to them and so must never carry the "p/" prefix.
+    """
+    return f"{player['id']}-{slug(player.get('name'))}.html"
+
+
 def page_path(player: dict) -> str:
-    return f"p/{player['id']}-{slug(player.get('name'))}.html"
+    return f"p/{_player_filename(player)}"
 
 
 def _credited_seasons(player: dict) -> int:
@@ -304,6 +312,74 @@ def _status(player: dict) -> str:
     if player.get("arbitration_eligible"):
         return "Arbitration eligible"
     return "Pre-arbitration"
+
+
+def _min_seasons_to(days_needed: int) -> int:
+    """The fewest additional seasons that could possibly cover `days_needed`
+    more days, at the maximum creditable rate of FULL_YEAR_DAYS per season --
+    i.e. a player who spends the entire time on an active roster or injured
+    list from here on. Ceiling division: 1 day needed still costs a season.
+    """
+    if days_needed <= 0:
+        return 0
+    return -(-days_needed // FULL_YEAR_DAYS)
+
+
+def _milestone_sentence(player: dict) -> str:
+    """A plain-English statement of standing relative to the CBA thresholds.
+
+    Every number here is read off the ruleset the same way `_threshold_sentence()`
+    and the explainer are -- FULL_YEAR_DAYS, ARBITRATION_YEARS, FREE_AGENCY_YEARS
+    and _days_for() all come from config/cba/, so a successor agreement moves
+    this sentence exactly the way it moves the rest of the page.
+
+    For a player short of a threshold this states a FLOOR, not a projection:
+    the fewest more days -- and so the fewest more seasons -- he could reach it
+    in, given perfect roster health from today. That is a guarantee about the
+    arithmetic ("he cannot possibly get there faster than this"), never a guess
+    about his performance or his health. A probability-weighted projection
+    exists for this question (docs/data/accrual_model.json, used by
+    contract.js) but it is read only in the browser; reproducing it here would
+    be a second implementation of the same number, and this generator has no
+    reason to guess at a date the engine itself refuses to predict.
+    """
+    service = player.get("service_time") or "0.000"
+    days_total = int(player.get("service_days_total") or 0)
+
+    if not player.get("on_40_man"):
+        # Final. There is nothing left to project for a career that is over.
+        if player.get("free_agent_eligible"):
+            return f"His career closed at {service} years of service, enough to reach free agency."
+        if player.get("arbitration_eligible"):
+            return (
+                f"His career closed at {service} years of service, enough to reach "
+                "arbitration eligibility but short of free agency."
+            )
+        if days_total:
+            return f"His career closed at {service} years of service, short of arbitration eligibility."
+        return "He never accrued a day of major league service time."
+
+    if player.get("free_agent_eligible"):
+        return f"{service} years of service — already eligible for free agency."
+
+    fa_days = _days_for(FREE_AGENCY_YEARS)
+    if player.get("arbitration_eligible"):
+        seasons = _min_seasons_to(fa_days - days_total)
+        track = " on the Super Two track" if player.get("super_two_candidate") else ""
+        return (
+            f"{service} years of service, arbitration-eligible{track} — at least "
+            f"{seasons} more full season{'' if seasons == 1 else 's'} on an active "
+            f"roster or injured list to reach free agency ({_yrs(FREE_AGENCY_YEARS)})."
+        )
+
+    arb_days = _days_for(ARBITRATION_YEARS)
+    seasons = _min_seasons_to(arb_days - days_total)
+    return (
+        f"{service} years of service — at least {seasons} more full "
+        f"season{'' if seasons == 1 else 's'} on an active roster or injured list "
+        f"to reach standard arbitration eligibility ({_yrs(ARBITRATION_YEARS)}); "
+        "the Super Two cutoff can move him there a year early."
+    )
 
 
 def _plain_figure(service: str) -> str:
@@ -568,6 +644,46 @@ def _status_badge(player: dict) -> str:
     return f"<span class='badge {cls}'>{label}</span>"
 
 
+def _key_players_line(players: list[dict]) -> str:
+    """Name-only links to the players on this roster already at a threshold.
+
+    "Phillies arbitration eligible" is a far commoner search than any single
+    player's name (see CLAUDE.md), and the full roster table below already
+    answers it -- but burying the answer in a 40-row table gives a crawler no
+    reason to treat these names as more relevant than the rest. This surfaces
+    them by name, right under the facts grid.
+
+    Grouped by ELIGIBILITY, not by day count, on purpose: a group's membership
+    changes only when a threshold is actually crossed, which is a real content
+    change and should move the page's lastmod. Sorting or displaying by raw
+    day count would instead make the sentence reorder on nearly every
+    accruing day, which is exactly the daily-tick problem `_content_key()`
+    exists to keep out of the sitemap.
+    """
+    def _links(group: list[dict]) -> str:
+        return ", ".join(
+            f"<a href=\"../{page_path(p)}\">{html.escape(p.get('name') or '')}</a>"
+            for p in sorted(group, key=lambda p: p.get("name") or "")
+        )
+
+    fa = [p for p in players if p.get("free_agent_eligible")]
+    s2 = [p for p in players if p.get("super_two_candidate")]
+    already_shown = {p["id"] for p in fa} | {p["id"] for p in s2}
+    arb = [
+        p for p in players
+        if p.get("arbitration_eligible") and p["id"] not in already_shown
+    ]
+
+    parts = []
+    if fa:
+        parts.append(f"<b>Free agency eligible:</b> {_links(fa)}.")
+    if s2:
+        parts.append(f"<b>Super Two track:</b> {_links(s2)}.")
+    if arb:
+        parts.append(f"<b>Arbitration eligible:</b> {_links(arb)}.")
+    return f"<p class='key-players'>{' '.join(parts)}</p>" if parts else ""
+
+
 def render_club(club: str, players: list[dict], generated_at: str) -> str:
     """A club's 40-man roster, by service time.
 
@@ -658,6 +774,8 @@ def render_club(club: str, players: list[dict], generated_at: str) -> str:
     <div><span>Super Two track</span><b class="big">{s2}</b></div>
   </div>
 
+  {_key_players_line(players)}
+
   <table><thead><tr><th>Player</th><th>Pos</th><th class="n">Service time</th>
   <th class="n">Days</th><th>Status</th></tr></thead><tbody>{rows}</tbody></table>
 
@@ -725,7 +843,42 @@ def _jsonld(player: dict, name: str, url: str, service: str) -> str:
     return _ld_script([person, _breadcrumb_ld(trail)])
 
 
-def render(player: dict, team_names: dict[int, str], generated_at: str) -> str:
+def _teammates_block(player: dict, teammates: list[dict]) -> str:
+    """Links to a handful of this player's current roster mates.
+
+    Capped at 8 rather than the whole roster: the club page already carries
+    every name, and copying all 40-45 of them onto every one of its players'
+    pages would multiply boilerplate without giving a crawler a reason to
+    prefer any one page over another. Picked by current service time so the
+    players most likely to be searched surface first; NAMES ONLY, never a
+    figure -- a teammate's own day count ticking up must not change the
+    rendered HTML of everyone else on his roster, which is exactly the
+    daily-tick problem `_content_key()` exists to keep out of the sitemap.
+
+    Callers must pass `[]` for anyone not currently on a 40-man: a retired
+    player's stored club is stale (see `_club_phrase()`), so looking up
+    "teammates" by that name would list men on today's roster who were never
+    on a roster with him at all.
+    """
+    others = sorted(
+        (t for t in teammates if t.get("id") != player.get("id")),
+        key=lambda t: (-int(t.get("service_days_total") or 0), t.get("name") or ""),
+    )[:8]
+    if not others:
+        return ""
+    items = "".join(
+        f"<li><a href=\"{_player_filename(t)}\">{html.escape(t.get('name') or '')}</a></li>"
+        for t in others
+    )
+    return f"<h2>Teammates</h2><ul class='teammates'>{items}</ul>"
+
+
+def render(
+    player: dict,
+    team_names: dict[int, str],
+    generated_at: str,
+    teammates: list[dict] | None = None,
+) -> str:
     name = html.escape(player.get("name") or "Player")
     service = html.escape(player.get("service_time") or "0.000")
     url = f"{SITE_URL}/{page_path(player)}"
@@ -845,9 +998,13 @@ def render(player: dict, team_names: dict[int, str], generated_at: str) -> str:
     <div><span>MLB debut</span>{debut}</div>
   </div>
 
+  <p class="milestone">{html.escape(_milestone_sentence(player))}</p>
+
   {caveat}
   <h2>Season by season</h2>
   {_season_rows(player, team_names)}
+
+  {_teammates_block(player, teammates or [])}
 
   <p class="foot">
     {_threshold_sentence()}
@@ -929,11 +1086,24 @@ _PCT_RE = re.compile(r"--pct:[\d.]+")                      # the meter fill
 # reading the template -- the first pass at this list missed it, and the diff
 # is what said so.
 _PLAIN_FIGURE_RE = re.compile(r"<b>\d+ (?:year|day)s?(?: and \d+ days?)?</b>")
+# _svc_cell() -- the meter used on club and alumni listing pages -- splits the
+# Y.DDD figure across two <span>s so the years and the days can be styled
+# differently, which means _FIGURE_RE's single \d+\.\d{3} token never matches
+# it. Found the same way as _PLAIN_FIGURE_RE: rendering a club page for the
+# same player a day apart and diffing the normalised output showed every club
+# page moving on nearly every accruing day -- the exact regression this whole
+# mechanism exists to prevent, just on a page nobody had re-checked.
+_SVC_SPLIT_RE = re.compile(
+    r"<span class='svc-years'>\d+</span><span class='svc-days'>\.\d{3}</span>"
+)
 
 
 def _content_key(page_html: str) -> str:
     stable = _VOLATILE_RE.sub("Last updated.", page_html)
     stable = _PLAIN_FIGURE_RE.sub("<b><PLAIN></b>", stable)
+    stable = _SVC_SPLIT_RE.sub(
+        "<span class='svc-years'><SVC></span><span class='svc-days'><SVC></span>", stable
+    )
     stable = _FIGURE_RE.sub("<SVC>", stable)
     stable = _DAYS_PHRASE_RE.sub("<DAYS> days credited", stable)
     stable = _DAYS_FACT_RE.sub(r"\1<DAYS>", stable)
@@ -1015,14 +1185,18 @@ def write_player_pages(
         directory.mkdir(parents=True, exist_ok=True)
 
     lastmod = _LastMod(generated_at[:10])
+    by_club = _group_rostered_by_club(published)
 
     for player in published:
-        page = render(player, team_names, generated_at)
+        # Only a currently-rostered player gets real teammates -- see the
+        # warning in _group_rostered_by_club() and _teammates_block().
+        teammates = by_club.get(player.get("team"), []) if player.get("on_40_man") else []
+        page = render(player, team_names, generated_at, teammates)
         rel = page_path(player)
         (DOCS / rel).write_text(page)
         lastmod.record(rel, page)
 
-    clubs = _write_club_pages(published, generated_at, lastmod)
+    clubs = _write_club_pages(by_club, generated_at, lastmod)
     alumni = [p for p in published if not p.get("on_40_man")]
     alumni_pages = _write_alumni_pages(alumni, generated_at, lastmod) if alumni else []
 
@@ -1034,6 +1208,7 @@ def write_player_pages(
     lastmod.save()
     _write_robots()
     _write_404()
+    _update_homepage_key_players(_pick_key_players(published))
     total_kb = sum((DOCS / page_path(p)).stat().st_size for p in published) / 1024
     print(
         f"Wrote {len(published)} player pages ({total_kb / 1024:.1f} MB) to {PAGE_DIR} "
@@ -1043,25 +1218,110 @@ def write_player_pages(
     return published
 
 
-def _write_club_pages(
-    published: list[dict], generated_at: str, lastmod: "_LastMod"
-) -> list[str]:
-    """One page per club with someone on its 40-man. Returns the club names.
+def _pick_key_players(published: list[dict], limit: int = 8) -> list[dict]:
+    """A handful of currently-rostered players worth linking from the homepage.
+
+    Picked by total days credited -- the same field the main table defaults
+    to sorting by -- so the names a crawler reaches from a bare `<a href>`
+    are the same ones a JavaScript visitor sees first. Not a figure anyone
+    reads here, only a sort key, so this does not reintroduce the daily-tick
+    problem _content_key() exists to prevent.
+    """
+    rostered = [p for p in published if p.get("on_40_man")]
+    rostered.sort(key=lambda p: (-int(p.get("service_days_total") or 0), p.get("name") or ""))
+    return rostered[:limit]
+
+
+_KEY_PLAYERS_START = "<!-- KEY_PLAYERS_START -->"
+_KEY_PLAYERS_END = "<!-- KEY_PLAYERS_END -->"
+
+
+def _update_homepage_key_players(key_players: list[dict]) -> None:
+    """Rewrite the one generated region of the otherwise hand-maintained homepage.
+
+    docs/index.html renders its player table client-side from index.json, so
+    a crawler that does not run JavaScript finds no player link anywhere on
+    the one page that carries the site's own inbound links -- every player
+    page sits three hops from home with exactly one inbound internal link,
+    from its club page. This gives a crawler a handful of direct paths in.
+
+    Injected between two HTML comment markers rather than templated whole:
+    the rest of index.html is genuinely hand-maintained (the nav, the
+    filters, the table shell), and a roster-dependent list of names would go
+    stale the moment a player included here dropped off a 40-man -- unlike
+    the nav or the "t/" link, which point at URLs that never change. Marking
+    out only this one region keeps everything else exactly as a person last
+    edited it, and running this script again always makes it current.
+
+    ⚠️ "Always makes it current" describes what this function does to the
+    WORKING TREE, not what is live. Both workflows deliberately never `git
+    add docs/index.html`, because the rest of the file is hand-edited and
+    sweeping it into an automated commit is exactly the risk that exclusion
+    exists to avoid -- see the commit_data.sh paths in both workflow YAMLs.
+    So today this region is refreshed only when a human runs the pipeline
+    and commits the result (as this change does), the same cadence as any
+    other index.html edit, NOT every night with the daily job. Players are
+    picked by tenure specifically because that population churns slowly, so
+    the staleness window this leaves is small; `validate_published.py`'s
+    link check (run on every push and PR, see ci.yml) still catches it if a
+    picked player ever does drop off a 40-man between updates, the same
+    safety net the og:url/canonical check already relies on for this file.
+    Wiring this into the daily workflow too is a reasonable follow-up, but it
+    is a deliberate change to that long-standing exclusion and belongs in its
+    own decision, not bundled into this one.
+
+    If the markers are missing (a hand edit removed them, or this runs
+    against a docs/index.html that predates this feature), this is a no-op
+    rather than a crash or a silently corrupted file.
+    """
+    index_path = DOCS / "index.html"
+    if not index_path.exists():
+        return
+    text = index_path.read_text(encoding="utf-8")
+    if _KEY_PLAYERS_START not in text or _KEY_PLAYERS_END not in text:
+        return
+    links = ", ".join(
+        f'<a href="{page_path(p)}">{html.escape(p.get("name") or "")}</a>'
+        for p in key_players
+    )
+    replacement = (
+        f"{_KEY_PLAYERS_START}\n"
+        f"      <p>Notable players on a 40-man roster right now: {links}.</p>\n"
+        f"      {_KEY_PLAYERS_END}"
+    )
+    pattern = re.compile(re.escape(_KEY_PLAYERS_START) + r".*?" + re.escape(_KEY_PLAYERS_END), re.S)
+    index_path.write_text(pattern.sub(replacement, text, count=1), encoding="utf-8")
+
+
+def _group_rostered_by_club(published: list[dict]) -> dict[str, list[dict]]:
+    """Every published, CURRENTLY rostered player, grouped by his 40-man club.
 
     ⚠️ ROSTERED PLAYERS ONLY, and the filter is explicit rather than implied by
     the caller. `published` used to be exactly the 40-man, so grouping it by
     club was the same thing; since _should_publish() widened to alumni it is
     not. A retired player's stored `team` is the last club we saw him with,
     which is stale by construction -- listing him on that club's 40-man page
+    (or as a "teammate" of a current player who happens to share that name)
     would assert a roster spot he does not hold, which is the same category
     error already fixed once in the table's payload.
+
+    Shared by the club pages and the per-player teammate links so the two
+    groupings cannot drift apart: a player shown as someone's "teammate" but
+    missing from that club's own roster page would be exactly the kind of
+    silent disagreement this project tests against elsewhere.
     """
     by_club: dict[str, list[dict]] = {}
     for player in published:
         club = player.get("team")
         if club and player.get("on_40_man"):
             by_club.setdefault(club, []).append(player)
+    return by_club
 
+
+def _write_club_pages(
+    by_club: dict[str, list[dict]], generated_at: str, lastmod: "_LastMod"
+) -> list[str]:
+    """One page per club with someone on its 40-man. Returns the club names."""
     for club, players in by_club.items():
         page = render_club(club, players, generated_at)
         rel = club_path(club)
@@ -1445,8 +1705,17 @@ td a:hover { text-decoration: underline; }
 .lede { font-size: 1.05rem; line-height: 1.6; color: var(--text-secondary);
         margin: 0.9rem 0 0; max-width: 62ch; }
 .lede b { color: var(--text-primary); font-weight: 650; }
+.milestone { font-size: 0.9rem; color: var(--text-secondary); margin: 0.6rem 0 0;
+             max-width: 62ch; border-left: 2px solid var(--accent); padding-left: 0.7rem; }
+.milestone:empty { display: none; }
 .caveat { background: var(--status-warning-wash); color: var(--text-secondary);
           padding: 0.7rem 0.85rem; border-radius: 6px; font-size: 0.85rem; }
+.teammates { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem;
+             padding: 0; margin: 0.4rem 0 0; font-size: 0.9rem; }
+.teammates a, .key-players a { color: var(--accent); text-decoration: none; }
+.teammates a:hover, .key-players a:hover { text-decoration: underline; }
+.key-players { font-size: 0.88rem; color: var(--text-secondary); margin: 0.8rem 0 0; }
+.key-players b { color: var(--text-primary); }
 .back { display: inline-block; margin-bottom: 1rem; color: var(--accent);
         text-decoration: none; }
 .foot { margin-top: 1.5rem; font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
