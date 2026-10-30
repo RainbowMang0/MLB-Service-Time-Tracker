@@ -3890,6 +3890,63 @@ indexed in the first week, on a new domain with no backlinks, is a normal
 result rather than a broken one. Re-read the split sitemap report before
 spending effort on either.
 
+### Publishing made sticky — a page never comes down (2026-10-30)
+
+**The bug.** The 2026-10-30 daily update silently unpublished five pages —
+Justin Verlander, Max Scherzer, Rudy Martin Jr., Henry Baez, Aaron Sabato —
+the moment each came off a 40-man roster. `write_player_pages()` rebuilds
+`docs/p/`, `docs/t/` and `docs/alumni/` wholesale every run from whatever
+`_should_publish()` says *that day*, and `_should_publish()` is `on_40_man
+or _is_alumnus()` — so a player who falls off the roster without yet
+qualifying as an alumnus (missing seasons, or only one credited season; see
+"Publication widened to 2,466 alumni" above) simply vanishes on the next
+rebuild. `docs/index.html` still carried two hand-written links to Verlander
+and Scherzer from an earlier `_update_homepage_key_players()` run, so
+`validate_published.py`'s dead-link check started failing on `main`.
+
+**Owner's rule (Braxton):** a player's page must never be removed because he
+retires or leaves a roster — it moves to "Previous players" instead and stays
+there for good.
+
+**The fix is a ratchet, not a widened `_is_alumnus()`.** Widening the
+alumnus rule further would have reopened the exact trade-off "Publication
+widened to 2,466 alumni" measured and declined — some non-rostered records
+are genuinely too thin to publish *for the first time*. The actual bug was
+narrower: a record that was **already** published must not be re-evaluated
+against that bar on every run.
+
+* **`data/published_ids.json`** — a flat JSON array of ids, committed, that
+  only ever grows. `load_ever_published()` / `save_ever_published()` in
+  `write_player_pages.py` read and rewrite it.
+* **`_should_publish(player, ever_published=None)`** gained a second,
+  optional argument: `on_40_man or _is_alumnus(player) or player["id"] in
+  ever_published`. Omitting it (every existing test that passes a bare dict
+  literal) reproduces the old, fresh-criteria-only behavior exactly — nothing
+  about *who newly qualifies* changed.
+* **`write_player_pages()`** loads the sticky set, folds it into `published`
+  before the `rmtree`-and-rebuild, and saves the union of the old set and
+  `{p["id"] for p in published}` back out before returning — so an id can be
+  added but never removed, and this is true even though the three
+  directories are still rebuilt from scratch every run.
+* **`write_index()`** (in `update_service_time.py`) takes the *same* loaded
+  set as a third argument, so the published `has_page` column and the actual
+  contents of `docs/p/` cannot disagree — they did not get a chance to drift
+  apart because both read one snapshot taken once, at the top of
+  `_write_outputs()`.
+* `backfill_history.py` needed no changes: it delegates to `_write_outputs()`
+  already (see `write_db()`'s own docstring on why there is only one publish
+  path).
+
+**Seeded with:** every id that had a page in `docs/p/` right before this fix,
+plus the five that had just been dropped. 3,836 → 3,841 pages. The 404 page's
+copy, which asserted "pages are... removed when a player drops off," was
+rewritten to say the opposite.
+
+**What this does not change:** `_is_alumnus()` itself, and the 1,756 thin
+non-rostered records still held back from a FIRST publication, are untouched
+— this is about not un-publishing, not about widening who gets published to
+begin with.
+
 ### The page CSS is a real file now
 
 It was inlined into each of the 1,358 player pages: ~1.4 KB apiece, and

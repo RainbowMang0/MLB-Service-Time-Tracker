@@ -66,6 +66,7 @@ config/tax/                    duty-day rules + 2026 state rates (tiered)
 data/reference_*.json          hand-entered B-R figures, published Super Two cutoffs
 data/cache/transactions/       per-player transaction cache (rostered only)
 data/backfill_state.json       resumable backfill progress
+data/published_ids.json        ids ever given a page; only grows -- a page never comes down
 docs/index.html, app.js, styles.css      main table (hand-edited)
 docs/taxes.*, duty-days.js               duty-day tool (hand-edited; engine runs in node)
 docs/contract.html/.js, contract-page.js contract clock (engine / UI)

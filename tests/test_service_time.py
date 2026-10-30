@@ -2253,8 +2253,140 @@ def test_a_published_alumnus_is_reachable_and_off_the_club_pages():
     check("the index declares a has_page column", "has_page" in idx["fields"])
     col = idx["fields"].index("has_page")
     flagged = sum(1 for r in idx["players"] if r[col] == 1)
+    # Sticky ids count too: a player who left his roster keeps his page (see
+    # load_ever_published()), and the index's has_page flag must say so.
+    ever_published = w.load_ever_published()
     check(f"...and it counts the published pages ({flagged})",
-          flagged == sum(1 for p in db if w._should_publish(p)))
+          flagged == sum(1 for p in db if w._should_publish(p, ever_published)))
+
+
+def test_a_player_who_leaves_the_40man_keeps_his_page():
+    """
+    OWNER'S RULE (Braxton, 2026-10-30): a player's page outlives his roster
+    spot. The 2026-10-30 daily update dropped five pages -- Verlander,
+    Scherzer and three others -- the moment they came off a 40-man roster,
+    because `_should_publish()` on its own only re-qualifies a non-rostered
+    player who passes `_is_alumnus()` (complete history, more than one
+    credited season), and these five did not.
+
+    `_should_publish()` now takes the sticky `ever_published` set as a second,
+    optional argument: a fresh roster/alumnus check decides who is NEWLY
+    published, but an id already in that set stays published regardless.
+    """
+    import write_player_pages as w
+
+    thin = {"id": 777001, "on_40_man": True, "missing_seasons": 10,
+            "seasons": [{"y": 2020, "d": 5}]}
+    check("published while rostered, even with thin history",
+          w._should_publish(thin))
+
+    thin["on_40_man"] = False
+    check("fresh criteria alone drop him the moment he leaves the roster",
+          not w._should_publish(thin) and not w._is_alumnus(thin))
+    check("...but the sticky set keeps him published",
+          w._should_publish(thin, {777001}))
+    check("a sticky id for someone else does not publish him",
+          not w._should_publish(thin, {1, 2, 3}))
+
+
+def test_a_previously_published_page_is_never_dropped():
+    """
+    End-to-end version of the rule above: running write_player_pages() a
+    second time, with the player now off the roster and shaped exactly like
+    the kind of record `_is_alumnus()` rejects, must not delete his file --
+    the generator rebuilds docs/p/ wholesale on every run (see the rmtree in
+    write_player_pages()), so the only thing standing between "has a page"
+    and "page silently vanishes" is whether his id is remembered.
+
+    Runs against a temporary docs/ tree (the module's directory and
+    published-ids constants are monkeypatched for the duration) so this does
+    not touch the real site.
+    """
+    import tempfile
+    import write_player_pages as w
+
+    tmp = tempfile.TemporaryDirectory()
+    try:
+        tmp_root = pathlib.Path(tmp.name)
+        docs = tmp_root / "docs"
+        docs.mkdir()
+
+        patched = {
+            "DOCS": docs,
+            "PAGE_DIR": docs / "p",
+            "CLUB_DIR": docs / "t",
+            "ALUMNI_DIR": docs / "alumni",
+            "LASTMOD_PATH": docs / "data" / "page_lastmod.json",
+            "PUBLISHED_IDS_PATH": tmp_root / "data" / "published_ids.json",
+        }
+        saved = {name: getattr(w, name) for name in patched}
+        for name, value in patched.items():
+            setattr(w, name, value)
+
+        try:
+            player_id = 777002
+            rostered = {
+                "id": player_id, "name": "Test Fading Player", "on_40_man": True,
+                "team": "Test Club", "team_id": 1, "missing_seasons": 0,
+                "seasons": [{"y": 2026, "d": 20}],
+            }
+            first_run = w.write_player_pages(
+                {str(player_id): rostered}, "2026-10-29T00:00:00+00:00"
+            )
+            check("published on the first run, while rostered",
+                  any(p["id"] == player_id for p in first_run))
+            page = w.PAGE_DIR / w._player_filename(rostered)
+            check("his page file exists after the first run", page.exists())
+
+            fallen_off = dict(rostered)
+            fallen_off["on_40_man"] = False
+            check("sanity: fresh criteria alone would reject this record",
+                  not w._is_alumnus(fallen_off))
+
+            second_run = w.write_player_pages(
+                {str(player_id): fallen_off}, "2026-10-30T00:00:00+00:00"
+            )
+            check("still published after dropping off the roster",
+                  any(p["id"] == player_id for p in second_run))
+            check("his page file survives the wholesale rebuild", page.exists())
+            check("the sticky id file remembers him",
+                  player_id in w.load_ever_published())
+        finally:
+            for name, value in saved.items():
+                setattr(w, name, value)
+    finally:
+        tmp.cleanup()
+
+
+def test_the_homepage_has_no_dead_links():
+    """
+    docs/index.html is the one hand-maintained page carrying real <a href>
+    links into generated pages -- the "t/" hub and the region
+    `_update_homepage_key_players()` rewrites between KEY_PLAYERS_START/END.
+    Those links are only as good as the files they point to: the 2026-10-30
+    daily update rebuilt docs/p/ without the five players this file was
+    still linking to, and nothing caught it until validate_published.py was
+    run by hand. This pins the same check here so the plain test run does
+    too.
+    """
+    import re
+
+    root = pathlib.Path(__file__).resolve().parents[1]
+    docs = root / "docs"
+    text = (docs / "index.html").read_text(encoding="utf-8")
+
+    dead = []
+    for href in re.findall(r'href="((?!https?:|#|mailto:)[^"]+)"', text):
+        clean = href.split("#")[0].split("?")[0]
+        if not clean or clean.startswith("/"):
+            continue  # site-absolute; validate_published.py covers these
+        target = (docs / clean).resolve()
+        if clean.endswith("/") or target.is_dir():
+            target = target / "index.html"
+        if not target.exists():
+            dead.append(href)
+    check(f"every relative homepage link resolves to a real file ({len(dead)} dead)",
+          not dead)
 
 
 def test_the_sitemap_is_an_index_split_by_section():
@@ -3624,6 +3756,9 @@ if __name__ == "__main__":
     test_the_daily_service_time_tick_is_not_a_content_change()
     test_only_alumni_with_a_defensible_figure_are_published()
     test_a_published_alumnus_is_reachable_and_off_the_club_pages()
+    test_a_player_who_leaves_the_40man_keeps_his_page()
+    test_a_previously_published_page_is_never_dropped()
+    test_the_homepage_has_no_dead_links()
     test_the_sitemap_is_an_index_split_by_section()
     test_the_milestone_sentence_is_a_floor_derived_from_the_ruleset()
     test_the_milestone_sentence_follows_the_ruleset_not_a_literal()
