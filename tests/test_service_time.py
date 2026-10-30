@@ -779,9 +779,11 @@ def test_profile_rows_sum_to_the_published_total():
 # --- Super Two -----------------------------------------------------------
 #
 # Written from the rule, not from the old heuristic. The heuristic treated
-# "86 days into your third year" as the whole test; 86 days is really a
-# secondary condition on top of a top-22% ranking of the league-wide class,
-# which is only computable now that the database holds every player.
+# "86 days into your third year" as the whole test; the real rule states the
+# 86-day floor and the top-22% ranking as ONE condition -- mlb.com's glossary
+# puts it in a single sentence -- so the 86-day floor defines who is IN the
+# class being ranked, not a filter applied after it. See the "CORRECTED
+# 2026-10-30" note in scripts/super_two.py.
 
 
 def _s2_player(pid, name, rows):
@@ -790,13 +792,15 @@ def _s2_player(pid, name, rows):
 
 
 def _s2_league(n, year=2025):
-    """n players spread evenly across the 2.000-3.000 band."""
+    """n players spread evenly across the 2.000-3.000 band, each with
+    86..171 days in `year` -- clearing the class's 86-day floor -- so every
+    one of them lands in that year's class."""
     db = {}
     for i in range(n):
-        # 345..514, so every player accrues at least one day in `year` and is
-        # therefore in that year's class.
-        days = 2 * 172 + 1 + (i * 169) // max(n - 1, 1)
-        db[str(i)] = _s2_player(i, f"P{i:03d}", [(year - 2, 172), (year - 1, 172), (year, days - 344)])
+        days_in_year = 86 + (i * 85) // max(n - 1, 1)
+        total = 2 * 172 + days_in_year
+        db[str(i)] = _s2_player(i, f"P{i:03d}", [(year - 2, 172), (year - 1, 172), (year, days_in_year)])
+        assert 2 * 172 <= total < 3 * 172
     return db
 
 
@@ -822,6 +826,51 @@ def test_super_two_class_excludes_players_who_did_not_play_that_year():
     db["retired"] = _s2_player(9001, "Retired Guy", [(2014, 172), (2015, 172), (2016, 100)])
     cutoff = S.compute_cutoff(db, 2025)
     check("the retired player is not counted in the class", cutoff["class_size"] == 60)
+
+
+def test_super_two_class_requires_86_days_not_just_any_accrual():
+    """
+    mlb.com's own glossary states the 86-day floor and the top-22% ranking
+    as one condition, not two: "rank in the top 22 percent ... among those
+    who have amassed between two and three years ... and have accrued at
+    least 86 days ... during the preceding season." The floor describes who
+    is IN the pool being ranked. Before 2026-10-30 a player with a single
+    day of accrual still inflated the class denominator even though he
+    could never clear the 86-day floor to qualify.
+    """
+    import super_two as S  # noqa: PLC0415
+
+    db = _s2_league(60)
+    db["cup_of_coffee"] = _s2_player(
+        9004, "Cup Of Coffee", [(2023, 172), (2024, 172), (2025, 10)]
+    )
+    cutoff = S.compute_cutoff(db, 2025)
+    check(
+        "a player with <86 days in the season is not in the class at all",
+        cutoff["class_size"] == 60,
+    )
+    ranked = S.build_class(db, 2025)
+    check(
+        "...he does not appear in the ranked class either",
+        all(record.get("name") != "Cup Of Coffee" for _, _, record in ranked),
+    )
+
+
+def test_super_two_rounds_the_qualifying_count_rather_than_flooring_it():
+    """
+    85 * 22% = 18.7. The old floor() dropped the 19th-ranked player; "top 22
+    percent" rounded to the nearest whole number admits him. This is the
+    change (together with the 86-day class fix above) that took the
+    computed 2022 cutoff from +7 days off the published figure to +1, and
+    2021 from +0 to an exact match -- see data/reference_super_two.json and
+    scripts/validate_super_two.py.
+    """
+    import super_two as S  # noqa: PLC0415
+
+    db = _s2_league(85)
+    cutoff = S.compute_cutoff(db, 2025)
+    check("85 players form the class", cutoff["class_size"] == 85)
+    check("18.7 rounds up to 19, not down to 18", cutoff["qualifying_count"] == 19)
 
 
 def test_super_two_requires_86_days_in_the_preceding_season():
@@ -861,6 +910,50 @@ def test_super_two_declines_to_guess_from_a_tiny_population():
     import super_two as S  # noqa: PLC0415
 
     check("no cutoff from 10 players", S.compute_cutoff(_s2_league(10), 2025) is None)
+
+
+def test_validate_super_two_counts_failures_and_would_exit_nonzero():
+    """
+    `validate_super_two.py`'s exit code is what the "Validate Service Time"
+    Action gates on -- a mismatch has to make `failures` nonzero, not just
+    print FAIL to a log nobody reads. Pinned directly against `evaluate()`,
+    the pure function `main()` calls before deciding `sys.exit()`, rather
+    than via subprocess, so it is fast, deterministic, and independent of
+    whatever the live reference file says on a given day.
+    """
+    import validate_super_two as V  # noqa: PLC0415
+    import super_two as S  # noqa: PLC0415
+
+    db = _s2_league(100)
+    real_cutoff = S.compute_cutoff(db, 2025)
+    matching = S.format_service(real_cutoff["cutoff_days"])
+    far_off = S.format_service(real_cutoff["cutoff_days"] + 50)
+
+    _, failures, entered, pending = V.evaluate(
+        db, [{"season": 2025, "published": matching}], tolerance_days=2
+    )
+    check("a matching published figure passes", failures == 0)
+    check("...and the script would exit 0", (1 if failures else 0) == 0)
+    check("it is counted as entered", entered == 1 and pending == 0)
+
+    _, failures, entered, pending = V.evaluate(
+        db, [{"season": 2025, "published": far_off}], tolerance_days=2
+    )
+    check("a far-off published figure fails", failures == 1)
+    check("...and the script would exit nonzero", (1 if failures else 0) == 1)
+
+    _, failures, entered, pending = V.evaluate(
+        db, [{"season": 2025, "published": None}], tolerance_days=2
+    )
+    check("a row awaiting a figure never fails", failures == 0)
+    check("it is counted as pending, not entered", pending == 1 and entered == 0)
+
+    # A season too small to draw a cutoff through must still fail against a
+    # published figure -- "we refuse to compute" cannot score as "ok".
+    _, failures, entered, pending = V.evaluate(
+        _s2_league(10), [{"season": 2025, "published": "2.130"}], tolerance_days=2
+    )
+    check("a class too small to measure fails rather than passing vacuously", failures == 1)
 
 
 def test_qualifying_season_follows_the_season_being_played():
@@ -2779,9 +2872,12 @@ if __name__ == "__main__":
     test_profile_rows_sum_to_the_published_total()
     test_super_two_cutoff_is_the_top_22_percent_boundary()
     test_super_two_class_excludes_players_who_did_not_play_that_year()
+    test_super_two_class_requires_86_days_not_just_any_accrual()
+    test_super_two_rounds_the_qualifying_count_rather_than_flooring_it()
     test_super_two_requires_86_days_in_the_preceding_season()
     test_super_two_flags_only_the_two_to_three_year_band()
     test_super_two_declines_to_guess_from_a_tiny_population()
+    test_validate_super_two_counts_failures_and_would_exit_nonzero()
     test_qualifying_season_follows_the_season_being_played()
     test_qualifying_season_falls_back_early_in_a_season()
     test_latest_complete_season_is_measured_not_assumed()

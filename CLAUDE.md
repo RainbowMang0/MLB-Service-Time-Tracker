@@ -4078,6 +4078,99 @@ which also asserts the live payload is *in* the prediction case: a cutoff
 computed for a season MLB has already announced would mean `super_two.py` is a
 season behind, which is its own bug.
 
+## The Super Two class was built from the wrong rule (2026-10-30)
+
+Filling in `data/reference_super_two.json` turned the check on, and it failed
+four of five years. The errors had no consistent sign (−3d, +3d, +12d, +7d,
+0d), which was itself the clue: a method with the wrong *sign* on one input is
+usually the wrong formula, not wrong data.
+
+**The class-membership test was reading "and" as "then".** mlb.com's own
+glossary states the rule as one sentence: a player must "rank in the top 22
+percent, in terms of service time, among those who have amassed between two
+and three years in the Majors **and** have accrued at least 86 days of service
+time during the preceding season." That `and` joins two conditions on the same
+pool — the 86-day floor describes who is *in* the group being ranked. The code
+read it as two sequential steps: build the class from anyone with 2-3 years
+who accrued `> 0` days that season, rank it, and only check the 86-day floor
+*afterward*, on whichever candidates landed above the cutoff. A player who
+played one game and could never possibly qualify was still inflating the
+denominator every other player was ranked against.
+
+**And the 22% share was floored, not rounded.** "Top 22 percent" of a class
+whose size is not a multiple of 50 is not a whole number, and `math.floor()`
+always drops the player who was meant to round up and in. "Rounded to the
+nearest whole number" is the conventional reading of a percentile cutoff like
+this and is also the better empirical fit — see below.
+
+**Both fixes together, measured against the published figures:**
+
+| season | before (old class, floor) | after (86-day class, rounded) | published |
+|---|---|---|---|
+| 2021 | +0d | **0d — exact** | 2.116 |
+| 2022 | +7d | **+1d** | 2.128 |
+| 2023 | +12d | +12d | 2.118 |
+| 2024 | +3d | +3d | 2.132 |
+| 2025 | −3d | −3d | 2.140 |
+
+2021 and 2022 are the two most reliable years in this project's own transaction
+coverage, and they are exactly the two that moved onto the right side of the
+2-day tolerance. 2023-2025 did not move at all under this fix, which argues the
+remaining error there is not in the class rule — it is somewhere else. See
+"Still open" below.
+
+`build_class()` in `scripts/super_two.py` now filters on
+`minimum_prior_season_days` (the same 86 already in `config/cba/`, reused in
+its correct role — no new literal), and `compute_cutoff()` rounds
+`_round_half_up()` rather than flooring. Python's builtin `round()` was
+deliberately not used: it rounds a tie to the nearest *even* integer, which is
+not what a human reads "nearest whole number" to mean, and would silently
+misround a class size that happens to land exactly on a half.
+
+**`validate_super_two.py` was refactored, not re-logic'd.** Its exit code was
+already correct — `sys.exit(1 if failures else 0)` was there before this
+change and a live run confirmed it (exit 1, four failures, before the fix). The
+two computation passes (one to print, one to count failures) were merged into
+one `evaluate()` function so the counting logic exists in exactly one place
+and so a test can call it directly without a subprocess.
+
+### Still open: 2023-2025 did not move, and that is a lead, not a dead end
+
+The unmerged `servicetime/fix-service-time-accuracy` branch (PR #13) fixes
+four *unrelated* per-player service-time defects: overseas season-opener dates
+applied to every club instead of just the two that played there, the 2023
+season computed as ending a day late, the sub-20-day-option rule recorded in
+config but never wired in, and the Rookie-of-the-Year full-year credit never
+implemented at all. None of those are about the Super Two class or rounding
+rule — they are about individual players' credited-day totals, exactly the
+kind of error `compute_cutoff()`'s own docstring already names as what a
+reference-figure mismatch most likely means once the rule itself is right.
+
+Two of the four land squarely on the seasons still failing: the 2023 end-date
+bug is *literally about 2023*, and the ROY full-year credit applies to recent
+rookie classes, which is exactly the 2-3-year band this cutoff ranks. A
+boundary is the service time of one specific player at the edge of the top
+22% — moving a handful of players near that edge by a handful of days each is
+precisely what would move 2023-2025 without touching 2021-2022, which is what
+was measured.
+
+**Not verified by an actual recompute**, and deliberately not attempted here.
+Testing it for real means recomputing every player in the 2-3 year band for
+five seasons under the fixed rules — not the 39-player Baseball Reference
+spot-check PR #13 itself ran — which is the multi-hour, many-thousand-call
+`--recompute-all` class of operation this file already warns against running
+casually, and this session was explicitly told not to touch service-time math
+or recompute data. Re-run `scripts/validate_super_two.py` after PR #13 merges
+and a full recompute completes; if 2023-2025 close up the way 2021-2022 did,
+that confirms the class/rounding rule is now right and the remaining error was
+always downstream of it.
+
+Pinned by `test_super_two_class_requires_86_days_not_just_any_accrual()` and
+`test_super_two_rounds_the_qualifying_count_rather_than_flooring_it()` in
+`tests/test_service_time.py`, plus
+`test_validate_super_two_counts_failures_and_would_exit_nonzero()` for the
+exit-code wiring.
+
 ## The player profile vision, and what each part costs (2026-09-11)
 
 Owner's picture: a visitor clicks a name and gets a full profile — service
