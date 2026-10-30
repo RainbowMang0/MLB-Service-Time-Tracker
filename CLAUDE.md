@@ -24,22 +24,79 @@ rediscover any of it.
 
 ---
 
-## Where the project stands — read this first (updated 2026-09-08)
+## Where the project stands — read this first (updated 2026-10-30)
 
-Three tools, all live, all free, all client-side. Nothing is paywalled and
+Four tools, all live, all free, all client-side. Nothing is paywalled and
 nothing is stored on a server.
 
 | | what it is | state |
 |---|---|---|
-| `/` | the service-time tracker | mature; 5,578 players, daily refresh, gates green |
+| `/` | the service-time tracker | mature; 5,600+ players, daily refresh, gates green |
+| `/t/`, `/alumni/` | club hubs and the previous-players directory | live; ~1,350 rostered pages, ~2,500 alumni pages published as a measured batch (see "Publication widened to 2,466 alumni") |
 | `/taxes.html` | duty-day / jock-tax allocation | shipped 2026-09-02, **not yet reviewed by a CPA** |
-| `/contract.html` | contract clock, projections, offer value | shipped 2026-09-02 |
+| `/contract.html` | contract clock | **rebuilt 2026-10-25** — opens on a short answer (arbitration/free-agency year, age, pay until then) with the original 5-panel tool behind a toggle; still no arbitration projection, comp set or decline branch (no salary data) |
 | `/neutrality.html` | the neutrality statement | shipped 2026-09-02 |
+
+Site navigation (`NAV_SECTIONS` in `scripts/write_player_pages.py`, on every
+generated page) and a statistics tab on every player profile
+(season-by-season hitting/pitching from data already fetched; no WAR, no
+salary) shipped with the same 2026-10-25 merge. See "The contract clock
+rebuilt" below.
+
+**`handoff/` holds three long-form notes, all dated 2026-10-28, written for
+whoever picks this up next:** `site-expansion.md` (duty days, the contract
+clock, schedules, alumni, the split sitemap — status table and known bugs),
+`contract-and-profiles.md` (the contract rebuild and statistics tab in
+detail, with a numbered list of open issues), and
+`baseball-reference-validation.md` (why B-R is still not scraped, and the
+measured cause of Justin Verlander's residual). Read the relevant one before
+re-deriving something it already covers — this file still has the full
+history, those have the sharper "what's open" lists.
+
+**PR #13 and PR #17 are MERGED as of 2026-10-30.** PR #13
+(`servicetime/fix-service-time-accuracy`) fixed four accrual bugs —
+overseas-opener season windows applied to every club, a 2023 end-date off by
+a day, the 20-day optional-assignment rule (in the config but never wired
+up), and a Rookie-of-the-Year full-year service credit — and bumped
+`SERVICE_TIME_RULES_VERSION` 5 → 6. **The engine is merged but the database
+is NOT yet recomputed — `main` still serves rules-version-5 figures until
+the owner runs the `--recompute-all` backfill** (see "Recomputing after a
+rules change"); rostered players will converge the next time the daily job
+runs after that. PR #17 fixed the Super Two class/rounding rule on top of
+that — see the next paragraph and "The Super Two class was built from the
+wrong rule" below.
+
+**Two PRs are still open and unmerged as of 2026-10-30 — nothing in them is
+live until merged:**
+
+- **PR #14** (`servicetime/player-page-indexing`) adds a plain-English
+  eligibility sentence and internal links (teammates, club rosters, a few
+  homepage links) to player and club pages, aimed at Search Console's
+  "discovered — currently not indexed" pages. No service-time math changes.
+  Needs a rebase onto current `main` (both #13 and #17 regenerated `docs/p/`
+  and `docs/t/`).
+- **PR #15** (`servicetime/pre-arb-salary-estimate`) adds a labelled
+  league-minimum salary estimate on a player's page, shown only when he
+  reads clearly pre-arbitration and carries no known extension — checked
+  against a hand-maintained `data/known_extensions.json` plus a scan of the
+  cached transaction text for extension wording. Also needs a rebase onto
+  current `main` and #14.
 
 **The two things blocking promotion of the paid-section tools to anyone** are
 item 0a and 0b under "Immediate next steps": no tax professional has reviewed
 the duty-day methodology, and the MLBPA/club question has not been asked.
 Both are conversations, not code.
+
+**A known open accuracy question, partially resolved by PR #17:** the Super
+Two reference file (`data/reference_super_two.json`) holds five published
+cutoffs, 2021-2025. PR #17 fixed the class-membership rule (the 86-day floor
+was being checked after ranking instead of as part of the class) and switched
+the top-22% share from floored to rounded, which moved 2021 and 2022 inside
+`validate_super_two.py`'s 2-day tolerance. **2023-2025 still fail** — 2023
++12d, 2024 +3d, 2025 −3d — and the leading theory is that the remaining error
+is downstream of PR #13's per-player accrual fixes rather than the class rule
+itself, so it needs re-checking once the `--recompute-all` backfill above has
+run. See "The Super Two class was built from the wrong rule" below.
 
 **The three biggest architectural facts a new session needs:**
 
@@ -69,6 +126,17 @@ Both are conversations, not code.
 
 **Recent history, newest first:**
 
+* 2026-10-30 — **merged PR #13 and PR #17** (service-time accuracy, the Super
+  Two class/rounding fix) into `main`. See the next two entries for what each
+  contains; both landed as code, with the whole-database recompute still the
+  owner's to run — see "Rules version 6" below.
+* 2026-10-30 — **the Super Two class was being built from the wrong rule**:
+  the 86-day floor was checked after ranking instead of as part of class
+  membership, and the top-22% share was floored instead of rounded. Fixing
+  both moved 2021 and 2022 inside the validator's tolerance; 2023-2025 did not
+  move, which is consistent with their remaining error living in PR #13's
+  per-player fixes rather than in this rule. See "The Super Two class was
+  built from the wrong rule" below.
 * 2026-10-28 — **rules version 6: four accuracy fixes, the first that correct
   the season WINDOW rather than the interval walk.** A Baseball Reference
   audit of 20 players found veterans matched but partial-season players read
@@ -83,6 +151,17 @@ Both are conversations, not code.
   finish a full year. **The engine is at v6 but the database is NOT yet
   recomputed — the owner runs the full recompute.** See "Rules version 6"
   below.
+* 2026-10-28 — three handoff notes written to `handoff/` covering everything
+  since 09-08 (see above); nothing in the codebase changed.
+* 2026-10-26 — the Super Two reference file filled for 2021-2025; the tile
+  tooltip stopped quoting the project's own estimates as if they were
+  published, and stopped stating an unpublished 2026 cutoff in the past
+  tense. See "The Super Two check finally has something to check against".
+* 2026-10-25 — merged six weeks of branch work: the contract clock rebuilt
+  around a short answer, site navigation on every page, and a statistics
+  tab on player profiles. See "The contract clock rebuilt" below.
+* 2026-09-11 — the contract page audit fixes shipped, plus the player
+  profile vision writeup and the cartoon-likeness decision.
 * 2026-09-08 — **maintenance pass.** Six real defects, none in the accrual
   rules: the CBA prose was hardcoded (above); the daily job made 7,179 API
   calls to fetch 22 season windows; both documented data fallbacks rendered
@@ -153,9 +232,9 @@ config/cba/2027.json           valid placeholder that REFUSES to compute
 config/cba/roy_full_year_awards.json  hand-maintained ROY full-year credits; NOT a ruleset (cba._ruleset_paths skips it)
 config/tax/duty-day-rules.json day types and whether each counts as a duty day
 config/tax/2026-states.json    52 jurisdictions: 9 verified, 14 estimate-tier, 1 conflicting, 28 no rate
-tests/test_service_time.py     390 tests, no pytest needed: `python tests/test_service_time.py`
+tests/test_service_time.py     402 tests, no pytest needed: `python tests/test_service_time.py`
 tests/duty_days.test.cjs       27 tests, no npm needed: `node --test tests/duty_days.test.cjs`
-tests/contract.test.cjs        20 tests, incl. the advice-vocabulary lint
+tests/contract.test.cjs        41 tests, incl. the advice-vocabulary lint
 docs/                          the static site (index.html, styles.css, app.js)
 docs/taxes.html/.js/.css       the Duty Day Tracker (hand-written, client-side only)
 docs/duty-days.js              the duty-day allocation engine; pure, runs in node too
@@ -611,7 +690,7 @@ older ruleset, which is the condition `--recompute-all` exists to reach.
 - **1,364 on a 40-man.** Each has a static page at
   `docs/p/<id>-<slug>.html`, listed in `docs/sitemap.xml`. (The count moves
   by a player or two most days; that is roster churn, not drift.)
-- **390 Python tests, 27 duty-day JS tests, 41 contract JS tests** — all passing.
+- **402 Python tests, 27 duty-day JS tests, 41 contract JS tests** — all passing.
 - **Super Two cutoff currently 2.137**, computed from the whole population.
 - 1 player at or above 20.000 years (Verlander, 21.075), which is correct.
 - **26 players read exactly 0.000** and are hidden from the table by
@@ -3175,6 +3254,11 @@ Nothing else is blocking them.
 | C — extension analyzer | **accept side only** | the offer the user types |
 | D — ruleset comparison | **built** | config/cba/, already there |
 
+Status unchanged by the 2026-10-25 rebuild (see "The contract clock
+rebuilt" below) — what changed is which module the page opens on (a short
+answer built on A, with B and C's absences stated in plain language) rather
+than what each module can do.
+
 ### Projections are measured, not assumed
 
 The obvious way to answer "when do I reach free agency?" is to assume a full
@@ -3358,6 +3442,66 @@ to two of the site's three tools.
   a state tax rate.
 * **No persistence and no export.** Real gaps (the duty-day tool has both),
   but features rather than defects, and the owner's call.
+
+## The contract clock rebuilt: short answer, research, navigation, statistics
+
+**Merged 2026-10-25** (`a46531b9f`), after six weeks of work on a branch.
+Full detail is in `handoff/contract-and-profiles.md`; this is the pointer so
+the work is not invisible to a session that only reads this file.
+
+**The page now opens on the short answer**, not the five-panel tool: pick a
+player or type a service figure (`2.100` = 2 years, 100 days) and get his
+arbitration year, free-agency year, each with an age and a p20-p80 spread,
+and what he is paid until then (league minimum, or "Negotiable" once
+arbitration-eligible). The original five panels are unchanged, behind a
+"Show the full tool" toggle remembered per browser.
+
+**The shape came from reading the peer-reviewed literature, not guessing.**
+`research/valuation-literature.md` tags 17 works by how well-sourced they
+are (`verified` = read in full, down to `not_peer_reviewed`). The finding
+that decided the page's shape: published estimates of what a restricted
+player captures of his own value range from about a tenth to essentially
+all of it, and the spread is mostly *method*, not disagreement about the
+player — so the stage panel now explains the bargaining-rights mechanism at
+each threshold and never states a dollar share of value.
+`tests/contract.test.cjs` greps the engine and the page for a percentage to
+keep it that way.
+
+**Age at threshold.** `birthDate`, present in the `/people` response all
+along and previously discarded, is now stored as `birth_year` (year only,
+never a date) and drives an age column next to every projected year —
+because every threshold here is service-based and every valuation result in
+the literature is age-based, and the two come apart for a late debut.
+
+**Site navigation** (`NAV_SECTIONS` / `_site_nav()` in
+`scripts/write_player_pages.py`) now runs across every generated page plus
+the hand-written ones: Service time, By club, Previous players, What is
+service time?, Contract clock, Duty days, Neutrality. The two unfinished
+tools carry an "in development" `.nav-tag`. Tests pin both halves:
+`test_the_site_nav_is_the_same_on_every_page` checks every hand-written and
+generated page reaches the same set of destinations, and
+`test_the_two_unfinished_tools_are_marked_in_the_nav` checks exactly
+`contract.html` and `taxes.html` carry the tag, everywhere they are linked.
+
+**A statistics tab** on every player profile (`renderStatsPanel`,
+`statsTable`, `wireProfileTabs` in `docs/app.js`) shows season-by-season
+hitting or pitching from the yearByYear statline the `/people` hydrate
+already returns — `season_stats_from_bio()` in `scripts/fetch_mlb_data.py`
+now keeps the field `season_teams_from_bio()` always threw away, so this
+cost no extra API call. No WAR (not an MLB-published field; the public
+sources forbid scraping) and no salary — the panel says so rather than
+quietly lacking the column.
+
+⚠️ **Known open issues, not yet fixed** (full list in
+`handoff/contract-and-profiles.md` §6): the statistics tab is empty for
+most non-rostered players, with copy that wrongly implies it will "fill in
+on the next run"; about 11% of accruing rostered seasons have no statline,
+growing toward the present, cause unconfirmed; a traded player's stats tab
+keeps only the later club's season line, dropping the first club's counting
+stats, on an API-ordering assumption that has not been checked live; the
+offer panel's default rates (4% commission, 35% federal, 5% discount) are
+unsourced; and the short answer's league-minimum figure is a fixed
+2026 dollar amount that overstates earlier seasons.
 
 ## Discoverability: every rostered player has a real page
 
@@ -4316,7 +4460,7 @@ and so a test can call it directly without a subprocess.
 
 ### Still open: 2023-2025 did not move, and that is a lead, not a dead end
 
-The unmerged `servicetime/fix-service-time-accuracy` branch (PR #13) fixes
+**PR #13 (`servicetime/fix-service-time-accuracy`) is now merged** and fixes
 four *unrelated* per-player service-time defects: overseas season-opener dates
 applied to every club instead of just the two that played there, the 2023
 season computed as ending a day late, the sub-20-day-option rule recorded in
@@ -4339,11 +4483,12 @@ Testing it for real means recomputing every player in the 2-3 year band for
 five seasons under the fixed rules — not the 39-player Baseball Reference
 spot-check PR #13 itself ran — which is the multi-hour, many-thousand-call
 `--recompute-all` class of operation this file already warns against running
-casually, and this session was explicitly told not to touch service-time math
-or recompute data. Re-run `scripts/validate_super_two.py` after PR #13 merges
-and a full recompute completes; if 2023-2025 close up the way 2021-2022 did,
-that confirms the class/rounding rule is now right and the remaining error was
-always downstream of it.
+casually. **PR #13 has merged, but the database has not been recomputed** —
+confirmed 2026-10-30, every stored record is still stamped `rules_version: 5`.
+Re-run `scripts/validate_super_two.py` once the owner has run the
+`--recompute-all` backfill under rules version 6; if 2023-2025 close up the
+way 2021-2022 did, that confirms the class/rounding rule is now right and the
+remaining error was always downstream of it.
 
 Pinned by `test_super_two_class_requires_86_days_not_just_any_accrual()` and
 `test_super_two_rounds_the_qualifying_count_rather_than_flooring_it()` in
