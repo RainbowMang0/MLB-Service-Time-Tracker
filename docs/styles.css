@@ -915,6 +915,21 @@ body.profile-open { overflow: hidden; }
 }
 .profile-loading { background: var(--accent-wash); }
 
+/* The pre-arbitration salary estimate -- see scripts/salary_estimates.py and
+   salaryBlock() in app.js. Same "note" treatment as .profile-gap: the accent
+   wash for an informational estimate, the warning wash for "this does not
+   apply to him", so the two read as different levels of one idea. */
+.profile-salary {
+  margin: 0 0 1rem;
+  padding: 0.7rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+.profile-salary-estimate { background: var(--accent-wash); }
+.profile-salary-extension { background: var(--status-warning-wash); }
+
 /* --- 7. Career strip ----------------------------------------------------
    The season table below it is accurate and it opens as twenty-two rows of
    digits. This says the same thing in one glance: how much each season was

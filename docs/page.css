@@ -74,3 +74,12 @@ h1 { letter-spacing: -0.02em; }
 .wrap--narrow p { color: var(--text-secondary); line-height: 1.7; }
 .wrap--narrow a { color: var(--accent); }
 .actions { margin-top: 1.6rem; }
+/* The pre-arbitration salary estimate -- see salary_estimates.py. Same
+   "note" treatment as .caveat, in the accent wash for an informational
+   estimate and the warning wash for "this does not apply to him", so the
+   two read as different levels of the same idea rather than unrelated UI. */
+.salary-note { margin: 0.9rem 0; padding: 0.7rem 0.85rem; border-radius: 6px;
+               font-size: 0.85rem; line-height: 1.6; }
+.salary-note p { margin: 0; }
+.salary-note-estimate { background: var(--accent-wash); color: var(--text-secondary); }
+.salary-note-extension { background: var(--status-warning-wash); color: var(--text-secondary); }

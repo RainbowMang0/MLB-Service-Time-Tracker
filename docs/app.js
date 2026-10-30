@@ -19,6 +19,19 @@
   // load is unaffected for the visitors who never open one.
   const PROFILE_SHARDS = 64;
   const profileShardCache = new Map();
+  // The league-minimum salary ESTIMATE for clearly pre-arbitration players --
+  // see scripts/salary_estimates.py for the gating (pre-arb only, no known or
+  // detected contract extension). One small file, fetched once, lazily: most
+  // visitors never open a profile, so this should not cost anything on the
+  // table's critical path either.
+  const SALARY_URL = "data/salary_estimates.json";
+  let salaryEstimatesPromise = null;
+  function loadSalaryEstimates() {
+    if (!salaryEstimatesPromise) {
+      salaryEstimatesPromise = fetchJson(SALARY_URL).catch(() => null);
+    }
+    return salaryEstimatesPromise;
+  }
 
   // --- CBA thresholds -----------------------------------------------------
   // These used to be literals here: 172, and 3/6 years inline at each call
@@ -1114,7 +1127,48 @@
       </p>`;
   }
 
-  function renderProfile(profile, teams) {
+  /**
+   * The league-minimum salary ESTIMATE, pre-arbitration players only.
+   *
+   * `salary` is the fetched data/salary_estimates.json, or null if it has
+   * not loaded (or failed to). Everything here is a lookup against what the
+   * pipeline already decided server-side (scripts/salary_estimates.py) --
+   * this never re-derives "clearly pre-arbitration" or re-scans transaction
+   * text, which would be a second copy of that logic in a second language.
+   * Returns "" (no block) for anyone not in the payload at all, which is the
+   * correct rendering of "the rule only applies to clearly pre-arb players".
+   */
+  function salaryBlock(profile, salary) {
+    if (!salary || profile.id == null) return "";
+    const ext = salary.extensions && salary.extensions[String(profile.id)];
+    if (ext) {
+      return `
+        <p class="profile-salary profile-salary-extension">
+          <strong>Salary:</strong> ${esc(profile.name)} has a contract or
+          extension on file beyond the league minimum, so no salary estimate
+          is shown for him. ${esc(ext.note || "")}
+        </p>`;
+    }
+    const ids = salary.estimate_ids || [];
+    if (ids.includes(profile.id)) {
+      return `
+        <p class="profile-salary profile-salary-estimate">
+          <strong>Salary (estimate):</strong> ${esc(profile.name)} is clearly
+          pre-arbitration (below Super Two, arbitration and free-agency
+          eligibility) and no contract extension is on file for him, so his
+          pay is most likely the ${esc(salary.minimum_year)} MLB minimum of
+          <b>$${Number(salary.minimum).toLocaleString("en-US")}</b>. This is
+          the league minimum from the Basic Agreement, not a confirmed figure
+          for this player — this project has no permitted source for actual
+          salaries, and a handful of pre-arbitration players sign extensions
+          this page could not detect. If one exists for him, his real pay is
+          higher.
+        </p>`;
+    }
+    return "";
+  }
+
+  function renderProfile(profile, teams, salary) {
     const body = el("profile-body");
     if (!body) return;
 
@@ -1215,6 +1269,7 @@
             : "—"
         }</dd></div>
       </dl>
+      ${salaryBlock(profile, salary)}
       ${careerStrip(seasons, teams)}
 
       <div class="profile-tabs" role="tablist" aria-label="Player detail">
@@ -1306,7 +1361,7 @@
     const closeBtn = el("profile-close");
     if (closeBtn) closeBtn.focus();
 
-    loadProfileShard(playerId).then((shard) => {
+    Promise.all([loadProfileShard(playerId), loadSalaryEstimates()]).then(([shard, salary]) => {
       const profile = shard && shard.players ? shard.players[String(playerId)] : null;
       if (!profile) {
         // Expected for players whose records predate the profile build. Say
@@ -1323,7 +1378,7 @@
           </p>`;
         return;
       }
-      renderProfile(profile, (shard && shard.teams) || {});
+      renderProfile(profile, (shard && shard.teams) || {}, salary);
     });
   }
 

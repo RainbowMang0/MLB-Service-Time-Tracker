@@ -1776,6 +1776,229 @@ def test_a_debuted_player_is_never_described_as_never_having_been_up():
     )
 
 
+def test_salary_estimate_shown_for_clearly_pre_arb_with_no_extension():
+    """
+    A clearly pre-arbitration player (below Super Two, arbitration and
+    free-agency eligibility, with at least one credited day) and no
+    extension signal from either source gets an "estimate" record, and the
+    dollar figure is READ FROM THE RULESET, not a literal in
+    salary_estimates.py -- the same discipline every other threshold on this
+    site follows (see "Where the service-time math actually lives" in
+    CLAUDE.md).
+    """
+    import cba
+    import salary_estimates as se
+
+    player = {
+        "id": 900000101, "name": "Test Rookie", "on_40_man": True,
+        "service_days_total": 40, "free_agent_eligible": False,
+        "arbitration_eligible": False, "super_two_candidate": False,
+    }
+    ruleset = cba.default()
+    record = se.classify(player, {}, ruleset)
+    check("a clearly pre-arb player with no extension signal gets a record", record is not None)
+    check("...status is 'estimate'", record["status"] == se.STATUS_ESTIMATE)
+    check(
+        "...the minimum is read from the ruleset, not hardcoded",
+        record["minimum"] == ruleset.require("salary.mlb_minimum"),
+    )
+    check(
+        "...the minimum YEAR is also read from the ruleset",
+        record["minimum_year"] == ruleset.require("salary.mlb_minimum_year"),
+    )
+
+    # Swap in a fake ruleset with a different number -- if the output moves
+    # with it, the value really is being read through the ruleset rather
+    # than copied from the real one by coincidence.
+    class _FakeRuleset:
+        def require(self, path):
+            return {"salary.mlb_minimum": 555, "salary.mlb_minimum_year": 1999}[path]
+
+    fake_record = se.classify(player, {}, _FakeRuleset())
+    check("a different ruleset produces a different minimum", fake_record["minimum"] == 555)
+    check("...and a different year", fake_record["minimum_year"] == 1999)
+
+
+def test_known_extension_suppresses_the_salary_estimate():
+    """
+    The hard rule this feature exists to satisfy: a player with a contract
+    extension on file must never be shown the league minimum. The primary
+    channel for that is data/known_extensions.json -- see that file's own
+    header for why a hand list, not a scrape, is the right tool here.
+    """
+    import salary_estimates as se
+
+    player = {
+        "id": 900000102, "name": "Test Extended Player", "on_40_man": True,
+        "service_days_total": 200, "free_agent_eligible": False,
+        "arbitration_eligible": False, "super_two_candidate": False,
+    }
+    known = {900000102: {"note": "Signed an 8-year extension (test fixture)."}}
+    record = se.classify(player, known, cba.default())
+    check("a known-extension player gets a record", record is not None)
+    check("...status is 'extension'", record["status"] == se.STATUS_EXTENSION)
+    check("...no minimum is shown", "minimum" not in record)
+    check("...the note is carried through", "8-year extension" in record["note"])
+
+    # The real file this project ships: both already-documented cases
+    # (Julio Rodríguez, Michael Harris II) must be present and must suppress
+    # the estimate the moment they are (hypothetically) still pre-arb.
+    real_known = se.load_known_extensions()
+    for real_id in (677594, 671739):
+        check(f"id {real_id} is in the shipped known_extensions.json", real_id in real_known)
+    pretend_still_pre_arb = {
+        "id": 677594, "name": "Julio Rodríguez", "on_40_man": True,
+        "service_days_total": 100, "free_agent_eligible": False,
+        "arbitration_eligible": False, "super_two_candidate": False,
+    }
+    real_record = se.classify(pretend_still_pre_arb, real_known, cba.default())
+    check("the shipped Julio Rodríguez row suppresses the estimate", real_record["status"] == se.STATUS_EXTENSION)
+
+
+def test_a_transaction_mentioning_an_extension_suppresses_the_estimate():
+    """
+    The secondary, defensive signal: if the MLB Stats API transaction feed
+    (already cached, no new API call) ever DOES mention an extension or a
+    multi-year contract, that alone is enough to suppress the estimate, even
+    with no entry in the hand-maintained list. Measured against the real
+    cache (2026-10-29): this never fires today, which is exactly why the
+    hand list in data/known_extensions.json has to exist too.
+    """
+    import salary_estimates as se
+
+    fake_id = 900000103
+    cache_path = se.CACHE_DIR / f"{fake_id}.json"
+    cache_path.parent.mkdir(parents=True, exist_ok=True)
+    assert not cache_path.exists(), "test fixture id collides with a real cached player"
+    try:
+        cache_path.write_text(json.dumps([
+            {"date": "2025-04-01", "description": "Some Club recalled RHP Test Player from Triple-A.",
+             "team": "Some Club", "team_id": 100, "from_team_id": None, "to_team_id": None},
+            {"date": "2025-06-01",
+             "description": "Some Club signed RHP Test Player to a 6-year contract extension.",
+             "team": "Some Club", "team_id": 100, "from_team_id": None, "to_team_id": None},
+        ]))
+        check(
+            "the extension wording is detected from the cached transactions",
+            se._transaction_suggests_extension(fake_id),
+        )
+        player = {
+            "id": fake_id, "name": "Test Player", "on_40_man": True,
+            "service_days_total": 90, "free_agent_eligible": False,
+            "arbitration_eligible": False, "super_two_candidate": False,
+        }
+        record = se.classify(player, {}, cba.default())
+        check("...and the estimate is suppressed because of it", record["status"] == se.STATUS_EXTENSION)
+    finally:
+        cache_path.unlink(missing_ok=True)
+
+    # An ORDINARY free-agent or minor-league signing must not false-positive
+    # just because it uses the word "contract". Pre-arb players essentially
+    # never have one of these (free agency implies 6+ years), but the guard
+    # exists so a coincidental phrase cannot misfire.
+    ordinary_id = 900000104
+    ordinary_path = se.CACHE_DIR / f"{ordinary_id}.json"
+    assert not ordinary_path.exists(), "test fixture id collides with a real cached player"
+    try:
+        ordinary_path.write_text(json.dumps([
+            {"date": "2025-01-10",
+             "description": "Some Club signed free agent RHP Test Player to a minor league contract.",
+             "team": "Some Club", "team_id": 100, "from_team_id": None, "to_team_id": None},
+        ]))
+        check(
+            "an ordinary free-agent/minor-league signing is not mistaken for an extension",
+            not se._transaction_suggests_extension(ordinary_id),
+        )
+    finally:
+        ordinary_path.unlink(missing_ok=True)
+
+
+def test_no_salary_section_outside_clearly_pre_arbitration():
+    """
+    The rule only applies to clearly pre-arbitration players. For anyone
+    else -- arbitration eligible, Super Two, free-agency eligible, not
+    rostered, or never debuted -- classify() must return None, which
+    render() turns into no block at all rather than a block saying
+    "unsure". "Unsure" and "does not apply" are different facts and the
+    page must not conflate them.
+    """
+    import salary_estimates as se
+    import write_player_pages as w
+
+    base = {
+        "id": 900000105, "name": "Test Veteran", "on_40_man": True,
+        "service_days_total": 900, "team": "Some Club", "position": "RHP",
+        "mlb_debut": "2020-04-01", "service_time": "5.108", "seasons": [],
+    }
+    for flag in ("free_agent_eligible", "arbitration_eligible", "super_two_candidate"):
+        player = dict(base, **{flag: True})
+        check(f"no salary record when {flag} is true", se.classify(player, {}, cba.default()) is None)
+        page = w.render(player, {}, "2026-10-29T00:00:00+00:00")
+        check(f"...and no salary block on the page when {flag} is true", "salary-note" not in page)
+
+    not_rostered = dict(base, on_40_man=False)
+    check("no salary record for a player off the 40-man", se.classify(not_rostered, {}, cba.default()) is None)
+
+    never_debuted = dict(base, service_days_total=0, free_agent_eligible=False,
+                          arbitration_eligible=False, super_two_candidate=False)
+    check("no salary record for a player who has never debuted", se.classify(never_debuted, {}, cba.default()) is None)
+
+
+def test_salary_block_wording_matches_estimate_vs_extension():
+    """
+    End-to-end through write_player_pages.render(): the estimate case names
+    a dollar figure and calls it an estimate; the extension case names no
+    figure at all. Mixing those up is exactly the failure this feature
+    exists to prevent.
+    """
+    import write_player_pages as w
+
+    pre_arb = {
+        "id": 900000106, "name": "Test Rookie Two", "on_40_man": True,
+        "service_days_total": 50, "free_agent_eligible": False,
+        "arbitration_eligible": False, "super_two_candidate": False,
+        "team": "Some Club", "position": "2B", "mlb_debut": "2026-05-01",
+        "service_time": "0.050", "seasons": [],
+    }
+    page = w.render(pre_arb, {}, "2026-10-29T00:00:00+00:00")
+    check("the estimate block appears", "salary-note-estimate" in page)
+    check("...names the league minimum in dollars", "$780,000" in page or "$" in page)
+    check("...calls it an estimate, not a confirmed figure", "estimate" in page.lower())
+    check("...the extension block does not also appear", "salary-note-extension" not in page)
+
+    extended = dict(pre_arb, id=671739, name="Michael Harris II")
+    ext_page = w.render(extended, {}, "2026-10-29T00:00:00+00:00")
+    check("the extension block appears for a known-extension id", "salary-note-extension" in ext_page)
+    check("...and the estimate block does not", "salary-note-estimate" not in ext_page)
+    check("...no dollar figure is shown for him", "$780,000" not in ext_page)
+
+
+def test_the_profile_overlay_fetches_and_renders_the_same_salary_data():
+    """
+    The static page (render(), tested above) and the SPA profile overlay
+    (app.js) must show the same thing for the same player -- they read the
+    SAME published docs/data/salary_estimates.json rather than each
+    re-deriving "clearly pre-arbitration" in a second language. This pins
+    the wiring on the JS side the way test_the_stats_tab_states_that_war_and_
+    salary_are_absent() pins the neighbouring "no salary data" sentence.
+    """
+    ROOT = pathlib.Path(__file__).resolve().parents[1]
+    app = (ROOT / "docs" / "app.js").read_text()
+    for marker in [
+        "data/salary_estimates.json",
+        "function salaryBlock",
+        "profile-salary-estimate",
+        "profile-salary-extension",
+        "salary.extensions",
+        "salary.estimate_ids",
+    ]:
+        check(f"app.js wires in {marker!r}", marker in app)
+    check(
+        "renderProfile() is passed the fetched salary data",
+        "renderProfile(profile, (shard && shard.teams) || {}, salary)" in app,
+    )
+
+
 def test_statlines_are_read_from_the_bio_the_pipeline_already_fetches():
     """
     BIO_SEASON_TEAMS_HYDRATE has always asked for yearByYear hitting and
@@ -3744,6 +3967,12 @@ if __name__ == "__main__":
     test_both_published_files_carry_the_cba_rules_block()
     test_nothing_published_claims_a_transaction_coverage_cutoff_year()
     test_a_debuted_player_is_never_described_as_never_having_been_up()
+    test_salary_estimate_shown_for_clearly_pre_arb_with_no_extension()
+    test_known_extension_suppresses_the_salary_estimate()
+    test_a_transaction_mentioning_an_extension_suppresses_the_estimate()
+    test_no_salary_section_outside_clearly_pre_arbitration()
+    test_salary_block_wording_matches_estimate_vs_extension()
+    test_the_profile_overlay_fetches_and_renders_the_same_salary_data()
     test_statlines_are_read_from_the_bio_the_pipeline_already_fetches()
     test_a_malformed_or_empty_bio_yields_no_statline_rather_than_an_error()
     test_the_stats_tab_states_that_war_and_salary_are_absent()

@@ -1,0 +1,724 @@
+[
+  {
+    "_README": [
+      "Hand-maintained list of players known, from PUBLIC REPORTING, to have",
+      "signed a multi-year contract or extension while they were still",
+      "pre-arbitration. This exists because of a hard limit measured while",
+      "building scripts/salary_estimates.py: the MLB Stats API /transactions",
+      "feed -- the same feed the service-time engine already reads, and the",
+      "only mechanism the brief for this feature proposed -- records ROSTER",
+      "STATUS, not money. An extension changes no roster status, so it is",
+      "never logged there. Measured 2026-10-29 against every cached",
+      "transaction file in data/cache/transactions/ (the whole rostered",
+      "population): zero rows anywhere contain the word 'extension' or a",
+      "contract-year phrase. Michael Harris II signed an 8-year extension in",
+      "August 2022 and his cached transaction history has no trace of it.",
+      "",
+      "So this file is the second signal, in the same spirit as",
+      "data/reference_super_two.json and data/reference_service_time.json:",
+      "entered by a person from public reporting (team announcements, AP,",
+      "ESPN, MLB.com), never scraped from Spotrac/Cot's/Baseball-Reference or",
+      "any other salary site, and never carrying a dollar figure or contract",
+      "length here -- only the fact that a deal exists, which is all the",
+      "salary estimate needs to know in order to stay silent.",
+      "",
+      "THIS LIST IS NOT EXHAUSTIVE. It cannot be: there is no free, permitted,",
+      "machine-readable feed of contract extensions, which is the same gap",
+      "that keeps the contract tool's Module B/C unbuilt (see CLAUDE.md). A",
+      "name missing here does not mean no extension exists -- it means nobody",
+      "has entered one yet. The owner is in clubhouses and will know about a",
+      "teammate's deal well before any public report does, which is exactly",
+      "why this is a file he can edit directly rather than something scraped.",
+      "",
+      "ADD A ROW THE MOMENT YOU HEAR ABOUT A PRE-ARB EXTENSION, even before",
+      "it is public. Each row needs: id (the MLB person id -- the same one in",
+      "docs/data/service_time.json, never a jersey number or anything else),",
+      "name (for human readability only; matching is by id), signed (the date",
+      "if known, else null), and note (where this came from). Review the",
+      "current pre-arb list periodically: run",
+      "`python3 -c \"import json; db=json.load(open('docs/data/service_time.json'));",
+      "[print(p['id'], p['name'], p['team']) for p in db['players'] if p['on_40_man']",
+      "and p['service_days_total'] and not p['free_agent_eligible'] and not",
+      "p['arbitration_eligible'] and not p['super_two_candidate']]\"` and check",
+      "each name against what you know."
+    ]
+  },
+  {
+    "id": 677594,
+    "name": "Julio Rodríguez",
+    "signed": "2022-08-15",
+    "note": "Long-term extension signed with the Mariners while pre-arbitration. Widely reported at the time (AP/ESPN). Kept as a worked example and a regression test -- he has since crossed into arbitration eligibility on service time alone, so the pre-arb gate already excludes him regardless of this entry.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document"
+  },
+  {
+    "id": 671739,
+    "name": "Michael Harris II",
+    "signed": "2022-08-17",
+    "note": "8-year extension signed with the Braves while pre-arbitration -- the case that motivated this file (see the _README). Widely reported at the time (AP/ESPN). Kept as a worked example and a regression test -- he has since crossed into arbitration eligibility on service time alone, so the pre-arb gate already excludes him regardless of this entry.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document"
+  },
+  {
+    "id": 673357,
+    "name": "Luis Robert Jr.",
+    "signed": "2020-01-02",
+    "note": "6 yrs/$50M extension, six-year (2020-25) -- Baltimore Orioles.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2020"
+  },
+  {
+    "id": 594835,
+    "name": "Marco Gonzales",
+    "signed": "2020-02-03",
+    "note": "extension, four-year (2021-24) -- Texas Rangers.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2020"
+  },
+  {
+    "id": 608718,
+    "name": "Brent Suter",
+    "signed": "2020-02-16",
+    "note": "extension, two-year (2020-21) -- Atlanta Braves.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2020"
+  },
+  {
+    "id": 607481,
+    "name": "Aaron Bummer",
+    "signed": "2020-02-22",
+    "note": "extension, five-year (2020-24) -- Omaha Storm Chasers.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2020"
+  },
+  {
+    "id": 642547,
+    "name": "Freddy Peralta",
+    "signed": "2020-02-26",
+    "note": "extension, five-year (2020-24) -- Tampa Bay Rays.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2020"
+  },
+  {
+    "id": 660162,
+    "name": "Yoán Moncada",
+    "signed": "2020-03-05",
+    "note": "5 yrs/$70M extension, five-year (2020-24) -- Los Angeles Angels.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2020"
+  },
+  {
+    "id": 621111,
+    "name": "Walker Buehler",
+    "signed": "2021-02-10",
+    "note": "extension, two-year (2021-22) -- San Diego Padres.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2021"
+  },
+  {
+    "id": 665487,
+    "name": "Fernando Tatis Jr.",
+    "signed": "2021-02-17",
+    "note": "14 yrs/$340M extension, 14-year (2021-34) -- San Diego Padres.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2021"
+  },
+  {
+    "id": 677976,
+    "name": "Randy Dobnak",
+    "signed": "2021-03-28",
+    "note": "extension, five-year (2021-25) -- Kansas City Royals.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2021"
+  },
+  {
+    "id": 662253,
+    "name": "Andrés Muñoz",
+    "signed": "2021-12-01",
+    "note": "extension, four-year (2022-25) -- Seattle Mariners.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2022"
+  },
+  {
+    "id": 663647,
+    "name": "Ke'Bryan Hayes",
+    "signed": "2022-04-07",
+    "note": "8 yrs/$70M extension, eight-year (2022-29) -- Cincinnati Reds.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2022"
+  },
+  {
+    "id": 664702,
+    "name": "Myles Straw",
+    "signed": "2022-04-09",
+    "note": "extension, five-year (2022-26) -- Toronto Blue Jays.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2022"
+  },
+  {
+    "id": 676477,
+    "name": "Garrett Whitlock",
+    "signed": "2022-04-10",
+    "note": "extension, four-year (2023-26) -- Boston Red Sox.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2022"
+  },
+  {
+    "id": 668804,
+    "name": "Bryan Reynolds",
+    "signed": "2022-04-14",
+    "note": "extension, two-year (2022-23) -- Pittsburgh Pirates.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2022"
+  },
+  {
+    "id": 670541,
+    "name": "Yordan Alvarez",
+    "signed": "2022-06-03",
+    "note": "extension, six-year (2023-28) -- Houston Astros.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2022"
+  },
+  {
+    "id": 676879,
+    "name": "Aaron Ashby",
+    "signed": "2022-07-23",
+    "note": "extension, five-year (2023-27) -- Milwaukee Brewers.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2022"
+  },
+  {
+    "id": 663586,
+    "name": "Austin Riley",
+    "signed": "2022-08-01",
+    "note": "extension, 10-year (2023-32) -- Atlanta Braves.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2022"
+  },
+  {
+    "id": 675911,
+    "name": "Spencer Strider",
+    "signed": "2022-10-10",
+    "note": "6 yrs/$75M extension, six-year (2023-28) -- Atlanta Braves.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2022"
+  },
+  {
+    "id": 664062,
+    "name": "Tony Gonsolin",
+    "signed": "2023-01-31",
+    "note": "extension, two-year (2023-24) -- Kansas City Royals.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2023"
+  },
+  {
+    "id": 660688,
+    "name": "Keibert Ruiz",
+    "signed": "2023-03-11",
+    "note": "extension, eight-year (2023-30) -- Washington Nationals.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2023"
+  },
+  {
+    "id": 682998,
+    "name": "Corbin Carroll",
+    "signed": "2023-03-11",
+    "note": "8 yrs/$111M extension, eight-year (2023-30) -- Arizona Diamondbacks.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2023"
+  },
+  {
+    "id": 665926,
+    "name": "Andrés Giménez",
+    "signed": "2023-03-28",
+    "note": "7 yrs/$106.5M extension, seven-year (2023-29) -- Toronto Blue Jays.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2023"
+  },
+  {
+    "id": 668881,
+    "name": "Hunter Greene",
+    "signed": "2023-04-18",
+    "note": "extension, six-year (2023-28) -- Cincinnati Reds.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2023"
+  },
+  {
+    "id": 694192,
+    "name": "Jackson Chourio",
+    "signed": "2023-12-04",
+    "note": "8 yrs/$82M extension, eight-year (2024-31) -- Milwaukee Brewers.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2024"
+  },
+  {
+    "id": 690993,
+    "name": "Colt Keith",
+    "signed": "2024-01-28",
+    "note": "extension, six-year (2024-29) -- Detroit Tigers.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2024"
+  },
+  {
+    "id": 677951,
+    "name": "Bobby Witt Jr.",
+    "signed": "2024-02-05",
+    "note": "11 yrs/$288.8M extension, 11-year (2024-34) -- Kansas City Royals.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2024"
+  },
+  {
+    "id": 678394,
+    "name": "Brayan Bello",
+    "signed": "2024-03-07",
+    "note": "6 yrs/$55M extension, six-year (2024-29) -- Boston Red Sox.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2024"
+  },
+  {
+    "id": 678662,
+    "name": "Ezequiel Tovar",
+    "signed": "2024-03-24",
+    "note": "7 yrs/$63.5M extension, seven-year (2024-30) -- Colorado Rockies.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2024"
+  },
+  {
+    "id": 678882,
+    "name": "Ceddanne Rafaela",
+    "signed": "2024-04-08",
+    "note": "extension, eight-year (2024-31) -- Boston Red Sox.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2024"
+  },
+  {
+    "id": 650911,
+    "name": "Cristopher Sánchez",
+    "signed": "2024-06-22",
+    "note": "extension, four-year (2025-28) -- Philadelphia Phillies.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2024"
+  },
+  {
+    "id": 666142,
+    "name": "Cole Ragans",
+    "signed": "2025-02-14",
+    "note": "extension, three-year (2025-27) -- Kansas City Royals.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2025"
+  },
+  {
+    "id": 671732,
+    "name": "Lawrence Butler",
+    "signed": "2025-03-06",
+    "note": "7 yrs/$65.5M extension (2025-31, 2032 club option) -- Athletics.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://apnews.com/article/athletics-as-butler-contract-a4f42f18fca6a446ec3ae405da190e01"
+  },
+  {
+    "id": 679885,
+    "name": "Justin Martinez",
+    "signed": "2025-03-21",
+    "note": "5 yrs/$18M extension, five-year (2025-29) -- Aguilas Cibaenas.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2025"
+  },
+  {
+    "id": 676440,
+    "name": "Tanner Bibee",
+    "signed": "2025-03-22",
+    "note": "5 yrs/$48M extension, five-year (2025-29) -- Cleveland Guardians.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2025"
+  },
+  {
+    "id": 694297,
+    "name": "Brandon Pfaadt",
+    "signed": "2025-03-28",
+    "note": "5 yrs/$45M extension, five-year (2026-30) -- Arizona Diamondbacks.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2025"
+  },
+  {
+    "id": 692225,
+    "name": "Kristian Campbell",
+    "signed": "2025-04-02",
+    "note": "8 yrs/$60M extension (2025-32) -- Boston Red Sox.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.mlb.com/news/earliest-contract-extensions-in-mlb-history-c269677352"
+  },
+  {
+    "id": 701538,
+    "name": "Jackson Merrill",
+    "signed": "2025-04-02",
+    "note": "9 yrs/$135M extension, nine-year (2026-34) -- San Diego Padres.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2025"
+  },
+  {
+    "id": 701350,
+    "name": "Roman Anthony",
+    "signed": "2025-08-06",
+    "note": "8 yrs/$130M extension (2026-33) -- Boston Red Sox.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.mlb.com/news/earliest-contract-extensions-in-mlb-history-c269677352"
+  },
+  {
+    "id": 694212,
+    "name": "Samuel Basallo",
+    "signed": "2025-08-22",
+    "note": "8 yrs/$67M extension (2026-33) -- Baltimore Orioles.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.mlb.com/news/earliest-contract-extensions-in-mlb-history-c269677352"
+  },
+  {
+    "id": 672580,
+    "name": "Maikel Garcia",
+    "signed": "2025-12-12",
+    "note": "extension, five-year (2026-30) -- Kansas City Royals.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2026"
+  },
+  {
+    "id": 691016,
+    "name": "Tyler Soderstrom",
+    "signed": "2025-12-25",
+    "note": "7 yrs/$86M extension, seven-year (2026-32) -- Athletics.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2026"
+  },
+  {
+    "id": 805779,
+    "name": "Jacob Wilson",
+    "signed": "2026-01-30",
+    "note": "7 yrs/$70M extension (2026-32, 2033 club option); $1M salary in 2026 -- Athletics.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.mlbtraderumors.com/2026/01/athletics-jacob-wilson-extension-seven-years.html"
+  },
+  {
+    "id": 691718,
+    "name": "Pete Crow-Armstrong",
+    "signed": "2026-03-24",
+    "note": "6 yrs/$115M extension, six-year (2027-32) -- Chicago Cubs.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2026"
+  },
+  {
+    "id": 806068,
+    "name": "Colt Emerson",
+    "signed": "2026-04-01",
+    "note": "8 yrs/$95M extension (2026-33, 2034 club option); signed pre-debut -- Seattle Mariners.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.mlb.com/news/earliest-contract-extensions-in-mlb-history-c269677352"
+  },
+  {
+    "id": 806198,
+    "name": "Cooper Pratt",
+    "signed": "2026-04-03",
+    "note": "8 yrs/$50.75M extension (2026-33, two club options); signed pre-debut -- Milwaukee Brewers.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.mlb.com/news/earliest-contract-extensions-in-mlb-history-c269677352"
+  },
+  {
+    "id": 804606,
+    "name": "Konnor Griffin",
+    "signed": "2026-04-08",
+    "note": "9 yrs/$140M extension (2026-34) -- Pittsburgh Pirates.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.mlb.com/news/earliest-contract-extensions-in-mlb-history-c269677352"
+  },
+  {
+    "id": 805808,
+    "name": "Kevin McGonigle",
+    "signed": "2026-04-15",
+    "note": "8 yrs/$150M extension (2027-34) -- Detroit Tigers.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.mlb.com/news/earliest-contract-extensions-in-mlb-history-c269677352"
+  },
+  {
+    "id": 800325,
+    "name": "Luis Lara",
+    "signed": "2026-06-09",
+    "note": "7 yrs/$31M (2026-32, club options 2033-35); signed pre-debut -- Milwaukee Brewers.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.mlbtraderumors.com/2026/06/brewers-luis-lara-agree-to-extension.html"
+  },
+  {
+    "id": 802139,
+    "name": "JJ Wetherholt",
+    "signed": "2026-07-10",
+    "note": "8 yrs/$112.5M extension (2027-34), $2M signing bonus -- St. Louis Cardinals.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://apnews.com/article/st-louis-cardinals-jj-wetherholt-contract-552c36a816d3d8fd086ff7085da405ac"
+  },
+  {
+    "id": 695505,
+    "name": "Chase Burns",
+    "signed": "2026-07-16",
+    "note": "7 yrs/$105M extension (2027-33), $2M signing bonus -- Cincinnati Reds.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.mlbtraderumors.com/2026/07/reds-extend-chase-burns-seven-years-105-million.html"
+  },
+  {
+    "id": 676917,
+    "name": "Cade Cavalli",
+    "signed": "2026-09-18",
+    "note": "4 yrs/$47M extension (2027-30, 2031 club option) -- Washington Nationals.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://apnews.com/article/cavalli-contract-nationals-76d59c66f22db2e320bf554eec31133b"
+  },
+  {
+    "id": 645277,
+    "name": "Ozzie Albies",
+    "signed": "2019-04-11",
+    "note": "6 yrs/$34.425M extension (service 1.062 at signing) -- Atlanta Braves.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.mlbtraderumors.com/extensiontracker"
+  },
+  {
+    "id": 660670,
+    "name": "Ronald Acuña Jr.",
+    "signed": "2019-04-02",
+    "note": "7 yrs/$99.44M extension (service 0.159 at signing) -- Atlanta Braves.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.mlbtraderumors.com/extensiontracker"
+  },
+  {
+    "id": 608566,
+    "name": "Germán Márquez",
+    "signed": "2019-04-02",
+    "note": "4 yrs/$42.435M extension (service 2.027 at signing) -- St. Paul Saints.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.mlbtraderumors.com/extensiontracker"
+  },
+  {
+    "id": 605483,
+    "name": "Blake Snell",
+    "signed": "2019-03-21",
+    "note": "4 yrs/$49.426M extension (service 2.072 at signing) -- Los Angeles Dodgers.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.mlbtraderumors.com/extensiontracker"
+  },
+  {
+    "id": 608324,
+    "name": "Alex Bregman",
+    "signed": "2019-03-19",
+    "note": "5 yrs/$100M extension (service 2.070 at signing) -- Chicago Cubs.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.mlbtraderumors.com/extensiontracker"
+  },
+  {
+    "id": 664040,
+    "name": "Brandon Lowe",
+    "signed": "2019-03-19",
+    "note": "5 yrs/$23.441M extension (service 0.058 at signing) -- Pittsburgh Pirates.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.mlbtraderumors.com/extensiontracker"
+  },
+  {
+    "id": 571945,
+    "name": "Miles Mikolas",
+    "signed": "2019-02-26",
+    "note": "4 yrs/$68M extension (service 2.037 at signing) -- Washington Nationals.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.mlbtraderumors.com/extensiontracker"
+  },
+  {
+    "id": 622663,
+    "name": "Luis Severino",
+    "signed": "2019-02-15",
+    "note": "4 yrs/$40M extension (service 2.170 at signing) -- Athletics.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.mlbtraderumors.com/extensiontracker"
+  },
+  {
+    "id": 593871,
+    "name": "Jorge Polanco",
+    "signed": "2019-02-14",
+    "note": "5 yrs/$25.75M extension (service 2.024 at signing) -- New York Mets.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.mlbtraderumors.com/extensiontracker"
+  },
+  {
+    "id": 596146,
+    "name": "Max Kepler",
+    "signed": "2019-02-14",
+    "note": "5 yrs/$35M extension (service 2.152 at signing) -- Arizona Diamondbacks.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.mlbtraderumors.com/extensiontracker"
+  },
+  {
+    "id": 606466,
+    "name": "Ketel Marte",
+    "signed": "2018-03-26",
+    "note": "5 yrs/$24M extension (service 1.162 at signing) -- Arizona Diamondbacks.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.mlbtraderumors.com/extensiontracker"
+  },
+  {
+    "id": 808975,
+    "name": "Hyeseong Kim",
+    "signed": "2025-01-03",
+    "note": "3 yrs/$12.5M (2025-27) + 2028-29 options; KBO posting -- Los Angeles Dodgers.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://apnews.com/article/dodgers-hyeseong-kim-3472e91ccd82125adf8ad90ec466bebf"
+  },
+  {
+    "id": 608372,
+    "name": "Tomoyuki Sugano",
+    "signed": "2026-02-10",
+    "note": "1 yr/$5.1M (2026) with COL; previously 1 yr/$13M with BAL (2025) from NPB -- Colorado Rockies.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://apnews.com/article/rockies-sugano-36dd6c20d5e256f5855b36831330bc04"
+  },
+  {
+    "id": 664074,
+    "name": "Cody Ponce",
+    "signed": "2025-12-11",
+    "note": "3 yrs/$30M (2026-28), returned from KBO -- Toronto Blue Jays.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.mlb.com/news/cody-ponce-blue-jays-free-agent-contract"
+  },
+  {
+    "id": 823550,
+    "name": "Sung-Mun Song",
+    "signed": "2025-12-19",
+    "note": "4 yrs/$15M (2026-29, 2029 player option); KBO posting -- San Diego Padres.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://apnews.com/article/sung-mun-song-padres-contract-433ce3f9d9bdb0caeb65923cd28e1931"
+  },
+  {
+    "id": 808959,
+    "name": "Munetaka Murakami",
+    "signed": "2025-12-21",
+    "note": "2 yrs/$34M (2026-27); NPB posting -- Chicago White Sox.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://apnews.com/article/white-sox-murakami-b8c8ccd00b97b2d5a6f7eedb11df70d6"
+  },
+  {
+    "id": 837227,
+    "name": "Tatsuya Imai",
+    "signed": "2026-01-01",
+    "note": "3 yrs/$54M (2026-28) with opt-outs; NPB posting -- Houston Astros.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://apnews.com/article/tatsuya-imai-astros-contract-c1616ce611e0365f27cfb9d2be226c09"
+  },
+  {
+    "id": 672960,
+    "name": "Kazuma Okamoto",
+    "signed": "2026-01-03",
+    "note": "4 yrs/$60M (2026-29); NPB posting -- Toronto Blue Jays.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://apnews.com/article/okamoto-blue-jays-contract-8243d4a7e367ffbbc5ebeab90c8c52e5"
+  },
+  {
+    "id": 623454,
+    "name": "Drew Anderson",
+    "signed": "2025-12-05",
+    "note": "1 yr/$7M (2026) + $10M 2027 club option, returned from KBO -- Detroit Tigers.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://apnews.com/article/drew-anderson-tigers-contract-e0424d9ad899ebe3336d4bd17fc2f845"
+  },
+  {
+    "id": 656492,
+    "name": "Foster Griffin",
+    "signed": "2025-12-16",
+    "note": "1 yr/$5.5M (2026) with WSN, returned from NPB; traded to CLE Aug 2026 -- Cleveland Guardians.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://apnews.com/article/griffin-nationals-contract-8383cd472afb6683296eb4e16f5dfe81"
+  },
+  {
+    "id": 606996,
+    "name": "Kyle Hart",
+    "signed": "2025-11-17",
+    "note": "1 yr/$1.2M guaranteed ($1M 2026 salary, $2.5M 2027 club option, $0.2M buyout) -- San Diego Padres.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://apnews.com/article/padres-kyle-hart-349546a9149314fc6ea87ce73b933004"
+  },
+  {
+    "id": 808967,
+    "name": "Yoshinobu Yamamoto",
+    "signed": "2023-12-21",
+    "note": "12 yrs/$325M (2024-35); NPB posting -- Los Angeles Dodgers.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2024"
+  },
+  {
+    "id": 684007,
+    "name": "Shota Imanaga",
+    "signed": "2024-01-10",
+    "note": "4-yr deal (2024-27) w/ options; NPB posting -- Chicago Cubs.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2024"
+  },
+  {
+    "id": 808982,
+    "name": "Jung Hoo Lee",
+    "signed": "2023-12-12",
+    "note": "6 yrs/$113M (2024-29); KBO posting -- San Francisco Giants.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2024"
+  },
+  {
+    "id": 673513,
+    "name": "Yuki Matsui",
+    "signed": "2023-12-23",
+    "note": "5-yr deal (2024-28); NPB FA -- San Diego Padres.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2024"
+  },
+  {
+    "id": 684320,
+    "name": "Yariel Rodríguez",
+    "signed": "2024-02-09",
+    "note": "multi-year MLB deal (thru 2028); Cuban FA -- Buffalo Bisons.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2024"
+  },
+  {
+    "id": 673548,
+    "name": "Seiya Suzuki",
+    "signed": "2022-03-16",
+    "note": "5 yrs/$85M (2022-26); NPB posting -- Chicago Cubs.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2022"
+  },
+  {
+    "id": 807799,
+    "name": "Masataka Yoshida",
+    "signed": "2022-12-07",
+    "note": "5 yrs/$90M (2023-27); NPB posting -- Boston Red Sox.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2023"
+  },
+  {
+    "id": 673540,
+    "name": "Kodai Senga",
+    "signed": "2022-12-10",
+    "note": "5 yrs/$75M (2023-27); NPB FA -- New York Mets.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2023"
+  },
+  {
+    "id": 829272,
+    "name": "Shinnosuke Ogasawara",
+    "signed": "2025-01-24",
+    "note": "2-yr deal (2025-26); NPB posting -- Harrisburg Senators.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2025"
+  },
+  {
+    "id": 680802,
+    "name": "Ryan Weiss",
+    "signed": "2025-12-02",
+    "note": "1-yr MLB deal (2026), returned from KBO -- Sugar Land Space Cowboys.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2026"
+  },
+  {
+    "id": 676664,
+    "name": "JP Sears",
+    "signed": "2026-01-08",
+    "note": "Not an extension: agreed to a one-year, 2026 contract to avoid arbitration. FanGraphs credits him roughly 3.065 years of service (arbitration-eligible), but this project's own service-time data shows only 72 credited days -- his transaction history here looks incomplete. The league-minimum estimate does not apply to him either way, so the estimate is suppressed.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document",
+    "source_url": "https://www.fangraphs.com/roster-resource/transaction-tracker?transactiontype=extension&season=2026"
+  }
+]
