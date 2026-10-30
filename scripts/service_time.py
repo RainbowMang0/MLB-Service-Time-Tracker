@@ -784,6 +784,81 @@ def days_in_intervals(intervals: list[tuple[dt.date, dt.date]]) -> int:
     return total
 
 
+# --- The 20-day optional-assignment rule ------------------------------------
+# Under the CBA, a player whose optional assignments total FEWER than 20 days in
+# a championship season is credited Major League service for those days -- a
+# brief demotion does not cost service time (and, the same threshold, does not
+# burn an option year). Sources are in config/cba/2022.json under
+# options.days_to_burn_option_year, now marked verified:
+#   https://www.baseballamerica.com/stories/brett-baty-s-early-season-assignment-highlights-lesser-known-option-rule/
+#   https://www.mlb.com/glossary/transactions/minor-league-options
+#
+# The engine credits nothing back for a DFA, a release, an outright or an IL
+# move -- only an OPTION. So the gaps between a player's active intervals are
+# attributed to an option only when the day the interval closed is itself an
+# "optioned" transaction date. That is how we tell an option gap from any other
+# gap without guessing: the feed's own word for the move that opened it.
+_OPTION_RE = re.compile(r"\boptioned\b", re.IGNORECASE)
+
+# How far before a club's Opening Day an option is still read as a spring-
+# training assignment that counts from Opening Day. Spring training runs ~6
+# weeks; 45 days covers it without reaching into the prior season (which ended
+# the previous October). Same constant the pre-debut floor uses, and for the
+# same reason -- it separates two populations rather than tuning a boundary.
+_SPRING_OPTION_LOOKBACK_DAYS = 45
+
+
+def _optional_assignment_days(
+    season_intervals: list[tuple[dt.date, dt.date]],
+    option_dates: set[dt.date],
+    season: "SeasonWindow",
+) -> int:
+    """Total days this player spent on OPTIONAL ASSIGNMENT during the season.
+
+    `season_intervals` are his active (on-roster) intervals already clipped to
+    the season window, in chronological order. The days he was OFF the roster
+    because of an option are the gaps between them -- counted only when the gap
+    was opened by an "optioned" transaction, so a DFA/release/IL gap is never
+    swept in.
+
+    Three regions, none overlapping:
+
+      * between two consecutive intervals, when the first closed on an option;
+      * before the first interval, when he was optioned in spring training (an
+        option in the 45 days up to the first interval, with the first interval
+        starting after Opening Day) -- counted from the club's Opening Day;
+      * after the last interval, when he was optioned and never recalled that
+        season -- counted through the end of the season.
+    """
+    if not season_intervals:
+        return 0
+    ivs = sorted(season_intervals)
+    gap = 0
+
+    # Between consecutive intervals.
+    for (_s1, e1), (s2, _e2) in zip(ivs, ivs[1:]):
+        stop_day = e1 + dt.timedelta(days=1)
+        if stop_day in option_dates:
+            gap += (s2 - stop_day).days
+
+    # Before the first interval: optioned in spring, recalled during the season.
+    first_start = ivs[0][0]
+    if first_start > season.start:
+        earliest = season.start - dt.timedelta(days=_SPRING_OPTION_LOOKBACK_DAYS)
+        if any(earliest <= d <= first_start for d in option_dates):
+            gap += (first_start - season.start).days
+
+    # After the last interval: optioned and never recalled -- the assignment
+    # runs to the end of the season.
+    last_end = ivs[-1][1]
+    if last_end < season.end:
+        stop_day = last_end + dt.timedelta(days=1)
+        if stop_day in option_dates:
+            gap += (season.end - last_end).days
+
+    return gap
+
+
 def compute_service_time(
     transactions: list[Transaction],
     seasons: list[SeasonWindow],
@@ -792,6 +867,7 @@ def compute_service_time(
     accrual_floor: dt.date | None = None,
     accrual_ceiling: dt.date | None = None,
     seasons_with_appearances: set[int] | None = None,
+    roy_full_year_seasons: set[int] | None = None,
     ruleset: "cba.Ruleset | None" = None,
 ) -> ServiceTimeResult:
     """
@@ -835,6 +911,13 @@ def compute_service_time(
     corroborate him, and his year is dropped. Rare enough not to show up in
     the modern era at all (one season in 2010, four in 2009, none after).
 
+    `roy_full_year_seasons` is the set of seasons in which this player is
+    credited a FULL year regardless of days accrued, because he finished first
+    or second in Rookie of the Year voting (the 2022 CBA's Prospect Promotion
+    Incentive). The list of who qualified is hand-maintained in
+    config/cba/roy_full_year_awards.json and resolved per player by the caller; the
+    full-year VALUE comes from the ruleset, not a literal.
+
     `ruleset` is the CBA agreement to compute under, from config/cba/. It
     defaults to the agreement currently in force, so every existing caller is
     unaffected. Pass a different one to run a player under a successor
@@ -851,6 +934,10 @@ def compute_service_time(
         "arbitration.super_two.service_range_years"
     )
     s2_min_days = rules.require("arbitration.super_two.heuristic_min_days")
+    # The 20-day optional-assignment threshold. require_verified rather than
+    # require: this credits days back, so a number nobody has checked against
+    # the CBA text must not drive it -- a wrong threshold is worse than a crash.
+    option_credit_threshold = rules.require_verified("options.days_to_burn_option_year")
 
     ordered_seasons = sorted(seasons, key=lambda s: s.year)
     if horizon_end is None:
@@ -867,6 +954,7 @@ def compute_service_time(
     total_days = 0
     by_season: dict[int, dict] = {}
     years_with_transactions = {t.date.year for t in transactions}
+    option_dates = {t.date for t in transactions if _OPTION_RE.search(t.description)}
 
     for season in ordered_seasons:
         season_intervals = [
@@ -883,8 +971,23 @@ def compute_service_time(
         ):
             # Nothing in this season says he was on a major league roster.
             days = 0
+        # The 20-day optional-assignment rule: if the days this player spent on
+        # optional assignment this season total fewer than the threshold, those
+        # days count as Major League service. Added to raw days before
+        # proration and the cap, so a short option on top of an otherwise full
+        # season still cannot exceed max_days_creditable_per_season.
+        if days > 0:
+            option_days = _optional_assignment_days(season_intervals, option_dates, season)
+            if 0 < option_days < option_credit_threshold:
+                days += option_days
         prorated_days = _prorate_shortened_season(season, days, rules)
         credited_days = min(prorated_days, max_per_season)
+        # The Prospect Promotion Incentive: a top-two Rookie of the Year finish
+        # is credited a full year for that season. It can only RAISE the figure
+        # (a player who already has a full season is unaffected), and the
+        # full-year value is the ruleset's, never a literal.
+        if roy_full_year_seasons and season.year in roy_full_year_seasons:
+            credited_days = max(credited_days, full_year_days)
         total_days += credited_days
         by_season[season.year] = {
             "raw_active_days": days,

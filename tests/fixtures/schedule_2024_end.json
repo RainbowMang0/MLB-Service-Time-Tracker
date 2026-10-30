@@ -1,0 +1,115 @@
+{
+ "dates": [
+  {
+   "date": "2024-09-28",
+   "games": [
+    {
+     "gamePk": 745685,
+     "gameType": "R",
+     "officialDate": "2024-09-28",
+     "gameDate": "2024-09-28T17:05:00Z",
+     "resumedFrom": null,
+     "resumeDate": null,
+     "rescheduledFrom": null,
+     "status": {
+      "detailedState": "Final"
+     },
+     "teams": {
+      "away": {
+       "team": {
+        "id": 134
+       }
+      },
+      "home": {
+       "team": {
+        "id": 147
+       }
+      }
+     }
+    }
+   ]
+  },
+  {
+   "date": "2024-09-29",
+   "games": [
+    {
+     "gamePk": 746577,
+     "gameType": "R",
+     "officialDate": "2024-09-29",
+     "gameDate": "2024-09-29T19:10:00Z",
+     "resumedFrom": null,
+     "resumeDate": null,
+     "rescheduledFrom": null,
+     "status": {
+      "detailedState": "Cancelled"
+     },
+     "teams": {
+      "away": {
+       "team": {
+        "id": 117
+       }
+      },
+      "home": {
+       "team": {
+        "id": 114
+       }
+      }
+     }
+    }
+   ]
+  },
+  {
+   "date": "2024-09-30",
+   "games": [
+    {
+     "gamePk": 747139,
+     "gameType": "R",
+     "officialDate": "2024-09-30",
+     "gameDate": "2024-09-30T17:10:00Z",
+     "resumedFrom": null,
+     "resumeDate": null,
+     "rescheduledFrom": "2024-09-26T23:20:00Z",
+     "status": {
+      "detailedState": "Final"
+     },
+     "teams": {
+      "away": {
+       "team": {
+        "id": 121
+       }
+      },
+      "home": {
+       "team": {
+        "id": 144
+       }
+      }
+     }
+    },
+    {
+     "gamePk": 747064,
+     "gameType": "R",
+     "officialDate": "2024-09-30",
+     "gameDate": "2024-09-30T17:15:00Z",
+     "resumedFrom": null,
+     "resumeDate": null,
+     "rescheduledFrom": "2024-09-25T23:20:00Z",
+     "status": {
+      "detailedState": "Final"
+     },
+     "teams": {
+      "away": {
+       "team": {
+        "id": 121
+       }
+      },
+      "home": {
+       "team": {
+        "id": 144
+       }
+      }
+     }
+    }
+   ]
+  }
+ ]
+}
