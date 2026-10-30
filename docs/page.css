@@ -55,8 +55,17 @@ td a:hover { text-decoration: underline; }
 .lede { font-size: 1.05rem; line-height: 1.6; color: var(--text-secondary);
         margin: 0.9rem 0 0; max-width: 62ch; }
 .lede b { color: var(--text-primary); font-weight: 650; }
+.milestone { font-size: 0.9rem; color: var(--text-secondary); margin: 0.6rem 0 0;
+             max-width: 62ch; border-left: 2px solid var(--accent); padding-left: 0.7rem; }
+.milestone:empty { display: none; }
 .caveat { background: var(--status-warning-wash); color: var(--text-secondary);
           padding: 0.7rem 0.85rem; border-radius: 6px; font-size: 0.85rem; }
+.teammates { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem;
+             padding: 0; margin: 0.4rem 0 0; font-size: 0.9rem; }
+.teammates a, .key-players a { color: var(--accent); text-decoration: none; }
+.teammates a:hover, .key-players a:hover { text-decoration: underline; }
+.key-players { font-size: 0.88rem; color: var(--text-secondary); margin: 0.8rem 0 0; }
+.key-players b { color: var(--text-primary); }
 .back { display: inline-block; margin-bottom: 1rem; color: var(--accent);
         text-decoration: none; }
 .foot { margin-top: 1.5rem; font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }

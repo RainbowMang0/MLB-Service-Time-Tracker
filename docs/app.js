@@ -441,8 +441,9 @@
     const published = (pub.by_season || {})[String(cutoff && cutoff.season)];
     const record =
       `Checked against the ${pub.count} seasons MLB has published ` +
-      `(${from}–${to}, which ranged ${pub.low} to ${pub.high}), this method came ` +
-      `within a day once and was up to twelve days out at worst.`;
+      `(${from}–${to}, which ranged ${pub.low} to ${pub.high}), this method matched ` +
+      `exactly once, came within a day a second time, and was up to twelve days ` +
+      `out at worst.`;
     if (published) {
       return (
         `MLB published ${published} for that season, so the figure above is this ` +
@@ -524,11 +525,13 @@
           ? `This project's own data puts the Super Two boundary after the ` +
             `${superTwoCutoff.season} season at ${superTwoCutoff.cutoff}: ` +
             `${superTwoCutoff.class_size} players finished that year between 2.000 and ` +
-            `3.000 years, and the top 22% of them (${superTwoCutoff.qualifying_count}) ` +
+            `3.000 years with at least 86 days of service that season, and the top ` +
+            `22% of them (${superTwoCutoff.qualifying_count}) ` +
             `reach arbitration a year early. Listed here are players at or above ` +
             `that line who have also accrued 86+ days in ` +
-            `${superTwoCutoff.qualifying_season || superTwoCutoff.season}, the second ` +
-            `half of the rule. ` +
+            `${superTwoCutoff.qualifying_season || superTwoCutoff.season} -- the same ` +
+            `86-day test, re-applied to the season being projected rather than the ` +
+            `season the boundary came from. ` +
             // Only while the season is actually running. Unconditional, this
             // told a reader in late October that a season finished weeks
             // earlier was still being played.
