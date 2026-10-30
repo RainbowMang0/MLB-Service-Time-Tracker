@@ -277,8 +277,57 @@ def _is_alumnus(player: dict) -> bool:
     )
 
 
-def _should_publish(player: dict) -> bool:
-    return bool(player.get("on_40_man")) or _is_alumnus(player)
+PUBLISHED_IDS_PATH = ROOT / "data" / "published_ids.json"
+
+
+def load_ever_published() -> set[int]:
+    """Every player id that has ever had a published page, from `data/published_ids.json`.
+
+    OWNER'S RULE (Braxton, 2026-10-30): a page is never removed because a
+    player left a 40-man roster or stopped meeting `_is_alumnus()`. The 2026-
+    10-30 daily update dropped five pages -- Verlander, Scherzer and three
+    others -- the moment they came off a roster and failed the alumnus test,
+    which also broke the two homepage links pointing at them (caught by
+    validate_published.py's dead-link check).
+
+    This file is the fix: it only ever grows (see save_ever_published()), so
+    an id that lands in it stays published for good, independent of whatever
+    `_should_publish()` would say about the player on a given day. The rmtree
+    in write_player_pages() still wipes PAGE_DIR/CLUB_DIR/ALUMNI_DIR, but
+    `published` is recomputed to include every id here, so the directory is
+    rebuilt WITH these pages rather than without them.
+
+    A missing or unreadable file degrades to "nothing is sticky yet", which
+    is always safe -- it just means `_should_publish()`'s fresh criteria
+    decide, same as before this existed.
+    """
+    try:
+        return {int(x) for x in json.loads(PUBLISHED_IDS_PATH.read_text())}
+    except (OSError, ValueError):
+        return set()
+
+
+def save_ever_published(ids: set[int]) -> None:
+    """Persist the (only ever growing) set of ids that have had a page."""
+    PUBLISHED_IDS_PATH.parent.mkdir(parents=True, exist_ok=True)
+    PUBLISHED_IDS_PATH.write_text(json.dumps(sorted(ids)) + "\n")
+
+
+def _should_publish(player: dict, ever_published: set[int] | None = None) -> bool:
+    """Does this player get a page?
+
+    `ever_published` is the sticky set from load_ever_published(). Passing it
+    makes publication a ratchet: an id already in it stays published even if
+    the player has since come off a 40-man roster and no longer passes
+    `_is_alumnus()` (see that function's own caveat about which non-rostered
+    players stand on their own). Callers that only care about the fresh
+    criteria -- the tests, mainly -- can omit it.
+    """
+    return (
+        bool(player.get("on_40_man"))
+        or _is_alumnus(player)
+        or bool(ever_published and player.get("id") in ever_published)
+    )
 
 
 def _fmt(days: int) -> str:
@@ -1212,9 +1261,21 @@ def write_player_pages(
     db: dict[str, dict],
     generated_at: str | None = None,
     super_two_cutoff: dict | None = None,
+    ever_published: set[int] | None = None,
 ) -> list[dict]:
-    """Regenerate docs/p/ from scratch and return the players published."""
+    """Regenerate docs/p/ from scratch and return the players published.
+
+    `ever_published` should be the caller's already-loaded sticky set (see
+    load_ever_published()) so that it and write_index()'s `has_page` column
+    agree on the same snapshot; if omitted this loads it itself. Either way,
+    whatever is actually published here is folded back in and saved before
+    returning, so an id can only ever be added to the sticky set, never
+    removed -- that is the owner's rule that a player's page outlives his
+    roster spot.
+    """
     generated_at = generated_at or dt.datetime.now(dt.timezone.utc).isoformat()
+    if ever_published is None:
+        ever_published = load_ever_published()
 
     team_names: dict[int, str] = {}
     for player in db.values():
@@ -1222,12 +1283,14 @@ def write_player_pages(
             team_names[int(player["team_id"])] = player["team"]
 
     published = sorted(
-        (p for p in db.values() if _should_publish(p)),
+        (p for p in db.values() if _should_publish(p, ever_published)),
         key=lambda p: p.get("name") or "",
     )
 
-    # Rebuilt wholesale: a player who drops off a 40-man must lose his page,
-    # not keep serving a stale one.
+    # Rebuilt wholesale, but NOT from scratch in the sense of "only today's
+    # criteria": `published` above already folds in every sticky id, so a
+    # player who drops off a 40-man and fails `_is_alumnus()` still comes
+    # back out of this rmtree+rebuild with his page intact.
     for directory in (PAGE_DIR, CLUB_DIR):
         if directory.exists():
             shutil.rmtree(directory)
@@ -1258,6 +1321,7 @@ def write_player_pages(
     _write_robots()
     _write_404()
     _update_homepage_key_players(_pick_key_players(published))
+    save_ever_published(ever_published | {p["id"] for p in published if p.get("id") is not None})
     total_kb = sum((DOCS / page_path(p)).stat().st_size for p in published) / 1024
     print(
         f"Wrote {len(published)} player pages ({total_kb / 1024:.1f} MB) to {PAGE_DIR} "
@@ -2186,9 +2250,10 @@ def _write_404() -> None:
 <div class="viz-root"><div class="wrap wrap--narrow">
   <h1>That page isn't here.</h1>
   <p>
-    The link may be old, or it may point to a player who has since come off a
-    40-man roster &mdash; pages are published for current players and are
-    removed when a player drops off.
+    The link may be mistyped, or point to a player this site has never
+    published a page for. A player's page is never taken down just because he
+    comes off a 40-man roster or retires &mdash; once published, it stays, now
+    under "Previous players".
   </p>
   <p>
     Every player this project tracks, current or not, is in the searchable

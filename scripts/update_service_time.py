@@ -814,7 +814,11 @@ def _published_super_two_history() -> dict | None:
     }
 
 
-def write_index(db: dict[str, dict], super_two_cutoff: dict | None = None) -> None:
+def write_index(
+    db: dict[str, dict],
+    super_two_cutoff: dict | None = None,
+    ever_published: set[int] | None = None,
+) -> None:
     """
     Emit the compact file the frontend downloads.
 
@@ -891,7 +895,13 @@ def write_index(db: dict[str, dict], super_two_cutoff: dict | None = None) -> No
             # breakdown, so it cannot count a player's credited seasons. A
             # second copy of the rule in JS would be the exact drift the CBA
             # thresholds were consolidated to stop.
-            1 if write_player_pages._should_publish(p) else 0,
+            #
+            # `ever_published` makes this agree with write_player_pages():
+            # a player's page is never taken down just because he left a
+            # roster, so this flag must not go back to 0 the day that happens
+            # either, or the table would show a dead-end "no page" button for
+            # a player who still has one.
+            1 if write_player_pages._should_publish(p, ever_published) else 0,
             # Birth year, not the full date. The contract tool needs to say how
             # old a player will be when he reaches a threshold, which only
             # needs the year; shipping the exact birthday would add a personal
@@ -1274,6 +1284,12 @@ def _write_outputs(db: dict[str, dict]) -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     publish_config()
 
+    # Loaded once and threaded through write_index() and _write_pages() below,
+    # so the `has_page` column and the actual docs/p/ directory are built from
+    # the same snapshot of "who has ever had a page". write_player_pages()
+    # grows and re-saves this file; write_index() only reads it.
+    ever_published = write_player_pages.load_ever_published()
+
     # Super Two needs the whole population, so it can only be settled once
     # every record exists -- see scripts/super_two.py. This replaces the flat
     # 86-day flag that compute_service_time() sets per player without any
@@ -1321,7 +1337,7 @@ def _write_outputs(db: dict[str, dict]) -> None:
     }
     OUTPUT_FILE.write_text(json.dumps(output, indent=2))
     print(f"Wrote {len(db)} player records to {OUTPUT_FILE}")
-    write_index(db, cutoff)
+    write_index(db, cutoff, ever_published)
     write_profiles(db)
     # The empirical accrual distribution behind the contract page's threshold
     # projections. Derived from the database, so it belongs with the other
@@ -1329,7 +1345,7 @@ def _write_outputs(db: dict[str, dict]) -> None:
     _write_accrual_model(db)
     # Crawlable static pages. Hash routing is invisible to search engines, so
     # without these no player could be found by searching for him.
-    _write_pages(db, output["generated_at"], super_two_cutoff=cutoff)
+    _write_pages(db, output["generated_at"], super_two_cutoff=cutoff, ever_published=ever_published)
     report_debuted_but_empty(db)
     # A league-minimum salary ESTIMATE for clearly pre-arbitration players,
     # skipping anyone with a known or detected extension. No API calls --
