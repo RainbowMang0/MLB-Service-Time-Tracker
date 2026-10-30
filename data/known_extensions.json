@@ -1,0 +1,60 @@
+[
+  {
+    "_README": [
+      "Hand-maintained list of players known, from PUBLIC REPORTING, to have",
+      "signed a multi-year contract or extension while they were still",
+      "pre-arbitration. This exists because of a hard limit measured while",
+      "building scripts/salary_estimates.py: the MLB Stats API /transactions",
+      "feed -- the same feed the service-time engine already reads, and the",
+      "only mechanism the brief for this feature proposed -- records ROSTER",
+      "STATUS, not money. An extension changes no roster status, so it is",
+      "never logged there. Measured 2026-10-29 against every cached",
+      "transaction file in data/cache/transactions/ (the whole rostered",
+      "population): zero rows anywhere contain the word 'extension' or a",
+      "contract-year phrase. Michael Harris II signed an 8-year extension in",
+      "August 2022 and his cached transaction history has no trace of it.",
+      "",
+      "So this file is the second signal, in the same spirit as",
+      "data/reference_super_two.json and data/reference_service_time.json:",
+      "entered by a person from public reporting (team announcements, AP,",
+      "ESPN, MLB.com), never scraped from Spotrac/Cot's/Baseball-Reference or",
+      "any other salary site, and never carrying a dollar figure or contract",
+      "length here -- only the fact that a deal exists, which is all the",
+      "salary estimate needs to know in order to stay silent.",
+      "",
+      "THIS LIST IS NOT EXHAUSTIVE. It cannot be: there is no free, permitted,",
+      "machine-readable feed of contract extensions, which is the same gap",
+      "that keeps the contract tool's Module B/C unbuilt (see CLAUDE.md). A",
+      "name missing here does not mean no extension exists -- it means nobody",
+      "has entered one yet. The owner is in clubhouses and will know about a",
+      "teammate's deal well before any public report does, which is exactly",
+      "why this is a file he can edit directly rather than something scraped.",
+      "",
+      "ADD A ROW THE MOMENT YOU HEAR ABOUT A PRE-ARB EXTENSION, even before",
+      "it is public. Each row needs: id (the MLB person id -- the same one in",
+      "docs/data/service_time.json, never a jersey number or anything else),",
+      "name (for human readability only; matching is by id), signed (the date",
+      "if known, else null), and note (where this came from). Review the",
+      "current pre-arb list periodically: run",
+      "`python3 -c \"import json; db=json.load(open('docs/data/service_time.json'));",
+      "[print(p['id'], p['name'], p['team']) for p in db['players'] if p['on_40_man']",
+      "and p['service_days_total'] and not p['free_agent_eligible'] and not",
+      "p['arbitration_eligible'] and not p['super_two_candidate']]\"` and check",
+      "each name against what you know."
+    ]
+  },
+  {
+    "id": 677594,
+    "name": "Julio Rodríguez",
+    "signed": "2022-08-15",
+    "note": "Long-term extension signed with the Mariners while pre-arbitration. Widely reported at the time (AP/ESPN). Kept as a worked example and a regression test -- he has since crossed into arbitration eligibility on service time alone, so the pre-arb gate already excludes him regardless of this entry.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document"
+  },
+  {
+    "id": 671739,
+    "name": "Michael Harris II",
+    "signed": "2022-08-17",
+    "note": "8-year extension signed with the Braves while pre-arbitration -- the case that motivated this file (see the _README). Widely reported at the time (AP/ESPN). Kept as a worked example and a regression test -- he has since crossed into arbitration eligibility on service time alone, so the pre-arb gate already excludes him regardless of this entry.",
+    "source": "public reporting, hand-entered, not independently verified against a primary document"
+  }
+]

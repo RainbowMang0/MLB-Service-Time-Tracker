@@ -48,6 +48,7 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
 import cba  # noqa: E402
+import salary_estimates  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
@@ -167,6 +168,11 @@ SUPER_TWO_TOP_PERCENTILE = _RULES.require("arbitration.super_two.top_percentile"
 SUPER_TWO_MIN_PRIOR_DAYS = _RULES.require(
     "arbitration.super_two.minimum_prior_season_days"
 )
+
+# Loaded once, not per page: 1,300+ pages re-reading and re-parsing the same
+# small hand-maintained file would be pure waste. See salary_estimates.py for
+# what this does and does not know.
+_KNOWN_EXTENSIONS = salary_estimates.load_known_extensions()
 
 
 def _yrs(years: float) -> str:
@@ -342,6 +348,48 @@ def _club_phrase(player: dict) -> str:
     if not club:
         return ""
     return f"with {club}" if player.get("on_40_man") else f"last with {club}"
+
+
+def _salary_block(player: dict) -> str:
+    """A labelled league-minimum salary ESTIMATE, pre-arbitration players only.
+
+    Delegates the whole decision to salary_estimates.classify() -- this
+    function only renders what that returns, so the gating logic (clearly
+    pre-arb, no known or detected extension) lives in exactly one place and
+    cannot drift from what app.js's lazily-fetched salary_estimates.json
+    shows for the same player in the table overlay.
+
+    Returns "" (no block at all) for anyone who is not clearly
+    pre-arbitration, which is the correct rendering of "the rule only
+    applies to clearly pre-arb players" -- not a missing feature, a player
+    for whom the question does not apply the same way.
+    """
+    record = salary_estimates.classify(player, _KNOWN_EXTENSIONS, _RULES)
+    if record is None:
+        return ""
+    name = html.escape(player.get("name") or "He")
+    if record["status"] == salary_estimates.STATUS_EXTENSION:
+        note = html.escape(record.get("note") or "")
+        return (
+            "<div class='salary-note salary-note-extension'>"
+            f"<p><strong>Salary:</strong> {name} has a contract or extension on file "
+            "beyond the league minimum, so no salary estimate is shown for him. "
+            f"{note}</p></div>"
+        )
+    minimum = record["minimum"]
+    minimum_year = record["minimum_year"]
+    return (
+        "<div class='salary-note salary-note-estimate'>"
+        f"<p><strong>Salary (estimate):</strong> {name} is clearly pre-arbitration "
+        "(below Super Two, arbitration and free-agency eligibility) and no "
+        "contract extension is on file for him, so his pay is most likely the "
+        f"{minimum_year} MLB minimum of <b>${minimum:,}</b>. This is the league "
+        "minimum from the Basic Agreement, not a confirmed figure for this "
+        "player — this project has no permitted source for actual salaries, "
+        "and a handful of pre-arbitration players sign extensions that this "
+        "page could not detect. If one exists for him, his real pay is higher."
+        "</p></div>"
+    )
 
 
 def _description(player: dict) -> str:
@@ -846,6 +894,7 @@ def render(player: dict, team_names: dict[int, str], generated_at: str) -> str:
   </div>
 
   {caveat}
+  {_salary_block(player)}
   <h2>Season by season</h2>
   {_season_rows(player, team_names)}
 
@@ -1455,6 +1504,15 @@ h1 { letter-spacing: -0.02em; }
 .wrap--narrow p { color: var(--text-secondary); line-height: 1.7; }
 .wrap--narrow a { color: var(--accent); }
 .actions { margin-top: 1.6rem; }
+/* The pre-arbitration salary estimate -- see salary_estimates.py. Same
+   "note" treatment as .caveat, in the accent wash for an informational
+   estimate and the warning wash for "this does not apply to him", so the
+   two read as different levels of the same idea rather than unrelated UI. */
+.salary-note { margin: 0.9rem 0; padding: 0.7rem 0.85rem; border-radius: 6px;
+               font-size: 0.85rem; line-height: 1.6; }
+.salary-note p { margin: 0; }
+.salary-note-estimate { background: var(--accent-wash); color: var(--text-secondary); }
+.salary-note-extension { background: var(--status-warning-wash); color: var(--text-secondary); }
 """
 
 
