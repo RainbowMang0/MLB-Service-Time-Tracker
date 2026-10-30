@@ -1,0 +1,173 @@
+{
+ "dates": [
+  {
+   "date": "2023-09-28",
+   "games": [
+    {
+     "gamePk": 716404,
+     "gameType": "R",
+     "officialDate": "2023-09-28",
+     "gameDate": "2023-09-28T23:10:00Z",
+     "resumedFrom": null,
+     "resumeDate": "2023-10-02T17:10:00Z",
+     "rescheduledFrom": null,
+     "status": {
+      "detailedState": "Completed Early"
+     },
+     "teams": {
+      "away": {
+       "team": {
+        "id": 146
+       }
+      },
+      "home": {
+       "team": {
+        "id": 121
+       }
+      }
+     }
+    }
+   ]
+  },
+  {
+   "date": "2023-09-29",
+   "games": [
+    {
+     "gamePk": 716398,
+     "gameType": "R",
+     "officialDate": "2023-09-29",
+     "gameDate": "2023-09-29T22:35:00Z",
+     "resumedFrom": null,
+     "resumeDate": null,
+     "rescheduledFrom": null,
+     "status": {
+      "detailedState": "Final"
+     },
+     "teams": {
+      "away": {
+       "team": {
+        "id": 146
+       }
+      },
+      "home": {
+       "team": {
+        "id": 134
+       }
+      }
+     }
+    },
+    {
+     "gamePk": 716393,
+     "gameType": "R",
+     "officialDate": "2023-09-30",
+     "gameDate": "2023-09-29T23:10:00Z",
+     "resumedFrom": null,
+     "resumeDate": null,
+     "rescheduledFrom": null,
+     "status": {
+      "detailedState": "Postponed"
+     },
+     "teams": {
+      "away": {
+       "team": {
+        "id": 143
+       }
+      },
+      "home": {
+       "team": {
+        "id": 121
+       }
+      }
+     }
+    }
+   ]
+  },
+  {
+   "date": "2023-09-30",
+   "games": [
+    {
+     "gamePk": 716393,
+     "gameType": "R",
+     "officialDate": "2023-09-30",
+     "gameDate": "2023-09-30T20:15:00Z",
+     "resumedFrom": null,
+     "resumeDate": null,
+     "rescheduledFrom": "2023-09-29T23:10:00Z",
+     "status": {
+      "detailedState": "Final"
+     },
+     "teams": {
+      "away": {
+       "team": {
+        "id": 143
+       }
+      },
+      "home": {
+       "team": {
+        "id": 121
+       }
+      }
+     }
+    }
+   ]
+  },
+  {
+   "date": "2023-10-01",
+   "games": [
+    {
+     "gamePk": 716367,
+     "gameType": "R",
+     "officialDate": "2023-10-01",
+     "gameDate": "2023-10-01T19:05:00Z",
+     "resumedFrom": null,
+     "resumeDate": null,
+     "rescheduledFrom": null,
+     "status": {
+      "detailedState": "Final"
+     },
+     "teams": {
+      "away": {
+       "team": {
+        "id": 111
+       }
+      },
+      "home": {
+       "team": {
+        "id": 110
+       }
+      }
+     }
+    }
+   ]
+  },
+  {
+   "date": "2023-10-02",
+   "games": [
+    {
+     "gamePk": 716404,
+     "gameType": "R",
+     "officialDate": "2023-09-28",
+     "gameDate": "2023-10-02T17:10:00Z",
+     "resumedFrom": "2023-09-28T23:10:00Z",
+     "resumeDate": null,
+     "rescheduledFrom": null,
+     "status": {
+      "detailedState": "Completed Early"
+     },
+     "teams": {
+      "away": {
+       "team": {
+        "id": 146
+       }
+      },
+      "home": {
+       "team": {
+        "id": 121
+       }
+      }
+     }
+    }
+   ]
+  }
+ ]
+}
