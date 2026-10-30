@@ -64,6 +64,11 @@ OUTPUT_FILE = DATA_DIR / "service_time.json"
 # The CBA agreement in force. Every threshold this pipeline publishes comes
 # from here rather than from a literal -- see scripts/cba.py.
 _RULES = cba.default()
+# {mlbam_id -> {season, ...}} the 2022 CBA's Prospect Promotion Incentive
+# credited a full service year (a top-two Rookie of the Year finish). Loaded
+# once; the list is hand-maintained in config/cba/roy_full_year_awards.json and
+# validated by cba.py. Empty until verified entries are added.
+_ROY_FULL_YEAR_SEASONS = cba.roy_full_year_seasons_by_player()
 # config/ is the source of truth for rulesets, but it sits outside docs/ and
 # GitHub Pages serves docs/ as the site root, so the browser cannot reach it.
 # publish_config() copies it in. Source stays canonical; this is a build
@@ -111,11 +116,28 @@ TODAY = dt.date.today()
 #      1,370 changed, 687 days removed, 0 added. Detection is grouped by date
 #      so it cannot depend on the order the API lists two same-day rows in --
 #      the sort-order trap of finding #10, which was worth 160 days there.
+#   6  four accuracy fixes, the first time the season WINDOW itself was wrong
+#      rather than the interval walk (finding #22). (a) Season windows come
+#      from the /schedule feed, so each season starts on the player's own
+#      club's first game -- the Seoul/Tokyo openers a week early, the rest on
+#      their real domestic Opening Day -- instead of the single overseas opener
+#      /seasons reports applied to all 30 clubs (the ~8-days-high error the
+#      Baseball Reference audit found). (b) A season ends on the last game
+#      actually played, not /seasons' end, which in 2023 was a makeup game
+#      scheduled 10-02 and later cancelled (real last day 10-01). (c) The
+#      20-day optional-assignment rule: a player optioned for fewer than 20
+#      days in a season is credited those days as service. (d) The Prospect
+#      Promotion Incentive: a top-two Rookie of the Year finish is credited a
+#      full year (config/cba/roy_full_year_awards.json). Measured on the 1,394
+#      reproducible cached players: ~586 change, the opener/end fix only
+#      removing days and the 20-day rule only adding them; reference veterans
+#      unmoved.
 #
-# Only-removes is the expected shape for both 4 and 5: a rule that can only
-# CLOSE an interval must never add a day, and the measurement is what confirms
-# it did not.
-SERVICE_TIME_RULES_VERSION = 5
+# Only-removes is the expected shape for 4 and 5: a rule that can only CLOSE an
+# interval must never add a day. 6 moves figures in BOTH directions, because it
+# is the first version to correct the window a day is measured against rather
+# than only which days are inside it.
+SERVICE_TIME_RULES_VERSION = 6
 
 # The carry-in rule: presume a player is on a roster from his debut onward
 # rather than crediting him nothing until a start transaction happens to fire.
@@ -203,11 +225,114 @@ def _fetch_transactions_incremental(
 
 
 def _season_windows_for(years: range) -> list[SeasonWindow]:
+    """League windows: the domestic opener and the real season end. Used where
+    the player's club is not known. build_player_record uses the per-club
+    variant below instead."""
     windows = []
     for year in years:
         start, end = mlb.get_season_window(year)
         windows.append(SeasonWindow(year=year, start=start, end=end))
     return windows
+
+
+def _opening_day_for(
+    year: int, opening_day_club: int | None, candidate_clubs: list[int]
+) -> dt.date:
+    """The season-window START for a player, from his club's own opener.
+
+    Service time is credited from a club's OWN first regular-season game, and
+    those differ -- the Seoul/Tokyo openers a week early, the 2026 Oracle Park
+    opener a day early. So the window must start on the player's club's opener,
+    not the league's earliest game applied to everyone (which credited a week
+    of phantom days to every non-overseas club -- the ~8-days-high error the
+    Baseball Reference audit found).
+
+      * `opening_day_club` known -> that club's own opener. This is the club he
+        was with at Opening Day (the earliest club of the season by transaction
+        date -- see _opening_day_clubs), which is the ONLY defensible choice
+        for a traded player: a player who opened with an overseas club and was
+        traded away in June still earned that early Seoul start, while one who
+        opened with a domestic club and was traded TO an overseas-opener club
+        never played the overseas series and must not get its early date.
+      * unknown -> the LATEST of his candidate clubs' openers. Conservative: it
+        can never credit a day before any of his clubs began, and
+        over-crediting is the failure mode behind every revert in this project,
+        so a player reading a few days low is the safe way to be wrong.
+      * no clubs at all -> the domestic opener (what get_club_season_start
+        already returns for an unknown club).
+    """
+    domestic, _ = mlb.get_season_window(year)
+    if opening_day_club:
+        return mlb.get_club_season_start(year, opening_day_club)
+    openers = [mlb.get_club_season_start(year, c) for c in candidate_clubs if c]
+    return max(openers) if openers else domestic
+
+
+def _season_windows_for_player(
+    years: range,
+    season_teams_bio: dict[int, list[int]],
+    txn_team_ids: dict[int, list[int]],
+    opening_day_clubs: dict[int, int],
+) -> list[SeasonWindow]:
+    """Per-player season windows: each season starts on the opener of the club
+    the player was with at Opening Day, and ends on the real last-played date.
+
+    `opening_day_clubs` maps season year -> the club he opened with, derived
+    from his earliest transaction of that season (see _opening_day_clubs). For
+    a season with no transactions the club is resolved the same way
+    _season_teams() does -- stat splits, then transactions, then carried
+    forward from the prior season -- because a silent season almost always
+    means he stayed put, so last year's club is still this year's at the opener.
+    """
+    windows = []
+    carried: list[int] = []
+    for year in years:
+        _, end = mlb.get_season_window(year)
+        candidates = season_teams_bio.get(year) or txn_team_ids.get(year) or carried
+        if candidates:
+            carried = candidates
+        windows.append(
+            SeasonWindow(
+                year=year,
+                start=_opening_day_for(year, opening_day_clubs.get(year), candidates),
+                end=end,
+            )
+        )
+    return windows
+
+
+def _opening_day_clubs(raw_txns: list[dict], mlb_ids: set[int]) -> dict[int, int]:
+    """{season year -> the club this player opened the season with}.
+
+    The Opening Day club is the ORIGIN of his earliest transaction that season
+    -- the club he was already with going into that move. For a trade,
+    "A traded X to B", the origin is A (from_team); for "A optioned X" it is the
+    acting club A; for "B claimed X off waivers from A" it is A, the club he was
+    leaving. So the preference is from_team, then the acting team, then to_team,
+    and the chronologically first transaction of the year wins.
+
+    A year with no transaction at all is absent from the result, and
+    _opening_day_for falls back to the carried-forward club for it.
+    """
+    out: dict[int, int] = {}
+    for t in sorted(raw_txns, key=lambda t: t.get("date") or ""):
+        date = t.get("date")
+        if not date or not _involves_mlb_club(t, mlb_ids):
+            continue
+        year = int(date[:4])
+        if year in out:
+            continue  # first (earliest) transaction of the year wins
+        origin = next(
+            (
+                t.get(key)
+                for key in ("from_team_id", "team_id", "to_team_id")
+                if t.get(key) in mlb_ids
+            ),
+            None,
+        )
+        if origin is not None:
+            out[year] = origin
+    return out
 
 
 _MLB_TEAM_IDS: set[int] | None = None
@@ -489,7 +614,14 @@ def build_player_record(
     if career_end is not None:
         last_year = min(last_year, max(career_end.year, first_year))
     years = range(first_year, last_year + 1)
-    seasons = _season_windows_for(years)
+    # Per-club season windows: each season starts on the opener of the club
+    # this player was with at Opening Day (Seoul/Tokyo clubs a week early, the
+    # rest on their own domestic Opening Day) and ends on the real last-played
+    # date. See _season_windows_for_player.
+    opening_day_clubs = _opening_day_clubs(raw_txns, mlb_ids)
+    seasons = _season_windows_for_player(
+        years, season_teams_bio, txn_team_ids, opening_day_clubs
+    )
 
     # End of his final season, not his final game: service time is roster
     # time, so a player keeps accruing after his last appearance if he stays
@@ -514,6 +646,9 @@ def build_player_record(
         # Seasons MLB's own splits say he appeared in. Without this the
         # presumption has nothing to bound it -- see compute_service_time.
         seasons_with_appearances=set(season_teams_bio),
+        # Seasons a top-two Rookie of the Year finish credits as a full year,
+        # keyed by this player's id. Empty for almost everyone.
+        roy_full_year_seasons=_ROY_FULL_YEAR_SEASONS.get(player_id),
         accrual_floor=accrual_floor,
         accrual_ceiling=accrual_ceiling,
         # Stop the clock at horizon_end (today, for the daily job) rather than

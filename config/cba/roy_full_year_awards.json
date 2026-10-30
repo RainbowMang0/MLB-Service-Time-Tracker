@@ -1,0 +1,90 @@
+{
+  "_description": [
+    "Rookie of the Year full-year service credits (2022 CBA, Prospect Promotion",
+    "Incentive).",
+    "",
+    "THE RULE: a qualifying rookie who finishes FIRST or SECOND in Rookie of the",
+    "Year voting is credited a full year of Major League service for that season,",
+    "even if his day count fell short. The engine (scripts/service_time.py,",
+    "compute_service_time) raises that season's credited days to the full-year",
+    "value -- and that value comes from the CBA ruleset",
+    "(service_time.days_per_credited_year), never a literal, so a successor",
+    "agreement that changes a credited year changes this too.",
+    "",
+    "CBA SOURCE: 2022-2026 Basic Agreement, Article XXI (the Prospect Promotion",
+    "Incentive). The incentive is reciprocal -- a club that carries a top prospect",
+    "on its Opening Day roster can earn a draft pick if he goes on to finish top",
+    "two in Rookie of the Year voting (or top three in MVP/Cy Young), and the",
+    "player is credited a full service year. See:",
+    "  https://www.mlb.com/glossary/rules/prospect-promotion-incentive",
+    "",
+    "WHAT IS LISTED: only players a cited source confirms actually RECEIVED the",
+    "full year for that season. This is a reference list of settled facts, not a",
+    "prediction of who might qualify -- the same discipline as",
+    "data/reference_super_two.json and data/reference_service_time.json. An entry",
+    "that cannot cite a source is not entered, because a guessed full year is a",
+    "number nobody checked wearing the site's authority.",
+    "",
+    "SHAPE: each entry carries mlbam_id (the MLB person id, the only stable key --",
+    "never match this dataset by name), name (for humans), season (the year the",
+    "award was for), league ('AL' or 'NL'), finish (1 or 2), and source (a URL or",
+    "list of URLs). scripts/cba.py validates that every entry has all of these,",
+    "and that finish is 1 or 2. Every mlbam_id below was checked against",
+    "docs/data/service_time.json (name and debut date match).",
+    "",
+    "Verified entries are added by hand."
+  ],
+  "awards": [
+    {
+      "mlbam_id": 671739,
+      "name": "Michael Harris II",
+      "season": 2022,
+      "league": "NL",
+      "finish": 1,
+      "source": [
+        "https://www.mlbtraderumors.com/2022/11/michael-harris-ii-wins-national-league-rookie-of-the-year-award.html",
+        "https://www.baseballamerica.com/stories/prospect-promotion-incentive-explaining-ppi-rules-quirks-more/"
+      ]
+    },
+    {
+      "mlbam_id": 668939,
+      "name": "Adley Rutschman",
+      "season": 2022,
+      "league": "AL",
+      "finish": 2,
+      "source": "https://www.mlbtraderumors.com/2022/11/adley-rutschman-earns-full-service-year-with-rookie-of-the-year-runner-up.html"
+    },
+    {
+      "mlbam_id": 676440,
+      "name": "Tanner Bibee",
+      "season": 2023,
+      "league": "AL",
+      "finish": 2,
+      "source": "https://www.mlb.com/news/tanner-bibee-second-place-al-rookie-of-the-year-award"
+    },
+    {
+      "mlbam_id": 694973,
+      "name": "Paul Skenes",
+      "season": 2024,
+      "league": "NL",
+      "finish": 1,
+      "source": "https://www.mlbtraderumors.com/2024/11/paul-skenes-wins-national-league-rookie-of-the-year-earns-full-year-of-service-time.html"
+    },
+    {
+      "mlbam_id": 701762,
+      "name": "Nick Kurtz",
+      "season": 2025,
+      "league": "AL",
+      "finish": 1,
+      "source": "https://www.mlbtraderumors.com/2025/11/nick-kurtz-wins-american-league-rookie-of-the-year-earns-full-year-of-service-time.html"
+    },
+    {
+      "mlbam_id": 690990,
+      "name": "Cade Horton",
+      "season": 2025,
+      "league": "NL",
+      "finish": 2,
+      "source": "https://www.mlbtraderumors.com/2025/11/drake-baldwin-wins-national-league-rookie-of-the-year-earns-braves-ppi-pick.html"
+    }
+  ]
+}

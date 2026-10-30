@@ -29,34 +29,74 @@ WHAT IS COMPUTED, AND WHAT IS ASSUMED
 For the offseason following season Y:
 
   class    -- players whose service time AT THE END OF SEASON Y falls in
-              [2.000, 3.000), and who accrued at least one day in season Y.
+              [2.000, 3.000), AND who accrued at least 86 days of service
+              in season Y.
   cutoff   -- the service time of the last player inside the top 22% of
-              that class, ranked by total service descending.
-  eligible -- class members at or above the cutoff who also accrued
-              >= 86 days in season Y.
+              that class (rounded to the nearest whole number), ranked by
+              total service descending.
+  eligible -- class members at or above the cutoff.
 
-The "at least one day in season Y" test is a data-derived stand-in for "was
-in the major leagues that year". The rule's class is players with 2-3 years
-of service, which in practice means players currently in MLB; a man who
-last played in 2015 and sits at 2.5 years is not in the 2025 class. Using
-accrual rather than a roster snapshot keeps this consistent with everything
-else here: prefer a check the data can settle.
+⚠️ CORRECTED 2026-10-30. This used to read "and who accrued at least one
+day in season Y" for the class, with the 86-day floor applied only as a
+second test on top of the ranking. That is NOT what MLB's own description
+of the rule says. The glossary at mlb.com/glossary/transactions/super-two
+states it as one sentence, not two: a player must "rank in the top 22
+percent, in terms of service time, among those who have amassed between
+two and three years in the Majors and have accrued at least 86 days of
+service time during the preceding season" -- the 86-day floor describes
+the POOL being ranked, not an extra filter applied after ranking it.
 
-It undercounts by a hair -- a player on a 40-man roster who spent the whole
-year in the minors accrues nothing and drops out of the class denominator,
-where the real rule would keep him. He could never qualify anyway (the
-86-day test excludes him), so the effect is limited to shifting the 22%
-boundary by a fraction of a player.
+validate_super_two.py's original four-of-five failures against
+data/reference_super_two.json are consistent with this: rebuilding the
+class with the 86-day floor, and rounding the 22% share to the nearest
+whole number instead of flooring it (see below), takes 2021 from +0d to
+an exact match and 2022 from +7d to +1d -- both inside the 2-day
+tolerance. 2023-2025 still miss (+12d, +3d, -3d); those are consistent
+with known per-player service-time defects tracked separately (see
+handoff/contract-and-profiles.md and the unmerged
+servicetime/fix-service-time-accuracy branch) rather than with this
+class/rounding rule, which a boundary that sits on exactly the right two
+players either side of it cannot itself produce.
+
+The "accrued >= 86 days in season Y" test is also a data-derived stand-in
+for "was in the major leagues that year, long enough to be in the pool at
+all" -- the rule's class is players with 2-3 years of service who are
+*also* candidates for the 86-day test, which in practice means players
+materially in MLB that season; a man who last played in 2015 and sits at
+2.5 years is not in the 2025 class. Using accrual rather than a roster
+snapshot keeps this consistent with everything else here: prefer a check
+the data can settle.
+
+ROUNDING
+========
+"Top 22 percent" of a class whose size is not a multiple of 50 is not a
+whole number. mlb.com's own glossary text does not spell out how the
+fraction is rounded, but "rounded to the nearest whole number" is how this
+kind of percentile cutoff is conventionally stated, and it is also the
+better empirical fit: on the reference seasons it reproduces 2021 exactly
+and 2022 to within a day, where flooring the fraction (the previous
+behaviour) left both further out. A plain floor() silently drops the
+player who was meant to round up and in; `_round_half_up()` below makes it
+explicit and deterministic (Python's builtin `round()` rounds .5 to even,
+which is not "nearest" as a human would read it).
+
+It undercounts by a hair -- a player on a 40-man roster who spent the
+whole year in the minors accrues nothing and drops out of the class
+denominator, where the real rule would keep him. He could never qualify
+anyway (he fails the 86-day floor too), so the effect is limited to
+shifting the 22% boundary by a fraction of a player.
 
 ACCURACY
 ========
 The computed cutoffs land in the 2.11-2.14 band across recent seasons,
-which is where reported Super Two cutoffs have historically fallen -- and
-they get there with no tuning of any kind. That is encouraging but it is
-NOT verification. `data/reference_super_two.json` exists for the same
-reason the Baseball Reference file does: published cutoffs entered by hand
-are the only independent check, and a number that merely looks plausible is
-exactly the kind of thing this project has been wrong about before.
+which is where reported Super Two cutoffs have historically fallen. As of
+2026-10-30 that is backed by `data/reference_super_two.json` (published
+cutoffs, 2021-2025, entered by hand) rather than being merely plausible:
+`scripts/validate_super_two.py` checks the computed figure against each
+published one. Two of five are inside the 2-day tolerance after this
+correction (2021 exact, 2022 +1d); the other three (2023 +12d, 2024 +3d,
+2025 -3d) are believed to be downstream of per-player service-time
+accuracy, not of the class or rounding rule -- see the note above.
 """
 
 from __future__ import annotations
@@ -79,10 +119,13 @@ SUPER_TWO_TOP_FRACTION = _DEFAULT_RULES.require(
     "arbitration.super_two.top_percentile"
 ) / 100.0
 
-# CBA: and at least 86 days of service in the immediately preceding season.
+# CBA: at least 86 days of service in the immediately preceding season.
 # Note this is the SAME number the old heuristic used, but in its correct
 # role. The heuristic treated "86 days into your third year" as the whole
-# test; it is really a secondary condition on top of the 22% ranking.
+# test. It is not a secondary filter applied after the 22% ranking -- it
+# defines who is IN the pool being ranked (see "CORRECTED 2026-10-30" above)
+# -- and apply_super_two() also re-checks it against the *current* season
+# for a live candidate, which is a separate use of the same number.
 SUPER_TWO_MIN_PRECEDING_SEASON_DAYS = _DEFAULT_RULES.require(
     "arbitration.super_two.minimum_prior_season_days"
 )
@@ -118,26 +161,46 @@ def build_class(
     (service_days_through_year, days_in_year, record) for the 2-3 year class
     at the end of `year`, ranked by service descending.
 
-    The class boundaries are the ruleset's, not literals: a successor
-    agreement could define the class over a different service range.
+    Membership requires BOTH conditions mlb.com's glossary states as one
+    sentence: 2-3 years of total service, AND at least
+    `minimum_prior_season_days` (86) of service in `year` itself. Before
+    2026-10-30 this required only >0 days in `year`, treating the 86-day
+    floor as a filter applied only after the ranking -- see the
+    "CORRECTED" note in the module docstring for why that read the rule
+    backwards and how it was measured.
+
+    The class boundaries and the day floor are the ruleset's, not literals:
+    a successor agreement could define either differently.
     """
     rules = ruleset or _DEFAULT_RULES
     full_year = rules.require("service_time.days_per_credited_year")
     low_years, high_years = rules.require("arbitration.super_two.service_range_years")
     low_days, high_days = low_years * full_year, high_years * full_year
+    min_prior_days = rules.require("arbitration.super_two.minimum_prior_season_days")
     members = []
     for record in db.values():
         seasons = record.get("seasons")
         if not seasons:
             continue
         in_year = _days_in(seasons, year)
-        if in_year <= 0:
+        if in_year < min_prior_days:
             continue
         through = _service_through(seasons, year)
         if low_days <= through < high_days:
             members.append((through, in_year, record))
     members.sort(key=lambda m: (-m[0], m[2].get("name") or ""))
     return members
+
+
+def _round_half_up(value: float) -> int:
+    """
+    "Rounded to the nearest whole number", spelled out rather than left to
+    Python's builtin `round()`, which rounds a tie (x.5) to the nearest
+    EVEN integer rather than up -- not what a human reads "nearest whole
+    number" to mean, and a silent source of an off-by-one on a class size
+    that lands exactly on a half.
+    """
+    return math.floor(value + 0.5)
 
 
 def compute_cutoff(
@@ -155,9 +218,9 @@ def compute_cutoff(
     if len(members) < min_class_size:
         return None
 
-    # floor(): the 22% is a share of the class, and a fractional player
-    # rounds down rather than admitting one more.
-    qualifying_count = math.floor(len(members) * top_fraction)
+    # Rounded to the nearest whole number, not floored -- see
+    # _round_half_up() and the "ROUNDING" section of the module docstring.
+    qualifying_count = _round_half_up(len(members) * top_fraction)
     if qualifying_count < 1:
         return None
 
