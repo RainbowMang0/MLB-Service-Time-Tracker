@@ -41,6 +41,13 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    env:
+      # The backup switch (README.md, "Turning off live fetching"). A repo
+      # variable so it can be flipped from the Settings UI with no code
+      # change or redeploy, independent of any one workflow_dispatch run;
+      # unset reads as "true" both here and in update_service_time.py, so
+      # the default is enabled.
+      MLB_FETCH_ENABLED: ${{ vars.MLB_FETCH_ENABLED }}
     steps:
       # Checkout comes FIRST because the gate below reads the database to
       # decide whether today's update has already happened.

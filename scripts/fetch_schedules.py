@@ -166,9 +166,12 @@ def fetch_season(season: int) -> dict:
         "hydrate": "venue(location)",
     }
     url = f"{mlb.BASE_URL}/schedule"
-    resp = mlb.requests.get(url, params=params, timeout=mlb.REQUEST_TIMEOUT)
+    # Through the shared session, not a bare requests.get(): that session
+    # carries the project's User-Agent (see fetch_mlb_data.USER_AGENT), and a
+    # direct call here was sending the API an unidentified default string.
+    resp = mlb._session.get(url, params=params, timeout=mlb.REQUEST_TIMEOUT)
     resp.raise_for_status()
-    mlb.time.sleep(mlb.POLITE_DELAY_SECONDS)
+    mlb.polite_pause()
     return resp.json()
 
 

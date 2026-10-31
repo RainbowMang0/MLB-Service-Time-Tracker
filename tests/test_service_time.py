@@ -5,6 +5,7 @@ run directly with `python tests/test_service_time.py`.
 
 import datetime as dt
 import json
+import os
 import pathlib
 import sys
 
@@ -4308,6 +4309,333 @@ def test_a_traded_players_start_is_his_opening_day_club_not_the_latest_opener():
         mlb._SEASON_SCHEDULE.clear()
 
 
+# ---------------------------------------------------------------------------
+# Google Analytics, AdSense, the data-source protections, and the two new
+# hand-written pages (about.html, privacy.html). See CLAUDE.md -- these ship
+# the same two ids (GA_MEASUREMENT_ID, ADSENSE_CLIENT_ID) on every page, so
+# the thing worth pinning is "every page carries it exactly once", the same
+# shape as test_the_site_nav_is_the_same_on_every_page().
+# ---------------------------------------------------------------------------
+
+_HAND_WRITTEN_HTML_PAGES = [
+    "index.html", "taxes.html", "contract.html", "neutrality.html",
+    "about.html", "privacy.html",
+]
+
+
+def _generated_sample_pages():
+    """One rendered string per generated template, same fixtures style as
+    test_the_site_nav_is_the_same_on_every_page() and
+    test_a_debuted_player_is_never_described_as_never_having_been_up()."""
+    import write_player_pages as w
+
+    player = {
+        "id": 1, "name": "Test Debutant", "mlb_debut": "2026-08-29",
+        "on_40_man": True, "service_days_total": 0, "service_time": "0.000",
+        "team": "Some Club", "seasons": [], "position": "P",
+    }
+    pages = {
+        "render_club_index": w.render_club_index({"Atlanta Braves": []}, "2026-01-01"),
+        "render_club": w.render_club("Atlanta Braves", [], "2026-01-01"),
+        "render (player)": w.render(player, {}, "2026-01-01"),
+        "_alumni_shell": w._alumni_shell(
+            "Title", "Desc", "https://bigleagueservicetime.com/alumni/",
+            "", "Heading", "Sub", "Body", "2026-01-01", [],
+        ),
+        "render_explainer": w.render_explainer("2026-01-01"),
+        "render_arbitration_eligible": w.render_arbitration_eligible([], "2026-01-01", None, {}),
+        "render_super_two": w.render_super_two([], {}, "2026-01-01", None),
+    }
+    return pages
+
+
+def test_every_page_carries_exactly_one_ga_tag_and_one_adsense_block():
+    """
+    Measurement ID G-G04P969TLX and AdSense publisher ca-pub-8748967682918425
+    each have to land on every page once -- missing one makes a page's
+    traffic or ad delivery invisible, and a duplicate is a page that double-
+    fires analytics events. Generated pages share one constant
+    (write_player_pages.HEAD_TAGS); the six hand-written pages each carry
+    their own literal copy, which is exactly the shape that let the
+    Cloudflare token drift once before (see ANALYTICS's docstring) -- so
+    every hand-written copy is checked too, not just the generated ones.
+    """
+    ROOT = pathlib.Path(__file__).resolve().parents[1]
+    docs = ROOT / "docs"
+
+    ga_script = "googletagmanager.com/gtag/js?id=G-G04P969TLX"
+    ga_config = "gtag('config', 'G-G04P969TLX')"
+    adsense_script = "pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748967682918425"
+    adsense_meta = 'google-adsense-account" content="ca-pub-8748967682918425'
+
+    for name in _HAND_WRITTEN_HTML_PAGES:
+        html = (docs / name).read_text(encoding="utf-8")
+        check(f"{name}: exactly one GA script tag", html.count(ga_script) == 1)
+        check(f"{name}: exactly one GA config call", html.count(ga_config) == 1)
+        check(f"{name}: exactly one AdSense script tag", html.count(adsense_script) == 1)
+        check(f"{name}: exactly one AdSense meta tag", html.count(adsense_meta) == 1)
+
+    import write_player_pages as w
+    w._write_404()
+    page404 = (docs / "404.html").read_text(encoding="utf-8")
+    generated = _generated_sample_pages()
+    generated["404"] = page404
+
+    for name, html in generated.items():
+        check(f"{name}: exactly one GA script tag", html.count(ga_script) == 1)
+        check(f"{name}: exactly one GA config call", html.count(ga_config) == 1)
+        check(f"{name}: exactly one AdSense script tag", html.count(adsense_script) == 1)
+        check(f"{name}: exactly one AdSense meta tag", html.count(adsense_meta) == 1)
+
+
+def test_ads_txt_is_exact():
+    """
+    ads.txt has one job: tell Google's crawler this site sells inventory
+    directly. A typo here silently breaks ad delivery with no error anyone
+    would see, so the content is pinned exactly rather than loosely matched.
+    """
+    ROOT = pathlib.Path(__file__).resolve().parents[1]
+    text = (ROOT / "docs" / "ads.txt").read_text(encoding="utf-8")
+    check(
+        "ads.txt is exactly the one required line",
+        text.strip() == "google.com, pub-8748967682918425, DIRECT, f08c47fec0942fa0",
+    )
+    check("ads.txt is not swallowed by Jekyll", (ROOT / "docs" / ".nojekyll").exists())
+
+
+def test_every_page_carries_the_required_footer_disclaimer_and_links():
+    """
+    The data-source review requires this exact sentence (not a paraphrase)
+    plus reachable About/Privacy/contact links on every page -- see
+    write_player_pages._footer_extra() for the generated side.
+    """
+    ROOT = pathlib.Path(__file__).resolve().parents[1]
+    docs = ROOT / "docs"
+    required = (
+        "Not affiliated with or endorsed by Major League Baseball or any "
+        "team. Service time figures are our own calculations from public "
+        "data."
+    )
+    contact = "contact@bigleagueservicetime.com"
+
+    import write_player_pages as w
+    w._write_404()
+    pages = _generated_sample_pages()
+    pages["404"] = (docs / "404.html").read_text(encoding="utf-8")
+    for name in _HAND_WRITTEN_HTML_PAGES:
+        pages[name] = (docs / name).read_text(encoding="utf-8")
+
+    for name, html in pages.items():
+        normalized = " ".join(html.split())
+        check(f"{name}: carries the required disclaimer sentence", required in normalized)
+        check(f"{name}: links to About", "about.html" in html)
+        check(f"{name}: links to Privacy", "privacy.html" in html)
+        check(f"{name}: shows the contact address", contact in html)
+
+
+def test_the_five_pages_carry_an_original_intro():
+    """
+    Homepage, /t/, /service-time.html, /arbitration-eligible.html and
+    /super-two.html each need a short plain-language intro explaining what
+    service time is and why it matters, per the task. Pinned by a phrase
+    from each one's actual prose rather than just "length > 0", so a future
+    edit that deletes the intro (but leaves other text) is still caught.
+    """
+    ROOT = pathlib.Path(__file__).resolve().parents[1]
+    index_html = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
+    check(
+        "homepage explains what service time is and why it matters",
+        "clock that governs a player" in index_html
+        and "salary arbitration" in index_html
+        and "free agent" in index_html,
+    )
+    check(
+        "homepage explains how to use the table",
+        "Search or filter the table" in index_html,
+    )
+
+    import write_player_pages as w
+    club_index = w.render_club_index({"Atlanta Braves": []}, "2026-01-01")
+    club_index_normalized = " ".join(club_index.split())
+    check(
+        "/t/ explains what service time is and why it matters",
+        "A player earns a day of major league" in club_index_normalized
+        and "salary arbitration" in club_index_normalized,
+    )
+    check(
+        "/t/ explains how to use the directory",
+        "Click a club below" in club_index_normalized,
+    )
+
+    explainer = w.render_explainer("2026-01-01")
+    check(
+        "service-time.html explains why it matters and how to use the page",
+        "milestones below are the ones that matter most" in explainer,
+    )
+
+    arb = w.render_arbitration_eligible([], "2026-01-01", None, {})
+    check(
+        "arbitration-eligible.html explains the rule and how the page is read",
+        "becomes eligible for salary arbitration" in arb
+        and "reports eligibility, not any club" in arb,
+    )
+
+    s2 = w.render_super_two([], {}, "2026-01-01", None)
+    check(
+        "super-two.html explains the rule and how the page is read",
+        "reaches arbitration a year early" in s2 and "Who is in the class right now" in s2,
+    )
+
+
+def test_about_page_stays_high_level():
+    """
+    about.html is deliberately high-level: no formulas, no rule logic, no
+    named API endpoints, and "public data" rather than "public MLB data"
+    (CLAUDE.md, Hard rule 4's spirit extended to not over-specifying the
+    source). privacy.html is allowed to be detailed about cookies, so only
+    about.html is checked here.
+    """
+    import re
+
+    ROOT = pathlib.Path(__file__).resolve().parents[1]
+    about = (ROOT / "docs" / "about.html").read_text(encoding="utf-8")
+
+    check("about.html never names the API client", "statsapi" not in about.lower())
+    check("about.html never states a day/year threshold as a literal",
+          not re.search(r"\b172\b", about))
+    check("about.html never says the word API",
+          not re.search(r"\bAPI\b", about, re.IGNORECASE))
+    check('about.html says "public data", never "public MLB data"',
+          "public data" in about and "public mlb data" not in about.lower())
+    check("about.html carries the contact address",
+          "contact@bigleagueservicetime.com" in about)
+
+
+def test_no_page_in_docs_links_or_names_the_raw_statsapi_endpoint():
+    """
+    Hard rule: no page links raw API JSON. statsapi.mlb.com is fine to name
+    as prose provenance (README.md, service-time.html's sourcing section),
+    but no `<a href>` anywhere in docs/ may point AT it, and no page may
+    quote a transaction's raw MLB description text -- see
+    write_player_pages._season_rows(), which shows only year/club/days/our
+    own source label, never the feed's wording.
+    """
+    import re
+
+    ROOT = pathlib.Path(__file__).resolve().parents[1]
+    docs = ROOT / "docs"
+
+    for path in docs.rglob("*.html"):
+        html = path.read_text(encoding="utf-8")
+        for href in re.findall(r'href=["\']([^"\']+)["\']', html):
+            check(
+                f"{path.relative_to(ROOT)}: no link points at statsapi.mlb.com",
+                "statsapi.mlb.com" not in href,
+            )
+
+
+def test_fetchers_send_an_honest_user_agent_and_use_the_shared_pause():
+    """
+    Every MLB Stats API call should identify the site (an honest User-Agent)
+    and wait between requests through one shared, configurable helper --
+    fetch_schedules.py used to call requests.get() directly, bypassing both.
+    """
+    import fetch_mlb_data as mlb
+
+    check(
+        "the shared session sends the documented User-Agent",
+        mlb._session.headers.get("User-Agent")
+        == "bigleagueservicetime.com (contact@bigleagueservicetime.com)",
+    )
+    check("USER_AGENT constant matches what the session actually sends",
+          mlb.USER_AGENT == mlb._session.headers.get("User-Agent"))
+
+    old = os.environ.get("MLB_FETCH_PAUSE_SECONDS")
+    try:
+        os.environ["MLB_FETCH_PAUSE_SECONDS"] = "2.5"
+        check("the pause is configurable via the environment",
+              mlb.polite_delay_seconds() == 2.5)
+
+        slept = []
+        real_sleep = mlb.time.sleep
+        mlb.time.sleep = lambda s: slept.append(s)  # a fake opener for time.sleep
+        try:
+            mlb.polite_pause()
+        finally:
+            mlb.time.sleep = real_sleep
+        check("polite_pause() sleeps exactly the configured amount", slept == [2.5])
+
+        os.environ["MLB_FETCH_PAUSE_SECONDS"] = "not-a-number"
+        check("a non-numeric override falls back to the default rather than crashing",
+              mlb.polite_delay_seconds() == mlb.DEFAULT_POLITE_DELAY_SECONDS)
+    finally:
+        if old is None:
+            os.environ.pop("MLB_FETCH_PAUSE_SECONDS", None)
+        else:
+            os.environ["MLB_FETCH_PAUSE_SECONDS"] = old
+
+    import inspect
+    import fetch_schedules as fs
+    src = inspect.getsource(fs.fetch_season)
+    check(
+        "fetch_schedules.py's one direct caller goes through the shared "
+        "session (and so sends the same User-Agent), not a bare requests.get()",
+        "mlb._session.get" in src and "mlb.requests.get" not in src,
+    )
+    check("fetch_schedules.py uses the shared pause helper",
+          "mlb.polite_pause()" in src)
+
+
+def test_mlb_fetch_enabled_false_skips_the_api_and_still_builds():
+    """
+    The backup switch. MLB_FETCH_ENABLED=false must skip every MLB Stats API
+    call in the daily job and rebuild the published site from the stored
+    database only -- the same no-network path --recompute-derived takes,
+    reached without a manual flag. See README.md, "Turning off live fetching".
+    """
+    import update_service_time as u
+
+    old = os.environ.get("MLB_FETCH_ENABLED")
+    try:
+        for value, enabled in (("false", False), ("0", False), ("no", False),
+                                ("true", True), ("", True)):
+            os.environ["MLB_FETCH_ENABLED"] = value
+            check(f"MLB_FETCH_ENABLED={value!r} reads as enabled={enabled}",
+                  u.mlb_fetch_enabled() is enabled)
+        os.environ.pop("MLB_FETCH_ENABLED", None)
+        check("unset defaults to enabled", u.mlb_fetch_enabled() is True)
+    finally:
+        if old is None:
+            os.environ.pop("MLB_FETCH_ENABLED", None)
+        else:
+            os.environ["MLB_FETCH_ENABLED"] = old
+
+    fetch_calls = []
+    write_calls = []
+    real_fetch = u.mlb.get_all_40man_players
+    real_write = u._write_outputs
+    real_load = u.load_existing_db
+    real_argv = sys.argv
+    u.mlb.get_all_40man_players = lambda *a, **k: (fetch_calls.append(1), [])[1]
+    u._write_outputs = lambda db: write_calls.append(1)
+    u.load_existing_db = lambda: {}
+    try:
+        os.environ["MLB_FETCH_ENABLED"] = "false"
+        sys.argv = ["update_service_time.py"]
+        u.main()
+        check("no roster fetch happens when the switch is off", fetch_calls == [])
+        check("the site is still rebuilt from the stored database", write_calls == [1])
+    finally:
+        u.mlb.get_all_40man_players = real_fetch
+        u._write_outputs = real_write
+        u.load_existing_db = real_load
+        sys.argv = real_argv
+        if old is None:
+            os.environ.pop("MLB_FETCH_ENABLED", None)
+        else:
+            os.environ["MLB_FETCH_ENABLED"] = old
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -4462,5 +4790,13 @@ if __name__ == "__main__":
     test_the_roy_loader_rejects_an_unsourced_or_malformed_entry()
     test_the_roy_list_is_not_treated_as_a_ruleset_version()
     test_a_traded_players_start_is_his_opening_day_club_not_the_latest_opener()
+    test_every_page_carries_exactly_one_ga_tag_and_one_adsense_block()
+    test_ads_txt_is_exact()
+    test_every_page_carries_the_required_footer_disclaimer_and_links()
+    test_the_five_pages_carry_an_original_intro()
+    test_about_page_stays_high_level()
+    test_no_page_in_docs_links_or_names_the_raw_statsapi_endpoint()
+    test_fetchers_send_an_honest_user_agent_and_use_the_shared_pause()
+    test_mlb_fetch_enabled_false_skips_the_api_and_still_builds()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

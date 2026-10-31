@@ -144,6 +144,23 @@ otherwise publish confidently wrong data over a correct file — an empty
 fetch would flag every player in the database as no longer rostered and the
 job would report success.
 
+### Turning off live fetching
+
+`MLB_FETCH_ENABLED` is a backup switch for the daily job. It defaults to
+**on** (every value except `false`/`0`/`no`/`off` counts as enabled). Set it
+to `false` to skip every call to the MLB Stats API for a run and rebuild the
+published site from whatever is already stored in `docs/data/` — the same
+"no network calls" behavior as `--recompute-derived`, reached without a
+manual flag.
+
+To flip it on the live site: **Settings → Secrets and variables → Actions →
+Variables** → add `MLB_FETCH_ENABLED` set to `false`, or delete it (or set it
+to `true`) to turn fetching back on. Locally:
+`MLB_FETCH_ENABLED=false python3 scripts/update_service_time.py`.
+
+Use it if `statsapi.mlb.com` is down, misbehaving, or a legal/robots concern
+needs the fetching paused without editing workflow files.
+
 ---
 
 ## Deploying your own
@@ -176,6 +193,17 @@ Eastern year-round with no manual upkeep.
 `statsapi.mlb.com` — the public API behind MLB.com's own stats pages.
 Unofficial and undocumented, no key required, and widely relied on by the
 baseball-analytics community.
+
+Every request identifies itself with an honest User-Agent
+(`bigleagueservicetime.com (contact@bigleagueservicetime.com)`) and waits
+about a second after each call (`MLB_FETCH_PAUSE_SECONDS`, default `1.0`) —
+one shared helper in `scripts/fetch_mlb_data.py` (`polite_pause()`), used by
+every fetcher. Transaction history is cached per player
+(`data/cache/transactions/`) and fetched incrementally: a daily run asks the
+API only for transactions since the last cached date, not a player's whole
+career again. The historical backfill (`scripts/backfill_history.py`) goes
+further and skips any player whose stored record was already computed under
+the current rules version — see `_needs_recompute()`.
 
 The Baseball Reference figures in `data/reference_service_time.json` are
 entered **by hand**, deliberately not scraped, both to respect B-R's terms
