@@ -101,7 +101,9 @@ accuracy, not of the class or rounding rule -- see the note above.
 
 from __future__ import annotations
 
+import json
 import math
+import pathlib
 
 import cba
 
@@ -135,12 +137,118 @@ SUPER_TWO_MIN_PRECEDING_SEASON_DAYS = _DEFAULT_RULES.require(
 # from a handful of players. Fall back to the flat heuristic and say so.
 MIN_CLASS_SIZE = _DEFAULT_RULES.require("arbitration.super_two.minimum_class_size")
 
+REPORTED_CUTOFF_FILE = pathlib.Path(__file__).resolve().parents[1] / "data" / "super_two_reported.json"
+
 
 def format_service(days: int, ruleset: "cba.Ruleset | None" = None) -> str:
     full_year = (ruleset or _DEFAULT_RULES).require(
         "service_time.days_per_credited_year"
     )
     return f"{days // full_year}.{days % full_year:03d}"
+
+
+def parse_service(value: str, ruleset: "cba.Ruleset | None" = None) -> int:
+    """The inverse of format_service(): "2.132" -> 476. Raises ValueError on
+    anything that is not exactly years.days (an empty string, missing dot,
+    non-digits) rather than guessing -- callers that want a graceful fallback
+    (e.g. load_reported_cutoff()) catch it themselves."""
+    full_year = (ruleset or _DEFAULT_RULES).require(
+        "service_time.days_per_credited_year"
+    )
+    years_str, dot, days_str = value.partition(".")
+    if not dot:
+        raise ValueError(f"not a years.days figure: {value!r}")
+    return int(years_str) * full_year + int(days_str)
+
+
+def load_reported_cutoff(
+    path: pathlib.Path | None = None,
+    projected_season: int | None = None,
+    ruleset: "cba.Ruleset | None" = None,
+) -> dict | None:
+    """A single hand-kept, UNOFFICIAL reported Super Two cutoff, from
+    data/super_two_reported.json -- see that file's own _README.
+
+    This is the only input in the Super Two pipeline that is not derived
+    from this project's own data: a number heard from reporting (e.g.
+    "expected to land a day above player X's service time") ahead of the
+    actual published figure MLB Trade Rumors / the Associated Press report
+    each November, which data/reference_super_two.json holds once it exists.
+
+    Returns None -- never raises -- if the file is missing, is not valid
+    JSON, is missing a required field, has an unparseable `cutoff`, or (when
+    `projected_season` is given) its `season` does not match: a stale or
+    malformed reported figure must fall back to the single computed cutoff,
+    not break the page or mix seasons.
+    """
+    rules = ruleset or _DEFAULT_RULES
+    p = path or REPORTED_CUTOFF_FILE
+    try:
+        raw = json.loads(p.read_text())
+    except (OSError, ValueError):
+        return None
+    if not isinstance(raw, dict):
+        return None
+
+    season = raw.get("season")
+    cutoff_str = raw.get("cutoff")
+    if not isinstance(season, int) or not isinstance(cutoff_str, str):
+        return None
+    if projected_season is not None and season != projected_season:
+        return None
+
+    try:
+        cutoff_days = parse_service(cutoff_str, rules)
+    except (ValueError, TypeError):
+        return None
+
+    return {
+        "season": season,
+        "cutoff_days": cutoff_days,
+        "cutoff": format_service(cutoff_days, rules),
+        "source": raw.get("source") or "",
+        "entered": raw.get("entered") or "",
+    }
+
+
+def cutoff_range(computed: dict | None, reported: dict | None) -> dict | None:
+    """Combine this project's own computed cutoff with the hand-kept
+    reported figure (see load_reported_cutoff()) into a low/high band for
+    the SAME season.
+
+    low is always this project's own computed cutoff -- the figure the rest
+    of the site already treats as the Super Two line. high is the reported
+    figure when one exists for the matching season, ordered with
+    min()/max() rather than assumed, so a reported figure that happens to
+    sit below the computed one (it can; it is someone's guess, not a
+    guarantee) still produces a valid low<=high band instead of a crossed
+    one. With no usable reported figure -- or an identical one -- this
+    collapses to a single-valued, degenerate range (`is_range` False),
+    which is the graceful fallback to "current behaviour": a single cutoff.
+
+    Returns None only when there is no computed cutoff to anchor on at all.
+    """
+    if computed is None:
+        return None
+    computed_days = computed["cutoff_days"]
+    reported_days = None
+    if reported is not None and reported.get("season") == computed.get("season"):
+        reported_days = reported["cutoff_days"]
+
+    if reported_days is None:
+        low_days = high_days = computed_days
+    else:
+        low_days, high_days = min(computed_days, reported_days), max(computed_days, reported_days)
+
+    return {
+        "season": computed["season"],
+        "low_days": low_days,
+        "high_days": high_days,
+        "low": format_service(low_days),
+        "high": format_service(high_days),
+        "is_range": low_days != high_days,
+        "reported": reported if reported_days is not None else None,
+    }
 
 
 def _service_through(seasons: list[dict], year: int) -> int:
@@ -296,11 +404,26 @@ def qualifying_season(db: dict[str, dict], reference_year: int) -> int:
     return reference_year
 
 
-def apply_super_two(db: dict[str, dict], reference_year: int) -> dict | None:
+def apply_super_two(
+    db: dict[str, dict],
+    reference_year: int,
+    reported: dict | None = None,
+) -> dict | None:
     """
     Set `super_two_candidate` on every record, using the cutoff measured
     after `reference_year` as the threshold. Returns the cutoff metadata, or
     None if it could not be computed (in which case flags are left alone).
+
+    `reported` is an optional hand-kept figure from load_reported_cutoff(),
+    for the one-sided range the site shows around the computed cutoff (see
+    cutoff_range()). It never changes WHO is flagged `super_two_candidate` --
+    that stays exactly "at or above this project's own computed cutoff",
+    the only number the rest of the site (selection, badges, salary gating)
+    has ever keyed off and the one every existing test already pins. It only
+    adds `super_two_bubble`: True for a candidate whose service sits below
+    the reported high end, i.e. inside the low-to-high band rather than
+    past all of it -- extra nuance a renderer can use, never a narrower
+    gate.
 
     TWO DIFFERENT QUESTIONS, and it matters which one this answers.
 
@@ -335,8 +458,11 @@ def apply_super_two(db: dict[str, dict], reference_year: int) -> dict | None:
         return None
 
     cutoff_days = cutoff["cutoff_days"]
+    rng = cutoff_range(cutoff, reported)
+    high_days = rng["high_days"] if rng else cutoff_days
     season_tested = qualifying_season(db, reference_year)
     eligible = 0
+    bubble = 0
     for record in db.values():
         service = int(record.get("service_days_total") or 0)
         seasons = record.get("seasons") or []
@@ -346,13 +472,18 @@ def apply_super_two(db: dict[str, dict], reference_year: int) -> dict | None:
             and service >= cutoff_days
             and in_tested_season >= SUPER_TWO_MIN_PRECEDING_SEASON_DAYS
         )
+        is_bubble = is_super_two and rng is not None and rng["is_range"] and service < high_days
         record["super_two_candidate"] = is_super_two
+        record["super_two_bubble"] = is_bubble
         record["arbitration_eligible"] = (
             service >= 3 * FULL_YEAR_DAYS or is_super_two
         )
         eligible += is_super_two
+        bubble += is_bubble
 
+    cutoff["range"] = rng
     cutoff["projected_candidates"] = eligible
+    cutoff["projected_bubble"] = bubble
     cutoff["qualifying_season"] = season_tested
     # Is the season the 86-day test runs against actually finished?
     #

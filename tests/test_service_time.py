@@ -902,6 +902,137 @@ def test_super_two_flags_only_the_two_to_three_year_band():
     )
 
 
+def test_load_reported_cutoff_falls_back_gracefully():
+    """
+    load_reported_cutoff() is the one hand-kept, unofficial input in the
+    pipeline (data/super_two_reported.json) -- Job 8's brief says a missing
+    or malformed file, or one whose season does not match the season being
+    projected, must fall back to the single computed cutoff rather than
+    error. Every branch here is a way that can happen.
+    """
+    import tempfile
+    import super_two as S  # noqa: PLC0415
+
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp = pathlib.Path(tmp)
+
+        missing = tmp / "does_not_exist.json"
+        check("a missing file returns None", S.load_reported_cutoff(path=missing) is None)
+
+        malformed = tmp / "malformed.json"
+        malformed.write_text("{not valid json")
+        check("invalid JSON returns None", S.load_reported_cutoff(path=malformed) is None)
+
+        not_an_object = tmp / "not_an_object.json"
+        not_an_object.write_text("[1, 2, 3]")
+        check("a JSON array (not an object) returns None",
+              S.load_reported_cutoff(path=not_an_object) is None)
+
+        missing_fields = tmp / "missing_fields.json"
+        missing_fields.write_text('{"season": 2026}')
+        check("a missing cutoff field returns None",
+              S.load_reported_cutoff(path=missing_fields) is None)
+
+        bad_figure = tmp / "bad_figure.json"
+        bad_figure.write_text('{"season": 2026, "cutoff": "not-a-number"}')
+        check("an unparseable cutoff figure returns None",
+              S.load_reported_cutoff(path=bad_figure) is None)
+
+        no_dot = tmp / "no_dot.json"
+        no_dot.write_text('{"season": 2026, "cutoff": "2132"}')
+        check("a figure with no years.days dot returns None",
+              S.load_reported_cutoff(path=no_dot) is None)
+
+        good = tmp / "good.json"
+        good.write_text('{"season": 2026, "cutoff": "2.132", "source": "reported", "entered": "2026-10-30"}')
+        loaded = S.load_reported_cutoff(path=good)
+        check("a well-formed file loads", loaded is not None)
+        check("cutoff_days is parsed correctly", loaded["cutoff_days"] == 2 * S.FULL_YEAR_DAYS + 132)
+        check("source and entered pass through", loaded["source"] == "reported" and loaded["entered"] == "2026-10-30")
+
+        check("a season filter that matches keeps the figure",
+              S.load_reported_cutoff(path=good, projected_season=2026) is not None)
+        check("a season filter that does not match falls back to None",
+              S.load_reported_cutoff(path=good, projected_season=2025) is None)
+
+
+def test_cutoff_range_orders_low_and_high_and_handles_no_reported_figure():
+    """
+    cutoff_range() is the one place the low/high band is assembled. Low is
+    always this project's own computed cutoff; high is the reported figure
+    for the SAME season when one exists, ordered with min()/max() rather
+    than assumed, so a reported figure below the computed one (it is
+    someone's guess, not a guarantee) still produces a valid band instead
+    of a crossed one. No computed cutoff at all collapses to None.
+    """
+    import super_two as S  # noqa: PLC0415
+
+    computed = {"season": 2026, "cutoff_days": 469, "cutoff": "2.125"}
+
+    check("no computed cutoff at all returns None",
+          S.cutoff_range(None, {"season": 2026, "cutoff_days": 476}) is None)
+
+    no_reported = S.cutoff_range(computed, None)
+    check("no reported figure collapses to a single-valued range",
+          no_reported["low_days"] == no_reported["high_days"] == 469
+          and no_reported["is_range"] is False)
+
+    wrong_season = S.cutoff_range(computed, {"season": 2025, "cutoff_days": 476})
+    check("a reported figure for a different season is ignored",
+          wrong_season["is_range"] is False and wrong_season["high_days"] == 469)
+
+    higher = S.cutoff_range(computed, {"season": 2026, "cutoff_days": 476})
+    check("a reported figure above the computed one becomes the high end",
+          higher["low_days"] == 469 and higher["high_days"] == 476 and higher["is_range"] is True)
+
+    lower = S.cutoff_range(computed, {"season": 2026, "cutoff_days": 460})
+    check("a reported figure BELOW the computed one still orders low <= high",
+          lower["low_days"] == 460 and lower["high_days"] == 469 and lower["is_range"] is True)
+
+    equal = S.cutoff_range(computed, {"season": 2026, "cutoff_days": 469})
+    check("an identical reported figure is a single line, not a zero-width range",
+          equal["is_range"] is False and equal["low_days"] == equal["high_days"] == 469)
+
+
+def test_apply_super_two_sets_the_bubble_flag_from_a_reported_range():
+    """
+    apply_super_two()'s optional `reported` argument must never change WHO
+    is flagged super_two_candidate -- that stays "at or above this
+    project's own computed cutoff", the number every other selector and
+    badge on the site already keys off. It only adds super_two_bubble:
+    True for a candidate whose service sits below the reported high end.
+    """
+    import super_two as S  # noqa: PLC0415
+
+    db = _s2_league(100, year=2025)
+    cutoff = S.compute_cutoff(db, 2025)
+    low_days = cutoff["cutoff_days"]
+
+    # A reported figure a few days above the computed cutoff opens a real
+    # bubble band.
+    reported = {"season": 2025, "cutoff_days": low_days + 5}
+    result = S.apply_super_two(db, 2025, reported=reported)
+    check("apply_super_two still returns the cutoff metadata", result is not None)
+    check("the range is attached to the returned cutoff", result["range"]["is_range"] is True)
+
+    at_low = next(p for p in db.values() if p.get("service_days_total") == low_days)
+    check("a candidate exactly at the low end is a candidate", at_low["super_two_candidate"] is True)
+    check("...and is on the bubble (below the reported high end)", at_low["super_two_bubble"] is True)
+
+    above_high = [p for p in db.values() if p.get("service_days_total", 0) >= low_days + 5]
+    check("at least one player clears the reported high end in this fixture", len(above_high) > 0)
+    for p in above_high:
+        check(f"{p['name']} at/above the high end is a candidate but not on the bubble",
+              p["super_two_candidate"] is True and p["super_two_bubble"] is False)
+
+    # With no reported figure at all, nobody is ever on the bubble -- the
+    # graceful single-cutoff fallback.
+    db2 = _s2_league(100, year=2025)
+    S.apply_super_two(db2, 2025, reported=None)
+    check("with no reported figure, no one is flagged on the bubble",
+          not any(p.get("super_two_bubble") for p in db2.values()))
+
+
 def test_super_two_declines_to_guess_from_a_tiny_population():
     """
     A partial dataset would otherwise produce a confident-looking cutoff
@@ -2297,34 +2428,88 @@ def test_super_two_status_labels_ties_and_boundaries():
     """
     _s2_status() is the per-player label on the Super Two page. It must
     not reimplement the Super Two test -- it only compares an
-    already-computed day count to an already-computed cutoff, and defers
-    to the engine's own super_two_candidate flag whenever that is set.
+    already-computed day count to an already-computed low/high range, and
+    defers to the engine's own super_two_candidate flag whenever that is
+    set. See test_super_two_status_labels_with_a_real_range() for the
+    low/high boundaries this adds on top of the single-value behaviour
+    pinned here.
     """
     import write_player_pages as wpp
 
     cutoff_days = 2 * wpp.FULL_YEAR_DAYS + 50
 
+    # No reported figure: high_days omitted, collapses to the single-value
+    # behaviour this function had before the range existed.
     flagged = {"service_days_total": cutoff_days, "super_two_candidate": True}
     check("the engine's own flag wins: 'Projected Super Two'",
           wpp._s2_status(flagged, cutoff_days) == "Projected Super Two")
 
-    # A tie at the cutoff, not flagged (e.g. he hasn't met this season's day
+    # A tie at the low end, not flagged (e.g. he hasn't met this season's day
     # floor yet) -- described as sitting right on the line, not above or
     # below it.
     tied = {"service_days_total": cutoff_days, "super_two_candidate": False}
-    check("a tie at the cutoff reads as 'right at the line'",
-          wpp._s2_status(tied, cutoff_days) == "Right at the projected line")
+    check("a tie at the low end reads as 'right at' it, short of the floor",
+          wpp._s2_status(tied, cutoff_days)
+          == "Right at the projected low end, short of the season's day floor")
 
     above_unflagged = {"service_days_total": cutoff_days + 5, "super_two_candidate": False}
-    check("above the cutoff but unflagged names the day-floor gap",
-          wpp._s2_status(above_unflagged, cutoff_days) == "Above the line, short of the season's day floor")
+    check("above the low end but unflagged names the day-floor gap",
+          wpp._s2_status(above_unflagged, cutoff_days)
+          == "Above the projected range, short of the season's day floor")
 
     below = {"service_days_total": cutoff_days - 5, "super_two_candidate": False}
-    check("below the cutoff reads as below the line",
-          wpp._s2_status(below, cutoff_days) == "Below the projected line")
+    check("below the low end reads as below the range",
+          wpp._s2_status(below, cutoff_days) == "Below the projected range")
 
     check("no cutoff at all is called out rather than guessed",
           wpp._s2_status(below, None) == "Cutoff not yet measurable")
+
+
+def test_super_two_status_labels_with_a_real_range():
+    """
+    With a reported high end distinct from the computed low end, a
+    candidate (service >= low, day floor met) splits into "Projected Super
+    Two" (>= high) and "On the bubble" (< high) -- the classification Job 8
+    asked for: at/above high = Projected Super Two, [low, high) = bubble,
+    below low = below the range. Equal ends (no usable reported figure, or
+    one identical to the computed cutoff) must keep behaving as a single
+    line, which the other test above already pins.
+    """
+    import write_player_pages as wpp
+
+    low = 2 * wpp.FULL_YEAR_DAYS + 50
+    high = 2 * wpp.FULL_YEAR_DAYS + 57
+
+    at_high = {"service_days_total": high, "super_two_candidate": True}
+    check("exactly at the high end is 'Projected Super Two' (inclusive)",
+          wpp._s2_status(at_high, low, high) == "Projected Super Two")
+
+    above_high = {"service_days_total": high + 3, "super_two_candidate": True}
+    check("above the high end is still 'Projected Super Two'",
+          wpp._s2_status(above_high, low, high) == "Projected Super Two")
+
+    at_low = {"service_days_total": low, "super_two_candidate": True}
+    check("exactly at the low end is 'On the bubble' (inclusive low, exclusive high)",
+          wpp._s2_status(at_low, low, high) == "On the bubble")
+
+    mid_bubble = {"service_days_total": low + 3, "super_two_candidate": True}
+    check("strictly between low and high is 'On the bubble'",
+          wpp._s2_status(mid_bubble, low, high) == "On the bubble")
+
+    one_below_high = {"service_days_total": high - 1, "super_two_candidate": True}
+    check("one day short of the high end is still 'On the bubble'",
+          wpp._s2_status(one_below_high, low, high) == "On the bubble")
+
+    below_low = {"service_days_total": low - 1, "super_two_candidate": False}
+    check("below the low end is 'Below the projected range'",
+          wpp._s2_status(below_low, low, high) == "Below the projected range")
+
+    # Equal ends (e.g. a reported figure identical to the computed cutoff):
+    # a candidate at the shared value reads as a plain "Projected Super
+    # Two", never "On the bubble" -- there is no band to be inside.
+    equal_candidate = {"service_days_total": low, "super_two_candidate": True}
+    check("equal low and high collapses to a single line, not a bubble",
+          wpp._s2_status(equal_candidate, low, low) == "Projected Super Two")
 
 
 def test_known_extension_is_labelled_not_hidden_on_the_arbitration_page():
@@ -2358,6 +2543,88 @@ def test_known_extension_is_labelled_not_hidden_on_the_arbitration_page():
           "Signed a long extension while pre-arbitration." in html)
     check("the player without a known extension carries no such badge",
           html.split("No Extension</a>")[1].split("</tr>")[0].count("Contract/extension on file") == 0)
+
+
+def test_the_super_two_page_shows_the_range_and_three_groups():
+    """
+    Job 8: the Super Two page must show "Projected cutoff range: LOW to
+    HIGH" (not a single number) when a reported figure gives it one, and
+    classify the live class into three groups -- at/above high: Projected
+    Super Two; [low, high): on the bubble; below low: below the range.
+    """
+    import re
+    import super_two as S  # noqa: PLC0415
+    import write_player_pages as wpp
+
+    low_days = 2 * wpp.FULL_YEAR_DAYS + 50
+    high_days = 2 * wpp.FULL_YEAR_DAYS + 57
+    cutoff = {
+        "season": 2026, "cutoff_days": low_days, "cutoff": S.format_service(low_days),
+        "class_size": 136, "qualifying_count": 30,
+        "range": {
+            "season": 2026, "low_days": low_days, "high_days": high_days,
+            "low": S.format_service(low_days), "high": S.format_service(high_days),
+            "is_range": True,
+            "reported": {"season": 2026, "cutoff_days": high_days,
+                         "source": "reported, unofficial: one day above Jordan Beck's service time",
+                         "entered": "2026-10-30"},
+        },
+    }
+    players = [
+        {"id": 1, "name": "Above High <script>", "team": "A", "on_40_man": True,
+         "service_days_total": high_days, "service_time": "2.057", "super_two_candidate": True},
+        {"id": 2, "name": "On The Bubble", "team": "A", "on_40_man": True,
+         "service_days_total": low_days, "service_time": "2.050", "super_two_candidate": True},
+        {"id": 3, "name": "Below Range", "team": "A", "on_40_man": True,
+         "service_days_total": low_days - 1, "service_time": "2.049", "super_two_candidate": False},
+    ]
+    html_out = wpp.render_super_two(players, {}, "2026-10-30T00:00:00+00:00", cutoff)
+
+    check("the page states the range, not a single number",
+          f"Projected cutoff range: {cutoff['range']['low']} to {cutoff['range']['high']}" in html_out)
+    check("the reported source note reaches the page",
+          "one day above Jordan Beck" in html_out)
+    check("a player at/above the high end reads 'Projected Super Two'",
+          "Projected Super Two</td>" in html_out)
+    check("a player on the bubble reads 'On the bubble'",
+          "On the bubble</td>" in html_out)
+    check("a player below the low end reads 'Below the projected range'",
+          "Below the projected range</td>" in html_out)
+    check("a name with HTML-significant characters is escaped",
+          "Above High <script>" not in html_out and "Above High &lt;script&gt;" in html_out)
+    subtitle = re.search(r'<p class="subtitle">(.*?)</p>', html_out, re.S).group(1)
+    subtitle = " ".join(subtitle.split())
+    check("the subtitle reports all three group counts",
+          "1 project as Super Two" in subtitle
+          and "1 is on the bubble" in subtitle
+          and "1 fall below the projected range" in subtitle)
+
+
+def test_arbitration_eligible_badge_distinguishes_the_bubble():
+    """
+    Job 8: a Super Two candidate who is only "on the bubble" (per
+    super_two.apply_super_two's super_two_bubble flag) must read as such on
+    the arbitration-eligible page too, not as a flatly-asserted "Super Two".
+    """
+    import write_player_pages as wpp
+
+    players = [
+        {"id": 1, "name": "Bubble Player", "team": "A", "on_40_man": True,
+         "service_days_total": 2 * wpp.FULL_YEAR_DAYS + 50, "service_time": "2.050",
+         "super_two_candidate": True, "super_two_bubble": True},
+        {"id": 2, "name": "Solid Super Two", "team": "A", "on_40_man": True,
+         "service_days_total": 2 * wpp.FULL_YEAR_DAYS + 60, "service_time": "2.060",
+         "super_two_candidate": True, "super_two_bubble": False},
+    ]
+    html_out = wpp.render_arbitration_eligible(players, "2026-10-30T00:00:00+00:00", None, {})
+    check("the bubble player is labelled 'On the Super Two bubble'",
+          "On the Super Two bubble" in html_out)
+    bubble_row = html_out.split("Bubble Player</a>")[1].split("</tr>")[0]
+    solid_row = html_out.split("Solid Super Two</a>")[1].split("</tr>")[0]
+    check("the bubble badge is attached to the bubble player, not the other one",
+          "On the Super Two bubble" in bubble_row and "On the Super Two bubble" not in solid_row)
+    check("a solid Super Two candidate still reads as plain 'Super Two'",
+          ">Super Two<" in solid_row)
 
 
 def test_the_offseason_pages_are_added_to_the_sitemap_and_workflows():
@@ -4080,6 +4347,9 @@ if __name__ == "__main__":
     test_super_two_rounds_the_qualifying_count_rather_than_flooring_it()
     test_super_two_requires_86_days_in_the_preceding_season()
     test_super_two_flags_only_the_two_to_three_year_band()
+    test_load_reported_cutoff_falls_back_gracefully()
+    test_cutoff_range_orders_low_and_high_and_handles_no_reported_figure()
+    test_apply_super_two_sets_the_bubble_flag_from_a_reported_range()
     test_super_two_declines_to_guess_from_a_tiny_population()
     test_validate_super_two_counts_failures_and_would_exit_nonzero()
     test_qualifying_season_follows_the_season_being_played()
@@ -4157,7 +4427,10 @@ if __name__ == "__main__":
     test_arbitration_eligible_selection_boundaries()
     test_super_two_class_selection_boundaries()
     test_super_two_status_labels_ties_and_boundaries()
+    test_super_two_status_labels_with_a_real_range()
     test_known_extension_is_labelled_not_hidden_on_the_arbitration_page()
+    test_the_super_two_page_shows_the_range_and_three_groups()
+    test_arbitration_eligible_badge_distinguishes_the_bubble()
     test_the_offseason_pages_are_added_to_the_sitemap_and_workflows()
     test_the_site_nav_is_the_same_on_every_page()
     test_the_two_unfinished_tools_are_marked_in_the_nav()
