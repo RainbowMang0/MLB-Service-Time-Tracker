@@ -193,7 +193,8 @@ def check_links() -> list[str]:
     #    kind that rots without anyone noticing.
     generated = ([docs / "index.html", docs / "404.html",
                   docs / "taxes.html", docs / "contract.html",
-                  docs / "neutrality.html"]
+                  docs / "neutrality.html",
+                  docs / "arbitration-eligible.html", docs / "super-two.html"]
                  + sorted(docs.glob("p/*.html")) + sorted(docs.glob("t/*.html")))
     generated = [p for p in generated if p.exists()]
     missing_targets: set[str] = set()

@@ -164,6 +164,7 @@ jobs:
           scripts/commit_data.sh \
             "chore: daily service time update ($(date -u +%F))" \
             docs/data docs/p docs/t docs/alumni docs/page.css docs/404.html docs/service-time.html \
+            docs/arbitration-eligible.html docs/super-two.html \
             docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-clubs.xml \
             docs/sitemap-players.xml docs/sitemap-alumni.xml docs/robots.txt data/cache \
             data/published_ids.json
