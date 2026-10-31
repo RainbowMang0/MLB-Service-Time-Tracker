@@ -8,37 +8,37 @@
   "Bands with a small sample are marked enough_data: false and should not be presented as a distribution."
  ],
  "full_year_days": 172,
- "transitions": 16314,
+ "transitions": 16313,
  "min_band_sample": 100,
  "bands": [
   {
    "band": 0,
    "label": "0.000-1.000",
-   "sample": 6156,
+   "sample": 6151,
    "enough_data": true,
    "p20": 31,
    "p50": 122,
    "p80": 172,
-   "mean": 106.2,
+   "mean": 106.1,
    "share_full_year": 0.371,
    "share_zero": 0.077
   },
   {
    "band": 1,
    "label": "1.000-2.000",
-   "sample": 2154,
+   "sample": 2156,
    "enough_data": true,
-   "p20": 60,
+   "p20": 59,
    "p50": 172,
    "p80": 172,
-   "mean": 127.8,
+   "mean": 127.6,
    "share_full_year": 0.564,
-   "share_zero": 0.061
+   "share_zero": 0.062
   },
   {
    "band": 2,
    "label": "2.000-3.000",
-   "sample": 1680,
+   "sample": 1681,
    "enough_data": true,
    "p20": 84,
    "p50": 172,
@@ -50,7 +50,7 @@
   {
    "band": 3,
    "label": "3.000-4.000",
-   "sample": 1321,
+   "sample": 1322,
    "enough_data": true,
    "p20": 108,
    "p50": 172,
