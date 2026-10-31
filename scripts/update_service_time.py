@@ -1294,15 +1294,29 @@ def _write_outputs(db: dict[str, dict]) -> None:
     # every record exists -- see scripts/super_two.py. This replaces the flat
     # 86-day flag that compute_service_time() sets per player without any
     # league context.
-    cutoff = super_two.apply_super_two(
-        db, super_two.latest_complete_season(db, TODAY.year)
-    )
+    reference_season = super_two.latest_complete_season(db, TODAY.year)
+    # The hand-kept, unofficial reported cutoff (see data/super_two_reported.json)
+    # only applies to the SAME season the computed cutoff was just measured
+    # from (compute_cutoff's "offseason after `year`" convention, matching
+    # data/reference_super_two.json) -- load_reported_cutoff() checks that
+    # and returns None for a stale or mismatched entry, the graceful
+    # fallback to a single cutoff.
+    reported = super_two.load_reported_cutoff(projected_season=reference_season)
+    cutoff = super_two.apply_super_two(db, reference_season, reported=reported)
     if cutoff:
+        range_note = ""
+        if cutoff.get("range") and cutoff["range"]["is_range"]:
+            range_note = (
+                f"; reported high end {cutoff['range']['high']} gives a range of "
+                f"{cutoff['range']['low']}-{cutoff['range']['high']} "
+                f"({cutoff['projected_bubble']} on the bubble)"
+            )
         print(
             f"Super Two cutoff after {cutoff['season']}: {cutoff['cutoff']} "
             f"({cutoff['class_size']} in the 2-3 year class, top "
             f"{cutoff['qualifying_count']} qualify); "
             f"{cutoff['projected_candidates']} players currently project above it"
+            f"{range_note}"
         )
     else:
         print("Super Two: class too small to measure a cutoff; heuristic flags kept.")

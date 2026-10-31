@@ -367,7 +367,7 @@ def _status(player: dict) -> str:
     if player.get("free_agent_eligible"):
         return "Free agency eligible"
     if player.get("super_two_candidate"):
-        return "On the Super Two track"
+        return "On the Super Two bubble" if player.get("super_two_bubble") else "On the Super Two track"
     if player.get("arbitration_eligible"):
         return "Arbitration eligible"
     return "Pre-arbitration"
@@ -424,7 +424,10 @@ def _milestone_sentence(player: dict) -> str:
     fa_days = _days_for(FREE_AGENCY_YEARS)
     if player.get("arbitration_eligible"):
         seasons = _min_seasons_to(fa_days - days_total)
-        track = " on the Super Two track" if player.get("super_two_candidate") else ""
+        if player.get("super_two_candidate"):
+            track = " on the Super Two bubble" if player.get("super_two_bubble") else " on the Super Two track"
+        else:
+            track = ""
         return (
             f"{service} years of service, arbitration-eligible{track} — at least "
             f"{seasons} more full season{'' if seasons == 1 else 's'} on an active "
@@ -2317,6 +2320,13 @@ def select_super_two_class(players: list[dict]) -> list[dict]:
 
 def _arb_status_badge(player: dict) -> str:
     if player.get("super_two_candidate"):
+        # super_two_bubble (set by super_two.apply_super_two) is only ever
+        # True when a reported figure for this season puts him below the
+        # high end of the range -- see CLAUDE.md / the Super Two page for
+        # what the range means. No reported figure, or a player past the
+        # whole range, still reads as a plain "Super Two".
+        if player.get("super_two_bubble"):
+            return "<span class='badge badge-serious'>On the Super Two bubble</span>"
         return "<span class='badge badge-serious'>Super Two</span>"
     return "<span class='badge badge-warning'>Arbitration eligible</span>"
 
@@ -2373,6 +2383,7 @@ def render_arbitration_eligible(
     season_phrase = f" heading into {next_season}" if next_season else ""
 
     s2_count = sum(1 for p in eligible if p.get("super_two_candidate"))
+    s2_bubble_count = sum(1 for p in eligible if p.get("super_two_bubble"))
     standard_count = len(eligible) - s2_count
     club_count = len({p.get("team") for p in eligible if p.get("team")})
     extension_count = sum(1 for p in eligible if p.get("id") in known_extensions)
@@ -2381,6 +2392,11 @@ def render_arbitration_eligible(
         "on file (marked below), so an actual arbitration hearing is "
         "unlikely even though their service time qualifies."
         if extension_count else ""
+    )
+    bubble_phrase = (
+        f" ({s2_bubble_count} of those are on the bubble -- within the "
+        "projected range but short of its high end; see the Super Two page.)"
+        if s2_bubble_count else ""
     )
 
     desc = (
@@ -2460,12 +2476,12 @@ def render_arbitration_eligible(
   {SUPER_TWO_TOP_PERCENTILE}% of that class, with at least
   {SUPER_TWO_MIN_PRIOR_DAYS} days of service in the preceding season. See
   <a href="{BASE_PATH}{SUPER_TWO_PAGE_PATH}">the Super Two page</a> for how
-  that line is projected this year.</p>
+  that line is projected this year -- as a range, not one number.</p>
 
   <p class="lede">The {len(eligible)} players below are rostered players
   whose service time estimate meets one of those two tests today. Teams
   still choose whether to tender a contract to each of them; this page
-  reports eligibility, not any club's decision.{extension_sentence}</p>
+  reports eligibility, not any club's decision.{extension_sentence}{bubble_phrase}</p>
 
   <table class="arb-table"><thead><tr><th>Player</th><th class="n">Service time</th>
   <th>Status</th></tr></thead><tbody>{''.join(rows)}</tbody></table>
@@ -2491,18 +2507,30 @@ def render_arbitration_eligible(
 """
 
 
-def _s2_status(player: dict, cutoff_days: int | None) -> str:
-    """Plain-English standing of one player relative to the projected line."""
-    if player.get("super_two_candidate"):
-        return "Projected Super Two"
-    if cutoff_days is None:
+def _s2_status(player: dict, low_days: int | None, high_days: int | None = None) -> str:
+    """Plain-English standing of one player relative to the projected range.
+
+    low_days/high_days come from super_two_cutoff["range"] (see
+    super_two.cutoff_range()): low is this project's own computed cutoff,
+    high is the reported figure when one applies this season, else equal to
+    low -- the graceful single-value fallback. Defers to the engine's own
+    `super_two_candidate` flag (service >= low AND this season's day floor
+    met) exactly as before for whether a player is "in" at all; it only adds
+    where within or past the range he sits. A player whose raw day count
+    clears low but whose flag is False failed the day floor, not the range,
+    so that caveat is kept exactly as it read before the range existed.
+    """
+    if low_days is None:
         return "Cutoff not yet measurable"
+    high_days = low_days if high_days is None else high_days
     days = int(player.get("service_days_total") or 0)
-    if days == cutoff_days:
-        return "Right at the projected line"
-    if days > cutoff_days:
-        return "Above the line, short of the season's day floor"
-    return "Below the projected line"
+    if player.get("super_two_candidate"):
+        return "Projected Super Two" if days >= high_days else "On the bubble"
+    if days == low_days:
+        return "Right at the projected low end, short of the season's day floor"
+    if days > low_days:
+        return "Above the projected range, short of the season's day floor"
+    return "Below the projected range"
 
 
 def _s2_history_rows(db: dict[str, dict]) -> list[dict]:
@@ -2541,29 +2569,75 @@ def render_super_two(
     generated_at: str,
     super_two_cutoff: dict | None,
 ) -> str:
-    """The Super Two rule explained, this winter's projected cutoff, who is
-    in the live 2-3 year class relative to it, and how this project's
+    """The Super Two rule explained, this winter's projected cutoff RANGE, who
+    is in the live 2-3 year class relative to it, and how this project's
     computed cutoffs have checked out against published figures in the past.
 
+    The range comes from super_two_cutoff["range"] (see
+    super_two.cutoff_range()): low is this project's own computed cutoff,
+    high is a hand-kept, unofficial reported figure for the same season
+    (data/super_two_reported.json) when one applies -- else the range
+    collapses to that single computed value, same as before this existed.
+
     Every number is read off super_two.py / the CBA ruleset, never
-    re-derived: the cutoff and the per-player super_two_candidate flag are
-    both produced by scripts/super_two.py and handed in rather than
-    recomputed here.
+    re-derived: the cutoff, its range, and the per-player
+    super_two_candidate/super_two_bubble flags are all produced by
+    scripts/super_two.py and handed in rather than recomputed here.
     """
     url = f"{SITE_URL}/{SUPER_TWO_PAGE_PATH}"
     cutoff_days = super_two_cutoff.get("cutoff_days") if super_two_cutoff else None
     season_measured = super_two_cutoff.get("season") if super_two_cutoff else None
+    rng = super_two_cutoff.get("range") if super_two_cutoff else None
+    low_days = rng["low_days"] if rng else cutoff_days
+    high_days = rng["high_days"] if rng else cutoff_days
+    is_range = bool(rng and rng["is_range"])
+    reported = rng.get("reported") if rng else None
 
-    projected_count = sum(1 for p in class_players if p.get("super_two_candidate"))
+    history = _s2_history_rows(db)
+    # How far this project's own computed cutoffs have missed the figures
+    # MLB Trade Rumors / the Associated Press eventually published, in the
+    # seasons where both exist -- read off the validator's own deltas rather
+    # than restated by hand, so this sentence cannot drift from what
+    # scripts/validate_super_two.py actually finds.
+    misses = [abs(row["delta"]) for row in history if row["delta"] is not None]
 
-    if super_two_cutoff:
+    statuses = [_s2_status(p, low_days, high_days) for p in class_players]
+    projected_count = statuses.count("Projected Super Two")
+    bubble_count = statuses.count("On the bubble")
+    below_count = statuses.count("Below the projected range")
+
+    if super_two_cutoff and is_range:
+        miss_phrase = (
+            f" In the {len(misses)} season{'s' if len(misses) != 1 else ''} with a "
+            f"published figure to check against, this project's computed cutoff has "
+            f"missed it by {min(misses)} to {max(misses)} days."
+            if misses else ""
+        )
+        reported_note = ""
+        if reported and reported.get("source"):
+            reported_note = f" The high end is {html.escape(reported['source'])}."
+        cutoff_block = (
+            f"<p class='lede'>After the <b>{season_measured}</b> season, the "
+            f"2.000-3.000 year class had {super_two_cutoff['class_size']} "
+            f"players, and the top {super_two_cutoff['qualifying_count']} of "
+            f"them (the top {SUPER_TWO_TOP_PERCENTILE}%) fell at or above "
+            f"<b>{rng['low']}</b> years of service ({low_days:,} days) -- this "
+            "project's own computed cutoff. "
+            f"<strong>Projected cutoff range: {rng['low']} to {rng['high']}</strong> "
+            f"years of service ({low_days:,}-{high_days:,} days).</p>"
+            "<p class='lede'>This is shown as a range, not a single number, "
+            f"because the computed figure is not exact.{miss_phrase}{reported_note} "
+            "The live class below is measured against both ends of the range.</p>"
+        )
+    elif super_two_cutoff:
         cutoff_block = (
             f"<p class='lede'>After the <b>{season_measured}</b> season, the "
             f"2.000-3.000 year class had {super_two_cutoff['class_size']} "
             f"players, and the top {super_two_cutoff['qualifying_count']} of "
             f"them (the top {SUPER_TWO_TOP_PERCENTILE}%) fell at or above "
             f"<b>{super_two_cutoff['cutoff']}</b> years of service "
-            f"({super_two_cutoff['cutoff_days']:,} days). That is the line "
+            f"({super_two_cutoff['cutoff_days']:,} days). <strong>Projected "
+            f"cutoff: {super_two_cutoff['cutoff']}</strong>. That is the line "
             "this site currently projects the live class against, below.</p>"
         )
     else:
@@ -2573,25 +2647,32 @@ def render_super_two(
             "player floor). No projection is shown.</p>"
         )
 
-    desc = (
-        f"This winter's projected Super Two cutoff"
-        f"{f' after the {season_measured} season' if season_measured else ''}: "
-        f"{super_two_cutoff['cutoff'] if super_two_cutoff else 'not yet measurable'} "
-        "years of service. Estimated from this project's own data, not an "
-        "official MLB/MLBPA figure."
-    )
+    if super_two_cutoff and is_range:
+        desc = (
+            f"This winter's projected Super Two cutoff range after the "
+            f"{season_measured} season: {rng['low']} to {rng['high']} years of "
+            "service. Estimated from this project's own data plus one "
+            "unofficial reported figure, not an official MLB/MLBPA number."
+        )
+    else:
+        desc = (
+            f"This winter's projected Super Two cutoff"
+            f"{f' after the {season_measured} season' if season_measured else ''}: "
+            f"{super_two_cutoff['cutoff'] if super_two_cutoff else 'not yet measurable'} "
+            "years of service. Estimated from this project's own data, not an "
+            "official MLB/MLBPA figure."
+        )
 
     rows = "".join(
         f"<tr><td><a href=\"{BASE_PATH}{page_path(p)}\">{html.escape(p.get('name') or '')}</a></td>"
         f"<td>{html.escape(p.get('team') or '—')}</td>"
         f"<td class='n'>{html.escape(p.get('service_time') or '0.000')}</td>"
-        f"<td>{html.escape(_s2_status(p, cutoff_days))}</td></tr>"
-        for p in sorted(
-            class_players, key=lambda p: (-int(p.get("service_days_total") or 0), p.get("name") or "")
+        f"<td>{html.escape(status)}</td></tr>"
+        for p, status in sorted(
+            zip(class_players, statuses),
+            key=lambda ps: (-int(ps[0].get("service_days_total") or 0), ps[0].get("name") or ""),
         )
     )
-
-    history = _s2_history_rows(db)
     history_rows = "".join(
         "<tr><td>{season}</td><td class='n'>{ours}</td><td class='n'>{pub}</td>"
         "<td>{verdict}</td></tr>".format(
@@ -2646,8 +2727,10 @@ def render_super_two(
   {_crumbs(("All players", BASE_PATH), ("Super Two", None))}
 
   <h1>Super Two: this winter's projected cutoff</h1>
-  <p class="subtitle">{projected_count} of {len(class_players)} players in the
-  live 2.000-3.000 year class project above the line.</p>
+  <p class="subtitle">Of {len(class_players)} players in the live
+  2.000-3.000 year class: {projected_count} project as Super Two, {bubble_count}
+  {'is' if bubble_count == 1 else 'are'} on the bubble, and {below_count} fall
+  below the projected range.</p>
 
   <p class="lede">A player with at least {_RULES.require('arbitration.super_two.service_range_years')[0]:.0f}
   but fewer than {_RULES.require('arbitration.super_two.service_range_years')[1]:.0f}
@@ -2668,10 +2751,12 @@ def render_super_two(
 
   <h2>Who is in the class right now</h2>
   <p>Every rostered player currently between 2.000 and 3.000 years of
-  service, most service time first. "Projected Super Two" also requires
-  the player to have reached {SUPER_TWO_MIN_PRIOR_DAYS} days of service in
-  the season being measured -- a player can sit above the day line and
-  still not be flagged yet if he has not reached that floor this season.</p>
+  service, most service time first. "Projected Super Two" means at or above
+  the high end of the range above; "On the bubble" means inside the range,
+  below the high end. Both also require the player to have reached
+  {SUPER_TWO_MIN_PRIOR_DAYS} days of service in the season being measured --
+  a player can sit above the low end of the range and still read as short
+  of that day floor if he has not reached it yet this season.</p>
 
   <table><thead><tr><th>Player</th><th>Club</th><th class="n">Service time</th>
   <th>Standing</th></tr></thead><tbody>{rows}</tbody></table>
