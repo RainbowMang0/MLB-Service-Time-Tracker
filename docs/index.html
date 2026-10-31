@@ -3,6 +3,22 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google Analytics. Hand-maintained here because this page is not
+     generated -- scripts/write_player_pages.py has the same two ids in its
+     GA_MEASUREMENT_ID/ADSENSE_CLIENT_ID constants for every generated page.
+     Change both together. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G04P969TLX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-G04P969TLX');
+</script>
+<!-- End Google Analytics -->
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748967682918425" crossorigin="anonymous"></script>
+<meta name="google-adsense-account" content="ca-pub-8748967682918425">
+<!-- End Google AdSense -->
 <title>Big League Service Time Tracker</title>
 
 <!-- Shared links were rendering as a bare URL, which for a niche project is
@@ -55,6 +71,24 @@
     </header>
 
       <nav class="site-nav" aria-label="Site sections"><a href="./" aria-current="page">Service time</a><a href="t/">By club</a><a href="alumni/">Previous players</a><a href="arbitration-eligible.html">Arbitration eligible</a><a href="super-two.html">Super Two</a><a href="service-time.html">What is service time?</a><a href="contract.html">Contract clock <span class="nav-tag">in development</span></a><a href="taxes.html">Duty days <span class="nav-tag">in development</span></a><a href="neutrality.html">Neutrality</a></nav>
+
+    <section class="intro">
+      <p>Major league service time is the clock that governs a player's
+      career off the field: it decides when he can argue for a raise in
+      salary arbitration and when he becomes a free agent, able to sign with
+      any club he chooses. A player earns a day of service for every day he
+      spends on a major league roster, hurt or healthy, starting or
+      mopping up — it has almost nothing to do with how well he plays.</p>
+      <p>This table tracks that clock for every player on a 40-man roster
+      today, plus every player who has ever come off one, reconstructed
+      daily from public roster transactions. A smaller group of players
+      reach arbitration a year early under the Super Two rule. See
+      <a href="service-time.html">what is service time?</a> for the exact
+      day counts behind each milestone.</p>
+      <p>Search or filter the table below to find a player or a team, click
+      a name to open his season-by-season history, or use the "By club" tab
+      above to see a whole 40-man roster at once.</p>
+    </section>
 
     <div class="disclaimer-banner" id="disclaimer-banner">
       <span class="disclaimer-icon" aria-hidden="true">ⓘ</span>
@@ -140,6 +174,15 @@
         This is an independent project. It is not affiliated with, endorsed by,
         or sponsored by Major League Baseball, the Major League Baseball
         Players Association, or any of their clubs.
+      </p>
+      <p>
+        Not affiliated with or endorsed by Major League Baseball or any team.
+        Service time figures are our own calculations from public data.
+      </p>
+      <p>
+        <a href="about.html">About</a> &middot;
+        <a href="privacy.html">Privacy</a> &middot;
+        <a href="mailto:contact@bigleagueservicetime.com">contact@bigleagueservicetime.com</a>
       </p>
       <p>
         <a href="t/">Browse service time by club</a> — every 40-man roster, and

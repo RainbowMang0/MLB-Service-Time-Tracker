@@ -13,6 +13,7 @@ from __future__ import annotations
 import collections
 import datetime as dt
 import functools
+import os
 import sys
 import time
 from dataclasses import dataclass
@@ -23,10 +24,16 @@ import requests
 BASE_URL = "https://statsapi.mlb.com/api/v1"
 SPORT_ID_MLB = 1
 
+# An honest User-Agent naming the site and a way to reach whoever runs it --
+# statsapi.mlb.com is public and undocumented, and the polite thing an
+# unofficial client can do is make itself identifiable rather than blend in
+# with a browser's default string.
+USER_AGENT = "bigleagueservicetime.com (contact@bigleagueservicetime.com)"
+
 _session = requests.Session()
 _session.headers.update(
     {
-        "User-Agent": "mlb-service-time-tracker/1.0 (+https://github.com/; contact: repo owner)",
+        "User-Agent": USER_AGENT,
         "Accept": "application/json",
     }
 )
@@ -34,7 +41,31 @@ _session.headers.update(
 REQUEST_TIMEOUT = 20
 MAX_RETRIES = 3
 RETRY_BACKOFF_SECONDS = 2
-POLITE_DELAY_SECONDS = 0.15  # small delay between calls to be a good API citizen
+
+# The pause between requests, read fresh from the environment on every call
+# rather than frozen at import time -- so a workflow step, a test, or a
+# one-off shell command can tune it (`MLB_FETCH_PAUSE_SECONDS=0 python3 ...`
+# for a local dry run) without editing this file. Defaults to roughly one
+# second per the owner's instruction to be a polite, identifiable client of
+# a public, undocumented, unpaid API; see the daily-update workflow for the
+# request-count estimate that this default was chosen against.
+DEFAULT_POLITE_DELAY_SECONDS = 1.0
+
+
+def polite_delay_seconds() -> float:
+    raw = os.environ.get("MLB_FETCH_PAUSE_SECONDS")
+    if raw is None or raw.strip() == "":
+        return DEFAULT_POLITE_DELAY_SECONDS
+    try:
+        return max(0.0, float(raw))
+    except ValueError:
+        return DEFAULT_POLITE_DELAY_SECONDS
+
+
+def polite_pause() -> None:
+    """Sleep the configured pause. One call site, so every fetcher honors the
+    same knob -- see MLB_FETCH_PAUSE_SECONDS above."""
+    time.sleep(polite_delay_seconds())
 
 
 def _get(path: str, params: dict[str, Any] | None = None) -> dict:
@@ -44,7 +75,7 @@ def _get(path: str, params: dict[str, Any] | None = None) -> dict:
         try:
             resp = _session.get(url, params=params, timeout=REQUEST_TIMEOUT)
             resp.raise_for_status()
-            time.sleep(POLITE_DELAY_SECONDS)
+            polite_pause()
             return resp.json()
         except requests.RequestException as exc:  # pragma: no cover - network path
             last_err = exc

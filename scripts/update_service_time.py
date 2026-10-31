@@ -1094,6 +1094,21 @@ def load_existing_db() -> dict[str, dict]:
     return {}
 
 
+def mlb_fetch_enabled() -> bool:
+    """The backup switch: MLB_FETCH_ENABLED=false skips every MLB Stats API
+    call and rebuilds the published site from whatever is already stored.
+
+    Defaults to enabled (true). Read as a string, not a Python bool, because
+    it comes from an environment variable / GitHub Actions workflow input,
+    where both arrive as text -- "false" and "0" are the only recognized
+    ways to disable it, so a blank or unset value is unambiguously "on".
+    See README.md, "Turning off live fetching" for how to flip it.
+    """
+    return os.environ.get("MLB_FETCH_ENABLED", "true").strip().lower() not in (
+        "false", "0", "no", "off",
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--full-refresh", action="store_true", help="Ignore cache, re-pull full history.")
@@ -1131,6 +1146,14 @@ def main() -> None:
 
     if args.recompute_derived:
         print("Recomputing derived data only -- no API calls, no record changes.")
+        _write_outputs(db)
+        return
+
+    if not mlb_fetch_enabled():
+        print(
+            "MLB_FETCH_ENABLED is false -- skipping every MLB Stats API call "
+            "and rebuilding the published site from the stored database only."
+        )
         _write_outputs(db)
         return
 
