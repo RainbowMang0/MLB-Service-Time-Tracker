@@ -76,6 +76,15 @@ jobs:
       - name: Data query helper (fixtures only, no real data read)
         run: python tests/test_query_data.py
 
+      # Validates data/lockout_updates.json against its own schema (required
+      # fields, real ISO dates, https sources) AND builds docs/lockout.html
+      # from it, so a bad hand-edit to that one file fails here rather than
+      # shipping. See scripts/build_lockout_page.py.
+      - name: CBA & lockout tracker page (data validation + build)
+        run: |
+          python scripts/build_lockout_page.py --check
+          python tests/test_lockout.py
+
       - name: Duty-day allocation engine
         run: node --test tests/duty_days.test.cjs
 

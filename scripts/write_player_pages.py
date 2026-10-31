@@ -119,6 +119,7 @@ NAV_SECTIONS = [
     ("arbitration-eligible.html", "Arbitration eligible", None),
     ("super-two.html", "Super Two", None),
     ("service-time.html", "What is service time?", None),
+    ("lockout.html", "CBA &amp; Lockout", None),
     ("contract.html", "Contract clock", "in development"),
     ("taxes.html", "Duty days", "in development"),
     ("neutrality.html", "Neutrality", None),

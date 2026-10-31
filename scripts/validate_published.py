@@ -193,7 +193,7 @@ def check_links() -> list[str]:
     #    kind that rots without anyone noticing.
     generated = ([docs / "index.html", docs / "404.html",
                   docs / "taxes.html", docs / "contract.html",
-                  docs / "neutrality.html",
+                  docs / "neutrality.html", docs / "lockout.html",
                   docs / "arbitration-eligible.html", docs / "super-two.html"]
                  + sorted(docs.glob("p/*.html")) + sorted(docs.glob("t/*.html")))
     generated = [p for p in generated if p.exists()]
@@ -204,6 +204,9 @@ def check_links() -> list[str]:
         for url in re.findall(r'(?:href|content)="(https?://[^"]+)"', text):
             if url.startswith("https://github.com/"):
                 continue  # the methodology link, deliberately off-site
+            if page.name == "lockout.html" and url.startswith("https://"):
+                continue  # news source citations -- deliberately off-site,
+                          # validated for https-only by scripts/build_lockout_page.py
             if not url.startswith(site_root):
                 foreign += 1
                 if foreign <= 5:
