@@ -8,7 +8,7 @@
   "Bands with a small sample are marked enough_data: false and should not be presented as a distribution."
  ],
  "full_year_days": 172,
- "transitions": 16330,
+ "transitions": 16328,
  "min_band_sample": 100,
  "bands": [
   {
@@ -81,18 +81,18 @@
    "p80": 172,
    "mean": 155.4,
    "share_full_year": 0.815,
-   "share_zero": 0.022
+   "share_zero": 0.023
   },
   {
    "band": 6,
    "label": "6.000+",
-   "sample": 2640,
+   "sample": 2638,
    "enough_data": true,
    "p20": 172,
    "p50": 172,
    "p80": 172,
-   "mean": 156.4,
-   "share_full_year": 0.819,
+   "mean": 156.3,
+   "share_full_year": 0.818,
    "share_zero": 0.016
   }
  ]
