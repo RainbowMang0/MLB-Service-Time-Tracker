@@ -59,6 +59,9 @@ scripts/validate_*.py          service_time (vs B-R hand entries), against_roste
                                super_two (offline), published (offline: files agree,
                                every link resolves)
 scripts/probe_player.py        everything the model knows about one player
+scripts/query_data.py          targeted reads of service_time.json (id/name/range/
+                               team/fields/super-two) -- see note below, don't read
+                               the file whole
 config/cba/2022.json           agreement in force; every value carries a source
 config/cba/2027.json           placeholder that REFUSES to compute
 config/cba/roy_full_year_awards.json  hand-kept ROY credits (not a ruleset)
@@ -80,6 +83,17 @@ docs/p/ docs/t/ docs/alumni/   generated pages; also page.css, 404.html,
 .github/workflows/             ci.yml (every push/PR, offline), update-service-time.yml
                                (daily 8am ET), backfill-history.yml (manual),
                                validate.yml (manual), probe-coverage.yml
+```
+
+Never read `docs/data/*.json`, `data/cache/*`, or `docs/p/*.html` whole —
+they're huge generated files and will blow a session's context for no
+reason. Use `scripts/query_data.py` for targeted questions, or `rg` plus
+line-range `Read`s when you need something it doesn't cover. Examples:
+
+```
+python3 scripts/query_data.py --player "jordan beck"
+python3 scripts/query_data.py --range 2.000-3.000 --team "Colorado Rockies"
+python3 scripts/query_data.py --super-two
 ```
 
 ## Tests and checks (run before every PR)

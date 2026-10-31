@@ -73,6 +73,9 @@ jobs:
       - name: Service-time engine and CBA rulesets
         run: python tests/test_service_time.py
 
+      - name: Data query helper (fixtures only, no real data read)
+        run: python tests/test_query_data.py
+
       - name: Duty-day allocation engine
         run: node --test tests/duty_days.test.cjs
 
