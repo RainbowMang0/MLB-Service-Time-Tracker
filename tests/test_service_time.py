@@ -2212,6 +2212,179 @@ def test_the_page_does_not_claim_a_finished_season_is_still_being_played():
           super_two._max_days_in(db, 2031) < super_two.FULL_YEAR_DAYS)
 
 
+def test_arbitration_eligible_selection_boundaries():
+    """
+    select_arbitration_eligible() is the one place "arbitration-eligible
+    this winter" is decided for the new page -- 3+ but under 6 years, or
+    Super Two, rostered only. Pinning the exact boundaries (3.000 included,
+    6.000 excluded) and the non-rostered exclusion so a departed player's
+    stale flag can never resurrect him onto the page.
+    """
+    import write_player_pages as wpp
+
+    arb_days = wpp._days_for(wpp.ARBITRATION_YEARS)
+    fa_days = wpp._days_for(wpp.FREE_AGENCY_YEARS)
+
+    players = [
+        # Exactly 3.000: the standard threshold is inclusive.
+        {"id": 1, "name": "Right At Arb", "team": "A", "on_40_man": True,
+         "service_days_total": arb_days, "service_time": "3.000",
+         "super_two_candidate": False},
+        # One day short of arbitration, not Super Two: excluded.
+        {"id": 2, "name": "Just Short", "team": "A", "on_40_man": True,
+         "service_days_total": arb_days - 1, "service_time": "2.171",
+         "super_two_candidate": False},
+        # Exactly 6.000: free agency eligible, excluded even though
+        # service_time.py would still set arbitration_eligible for him.
+        {"id": 3, "name": "Right At FA", "team": "A", "on_40_man": True,
+         "service_days_total": fa_days, "service_time": "6.000",
+         "super_two_candidate": False},
+        # Super Two, under the standard threshold: included on that basis
+        # alone.
+        {"id": 4, "name": "Super Twoer", "team": "A", "on_40_man": True,
+         "service_days_total": 2 * wpp.FULL_YEAR_DAYS + 100, "service_time": "2.100",
+         "super_two_candidate": True},
+        # Would otherwise qualify, but has left the 40-man: his flag is
+        # stale (apply_super_two recomputes it against a frozen total) and
+        # must not resurrect him onto a page about this winter.
+        {"id": 5, "name": "Departed", "team": "A", "on_40_man": False,
+         "service_days_total": arb_days + 50, "service_time": "3.050",
+         "super_two_candidate": False},
+    ]
+    got = {p["id"] for p in wpp.select_arbitration_eligible(players)}
+    check("exactly 3.000 years is included", 1 in got)
+    check("one day short of 3.000 is excluded", 2 not in got)
+    check("exactly 6.000 years (free agency) is excluded", 3 not in got)
+    check("a Super Two candidate under 3.000 is included", 4 in got)
+    check("a departed player is excluded regardless of his stored flags", 5 not in got)
+    check("nothing else sneaks in", got == {1, 4})
+
+
+def test_super_two_class_selection_boundaries():
+    """
+    select_super_two_class() feeds the "who is in the class right now"
+    table on the Super Two page. Same half-open band [2.000, 3.000) that
+    super_two.build_class() ranks -- a player at exactly 3.000 is excluded
+    here for the same reason he is excluded from the class the cutoff
+    itself is measured through.
+    """
+    import write_player_pages as wpp
+
+    low = 2 * wpp.FULL_YEAR_DAYS
+    high = 3 * wpp.FULL_YEAR_DAYS
+    players = [
+        {"id": 1, "name": "Right At Two", "team": "A", "on_40_man": True,
+         "service_days_total": low, "service_time": "2.000"},
+        {"id": 2, "name": "Just Under Three", "team": "A", "on_40_man": True,
+         "service_days_total": high - 1, "service_time": "2.171"},
+        {"id": 3, "name": "Right At Three", "team": "A", "on_40_man": True,
+         "service_days_total": high, "service_time": "3.000"},
+        {"id": 4, "name": "Just Under Two", "team": "A", "on_40_man": True,
+         "service_days_total": low - 1, "service_time": "1.171"},
+        {"id": 5, "name": "Departed In Band", "team": "A", "on_40_man": False,
+         "service_days_total": low + 10, "service_time": "2.010"},
+    ]
+    got = {p["id"] for p in wpp.select_super_two_class(players)}
+    check("exactly 2.000 is included (lower bound inclusive)", 1 in got)
+    check("just under 3.000 is included", 2 in got)
+    check("exactly 3.000 is excluded (upper bound exclusive)", 3 not in got)
+    check("just under 2.000 is excluded", 4 not in got)
+    check("a departed player in the band is excluded", 5 not in got)
+    check("nothing else sneaks in", got == {1, 2})
+
+
+def test_super_two_status_labels_ties_and_boundaries():
+    """
+    _s2_status() is the per-player label on the Super Two page. It must
+    not reimplement the Super Two test -- it only compares an
+    already-computed day count to an already-computed cutoff, and defers
+    to the engine's own super_two_candidate flag whenever that is set.
+    """
+    import write_player_pages as wpp
+
+    cutoff_days = 2 * wpp.FULL_YEAR_DAYS + 50
+
+    flagged = {"service_days_total": cutoff_days, "super_two_candidate": True}
+    check("the engine's own flag wins: 'Projected Super Two'",
+          wpp._s2_status(flagged, cutoff_days) == "Projected Super Two")
+
+    # A tie at the cutoff, not flagged (e.g. he hasn't met this season's day
+    # floor yet) -- described as sitting right on the line, not above or
+    # below it.
+    tied = {"service_days_total": cutoff_days, "super_two_candidate": False}
+    check("a tie at the cutoff reads as 'right at the line'",
+          wpp._s2_status(tied, cutoff_days) == "Right at the projected line")
+
+    above_unflagged = {"service_days_total": cutoff_days + 5, "super_two_candidate": False}
+    check("above the cutoff but unflagged names the day-floor gap",
+          wpp._s2_status(above_unflagged, cutoff_days) == "Above the line, short of the season's day floor")
+
+    below = {"service_days_total": cutoff_days - 5, "super_two_candidate": False}
+    check("below the cutoff reads as below the line",
+          wpp._s2_status(below, cutoff_days) == "Below the projected line")
+
+    check("no cutoff at all is called out rather than guessed",
+          wpp._s2_status(below, None) == "Cutoff not yet measurable")
+
+
+def test_known_extension_is_labelled_not_hidden_on_the_arbitration_page():
+    """
+    The brief asked that a player with a known contract/extension either be
+    excluded or clearly labelled. This project labels rather than excludes
+    (see render_arbitration_eligible's own docstring for why): the engine's
+    arbitration_eligible flag is about service time alone and stays correct
+    regardless of a contract, and hiding a rostered, eligible player risks
+    reading as an omission rather than a decision.
+    """
+    import write_player_pages as wpp
+
+    players = [
+        {"id": 1, "name": "Has An Extension", "team": "A", "on_40_man": True,
+         "service_days_total": 4 * wpp.FULL_YEAR_DAYS, "service_time": "4.000",
+         "super_two_candidate": False},
+        {"id": 2, "name": "No Extension", "team": "A", "on_40_man": True,
+         "service_days_total": 4 * wpp.FULL_YEAR_DAYS, "service_time": "4.000",
+         "super_two_candidate": False},
+    ]
+    known = {1: {"note": "Signed a long extension while pre-arbitration."}}
+    html = wpp.render_arbitration_eligible(players, "2026-10-30T00:00:00+00:00", None, known)
+
+    check("both players still appear -- labelled, not excluded",
+          "Has An Extension" in html and "No Extension" in html)
+    check("the extension badge is attached to the right player",
+          html.index("Contract/extension on file") > html.index("Has An Extension") and
+          html.index("Has An Extension") < html.index("No Extension"))
+    check("the note text reaches the page",
+          "Signed a long extension while pre-arbitration." in html)
+    check("the player without a known extension carries no such badge",
+          html.split("No Extension</a>")[1].split("</tr>")[0].count("Contract/extension on file") == 0)
+
+
+def test_the_offseason_pages_are_added_to_the_sitemap_and_workflows():
+    """
+    New generated paths have to clear three separate places by hand: the
+    core sitemap, and the commit_data.sh path lists in both workflow YAMLs
+    (see CLAUDE.md, "Add every new generated path to both workflows'
+    commit_data.sh lists"). Missing any one of them means the page either
+    never gets indexed or never gets committed by the daily job.
+    """
+    import write_player_pages as wpp
+
+    ROOT = pathlib.Path(__file__).resolve().parents[1]
+    core = (ROOT / "docs" / "sitemap-core.xml").read_text()
+    for path in (wpp.ARBITRATION_ELIGIBLE_PATH, wpp.SUPER_TWO_PAGE_PATH):
+        check(f"sitemap-core.xml lists {path}", f"/{path}</loc>" in core)
+
+    workflows = ROOT / ".github" / "workflows"
+    for name in ("update-service-time.yml", "backfill-history.yml"):
+        body = (workflows / name).read_text()
+        check(
+            f"{name} commits the two new offseason pages",
+            f"docs/{wpp.ARBITRATION_ELIGIBLE_PATH}" in body
+            and f"docs/{wpp.SUPER_TWO_PAGE_PATH}" in body,
+        )
+
+
 def test_the_site_nav_is_the_same_on_every_page():
     """
     The navigation lands in nine places -- four hand-written pages and five
@@ -2255,6 +2428,8 @@ def test_the_site_nav_is_the_same_on_every_page():
     generated = [
         wpp.render_club_index({"Atlanta Braves": []}, "2026-01-01"),
         wpp.render_explainer("2026-01-01"),
+        wpp.render_arbitration_eligible([], "2026-01-01", None, {}),
+        wpp.render_super_two([], {}, "2026-01-01", None),
     ]
     for html in generated:
         check("generated nav reaches every section", destinations(html) == expected)
@@ -3979,6 +4154,11 @@ if __name__ == "__main__":
     test_the_super_two_prose_quotes_published_figures_not_our_own()
     test_an_unpublished_cutoff_is_called_a_prediction_not_a_fact()
     test_the_page_does_not_claim_a_finished_season_is_still_being_played()
+    test_arbitration_eligible_selection_boundaries()
+    test_super_two_class_selection_boundaries()
+    test_super_two_status_labels_ties_and_boundaries()
+    test_known_extension_is_labelled_not_hidden_on_the_arbitration_page()
+    test_the_offseason_pages_are_added_to_the_sitemap_and_workflows()
     test_the_site_nav_is_the_same_on_every_page()
     test_the_two_unfinished_tools_are_marked_in_the_nav()
     test_the_nav_marks_the_current_page_with_aria_current()

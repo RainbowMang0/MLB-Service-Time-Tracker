@@ -49,6 +49,8 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
 import cba  # noqa: E402
 import salary_estimates  # noqa: E402
+import super_two  # noqa: E402
+import validate_super_two  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
@@ -114,6 +116,8 @@ NAV_SECTIONS = [
     ("", "Service time", None),
     ("t/", "By club", None),
     ("alumni/", "Previous players", None),
+    ("arbitration-eligible.html", "Arbitration eligible", None),
+    ("super-two.html", "Super Two", None),
     ("service-time.html", "What is service time?", None),
     ("contract.html", "Contract clock", "in development"),
     ("taxes.html", "Duty days", "in development"),
@@ -1316,6 +1320,23 @@ def write_player_pages(
     explainer = render_explainer(generated_at, super_two_cutoff)
     (DOCS / EXPLAINER_PATH).write_text(explainer)
     lastmod.record(EXPLAINER_PATH, explainer)
+
+    # Offseason pages: who is arbitration-eligible this winter, and where the
+    # Super Two line is projected to fall. `published` (not `db`) feeds the
+    # selectors so every linked player is guaranteed to have a page -- any
+    # on_40_man player is always in `published`, see _should_publish().
+    arb_eligible = select_arbitration_eligible(published)
+    arb_html = render_arbitration_eligible(
+        arb_eligible, generated_at, super_two_cutoff, _KNOWN_EXTENSIONS
+    )
+    (DOCS / ARBITRATION_ELIGIBLE_PATH).write_text(arb_html, encoding="utf-8")
+    lastmod.record(ARBITRATION_ELIGIBLE_PATH, arb_html)
+
+    s2_class = select_super_two_class(published)
+    s2_html = render_super_two(s2_class, db, generated_at, super_two_cutoff)
+    (DOCS / SUPER_TWO_PAGE_PATH).write_text(s2_html, encoding="utf-8")
+    lastmod.record(SUPER_TWO_PAGE_PATH, s2_html)
+
     _write_sitemap(published, clubs, alumni_pages, generated_at, lastmod)
     lastmod.save()
     _write_robots()
@@ -1664,6 +1685,16 @@ def _write_sitemap(
         f"<lastmod>{lastmod.of(EXPLAINER_PATH)}</lastmod>"
         f"<priority>0.9</priority></url>"
     )
+    # The two offseason pages, same tier as the explainer: both are hub-like
+    # (link out to many player/club pages) and target their own searches
+    # ("arbitration eligible players", "super two cutoff") rather than any
+    # one player's name.
+    for path in (ARBITRATION_ELIGIBLE_PATH, SUPER_TWO_PAGE_PATH):
+        urls.append(
+            f"  <url><loc>{SITE_URL}/{path}</loc>"
+            f"<lastmod>{lastmod.of(path)}</lastmod>"
+            f"<priority>0.9</priority></url>"
+        )
     # Hand-written pages. They are not generated, so nothing here can render
     # them -- but they still need an honest lastmod, which means hashing what
     # is actually on disk. A page missing from docs/ is skipped rather than
@@ -1846,6 +1877,13 @@ h1 { letter-spacing: -0.02em; }
 .salary-note p { margin: 0; }
 .salary-note-estimate { background: var(--accent-wash); color: var(--text-secondary); }
 .salary-note-extension { background: var(--status-warning-wash); color: var(--text-secondary); }
+/* The club separator row on the arbitration-eligible page -- a <tr><td
+   colspan> rather than a second table per club, so the page stays one
+   sortable-by-eye list instead of 30 disconnected tables. */
+.arb-club-row td { background: var(--accent-wash); font-weight: 600;
+                    padding: 0.5rem 0.6rem; }
+.arb-club-row a { color: var(--text-primary); }
+.arb-table .badge[title] { cursor: help; }
 """
 
 
@@ -1854,6 +1892,8 @@ def _write_page_css() -> None:
 
 
 EXPLAINER_PATH = "service-time.html"
+ARBITRATION_ELIGIBLE_PATH = "arbitration-eligible.html"
+SUPER_TWO_PAGE_PATH = "super-two.html"
 
 # Pages that are hand-written rather than generated, but still belong in the
 # sitemap. Listed by hand for the same reason the workflows list their paths
@@ -2215,6 +2255,457 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
 </body>
 </html>
 """
+
+
+# ---------------------------------------------------------------------------
+# Offseason pages: who is arbitration-eligible this winter, and where the
+# Super Two line is projected to fall. Both are generated from the same
+# records as every other page here -- no literals, no re-derivation of a
+# rule that already lives in super_two.py or the CBA ruleset.
+# ---------------------------------------------------------------------------
+
+
+def select_arbitration_eligible(players: list[dict]) -> list[dict]:
+    """Rostered players arbitration-eligible this coming offseason.
+
+    That is 3+ credited years but short of free agency, OR a Super Two
+    candidate (who is by definition under 3.000 and so under free agency
+    too). Free-agency-eligible players are excluded even though
+    `arbitration_eligible` stays true for them once they cross 3.000 --
+    see service_time.py's compute_service_time -- because a 6+ year player
+    heads to free agency, not an arbitration hearing.
+
+    Restricted to `on_40_man`: a departed player's `arbitration_eligible`
+    flag is recomputed daily by super_two.apply_super_two() against his
+    FROZEN total (see that module), so a retired player can carry the flag
+    forever. He is not going to a hearing this winter, so he does not
+    belong on this page -- the owner's rule that a departed player is never
+    described as a current prospect for anything.
+    """
+    arb_days = _days_for(ARBITRATION_YEARS)
+    fa_days = _days_for(FREE_AGENCY_YEARS)
+    out = []
+    for p in players:
+        if not p.get("on_40_man"):
+            continue
+        days = int(p.get("service_days_total") or 0)
+        if days >= fa_days:
+            continue
+        if days >= arb_days or p.get("super_two_candidate"):
+            out.append(p)
+    return out
+
+
+def select_super_two_class(players: list[dict]) -> list[dict]:
+    """Rostered players in the LIVE 2.000-3.000 year band, for the Super Two
+    page's "who is in the class right now" table.
+
+    Same half-open band super_two.build_class() uses ([2.000, 3.000)), so a
+    player sitting at exactly 3.000 is correctly excluded here the same way
+    he is excluded from the class the cutoff itself is drawn through.
+    Restricted to `on_40_man` for the same reason select_arbitration_eligible
+    is: a departed player's clock is frozen and he is not a candidate for
+    anything this winter.
+    """
+    low = 2 * FULL_YEAR_DAYS
+    high = 3 * FULL_YEAR_DAYS
+    return [
+        p for p in players
+        if p.get("on_40_man") and low <= int(p.get("service_days_total") or 0) < high
+    ]
+
+
+def _arb_status_badge(player: dict) -> str:
+    if player.get("super_two_candidate"):
+        return "<span class='badge badge-serious'>Super Two</span>"
+    return "<span class='badge badge-warning'>Arbitration eligible</span>"
+
+
+def _arb_extension_note(player: dict, known_extensions: dict[int, dict]) -> str:
+    """A short, clearly-labelled note for a player with a known contract or
+    extension on file -- see data/known_extensions.json.
+
+    This page does NOT remove these players from the list: the engine's
+    arbitration_eligible flag is about service time alone, and is correct
+    regardless of a contract. Hiding them risks a reader concluding a
+    rostered, service-time-eligible player simply isn't listed by mistake.
+    Labelling instead keeps the list complete and honest about which names
+    on it are unlikely to actually see a hearing this winter.
+    """
+    row = known_extensions.get(player.get("id"))
+    if not row:
+        return ""
+    note = html.escape(row.get("note") or "A contract or extension is on file for him.")
+    return (
+        "<span class='badge badge-neutral' title='"
+        f"{note}'>Contract/extension on file</span>"
+    )
+
+
+def _group_by_club(players: list[dict]) -> dict[str, list[dict]]:
+    by_club: dict[str, list[dict]] = {}
+    for p in players:
+        club = p.get("team")
+        if club:
+            by_club.setdefault(club, []).append(p)
+    return by_club
+
+
+def render_arbitration_eligible(
+    eligible: list[dict],
+    generated_at: str,
+    super_two_cutoff: dict | None,
+    known_extensions: dict[int, dict],
+) -> str:
+    """"Arbitration-eligible this winter" -- every rostered player with 3+
+    but under 6 years of service, plus the Super Two group, grouped by club.
+
+    See select_arbitration_eligible() for exactly who qualifies and why a
+    departed player never appears here even if his stale flag says so.
+    """
+    url = f"{SITE_URL}/{ARBITRATION_ELIGIBLE_PATH}"
+    gen_year = int((generated_at or "")[:4]) if generated_at else None
+    next_season = (
+        (super_two_cutoff.get("season") + 1)
+        if super_two_cutoff and super_two_cutoff.get("season")
+        else (gen_year + 1 if gen_year else None)
+    )
+    season_phrase = f" heading into {next_season}" if next_season else ""
+
+    s2_count = sum(1 for p in eligible if p.get("super_two_candidate"))
+    standard_count = len(eligible) - s2_count
+    club_count = len({p.get("team") for p in eligible if p.get("team")})
+    extension_count = sum(1 for p in eligible if p.get("id") in known_extensions)
+    extension_sentence = (
+        f" {extension_count} of them already have a contract or extension "
+        "on file (marked below), so an actual arbitration hearing is "
+        "unlikely even though their service time qualifies."
+        if extension_count else ""
+    )
+
+    desc = (
+        f"{len(eligible)} players on a 40-man roster are projected "
+        f"arbitration-eligible this winter{season_phrase} -- {standard_count} by "
+        f"standard service time ({_yrs(ARBITRATION_YEARS)}+) and {s2_count} as "
+        "Super Two. Estimated from this project's own service-time data, not "
+        "an official MLB/MLBPA figure."
+    )
+
+    rows = []
+    for club, players in sorted(_group_by_club(eligible).items()):
+        rows.append(
+            f"<tr class='arb-club-row'><td colspan='3'><a href=\"{BASE_PATH}{club_path(club)}\">"
+            f"{html.escape(club)}</a> <span class='n'>({len(players)})</span></td></tr>"
+        )
+        for p in sorted(
+            players, key=lambda p: (-int(p.get("service_days_total") or 0), p.get("name") or "")
+        ):
+            note = _arb_extension_note(p, known_extensions)
+            rows.append(
+                f"<tr><td><a href=\"{BASE_PATH}{page_path(p)}\">"
+                f"{html.escape(p.get('name') or '')}</a></td>"
+                f"<td class='n'>{html.escape(p.get('service_time') or '0.000')}</td>"
+                f"<td>{_arb_status_badge(p)} {note}</td></tr>"
+            )
+
+    graph = [
+        {"@type": "CollectionPage", "name": "Arbitration-eligible players this winter",
+         "url": url, "description": desc},
+        _breadcrumb_ld([
+            ("Big League Service Time Tracker", f"{SITE_URL}/"),
+            ("Arbitration eligible", url),
+        ]),
+    ]
+
+    title_year = f" ({next_season})" if next_season else ""
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Arbitration-eligible players this winter{title_year} | Big League Service Time Tracker</title>
+<meta name="description" content="{html.escape(desc)}" />
+<link rel="canonical" href="{url}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Arbitration-eligible players this winter{title_year}" />
+<meta property="og:description" content="{html.escape(desc)}" />
+<meta property="og:url" content="{url}" />
+<meta name="twitter:card" content="summary" />
+{_ld_script(graph)}
+<link rel="icon" href="{BASE_PATH}favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="{BASE_PATH}styles.css" />
+<link rel="stylesheet" href="{BASE_PATH}page.css" />
+<script>
+  try {{
+    var t = localStorage.getItem("mlb-service-time-theme");
+    if (t) document.documentElement.setAttribute("data-theme", t);
+  }} catch (e) {{}}
+</script>
+</head>
+<body>
+<div class="viz-root"><div class="wrap">
+  {_site_nav("arbitration-eligible.html")}
+  {_crumbs(("All players", BASE_PATH), ("Arbitration eligible", None))}
+
+  <h1>Arbitration-eligible players this winter{title_year}</h1>
+  <p class="subtitle">{len(eligible)} players across {club_count} clubs, by club and
+  service time.</p>
+
+  <p class="lede">A player becomes eligible for salary arbitration once he
+  reaches {_yrs(ARBITRATION_YEARS)} years of major league service time, and
+  stays eligible until he reaches free agency at {_yrs(FREE_AGENCY_YEARS)}.
+  A smaller group reaches it a year early under the <b>Super Two</b> rule:
+  players with 2.000-3.000 years of service who rank in the top
+  {SUPER_TWO_TOP_PERCENTILE}% of that class, with at least
+  {SUPER_TWO_MIN_PRIOR_DAYS} days of service in the preceding season. See
+  <a href="{BASE_PATH}{SUPER_TWO_PAGE_PATH}">the Super Two page</a> for how
+  that line is projected this year.</p>
+
+  <p class="lede">The {len(eligible)} players below are rostered players
+  whose service time estimate meets one of those two tests today. Teams
+  still choose whether to tender a contract to each of them; this page
+  reports eligibility, not any club's decision.{extension_sentence}</p>
+
+  <table class="arb-table"><thead><tr><th>Player</th><th class="n">Service time</th>
+  <th>Status</th></tr></thead><tbody>{''.join(rows)}</tbody></table>
+
+  <p class="foot">
+    {_threshold_sentence()}
+    <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
+    <br /><br />
+    These figures are <strong>estimates</strong> reconstructed from public
+    roster transaction records. They are not official MLB or MLBPA figures —
+    those are not published, and this page does not predict which players a
+    club actually tenders. See the
+    <a href="https://github.com/RainbowMang0/MLB-Service-Time-Tracker#readme">methodology</a>.
+    Last updated {html.escape(generated_at[:10])}.
+    <br /><br />
+    Independent project, not affiliated with or endorsed by Major League
+    Baseball or the MLBPA.
+  </p>
+</div></div>
+{ANALYTICS}
+</body>
+</html>
+"""
+
+
+def _s2_status(player: dict, cutoff_days: int | None) -> str:
+    """Plain-English standing of one player relative to the projected line."""
+    if player.get("super_two_candidate"):
+        return "Projected Super Two"
+    if cutoff_days is None:
+        return "Cutoff not yet measurable"
+    days = int(player.get("service_days_total") or 0)
+    if days == cutoff_days:
+        return "Right at the projected line"
+    if days > cutoff_days:
+        return "Above the line, short of the season's day floor"
+    return "Below the projected line"
+
+
+def _s2_history_rows(db: dict[str, dict]) -> list[dict]:
+    """This project's computed cutoff vs. the published figure, season by
+    season, straight from data/reference_super_two.json -- the only
+    independent check super_two.py has. Reuses compute_cutoff() and the
+    validator's own tolerance and parser rather than re-deriving either.
+    """
+    path = ROOT / "data" / "reference_super_two.json"
+    try:
+        rows = [r for r in json.loads(path.read_text()) if isinstance(r, dict) and r.get("season")]
+    except (OSError, ValueError):
+        return []
+    out = []
+    for row in sorted(rows, key=lambda r: -r["season"]):
+        season = row["season"]
+        cutoff = super_two.compute_cutoff(db, season)
+        published = row.get("published")
+        delta = ok = None
+        if cutoff and published:
+            delta = cutoff["cutoff_days"] - validate_super_two._parse(published)
+            ok = abs(delta) <= validate_super_two.DEFAULT_TOLERANCE_DAYS
+        out.append({
+            "season": season,
+            "ours": cutoff["cutoff"] if cutoff else None,
+            "published": published,
+            "delta": delta,
+            "ok": ok,
+        })
+    return out
+
+
+def render_super_two(
+    class_players: list[dict],
+    db: dict[str, dict],
+    generated_at: str,
+    super_two_cutoff: dict | None,
+) -> str:
+    """The Super Two rule explained, this winter's projected cutoff, who is
+    in the live 2-3 year class relative to it, and how this project's
+    computed cutoffs have checked out against published figures in the past.
+
+    Every number is read off super_two.py / the CBA ruleset, never
+    re-derived: the cutoff and the per-player super_two_candidate flag are
+    both produced by scripts/super_two.py and handed in rather than
+    recomputed here.
+    """
+    url = f"{SITE_URL}/{SUPER_TWO_PAGE_PATH}"
+    cutoff_days = super_two_cutoff.get("cutoff_days") if super_two_cutoff else None
+    season_measured = super_two_cutoff.get("season") if super_two_cutoff else None
+
+    projected_count = sum(1 for p in class_players if p.get("super_two_candidate"))
+
+    if super_two_cutoff:
+        cutoff_block = (
+            f"<p class='lede'>After the <b>{season_measured}</b> season, the "
+            f"2.000-3.000 year class had {super_two_cutoff['class_size']} "
+            f"players, and the top {super_two_cutoff['qualifying_count']} of "
+            f"them (the top {SUPER_TWO_TOP_PERCENTILE}%) fell at or above "
+            f"<b>{super_two_cutoff['cutoff']}</b> years of service "
+            f"({super_two_cutoff['cutoff_days']:,} days). That is the line "
+            "this site currently projects the live class against, below.</p>"
+        )
+    else:
+        cutoff_block = (
+            "<p class='lede'>The class is currently too small to measure a "
+            f"cutoff through (fewer than the project's own {_RULES.require('arbitration.super_two.minimum_class_size')} "
+            "player floor). No projection is shown.</p>"
+        )
+
+    desc = (
+        f"This winter's projected Super Two cutoff"
+        f"{f' after the {season_measured} season' if season_measured else ''}: "
+        f"{super_two_cutoff['cutoff'] if super_two_cutoff else 'not yet measurable'} "
+        "years of service. Estimated from this project's own data, not an "
+        "official MLB/MLBPA figure."
+    )
+
+    rows = "".join(
+        f"<tr><td><a href=\"{BASE_PATH}{page_path(p)}\">{html.escape(p.get('name') or '')}</a></td>"
+        f"<td>{html.escape(p.get('team') or '—')}</td>"
+        f"<td class='n'>{html.escape(p.get('service_time') or '0.000')}</td>"
+        f"<td>{html.escape(_s2_status(p, cutoff_days))}</td></tr>"
+        for p in sorted(
+            class_players, key=lambda p: (-int(p.get("service_days_total") or 0), p.get("name") or "")
+        )
+    )
+
+    history = _s2_history_rows(db)
+    history_rows = "".join(
+        "<tr><td>{season}</td><td class='n'>{ours}</td><td class='n'>{pub}</td>"
+        "<td>{verdict}</td></tr>".format(
+            season=row["season"],
+            ours=html.escape(row["ours"] or "—"),
+            pub=html.escape(row["published"] or "not entered"),
+            verdict=(
+                "awaiting a published figure" if row["published"] is None
+                else "class too small to measure" if row["ours"] is None
+                else ("ok" if row["ok"] else f"off by {row['delta']:+d} days")
+            ),
+        )
+        for row in history
+    )
+
+    graph = [
+        {"@type": "CollectionPage", "name": "Super Two cutoff projection", "url": url,
+         "description": desc},
+        _breadcrumb_ld([
+            ("Big League Service Time Tracker", f"{SITE_URL}/"),
+            ("Super Two", url),
+        ]),
+    ]
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Super Two cutoff projection | Big League Service Time Tracker</title>
+<meta name="description" content="{html.escape(desc)}" />
+<link rel="canonical" href="{url}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Super Two cutoff projection" />
+<meta property="og:description" content="{html.escape(desc)}" />
+<meta property="og:url" content="{url}" />
+<meta name="twitter:card" content="summary" />
+{_ld_script(graph)}
+<link rel="icon" href="{BASE_PATH}favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="{BASE_PATH}styles.css" />
+<link rel="stylesheet" href="{BASE_PATH}page.css" />
+<script>
+  try {{
+    var t = localStorage.getItem("mlb-service-time-theme");
+    if (t) document.documentElement.setAttribute("data-theme", t);
+  }} catch (e) {{}}
+</script>
+</head>
+<body>
+<div class="viz-root"><div class="wrap">
+  {_site_nav("super-two.html")}
+  {_crumbs(("All players", BASE_PATH), ("Super Two", None))}
+
+  <h1>Super Two: this winter's projected cutoff</h1>
+  <p class="subtitle">{projected_count} of {len(class_players)} players in the
+  live 2.000-3.000 year class project above the line.</p>
+
+  <p class="lede">A player with at least {_RULES.require('arbitration.super_two.service_range_years')[0]:.0f}
+  but fewer than {_RULES.require('arbitration.super_two.service_range_years')[1]:.0f}
+  years of major league service reaches arbitration a year early -- "Super
+  Two" -- if he ranks in the top {SUPER_TWO_TOP_PERCENTILE}% of that class,
+  by total service, and accrued at least {SUPER_TWO_MIN_PRIOR_DAYS} days of
+  service in the preceding season. MLB does not publish the class or the
+  cutoff; this project computes both from its own database of every
+  tracked player's season-by-season service time, which is close to the
+  league-wide population the rule is defined against.</p>
+
+  {cutoff_block}
+
+  <p class='lede'>The cutoff is <b>not fixed</b> -- it falls wherever that
+  year's class falls, and it has moved year to year historically. The
+  figures above and below are this project's own estimate, not an
+  official MLB/MLBPA number.</p>
+
+  <h2>Who is in the class right now</h2>
+  <p>Every rostered player currently between 2.000 and 3.000 years of
+  service, most service time first. "Projected Super Two" also requires
+  the player to have reached {SUPER_TWO_MIN_PRIOR_DAYS} days of service in
+  the season being measured -- a player can sit above the day line and
+  still not be flagged yet if he has not reached that floor this season.</p>
+
+  <table><thead><tr><th>Player</th><th>Club</th><th class="n">Service time</th>
+  <th>Standing</th></tr></thead><tbody>{rows}</tbody></table>
+
+  <h2>How this project's cutoffs have checked out</h2>
+  <p>Computed cutoffs compared against published figures, where one has
+  been entered (data/reference_super_two.json). A miss here means a
+  per-player service-time defect somewhere in that season's data, not
+  necessarily the class or rounding rule -- see
+  scripts/validate_super_two.py.</p>
+
+  <table><thead><tr><th>Season</th><th class="n">This site</th>
+  <th class="n">Published</th><th>Result</th></tr></thead>
+  <tbody>{history_rows}</tbody></table>
+
+  <p class="foot">
+    {_threshold_sentence()}
+    <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
+    <br /><br />
+    These figures are <strong>estimates</strong> reconstructed from public
+    roster transaction records. They are not official MLB or MLBPA figures —
+    those are not published. See the
+    <a href="https://github.com/RainbowMang0/MLB-Service-Time-Tracker#readme">methodology</a>.
+    Last updated {html.escape(generated_at[:10])}.
+    <br /><br />
+    Independent project, not affiliated with or endorsed by Major League
+    Baseball or the MLBPA.
+  </p>
+</div></div>
+{ANALYTICS}
+</body>
+</html>
+"""
+
 
 def _write_404() -> None:
     """The page GitHub Pages serves for any unknown path.
