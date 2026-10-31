@@ -83,3 +83,10 @@ h1 { letter-spacing: -0.02em; }
 .salary-note p { margin: 0; }
 .salary-note-estimate { background: var(--accent-wash); color: var(--text-secondary); }
 .salary-note-extension { background: var(--status-warning-wash); color: var(--text-secondary); }
+/* The club separator row on the arbitration-eligible page -- a <tr><td
+   colspan> rather than a second table per club, so the page stays one
+   sortable-by-eye list instead of 30 disconnected tables. */
+.arb-club-row td { background: var(--accent-wash); font-weight: 600;
+                    padding: 0.5rem 0.6rem; }
+.arb-club-row a { color: var(--text-primary); }
+.arb-table .badge[title] { cursor: help; }
