@@ -1,0 +1,9 @@
+{
+  "_README": "Fixture counterpart to docs/data/salary_estimates.json, used only by tests/test_query_data.py.",
+  "minimum": 780000,
+  "minimum_year": 2026,
+  "estimate_ids": [900001],
+  "extensions": {
+    "900006": {"note": "fixture extension note"}
+  }
+}
