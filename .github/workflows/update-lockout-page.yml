@@ -62,4 +62,5 @@ jobs:
         run: python scripts/build_lockout_page.py
 
       - name: Commit and push
-        run: scripts/commit_data.sh "chore: rebuild CBA & lockout tracker page" docs/lockout.html
+        run: |
+          scripts/commit_data.sh "chore: rebuild CBA & lockout tracker page" docs/lockout.html
