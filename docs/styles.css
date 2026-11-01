@@ -1246,6 +1246,20 @@ body.profile-open { overflow: hidden; }
   .nav-tag { font-size: 0.54rem; padding: 1px 4px; }
 }
 
+/* The ten-item strip needs about 1493px at full size and 1324px even at the
+   tightened size above -- comfortably more than common laptop widths of
+   1280, 1366 and 1440, which clipped "Neutrality" (and at 1366/1440 clipped
+   it entirely) with only the rule above. This tightens further and pushes
+   the threshold past all of those, including 1536, so the only viewports
+   still in the rule above are ones already narrow enough to be scrolling by
+   choice. Overrides the rule above wherever both match, by appearing after
+   it; leaves mobile (via the 640px rule below) untouched. */
+@media (min-width: 1024px) and (max-width: 1560px) {
+  .site-nav { gap: 1px; }
+  .site-nav a { padding: 6px 5px; font-size: 0.68rem; letter-spacing: 0; }
+  .nav-tag { font-size: 0.5rem; padding: 1px 3px; }
+}
+
 @media (max-width: 640px) {
   .site-nav a { padding: 8px 10px; font-size: 0.76rem; }
   /* The tag stays. Hiding it here was the first draft and it was wrong:

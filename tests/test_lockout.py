@@ -182,6 +182,57 @@ def test_url_with_embedded_whitespace_is_rejected():
     check("a source_url with embedded whitespace is rejected", raised)
 
 
+def test_uppercase_scheme_is_rejected():
+    bad = copy.deepcopy(GOOD)
+    bad["entries"][0]["source_url"] = "HTTPS://example.com/one"
+    raised = False
+    try:
+        blp.validate(bad, today=PINNED_TODAY)
+    except blp.LockoutDataError:
+        raised = True
+    check("'HTTPS://' (uppercase scheme) is rejected", raised)
+
+    bad2 = copy.deepcopy(GOOD)
+    bad2["entries"][0]["source_url"] = "Https://example.com/one"
+    raised2 = False
+    try:
+        blp.validate(bad2, today=PINNED_TODAY)
+    except blp.LockoutDataError:
+        raised2 = True
+    check("'Https://' (mixed-case scheme) is rejected", raised2)
+
+
+def test_url_with_no_host_is_rejected():
+    bad = copy.deepcopy(GOOD)
+    bad["entries"][0]["source_url"] = "https://:443/x"
+    raised = False
+    try:
+        blp.validate(bad, today=PINNED_TODAY)
+    except blp.LockoutDataError:
+        raised = True
+    check("'https://:443/x' (no host, just a port) is rejected", raised)
+
+
+def test_url_with_invisible_characters_is_rejected():
+    bad = copy.deepcopy(GOOD)
+    bad["entries"][0]["source_url"] = "https://exa​mple.com/one"
+    raised = False
+    try:
+        blp.validate(bad, today=PINNED_TODAY)
+    except blp.LockoutDataError:
+        raised = True
+    check("a source_url with a zero-width space is rejected", raised)
+
+    bad2 = copy.deepcopy(GOOD)
+    bad2["entries"][0]["source_url"] = "https://example.com/﻿one"
+    raised2 = False
+    try:
+        blp.validate(bad2, today=PINNED_TODAY)
+    except blp.LockoutDataError:
+        raised2 = True
+    check("a source_url with a BOM/zero-width-no-break-space is rejected", raised2)
+
+
 def test_future_dated_entry_is_rejected():
     bad = copy.deepcopy(GOOD)
     bad["entries"][0]["date"] = "2099-01-01"
@@ -203,6 +254,41 @@ def test_lockout_end_before_lockout_start_is_rejected():
     except blp.LockoutDataError as exc:
         raised = "lockout_end" in str(exc)
     check("lockout_end before lockout_start is rejected", raised)
+
+
+def test_lockout_start_on_cba_expires_day_is_rejected():
+    # A lockout can't start the same calendar day the agreement expires --
+    # the agreement is still in force until 11:59 p.m. ET that night.
+    bad = copy.deepcopy(GOOD)
+    bad["lockout_start"] = bad["cba_expires"]
+    raised = False
+    try:
+        blp.validate(bad, today=PINNED_TODAY)
+    except blp.LockoutDataError as exc:
+        raised = "lockout_start" in str(exc)
+    check("lockout_start == cba_expires is rejected", raised)
+
+
+def test_lockout_start_before_cba_expires_is_rejected():
+    bad = copy.deepcopy(GOOD)
+    bad["lockout_start"] = "2026-11-20"
+    raised = False
+    try:
+        blp.validate(bad, today=PINNED_TODAY)
+    except blp.LockoutDataError as exc:
+        raised = "lockout_start" in str(exc)
+    check("lockout_start before cba_expires is rejected", raised)
+
+
+def test_lockout_start_after_cba_expires_is_accepted():
+    good = copy.deepcopy(GOOD)
+    good["lockout_start"] = "2026-12-02"
+    try:
+        blp.validate(good, today=PINNED_TODAY)
+        ok = True
+    except blp.LockoutDataError:
+        ok = False
+    check("lockout_start the day after cba_expires validates", ok)
 
 
 def test_countdown_before_a_lockout():
@@ -523,8 +609,14 @@ if __name__ == "__main__":
     test_non_https_source_url_is_rejected()
     test_bare_https_url_is_rejected()
     test_url_with_embedded_whitespace_is_rejected()
+    test_uppercase_scheme_is_rejected()
+    test_url_with_no_host_is_rejected()
+    test_url_with_invisible_characters_is_rejected()
     test_future_dated_entry_is_rejected()
     test_lockout_end_before_lockout_start_is_rejected()
+    test_lockout_start_on_cba_expires_day_is_rejected()
+    test_lockout_start_before_cba_expires_is_rejected()
+    test_lockout_start_after_cba_expires_is_accepted()
     test_countdown_before_a_lockout()
     test_day_count_after_a_lockout_starts()
     test_a_future_lockout_start_is_still_the_countdown_state()

@@ -109,6 +109,12 @@
 }
 .lede b { color: var(--text-primary); font-weight: 650; }
 
+/* .stat-tiles (styles.css) carries its own side margin, sized for the main
+   tracker's full-bleed layout. Inside .tax-main's padded column that left
+   the first tile floating to the right of the lede, the status sentence
+   and every panel beside it. Zero it here so they share one left edge. */
+.tax-main .stat-tiles { margin-left: 0; margin-right: 0; }
+
 .foot {
   margin-top: 1.5rem;
   font-size: 0.8rem;

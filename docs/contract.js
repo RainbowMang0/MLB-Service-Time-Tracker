@@ -1,9 +1,8 @@
 /*
  * contract.js -- the contract clock and offer-valuation engine.
  *
- * Same contract as duty-days.js: pure functions, no DOM, no fetch, no
- * storage. It runs in the browser today and under `node --test`, and would
- * run server-side unchanged.
+ * Pure functions, no DOM, no fetch, no storage, so it runs the same
+ * wherever it's loaded.
  *
  * WHAT THIS DOES NOT DO, AND WILL NOT UNTIL THE DATA EXISTS
  * ========================================================
@@ -30,10 +29,8 @@
  * Nothing in this file, or in any string it returns, tells the reader what
  * to do. The engine reports; the reader decides.
  *
- * That is enforced rather than promised: tests/contract.test.cjs greps this
- * file and the page for directive vocabulary and fails on a hit. The list of
- * banned phrases lives THERE and only there -- writing it out here would trip
- * the check on its own documentation, which it duly did the first time.
+ * That is enforced by an automated check for directive language, not left
+ * to style alone.
  */
 
 (function (root, factory) {

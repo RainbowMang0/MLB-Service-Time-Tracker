@@ -29,13 +29,15 @@ WHAT IS VALIDATED
 =================
 Every field data/lockout_updates.json is required to have, every date is
 checked for being real ISO *and* written as YYYY-MM-DD (not a week-date or a
-compact form `fromisoformat` would also accept), lockout_end may not precede
-lockout_start, every entry needs a well-formed https source (no "https://"
-with an empty host, no embedded whitespace), no entry may be dated more than
-a day past today in US/Eastern, and all text is HTML-escaped at render time
-regardless of what's already in the file -- the file is hand-edited by one
-person, but a page that broke on a stray "<" would be a strange way to find
-that out.
+compact form `fromisoformat` would also accept), lockout_start must be
+strictly after cba_expires (a lockout can't start before the agreement it
+would follow has expired), lockout_end may not precede lockout_start, every
+entry needs a well-formed https source (lowercase scheme only, a real host,
+no embedded whitespace, no zero-width or other invisible/control
+characters), no entry may be dated more than a day past today in
+US/Eastern, and all text is HTML-escaped at render time regardless of
+what's already in the file -- the file is hand-edited by one person, but a
+page that broke on a stray "<" would be a strange way to find that out.
 
 TIMEZONE
 ========
@@ -64,6 +66,7 @@ import json
 import pathlib
 import re
 import sys
+import unicodedata
 from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
@@ -129,12 +132,24 @@ def _parse_optional_iso_date(value, field: str) -> dt.date | None:
     return _parse_iso_date(value, field)
 
 
+_INVISIBLE_CATEGORIES = ("Cf", "Cc")
+
+
 def _check_https_url(url, field: str) -> None:
-    if not isinstance(url, str) or any(ch.isspace() for ch in url):
-        raise LockoutDataError(f"{field}: must be an https:// URL with no whitespace, got {url!r}")
+    if not isinstance(url, str):
+        raise LockoutDataError(f"{field}: must be an https:// URL, got {url!r}")
+    # Case-sensitive on purpose: "HTTPS://" or "Https://" is rejected outright
+    # rather than normalized, so a scheme typo fails loudly instead of being
+    # quietly accepted.
+    if not url.startswith("https://"):
+        raise LockoutDataError(f"{field}: must start with 'https://', got {url!r}")
+    if any(ch.isspace() or unicodedata.category(ch) in _INVISIBLE_CATEGORIES for ch in url):
+        raise LockoutDataError(
+            f"{field}: must not contain whitespace or invisible/control characters, got {url!r}"
+        )
     parts = urlsplit(url)
-    if parts.scheme != "https" or not parts.netloc:
-        raise LockoutDataError(f"{field}: must be a well-formed https:// URL, got {url!r}")
+    if not parts.hostname:
+        raise LockoutDataError(f"{field}: must be a well-formed https:// URL with a host, got {url!r}")
 
 
 def validate(data: dict, today: dt.date | None = None) -> None:
@@ -154,11 +169,18 @@ def validate(data: dict, today: dt.date | None = None) -> None:
     if missing:
         raise LockoutDataError(f"missing required field(s): {', '.join(missing)}")
 
-    _parse_iso_date(data["cba_expires"], "cba_expires")
+    cba_expires = _parse_iso_date(data["cba_expires"], "cba_expires")
     lockout_start = _parse_optional_iso_date(data["lockout_start"], "lockout_start")
     lockout_end = _parse_optional_iso_date(data["lockout_end"], "lockout_end")
     _parse_optional_iso_date(data["regular_season_delayed_from"], "regular_season_delayed_from")
     _parse_iso_date(data["updated"], "updated")
+
+    if lockout_start is not None and lockout_start <= cba_expires:
+        raise LockoutDataError(
+            f"lockout_start ({lockout_start}) must be strictly after cba_expires "
+            f"({cba_expires}) -- the agreement doesn't expire until 11:59 p.m. ET "
+            "that day"
+        )
 
     if lockout_start is not None and lockout_end is not None and lockout_end < lockout_start:
         raise LockoutDataError(
@@ -358,12 +380,12 @@ def _faq_entries(cba_expires: dt.date) -> list[tuple[str, str]]:
             "Does service time accrue during an MLB lockout?",
             "Not during the offseason. Service time is only earned for days "
             "on a major league roster during the championship season, so an "
-            "offseason lockout -- one that starts in December, for example "
-            "-- doesn't cost a day on its own; there's no season running for "
+            "offseason lockout — one that starts in December, for example "
+            "— doesn't cost a day on its own; there's no season running for "
             "the clock to measure. If a lockout ends up delaying the start "
             "of a season and regular-season days are actually lost, whether "
             "those days count toward service time depends on the settlement "
-            "that ends the stoppage -- it has been handled differently "
+            "that ends the stoppage — it has been handled differently "
             "across past work stoppages.",
         ),
         (
@@ -386,7 +408,7 @@ def _faq_entries(cba_expires: dt.date) -> list[tuple[str, str]]:
             "Are free-agent signings and trades frozen during a lockout?",
             "Yes. Clubs can't sign players to major league contracts, trade "
             "players who are on a 40-man roster, or make other 40-man moves "
-            "while a lockout is in effect -- which is why that kind of "
+            "while a lockout is in effect — which is why that kind of "
             "business typically rushes to beat the deadline. Minor league "
             "contracts, which don't touch a 40-man roster, can continue.",
         ),
@@ -397,7 +419,7 @@ def _faq_entries(cba_expires: dt.date) -> list[tuple[str, str]]:
             "arbitration-related scheduling along with everything else. "
             "Options apply only to players on the 40-man roster, so option "
             "moves freeze right along with the other 40-man transactions "
-            "above -- the option rule itself doesn't change.",
+            "above — the option rule itself doesn't change.",
         ),
         (
             "How long did the last MLB lockout last?",
