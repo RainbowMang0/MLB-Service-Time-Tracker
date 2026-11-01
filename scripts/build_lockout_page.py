@@ -1,0 +1,735 @@
+#!/usr/bin/env python3
+"""
+build_lockout_page.py
+----------------------
+Reads data/lockout_updates.json and writes docs/lockout.html.
+
+WHY THIS EXISTS
+===============
+The 2026 CBA expires December 1, 2026 and a lockout is widely expected the
+next day. That is a live news story, and this project wants to carry it
+without turning "update the lockout page" into a code change. So the page
+is generated from one small, hand-edited data file
+(data/lockout_updates.json) -- editing that file and pushing it to main is
+the entire update. See that file's own _README for the fields.
+
+This script is deliberately separate from write_player_pages.py: it does
+not touch any player, club or alumni page. A bad edit to
+data/lockout_updates.json is isolated to this one page by two things working
+together, not one: CI runs `--check` on every push and PR so a bad edit is
+normally rejected before it ever reaches main, AND the daily workflow runs
+this script's step with continue-on-error, so even if a bad file slipped
+through, the one commit step that follows still runs and ships everything
+else the job computed -- only docs/lockout.html stays as it was (see
+.github/workflows/update-service-time.yml). It reuses write_player_pages's
+GA/AdSense/Cloudflare constants rather than re-declaring them, so the two
+cannot drift apart.
+
+WHAT IS VALIDATED
+=================
+Every field data/lockout_updates.json is required to have, every date is
+checked for being real ISO *and* written as YYYY-MM-DD (not a week-date or a
+compact form `fromisoformat` would also accept), lockout_start must be
+strictly after cba_expires (a lockout can't start before the agreement it
+would follow has expired), lockout_end may not precede lockout_start, every
+entry needs a well-formed https source (lowercase scheme only, a real host,
+no embedded whitespace, no zero-width or other invisible/control
+characters), no entry may be dated more than a day past today in
+US/Eastern, and all text is HTML-escaped at render time regardless of
+what's already in the file -- the file is hand-edited by one person, but a
+page that broke on a stray "<" would be a strange way to find that out.
+
+TIMEZONE
+========
+The agreement expires at 11:59 p.m. US/Eastern on cba_expires, not at
+midnight UTC and not at the visitor's or the build server's local midnight.
+Every comparison here -- the countdown, the lockout day count, the
+"expires tonight" state -- is anchored to the America/New_York calendar via
+ZoneInfo, never dt.date.today(). docs/lockout.js carries the same rule for
+the browser, keyed off an explicit `timeZone: "America/New_York"` so a
+visitor in Tokyo or Los Angeles sees the same status a visitor in New York
+does.
+
+USAGE
+=====
+  python3 scripts/build_lockout_page.py             # validate and write docs/lockout.html
+  python3 scripts/build_lockout_page.py --check      # validate only, write nothing
+  python3 scripts/build_lockout_page.py --today 2026-12-10   # pin "today" (tests, previews)
+"""
+
+from __future__ import annotations
+
+import argparse
+import datetime as dt
+import html
+import json
+import pathlib
+import re
+import sys
+import unicodedata
+from urllib.parse import urlsplit
+from zoneinfo import ZoneInfo
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+
+import write_player_pages as wpp  # noqa: E402
+
+ROOT = pathlib.Path(__file__).resolve().parents[1]
+DATA_FILE = ROOT / "data" / "lockout_updates.json"
+OUT_FILE = ROOT / "docs" / "lockout.html"
+
+SITE_URL = wpp.SITE_URL
+PAGE_URL = f"{SITE_URL}/lockout.html"
+
+ET = ZoneInfo("America/New_York")
+
+REQUIRED_TOP_FIELDS = (
+    "cba_expires", "lockout_start", "lockout_end",
+    "regular_season_delayed_from", "updated", "entries",
+)
+REQUIRED_ENTRY_FIELDS = ("date", "headline", "summary", "source_name", "source_url")
+
+_ISO_DATE_RE = re.compile(r"\d{4}-\d{2}-\d{2}")
+
+_MONTH_ABBR = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "June", "July",
+               "Aug.", "Sep.", "Oct.", "Nov.", "Dec."]
+_MONTH_FULL = ["January", "February", "March", "April", "May", "June", "July",
+               "August", "September", "October", "November", "December"]
+
+
+def format_date_abbrev(d: dt.date) -> str:
+    """"Dec. 1, 2026" -- the short form used in tiles and inline sentences."""
+    return f"{_MONTH_ABBR[d.month - 1]} {d.day}, {d.year}"
+
+
+def format_date_full(d: dt.date) -> str:
+    """"December 1, 2026" -- the long form used in prose paragraphs."""
+    return f"{_MONTH_FULL[d.month - 1]} {d.day}, {d.year}"
+
+
+class LockoutDataError(ValueError):
+    """A problem with data/lockout_updates.json, meant to fail CI loudly."""
+
+
+def now_et() -> dt.datetime:
+    return dt.datetime.now(ET)
+
+
+def _parse_iso_date(value: str, field: str) -> dt.date:
+    if not isinstance(value, str) or not _ISO_DATE_RE.fullmatch(value):
+        raise LockoutDataError(
+            f"{field}: expected an ISO date string YYYY-MM-DD, got {value!r}"
+        )
+    try:
+        return dt.date.fromisoformat(value)
+    except ValueError as exc:
+        raise LockoutDataError(f"{field}: {value!r} is not a valid date") from exc
+
+
+def _parse_optional_iso_date(value, field: str) -> dt.date | None:
+    if value is None:
+        return None
+    return _parse_iso_date(value, field)
+
+
+_INVISIBLE_CATEGORIES = ("Cf", "Cc")
+
+
+def _check_https_url(url, field: str) -> None:
+    if not isinstance(url, str):
+        raise LockoutDataError(f"{field}: must be an https:// URL, got {url!r}")
+    # Case-sensitive on purpose: "HTTPS://" or "Https://" is rejected outright
+    # rather than normalized, so a scheme typo fails loudly instead of being
+    # quietly accepted.
+    if not url.startswith("https://"):
+        raise LockoutDataError(f"{field}: must start with 'https://', got {url!r}")
+    if any(ch.isspace() or unicodedata.category(ch) in _INVISIBLE_CATEGORIES for ch in url):
+        raise LockoutDataError(
+            f"{field}: must not contain whitespace or invisible/control characters, got {url!r}"
+        )
+    parts = urlsplit(url)
+    if not parts.hostname:
+        raise LockoutDataError(f"{field}: must be a well-formed https:// URL with a host, got {url!r}")
+
+
+def validate(data: dict, today: dt.date | None = None) -> None:
+    """Raises LockoutDataError on anything a bad hand-edit could introduce.
+
+    Checked here rather than left to render-time KeyErrors so CI reports a
+    clear message instead of a traceback, and so the same check protects
+    both the daily build and the push-triggered one.
+    """
+    if today is None:
+        today = now_et().date()
+
+    if not isinstance(data, dict):
+        raise LockoutDataError("top level must be a JSON object")
+
+    missing = [f for f in REQUIRED_TOP_FIELDS if f not in data]
+    if missing:
+        raise LockoutDataError(f"missing required field(s): {', '.join(missing)}")
+
+    cba_expires = _parse_iso_date(data["cba_expires"], "cba_expires")
+    lockout_start = _parse_optional_iso_date(data["lockout_start"], "lockout_start")
+    lockout_end = _parse_optional_iso_date(data["lockout_end"], "lockout_end")
+    _parse_optional_iso_date(data["regular_season_delayed_from"], "regular_season_delayed_from")
+    _parse_iso_date(data["updated"], "updated")
+
+    if lockout_start is not None and lockout_start <= cba_expires:
+        raise LockoutDataError(
+            f"lockout_start ({lockout_start}) must be strictly after cba_expires "
+            f"({cba_expires}) -- the agreement doesn't expire until 11:59 p.m. ET "
+            "that day"
+        )
+
+    if lockout_start is not None and lockout_end is not None and lockout_end < lockout_start:
+        raise LockoutDataError(
+            f"lockout_end ({lockout_end}) is before lockout_start ({lockout_start})"
+        )
+
+    entries = data["entries"]
+    if not isinstance(entries, list):
+        raise LockoutDataError("entries must be a list")
+
+    future_cutoff = today + dt.timedelta(days=1)
+    for i, entry in enumerate(entries):
+        label = f"entries[{i}]"
+        if not isinstance(entry, dict):
+            raise LockoutDataError(f"{label}: must be an object")
+        missing = [f for f in REQUIRED_ENTRY_FIELDS if f not in entry or entry[f] in (None, "")]
+        if missing:
+            raise LockoutDataError(f"{label}: missing required field(s): {', '.join(missing)}")
+        entry_date = _parse_iso_date(entry["date"], f"{label}.date")
+        if entry_date > future_cutoff:
+            raise LockoutDataError(f"{label}.date: {entry_date} is in the future")
+        _check_https_url(entry["source_url"], f"{label}.source_url")
+        for field in ("headline", "summary", "source_name"):
+            if not isinstance(entry[field], str) or not entry[field].strip():
+                raise LockoutDataError(f"{label}.{field}: must be a non-empty string")
+
+
+def load(path: pathlib.Path = DATA_FILE, today: dt.date | None = None) -> dict:
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except FileNotFoundError as exc:
+        raise LockoutDataError(f"{path}: not found") from exc
+    except json.JSONDecodeError as exc:
+        raise LockoutDataError(f"{path}: invalid JSON ({exc})") from exc
+    validate(data, today)
+    return data
+
+
+def sorted_entries(data: dict) -> list[dict]:
+    """Newest first, regardless of the order they were hand-typed in."""
+    return sorted(data["entries"], key=lambda e: e["date"], reverse=True)
+
+
+# ---------------------------------------------------------------------------
+# Day-counting conventions. Both are INCLUSIVE of the start date -- the day
+# a lockout begins is "day 1" of it, matching how the 2021-22 lockout's
+# widely reported 99-day length is counted (Dec 2, 2021 through Mar 10, 2022
+# inclusive). The same convention applies to days of a season missed once
+# regular_season_delayed_from is set.
+# ---------------------------------------------------------------------------
+
+def days_until(today: dt.date, target: dt.date) -> int:
+    """Simple, EXCLUSIVE-of-today difference: "30 days until" on the 30th day
+    before, zero on the day itself. Not the same inclusive convention as the
+    day counters above -- a countdown counts what's left, not an elapsed
+    span, so there is nothing to include."""
+    return (target - today).days
+
+
+def day_number(today: dt.date, start: dt.date) -> int:
+    return (today - start).days + 1
+
+
+def cba_expires_instant(cba_expires: dt.date) -> dt.datetime:
+    """11:59 p.m. US/Eastern on the day the agreement expires -- see Yahoo
+    Sports, 2026-10-29: "expires at 11:59 p.m. ET on Dec. 1." That is
+    2026-12-02T04:59Z, because December is Eastern Standard Time (UTC-5);
+    ZoneInfo gets the right offset without hardcoding it."""
+    return dt.datetime(cba_expires.year, cba_expires.month, cba_expires.day, 23, 59, tzinfo=ET)
+
+
+def compute_status(data: dict, now: dt.datetime) -> dict:
+    """The one status block the page (and docs/lockout.js) renders from.
+
+    `now` must be timezone-aware; `now_et()` is the normal caller. `kind` is
+    one of:
+      "countdown"          -- before cba_expires, any day but the day itself.
+      "expiring_today"      -- the ET calendar day cba_expires falls on, before
+                               11:59 p.m. ET.
+      "lockout"              -- lockout_start has arrived (<= today, ET) and
+                               lockout_end hasn't passed yet, or isn't set.
+      "lockout_ended"        -- lockout_end has passed; the day count freezes
+                               at the day the stoppage reached.
+      "expired_no_lockout"   -- past 11:59 p.m. ET on cba_expires, with no
+                               lockout_start on record yet. Not "resolved":
+                               this says only that the clock in the agreement
+                               ran out, never that a deal was reached.
+
+    A lockout_start in the future (not yet <= today) is deliberately NOT
+    "lockout" -- it falls through to whichever of the states above actually
+    describes today, because the lockout hasn't started yet.
+    """
+    if now.tzinfo is None:
+        raise ValueError("compute_status requires a timezone-aware `now`")
+
+    cba_expires = _parse_iso_date(data["cba_expires"], "cba_expires")
+    lockout_start = _parse_optional_iso_date(data["lockout_start"], "lockout_start")
+    lockout_end = _parse_optional_iso_date(data["lockout_end"], "lockout_end")
+    delayed_from = _parse_optional_iso_date(
+        data["regular_season_delayed_from"], "regular_season_delayed_from"
+    )
+
+    expires_at = cba_expires_instant(cba_expires)
+    today = now.astimezone(ET).date()
+
+    if lockout_start is not None and lockout_start <= today:
+        if lockout_end is not None and today > lockout_end:
+            kind = "lockout_ended"
+            day = day_number(lockout_end, lockout_start)
+        else:
+            kind = "lockout"
+            day = day_number(today, lockout_start)
+            if lockout_end is not None:
+                day = min(day, day_number(lockout_end, lockout_start))
+    elif now < expires_at:
+        if today == cba_expires:
+            kind = "expiring_today"
+            day = None
+        else:
+            kind = "countdown"
+            day = days_until(today, cba_expires)
+    else:
+        kind = "expired_no_lockout"
+        day = None
+
+    days_at_stake = None
+    if delayed_from is not None and today >= delayed_from:
+        days_at_stake = day_number(today, delayed_from)
+
+    return {
+        "kind": kind,
+        "day": day,
+        "days_at_stake": days_at_stake,
+        "cba_expires": cba_expires.isoformat(),
+        "cba_expires_at": expires_at.isoformat(),
+        "cba_expires_label": format_date_abbrev(cba_expires),
+        "lockout_start": lockout_start.isoformat() if lockout_start else None,
+        "lockout_end": lockout_end.isoformat() if lockout_end else None,
+        "lockout_end_label": format_date_abbrev(lockout_end) if lockout_end else None,
+        "regular_season_delayed_from": delayed_from.isoformat() if delayed_from else None,
+    }
+
+
+def tile_value(status: dict) -> str:
+    """The short string the stat tile shows -- the full sentence goes under
+    it once, in render_sentence(), rather than being printed a second time."""
+    kind, day = status["kind"], status["day"]
+    if kind == "countdown":
+        return f"{day} day{'s' if day != 1 else ''}"
+    if kind == "expiring_today":
+        return "Expires tonight"
+    if kind == "lockout":
+        return f"Day {day}"
+    if kind == "lockout_ended":
+        return "Lockout ended"
+    return "Expired"  # expired_no_lockout
+
+
+def render_sentence(status: dict) -> str:
+    kind, day = status["kind"], status["day"]
+    if kind == "countdown":
+        text = f"{day} day{'s' if day != 1 else ''} until the CBA expires ({status['cba_expires_label']})"
+    elif kind == "expiring_today":
+        text = "The CBA expires tonight at 11:59 p.m. ET"
+    elif kind == "lockout":
+        text = f"Day {day} of the lockout"
+    elif kind == "lockout_ended":
+        text = f"Lockout ended {status['lockout_end_label']} after {day} day{'s' if day != 1 else ''}"
+    else:
+        text = (
+            f"The CBA expired at 11:59 p.m. ET on {status['cba_expires_label']}. "
+            "This page will update when a lockout or new agreement is confirmed."
+        )
+    if status["days_at_stake"] is not None:
+        n = status["days_at_stake"]
+        text += f" — an estimated {n} service-time day{'s' if n != 1 else ''} at stake so far"
+    return text
+
+
+def last_updated(data: dict) -> dt.date:
+    updated = _parse_iso_date(data["updated"], "updated")
+    entries = sorted_entries(data)
+    if entries:
+        newest = _parse_iso_date(entries[0]["date"], "entries[0].date")
+        return max(updated, newest)
+    return updated
+
+
+# ---------------------------------------------------------------------------
+# Rendering
+# ---------------------------------------------------------------------------
+
+def _faq_entries(cba_expires: dt.date) -> list[tuple[str, str]]:
+    cba_expires_full = format_date_full(cba_expires)
+    return [
+        (
+            "Does service time accrue during an MLB lockout?",
+            "Not during the offseason. Service time is only earned for days "
+            "on a major league roster during the championship season, so an "
+            "offseason lockout — one that starts in December, for example "
+            "— doesn't cost a day on its own; there's no season running for "
+            "the clock to measure. If a lockout ends up delaying the start "
+            "of a season and regular-season days are actually lost, whether "
+            "those days count toward service time depends on the settlement "
+            "that ends the stoppage — it has been handled differently "
+            "across past work stoppages.",
+        ),
+        (
+            "What's the difference between a lockout and a strike?",
+            "A lockout is called by the owners, who shut business down and "
+            "bar players from club facilities. A strike is called by the "
+            "players, who refuse to work. The 2021-22 work stoppage was a "
+            "lockout; earlier disputes in MLB history, including the "
+            "1994-95 stoppage, were players' strikes.",
+        ),
+        (
+            "When does the current CBA expire, and when could a lockout start?",
+            f"The agreement expires {cba_expires_full}, specifically 11:59 "
+            "p.m. ET that night. In the last round of bargaining, owners "
+            "locked players out within a day of the old deal expiring, so a "
+            "similar timeline is widely expected again if no new agreement "
+            "is reached first.",
+        ),
+        (
+            "Are free-agent signings and trades frozen during a lockout?",
+            "Yes. Clubs can't sign players to major league contracts, trade "
+            "players who are on a 40-man roster, or make other 40-man moves "
+            "while a lockout is in effect — which is why that kind of "
+            "business typically rushes to beat the deadline. Minor league "
+            "contracts, which don't touch a 40-man roster, can continue.",
+        ),
+        (
+            "Does a lockout affect salary arbitration or minor league options?",
+            "A lockout halts the business side of the sport broadly, which "
+            "has historically pushed back tender deadlines and "
+            "arbitration-related scheduling along with everything else. "
+            "Options apply only to players on the 40-man roster, so option "
+            "moves freeze right along with the other 40-man transactions "
+            "above — the option rule itself doesn't change.",
+        ),
+        (
+            "How long did the last MLB lockout last?",
+            "99 days: it began December 2, 2021 and ended March 10, 2022. "
+            "Opening Day moved from March 31 to April 7, but the two sides "
+            "agreed to play a full 162-game season on a compressed "
+            "schedule, so no games were ultimately missed.",
+        ),
+    ]
+
+
+def _stat_tile(value: str, label: str) -> str:
+    return f'<div class="stat-tile"><div class="value">{html.escape(value)}</div><div class="label">{html.escape(label)}</div></div>'
+
+
+def _render_entries(entries: list[dict]) -> str:
+    rows = []
+    for e in entries:
+        rows.append(
+            "<li class='lockout-entry'>"
+            f"<p class='lockout-entry-date'>{html.escape(e['date'])}</p>"
+            f"<p class='lockout-entry-headline'><b>{html.escape(e['headline'])}</b></p>"
+            f"<p class='lockout-entry-summary'>{html.escape(e['summary'])}</p>"
+            f"<p class='lockout-entry-source'>Source: "
+            f"<a href=\"{html.escape(e['source_url'])}\" rel=\"noopener\" target=\"_blank\">"
+            f"{html.escape(e['source_name'])}</a></p>"
+            "</li>"
+        )
+    return "<ul class='lockout-entries'>" + "".join(rows) + "</ul>"
+
+
+def _render_faq(cba_expires: dt.date) -> tuple[str, list[dict]]:
+    html_parts = []
+    ld_items = []
+    for q, a in _faq_entries(cba_expires):
+        html_parts.append(f"<h3>{html.escape(q)}</h3><p>{a}</p>")
+        ld_items.append({
+            "@type": "Question",
+            "name": q,
+            "acceptedAnswer": {"@type": "Answer", "text": a},
+        })
+    return "".join(html_parts), ld_items
+
+
+def render(data: dict, now: dt.datetime) -> str:
+    status = compute_status(data, now)
+    entries = sorted_entries(data)
+    updated = last_updated(data)
+    cba_expires = dt.date.fromisoformat(status["cba_expires"])
+    cba_expires_label = status["cba_expires_label"]
+
+    desc = (
+        "Live tracker for the 2026 MLB CBA talks and expected lockout: "
+        f"countdown to the {cba_expires_label} expiry, sourced updates, and "
+        "what a lockout means for service time."
+    )
+
+    tiles = [_stat_tile(tile_value(status), "Status")]
+    if status["days_at_stake"] is not None:
+        tiles.append(_stat_tile(str(status["days_at_stake"]), "Service-time days at stake"))
+
+    faq_html, faq_ld = _render_faq(cba_expires)
+
+    graph = [
+        {
+            "@type": "Article",
+            "headline": "MLB CBA Talks & 2026 Lockout Tracker",
+            "description": desc,
+            "datePublished": "2026-10-31",
+            "dateModified": updated.isoformat(),
+            "mainEntityOfPage": PAGE_URL,
+            "url": PAGE_URL,
+            "author": {"@type": "Organization", "name": "Big League Service Time Tracker"},
+            "publisher": {"@type": "Organization", "name": "Big League Service Time Tracker"},
+        },
+        {"@type": "FAQPage", "mainEntity": faq_ld},
+        wpp._breadcrumb_ld([
+            ("Big League Service Time Tracker", f"{SITE_URL}/"),
+            ("CBA & Lockout", PAGE_URL),
+        ]),
+    ]
+
+    # Everything docs/lockout.js needs to recompute the status live, keyed
+    # the same as compute_status()'s own return value so the two stay easy to
+    # compare by eye.
+    status_json = json.dumps({
+        "cba_expires": status["cba_expires"],
+        "cba_expires_at": status["cba_expires_at"],
+        "lockout_start": status["lockout_start"],
+        "lockout_end": status["lockout_end"],
+        "regular_season_delayed_from": status["regular_season_delayed_from"],
+        "labels": {
+            "cbaExpiresLabel": status["cba_expires_label"],
+            "lockoutEndLabel": status["lockout_end_label"],
+        },
+    })
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+{wpp.HEAD_TAGS}
+<title>MLB CBA Talks &amp; 2026 Lockout Tracker | Big League Service Time</title>
+
+<meta name="description" content="{html.escape(desc)}" />
+<meta name="theme-color" content="#0a0c10" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="MLB CBA Talks &amp; 2026 Lockout Tracker" />
+<meta property="og:description" content="{html.escape(desc)}" />
+<link rel="canonical" href="{PAGE_URL}" />
+<meta property="og:url" content="{PAGE_URL}" />
+<meta name="twitter:card" content="summary" />
+{wpp._ld_script(graph)}
+
+<script>
+  try {{
+    var t = localStorage.getItem("mlb-service-time-theme");
+    if (t) document.documentElement.setAttribute("data-theme", t);
+  }} catch (e) {{}}
+</script>
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="taxes.css" />
+</head>
+<body>
+  <div class="viz-root">
+
+    <header class="page-header">
+      <div class="page-header-inner">
+        <h1>
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+            <circle cx="16" cy="16" r="14" class="bm-ball" />
+            <path d="M7.2 5.6c3.6 3 5.4 6.5 5.4 10.4s-1.8 7.4-5.4 10.4" class="bm-seam" />
+            <path d="M24.8 5.6c-3.6 3-5.4 6.5-5.4 10.4s1.8 7.4 5.4 10.4" class="bm-seam" />
+          </svg>
+          <span>CBA &amp; Lockout Tracker</span>
+        </h1>
+        <p class="subtitle">Plain-English updates on the 2026 CBA talks, and what a lockout would mean for the game's clock.</p>
+      </div>
+    </header>
+
+      <nav class="site-nav" aria-label="Site sections"><a href="./">Service time</a><a href="t/">By club</a><a href="alumni/">Previous players</a><a href="arbitration-eligible.html">Arbitration eligible</a><a href="super-two.html">Super Two</a><a href="service-time.html">What is service time?</a><a href="lockout.html" aria-current="page">Lockout</a><a href="contract.html">Contract clock <span class="nav-tag">in development</span></a><a href="taxes.html">Duty days <span class="nav-tag">in development</span></a><a href="neutrality.html">Neutrality</a></nav>
+
+    <main class="tax-main">
+
+      <p class="lede">The current Basic Agreement between MLB and the
+      players' union expires <b>{html.escape(cba_expires_label)}</b> at 11:59
+      p.m. ET. Owners are widely expected to lock players out shortly after,
+      as they did in 2021. This page tracks that timeline and, once a
+      lockout starts, how long it has run. It reports public news, not a
+      prediction of how talks end.</p>
+
+      <section class="stat-tiles" aria-label="Lockout status" id="lockout-tiles">
+        {''.join(tiles)}
+      </section>
+      <p class="panel-note" id="lockout-status-note">{html.escape(render_sentence(status))}</p>
+      <script id="lockout-status-data" type="application/json">{status_json}</script>
+      <script src="lockout.js"></script>
+      <script>
+        (function () {{
+          try {{
+            var data = JSON.parse(document.getElementById("lockout-status-data").textContent);
+            var status = LockoutStatus.computeStatus(data);
+            var sentence = LockoutStatus.sentence(status, data.labels);
+            document.getElementById("lockout-status-note").textContent = sentence;
+            var valueEl = document.querySelector("#lockout-tiles .stat-tile .value");
+            if (valueEl) valueEl.textContent = LockoutStatus.tileValue(status);
+          }} catch (e) {{ /* static build value stays as-is */ }}
+        }})();
+      </script>
+
+      <section class="panel">
+        <h2>Latest updates</h2>
+        <p class="panel-note">Last updated {html.escape(updated.isoformat())}.</p>
+        {_render_entries(entries)}
+      </section>
+
+      <section class="panel">
+        <h2>What's being negotiated</h2>
+        <p class="panel-note">
+          The Basic Agreement is the contract between MLB's 30 clubs and the
+          players' union (the MLBPA) that governs pay, free agency,
+          arbitration, roster rules and more. Based on public reporting as
+          talks continue, the clubs have proposed a salary cap paired with a
+          minimum payroll floor, and the union has rejected a cap while
+          pushing for a higher minimum salary and other player-side gains.
+          Other reported topics include the length of the regular season and
+          playoff format. None of this is final — it is what has been
+          reported, not an agreement.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Lockout vs. strike, and the key dates</h2>
+        <p class="panel-note">
+          A <b>lockout</b> is management shutting the business down and
+          barring players from club facilities; a <b>strike</b> is players
+          refusing to work. The 2021-22 stoppage was a lockout: it began
+          December 2, 2021 and ran 99 days, ending March 10, 2022. Opening
+          Day moved from March 31 to April 7, but the sides later agreed to
+          play a full 162-game season anyway, so no games were ultimately
+          missed. The current agreement expires {html.escape(cba_expires_label)}.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>How a lockout affects service time, Super Two and arbitration</h2>
+        <p class="panel-note">
+          No <a href="service-time.html">service time</a> accrues while the
+          season is shut down — an offseason lockout itself doesn't cost a
+          day, because service time is only earned during the championship
+          season, and that includes off-days: a player is credited for every
+          day on the active roster or injured list, not just days his team
+          actually plays. What would matter is regular-season days actually
+          missed; in 2021-22 the eventual deal restored a full 162-game
+          season, so no player's service time or free-agency timeline ended
+          up shorter for it — that is public history, not a guarantee about
+          any future lockout. A lockout has historically pushed back
+          offseason business broadly, including salary arbitration
+          scheduling and tender deadlines, and it has no effect on the
+          <a href="super-two.html">Super Two</a> rule's mechanics themselves
+          — only on how much of a season there ends up being to measure it
+          against.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Minor league options, free agency and transactions</h2>
+        <p class="panel-note">
+          During a lockout, clubs cannot sign free agents, make trades, or
+          complete any other transaction involving a player on the 40-man
+          roster. Optioning a player is itself a 40-man roster move, so
+          option moves freeze right along with everything else in that
+          group; business involving players who are not on a 40-man roster
+          — most of the minor leagues — continues as normal. See
+          <a href="arbitration-eligible.html">who's arbitration-eligible this
+          winter</a> for the group whose contracts are usually decided right
+          around when a lockout would hit.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>FAQ</h2>
+        {faq_html}
+      </section>
+
+      <p class="foot">
+        This page is an independent tracker, not a prediction of how
+        negotiations end. It reports what has been publicly reported, in our
+        own words, and links to the original source for every item above.
+        <br /><br />
+        Not affiliated with or endorsed by Major League Baseball or any team.
+        Service time figures are our own calculations from public data.
+        <br /><br />
+        <a href="about.html">About</a> &middot;
+        <a href="privacy.html">Privacy</a> &middot;
+        <a href="mailto:{wpp.CONTACT_EMAIL}">{wpp.CONTACT_EMAIL}</a>
+      </p>
+
+    </main>
+
+    <footer class="page-footer">
+      <p>
+        Not affiliated with or endorsed by Major League Baseball or any team.
+        Service time figures are our own calculations from public data.
+      </p>
+      <p><a href="./">Service time tracker</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="neutrality.html">Neutrality</a> &middot; <a href="service-time.html">What is service time?</a> &middot; <a href="mailto:{wpp.CONTACT_EMAIL}">{wpp.CONTACT_EMAIL}</a></p>
+    </footer>
+  </div>
+  {wpp.ANALYTICS}
+</body>
+</html>
+"""
+
+
+def build(data_file: pathlib.Path = DATA_FILE, out_file: pathlib.Path = OUT_FILE,
+          now: dt.datetime | None = None) -> str:
+    data = load(data_file, today=(now.astimezone(ET).date() if now else None))
+    page = render(data, now or now_et())
+    out_file.write_text(page, encoding="utf-8")
+    return page
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--data-file", type=pathlib.Path, default=DATA_FILE)
+    parser.add_argument("--out", type=pathlib.Path, default=OUT_FILE)
+    parser.add_argument("--check", action="store_true", help="validate only, write nothing")
+    parser.add_argument("--today", type=str, default=None,
+                         help="pin today's ET date (noon ET), ISO format")
+    args = parser.parse_args(argv)
+
+    today = dt.date.fromisoformat(args.today) if args.today else None
+    now = dt.datetime(today.year, today.month, today.day, 12, 0, tzinfo=ET) if today else now_et()
+
+    try:
+        data = load(args.data_file, today=now.astimezone(ET).date())
+        if args.check:
+            print(f"{args.data_file}: ok ({len(data['entries'])} entries)")
+            return 0
+        page = render(data, now)
+        args.out.write_text(page, encoding="utf-8")
+        print(f"wrote {args.out}")
+        return 0
+    except LockoutDataError as exc:
+        print(f"lockout data error: {exc}", file=sys.stderr)
+        return 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())

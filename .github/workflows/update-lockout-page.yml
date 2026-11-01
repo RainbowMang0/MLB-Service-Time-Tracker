@@ -1,0 +1,66 @@
+name: Rebuild CBA & Lockout Page
+
+# Lets updating the lockout tracker be "edit one file, push to main" with no
+# code change and no wait for the next daily run.
+#
+# data/lockout_updates.json is hand-edited (see its own _README) and
+# docs/lockout.html is generated from it by scripts/build_lockout_page.py,
+# which also runs as part of the daily service-time job
+# (update-service-time.yml) so the countdown/day-count stays correct even on
+# a day nobody touches the data file. This workflow exists for the other
+# case: someone adds a news entry or sets lockout_start and wants the site
+# updated right away, not at the next 8am ET run.
+#
+# Safe by construction, not just by review: build_lockout_page.py validates
+# the file before writing anything (bad JSON, a missing field, a non-https
+# source) and exits nonzero on a problem, so a bad edit here fails loud and
+# commits nothing -- it cannot take down any other page, because it never
+# touches any other file.
+#
+# It DOES share the daily job's concurrency group, though. Both this
+# workflow and update-service-time.yml write docs/lockout.html, and GitHub
+# Actions queues two jobs in the same group rather than running them side
+# by side (cancel-in-progress: false on both) -- so whichever of the two
+# runs second always checks out main *after* the first one's commit lands,
+# and rebuilds from the data file as it is at that point. Without this, a
+# daily run that started before a same-morning data edit could still push
+# its stale page after this workflow's fresher one and silently undo it.
+# Separate groups could not detect that; this one can't race it.
+
+on:
+  push:
+    branches: ["main"]
+    paths: ["data/lockout_updates.json"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  # Shared with update-service-time.yml and backfill-history.yml on purpose
+  # -- see the comment above. All three write into docs/, and docs/lockout.html
+  # specifically, so only one may run at a time.
+  group: service-time-update
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # No `pip install`: scripts/build_lockout_page.py and everything it
+      # imports (write_player_pages, cba, salary_estimates, super_two,
+      # validate_super_two) are stdlib-only -- no network call either.
+      - name: Validate and rebuild docs/lockout.html
+        run: python scripts/build_lockout_page.py
+
+      - name: Commit and push
+        run: |
+          scripts/commit_data.sh "chore: rebuild CBA & lockout tracker page" docs/lockout.html

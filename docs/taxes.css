@@ -98,6 +98,56 @@
   margin-top: 14px;
 }
 
+/* --- lede / foot, shared by the CBA & lockout tracker and any other
+   prose page layered on .tax-main --------------------------------------- */
+
+.lede {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0 0 20px;
+}
+.lede b { color: var(--text-primary); font-weight: 650; }
+
+/* .stat-tiles (styles.css) carries its own side margin, sized for the main
+   tracker's full-bleed layout. Inside .tax-main's padded column that left
+   the first tile floating to the right of the lede, the status sentence
+   and every panel beside it. Zero it here so they share one left edge. */
+.tax-main .stat-tiles { margin-left: 0; margin-right: 0; }
+
+.foot {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* --- the lockout tracker's update log ----------------------------------- */
+
+.lockout-entries {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.lockout-entry + .lockout-entry {
+  padding-top: 16px;
+  border-top: 1px solid var(--glass-border);
+}
+.lockout-entry p { margin: 0 0 4px; }
+.lockout-entry-date {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+.lockout-entry-headline { color: var(--text-primary); }
+.lockout-entry-summary { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.55; }
+.lockout-entry-source { font-size: 0.82rem; color: var(--text-muted); }
+.lockout-entry-source a { color: var(--accent); text-decoration: none; }
+.lockout-entry-source a:hover { text-decoration: underline; }
+
 /* --- form ----------------------------------------------------------------- */
 
 .field-grid {

@@ -293,6 +293,28 @@ html, body {
     color-mix(in srgb, var(--accent) 80%, transparent), transparent);
 }
 
+/* A quiet pointer to the lockout tracker, same glass-surface language as
+   .disclaimer-banner but its own class: it is an invitation to click, not a
+   caveat, and must survive being styled differently later without the two
+   rules fighting each other. */
+.lockout-banner {
+  margin: 0 clamp(16px, 4vw, 40px) 20px;
+  padding: 10px 16px;
+  background: var(--glass-surface);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  font-size: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  align-items: baseline;
+}
+.lockout-banner a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.lockout-banner a:hover, .lockout-banner a:focus-visible { text-decoration: underline; }
+.lockout-banner-note { color: var(--text-muted); }
+
 .stat-tiles {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -1213,12 +1235,29 @@ body.profile-open { overflow: hidden; }
   border-color: color-mix(in srgb, var(--accent) 40%, transparent);
 }
 
-/* The strip fits seven items down to about 1150px, then clips one. Rather
-   than let a laptop or an iPad in landscape (1024) show a half-cut label,
+/* The strip fits seven items down to about 1150px, then clips one -- and
+   with the CBA & lockout link added (now ten items, kept short as
+   "Lockout" for exactly this reason) the same clipping started at 1280px,
+   wide enough to be a laptop's native width, not just a narrow viewport.
+   Rather than let a laptop or an iPad in landscape show a half-cut label,
    it tightens once here and only scrolls on genuinely narrow screens. */
-@media (max-width: 1150px) {
+@media (max-width: 1300px) {
   .site-nav a { padding: 8px 7px; font-size: 0.73rem; letter-spacing: 0.01em; }
   .nav-tag { font-size: 0.54rem; padding: 1px 4px; }
+}
+
+/* The ten-item strip needs about 1493px at full size and 1324px even at the
+   tightened size above -- comfortably more than common laptop widths of
+   1280, 1366 and 1440, which clipped "Neutrality" (and at 1366/1440 clipped
+   it entirely) with only the rule above. This tightens further and pushes
+   the threshold past all of those, including 1536, so the only viewports
+   still in the rule above are ones already narrow enough to be scrolling by
+   choice. Overrides the rule above wherever both match, by appearing after
+   it; leaves mobile (via the 640px rule below) untouched. */
+@media (min-width: 1024px) and (max-width: 1560px) {
+  .site-nav { gap: 1px; }
+  .site-nav a { padding: 6px 5px; font-size: 0.68rem; letter-spacing: 0; }
+  .nav-tag { font-size: 0.5rem; padding: 1px 3px; }
 }
 
 @media (max-width: 640px) {

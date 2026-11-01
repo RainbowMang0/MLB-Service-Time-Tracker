@@ -210,6 +210,26 @@ entered **by hand**, deliberately not scraped, both to respect B-R's terms
 and because a handful of hand-checked numbers is enough to catch a
 systematic error.
 
+## Updating the CBA & lockout tracker (`/lockout.html`)
+
+Edit `data/lockout_updates.json` and push to `main` — that's the whole
+update, no code change needed. Add a news item to `entries` (date,
+headline, a 1-3 sentence summary in your own words, `source_name` and an
+`https://` `source_url`); any order, the page sorts newest first. A push
+that touches that file alone rebuilds and commits `docs/lockout.html`
+automatically (`update-lockout-page.yml`); it also rebuilds every night as
+part of the daily job so the day counter stays right either way.
+
+To mark the lockout as started, set `lockout_start` to that date (ISO,
+`YYYY-MM-DD`) — the page switches from a countdown to "Day N of the
+lockout" automatically, day 1 being the start date itself. Set
+`lockout_end` once it's over. `regular_season_delayed_from` is separate: set
+it only once games are actually being missed, and the page adds an
+estimated service-time-days-at-stake figure. `scripts/build_lockout_page.py
+--check` validates the file (real ISO dates, https sources, nothing
+missing) without writing anything, and CI runs the same check on every
+push.
+
 ## Not affiliated with MLB
 
 This is an independent project. It is not affiliated with, endorsed by, or

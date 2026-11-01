@@ -2655,17 +2655,23 @@ def test_the_offseason_pages_are_added_to_the_sitemap_and_workflows():
 
 def test_the_site_nav_is_the_same_on_every_page():
     """
-    The navigation lands in nine places -- four hand-written pages and five
-    generated templates -- and docs/index.html cannot read the Python that
-    builds it. That is the exact shape of the bug that left the analytics
-    token wrong in index.html while the four generated templates were right,
-    and of the one that froze index.json while the database moved underneath.
+    The navigation lands in many places -- six hand-written pages, the
+    generated lockout tracker, and five generated templates -- and
+    docs/index.html cannot read the Python that builds it. That is the exact
+    shape of the bug that left the analytics token wrong in index.html while
+    the four generated templates were right, and of the one that froze
+    index.json while the database moved underneath.
 
     So the destination SET is asserted rather than trusted. Labels and href
     style may legitimately differ (generated pages are BASE_PATH-absolute
     because they are served from /p/, /t/ and /alumni/; hand-written pages are
     relative because they are served from the root). What may not differ is
     which sections a reader can reach.
+
+    docs/taxes.html is excluded on purpose. It's parked (CLAUDE.md, "Do NOT
+    touch docs/taxes.html") and was deliberately left off the lockout rollout
+    rather than edited for a one-line nav addition, so it still carries the
+    nav set from before docs/lockout.html existed.
     """
     import re
     import write_player_pages as wpp
@@ -2683,9 +2689,11 @@ def test_the_site_nav_is_the_same_on_every_page():
 
     hand_written = [
         "docs/index.html",
-        "docs/taxes.html",
         "docs/contract.html",
         "docs/neutrality.html",
+        "docs/about.html",
+        "docs/privacy.html",
+        "docs/lockout.html",
     ]
     for rel in hand_written:
         html = (ROOT / rel).read_text()
@@ -4319,7 +4327,7 @@ def test_a_traded_players_start_is_his_opening_day_club_not_the_latest_opener():
 
 _HAND_WRITTEN_HTML_PAGES = [
     "index.html", "taxes.html", "contract.html", "neutrality.html",
-    "about.html", "privacy.html",
+    "about.html", "privacy.html", "lockout.html",
 ]
 
 

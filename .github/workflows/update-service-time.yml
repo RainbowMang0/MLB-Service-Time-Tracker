@@ -156,6 +156,33 @@ jobs:
             python scripts/update_service_time.py
           fi
 
+      # Keeps the countdown/day-count on docs/lockout.html correct even on a
+      # day data/lockout_updates.json itself doesn't change -- the page's own
+      # inline script recomputes it in the browser too (see
+      # scripts/build_lockout_page.py), but there's no reason to let the
+      # server-rendered fallback drift when the daily job is already running
+      # anyway. No API calls; it only reads data/lockout_updates.json.
+      #
+      # continue-on-error: true is load-bearing, not cosmetic. This step can
+      # fail for a reason that has nothing to do with the 5,600-player
+      # pipeline this job exists to run: a bad hand-edit to
+      # data/lockout_updates.json. CI (ci.yml) already runs
+      # `build_lockout_page.py --check` on every push and PR, so a bad edit
+      # is rejected before it ever reaches main -- but if one slips through
+      # anyway, this step must not take the "Commit and push changes" step
+      # down with it. On failure, the existing docs/lockout.html is simply
+      # left as it is and committed unchanged; everything else this job
+      # computed still ships.
+      - name: Rebuild the CBA & lockout tracker page
+        id: rebuild_lockout
+        if: steps.gate.outputs.run == 'true'
+        continue-on-error: true
+        run: python scripts/build_lockout_page.py
+
+      - name: Warn if the lockout page could not be rebuilt
+        if: steps.gate.outputs.run == 'true' && steps.rebuild_lockout.outcome == 'failure'
+        run: echo "::warning::docs/lockout.html was not rebuilt (data/lockout_updates.json failed validation) -- kept the existing page. See the 'Rebuild the CBA & lockout tracker page' step above."
+
       - name: Commit and push changes
         if: steps.gate.outputs.run == 'true'
         run: |
@@ -171,7 +198,7 @@ jobs:
           scripts/commit_data.sh \
             "chore: daily service time update ($(date -u +%F))" \
             docs/data docs/p docs/t docs/alumni docs/page.css docs/404.html docs/service-time.html \
-            docs/arbitration-eligible.html docs/super-two.html \
+            docs/arbitration-eligible.html docs/super-two.html docs/lockout.html \
             docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-clubs.xml \
             docs/sitemap-players.xml docs/sitemap-alumni.xml docs/robots.txt data/cache \
             data/published_ids.json

@@ -119,6 +119,7 @@ NAV_SECTIONS = [
     ("arbitration-eligible.html", "Arbitration eligible", None),
     ("super-two.html", "Super Two", None),
     ("service-time.html", "What is service time?", None),
+    ("lockout.html", "Lockout", None),
     ("contract.html", "Contract clock", "in development"),
     ("taxes.html", "Duty days", "in development"),
     ("neutrality.html", "Neutrality", None),
@@ -1986,6 +1987,7 @@ SUPER_TWO_PAGE_PATH = "super-two.html"
 HAND_WRITTEN_PAGES = [
     ("taxes.html", "0.9"),
     ("contract.html", "0.9"),
+    ("lockout.html", "0.9"),
     ("neutrality.html", "0.5"),
     ("about.html", "0.5"),
     ("privacy.html", "0.3"),
