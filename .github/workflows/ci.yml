@@ -91,6 +91,12 @@ jobs:
       - name: Contract engine, and the advice-vocabulary lint
         run: node --test tests/contract.test.cjs
 
+      # The browser-side twin of build_lockout_page.py's countdown/day-count
+      # math (docs/lockout.js) -- includes the ET-anchored expiry instant and
+      # the Tokyo/Los Angeles timezone-independence checks.
+      - name: CBA & lockout tracker page (browser-side countdown logic)
+        run: node --test tests/lockout.test.cjs
+
       # The three published files are derived from the database and are the
       # only two a visitor ever reads, so a bad derivation ships wrong numbers
       # while every check that reads the database still passes. This also

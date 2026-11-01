@@ -16,6 +16,16 @@ name: Rebuild CBA & Lockout Page
 # source) and exits nonzero on a problem, so a bad edit here fails loud and
 # commits nothing -- it cannot take down any other page, because it never
 # touches any other file.
+#
+# It DOES share the daily job's concurrency group, though. Both this
+# workflow and update-service-time.yml write docs/lockout.html, and GitHub
+# Actions queues two jobs in the same group rather than running them side
+# by side (cancel-in-progress: false on both) -- so whichever of the two
+# runs second always checks out main *after* the first one's commit lands,
+# and rebuilds from the data file as it is at that point. Without this, a
+# daily run that started before a same-morning data edit could still push
+# its stale page after this workflow's fresher one and silently undo it.
+# Separate groups could not detect that; this one can't race it.
 
 on:
   push:
@@ -27,10 +37,10 @@ permissions:
   contents: write
 
 concurrency:
-  # Its own group, not service-time-update's: this touches only
-  # data/lockout_updates.json and docs/lockout.html, so there is nothing to
-  # race with the daily job or the backfill over.
-  group: lockout-page-update
+  # Shared with update-service-time.yml and backfill-history.yml on purpose
+  # -- see the comment above. All three write into docs/, and docs/lockout.html
+  # specifically, so only one may run at a time.
+  group: service-time-update
   cancel-in-progress: false
 
 jobs:
