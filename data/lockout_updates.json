@@ -8,14 +8,26 @@
     "",
     "FIELDS",
     "  cba_expires               -- ISO date the current agreement expires.",
-    "                               Not a literal anywhere else on the site;",
-    "                               this file is the one place it is typed.",
+    "                               The agreement actually expires 11:59pm",
+    "                               ET that date; build_lockout_page.py adds",
+    "                               the time and formats every on-page date",
+    "                               from this field, so it's the only place",
+    "                               the date itself is typed -- except",
+    "                               docs/index.html's banner, which is",
+    "                               hand-maintained and can't read this file",
+    "                               (same reason it hand-copies the GA id);",
+    "                               update both if this date ever changes.",
     "  lockout_start              -- ISO date the lockout began, or null if",
     "                               no lockout has started yet. Set this the",
     "                               day it happens and the page switches from",
     "                               a countdown to a day count automatically.",
+    "                               A date here that hasn't arrived yet is",
+    "                               treated as not-started -- the page stays",
+    "                               on the countdown until that day comes.",
     "  lockout_end               -- ISO date the lockout ended, or null while",
-    "                               it is ongoing / has not happened.",
+    "                               it is ongoing / has not happened. Once",
+    "                               set, the day count freezes at the day",
+    "                               the stoppage reached.",
     "  regular_season_delayed_from -- ISO date the regular season was",
     "                               originally scheduled to start, or null.",
     "                               Set this only once games are actually",
@@ -42,7 +54,7 @@
   "entries": [
     {
       "date": "2026-10-29",
-      "headline": "Reporting: talks remain deadlocked over a salary cap as the Dec. 1 deadline nears",
+      "headline": "Reporting: talks remain far apart over a salary cap as the Dec. 1 deadline nears",
       "summary": "Yahoo Sports reported that with the current agreement expiring Dec. 1, 2026, a lockout is widely expected the next day. The owners' push for a salary cap is described as the central sticking point, with the players' union opposed and instead seeking a higher minimum salary and stronger service-time protections.",
       "source_name": "Yahoo Sports",
       "source_url": "https://sports.yahoo.com/mlb/article/mlb-labor-faq-with-a-lockout-on-the-horizon-heres-what-baseball-fans-need-to-know-175303012.html"
@@ -50,7 +62,7 @@
     {
       "date": "2026-10-29",
       "headline": "Reporting: owners' salary-cap proposal pairs a payroll floor with a 50-50 revenue split",
-      "summary": "The Boston Globe reported that owners have proposed a salary cap near $245 million together with a roughly $171 million payroll floor and a 50-50 split of revenue, which the players' union has rejected. The two sides are described as deadlocked with the CBA's Dec. 1 expiration approaching.",
+      "summary": "The Boston Globe reported that owners have proposed a salary cap near $245 million together with a roughly $171 million payroll floor and a 50-50 split of revenue, which the players' union has rejected. The Globe expects owners to lock players out at midnight on Dec. 2.",
       "source_name": "Boston Globe",
       "source_url": "https://www.bostonglobe.com/2026/10/29/sports/mlb-labor-owners-players/"
     }

@@ -1235,10 +1235,13 @@ body.profile-open { overflow: hidden; }
   border-color: color-mix(in srgb, var(--accent) 40%, transparent);
 }
 
-/* The strip fits seven items down to about 1150px, then clips one. Rather
-   than let a laptop or an iPad in landscape (1024) show a half-cut label,
+/* The strip fits seven items down to about 1150px, then clips one -- and
+   with the CBA & lockout link added (now ten items, kept short as
+   "Lockout" for exactly this reason) the same clipping started at 1280px,
+   wide enough to be a laptop's native width, not just a narrow viewport.
+   Rather than let a laptop or an iPad in landscape show a half-cut label,
    it tightens once here and only scrolls on genuinely narrow screens. */
-@media (max-width: 1150px) {
+@media (max-width: 1300px) {
   .site-nav a { padding: 8px 7px; font-size: 0.73rem; letter-spacing: 0.01em; }
   .nav-tag { font-size: 0.54rem; padding: 1px 4px; }
 }
