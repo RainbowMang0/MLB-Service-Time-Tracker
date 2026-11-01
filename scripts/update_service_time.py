@@ -44,6 +44,7 @@ import accrual_model  # noqa: E402
 import cba  # noqa: E402
 import fetch_mlb_data as mlb  # noqa: E402
 import salary_estimates  # noqa: E402
+import service_time_exceptions  # noqa: E402
 import super_two  # noqa: E402
 import write_player_pages  # noqa: E402
 from write_player_pages import write_player_pages as _write_pages  # noqa: E402
@@ -70,6 +71,16 @@ _RULES = cba.default()
 # once; the list is hand-maintained in config/cba/roy_full_year_awards.json and
 # validated by cba.py. Empty until verified entries are added.
 _ROY_FULL_YEAR_SEASONS = cba.roy_full_year_seasons_by_player()
+# {mlbam_id -> [exception, ...]} the hand-kept restricted-list service-time
+# exceptions (paid DV administrative leave, 2020 opt-outs, suspensions the feed
+# shows only as a restricted-list placement). Validated on load. See
+# data/service_time_exceptions.json and scripts/service_time_exceptions.py.
+_SERVICE_TIME_EXCEPTIONS = service_time_exceptions.load_exceptions()
+# The DFA grace window (rules v7): a player designated for assignment DURING the
+# season keeps earning service until the move that resolves it, capped at this
+# many days. From config/cba/, never a literal -- a successor agreement that
+# changes the window is a config edit.
+_DFA_LIMBO_DAYS = _RULES.require("designated_for_assignment.max_service_days")
 # config/ is the source of truth for rulesets, but it sits outside docs/ and
 # GitHub Pages serves docs/ as the site root, so the browser cannot reach it.
 # publish_config() copies it in. Source stays canonical; this is a build
@@ -134,11 +145,32 @@ TODAY = dt.date.today()
 #      removing days and the 20-day rule only adding them; reference veterans
 #      unmoved.
 #
+#   7  service-time DATA fixes, after the v6 recompute exposed two outliers as
+#      data bugs rather than rules bugs. (a) The restricted list STOPS the clock
+#      by default -- a restricted-list player is not paid and earns no service
+#      (MLB Rule 2(c)(6)) -- instead of being treated as a non-stopping
+#      placement. The spells that DO earn service (paid DV administrative leave,
+#      2020 opt-outs) and the suspensions that look like a leave in the feed are
+#      restored or removed per player from the hand-kept, sourced
+#      data/service_time_exceptions.json. (b) A missing lastPlayedDate no longer
+#      falls back to the last roster-transaction date, which extended careers
+#      past the last season a player actually had MLB service; it uses the last
+#      season with an MLB appearance (plus any counts=true exception), and only
+#      a never-appeared player falls back to a roster event. (c) A DFA during
+#      the season keeps the clock running until the move that resolves it,
+#      capped at designated_for_assignment.max_service_days (7); an offseason
+#      DFA still adds nothing. (d) A transaction cache written before team IDs
+#      were stored (ID-less rows) is discarded and refetched, so minor-league
+#      rows can no longer read as MLB moves -- the Velázquez cache bug.
+#      Trevor Bauer 8.157 -> ~7.178, Jose Alvarado 9.093 -> ~9.014, Nelson
+#      Velázquez stays 2.042; the restricted-list and DFA rules each move a few
+#      dozen other players by a handful of days.
+#
 # Only-removes is the expected shape for 4 and 5: a rule that can only CLOSE an
-# interval must never add a day. 6 moves figures in BOTH directions, because it
-# is the first version to correct the window a day is measured against rather
-# than only which days are inside it.
-SERVICE_TIME_RULES_VERSION = 6
+# interval must never add a day. 6 and 7 both move figures in BOTH directions --
+# 7 because the restricted-list stop and the lastPlayedDate fix remove days
+# while the DFA grace window and the counts=true exceptions add them.
+SERVICE_TIME_RULES_VERSION = 7
 
 # The carry-in rule: presume a player is on a roster from his debut onward
 # rather than crediting him nothing until a start transaction happens to fire.
@@ -173,6 +205,32 @@ def _load_cached_transactions(player_id: int) -> list[dict]:
     return []
 
 
+def _row_is_legacy_format(txn: dict) -> bool:
+    """A cached transaction written before team IDs were stored.
+
+    The old shape carried only date/description/team; the three id keys
+    (team_id, from_team_id, to_team_id) were simply absent. Key PRESENCE, not
+    value, is the test -- a freshly-fetched row always has the keys, even when
+    the feed gave no club for that move and all three are null -- so a healthy
+    cache is never mistaken for a legacy one.
+    """
+    return not any(
+        k in txn for k in ("team_id", "from_team_id", "to_team_id")
+    )
+
+
+def _cache_is_legacy(cached: list[dict]) -> bool:
+    """True if ANY row is in the pre-team-id format.
+
+    _involves_mlb_club keeps an ID-less row (it cannot judge it), so a single
+    legacy row lets a minor-league or foreign-league move read as an MLB one --
+    the Nelson Velázquez bug, where his whole cache predated team IDs and his
+    Mexican-League and Triple-A moves opened phantom MLB stretches. One such row
+    makes the file untrustworthy, so the whole thing is refetched.
+    """
+    return any(_row_is_legacy_format(t) for t in cached)
+
+
 def _save_cached_transactions(player_id: int, txns: list[dict]) -> None:
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     _cache_path(player_id).write_text(json.dumps(txns, indent=2, default=str))
@@ -189,6 +247,17 @@ def _fetch_transactions_incremental(
     megabytes to the repo in exchange for nothing.
     """
     cached = [] if (full_refresh or not use_cache) else _load_cached_transactions(player_id)
+
+    if cached and _cache_is_legacy(cached):
+        if mlb_fetch_enabled():
+            # Throw the stale file away; the fetch below rebuilds the full
+            # history from scratch, this time with team IDs on every row.
+            cached = []
+        else:
+            # Offline (the fetch-off path never recomputes in production, but
+            # keep it safe for any other caller): we cannot refetch, so drop the
+            # untrustworthy ID-less rows rather than let them read as MLB moves.
+            return [t for t in cached if not _row_is_legacy_format(t)]
 
     if cached:
         last_date = max(dt.date.fromisoformat(t["date"]) for t in cached)
@@ -553,6 +622,14 @@ def build_player_record(
     if roster_start is not None:
         accrual_floor = roster_start
 
+    # Hand-kept restricted-list service-time exceptions for this player (rules
+    # v7). counts=true spells (paid DV administrative leave, 2020 opt-outs) are
+    # credited back; counts=false spells (a suspension the feed shows only as a
+    # restricted-list placement) are removed. See data/service_time_exceptions.json.
+    force_active_periods, force_inactive_periods = service_time_exceptions.periods_for_player(
+        _SERVICE_TIME_EXCEPTIONS, player_id
+    )
+
     # A player who is done playing has to have his clock stopped explicitly.
     # Careers usually end with "elected free agency", which is deliberately not
     # a stop keyword (adding it would wreck 272 active players -- see the note
@@ -582,13 +659,21 @@ def build_player_record(
     # being looked for in the wrong place.
     #
     # The fallback now asks when the feed last put him on a MAJOR LEAGUE
-    # roster, from two sources that are already fetched:
+    # roster. The source it TRUSTS is the player's own year-by-year splits:
     #
-    #   * the last season his year-by-year splits show an appearance
-    #   * the last transaction that is actually a roster event (a start or a
-    #     stop), which covers a man who was rostered without appearing
+    #   * the last season those splits show an MLB appearance, and
+    #   * the end of any counts=true service exception (paid administrative
+    #     leave is real MLB service and extends the career the same way an
+    #     appearance does -- this is what keeps Trevor Bauer's 2022 Opening-Day
+    #     days in the window).
     #
-    # A minor league signing is neither, so it no longer extends a career.
+    # It deliberately does NOT reach for "the last roster transaction" any more
+    # (rules v7). That was the Trevor Bauer bug: with lastPlayedDate null, his
+    # last roster event was a January-2023 DFA and release -- months after his
+    # last MLB service -- which stretched his career through 2023. A stray
+    # offseason transaction must not make a career longer. Only when the splits
+    # show no appearance at ALL (a man who reached a roster without ever
+    # playing) do we fall back to a roster event, and then a bare transaction.
     last_played = bio.get("lastPlayedDate")
     career_end: dt.date | None = None
     if not currently_rostered:
@@ -598,16 +683,20 @@ def build_player_record(
             candidates = []
             if season_teams_bio:
                 candidates.append(dt.date(max(season_teams_bio), 12, 31))
-            roster_events = [
-                t.date for t in transactions
-                if is_active_start(t.description) or is_active_stop(t.description)
-            ]
-            if roster_events:
-                candidates.append(max(roster_events))
+            candidates.extend(end for _start, end in force_active_periods)
             if candidates:
                 career_end = max(candidates)
-            elif transactions:
-                career_end = max(t.date for t in transactions)
+            else:
+                # Never appeared: last resort is a real roster event, and only
+                # then a bare transaction date.
+                roster_events = [
+                    t.date for t in transactions
+                    if is_active_start(t.description) or is_active_stop(t.description)
+                ]
+                if roster_events:
+                    career_end = max(roster_events)
+                elif transactions:
+                    career_end = max(t.date for t in transactions)
 
     debut_year = debut_date.year if debut_date else MIN_TRANSACTION_YEAR
     first_year = max(debut_year, MIN_TRANSACTION_YEAR)
@@ -657,6 +746,11 @@ def build_player_record(
         # on a roster is credited with the remaining weeks of a season that
         # hasn't been played yet.
         horizon_end=horizon_end,
+        # Rules v7: the DFA grace window and the hand-kept restricted-list
+        # service exceptions for this player.
+        dfa_limbo_days=_DFA_LIMBO_DAYS,
+        force_active_periods=force_active_periods,
+        force_inactive_periods=force_inactive_periods,
     )
 
     return {
