@@ -308,34 +308,41 @@ def _season_windows_for(years: range) -> list[SeasonWindow]:
 def _opening_day_for(
     year: int, opening_day_club: int | None, candidate_clubs: list[int]
 ) -> dt.date:
-    """The season-window START for a player, from his club's own opener.
+    """The season-window START for a player (rules v7: the CBA-uniform opener).
 
-    Service time is credited from a club's OWN first regular-season game, and
-    those differ -- the Seoul/Tokyo openers a week early, the 2026 Oracle Park
-    opener a day early. So the window must start on the player's club's opener,
-    not the league's earliest game applied to everyone (which credited a week
-    of phantom days to every non-overseas club -- the ~8-days-high error the
-    Baseball Reference audit found).
+    CBA Art. XXI(A)(1) credits service "uniformly to all Players and all Clubs
+    ... notwithstanding differences in a particular Club's schedule", so every
+    club shares ONE Opening Day -- the league-wide uniform start -- and a club
+    that opened a day LATE domestically (DET 04-08 vs the league 04-07 in 2022)
+    does not cost its players a day. The one exception is Art. V(A): a club that
+    opened OVERSEAS earlier (Seoul/Tokyo/Mexico, outside the 187-day window)
+    keeps its own earlier date; otherwise applying the league opener to it would
+    erase the early series it really played (the ~8-days-high regression the
+    Baseball Reference audit caught). Both are captured by taking, for a club,
+    min(its own opener, the uniform start): a late domestic opener snaps up to
+    the uniform date, an early overseas opener stays put.
 
-      * `opening_day_club` known -> that club's own opener. This is the club he
-        was with at Opening Day (the earliest club of the season by transaction
-        date -- see _opening_day_clubs), which is the ONLY defensible choice
-        for a traded player: a player who opened with an overseas club and was
-        traded away in June still earned that early Seoul start, while one who
-        opened with a domestic club and was traded TO an overseas-opener club
-        never played the overseas series and must not get its early date.
-      * unknown -> the LATEST of his candidate clubs' openers. Conservative: it
-        can never credit a day before any of his clubs began, and
+      * `opening_day_club` known -> min(that club's own opener, uniform). This is
+        the club he was with at Opening Day (the earliest club of the season by
+        transaction date -- see _opening_day_clubs), the ONLY defensible choice
+        for a traded player: one who opened overseas and was traded away in June
+        still earned the early start, while one who opened domestically and was
+        traded TO an overseas club never played its early series.
+      * unknown -> the LATEST of his candidate clubs' CBA starts. Conservative:
+        it can never credit a day before any of his clubs began, and
         over-crediting is the failure mode behind every revert in this project,
         so a player reading a few days low is the safe way to be wrong.
-      * no clubs at all -> the domestic opener (what get_club_season_start
-        already returns for an unknown club).
+      * no clubs at all -> the uniform start.
     """
-    domestic, _ = mlb.get_season_window(year)
+    uniform = mlb.get_uniform_season_start(year)
     if opening_day_club:
-        return mlb.get_club_season_start(year, opening_day_club)
-    openers = [mlb.get_club_season_start(year, c) for c in candidate_clubs if c]
-    return max(openers) if openers else domestic
+        return min(mlb.get_club_season_start(year, opening_day_club), uniform)
+    starts = [
+        min(mlb.get_club_season_start(year, c), uniform)
+        for c in candidate_clubs
+        if c
+    ]
+    return max(starts) if starts else uniform
 
 
 def _season_windows_for_player(
@@ -357,10 +364,18 @@ def _season_windows_for_player(
     windows = []
     carried: list[int] = []
     for year in years:
-        _, end = mlb.get_season_window(year)
+        _, league_end = mlb.get_season_window(year)
         candidates = season_teams_bio.get(year) or txn_team_ids.get(year) or carried
         if candidates:
             carried = candidates
+        # The season ends on the league's last regularly scheduled game for
+        # almost everyone; it runs a day LATER only for a club that actually
+        # played a tiebreaker (rules v7). get_club_season_end floors at the
+        # league end, so a club whose own games ended earlier is unaffected.
+        end = league_end
+        for c in candidates:
+            if c:
+                end = max(end, mlb.get_club_season_end(year, c))
         windows.append(
             SeasonWindow(
                 year=year,

@@ -4877,6 +4877,142 @@ def test_the_player_level_v7_figures_hold_against_the_real_feed():
           vel_full["service_days_total"] == 391)
 
 
+# --- rules v7: the season-boundary (off-by-one) fix -------------------------
+
+def _R(home, away, date, **extra):
+    """A played regular-season game row for a /schedule fixture."""
+    g = {"gameType": "R", "status": {"detailedState": "Final"},
+         "teams": {"home": {"team": {"id": home}}, "away": {"team": {"id": away}}}}
+    g.update(extra)
+    return {"date": date, "games": [g]}
+
+
+def test_a_tiebreaker_game_does_not_set_the_league_season_end():
+    """Rules v7. CBA Art. XXI(A)(1) runs service through the last REGULARLY
+    scheduled game 'uniformly to all ... Clubs'. A tiebreaker ('game 163',
+    gameType R with tiebreaker 'Y') is not regularly scheduled, so it must not
+    set the league end -- the 2013 TEX/TB 09-30 and 2018 MIL/CHC, COL/LAD 10-01
+    games used to drag the end a day past the last real game for every club
+    (Cole/Arenado/Soto +1). But a club that actually PLAYED the tiebreaker keeps
+    that day for its own players."""
+    import fetch_mlb_data as mlb
+
+    payload = {"dates": [
+        _R(140, 147, "2013-09-29"),  # last regularly scheduled games
+        _R(139, 111, "2013-09-29"),
+        _R(140, 139, "2013-09-30", tiebreaker="Y"),  # AL tiebreaker, TEX(140) @ TB(139)
+    ]}
+    sched = mlb._parse_season_schedule(2013, payload)
+    check("the league end is the last regular game, not the tiebreaker", sched.end == dt.date(2013, 9, 29))
+    check("a club that played the tiebreaker keeps that day", sched.club_ends[140] == dt.date(2013, 9, 30))
+    check("...both of them", sched.club_ends[139] == dt.date(2013, 9, 30))
+    check("a club that did not keeps the regular end", sched.club_ends[147] == dt.date(2013, 9, 29))
+
+    real_get = mlb._get
+    mlb.get_season_window.cache_clear()
+    mlb._SEASON_SCHEDULE.clear()
+    try:
+        mlb._get = lambda path, params=None: payload
+        check("get_club_season_end extends a tiebreaker club", mlb.get_club_season_end(2013, 140) == dt.date(2013, 9, 30))
+        check("get_club_season_end leaves a non-tiebreaker club at the league end", mlb.get_club_season_end(2013, 147) == dt.date(2013, 9, 29))
+        check("an unknown club falls back to the league end", mlb.get_club_season_end(2013, 999) == dt.date(2013, 9, 29))
+    finally:
+        mlb._get = real_get
+        mlb.get_season_window.cache_clear()
+        mlb._SEASON_SCHEDULE.clear()
+
+
+def test_the_2018_tiebreakers_end_the_league_season_on_09_30():
+    """The 2018 case specifically: two game-163s on 10-01 (CHC/MIL and COL/LAD).
+    The league ends 09-30; the four clubs that played keep 10-01."""
+    import fetch_mlb_data as mlb
+    payload = {"dates": [
+        _R(112, 158, "2018-09-30"),
+        _R(115, 119, "2018-09-30"),
+        _R(112, 158, "2018-10-01", tiebreaker="Y"),  # CHC(112) v MIL(158)
+        _R(119, 115, "2018-10-01", tiebreaker="Y"),  # LAD(119) v COL(115)
+    ]}
+    sched = mlb._parse_season_schedule(2018, payload)
+    check("the 2018 league end is 09-30", sched.end == dt.date(2018, 9, 30))
+    for club in (112, 158, 115, 119):
+        check(f"club {club} keeps its 10-01 tiebreaker", sched.club_ends[club] == dt.date(2018, 10, 1))
+
+
+def test_the_cba_uniform_start_applies_to_every_club_except_an_overseas_opener():
+    """Rules v7. A staggered DOMESTIC opener must not cost a player a day (CBA
+    Art. XXI(A)(1)); every domestic club shares one Opening Day. A club that
+    opened OVERSEAS earlier (Art. V(A): outside the 187-day window) keeps its
+    own earlier date. 2022 DET opened 04-08 vs the league's 04-07; a Tokyo/Seoul
+    club opened a week before everyone else."""
+    import fetch_mlb_data as mlb
+    import update_service_time as u
+
+    # Overseas club 119 opens 03-20; domestic clubs 147/111 open 04-07, DET(116)
+    # opens 04-08; the season ends 09-28.
+    payload = {"dates": [
+        _R(119, 121, "2024-03-20"),   # overseas (Seoul-style) opener
+        _R(147, 111, "2024-04-07"),   # league Opening Day
+        _R(116, 135, "2024-04-08"),   # a club that opened a day late
+        _R(147, 111, "2024-09-28"),   # last game
+    ]}
+    sched = mlb._parse_season_schedule(2024, payload)
+    check("the uniform start is the earliest domestic opener (04-07)", sched.uniform_opener == dt.date(2024, 4, 7))
+    check("the overseas club keeps its own early opener", sched.club_openers[119] == dt.date(2024, 3, 20))
+
+    real_get = mlb._get
+    mlb.get_season_window.cache_clear()
+    mlb._SEASON_SCHEDULE.clear()
+    try:
+        mlb._get = lambda path, params=None: payload
+        check("get_uniform_season_start is 04-07", mlb.get_uniform_season_start(2024) == dt.date(2024, 4, 7))
+        check("a late-opening domestic club's player starts on the uniform day",
+              u._opening_day_for(2024, 116, [116]) == dt.date(2024, 4, 7))
+        check("an on-time domestic club too",
+              u._opening_day_for(2024, 147, [147]) == dt.date(2024, 4, 7))
+        check("an overseas club keeps its own earlier opener (no regression)",
+              u._opening_day_for(2024, 119, [119]) == dt.date(2024, 3, 20))
+        check("an unknown opening-day club takes the latest candidate's CBA start",
+              u._opening_day_for(2024, None, [119, 147]) == dt.date(2024, 4, 7))
+    finally:
+        mlb._get = real_get
+        mlb.get_season_window.cache_clear()
+        mlb._SEASON_SCHEDULE.clear()
+
+
+def test_a_tiebreaker_clubs_player_window_runs_a_day_longer():
+    """End to end through the window builder: a player on the club that played
+    the tiebreaker gets the extra day; a player on any other club does not."""
+    import fetch_mlb_data as mlb
+    import update_service_time as u
+
+    payload = {"dates": [
+        _R(140, 147, "2013-09-29"),
+        _R(139, 111, "2013-09-29"),
+        _R(140, 139, "2013-09-30", tiebreaker="Y"),
+    ]}
+    real_get = mlb._get
+    mlb.get_season_window.cache_clear()
+    mlb._SEASON_SCHEDULE.clear()
+    try:
+        mlb._get = lambda path, params=None: payload
+        tb = u._season_windows_for_player(range(2013, 2014), {2013: [140]}, {}, {2013: 140})
+        other = u._season_windows_for_player(range(2013, 2014), {2013: [147]}, {}, {2013: 147})
+        check("the tiebreaker club's season runs through 09-30", tb[0].end == dt.date(2013, 9, 30))
+        check("every other club's season ends on the regular 09-29", other[0].end == dt.date(2013, 9, 29))
+    finally:
+        mlb._get = real_get
+        mlb.get_season_window.cache_clear()
+        mlb._SEASON_SCHEDULE.clear()
+
+
+def test_soto_accepted_delta_reflects_the_boundary_fix():
+    """The season-boundary fix removed Soto's '1 of rounding' (the 2018 10-01
+    tiebreaker), so his accepted reference delta drops from 6 to 5."""
+    ref = json.loads((pathlib.Path(__file__).resolve().parents[1] / "data" / "reference_service_time.json").read_text())
+    soto = next(r for r in ref if r.get("player_id") == 665742)
+    check("Soto's accepted_delta is 5", soto["accepted_delta"] == 5)
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -5047,5 +5183,10 @@ if __name__ == "__main__":
     test_rules_version_is_seven()
     test_the_dfa_grace_window_is_a_sourced_ruleset_value()
     test_the_player_level_v7_figures_hold_against_the_real_feed()
+    test_a_tiebreaker_game_does_not_set_the_league_season_end()
+    test_the_2018_tiebreakers_end_the_league_season_on_09_30()
+    test_the_cba_uniform_start_applies_to_every_club_except_an_overseas_opener()
+    test_a_tiebreaker_clubs_player_window_runs_a_day_longer()
+    test_soto_accepted_delta_reflects_the_boundary_fix()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

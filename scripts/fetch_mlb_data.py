@@ -305,8 +305,32 @@ class SeasonSchedule:
     year: int
     club_openers: dict[int, dt.date]  # club id -> that club's first R game
     domestic_opener: dt.date  # the modal opener; the default for an unknown club
-    end: dt.date  # the last regular-season game actually on the calendar
+    end: dt.date  # the last REGULARLY SCHEDULED game (tiebreakers excluded)
     source: str  # "schedule" | "seasons" | "estimate"
+    # The CBA-uniform season start (rules v7): CBA Art. XXI(A)(1) credits service
+    # "uniformly to all Players and all Clubs ... notwithstanding differences in
+    # a particular Club's schedule", so a staggered DOMESTIC opener (DET 04-08
+    # vs the league's 04-07 in 2022) must not cost a player a day. This is the
+    # earliest club opener within 187 days of `end` -- i.e. the earliest
+    # domestic Opening Day. Clubs that opened OVERSEAS earlier than that (Art.
+    # V(A): Tokyo/Seoul/Mexico, more than 187 days before the end) keep their own
+    # earlier date, which is why club_openers is kept too. Equals domestic_opener
+    # for a degraded/estimated window.
+    uniform_opener: dt.date = None  # type: ignore[assignment]
+    # club id -> that club's last PLAYED R game INCLUDING a tiebreaker it played.
+    # A tiebreaker ("game 163") is not a regularly scheduled game, so it is
+    # excluded from the league `end` above; but a club that actually played one
+    # earned that extra day for its own players (CBA reading confirmed against
+    # the reference: Cole/Arenado/Soto, whose clubs did NOT play a tiebreaker,
+    # lose the phantom day, while a club that did keeps it). Empty for a
+    # degraded/estimated window, where per-club data is unavailable.
+    club_ends: dict[int, dt.date] = None  # type: ignore[assignment]
+
+    def __post_init__(self):
+        if self.uniform_opener is None:
+            self.uniform_opener = self.domestic_opener
+        if self.club_ends is None:
+            self.club_ends = {}
 
 
 # year -> SeasonSchedule, populated as a side effect of get_season_window() so
@@ -362,6 +386,7 @@ def _parse_season_schedule(year: int, payload: dict) -> SeasonSchedule | None:
     and the makeup Final share a gamePk but neither carries `resumedFrom`.
     """
     openers: dict[int, list[dt.date]] = {}
+    club_last: dict[int, list[dt.date]] = {}
     end_candidates: list[dt.date] = []
     # Defense in depth against the resumed-game shape above, in case a future
     # payload omits `resumedFrom` on the duplicate row: a gamePk that has
@@ -406,20 +431,46 @@ def _parse_season_schedule(year: int, payload: dict) -> SeasonSchedule | None:
                 if game_pk in counted_end_game_pks:
                     continue
                 counted_end_game_pks.add(game_pk)
+            # This game was actually PLAYED. Record it as each club's own
+            # last-played candidate (club_ends), including a tiebreaker -- a club
+            # that played "game 163" earned that day for its own players.
+            for side in ("home", "away"):
+                cid = ((teams.get(side) or {}).get("team") or {}).get("id")
+                if isinstance(cid, int):
+                    club_last.setdefault(cid, []).append(day)
+            # A tiebreaker ("game 163") is NOT a regularly scheduled game (CBA
+            # Art. XXI(A)(1): service runs through the last regularly scheduled
+            # game "uniformly to all ... Clubs"), so it does NOT set the
+            # league-wide season end. The 2013 TEX/TB 09-30 and 2018 MIL/CHC and
+            # COL/LAD 10-01 tiebreakers used to drag the end a day past the last
+            # real game, crediting a phantom day to every club.
+            if game.get("tiebreaker") == "Y":
+                continue
             end_candidates.append(day)
     if not openers or not end_candidates:
         return None
     club_openers = {cid: min(days) for cid, days in openers.items()}
+    club_ends = {cid: max(days) for cid, days in club_last.items()}
     # The modal opener is the standard league Opening Day; the overseas and
     # early-domestic clubs are the minority outliers. It is only ever used as a
     # default for a player whose club we could not identify.
     domestic = collections.Counter(club_openers.values()).most_common(1)[0][0]
+    end = max(end_candidates)
+    # CBA-uniform start: the earliest opener within 187 days of the end. A club
+    # that opened OVERSEAS earlier than that (more than 186 days before the end)
+    # is beyond the window and keeps its own earlier date (Art. V(A)); every
+    # other (domestic) club shares this one Opening Day.
+    earliest_in_window = end - dt.timedelta(days=186)
+    within = [d for d in club_openers.values() if d >= earliest_in_window]
+    uniform = min(within) if within else domestic
     return SeasonSchedule(
         year=year,
         club_openers=club_openers,
         domestic_opener=domestic,
-        end=max(end_candidates),
+        end=end,
         source="schedule",
+        uniform_opener=uniform,
+        club_ends=club_ends,
     )
 
 
@@ -519,6 +570,38 @@ def get_club_season_start(year: int, club_id: int | None) -> dt.date:
     if sched is not None and club_id is not None and club_id in sched.club_openers:
         return sched.club_openers[club_id]
     return start
+
+
+def get_uniform_season_start(year: int) -> dt.date:
+    """The CBA-uniform Opening Day for the year (rules v7).
+
+    The single season start that Art. XXI(A)(1) applies to every club, so a
+    staggered DOMESTIC opener does not cost a player a day. A club that opened
+    overseas earlier keeps its own date -- callers take min(own opener, this).
+    Falls back to the domestic opener for a degraded/estimated window.
+    """
+    get_season_window(year)  # populates _SEASON_SCHEDULE[year]
+    sched = _SEASON_SCHEDULE.get(year)
+    return sched.uniform_opener if sched is not None else get_season_window(year)[0]
+
+
+def get_club_season_end(year: int, club_id: int | None) -> dt.date:
+    """That club's own last regular-season day for the year (rules v7).
+
+    Equals the league season end for almost every club; it is LATER only for a
+    club that actually played a tiebreaker ("game 163"), which earns that club's
+    own players the extra day even though the tiebreaker does not set the
+    league-wide end. Never EARLIER than the league end -- a club out of
+    contention still rostered players through the last scheduled day, and
+    service time is roster time, not game time -- so this is max(league end,
+    the club's own last played game). Falls back to the league end when the club
+    is unknown or the window was degraded/estimated.
+    """
+    _, end = get_season_window(year)  # populates _SEASON_SCHEDULE[year]
+    sched = _SEASON_SCHEDULE.get(year)
+    if sched is not None and club_id is not None and club_id in sched.club_ends:
+        return max(end, sched.club_ends[club_id])
+    return end
 
 
 def estimated_season_windows() -> set[int]:
