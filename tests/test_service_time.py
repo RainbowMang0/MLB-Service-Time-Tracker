@@ -4749,6 +4749,36 @@ def test_a_service_time_exception_can_restore_or_remove_days():
     check("...leaving only the days before it", cut == 47)
 
 
+def test_jordan_hicks_2020_opt_out_keeps_his_season():
+    """The real-world bug this exception fixes: Hicks's actual 2020
+    transactions ('placed ... on the restricted list' 2020-07-13, 'activated
+    ... from the restricted list' 2020-10-30) bracket the entire 2020 season,
+    so the rules-v7 default restricted-list stop -- correct for an unpaid
+    suspension -- would erase his whole prorated 2020 year. The hand-kept
+    exception restores it."""
+    import service_time_exceptions as ste
+
+    season_2020 = SeasonWindow(2020, dt.date(2020, 7, 23), dt.date(2020, 9, 27))
+    txns = [
+        Transaction(dt.date(2019, 4, 1), "St. Louis Cardinals selected the contract of RHP Jordan Hicks."),
+        Transaction(dt.date(2020, 2, 12), "St. Louis Cardinals placed RHP Jordan Hicks on the 60-day injured list."),
+        Transaction(dt.date(2020, 7, 13), "St. Louis Cardinals placed RHP Jordan Hicks on the restricted list."),
+        Transaction(dt.date(2020, 10, 30), "St. Louis Cardinals activated RHP Jordan Hicks from the restricted list."),
+    ]
+    without_exception = compute_service_time(txns, [season_2020], horizon_end=dt.date(2020, 9, 27))
+    check("without the exception, the default restricted-list stop erases his 2020 season",
+          without_exception.by_season.get(2020, {}).get("credited_days", 0) == 0)
+
+    real = ste.load_exceptions()
+    active, inactive = ste.periods_for_player(real, 663855)
+    with_exception = compute_service_time(
+        txns, [season_2020], horizon_end=dt.date(2020, 9, 27),
+        force_active_periods=active, force_inactive_periods=inactive,
+    )
+    check("the exception restores a full credited 2020 year",
+          with_exception.by_season[2020]["credited_days"] == 172)
+
+
 def test_the_service_time_exceptions_file_loads_and_validates():
     """The hand-kept exceptions file validates as it loads, like the ROY list:
     a malformed or unsourced entry fails loudly in CI, and the shipped file
@@ -4767,6 +4797,13 @@ def test_the_service_time_exceptions_file_loads_and_validates():
     for e in bauer:
         src = e["source"] if isinstance(e["source"], list) else [e["source"]]
         check(f"every source is an https URL ({e['start']})", all(u.startswith("https://") for u in src))
+
+    hicks = real.get(663855, [])
+    check("Jordan Hicks's 2020 opt-out spell is recorded", len(hicks) == 1)
+    check("it counts as service", hicks[0]["counts"] is True)
+    hicks_active, _ = ste.periods_for_player(real, 663855)
+    check("the opt-out is a counts=true period covering the restricted-list dates",
+          (dt.date(2020, 7, 13), dt.date(2020, 10, 30)) in hicks_active)
 
     def _rejects(entry, why):
         import tempfile, json as _json
