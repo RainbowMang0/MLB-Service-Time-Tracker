@@ -29,7 +29,7 @@
       "minimum_prior_season_days": 86,
       "minimum_class_size": 50,
       "heuristic_min_days": 86,
-      "cutoff_note": "The real cutoff is set annually by the class, not by a fixed threshold. scripts/super_two.py computes it from the whole population; heuristic_min_days is only a flag for candidates when a computed cutoff is unavailable."
+      "cutoff_note": "The real cutoff is set annually by the class, not by a fixed threshold. It is computed from the whole population; heuristic_min_days is only a flag for candidates when a computed cutoff is unavailable."
     },
     "max_arb_years_standard": 3,
     "max_arb_years_super_two": 4
@@ -73,13 +73,13 @@
 
   "sources": {
     "_legend": {
-      "verified": "Corroborated by this project's own measurement — the roster gate against MLB's historical 40-man rosters, and/or the hand-entered Baseball Reference figures. See CLAUDE.md.",
+      "verified": "Corroborated by this project's own measurement — the roster gate against MLB's historical 40-man rosters, and/or independent hand-entered reference figures.",
       "documented": "Consistently and widely reported, and consistent with observed data, but NOT read off the CBA text by the author of this file.",
       "unverified": "Not checked. Nothing may depend on this value until someone reads it off the CBA text and changes this status."
     },
     "service_time.days_per_credited_year": {
       "status": "verified",
-      "note": "172 reproduces 12-of-17 exact matches against hand-entered Baseball Reference figures, with the other five within a day. See CLAUDE.md, 'The first independent check'."
+      "note": "172 reproduces 12-of-17 exact matches against independent hand-entered reference figures, with the other five within a day."
     },
     "service_time.max_days_creditable_per_season": {
       "status": "verified",
@@ -107,7 +107,7 @@
     },
     "arbitration.super_two.top_percentile": {
       "status": "documented",
-      "note": "Top 22% of the two-to-three-year class. Raised from 17% in an earlier agreement. scripts/super_two.py computes cutoffs of 2.112-2.136 across 2021-2025 from this value, which land in the band where reported cutoffs historically fall — encouraging, and explicitly NOT treated as proof. See CLAUDE.md, 'Super Two, computed rather than guessed'."
+      "note": "Top 22% of the two-to-three-year class. Raised from 17% in an earlier agreement. The computed cutoffs of 2.112-2.136 across 2021-2025 from this value land in the band where reported cutoffs historically fall — encouraging, and explicitly NOT treated as proof."
     },
     "arbitration.super_two.minimum_prior_season_days": {
       "status": "documented",
@@ -138,7 +138,7 @@
     },
     "options.days_to_burn_option_year": {
       "status": "verified",
-      "note": "20 days on optional assignment is the threshold with two faces: an option year is charged only once a player is optioned for 20+ days, and -- the same number -- a player optioned for FEWER than 20 days in a season is credited Major League service for those days. CONSUMED by scripts/service_time.py (compute_service_time) for that service credit. Sources: https://www.baseballamerica.com/stories/brett-baty-s-early-season-assignment-highlights-lesser-known-option-rule/ and https://www.mlb.com/glossary/transactions/minor-league-options",
+      "note": "20 days on optional assignment is the threshold with two faces: an option year is charged only once a player is optioned for 20+ days, and -- the same number -- a player optioned for FEWER than 20 days in a season is credited Major League service for those days. The service-time calculation consumes this value for that service credit. Sources: https://www.baseballamerica.com/stories/brett-baty-s-early-season-assignment-highlights-lesser-known-option-rule/ and https://www.mlb.com/glossary/transactions/minor-league-options",
       "sources": [
         "https://www.baseballamerica.com/stories/brett-baty-s-early-season-assignment-highlights-lesser-known-option-rule/",
         "https://www.mlb.com/glossary/transactions/minor-league-options"
@@ -161,7 +161,7 @@
     },
     "designated_for_assignment.max_service_days": {
       "status": "documented",
-      "note": "A player designated for assignment DURING the regular season keeps earning Major League service for the whole DFA period, until the move that resolves it (a trade, a waiver claim, an outright/option/assignment or a release), and a DFA must be resolved within seven days. A player designated for assignment BEFORE the regular season does NOT earn service for the days the DFA runs into the season. CONSUMED by scripts/service_time.py (the dfa_limbo_days grace window). The seven-day window is in MLB's own glossary; the service-accrual rule (both halves, in-season and pre-season) is stated in published MLB roster-rules summaries, not quoted from the CBA text, hence documented rather than verified.",
+      "note": "A player designated for assignment DURING the regular season keeps earning Major League service for the whole DFA period, until the move that resolves it (a trade, a waiver claim, an outright/option/assignment or a release), and a DFA must be resolved within seven days. A player designated for assignment BEFORE the regular season does NOT earn service for the days the DFA runs into the season. The service-time calculation consumes this value as the DFA grace window. The seven-day window is in MLB's own glossary; the service-accrual rule (both halves, in-season and pre-season) is stated in published MLB roster-rules summaries, not quoted from the CBA text, hence documented rather than verified.",
       "sources": [
         "https://www.mlb.com/glossary/transactions/designate-for-assignment",
         "https://www.thecubreporter.com/book/mlb-roster-rules-presented-arizona-phil-4",
