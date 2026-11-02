@@ -647,7 +647,7 @@ def build_global_active_intervals(
         first major-league transaction of ANY kind is 2015-04-08. Ten
         seasons -- six of them inside the era where coverage is known to be
         good -- produced no interval at all, and he read 11.000 against a
-        published 20.002.
+        published x.yyy.
 
     This is the exact mirror of `accrual_ceiling`, which already presumes a
     player stayed on the roster to the end of his last season rather than

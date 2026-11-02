@@ -558,7 +558,7 @@ def test_normal_season_is_not_prorated():
 # 2015-04-08 -- he sat on Detroit's roster for a decade without being
 # optioned, DFA'd, released or injured, so the feed had nothing to say about
 # him. Ten seasons produced no interval and he read 11.000 against a
-# published 20.002.
+# published x.yyy.
 
 
 def _verlander_shaped_seasons(first: int, last: int) -> list[SeasonWindow]:

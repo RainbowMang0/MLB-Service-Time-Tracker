@@ -929,9 +929,9 @@ figures, as of 2026-01-26, scored both ways. Only three players move at all:
 
 | player | B-R | carry-in off | carry-in on |
 |---|---|---|---|
-| Justin Verlander | 20.002 | 11.000 (−1550d) | 20.090 (**+88d**) |
-| Max Scherzer | 17.079 | 17.000 (−79d) | 17.156 (**+77d**) |
-| Juan Soto | 7.134 | 7.135 (+1d) | 7.140 (**+6d**) |
+| Justin Verlander | x.yyy | 11.000 (−1550d) | 20.090 (**+88d**) |
+| Max Scherzer | x.yyy | 17.000 (−79d) | 17.156 (**+77d**) |
+| Juan Soto | x.yyy | 7.135 (+1d) | 7.140 (**+6d**) |
 | *the other 15* | | | **byte-identical** |
 
 Total absolute error across the eighteen: **1,662 days → 203 days.**
@@ -1222,24 +1222,24 @@ All are the 01/26 snapshot, compared against what the model computes as of
 
 | player | B-R | ours | off by |
 |---|---|---|---|
-| Aaron Judge | 9.051 | 9.051 | **0** |
-| Paul Goldschmidt | 14.059 | 14.059 | **0** |
-| Carlos Correa | 10.119 | 10.119 | **0** |
-| Corey Seager | 10.032 | 10.032 | **0** |
-| Shohei Ohtani | 8.000 | 8.000 | **0** |
-| Pete Alonso | 7.000 | 7.000 | **0** |
-| Vladimir Guerrero Jr. | 6.157 | 6.157 | **0** |
-| Bo Bichette | 6.063 | 6.063 | **0** |
-| Kenley Jansen | 15.073 | 15.072 | −1 |
-| José Ramírez | 11.074 | 11.073 | −1 |
-| Rafael Devers | 8.070 | 8.069 | −1 |
-| Nolan Arenado | 12.155 | 12.156 | +1 |
-| Gerrit Cole | 12.111 | 12.112 | +1 |
-| Juan Soto | 7.134 | 7.135 | +1 |
-| Jacob deGrom | 11.139 | 11.137 | −2 |
-| Mookie Betts | 11.070 | 11.068 | −2 |
-| Max Scherzer | 17.079 | 16.169 | −82 (GAP, 1 season) |
-| Justin Verlander | 20.002 | 11.000 | −1550 (GAP, 10 seasons) |
+| Aaron Judge | x.yyy | 9.051 | **0** |
+| Paul Goldschmidt | x.yyy | 14.059 | **0** |
+| Carlos Correa | x.yyy | 10.119 | **0** |
+| Corey Seager | x.yyy | 10.032 | **0** |
+| Shohei Ohtani | x.yyy | 8.000 | **0** |
+| Pete Alonso | x.yyy | 7.000 | **0** |
+| Vladimir Guerrero Jr. | x.yyy | 6.157 | **0** |
+| Bo Bichette | x.yyy | 6.063 | **0** |
+| Kenley Jansen | x.yyy | 15.072 | −1 |
+| José Ramírez | x.yyy | 11.073 | −1 |
+| Rafael Devers | x.yyy | 8.069 | −1 |
+| Nolan Arenado | x.yyy | 12.156 | +1 |
+| Gerrit Cole | x.yyy | 12.112 | +1 |
+| Juan Soto | x.yyy | 7.135 | +1 |
+| Jacob deGrom | x.yyy | 11.137 | −2 |
+| Mookie Betts | x.yyy | 11.068 | −2 |
+| Max Scherzer | x.yyy | 16.169 | −82 (GAP, 1 season) |
+| Justin Verlander | x.yyy | 11.000 | −1550 (GAP, 10 seasons) |
 
 **Eight are exact and all sixteen non-gap figures land within two days**,
 across careers of six to fifteen years. Verdict: 16 passed, 0 failed, 2 known
@@ -1266,7 +1266,7 @@ that; the two checks are complementary and neither replaces the other.
 **How to read the B-R page.** There is no per-season `s.YYYY` column — that
 was a wrong assumption baked into the first version of this file and the
 validator. B-R shows a single dated snapshot in the bio block, e.g.
-"9.051 (01/26)". `as_of` on every row is therefore one offseason date
+"x.yyy (01/26)". `as_of` on every row is therefore one offseason date
 (2026-01-26), which works because **service time does not accrue between the
 World Series and Opening Day** — the exact day need not match B-R's label.
 
@@ -1311,8 +1311,8 @@ validator's verdict rule had to catch up. Live, 2026-08-22:
 
 | player | B-R | before carry-in | after |
 |---|---|---|---|
-| Justin Verlander | 20.002 | 11.000 (−1550d) | 20.091 (**+89d**) |
-| Max Scherzer | 17.079 | 16.169 (−82d) | 17.152 (**+73d**) |
+| Justin Verlander | x.yyy | 11.000 (−1550d) | 20.091 (**+89d**) |
+| Max Scherzer | x.yyy | 16.169 (−82d) | 17.152 (**+73d**) |
 
 The old rule said reading HIGH is always a failure, on the reasoning that
 missing history cannot inflate a figure. **Carry-in makes that premise
@@ -4311,8 +4311,8 @@ filters it out of `available_versions()` and `load()`'s discovery by name, so
 it rides along in the published `docs/data/config/` mirror without being
 mistaken for an agreement. Six verified entries today (Harris II 2022, Rutschman
 2022, Bibee 2023, Skenes 2024, Kurtz 2025, Horton 2025), each id checked against
-`service_time.json`. The B-Ref audit rows for Skenes (2.000) and Kurtz (1.000)
-are the positive control: they only match with the ROY credit applied.
+`service_time.json`. Skenes and Kurtz are the positive control: our figures
+for them only match B-R's published snapshot once the ROY credit is applied.
 
 ### What this does to the daily job and the recompute
 

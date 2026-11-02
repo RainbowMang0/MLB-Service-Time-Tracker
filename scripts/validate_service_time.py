@@ -12,7 +12,7 @@ Why "as of a past date" and not "right now"
 A player's live service time is a moving target -- it changes every day he's
 on an active roster, so there's nothing fixed to compare it against. But his
 service time as of a past date is a historical fact. Baseball Reference shows
-one dated snapshot in the bio block on a player's page -- "9.051 (01/26)" --
+one dated snapshot in the bio block on a player's page -- "x.yyy (01/26)" --
 and that figure does not change after the fact, which makes it a usable fixed
 target for regression-testing this project's math against a real,
 independently reported number.
@@ -42,10 +42,10 @@ Usage
 Reference file format (see data/reference_service_time.example.json):
     [
       {
-        "player_id": 592450,
-        "name": "Aaron Judge",
+        "player_id": 0,
+        "name": "REPLACE ME",
         "as_of": "2026-01-26",
-        "expected": "9.051",
+        "expected": "x.yyy",
         "source": "baseball-reference.com player page, snapshot labelled 01/26"
       }
     ]
