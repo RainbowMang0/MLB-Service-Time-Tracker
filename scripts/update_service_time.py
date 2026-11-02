@@ -163,9 +163,13 @@ TODAY = dt.date.today()
 #      DFA still adds nothing. (d) A transaction cache written before team IDs
 #      were stored (ID-less rows) is discarded and refetched, so minor-league
 #      rows can no longer read as MLB moves -- the Velázquez cache bug.
-#      Trevor Bauer 8.157 -> ~7.178, Jose Alvarado 9.093 -> ~9.014, Nelson
-#      Velázquez stays 2.042; the restricted-list and DFA rules each move a few
-#      dozen other players by a handful of days.
+#      Trevor Bauer 8.157 -> 8.007 (1,383 days), Jose Alvarado 9.093 -> 9.009
+#      (1,557 days; ~5 days under a 9.014 estimate -- cause not tracked down,
+#      noted on the PR), Nelson Velázquez -> 2.047 (391 days: the cache fix
+#      holds him at 386/2.042 and the DFA grace window adds his five 2026 limbo
+#      days). The restricted-list and DFA rules each move a few dozen other
+#      players by a handful of days. (Service-time days run 0-171, so .178 is
+#      not a valid figure; the earlier "7.178" target was an arithmetic slip.)
 #
 # Only-removes is the expected shape for 4 and 5: a rule that can only CLOSE an
 # interval must never add a day. 6 and 7 both move figures in BOTH directions --
