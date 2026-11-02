@@ -161,9 +161,10 @@
     },
     "designated_for_assignment.max_service_days": {
       "status": "documented",
-      "note": "A player designated for assignment DURING the regular season keeps earning Major League service until the move that resolves the DFA (a trade, a waiver claim, an outright/option/assignment or a release), and a DFA must be resolved within seven days. CONSUMED by scripts/service_time.py (the dfa_limbo_days grace window). Widely reported MLB roster rule; not read off the CBA text, hence documented rather than verified.",
+      "note": "A player designated for assignment DURING the regular season keeps earning Major League service for the whole DFA period, until the move that resolves it (a trade, a waiver claim, an outright/option/assignment or a release), and a DFA must be resolved within seven days. A player designated for assignment BEFORE the regular season does NOT earn service for the days the DFA runs into the season. CONSUMED by scripts/service_time.py (the dfa_limbo_days grace window). The seven-day window is in MLB's own glossary; the service-accrual rule (both halves, in-season and pre-season) is stated in published MLB roster-rules summaries, not quoted from the CBA text, hence documented rather than verified.",
       "sources": [
         "https://www.mlb.com/glossary/transactions/designate-for-assignment",
+        "https://www.thecubreporter.com/book/mlb-roster-rules-presented-arizona-phil-4",
         "https://www.thescore.com/mlb/news/1560210"
       ]
     },
