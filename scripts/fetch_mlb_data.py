@@ -311,11 +311,13 @@ class SeasonSchedule:
     # "uniformly to all Players and all Clubs ... notwithstanding differences in
     # a particular Club's schedule", so a staggered DOMESTIC opener (DET 04-08
     # vs the league's 04-07 in 2022) must not cost a player a day. This is the
-    # earliest club opener within 187 days of `end` -- i.e. the earliest
-    # domestic Opening Day. Clubs that opened OVERSEAS earlier than that (Art.
-    # V(A): Tokyo/Seoul/Mexico, more than 187 days before the end) keep their own
-    # earlier date, which is why club_openers is kept too. Equals domestic_opener
-    # for a degraded/estimated window.
+    # modal opener among clubs that opened within 187 days of `end` -- the date
+    # most of THOSE clubs share. A club that opened EARLIER than that, whether
+    # overseas (Art. V(A): Tokyo/Seoul/Mexico, outside the window) or an
+    # early-domestic outlier inside it (2026's Yankees/Giants Oracle Park game),
+    # keeps its own earlier date, which is why club_openers is kept too. Equals
+    # domestic_opener whenever every club falls inside the window, which is the
+    # common case.
     uniform_opener: dt.date = None  # type: ignore[assignment]
     # club id -> that club's last PLAYED R game INCLUDING a tiebreaker it played.
     # A tiebreaker ("game 163") is not a regularly scheduled game, so it is
@@ -456,13 +458,21 @@ def _parse_season_schedule(year: int, payload: dict) -> SeasonSchedule | None:
     # default for a player whose club we could not identify.
     domestic = collections.Counter(club_openers.values()).most_common(1)[0][0]
     end = max(end_candidates)
-    # CBA-uniform start: the earliest opener within 187 days of the end. A club
-    # that opened OVERSEAS earlier than that (more than 186 days before the end)
-    # is beyond the window and keeps its own earlier date (Art. V(A)); every
-    # other (domestic) club shares this one Opening Day.
+    # CBA-uniform start: the MODE of the openers within 187 days of the end. A
+    # club that opened OVERSEAS earlier than that (more than 186 days before the
+    # end) is beyond the window and excluded, keeping its own earlier date
+    # (Art. V(A)); every other club shares this one Opening Day.
+    #
+    # It must be the mode, not the earliest, of that window. "Earliest opener in
+    # the window" was tried and reverted: it correctly excluded a true overseas
+    # opener (outside the window), but an early-DOMESTIC outlier that is INSIDE
+    # it (2026's Yankees/Giants Oracle Park game, 03-25) was wrongly adopted as
+    # the shared Opening Day every other club's player snapped down to, even
+    # though those clubs did not open until 03-26/03-27 and were never on an
+    # Opening Day roster that early.
     earliest_in_window = end - dt.timedelta(days=186)
     within = [d for d in club_openers.values() if d >= earliest_in_window]
-    uniform = min(within) if within else domestic
+    uniform = collections.Counter(within).most_common(1)[0][0] if within else domestic
     return SeasonSchedule(
         year=year,
         club_openers=club_openers,

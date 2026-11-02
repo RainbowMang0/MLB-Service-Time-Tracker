@@ -5196,16 +5196,18 @@ def test_the_cba_uniform_start_applies_to_every_club_except_an_overseas_opener()
     import fetch_mlb_data as mlb
     import update_service_time as u
 
-    # Overseas club 119 opens 03-20; domestic clubs 147/111 open 04-07, DET(116)
-    # opens 04-08; the season ends 09-28.
+    # Overseas club 119 opens 03-20; most domestic clubs (147/111/139/118) open
+    # 04-07, the modal date; DET(116) opens 04-08, a day late. The season ends
+    # 09-28.
     payload = {"dates": [
         _R(119, 121, "2024-03-20"),   # overseas (Seoul-style) opener
         _R(147, 111, "2024-04-07"),   # league Opening Day
+        _R(139, 118, "2024-04-07"),   # most of the league shares it
         _R(116, 135, "2024-04-08"),   # a club that opened a day late
         _R(147, 111, "2024-09-28"),   # last game
     ]}
     sched = mlb._parse_season_schedule(2024, payload)
-    check("the uniform start is the earliest domestic opener (04-07)", sched.uniform_opener == dt.date(2024, 4, 7))
+    check("the uniform start is the modal domestic opener (04-07)", sched.uniform_opener == dt.date(2024, 4, 7))
     check("the overseas club keeps its own early opener", sched.club_openers[119] == dt.date(2024, 3, 20))
 
     real_get = mlb._get
@@ -5222,6 +5224,65 @@ def test_the_cba_uniform_start_applies_to_every_club_except_an_overseas_opener()
               u._opening_day_for(2024, 119, [119]) == dt.date(2024, 3, 20))
         check("an unknown opening-day club takes the latest candidate's CBA start",
               u._opening_day_for(2024, None, [119, 147]) == dt.date(2024, 4, 7))
+    finally:
+        mlb._get = real_get
+        mlb.get_season_window.cache_clear()
+        mlb._SEASON_SCHEDULE.clear()
+
+
+def test_an_early_domestic_outlier_does_not_become_the_uniform_start():
+    """Rules v7, round 2. The 187-day-window rule for uniform_opener correctly
+    excluded a true overseas opener, but an early-domestic outlier (not
+    overseas, just a special early game) falls INSIDE that window too, so it
+    was wrongly adopted as the shared Opening Day every other club's player
+    snapped down to. 2026: the Yankees and Giants opened at Oracle Park on
+    03-25; 22 clubs opened 03-26, six opened 03-27 (none of them played that
+    day). A DFA in the days before a club's own opener must clip its limbo at
+    THAT club's opener, not at 03-25 -- see the real cases this fixes: Stubbs
+    (PHI), Wisely (ATL), Rortvedt (NYM), Mead (CWS), Leo Jimenez (TOR) and
+    Waters (KC)."""
+    import fetch_mlb_data as mlb
+    import update_service_time as u
+
+    payload = {"dates": [
+        _R(147, 137, "2026-03-25"),   # NYY @ SF, Oracle Park -- 2 clubs
+        _R(143, 144, "2026-03-26"),   # PHI/ATL -- the shared Opening Day
+        _R(121, 145, "2026-03-26"),   # NYM/CWS, same day
+        _R(141, 118, "2026-03-27"),   # TOR/KC open a day later
+        _R(147, 137, "2026-09-27"),   # last game, keeps the window realistic
+    ]}
+    sched = mlb._parse_season_schedule(2026, payload)
+    check("the modal opener is 03-26, not the 2-club 03-25 outlier",
+          sched.domestic_opener == dt.date(2026, 3, 26))
+    check("the uniform start follows the modal opener, not the earliest one",
+          sched.uniform_opener == dt.date(2026, 3, 26))
+    check("the Oracle Park clubs keep their own earlier opener",
+          sched.club_openers[147] == dt.date(2026, 3, 25))
+
+    real_get = mlb._get
+    mlb.get_season_window.cache_clear()
+    mlb._SEASON_SCHEDULE.clear()
+    try:
+        mlb._get = lambda path, params=None: payload
+        check("a club that opened 03-27 still starts on the 03-26 uniform day, not 03-25",
+              u._opening_day_for(2026, 141, [141]) == dt.date(2026, 3, 26))
+        check("Oracle Park's own clubs keep their 03-25 start",
+              u._opening_day_for(2026, 147, [147]) == dt.date(2026, 3, 25))
+
+        # End to end: a DFA on 03-24 (before PHI's real opener) must not spill
+        # any regular-season limbo days just because two other clubs happened
+        # to play on 03-25.
+        txns = [
+            Transaction(dt.date(2025, 5, 1), "Philadelphia Phillies recalled RHP X from Triple-A."),
+            Transaction(dt.date(2026, 3, 24), "Philadelphia Phillies designated RHP X for assignment."),
+        ]
+        opener = u._opening_day_for(2026, 143, [143])
+        check("PHI's own opener is 03-26, not the Oracle Park 03-25", opener == dt.date(2026, 3, 26))
+        clipped = build_global_active_intervals(
+            txns, dt.date(2026, 12, 31), dfa_limbo_days=7, season_starts=[opener]
+        )
+        check("the spring DFA's limbo stops the day before PHI's own opener",
+              clipped[-1][1] == dt.date(2026, 3, 25))
     finally:
         mlb._get = real_get
         mlb.get_season_window.cache_clear()
@@ -5446,6 +5507,7 @@ if __name__ == "__main__":
     test_a_tiebreaker_game_does_not_set_the_league_season_end()
     test_the_2018_tiebreakers_end_the_league_season_on_09_30()
     test_the_cba_uniform_start_applies_to_every_club_except_an_overseas_opener()
+    test_an_early_domestic_outlier_does_not_become_the_uniform_start()
     test_a_tiebreaker_clubs_player_window_runs_a_day_longer()
     test_soto_accepted_delta_reflects_the_boundary_fix()
     print(f"\n{PASS} passed, {FAIL} failed")
