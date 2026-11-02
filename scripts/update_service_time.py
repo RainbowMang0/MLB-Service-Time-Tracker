@@ -35,6 +35,7 @@ import datetime as dt
 import json
 import os
 import pathlib
+import re
 import shutil
 import sys
 
@@ -97,6 +98,12 @@ CACHE_DIR = ROOT / "data" / "cache" / "transactions"
 
 MIN_TRANSACTION_YEAR = 2005  # don't bother reaching back further than this
 TODAY = dt.date.today()
+
+# "elected/declared free agency" means a player left the roster. It is NOT a
+# global stop keyword (no matching re-signing START exists -- see service_time.py),
+# so it is used only by _still_on_ml_roster. Deliberately does not match the
+# signing verb in "signed free agent RHP ...".
+_ELECTED_FREE_AGENCY_RE = re.compile(r"\b(?:elected|declared) free agency\b", re.I)
 
 # Stamped on every record. BUMP THIS whenever a change to the service-time
 # rules would give a stored player a different figure -- it is what tells the
@@ -553,13 +560,24 @@ def _still_on_ml_roster(transactions: list[Transaction]) -> bool:
     True if his latest roster-defining move is a START -- an activation, recall,
     contract selection, or an injured-list placement (IL placements read as a
     start, see is_active_start) -- or a trade, which keeps him in the majors.
-    False if it is a STOP (release, outright, option, DFA, restricted list), or
-    if he has no major-league roster move at all.
+    False if it is a STOP (release, outright, option, DFA, restricted list), a
+    free-agency election, or if he has no major-league roster move at all.
+
+    A free-agency election counts as leaving HERE even though it is deliberately
+    not a global stop keyword (there is no matching START for the re-signing that
+    usually follows, so treating it as a stop everywhere wrecks 272 active
+    players -- see service_time.py). This guard only runs for a player who is NOT
+    currently rostered, and it reads the LATEST event: an active player who
+    elected free agency and re-signed has a later start/recall that wins first.
+    Without this, a player who was selected to the 40-man and then elected free
+    agency and drifted through the minors (Aaron Sanchez: 2022 selection, then
+    'elected free agency', then only minor-league deals) read as still on a
+    roster off a two-year-old selection and accrued phantom service to today.
     """
     for t in sorted(transactions, key=lambda t: t.date, reverse=True):
         if is_active_start(t.description):
             return True
-        if is_active_stop(t.description):
+        if is_active_stop(t.description) or _ELECTED_FREE_AGENCY_RE.search(t.description):
             return False
         if is_trade(t.description):
             return True
@@ -732,7 +750,8 @@ def build_player_record(
     # accruing through the horizon exactly as a listed player does. The
     # _still_on_ml_roster guard is what stops this from reviving a player who
     # really did leave MLB for the minors (Aaron Sanchez): his last major-league
-    # move is a stop, so the guard is False and the cap still applies.
+    # roster event is a free-agency election, so the guard is False and the cap
+    # still applies.
     still_accruing = currently_rostered or (
         bool(bio.get("active")) and _still_on_ml_roster(transactions)
     )
@@ -742,21 +761,49 @@ def build_player_record(
         if last_played:
             career_end = dt.date.fromisoformat(last_played)
         else:
+            # No last-played date: the feed never recorded a final game, so his
+            # clock ends when he actually left a major-league roster. That is the
+            # LATEST of three things: the end of the last season his splits show
+            # an appearance; the end of a counts=true service exception; and the
+            # date of his last major-league roster START -- an activation, IL
+            # placement, recall, contract selection, or a trade (each of which
+            # put him ON a roster that day). That last term is finding #6's real
+            # fix: a player stashed on the 60-day injured list across a season he
+            # never appeared in, then outrighted, earned every roster day up to
+            # that outright. Capping at his last appearance season instead threw
+            # those IL seasons away -- Alec Marsh, Christian Bethancourt and Rob
+            # Zastryzny each spent 2025-26 on the IL and lost a year or two. The
+            # later outright is a STOP, so compute_service_time closes the final
+            # interval at it on its own; only the real roster time is credited.
+            #
+            # A STOP must NOT extend career_end on its own -- that was the Trevor
+            # Bauer bug the old "last transaction" fallback caused: with
+            # lastPlayedDate null his last event was a January-2023 DFA and
+            # release, months after his last MLB service, which stretched his
+            # window into 2023. His last START is in 2022, so career_end stays in
+            # 2022 and the stray offseason stop is ignored. A minor-league signing
+            # or assignment (Aaron Sanchez's 2026 Royals minor-league deal) is
+            # neither a start nor a trade, so it cannot stretch a career either.
+            roster_starts = [
+                t.date for t in transactions
+                if is_active_start(t.description) or is_trade(t.description)
+            ]
             candidates = []
             if season_teams_bio:
                 candidates.append(dt.date(max(season_teams_bio), 12, 31))
             candidates.extend(end for _start, end in force_active_periods)
+            if roster_starts:
+                candidates.append(max(roster_starts))
             if candidates:
                 career_end = max(candidates)
             else:
-                # Never appeared: last resort is a real roster event, and only
-                # then a bare transaction date.
-                roster_events = [
-                    t.date for t in transactions
-                    if is_active_start(t.description) or is_active_stop(t.description)
+                # Never appeared and never started: last resort is a real roster
+                # stop, and only then a bare transaction date.
+                roster_stops = [
+                    t.date for t in transactions if is_active_stop(t.description)
                 ]
-                if roster_events:
-                    career_end = max(roster_events)
+                if roster_stops:
+                    career_end = max(roster_stops)
                 elif transactions:
                     career_end = max(t.date for t in transactions)
 

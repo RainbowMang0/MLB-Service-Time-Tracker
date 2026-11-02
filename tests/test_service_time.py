@@ -1364,6 +1364,29 @@ def test_a_player_on_the_60_day_il_is_still_on_a_major_league_roster():
     check("a player whose latest major-league move is a release is NOT on a roster",
           u._still_on_ml_roster(sanchez) is False)
 
+    # Aaron Sanchez, the REAL sequence: selected to the 40-man, then elected free
+    # agency, then only minor-league deals (not roster moves). "elected free
+    # agency" is not a global stop keyword, but it DOES mean he left the roster,
+    # so the guard must read it as leaving rather than skipping back to the
+    # two-year-old selection and reviving him. Without this he accrued phantom
+    # service to today (9.109 instead of ~6.1).
+    sanchez_real = [
+        Transaction(dt.date(2022, 10, 3), "Minnesota Twins selected the contract of RHP Aaron Sanchez from St. Paul Saints."),
+        Transaction(dt.date(2022, 11, 6), "RHP Aaron Sanchez elected free agency."),
+        Transaction(dt.date(2026, 1, 27), "Kansas City Royals signed free agent RHP Aaron Sanchez to a minor league contract."),
+    ]
+    check("a player whose latest roster event is a free-agency election is NOT on a roster",
+          u._still_on_ml_roster(sanchez_real) is False)
+
+    # But "signed free agent ... to a minor league contract" must not itself be
+    # mistaken for the free-agency leaving signal (it is a signing, not a
+    # departure); a player recalled after it is still on a roster.
+    resigned = [
+        Transaction(dt.date(2025, 12, 1), "Club signed free agent RHP Q to a minor league contract."),
+        Transaction(dt.date(2026, 4, 1), "Club selected the contract of RHP Q."),
+    ]
+    check("a signing is not read as a free-agency departure", u._still_on_ml_roster(resigned) is True)
+
     # A DFA as the last move also leaves him off the roster.
     dfa_last = [
         Transaction(dt.date(2023, 1, 1), "Club selected the contract of RHP W."),
@@ -5043,13 +5066,18 @@ def test_the_player_level_v7_figures_hold_against_the_real_feed():
     import update_service_time as u
 
     def days(pid, name, rostered, dfa=u._DFA_LIMBO_DAYS):
-        saved = u._DFA_LIMBO_DAYS
+        # Never write the transaction cache: this runs live and some of these
+        # players have fresher transactions than the in-repo cache (or none),
+        # and a test must not mutate committed data.
+        saved_dfa, saved_save = u._DFA_LIMBO_DAYS, u._save_cached_transactions
         u._DFA_LIMBO_DAYS = dfa
+        u._save_cached_transactions = lambda _pid, _txns: None
         try:
             r = u.build_player_record({"id": pid, "fullName": name}, full_refresh=False,
                                       use_cache=True, currently_rostered=rostered)
         finally:
-            u._DFA_LIMBO_DAYS = saved
+            u._DFA_LIMBO_DAYS = saved_dfa
+            u._save_cached_transactions = saved_save
         return r
 
     bauer = days(545333, "Trevor Bauer", False)
@@ -5058,6 +5086,31 @@ def test_the_player_level_v7_figures_hold_against_the_real_feed():
     ceiling = bauer["accrual_ceiling"]
     check("Bauer's career does not run past 2022 (no fallback to the 2023 release)",
           ceiling is None or str(ceiling)[:4] <= "2022")
+
+    # Rules v7 regression (QA HOLD on PR #25): a player who spent whole seasons
+    # on the 60-day IL and was THEN outrighted keeps the IL service up to the
+    # outright. The first fix capped them at their last APPEARANCE season and
+    # cratered each by one or two years; the roster-start career_end term
+    # restores them. Needs the live feed -- the outright post-dates the cached
+    # transactions. Lower bounds, well clear of each player's crater value, so a
+    # few days of live drift won't flap them.
+    marsh = days(679525, "Alec Marsh", False)
+    check(f"Marsh keeps his 2025-26 IL service, not cratered to ~250d (got {marsh['service_days_total']})",
+          marsh["service_days_total"] >= 560)
+    beth = days(542194, "Christian Bethancourt", False)
+    check(f"Bethancourt keeps his roster/IL service, not cratered (got {beth['service_days_total']})",
+          beth["service_days_total"] >= 1180)
+    zast = days(642239, "Rob Zastryzny", False)
+    check(f"Zastryzny keeps his 2026 IL service, not cratered (got {zast['service_days_total']})",
+          zast["service_days_total"] >= 840)
+
+    # The opposite guard: Aaron Sanchez elected free agency after his last 2022
+    # selection and has only signed minor-league deals since, so he must stay
+    # capped near his real ~6.1 years, not balloon to today (the pre-fix 9.109
+    # that the stale _still_on_ml_roster guard produced off the 2022 selection).
+    sanchez = days(592717, "Aaron Sanchez", False)
+    check(f"Sanchez stays capped near his real figure, not ballooning past ~1,200d (got {sanchez['service_days_total']})",
+          1100 <= sanchez["service_days_total"] <= 1200)
 
     alv = days(621237, "Jose Alvarado", False)
     check(f"Alvarado drops the restricted-list days (got {alv['service_days_total']})",
