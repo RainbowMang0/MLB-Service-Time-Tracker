@@ -5088,17 +5088,19 @@ def test_the_player_level_v7_figures_hold_against_the_real_feed():
           ceiling is None or str(ceiling)[:4] <= "2022")
 
     # Rules v7 regression (QA HOLD on PR #25): a player who spent whole seasons
-    # on the 60-day IL and was THEN outrighted keeps the IL service up to the
-    # outright. The first fix capped them at their last APPEARANCE season and
-    # cratered each by one or two years; the roster-start career_end term
-    # restores them. Needs the live feed -- the outright post-dates the cached
-    # transactions. Lower bounds, well clear of each player's crater value, so a
-    # few days of live drift won't flap them.
+    # on a major-league roster -- Marsh and Zastryzny on the 60-day IL,
+    # Bethancourt on minor-league deals then a late selection, NOT the IL -- and
+    # was THEN outrighted/DFA'd keeps that service up to the outright. The first
+    # fix capped them at their last APPEARANCE season and cratered each by one
+    # or two years; the roster-start career_end term restores them. Needs the
+    # live feed -- the outright post-dates the cached transactions. Lower
+    # bounds, well clear of each player's crater value, so a few days of live
+    # drift won't flap them.
     marsh = days(679525, "Alec Marsh", False)
     check(f"Marsh keeps his 2025-26 IL service, not cratered to ~250d (got {marsh['service_days_total']})",
           marsh["service_days_total"] >= 560)
     beth = days(542194, "Christian Bethancourt", False)
-    check(f"Bethancourt keeps his roster/IL service, not cratered (got {beth['service_days_total']})",
+    check(f"Bethancourt keeps his roster service, not cratered (got {beth['service_days_total']})",
           beth["service_days_total"] >= 1180)
     zast = days(642239, "Rob Zastryzny", False)
     check(f"Zastryzny keeps his 2026 IL service, not cratered (got {zast['service_days_total']})",

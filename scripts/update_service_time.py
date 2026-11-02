@@ -162,9 +162,17 @@ _ELECTED_FREE_AGENCY_RE = re.compile(r"\b(?:elected|declared) free agency\b", re
 #      restored or removed per player from the hand-kept, sourced
 #      data/service_time_exceptions.json. (b) A missing lastPlayedDate no longer
 #      falls back to the last roster-transaction date, which extended careers
-#      past the last season a player actually had MLB service; it uses the last
-#      season with an MLB appearance (plus any counts=true exception), and only
-#      a never-appeared player falls back to a roster event. (c) A DFA during
+#      past the last season a player actually had MLB service. He keeps
+#      accruing past his last appearance while still on a roster -- currently
+#      rostered, or bio-active with his latest major-league roster move a
+#      placement/activation rather than a release/outright/option/DFA/free-
+#      agency election (the _still_on_ml_roster guard) -- which is what keeps a
+#      60-day-IL season from being erased. Once he has actually left,
+#      career_end is the last season with an MLB appearance (plus any
+#      counts=true exception); a player who never appeared at all falls back to
+#      his last major-league roster START (an activation, IL placement, recall,
+#      contract selection or trade -- never a bare STOP, which cannot extend a
+#      career on its own). (c) A DFA during
 #      the season keeps the clock running until the move that resolves it,
 #      capped at designated_for_assignment.max_service_days (7); an offseason
 #      DFA still adds nothing. (d) A transaction cache written before team IDs
@@ -771,10 +779,13 @@ def build_player_record(
             # fix: a player stashed on the 60-day injured list across a season he
             # never appeared in, then outrighted, earned every roster day up to
             # that outright. Capping at his last appearance season instead threw
-            # those IL seasons away -- Alec Marsh, Christian Bethancourt and Rob
-            # Zastryzny each spent 2025-26 on the IL and lost a year or two. The
-            # later outright is a STOP, so compute_service_time closes the final
-            # interval at it on its own; only the real roster time is credited.
+            # those IL seasons away -- Alec Marsh and Rob Zastryzny each spent
+            # 2025-26 on the IL and lost a year or two. Christian Bethancourt hits
+            # the same bug from a different roster START: minor-league deals
+            # through 2025-26, then a 2026-09-01 Pirates selection, lost the same
+            # way. The later outright/DFA is a STOP, so compute_service_time
+            # closes the final interval at it on its own; only the real roster
+            # time is credited.
             #
             # A STOP must NOT extend career_end on its own -- that was the Trevor
             # Bauer bug the old "last transaction" fallback caused: with
