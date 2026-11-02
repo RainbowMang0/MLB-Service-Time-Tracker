@@ -52,6 +52,7 @@ from service_time import (  # noqa: E402
     roster_start_before_debut,
     is_active_start,
     is_active_stop,
+    is_trade,
     SeasonWindow,
     Transaction,
     compute_service_time,
@@ -535,6 +536,32 @@ def _build_seasons(
     return rows
 
 
+def _still_on_ml_roster(transactions: list[Transaction]) -> bool:
+    """Does the player's most recent major-league roster move leave him ON a
+    roster?
+
+    A player stashed on the 60-day injured list is still carried by his club and
+    still accruing service, but he drops off the 40-man LISTING, so the published
+    on_40_man flag (which the backfill feeds in as `currently_rostered`) reads
+    False for him. Used together with the bio's `active` flag to tell such a
+    player apart from one who is genuinely done (retired, or gone to the minors).
+
+    True if his latest roster-defining move is a START -- an activation, recall,
+    contract selection, or an injured-list placement (IL placements read as a
+    start, see is_active_start) -- or a trade, which keeps him in the majors.
+    False if it is a STOP (release, outright, option, DFA, restricted list), or
+    if he has no major-league roster move at all.
+    """
+    for t in sorted(transactions, key=lambda t: t.date, reverse=True):
+        if is_active_start(t.description):
+            return True
+        if is_active_stop(t.description):
+            return False
+        if is_trade(t.description):
+            return True
+    return False
+
+
 def build_player_record(
     roster_entry: dict,
     full_refresh: bool,
@@ -689,9 +716,25 @@ def build_player_record(
     # offseason transaction must not make a career longer. Only when the splits
     # show no appearance at ALL (a man who reached a roster without ever
     # playing) do we fall back to a roster event, and then a bare transaction.
+    # A player on the 60-day injured list is still carried by his club and still
+    # accruing, but he drops off the 40-man LISTING, so the published on_40_man
+    # flag -- which the backfill feeds in as `currently_rostered` -- reads False
+    # for him. Capping his career at his last game then erased every IL season
+    # after it: Anthony Rendon, two full seasons on the 60-day IL, lost 345 days;
+    # Brusdar Graterol, Joe Jimenez and ~10 others lost a year or two each. If
+    # the bio still lists him active AND his latest major-league roster move
+    # keeps him on a roster (an IL placement or an activation, not a
+    # release/outright/option/DFA), he has not stopped playing and must keep
+    # accruing through the horizon exactly as a listed player does. The
+    # _still_on_ml_roster guard is what stops this from reviving a player who
+    # really did leave MLB for the minors (Aaron Sanchez): his last major-league
+    # move is a stop, so the guard is False and the cap still applies.
+    still_accruing = currently_rostered or (
+        bool(bio.get("active")) and _still_on_ml_roster(transactions)
+    )
     last_played = bio.get("lastPlayedDate")
     career_end: dt.date | None = None
-    if not currently_rostered:
+    if not still_accruing:
         if last_played:
             career_end = dt.date.fromisoformat(last_played)
         else:

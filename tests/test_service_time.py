@@ -1315,6 +1315,67 @@ def test_a_minor_league_signing_does_not_extend_a_career():
     check("an actual roster move still reads as one", is_active_start(recall) is True)
 
 
+def test_a_player_on_the_60_day_il_is_still_on_a_major_league_roster():
+    """Rules v7 regression. A player stashed on the 60-day injured list is still
+    carried by his club and still accruing, but he drops off the 40-man LISTING,
+    so the backfill recomputes him with currently_rostered=False. Capping his
+    career at his last game then erased every IL season after it -- Anthony
+    Rendon lost 345 days (two full seasons on the 60-day IL), Brusdar Graterol a
+    year each, ~12 players in all. _still_on_ml_roster is the guard that, with
+    the bio's active flag, keeps such a player accruing: his latest major-league
+    move is an IL placement (a START), not a release/outright/option/DFA."""
+    import update_service_time as u
+
+    # Rendon: last move is a transfer to the 60-day IL -- an IL placement reads
+    # as a start (is_active_start), so he is still on a major league roster.
+    rendon = [
+        Transaction(dt.date(2024, 4, 1), "Los Angeles Angels activated 3B Anthony Rendon."),
+        Transaction(dt.date(2025, 3, 27), "Los Angeles Angels placed 3B Anthony Rendon on the 10-day injured list."),
+        Transaction(dt.date(2025, 5, 20), "Los Angeles Angels transferred 3B Anthony Rendon to the 60-day injured list."),
+    ]
+    check("a player whose latest move is a 60-day IL transfer is still on a roster",
+          u._still_on_ml_roster(rendon) is True)
+
+    # Graterol: optioned/recalled churn, but ends the window on a 60-day IL row.
+    graterol = [
+        Transaction(dt.date(2024, 7, 1), "Los Angeles Dodgers activated RHP Brusdar Graterol."),
+        Transaction(dt.date(2025, 2, 15), "Los Angeles Dodgers placed RHP Brusdar Graterol on the 60-day injured list."),
+    ]
+    check("Graterol on the 60-day IL is still on a roster",
+          u._still_on_ml_roster(graterol) is True)
+
+    # A plainly active player (last move an activation) is on a roster.
+    active = [Transaction(dt.date(2026, 4, 1), "Club recalled RHP Y from Triple-A.")]
+    check("a recalled player is still on a roster", u._still_on_ml_roster(active) is True)
+
+    # A trade keeps him in the majors (joins the new 40-man).
+    traded = [
+        Transaction(dt.date(2026, 5, 1), "Club A recalled RHP Z from Triple-A."),
+        Transaction(dt.date(2026, 6, 1), "Club A traded RHP Z to Club B."),
+    ]
+    check("a traded player is still on a roster", u._still_on_ml_roster(traded) is True)
+
+    # Aaron Sanchez: his last major-league move is a release (a STOP), so the
+    # cap must still bite -- the guard is False and he is NOT revived.
+    sanchez = [
+        Transaction(dt.date(2022, 4, 23), "Washington Nationals recalled RHP Aaron Sanchez."),
+        Transaction(dt.date(2022, 9, 1), "Washington Nationals released RHP Aaron Sanchez."),
+    ]
+    check("a player whose latest major-league move is a release is NOT on a roster",
+          u._still_on_ml_roster(sanchez) is False)
+
+    # A DFA as the last move also leaves him off the roster.
+    dfa_last = [
+        Transaction(dt.date(2023, 1, 1), "Club selected the contract of RHP W."),
+        Transaction(dt.date(2023, 1, 10), "Club designated RHP W for assignment."),
+    ]
+    check("a player whose latest move is a DFA is NOT on a roster",
+          u._still_on_ml_roster(dfa_last) is False)
+
+    # No major-league roster move at all: not on a roster.
+    check("a player with no roster move is NOT on a roster", u._still_on_ml_roster([]) is False)
+
+
 def test_the_ceiling_stops_a_player_who_left_for_the_minors():
     """The interval must not outlive the last major league roster evidence."""
     seasons = [SeasonWindow(y, dt.date(y, 3, 28), dt.date(y, 10, 1)) for y in range(2022, 2027)]
@@ -5105,6 +5166,7 @@ if __name__ == "__main__":
     test_an_inferred_season_needs_something_to_corroborate_it()
     test_an_appearance_alone_is_enough_to_keep_a_presumed_season()
     test_a_minor_league_signing_does_not_extend_a_career()
+    test_a_player_on_the_60_day_il_is_still_on_a_major_league_roster()
     test_the_ceiling_stops_a_player_who_left_for_the_minors()
     test_a_rule_5_return_closes_the_interval()
     test_returned_to_an_affiliate_is_also_a_stop()
