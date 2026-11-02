@@ -760,16 +760,33 @@ def build_global_active_intervals(
 
         if has_stop:
             is_dfa = any(_DFA_RE.search(r.description) for r in rows)
+            # A same-day move that resolves the DFA: an outright, release or
+            # option (a non-DFA stop), or a trade. A same-day claim/activation
+            # is caught by has_start. When any of these shares the DFA's date
+            # the outcome is already known that day, so there is no limbo to
+            # credit (Waguespack 2021-03-10, Rico Garcia 2023-07-07, Juan Brito
+            # 2026-08-03 -- an outright/option on the DFA day used to get a full
+            # 7-day over-credit because the guard only checked has_start).
+            has_non_dfa_stop = any(
+                _is_active_stop(r.description) and not _DFA_RE.search(r.description)
+                for r in rows
+            )
             last_stop_kind = "dfa" if is_dfa else "other"
             if active_since is not None:
                 close = day - dt.timedelta(days=1)
                 # DFA grace window (rules v7): a player DFA'd in-season keeps
                 # earning until the next move that resolves it, capped at
-                # dfa_limbo_days. Only when the DFA stands alone that day -- a
-                # same-day option/outright/claim already names the outcome, so
-                # there is no limbo. The season clip later enforces "never past
-                # season end"; here it is only capped at the horizon.
-                if dfa_limbo_days and is_dfa and not has_start:
+                # dfa_limbo_days. Only when the DFA stands alone that day -- any
+                # same-day start/stop/trade already names the outcome, so there
+                # is no limbo. The season clip later enforces "never past season
+                # end"; here it is only capped at the horizon.
+                if (
+                    dfa_limbo_days
+                    and is_dfa
+                    and not has_start
+                    and not has_trade
+                    and not has_non_dfa_stop
+                ):
                     limbo_end = day + dt.timedelta(days=dfa_limbo_days - 1)
                     nxt = _next_resolving_day(day_order, idx, by_date)
                     if nxt is not None:

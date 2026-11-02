@@ -4780,6 +4780,55 @@ def test_a_dfa_in_season_keeps_the_clock_running_until_the_next_move():
           with_grace.total_days == without.total_days)
 
 
+def test_a_dfa_resolved_the_same_day_credits_no_limbo():
+    """Rules v7. When a DFA's outcome lands on the DFA's own date -- an outright,
+    release, option or trade (a claim/activation is already caught) -- the
+    outcome is known that day, so there is no grace window to credit. The guard
+    used to check only has_start, so a same-day outright/option got a full 7-day
+    over-credit (Waguespack 2021-03-10, Rico Garcia 2023-07-07, Juan Brito
+    2026-08-03). The clock stops the day before the DFA, exactly as grace-off."""
+    opened = Transaction(dt.date(2024, 5, 1), "Team A selected the contract of RHP X from Triple-A.")
+
+    # DFA and an outright on the same day: no limbo.
+    same_day_outright = [
+        opened,
+        Transaction(dt.date(2024, 7, 10), "Team A designated RHP X for assignment."),
+        Transaction(dt.date(2024, 7, 10), "Team A sent RHP X outright to Triple-A."),
+    ]
+    iv = build_global_active_intervals(same_day_outright, dt.date(2024, 12, 31), dfa_limbo_days=7)
+    check("a same-day DFA + outright stops the day before the DFA (no limbo)",
+          iv == [(dt.date(2024, 5, 1), dt.date(2024, 7, 9))])
+
+    # DFA and an option on the same day: no limbo.
+    same_day_option = [
+        opened,
+        Transaction(dt.date(2024, 7, 10), "Team A designated RHP X for assignment."),
+        Transaction(dt.date(2024, 7, 10), "Team A optioned RHP X to Triple-A."),
+    ]
+    iv2 = build_global_active_intervals(same_day_option, dt.date(2024, 12, 31), dfa_limbo_days=7)
+    check("a same-day DFA + option credits no limbo",
+          iv2 == [(dt.date(2024, 5, 1), dt.date(2024, 7, 9))])
+
+    # DFA and a trade on the same day: no limbo (the trade names the outcome).
+    same_day_trade = [
+        opened,
+        Transaction(dt.date(2024, 7, 10), "Team A designated RHP X for assignment."),
+        Transaction(dt.date(2024, 7, 10), "Team A traded RHP X to Team B."),
+    ]
+    iv3 = build_global_active_intervals(same_day_trade, dt.date(2024, 12, 31), dfa_limbo_days=7)
+    check("a same-day DFA + trade credits no limbo",
+          iv3[0] == (dt.date(2024, 5, 1), dt.date(2024, 7, 9)))
+
+    # Control: a DFA that stands alone still gets its grace window.
+    alone = [
+        opened,
+        Transaction(dt.date(2024, 7, 10), "Team A designated RHP X for assignment."),
+    ]
+    iv4 = build_global_active_intervals(alone, dt.date(2024, 12, 31), dfa_limbo_days=7)
+    check("a DFA that stands alone still earns the grace window",
+          iv4[-1][1] == dt.date(2024, 7, 16))
+
+
 def test_a_service_time_exception_can_restore_or_remove_days():
     """Rules v7. The feed phrases paid administrative leave, a 2020 opt-out and
     a suspension identically ('placed ... on the restricted list'), so the few
@@ -5276,6 +5325,7 @@ if __name__ == "__main__":
     test_mlb_fetch_enabled_false_skips_the_api_and_still_builds()
     test_a_restricted_list_placement_stops_the_clock_by_default()
     test_a_dfa_in_season_keeps_the_clock_running_until_the_next_move()
+    test_a_dfa_resolved_the_same_day_credits_no_limbo()
     test_a_service_time_exception_can_restore_or_remove_days()
     test_the_service_time_exceptions_file_loads_and_validates()
     test_a_legacy_cache_without_team_ids_is_discarded_or_ignored()
