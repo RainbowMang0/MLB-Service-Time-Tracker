@@ -4829,6 +4829,55 @@ def test_a_dfa_resolved_the_same_day_credits_no_limbo():
           iv4[-1][1] == dt.date(2024, 7, 16))
 
 
+def test_a_spring_dfa_does_not_credit_regular_season_limbo():
+    """Rules v7. A player designated for assignment BEFORE Opening Day earns no
+    service for that season (OFRU: he was never on its active roster). The grace
+    window must not cross an opener that falls after the DFA -- a DFA in the days
+    before Opening Day used to spill regular-season limbo days (20 cached cases,
+    e.g. 676724 2024-03-27, 596117 2026-03-25)."""
+    opener = dt.date(2024, 3, 28)
+    txns = [
+        Transaction(dt.date(2023, 5, 1), "Team A recalled RHP X from Triple-A."),
+        Transaction(dt.date(2024, 3, 25), "Team A designated RHP X for assignment."),
+    ]
+
+    # Without the opener, the 7-day window spills 4 days past Opening Day.
+    spill = build_global_active_intervals(txns, dt.date(2024, 12, 31), dfa_limbo_days=7)
+    check("without the opener the grace window crosses Opening Day",
+          spill[-1][1] == dt.date(2024, 3, 31))
+
+    # With the opener, limbo is clipped to the day before it -- nothing lands in
+    # the regular season.
+    clipped = build_global_active_intervals(
+        txns, dt.date(2024, 12, 31), dfa_limbo_days=7, season_starts=[opener]
+    )
+    check("the spring DFA's limbo stops the day before Opening Day",
+          clipped[-1][1] == dt.date(2024, 3, 27))
+
+    # End to end: the player is credited nothing for the season he was DFA'd out
+    # of before it began.
+    seasons = [
+        SeasonWindow(2023, dt.date(2023, 3, 30), dt.date(2023, 10, 1)),
+        SeasonWindow(2024, opener, dt.date(2024, 9, 29)),
+    ]
+    result = compute_service_time(
+        txns, seasons, dfa_limbo_days=7, horizon_end=dt.date(2024, 12, 31)
+    )
+    check("a spring DFA credits no regular-season days",
+          result.by_season[2024]["credited_days"] == 0)
+
+    # A DFA during the season keeps its grace window (the opener is behind it).
+    in_season = [
+        Transaction(dt.date(2024, 5, 1), "Team A recalled RHP X from Triple-A."),
+        Transaction(dt.date(2024, 7, 10), "Team A designated RHP X for assignment."),
+    ]
+    iv = build_global_active_intervals(
+        in_season, dt.date(2024, 12, 31), dfa_limbo_days=7, season_starts=[opener]
+    )
+    check("an in-season DFA still earns its grace window",
+          iv[-1][1] == dt.date(2024, 7, 16))
+
+
 def test_a_service_time_exception_can_restore_or_remove_days():
     """Rules v7. The feed phrases paid administrative leave, a 2020 opt-out and
     a suspension identically ('placed ... on the restricted list'), so the few
@@ -5326,6 +5375,7 @@ if __name__ == "__main__":
     test_a_restricted_list_placement_stops_the_clock_by_default()
     test_a_dfa_in_season_keeps_the_clock_running_until_the_next_move()
     test_a_dfa_resolved_the_same_day_credits_no_limbo()
+    test_a_spring_dfa_does_not_credit_regular_season_limbo()
     test_a_service_time_exception_can_restore_or_remove_days()
     test_the_service_time_exceptions_file_loads_and_validates()
     test_a_legacy_cache_without_team_ids_is_discarded_or_ignored()

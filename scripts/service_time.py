@@ -587,6 +587,7 @@ def build_global_active_intervals(
     presume_active_from: dt.date | None = None,
     claim_recall_is_minors: bool = True,
     dfa_limbo_days: int | None = None,
+    season_starts: list[dt.date] | None = None,
     force_active_periods: list[tuple[dt.date, dt.date]] | None = None,
     force_inactive_periods: list[tuple[dt.date, dt.date]] | None = None,
 ) -> list[tuple[dt.date, dt.date]]:
@@ -676,6 +677,12 @@ def build_global_active_intervals(
     stops the clock the day it happens -- which is what the direct unit tests
     exercise. It only adds days to a player who WAS active at the DFA; an
     offseason DFA, where no interval is open, adds nothing.
+
+    `season_starts` are the clubs' Opening Days, used only to keep the grace
+    window from crossing one. A player designated for assignment BEFORE a
+    season's Opening Day earns no service for that season (OFRU; he was never on
+    its active roster), so a spring DFA's limbo is clipped at the day before the
+    next opener rather than spilling regular-season days he did not earn.
 
     `force_active_periods` and `force_inactive_periods` are hand-kept,
     per-player service-time exceptions (data/service_time_exceptions.json),
@@ -792,6 +799,16 @@ def build_global_active_intervals(
                     if nxt is not None:
                         limbo_end = min(limbo_end, nxt - dt.timedelta(days=1))
                     limbo_end = min(limbo_end, horizon_end)
+                    # A spring DFA -- before a season's Opening Day -- earns no
+                    # service for that season, so the grace window must not cross
+                    # an opener that falls after the DFA. Without this a DFA in
+                    # the days before Opening Day credited regular-season limbo
+                    # days the player was never on the roster for (20 cached
+                    # cases, e.g. 676724 2024-03-27, 596117 2026-03-25).
+                    if season_starts:
+                        later_openers = [s for s in season_starts if s > day]
+                        if later_openers:
+                            limbo_end = min(limbo_end, min(later_openers) - dt.timedelta(days=1))
                     if limbo_end > close:
                         close = limbo_end
                 intervals.append((active_since, close))
@@ -1113,6 +1130,7 @@ def compute_service_time(
         accrual_ceiling=accrual_ceiling,
         presume_active_from=accrual_floor if presume_active_from_debut else None,
         dfa_limbo_days=dfa_limbo_days,
+        season_starts=[s.start for s in ordered_seasons],
         force_active_periods=force_active_periods,
         force_inactive_periods=force_inactive_periods,
     )
