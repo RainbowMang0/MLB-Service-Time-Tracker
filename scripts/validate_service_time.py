@@ -66,6 +66,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import os
 import pathlib
 import sys
 
@@ -75,7 +76,13 @@ from service_time import FULL_YEAR_DAYS  # noqa: E402
 from update_service_time import build_player_record  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-DEFAULT_REFERENCE_FILE = ROOT / "data" / "reference_service_time.json"
+# The hand-entered reference figures are NOT checked into the repo (owner's
+# rule: no third-party reference numbers in the tree). Point ST_REFERENCE_PATH
+# at the private copy, or pass --reference. The in-repo path is only the
+# fallback used by someone who has placed a file there deliberately.
+DEFAULT_REFERENCE_FILE = pathlib.Path(
+    os.environ.get("ST_REFERENCE_PATH") or (ROOT / "data" / "reference_service_time.json")
+)
 EXAMPLE_REFERENCE_FILE = ROOT / "data" / "reference_service_time.example.json"
 
 DEFAULT_TOLERANCE_DAYS = 3
@@ -91,9 +98,10 @@ def load_reference(path: pathlib.Path) -> list[dict]:
     if not path.exists():
         raise SystemExit(
             f"No reference file at {path}.\n"
-            f"Copy {EXAMPLE_REFERENCE_FILE.relative_to(ROOT)} to "
-            f"{path.relative_to(ROOT)} and fill in real Baseball Reference "
-            "figures for a handful of players, then re-run."
+            "The hand-entered Baseball Reference figures are not checked into "
+            "the repo. Point ST_REFERENCE_PATH at your private copy (or pass "
+            f"--reference), or copy {EXAMPLE_REFERENCE_FILE.name} to that path "
+            "and fill in real figures for a handful of players, then re-run."
         )
     return json.loads(path.read_text())
 
