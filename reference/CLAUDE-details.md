@@ -752,12 +752,12 @@ against the fully recomputed v3 database, 2026-08-25.**
 see the bug history. The first v3 numbers were slightly pessimistic: 2014 read
 98.8% and Tampa Bay 98.6%.)*
 
-Baseball Reference: **17 passed, 0 failed, 2 known gaps** (Scherzer +73d,
-Verlander +89d, both bounded by the seasons their own records declare
+Baseball Reference: **17 passed, 0 failed, 2 known gaps** (Scherzer and
+Verlander, both bounded by the seasons their own records declare
 presumed). **Twelve figures exact to the day**, up from nine, and the other
-five are all ±1. Total absolute residual across the seventeen
-complete-history players: **11 days → 4 days.** Soto still +6, matching his
-accepted delta exactly.
+five are all within a day or two. Total absolute residual across the seventeen
+complete-history players: **11 days → 4 days.** Soto's residual is unchanged,
+matching his accepted delta exactly.
 
 **Over-crediting did not move in any of the four club-seasons**, which was
 the condition #15 and #16 were held to before shipping — 2% was the agreed
@@ -767,19 +767,19 @@ the two that were already clean came back identical.
 
 ### Still open
 
-- **Juan Soto, +6 days** — diagnosed (see above), accepted, not worth the
-  regressions the fix caused.
-- **Scherzer +73d and Verlander +89d** — both GAP rows, bounded by the
+- **Juan Soto, a small residual** — diagnosed (see above), accepted, not worth
+  the regressions the fix caused.
+- **Scherzer and Verlander** — both GAP rows, bounded by the
   seasons their own records declare presumed. Not defects; the known limit
   of what the feed can see.
 - What remains in the roster gate is thin and scattered rather than
   concentrated: Yankees 2014's worst is now Slade Heathcott at `under=4`,
   Yankees 2018's is Ben Heller at `under=1`. There is no longer a single
   player worth naming as the next bug.
-- **Braxton Fulford, +1 day against MLB's rosters and −3 against Baseball
-  Reference** — finding #17. The +1 is one recall the roster never reflects;
-  the −3 is on the far side of MLB's own roster data and cannot be reached
-  from public sources. Neither is worth a rules change.
+- **Braxton Fulford, +1 day against MLB's rosters, and a further gap against
+  Baseball Reference** — finding #17. The +1 is one recall the roster never
+  reflects; the B-R gap is on the far side of MLB's own roster data and
+  cannot be reached from public sources. Neither is worth a rules change.
 - **Elih Villanueva, 0.000 for a one-game career** — finding #20. Same shape
   as Fulford: we match MLB's own rosters exactly (they never list him), and
   the day he certainly earned is not reachable from either public source.
@@ -927,14 +927,14 @@ reliably present.
 **Offline evidence, before the live run.** All eighteen Baseball Reference
 figures, as of 2026-01-26, scored both ways. Only three players move at all:
 
-| player | B-R | carry-in off | carry-in on |
-|---|---|---|---|
-| Justin Verlander | 20.002 | 11.000 (−1550d) | 20.090 (**+88d**) |
-| Max Scherzer | 17.079 | 17.000 (−79d) | 17.156 (**+77d**) |
-| Juan Soto | 7.134 | 7.135 (+1d) | 7.140 (**+6d**) |
-| *the other 15* | | | **byte-identical** |
+| player | carry-in off | carry-in on |
+|---|---|---|
+| Justin Verlander | 11.000, far under | 20.090, much closer |
+| Max Scherzer | 17.000, under | 17.156, closer |
+| Juan Soto | 7.135, close | 7.140, slightly farther |
+| *the other 15* | | **byte-identical** |
 
-Total absolute error across the eighteen: **1,662 days → 203 days.**
+Total absolute error across the eighteen fell substantially.
 
 The fifteen unchanged players are the property that matters most: where the
 feed is complete, carry-in is inert. It only fires where the feed is silent,
@@ -945,8 +945,8 @@ away. He was optioned down and recalled during 2008; neither move is in the
 feed, so carry-in credits his whole 2008 (155 days) instead of the 79 he
 earned. An under-credit became a slightly smaller over-credit.
 
-Soto (+1d → +6d) is the one modern player it touches, and the five days are
-the only movement in the well-covered era in either direction. Watch him if
+Soto is the one modern player it touches, and the move is small — the
+only movement in the well-covered era in either direction. Watch him if
 a later measurement suggests carry-in over-credits generally; on this
 evidence he is noise.
 
@@ -974,8 +974,9 @@ up. 2018 is untouched end to end, which is the same result as the reference
 players: carry-in fires only where the feed is silent.
 
 The gain looks small here and is enormous on career totals (Verlander,
-−1550d → +88d) for the reason described below: a single-season roster sample
-cannot see a defect that lives in the *years before* the sampled season.
+far under to much closer) for the reason described below: a single-season
+roster sample cannot see a defect that lives in the *years before* the
+sampled season.
 
 Note why the roster check nearly missed this and the Baseball Reference check
 caught it immediately: sampling one club-season makes a carry-in player look
@@ -1000,7 +1001,7 @@ Three separate reasons, and each is sufficient on its own:
    hand-entered "both to respect B-R's terms and because a handful of
    hand-checked figures is enough to catch a systemic error."
 3. **B-R is not the best oracle available anyway.** Finding #17 measured it
-   sitting **4 days above MLB's own roster endpoint** on Braxton Fulford. The
+   sitting **above MLB's own roster endpoint** on Braxton Fulford. The
    likeliest reading is that B-R has the official MLBPA ledger — the
    unpublished thing this project exists to approximate. Tuning toward B-R
    past the point where MLB's own rosters agree would be tuning toward a
@@ -1070,7 +1071,8 @@ club-season got worse. That is the only shape a rule which can only *close*
 an interval is allowed to have.
 
 **Baseball Reference under v5: 17 passed, 0 failed, 2 known gaps** — identical
-to v3 and v4. Scherzer +73d, Verlander +89d, no complete-history player moved.
+to v3 and v4. Scherzer and Verlander remain the two GAP rows; no
+complete-history player moved.
 
 What v5 did NOT fix, and why that is correct: Nick Maronde still reads
 `over=12, agree=0` on the same `traded / recalled` shape. The rule only trims
@@ -1107,9 +1109,9 @@ over-crediting halved. The two that contained no claim-then-recall came back
 byte-identical, which is what a narrow rule should do.
 
 **Baseball Reference under v4: 17 passed, 0 failed, 2 known gaps** — identical
-to v3, Scherzer +73d and Verlander +89d, both bounded by their own declared
-presumed seasons. No complete-history player moved, which is the regression
-detector reporting no regression.
+to v3; Scherzer and Verlander remain the two GAP rows, both bounded by their
+own declared presumed seasons. No complete-history player moved, which is the
+regression detector reporting no regression.
 
 The other eight club-seasons in the sweep, for context: Yankees 2011 and Rays
 2014 also came back perfect; the worst is Cleveland 2022 at 94.7% (0.9% over,
@@ -1220,26 +1222,7 @@ project checked against a source that is not MLB's own transaction feed.
 All are the 01/26 snapshot, compared against what the model computes as of
 2026-01-26.
 
-| player | B-R | ours | off by |
-|---|---|---|---|
-| Aaron Judge | 9.051 | 9.051 | **0** |
-| Paul Goldschmidt | 14.059 | 14.059 | **0** |
-| Carlos Correa | 10.119 | 10.119 | **0** |
-| Corey Seager | 10.032 | 10.032 | **0** |
-| Shohei Ohtani | 8.000 | 8.000 | **0** |
-| Pete Alonso | 7.000 | 7.000 | **0** |
-| Vladimir Guerrero Jr. | 6.157 | 6.157 | **0** |
-| Bo Bichette | 6.063 | 6.063 | **0** |
-| Kenley Jansen | 15.073 | 15.072 | −1 |
-| José Ramírez | 11.074 | 11.073 | −1 |
-| Rafael Devers | 8.070 | 8.069 | −1 |
-| Nolan Arenado | 12.155 | 12.156 | +1 |
-| Gerrit Cole | 12.111 | 12.112 | +1 |
-| Juan Soto | 7.134 | 7.135 | +1 |
-| Jacob deGrom | 11.139 | 11.137 | −2 |
-| Mookie Betts | 11.070 | 11.068 | −2 |
-| Max Scherzer | 17.079 | 16.169 | −82 (GAP, 1 season) |
-| Justin Verlander | 20.002 | 11.000 | −1550 (GAP, 10 seasons) |
+*(The per-player table was removed: listing our figure next to a "match" verdict would reveal Baseball Reference's own numbers. The original comparison is kept only in git history.)*
 
 **Eight are exact and all sixteen non-gap figures land within two days**,
 across careers of six to fifteen years. Verdict: 16 passed, 0 failed, 2 known
@@ -1266,7 +1249,7 @@ that; the two checks are complementary and neither replaces the other.
 **How to read the B-R page.** There is no per-season `s.YYYY` column — that
 was a wrong assumption baked into the first version of this file and the
 validator. B-R shows a single dated snapshot in the bio block, e.g.
-"9.051 (01/26)". `as_of` on every row is therefore one offseason date
+"x.yyy (01/26)". `as_of` on every row is therefore one offseason date
 (2026-01-26), which works because **service time does not accrue between the
 World Series and Opening Day** — the exact day need not match B-R's label.
 
@@ -1309,10 +1292,10 @@ revert in this project. Measure it on Yankees 2014 + 2018 before believing it.
 Turning carry-in on flipped the sign of the two known gaps, and the
 validator's verdict rule had to catch up. Live, 2026-08-22:
 
-| player | B-R | before carry-in | after |
-|---|---|---|---|
-| Justin Verlander | 20.002 | 11.000 (−1550d) | 20.091 (**+89d**) |
-| Max Scherzer | 17.079 | 16.169 (−82d) | 17.152 (**+73d**) |
+| player | before carry-in | after |
+|---|---|---|
+| Justin Verlander | 11.000, far under | 20.091, now over |
+| Max Scherzer | 16.169, under | 17.152, now over |
 
 The old rule said reading HIGH is always a failure, on the reasoning that
 missing history cannot inflate a figure. **Carry-in makes that premise
@@ -1325,22 +1308,22 @@ presumes, so beyond `missing_seasons × 172` it is a real failure. A player
 with complete history is held to the tolerance both ways, and those sixteen
 are what actually guards against regressions.
 
-#### Juan Soto: a 6-day residual, diagnosed and accepted
+#### Juan Soto: a small residual, diagnosed and accepted
 
 He is the only complete-history player outside tolerance, and the cause is
 exact: **MLB's `mlbDebutDate` for him is 2018-05-15, but the feed says his
 contract was selected on 2018-05-20.** The 05-15 row is a plain "assigned
 to", with no start wording. B-R counts from the 20th; we accrue from the
-debut date. Five days, plus one of ordinary rounding.
+debut date.
 
 **The obvious fix was tried and measured, and is harmful.** Scoping carry-in
 so it never overrides a start the feed can see:
 
 | | before | after |
 |---|---|---|
-| Juan Soto | +6d | +6d (**unchanged** — his 05-15 row is not a start) |
-| Jacob deGrom | +1d | **−87d** |
-| Shohei Ohtani | +0d | **−56d** |
+| Juan Soto | small residual | **unchanged** — his 05-15 row is not a start |
+| Jacob deGrom | close | **much farther under** |
+| Shohei Ohtani | exact | **much farther under** |
 
 deGrom and Ohtani were already on a roster before their first debut-season
 *start* transaction fired, so deferring to it threw away the front of their
@@ -1803,11 +1786,10 @@ or diff only the non-accruing population.
 
 **The independent check is what settled it.** Under v3 the Baseball
 Reference comparison went from 9 exact to **12 exact of 17**, with the
-remaining five at ±1 day: deGrom −2 → **0**, Jansen −1 → **0**, Devers −1 →
-**0**, Betts −2 → −1. Total absolute residual across the seventeen
-complete-history players: **11 days → 4 days.** That is the shape a correct
-front-of-career fix should have — it moves players toward B-R rather than
-uniformly up.
+remaining five all landing within a day. Total absolute residual across the
+seventeen complete-history players: **11 days → 4 days.** That is the shape a
+correct front-of-career fix should have — it moves players toward B-R rather
+than uniformly up.
 
 ### 16. RESOLVED: a trade is invisible to the parser
 
@@ -1932,8 +1914,7 @@ that do not contain one.
 ### 17. A one-day recall the roster never reflects, and a gap B-R can see that we cannot
 
 **Raised 2026-08-26 by the owner**, comparing Braxton Fulford against Baseball
-Reference: B-R has him at **97 days** entering 2026, we publish **94** for his
-2025.
+Reference: B-R reads higher than we publish for his 2025.
 
 Probed day by day against MLB's own historical rosters (`probe_player.py`,
 interval 1, the whole 2025 season). MLB's roster endpoint says he was accruing
@@ -1954,7 +1935,7 @@ which:
 |---|---|---|
 | MLB's own historical 40-man rosters | **93** | day-by-day ground truth |
 | what we publish | **94** | +1 |
-| Baseball Reference | **97** | +4 over MLB's rosters |
+| Baseball Reference | — | higher than MLB's rosters |
 
 **Our +1 is a single day: 2025-04-26.** He was recalled 04-26 and optioned
 again 04-27, and the roster snapshot for 04-26 shows him *not* on the active
@@ -1971,7 +1952,7 @@ this is, it is not systemic. This is the same trap as findings #4, #5 and #10:
 a plausible reading of MLB's vocabulary that measurement refuses.
 
 **The B-R gap is the more interesting number and we cannot close it.** B-R is
-4 days above MLB's *own* roster endpoint, not just above us. Nothing in the
+above MLB's *own* roster endpoint, not just above us. Nothing in the
 public data reaches those days. The likeliest explanation is that B-R has the
 official MLBPA ledger, which is exactly the thing this project exists to
 approximate because it is not published. Recorded, not chased.
@@ -4311,8 +4292,8 @@ filters it out of `available_versions()` and `load()`'s discovery by name, so
 it rides along in the published `docs/data/config/` mirror without being
 mistaken for an agreement. Six verified entries today (Harris II 2022, Rutschman
 2022, Bibee 2023, Skenes 2024, Kurtz 2025, Horton 2025), each id checked against
-`service_time.json`. The B-Ref audit rows for Skenes (2.000) and Kurtz (1.000)
-are the positive control: they only match with the ROY credit applied.
+`service_time.json`. Skenes and Kurtz are the positive control: our figures
+for them only match B-R's published snapshot once the ROY credit is applied.
 
 ### What this does to the daily job and the recompute
 

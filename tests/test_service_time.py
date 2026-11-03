@@ -558,7 +558,7 @@ def test_normal_season_is_not_prorated():
 # 2015-04-08 -- he sat on Detroit's roster for a decade without being
 # optioned, DFA'd, released or injured, so the feed had nothing to say about
 # him. Ten seasons produced no interval and he read 11.000 against a
-# published 20.002.
+# published x.yyy.
 
 
 def _verlander_shaped_seasons(first: int, last: int) -> list[SeasonWindow]:
@@ -1313,6 +1313,90 @@ def test_a_minor_league_signing_does_not_extend_a_career():
 
     recall = "Toronto Blue Jays recalled RHP X from Buffalo Bisons."
     check("an actual roster move still reads as one", is_active_start(recall) is True)
+
+
+def test_a_player_on_the_60_day_il_is_still_on_a_major_league_roster():
+    """Rules v7 regression. A player stashed on the 60-day injured list is still
+    carried by his club and still accruing, but he drops off the 40-man LISTING,
+    so the backfill recomputes him with currently_rostered=False. Capping his
+    career at his last game then erased every IL season after it -- Anthony
+    Rendon lost 345 days (two full seasons on the 60-day IL), Brusdar Graterol a
+    year each, ~12 players in all. _still_on_ml_roster is the guard that, with
+    the bio's active flag, keeps such a player accruing: his latest major-league
+    move is an IL placement (a START), not a release/outright/option/DFA."""
+    import update_service_time as u
+
+    # Rendon: last move is a transfer to the 60-day IL -- an IL placement reads
+    # as a start (is_active_start), so he is still on a major league roster.
+    rendon = [
+        Transaction(dt.date(2024, 4, 1), "Los Angeles Angels activated 3B Anthony Rendon."),
+        Transaction(dt.date(2025, 3, 27), "Los Angeles Angels placed 3B Anthony Rendon on the 10-day injured list."),
+        Transaction(dt.date(2025, 5, 20), "Los Angeles Angels transferred 3B Anthony Rendon to the 60-day injured list."),
+    ]
+    check("a player whose latest move is a 60-day IL transfer is still on a roster",
+          u._still_on_ml_roster(rendon) is True)
+
+    # Graterol: optioned/recalled churn, but ends the window on a 60-day IL row.
+    graterol = [
+        Transaction(dt.date(2024, 7, 1), "Los Angeles Dodgers activated RHP Brusdar Graterol."),
+        Transaction(dt.date(2025, 2, 15), "Los Angeles Dodgers placed RHP Brusdar Graterol on the 60-day injured list."),
+    ]
+    check("Graterol on the 60-day IL is still on a roster",
+          u._still_on_ml_roster(graterol) is True)
+
+    # A plainly active player (last move an activation) is on a roster.
+    active = [Transaction(dt.date(2026, 4, 1), "Club recalled RHP Y from Triple-A.")]
+    check("a recalled player is still on a roster", u._still_on_ml_roster(active) is True)
+
+    # A trade keeps him in the majors (joins the new 40-man).
+    traded = [
+        Transaction(dt.date(2026, 5, 1), "Club A recalled RHP Z from Triple-A."),
+        Transaction(dt.date(2026, 6, 1), "Club A traded RHP Z to Club B."),
+    ]
+    check("a traded player is still on a roster", u._still_on_ml_roster(traded) is True)
+
+    # Aaron Sanchez: his last major-league move is a release (a STOP), so the
+    # cap must still bite -- the guard is False and he is NOT revived.
+    sanchez = [
+        Transaction(dt.date(2022, 4, 23), "Washington Nationals recalled RHP Aaron Sanchez."),
+        Transaction(dt.date(2022, 9, 1), "Washington Nationals released RHP Aaron Sanchez."),
+    ]
+    check("a player whose latest major-league move is a release is NOT on a roster",
+          u._still_on_ml_roster(sanchez) is False)
+
+    # Aaron Sanchez, the REAL sequence: selected to the 40-man, then elected free
+    # agency, then only minor-league deals (not roster moves). "elected free
+    # agency" is not a global stop keyword, but it DOES mean he left the roster,
+    # so the guard must read it as leaving rather than skipping back to the
+    # two-year-old selection and reviving him. Without this he accrued phantom
+    # service to today (9.109 instead of ~6.1).
+    sanchez_real = [
+        Transaction(dt.date(2022, 10, 3), "Minnesota Twins selected the contract of RHP Aaron Sanchez from St. Paul Saints."),
+        Transaction(dt.date(2022, 11, 6), "RHP Aaron Sanchez elected free agency."),
+        Transaction(dt.date(2026, 1, 27), "Kansas City Royals signed free agent RHP Aaron Sanchez to a minor league contract."),
+    ]
+    check("a player whose latest roster event is a free-agency election is NOT on a roster",
+          u._still_on_ml_roster(sanchez_real) is False)
+
+    # But "signed free agent ... to a minor league contract" must not itself be
+    # mistaken for the free-agency leaving signal (it is a signing, not a
+    # departure); a player recalled after it is still on a roster.
+    resigned = [
+        Transaction(dt.date(2025, 12, 1), "Club signed free agent RHP Q to a minor league contract."),
+        Transaction(dt.date(2026, 4, 1), "Club selected the contract of RHP Q."),
+    ]
+    check("a signing is not read as a free-agency departure", u._still_on_ml_roster(resigned) is True)
+
+    # A DFA as the last move also leaves him off the roster.
+    dfa_last = [
+        Transaction(dt.date(2023, 1, 1), "Club selected the contract of RHP W."),
+        Transaction(dt.date(2023, 1, 10), "Club designated RHP W for assignment."),
+    ]
+    check("a player whose latest move is a DFA is NOT on a roster",
+          u._still_on_ml_roster(dfa_last) is False)
+
+    # No major-league roster move at all: not on a roster.
+    check("a player with no roster move is NOT on a roster", u._still_on_ml_roster([]) is False)
 
 
 def test_the_ceiling_stops_a_player_who_left_for_the_minors():
@@ -4644,6 +4728,611 @@ def test_mlb_fetch_enabled_false_skips_the_api_and_still_builds():
             os.environ["MLB_FETCH_ENABLED"] = old
 
 
+# --- rules v7: restricted list, DFA clock, exceptions, stale cache ----------
+
+def _can_reach_statsapi() -> bool:
+    """True if this process can open a TCP connection to statsapi.mlb.com:443.
+
+    The player-level integration checks below need the real /schedule feed for
+    season windows. CI runs offline, where they would otherwise estimate the
+    window and assert against a guess; so they are skipped unless the feed is
+    actually reachable (as it is on the box that computed these figures).
+    """
+    import socket
+    try:
+        socket.create_connection(("statsapi.mlb.com", 443), timeout=5).close()
+        return True
+    except OSError:
+        return False
+
+
+def test_a_restricted_list_placement_stops_the_clock_by_default():
+    """Rules v7. A restricted-list player is not paid and earns no Major League
+    service (MLB Rule 2(c)(6)), so a 'placed ... on the restricted list' row is
+    a STOP, and 'activated ... from the restricted list' is a START that reopens
+    the clock. Before v7 the restricted list was a non-stopping placement that
+    kept accruing -- the Jose Alvarado / 68-player overcount."""
+    txns = [
+        Transaction(dt.date(2025, 4, 1), "Phillies selected the contract of LHP X from Lehigh Valley."),
+        Transaction(dt.date(2025, 5, 18), "Phillies placed LHP X on the restricted list."),
+        Transaction(dt.date(2025, 8, 19), "Phillies activated LHP X from the restricted list."),
+    ]
+    intervals = build_global_active_intervals(txns, dt.date(2025, 9, 28))
+    check("the restricted-list placement closes the first interval the day before",
+          (dt.date(2025, 4, 1), dt.date(2025, 5, 17)) in intervals)
+    check("reinstatement opens a second interval",
+          (dt.date(2025, 8, 19), dt.date(2025, 9, 28)) in intervals)
+    check("the restricted-list days are not credited", len(intervals) == 2)
+
+
+def test_a_dfa_in_season_keeps_the_clock_running_until_the_next_move():
+    """Rules v7. A player designated for assignment DURING the season keeps
+    earning service until the move that resolves the DFA (trade, claim,
+    outright/option/assignment, release), capped at the grace window. Before v7
+    the clock stopped the day of the DFA."""
+    opened = Transaction(dt.date(2024, 5, 1), "Team A selected the contract of RHP X from Triple-A.")
+    dfa = Transaction(dt.date(2024, 7, 10), "Team A designated RHP X for assignment.")
+    claim = Transaction(dt.date(2024, 7, 12), "Team B claimed RHP X off waivers from Team A.")
+
+    # (a) DFA then claim two days later: the two limbo days are credited.
+    iv = build_global_active_intervals([opened, dfa, claim], dt.date(2024, 12, 31), dfa_limbo_days=7)
+    check("the DFA-to-claim limbo closes the day before the claim (2 days credited)",
+          iv[0] == (dt.date(2024, 5, 1), dt.date(2024, 7, 11)))
+
+    # (b) DFA with nothing after it: capped at the grace window (7 days incl. the DFA day).
+    iv2 = build_global_active_intervals([opened, dfa], dt.date(2024, 12, 31), dfa_limbo_days=7)
+    check("an unresolved DFA is capped at the grace window",
+          iv2[-1][1] == dt.date(2024, 7, 16))
+    check("the grace window is exactly 7 days from the DFA",
+          (iv2[-1][1] - dt.date(2024, 7, 10)).days + 1 == 7)
+
+    # (c) grace off (the default) reproduces the old behaviour: stop at DFA - 1.
+    iv3 = build_global_active_intervals([opened, dfa], dt.date(2024, 12, 31))
+    check("with the grace window off the clock still stops the day before the DFA",
+          iv3 == [(dt.date(2024, 5, 1), dt.date(2024, 7, 9))])
+
+    # (d) an OFFSEASON DFA adds nothing: the grace days fall outside the season.
+    season = SeasonWindow(2024, dt.date(2024, 3, 28), dt.date(2024, 9, 29))
+    off_dfa = [
+        Transaction(dt.date(2024, 5, 1), "Team A selected the contract of RHP X from Triple-A."),
+        Transaction(dt.date(2024, 11, 3), "Team A designated RHP X for assignment."),
+    ]
+    with_grace = compute_service_time(off_dfa, [season], dfa_limbo_days=7, horizon_end=dt.date(2024, 12, 31))
+    without = compute_service_time(off_dfa, [season], horizon_end=dt.date(2024, 12, 31))
+    check("an offseason DFA's grace days add nothing (clipped to the season)",
+          with_grace.total_days == without.total_days)
+
+
+def test_a_dfa_resolved_the_same_day_credits_no_limbo():
+    """Rules v7. When a DFA's outcome lands on the DFA's own date -- an outright,
+    release, option or trade (a claim/activation is already caught) -- the
+    outcome is known that day, so there is no grace window to credit. The guard
+    used to check only has_start, so a same-day outright/option got a full 7-day
+    over-credit (Waguespack 2021-03-10, Rico Garcia 2023-07-07, Juan Brito
+    2026-08-03). The clock stops the day before the DFA, exactly as grace-off."""
+    opened = Transaction(dt.date(2024, 5, 1), "Team A selected the contract of RHP X from Triple-A.")
+
+    # DFA and an outright on the same day: no limbo.
+    same_day_outright = [
+        opened,
+        Transaction(dt.date(2024, 7, 10), "Team A designated RHP X for assignment."),
+        Transaction(dt.date(2024, 7, 10), "Team A sent RHP X outright to Triple-A."),
+    ]
+    iv = build_global_active_intervals(same_day_outright, dt.date(2024, 12, 31), dfa_limbo_days=7)
+    check("a same-day DFA + outright stops the day before the DFA (no limbo)",
+          iv == [(dt.date(2024, 5, 1), dt.date(2024, 7, 9))])
+
+    # DFA and an option on the same day: no limbo.
+    same_day_option = [
+        opened,
+        Transaction(dt.date(2024, 7, 10), "Team A designated RHP X for assignment."),
+        Transaction(dt.date(2024, 7, 10), "Team A optioned RHP X to Triple-A."),
+    ]
+    iv2 = build_global_active_intervals(same_day_option, dt.date(2024, 12, 31), dfa_limbo_days=7)
+    check("a same-day DFA + option credits no limbo",
+          iv2 == [(dt.date(2024, 5, 1), dt.date(2024, 7, 9))])
+
+    # DFA and a trade on the same day: no limbo (the trade names the outcome).
+    same_day_trade = [
+        opened,
+        Transaction(dt.date(2024, 7, 10), "Team A designated RHP X for assignment."),
+        Transaction(dt.date(2024, 7, 10), "Team A traded RHP X to Team B."),
+    ]
+    iv3 = build_global_active_intervals(same_day_trade, dt.date(2024, 12, 31), dfa_limbo_days=7)
+    check("a same-day DFA + trade credits no limbo",
+          iv3[0] == (dt.date(2024, 5, 1), dt.date(2024, 7, 9)))
+
+    # Control: a DFA that stands alone still gets its grace window.
+    alone = [
+        opened,
+        Transaction(dt.date(2024, 7, 10), "Team A designated RHP X for assignment."),
+    ]
+    iv4 = build_global_active_intervals(alone, dt.date(2024, 12, 31), dfa_limbo_days=7)
+    check("a DFA that stands alone still earns the grace window",
+          iv4[-1][1] == dt.date(2024, 7, 16))
+
+
+def test_a_spring_dfa_does_not_credit_regular_season_limbo():
+    """Rules v7. A player designated for assignment BEFORE Opening Day earns no
+    service for that season (OFRU: he was never on its active roster). The grace
+    window must not cross an opener that falls after the DFA -- a DFA in the days
+    before Opening Day used to spill regular-season limbo days (20 cached cases,
+    e.g. 676724 2024-03-27, 596117 2026-03-25)."""
+    opener = dt.date(2024, 3, 28)
+    txns = [
+        Transaction(dt.date(2023, 5, 1), "Team A recalled RHP X from Triple-A."),
+        Transaction(dt.date(2024, 3, 25), "Team A designated RHP X for assignment."),
+    ]
+
+    # Without the opener, the 7-day window spills 4 days past Opening Day.
+    spill = build_global_active_intervals(txns, dt.date(2024, 12, 31), dfa_limbo_days=7)
+    check("without the opener the grace window crosses Opening Day",
+          spill[-1][1] == dt.date(2024, 3, 31))
+
+    # With the opener, limbo is clipped to the day before it -- nothing lands in
+    # the regular season.
+    clipped = build_global_active_intervals(
+        txns, dt.date(2024, 12, 31), dfa_limbo_days=7, season_starts=[opener]
+    )
+    check("the spring DFA's limbo stops the day before Opening Day",
+          clipped[-1][1] == dt.date(2024, 3, 27))
+
+    # End to end: the player is credited nothing for the season he was DFA'd out
+    # of before it began.
+    seasons = [
+        SeasonWindow(2023, dt.date(2023, 3, 30), dt.date(2023, 10, 1)),
+        SeasonWindow(2024, opener, dt.date(2024, 9, 29)),
+    ]
+    result = compute_service_time(
+        txns, seasons, dfa_limbo_days=7, horizon_end=dt.date(2024, 12, 31)
+    )
+    check("a spring DFA credits no regular-season days",
+          result.by_season[2024]["credited_days"] == 0)
+
+    # A DFA during the season keeps its grace window (the opener is behind it).
+    in_season = [
+        Transaction(dt.date(2024, 5, 1), "Team A recalled RHP X from Triple-A."),
+        Transaction(dt.date(2024, 7, 10), "Team A designated RHP X for assignment."),
+    ]
+    iv = build_global_active_intervals(
+        in_season, dt.date(2024, 12, 31), dfa_limbo_days=7, season_starts=[opener]
+    )
+    check("an in-season DFA still earns its grace window",
+          iv[-1][1] == dt.date(2024, 7, 16))
+
+
+def test_a_service_time_exception_can_restore_or_remove_days():
+    """Rules v7. The feed phrases paid administrative leave, a 2020 opt-out and
+    a suspension identically ('placed ... on the restricted list'), so the few
+    that DO (or do not) earn service are corrected per player from
+    data/service_time_exceptions.json: a counts=true period is unioned back in,
+    a counts=false period is cut out."""
+    season = SeasonWindow(2025, dt.date(2025, 4, 1), dt.date(2025, 9, 28))
+    txns = [
+        Transaction(dt.date(2025, 4, 1), "Club selected the contract of LHP X from Triple-A."),
+        Transaction(dt.date(2025, 5, 18), "Club placed LHP X on the restricted list."),
+    ]
+    base = compute_service_time(txns, [season], horizon_end=dt.date(2025, 9, 28)).total_days
+    restored = compute_service_time(
+        txns, [season], horizon_end=dt.date(2025, 9, 28),
+        force_active_periods=[(dt.date(2025, 5, 18), dt.date(2025, 9, 28))],
+    ).total_days
+    check("a counts=true exception restores the stopped days", restored > base)
+    check("...and restores them to a full credited year (181 raw, capped at 172)", restored == 172)
+
+    # A counts=false exception removes an otherwise-credited stretch.
+    active = [Transaction(dt.date(2025, 4, 1), "Club selected the contract of LHP X from Triple-A.")]
+    full = compute_service_time(active, [season], horizon_end=dt.date(2025, 9, 28)).total_days
+    cut = compute_service_time(
+        active, [season], horizon_end=dt.date(2025, 9, 28),
+        force_inactive_periods=[(dt.date(2025, 5, 18), dt.date(2025, 9, 28))],
+    ).total_days
+    check("a counts=false exception removes the credited days", cut < full)
+    check("...leaving only the days before it", cut == 47)
+
+
+def test_jordan_hicks_2020_opt_out_keeps_his_season():
+    """The real-world bug this exception fixes: Hicks's actual 2020
+    transactions ('placed ... on the restricted list' 2020-07-13, 'activated
+    ... from the restricted list' 2020-10-30) bracket the entire 2020 season,
+    so the rules-v7 default restricted-list stop -- correct for an unpaid
+    suspension -- would erase his whole prorated 2020 year. The hand-kept
+    exception restores it."""
+    import service_time_exceptions as ste
+
+    season_2020 = SeasonWindow(2020, dt.date(2020, 7, 23), dt.date(2020, 9, 27))
+    txns = [
+        Transaction(dt.date(2019, 4, 1), "St. Louis Cardinals selected the contract of RHP Jordan Hicks."),
+        Transaction(dt.date(2020, 2, 12), "St. Louis Cardinals placed RHP Jordan Hicks on the 60-day injured list."),
+        Transaction(dt.date(2020, 7, 13), "St. Louis Cardinals placed RHP Jordan Hicks on the restricted list."),
+        Transaction(dt.date(2020, 10, 30), "St. Louis Cardinals activated RHP Jordan Hicks from the restricted list."),
+    ]
+    without_exception = compute_service_time(txns, [season_2020], horizon_end=dt.date(2020, 9, 27))
+    check("without the exception, the default restricted-list stop erases his 2020 season",
+          without_exception.by_season.get(2020, {}).get("credited_days", 0) == 0)
+
+    real = ste.load_exceptions()
+    active, inactive = ste.periods_for_player(real, 663855)
+    with_exception = compute_service_time(
+        txns, [season_2020], horizon_end=dt.date(2020, 9, 27),
+        force_active_periods=active, force_inactive_periods=inactive,
+    )
+    check("the exception restores a full credited 2020 year",
+          with_exception.by_season[2020]["credited_days"] == 172)
+
+
+def test_the_service_time_exceptions_file_loads_and_validates():
+    """The hand-kept exceptions file validates as it loads, like the ROY list:
+    a malformed or unsourced entry fails loudly in CI, and the shipped file
+    carries the Trevor Bauer administrative-leave / suspension pair."""
+    import service_time_exceptions as ste
+
+    real = ste.load_exceptions()
+    check("the shipped file loads", isinstance(real, dict))
+    bauer = real.get(545333, [])
+    check("Bauer's two spells are recorded", len(bauer) == 2)
+    counts = sorted(e["counts"] for e in bauer)
+    check("one counts, one does not", counts == [False, True])
+    active, inactive = ste.periods_for_player(real, 545333)
+    check("the paid leave is a counts=true period", (dt.date(2021, 7, 2), dt.date(2022, 4, 28)) in active)
+    check("the suspension is a counts=false period", (dt.date(2022, 4, 29), dt.date(2022, 12, 31)) in inactive)
+    for e in bauer:
+        src = e["source"] if isinstance(e["source"], list) else [e["source"]]
+        check(f"every source is an https URL ({e['start']})", all(u.startswith("https://") for u in src))
+
+    hicks = real.get(663855, [])
+    check("Jordan Hicks's 2020 opt-out spell is recorded", len(hicks) == 1)
+    check("it counts as service", hicks[0]["counts"] is True)
+    hicks_active, _ = ste.periods_for_player(real, 663855)
+    check("the opt-out is a counts=true period covering the restricted-list dates",
+          (dt.date(2020, 7, 13), dt.date(2020, 10, 30)) in hicks_active)
+
+    def _rejects(entry, why):
+        import tempfile, json as _json
+        p = pathlib.Path(tempfile.mkstemp(suffix=".json")[1])
+        p.write_text(_json.dumps({"exceptions": [entry]}))
+        try:
+            ste.load_exceptions(p)
+            check(f"rejects {why}", False)
+        except ste.ServiceTimeExceptionError:
+            check(f"rejects {why}", True)
+        finally:
+            p.unlink()
+
+    good = {"mlbam_id": 1, "name": "T", "start": "2021-01-01", "end": "2021-02-01",
+            "counts": True, "reason": "r", "source": "https://example.com"}
+    _rejects({**good, "source": "http://example.com"}, "a non-https source")
+    _rejects({**good, "start": "not-a-date"}, "a non-ISO date")
+    _rejects({**good, "end": "2020-01-01"}, "an end before the start")
+    _rejects({k: v for k, v in good.items() if k != "counts"}, "a missing counts flag")
+    _rejects({k: v for k, v in good.items() if k != "source"}, "a missing source")
+
+
+def test_a_legacy_cache_without_team_ids_is_discarded_or_ignored():
+    """Rules v7 stale-cache guard. A transaction cache written before team IDs
+    were stored keeps ID-less rows, which _involves_mlb_club cannot judge and so
+    keeps -- the Nelson Velazquez bug, where minor-league and Mexican-League
+    moves read as Major League ones. A cache with any such row is refetched when
+    online, or its ID-less rows are dropped when fetching is off."""
+    import update_service_time as u
+
+    legacy_row = {"date": "2019-06-01", "description": "Mexican League move", "team": "X"}
+    healthy_row = {"date": "2020-04-01", "description": "Club selected the contract of X.",
+                   "team": "Club", "team_id": 147, "from_team_id": None, "to_team_id": 147}
+    check("a row missing all three id keys is legacy", u._row_is_legacy_format(legacy_row))
+    check("a row with the id keys (even all null) is not legacy",
+          not u._row_is_legacy_format({**healthy_row, "team_id": None, "to_team_id": None, "from_team_id": None}))
+    check("a cache with one legacy row is legacy", u._cache_is_legacy([healthy_row, legacy_row]))
+    check("an all-healthy cache is not legacy", not u._cache_is_legacy([healthy_row]))
+
+    # Offline, _fetch_transactions_incremental drops the ID-less rows rather
+    # than letting them read as Major League moves.
+    real_load = u._load_cached_transactions
+    real_enabled = u.mlb_fetch_enabled
+    u._load_cached_transactions = lambda pid: [healthy_row, legacy_row]
+    u.mlb_fetch_enabled = lambda: False
+    try:
+        out = u._fetch_transactions_incremental(99, full_refresh=False, use_cache=True)
+        check("offline, the legacy row is dropped", legacy_row not in out)
+        check("offline, the healthy row is kept", healthy_row in out)
+    finally:
+        u._load_cached_transactions = real_load
+        u.mlb_fetch_enabled = real_enabled
+
+
+def test_rules_version_is_seven():
+    """The bump the backfill reads to know which players to recompute."""
+    import update_service_time as u
+    check("SERVICE_TIME_RULES_VERSION is 7", u.SERVICE_TIME_RULES_VERSION == 7)
+
+
+def test_the_dfa_grace_window_is_a_sourced_ruleset_value():
+    """The 7-day grace window is read from config/cba, never a literal, and
+    carries a sources entry like every other value the engine consumes."""
+    rules = cba.default()
+    check("the DFA grace window is 7 days", rules.require("designated_for_assignment.max_service_days") == 7)
+    check("it carries a sources status",
+          rules.status("designated_for_assignment.max_service_days") is not None)
+
+
+def test_the_player_level_v7_figures_hold_against_the_real_feed():
+    """Integration: the three diagnosed players, computed through the real
+    pipeline (cached transactions + the live /schedule windows). Skipped when
+    the feed is unreachable (CI), since without it the windows are only an
+    estimate. These are the headline figures in the PR."""
+    if not _can_reach_statsapi():
+        check("statsapi reachable for the player-level v7 checks (skipped offline)", True)
+        return
+    import update_service_time as u
+
+    def days(pid, name, rostered, dfa=u._DFA_LIMBO_DAYS):
+        # Never write the transaction cache: this runs live and some of these
+        # players have fresher transactions than the in-repo cache (or none),
+        # and a test must not mutate committed data.
+        saved_dfa, saved_save = u._DFA_LIMBO_DAYS, u._save_cached_transactions
+        u._DFA_LIMBO_DAYS = dfa
+        u._save_cached_transactions = lambda _pid, _txns: None
+        try:
+            r = u.build_player_record({"id": pid, "fullName": name}, full_refresh=False,
+                                      use_cache=True, currently_rostered=rostered)
+        finally:
+            u._DFA_LIMBO_DAYS = saved_dfa
+            u._save_cached_transactions = saved_save
+        return r
+
+    bauer = days(545333, "Trevor Bauer", False)
+    check(f"Bauer is ~1,382 days, not the old 1,533 (got {bauer['service_days_total']})",
+          1381 <= bauer["service_days_total"] <= 1384)
+    ceiling = bauer["accrual_ceiling"]
+    check("Bauer's career does not run past 2022 (no fallback to the 2023 release)",
+          ceiling is None or str(ceiling)[:4] <= "2022")
+
+    # Rules v7 regression (QA HOLD on PR #25): a player who spent whole seasons
+    # on a major-league roster -- Marsh and Zastryzny on the 60-day IL,
+    # Bethancourt on minor-league deals then a late selection, NOT the IL -- and
+    # was THEN outrighted/DFA'd keeps that service up to the outright. The first
+    # fix capped them at their last APPEARANCE season and cratered each by one
+    # or two years; the roster-start career_end term restores them. Needs the
+    # live feed -- the outright post-dates the cached transactions. Lower
+    # bounds, well clear of each player's crater value, so a few days of live
+    # drift won't flap them.
+    marsh = days(679525, "Alec Marsh", False)
+    check(f"Marsh keeps his 2025-26 IL service, not cratered to ~250d (got {marsh['service_days_total']})",
+          marsh["service_days_total"] >= 560)
+    beth = days(542194, "Christian Bethancourt", False)
+    check(f"Bethancourt keeps his roster service, not cratered (got {beth['service_days_total']})",
+          beth["service_days_total"] >= 1180)
+    zast = days(642239, "Rob Zastryzny", False)
+    check(f"Zastryzny keeps his 2026 IL service, not cratered (got {zast['service_days_total']})",
+          zast["service_days_total"] >= 840)
+
+    # The opposite guard: Aaron Sanchez elected free agency after his last 2022
+    # selection and has only signed minor-league deals since, so he must stay
+    # capped near his real ~6.1 years, not balloon to today (the pre-fix 9.109
+    # that the stale _still_on_ml_roster guard produced off the 2022 selection).
+    sanchez = days(592717, "Aaron Sanchez", False)
+    check(f"Sanchez stays capped near his real figure, not ballooning past ~1,200d (got {sanchez['service_days_total']})",
+          1100 <= sanchez["service_days_total"] <= 1200)
+
+    alv = days(621237, "Jose Alvarado", False)
+    check(f"Alvarado drops the restricted-list days (got {alv['service_days_total']})",
+          1555 <= alv["service_days_total"] <= 1559)
+
+    # The stale-cache guard alone keeps Velazquez at 2.042; the DFA grace window
+    # then legitimately adds his two 2026 limbo stretches.
+    vel_cacheonly = days(676369, "Nelson Velazquez", False, dfa=None)
+    check(f"the cache guard keeps Velazquez at 2.042 / 386 days (got {vel_cacheonly['service_days_total']})",
+          vel_cacheonly["service_days_total"] == 386)
+    vel_full = days(676369, "Nelson Velazquez", False)
+    check(f"the in-season DFA grace adds his 2026 limbo days (got {vel_full['service_days_total']})",
+          vel_full["service_days_total"] == 391)
+
+
+# --- rules v7: the season-boundary (off-by-one) fix -------------------------
+
+def _R(home, away, date, **extra):
+    """A played regular-season game row for a /schedule fixture."""
+    g = {"gameType": "R", "status": {"detailedState": "Final"},
+         "teams": {"home": {"team": {"id": home}}, "away": {"team": {"id": away}}}}
+    g.update(extra)
+    return {"date": date, "games": [g]}
+
+
+def test_a_tiebreaker_game_does_not_set_the_league_season_end():
+    """Rules v7. CBA Art. XXI(A)(1) runs service through the last REGULARLY
+    scheduled game 'uniformly to all ... Clubs'. A tiebreaker ('game 163',
+    gameType R with tiebreaker 'Y') is not regularly scheduled, so it must not
+    set the league end -- the 2013 TEX/TB 09-30 and 2018 MIL/CHC, COL/LAD 10-01
+    games used to drag the end a day past the last real game for every club
+    (Cole/Arenado/Soto +1). But a club that actually PLAYED the tiebreaker keeps
+    that day for its own players."""
+    import fetch_mlb_data as mlb
+
+    payload = {"dates": [
+        _R(140, 147, "2013-09-29"),  # last regularly scheduled games
+        _R(139, 111, "2013-09-29"),
+        _R(140, 139, "2013-09-30", tiebreaker="Y"),  # AL tiebreaker, TEX(140) @ TB(139)
+    ]}
+    sched = mlb._parse_season_schedule(2013, payload)
+    check("the league end is the last regular game, not the tiebreaker", sched.end == dt.date(2013, 9, 29))
+    check("a club that played the tiebreaker keeps that day", sched.club_ends[140] == dt.date(2013, 9, 30))
+    check("...both of them", sched.club_ends[139] == dt.date(2013, 9, 30))
+    check("a club that did not keeps the regular end", sched.club_ends[147] == dt.date(2013, 9, 29))
+
+    real_get = mlb._get
+    mlb.get_season_window.cache_clear()
+    mlb._SEASON_SCHEDULE.clear()
+    try:
+        mlb._get = lambda path, params=None: payload
+        check("get_club_season_end extends a tiebreaker club", mlb.get_club_season_end(2013, 140) == dt.date(2013, 9, 30))
+        check("get_club_season_end leaves a non-tiebreaker club at the league end", mlb.get_club_season_end(2013, 147) == dt.date(2013, 9, 29))
+        check("an unknown club falls back to the league end", mlb.get_club_season_end(2013, 999) == dt.date(2013, 9, 29))
+    finally:
+        mlb._get = real_get
+        mlb.get_season_window.cache_clear()
+        mlb._SEASON_SCHEDULE.clear()
+
+
+def test_the_2018_tiebreakers_end_the_league_season_on_09_30():
+    """The 2018 case specifically: two game-163s on 10-01 (CHC/MIL and COL/LAD).
+    The league ends 09-30; the four clubs that played keep 10-01."""
+    import fetch_mlb_data as mlb
+    payload = {"dates": [
+        _R(112, 158, "2018-09-30"),
+        _R(115, 119, "2018-09-30"),
+        _R(112, 158, "2018-10-01", tiebreaker="Y"),  # CHC(112) v MIL(158)
+        _R(119, 115, "2018-10-01", tiebreaker="Y"),  # LAD(119) v COL(115)
+    ]}
+    sched = mlb._parse_season_schedule(2018, payload)
+    check("the 2018 league end is 09-30", sched.end == dt.date(2018, 9, 30))
+    for club in (112, 158, 115, 119):
+        check(f"club {club} keeps its 10-01 tiebreaker", sched.club_ends[club] == dt.date(2018, 10, 1))
+
+
+def test_the_cba_uniform_start_applies_to_every_club_except_an_overseas_opener():
+    """Rules v7. A staggered DOMESTIC opener must not cost a player a day (CBA
+    Art. XXI(A)(1)); every domestic club shares one Opening Day. A club that
+    opened OVERSEAS earlier (Art. V(A): outside the 187-day window) keeps its
+    own earlier date. 2022 DET opened 04-08 vs the league's 04-07; a Tokyo/Seoul
+    club opened a week before everyone else."""
+    import fetch_mlb_data as mlb
+    import update_service_time as u
+
+    # Overseas club 119 opens 03-20; most domestic clubs (147/111/139/118) open
+    # 04-07, the modal date; DET(116) opens 04-08, a day late. The season ends
+    # 09-28.
+    payload = {"dates": [
+        _R(119, 121, "2024-03-20"),   # overseas (Seoul-style) opener
+        _R(147, 111, "2024-04-07"),   # league Opening Day
+        _R(139, 118, "2024-04-07"),   # most of the league shares it
+        _R(116, 135, "2024-04-08"),   # a club that opened a day late
+        _R(147, 111, "2024-09-28"),   # last game
+    ]}
+    sched = mlb._parse_season_schedule(2024, payload)
+    check("the uniform start is the modal domestic opener (04-07)", sched.uniform_opener == dt.date(2024, 4, 7))
+    check("the overseas club keeps its own early opener", sched.club_openers[119] == dt.date(2024, 3, 20))
+
+    real_get = mlb._get
+    mlb.get_season_window.cache_clear()
+    mlb._SEASON_SCHEDULE.clear()
+    try:
+        mlb._get = lambda path, params=None: payload
+        check("get_uniform_season_start is 04-07", mlb.get_uniform_season_start(2024) == dt.date(2024, 4, 7))
+        check("a late-opening domestic club's player starts on the uniform day",
+              u._opening_day_for(2024, 116, [116]) == dt.date(2024, 4, 7))
+        check("an on-time domestic club too",
+              u._opening_day_for(2024, 147, [147]) == dt.date(2024, 4, 7))
+        check("an overseas club keeps its own earlier opener (no regression)",
+              u._opening_day_for(2024, 119, [119]) == dt.date(2024, 3, 20))
+        check("an unknown opening-day club takes the latest candidate's CBA start",
+              u._opening_day_for(2024, None, [119, 147]) == dt.date(2024, 4, 7))
+    finally:
+        mlb._get = real_get
+        mlb.get_season_window.cache_clear()
+        mlb._SEASON_SCHEDULE.clear()
+
+
+def test_an_early_domestic_outlier_does_not_become_the_uniform_start():
+    """Rules v7, round 2. The 187-day-window rule for uniform_opener correctly
+    excluded a true overseas opener, but an early-domestic outlier (not
+    overseas, just a special early game) falls INSIDE that window too, so it
+    was wrongly adopted as the shared Opening Day every other club's player
+    snapped down to. 2026: the Yankees and Giants opened at Oracle Park on
+    03-25; 22 clubs opened 03-26, six opened 03-27 (none of them played that
+    day). A DFA in the days before a club's own opener must clip its limbo at
+    THAT club's opener, not at 03-25 -- see the real cases this fixes: Stubbs
+    (PHI), Wisely (ATL), Rortvedt (NYM), Mead (CWS), Leo Jimenez (TOR) and
+    Waters (KC)."""
+    import fetch_mlb_data as mlb
+    import update_service_time as u
+
+    payload = {"dates": [
+        _R(147, 137, "2026-03-25"),   # NYY @ SF, Oracle Park -- 2 clubs
+        _R(143, 144, "2026-03-26"),   # PHI/ATL -- the shared Opening Day
+        _R(121, 145, "2026-03-26"),   # NYM/CWS, same day
+        _R(141, 118, "2026-03-27"),   # TOR/KC open a day later
+        _R(147, 137, "2026-09-27"),   # last game, keeps the window realistic
+    ]}
+    sched = mlb._parse_season_schedule(2026, payload)
+    check("the modal opener is 03-26, not the 2-club 03-25 outlier",
+          sched.domestic_opener == dt.date(2026, 3, 26))
+    check("the uniform start follows the modal opener, not the earliest one",
+          sched.uniform_opener == dt.date(2026, 3, 26))
+    check("the Oracle Park clubs keep their own earlier opener",
+          sched.club_openers[147] == dt.date(2026, 3, 25))
+
+    real_get = mlb._get
+    mlb.get_season_window.cache_clear()
+    mlb._SEASON_SCHEDULE.clear()
+    try:
+        mlb._get = lambda path, params=None: payload
+        check("a club that opened 03-27 still starts on the 03-26 uniform day, not 03-25",
+              u._opening_day_for(2026, 141, [141]) == dt.date(2026, 3, 26))
+        check("Oracle Park's own clubs keep their 03-25 start",
+              u._opening_day_for(2026, 147, [147]) == dt.date(2026, 3, 25))
+
+        # End to end: a DFA on 03-24 (before PHI's real opener) must not spill
+        # any regular-season limbo days just because two other clubs happened
+        # to play on 03-25.
+        txns = [
+            Transaction(dt.date(2025, 5, 1), "Philadelphia Phillies recalled RHP X from Triple-A."),
+            Transaction(dt.date(2026, 3, 24), "Philadelphia Phillies designated RHP X for assignment."),
+        ]
+        opener = u._opening_day_for(2026, 143, [143])
+        check("PHI's own opener is 03-26, not the Oracle Park 03-25", opener == dt.date(2026, 3, 26))
+        clipped = build_global_active_intervals(
+            txns, dt.date(2026, 12, 31), dfa_limbo_days=7, season_starts=[opener]
+        )
+        check("the spring DFA's limbo stops the day before PHI's own opener",
+              clipped[-1][1] == dt.date(2026, 3, 25))
+    finally:
+        mlb._get = real_get
+        mlb.get_season_window.cache_clear()
+        mlb._SEASON_SCHEDULE.clear()
+
+
+def test_a_tiebreaker_clubs_player_window_runs_a_day_longer():
+    """End to end through the window builder: a player on the club that played
+    the tiebreaker gets the extra day; a player on any other club does not."""
+    import fetch_mlb_data as mlb
+    import update_service_time as u
+
+    payload = {"dates": [
+        _R(140, 147, "2013-09-29"),
+        _R(139, 111, "2013-09-29"),
+        _R(140, 139, "2013-09-30", tiebreaker="Y"),
+    ]}
+    real_get = mlb._get
+    mlb.get_season_window.cache_clear()
+    mlb._SEASON_SCHEDULE.clear()
+    try:
+        mlb._get = lambda path, params=None: payload
+        tb = u._season_windows_for_player(range(2013, 2014), {2013: [140]}, {}, {2013: 140})
+        other = u._season_windows_for_player(range(2013, 2014), {2013: [147]}, {}, {2013: 147})
+        check("the tiebreaker club's season runs through 09-30", tb[0].end == dt.date(2013, 9, 30))
+        check("every other club's season ends on the regular 09-29", other[0].end == dt.date(2013, 9, 29))
+    finally:
+        mlb._get = real_get
+        mlb.get_season_window.cache_clear()
+        mlb._SEASON_SCHEDULE.clear()
+
+
+def test_soto_accepted_delta_reflects_the_boundary_fix():
+    """The season-boundary fix removed Soto's '1 of rounding' (the 2018 10-01
+    tiebreaker), so his accepted reference delta drops from 6 to 5.
+
+    The hand-entered reference figures live OUTSIDE the repo (owner's rule: no
+    third-party reference numbers checked in). Point ST_REFERENCE_PATH at the
+    private copy to run this check; without it the test skips cleanly."""
+    ref_path = os.environ.get("ST_REFERENCE_PATH")
+    if not ref_path or not pathlib.Path(ref_path).exists():
+        check("ST_REFERENCE_PATH reference file present (skipped; figures live outside the repo)", True)
+        return
+    ref = json.loads(pathlib.Path(ref_path).read_text())
+    soto = next(r for r in ref if r.get("player_id") == 665742)
+    check("Soto's accepted_delta is 5", soto["accepted_delta"] == 5)
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -4699,6 +5388,7 @@ if __name__ == "__main__":
     test_an_inferred_season_needs_something_to_corroborate_it()
     test_an_appearance_alone_is_enough_to_keep_a_presumed_season()
     test_a_minor_league_signing_does_not_extend_a_career()
+    test_a_player_on_the_60_day_il_is_still_on_a_major_league_roster()
     test_the_ceiling_stops_a_player_who_left_for_the_minors()
     test_a_rule_5_return_closes_the_interval()
     test_returned_to_an_affiliate_is_also_a_stop()
@@ -4806,5 +5496,21 @@ if __name__ == "__main__":
     test_no_page_in_docs_links_or_names_the_raw_statsapi_endpoint()
     test_fetchers_send_an_honest_user_agent_and_use_the_shared_pause()
     test_mlb_fetch_enabled_false_skips_the_api_and_still_builds()
+    test_a_restricted_list_placement_stops_the_clock_by_default()
+    test_a_dfa_in_season_keeps_the_clock_running_until_the_next_move()
+    test_a_dfa_resolved_the_same_day_credits_no_limbo()
+    test_a_spring_dfa_does_not_credit_regular_season_limbo()
+    test_a_service_time_exception_can_restore_or_remove_days()
+    test_the_service_time_exceptions_file_loads_and_validates()
+    test_a_legacy_cache_without_team_ids_is_discarded_or_ignored()
+    test_rules_version_is_seven()
+    test_the_dfa_grace_window_is_a_sourced_ruleset_value()
+    test_the_player_level_v7_figures_hold_against_the_real_feed()
+    test_a_tiebreaker_game_does_not_set_the_league_season_end()
+    test_the_2018_tiebreakers_end_the_league_season_on_09_30()
+    test_the_cba_uniform_start_applies_to_every_club_except_an_overseas_opener()
+    test_an_early_domestic_outlier_does_not_become_the_uniform_start()
+    test_a_tiebreaker_clubs_player_window_runs_a_day_longer()
+    test_soto_accepted_delta_reflects_the_boundary_fix()
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

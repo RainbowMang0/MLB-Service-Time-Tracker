@@ -21,24 +21,9 @@ The owner found where B-R publishes service time and asked for it to be pulled
 for as many players as possible, on the basis that some of our estimates still
 look wrong — Verlander specifically.
 
-The recipe they supplied is accurate and worth keeping, because it is a
-correct description of B-R's page even though we are not going to automate
-against it:
-
-- The figure is **not in any stats table**. It is plain text in the bio block,
-  `div#meta`, on the same line as contract status:
-  `Service Time (01/2026): 14.070 • Free Agent: 2031`
-- Format is `YEARS.DAYS`. It is a **January snapshot**, so it excludes the
-  current season's days.
-- Player URL: `/players/{first letter of surname}/{bbrefid}.shtml`, e.g.
-  `/players/t/troutmi01.shtml`; or the site search endpoint, which redirects
-  on a unique match.
-- Parse by regex over `div#meta`'s text, not by tag structure:
-  `r"Service Time \((\d{2}/\d{4})\):\s*([\d.]+)"`
-- Year-by-year opening-day figures are in `div#all_br-salaries`, which B-R
-  wraps in an HTML comment, so a parser skips it unless you strip the comment
-  markers first.
-- Verification targets: Trout `14.070` (01/2026), Sale `15.061` (01/2026).
+The owner also supplied a recipe for parsing B-R's page. It is not reproduced
+here — this project does not scrape B-R (see §2) and does not keep a guide for
+doing so, whether or not it would be accurate.
 
 ## 2. The decision: declined, and it should stay declined
 
@@ -137,9 +122,8 @@ His season rows, first eleven:
 **2005 through 2014 are all `presumed`** — credited from his debut date at the
 full 172-day cap because the feed says nothing about him until a 2015 IL
 placement. That is exactly the ten seasons `missing_seasons` counts, and the
-recorded reference residual (**+89 days** against B-R's `20.002` at the
-2026-01-26 snapshot) lives entirely inside them. He is not wrong by a rule; he
-is wrong by a presumption.
+recorded reference residual against B-R's snapshot as of 2026-01-26 lives
+entirely inside them. He is not wrong by a rule; he is wrong by a presumption.
 
 Two things worth knowing before anyone tries to improve it:
 

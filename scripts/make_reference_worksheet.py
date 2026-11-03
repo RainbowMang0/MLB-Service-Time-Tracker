@@ -208,7 +208,7 @@ def main() -> None:
 
     print("\nHow to use this:")
     print("  1. Open each player's Baseball Reference page.")
-    print("  2. In the bio block, read the Service Time snapshot, e.g. '9.051 (01/26)'.")
+    print("  2. In the bio block, read the Service Time snapshot, e.g. 'x.yyy (01/26)'.")
     print("  3. Add a row to data/reference_service_time.json with that figure as")
     print("     `expected` and the snapshot's date as `as_of`. Run with --json to")
     print("     get the rows prefilled with everything except the figure itself.")

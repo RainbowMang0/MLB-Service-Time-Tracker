@@ -2,3 +2,8 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# Hand-entered Baseball Reference figures are kept private, never in the repo
+# (owner's rule: no third-party reference numbers in the tree). Validation
+# reads them from ST_REFERENCE_PATH; see data/reference_service_time.example.json.
+data/reference_service_time.json

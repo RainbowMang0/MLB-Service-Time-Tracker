@@ -1,0 +1,77 @@
+{
+  "_README": [
+    "Hand-kept service-time exceptions for restricted-list spells the roster",
+    "feed cannot tell apart on wording alone.",
+    "",
+    "THE DEFAULT (rules v7): a 'placed ... on the restricted list' transaction",
+    "STOPS the service clock. Under MLB Rule 2(c)(6) and the standard glossaries",
+    "a restricted-list player is not paid and earns no Major League service.",
+    "scripts/service_time.py (_STOP_RE) treats the placement as a stop and a",
+    "later 'activated/reinstated ... from the restricted list' as a start.",
+    "",
+    "THE EXCEPTIONS: a few restricted-list spells DO earn service -- paid",
+    "domestic-violence administrative leave and the 2020 high-risk COVID",
+    "opt-outs -- and a few that look like a leave in the feed are actually an",
+    "unpaid suspension that earns none. The feed phrases all of these",
+    "identically ('placed ... on the restricted list'), so they cannot be told",
+    "apart from the text; each is recorded here by hand with a public source.",
+    "",
+    "counts=true  -> the period IS credited as Major League service (unioned",
+    "               into the player's active intervals, then clipped to the",
+    "               season windows). Use for paid administrative leave and the",
+    "               2020 opt-outs.",
+    "counts=false -> the period is NOT credited (cut out of the active",
+    "               intervals). Use for a suspension the feed shows only as a",
+    "               restricted-list placement. Redundant where the default stop",
+    "               already handles it, but kept for the record and its source.",
+    "",
+    "This is a reference list of settled, sourced facts -- the same discipline",
+    "as config/cba/roy_full_year_awards.json and data/super_two_reported.json.",
+    "An entry that cannot cite a public source is not entered.",
+    "",
+    "FIELDS (all required; scripts/service_time_exceptions.py validates them and",
+    "is exercised by tests/test_service_time.py, so CI fails on a malformed",
+    "file): mlbam_id (the MLB person id, the only stable key -- never match by",
+    "name), name (for humans), start and end (inclusive ISO dates YYYY-MM-DD,",
+    "end >= start), counts (true/false), reason, source (one https URL or a list",
+    "of them)."
+  ],
+  "exceptions": [
+    {
+      "mlbam_id": 545333,
+      "name": "Trevor Bauer",
+      "start": "2021-07-02",
+      "end": "2022-04-28",
+      "counts": true,
+      "reason": "Paid administrative leave under the MLB/MLBPA Joint Domestic Violence, Sexual Assault and Child Abuse Policy, beginning 2021-07-02 and continuing (the feed records it as a restricted-list placement) until the suspension took effect 2022-04-29. A player on paid administrative leave keeps his salary and his Major League service, so his 2021 season is full and his 2022 is credited from the Dodgers' Opening Day (Apr 8) through Apr 28.",
+      "source": [
+        "https://www.mlb.com/news/trevor-bauer-put-on-administrative-leave",
+        "https://www.espn.com/mlb/story/_/id/31751151/los-angeles-dodgers-p-trevor-bauer-placed-7-day-administrative-leave-amid-sexual-assault-allegations"
+      ]
+    },
+    {
+      "mlbam_id": 545333,
+      "name": "Trevor Bauer",
+      "start": "2022-04-29",
+      "end": "2022-12-31",
+      "counts": false,
+      "reason": "Suspension under the Joint Domestic Violence Policy, effective 2022-04-29 (originally 324 games, reduced to 194 by an arbitrator but upheld and served). The transaction feed carries no separate suspension row -- it shows only the restricted-list placement -- so this records that the time earns no service. The default restricted-list stop already produces this; the entry is kept for the record and the source.",
+      "source": [
+        "https://www.espn.com/mlb/story/_/id/35307636/trevor-bauer-mlb-suspension-reduction-dodgers",
+        "https://www.mlbtraderumors.com/2022/12/trevor-bauers-suspension-reduced-to-194-games-bauer-reinstated-effective-immediately.html"
+      ]
+    },
+    {
+      "mlbam_id": 663855,
+      "name": "Jordan Hicks",
+      "start": "2020-07-13",
+      "end": "2020-10-30",
+      "counts": true,
+      "reason": "2020 high-risk COVID-19 opt-out. Hicks has Type 1 diabetes, which MLB listed as a preexisting high-risk condition; a high-risk player who opted out of the 2020 season received his full prorated salary AND Major League service time. The feed records the opt-out only as a restricted-list placement (2020-07-13) and reinstatement (2020-10-30), identical to an unpaid absence, so without this entry the default restricted-list stop wrongly erases his entire (prorated) 2020 season -- about 172 days.",
+      "source": [
+        "https://www.mlb.com/news/jordan-hicks-elects-not-to-play-in-2020-season",
+        "https://www.mlbtraderumors.com/2020/07/jordan-hicks-opts-out-of-2020-season.html"
+      ]
+    }
+  ]
+}

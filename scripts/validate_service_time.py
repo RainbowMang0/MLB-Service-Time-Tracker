@@ -12,7 +12,7 @@ Why "as of a past date" and not "right now"
 A player's live service time is a moving target -- it changes every day he's
 on an active roster, so there's nothing fixed to compare it against. But his
 service time as of a past date is a historical fact. Baseball Reference shows
-one dated snapshot in the bio block on a player's page -- "9.051 (01/26)" --
+one dated snapshot in the bio block on a player's page -- "x.yyy (01/26)" --
 and that figure does not change after the fact, which makes it a usable fixed
 target for regression-testing this project's math against a real,
 independently reported number.
@@ -42,10 +42,10 @@ Usage
 Reference file format (see data/reference_service_time.example.json):
     [
       {
-        "player_id": 592450,
-        "name": "Aaron Judge",
+        "player_id": 0,
+        "name": "REPLACE ME",
         "as_of": "2026-01-26",
-        "expected": "9.051",
+        "expected": "x.yyy",
         "source": "baseball-reference.com player page, snapshot labelled 01/26"
       }
     ]
@@ -66,6 +66,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import os
 import pathlib
 import sys
 
@@ -75,7 +76,13 @@ from service_time import FULL_YEAR_DAYS  # noqa: E402
 from update_service_time import build_player_record  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-DEFAULT_REFERENCE_FILE = ROOT / "data" / "reference_service_time.json"
+# The hand-entered reference figures are NOT checked into the repo (owner's
+# rule: no third-party reference numbers in the tree). Point ST_REFERENCE_PATH
+# at the private copy, or pass --reference. The in-repo path is only the
+# fallback used by someone who has placed a file there deliberately.
+DEFAULT_REFERENCE_FILE = pathlib.Path(
+    os.environ.get("ST_REFERENCE_PATH") or (ROOT / "data" / "reference_service_time.json")
+)
 EXAMPLE_REFERENCE_FILE = ROOT / "data" / "reference_service_time.example.json"
 
 DEFAULT_TOLERANCE_DAYS = 3
@@ -91,9 +98,10 @@ def load_reference(path: pathlib.Path) -> list[dict]:
     if not path.exists():
         raise SystemExit(
             f"No reference file at {path}.\n"
-            f"Copy {EXAMPLE_REFERENCE_FILE.relative_to(ROOT)} to "
-            f"{path.relative_to(ROOT)} and fill in real Baseball Reference "
-            "figures for a handful of players, then re-run."
+            "The hand-entered Baseball Reference figures are not checked into "
+            "the repo. Point ST_REFERENCE_PATH at your private copy (or pass "
+            f"--reference), or copy {EXAMPLE_REFERENCE_FILE.name} to that path "
+            "and fill in real figures for a handful of players, then re-run."
         )
     return json.loads(path.read_text())
 

@@ -202,16 +202,25 @@ ACTIVE_STOP_KEYWORDS = [
 # build_global_active_intervals().
 
 # Some "placed on the ... list" transactions still accrue service time
-# (paternity, bereavement, restricted, and the 10/15/60-day injured list all
-# count). Only a genuine optional assignment/outright/DFA/release should stop
-# the clock. We special-case the accruing lists here so the generic
-# "placed on the" stop keyword above doesn't wrongly zero them out.
+# (paternity, bereavement, and the 10/15/60-day injured list all count). Only a
+# genuine optional assignment/outright/DFA/release -- or, now, a restricted-list
+# placement -- should stop the clock. We special-case the accruing lists here so
+# the generic "placed on the" stop keyword above doesn't wrongly zero them out.
+#
+# THE RESTRICTED LIST IS NOT HERE ANY MORE (rules v7). Under MLB Rule 2(c)(6)
+# and the standard glossaries a restricted-list player is not paid and does NOT
+# earn service, so a placement STOPS the clock (it moved into _STOP_RE below).
+# The handful of restricted-list spells that DO earn service -- paid domestic-
+# violence administrative leave, the 2020 high-risk COVID opt-outs -- are not a
+# property of the wording (the feed phrases them identically to a suspension),
+# so they cannot be distinguished here. They are restored per player from the
+# hand-kept, sourced data/service_time_exceptions.json, applied as
+# `force_active_periods` in build_global_active_intervals.
 NON_STOPPING_PLACEMENT_KEYWORDS = [
     "injured list",
     "il ",
     "paternity list",
     "bereavement",
-    "restricted list",
     "family medical emergency",
 ]
 
@@ -285,6 +294,14 @@ _STOP_RE = re.compile(
     rf"|designated{_NAME}for assignment"
     rf"|sent{_NAME}outright"
     rf"|sent{_NAME}to the minor"
+    # A restricted-list placement stops the clock (rules v7): the player is not
+    # paid and earns no service. The exceptions that DO earn -- paid DV
+    # administrative leave, 2020 opt-outs -- are restored per player from
+    # data/service_time_exceptions.json, not from the wording, because the feed
+    # phrases a leave and a suspension identically. "activated/reinstated ...
+    # from the restricted list" is still a START (it matches _START_RE), so a
+    # genuine return restarts the clock.
+    rf"|placed{_NAME}on the restricted list"
     # "<Player> returned to <club A> from <club B>" -- see the note below.
     r"|returned to (?!the active roster).{0,60}?\bfrom\b",
     re.IGNORECASE,
@@ -332,7 +349,7 @@ _STOP_RE = re.compile(
 # accruing the whole time, so it must never read as a demotion.
 _NON_STOPPING_RE = re.compile(
     r"injured list|disabled list|rehab assignment|paternity|bereavement"
-    r"|restricted list|family medical",
+    r"|family medical",
     re.IGNORECASE,
 )
 
@@ -569,6 +586,10 @@ def build_global_active_intervals(
     accrual_ceiling: dt.date | None = None,
     presume_active_from: dt.date | None = None,
     claim_recall_is_minors: bool = True,
+    dfa_limbo_days: int | None = None,
+    season_starts: list[dt.date] | None = None,
+    force_active_periods: list[tuple[dt.date, dt.date]] | None = None,
+    force_inactive_periods: list[tuple[dt.date, dt.date]] | None = None,
 ) -> list[tuple[dt.date, dt.date]]:
     """
     Walk a player's ENTIRE chronological transaction history (not bounded to
@@ -626,7 +647,7 @@ def build_global_active_intervals(
         first major-league transaction of ANY kind is 2015-04-08. Ten
         seasons -- six of them inside the era where coverage is known to be
         good -- produced no interval at all, and he read 11.000 against a
-        published 20.002.
+        published x.yyy.
 
     This is the exact mirror of `accrual_ceiling`, which already presumes a
     player stayed on the roster to the end of his last season rather than
@@ -647,6 +668,29 @@ def build_global_active_intervals(
     happened before a player's major league debut can bear on whether he was
     on a major league roster after it, and leaving them in would let a
     pre-debut stop close the carried-in interval before it began.
+
+    `dfa_limbo_days` turns on the DFA grace window (rules v7). A player who is
+    designated for assignment DURING the season keeps earning service until the
+    move that resolves it (a trade, a waiver claim, an outright/option/other
+    assignment, or a release), capped at this many days and never past the
+    season (the season clip does that). None keeps the old behaviour -- the DFA
+    stops the clock the day it happens -- which is what the direct unit tests
+    exercise. It only adds days to a player who WAS active at the DFA; an
+    offseason DFA, where no interval is open, adds nothing.
+
+    `season_starts` are the clubs' Opening Days, used only to keep the grace
+    window from crossing one. A player designated for assignment BEFORE a
+    season's Opening Day earns no service for that season (OFRU; he was never on
+    its active roster), so a spring DFA's limbo is clipped at the day before the
+    next opener rather than spilling regular-season days he did not earn.
+
+    `force_active_periods` and `force_inactive_periods` are hand-kept,
+    per-player service-time exceptions (data/service_time_exceptions.json),
+    applied after the walk. An active period is unioned in (paid DV
+    administrative leave, a 2020 high-risk opt-out -- restricted-list spells the
+    feed cannot tell from a suspension); an inactive period is cut out (a
+    suspension the feed shows only as a restricted-list placement). Both are
+    clipped to the same floor/ceiling/horizon as everything else.
     """
     if accrual_ceiling is not None:
         horizon_end = min(horizon_end, accrual_ceiling)
@@ -714,18 +758,60 @@ def build_global_active_intervals(
     # reopens it. See the finding #16 note above.
     last_stop_kind: str | None = None
 
-    for day in sorted(by_date):
+    day_order = sorted(by_date)
+    for idx, day in enumerate(day_order):
         rows = by_date[day]
         has_start = any(_is_active_start(r.description) for r in rows)
         has_stop = any(_is_active_stop(r.description) for r in rows)
         has_trade = any(is_trade(r.description) for r in rows)
 
         if has_stop:
-            last_stop_kind = (
-                "dfa" if any(_DFA_RE.search(r.description) for r in rows) else "other"
+            is_dfa = any(_DFA_RE.search(r.description) for r in rows)
+            # A same-day move that resolves the DFA: an outright, release or
+            # option (a non-DFA stop), or a trade. A same-day claim/activation
+            # is caught by has_start. When any of these shares the DFA's date
+            # the outcome is already known that day, so there is no limbo to
+            # credit (Waguespack 2021-03-10, Rico Garcia 2023-07-07, Juan Brito
+            # 2026-08-03 -- an outright/option on the DFA day used to get a full
+            # 7-day over-credit because the guard only checked has_start).
+            has_non_dfa_stop = any(
+                _is_active_stop(r.description) and not _DFA_RE.search(r.description)
+                for r in rows
             )
+            last_stop_kind = "dfa" if is_dfa else "other"
             if active_since is not None:
-                intervals.append((active_since, day - dt.timedelta(days=1)))
+                close = day - dt.timedelta(days=1)
+                # DFA grace window (rules v7): a player DFA'd in-season keeps
+                # earning until the next move that resolves it, capped at
+                # dfa_limbo_days. Only when the DFA stands alone that day -- any
+                # same-day start/stop/trade already names the outcome, so there
+                # is no limbo. The season clip later enforces "never past season
+                # end"; here it is only capped at the horizon.
+                if (
+                    dfa_limbo_days
+                    and is_dfa
+                    and not has_start
+                    and not has_trade
+                    and not has_non_dfa_stop
+                ):
+                    limbo_end = day + dt.timedelta(days=dfa_limbo_days - 1)
+                    nxt = _next_resolving_day(day_order, idx, by_date)
+                    if nxt is not None:
+                        limbo_end = min(limbo_end, nxt - dt.timedelta(days=1))
+                    limbo_end = min(limbo_end, horizon_end)
+                    # A spring DFA -- before a season's Opening Day -- earns no
+                    # service for that season, so the grace window must not cross
+                    # an opener that falls after the DFA. Without this a DFA in
+                    # the days before Opening Day credited regular-season limbo
+                    # days the player was never on the roster for (20 cached
+                    # cases, e.g. 676724 2024-03-27, 596117 2026-03-25).
+                    if season_starts:
+                        later_openers = [s for s in season_starts if s > day]
+                        if later_openers:
+                            limbo_end = min(limbo_end, min(later_openers) - dt.timedelta(days=1))
+                    if limbo_end > close:
+                        close = limbo_end
+                intervals.append((active_since, close))
                 active_since = None
         elif has_start:
             if active_since is None:
@@ -763,7 +849,47 @@ def build_global_active_intervals(
                     trimmed.append((start, end))
             intervals = trimmed
 
+    # Hand-kept service-time exceptions (rules v7), applied last so they
+    # override the generic walk for the few players whose restricted-list
+    # placement the default rule gets wrong. A counts=true period is a paid
+    # leave / opt-out that DID earn service; a counts=false period is a stretch
+    # that did not. See data/service_time_exceptions.json.
+    if force_active_periods:
+        for lo, hi in force_active_periods:
+            if accrual_floor is not None:
+                lo = max(lo, accrual_floor)
+            hi = min(hi, horizon_end)
+            if lo <= hi:
+                intervals.append((lo, hi))
+        intervals = _merge_intervals(intervals)
+    if force_inactive_periods:
+        for lo, hi in force_inactive_periods:
+            intervals = _subtract_period(intervals, lo, hi)
+
     return intervals
+
+
+def _next_resolving_day(
+    day_order: list[dt.date],
+    idx: int,
+    by_date: dict[dt.date, list["Transaction"]],
+) -> dt.date | None:
+    """The first day after `day_order[idx]` carrying a move that resolves a DFA.
+
+    A DFA ends on the next trade, waiver claim, outright/option/assignment or
+    release -- in feed terms, any start, stop or trade. Returns that date, or
+    None if nothing follows (the grace window then runs its full length).
+    """
+    for day in day_order[idx + 1:]:
+        rows = by_date[day]
+        if any(
+            _is_active_start(r.description)
+            or _is_active_stop(r.description)
+            or is_trade(r.description)
+            for r in rows
+        ):
+            return day
+    return None
 
 
 def _overlap_days(
@@ -782,6 +908,52 @@ def days_in_intervals(intervals: list[tuple[dt.date, dt.date]]) -> int:
         if end >= start:
             total += (end - start).days + 1
     return total
+
+
+def _merge_intervals(
+    intervals: list[tuple[dt.date, dt.date]]
+) -> list[tuple[dt.date, dt.date]]:
+    """Collapse overlapping or day-adjacent intervals into a disjoint set.
+
+    The day count in compute_service_time sums each interval's overlap with a
+    season independently, so two intervals that overlap inside one season would
+    be counted twice. The walk never produces overlaps, but a hand-kept
+    `force_active_periods` exception can (it is added on top of the walk's
+    output), so the result is merged before it is used. Adjacent ranges
+    (end, end+1 day) are joined too -- they describe one unbroken stretch.
+    """
+    if not intervals:
+        return []
+    ordered = sorted(intervals)
+    merged = [ordered[0]]
+    for start, end in ordered[1:]:
+        last_start, last_end = merged[-1]
+        if start <= last_end + dt.timedelta(days=1):
+            merged[-1] = (last_start, max(last_end, end))
+        else:
+            merged.append((start, end))
+    return merged
+
+
+def _subtract_period(
+    intervals: list[tuple[dt.date, dt.date]], lo: dt.date, hi: dt.date
+) -> list[tuple[dt.date, dt.date]]:
+    """Remove the inclusive [lo, hi] window from a disjoint interval list.
+
+    Used for a `force_inactive_periods` exception -- a stretch the feed credits
+    (or would credit) but which earned no service (e.g. a suspension the feed
+    shows only as a restricted-list placement). The result stays disjoint.
+    """
+    out: list[tuple[dt.date, dt.date]] = []
+    for start, end in intervals:
+        if hi < start or lo > end:
+            out.append((start, end))
+            continue
+        if start < lo:
+            out.append((start, lo - dt.timedelta(days=1)))
+        if end > hi:
+            out.append((hi + dt.timedelta(days=1), end))
+    return out
 
 
 # --- The 20-day optional-assignment rule ------------------------------------
@@ -869,6 +1041,9 @@ def compute_service_time(
     seasons_with_appearances: set[int] | None = None,
     roy_full_year_seasons: set[int] | None = None,
     ruleset: "cba.Ruleset | None" = None,
+    dfa_limbo_days: int | None = None,
+    force_active_periods: list[tuple[dt.date, dt.date]] | None = None,
+    force_inactive_periods: list[tuple[dt.date, dt.date]] | None = None,
 ) -> ServiceTimeResult:
     """
     Compute total MLB service time across multiple seasons.
@@ -923,6 +1098,11 @@ def compute_service_time(
     unaffected. Pass a different one to run a player under a successor
     agreement and diff the two -- which is the point of the whole exercise
     once the 2022 agreement expires on 2026-12-01.
+
+    `dfa_limbo_days`, `force_active_periods` and `force_inactive_periods` are
+    passed straight through to build_global_active_intervals -- the DFA grace
+    window and the hand-kept restricted-list exceptions (rules v7). All default
+    off, so a caller that does not opt in gets the old behaviour.
     """
     rules = ruleset or _DEFAULT_RULES
     full_year_days = rules.require("service_time.days_per_credited_year")
@@ -949,6 +1129,10 @@ def compute_service_time(
         accrual_floor=accrual_floor,
         accrual_ceiling=accrual_ceiling,
         presume_active_from=accrual_floor if presume_active_from_debut else None,
+        dfa_limbo_days=dfa_limbo_days,
+        season_starts=[s.start for s in ordered_seasons],
+        force_active_periods=force_active_periods,
+        force_inactive_periods=force_inactive_periods,
     )
 
     total_days = 0

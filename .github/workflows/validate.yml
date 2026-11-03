@@ -36,12 +36,14 @@ name: Validate Service Time
 # that need the network, cost real API calls, or take arguments.
 #               Offline, seconds, and neither needs anything installed.
 #
-#   reference -- compares finished figures against known Baseball Reference
-#               numbers in data/reference_service_time.json. Narrow (a
-#               handful of players, hand-entered) but genuinely independent,
-#               which is exactly what the roster check cannot be.
+# There is also scripts/validate_service_time.py, which compares finished
+# figures against a handful of hand-entered reference figures -- genuinely
+# independent, which is exactly what the roster check cannot be. It is not a
+# dispatch option here: the reference file is never checked into the repo
+# (owner's rule), so a GitHub-hosted run has nothing to point it at. Run it
+# locally with ST_REFERENCE_PATH set to a private copy.
 #
-# Run both before a mass backfill.
+# Run rosters and super-two both before a mass backfill.
 #
 # The rosters check scores the carry-in rule both ways from a single fetch
 # (carry_in: both), so an A/B costs one run and cannot drift between the two
@@ -57,7 +59,6 @@ on:
         default: rosters
         options:
           - rosters
-          - reference
           - super-two
           - player
           - published
@@ -121,9 +122,6 @@ jobs:
       - name: Run check
         run: |
           case "${{ github.event.inputs.check }}" in
-            reference)
-              python scripts/validate_service_time.py
-              ;;
             super-two)
               python scripts/validate_super_two.py
               ;;

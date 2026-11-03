@@ -35,6 +35,7 @@ import datetime as dt
 import json
 import os
 import pathlib
+import re
 import shutil
 import sys
 
@@ -44,6 +45,7 @@ import accrual_model  # noqa: E402
 import cba  # noqa: E402
 import fetch_mlb_data as mlb  # noqa: E402
 import salary_estimates  # noqa: E402
+import service_time_exceptions  # noqa: E402
 import super_two  # noqa: E402
 import write_player_pages  # noqa: E402
 from write_player_pages import write_player_pages as _write_pages  # noqa: E402
@@ -51,6 +53,7 @@ from service_time import (  # noqa: E402
     roster_start_before_debut,
     is_active_start,
     is_active_stop,
+    is_trade,
     SeasonWindow,
     Transaction,
     compute_service_time,
@@ -70,6 +73,16 @@ _RULES = cba.default()
 # once; the list is hand-maintained in config/cba/roy_full_year_awards.json and
 # validated by cba.py. Empty until verified entries are added.
 _ROY_FULL_YEAR_SEASONS = cba.roy_full_year_seasons_by_player()
+# {mlbam_id -> [exception, ...]} the hand-kept restricted-list service-time
+# exceptions (paid DV administrative leave, 2020 opt-outs, suspensions the feed
+# shows only as a restricted-list placement). Validated on load. See
+# data/service_time_exceptions.json and scripts/service_time_exceptions.py.
+_SERVICE_TIME_EXCEPTIONS = service_time_exceptions.load_exceptions()
+# The DFA grace window (rules v7): a player designated for assignment DURING the
+# season keeps earning service until the move that resolves it, capped at this
+# many days. From config/cba/, never a literal -- a successor agreement that
+# changes the window is a config edit.
+_DFA_LIMBO_DAYS = _RULES.require("designated_for_assignment.max_service_days")
 # config/ is the source of truth for rulesets, but it sits outside docs/ and
 # GitHub Pages serves docs/ as the site root, so the browser cannot reach it.
 # publish_config() copies it in. Source stays canonical; this is a build
@@ -85,6 +98,12 @@ CACHE_DIR = ROOT / "data" / "cache" / "transactions"
 
 MIN_TRANSACTION_YEAR = 2005  # don't bother reaching back further than this
 TODAY = dt.date.today()
+
+# "elected/declared free agency" means a player left the roster. It is NOT a
+# global stop keyword (no matching re-signing START exists -- see service_time.py),
+# so it is used only by _still_on_ml_roster. Deliberately does not match the
+# signing verb in "signed free agent RHP ...".
+_ELECTED_FREE_AGENCY_RE = re.compile(r"\b(?:elected|declared) free agency\b", re.I)
 
 # Stamped on every record. BUMP THIS whenever a change to the service-time
 # rules would give a stored player a different figure -- it is what tells the
@@ -134,11 +153,44 @@ TODAY = dt.date.today()
 #      removing days and the 20-day rule only adding them; reference veterans
 #      unmoved.
 #
+#   7  service-time DATA fixes, after the v6 recompute exposed two outliers as
+#      data bugs rather than rules bugs. (a) The restricted list STOPS the clock
+#      by default -- a restricted-list player is not paid and earns no service
+#      (MLB Rule 2(c)(6)) -- instead of being treated as a non-stopping
+#      placement. The spells that DO earn service (paid DV administrative leave,
+#      2020 opt-outs) and the suspensions that look like a leave in the feed are
+#      restored or removed per player from the hand-kept, sourced
+#      data/service_time_exceptions.json. (b) A missing lastPlayedDate no longer
+#      falls back to the last roster-transaction date, which extended careers
+#      past the last season a player actually had MLB service. He keeps
+#      accruing past his last appearance while still on a roster -- currently
+#      rostered, or bio-active with his latest major-league roster move a
+#      placement/activation rather than a release/outright/option/DFA/free-
+#      agency election (the _still_on_ml_roster guard) -- which is what keeps a
+#      60-day-IL season from being erased. Once he has actually left,
+#      career_end is the last season with an MLB appearance (plus any
+#      counts=true exception); a player who never appeared at all falls back to
+#      his last major-league roster START (an activation, IL placement, recall,
+#      contract selection or trade -- never a bare STOP, which cannot extend a
+#      career on its own). (c) A DFA during
+#      the season keeps the clock running until the move that resolves it,
+#      capped at designated_for_assignment.max_service_days (7); an offseason
+#      DFA still adds nothing. (d) A transaction cache written before team IDs
+#      were stored (ID-less rows) is discarded and refetched, so minor-league
+#      rows can no longer read as MLB moves -- the Velázquez cache bug.
+#      Trevor Bauer 8.157 -> 8.007 (1,383 days), Jose Alvarado 9.093 -> 9.009
+#      (1,557 days; ~5 days under a 9.014 estimate -- cause not tracked down,
+#      noted on the PR), Nelson Velázquez -> 2.047 (391 days: the cache fix
+#      holds him at 386/2.042 and the DFA grace window adds his five 2026 limbo
+#      days). The restricted-list and DFA rules each move a few dozen other
+#      players by a handful of days. (Service-time days run 0-171, so .178 is
+#      not a valid figure; the earlier "7.178" target was an arithmetic slip.)
+#
 # Only-removes is the expected shape for 4 and 5: a rule that can only CLOSE an
-# interval must never add a day. 6 moves figures in BOTH directions, because it
-# is the first version to correct the window a day is measured against rather
-# than only which days are inside it.
-SERVICE_TIME_RULES_VERSION = 6
+# interval must never add a day. 6 and 7 both move figures in BOTH directions --
+# 7 because the restricted-list stop and the lastPlayedDate fix remove days
+# while the DFA grace window and the counts=true exceptions add them.
+SERVICE_TIME_RULES_VERSION = 7
 
 # The carry-in rule: presume a player is on a roster from his debut onward
 # rather than crediting him nothing until a start transaction happens to fire.
@@ -173,6 +225,32 @@ def _load_cached_transactions(player_id: int) -> list[dict]:
     return []
 
 
+def _row_is_legacy_format(txn: dict) -> bool:
+    """A cached transaction written before team IDs were stored.
+
+    The old shape carried only date/description/team; the three id keys
+    (team_id, from_team_id, to_team_id) were simply absent. Key PRESENCE, not
+    value, is the test -- a freshly-fetched row always has the keys, even when
+    the feed gave no club for that move and all three are null -- so a healthy
+    cache is never mistaken for a legacy one.
+    """
+    return not any(
+        k in txn for k in ("team_id", "from_team_id", "to_team_id")
+    )
+
+
+def _cache_is_legacy(cached: list[dict]) -> bool:
+    """True if ANY row is in the pre-team-id format.
+
+    _involves_mlb_club keeps an ID-less row (it cannot judge it), so a single
+    legacy row lets a minor-league or foreign-league move read as an MLB one --
+    the Nelson Velázquez bug, where his whole cache predated team IDs and his
+    Mexican-League and Triple-A moves opened phantom MLB stretches. One such row
+    makes the file untrustworthy, so the whole thing is refetched.
+    """
+    return any(_row_is_legacy_format(t) for t in cached)
+
+
 def _save_cached_transactions(player_id: int, txns: list[dict]) -> None:
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     _cache_path(player_id).write_text(json.dumps(txns, indent=2, default=str))
@@ -189,6 +267,17 @@ def _fetch_transactions_incremental(
     megabytes to the repo in exchange for nothing.
     """
     cached = [] if (full_refresh or not use_cache) else _load_cached_transactions(player_id)
+
+    if cached and _cache_is_legacy(cached):
+        if mlb_fetch_enabled():
+            # Throw the stale file away; the fetch below rebuilds the full
+            # history from scratch, this time with team IDs on every row.
+            cached = []
+        else:
+            # Offline (the fetch-off path never recomputes in production, but
+            # keep it safe for any other caller): we cannot refetch, so drop the
+            # untrustworthy ID-less rows rather than let them read as MLB moves.
+            return [t for t in cached if not _row_is_legacy_format(t)]
 
     if cached:
         last_date = max(dt.date.fromisoformat(t["date"]) for t in cached)
@@ -239,34 +328,41 @@ def _season_windows_for(years: range) -> list[SeasonWindow]:
 def _opening_day_for(
     year: int, opening_day_club: int | None, candidate_clubs: list[int]
 ) -> dt.date:
-    """The season-window START for a player, from his club's own opener.
+    """The season-window START for a player (rules v7: the CBA-uniform opener).
 
-    Service time is credited from a club's OWN first regular-season game, and
-    those differ -- the Seoul/Tokyo openers a week early, the 2026 Oracle Park
-    opener a day early. So the window must start on the player's club's opener,
-    not the league's earliest game applied to everyone (which credited a week
-    of phantom days to every non-overseas club -- the ~8-days-high error the
-    Baseball Reference audit found).
+    CBA Art. XXI(A)(1) credits service "uniformly to all Players and all Clubs
+    ... notwithstanding differences in a particular Club's schedule", so every
+    club shares ONE Opening Day -- the league-wide uniform start -- and a club
+    that opened a day LATE domestically (DET 04-08 vs the league 04-07 in 2022)
+    does not cost its players a day. The one exception is Art. V(A): a club that
+    opened OVERSEAS earlier (Seoul/Tokyo/Mexico, outside the 187-day window)
+    keeps its own earlier date; otherwise applying the league opener to it would
+    erase the early series it really played (the ~8-days-high regression the
+    Baseball Reference audit caught). Both are captured by taking, for a club,
+    min(its own opener, the uniform start): a late domestic opener snaps up to
+    the uniform date, an early overseas opener stays put.
 
-      * `opening_day_club` known -> that club's own opener. This is the club he
-        was with at Opening Day (the earliest club of the season by transaction
-        date -- see _opening_day_clubs), which is the ONLY defensible choice
-        for a traded player: a player who opened with an overseas club and was
-        traded away in June still earned that early Seoul start, while one who
-        opened with a domestic club and was traded TO an overseas-opener club
-        never played the overseas series and must not get its early date.
-      * unknown -> the LATEST of his candidate clubs' openers. Conservative: it
-        can never credit a day before any of his clubs began, and
+      * `opening_day_club` known -> min(that club's own opener, uniform). This is
+        the club he was with at Opening Day (the earliest club of the season by
+        transaction date -- see _opening_day_clubs), the ONLY defensible choice
+        for a traded player: one who opened overseas and was traded away in June
+        still earned the early start, while one who opened domestically and was
+        traded TO an overseas club never played its early series.
+      * unknown -> the LATEST of his candidate clubs' CBA starts. Conservative:
+        it can never credit a day before any of his clubs began, and
         over-crediting is the failure mode behind every revert in this project,
         so a player reading a few days low is the safe way to be wrong.
-      * no clubs at all -> the domestic opener (what get_club_season_start
-        already returns for an unknown club).
+      * no clubs at all -> the uniform start.
     """
-    domestic, _ = mlb.get_season_window(year)
+    uniform = mlb.get_uniform_season_start(year)
     if opening_day_club:
-        return mlb.get_club_season_start(year, opening_day_club)
-    openers = [mlb.get_club_season_start(year, c) for c in candidate_clubs if c]
-    return max(openers) if openers else domestic
+        return min(mlb.get_club_season_start(year, opening_day_club), uniform)
+    starts = [
+        min(mlb.get_club_season_start(year, c), uniform)
+        for c in candidate_clubs
+        if c
+    ]
+    return max(starts) if starts else uniform
 
 
 def _season_windows_for_player(
@@ -288,10 +384,18 @@ def _season_windows_for_player(
     windows = []
     carried: list[int] = []
     for year in years:
-        _, end = mlb.get_season_window(year)
+        _, league_end = mlb.get_season_window(year)
         candidates = season_teams_bio.get(year) or txn_team_ids.get(year) or carried
         if candidates:
             carried = candidates
+        # The season ends on the league's last regularly scheduled game for
+        # almost everyone; it runs a day LATER only for a club that actually
+        # played a tiebreaker (rules v7). get_club_season_end floors at the
+        # league end, so a club whose own games ended earlier is unaffected.
+        end = league_end
+        for c in candidates:
+            if c:
+                end = max(end, mlb.get_club_season_end(year, c))
         windows.append(
             SeasonWindow(
                 year=year,
@@ -451,6 +555,43 @@ def _build_seasons(
     return rows
 
 
+def _still_on_ml_roster(transactions: list[Transaction]) -> bool:
+    """Does the player's most recent major-league roster move leave him ON a
+    roster?
+
+    A player stashed on the 60-day injured list is still carried by his club and
+    still accruing service, but he drops off the 40-man LISTING, so the published
+    on_40_man flag (which the backfill feeds in as `currently_rostered`) reads
+    False for him. Used together with the bio's `active` flag to tell such a
+    player apart from one who is genuinely done (retired, or gone to the minors).
+
+    True if his latest roster-defining move is a START -- an activation, recall,
+    contract selection, or an injured-list placement (IL placements read as a
+    start, see is_active_start) -- or a trade, which keeps him in the majors.
+    False if it is a STOP (release, outright, option, DFA, restricted list), a
+    free-agency election, or if he has no major-league roster move at all.
+
+    A free-agency election counts as leaving HERE even though it is deliberately
+    not a global stop keyword (there is no matching START for the re-signing that
+    usually follows, so treating it as a stop everywhere wrecks 272 active
+    players -- see service_time.py). This guard only runs for a player who is NOT
+    currently rostered, and it reads the LATEST event: an active player who
+    elected free agency and re-signed has a later start/recall that wins first.
+    Without this, a player who was selected to the 40-man and then elected free
+    agency and drifted through the minors (Aaron Sanchez: 2022 selection, then
+    'elected free agency', then only minor-league deals) read as still on a
+    roster off a two-year-old selection and accrued phantom service to today.
+    """
+    for t in sorted(transactions, key=lambda t: t.date, reverse=True):
+        if is_active_start(t.description):
+            return True
+        if is_active_stop(t.description) or _ELECTED_FREE_AGENCY_RE.search(t.description):
+            return False
+        if is_trade(t.description):
+            return True
+    return False
+
+
 def build_player_record(
     roster_entry: dict,
     full_refresh: bool,
@@ -553,6 +694,14 @@ def build_player_record(
     if roster_start is not None:
         accrual_floor = roster_start
 
+    # Hand-kept restricted-list service-time exceptions for this player (rules
+    # v7). counts=true spells (paid DV administrative leave, 2020 opt-outs) are
+    # credited back; counts=false spells (a suspension the feed shows only as a
+    # restricted-list placement) are removed. See data/service_time_exceptions.json.
+    force_active_periods, force_inactive_periods = service_time_exceptions.periods_for_player(
+        _SERVICE_TIME_EXCEPTIONS, player_id
+    )
+
     # A player who is done playing has to have his clock stopped explicitly.
     # Careers usually end with "elected free agency", which is deliberately not
     # a stop keyword (adding it would wreck 272 active players -- see the note
@@ -582,32 +731,92 @@ def build_player_record(
     # being looked for in the wrong place.
     #
     # The fallback now asks when the feed last put him on a MAJOR LEAGUE
-    # roster, from two sources that are already fetched:
+    # roster. The source it TRUSTS is the player's own year-by-year splits:
     #
-    #   * the last season his year-by-year splits show an appearance
-    #   * the last transaction that is actually a roster event (a start or a
-    #     stop), which covers a man who was rostered without appearing
+    #   * the last season those splits show an MLB appearance, and
+    #   * the end of any counts=true service exception (paid administrative
+    #     leave is real MLB service and extends the career the same way an
+    #     appearance does -- this is what keeps Trevor Bauer's 2022 Opening-Day
+    #     days in the window).
     #
-    # A minor league signing is neither, so it no longer extends a career.
+    # It deliberately does NOT reach for "the last roster transaction" any more
+    # (rules v7). That was the Trevor Bauer bug: with lastPlayedDate null, his
+    # last roster event was a January-2023 DFA and release -- months after his
+    # last MLB service -- which stretched his career through 2023. A stray
+    # offseason transaction must not make a career longer. Only when the splits
+    # show no appearance at ALL (a man who reached a roster without ever
+    # playing) do we fall back to a roster event, and then a bare transaction.
+    # A player on the 60-day injured list is still carried by his club and still
+    # accruing, but he drops off the 40-man LISTING, so the published on_40_man
+    # flag -- which the backfill feeds in as `currently_rostered` -- reads False
+    # for him. Capping his career at his last game then erased every IL season
+    # after it: Anthony Rendon, two full seasons on the 60-day IL, lost 345 days;
+    # Brusdar Graterol, Joe Jimenez and ~10 others lost a year or two each. If
+    # the bio still lists him active AND his latest major-league roster move
+    # keeps him on a roster (an IL placement or an activation, not a
+    # release/outright/option/DFA), he has not stopped playing and must keep
+    # accruing through the horizon exactly as a listed player does. The
+    # _still_on_ml_roster guard is what stops this from reviving a player who
+    # really did leave MLB for the minors (Aaron Sanchez): his last major-league
+    # roster event is a free-agency election, so the guard is False and the cap
+    # still applies.
+    still_accruing = currently_rostered or (
+        bool(bio.get("active")) and _still_on_ml_roster(transactions)
+    )
     last_played = bio.get("lastPlayedDate")
     career_end: dt.date | None = None
-    if not currently_rostered:
+    if not still_accruing:
         if last_played:
             career_end = dt.date.fromisoformat(last_played)
         else:
+            # No last-played date: the feed never recorded a final game, so his
+            # clock ends when he actually left a major-league roster. That is the
+            # LATEST of three things: the end of the last season his splits show
+            # an appearance; the end of a counts=true service exception; and the
+            # date of his last major-league roster START -- an activation, IL
+            # placement, recall, contract selection, or a trade (each of which
+            # put him ON a roster that day). That last term is finding #6's real
+            # fix: a player stashed on the 60-day injured list across a season he
+            # never appeared in, then outrighted, earned every roster day up to
+            # that outright. Capping at his last appearance season instead threw
+            # those IL seasons away -- Alec Marsh and Rob Zastryzny each spent
+            # 2025-26 on the IL and lost a year or two. Christian Bethancourt hits
+            # the same bug from a different roster START: minor-league deals
+            # through 2025-26, then a 2026-09-01 Pirates selection, lost the same
+            # way. The later outright/DFA is a STOP, so compute_service_time
+            # closes the final interval at it on its own; only the real roster
+            # time is credited.
+            #
+            # A STOP must NOT extend career_end on its own -- that was the Trevor
+            # Bauer bug the old "last transaction" fallback caused: with
+            # lastPlayedDate null his last event was a January-2023 DFA and
+            # release, months after his last MLB service, which stretched his
+            # window into 2023. His last START is in 2022, so career_end stays in
+            # 2022 and the stray offseason stop is ignored. A minor-league signing
+            # or assignment (Aaron Sanchez's 2026 Royals minor-league deal) is
+            # neither a start nor a trade, so it cannot stretch a career either.
+            roster_starts = [
+                t.date for t in transactions
+                if is_active_start(t.description) or is_trade(t.description)
+            ]
             candidates = []
             if season_teams_bio:
                 candidates.append(dt.date(max(season_teams_bio), 12, 31))
-            roster_events = [
-                t.date for t in transactions
-                if is_active_start(t.description) or is_active_stop(t.description)
-            ]
-            if roster_events:
-                candidates.append(max(roster_events))
+            candidates.extend(end for _start, end in force_active_periods)
+            if roster_starts:
+                candidates.append(max(roster_starts))
             if candidates:
                 career_end = max(candidates)
-            elif transactions:
-                career_end = max(t.date for t in transactions)
+            else:
+                # Never appeared and never started: last resort is a real roster
+                # stop, and only then a bare transaction date.
+                roster_stops = [
+                    t.date for t in transactions if is_active_stop(t.description)
+                ]
+                if roster_stops:
+                    career_end = max(roster_stops)
+                elif transactions:
+                    career_end = max(t.date for t in transactions)
 
     debut_year = debut_date.year if debut_date else MIN_TRANSACTION_YEAR
     first_year = max(debut_year, MIN_TRANSACTION_YEAR)
@@ -657,6 +866,11 @@ def build_player_record(
         # on a roster is credited with the remaining weeks of a season that
         # hasn't been played yet.
         horizon_end=horizon_end,
+        # Rules v7: the DFA grace window and the hand-kept restricted-list
+        # service exceptions for this player.
+        dfa_limbo_days=_DFA_LIMBO_DAYS,
+        force_active_periods=force_active_periods,
+        force_inactive_periods=force_inactive_periods,
     )
 
     return {
