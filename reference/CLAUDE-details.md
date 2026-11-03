@@ -1222,26 +1222,7 @@ project checked against a source that is not MLB's own transaction feed.
 All are the 01/26 snapshot, compared against what the model computes as of
 2026-01-26.
 
-| player | ours | verdict |
-|---|---|---|
-| Aaron Judge | 9.051 | **match** |
-| Paul Goldschmidt | 14.059 | **match** |
-| Carlos Correa | 10.119 | **match** |
-| Corey Seager | 10.032 | **match** |
-| Shohei Ohtani | 8.000 | **match** |
-| Pete Alonso | 7.000 | **match** |
-| Vladimir Guerrero Jr. | 6.157 | **match** |
-| Bo Bichette | 6.063 | **match** |
-| Kenley Jansen | 15.072 | within tolerance |
-| José Ramírez | 11.073 | within tolerance |
-| Rafael Devers | 8.069 | within tolerance |
-| Nolan Arenado | 12.156 | within tolerance |
-| Gerrit Cole | 12.112 | within tolerance |
-| Juan Soto | 7.135 | within tolerance |
-| Jacob deGrom | 11.137 | within tolerance |
-| Mookie Betts | 11.068 | within tolerance |
-| Max Scherzer | 16.169 | GAP, 1 season |
-| Justin Verlander | 11.000 | GAP, 10 seasons |
+*(The per-player table was removed: listing our figure next to a "match" verdict would reveal Baseball Reference's own numbers. The original comparison is kept only in git history.)*
 
 **Eight are exact and all sixteen non-gap figures land within two days**,
 across careers of six to fifteen years. Verdict: 16 passed, 0 failed, 2 known
