@@ -122,9 +122,8 @@ His season rows, first eleven:
 **2005 through 2014 are all `presumed`** — credited from his debut date at the
 full 172-day cap because the feed says nothing about him until a 2015 IL
 placement. That is exactly the ten seasons `missing_seasons` counts, and the
-recorded reference residual (**+89 days** against B-R's snapshot as of
-2026-01-26) lives entirely inside them. He is not wrong by a rule; he
-is wrong by a presumption.
+recorded reference residual against B-R's snapshot as of 2026-01-26 lives
+entirely inside them. He is not wrong by a rule; he is wrong by a presumption.
 
 Two things worth knowing before anyone tries to improve it:
 
