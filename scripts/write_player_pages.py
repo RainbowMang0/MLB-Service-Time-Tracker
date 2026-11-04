@@ -194,13 +194,19 @@ def _site_header(current: str | None = None) -> str:
     resolve differently per directory. BASE_PATH is derived from docs/CNAME,
     so a domain move carries the header with it.
     """
-    tabs = "".join(
-        f'<a{" class=\"hide-phone\"" if "phone" not in where else ""} '
-        f'href="{BASE_PATH}{href}"'
-        f'{" aria-current=\"page\"" if current == href else ""}>{tab_label}</a>'
-        for href, tab_label, _sheet_label, where in NAV
-        if "phone" in where or "desktop" in where
-    )
+    # Built piecewise rather than inline in the f-string: the CI runner is
+    # Python 3.11, where an f-string expression may not contain a backslash
+    # (PEP 701 relaxed that only in 3.12), and a quoted attribute value
+    # needs one. This bit the first push to CI, which is the right place
+    # for it to be caught, and a plain concatenation is clearer anyway.
+    tab_parts = []
+    for href, tab_label, _sheet_label, where in NAV:
+        if "phone" not in where and "desktop" not in where:
+            continue
+        cls = ' class="hide-phone"' if "phone" not in where else ""
+        cur = ' aria-current="page"' if current == href else ""
+        tab_parts.append(f'<a{cls} href="{BASE_PATH}{href}"{cur}>{tab_label}</a>')
+    tabs = "".join(tab_parts)
     numbers = "".join(
         f'<li><a href="{BASE_PATH}{href}">{sheet_label}</a></li>'
         for href, _tab_label, sheet_label, where in NAV
