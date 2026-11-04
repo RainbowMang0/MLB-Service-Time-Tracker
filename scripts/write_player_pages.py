@@ -569,6 +569,18 @@ def club_path(club: str) -> str:
     return f"{CLUB_DIR_NAME}/{slug(club)}.html"
 
 
+def club_arbitration_path(club: str) -> str:
+    return f"{CLUB_DIR_NAME}/{slug(club)}-arbitration.html"
+
+
+def club_non_tender_path(club: str) -> str:
+    return f"{CLUB_DIR_NAME}/{slug(club)}-non-tender.html"
+
+
+def club_free_agents_path(club: str) -> str:
+    return f"{CLUB_DIR_NAME}/{slug(club)}-free-agents.html"
+
+
 def _crumbs(*trail: tuple[str, str | None]) -> str:
     """Breadcrumb markup. Each item is (label, href); href None = current page."""
     parts = []
@@ -806,7 +818,101 @@ def _key_players_line(players: list[dict]) -> str:
     return f"<p class='key-players'>{' '.join(parts)}</p>" if parts else ""
 
 
-def render_club(club: str, players: list[dict], generated_at: str) -> str:
+# ---------------------------------------------------------------------------
+# Per-club offseason tables: the same arbitration-eligible, non-tender-watch
+# and free-agents-by-year data as the league-wide pages, filtered to one
+# club. Shared by the "This offseason" section inside render_club() and the
+# three standalone club subpages below, so the two never disagree about who
+# is on either list.
+# ---------------------------------------------------------------------------
+
+def _club_arb_table(players: list[dict], link_prefix: str = "../") -> str:
+    if not players:
+        return "<p>No one on this roster is projected arbitration-eligible this winter.</p>"
+    rows = "".join(
+        f"<tr><td><a href=\"{link_prefix}{page_path(p)}\">{html.escape(p.get('name') or '')}</a></td>"
+        f"<td class='n'>{html.escape(p.get('service_time') or '0.000')}</td>"
+        f"<td>{_arb_status_badge(p)}</td></tr>"
+        for p in _sorted_by_days(players)
+    )
+    return (
+        "<table><thead><tr><th>Player</th><th class='n'>Service time</th>"
+        f"<th>Status</th></tr></thead><tbody>{rows}</tbody></table>"
+    )
+
+
+def _club_non_tender_table(pairs: list[tuple[dict, list[str]]], link_prefix: str = "../") -> str:
+    if not pairs:
+        return "<p>No one on this roster is on the non-tender watch list this winter.</p>"
+    rows = "".join(
+        f"<tr><td><a href=\"{link_prefix}{page_path(p)}\">{html.escape(p.get('name') or '')}</a></td>"
+        f"<td class='n'>{html.escape(p.get('service_time') or '0.000')}</td>"
+        f"<td>{html.escape('; '.join(r.capitalize() for r in reasons))}</td></tr>"
+        for p, reasons in sorted(
+            pairs, key=lambda pr: (-int(pr[0].get("service_days_total") or 0), pr[0].get("name") or "")
+        )
+    )
+    return (
+        "<table><thead><tr><th>Player</th><th class='n'>Service time</th>"
+        f"<th>Why he's listed</th></tr></thead><tbody>{rows}</tbody></table>"
+    )
+
+
+def _club_fa_table(players: list[dict], next_season: int | None, link_prefix: str = "../") -> str:
+    if not players:
+        phrase = f" after {next_season}" if next_season else ""
+        return f"<p>No one on this roster is projected to reach free agency{phrase}.</p>"
+    rows = "".join(
+        f"<tr><td><a href=\"{link_prefix}{page_path(p)}\">{html.escape(p.get('name') or '')}</a></td>"
+        f"<td class='n'>{html.escape(p.get('service_time') or '0.000')}</td></tr>"
+        for p in _sorted_by_days(players)
+    )
+    return (
+        "<table><thead><tr><th>Player</th><th class='n'>Service time</th>"
+        f"</tr></thead><tbody>{rows}</tbody></table>"
+    )
+
+
+def _club_offseason_section(
+    club: str, arb_eligible: list[dict], non_tender: list[tuple[dict, list[str]]],
+    fa_next_season: list[dict], next_season: int | None,
+) -> str:
+    """The "This offseason" block inside render_club(): three small tables,
+    each linking out to the matching standalone club page and the matching
+    league-wide page. Empty lists render a plain sentence rather than an
+    empty table, same as the rest of the site does for a club with nothing
+    to show.
+    """
+    slug_ = slug(club)
+    fa_heading = f"Free agents after {next_season}" if next_season else "Free agents"
+    return f"""
+  <h2>This offseason</h2>
+  <h3>Arbitration eligible</h3>
+  {_club_arb_table(arb_eligible)}
+  <p class="foot-note"><a href="{slug_}-arbitration.html">Full {html.escape(club)} arbitration list</a>
+  &middot; <a href="{BASE_PATH}{ARBITRATION_ELIGIBLE_PATH}">league-wide</a></p>
+
+  <h3>Non-tender watch</h3>
+  {_club_non_tender_table(non_tender)}
+  <p class="foot-note"><a href="{slug_}-non-tender.html">Full {html.escape(club)} non-tender watch</a>
+  &middot; <a href="{BASE_PATH}{NON_TENDER_WATCH_PATH}">league-wide</a></p>
+
+  <h3>{fa_heading}</h3>
+  {_club_fa_table(fa_next_season, next_season)}
+  <p class="foot-note"><a href="{slug_}-free-agents.html">Full {html.escape(club)} free agents</a>
+  &middot; <a href="{BASE_PATH}{FREE_AGENTS_PATH}">league-wide</a></p>
+"""
+
+
+def render_club(
+    club: str,
+    players: list[dict],
+    generated_at: str,
+    arb_eligible: list[dict] | None = None,
+    non_tender: list[tuple[dict, list[str]]] | None = None,
+    fa_next_season: list[dict] | None = None,
+    next_season: int | None = None,
+) -> str:
     """A club's 40-man roster, by service time.
 
     These exist so the player pages are not crawl leaves. Before them, every
@@ -843,6 +949,10 @@ def render_club(club: str, players: list[dict], generated_at: str) -> str:
         for p in sorted(
             players, key=lambda p: (-int(p.get("service_days_total") or 0), p.get("name") or "")
         )
+    )
+
+    offseason_section = _club_offseason_section(
+        club, arb_eligible or [], non_tender or [], fa_next_season or [], next_season
     )
 
     graph = [
@@ -902,9 +1012,12 @@ def render_club(club: str, players: list[dict], generated_at: str) -> str:
   <table><thead><tr><th>Player</th><th>Pos</th><th class="n">Service time</th>
   <th class="n">Days</th><th>Status</th></tr></thead><tbody>{rows}</tbody></table>
 
+  {offseason_section}
+
   <p class="foot">
     {_threshold_sentence()}
     <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
+    Players near a threshold are estimates.
     <br /><br />
     These figures are <strong>estimates</strong> reconstructed from public
     roster transaction records. They are not official MLB or MLBPA figures —
@@ -921,6 +1034,145 @@ def render_club(club: str, players: list[dict], generated_at: str) -> str:
 </body>
 </html>
 """
+
+
+# ---------------------------------------------------------------------------
+# Three small standalone pages per club, so a club-level search ("cubs
+# arbitration eligible", "cubs non-tender", "cubs free agents") has its own
+# landing page rather than a subsection of the full roster page. Built with
+# _alumni_shell(), the same generic page scaffold the alumni letter pages
+# use -- it already carries the nav, the estimate disclaimer and the footer
+# links, so none of that is duplicated here.
+# ---------------------------------------------------------------------------
+
+def render_club_arbitration(
+    club: str, players: list[dict], generated_at: str, next_season: int | None,
+) -> str:
+    slug_ = slug(club)
+    name = html.escape(club)
+    url = f"{SITE_URL}/{club_arbitration_path(club)}"
+    year_phrase = f" {next_season}" if next_season else ""
+    desc = (
+        f"{len(players)} {club} players are projected arbitration-eligible "
+        f"this winter{year_phrase} -- estimated from this project's own "
+        "service-time data, not an official MLB/MLBPA figure."
+    )
+    body = (
+        "<p class='lede'>Players near a threshold are estimates. See the "
+        f"<a href=\"{BASE_PATH}{ARBITRATION_ELIGIBLE_PATH}\">full league-wide "
+        "list</a> for every club.</p>"
+        + _club_arb_table(players)
+        + f"<p class=\"actions\"><a href=\"{slug_}.html\">&larr; {name} roster</a></p>"
+    )
+    graph = [
+        {"@type": "CollectionPage", "name": f"{club} arbitration-eligible players{year_phrase}",
+         "url": url, "description": desc},
+        _breadcrumb_ld([
+            ("Big League Service Time Tracker", f"{SITE_URL}/"),
+            (club, f"{SITE_URL}/{club_path(club)}"),
+            (f"Arbitration eligible{year_phrase}", url),
+        ]),
+    ]
+    return _alumni_shell(
+        f"{name} arbitration-eligible players{year_phrase} | Big League Service Time Tracker",
+        desc, url,
+        _site_nav(None) + _crumbs(
+            ("All players", BASE_PATH), (club, f"{slug_}.html"), (f"Arbitration eligible{year_phrase}", None)
+        ),
+        f"{club} arbitration-eligible players{year_phrase}",
+        f"{len(players)} players on the {club} 40-man roster.",
+        body, generated_at, graph,
+    )
+
+
+def render_club_non_tender(
+    club: str, pairs: list[tuple[dict, list[str]]], generated_at: str, next_season: int | None,
+) -> str:
+    slug_ = slug(club)
+    name = html.escape(club)
+    url = f"{SITE_URL}/{club_non_tender_path(club)}"
+    year_phrase = f" {next_season}" if next_season else ""
+    desc = (
+        f"{len(pairs)} {club} players are on this winter's non-tender watch "
+        f"list{year_phrase} -- estimated from this project's own "
+        "service-time data, not a prediction of the club's decision."
+    )
+    body = (
+        "<p class='lede'>A player makes this list if he is "
+        "arbitration-eligible and either in his final arbitration year "
+        f"before free agency, or played in fewer than "
+        f"{NON_TENDER_LOW_GAMES_THRESHOLD} games last season. See the "
+        f"<a href=\"{BASE_PATH}{NON_TENDER_WATCH_PATH}\">full league-wide "
+        "list</a> for every club.</p>"
+        + _club_non_tender_table(pairs)
+        + f"<p class=\"actions\"><a href=\"{slug_}.html\">&larr; {name} roster</a></p>"
+    )
+    graph = [
+        {"@type": "CollectionPage", "name": f"{club} non-tender watch{year_phrase}",
+         "url": url, "description": desc},
+        _breadcrumb_ld([
+            ("Big League Service Time Tracker", f"{SITE_URL}/"),
+            (club, f"{SITE_URL}/{club_path(club)}"),
+            (f"Non-tender watch{year_phrase}", url),
+        ]),
+    ]
+    return _alumni_shell(
+        f"{name} non-tender candidates{year_phrase} | Big League Service Time Tracker",
+        desc, url,
+        _site_nav(None) + _crumbs(
+            ("All players", BASE_PATH), (club, f"{slug_}.html"), (f"Non-tender watch{year_phrase}", None)
+        ),
+        f"{club} non-tender watch{year_phrase}",
+        f"{len(pairs)} players on the {club} 40-man roster.",
+        body, generated_at, graph,
+    )
+
+
+def render_club_free_agents(
+    club: str, fa_now: list[dict], fa_next_season: list[dict], generated_at: str,
+    next_season: int | None,
+) -> str:
+    slug_ = slug(club)
+    name = html.escape(club)
+    url = f"{SITE_URL}/{club_free_agents_path(club)}"
+    fa_heading = f"free agents after {next_season}" if next_season else "free agents"
+    desc = (
+        f"{len(fa_now)} {club} players are free-agent eligible now, and "
+        f"{len(fa_next_season)} more are projected to reach it after "
+        f"{next_season} -- estimated from this project's own service-time "
+        "data, not an official MLB/MLBPA figure."
+    )
+    body = (
+        "<p class='lede'>Year groups are a floor, not a projection of "
+        "playing time: they assume a player stays on a major league roster "
+        "every remaining day he possibly can. See the "
+        f"<a href=\"{BASE_PATH}{FREE_AGENTS_PATH}\">full league-wide list</a> "
+        "for every club and every year.</p>"
+        "<h2>Free agents now</h2>"
+        + _club_fa_table(fa_now, None)
+        + f"<h2>Free agents after {next_season}</h2>"
+        + _club_fa_table(fa_next_season, next_season)
+        + f"<p class=\"actions\"><a href=\"{slug_}.html\">&larr; {name} roster</a></p>"
+    )
+    graph = [
+        {"@type": "CollectionPage", "name": f"{club} {fa_heading}",
+         "url": url, "description": desc},
+        _breadcrumb_ld([
+            ("Big League Service Time Tracker", f"{SITE_URL}/"),
+            (club, f"{SITE_URL}/{club_path(club)}"),
+            ("Free agents", url),
+        ]),
+    ]
+    return _alumni_shell(
+        f"{name} {fa_heading} | Big League Service Time Tracker",
+        desc, url,
+        _site_nav(None) + _crumbs(
+            ("All players", BASE_PATH), (club, f"{slug_}.html"), ("Free agents", None)
+        ),
+        f"{club} {fa_heading}",
+        f"{len(fa_now)} free agents now, {len(fa_next_season)} projected after {next_season}.",
+        body, generated_at, graph,
+    )
 
 
 def _jsonld(player: dict, name: str, url: str, service: str) -> str:
@@ -1337,7 +1589,24 @@ def write_player_pages(
         (DOCS / rel).write_text(page)
         lastmod.record(rel, page)
 
-    clubs = _write_club_pages(by_club, generated_at, lastmod)
+    # Offseason selections: who is arbitration-eligible this winter, who is
+    # on the non-tender watch list, and who reaches free agency and when.
+    # `published` (not `db`) feeds every selector so every linked player is
+    # guaranteed to have a page -- any on_40_man player is always in
+    # `published`, see _should_publish(). Computed once, up front, because
+    # _write_club_pages() needs the same league-wide lists filtered per club.
+    arb_eligible = select_arbitration_eligible(published)
+    non_tender_watch = select_non_tender_watch(arb_eligible)
+    rostered = [p for p in published if p.get("on_40_man")]
+    fa_now = select_free_agents_now(rostered)
+    gen_year = int((generated_at or "")[:4]) if generated_at else None
+    next_season = gen_year + 1 if gen_year else None
+    fa_by_year = select_free_agents_by_year(rostered, next_season) if next_season else {}
+
+    clubs = _write_club_pages(
+        by_club, generated_at, lastmod,
+        arb_eligible, non_tender_watch, fa_now, fa_by_year, next_season,
+    )
     alumni = [p for p in published if not p.get("on_40_man")]
     alumni_pages = _write_alumni_pages(alumni, generated_at, lastmod) if alumni else []
 
@@ -1346,11 +1615,6 @@ def write_player_pages(
     (DOCS / EXPLAINER_PATH).write_text(explainer)
     lastmod.record(EXPLAINER_PATH, explainer)
 
-    # Offseason pages: who is arbitration-eligible this winter, and where the
-    # Super Two line is projected to fall. `published` (not `db`) feeds the
-    # selectors so every linked player is guaranteed to have a page -- any
-    # on_40_man player is always in `published`, see _should_publish().
-    arb_eligible = select_arbitration_eligible(published)
     arb_html = render_arbitration_eligible(
         arb_eligible, generated_at, super_two_cutoff, _KNOWN_EXTENSIONS
     )
@@ -1361,6 +1625,14 @@ def write_player_pages(
     s2_html = render_super_two(s2_class, db, generated_at, super_two_cutoff)
     (DOCS / SUPER_TWO_PAGE_PATH).write_text(s2_html, encoding="utf-8")
     lastmod.record(SUPER_TWO_PAGE_PATH, s2_html)
+
+    nt_html = render_non_tender_watch(non_tender_watch, generated_at, next_season)
+    (DOCS / NON_TENDER_WATCH_PATH).write_text(nt_html, encoding="utf-8")
+    lastmod.record(NON_TENDER_WATCH_PATH, nt_html)
+
+    fa_html = render_free_agents(fa_now, fa_by_year, generated_at)
+    (DOCS / FREE_AGENTS_PATH).write_text(fa_html, encoding="utf-8")
+    lastmod.record(FREE_AGENTS_PATH, fa_html)
 
     _write_sitemap(published, clubs, alumni_pages, generated_at, lastmod)
     lastmod.save()
@@ -1478,14 +1750,51 @@ def _group_rostered_by_club(published: list[dict]) -> dict[str, list[dict]]:
 
 
 def _write_club_pages(
-    by_club: dict[str, list[dict]], generated_at: str, lastmod: "_LastMod"
+    by_club: dict[str, list[dict]],
+    generated_at: str,
+    lastmod: "_LastMod",
+    arb_eligible: list[dict],
+    non_tender_watch: list[tuple[dict, list[str]]],
+    fa_now: list[dict],
+    fa_by_year: dict[int, list[dict]],
+    next_season: int | None,
 ) -> list[str]:
-    """One page per club with someone on its 40-man. Returns the club names."""
+    """One roster page per club, plus three standalone offseason subpages
+    each (arbitration-eligible, non-tender watch, free agents) -- so a
+    club-level search has its own landing page instead of a buried section.
+    Returns the club names.
+    """
+    arb_by_club = _group_by_club(arb_eligible)
+    nt_by_club = _group_by_club_pairs(non_tender_watch)
+    fa_now_by_club = _group_by_club(fa_now)
+    fa_next_by_club = _group_by_club(fa_by_year.get(next_season, []) if next_season else [])
+
     for club, players in by_club.items():
-        page = render_club(club, players, generated_at)
+        club_arb = arb_by_club.get(club, [])
+        club_nt = nt_by_club.get(club, [])
+        club_fa_next = fa_next_by_club.get(club, [])
+
+        page = render_club(club, players, generated_at, club_arb, club_nt, club_fa_next, next_season)
         rel = club_path(club)
         (DOCS / rel).write_text(page)
         lastmod.record(rel, page)
+
+        arb_page = render_club_arbitration(club, club_arb, generated_at, next_season)
+        rel = club_arbitration_path(club)
+        (DOCS / rel).write_text(arb_page, encoding="utf-8")
+        lastmod.record(rel, arb_page)
+
+        nt_page = render_club_non_tender(club, club_nt, generated_at, next_season)
+        rel = club_non_tender_path(club)
+        (DOCS / rel).write_text(nt_page, encoding="utf-8")
+        lastmod.record(rel, nt_page)
+
+        fa_page = render_club_free_agents(
+            club, fa_now_by_club.get(club, []), club_fa_next, generated_at, next_season
+        )
+        rel = club_free_agents_path(club)
+        (DOCS / rel).write_text(fa_page, encoding="utf-8")
+        lastmod.record(rel, fa_page)
 
     directory = render_club_index(by_club, generated_at)
     (CLUB_DIR / "index.html").write_text(directory)
@@ -1716,7 +2025,10 @@ def _write_sitemap(
     # (link out to many player/club pages) and target their own searches
     # ("arbitration eligible players", "super two cutoff") rather than any
     # one player's name.
-    for path in (ARBITRATION_ELIGIBLE_PATH, SUPER_TWO_PAGE_PATH):
+    for path in (
+        ARBITRATION_ELIGIBLE_PATH, SUPER_TWO_PAGE_PATH,
+        NON_TENDER_WATCH_PATH, FREE_AGENTS_PATH,
+    ):
         urls.append(
             f"  <url><loc>{SITE_URL}/{path}</loc>"
             f"<lastmod>{lastmod.of(path)}</lastmod>"
@@ -1743,6 +2055,16 @@ def _write_sitemap(
         f"<priority>0.8</priority></url>"
         for c in clubs
     ]
+    # The three standalone offseason subpages per club -- lower priority than
+    # the roster hub itself, same tier reasoning as the roster page vs the
+    # player pages below it.
+    for c in clubs:
+        for rel in (club_arbitration_path(c), club_non_tender_path(c), club_free_agents_path(c)):
+            club_urls.append(
+                f"  <url><loc>{SITE_URL}/{rel}</loc>"
+                f"<lastmod>{lastmod.of(rel)}</lastmod>"
+                f"<priority>0.7</priority></url>"
+            )
     def _url(rel, prio=None):
         pr = f"<priority>{prio}</priority>" if prio else ""
         return (f"  <url><loc>{SITE_URL}/{rel}</loc>"
@@ -1978,6 +2300,8 @@ def _write_page_css() -> None:
 EXPLAINER_PATH = "service-time.html"
 ARBITRATION_ELIGIBLE_PATH = "arbitration-eligible.html"
 SUPER_TWO_PAGE_PATH = "super-two.html"
+NON_TENDER_WATCH_PATH = "non-tender-watch.html"
+FREE_AGENTS_PATH = "free-agents.html"
 
 # Pages that are hand-written rather than generated, but still belong in the
 # sitemap. Listed by hand for the same reason the workflows list their paths
@@ -2565,6 +2889,10 @@ def render_arbitration_eligible(
   <p class="subtitle">{len(eligible)} players across {club_count} clubs, by club and
   service time.</p>
 
+  <p class="lede">Related this winter: the
+  <a href="{BASE_PATH}{NON_TENDER_WATCH_PATH}">non-tender watch list</a> and
+  this year's <a href="{BASE_PATH}{FREE_AGENTS_PATH}">free agents</a>.</p>
+
   <p class="lede">A player becomes eligible for salary arbitration once he
   reaches {_yrs(ARBITRATION_YEARS)} years of major league service time, and
   stays eligible until he reaches free agency at {_yrs(FREE_AGENCY_YEARS)}.
@@ -2574,6 +2902,11 @@ def render_arbitration_eligible(
   {SUPER_TWO_MIN_PRIOR_DAYS} days of service in the preceding season. See
   <a href="{BASE_PATH}{SUPER_TWO_PAGE_PATH}">the Super Two page</a> for how
   that line is projected this year -- as a range, not one number.</p>
+
+  <p class="lede">{s2_count} of the {len(eligible)} players below are
+  included as Super Two rather than by standard service time, using the
+  cutoff this project had computed as of {html.escape((generated_at or "")[:10])}
+  -- that cutoff can still move as more of the season's data settles.</p>
 
   <p class="lede">The {len(eligible)} players below are rostered players
   whose service time estimate meets one of those two tests today. Teams
@@ -2880,6 +3213,382 @@ def render_super_two(
     those are not published. See the
     <a href="https://github.com/RainbowMang0/MLB-Service-Time-Tracker#readme">methodology</a>.
     Last updated {html.escape(generated_at[:10])}.
+    <br /><br />
+    Independent project, not affiliated with or endorsed by Major League
+    Baseball or the MLBPA.
+    {_footer_extra()}
+  </p>
+</div></div>
+{ANALYTICS}
+</body>
+</html>
+"""
+
+
+# ---------------------------------------------------------------------------
+# Non-tender watch and free-agent-by-year pages. Same source data as the
+# arbitration-eligible page above -- nothing new is fetched, nothing new is
+# computed about service time itself. These only group and select from
+# fields the pipeline already stores.
+# ---------------------------------------------------------------------------
+
+NON_TENDER_LOW_GAMES_THRESHOLD = 20
+
+
+def _last_season_games_played(player: dict) -> int:
+    """Games played in the most recent season this player has stats for.
+
+    Hitting and pitching `gamesPlayed` are not summed -- a two-way player's
+    two lines describe the SAME games, not twice as many -- so this takes
+    whichever is larger, which for a conventional position player or pitcher
+    is simply the one populated line.
+    """
+    season_stats = player.get("season_stats") or {}
+    if not season_stats:
+        return 0
+    year = max(int(y) for y in season_stats)
+    rec = season_stats.get(str(year)) or {}
+    hitting = (rec.get("hitting") or {}).get("gamesPlayed") or 0
+    pitching = (rec.get("pitching") or {}).get("gamesPlayed") or 0
+    return max(int(hitting), int(pitching))
+
+
+def _non_tender_reasons(player: dict, fa_days: int) -> list[str]:
+    """Which of the two non-tender signals this player trips, if any.
+
+    See select_non_tender_watch() for the rule itself.
+    """
+    reasons = []
+    days = int(player.get("service_days_total") or 0)
+    if days >= fa_days - FULL_YEAR_DAYS:
+        reasons.append("in his final arbitration year before free agency")
+    games = _last_season_games_played(player)
+    if games < NON_TENDER_LOW_GAMES_THRESHOLD:
+        reasons.append(f"played in just {games} game{'s' if games != 1 else ''} last season")
+    return reasons
+
+
+def select_non_tender_watch(arb_eligible: list[dict]) -> list[tuple[dict, list[str]]]:
+    """Which arbitration-eligible players are realistic non-tender risks.
+
+    THE RULE, stated once here and printed verbatim (in plain language) at
+    the top of the page: a player qualifies if EITHER (a) he is already in
+    his final season of arbitration eligibility -- one more raise is the
+    last one before his price is set by the open market, which is the
+    clearest service-time-driven non-tender signal this data can support --
+    OR (b) he played in fewer than NON_TENDER_LOW_GAMES_THRESHOLD games in
+    his most recent season, the clearest signal available here that an
+    expensive arbitration role is not being used.
+
+    No probability is invented and no club's intent is guessed at; this is
+    the test applied, not a prediction of what any team will do. Kept as one
+    function (plus _non_tender_reasons()) so the rule can be changed in one
+    place later.
+    """
+    fa_days = _days_for(FREE_AGENCY_YEARS)
+    out = []
+    for p in arb_eligible:
+        reasons = _non_tender_reasons(p, fa_days)
+        if reasons:
+            out.append((p, reasons))
+    return out
+
+
+def select_free_agents_now(players: list[dict]) -> list[dict]:
+    """Rostered players already free-agent eligible this winter.
+
+    Restricted to on_40_man for the same reason select_arbitration_eligible
+    is: a long-departed player's free_agent_eligible flag is frozen and says
+    nothing about this offseason's free agent class.
+    """
+    return [p for p in players if p.get("on_40_man") and p.get("free_agent_eligible")]
+
+
+def free_agency_year(player: dict, next_season: int) -> int | None:
+    """The season after which a rostered, not-yet-free-agent player reaches
+    free agency -- or None if he is already there, or not rostered at all.
+
+    Reuses _min_seasons_to(), the same floor the player-page milestone
+    sentence already computes: the fewest additional seasons that could
+    possibly cover the days still owed, assuming he never leaves a roster.
+    This is not a new formula -- it is the existing "earliest possible"
+    arithmetic, just reported as a season rather than a sentence.
+    `next_season` is the first season still ahead of him, so needing exactly
+    one more season lands on next_season itself.
+    """
+    if not player.get("on_40_man") or player.get("free_agent_eligible"):
+        return None
+    fa_days = _days_for(FREE_AGENCY_YEARS)
+    days = int(player.get("service_days_total") or 0)
+    seasons = _min_seasons_to(fa_days - days)
+    return next_season + seasons - 1
+
+
+def select_free_agents_by_year(
+    players: list[dict], next_season: int
+) -> dict[int, list[dict]]:
+    """Every rostered, not-yet-eligible player, grouped by the earliest
+    season he could reach free agency. See free_agency_year()."""
+    by_year: dict[int, list[dict]] = {}
+    for p in players:
+        year = free_agency_year(p, next_season)
+        if year is not None:
+            by_year.setdefault(year, []).append(p)
+    return by_year
+
+
+def _sorted_by_days(players: list[dict]) -> list[dict]:
+    return sorted(
+        players,
+        key=lambda p: (-int(p.get("service_days_total") or 0), p.get("name") or ""),
+    )
+
+
+def _non_tender_rows(watch: list[tuple[dict, list[str]]], depth: str = BASE_PATH) -> str:
+    rows = []
+    for club, pairs in sorted(_group_by_club_pairs(watch).items()):
+        rows.append(
+            f"<tr class='arb-club-row'><td colspan='3'><a href=\"{depth}{club_path(club)}\">"
+            f"{html.escape(club)}</a> <span class='n'>({len(pairs)})</span></td></tr>"
+        )
+        for p, reasons in sorted(
+            pairs, key=lambda pr: (-int(pr[0].get("service_days_total") or 0), pr[0].get("name") or "")
+        ):
+            rows.append(
+                f"<tr><td><a href=\"{depth}{page_path(p)}\">"
+                f"{html.escape(p.get('name') or '')}</a></td>"
+                f"<td class='n'>{html.escape(p.get('service_time') or '0.000')}</td>"
+                f"<td>{html.escape('; '.join(r.capitalize() for r in reasons))}</td></tr>"
+            )
+    return "".join(rows)
+
+
+def _group_by_club_pairs(
+    pairs: list[tuple[dict, list[str]]]
+) -> dict[str, list[tuple[dict, list[str]]]]:
+    by_club: dict[str, list[tuple[dict, list[str]]]] = {}
+    for p, reasons in pairs:
+        club = p.get("team")
+        if club:
+            by_club.setdefault(club, []).append((p, reasons))
+    return by_club
+
+
+def render_non_tender_watch(
+    watch: list[tuple[dict, list[str]]], generated_at: str, next_season: int | None,
+) -> str:
+    """League-wide non-tender watch list. See select_non_tender_watch() for
+    the rule that builds it."""
+    url = f"{SITE_URL}/{NON_TENDER_WATCH_PATH}"
+    gen_year = int((generated_at or "")[:4]) if generated_at else None
+    deadline = f"November 20, {gen_year}" if gen_year else "this November"
+    season_phrase = f" for the {next_season} season" if next_season else ""
+
+    final_year_count = sum(1 for _, r in watch if any("final arbitration year" in x for x in r))
+    low_games_count = sum(1 for _, r in watch if any("played in just" in x for x in r))
+    club_count = len({p.get("team") for p, _ in watch if p.get("team")})
+
+    desc = (
+        f"{len(watch)} arbitration-eligible players on this winter's non-tender "
+        f"watch list ahead of the {deadline} deadline -- "
+        f"{final_year_count} in their final arbitration year and {low_games_count} "
+        "with limited playing time last season. Estimated from this project's "
+        "own service-time data, not a prediction of any club's decision."
+    )
+
+    rows = _non_tender_rows(watch)
+
+    graph = [
+        {"@type": "CollectionPage", "name": "Non-tender watch list", "url": url,
+         "description": desc},
+        _breadcrumb_ld([
+            ("Big League Service Time Tracker", f"{SITE_URL}/"),
+            ("Non-tender watch", url),
+        ]),
+    ]
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+{HEAD_TAGS}
+<title>MLB non-tender candidates{season_phrase} | Big League Service Time Tracker</title>
+<meta name="description" content="{html.escape(desc)}" />
+<link rel="canonical" href="{url}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="MLB non-tender candidates{season_phrase}" />
+<meta property="og:description" content="{html.escape(desc)}" />
+<meta property="og:url" content="{url}" />
+<meta name="twitter:card" content="summary" />
+{_ld_script(graph)}
+<link rel="icon" href="{BASE_PATH}favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="{BASE_PATH}styles.css" />
+<link rel="stylesheet" href="{BASE_PATH}page.css" />
+<script>
+  try {{
+    var t = localStorage.getItem("mlb-service-time-theme");
+    if (t) document.documentElement.setAttribute("data-theme", t);
+  }} catch (e) {{}}
+</script>
+</head>
+<body>
+<div class="viz-root"><div class="wrap">
+  {_site_nav(None)}
+  {_crumbs(("All players", BASE_PATH), ("Non-tender watch", None))}
+
+  <h1>Non-tender watch{season_phrase}</h1>
+  <p class="subtitle">Clubs must tender or release every arbitration-eligible
+  player by the <b>{deadline}</b> non-tender deadline. {len(watch)} players
+  across {club_count} clubs meet this page's watch rule.</p>
+
+  <p class="lede"><b>The rule:</b> a player makes this list if he is
+  arbitration-eligible and either already in his final arbitration year
+  before free agency, or played in fewer than {NON_TENDER_LOW_GAMES_THRESHOLD}
+  games last season -- the two clearest service-time-and-playing-time signals
+  this data can support. This is not a probability and not a prediction of
+  what any club will do; it is the rule above, applied.</p>
+
+  <p class="lede">See the full <a href="{BASE_PATH}{ARBITRATION_ELIGIBLE_PATH}">
+  arbitration-eligible list</a> or this winter's
+  <a href="{BASE_PATH}{FREE_AGENTS_PATH}">free agents</a>.</p>
+
+  <table class="arb-table"><thead><tr><th>Player</th><th class="n">Service time</th>
+  <th>Why he's listed</th></tr></thead><tbody>{rows}</tbody></table>
+
+  <p class="foot">
+    {_threshold_sentence()}
+    <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
+    Players near a threshold are estimates.
+    <br /><br />
+    These figures are <strong>estimates</strong> reconstructed from public
+    roster transaction records. They are not official MLB or MLBPA figures —
+    those are not published, and this page does not predict which players a
+    club actually non-tenders. See the
+    <a href="https://github.com/RainbowMang0/MLB-Service-Time-Tracker#readme">methodology</a>.
+    Last updated {html.escape((generated_at or "")[:10])}.
+    <br /><br />
+    Independent project, not affiliated with or endorsed by Major League
+    Baseball or the MLBPA.
+    {_footer_extra()}
+  </p>
+</div></div>
+{ANALYTICS}
+</body>
+</html>
+"""
+
+
+def _fa_year_rows(players: list[dict], depth: str = BASE_PATH) -> str:
+    return "".join(
+        f"<tr><td><a href=\"{depth}{page_path(p)}\">{html.escape(p.get('name') or '')}</a></td>"
+        f"<td><a href=\"{depth}{club_path(p.get('team') or '')}\">{html.escape(p.get('team') or '—')}</a></td>"
+        f"<td class='n'>{html.escape(p.get('service_time') or '0.000')}</td></tr>"
+        for p in _sorted_by_days(players)
+    )
+
+
+def render_free_agents(
+    fa_now: list[dict], by_year: dict[int, list[dict]], generated_at: str,
+) -> str:
+    """League-wide free agent page: who is a free agent now, and every
+    rostered player grouped by the season he could first reach free agency.
+    See select_free_agents_now() / select_free_agents_by_year()."""
+    url = f"{SITE_URL}/{FREE_AGENTS_PATH}"
+    gen_year = int((generated_at or "")[:4]) if generated_at else None
+    season_phrase = f" after the {gen_year} season" if gen_year else ""
+    club_count = len({p.get("team") for p in fa_now if p.get("team")})
+
+    desc = (
+        f"{len(fa_now)} players reach MLB free agency{season_phrase}, plus "
+        f"every rostered player grouped by the year he is projected to reach "
+        "it. Estimated from this project's own service-time data, not an "
+        "official MLB/MLBPA figure."
+    )
+
+    now_rows = _fa_year_rows(fa_now)
+
+    year_sections = []
+    for year in sorted(by_year):
+        players = by_year[year]
+        year_sections.append(
+            f"<h2>Free agents after {year}</h2>"
+            f"<p class='subtitle'>{len(players)} rostered players, by club and "
+            "service time.</p>"
+            "<table><thead><tr><th>Player</th><th>Club</th>"
+            f"<th class='n'>Service time</th></tr></thead><tbody>{_fa_year_rows(players)}"
+            "</tbody></table>"
+        )
+
+    graph = [
+        {"@type": "CollectionPage", "name": "MLB free agents by year", "url": url,
+         "description": desc},
+        _breadcrumb_ld([
+            ("Big League Service Time Tracker", f"{SITE_URL}/"),
+            ("Free agents", url),
+        ]),
+    ]
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+{HEAD_TAGS}
+<title>MLB free agents{season_phrase} and by year | Big League Service Time Tracker</title>
+<meta name="description" content="{html.escape(desc)}" />
+<link rel="canonical" href="{url}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="MLB free agents{season_phrase} and by year" />
+<meta property="og:description" content="{html.escape(desc)}" />
+<meta property="og:url" content="{url}" />
+<meta name="twitter:card" content="summary" />
+{_ld_script(graph)}
+<link rel="icon" href="{BASE_PATH}favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="{BASE_PATH}styles.css" />
+<link rel="stylesheet" href="{BASE_PATH}page.css" />
+<script>
+  try {{
+    var t = localStorage.getItem("mlb-service-time-theme");
+    if (t) document.documentElement.setAttribute("data-theme", t);
+  }} catch (e) {{}}
+</script>
+</head>
+<body>
+<div class="viz-root"><div class="wrap">
+  {_site_nav(None)}
+  {_crumbs(("All players", BASE_PATH), ("Free agents", None))}
+
+  <h1>MLB free agents{season_phrase}</h1>
+  <p class="subtitle">{len(fa_now)} players across {club_count} clubs are
+  free-agent eligible now. Every other rostered player is grouped below by
+  the year he is projected to reach free agency.</p>
+
+  <p class="lede">A player reaches free agency at {_yrs(FREE_AGENCY_YEARS)}
+  years of major league service. The year groups below are a floor, not a
+  projection of playing time: they assume a player stays on a major league
+  roster every remaining day he possibly can, so an injury or a demotion can
+  only push a player's year later, never earlier. See
+  <a href="{BASE_PATH}{ARBITRATION_ELIGIBLE_PATH}">arbitration-eligible
+  players</a> or the <a href="{BASE_PATH}{NON_TENDER_WATCH_PATH}">non-tender
+  watch list</a> for who reaches the open market sooner by another route.</p>
+
+  <h2>Free agents now{season_phrase}</h2>
+  <table class="arb-table"><thead><tr><th>Player</th><th>Club</th>
+  <th class="n">Service time</th></tr></thead><tbody>{now_rows}</tbody></table>
+
+  {''.join(year_sections)}
+
+  <p class="foot">
+    {_threshold_sentence()}
+    <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
+    Players near a threshold are estimates.
+    <br /><br />
+    These figures are <strong>estimates</strong> reconstructed from public
+    roster transaction records. They are not official MLB or MLBPA figures —
+    those are not published. See the
+    <a href="https://github.com/RainbowMang0/MLB-Service-Time-Tracker#readme">methodology</a>.
+    Last updated {html.escape((generated_at or "")[:10])}.
     <br /><br />
     Independent project, not affiliated with or endorsed by Major League
     Baseball or the MLBPA.

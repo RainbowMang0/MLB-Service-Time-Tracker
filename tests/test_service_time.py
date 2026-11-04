@@ -41,6 +41,13 @@ def check(label: str, condition: bool):
         print(f"  FAIL - {label}")
 
 
+def _tbody_row_count(html_out: str) -> int:
+    """Number of <tr> rows inside the first <tbody>...</tbody>, i.e. data
+    rows only, with the <thead> row excluded."""
+    body = html_out.split("<tbody>", 1)[1].split("</tbody>", 1)[0]
+    return body.count("<tr>")
+
+
 def test_single_full_season():
     season = SeasonWindow(2023, dt.date(2023, 3, 30), dt.date(2023, 10, 1))
     txns = [
@@ -2724,17 +2731,287 @@ def test_the_offseason_pages_are_added_to_the_sitemap_and_workflows():
 
     ROOT = pathlib.Path(__file__).resolve().parents[1]
     core = (ROOT / "docs" / "sitemap-core.xml").read_text()
-    for path in (wpp.ARBITRATION_ELIGIBLE_PATH, wpp.SUPER_TWO_PAGE_PATH):
+    for path in (
+        wpp.ARBITRATION_ELIGIBLE_PATH, wpp.SUPER_TWO_PAGE_PATH,
+        wpp.NON_TENDER_WATCH_PATH, wpp.FREE_AGENTS_PATH,
+    ):
         check(f"sitemap-core.xml lists {path}", f"/{path}</loc>" in core)
 
     workflows = ROOT / ".github" / "workflows"
     for name in ("update-service-time.yml", "backfill-history.yml"):
         body = (workflows / name).read_text()
         check(
-            f"{name} commits the two new offseason pages",
-            f"docs/{wpp.ARBITRATION_ELIGIBLE_PATH}" in body
-            and f"docs/{wpp.SUPER_TWO_PAGE_PATH}" in body,
+            f"{name} commits every root-level offseason page",
+            all(
+                f"docs/{p}" in body
+                for p in (
+                    wpp.ARBITRATION_ELIGIBLE_PATH, wpp.SUPER_TWO_PAGE_PATH,
+                    wpp.NON_TENDER_WATCH_PATH, wpp.FREE_AGENTS_PATH,
+                )
+            ),
         )
+
+
+def test_non_tender_watch_selection_states_its_rule_and_picks_expected_players():
+    """
+    select_non_tender_watch() applies exactly one rule, stated in its own
+    docstring and printed verbatim (in plain language) on the rendered page:
+    a player qualifies if he is already in his final arbitration year before
+    free agency (within one credited year of free agency, i.e.
+    service_days_total >= fa_days - FULL_YEAR_DAYS), OR he played in fewer
+    than NON_TENDER_LOW_GAMES_THRESHOLD games in his most recent season.
+    Pins the boundary of the first signal and that a player tripping
+    neither signal is dropped entirely, not merely unlabeled.
+    """
+    import write_player_pages as wpp
+
+    fa_days = wpp._days_for(wpp.FREE_AGENCY_YEARS)
+    final_year_floor = fa_days - wpp.FULL_YEAR_DAYS
+
+    def with_games(games):
+        return {"season_stats": {"2026": {"hitting": {"gamesPlayed": games}}}}
+
+    final_year_only = {
+        "id": 1, "name": "Final Year Only", "team": "A", "on_40_man": True,
+        "service_days_total": final_year_floor, "service_time": "5.028",
+        **with_games(120),
+    }
+    low_games_only = {
+        "id": 2, "name": "Low Games Only", "team": "A", "on_40_man": True,
+        "service_days_total": 500, "service_time": "2.156",
+        **with_games(5),
+    }
+    both_signals = {
+        "id": 3, "name": "Both Signals", "team": "A", "on_40_man": True,
+        "service_days_total": fa_days - 10, "service_time": "5.160",
+        **with_games(10),
+    }
+    one_day_short_of_final_year = {
+        "id": 4, "name": "One Day Short", "team": "A", "on_40_man": True,
+        "service_days_total": final_year_floor - 1, "service_time": "5.027",
+        **with_games(130),
+    }
+    neither_signal = {
+        "id": 5, "name": "Neither Signal", "team": "A", "on_40_man": True,
+        "service_days_total": 500, "service_time": "2.156",
+        **with_games(50),
+    }
+
+    arb_eligible = [
+        final_year_only, low_games_only, both_signals,
+        one_day_short_of_final_year, neither_signal,
+    ]
+    watch = wpp.select_non_tender_watch(arb_eligible)
+    got = {p["id"]: reasons for p, reasons in watch}
+
+    check("the final-arbitration-year boundary is inclusive", 1 in got)
+    check("one day short of that boundary (and not low-games) is excluded",
+          4 not in got)
+    check("a player on the low-games signal alone is included", 2 in got)
+    check("a player on neither signal is dropped entirely, not just unlabeled",
+          5 not in got)
+    check("a player tripping both signals carries both reasons",
+          len(got[3]) == 2)
+    check("nothing else sneaks onto the list", set(got) == {1, 2, 3})
+
+    html_out = wpp.render_non_tender_watch(watch, "2026-11-04T00:00:00+00:00", 2027)
+    normalized = " ".join(html_out.split())
+    check("the page states the rule in one plain sentence",
+          "already in his final arbitration year before free agency, or played "
+          "in fewer than 20 games last season" in normalized)
+    check("a listed player's name reaches the page", "Final Year Only" in html_out)
+    check("an excluded player's name does not", "Neither Signal" not in html_out)
+
+
+def test_free_agents_by_year_boundary_at_exactly_six_years():
+    """
+    select_free_agents_now() and select_free_agents_by_year()/
+    free_agency_year() must split cleanly at the free-agency threshold: a
+    player already AT it belongs to "free agents now" and nowhere in the
+    by-year groups (his free_agent_eligible flag already makes him one),
+    while a player one day short of it belongs in the very next season's
+    bucket, not the current one.
+    """
+    import write_player_pages as wpp
+
+    fa_days = wpp._days_for(wpp.FREE_AGENCY_YEARS)
+    next_season = 2027
+
+    at_six = {
+        "id": 1, "name": "Right At Six", "team": "A", "on_40_man": True,
+        "service_days_total": fa_days, "service_time": "6.000",
+        "free_agent_eligible": True,
+    }
+    just_under_six = {
+        "id": 2, "name": "Just Under Six", "team": "A", "on_40_man": True,
+        "service_days_total": fa_days - 1, "service_time": "5.171",
+        "free_agent_eligible": False,
+    }
+    two_seasons_out = {
+        "id": 3, "name": "Two Seasons Out", "team": "A", "on_40_man": True,
+        "service_days_total": fa_days - wpp.FULL_YEAR_DAYS - 1, "service_time": "4.171",
+        "free_agent_eligible": False,
+    }
+
+    players = [at_six, just_under_six, two_seasons_out]
+    fa_now = {p["id"] for p in wpp.select_free_agents_now(players)}
+    by_year = wpp.select_free_agents_by_year(players, next_season)
+    by_year_ids = {year: {p["id"] for p in plist} for year, plist in by_year.items()}
+
+    check("exactly 6.000 years lands in free agents now", 1 in fa_now)
+    check("exactly 6.000 years is not grouped by year at all",
+          all(1 not in ids for ids in by_year_ids.values()))
+    check("one day short of 6.000 is not free agent now", 2 not in fa_now)
+    check("one day short of 6.000 lands in the very next season",
+          2 in by_year_ids.get(next_season, set()))
+    check("needing one more full season after that lands one year later",
+          3 in by_year_ids.get(next_season + 1, set()))
+
+
+def test_club_offseason_subpages_have_correct_counts_titles_and_descriptions():
+    """
+    Each club gets three standalone offseason subpages. This pins that the
+    row counts on each subpage match exactly what was handed to the
+    renderer (no cross-club leakage, nothing dropped), and that each page
+    carries its own unique, club-specific title and meta description -- not
+    a copy-pasted generic one.
+    """
+    import write_player_pages as wpp
+
+    arb_players = [
+        {"id": 1, "name": "Arb Cub One", "team": "Chicago Cubs", "on_40_man": True,
+         "service_days_total": 3 * wpp.FULL_YEAR_DAYS, "service_time": "3.000",
+         "super_two_candidate": False},
+        {"id": 2, "name": "Arb Cub Two", "team": "Chicago Cubs", "on_40_man": True,
+         "service_days_total": 4 * wpp.FULL_YEAR_DAYS, "service_time": "4.000",
+         "super_two_candidate": False},
+    ]
+    nt_pairs = [
+        (arb_players[0], ["played in just 5 games last season"]),
+    ]
+    fa_now = [
+        {"id": 3, "name": "Cub Free Agent", "team": "Chicago Cubs", "on_40_man": True,
+         "service_time": "7.000"},
+    ]
+    fa_next = [
+        {"id": 4, "name": "Cub Next Year FA", "team": "Chicago Cubs", "on_40_man": True,
+         "service_time": "5.171"},
+    ]
+
+    arb_page = wpp.render_club_arbitration("Chicago Cubs", arb_players, "2026-11-04T00:00:00+00:00", 2027)
+    nt_page = wpp.render_club_non_tender("Chicago Cubs", nt_pairs, "2026-11-04T00:00:00+00:00", 2027)
+    fa_page = wpp.render_club_free_agents(
+        "Chicago Cubs", fa_now, fa_next, "2026-11-04T00:00:00+00:00", 2027
+    )
+
+    check("the arbitration subpage lists exactly the two players handed to it",
+          _tbody_row_count(arb_page) == 2 and "Arb Cub One" in arb_page and "Arb Cub Two" in arb_page)
+    check("the non-tender subpage lists exactly the one pair handed to it",
+          _tbody_row_count(nt_page) == 1 and "Arb Cub One" in nt_page)
+    check("the free-agents subpage lists one now and one next year",
+          "Cub Free Agent" in fa_page and "Cub Next Year FA" in fa_page)
+
+    titles = {
+        "arb": arb_page.split("<title>")[1].split("</title>")[0],
+        "nt": nt_page.split("<title>")[1].split("</title>")[0],
+        "fa": fa_page.split("<title>")[1].split("</title>")[0],
+    }
+    check("all three subpages have distinct titles", len(set(titles.values())) == 3)
+    for name, page in (("arb", arb_page), ("nt", nt_page), ("fa", fa_page)):
+        desc = page.split('meta name="description" content="')[1].split('"')[0]
+        check(f"the {name} subpage's meta description names the club",
+              "Chicago Cubs" in desc)
+
+
+def test_write_club_pages_produces_three_subpages_per_club_with_right_totals():
+    """
+    End-to-end through write_player_pages(): for a small two-club roster,
+    each club must get a roster page plus exactly three offseason subpages
+    on disk, and the league-wide non-tender-watch.html / free-agents.html
+    totals must equal the sum of what lands on the per-club subpages --
+    the league and club pages are built from the same selectors (see
+    _write_club_pages()), so they must never disagree about who is on
+    either list.
+    """
+    import tempfile
+    import write_player_pages as wpp
+
+    tmp = tempfile.TemporaryDirectory()
+    try:
+        tmp_root = pathlib.Path(tmp.name)
+        docs = tmp_root / "docs"
+        docs.mkdir()
+
+        patched = {
+            "DOCS": docs,
+            "PAGE_DIR": docs / "p",
+            "CLUB_DIR": docs / "t",
+            "ALUMNI_DIR": docs / "alumni",
+            "LASTMOD_PATH": docs / "data" / "page_lastmod.json",
+            "PUBLISHED_IDS_PATH": tmp_root / "data" / "published_ids.json",
+        }
+        saved = {name: getattr(wpp, name) for name in patched}
+        for name, value in patched.items():
+            setattr(wpp, name, value)
+
+        try:
+            fa_days = wpp._days_for(wpp.FREE_AGENCY_YEARS)
+            arb_days = wpp._days_for(wpp.ARBITRATION_YEARS)
+
+            def player(id_, name, team, team_id, days, extra=None):
+                rec = {
+                    "id": id_, "name": name, "team": team, "team_id": team_id,
+                    "on_40_man": True, "missing_seasons": 0,
+                    "service_days_total": days, "service_time": wpp._fmt(days),
+                    "free_agent_eligible": days >= fa_days,
+                }
+                rec.update(extra or {})
+                return rec
+
+            db = {
+                # Club One: one arbitration-eligible non-tender risk, one
+                # free agent now.
+                "1": player(1, "Club One Arb", "Club One", 1, arb_days,
+                            {"season_stats": {"2026": {"hitting": {"gamesPlayed": 3}}}}),
+                "2": player(2, "Club One FA Now", "Club One", 1, fa_days),
+                # Club Two: one free agent next season, nobody arbitration
+                # eligible or on the non-tender watch.
+                "3": player(3, "Club Two FA Next", "Club Two", 2, fa_days - 1),
+            }
+
+            published = wpp.write_player_pages(db, "2026-11-04T00:00:00+00:00")
+            check("all three players publish", len(published) == 3)
+
+            for club in ("club-one", "club-two"):
+                for suffix in ("-arbitration", "-non-tender", "-free-agents"):
+                    check(f"{club}{suffix}.html was written",
+                          (docs / "t" / f"{club}{suffix}.html").exists())
+
+            club_one_arb = (docs / "t" / "club-one-arbitration.html").read_text()
+            club_one_nt = (docs / "t" / "club-one-non-tender.html").read_text()
+            club_one_fa = (docs / "t" / "club-one-free-agents.html").read_text()
+            club_two_fa = (docs / "t" / "club-two-free-agents.html").read_text()
+
+            check("Club One's arbitration subpage lists its one eligible player",
+                  "Club One Arb" in club_one_arb and _tbody_row_count(club_one_arb) == 1)
+            check("Club One's non-tender subpage lists the same player (low games)",
+                  "Club One Arb" in club_one_nt and _tbody_row_count(club_one_nt) == 1)
+            check("Club One's free-agents subpage lists its free-agent-now player",
+                  "Club One FA Now" in club_one_fa)
+            check("Club Two's free-agents subpage lists its next-season player",
+                  "Club Two FA Next" in club_two_fa)
+
+            league_nt = (docs / "non-tender-watch.html").read_text()
+            league_fa = (docs / "free-agents.html").read_text()
+            check("the league-wide non-tender page carries the same player",
+                  "Club One Arb" in league_nt)
+            check("the league-wide free-agents page carries both free agents",
+                  "Club One FA Now" in league_fa and "Club Two FA Next" in league_fa)
+        finally:
+            for name, value in saved.items():
+                setattr(wpp, name, value)
+    finally:
+        tmp.cleanup()
 
 
 def test_the_site_nav_is_the_same_on_every_page():
@@ -5458,6 +5735,10 @@ if __name__ == "__main__":
     test_the_super_two_page_shows_the_range_and_three_groups()
     test_arbitration_eligible_badge_distinguishes_the_bubble()
     test_the_offseason_pages_are_added_to_the_sitemap_and_workflows()
+    test_non_tender_watch_selection_states_its_rule_and_picks_expected_players()
+    test_free_agents_by_year_boundary_at_exactly_six_years()
+    test_club_offseason_subpages_have_correct_counts_titles_and_descriptions()
+    test_write_club_pages_produces_three_subpages_per_club_with_right_totals()
     test_the_site_nav_is_the_same_on_every_page()
     test_the_two_unfinished_tools_are_marked_in_the_nav()
     test_the_nav_marks_the_current_page_with_aria_current()
