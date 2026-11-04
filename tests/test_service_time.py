@@ -3014,124 +3014,324 @@ def test_write_club_pages_produces_three_subpages_per_club_with_right_totals():
         tmp.cleanup()
 
 
-def test_the_site_nav_is_the_same_on_every_page():
-    """
-    The navigation lands in many places -- six hand-written pages, the
-    generated lockout tracker, and five generated templates -- and
-    docs/index.html cannot read the Python that builds it. That is the exact
-    shape of the bug that left the analytics token wrong in index.html while
-    the four generated templates were right, and of the one that froze
-    index.json while the database moved underneath.
+def _header_block(html_text):
+    """The <header class="site-top">...</header> slice, or a hard failure.
 
-    So the destination SET is asserted rather than trusted. Labels and href
-    style may legitimately differ (generated pages are BASE_PATH-absolute
-    because they are served from /p/, /t/ and /alumni/; hand-written pages are
-    relative because they are served from the root). What may not differ is
-    which sections a reader can reach.
+    Every page-type test below starts here -- the header is the one piece
+    of markup that must be byte-for-byte the same shape everywhere, so every
+    assertion about it is scoped to this slice rather than the whole page,
+    which would let an unrelated string elsewhere in the page (a footer
+    link, a prose mention) pass a check it should not.
+    """
+    import re
+    m = re.search(r'<header class="site-top".*?</header>', html_text, re.S)
+    assert m, "page carries no site-top header"
+    return m.group(0)
+
+
+def _header_destinations(block):
+    """Every href in a header block, normalised to a BASE_PATH-free key.
+
+    Both href styles collapse to the same key: generated pages are
+    BASE_PATH-absolute ("/t/") and the hand-written pages now match them
+    exactly (see CLAUDE.md), but lstrip keeps this test from caring which.
+    mailto: and the phone search icon's "?q=" link are not page destinations
+    and are excluded so they cannot pollute a set-equality check.
+    """
+    import re
+    hrefs = re.findall(r'href="([^"]+)"', block)
+    return {
+        h.lstrip("/") for h in hrefs
+        if not h.startswith("mailto:") and "?" not in h
+    }
+
+
+def _menu_sample_pages():
+    """One rendered HTML string per generated template, including the two
+    (alumni, 404) that have no standalone render_*() returning a string --
+    those are written to a scratch docs/ dir and read back, the same
+    monkeypatch-DOCS pattern test_write_club_pages_produces_three_subpages_
+    per_club_with_right_totals() uses.
+    """
+    import tempfile
+    import write_player_pages as wpp
+
+    player = {
+        "id": 1, "name": "Test Player", "team": "Atlanta Braves",
+        "on_40_man": True, "service_time": "1.000", "service_days_total": 172,
+        "position": "P", "mlb_debut": "2020-01-01",
+    }
+    pages = {
+        "render_club_index": wpp.render_club_index({"Atlanta Braves": []}, "2026-01-01"),
+        "render_club": wpp.render_club("Atlanta Braves", [], "2026-01-01"),
+        "render_club_arbitration": wpp.render_club_arbitration("Atlanta Braves", [], "2026-01-01", 2027),
+        "render_club_non_tender": wpp.render_club_non_tender("Atlanta Braves", [], "2026-01-01", 2027),
+        "render_club_free_agents": wpp.render_club_free_agents("Atlanta Braves", [], [], "2026-01-01", 2027),
+        "render (player)": wpp.render(player, {}, "2026-01-01", []),
+        "render_explainer": wpp.render_explainer("2026-01-01"),
+        "render_arbitration_eligible": wpp.render_arbitration_eligible([], "2026-01-01", None, {}),
+        "render_super_two": wpp.render_super_two([], {}, "2026-01-01", None),
+        "render_non_tender_watch": wpp.render_non_tender_watch([], "2026-01-01", 2027),
+        "render_free_agents": wpp.render_free_agents([], {}, "2026-01-01"),
+    }
+
+    tmp = tempfile.TemporaryDirectory()
+    try:
+        docs = pathlib.Path(tmp.name) / "docs"
+        docs.mkdir()
+        patched = {"DOCS": docs, "ALUMNI_DIR": docs / "alumni"}
+        saved = {name: getattr(wpp, name) for name in patched}
+        for name, value in patched.items():
+            setattr(wpp, name, value)
+        try:
+            alumnus = {
+                "id": 2, "name": "Old Timer", "team": "Atlanta Braves",
+                "on_40_man": False, "service_time": "6.000", "service_days_total": 1032,
+                "mlb_debut": "2010-01-01", "last_played": "2018-01-01",
+            }
+            written = wpp._write_alumni_pages([alumnus], "2026-01-01", wpp._LastMod("2026-01-01"))
+            for rel in written:
+                label = "render_alumni (letter)" if rel.endswith("/o.html") else "render_alumni (index)"
+                pages[label] = (docs / rel).read_text(encoding="utf-8")
+            wpp._write_404()
+            pages["404"] = (docs / "404.html").read_text(encoding="utf-8")
+        finally:
+            for name, value in saved.items():
+                setattr(wpp, name, value)
+    finally:
+        tmp.cleanup()
+    return pages
+
+
+_MENU_HAND_WRITTEN_PAGES = [
+    "docs/index.html", "docs/contract.html", "docs/lockout.html",
+    "docs/about.html", "docs/privacy.html", "docs/neutrality.html",
+]
+
+
+def test_the_site_header_is_the_same_on_every_page():
+    """
+    The header lands in many places -- six hand-written pages, the
+    generated lockout section (built by scripts/build_lockout_page.py, which
+    imports this module and reuses _site_header() rather than keeping its
+    own copy), and every generated template -- and docs/index.html cannot
+    read the Python that builds it. That is the exact shape of the bug that
+    left the analytics token wrong in index.html while the generated
+    templates were right.
+
+    So the destination SET is asserted rather than trusted, and the
+    presence of the logo link, the search form and the More button is
+    checked structurally rather than assumed from one page. The club grid's
+    30 links are excluded from the destination-set comparison and checked
+    on their own in test_every_club_in_the_sheet_links_to_a_real_club_page().
 
     docs/taxes.html is excluded on purpose. It's parked (CLAUDE.md, "Do NOT
-    touch docs/taxes.html") and was deliberately left off the lockout rollout
-    rather than edited for a one-line nav addition, so it still carries the
-    nav set from before docs/lockout.html existed.
+    touch docs/taxes.html") and keeps its pre-menu nav strip.
+    """
+    import write_player_pages as wpp
+
+    ROOT = pathlib.Path(__file__).resolve().parents[1]
+    nav_hrefs = {href for href, _tab, _sheet, _where in wpp.NAV}
+    club_hrefs = {wpp.club_path(name) for name, _abbr in wpp.CLUB_ABBR}
+
+    def check_block(label, block):
+        check(f"{label}: logo link is present exactly once", block.count('class="brand"') == 1)
+        check(f"{label}: search form is present exactly once",
+              block.count('<form class="top-search') == 1)
+        check(f"{label}: More button is present exactly once", block.count('aria-label="Menu"') == 1)
+        check(f"{label}: header reaches every menu destination, and nothing else",
+              _header_destinations(block) - club_hrefs == nav_hrefs)
+
+    for rel in _MENU_HAND_WRITTEN_PAGES:
+        html_text = (ROOT / rel).read_text(encoding="utf-8")
+        check(f"{rel}: header appears exactly once", html_text.count('<header class="site-top"') == 1)
+        check_block(rel, _header_block(html_text))
+
+    for label, html_text in _menu_sample_pages().items():
+        check(f"{label}: header appears exactly once", html_text.count('<header class="site-top"') == 1)
+        check_block(label, _header_block(html_text))
+
+
+def test_the_tab_row_matches_the_approved_phone_and_desktop_sets():
+    """
+    Phone and desktop show different numbers of tabs by design (the plan's
+    "tabs that fit + sheet" option): four on phone -- Players, Clubs,
+    Arbitration, Super Two -- so none is hidden with no cue it scrolls,
+    the exact problem the old sideways-scrolling strip had. Lockout and
+    Previous players are desktop-only tabs (class="hide-phone"), reachable
+    everywhere through the sheet instead.
     """
     import re
     import write_player_pages as wpp
 
-    ROOT = pathlib.Path(__file__).resolve().parents[1]
+    block = _header_block(wpp._site_header(None))
+    tabs = re.search(r'<nav class="tabs".*?</nav>', block, re.S).group(0)
+    items = re.findall(r'<a([^>]*)>([^<]*)</a>', tabs)
+    phone_labels = [label for attrs, label in items if "hide-phone" not in attrs]
+    all_labels = [label for _attrs, label in items]
 
-    def destinations(html):
-        m = re.search(r'<nav class="site-nav".*?</nav>', html, re.S)
-        assert m, "page carries no site nav"
-        hrefs = re.findall(r'href="([^"]+)"', m.group(0))
-        # Normalise the two href styles to the same key.
-        return {h.lstrip("/").replace("./", "") for h in hrefs}
-
-    expected = {h for h, _, _ in wpp.NAV_SECTIONS}
-
-    hand_written = [
-        "docs/index.html",
-        "docs/contract.html",
-        "docs/neutrality.html",
-        "docs/about.html",
-        "docs/privacy.html",
-        "docs/lockout.html",
-    ]
-    for rel in hand_written:
-        html = (ROOT / rel).read_text()
-        check(f"{rel} nav reaches every section", destinations(html) == expected)
-
-    # And the generated side, rendered rather than read off disk, so a
-    # template change is caught before it ships.
-    generated = [
-        wpp.render_club_index({"Atlanta Braves": []}, "2026-01-01"),
-        wpp.render_explainer("2026-01-01"),
-        wpp.render_arbitration_eligible([], "2026-01-01", None, {}),
-        wpp.render_super_two([], {}, "2026-01-01", None),
-    ]
-    for html in generated:
-        check("generated nav reaches every section", destinations(html) == expected)
+    check("phone tabs are exactly Players, Clubs, Arbitration, Super Two, in order",
+          phone_labels == ["Players", "Clubs", "Arbitration", "Super Two"])
+    check("desktop tabs add Lockout and Previous players, in order",
+          all_labels == ["Players", "Clubs", "Arbitration", "Super Two", "Lockout", "Previous players"])
 
 
-def test_the_two_unfinished_tools_are_marked_in_the_nav():
+def test_the_sheet_lists_every_required_row_and_never_the_shelved_tools():
     """
-    The owner's decision on 2026-09-11 was a complete menu with the duty-day
-    and contract tools flagged, because neither is finished -- no tax
-    professional has reviewed the duty-day methodology, and the contract tool
-    is mid-build. A visitor should know before clicking, not after.
-
-    Pinned because the tag is the whole reason those two are allowed in the
-    menu at all: dropping it silently would restore exactly the homepage
-    promotion that was deliberately reverted on 2026-09-08.
+    The More sheet is the one place every page links to Arbitration
+    eligible, Super Two, Previous players A-Z and the Lockout tracker by
+    their full names, plus the small site-info links and the contact
+    address. Contract clock and Duty days are deliberately absent: both
+    tools stay live at their own URLs, but neither is promoted from the
+    menu -- the owner's call for this job, reversing the "in development"
+    tag this sheet's predecessor nav used to carry for both.
     """
     import re
     import write_player_pages as wpp
 
+    block = _header_block(wpp._site_header(None))
+    sheet = re.search(r'<div class="sheet".*?</div></details>', block, re.S)
+    assert sheet, "header carries no sheet"
+    sheet_text = sheet.group(0)
+
+    for label in (
+        "Players", "Arbitration eligible", "Super Two",
+        "Previous players A", "Lockout tracker",
+        "What is service time?", "About", "Neutrality", "Privacy",
+    ):
+        check(f"sheet lists {label!r}", label in sheet_text)
+    check("sheet lists the contact address",
+          "contact@bigleagueservicetime.com" in sheet_text)
+
+    check("header does not link contract.html anywhere", "contract.html" not in block)
+    check("header does not link taxes.html anywhere", "taxes.html" not in block)
+
+
+def test_every_club_in_the_sheet_links_to_a_real_club_page():
+    """
+    All 30 clubs, by abbreviation, every one reachable in two taps from any
+    page. CLUB_ABBR is a fixed list (see its own docstring) rather than
+    something read off today's roster, so this test checks it against the
+    pages club_path() + slug() actually resolves to on disk -- the same
+    function the club pages themselves are written with -- rather than
+    trusting the two independently.
+    """
+    import write_player_pages as wpp
+
     ROOT = pathlib.Path(__file__).resolve().parents[1]
+    block = _header_block(wpp._site_header(None))
 
-    tagged = {h for h, _, tag in wpp.NAV_SECTIONS if tag}
-    check("exactly the two unfinished tools carry a tag", tagged == {"contract.html", "taxes.html"})
-
-    for rel in ["docs/index.html", "docs/contract.html", "docs/taxes.html"]:
-        nav = re.search(r'<nav class="site-nav".*?</nav>', (ROOT / rel).read_text(), re.S)
-        assert nav, rel
-        block = nav.group(0)
-        for href in ("contract.html", "taxes.html"):
-            link = re.search(rf'<a href="[^"]*{re.escape(href)}"[^>]*>(.*?)</a>', block, re.S)
-            check(f"{rel}: {href} is in the nav", bool(link))
-            check(f"{rel}: {href} is marked in development",
-                  bool(link) and "nav-tag" in link.group(1))
+    check("the sheet lists all 30 clubs", len(wpp.CLUB_ABBR) == 30)
+    for name, abbr in wpp.CLUB_ABBR:
+        href = wpp.club_path(name)
+        check(f"sheet links {abbr} to {href}",
+              f'<li><a href="/{href}">{abbr}</a></li>' in block)
+        check(f"{href} exists on disk", (ROOT / "docs" / href).exists())
 
 
-def test_the_nav_marks_the_current_page_with_aria_current():
+def test_the_header_marks_the_right_tab_current_and_only_one():
     """
     The CSS keys the current-page underline off aria-current rather than a
     hand-set class, so the accessible state and the visible state cannot
-    disagree. That only holds if aria-current is actually emitted.
+    disagree. That only holds if aria-current is emitted on the one matching
+    tab -- and on NO tab for a page type that has none (a player page, a
+    club page's offseason subpages, the explainer): claiming a tab that
+    is not really this page would mislead more than claiming none.
     """
     import re
+    import write_player_pages as wpp
+
+    def current_labels(html_text):
+        tabs = re.search(r'<nav class="tabs".*?</nav>', _header_block(html_text), re.S).group(0)
+        return re.findall(r'<a[^>]*aria-current="page"[^>]*>([^<]*)</a>', tabs)
+
+    one_tab_cases = [
+        ("docs/index.html", "Players"),
+        ("docs/lockout.html", "Lockout"),
+    ]
+    ROOT = pathlib.Path(__file__).resolve().parents[1]
+    for rel, label in one_tab_cases:
+        html_text = (ROOT / rel).read_text(encoding="utf-8")
+        check(f"{rel} marks exactly one tab current", len(current_labels(html_text)) == 1)
+        check(f"{rel} marks {label!r} current", current_labels(html_text) == [label])
+
+    generated_cases = [
+        ("render_club_index", wpp.render_club_index({"Atlanta Braves": []}, "2026-01-01"), "Clubs"),
+        ("render_club", wpp.render_club("Atlanta Braves", [], "2026-01-01"), "Clubs"),
+        ("render_arbitration_eligible",
+         wpp.render_arbitration_eligible([], "2026-01-01", None, {}), "Arbitration"),
+        ("render_super_two", wpp.render_super_two([], {}, "2026-01-01", None), "Super Two"),
+    ]
+    for label, html_text, tab in generated_cases:
+        check(f"{label} marks exactly one tab current", len(current_labels(html_text)) == 1)
+        check(f"{label} marks {tab!r} current", current_labels(html_text) == [tab])
+
+    for rel in ("docs/contract.html", "docs/about.html", "docs/privacy.html", "docs/neutrality.html"):
+        html_text = (ROOT / rel).read_text(encoding="utf-8")
+        check(f"{rel} marks no tab current (none applies)", current_labels(html_text) == [])
+
+    no_tab_generated = {
+        "render_explainer": wpp.render_explainer("2026-01-01"),
+        "render_non_tender_watch": wpp.render_non_tender_watch([], "2026-01-01", 2027),
+        "render_free_agents": wpp.render_free_agents([], {}, "2026-01-01"),
+        "render_club_arbitration": wpp.render_club_arbitration("Atlanta Braves", [], "2026-01-01", 2027),
+        "render (player)": wpp.render(
+            {"id": 1, "name": "Test Player", "team": "Atlanta Braves", "on_40_man": True,
+             "service_time": "1.000", "service_days_total": 172, "position": "P",
+             "mlb_debut": "2020-01-01"},
+            {}, "2026-01-01", [],
+        ),
+    }
+    for label, html_text in no_tab_generated.items():
+        check(f"{label} marks no tab current (none applies)", current_labels(html_text) == [])
+
+
+def test_no_banned_string_appears_in_the_header_or_sheet():
+    """
+    No script name, file path, data-source name or GitHub link may appear
+    anywhere a reader can see it (CLAUDE.md, "Hard rules"), and this menu
+    reaches every page on the site, so it is the highest-leverage place to
+    pin that. "public MLB data" is banned too -- the site's copy says
+    "public data" -- and so are direct links to the two shelved tools,
+    which must not be promoted from here under any string.
+    """
+    import write_player_pages as wpp
+
+    banned = (
+        "scripts/", ".py", "Stats API", "github.com",
+        "public MLB data", "taxes.html", "contract.html",
+    )
+    block = _header_block(wpp._site_header(None))
+    for needle in banned:
+        check(f"header/sheet does not contain {needle!r}", needle not in block)
+
+    for label, html_text in _menu_sample_pages().items():
+        block = _header_block(html_text)
+        for needle in banned:
+            check(f"{label}: header/sheet does not contain {needle!r}", needle not in block)
 
     ROOT = pathlib.Path(__file__).resolve().parents[1]
+    for rel in _MENU_HAND_WRITTEN_PAGES:
+        block = _header_block((ROOT / rel).read_text(encoding="utf-8"))
+        for needle in banned:
+            check(f"{rel}: header/sheet does not contain {needle!r}", needle not in block)
 
-    cases = [
-        ("docs/contract.html", "contract.html"),
-        ("docs/taxes.html", "taxes.html"),
-        ("docs/neutrality.html", "neutrality.html"),
-    ]
-    for rel, href in cases:
-        block = re.search(r'<nav class="site-nav".*?</nav>', (ROOT / rel).read_text(), re.S).group(0)
-        current = re.findall(r'<a href="([^"]+)"[^>]*aria-current="page"', block)
-        check(f"{rel} marks itself current", current == [href])
 
-    # index.html is the site root, so its own entry is the empty href.
-    block = re.search(r'<nav class="site-nav".*?</nav>', (ROOT / "docs/index.html").read_text(), re.S).group(0)
-    check("index.html marks itself current",
-          bool(re.search(r'<a href="\./"[^>]*aria-current="page"', block)))
+def test_the_404_template_carries_the_site_header():
+    """
+    The 404 is served for unknown paths anywhere on the site (including
+    under /p/), and it is the one template that carried NO navigation at
+    all before this job -- a visitor landing on a typo had exactly one way
+    back in, the "Search all players" link. It gets the full header now,
+    like every other page.
+    """
+    import write_player_pages as wpp
 
-    # Exactly one per page, or the underline appears twice.
-    for rel, _ in cases:
-        block = re.search(r'<nav class="site-nav".*?</nav>', (ROOT / rel).read_text(), re.S).group(0)
-        check(f"{rel} marks exactly one current page",
-              block.count('aria-current="page"') == 1)
+    html_text = _menu_sample_pages()["404"]
+    check("404 template has a site-top header", html_text.count('<header class="site-top"') == 1)
+    block = _header_block(html_text)
+    check("404 header has a logo link", 'class="brand"' in block)
+    check("404 header has a More button", 'aria-label="Menu"' in block)
 
 
 def test_the_daily_service_time_tick_is_not_a_content_change():
@@ -4683,7 +4883,7 @@ def test_a_traded_players_start_is_his_opening_day_club_not_the_latest_opener():
 # hand-written pages (about.html, privacy.html). See CLAUDE.md -- these ship
 # the same two ids (GA_MEASUREMENT_ID, ADSENSE_CLIENT_ID) on every page, so
 # the thing worth pinning is "every page carries it exactly once", the same
-# shape as test_the_site_nav_is_the_same_on_every_page().
+# shape as test_the_site_header_is_the_same_on_every_page().
 # ---------------------------------------------------------------------------
 
 _HAND_WRITTEN_HTML_PAGES = [
@@ -4694,7 +4894,7 @@ _HAND_WRITTEN_HTML_PAGES = [
 
 def _generated_sample_pages():
     """One rendered string per generated template, same fixtures style as
-    test_the_site_nav_is_the_same_on_every_page() and
+    test_the_site_header_is_the_same_on_every_page() and
     test_a_debuted_player_is_never_described_as_never_having_been_up()."""
     import write_player_pages as w
 
@@ -4709,7 +4909,7 @@ def _generated_sample_pages():
         "render (player)": w.render(player, {}, "2026-01-01"),
         "_alumni_shell": w._alumni_shell(
             "Title", "Desc", "https://bigleagueservicetime.com/alumni/",
-            "", "Heading", "Sub", "Body", "2026-01-01", [],
+            w._site_header(None), "", "Heading", "Sub", "Body", "2026-01-01", [],
         ),
         "render_explainer": w.render_explainer("2026-01-01"),
         "render_arbitration_eligible": w.render_arbitration_eligible([], "2026-01-01", None, {}),
@@ -5739,9 +5939,13 @@ if __name__ == "__main__":
     test_free_agents_by_year_boundary_at_exactly_six_years()
     test_club_offseason_subpages_have_correct_counts_titles_and_descriptions()
     test_write_club_pages_produces_three_subpages_per_club_with_right_totals()
-    test_the_site_nav_is_the_same_on_every_page()
-    test_the_two_unfinished_tools_are_marked_in_the_nav()
-    test_the_nav_marks_the_current_page_with_aria_current()
+    test_the_site_header_is_the_same_on_every_page()
+    test_the_tab_row_matches_the_approved_phone_and_desktop_sets()
+    test_the_sheet_lists_every_required_row_and_never_the_shelved_tools()
+    test_every_club_in_the_sheet_links_to_a_real_club_page()
+    test_the_header_marks_the_right_tab_current_and_only_one()
+    test_no_banned_string_appears_in_the_header_or_sheet()
+    test_the_404_template_carries_the_site_header()
     test_the_daily_service_time_tick_is_not_a_content_change()
     test_only_alumni_with_a_defensible_figure_are_published()
     test_a_published_alumnus_is_reachable_and_off_the_club_pages()

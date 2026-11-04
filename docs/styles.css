@@ -1318,4 +1318,78 @@ body.profile-open { overflow: hidden; }
 /* Statlines are wide. The wrapper already scrolls; this keeps the figures
    aligned in columns rather than ragging like prose. */
 .stats-table { font-variant-numeric: tabular-nums; }
+
+/* ---------------------------------------------------------------------
+   SITE HEADER: logo, search, the "More" sheet, and the primary tab row.
+   Shared across every page type. Sticky, and deliberately with no
+   backdrop-filter: a blur on this element clips the phone sheet below it
+   to the header's own box instead of letting it reach the bottom of the
+   screen.
+   --------------------------------------------------------------------- */
+.site-top { position: sticky; top: 0; z-index: 50; background: var(--page-plane); border-bottom: 1px solid var(--glass-border); }
+.site-top-row { display: flex; align-items: center; gap: 10px; max-width: 84rem; margin: 0 auto; padding: 10px clamp(16px,4vw,40px); }
+.brand { display: flex; align-items: center; gap: 8px; color: var(--text-primary); text-decoration: none; font-weight: 700; letter-spacing: -0.02em; font-size: 1.02rem; white-space: nowrap; }
+.brand svg { width: 26px; height: 26px; flex: none; }
+.brand .brand-long { display: none; }
+.top-search { flex: 1; display: flex; justify-content: flex-end; }
+.top-search input {
+  width: 100%; max-width: 340px; background: var(--surface-1); border: 1px solid var(--border); color: var(--text-primary);
+  border-radius: 8px; padding: 9px 12px 9px 34px; font: inherit; font-size: 0.92rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239fb0c4' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: 10px center; background-size: 16px;
+}
+.icon-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-width: 44px; height: 44px; padding: 0 12px; border-radius: 8px;
+  background: transparent; border: 1px solid var(--border); color: var(--text-primary); font: inherit; font-size: 0.9rem; cursor: pointer; list-style: none;
+}
+.icon-btn svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2; }
+summary.icon-btn::-webkit-details-marker { display: none; }
+
+/* Primary tabs. */
+.tabs { display: flex; gap: 2px; max-width: 84rem; margin: 0 auto; padding: 0 clamp(16px,4vw,40px); }
+.tabs a { flex: 0 0 auto; min-height: 44px; display: inline-flex; align-items: center; gap: 0; padding: 0 12px; color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 550; border-bottom: 2px solid transparent; white-space: nowrap; }
+.tabs a:hover { color: var(--text-primary); }
+.tabs a[aria-current="page"] { color: var(--text-primary); border-bottom-color: var(--accent); }
+.tag { font-size: 0.62rem; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); border: 1px solid var(--glass-border); border-radius: 3px; padding: 1px 4px; margin-left: 5px; vertical-align: 2px; }
+.dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--status-warning); margin-left: 6px; vertical-align: 2px; }
+
+/* The "More" sheet. */
+.menu { position: relative; }
+.sheet {
+  position: absolute; right: 0; top: calc(100% + 8px); width: min(560px,92vw); background: var(--surface-1); border: 1px solid var(--border);
+  border-radius: 12px; box-shadow: 0 18px 50px rgba(0,0,0,0.5); padding: 16px 18px; z-index: 60;
+}
+.sheet .sheet-h { margin: 14px 0 6px; font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); font-weight: 500; }
+.sheet .sheet-h:first-child { margin-top: 0; }
+.sheet ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 2px 12px; }
+.sheet li a { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 10px 8px; border-radius: 8px; color: var(--text-primary); text-decoration: none; font-size: 0.95rem; }
+.sheet li a:hover { background: var(--accent-wash); }
+.sheet li a small { color: var(--text-muted); font-size: 0.75rem; white-space: nowrap; }
+.clubs { display: grid !important; grid-template-columns: repeat(6,1fr) !important; gap: 4px !important; }
+.clubs a { justify-content: center !important; font-family: var(--mono); font-size: 0.8rem !important; min-height: 44px; align-items: center !important; padding: 0 !important; border: 1px solid var(--glass-border); }
+.sheet .site-links { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--glass-border); font-size: 0.85rem; }
+.sheet .site-links a { color: var(--text-secondary); text-decoration: none; padding: 6px 0; }
+
+/* The hand-written pages still carry their old page-header, which repeats
+   the brand mark directly under this one. Drop the mark there so the logo
+   appears once; the heading text itself is left alone, because the home
+   page's rewrite is a separate job. */
+.site-top + .page-header .brand-mark { display: none; }
+
+/* Phone. */
+.show-phone { display: none; }
+@media (max-width: 640px) {
+  .show-phone { display: inline-flex; }
+  .hide-phone { display: none !important; }
+  .site-top-row { gap: 8px; padding: 8px 12px; }
+  .tabs { padding: 0 6px; justify-content: space-between; }
+  .tabs a { padding: 0 8px; font-size: 0.88rem; }
+  .menu[open] .sheet { position: fixed; left: 0; right: 0; top: 57px; bottom: 0; width: auto; border-radius: 0; border: 0; border-top: 1px solid var(--border); overflow: auto; padding: 14px 14px 90px; }
+  .sheet ul { grid-template-columns: 1fr; }
+  .sheet li a { padding: 13px 8px; font-size: 1rem; }
+}
+@media (min-width: 1024px) {
+  .brand .brand-long { display: inline; }
+  .brand .brand-short { display: none; }
+}
 .stats-table th { white-space: nowrap; }

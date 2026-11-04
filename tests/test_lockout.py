@@ -577,8 +577,8 @@ def test_sitemap_generator_lists_the_lockout_page():
     hand_written_paths = [path for path, _priority in wpp.HAND_WRITTEN_PAGES]
     check("lockout.html is in HAND_WRITTEN_PAGES", "lockout.html" in hand_written_paths)
 
-    nav_paths = [path for path, _label, _tag in wpp.NAV_SECTIONS]
-    check("lockout.html is in NAV_SECTIONS", "lockout.html" in nav_paths)
+    nav_paths = [path for path, _tab, _sheet, _where in wpp.NAV]
+    check("lockout.html is in NAV", "lockout.html" in nav_paths)
 
 
 def test_committed_sitemap_also_lists_it_today():

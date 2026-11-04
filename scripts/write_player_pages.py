@@ -97,57 +97,161 @@ SITE_URL = _site_url()
 BASE_PATH = _base_path(SITE_URL)
 
 # --------------------------------------------------------------------------
-# Site navigation.
+# Site header: logo, search, the "More" sheet, and the primary tab row.
 #
-# One definition, used by all four generated templates. The five hand-written
-# pages carry the same markup with relative hrefs, and
-# test_the_site_nav_is_the_same_on_every_page() asserts the destination sets
-# match -- this is the same "lands in N places and the Nth is the trap" shape
-# as the analytics token, which sat wrong in docs/index.html precisely because
-# a hand-maintained file cannot read a Python constant.
+# One definition, used by every generated template. The six hand-written
+# pages (docs/index.html, contract.html, lockout.html, about.html,
+# privacy.html, neutrality.html) and scripts/build_lockout_page.py (which
+# already imports this module for its GA/AdSense constants) carry the same
+# markup by calling _site_header() too, or by hand where that is not
+# possible -- see test_the_site_header_is_the_same_on_every_page(), the same
+# "lands in N places and the Nth is the trap" shape as the analytics token,
+# which sat wrong in docs/index.html precisely because a hand-maintained
+# file cannot read a Python constant.
 #
-# `tag` marks a section a visitor should know about before clicking. The duty
-# day and contract tools work, but no tax professional has reviewed the
-# duty-day methodology and the contract tool is mid-build, so they say so.
-# Owner's decision, 2026-09-11.
+# docs/taxes.html is parked and keeps its old nav strip untouched -- see
+# CLAUDE.md, "Do NOT touch docs/taxes.html".
+#
+# Each entry is (href, tab_label, sheet_label, where). `where` is a set of
+# flags:
+#   "phone"   -- one of the four tabs shown at <=640px (also shown wider)
+#   "desktop" -- a tab shown above 640px; phone tabs carry this too
+#   "numbers" -- a row in the sheet's "Numbers" group
+#   "tools"   -- a row in the sheet's "Tools" group
+#   "small"   -- a small link at the foot of the sheet
+# tab_label is None for an entry with no tab (sheet/small-link only);
+# sheet_label is None for Clubs, whose sheet entry is the 30-club grid below,
+# not a row in a list.
+#
+# Contract clock (/contract.html) and Duty days (/taxes.html) carry no entry
+# at all, by owner's decision: both tools stay live and linked from their own
+# pages, but neither is promoted from the header, the sheet or the tabs.
+# This reverses the 2026-09-11 decision recorded in reference/CLAUDE-details.md
+# to link both with an "in development" tag; that tag and those two links are
+# gone from the menu entirely now, not just relabeled.
 # --------------------------------------------------------------------------
 
-NAV_SECTIONS = [
-    ("", "Service time", None),
-    ("t/", "By club", None),
-    ("alumni/", "Previous players", None),
-    ("arbitration-eligible.html", "Arbitration eligible", None),
-    ("super-two.html", "Super Two", None),
-    ("service-time.html", "What is service time?", None),
-    ("lockout.html", "Lockout", None),
-    ("contract.html", "Contract clock", "in development"),
-    ("taxes.html", "Duty days", "in development"),
-    ("neutrality.html", "Neutrality", None),
+NAV = [
+    ("", "Players", "Players", {"phone", "desktop", "numbers"}),
+    ("t/", "Clubs", None, {"phone", "desktop"}),
+    ("arbitration-eligible.html", "Arbitration", "Arbitration eligible", {"phone", "desktop", "numbers"}),
+    ("super-two.html", "Super Two", "Super Two", {"phone", "desktop", "numbers"}),
+    ("lockout.html", "Lockout", "Lockout tracker", {"desktop", "tools"}),
+    ("alumni/", "Previous players", "Previous players A–Z", {"desktop", "numbers"}),
+    ("service-time.html", None, "What is service time?", {"small"}),
+    ("about.html", None, "About", {"small"}),
+    ("neutrality.html", None, "Neutrality", {"small"}),
+    ("privacy.html", None, "Privacy", {"small"}),
 ]
 
+# All 30 clubs, by abbreviation, for the sheet's club grid. A fixed list
+# rather than something derived from today's roster: every club keeps a
+# 40-man roster year-round, so the two agree in practice, but the menu is
+# core navigation and must not depend on build-time roster data to list a
+# league that has not changed size since 2024-25. club_path() (below) turns
+# the full name into the same slug the club's own page is written to, so a
+# club rename is still a one-place fix.
+CLUB_ABBR = [
+    ("Arizona Diamondbacks", "ARI"), ("Atlanta Braves", "ATL"),
+    ("Athletics", "ATH"), ("Baltimore Orioles", "BAL"),
+    ("Boston Red Sox", "BOS"), ("Chicago Cubs", "CHC"),
+    ("Chicago White Sox", "CWS"), ("Cincinnati Reds", "CIN"),
+    ("Cleveland Guardians", "CLE"), ("Colorado Rockies", "COL"),
+    ("Detroit Tigers", "DET"), ("Houston Astros", "HOU"),
+    ("Kansas City Royals", "KC"), ("Los Angeles Angels", "LAA"),
+    ("Los Angeles Dodgers", "LAD"), ("Miami Marlins", "MIA"),
+    ("Milwaukee Brewers", "MIL"), ("Minnesota Twins", "MIN"),
+    ("New York Mets", "NYM"), ("New York Yankees", "NYY"),
+    ("Philadelphia Phillies", "PHI"), ("Pittsburgh Pirates", "PIT"),
+    ("San Diego Padres", "SD"), ("San Francisco Giants", "SF"),
+    ("Seattle Mariners", "SEA"), ("St. Louis Cardinals", "STL"),
+    ("Tampa Bay Rays", "TB"), ("Texas Rangers", "TEX"),
+    ("Toronto Blue Jays", "TOR"), ("Washington Nationals", "WSH"),
+]
 
-def _site_nav(current: str | None = None) -> str:
+_BRAND_SVG = (
+    '<svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">'
+    '<circle cx="16" cy="16" r="14" class="bm-ball" />'
+    '<path d="M7.2 5.6c3.6 3 5.4 6.5 5.4 10.4s-1.8 7.4-5.4 10.4" class="bm-seam" />'
+    '<path d="M24.8 5.6c-3.6 3-5.4 6.5-5.4 10.4s1.8 7.4 5.4 10.4" class="bm-seam" />'
+    "</svg>"
+)
+
+
+def _site_header(current: str | None = None) -> str:
     """
-    The navigation strip.
+    The shared header: logo, search, the "More" sheet, and the tab row.
 
-    `current` is a key from NAV_SECTIONS (the href fragment), and marks the
-    link with aria-current. The CSS keys off aria-current rather than a hand
-    set class, so the accessible state and the visible state cannot disagree.
+    `current` is a key from NAV (the href fragment). It marks the matching
+    TAB with aria-current, the same convention the old _site_nav() followed
+    -- the CSS keys the underline off aria-current rather than a hand-set
+    class, so the two cannot disagree. Most pages have no matching tab (a
+    player page, a club page, the explainer) and so mark nothing; that is
+    correct, not a gap, because there is no tab for them to claim.
 
-    Hrefs are BASE_PATH-absolute, not relative: these pages are served from
+    Hrefs are BASE_PATH-absolute, not relative: this markup is emitted from
     /p/, /t/ and /alumni/ as well as the root, so a relative href would
     resolve differently per directory. BASE_PATH is derived from docs/CNAME,
-    so a domain move carries the nav with it.
+    so a domain move carries the header with it.
     """
-    items = []
-    for href, label, tag in NAV_SECTIONS:
-        mark = ' aria-current="page"' if current == href else ""
-        badge = f' <span class="nav-tag">{tag}</span>' if tag else ""
-        items.append(f'<a href="{BASE_PATH}{href}"{mark}>{label}{badge}</a>')
+    # Built piecewise rather than inline in the f-string: the CI runner is
+    # Python 3.11, where an f-string expression may not contain a backslash
+    # (PEP 701 relaxed that only in 3.12), and a quoted attribute value
+    # needs one. This bit the first push to CI, which is the right place
+    # for it to be caught, and a plain concatenation is clearer anyway.
+    tab_parts = []
+    for href, tab_label, _sheet_label, where in NAV:
+        if "phone" not in where and "desktop" not in where:
+            continue
+        cls = ' class="hide-phone"' if "phone" not in where else ""
+        cur = ' aria-current="page"' if current == href else ""
+        tab_parts.append(f'<a{cls} href="{BASE_PATH}{href}"{cur}>{tab_label}</a>')
+    tabs = "".join(tab_parts)
+    numbers = "".join(
+        f'<li><a href="{BASE_PATH}{href}">{sheet_label}</a></li>'
+        for href, _tab_label, sheet_label, where in NAV
+        if "numbers" in where
+    )
+    tools = "".join(
+        f'<li><a href="{BASE_PATH}{href}">{sheet_label}</a></li>'
+        for href, _tab_label, sheet_label, where in NAV
+        if "tools" in where
+    )
+    clubs = "".join(
+        f'<li><a href="{BASE_PATH}{club_path(name)}">{abbr}</a></li>'
+        for name, abbr in CLUB_ABBR
+    )
+    small_links = "".join(
+        f'<a href="{BASE_PATH}{href}">{sheet_label}</a>'
+        for href, _tab_label, sheet_label, where in NAV
+        if "small" in where
+    )
     return (
-        '<nav class="site-nav" aria-label="Site sections">'
-        + "".join(items)
-        + "</nav>"
+        '<header class="site-top"><div class="site-top-row">'
+        f'<a class="brand" href="{BASE_PATH}">{_BRAND_SVG}'
+        '<span class="brand-long">Big League Service Time</span>'
+        '<span class="brand-short">Service Time</span></a>'
+        f'<form class="top-search hide-phone" action="{BASE_PATH}" role="search">'
+        '<input type="search" name="q" placeholder="Search a player or club" '
+        'aria-label="Search a player or club" /></form>'
+        f'<a class="icon-btn show-phone" href="{BASE_PATH}?q=" aria-label="Search players">'
+        '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+        '<circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg></a>'
+        '<details class="menu"><summary class="icon-btn" aria-label="Menu">'
+        '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+        '<path d="M4 7h16M4 12h16M4 17h16" /></svg>'
+        '<span class="hide-phone">More</span></summary>'
+        '<div class="sheet" role="navigation" aria-label="All pages">'
+        f'<p class="sheet-h">Numbers</p><ul>{numbers}</ul>'
+        f'<p class="sheet-h">Tools</p><ul>{tools}</ul>'
+        f'<p class="sheet-h">Clubs</p><ul class="clubs">{clubs}</ul>'
+        f'<div class="site-links">{small_links}'
+        '<a href="mailto:contact@bigleagueservicetime.com">'
+        "contact@bigleagueservicetime.com</a></div>"
+        "</div></details>"
+        "</div>"
+        f'<nav class="tabs" aria-label="Main">{tabs}</nav>'
+        "</header>"
     )
 
 
@@ -672,8 +776,7 @@ def render_club_index(by_club: dict[str, list[dict]], generated_at: str) -> str:
 </script>
 </head>
 <body>
-<div class="viz-root"><div class="wrap">
-  {_site_nav("t/")}
+<div class="viz-root">{_site_header("t/")}<div class="wrap">
   {_crumbs(("All players", "../"), ("By club", None))}
   <h1>Service time by club</h1>
   <p class="subtitle">Every 40-man roster, and who on it reaches arbitration and free agency.</p>
@@ -994,8 +1097,7 @@ def render_club(
 </script>
 </head>
 <body>
-<div class="viz-root"><div class="wrap">
-  {_site_nav("t/")}
+<div class="viz-root">{_site_header("t/")}<div class="wrap">
   {_crumbs(("All players", "../"), (name, None))}
   <h1>{name} — service time</h1>
   <p class="subtitle">Every player on the 40-man roster, most service time first.</p>
@@ -1075,8 +1177,8 @@ def render_club_arbitration(
     ]
     return _alumni_shell(
         f"{name} arbitration-eligible players{year_phrase} | Big League Service Time Tracker",
-        desc, url,
-        _site_nav(None) + _crumbs(
+        desc, url, _site_header(None),
+        _crumbs(
             ("All players", BASE_PATH), (club, f"{slug_}.html"), (f"Arbitration eligible{year_phrase}", None)
         ),
         f"{club} arbitration-eligible players{year_phrase}",
@@ -1118,8 +1220,8 @@ def render_club_non_tender(
     ]
     return _alumni_shell(
         f"{name} non-tender candidates{year_phrase} | Big League Service Time Tracker",
-        desc, url,
-        _site_nav(None) + _crumbs(
+        desc, url, _site_header(None),
+        _crumbs(
             ("All players", BASE_PATH), (club, f"{slug_}.html"), (f"Non-tender watch{year_phrase}", None)
         ),
         f"{club} non-tender watch{year_phrase}",
@@ -1165,8 +1267,8 @@ def render_club_free_agents(
     ]
     return _alumni_shell(
         f"{name} {fa_heading} | Big League Service Time Tracker",
-        desc, url,
-        _site_nav(None) + _crumbs(
+        desc, url, _site_header(None),
+        _crumbs(
             ("All players", BASE_PATH), (club, f"{slug_}.html"), ("Free agents", None)
         ),
         f"{club} {fa_heading}",
@@ -1322,7 +1424,8 @@ def render(
         # one place that links down to him. Without this he is an orphan.
         trail.append(("Previous players", f"../{ALUMNI_DIR_NAME}/"))
     trail.append((name, None))
-    crumbs = _site_nav() + _crumbs(*trail)
+    header = _site_header(None)
+    crumbs = _crumbs(*trail)
 
     caveat = ""
     if missing:
@@ -1363,7 +1466,7 @@ def render(
 <link rel="stylesheet" href="../page.css" />
 </head>
 <body>
-<div class="viz-root"><div class="wrap">
+<div class="viz-root">{header}<div class="wrap">
   {crumbs}
   <h1>{name} service time</h1>
   <p class="subtitle">{club_label}{' · ' if club_label and position else ''}{position} · {html.escape(_status(player))}</p>
@@ -1833,7 +1936,7 @@ def _alumni_letters(alumni: list[dict]) -> dict[str, list[dict]]:
     return dict(sorted(out.items()))
 
 
-def _alumni_shell(title: str, desc: str, url: str, crumbs: str,
+def _alumni_shell(title: str, desc: str, url: str, header: str, crumbs: str,
                   heading: str, sub: str, body: str, generated_at: str,
                   graph: list[dict], depth: str = "../") -> str:
     return f"""<!doctype html>
@@ -1862,7 +1965,7 @@ def _alumni_shell(title: str, desc: str, url: str, crumbs: str,
 </script>
 </head>
 <body>
-<div class="viz-root"><div class="wrap">
+<div class="viz-root">{header}<div class="wrap">
   {crumbs}
   <h1>{html.escape(heading)}</h1>
   <p class="subtitle">{sub}</p>
@@ -1951,8 +2054,8 @@ def _write_alumni_pages(
         ]
         page = _alumni_shell(
             f"Previous players — {letter} | Big League Service Time Tracker",
-            desc, url,
-            _site_nav("alumni/") + _crumbs(("All players", "../"), ("Previous players", "./"), (letter, None)),
+            desc, url, _site_header("alumni/"),
+            _crumbs(("All players", "../"), ("Previous players", "./"), (letter, None)),
             f"Previous players — {letter}",
             f"{len(players)} players no longer on a 40-man roster, by surname.",
             body, generated_at, graph,
@@ -1988,8 +2091,8 @@ def _write_alumni_pages(
     ]
     page = _alumni_shell(
         "Previous players — service time A to Z | Big League Service Time Tracker",
-        desc, url,
-        _site_nav("alumni/") + _crumbs(("All players", "../"), ("Previous players", None)),
+        desc, url, _site_header("alumni/"),
+        _crumbs(("All players", "../"), ("Previous players", None)),
         "Previous players",
         f"{total:,} players who have come off a 40-man roster, by surname. "
         "Their service time is final — it stopped when they did.",
@@ -2511,8 +2614,7 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
 </script>
 </head>
 <body>
-<div class="viz-root"><div class="wrap">
-  {_site_nav("service-time.html")}
+<div class="viz-root">{_site_header(None)}<div class="wrap">
   {_crumbs(("All players", BASE_PATH), ("What is service time?", None))}
 
   <h1>What is MLB service time?</h1>
@@ -2885,8 +2987,7 @@ def render_arbitration_eligible(
 </script>
 </head>
 <body>
-<div class="viz-root"><div class="wrap">
-  {_site_nav("arbitration-eligible.html")}
+<div class="viz-root">{_site_header("arbitration-eligible.html")}<div class="wrap">
   {_crumbs(("All players", BASE_PATH), ("Arbitration eligible", None))}
 
   <h1>Arbitration-eligible players this winter{title_year}</h1>
@@ -3158,8 +3259,7 @@ def render_super_two(
 </script>
 </head>
 <body>
-<div class="viz-root"><div class="wrap">
-  {_site_nav("super-two.html")}
+<div class="viz-root">{_site_header("super-two.html")}<div class="wrap">
   {_crumbs(("All players", BASE_PATH), ("Super Two", None))}
 
   <h1>Super Two: this winter's projected cutoff</h1>
@@ -3437,8 +3537,7 @@ def render_non_tender_watch(
 </script>
 </head>
 <body>
-<div class="viz-root"><div class="wrap">
-  {_site_nav(None)}
+<div class="viz-root">{_site_header(None)}<div class="wrap">
   {_crumbs(("All players", BASE_PATH), ("Non-tender watch", None))}
 
   <h1>Non-tender watch{season_phrase}</h1>
@@ -3559,8 +3658,7 @@ def render_free_agents(
 </script>
 </head>
 <body>
-<div class="viz-root"><div class="wrap">
-  {_site_nav(None)}
+<div class="viz-root">{_site_header(None)}<div class="wrap">
   {_crumbs(("All players", BASE_PATH), ("Free agents", None))}
 
   <h1>MLB free agents{season_phrase}</h1>
@@ -3637,7 +3735,7 @@ def _write_404() -> None:
 </script>
 </head>
 <body>
-<div class="viz-root"><div class="wrap wrap--narrow">
+<div class="viz-root">{_site_header(None)}<div class="wrap wrap--narrow">
   <h1>That page isn't here.</h1>
   <p>
     The link may be mistyped, or point to a player this site has never
