@@ -236,9 +236,9 @@ def _site_header(current: str | None = None) -> str:
         '<path d="M4 7h16M4 12h16M4 17h16" /></svg>'
         '<span class="hide-phone">More</span></summary>'
         '<div class="sheet" role="navigation" aria-label="All pages">'
-        f"<h3>Numbers</h3><ul>{numbers}</ul>"
-        f"<h3>Tools</h3><ul>{tools}</ul>"
-        f'<h3>Clubs</h3><ul class="clubs">{clubs}</ul>'
+        f'<p class="sheet-h">Numbers</p><ul>{numbers}</ul>'
+        f'<p class="sheet-h">Tools</p><ul>{tools}</ul>'
+        f'<p class="sheet-h">Clubs</p><ul class="clubs">{clubs}</ul>'
         f'<div class="site-links">{small_links}'
         '<a href="mailto:contact@bigleagueservicetime.com">'
         "contact@bigleagueservicetime.com</a></div>"

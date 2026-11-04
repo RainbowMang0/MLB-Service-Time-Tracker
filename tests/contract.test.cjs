@@ -402,32 +402,33 @@ test("the published index still contains the duplicate names this guards against
 // Reachability
 // -------------------------------------------------------------------------
 
-test("the homepage links both tools, and both are marked in development", () => {
-  // History, because this line has moved twice and the reasons matter.
+test("the site header does not promote either unfinished tool", () => {
+  // History, because this line has moved three times and the reasons matter.
   //
   // 2026-09-08: a site-wide link to these two was added, then reverted at the
   // owner's direction -- neither tool was finished, and pointing the site's
   // only inbound authority at them is the hard-to-undo direction.
   //
   // 2026-09-11: the owner asked for a navigation menu and chose "all five
-  // sections, but mark the two". So the links are back BY DECISION, and the
-  // tag is the condition attached to that decision rather than decoration.
+  // sections, but mark the two". So the links came back BY DECISION, and the
+  // in-development tag was the condition attached to that decision. The test
+  // below then checked both halves together: the link may exist only while
+  // the marker does.
   //
-  // This test therefore checks both halves together: the link may exist only
-  // while the marker does. Dropping the tag silently would restore exactly the
-  // unqualified promotion that was reverted, which is what the previous
-  // version of this test existed to catch -- and it did catch it.
+  // 2026-11-04: the owner shelved the contract clock and parked the duty-day
+  // page, and the new shared menu left both out entirely rather than relabel
+  // them. So the condition flips rather than disappears: the header must not
+  // link either one. Both pages stay live at their own URLs and keep their
+  // own old nav strip; what this pins is that the menu does not promote them
+  // from every page on the site.
   const home = fs.readFileSync(path.join(ROOT, "docs/index.html"), "utf8");
-  const nav = /<nav class="site-nav"[\s\S]*?<\/nav>/.exec(home);
-  assert.ok(nav, "homepage carries no site nav");
+  const header = /<header class="site-top"[\s\S]*?<\/header>/.exec(home);
+  assert.ok(header, "homepage carries no site header");
 
   for (const href of ["contract.html", "taxes.html"]) {
-    const link = new RegExp(`<a href="${href}"[^>]*>([\\s\\S]*?)</a>`).exec(nav[0]);
-    assert.ok(link, `homepage nav does not link ${href}`);
-    assert.match(
-      link[1],
-      /nav-tag/,
-      `${href} is linked from the homepage without the in-development marker`
+    assert.ok(
+      !header[0].includes(href),
+      `the site header still promotes ${href}, which is shelved or parked`
     );
   }
 });
