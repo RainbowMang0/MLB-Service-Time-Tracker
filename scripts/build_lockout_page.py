@@ -90,8 +90,9 @@ PAGE_URL = f"{SITE_URL}/lockout.html"
 SALARY_CAP_PAGE_URL = f"{SITE_URL}/lockout-salary-cap.html"
 
 # The two pages of the lockout section, as (href, label) pairs. The tab strip
-# below lives inside the page content, not the main site nav, which already
-# runs tight on laptop widths; see docs/styles.css, the .site-nav width notes.
+# below lives inside the page content, not the shared site header -- it is
+# local sub-navigation between this section's two pages, not a sitewide
+# destination, so it does not belong in the header's own tab row or sheet.
 LOCKOUT_TABS = (
     ("lockout.html", "Tracker"),
     ("lockout-salary-cap.html", "Salary cap & floor"),
@@ -711,6 +712,8 @@ def render(data: dict, now: dt.datetime) -> str:
 <body>
   <div class="viz-root">
 
+    {wpp._site_header("lockout.html")}
+
     <header class="page-header">
       <div class="page-header-inner">
         <h1>
@@ -724,8 +727,6 @@ def render(data: dict, now: dt.datetime) -> str:
         <p class="subtitle">Plain-English updates on the 2026 CBA talks, and what a lockout would mean for the game's clock.</p>
       </div>
     </header>
-
-      <nav class="site-nav" aria-label="Site sections"><a href="./">Service time</a><a href="t/">By club</a><a href="alumni/">Previous players</a><a href="arbitration-eligible.html">Arbitration eligible</a><a href="super-two.html">Super Two</a><a href="service-time.html">What is service time?</a><a href="lockout.html" aria-current="page">Lockout</a><a href="contract.html">Contract clock <span class="nav-tag">in development</span></a><a href="taxes.html">Duty days <span class="nav-tag">in development</span></a><a href="neutrality.html">Neutrality</a></nav>
 
     <main class="tax-main">
 
@@ -1054,6 +1055,8 @@ def render_salary_cap(data: dict) -> str:
 <body>
   <div class="viz-root">
 
+    {wpp._site_header("lockout.html")}
+
     <header class="page-header">
       <div class="page-header-inner">
         <h1>
@@ -1067,8 +1070,6 @@ def render_salary_cap(data: dict) -> str:
         <p class="subtitle">The league-level numbers in MLB's proposed cap and floor, how they sit against today's luxury tax, and what they could mean for service time.</p>
       </div>
     </header>
-
-      <nav class="site-nav" aria-label="Site sections"><a href="./">Service time</a><a href="t/">By club</a><a href="alumni/">Previous players</a><a href="arbitration-eligible.html">Arbitration eligible</a><a href="super-two.html">Super Two</a><a href="service-time.html">What is service time?</a><a href="lockout.html">Lockout</a><a href="contract.html">Contract clock <span class="nav-tag">in development</span></a><a href="taxes.html">Duty days <span class="nav-tag">in development</span></a><a href="neutrality.html">Neutrality</a></nav>
 
     <main class="tax-main">
 
