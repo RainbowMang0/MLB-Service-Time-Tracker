@@ -598,6 +598,228 @@ def test_meta_description_fits_search_result_length():
         check(f"meta description is <= 160 chars (got {len(desc)})", len(desc) <= 160)
 
 
+# ---------------------------------------------------------------------------
+# The salary cap & floor explainer: data/lockout_salary_cap.json validation,
+# plus whole-page checks against the real, built docs/lockout-salary-cap.html.
+# ---------------------------------------------------------------------------
+
+GOOD_CAP = {
+    "as_of": "2026-11-04",
+    "updated": "2026-11-04",
+    "meta_description": "A short, under-160-character description of the proposal.",
+    "summary": "A short summary of the proposal.",
+    "figures": [
+        {"value": "$171.2M", "label": "Owners' proposed floor", "note": "2027"},
+        {"value": "$245.3M", "label": "Owners' proposed cap", "note": "2027"},
+    ],
+    "scale": {
+        "min": 160,
+        "max": 310,
+        "caption": "A caption.",
+        "marks": [
+            {"amount": 171.2, "value": "$171.2M", "label": "Proposed floor", "side": "top"},
+            {"amount": 245.3, "value": "$245.3M", "label": "Proposed cap", "side": "bottom"},
+        ],
+    },
+    "sections": [
+        {
+            "title": "A section",
+            "summary": "A section summary.",
+            "paragraphs": ["A paragraph."],
+        },
+    ],
+    "faq": [
+        {"q": "Question one?", "a": "Answer one."},
+        {"q": "Question two?", "a": "Answer two."},
+        {"q": "Question three?", "a": "Answer three."},
+    ],
+    "sources": [
+        {"name": "Some Outlet", "date": "May 28, 2026", "url": "https://example.com/one"},
+    ],
+}
+
+
+def test_the_real_salary_cap_data_file_validates():
+    data = blp.load_salary_cap()
+    check("data/lockout_salary_cap.json loads and validates", isinstance(data, dict))
+    check("real file has sections", len(data["sections"]) >= 1)
+    check("real file has 3-4 FAQ pairs", 3 <= len(data["faq"]) <= 4)
+
+
+def test_a_well_formed_cap_fixture_validates():
+    try:
+        blp.validate_salary_cap(copy.deepcopy(GOOD_CAP))
+        ok = True
+    except blp.LockoutDataError:
+        ok = False
+    check("a well-formed salary-cap file raises nothing", ok)
+
+
+def test_cap_missing_top_level_field_is_rejected():
+    bad = copy.deepcopy(GOOD_CAP)
+    del bad["scale"]
+    raised = False
+    try:
+        blp.validate_salary_cap(bad)
+    except blp.LockoutDataError as exc:
+        raised = "scale" in str(exc)
+    check("missing scale is rejected and named in the error", raised)
+
+
+def test_cap_non_https_source_url_is_rejected():
+    bad = copy.deepcopy(GOOD_CAP)
+    bad["sources"][0]["url"] = "http://example.com/one"
+    raised = False
+    try:
+        blp.validate_salary_cap(bad)
+    except blp.LockoutDataError as exc:
+        raised = "url" in str(exc)
+    check("a non-https source url is rejected", raised)
+
+
+def test_cap_scale_mark_outside_range_is_rejected():
+    bad = copy.deepcopy(GOOD_CAP)
+    bad["scale"]["marks"][0]["amount"] = 999
+    raised = False
+    try:
+        blp.validate_salary_cap(bad)
+    except blp.LockoutDataError as exc:
+        raised = "amount" in str(exc)
+    check("a scale mark outside min/max is rejected", raised)
+
+
+def test_cap_faq_wrong_count_is_rejected():
+    too_few = copy.deepcopy(GOOD_CAP)
+    too_few["faq"] = too_few["faq"][:2]
+    raised_few = False
+    try:
+        blp.validate_salary_cap(too_few)
+    except blp.LockoutDataError:
+        raised_few = True
+    check("an FAQ with fewer than 3 pairs is rejected", raised_few)
+
+    too_many = copy.deepcopy(GOOD_CAP)
+    too_many["faq"] = too_many["faq"] + [{"q": "Q4?", "a": "A4."}, {"q": "Q5?", "a": "A5."}]
+    raised_many = False
+    try:
+        blp.validate_salary_cap(too_many)
+    except blp.LockoutDataError:
+        raised_many = True
+    check("an FAQ with more than 4 pairs is rejected", raised_many)
+
+
+CAP_PAGE = ROOT / "docs" / "lockout-salary-cap.html"
+CAP_DATA = json.loads((ROOT / "data" / "lockout_salary_cap.json").read_text(encoding="utf-8"))
+
+
+def test_the_cap_page_has_been_built():
+    check(f"{CAP_PAGE} exists", CAP_PAGE.exists())
+
+
+def test_the_cap_page_shows_every_headline_figure_from_the_data_file():
+    html_text = CAP_PAGE.read_text(encoding="utf-8")
+    for fig in CAP_DATA["figures"]:
+        check(f"the page shows the figure {fig['value']!r} ({fig['label']})", fig["value"] in html_text)
+
+
+def test_the_tab_strip_is_present_and_marks_the_right_tab_current():
+    lockout_html = LOCKOUT_PAGE.read_text(encoding="utf-8")
+    cap_html = CAP_PAGE.read_text(encoding="utf-8")
+
+    check('lockout.html has the lockout-tabs nav', 'class="lockout-tabs"' in lockout_html)
+    check('lockout-salary-cap.html has the lockout-tabs nav', 'class="lockout-tabs"' in cap_html)
+
+    m1 = re.search(r'<a href="lockout\.html"([^>]*)>Tracker</a>', lockout_html)
+    check("lockout.html's Tracker tab is found", m1 is not None)
+    if m1:
+        check("'Tracker' is current on lockout.html", 'aria-current="page"' in m1.group(1))
+
+    m2 = re.search(r'<a href="lockout-salary-cap\.html"([^>]*)>Salary cap &amp; floor</a>', lockout_html)
+    check("lockout.html's Salary cap & floor tab is found", m2 is not None)
+    if m2:
+        check("'Salary cap & floor' is NOT current on lockout.html", 'aria-current="page"' not in m2.group(1))
+
+    m3 = re.search(r'<a href="lockout-salary-cap\.html"([^>]*)>Salary cap &amp; floor</a>', cap_html)
+    check("lockout-salary-cap.html's Salary cap & floor tab is found", m3 is not None)
+    if m3:
+        check("'Salary cap & floor' is current on lockout-salary-cap.html", 'aria-current="page"' in m3.group(1))
+
+    m4 = re.search(r'<a href="lockout\.html"([^>]*)>Tracker</a>', cap_html)
+    check("lockout-salary-cap.html's Tracker tab is found", m4 is not None)
+    if m4:
+        check("'Tracker' is NOT current on lockout-salary-cap.html", 'aria-current="page"' not in m4.group(1))
+
+
+def test_the_cap_page_carries_exactly_one_ga_tag_and_one_adsense_block():
+    html_text = CAP_PAGE.read_text(encoding="utf-8")
+    ga_script = "googletagmanager.com/gtag/js?id=G-G04P969TLX"
+    ga_config = "gtag('config', 'G-G04P969TLX')"
+    adsense_script = "pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748967682918425"
+    adsense_meta = 'google-adsense-account" content="ca-pub-8748967682918425'
+    check("exactly one GA script tag", html_text.count(ga_script) == 1)
+    check("exactly one GA config call", html_text.count(ga_config) == 1)
+    check("exactly one AdSense script tag", html_text.count(adsense_script) == 1)
+    check("exactly one AdSense meta tag", html_text.count(adsense_meta) == 1)
+
+
+def test_the_cap_page_has_no_per_team_dollar_figures_or_method_leakage():
+    html_text = CAP_PAGE.read_text(encoding="utf-8")
+    lowered = html_text.lower()
+    check("no '.py' leaks into the page", ".py" not in lowered)
+    check("no '.json' leaks into the page", ".json" not in lowered)
+    check("no 'recompute' leaks into the page", "recompute" not in lowered)
+    check("no build_lockout_page script name leaks", "build_lockout_page" not in lowered)
+    check("no write_player_pages script name leaks", "write_player_pages" not in lowered)
+    check("'public data', never 'public mlb data'", "public mlb data" not in lowered)
+    team_names = (
+        "Yankees", "Red Sox", "Blue Jays", "Orioles", "Rays", "White Sox",
+        "Guardians", "Tigers", "Royals", "Twins", "Astros", "Angels",
+        "Athletics", "Mariners", "Rangers", "Braves", "Marlins", "Mets",
+        "Phillies", "Nationals", "Cubs", "Reds", "Brewers", "Pirates",
+        "Cardinals", "Diamondbacks", "Rockies", "Dodgers", "Padres", "Giants",
+    )
+    for name in team_names:
+        check(
+            f"no club-named dollar figure for the {name} (a per-team payroll number)",
+            not re.search(re.escape(name) + r"[^.]{0,60}\$\d", html_text)
+            and not re.search(r"\$\d[^.]{0,60}" + re.escape(name), html_text),
+        )
+
+
+def test_the_cap_page_json_ld_has_faqpage_article_and_breadcrumblist():
+    html_text = CAP_PAGE.read_text(encoding="utf-8")
+    m = re.search(r'<script type="application/ld\+json">(.*?)</script>', html_text, re.S)
+    check("a JSON-LD script block is present", m is not None)
+    data = json.loads(m.group(1))
+    types = {node.get("@type") for node in data.get("@graph", [])}
+    check("JSON-LD includes an Article node", "Article" in types)
+    check("JSON-LD includes a FAQPage node", "FAQPage" in types)
+    check("JSON-LD includes a BreadcrumbList node", "BreadcrumbList" in types)
+
+    faq_node = next(n for n in data["@graph"] if n.get("@type") == "FAQPage")
+    check("FAQPage has 3-4 questions", 3 <= len(faq_node["mainEntity"]) <= 4)
+
+
+def test_the_cap_page_meta_description_fits_search_result_length():
+    html_text = CAP_PAGE.read_text(encoding="utf-8")
+    m = re.search(r'<meta name="description" content="([^"]*)"', html_text)
+    check("a meta description is present", m is not None)
+    if m:
+        import html as html_mod
+        desc = html_mod.unescape(m.group(1))
+        check(f"meta description is <= 160 chars (got {len(desc)})", len(desc) <= 160)
+
+
+def test_lockout_salary_cap_is_hand_written_and_in_the_committed_sitemap():
+    import write_player_pages as wpp
+
+    hand_written_paths = [path for path, _priority in wpp.HAND_WRITTEN_PAGES]
+    check("lockout-salary-cap.html is in HAND_WRITTEN_PAGES", "lockout-salary-cap.html" in hand_written_paths)
+
+    sitemap = (ROOT / "docs" / "sitemap-core.xml").read_text(encoding="utf-8")
+    check("sitemap-core.xml lists /lockout-salary-cap.html", "/lockout-salary-cap.html</loc>" in sitemap)
+
+
 if __name__ == "__main__":
     test_the_real_data_file_validates()
     test_a_well_formed_fixture_validates()
@@ -644,6 +866,20 @@ if __name__ == "__main__":
     test_sitemap_generator_lists_the_lockout_page()
     test_committed_sitemap_also_lists_it_today()
     test_meta_description_fits_search_result_length()
+    test_the_real_salary_cap_data_file_validates()
+    test_a_well_formed_cap_fixture_validates()
+    test_cap_missing_top_level_field_is_rejected()
+    test_cap_non_https_source_url_is_rejected()
+    test_cap_scale_mark_outside_range_is_rejected()
+    test_cap_faq_wrong_count_is_rejected()
+    test_the_cap_page_has_been_built()
+    test_the_cap_page_shows_every_headline_figure_from_the_data_file()
+    test_the_tab_strip_is_present_and_marks_the_right_tab_current()
+    test_the_cap_page_carries_exactly_one_ga_tag_and_one_adsense_block()
+    test_the_cap_page_has_no_per_team_dollar_figures_or_method_leakage()
+    test_the_cap_page_json_ld_has_faqpage_article_and_breadcrumblist()
+    test_the_cap_page_meta_description_fits_search_result_length()
+    test_lockout_salary_cap_is_hand_written_and_in_the_committed_sitemap()
 
     print(f"\n{PASS} passed, {FAIL} failed")
     sys.exit(1 if FAIL else 0)

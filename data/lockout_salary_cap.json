@@ -1,0 +1,162 @@
+{
+  "_README": [
+    "Hand-edited. This is the ONLY file an update to the salary cap & floor",
+    "explainer page ever requires -- scripts/build_lockout_page.py reads it and",
+    "regenerates the page. Editing this file and pushing to main is the whole",
+    "update. Never hand-edit the generated HTML.",
+    "",
+    "Every dollar figure on the page lives here, never in the builder, so a",
+    "change to the proposal during bargaining is a one-number edit in one",
+    "place. Keep it league-level only: no per-team payroll numbers, no payroll",
+    "tables -- those come from salary sites we do not republish. Team counts",
+    "may appear only as attributed reporting, with whose count it is and that",
+    "it depends on the date.",
+    "",
+    "Every claim is tied to a source below. Confirm a number is still current",
+    "before changing it; proposals move during bargaining. Copy says",
+    "'public data', never 'public MLB data'.",
+    "",
+    "FIELDS",
+    "  as_of     -- ISO date the figures on the page were last confirmed.",
+    "  updated   -- ISO date this file was last hand-edited.",
+    "  summary   -- the 2-3 sentence summary shown above the fold.",
+    "  figures   -- the headline tiles: value, label, note. League-level only.",
+    "  scale     -- the one simple horizontal scale we draw ourselves. min/max",
+    "               bound it; each mark has an amount (millions), a value",
+    "               label, a caption, and a side (top/bottom) so close marks",
+    "               do not collide.",
+    "  sections  -- the collapsed explainer blocks, in page order. Each has a",
+    "               title, a summary line shown above the block, and body text",
+    "               as paragraphs and/or bullets. An optional links list adds",
+    "               internal links under the body.",
+    "  faq       -- 3-4 question/answer pairs, rendered with FAQ structured",
+    "               data, same pattern as the tracker page.",
+    "  sources   -- name, date and https url for every outlet cited above."
+  ],
+  "as_of": "2026-11-04",
+  "updated": "2026-11-04",
+  "meta_description": "MLB owners proposed a $245.3M salary cap and $171.2M floor for 2027. What it means, how it compares to the luxury tax, and what it could mean for service time.",
+  "summary": "In their first economic offer, on May 28, 2026, MLB's owners proposed a hard salary cap of $245.3 million and a salary floor of $171.2 million for 2027. The players' union has rejected any cap, pushing instead for a higher luxury-tax line and better pay for young players. The fight over a cap is the main reason a lockout is expected once the current agreement runs out at 11:59 p.m. ET on December 1, 2026.",
+  "figures": [
+    { "value": "$171.2M", "label": "Owners' proposed floor", "note": "2027" },
+    { "value": "$245.3M", "label": "Owners' proposed cap", "note": "2027" },
+    { "value": "$244M", "label": "2026 luxury-tax line", "note": "in force today" },
+    { "value": "$300M", "label": "Union's counter", "note": "2027 tax line" }
+  ],
+  "scale": {
+    "min": 160,
+    "max": 310,
+    "caption": "Where the proposed floor and cap sit against today's luxury-tax line and the union's counter. League-level figures only.",
+    "marks": [
+      { "amount": 171.2, "value": "$171.2M", "label": "Proposed floor", "side": "top" },
+      { "amount": 244, "value": "$244M", "label": "2026 luxury tax", "side": "bottom" },
+      { "amount": 245.3, "value": "$245.3M", "label": "Proposed cap", "side": "top" },
+      { "amount": 300, "value": "$300M", "label": "Union counter", "side": "bottom" }
+    ]
+  },
+  "sections": [
+    {
+      "title": "What a salary cap and a salary floor are",
+      "summary": "A cap is a hard ceiling on team spending; a floor is a minimum. Baseball has never had either.",
+      "paragraphs": [
+        "A salary cap is a hard ceiling: no team could spend more than a set amount on player pay in a season. A salary floor is the opposite -- a minimum every team has to reach.",
+        "Football, basketball and hockey all use some version of both. Baseball never has. Teams can spend as much as they want today; the only brake is the luxury tax, which charges clubs that cross a set line but does not stop them."
+      ]
+    },
+    {
+      "title": "The proposal, by the numbers",
+      "summary": "A $245.3M cap and a $171.2M floor for 2027, counted like luxury-tax payroll, packaged with a 50-50 revenue split.",
+      "bullets": [
+        "Cap: $245.3 million per team in 2027. No team could go over it.",
+        "Floor: $171.2 million per team in 2027. Every team would have to reach it.",
+        "Payroll would be counted the way the luxury tax counts it today: the average yearly value of each contract plus player benefits, which MLB estimates at about $20 million to $23 million per team in 2027.",
+        "The cap and floor come packaged with a 50-50 split of league revenue between players and teams, an escrow system that holds back part of player pay until revenue is final, and all local TV money pooled and shared equally among the 30 teams.",
+        "Proposed length: seven years, covering 2027 through 2033. How quickly a cap would phase in is still open -- in a later session the owners offered to start it in 2028 instead.",
+        "Using Opening Day 2026 payrolls, MLB said 12 teams were below the floor and 8 were above the cap. A later analysis by Sportico, using end-of-season payrolls, counted 12 below and 9 above. The number above the cap depends on which day's payrolls you use."
+      ]
+    },
+    {
+      "title": "How it compares to today's luxury tax",
+      "summary": "The 2026 luxury-tax line is $244M. The proposed cap sits just above it -- but as a wall, not a toll.",
+      "paragraphs": [
+        "Under the current deal, the 2026 competitive balance tax -- the luxury tax -- is set at $244 million. Teams above it pay a tax on the overage, and the rate climbs for repeat payers, but they can keep spending, and several clubs pass it every year.",
+        "The proposed cap sits just $1.3 million above that line. The difference is that it would be a wall, not a toll.",
+        "The union's own offer goes the other way: raise the tax line to $300 million in 2027, climbing toward $360 million later, and add a 'competitive-integrity tax' on teams that spend under $150 million."
+      ]
+    },
+    {
+      "title": "The owners' case",
+      "summary": "MLB says large payroll gaps hurt competitive balance, and argues players would gain under a guaranteed revenue split.",
+      "paragraphs": [
+        "MLB says large gaps in payroll hurt competitive balance and fans' belief that their team can win. The league notes that since 2012 only one World Series champion, the 2015 Royals, came from a bottom-15 market, and says a cap and floor would hold the gap between the highest and lowest payrolls to about 1.4 times.",
+        "The league argues that the luxury tax, in place since 2003, has not closed that gap, and that players would do better under a guaranteed 50% revenue share -- it says league revenue has grown 247% since 2003 while player payroll grew 149%.",
+        "Business coverage from Sportico adds a financial angle: a cap would give owners more predictable costs and could lift franchise values, which it reports have grown more slowly than in the other major leagues."
+      ]
+    },
+    {
+      "title": "The players' case",
+      "summary": "The union has rejected any cap, calling it a limit on what players can earn.",
+      "paragraphs": [
+        "The union has said from the start that it will not accept a cap. Interim executive director Bruce Meyer called it 'a form of institutionalized collusion' and said the plan would have cost players more than half a billion dollars had it been in place in 2026. Commissioner Rob Manfred disputes that, saying players would earn more in 2027 than in 2026.",
+        "The union also says players already receive more than half of revenue under MLB's own definitions, so a '50-50' split would be a step down, and it objects to escrow, which could claw back guaranteed money.",
+        "In the union's view, open free agency and salary arbitration let players earn their market value, and a hard cap would limit that."
+      ]
+    },
+    {
+      "title": "What it could mean for service time, arbitration and pre-arb players",
+      "summary": "Neither side has proposed scrapping service time. Here is how the pieces connect -- general explanation, plus each side's attributed offers.",
+      "note": "This is a general explanation plus clearly attributed proposals, not a prediction of how talks end.",
+      "bullets": [
+        "Service time still runs the clock. Neither side has proposed scrapping it; it would still decide when a player reaches arbitration and free agency. MLB has offered earlier free agency -- a year sooner than under today's rules -- for players 30 and older, but only as part of a cap deal.",
+        "Arbitration: MLB's June offer keeps arbitration eligibility and criteria as they are today, though the league says it is open to changes. The union wants a $3 million minimum arbitration salary and to roughly double the number of younger players who qualify a year early as 'Super Two' players.",
+        "Pre-arbitration players: MLB has offered a $1 million minimum salary for a full season, with the bonus pool for pre-arbitration players growing from $50 million to $65 million and later $75 million. The union is asking for a $1.5 million minimum and a $180 million pool.",
+        "The general idea, not a forecast: under any hard cap, every dollar a team spends counts against the same ceiling, so raises for arbitration-eligible players would compete for room with free-agent signings. In capped leagues, cheap young players tend to become more valuable to their teams. How that would play out in baseball depends on details still being negotiated."
+      ],
+      "links": [
+        { "text": "See who's arbitration-eligible this winter", "href": "arbitration-eligible.html" },
+        { "text": "How Super Two works", "href": "super-two.html" }
+      ]
+    },
+    {
+      "title": "What to watch next",
+      "summary": "Whether either side moves off its opening position before the deadline -- and whether a lockout follows.",
+      "bullets": [
+        "Whether either side moves off its opening position on a cap, the luxury-tax line, or the floor.",
+        "Whether the owners lock players out after the agreement expires at 11:59 p.m. ET on December 1, 2026 -- tracked on the main Tracker tab.",
+        "Any counteroffer that changes the cap, floor, escrow, or phase-in. We update this page with a date and source when that happens.",
+        "The scheduled start of the 2027 season, March 24."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What salary cap did MLB owners propose?",
+      "a": "In their first economic offer, on May 28, 2026, MLB's owners proposed a hard salary cap of $245.3 million for 2027, paired with a $171.2 million salary floor every team would have to reach."
+    },
+    {
+      "q": "Is the luxury tax the same as a salary cap?",
+      "a": "No. The 2026 luxury tax charges teams that spend over $244 million but still lets them spend as much as they want. A hard cap would stop them at the line."
+    },
+    {
+      "q": "Have the players agreed to a salary cap?",
+      "a": "No. The players' union has rejected any cap and instead proposed raising the luxury-tax line to $300 million, along with higher pay for younger players."
+    },
+    {
+      "q": "Would a salary cap change service time?",
+      "a": "Neither side has proposed scrapping service time, which would still set a player's path to arbitration and free agency. MLB has offered earlier free agency for players 30 and older, but only as part of a cap deal."
+    }
+  ],
+  "sources_note": "Figures are from published proposals and news reports (public data), not our own payroll estimates.",
+  "sources": [
+    { "name": "MLB.com -- initial economic proposal", "date": "May 28, 2026", "url": "https://www.mlb.com/news/mlb-makes-initial-economic-proposal-for-new-cba" },
+    { "name": "MLB.com -- proposed salary cap and floor system", "date": "July 31, 2026", "url": "https://www.mlb.com/news/mlb-proposed-salary-cap-floor-system" },
+    { "name": "MLB.com -- minimum salary and free agency proposal", "date": "June 25, 2026", "url": "https://www.mlb.com/news/mlb-cba-proposal-addresses-minimum-salary-free-agency" },
+    { "name": "MLB.com -- competitive balance tax glossary", "date": "Reference", "url": "https://www.mlb.com/glossary/transactions/competitive-balance-tax" },
+    { "name": "Associated Press -- owners propose a salary cap", "date": "May 28, 2026", "url": "https://apnews.com/article/mlb-salary-cap-96cc8ac5ee5328f3d5c904c55d7cc60f" },
+    { "name": "The Athletic -- MLB's hard-cap proposal", "date": "May 28, 2026", "url": "https://www.nytimes.com/athletic/7315605/2026/05/28/mlb-hard-salary-cap-union-lockout/" },
+    { "name": "MLB Trade Rumors -- union releases its proposal", "date": "May 27, 2026", "url": "https://www.mlbtraderumors.com/2026/05/mlbpa-releases-details-of-collective-bargaining-proposal.html" },
+    { "name": "MLB Trade Rumors -- Bruce Meyer on the league's offer", "date": "June 2026", "url": "https://www.mlbtraderumors.com/2026/06/mlbpas-bruce-meyer-comments-on-leagues-first-economic-proposal.html" },
+    { "name": "USA Today -- union rejects the cap", "date": "June 1, 2026", "url": "https://www.usatoday.com/story/sports/mlb/columnist/bob-nightengale/2026/06/01/mlb-players-association-rejects-owners-salary-cap-lockout-threats/90360848007/" },
+    { "name": "Sportico -- the labor fight and a possible cap", "date": "October 29, 2026", "url": "https://www.sportico.com/leagues/baseball/2026/mlb-labor-fight-lockout-future-salary-cap-cba-1234956712/" }
+  ]
+}

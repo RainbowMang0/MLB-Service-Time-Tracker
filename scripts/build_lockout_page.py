@@ -78,8 +78,24 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATA_FILE = ROOT / "data" / "lockout_updates.json"
 OUT_FILE = ROOT / "docs" / "lockout.html"
 
+# The salary cap & floor explainer is the lockout section's second page. It is
+# generated from its own small, hand-edited data file by the same convention as
+# the tracker: every dollar figure lives in the data file, never in this
+# builder, so a change to the proposal during bargaining is a one-number edit.
+SALARY_CAP_DATA_FILE = ROOT / "data" / "lockout_salary_cap.json"
+SALARY_CAP_OUT_FILE = ROOT / "docs" / "lockout-salary-cap.html"
+
 SITE_URL = wpp.SITE_URL
 PAGE_URL = f"{SITE_URL}/lockout.html"
+SALARY_CAP_PAGE_URL = f"{SITE_URL}/lockout-salary-cap.html"
+
+# The two pages of the lockout section, as (href, label) pairs. The tab strip
+# below lives inside the page content, not the main site nav, which already
+# runs tight on laptop widths; see docs/styles.css, the .site-nav width notes.
+LOCKOUT_TABS = (
+    ("lockout.html", "Tracker"),
+    ("lockout-salary-cap.html", "Salary cap & floor"),
+)
 
 ET = ZoneInfo("America/New_York")
 
@@ -219,9 +235,155 @@ def load(path: pathlib.Path = DATA_FILE, today: dt.date | None = None) -> dict:
     return data
 
 
+def _tab_strip(active: str) -> str:
+    """The two-tab strip shared by both lockout pages.
+
+    Plain links, no JavaScript. `active` is the href of the current page; the
+    matching tab carries aria-current, and the CSS keys off that rather than a
+    hand-set class so the visible state and the accessible state cannot
+    disagree -- the same rule the main nav follows.
+    """
+    items = []
+    for href, label in LOCKOUT_TABS:
+        mark = ' aria-current="page"' if href == active else ""
+        items.append(f'<a href="{href}"{mark}>{html.escape(label)}</a>')
+    return (
+        '<nav class="lockout-tabs" aria-label="CBA and lockout sections">'
+        + "".join(items)
+        + "</nav>"
+    )
+
+
 def sorted_entries(data: dict) -> list[dict]:
     """Newest first, regardless of the order they were hand-typed in."""
     return sorted(data["entries"], key=lambda e: e["date"], reverse=True)
+
+
+# ---------------------------------------------------------------------------
+# The salary cap & floor explainer: its own data file, validated the same way
+# the updates file is, and rendered below. Every figure a reader sees comes
+# from data/lockout_salary_cap.json; none is typed into this builder.
+# ---------------------------------------------------------------------------
+
+REQUIRED_CAP_TOP_FIELDS = (
+    "as_of", "updated", "meta_description", "summary",
+    "figures", "scale", "sections", "faq", "sources",
+)
+
+
+def validate_salary_cap(data: dict) -> None:
+    """Raises LockoutDataError on anything a bad hand-edit could introduce.
+
+    Checked here, not left to render-time KeyErrors, so CI reports a clear
+    message and the same gate protects the daily build and the push-triggered
+    one -- exactly as validate() does for the updates file.
+    """
+    if not isinstance(data, dict):
+        raise LockoutDataError("salary-cap: top level must be a JSON object")
+
+    missing = [f for f in REQUIRED_CAP_TOP_FIELDS if f not in data]
+    if missing:
+        raise LockoutDataError(f"salary-cap: missing required field(s): {', '.join(missing)}")
+
+    _parse_iso_date(data["as_of"], "salary-cap.as_of")
+    _parse_iso_date(data["updated"], "salary-cap.updated")
+
+    for field in ("meta_description", "summary"):
+        if not isinstance(data[field], str) or not data[field].strip():
+            raise LockoutDataError(f"salary-cap.{field}: must be a non-empty string")
+
+    figures = data["figures"]
+    if not isinstance(figures, list) or not figures:
+        raise LockoutDataError("salary-cap.figures: must be a non-empty list")
+    for i, fig in enumerate(figures):
+        if not isinstance(fig, dict):
+            raise LockoutDataError(f"salary-cap.figures[{i}]: must be an object")
+        for field in ("value", "label"):
+            if not isinstance(fig.get(field), str) or not fig[field].strip():
+                raise LockoutDataError(f"salary-cap.figures[{i}].{field}: must be a non-empty string")
+
+    scale = data["scale"]
+    if not isinstance(scale, dict):
+        raise LockoutDataError("salary-cap.scale: must be an object")
+    for field in ("min", "max"):
+        if not isinstance(scale.get(field), (int, float)):
+            raise LockoutDataError(f"salary-cap.scale.{field}: must be a number")
+    if scale["min"] >= scale["max"]:
+        raise LockoutDataError("salary-cap.scale: min must be less than max")
+    marks = scale.get("marks")
+    if not isinstance(marks, list) or not marks:
+        raise LockoutDataError("salary-cap.scale.marks: must be a non-empty list")
+    for i, mark in enumerate(marks):
+        if not isinstance(mark, dict):
+            raise LockoutDataError(f"salary-cap.scale.marks[{i}]: must be an object")
+        if not isinstance(mark.get("amount"), (int, float)):
+            raise LockoutDataError(f"salary-cap.scale.marks[{i}].amount: must be a number")
+        if not (scale["min"] <= mark["amount"] <= scale["max"]):
+            raise LockoutDataError(
+                f"salary-cap.scale.marks[{i}].amount ({mark['amount']}) is outside "
+                f"the scale range {scale['min']}-{scale['max']}"
+            )
+        for field in ("value", "label"):
+            if not isinstance(mark.get(field), str) or not mark[field].strip():
+                raise LockoutDataError(f"salary-cap.scale.marks[{i}].{field}: must be a non-empty string")
+        if mark.get("side") not in ("top", "bottom"):
+            raise LockoutDataError(f"salary-cap.scale.marks[{i}].side: must be 'top' or 'bottom'")
+
+    sections = data["sections"]
+    if not isinstance(sections, list) or not sections:
+        raise LockoutDataError("salary-cap.sections: must be a non-empty list")
+    for i, sec in enumerate(sections):
+        label = f"salary-cap.sections[{i}]"
+        if not isinstance(sec, dict):
+            raise LockoutDataError(f"{label}: must be an object")
+        for field in ("title", "summary"):
+            if not isinstance(sec.get(field), str) or not sec[field].strip():
+                raise LockoutDataError(f"{label}.{field}: must be a non-empty string")
+        paragraphs = sec.get("paragraphs", [])
+        bullets = sec.get("bullets", [])
+        if not isinstance(paragraphs, list) or not isinstance(bullets, list):
+            raise LockoutDataError(f"{label}: paragraphs and bullets must be lists")
+        if not paragraphs and not bullets:
+            raise LockoutDataError(f"{label}: needs at least one paragraph or bullet")
+        for item in [*paragraphs, *bullets]:
+            if not isinstance(item, str) or not item.strip():
+                raise LockoutDataError(f"{label}: every paragraph/bullet must be a non-empty string")
+        for j, link in enumerate(sec.get("links", []) or []):
+            if not isinstance(link, dict) or not link.get("text") or not link.get("href"):
+                raise LockoutDataError(f"{label}.links[{j}]: each link needs text and href")
+
+    faq = data["faq"]
+    if not isinstance(faq, list) or not (3 <= len(faq) <= 4):
+        raise LockoutDataError("salary-cap.faq: must be a list of 3-4 question/answer pairs")
+    for i, qa in enumerate(faq):
+        if not isinstance(qa, dict):
+            raise LockoutDataError(f"salary-cap.faq[{i}]: must be an object")
+        for field in ("q", "a"):
+            if not isinstance(qa.get(field), str) or not qa[field].strip():
+                raise LockoutDataError(f"salary-cap.faq[{i}].{field}: must be a non-empty string")
+
+    sources = data["sources"]
+    if not isinstance(sources, list) or not sources:
+        raise LockoutDataError("salary-cap.sources: must be a non-empty list")
+    for i, src in enumerate(sources):
+        label = f"salary-cap.sources[{i}]"
+        if not isinstance(src, dict):
+            raise LockoutDataError(f"{label}: must be an object")
+        for field in ("name", "date"):
+            if not isinstance(src.get(field), str) or not src[field].strip():
+                raise LockoutDataError(f"{label}.{field}: must be a non-empty string")
+        _check_https_url(src.get("url"), f"{label}.url")
+
+
+def load_salary_cap(path: pathlib.Path = SALARY_CAP_DATA_FILE) -> dict:
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except FileNotFoundError as exc:
+        raise LockoutDataError(f"{path}: not found") from exc
+    except json.JSONDecodeError as exc:
+        raise LockoutDataError(f"{path}: invalid JSON ({exc})") from exc
+    validate_salary_cap(data)
+    return data
 
 
 # ---------------------------------------------------------------------------
@@ -567,6 +729,8 @@ def render(data: dict, now: dt.datetime) -> str:
 
     <main class="tax-main">
 
+      {_tab_strip("lockout.html")}
+
       <p class="lede">The current Basic Agreement between MLB and the
       players' union expires <b>{html.escape(cba_expires_label)}</b> at 11:59
       p.m. ET. Owners are widely expected to lock players out shortly after,
@@ -697,10 +861,278 @@ def render(data: dict, now: dt.datetime) -> str:
 """
 
 
+# ---------------------------------------------------------------------------
+# Salary cap & floor explainer -- rendering
+# ---------------------------------------------------------------------------
+
+def _cap_tile(fig: dict) -> str:
+    note = fig.get("note")
+    note_html = f'<div class="tile-note">{html.escape(note)}</div>' if note else ""
+    return (
+        '<div class="stat-tile accent-muted">'
+        f'<div class="value">{html.escape(fig["value"])}</div>'
+        f'<div class="label">{html.escape(fig["label"])}</div>'
+        f'{note_html}'
+        "</div>"
+    )
+
+
+def _cap_scale_svg(scale: dict) -> str:
+    """One horizontal scale, drawn here with inline SVG -- no libraries, no
+    images. Only the league-level marks the data file carries; positions are
+    computed from each mark's amount against the scale's own min/max, and the
+    `side` (top/bottom) keeps two close marks from colliding. Decorative to a
+    screen reader: the same figures sit in the tiles and the text, so the SVG
+    is aria-hidden and the figures are not read twice."""
+    lo, hi = float(scale["min"]), float(scale["max"])
+    left, right = 70.0, 930.0
+    axis_y = 85.0
+    span = right - left
+
+    def x_of(amount: float) -> float:
+        return left + (float(amount) - lo) / (hi - lo) * span
+
+    parts = [
+        f'<line class="cap-scale-axis" x1="{left:.0f}" y1="{axis_y:.0f}" '
+        f'x2="{right:.0f}" y2="{axis_y:.0f}" />'
+    ]
+    for mark in scale["marks"]:
+        cx = x_of(mark["amount"])
+        anchor = "start" if cx < left + 20 else "end" if cx > right - 20 else "middle"
+        if mark["side"] == "top":
+            value_y, label_y = axis_y - 20, axis_y - 38
+        else:
+            value_y, label_y = axis_y + 30, axis_y + 48
+        parts.append(
+            f'<line class="cap-scale-tick" x1="{cx:.1f}" y1="{axis_y - 8:.0f}" '
+            f'x2="{cx:.1f}" y2="{axis_y + 8:.0f}" />'
+            f'<circle class="cap-scale-dot" cx="{cx:.1f}" cy="{axis_y:.0f}" r="4" />'
+            f'<text class="cap-scale-value" x="{cx:.1f}" y="{value_y:.0f}" '
+            f'text-anchor="{anchor}">{html.escape(mark["value"])}</text>'
+            f'<text class="cap-scale-label" x="{cx:.1f}" y="{label_y:.0f}" '
+            f'text-anchor="{anchor}">{html.escape(mark["label"])}</text>'
+        )
+    caption = scale.get("caption", "")
+    return (
+        '<figure class="cap-scale">'
+        '<svg viewBox="0 0 1000 150" class="cap-scale-svg" role="img" '
+        f'aria-label="{html.escape(caption)}" preserveAspectRatio="xMidYMid meet">'
+        + "".join(parts)
+        + "</svg>"
+        + (f'<figcaption class="panel-note">{html.escape(caption)}</figcaption>' if caption else "")
+        + "</figure>"
+    )
+
+
+def _cap_section(sec: dict) -> str:
+    body = []
+    if sec.get("note"):
+        body.append(f'<p class="cap-note">{html.escape(sec["note"])}</p>')
+    for para in sec.get("paragraphs", []):
+        body.append(f"<p>{html.escape(para)}</p>")
+    bullets = sec.get("bullets", [])
+    if bullets:
+        lis = "".join(f"<li>{html.escape(b)}</li>" for b in bullets)
+        body.append(f"<ul class='cap-bullets'>{lis}</ul>")
+    links = sec.get("links", []) or []
+    if links:
+        anchors = " &middot; ".join(
+            f'<a href="{html.escape(ln["href"])}">{html.escape(ln["text"])}</a>'
+            for ln in links
+        )
+        body.append(f'<p class="cap-links">{anchors}</p>')
+    return (
+        '<section class="panel cap-section">'
+        f'<h2>{html.escape(sec["title"])}</h2>'
+        f'<p class="panel-note cap-section-summary">{html.escape(sec["summary"])}</p>'
+        '<details class="cap-details"><summary>Read more</summary>'
+        f'<div class="cap-section-body">{"".join(body)}</div>'
+        "</details>"
+        "</section>"
+    )
+
+
+def _cap_faq(faq: list[dict]) -> tuple[str, list[dict]]:
+    html_parts = []
+    ld_items = []
+    for qa in faq:
+        q, a = qa["q"], qa["a"]
+        html_parts.append(f"<h3>{html.escape(q)}</h3><p>{html.escape(a)}</p>")
+        ld_items.append({
+            "@type": "Question",
+            "name": q,
+            "acceptedAnswer": {"@type": "Answer", "text": a},
+        })
+    return "".join(html_parts), ld_items
+
+
+def _cap_sources(data: dict, updated_label: str) -> str:
+    rows = []
+    for src in data["sources"]:
+        rows.append(
+            "<li>"
+            f'{html.escape(src["name"])} <span class="cap-source-date">({html.escape(src["date"])})</span> &mdash; '
+            f'<a href="{html.escape(src["url"])}" rel="noopener" target="_blank">link</a>'
+            "</li>"
+        )
+    note = data.get("sources_note", "")
+    note_html = f'<p class="panel-note">{html.escape(note)}</p>' if note else ""
+    return (
+        '<section class="panel cap-section">'
+        "<h2>Sources</h2>"
+        f'<p class="panel-note cap-section-summary">Last updated {html.escape(updated_label)}. Every figure above is tied to a published proposal or news report.</p>'
+        f"{note_html}"
+        '<details class="cap-details"><summary>Show sources</summary>'
+        f'<ul class="cap-sources">{"".join(rows)}</ul>'
+        "</details>"
+        "</section>"
+    )
+
+
+def render_salary_cap(data: dict) -> str:
+    as_of = _parse_iso_date(data["as_of"], "salary-cap.as_of")
+    updated = _parse_iso_date(data["updated"], "salary-cap.updated")
+    as_of_label = format_date_full(as_of)
+    updated_label = format_date_full(updated)
+
+    desc = data["meta_description"]
+    tiles = "".join(_cap_tile(fig) for fig in data["figures"])
+    scale_svg = _cap_scale_svg(data["scale"])
+    sections = "".join(_cap_section(sec) for sec in data["sections"])
+    faq_html, faq_ld = _cap_faq(data["faq"])
+    sources_html = _cap_sources(data, updated_label)
+
+    graph = [
+        {
+            "@type": "Article",
+            "headline": "MLB's proposed salary cap and floor, explained",
+            "description": desc,
+            "datePublished": "2026-11-04",
+            "dateModified": updated.isoformat(),
+            "mainEntityOfPage": SALARY_CAP_PAGE_URL,
+            "url": SALARY_CAP_PAGE_URL,
+            "author": {"@type": "Organization", "name": "Big League Service Time Tracker"},
+            "publisher": {"@type": "Organization", "name": "Big League Service Time Tracker"},
+        },
+        {"@type": "FAQPage", "mainEntity": faq_ld},
+        wpp._breadcrumb_ld([
+            ("Big League Service Time Tracker", f"{SITE_URL}/"),
+            ("CBA & Lockout", PAGE_URL),
+            ("Salary cap & floor", SALARY_CAP_PAGE_URL),
+        ]),
+    ]
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+{wpp.HEAD_TAGS}
+<title>MLB Salary Cap &amp; Floor Proposal Explained (2027 CBA) | Big League Service Time Tracker</title>
+
+<meta name="description" content="{html.escape(desc)}" />
+<meta name="theme-color" content="#0a0c10" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="MLB Salary Cap &amp; Floor Proposal Explained (2027 CBA)" />
+<meta property="og:description" content="{html.escape(desc)}" />
+<link rel="canonical" href="{SALARY_CAP_PAGE_URL}" />
+<meta property="og:url" content="{SALARY_CAP_PAGE_URL}" />
+<meta name="twitter:card" content="summary" />
+{wpp._ld_script(graph)}
+
+<script>
+  try {{
+    var t = localStorage.getItem("mlb-service-time-theme");
+    if (t) document.documentElement.setAttribute("data-theme", t);
+  }} catch (e) {{}}
+</script>
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="taxes.css" />
+</head>
+<body>
+  <div class="viz-root">
+
+    <header class="page-header">
+      <div class="page-header-inner">
+        <h1>
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+            <circle cx="16" cy="16" r="14" class="bm-ball" />
+            <path d="M7.2 5.6c3.6 3 5.4 6.5 5.4 10.4s-1.8 7.4-5.4 10.4" class="bm-seam" />
+            <path d="M24.8 5.6c-3.6 3-5.4 6.5-5.4 10.4s1.8 7.4 5.4 10.4" class="bm-seam" />
+          </svg>
+          <span>The owners' salary cap and floor proposal, explained</span>
+        </h1>
+        <p class="subtitle">The league-level numbers in MLB's proposed cap and floor, how they sit against today's luxury tax, and what they could mean for service time.</p>
+      </div>
+    </header>
+
+      <nav class="site-nav" aria-label="Site sections"><a href="./">Service time</a><a href="t/">By club</a><a href="alumni/">Previous players</a><a href="arbitration-eligible.html">Arbitration eligible</a><a href="super-two.html">Super Two</a><a href="service-time.html">What is service time?</a><a href="lockout.html">Lockout</a><a href="contract.html">Contract clock <span class="nav-tag">in development</span></a><a href="taxes.html">Duty days <span class="nav-tag">in development</span></a><a href="neutrality.html">Neutrality</a></nav>
+
+    <main class="tax-main">
+
+      {_tab_strip("lockout-salary-cap.html")}
+
+      <section class="stat-tiles cap-tiles" aria-label="Proposed cap and floor, league-level figures">
+        {tiles}
+      </section>
+
+      <p class="lede cap-summary">{html.escape(data["summary"])}</p>
+      <p class="panel-note cap-asof">As of {html.escape(as_of_label)}. These are proposals reported during bargaining, not final terms.</p>
+
+      {scale_svg}
+
+      {sections}
+
+      <section class="panel">
+        <h2>FAQ</h2>
+        {faq_html}
+      </section>
+
+      {sources_html}
+
+      <p class="foot">
+        This page explains publicly reported bargaining proposals in our own
+        words, and links to a source for every figure. It is not a prediction
+        of how negotiations end, and the numbers are proposals that can change.
+        <br /><br />
+        Not affiliated with or endorsed by Major League Baseball or any team.
+        Service time figures are our own calculations from public data.
+        <br /><br />
+        <a href="about.html">About</a> &middot;
+        <a href="privacy.html">Privacy</a> &middot;
+        <a href="mailto:{wpp.CONTACT_EMAIL}">{wpp.CONTACT_EMAIL}</a>
+      </p>
+
+    </main>
+
+    <footer class="page-footer">
+      <p>
+        Not affiliated with or endorsed by Major League Baseball or any team.
+        Service time figures are our own calculations from public data.
+      </p>
+      <p><a href="./">Service time tracker</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="neutrality.html">Neutrality</a> &middot; <a href="service-time.html">What is service time?</a> &middot; <a href="mailto:{wpp.CONTACT_EMAIL}">{wpp.CONTACT_EMAIL}</a></p>
+    </footer>
+  </div>
+  {wpp.ANALYTICS}
+</body>
+</html>
+"""
+
+
 def build(data_file: pathlib.Path = DATA_FILE, out_file: pathlib.Path = OUT_FILE,
           now: dt.datetime | None = None) -> str:
     data = load(data_file, today=(now.astimezone(ET).date() if now else None))
     page = render(data, now or now_et())
+    out_file.write_text(page, encoding="utf-8")
+    return page
+
+
+def build_salary_cap(data_file: pathlib.Path = SALARY_CAP_DATA_FILE,
+                     out_file: pathlib.Path = SALARY_CAP_OUT_FILE) -> str:
+    data = load_salary_cap(data_file)
+    page = render_salary_cap(data)
     out_file.write_text(page, encoding="utf-8")
     return page
 
@@ -719,12 +1151,17 @@ def main(argv: list[str] | None = None) -> int:
 
     try:
         data = load(args.data_file, today=now.astimezone(ET).date())
+        cap_data = load_salary_cap()
         if args.check:
             print(f"{args.data_file}: ok ({len(data['entries'])} entries)")
+            print(f"{SALARY_CAP_DATA_FILE}: ok ({len(cap_data['sections'])} sections)")
             return 0
         page = render(data, now)
         args.out.write_text(page, encoding="utf-8")
         print(f"wrote {args.out}")
+        cap_page = render_salary_cap(cap_data)
+        SALARY_CAP_OUT_FILE.write_text(cap_page, encoding="utf-8")
+        print(f"wrote {SALARY_CAP_OUT_FILE}")
         return 0
     except LockoutDataError as exc:
         print(f"lockout data error: {exc}", file=sys.stderr)
