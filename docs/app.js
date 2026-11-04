@@ -808,6 +808,17 @@
     });
   }
 
+  function prefillSearchFromQuery() {
+    // The header's phone search icon and the no-JS "Search a player or
+    // club" box both just link to "?q=<term>"; this is the one line that
+    // turns that into an actual filtered table on arrival, for a visitor
+    // who lands here from another page's header instead of typing here.
+    const input = el("search-input");
+    if (!input) return;
+    const q = new URLSearchParams(location.search).get("q");
+    if (q) input.value = q;
+  }
+
   function wireFilters() {
     // Any filter change invalidates the current page number -- landing the
     // user on "page 7 of 2" after narrowing a search is disorienting.
@@ -1535,6 +1546,7 @@
     wirePagination();
     wireProfile();
     wireHashNavigation();
+    prefillSearchFromQuery();
     renderTable();
     openProfileFromHash();
   }
