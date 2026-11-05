@@ -174,3 +174,28 @@ test("the tile value is short; the sentence is the long form", () => {
   assert.notEqual(tile, sentence);
   assert.ok(sentence.length > tile.length);
 });
+
+// -------------------------------------------------------------------------
+// matchesFilter -- the topic filter's one pure decision: which entries
+// stay visible for a given selected filter value. The inline DOM-wiring
+// script in docs/lockout.html is the only caller; this is the part of it
+// that's actually worth unit testing without a browser.
+// -------------------------------------------------------------------------
+
+test("'all' matches every category, including an empty/unknown one", () => {
+  assert.equal(LS.matchesFilter("salary_cap", "all"), true);
+  assert.equal(LS.matchesFilter("other", "all"), true);
+  assert.equal(LS.matchesFilter("", "all"), true);
+  assert.equal(LS.matchesFilter(null, "all"), true);
+});
+
+test("a specific filter only matches its own exact category", () => {
+  assert.equal(LS.matchesFilter("salary_cap", "salary_cap"), true);
+  assert.equal(LS.matchesFilter("negotiations", "salary_cap"), false);
+  assert.equal(LS.matchesFilter("other", "salary_cap"), false);
+});
+
+test("'other' as a filter matches entries filed under other, not every non-match", () => {
+  assert.equal(LS.matchesFilter("other", "other"), true);
+  assert.equal(LS.matchesFilter("players_union", "other"), false);
+});

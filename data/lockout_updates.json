@@ -42,6 +42,16 @@
     "                               fact), source_name and source_url (must be",
     "                               https). Any order -- the page sorts newest",
     "                               first on its own.",
+    "  entries[].category          -- OPTIONAL. Drives the on-page topic",
+    "                               filter above this list. One of:",
+    "                               salary_cap, negotiations, deadlines,",
+    "                               players_union, owners_league, other.",
+    "                               Leave it off, blank, or misspell it and",
+    "                               the entry still renders -- it just files",
+    "                               under the page's \"Other\" filter chip.",
+    "                               This can never fail validation; pick the",
+    "                               single best-fitting value, or 'other' if",
+    "                               genuinely unsure.",
     "",
     "Never invent a source, a quote, or a date. If nothing new and verified",
     "has happened, don't add an entry."
@@ -57,35 +67,40 @@
       "headline": "Reporting: talks remain far apart over a salary cap as the Dec. 1 deadline nears",
       "summary": "Yahoo Sports reported that with the current agreement expiring Dec. 1, 2026, a lockout is widely expected the next day. The owners' push for a salary cap is described as the central sticking point, with the players' union opposed and instead seeking a higher minimum salary and stronger service-time protections.",
       "source_name": "Yahoo Sports",
-      "source_url": "https://sports.yahoo.com/mlb/article/mlb-labor-faq-with-a-lockout-on-the-horizon-heres-what-baseball-fans-need-to-know-175303012.html"
+      "source_url": "https://sports.yahoo.com/mlb/article/mlb-labor-faq-with-a-lockout-on-the-horizon-heres-what-baseball-fans-need-to-know-175303012.html",
+      "category": "salary_cap"
     },
     {
       "date": "2026-10-29",
       "headline": "Reporting: owners' salary-cap proposal pairs a payroll floor with a 50-50 revenue split",
       "summary": "The Boston Globe reported that owners have proposed a salary cap near $245 million together with a roughly $171 million payroll floor and a 50-50 split of revenue, which the players' union has rejected. The Globe expects owners to lock players out at midnight on Dec. 2.",
       "source_name": "Boston Globe",
-      "source_url": "https://www.bostonglobe.com/2026/10/29/sports/mlb-labor-owners-players/"
+      "source_url": "https://www.bostonglobe.com/2026/10/29/sports/mlb-labor-owners-players/",
+      "category": "salary_cap"
     },
     {
       "date": "2026-11-01",
       "headline": "AP: no common ground on core money issues as the Dec. 1 expiration approaches",
       "summary": "The Associated Press reported that although the two sides have been bargaining since May, they still have not found agreement on the main economic issues. Owners want a salary cap and floor plus a limit on how much of a team's payroll one player can take up, while the players are pushing for wider free agency and arbitration rights, a much higher minimum salary, more revenue sharing and a penalty for teams that spend too little.",
       "source_name": "Associated Press (via NBC Sports)",
-      "source_url": "https://www.nbcsports.com/mlb/news/mlbs-2027-season-threatened-with-lockout-looming-when-labor-deal-expires-dec-1"
+      "source_url": "https://www.nbcsports.com/mlb/news/mlbs-2027-season-threatened-with-lockout-looming-when-labor-deal-expires-dec-1",
+      "category": "negotiations"
     },
     {
       "date": "2026-11-03",
       "headline": "MLB proposes pushing the start of its salary cap and floor back to 2028",
       "summary": "At a bargaining session on Tuesday, the league offered to hold off on its proposed salary cap and payroll floor until the 2028 season, saying clubs need a full offseason to adjust. Under the offer, the current luxury tax and revenue sharing rules would stay in place for 2027.",
       "source_name": "MLB.com",
-      "source_url": "https://www.mlb.com/news/mlb-increases-cap-and-floor-in-latest-proposal-sets-2028-target"
+      "source_url": "https://www.mlb.com/news/mlb-increases-cap-and-floor-in-latest-proposal-sets-2028-target",
+      "category": "salary_cap"
     },
     {
       "date": "2026-11-03",
       "headline": "Players' union rejects the delayed salary-cap plan",
       "summary": "In a statement, the MLBPA said delaying the cap to 2028 doesn't change its main objections, including what it called lower player pay and the loss of guaranteed contracts. The union added that players are ready to keep bargaining in good faith for a new agreement.",
       "source_name": "MLBPA",
-      "source_url": "https://www.mlbplayers.com/press-releases/statement-from-major-league-baseball-players-association"
+      "source_url": "https://www.mlbplayers.com/press-releases/statement-from-major-league-baseball-players-association",
+      "category": "players_union"
     }
   ]
 }

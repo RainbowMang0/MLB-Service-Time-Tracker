@@ -722,6 +722,50 @@
   background: var(--accent-wash);
 }
 
+/* The topic filter above "Latest updates". Same pill language as the tab
+   strip above, but real <button>s with aria-pressed rather than links --
+   this chooses a subset of one page's own content, not a destination. */
+.lockout-filter {
+  display: flex;
+  gap: 6px;
+  margin: 0 0 14px;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.lockout-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 14px;
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  color: var(--text-secondary);
+  background: var(--glass-surface);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.12s ease, border-color 0.12s ease, background-color 0.12s ease;
+}
+
+.lockout-filter-btn:hover { color: var(--text-primary); }
+
+.lockout-filter-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.lockout-filter-btn[aria-pressed="true"] {
+  color: var(--text-primary);
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+  background: var(--accent-wash);
+}
+
+.lockout-filter-empty {
+  margin: 0 0 14px;
+}
+
 /* --- salary cap & floor explainer ---------------------------------------- */
 
 /* The four headline tiles carry a small note line (a year, or "in force
@@ -850,4 +894,5 @@
   .cap-scale-value { font-size: 26px; }
   .cap-scale-label { font-size: 19px; }
   .lockout-tabs a { font-size: 0.76rem; padding: 7px 13px; }
+  .lockout-filter-btn { font-size: 0.74rem; padding: 6px 12px; }
 }
