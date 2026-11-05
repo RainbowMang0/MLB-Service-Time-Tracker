@@ -1670,10 +1670,27 @@ def test_a_club_page_path_is_derived_the_same_way_as_a_player_page():
 
 def test_a_breadcrumb_marks_the_current_page_as_the_last_step():
     from write_player_pages import _crumbs
-    out = _crumbs(("All players", "../"), ("Club", "../t/club.html"), ("Player", None))
-    check("earlier steps are links", '<a href="../">All players</a>' in out)
+    out = _crumbs(("Players", "../"), ("Club", "../t/club.html"), ("Player", None))
+    check("earlier steps are links", '<a href="../">Players</a>' in out)
     check("the current page is not a link", "<b>Player</b>" in out)
     check("and it is the last one", out.rstrip().endswith("<b>Player</b></nav>"))
+
+
+def test_no_crumb_still_says_all_players():
+    """
+    The crumb's first step used to read "All players", which disagreed with
+    the "Players" tab the shared header carries (PR #28). Checked on a
+    sample of every generated template plus the hand-written pages that
+    carry a crumb, rather than trusted from one call site.
+    """
+    import re
+
+    for label, html_text in _menu_sample_pages().items():
+        if "<nav class=\"crumbs\">" not in html_text:
+            continue
+        check(f"{label}: no crumb says 'All players'", "All players" not in html_text)
+        check(f"{label}: the first crumb step says 'Players'",
+              '>Players<' in re.search(r'<nav class="crumbs">.*?</nav>', html_text, re.S).group(0))
 
 
 def test_the_club_directory_is_reachable_in_one_hop():
@@ -5096,6 +5113,48 @@ def test_every_page_carries_the_required_footer_disclaimer_and_links():
         check(f"{name}: shows the contact address", contact in html)
 
 
+def test_the_homepage_puts_numbers_before_the_long_explanation():
+    """
+    Job 12b: a phone visitor used to scroll past three paragraphs before
+    reaching a single number. The one-line .home-lede now sits right under
+    the shared header, the stat tiles and search come before the long
+    explanation, and the long explanation itself is collapsed into a
+    <details> so a reader sees the table, not a wall of text, by default.
+
+    Also checks the banned phrase Braxton asked removed is gone from the
+    site entirely, not just reworded on this one page.
+    """
+    ROOT = pathlib.Path(__file__).resolve().parents[1]
+    index_html = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
+
+    check("the homepage carries a one-line lede", '<p class="home-lede">' in index_html)
+
+    lede_pos = index_html.index('class="home-lede"')
+    tiles_pos = index_html.index('class="stat-tiles"')
+    controls_pos = index_html.index('class="controls"')
+    table_pos = index_html.index('class="table-wrap"')
+    intro_details_pos = index_html.index('class="intro-details"')
+    check(
+        "the lede, tiles and search all come before the long explanation",
+        lede_pos < tiles_pos < controls_pos < intro_details_pos,
+    )
+    check(
+        "the table itself also comes before the long explanation",
+        table_pos < intro_details_pos,
+    )
+    check(
+        "the long explanation is collapsed behind a <details>",
+        "<details class=\"intro-details\">" in index_html,
+    )
+
+    banned = "almost nothing to do with how well he plays"
+    for path in (ROOT / "docs").rglob("*.html"):
+        check(f"{path.relative_to(ROOT)}: never carries the retired phrase",
+              banned not in path.read_text(encoding="utf-8"))
+    check("app.js never carries the retired phrase either",
+          banned not in (ROOT / "docs" / "app.js").read_text(encoding="utf-8"))
+
+
 def test_the_five_pages_carry_an_original_intro():
     """
     Homepage, /t/, /service-time.html, /arbitration-eligible.html and
@@ -5981,6 +6040,7 @@ if __name__ == "__main__":
     test_the_site_url_follows_docs_cname()
     test_a_club_page_path_is_derived_the_same_way_as_a_player_page()
     test_a_breadcrumb_marks_the_current_page_as_the_last_step()
+    test_no_crumb_still_says_all_players()
     test_the_club_directory_is_reachable_in_one_hop()
     test_lastmod_moves_only_when_a_page_actually_changes()
     test_a_missing_lastmod_manifest_degrades_to_the_old_behaviour()
@@ -6074,6 +6134,7 @@ if __name__ == "__main__":
     test_every_page_carries_exactly_one_ga_tag_and_one_adsense_block()
     test_ads_txt_is_exact()
     test_every_page_carries_the_required_footer_disclaimer_and_links()
+    test_the_homepage_puts_numbers_before_the_long_explanation()
     test_the_five_pages_carry_an_original_intro()
     test_about_page_stays_high_level()
     test_no_page_in_docs_links_or_names_the_raw_statsapi_endpoint()

@@ -1512,17 +1512,22 @@
     // readers instead of UTC, which would show tomorrow's date for most of
     // a US evening after the 8am ET daily job has already run and rolled
     // past 00:00 UTC.
+    //
+    // Guarded: the homepage rewrite dropped the old page-header that carried
+    // #updated-line (the generated-at-footer line below says the same thing).
     const updatedLine = el("updated-line");
-    if (data.generated_at) {
-      const d = new Date(data.generated_at);
-      updatedLine.textContent = `Updated ${d.toLocaleDateString("en-US", {
-        timeZone: "America/Chicago",
-        month: "short",
-        day: "numeric",
-        year: "numeric",
-      })}`;
-    } else {
-      updatedLine.textContent = "";
+    if (updatedLine) {
+      if (data.generated_at) {
+        const d = new Date(data.generated_at);
+        updatedLine.textContent = `Updated ${d.toLocaleDateString("en-US", {
+          timeZone: "America/Chicago",
+          month: "short",
+          day: "numeric",
+          year: "numeric",
+        })}`;
+      } else {
+        updatedLine.textContent = "";
+      }
     }
   }
 

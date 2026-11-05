@@ -227,6 +227,42 @@ html, body {
 .subtitle a { color: var(--accent); text-decoration: none;
               border-bottom: 1px solid transparent; }
 .subtitle a:hover, .subtitle a:focus-visible { border-bottom-color: var(--accent); }
+
+/* Homepage: one line above the tiles and search, so numbers come first on a
+   phone instead of three paragraphs. */
+.home-lede {
+  margin: 0 clamp(16px, 4vw, 40px) 14px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+.home-lede a {
+  color: var(--accent);
+  margin-left: 6px;
+  white-space: nowrap;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.home-lede a:hover, .home-lede a:focus-visible { border-bottom-color: var(--accent); }
+
+/* The long explanation moved below the table -- collapsed so it is still
+   one click away without pushing the numbers down the page. */
+.intro-details {
+  margin: 8px clamp(16px, 4vw, 40px) 32px;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
+.intro-details summary {
+  cursor: pointer;
+  color: var(--text-primary);
+  font-weight: 600;
+  padding: 10px 0;
+}
+.intro-details summary:hover, .intro-details summary:focus-visible { color: var(--accent); }
+.intro-details .intro { padding-top: 6px; }
+.intro-details .intro p { line-height: 1.6; max-width: 70ch; }
+.intro-details .intro a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+.intro-details .intro a:hover, .intro-details .intro a:focus-visible { border-bottom-color: var(--accent); }
+
 .theme-toggle {
   border: 1px solid var(--glass-border);
   background: var(--glass-surface);
@@ -1333,13 +1369,26 @@ body.profile-open { overflow: hidden; }
 /* Room under the wordmark so descenders (the g in "Big") are never clipped, notably in Safari. */
 .brand span { line-height: 1.3; padding-bottom: 2px; }
 .brand .brand-long { display: none; }
-.top-search { flex: 1; display: flex; justify-content: flex-end; }
+.top-search { flex: 1; display: flex; justify-content: flex-end; position: relative; }
 .top-search input {
   width: 100%; max-width: 340px; background: var(--surface-1); border: 1px solid var(--border); color: var(--text-primary);
   border-radius: 8px; padding: 9px 12px 9px 34px; font: inherit; font-size: 0.92rem;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239fb0c4' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E");
   background-repeat: no-repeat; background-position: 10px center; background-size: 16px;
 }
+/* Name/club suggestions for the header search box. Positioned off
+   .top-search (not the input) so the right edge lines up with the input
+   regardless of the input's own max-width. */
+.search-suggest {
+  position: absolute; top: calc(100% + 6px); right: 0; width: min(340px, 100%);
+  margin: 0; padding: 6px; list-style: none;
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45); z-index: 70; max-height: 60vh; overflow: auto;
+}
+.search-suggest li {
+  padding: 9px 10px; border-radius: 8px; font-size: 0.9rem; color: var(--text-primary); cursor: pointer;
+}
+.search-suggest li.active, .search-suggest li:hover { background: var(--accent-wash); }
 .icon-btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-width: 44px; height: 44px; padding: 0 12px; border-radius: 8px;
   background: transparent; border: 1px solid var(--border); color: var(--text-primary); font: inherit; font-size: 0.9rem; cursor: pointer; list-style: none;

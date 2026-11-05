@@ -841,7 +841,7 @@ def render(data: dict, now: dt.datetime) -> str:
 
     </main>
 
-    {wpp._site_footer()}
+    {wpp._site_footer()}{wpp._search_script_tag()}
   </div>
   {wpp.ANALYTICS}
 </body>
@@ -1088,7 +1088,7 @@ def render_salary_cap(data: dict) -> str:
 
     </main>
 
-    {wpp._site_footer()}
+    {wpp._site_footer()}{wpp._search_script_tag()}
   </div>
   {wpp.ANALYTICS}
 </body>
