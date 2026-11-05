@@ -3317,6 +3317,100 @@ def test_no_banned_string_appears_in_the_header_or_sheet():
             check(f"{rel}: header/sheet does not contain {needle!r}", needle not in block)
 
 
+def _footer_block(html_text):
+    """The <footer class="site-foot">...</footer> slice, or a hard failure.
+
+    Same reasoning as _header_block(): every footer assertion is scoped to
+    this slice so a stray mention elsewhere on the page (the page-header's
+    own links, a body paragraph) cannot satisfy a check it should not.
+    """
+    import re
+    m = re.search(r'<footer class="site-foot".*?</footer>', html_text, re.S)
+    assert m, "page carries no site-foot footer"
+    return m.group(0)
+
+
+def test_the_footer_is_the_same_on_every_page():
+    """
+    The footer, like the header, lands in many places that cannot share one
+    Python function -- six hand-written pages plus every generated
+    template -- so the destination SET is asserted per page/template rather
+    than trusted. Same shape, same reason, as
+    test_the_site_header_is_the_same_on_every_page().
+
+    docs/taxes.html is excluded on purpose, same as the header test: it is
+    parked and keeps its own page footer (CLAUDE.md, "Do NOT touch
+    docs/taxes.html").
+    """
+    import write_player_pages as wpp
+
+    ROOT = pathlib.Path(__file__).resolve().parents[1]
+    contact_link = "mailto:contact@bigleagueservicetime.com"
+    required_hrefs = {
+        "", "t/", "arbitration-eligible.html", "super-two.html", f"{wpp.ALUMNI_DIR_NAME}/",
+        "lockout.html", "service-time.html", "about.html", "neutrality.html", "privacy.html",
+    }
+
+    def check_block(label, html_text):
+        check(f"{label}: footer appears exactly once",
+              html_text.count('<footer class="site-foot"') == 1)
+        block = _footer_block(html_text)
+        check(f"{label}: footer reaches exactly the required destinations",
+              _header_destinations(block) == required_hrefs)
+        check(f"{label}: footer shows the contact address", contact_link in block)
+        check(f"{label}: footer does not link to the contract clock",
+              "contract.html" not in block)
+        check(f"{label}: footer does not link to duty days",
+              "taxes.html" not in block)
+
+    for rel in _MENU_HAND_WRITTEN_PAGES:
+        check_block(rel, (ROOT / rel).read_text(encoding="utf-8"))
+
+    for label, html_text in _menu_sample_pages().items():
+        check_block(label, html_text)
+
+
+def test_no_banned_string_appears_in_the_footer():
+    """
+    Same protection as test_no_banned_string_appears_in_the_header_or_sheet(),
+    scoped to the footer -- it is the other piece of markup that reaches
+    every page, so a data-source name or GitHub link slipping in here is
+    just as visible as one in the header.
+    """
+    banned = (
+        "scripts/", ".py", "Stats API", "github.com", "RainbowMang0", "README",
+        "source code", "public MLB data", "contract.html", "taxes.html",
+    )
+
+    def check_banned(label, block):
+        for needle in banned:
+            check(f"{label}: footer does not contain {needle!r}", needle not in block)
+
+    ROOT = pathlib.Path(__file__).resolve().parents[1]
+    for rel in _MENU_HAND_WRITTEN_PAGES:
+        check_banned(rel, _footer_block((ROOT / rel).read_text(encoding="utf-8")))
+
+    for label, html_text in _menu_sample_pages().items():
+        check_banned(label, _footer_block(html_text))
+
+
+def test_no_page_in_docs_links_to_the_repo():
+    """
+    The data-source review's one hard requirement for this job: nothing
+    published may point back at the repo itself. Checked over every file
+    actually shipped under docs/, not just the pages this job touched, so a
+    leftover link anywhere else would still be caught.
+    """
+    ROOT = pathlib.Path(__file__).resolve().parents[1]
+    docs = ROOT / "docs"
+    offenders = []
+    for path in docs.rglob("*.html"):
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        if "github.com/RainbowMang0" in text:
+            offenders.append(str(path.relative_to(ROOT)))
+    check("no page under docs/ links to github.com/RainbowMang0", not offenders)
+
+
 def test_the_404_template_carries_the_site_header():
     """
     The 404 is served for unknown paths anywhere on the site (including
@@ -4976,7 +5070,7 @@ def test_every_page_carries_the_required_footer_disclaimer_and_links():
     """
     The data-source review requires this exact sentence (not a paraphrase)
     plus reachable About/Privacy/contact links on every page -- see
-    write_player_pages._footer_extra() for the generated side.
+    write_player_pages._site_footer() for the generated side.
     """
     ROOT = pathlib.Path(__file__).resolve().parents[1]
     docs = ROOT / "docs"
@@ -5945,6 +6039,9 @@ if __name__ == "__main__":
     test_every_club_in_the_sheet_links_to_a_real_club_page()
     test_the_header_marks_the_right_tab_current_and_only_one()
     test_no_banned_string_appears_in_the_header_or_sheet()
+    test_the_footer_is_the_same_on_every_page()
+    test_no_banned_string_appears_in_the_footer()
+    test_no_page_in_docs_links_to_the_repo()
     test_the_404_template_carries_the_site_header()
     test_the_daily_service_time_tick_is_not_a_content_change()
     test_only_alumni_with_a_defensible_figure_are_published()

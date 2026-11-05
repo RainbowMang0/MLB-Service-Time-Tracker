@@ -807,15 +807,11 @@ def render_club_index(by_club: dict[str, list[dict]], generated_at: str) -> str:
     <br /><br />
     These figures are <strong>estimates</strong> reconstructed from public
     roster transaction records. They are not official MLB or MLBPA figures —
-    those are not published. See the
-    <a href="https://github.com/RainbowMang0/MLB-Service-Time-Tracker#readme">methodology</a>.
+    those are not published. See
+    <a href="{BASE_PATH}{EXPLAINER_PATH}">how these figures are calculated</a>.
     Last updated {html.escape(generated_at[:10])}.
-    <br /><br />
-    Independent project, not affiliated with or endorsed by Major League
-    Baseball or the MLBPA.
-    {_footer_extra()}
   </p>
-</div></div>
+</div>{_site_footer()}</div>
 {ANALYTICS}
 </body>
 </html>
@@ -1123,15 +1119,11 @@ def render_club(
     <br /><br />
     These figures are <strong>estimates</strong> reconstructed from public
     roster transaction records. They are not official MLB or MLBPA figures —
-    those are not published. See the
-    <a href="https://github.com/RainbowMang0/MLB-Service-Time-Tracker#readme">methodology</a>.
+    those are not published. See
+    <a href="{BASE_PATH}{EXPLAINER_PATH}">how these figures are calculated</a>.
     Last updated {html.escape(generated_at[:10])}.
-    <br /><br />
-    Independent project, not affiliated with or endorsed by Major League
-    Baseball or the MLBPA.
-    {_footer_extra()}
   </p>
-</div></div>
+</div>{_site_footer()}</div>
 {ANALYTICS}
 </body>
 </html>
@@ -1492,16 +1484,12 @@ def render(
     <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
     <br /><br />
     This figure is an <strong>estimate</strong> reconstructed from public roster
-    transaction records. It is not an official MLB or MLBPA figure — those are
-    not published. See the
-    <a href="https://github.com/RainbowMang0/MLB-Service-Time-Tracker#readme">methodology</a>.
+    transaction records. It is not an official MLB or MLBPA figure — that is
+    not published. See
+    <a href="{BASE_PATH}{EXPLAINER_PATH}">how this figure is calculated</a>.
     Last updated {html.escape(generated_at[:10])}.
-    <br /><br />
-    Independent project, not affiliated with or endorsed by Major League
-    Baseball or the MLBPA.
-    {_footer_extra()}
   </p>
-</div></div>
+</div>{_site_footer()}</div>
 {ANALYTICS}
 </body>
 </html>
@@ -1976,15 +1964,11 @@ def _alumni_shell(title: str, desc: str, url: str, header: str, crumbs: str,
     <br /><br />
     These figures are <strong>estimates</strong> reconstructed from public
     roster transaction records. They are not official MLB or MLBPA figures —
-    those are not published. See the
-    <a href="https://github.com/RainbowMang0/MLB-Service-Time-Tracker#readme">methodology</a>.
+    those are not published. See
+    <a href="{BASE_PATH}{EXPLAINER_PATH}">how these figures are calculated</a>.
     Last updated {html.escape(generated_at[:10])}.
-    <br /><br />
-    Independent project, not affiliated with or endorsed by Major League
-    Baseball or the MLBPA.
-    {_footer_extra()}
   </p>
-</div></div>
+</div>{_site_footer()}</div>
 {ANALYTICS}
 </body>
 </html>
@@ -2271,34 +2255,16 @@ HEAD_TAGS = (
     "<!-- End Google AdSense -->"
 )
 
-# The sentence the task's data-source review requires verbatim on every page,
-# plus the About/Privacy/Contact links that go with it. Appended to each
-# render function's own closing disclaimer rather than replacing it -- the
-# existing "not affiliated ... MLBPA" sentence is the one CLAUDE.md's hard
-# rules say must stay, so this adds to it instead of displacing it.
+# The sentence the task's data-source review requires verbatim on every
+# page. It used to be appended, with its own About/Privacy/Contact row, to
+# each render function's closing `<p class="foot">` via a now-retired
+# _footer_extra() -- both now live once per page in _site_footer() (defined
+# below, after the nav path constants it links to), which every render
+# function calls instead.
 FOOTER_REQUIRED_LINE = (
     "Not affiliated with or endorsed by Major League Baseball or any team. "
     "Service time figures are our own calculations from public data."
 )
-
-
-def _footer_links() -> str:
-    return (
-        f'<a href="{BASE_PATH}about.html">About</a> &middot; '
-        f'<a href="{BASE_PATH}privacy.html">Privacy</a> &middot; '
-        f'<a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a>'
-    )
-
-
-def _footer_extra() -> str:
-    """The required disclaimer line + About/Privacy/Contact links.
-
-    One function because it is appended, verbatim, inside every generated
-    page's closing `<p class="foot">` -- see render(), render_club(),
-    render_club_index(), _alumni_shell(), render_explainer(),
-    render_arbitration_eligible(), render_super_two() and _write_404().
-    """
-    return f"<br /><br />{FOOTER_REQUIRED_LINE}<br /><br />{_footer_links()}"
 
 
 PAGE_CSS = """/* GENERATED by scripts/write_player_pages.py -- edit that, not this.
@@ -2423,6 +2389,50 @@ HAND_WRITTEN_PAGES = [
     ("about.html", "0.5"),
     ("privacy.html", "0.3"),
 ]
+
+# --------------------------------------------------------------------------
+# Site footer: four link columns plus the required disclaimer. One
+# definition, used by every generated template and (like _site_header())
+# reproduced by hand on the six pages that cannot read this Python --
+# see test_the_footer_is_the_same_on_every_page().
+#
+# Contract clock and Duty days are absent by the same owner decision as the
+# header's sheet (see NAV's docstring): both stay live at their own URLs but
+# are not promoted from here.
+# --------------------------------------------------------------------------
+
+def _site_footer() -> str:
+    numbers = "".join(
+        f'<a href="{BASE_PATH}{href}">{label}</a>'
+        for href, label in (
+            ("", "Players"),
+            ("t/", "Clubs"),
+            (ARBITRATION_ELIGIBLE_PATH, "Arbitration eligible"),
+            (SUPER_TWO_PAGE_PATH, "Super Two"),
+            (f"{ALUMNI_DIR_NAME}/", "Previous players A–Z"),
+        )
+    )
+    tools = f'<a href="{BASE_PATH}lockout.html">Lockout tracker</a>'
+    learn = f'<a href="{BASE_PATH}{EXPLAINER_PATH}">What is service time?</a>'
+    site = "".join(
+        f'<a href="{BASE_PATH}{href}">{label}</a>'
+        for href, label in (
+            ("about.html", "About"),
+            ("neutrality.html", "Neutrality"),
+            ("privacy.html", "Privacy"),
+        )
+    ) + f'<a href="mailto:{CONTACT_EMAIL}">Contact</a>'
+    return (
+        '<footer class="site-foot">'
+        '<h2 class="visually-hidden">Site map</h2>'
+        '<div class="site-foot-inner">'
+        f'<div><p class="foot-h">Numbers</p>{numbers}</div>'
+        f'<div><p class="foot-h">Tools</p>{tools}</div>'
+        f'<div><p class="foot-h">Learn</p>{learn}</div>'
+        f'<div><p class="foot-h">Site</p>{site}</div>'
+        f'<p class="foot-disclaimer">{FOOTER_REQUIRED_LINE}</p>'
+        "</div></footer>"
+    )
 
 
 def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) -> str:
@@ -2775,11 +2785,9 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
   <p class="actions"><a href="{BASE_PATH}">Look up a player &rarr;</a></p>
 
   <p class="foot">
-    Updated {generated_at[:10]}. Not affiliated with or endorsed by Major
-    League Baseball or the MLBPA.
-    {_footer_extra()}
+    Updated {generated_at[:10]}.
   </p>
-</div></div>
+</div>{_site_footer()}</div>
 {ANALYTICS}
 </body>
 </html>
@@ -3028,15 +3036,11 @@ def render_arbitration_eligible(
     These figures are <strong>estimates</strong> reconstructed from public
     roster transaction records. They are not official MLB or MLBPA figures —
     those are not published, and this page does not predict which players a
-    club actually tenders. See the
-    <a href="https://github.com/RainbowMang0/MLB-Service-Time-Tracker#readme">methodology</a>.
+    club actually tenders. See
+    <a href="{BASE_PATH}{EXPLAINER_PATH}">how these figures are calculated</a>.
     Last updated {html.escape(generated_at[:10])}.
-    <br /><br />
-    Independent project, not affiliated with or endorsed by Major League
-    Baseball or the MLBPA.
-    {_footer_extra()}
   </p>
-</div></div>
+</div>{_site_footer()}</div>
 {ANALYTICS}
 </body>
 </html>
@@ -3314,15 +3318,11 @@ def render_super_two(
     <br /><br />
     These figures are <strong>estimates</strong> reconstructed from public
     roster transaction records. They are not official MLB or MLBPA figures —
-    those are not published. See the
-    <a href="https://github.com/RainbowMang0/MLB-Service-Time-Tracker#readme">methodology</a>.
+    those are not published. See
+    <a href="{BASE_PATH}{EXPLAINER_PATH}">how these figures are calculated</a>.
     Last updated {html.escape(generated_at[:10])}.
-    <br /><br />
-    Independent project, not affiliated with or endorsed by Major League
-    Baseball or the MLBPA.
-    {_footer_extra()}
   </p>
-</div></div>
+</div>{_site_footer()}</div>
 {ANALYTICS}
 </body>
 </html>
@@ -3567,15 +3567,11 @@ def render_non_tender_watch(
     These figures are <strong>estimates</strong> reconstructed from public
     roster transaction records. They are not official MLB or MLBPA figures —
     those are not published, and this page does not predict which players a
-    club actually non-tenders. See the
-    <a href="https://github.com/RainbowMang0/MLB-Service-Time-Tracker#readme">methodology</a>.
+    club actually non-tenders. See
+    <a href="{BASE_PATH}{EXPLAINER_PATH}">how these figures are calculated</a>.
     Last updated {html.escape((generated_at or "")[:10])}.
-    <br /><br />
-    Independent project, not affiliated with or endorsed by Major League
-    Baseball or the MLBPA.
-    {_footer_extra()}
   </p>
-</div></div>
+</div>{_site_footer()}</div>
 {ANALYTICS}
 </body>
 </html>
@@ -3688,15 +3684,11 @@ def render_free_agents(
     <br /><br />
     These figures are <strong>estimates</strong> reconstructed from public
     roster transaction records. They are not official MLB or MLBPA figures —
-    those are not published. See the
-    <a href="https://github.com/RainbowMang0/MLB-Service-Time-Tracker#readme">methodology</a>.
+    those are not published. See
+    <a href="{BASE_PATH}{EXPLAINER_PATH}">how these figures are calculated</a>.
     Last updated {html.escape((generated_at or "")[:10])}.
-    <br /><br />
-    Independent project, not affiliated with or endorsed by Major League
-    Baseball or the MLBPA.
-    {_footer_extra()}
   </p>
-</div></div>
+</div>{_site_footer()}</div>
 {ANALYTICS}
 </body>
 </html>
@@ -3748,11 +3740,7 @@ def _write_404() -> None:
     table on the main page.
   </p>
   <p class="actions"><a href="{BASE_PATH}">&larr; Search all players</a></p>
-  <p class="foot">
-    Not affiliated with or endorsed by Major League Baseball or the MLBPA.
-    {_footer_extra()}
-  </p>
-</div></div>
+</div>{_site_footer()}</div>
 {ANALYTICS}
 </body>
 </html>

@@ -561,7 +561,14 @@ def test_nav_reaches_lockout_on_hand_written_and_generated_pages():
 
     for rel in ("index.html", "about.html", "privacy.html", "neutrality.html", "contract.html", "lockout.html"):
         html_text = (ROOT / "docs" / rel).read_text(encoding="utf-8")
-        check(f"docs/{rel} nav links to lockout.html", 'href="lockout.html"' in html_text)
+        # The footer's nav is BASE_PATH-absolute ("/lockout.html"); other
+        # hand-written links on these pages (the lockout banner, the lockout
+        # page's own tab strip) are still page-relative -- either satisfies
+        # "this page can reach the tracker."
+        check(
+            f"docs/{rel} nav links to lockout.html",
+            'href="lockout.html"' in html_text or 'href="/lockout.html"' in html_text,
+        )
 
     generated = wpp.render_super_two([], {}, "2026-01-01", None)
     check("a generated page's nav links to /lockout.html", "/lockout.html" in generated)
