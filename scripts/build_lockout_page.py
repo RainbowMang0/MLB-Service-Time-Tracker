@@ -837,24 +837,11 @@ def render(data: dict, now: dt.datetime) -> str:
         This page is an independent tracker, not a prediction of how
         negotiations end. It reports what has been publicly reported, in our
         own words, and links to the original source for every item above.
-        <br /><br />
-        Not affiliated with or endorsed by Major League Baseball or any team.
-        Service time figures are our own calculations from public data.
-        <br /><br />
-        <a href="about.html">About</a> &middot;
-        <a href="privacy.html">Privacy</a> &middot;
-        <a href="mailto:{wpp.CONTACT_EMAIL}">{wpp.CONTACT_EMAIL}</a>
       </p>
 
     </main>
 
-    <footer class="page-footer">
-      <p>
-        Not affiliated with or endorsed by Major League Baseball or any team.
-        Service time figures are our own calculations from public data.
-      </p>
-      <p><a href="./">Service time tracker</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="neutrality.html">Neutrality</a> &middot; <a href="service-time.html">What is service time?</a> &middot; <a href="mailto:{wpp.CONTACT_EMAIL}">{wpp.CONTACT_EMAIL}</a></p>
-    </footer>
+    {wpp._site_footer()}
   </div>
   {wpp.ANALYTICS}
 </body>
@@ -1097,24 +1084,11 @@ def render_salary_cap(data: dict) -> str:
         This page explains publicly reported bargaining proposals in our own
         words, and links to a source for every figure. It is not a prediction
         of how negotiations end, and the numbers are proposals that can change.
-        <br /><br />
-        Not affiliated with or endorsed by Major League Baseball or any team.
-        Service time figures are our own calculations from public data.
-        <br /><br />
-        <a href="about.html">About</a> &middot;
-        <a href="privacy.html">Privacy</a> &middot;
-        <a href="mailto:{wpp.CONTACT_EMAIL}">{wpp.CONTACT_EMAIL}</a>
       </p>
 
     </main>
 
-    <footer class="page-footer">
-      <p>
-        Not affiliated with or endorsed by Major League Baseball or any team.
-        Service time figures are our own calculations from public data.
-      </p>
-      <p><a href="./">Service time tracker</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="neutrality.html">Neutrality</a> &middot; <a href="service-time.html">What is service time?</a> &middot; <a href="mailto:{wpp.CONTACT_EMAIL}">{wpp.CONTACT_EMAIL}</a></p>
-    </footer>
+    {wpp._site_footer()}
   </div>
   {wpp.ANALYTICS}
 </body>
