@@ -2631,8 +2631,8 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
   <p class="lede">Service time is the days a player spends on a major league
   roster. It decides when he reaches <a
   href="{BASE_PATH}{ARBITRATION_ELIGIBLE_PATH}">arbitration</a>, <a
-  href="{BASE_PATH}{SUPER_TWO_PAGE_PATH}">Super Two</a> and free agency,
-  and almost none of it depends on how well he plays.</p>
+  href="{BASE_PATH}{SUPER_TWO_PAGE_PATH}">Super Two</a> and free
+  agency.</p>
 
   <h2>It is roster time, not playing time</h2>
   <p>A player earns a day of service for each day he spends on a major

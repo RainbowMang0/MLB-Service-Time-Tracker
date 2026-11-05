@@ -5134,7 +5134,6 @@ def test_the_five_pages_carry_an_original_intro():
     check(
         "service-time.html opens with a short intro that says what it decides",
         "It decides when he reaches" in explainer
-        and "almost none of it depends on how well he plays" in explainer
         and "milestones below are the ones that matter most" not in explainer,
     )
 
