@@ -1376,10 +1376,9 @@ body.profile-open { overflow: hidden; }
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239fb0c4' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E");
   background-repeat: no-repeat; background-position: 10px center; background-size: 16px;
 }
-/* Name/club suggestions for the header search box, inserted by
-   search-typeahead.js. Positioned off .top-search (not the input) so its
-   right edge lines up with the input regardless of the input's own
-   max-width. */
+/* Name/club suggestions for the header search box. Positioned off
+   .top-search (not the input) so the right edge lines up with the input
+   regardless of the input's own max-width. */
 .search-suggest {
   position: absolute; top: calc(100% + 6px); right: 0; width: min(340px, 100%);
   margin: 0; padding: 6px; list-style: none;

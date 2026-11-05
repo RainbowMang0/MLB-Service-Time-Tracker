@@ -1,18 +1,12 @@
 /*
- * search-typeahead.js -- player/club name suggestions for the shared header
- * search box (docs/app.js owns the home table's own search-input; this is
- * the header's .top-search box, present on every page type).
- *
- * Pure logic (slugify, decodeIndex, buildSuggestions) is exported for
- * `node --test`; the DOM wiring below only runs in a browser and only
- * fetches data/index.json on the input's first focus, so a visitor who
- * never touches search pays nothing for this file beyond its own bytes.
+ * Player/club name suggestions for the shared header search box.
+ * The home table keeps its own search; this file only wires the header box.
+ * Suggestion helpers are exported for unit tests. Data loads on first focus.
  */
 (function (global) {
   "use strict";
 
-  // Same table write_player_pages.py's slug() uses for characters NFKD does
-  // not split into letter + combining mark.
+  // Characters NFKD does not split into letter + combining mark.
   var TRANSLITERATE = {
     "ø": "o", "Ø": "O",
     "ł": "l", "Ł": "L",
@@ -22,9 +16,7 @@
     "þ": "th", "Þ": "Th",
   };
 
-  // Mirrors slug() in write_player_pages.py so a suggestion's href matches
-  // the page that generator actually wrote, without shipping the slug
-  // itself in the published index.
+  // Keep suggestion hrefs aligned with published player/club page URLs.
   function slugify(name) {
     var s = String(name || "");
     var out = "";
@@ -36,10 +28,7 @@
     return out || "player";
   }
 
-  // index.json's `players` rows are [id, name, team_ix, pos_ix, days,
-  // on_40_man, missing_seasons, super_two, has_page, birth_year] -- see
-  // write_index() in scripts/update_service_time.py. Only id/name/team/
-  // has_page are needed here.
+  // Pull only id, name, team, and whether a page exists from the players index.
   function decodeIndex(payload) {
     var teams = (payload && payload.teams) || [];
     var rows = (payload && payload.players) || [];
