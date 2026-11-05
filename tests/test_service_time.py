@@ -5132,8 +5132,10 @@ def test_the_five_pages_carry_an_original_intro():
 
     explainer = w.render_explainer("2026-01-01")
     check(
-        "service-time.html explains why it matters and how to use the page",
-        "milestones below are the ones that matter most" in explainer,
+        "service-time.html opens with a short intro that says what it decides",
+        "It decides when he reaches" in explainer
+        and "almost none of it depends on how well he plays" in explainer
+        and "milestones below are the ones that matter most" not in explainer,
     )
 
     arb = w.render_arbitration_eligible([], "2026-01-01", None, {})

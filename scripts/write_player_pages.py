@@ -2628,20 +2628,11 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
   {_crumbs(("All players", BASE_PATH), ("What is service time?", None))}
 
   <h1>What is MLB service time?</h1>
-  <p class="lede">Major league service time is the currency of a baseball
-  career. It decides when a player can negotiate his salary, when he can
-  choose his employer, and what he is owed after he stops playing — and
-  almost none of it depends on how well he plays.</p>
-
-  <p class="lede">The milestones below are the ones that matter most:
-  arbitration lets a player argue for a raise years before free agency would
-  otherwise arrive, the <a href="{BASE_PATH}{SUPER_TWO_PAGE_PATH}">Super
-  Two</a> rule can move arbitration a year earlier for a smaller group, and
-  free agency is when a player can finally sign with any club. Use the table
-  below to see exactly how many days each threshold takes, then look up any
-  player or club from the <a href="{BASE_PATH}">main table</a> or the
-  <a href="{BASE_PATH}{ARBITRATION_ELIGIBLE_PATH}">arbitration-eligible
-  list</a> to see where he stands against them today.</p>
+  <p class="lede">Service time is the days a player spends on a major league
+  roster. It decides when he reaches <a
+  href="{BASE_PATH}{ARBITRATION_ELIGIBLE_PATH}">arbitration</a>, <a
+  href="{BASE_PATH}{SUPER_TWO_PAGE_PATH}">Super Two</a> and free agency,
+  and almost none of it depends on how well he plays.</p>
 
   <h2>It is roster time, not playing time</h2>
   <p>A player earns a day of service for each day he spends on a major
