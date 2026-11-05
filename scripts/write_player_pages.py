@@ -777,7 +777,7 @@ def render_club_index(by_club: dict[str, list[dict]], generated_at: str) -> str:
 </head>
 <body>
 <div class="viz-root">{_site_header("t/")}<div class="wrap">
-  {_crumbs(("All players", "../"), ("By club", None))}
+  {_crumbs(("Players", "../"), ("By club", None))}
   <h1>Service time by club</h1>
   <p class="subtitle">Every 40-man roster, and who on it reaches arbitration and free agency.</p>
 
@@ -811,7 +811,7 @@ def render_club_index(by_club: dict[str, list[dict]], generated_at: str) -> str:
     <a href="{BASE_PATH}{EXPLAINER_PATH}">how these figures are calculated</a>.
     Last updated {html.escape(generated_at[:10])}.
   </p>
-</div>{_site_footer()}</div>
+</div>{_site_footer()}{_search_script_tag()}</div>
 {ANALYTICS}
 </body>
 </html>
@@ -1094,7 +1094,7 @@ def render_club(
 </head>
 <body>
 <div class="viz-root">{_site_header("t/")}<div class="wrap">
-  {_crumbs(("All players", "../"), (name, None))}
+  {_crumbs(("Players", "../"), (name, None))}
   <h1>{name} — service time</h1>
   <p class="subtitle">Every player on the 40-man roster, most service time first.</p>
 
@@ -1123,7 +1123,7 @@ def render_club(
     <a href="{BASE_PATH}{EXPLAINER_PATH}">how these figures are calculated</a>.
     Last updated {html.escape(generated_at[:10])}.
   </p>
-</div>{_site_footer()}</div>
+</div>{_site_footer()}{_search_script_tag()}</div>
 {ANALYTICS}
 </body>
 </html>
@@ -1171,7 +1171,7 @@ def render_club_arbitration(
         f"{name} arbitration-eligible players{year_phrase} | Big League Service Time Tracker",
         desc, url, _site_header(None),
         _crumbs(
-            ("All players", BASE_PATH), (club, f"{slug_}.html"), (f"Arbitration eligible{year_phrase}", None)
+            ("Players", BASE_PATH), (club, f"{slug_}.html"), (f"Arbitration eligible{year_phrase}", None)
         ),
         f"{club} arbitration-eligible players{year_phrase}",
         f"{len(players)} players on the {club} 40-man roster.",
@@ -1214,7 +1214,7 @@ def render_club_non_tender(
         f"{name} non-tender candidates{year_phrase} | Big League Service Time Tracker",
         desc, url, _site_header(None),
         _crumbs(
-            ("All players", BASE_PATH), (club, f"{slug_}.html"), (f"Non-tender watch{year_phrase}", None)
+            ("Players", BASE_PATH), (club, f"{slug_}.html"), (f"Non-tender watch{year_phrase}", None)
         ),
         f"{club} non-tender watch{year_phrase}",
         f"{len(pairs)} players on the {club} 40-man roster.",
@@ -1261,7 +1261,7 @@ def render_club_free_agents(
         f"{name} {fa_heading} | Big League Service Time Tracker",
         desc, url, _site_header(None),
         _crumbs(
-            ("All players", BASE_PATH), (club, f"{slug_}.html"), ("Free agents", None)
+            ("Players", BASE_PATH), (club, f"{slug_}.html"), ("Free agents", None)
         ),
         f"{club} {fa_heading}",
         f"{len(fa_now)} free agents now, {len(fa_next_season)} projected after {next_season}.",
@@ -1407,7 +1407,7 @@ def render(
             f"time.{roster_note}"
         )
 
-    trail: list[tuple[str, str | None]] = [("All players", "../")]
+    trail: list[tuple[str, str | None]] = [("Players", "../")]
     if club and player.get("on_40_man"):
         trail.append((club, f"../{club_path(player['team'])}"))
     elif not player.get("on_40_man"):
@@ -1489,7 +1489,7 @@ def render(
     <a href="{BASE_PATH}{EXPLAINER_PATH}">how this figure is calculated</a>.
     Last updated {html.escape(generated_at[:10])}.
   </p>
-</div>{_site_footer()}</div>
+</div>{_site_footer()}{_search_script_tag()}</div>
 {ANALYTICS}
 </body>
 </html>
@@ -1968,7 +1968,7 @@ def _alumni_shell(title: str, desc: str, url: str, header: str, crumbs: str,
     <a href="{BASE_PATH}{EXPLAINER_PATH}">how these figures are calculated</a>.
     Last updated {html.escape(generated_at[:10])}.
   </p>
-</div>{_site_footer()}</div>
+</div>{_site_footer()}{_search_script_tag()}</div>
 {ANALYTICS}
 </body>
 </html>
@@ -2039,7 +2039,7 @@ def _write_alumni_pages(
         page = _alumni_shell(
             f"Previous players — {letter} | Big League Service Time Tracker",
             desc, url, _site_header("alumni/"),
-            _crumbs(("All players", "../"), ("Previous players", "./"), (letter, None)),
+            _crumbs(("Players", "../"), ("Previous players", "./"), (letter, None)),
             f"Previous players — {letter}",
             f"{len(players)} players no longer on a 40-man roster, by surname.",
             body, generated_at, graph,
@@ -2076,7 +2076,7 @@ def _write_alumni_pages(
     page = _alumni_shell(
         "Previous players — service time A to Z | Big League Service Time Tracker",
         desc, url, _site_header("alumni/"),
-        _crumbs(("All players", "../"), ("Previous players", None)),
+        _crumbs(("Players", "../"), ("Previous players", None)),
         "Previous players",
         f"{total:,} players who have come off a 40-man roster, by surname. "
         "Their service time is final — it stopped when they did.",
@@ -2435,6 +2435,17 @@ def _site_footer() -> str:
     )
 
 
+def _search_script_tag() -> str:
+    """The one script tag the header's search box needs, on every page type.
+
+    Deferred and BASE_PATH-absolute like the header's own links, so it loads
+    correctly from /p/, /t/ and /alumni/ too. The script itself does nothing
+    until a visitor focuses the search box (see docs/search-typeahead.js),
+    so this costs a page nothing beyond the one extra request.
+    """
+    return f'<script defer src="{BASE_PATH}search-typeahead.js"></script>'
+
+
 def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) -> str:
     """The page that explains what the number on every other page means.
 
@@ -2625,7 +2636,7 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
 </head>
 <body>
 <div class="viz-root">{_site_header(None)}<div class="wrap">
-  {_crumbs(("All players", BASE_PATH), ("What is service time?", None))}
+  {_crumbs(("Players", BASE_PATH), ("What is service time?", None))}
 
   <h1>What is MLB service time?</h1>
   <p class="lede">Service time is the days a player spends on a major league
@@ -2778,7 +2789,7 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
   <p class="foot">
     Updated {generated_at[:10]}.
   </p>
-</div>{_site_footer()}</div>
+</div>{_site_footer()}{_search_script_tag()}</div>
 {ANALYTICS}
 </body>
 </html>
@@ -2987,7 +2998,7 @@ def render_arbitration_eligible(
 </head>
 <body>
 <div class="viz-root">{_site_header("arbitration-eligible.html")}<div class="wrap">
-  {_crumbs(("All players", BASE_PATH), ("Arbitration eligible", None))}
+  {_crumbs(("Players", BASE_PATH), ("Arbitration eligible", None))}
 
   <h1>Arbitration-eligible players this winter{title_year}</h1>
   <p class="subtitle">{len(eligible)} players across {club_count} clubs, by club and
@@ -3031,7 +3042,7 @@ def render_arbitration_eligible(
     <a href="{BASE_PATH}{EXPLAINER_PATH}">how these figures are calculated</a>.
     Last updated {html.escape(generated_at[:10])}.
   </p>
-</div>{_site_footer()}</div>
+</div>{_site_footer()}{_search_script_tag()}</div>
 {ANALYTICS}
 </body>
 </html>
@@ -3255,7 +3266,7 @@ def render_super_two(
 </head>
 <body>
 <div class="viz-root">{_site_header("super-two.html")}<div class="wrap">
-  {_crumbs(("All players", BASE_PATH), ("Super Two", None))}
+  {_crumbs(("Players", BASE_PATH), ("Super Two", None))}
 
   <h1>Super Two: this winter's projected cutoff</h1>
   <p class="subtitle">Of {len(class_players)} players in the live
@@ -3313,7 +3324,7 @@ def render_super_two(
     <a href="{BASE_PATH}{EXPLAINER_PATH}">how these figures are calculated</a>.
     Last updated {html.escape(generated_at[:10])}.
   </p>
-</div>{_site_footer()}</div>
+</div>{_site_footer()}{_search_script_tag()}</div>
 {ANALYTICS}
 </body>
 </html>
@@ -3529,7 +3540,7 @@ def render_non_tender_watch(
 </head>
 <body>
 <div class="viz-root">{_site_header(None)}<div class="wrap">
-  {_crumbs(("All players", BASE_PATH), ("Non-tender watch", None))}
+  {_crumbs(("Players", BASE_PATH), ("Non-tender watch", None))}
 
   <h1>Non-tender watch{season_phrase}</h1>
   <p class="subtitle">Clubs must tender or release every arbitration-eligible
@@ -3562,7 +3573,7 @@ def render_non_tender_watch(
     <a href="{BASE_PATH}{EXPLAINER_PATH}">how these figures are calculated</a>.
     Last updated {html.escape((generated_at or "")[:10])}.
   </p>
-</div>{_site_footer()}</div>
+</div>{_site_footer()}{_search_script_tag()}</div>
 {ANALYTICS}
 </body>
 </html>
@@ -3646,7 +3657,7 @@ def render_free_agents(
 </head>
 <body>
 <div class="viz-root">{_site_header(None)}<div class="wrap">
-  {_crumbs(("All players", BASE_PATH), ("Free agents", None))}
+  {_crumbs(("Players", BASE_PATH), ("Free agents", None))}
 
   <h1>MLB free agents{season_phrase}</h1>
   <p class="subtitle">{len(fa_now)} players across {club_count} clubs are
@@ -3679,7 +3690,7 @@ def render_free_agents(
     <a href="{BASE_PATH}{EXPLAINER_PATH}">how these figures are calculated</a>.
     Last updated {html.escape((generated_at or "")[:10])}.
   </p>
-</div>{_site_footer()}</div>
+</div>{_site_footer()}{_search_script_tag()}</div>
 {ANALYTICS}
 </body>
 </html>
@@ -3731,7 +3742,7 @@ def _write_404() -> None:
     table on the main page.
   </p>
   <p class="actions"><a href="{BASE_PATH}">&larr; Search all players</a></p>
-</div>{_site_footer()}</div>
+</div>{_site_footer()}{_search_script_tag()}</div>
 {ANALYTICS}
 </body>
 </html>
