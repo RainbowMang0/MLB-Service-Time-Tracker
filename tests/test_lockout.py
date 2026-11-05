@@ -13,6 +13,7 @@ generator lists it).
 
 import copy
 import datetime as dt
+import html
 import json
 import pathlib
 import re
@@ -278,6 +279,78 @@ def test_lockout_start_before_cba_expires_is_rejected():
     except blp.LockoutDataError as exc:
         raised = "lockout_start" in str(exc)
     check("lockout_start before cba_expires is rejected", raised)
+
+
+# ---------------------------------------------------------------------------
+# The topic filter above "Latest updates": entries[].category is optional,
+# never fails validation (missing/blank/misspelled all fall back to
+# "other"), and drives a data-category attribute + a set of filter buttons
+# on the rendered page.
+# ---------------------------------------------------------------------------
+
+def test_category_is_optional_and_never_fails_validation():
+    good = copy.deepcopy(GOOD)
+    # Neither entry sets "category" at all.
+    try:
+        blp.validate(good, today=PINNED_TODAY)
+        ok = True
+    except blp.LockoutDataError:
+        ok = False
+    check("entries with no category field still validate", ok)
+
+
+def test_known_category_values_round_trip():
+    for value, _label in blp.ENTRY_CATEGORIES:
+        check(
+            f"category {value!r} maps to itself",
+            blp._entry_category({"category": value}) == value,
+        )
+
+
+def test_missing_blank_and_unknown_category_fall_back_to_other():
+    check("a missing category falls back to 'other'", blp._entry_category({}) == "other")
+    check(
+        "an explicit null category falls back to 'other'",
+        blp._entry_category({"category": None}) == "other",
+    )
+    check(
+        "a blank-string category falls back to 'other'",
+        blp._entry_category({"category": ""}) == "other",
+    )
+    check(
+        "a misspelled category falls back to 'other'",
+        blp._entry_category({"category": "Salary_Cap"}) == "other",
+    )
+    check(
+        "a non-string category falls back to 'other'",
+        blp._entry_category({"category": 42}) == "other",
+    )
+
+
+def test_rendered_entries_carry_a_data_category_attribute():
+    data = copy.deepcopy(GOOD)
+    data["entries"][0]["category"] = "negotiations"
+    # entries[1] deliberately has no category -- backwards compatibility.
+    rendered = blp._render_entries(blp.sorted_entries(data))
+    check(
+        "a categorized entry carries its data-category",
+        'data-category="negotiations"' in rendered,
+    )
+    check(
+        "an uncategorized entry falls back to data-category=\"other\"",
+        'data-category="other"' in rendered,
+    )
+
+
+def test_a_bad_category_value_does_not_break_the_whole_file():
+    bad = copy.deepcopy(GOOD)
+    bad["entries"][0]["category"] = "not-a-real-category"
+    try:
+        blp.validate(bad, today=PINNED_TODAY)
+        ok = True
+    except blp.LockoutDataError:
+        ok = False
+    check("an unrecognized category string still validates (falls back silently)", ok)
 
 
 def test_lockout_start_after_cba_expires_is_accepted():
@@ -595,6 +668,80 @@ def test_committed_sitemap_also_lists_it_today():
     check("sitemap-core.xml currently lists /lockout.html", "/lockout.html</loc>" in sitemap)
 
 
+def test_the_filter_bar_is_hidden_by_default_so_js_off_shows_no_dead_controls():
+    html_text = LOCKOUT_PAGE.read_text(encoding="utf-8")
+    m = re.search(r'<div class="lockout-filter" id="lockout-filter"[^>]*>', html_text)
+    check("the filter bar element is present", m is not None)
+    if m:
+        check("the filter bar starts hidden (no JS = no filter controls)", "hidden" in m.group(0))
+
+
+def test_the_filter_bar_has_all_plus_every_category_as_native_buttons():
+    html_text = LOCKOUT_PAGE.read_text(encoding="utf-8")
+    bar_match = re.search(r'<div class="lockout-filter"[^>]*>(.*?)</div>', html_text, re.S)
+    check("the filter bar markup is present", bar_match is not None)
+    bar_html = bar_match.group(1) if bar_match else ""
+    buttons = re.findall(r'<button[^>]*class="lockout-filter-btn"[^>]*>([^<]*)</button>', bar_html)
+    unescaped_buttons = [html.unescape(b) for b in buttons]
+    check("there is an All button", "All" in unescaped_buttons)
+    for _value, label in blp.ENTRY_CATEGORIES:
+        check(f"there is a {label!r} button", label in unescaped_buttons)
+    check("every filter control is a real <button>, not a div/span", bar_html.count("<button") == len(buttons))
+    check("'All' starts pressed", 'data-filter="all" aria-pressed="true"' in bar_html)
+    for value, _label in blp.ENTRY_CATEGORIES:
+        check(
+            f"{value!r} starts unpressed",
+            f'data-filter="{value}" aria-pressed="false"' in bar_html,
+        )
+
+
+def test_every_rendered_entry_is_visible_by_default_no_js():
+    html_text = LOCKOUT_PAGE.read_text(encoding="utf-8")
+    entries_match = re.search(r"<ul class='lockout-entries'>(.*?)</ul>", html_text, re.S)
+    check("the entries list is present", entries_match is not None)
+    entries_html = entries_match.group(1) if entries_match else ""
+    lis = re.findall(r"<li class='lockout-entry'[^>]*>", entries_html)
+    check("there is at least one entry", len(lis) > 0)
+    check("no entry's <li> carries a hidden attribute in the static markup", all(" hidden" not in li for li in lis))
+
+
+def test_the_filter_empty_state_message_is_present_and_hidden_by_default():
+    html_text = LOCKOUT_PAGE.read_text(encoding="utf-8")
+    m = re.search(r'<p class="panel-note lockout-filter-empty" id="lockout-filter-empty"([^>]*)>', html_text)
+    check("the empty-state message element is present", m is not None)
+    if m:
+        check("the empty-state message starts hidden", "hidden" in m.group(1))
+
+
+def test_the_filter_bar_appears_above_the_entries_list():
+    html_text = LOCKOUT_PAGE.read_text(encoding="utf-8")
+    filter_pos = html_text.find('id="lockout-filter"')
+    entries_pos = html_text.find("<ul class='lockout-entries'>")
+    check("the filter bar markup comes before the entries list", 0 <= filter_pos < entries_pos)
+
+
+def test_no_internal_pipeline_details_leak_into_the_lockout_page():
+    html_text = LOCKOUT_PAGE.read_text(encoding="utf-8")
+    lowered = html_text.lower()
+    check("no 'category' field name visible as reader-facing prose", "category:" not in lowered)
+    check("no script filename leaks", "build_lockout_page" not in lowered)
+    check("no data file name leaks", "lockout_updates.json" not in lowered)
+
+
+CATEGORIES_WITH_NO_REAL_ENTRY_TODAY = {"deadlines", "owners_league"}
+
+
+def test_real_data_exercises_both_a_populated_and_an_empty_category():
+    data = blp.load()
+    categories_present = {blp._entry_category(e) for e in data["entries"]}
+    check(
+        "at least one real category used by today's data has zero entries "
+        "(exercises the filter's empty-results state)",
+        bool(CATEGORIES_WITH_NO_REAL_ENTRY_TODAY - categories_present),
+    )
+    check("at least one real category has entries", bool(categories_present))
+
+
 def test_meta_description_fits_search_result_length():
     html_text = LOCKOUT_PAGE.read_text(encoding="utf-8")
     m = re.search(r'<meta name="description" content="([^"]*)"', html_text)
@@ -845,6 +992,11 @@ if __name__ == "__main__":
     test_lockout_end_before_lockout_start_is_rejected()
     test_lockout_start_on_cba_expires_day_is_rejected()
     test_lockout_start_before_cba_expires_is_rejected()
+    test_category_is_optional_and_never_fails_validation()
+    test_known_category_values_round_trip()
+    test_missing_blank_and_unknown_category_fall_back_to_other()
+    test_rendered_entries_carry_a_data_category_attribute()
+    test_a_bad_category_value_does_not_break_the_whole_file()
     test_lockout_start_after_cba_expires_is_accepted()
     test_countdown_before_a_lockout()
     test_day_count_after_a_lockout_starts()
@@ -872,6 +1024,13 @@ if __name__ == "__main__":
     test_nav_reaches_lockout_on_hand_written_and_generated_pages()
     test_sitemap_generator_lists_the_lockout_page()
     test_committed_sitemap_also_lists_it_today()
+    test_the_filter_bar_is_hidden_by_default_so_js_off_shows_no_dead_controls()
+    test_the_filter_bar_has_all_plus_every_category_as_native_buttons()
+    test_every_rendered_entry_is_visible_by_default_no_js()
+    test_the_filter_empty_state_message_is_present_and_hidden_by_default()
+    test_the_filter_bar_appears_above_the_entries_list()
+    test_no_internal_pipeline_details_leak_into_the_lockout_page()
+    test_real_data_exercises_both_a_populated_and_an_empty_category()
     test_meta_description_fits_search_result_length()
     test_the_real_salary_cap_data_file_validates()
     test_a_well_formed_cap_fixture_validates()

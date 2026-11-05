@@ -106,6 +106,37 @@ REQUIRED_TOP_FIELDS = (
 )
 REQUIRED_ENTRY_FIELDS = ("date", "headline", "summary", "source_name", "source_url")
 
+# The topic filter above "Latest updates": a small, fixed set of buckets an
+# entry can be hand-tagged into via the OPTIONAL entries[].category field
+# (see data/lockout_updates.json's own _README). "other" is both a value an
+# editor can pick on purpose and the fallback for a missing, blank, or
+# misspelled category -- see _entry_category() -- so this field can never
+# fail validation and an old entry written before this feature existed
+# keeps rendering exactly as before, just filed under "Other".
+ENTRY_CATEGORIES = (
+    ("salary_cap", "Salary cap & floor"),
+    ("negotiations", "Negotiations"),
+    ("deadlines", "Deadlines & dates"),
+    ("players_union", "Players & union"),
+    ("owners_league", "Owners & league"),
+    ("other", "Other"),
+)
+ENTRY_CATEGORY_LABELS = dict(ENTRY_CATEGORIES)
+OTHER_CATEGORY = "other"
+
+
+def _entry_category(entry: dict) -> str:
+    """The entry's filter bucket -- never raises, never blank.
+
+    Anything that isn't one of the known category values (missing, empty,
+    wrong type, a typo) falls back to "other" rather than failing
+    validation; see ENTRY_CATEGORIES above.
+    """
+    value = entry.get("category")
+    if isinstance(value, str) and value in ENTRY_CATEGORY_LABELS:
+        return value
+    return OTHER_CATEGORY
+
 _ISO_DATE_RE = re.compile(r"\d{4}-\d{2}-\d{2}")
 
 _MONTH_ABBR = ["Jan.", "Feb.", "Mar.", "Apr.", "May", "June", "July",
@@ -253,6 +284,68 @@ def _tab_strip(active: str) -> str:
         + "".join(items)
         + "</nav>"
     )
+
+
+def _filter_bar() -> str:
+    """The topic filter above "Latest updates".
+
+    Rendered `hidden` by construction: a visitor with JavaScript off (or a
+    crawler) never sees it at all, so there is no dead, non-functional
+    control -- every entry just stays visible, unfiltered, in its normal
+    place. The inline script below this bar's call site removes `hidden`
+    once it has wired click handling, and is the only thing that ever does.
+    Native <button> elements carry keyboard activation (Enter/Space) and
+    focus for free; aria-pressed is the one bit of state javascript has to
+    maintain by hand.
+    """
+    buttons = ['<button type="button" class="lockout-filter-btn" '
+               'data-filter="all" aria-pressed="true">All</button>']
+    for value, label in ENTRY_CATEGORIES:
+        buttons.append(
+            f'<button type="button" class="lockout-filter-btn" '
+            f'data-filter="{value}" aria-pressed="false">{html.escape(label)}</button>'
+        )
+    return (
+        '<div class="lockout-filter" id="lockout-filter" role="group" '
+        'aria-label="Filter updates by topic" hidden>'
+        + "".join(buttons)
+        + "</div>"
+        '<p class="panel-note lockout-filter-empty" id="lockout-filter-empty" hidden>'
+        "No updates for this topic yet.</p>"
+    )
+
+
+_FILTER_SCRIPT = """
+      <script>
+        (function () {
+          try {
+            var bar = document.getElementById("lockout-filter");
+            var empty = document.getElementById("lockout-filter-empty");
+            var list = document.querySelector(".lockout-entries");
+            if (!bar || !list) return;
+            var items = Array.prototype.slice.call(list.querySelectorAll(".lockout-entry"));
+            var buttons = Array.prototype.slice.call(bar.querySelectorAll(".lockout-filter-btn"));
+            function applyFilter(value) {
+              var visible = 0;
+              items.forEach(function (li) {
+                var show = LockoutStatus.matchesFilter(li.getAttribute("data-category"), value);
+                li.hidden = !show;
+                if (show) visible++;
+              });
+              if (empty) empty.hidden = visible !== 0;
+            }
+            buttons.forEach(function (btn) {
+              btn.addEventListener("click", function () {
+                buttons.forEach(function (b) {
+                  b.setAttribute("aria-pressed", b === btn ? "true" : "false");
+                });
+                applyFilter(btn.getAttribute("data-filter"));
+              });
+            });
+            bar.hidden = false;
+          } catch (e) { /* static build stays as all-entries-visible */ }
+        })();
+      </script>"""
 
 
 def sorted_entries(data: dict) -> list[dict]:
@@ -601,8 +694,9 @@ def _stat_tile(value: str, label: str) -> str:
 def _render_entries(entries: list[dict]) -> str:
     rows = []
     for e in entries:
+        category = _entry_category(e)
         rows.append(
-            "<li class='lockout-entry'>"
+            f"<li class='lockout-entry' data-category=\"{category}\">"
             f"<p class='lockout-entry-date'>{html.escape(e['date'])}</p>"
             f"<p class='lockout-entry-headline'><b>{html.escape(e['headline'])}</b></p>"
             f"<p class='lockout-entry-summary'>{html.escape(e['summary'])}</p>"
@@ -761,8 +855,10 @@ def render(data: dict, now: dt.datetime) -> str:
       <section class="panel">
         <h2>Latest updates</h2>
         <p class="panel-note">Last updated {html.escape(updated.isoformat())}.</p>
+        {_filter_bar()}
         {_render_entries(entries)}
       </section>
+      {_FILTER_SCRIPT}
 
       <section class="panel">
         <h2>What's being negotiated</h2>

@@ -1,5 +1,7 @@
 /*
- * lockout.js -- the CBA & lockout tracker's countdown/day-count logic.
+ * lockout.js -- the CBA & lockout tracker's countdown/day-count logic, plus
+ * the one pure helper (matchesFilter) the topic filter's inline DOM-wiring
+ * script uses to decide which entries stay visible.
  *
  * Keeps the status shown on first load in agreement with what a visitor
  * sees live, correcting it for a visitor whose "today" has moved on since
@@ -34,7 +36,7 @@
     return Math.round((toUTC(bStr) - toUTC(aStr)) / 86400000);
   }
 
-  // `data` is the JSON blob build_lockout_page.py embeds in the page
+  // `data` is the JSON blob embedded in the page
   // (cba_expires, cba_expires_at, lockout_start, lockout_end,
   // regular_season_delayed_from). `now` defaults to the real clock; tests
   // pass a fixed Date to exercise a specific instant.
@@ -134,12 +136,20 @@
     return text;
   }
 
+  // Topic filter above "Latest updates": true if `category` (an entry's
+  // data-category) belongs under the selected `filterValue` ("all" always
+  // matches; anything else is an exact match against the category).
+  function matchesFilter(category, filterValue) {
+    return filterValue === "all" || category === filterValue;
+  }
+
   var api = {
     etDateStr: etDateStr,
     daysBetween: daysBetween,
     computeStatus: computeStatus,
     tileValue: tileValue,
     sentence: sentence,
+    matchesFilter: matchesFilter,
   };
 
   if (typeof module !== "undefined" && module.exports) {
