@@ -36,7 +36,7 @@
     return Math.round((toUTC(bStr) - toUTC(aStr)) / 86400000);
   }
 
-  // `data` is the JSON blob build_lockout_page.py embeds in the page
+  // `data` is the JSON blob embedded in the page
   // (cba_expires, cba_expires_at, lockout_start, lockout_end,
   // regular_season_delayed_from). `now` defaults to the real clock; tests
   // pass a fixed Date to exercise a specific instant.
