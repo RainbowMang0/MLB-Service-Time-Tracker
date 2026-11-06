@@ -205,6 +205,96 @@ PITCHING_KEYS = (
 _STAT_KEYS = {"hitting": HITTING_KEYS, "pitching": PITCHING_KEYS}
 
 
+def _team_id_of(split: dict) -> int | None:
+    """The club id on a yearByYear split, or None when the split has no team.
+
+    The feed's combined season row (a mid-season trade) is the one with no
+    team. A bool is rejected because bool is a subclass of int.
+    """
+    team = split.get("team") or {}
+    if not isinstance(team, dict):
+        return None
+    team_id = team.get("id")
+    if isinstance(team_id, bool) or not isinstance(team_id, int):
+        return None
+    return team_id
+
+
+def _num_teams_of(split: dict) -> int | None:
+    """split.numTeams as an int, or None when the feed did not send one."""
+    raw = split.get("numTeams")
+    if isinstance(raw, bool) or raw in (None, ""):
+        return None
+    try:
+        return int(raw)
+    except (TypeError, ValueError):
+        return None
+
+
+def _is_combined_total(row: dict) -> bool:
+    """The feed's own season total: no club, and at least two teams.
+
+    A no-team row with numTeams missing or below 2 is not that total and is
+    not kept. Club splits are never this, even when they also carry numTeams,
+    because they name a team.
+    """
+    num = row.get("numTeams")
+    return (
+        row.get("team_id") is None
+        and isinstance(num, int)
+        and not isinstance(num, bool)
+        and num >= 2
+    )
+
+
+def _stat_line(split: dict, keys: tuple) -> dict | None:
+    """One whitelist row from a split. Empty (no kept key) returns None.
+
+    Zero is a real value — a pitcher's batting line is 0 at-bats — so only
+    None and "" are absent. team_id is None on the combined row.
+    """
+    stat = split.get("stat") or {}
+    if not isinstance(stat, dict) or not stat:
+        return None
+    row = {k: stat[k] for k in keys if stat.get(k) not in (None, "")}
+    if not row:
+        return None
+    row["team_id"] = _team_id_of(split)
+    num_teams = _num_teams_of(split)
+    if num_teams is not None:
+        row["numTeams"] = num_teams
+    return row
+
+
+def _finish_season_group(rows: list[dict]) -> dict | None:
+    """Collapse one group-year's splits into a season line plus club splits.
+
+    The combined no-team row IS the season total. Its rate stats (avg, era,
+    ops) are the feed's, so nothing is summed or averaged here. Per-club
+    rows are kept, in feed order, under ``splits`` for a later display.
+    A season with one club and no combined row stays a flat line, which is
+    what every single-club season already was.
+    """
+    clubs = [r for r in rows if r.get("team_id") is not None]
+    combined = [r for r in rows if _is_combined_total(r)]
+    if combined:
+        total = dict(combined[-1])
+        if clubs:
+            total["splits"] = [
+                {k: v for k, v in club.items() if k != "numTeams"} for club in clubs
+            ]
+        return total
+    if len(clubs) == 1:
+        return {k: v for k, v in clubs[0].items() if k != "numTeams"}
+    if clubs:
+        return {
+            "splits": [
+                {k: v for k, v in club.items() if k != "numTeams"} for club in clubs
+            ]
+        }
+    return None
+
+
 def season_stats_from_bio(bio: dict) -> dict[int, dict]:
     """
     {season year -> {"hitting": {...}, "pitching": {...}}} from a hydrated bio.
@@ -214,41 +304,129 @@ def season_stats_from_bio(bio: dict) -> dict[int, dict]:
     and season_teams_from_bio() reads exactly one field out of each split --
     the team id -- discarding the entire statline unread. This reads it.
 
-    Third time this project has found data it was already paying for and
-    throwing away: `by_season` became the profiles, `birthDate` became the age
-    column, and this is the statline.
+    A mid-season trade is several splits for one year: one per club, then a
+    combined row with no team and ``numTeams`` >= 2. Keeping "the later"
+    split made that combined row the whole season, and the major-league
+    filter then dropped it for having no team id — the year vanished. The
+    combined row is the season total (rate stats included, unsummed). The
+    club rows are kept on ``splits``.
 
     Team ids are NOT filtered here, for the same reason season_teams_from_bio()
     does not filter them: this module has no business deciding which ids are
-    major league ones. A split carrying a minor league team id is dropped by
-    the caller, which knows the 30 club ids.
+    major league ones. select_major_league_season_stats() does that, and it
+    keeps a no-team combined row when numTeams >= 2.
     """
-    out: dict[int, dict] = {}
+    pending: dict[int, dict[str, list]] = {}
     for group in bio.get("stats") or []:
+        if not isinstance(group, dict):
+            continue
         name = ((group.get("group") or {}).get("displayName") or "").lower()
         keys = _STAT_KEYS.get(name)
         if not keys:
             continue
         for split in group.get("splits") or []:
+            if not isinstance(split, dict):
+                continue
             season = split.get("season")
-            stat = split.get("stat") or {}
-            team_id = (split.get("team") or {}).get("id")
-            if season is None or not stat:
+            if season is None:
                 continue
             try:
                 year = int(season)
             except (TypeError, ValueError):
                 continue
-            # Keep what is there; never require a key.
-            row = {k: stat[k] for k in keys if stat.get(k) not in (None, "")}
-            if not row:
+            row = _stat_line(split, keys)
+            if row is None:
                 continue
-            row["team_id"] = team_id
-            # A player traded mid-season has two splits in the same year. The
-            # later one wins rather than the two being summed: summing rate
-            # stats (avg, era, ops) is simply wrong, and this project would
-            # rather show one club's real line than an invented combined one.
-            out.setdefault(year, {})[name] = row
+            pending.setdefault(year, {}).setdefault(name, []).append(row)
+
+    out: dict[int, dict] = {}
+    for year, groups in pending.items():
+        built = {}
+        for name, rows in groups.items():
+            finished = _finish_season_group(rows)
+            if finished:
+                built[name] = finished
+        if built:
+            out[year] = built
+    return out
+
+
+def _publish_total(row: dict) -> dict:
+    """Season-total fields only. team_id is None on a combined row; omit it."""
+    return {
+        k: v
+        for k, v in row.items()
+        if k not in ("team_id", "splits") and v is not None
+    }
+
+
+def _publish_club(row: dict) -> dict:
+    """One club's line. numTeams belongs to the season total, not the club."""
+    return {
+        k: v
+        for k, v in row.items()
+        if k not in ("splits", "numTeams") and v is not None
+    }
+
+
+def _publish_clubs(clubs: list[dict]) -> dict | None:
+    if not clubs:
+        return None
+    if len(clubs) == 1:
+        return _publish_club(clubs[0])
+    return {"splits": [_publish_club(club) for club in clubs]}
+
+
+def _store_major_league_group(row: dict, mlb_ids: set[int]) -> dict | None:
+    """Apply the 30-club filter to one group-year.
+
+    A combined total is kept only when every club split beside it is a
+    major-league club. A total that also folds in a minor-league line is not
+    a major-league season, so the major-league club lines are kept on their
+    own and the mix is not published as the total. A no-team row with
+    numTeams >= 2 and no non-major club beside it is never dropped.
+    """
+    splits = row.get("splits")
+    if not splits:
+        if _is_combined_total(row):
+            return _publish_total(row)
+        if row.get("team_id") in mlb_ids:
+            return _publish_club(row)
+        return None
+
+    mlb_splits = [s for s in splits if s.get("team_id") in mlb_ids]
+    dropped_a_club = len(mlb_splits) != len(list(splits))
+    if _is_combined_total(row) and not dropped_a_club:
+        published = _publish_total(row)
+        if mlb_splits:
+            published["splits"] = [_publish_club(s) for s in mlb_splits]
+        return published
+    return _publish_clubs(mlb_splits)
+
+
+def select_major_league_season_stats(
+    by_year: dict[int, dict], mlb_ids: set[int]
+) -> dict[int, dict]:
+    """The season lines worth storing, given the 30 major-league club ids.
+
+    season_stats_from_bio() keeps every split, including a minor-league team
+    id and the no-team combined row. This drops the minor-league clubs and
+    keeps the combined row (numTeams >= 2, no team) as the season total
+    unless that total mixes in a club that is not major league.
+    """
+    out: dict[int, dict] = {}
+    for year, groups in by_year.items():
+        if not isinstance(groups, dict):
+            continue
+        kept: dict[str, dict] = {}
+        for name, row in groups.items():
+            if not isinstance(row, dict):
+                continue
+            stored = _store_major_league_group(row, mlb_ids)
+            if stored:
+                kept[name] = stored
+        if kept:
+            out[year] = kept
     return out
 
 
