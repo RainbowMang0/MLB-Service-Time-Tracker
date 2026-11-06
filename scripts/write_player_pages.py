@@ -48,6 +48,7 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
 import cba  # noqa: E402
+import player_sections  # noqa: E402
 import salary_estimates  # noqa: E402
 import super_two  # noqa: E402
 import validate_super_two  # noqa: E402
@@ -1348,6 +1349,7 @@ def render(
     team_names: dict[int, str],
     generated_at: str,
     teammates: list[dict] | None = None,
+    transactions: list[dict] | None = None,
 ) -> str:
     name = html.escape(player.get("name") or "Player")
     service = html.escape(player.get("service_time") or "0.000")
@@ -1427,6 +1429,16 @@ def render(
             "figure is less certain than most.</p>"
         )
 
+    try:
+        section_today = dt.date.fromisoformat((generated_at or "")[:10])
+    except ValueError:
+        section_today = dt.date.today()
+    sections = player_sections.render_player_sections(
+        player, transactions, team_names, section_today
+    )
+    # Empty stays empty, so a page with nothing new keeps the bytes it had.
+    sections_html = f"\n{sections}\n" if sections else ""
+
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -1476,7 +1488,7 @@ def render(
   {_salary_block(player)}
   <h2>Season by season</h2>
   {_season_rows(player, team_names)}
-
+{sections_html}
   {_teammates_block(player, teammates or [])}
 
   <p class="foot">
@@ -1566,10 +1578,16 @@ _PLAIN_FIGURE_RE = re.compile(r"<b>\d+ (?:year|day)s?(?: and \d+ days?)?</b>")
 _SVC_SPLIT_RE = re.compile(
     r"<span class='svc-years'>\d+</span><span class='svc-days'>\.\d{3}</span>"
 )
+# An open injured-list stay is labeled "current" and carries no day count,
+# so the cell does not move during the season. The marker is still folded
+# out: a count put back in that cell would otherwise change every day and
+# bump the sitemap for every player still on the list.
+_OPEN_STINT_RE = re.compile(r'(<td class="num pp-open">).*?(</td>)', re.S)
 
 
 def _content_key(page_html: str) -> str:
     stable = _VOLATILE_RE.sub("Last updated.", page_html)
+    stable = _OPEN_STINT_RE.sub(r"\1<OPEN>\2", stable)
     stable = _PLAIN_FIGURE_RE.sub("<b><PLAIN></b>", stable)
     stable = _SVC_SPLIT_RE.sub(
         "<span class='svc-years'><SVC></span><span class='svc-days'><SVC></span>", stable
@@ -1675,7 +1693,10 @@ def write_player_pages(
         # Only a currently-rostered player gets real teammates -- see the
         # warning in _group_rostered_by_club() and _teammates_block().
         teammates = by_club.get(player.get("team"), []) if player.get("on_40_man") else []
-        page = render(player, team_names, generated_at, teammates)
+        page = render(
+            player, team_names, generated_at, teammates,
+            player_sections.load_cached_transactions(player.get("id")),
+        )
         rel = page_path(player)
         (DOCS / rel).write_text(page)
         lastmod.record(rel, page)
@@ -2359,6 +2380,34 @@ h1 { letter-spacing: -0.02em; }
                     padding: 0.5rem 0.6rem; }
 .arb-club-row a { color: var(--text-primary); }
 .arb-table .badge[title] { cursor: help; }
+.pp-section { margin: 1.6rem 0 0; }
+.pp-section > h2 { font-size: 1.15rem; margin: 0 0 0.35rem; }
+.pp-section h3 { font-size: 0.95rem; margin: 0.85rem 0 0.15rem; }
+.pp-section summary { display: flex; flex-wrap: wrap; align-items: baseline;
+  gap: 0.3rem 0.7rem; cursor: pointer; list-style: none; }
+.pp-section summary::-webkit-details-marker { display: none; }
+.pp-section summary::marker { content: ""; }
+.pp-section summary::before { content: "▸"; color: var(--text-muted); font-size: 0.8rem; }
+.pp-section details[open] > summary::before { content: "▾"; }
+.pp-section summary h2 { margin: 0; font-size: 1.15rem; }
+.pp-sum { color: var(--text-muted); font-size: 0.8rem; font-variant-numeric: tabular-nums; }
+.pp-note { color: var(--text-muted); font-size: 0.8rem; line-height: 1.5; margin: 0.4rem 0 0; }
+.tbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 0.35rem; }
+.pp-tbl { font-variant-numeric: tabular-nums; font-size: 0.82rem; }
+.pp-tbl thead th { position: static; top: auto; cursor: default; background: var(--page-plane);
+  backdrop-filter: none; letter-spacing: 0.04em; padding: 0.4rem 0.55rem; }
+.pp-tbl th, .pp-tbl td { white-space: nowrap; padding: 0.35rem 0.55rem; }
+.pp-tbl td.num, .pp-tbl th.num { text-align: right; }
+.pp-tbl th:first-child, .pp-tbl td:first-child { position: sticky; left: 0;
+  background: var(--page-plane); z-index: 1; }
+.pp-tbl tbody tr:nth-child(even) { background: var(--surface-1); }
+.pp-tbl tbody tr:nth-child(even) td:first-child { background: var(--surface-1); }
+.pp-tbl tfoot td { font-weight: 650; border-top: 1px solid var(--gridline); }
+.pp-tl { list-style: none; padding: 0; margin: 0.35rem 0 0; }
+.pp-tl li { padding: 0.4rem 0; border-bottom: 1px solid var(--gridline);
+  font-size: 0.9rem; line-height: 1.45; }
+.pp-tl time { display: block; color: var(--text-muted); font-size: 0.75rem;
+  font-variant-numeric: tabular-nums; }
 """
 
 
