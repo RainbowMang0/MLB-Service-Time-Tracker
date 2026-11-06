@@ -19,7 +19,11 @@ fundamentally different shape of job:
   * It does NOT cache transaction history. A retired player's service time
     never changes, so there is nothing to incrementally update, and caching
     thousands of transaction files would add tens of megabytes to the repo
-    for no benefit.
+    for no benefit. Player pages still need injured-list stints, season
+    lines, and career moves for those same players. That backfill is
+    scripts/alumni_sections.py: it calls the same transaction fetch with
+    use_cache=False, keeps the derived page data, and does not write a
+    raw transaction file or recompute service time.
 
 Why 2009 and not earlier
 ------------------------

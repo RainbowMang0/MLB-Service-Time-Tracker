@@ -47,6 +47,7 @@ import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
+import alumni_sections  # noqa: E402
 import cba  # noqa: E402
 import player_sections  # noqa: E402
 import salary_estimates  # noqa: E402
@@ -1350,6 +1351,7 @@ def render(
     generated_at: str,
     teammates: list[dict] | None = None,
     transactions: list[dict] | None = None,
+    compact: dict | None = None,
 ) -> str:
     name = html.escape(player.get("name") or "Player")
     service = html.escape(player.get("service_time") or "0.000")
@@ -1434,7 +1436,7 @@ def render(
     except ValueError:
         section_today = dt.date.today()
     sections = player_sections.render_player_sections(
-        player, transactions, team_names, section_today
+        player, transactions, team_names, section_today, compact=compact
     )
     # Empty stays empty, so a page with nothing new keeps the bytes it had.
     sections_html = f"\n{sections}\n" if sections else ""
@@ -1688,14 +1690,23 @@ def write_player_pages(
 
     lastmod = _LastMod(generated_at[:10])
     by_club = _group_rostered_by_club(published)
+    # Derived page data for players whose raw transactions were not stored.
+    # A player who still has a transaction file keeps that path.
+    compact_by_id = alumni_sections.load_store()
 
     for player in published:
         # Only a currently-rostered player gets real teammates -- see the
         # warning in _group_rostered_by_club() and _teammates_block().
         teammates = by_club.get(player.get("team"), []) if player.get("on_40_man") else []
+        transactions = player_sections.load_cached_transactions(player.get("id"))
+        compact = None
+        if transactions is None:
+            try:
+                compact = compact_by_id.get(int(player.get("id")))
+            except (TypeError, ValueError):
+                compact = None
         page = render(
-            player, team_names, generated_at, teammates,
-            player_sections.load_cached_transactions(player.get("id")),
+            player, team_names, generated_at, teammates, transactions, compact
         )
         rel = page_path(player)
         (DOCS / rel).write_text(page)
