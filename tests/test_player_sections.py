@@ -385,7 +385,15 @@ def test_stored_profiles_pick_the_right_tables():
     html = render_player_sections(baker, None, CLUB_NAMES, TODAY, WINDOWS)
     check("Baker's stored line hides batting", "<h3>Batting</h3>" not in html)
     check("Baker's stored line shows pitching", "<h3>Pitching</h3>" in html and ">62.1<" in html)
-    check("the missing traded season is not invented", ">2025<" not in html.split("<h3>Pitching</h3>", 1)[-1])
+    # The 2026-11-06 daily update stored Baker's 2025 traded year (Orioles and
+    # Rays). The page shows that stored line. A year the profile does not have
+    # is still not invented.
+    pitching = html.split("<h3>Pitching</h3>", 1)[-1]
+    check(
+        "the stored 2025 traded season is shown",
+        ">2025<" in pitching and ">2 Tms<" in pitching and ">Orioles<" in pitching and ">Rays<" in pitching,
+    )
+    check("a year the profile does not have is not invented", ">2020<" not in pitching)
 
     ohtani = profile(660271)
     page = render_player_sections(ohtani, None, CLUB_NAMES, TODAY, WINDOWS)
