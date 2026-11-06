@@ -526,5 +526,31 @@
     "team_id": null,
     "from_team_id": null,
     "to_team_id": 137
+  },
+  {
+    "date": "2026-11-02",
+    "description": "San Francisco Giants designated LHP Reiver Sanmartin for assignment.",
+    "team": "San Francisco Giants",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 137,
+    "typeCode": "DES",
+    "typeDesc": "Designated for Assignment",
+    "effectiveDate": "2026-11-02",
+    "resolutionDate": "2026-11-02",
+    "id": 947751
+  },
+  {
+    "date": "2026-11-06",
+    "description": "Washington Nationals traded RHP Robert Cranz to San Francisco Giants for LHP Reiver Sanmartin.",
+    "team": "Washington Nationals",
+    "team_id": null,
+    "from_team_id": 137,
+    "to_team_id": 120,
+    "typeCode": "TR",
+    "typeDesc": "Trade",
+    "effectiveDate": "2026-11-06",
+    "resolutionDate": null,
+    "id": 949789
   }
 ]
