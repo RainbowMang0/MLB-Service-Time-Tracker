@@ -1127,10 +1127,7 @@
     return `
       ${tables}
       <p class="profile-foot">
-        Major league seasons only, as reported by the MLB Stats API. A player
-        traded mid-season shows the club he finished the year with rather than
-        a combined line, because averaging rate statistics across two clubs
-        would invent a figure neither club's record contains.
+        Major league seasons only, from public data. One line per season.
         <b>No WAR and no salary.</b> WAR is not published by MLB's API — the
         public versions are Baseball-Reference's and FanGraphs' own
         calculations, and neither permits automated extraction. Earnings need

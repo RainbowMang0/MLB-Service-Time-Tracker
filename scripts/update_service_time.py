@@ -256,6 +256,59 @@ def _save_cached_transactions(player_id: int, txns: list[dict]) -> None:
     _cache_path(player_id).write_text(json.dumps(txns, indent=2, default=str))
 
 
+# Feed fields the service-time engine does not read. Stored on every newly
+# fetched row so a later display can use a move's kind and its effective
+# date without parsing the description. They are NOT a reason to refetch:
+# a cache row written before this shipped simply lacks the keys, and a
+# missing key reads as None. Do not treat that as a legacy cache — the
+# legacy path exists for missing team ids, which the engine cannot judge.
+# These fields must not be fed into compute_service_time.
+_TXN_CACHE_FIELDS = (
+    "typeCode",
+    "typeDesc",
+    "effectiveDate",
+    "resolutionDate",
+    "id",
+)
+
+
+def _jsonable_txn_value(value):
+    """A cache value is a JSON scalar, or None when the feed omitted it.
+
+    bool is a subclass of int, and a boolean is not a date or an id, so it
+    is rejected rather than stored as 0 or 1.
+    """
+    if isinstance(value, bool):
+        return None
+    if value is None or isinstance(value, (str, int, float)):
+        return value
+    return None
+
+
+def _cache_transaction(raw: dict) -> dict | None:
+    """One raw feed row in the on-disk cache shape.
+
+    The five ``_TXN_CACHE_FIELDS`` are always written, including when the
+    feed's value is null, so a row fetched from now on is distinguishable
+    from an older row that never had the key. A row with no date is not a
+    transaction this cache can order, and is dropped — same as before.
+    """
+    date = raw.get("date")
+    if not date:
+        return None
+    row = {
+        "date": date,
+        "description": raw.get("description", ""),
+        "team": (raw.get("toTeam") or {}).get("name") or (raw.get("fromTeam") or {}).get("name"),
+        "team_id": (raw.get("team") or {}).get("id"),
+        "from_team_id": (raw.get("fromTeam") or {}).get("id"),
+        "to_team_id": (raw.get("toTeam") or {}).get("id"),
+    }
+    for key in _TXN_CACHE_FIELDS:
+        row[key] = _jsonable_txn_value(raw.get(key))
+    return row
+
+
 def _fetch_transactions_incremental(
     player_id: int, full_refresh: bool, use_cache: bool = True
 ) -> list[dict]:
@@ -294,18 +347,17 @@ def _fetch_transactions_incremental(
     # major league moves, and the only reliable way to tell them apart is
     # whether a real MLB club is involved. An earlier version of this function
     # stored only the team NAME, which silently reduced that filter to a no-op.
-    new_txns = [
-        {
-            "date": t.get("date"),
-            "description": t.get("description", ""),
-            "team": (t.get("toTeam") or {}).get("name") or (t.get("fromTeam") or {}).get("name"),
-            "team_id": (t.get("team") or {}).get("id"),
-            "from_team_id": (t.get("fromTeam") or {}).get("id"),
-            "to_team_id": (t.get("toTeam") or {}).get("id"),
-        }
-        for t in new_raw
-        if t.get("date")
-    ]
+    #
+    # typeCode, typeDesc, effectiveDate, resolutionDate and the transaction id
+    # are stored too. An incremental run only asks for dates AFTER the newest
+    # cached row, so rows already on disk keep whatever keys they were written
+    # with. Filling the old rows in is a full refresh of that player, not this
+    # fetch, and it is not required for the rows to stay readable.
+    new_txns = []
+    for raw in new_raw:
+        row = _cache_transaction(raw)
+        if row is not None:
+            new_txns.append(row)
 
     merged = {t["date"] + "|" + t["description"]: t for t in (cached + new_txns)}
     result = sorted(merged.values(), key=lambda t: t["date"])
@@ -654,20 +706,14 @@ def build_player_record(
     }
     season_teams_bio = {y: ids for y, ids in season_teams_bio.items() if ids}
 
-    # The statline the /people hydrate has always returned and the pipeline has
-    # always discarded. Filtered to major league clubs for the same reason the
-    # season teams are: the splits carry minor league lines, and a Triple-A
-    # batting average on a page about major league service time would be wrong
-    # in a way nobody could see.
-    season_stats = {}
-    for year, groups in mlb.season_stats_from_bio(bio).items():
-        kept = {
-            g: {k: v for k, v in row.items() if k != "team_id"}
-            for g, row in groups.items()
-            if row.get("team_id") in mlb_ids
-        }
-        if kept:
-            season_stats[year] = kept
+    # The statline the /people hydrate has always returned. Minor-league
+    # club lines are dropped here, where the 30 club ids are known. A
+    # mid-season trade also arrives as a no-team combined row (numTeams >= 2);
+    # that row is the season total and is kept, with one split per club.
+    # See select_major_league_season_stats().
+    season_stats = mlb.select_major_league_season_stats(
+        mlb.season_stats_from_bio(bio), mlb_ids
+    )
 
     debut = bio.get("mlbDebutDate")
     debut_date = dt.date.fromisoformat(debut) if debut else None

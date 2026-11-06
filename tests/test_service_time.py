@@ -2310,6 +2310,179 @@ def test_a_malformed_or_empty_bio_yields_no_statline_rather_than_an_error():
             check(f"malformed bio raised {type(exc).__name__}", False)
 
 
+def _stat_split(season, stat, team_id=None, num_teams=None):
+    """A yearByYear split in the shape the people hydrate returns."""
+    row = {"season": str(season), "stat": stat}
+    if team_id is not None:
+        row["team"] = {"id": team_id}
+    if num_teams is not None:
+        row["numTeams"] = num_teams
+    return row
+
+
+def test_a_mid_season_trade_keeps_the_combined_total_and_each_club():
+    """
+    A traded season arrives as one split per club and then a combined row
+    with no team and numTeams >= 2. Keeping "the later" split made that
+    combined row the whole season, and the major-league filter dropped it
+    for having no team id, so the year disappeared.
+
+    The lines below are the feed's own shape for the three seasons the
+    research checked: Arrighetti 2026 (HOU + TOR), Baker 2025 (BAL + TB;
+    his hitting line is one club and must stay one club), Adames 2021
+    (TB + MIL). Rate stats are copied from the combined row, not averaged.
+    """
+    import fetch_mlb_data as mlb
+
+    # Club ids as the feed reports them.
+    HOU, TOR, BAL, TB, MIL, MINORS = 117, 141, 110, 139, 158, 999
+    mlb_ids = {HOU, TOR, BAL, TB, MIL}
+
+    bio = {
+        "stats": [
+            {
+                "group": {"displayName": "pitching"},
+                "splits": [
+                    # Spencer Arrighetti 2026.
+                    _stat_split("2026", {"gamesPlayed": 17, "inningsPitched": "88.0", "era": "9.99"}, HOU),
+                    _stat_split("2026", {"gamesPlayed": 7, "inningsPitched": "22.2", "era": "1.00"}, TOR),
+                    _stat_split(
+                        "2026",
+                        {"gamesPlayed": 24, "inningsPitched": "110.2", "era": "3.50"},
+                        num_teams=2,
+                    ),
+                    # Bryan Baker 2025. The combined row is last, which is
+                    # what used to overwrite both clubs and then get dropped.
+                    _stat_split("2025", {"gamesPlayed": 42, "inningsPitched": "38.1"}, BAL),
+                    _stat_split("2025", {"gamesPlayed": 31, "inningsPitched": "30.1"}, TB),
+                    _stat_split(
+                        "2025",
+                        {"gamesPlayed": 73, "inningsPitched": "68.2", "era": "2.50"},
+                        num_teams=2,
+                    ),
+                    # Combined row FIRST, then the clubs. The old code kept
+                    # whichever split arrived last, so this order has to work too.
+                    _stat_split("2020", {"gamesPlayed": 50, "era": "4.00"}, num_teams=2),
+                    _stat_split("2020", {"gamesPlayed": 20, "era": "5.00"}, HOU),
+                    _stat_split("2020", {"gamesPlayed": 30, "era": "3.00"}, TOR),
+                ],
+            },
+            {
+                "group": {"displayName": "hitting"},
+                "splits": [
+                    # Baker 2025 batting is one club (0 AB). It must not be
+                    # swallowed by the pitching trade, and the 0 must survive.
+                    _stat_split("2025", {"gamesPlayed": 42, "atBats": 0}, BAL),
+                    # Willy Adames 2021.
+                    _stat_split("2021", {"gamesPlayed": 41, "atBats": 132, "avg": ".250"}, TB),
+                    _stat_split("2021", {"gamesPlayed": 99, "atBats": 365, "avg": ".280"}, MIL),
+                    _stat_split(
+                        "2021",
+                        {"gamesPlayed": 140, "atBats": 497, "avg": ".272"},
+                        num_teams=2,
+                    ),
+                    # A minor-league line beside a major-league one. The
+                    # combined row mixes the two levels, so it is not the
+                    # major-league total; the major-league club line is.
+                    _stat_split("2019", {"gamesPlayed": 10, "atBats": 20}, TB),
+                    _stat_split("2019", {"gamesPlayed": 80, "atBats": 300}, MINORS),
+                    _stat_split("2019", {"gamesPlayed": 90, "atBats": 320}, num_teams=2),
+                    # Minor league only: nothing to publish.
+                    _stat_split("2018", {"gamesPlayed": 40, "atBats": 100}, MINORS),
+                ],
+            },
+        ]
+    }
+
+    parsed = mlb.season_stats_from_bio(bio)
+    # The parser itself does not know which ids are major league, so the
+    # minor-league split is still here. The selector is what drops it.
+    check(
+        "the parser keeps a minor-league split for the caller to filter",
+        any(s.get("team_id") == MINORS for s in parsed[2019]["hitting"]["splits"]),
+    )
+
+    stored = mlb.select_major_league_season_stats(parsed, mlb_ids)
+
+    arr = stored[2026]["pitching"]
+    check("Arrighetti 2026 total is the combined 24 games", arr["gamesPlayed"] == 24)
+    check("...and the combined 110.2 innings", arr["inningsPitched"] == "110.2")
+    check("...and the combined era, not either club's", arr["era"] == "3.50")
+    check("...numTeams is kept on the total", arr["numTeams"] == 2)
+    check("...the total has no club", "team_id" not in arr)
+    check(
+        "Arrighetti's two clubs are kept in feed order",
+        [s["team_id"] for s in arr["splits"]] == [HOU, TOR],
+    )
+    check("HOU's own line is 17 games / 88.0", arr["splits"][0]["gamesPlayed"] == 17
+          and arr["splits"][0]["inningsPitched"] == "88.0")
+    check("TOR's own line is 7 games / 22.2", arr["splits"][1]["gamesPlayed"] == 7
+          and arr["splits"][1]["inningsPitched"] == "22.2")
+
+    baker = stored[2025]["pitching"]
+    check("Baker 2025 pitching total is 73 games", baker["gamesPlayed"] == 73)
+    check("...and 68.2 innings", baker["inningsPitched"] == "68.2")
+    check(
+        "Baker's clubs are Baltimore then Tampa Bay",
+        [(s["team_id"], s["gamesPlayed"]) for s in baker["splits"]] == [(BAL, 42), (TB, 31)],
+    )
+    first = stored[2020]["pitching"]
+    check("a combined row listed before the clubs is still the total",
+          first["gamesPlayed"] == 50 and first["era"] == "4.00")
+    check("...and the clubs stay in feed order after it",
+          [s["team_id"] for s in first["splits"]] == [HOU, TOR])
+    baker_hit = stored[2025]["hitting"]
+    check("Baker's 2025 hitting line stays the one club that batted",
+          baker_hit["team_id"] == BAL and baker_hit["gamesPlayed"] == 42)
+    check("a 0 at-bat line is kept", baker_hit["atBats"] == 0)
+    check("the one-club hitting line is not given a phantom split list", "splits" not in baker_hit)
+
+    adames = stored[2021]["hitting"]
+    check("Adames 2021 total is 140 games", adames["gamesPlayed"] == 140)
+    check("...and the combined 497 at-bats", adames["atBats"] == 497)
+    check("...and the combined average", adames["avg"] == ".272")
+    check(
+        "Adames's clubs are Tampa Bay then Milwaukee",
+        [(s["team_id"], s["atBats"]) for s in adames["splits"]] == [(TB, 132), (MIL, 365)],
+    )
+
+    check("a mixed major/minor total is not published",
+          stored[2019]["hitting"]["gamesPlayed"] == 10
+          and stored[2019]["hitting"]["team_id"] == TB
+          and "splits" not in stored[2019]["hitting"])
+    check("a minor-league-only season is absent", 2018 not in stored)
+
+    # The bug itself: a filter that requires a major-league team id drops
+    # the combined row. This selector must not.
+    only_combined = {
+        2026: {
+            "pitching": {
+                "team_id": None,
+                "numTeams": 2,
+                "gamesPlayed": 24,
+                "inningsPitched": "110.2",
+            }
+        }
+    }
+    kept = mlb.select_major_league_season_stats(only_combined, mlb_ids)
+    check(
+        "a no-team combined row is kept when numTeams >= 2",
+        kept[2026]["pitching"]["gamesPlayed"] == 24 and kept[2026]["pitching"]["numTeams"] == 2,
+    )
+    not_a_total = {2024: {"hitting": {"team_id": None, "numTeams": 1, "gamesPlayed": 5}}}
+    check(
+        "a no-team row with numTeams below 2 is not a season",
+        mlb.select_major_league_season_stats(not_a_total, mlb_ids) == {},
+    )
+
+    app = (pathlib.Path(__file__).resolve().parents[1] / "docs" / "app.js").read_text()
+    check(
+        "the stats tab no longer says a trade shows only the club he finished with",
+        "finished the year with" not in app,
+    )
+    check("the stats tab attributes the line to public data", "from public data" in app)
+
+
 def test_the_stats_tab_states_that_war_and_salary_are_absent():
     """
     WAR is not a field MLB's API publishes -- bWAR and fWAR are
@@ -5671,6 +5844,124 @@ def test_a_legacy_cache_without_team_ids_is_discarded_or_ignored():
         u.mlb_fetch_enabled = real_enabled
 
 
+def test_new_transaction_fetches_store_type_dates_and_id_old_rows_still_read():
+    """
+    The incremental fetcher used to drop typeCode, typeDesc, effectiveDate,
+    resolutionDate and the transaction id. New rows store them, including a
+    null the feed actually sent (so a fetched row is distinguishable from an
+    older one that lacks the key).
+
+    Older cache rows stay readable: the key is simply absent, and reading it
+    is None. That absence is not a legacy cache — the legacy path refetches
+    when team ids are missing, which these rows still have — and it is not
+    fed to the service-time engine. An incremental fetch does not rewrite
+    the old rows; it only appends.
+    """
+    import update_service_time as u
+
+    raw = {
+        "id": 507148,
+        "date": "2021-07-25",
+        "effectiveDate": "2021-07-22",
+        "resolutionDate": None,
+        "typeCode": "SC",
+        "typeDesc": "Status Change",
+        "description": "Los Angeles Dodgers placed RF Mookie Betts on the 10-day injured list.",
+        "team": {"id": 119, "name": "Los Angeles Dodgers"},
+        "toTeam": {"id": 119, "name": "Los Angeles Dodgers"},
+    }
+    row = u._cache_transaction(raw)
+    check("typeCode is stored", row["typeCode"] == "SC")
+    check("typeDesc is stored", row["typeDesc"] == "Status Change")
+    check("effectiveDate is stored as the feed gave it, not the row date",
+          row["effectiveDate"] == "2021-07-22" and row["date"] == "2021-07-25")
+    check("a null resolutionDate is stored as None", row["resolutionDate"] is None)
+    check("the key is present even when the value is null", "resolutionDate" in row)
+    check("the transaction id is stored", row["id"] == 507148)
+    check("team ids are still stored alongside the new fields",
+          row["team_id"] == 119 and row["to_team_id"] == 119)
+
+    omitted = u._cache_transaction({
+        "date": "2024-05-01",
+        "description": "Club selected the contract of X.",
+        "team": {"id": 147},
+        "toTeam": {"id": 147, "name": "Club"},
+    })
+    for key in ("typeCode", "typeDesc", "effectiveDate", "resolutionDate", "id"):
+        check(f"a feed row that omits {key} still stores the key", key in omitted and omitted[key] is None)
+    check("a row with no date is not cached", u._cache_transaction({"description": "no date"}) is None)
+    check(
+        "a non-scalar id is not stored as an object",
+        u._cache_transaction({"date": "2024-01-01", "id": {"unexpected": 1}})["id"] is None,
+    )
+
+    old = {
+        "date": "2020-04-01",
+        "description": "Club selected the contract of X.",
+        "team": "Club",
+        "team_id": 147,
+        "from_team_id": None,
+        "to_team_id": 147,
+    }
+    for key in ("typeCode", "typeDesc", "effectiveDate", "resolutionDate", "id"):
+        check(f"an older cache row has no {key} key", key not in old)
+        check(f"reading {key} off an older row is None", old.get(key) is None)
+    check("missing type fields do not make a row legacy", not u._row_is_legacy_format(old))
+    check("a newly fetched row is not legacy either", not u._row_is_legacy_format(row))
+    check("an older row still counts as a major-league move", u._involves_mlb_club(old, {147}))
+    check("a new row still counts as a major-league move", u._involves_mlb_club(row, {119}))
+
+    def _as_txn(cached_row):
+        return Transaction(
+            date=dt.date.fromisoformat(cached_row["date"]),
+            description=cached_row["description"],
+            team=(
+                (cached_row.get("team") or {}).get("name")
+                if isinstance(cached_row.get("team"), dict)
+                else cached_row.get("team")
+            ),
+        )
+
+    built = [_as_txn(old), _as_txn(row)]
+    check("the engine's reader accepts an older row and a new one", len(built) == 2)
+    check("the new fields are not copied onto the engine transaction",
+          not hasattr(built[1], "typeCode") and not hasattr(built[1], "effectiveDate"))
+
+    # Incremental fetch: the cached row predates the new fields and must come
+    # back unchanged. The newly fetched row carries them. Nothing is written
+    # to the real cache.
+    old_day = (u.TODAY - dt.timedelta(days=30)).isoformat()
+    cached_old = dict(old, date=old_day)
+    fresh = dict(raw, date=u.TODAY.isoformat())
+    saved = {}
+
+    real_load = u._load_cached_transactions
+    real_save = u._save_cached_transactions
+    real_get = u.mlb.get_player_transactions
+
+    def _capture(_pid, txns):
+        saved["txns"] = txns
+
+    u._load_cached_transactions = lambda pid: [dict(cached_old)]
+    u._save_cached_transactions = _capture
+    u.mlb.get_player_transactions = lambda pid, start, end: [fresh, {"description": "undated"}]
+    try:
+        out = u._fetch_transactions_incremental(999001, full_refresh=False, use_cache=True)
+    finally:
+        u._load_cached_transactions = real_load
+        u._save_cached_transactions = real_save
+        u.mlb.get_player_transactions = real_get
+
+    check("the incremental result has the old row and the new one", len(out) == 2)
+    check("the older row was not rewritten with the new keys",
+          out[0]["date"] == old_day and "typeCode" not in out[0] and "id" not in out[0])
+    check("the new row stored typeCode and the retro effectiveDate",
+          out[1]["typeCode"] == "SC" and out[1]["effectiveDate"] == "2021-07-22")
+    check("the new row stored the transaction id", out[1]["id"] == 507148)
+    check("an undated feed row was not cached", all(t.get("description") != "undated" for t in out))
+    check("the save received the same rows", saved.get("txns") == out)
+
+
 def test_rules_version_is_seven():
     """The bump the backfill reads to know which players to recompute."""
     import update_service_time as u
@@ -6078,6 +6369,7 @@ if __name__ == "__main__":
     test_the_profile_overlay_fetches_and_renders_the_same_salary_data()
     test_statlines_are_read_from_the_bio_the_pipeline_already_fetches()
     test_a_malformed_or_empty_bio_yields_no_statline_rather_than_an_error()
+    test_a_mid_season_trade_keeps_the_combined_total_and_each_club()
     test_the_stats_tab_states_that_war_and_salary_are_absent()
     test_the_super_two_prose_quotes_published_figures_not_our_own()
     test_an_unpublished_cutoff_is_called_a_prediction_not_a_fact()
@@ -6147,6 +6439,7 @@ if __name__ == "__main__":
     test_a_service_time_exception_can_restore_or_remove_days()
     test_the_service_time_exceptions_file_loads_and_validates()
     test_a_legacy_cache_without_team_ids_is_discarded_or_ignored()
+    test_new_transaction_fetches_store_type_dates_and_id_old_rows_still_read()
     test_rules_version_is_seven()
     test_the_dfa_grace_window_is_a_sourced_ruleset_value()
     test_the_player_level_v7_figures_hold_against_the_real_feed()
