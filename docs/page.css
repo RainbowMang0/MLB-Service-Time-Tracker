@@ -90,3 +90,31 @@ h1 { letter-spacing: -0.02em; }
                     padding: 0.5rem 0.6rem; }
 .arb-club-row a { color: var(--text-primary); }
 .arb-table .badge[title] { cursor: help; }
+.pp-section { margin: 1.6rem 0 0; }
+.pp-section > h2 { font-size: 1.15rem; margin: 0 0 0.35rem; }
+.pp-section h3 { font-size: 0.95rem; margin: 0.85rem 0 0.15rem; }
+.pp-section summary { display: flex; flex-wrap: wrap; align-items: baseline;
+  gap: 0.3rem 0.7rem; cursor: pointer; list-style: none; }
+.pp-section summary::-webkit-details-marker { display: none; }
+.pp-section summary::marker { content: ""; }
+.pp-section summary::before { content: "▸"; color: var(--text-muted); font-size: 0.8rem; }
+.pp-section details[open] > summary::before { content: "▾"; }
+.pp-section summary h2 { margin: 0; font-size: 1.15rem; }
+.pp-sum { color: var(--text-muted); font-size: 0.8rem; font-variant-numeric: tabular-nums; }
+.pp-note { color: var(--text-muted); font-size: 0.8rem; line-height: 1.5; margin: 0.4rem 0 0; }
+.tbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 0.35rem; }
+.pp-tbl { font-variant-numeric: tabular-nums; font-size: 0.82rem; }
+.pp-tbl thead th { position: static; top: auto; cursor: default; background: var(--page-plane);
+  backdrop-filter: none; letter-spacing: 0.04em; padding: 0.4rem 0.55rem; }
+.pp-tbl th, .pp-tbl td { white-space: nowrap; padding: 0.35rem 0.55rem; }
+.pp-tbl td.num, .pp-tbl th.num { text-align: right; }
+.pp-tbl th:first-child, .pp-tbl td:first-child { position: sticky; left: 0;
+  background: var(--page-plane); z-index: 1; }
+.pp-tbl tbody tr:nth-child(even) { background: var(--surface-1); }
+.pp-tbl tbody tr:nth-child(even) td:first-child { background: var(--surface-1); }
+.pp-tbl tfoot td { font-weight: 650; border-top: 1px solid var(--gridline); }
+.pp-tl { list-style: none; padding: 0; margin: 0.35rem 0 0; }
+.pp-tl li { padding: 0.4rem 0; border-bottom: 1px solid var(--gridline);
+  font-size: 0.9rem; line-height: 1.45; }
+.pp-tl time { display: block; color: var(--text-muted); font-size: 0.75rem;
+  font-variant-numeric: tabular-nums; }
