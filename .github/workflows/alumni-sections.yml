@@ -1,0 +1,73 @@
+name: Alumni page sections
+
+# On demand, or once a month. Fills injured-list, season-line, and career-move
+# sections for published players who are off the 40-man and have no transaction
+# file. The daily roster job does not do this: those players rarely change,
+# and a full pass is a couple of hours of polite requests.
+#
+# Raw transactions are not stored. The derived sections live in
+# data/alumni_sections/ and the player pages are rewritten from that.
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "How many missing players to fetch this run (0 = all remaining)"
+        required: false
+        default: "0"
+      refresh:
+        description: "Fetch the whole alumni set again, including ids already stored"
+        type: boolean
+        default: false
+      rewrite_only:
+        description: "Rebuild pages from the derived store and call no API"
+        type: boolean
+        default: false
+  schedule:
+    # 16:00 UTC on the 1st, clear of the daily roster job's morning window.
+    - cron: "0 16 1 * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  # Same group as the daily update and the history backfill: all three write
+  # player pages, and two of them at once would clobber a page.
+  group: service-time-update
+  cancel-in-progress: false
+
+jobs:
+  alumni-sections:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch derived sections and rewrite pages
+        run: |
+          if [ "${{ github.event.inputs.rewrite_only }}" = "true" ]; then
+            python scripts/alumni_sections.py --rewrite-only
+          elif [ "${{ github.event.inputs.refresh }}" = "true" ]; then
+            python scripts/alumni_sections.py --refresh --limit "${{ github.event.inputs.limit || '0' }}"
+          else
+            python scripts/alumni_sections.py --limit "${{ github.event.inputs.limit || '0' }}"
+          fi
+
+      - name: Commit and push results
+        run: |
+          scripts/commit_data.sh \
+            "chore: alumni page sections ($(date -u +%F))" \
+            data/alumni_sections \
+            docs/p \
+            docs/data/page_lastmod.json \
+            docs/sitemap-alumni.xml \
+            docs/sitemap.xml
