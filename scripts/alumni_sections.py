@@ -365,9 +365,17 @@ def rewrite_pages(
 
     store = load_store()
     names = team_names_from_db(db)
-    changed: list[tuple[str, str]] = []
+    day = generated_at[:10]
+    try:
+        lastmod = json.loads(pages.LASTMOD_PATH.read_text())
+    except (OSError, ValueError):
+        lastmod = {}
+    if not isinstance(lastmod, dict):
+        lastmod = {}
+    changed: list[str] = []
     unchanged = 0
     missing = 0
+    failed = 0
     for player_id, compact in sorted(store.items()):
         if only_ids is not None and player_id not in only_ids:
             continue
@@ -381,18 +389,36 @@ def rewrite_pages(
         if path is None:
             missing += 1
             continue
-        html = pages.render(player, names, generated_at, [], None, compact)
+        rel = f"p/{path.name}"
+        try:
+            html = pages.render(player, names, generated_at, [], None, compact)
+        except Exception as exc:  # one bad page should not drop the rest
+            failed += 1
+            print(f"  page failed for {player_id}: {exc}", file=sys.stderr)
+            continue
         previous = path.read_text()
-        if pages._content_key(html) == pages._content_key(previous):
+        new_key = pages._content_key(html)
+        old_key = pages._content_key(previous)
+        stored = lastmod.get(rel) if isinstance(lastmod.get(rel), dict) else {}
+        if new_key == old_key and stored.get("hash") == new_key:
             unchanged += 1
             continue
-        path.write_text(html)
-        changed.append((f"p/{path.name}", html))
+        if html != previous:
+            path.write_text(html)
+        lastmod[rel] = {"hash": new_key, "lastmod": day}
+        changed.append(rel)
+        if len(changed) % 200 == 0:
+            pages.LASTMOD_PATH.write_text(json.dumps(lastmod, indent=0, sort_keys=True))
+            _bump_sitemap(changed, day)
     if changed:
-        day = generated_at[:10]
-        _bump_lastmod(changed, day)
-        _bump_sitemap([rel for rel, _html in changed], day)
-    return {"changed": len(changed), "unchanged": unchanged, "missing": missing}
+        pages.LASTMOD_PATH.write_text(json.dumps(lastmod, indent=0, sort_keys=True))
+        _bump_sitemap(changed, day)
+    return {
+        "changed": len(changed),
+        "unchanged": unchanged,
+        "missing": missing,
+        "failed": failed,
+    }
 
 
 def _report(alumni: list[int], stored: dict[int, dict], todo: list[int]) -> None:
@@ -442,7 +468,8 @@ def main(argv: list[str] | None = None) -> int:
         result = rewrite_pages(db, generated_at)
         print(
             f"Pages rewritten: {result['changed']}. "
-            f"Unchanged: {result['unchanged']}. Missing: {result['missing']}."
+            f"Unchanged: {result['unchanged']}. Missing: {result['missing']}. "
+            f"Failed: {result['failed']}."
         )
         return 0
 
@@ -494,7 +521,8 @@ def main(argv: list[str] | None = None) -> int:
     result = rewrite_pages(db, generated_at)
     print(
         f"Pages rewritten: {result['changed']}. "
-        f"Unchanged: {result['unchanged']}. Missing: {result['missing']}."
+        f"Unchanged: {result['unchanged']}. Missing: {result['missing']}. "
+        f"Failed: {result['failed']}."
     )
     return 1 if failed else 0
 
