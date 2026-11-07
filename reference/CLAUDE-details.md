@@ -4711,6 +4711,43 @@ first step.
 **Do not act on this before `sitemap-alumni.xml` and `sitemap-players.xml`
 have reported.** Same discipline as the held 1,756 alumni.
 
+## Rules v8 — phantom seasons and zeroed real seasons (2026-11-06)
+
+The v7 recompute left two opposite errors.
+
+Phantom seasons. A major-league "signed free agent" row that is really a
+minor-league deal — either a same-day sibling that says "minor league
+contract", or a same-day assignment to an affiliate — opened a stint. The
+release, outright, minor-league assignment, or free-agency election that
+ended it names only the affiliate, so the MLB-club filter dropped it and
+the stint ran to today. Rob Kaminsky 1.090 → 5.096 was this (2022 Mariners
+signing plus "assigned to Arkansas", then every later year). A free-agency
+election on the same day as an injured-list activation (Yency Almonte,
+2024-11-04) did the same thing. A lone "elected free agency" is still not a
+global stop: 118 cached rostered players would lose a later season.
+
+Zeroed real seasons. A stop the feed never reverses — an option with no
+recall (Butler, Allen, Sears) or a restricted-list placement whose return
+is only "roster status changed" (Strange-Gordon, 2016-07-28) — leaves the
+clock closed through seasons the stat feed shows he played. For a season
+from 2009 on with at least 20 MLB games and credited days at least 15 short
+of that game count, the span from the first game log date to the last is
+added, and a stop that falls between two games is not filled.
+
+`scripts/validate_service_sanity.py` counts both. An injured-list season
+after the last game is marked `il` and is not called phantom.
+
+Super Two ranking was already the CBA order (86 days defines the class,
+then the top 22%). The 2.125 figure was that math on the bad service-time
+data. `band_size` is the wider 2.000-3.000 band with at least one day, so
+the class count and the band count are no longer the same unlabeled number.
+
+Extensions. `data/contract_overrides.json` plus transaction text that says
+extension or an N-year contract take a player off the arbitration-eligible
+list and the non-tender watch. Mickey Moniak (666160, 2026-08-04, reported
+extension) is the override; the transaction cache has no extension wording.
+`data/known_extensions.json` is still only the pre-arb salary list.
+
 ## Working style notes
 
 - The owner has been working from an **iPad via GitHub Codespaces**. Safari's

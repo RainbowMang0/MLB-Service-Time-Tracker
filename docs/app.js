@@ -433,16 +433,22 @@
       return "MLB sets the official cutoff each offseason; the figure above is this project's own estimate of it.";
     }
     const [from, to] = pub.seasons;
+    const record =
+      `Checked against the ${pub.count} seasons MLB has published ` +
+      `(${from}–${to}, which ranged ${pub.low} to ${pub.high}).`;
     // Whether ours is a PREDICTION or a CHECK is decided by whether MLB has
     // published a figure for the season we computed -- asked of the data,
     // never inferred from the date, for the same reason
     // latest_complete_season() measures rather than assumes.
+    // An official flag on the current cutoff is that announcement: the
+    // number on the card is the published line, not our estimate of it.
+    if (cutoff && cutoff.official) {
+      return (
+        `MLB has published ${cutoff.cutoff} for that season, so the figure above ` +
+        `is that line, not an estimate. ${record}`
+      );
+    }
     const published = (pub.by_season || {})[String(cutoff && cutoff.season)];
-    const record =
-      `Checked against the ${pub.count} seasons MLB has published ` +
-      `(${from}–${to}, which ranged ${pub.low} to ${pub.high}), this method matched ` +
-      `exactly once, came within a day a second time, and was up to twelve days ` +
-      `out at worst.`;
     if (published) {
       return (
         `MLB published ${published} for that season, so the figure above is this ` +
@@ -521,7 +527,12 @@
         value: superTwo,
         accent: "accent-serious",
         title: superTwoCutoff
-          ? `This project's own data puts the Super Two boundary after the ` +
+          ? (superTwoCutoff.official
+            ? `The official line for the ${superTwoCutoff.season} season is ` +
+              `${superTwoCutoff.cutoff}. Listed here are players at or above ` +
+              `that line who also have at least 86 days of service in ` +
+              `${superTwoCutoff.qualifying_season || superTwoCutoff.season}. `
+            : `This project's own data puts the Super Two boundary after the ` +
             `${superTwoCutoff.season} season at ${superTwoCutoff.cutoff}: ` +
             `${superTwoCutoff.class_size} players finished that year between 2.000 and ` +
             `3.000 years with at least 86 days of service that season, and the top ` +
@@ -530,7 +541,7 @@
             `that line who have also accrued 86+ days in ` +
             `${superTwoCutoff.qualifying_season || superTwoCutoff.season} -- the same ` +
             `86-day test, re-applied to the season being projected rather than the ` +
-            `season the boundary came from. ` +
+            `season the boundary came from. `) +
             // Only while the season is actually running. Unconditional, this
             // told a reader in late October that a season finished weeks
             // earlier was still being played.

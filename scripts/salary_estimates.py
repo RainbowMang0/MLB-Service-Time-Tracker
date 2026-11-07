@@ -80,6 +80,11 @@ import cba  # noqa: E402
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 CACHE_DIR = ROOT / "data" / "cache" / "transactions"
 KNOWN_EXTENSIONS_PATH = ROOT / "data" / "known_extensions.json"
+# Players whose extension is not in the transaction feed. The arbitration
+# and non-tender lists read this. known_extensions.json stays the pre-arb
+# salary list; many of those deals have expired and must not drop a player
+# off this winter's arbitration list.
+CONTRACT_OVERRIDES_PATH = ROOT / "data" / "contract_overrides.json"
 OUT_PATH = ROOT / "docs" / "data" / "salary_estimates.json"
 
 STATUS_ESTIMATE = "estimate"
@@ -120,6 +125,52 @@ def _transaction_suggests_extension(player_id: int) -> bool:
         if _EXTENSION_RE.search(desc):
             return True
     return False
+
+
+def load_contract_overrides(path: pathlib.Path = CONTRACT_OVERRIDES_PATH) -> dict[int, dict]:
+    """{player id -> row} from data/contract_overrides.json.
+
+    Same shape as known_extensions.json: a leading _README object is skipped
+    because it has no id. A bad file reads as nobody, so a list page still
+    builds.
+    """
+    if not path.exists():
+        return {}
+    try:
+        rows = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {}
+    out: dict[int, dict] = {}
+    if isinstance(rows, dict):
+        rows = rows.get("players") or []
+    for row in rows:
+        if not isinstance(row, dict) or "id" not in row:
+            continue
+        try:
+            out[int(row["id"])] = row
+        except (TypeError, ValueError):
+            continue
+    return out
+
+
+def has_contract_extension(
+    player_id: int | None,
+    overrides: dict[int, dict] | None = None,
+) -> bool:
+    """True when a transaction or the hand-kept override says he signed an extension.
+
+    Transaction text is the existing detector (a roster row that says
+    "extension" or "N-year contract"). The override file covers a deal the
+    public transaction feed never logs. Either one takes him off the
+    arbitration and non-tender lists.
+    """
+    if player_id is None:
+        return False
+    if overrides is None:
+        overrides = load_contract_overrides()
+    if player_id in overrides:
+        return True
+    return _transaction_suggests_extension(player_id)
 
 
 def load_known_extensions(path: pathlib.Path = KNOWN_EXTENSIONS_PATH) -> dict[int, dict]:
