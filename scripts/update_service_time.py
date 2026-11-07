@@ -1173,10 +1173,8 @@ def write_index(
         "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "source": "MLB Stats API (statsapi.mlb.com, unofficial public endpoint)",
         "disclaimer": (
-            "Service time figures are ESTIMATES computed from public roster "
-            "transaction records, not official MLB/MLBPA figures. Where the "
-            "transaction feed cannot see the start of a player's career, his "
-            "figure is a floor rather than an estimate and the table says so."
+            "Service time figures are estimates from public data, "
+            "not official MLB numbers."
         ),
         "player_count": len(rows),
         "teams": teams,
@@ -1619,10 +1617,8 @@ def _write_outputs(db: dict[str, dict]) -> None:
         # behind it had stopped believing. Same wording as write_index() now,
         # so the two files cannot describe the data differently.
         "disclaimer": (
-            "Service time figures are ESTIMATES computed from public roster "
-            "transaction records, not official MLB/MLBPA figures. Where the "
-            "transaction feed cannot see the start of a player's career, his "
-            "figure is a floor rather than an estimate and the table says so."
+            "Service time figures are estimates from public data, "
+            "not official MLB numbers."
         ),
         "rules": _rules_block(),
         "player_count": len(db),

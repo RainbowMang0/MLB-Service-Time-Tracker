@@ -120,6 +120,17 @@
   }
 
   ready(function () {
+    var phone = document.querySelector(".phone-search");
+    if (phone) {
+      phone.addEventListener("click", function (event) {
+        event.preventDefault();
+        var top = document.querySelector(".site-top");
+        var box = document.querySelector(".top-search input[name=\"q\"]");
+        if (!top || !box) return;
+        var open = top.classList.toggle("search-open");
+        if (open) box.focus({ preventScroll: true });
+      });
+    }
     var input = document.querySelector(".top-search input[name=\"q\"]");
     if (!input) return;
     var form = input.closest("form");
