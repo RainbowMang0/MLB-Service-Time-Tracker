@@ -12,7 +12,9 @@ from __future__ import annotations
 import datetime as dt
 import json
 import pathlib
+import re
 import sys
+from html.parser import HTMLParser
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -22,6 +24,8 @@ from il_stints import SeasonWindows, build_stints, list_label, placement_start  
 from mlb_clubs import CLUB_NAMES  # noqa: E402
 from player_sections import render_player_sections  # noqa: E402
 from season_stat_tables import (  # noqa: E402
+    HITTING_COLUMNS,
+    PITCHING_COLUMNS,
     ip_to_outs,
     outs_to_ip,
     tables_to_show,
@@ -430,6 +434,193 @@ def test_open_stay_does_not_change_the_page_hash_during_the_season():
     check("the feed sentence is not copied", "retroactive" not in early.lower())
 
 
+class _StatTables(HTMLParser):
+    """Header cells and the career row of each season-stat table."""
+
+    def __init__(self):
+        super().__init__()
+        self.tables = {}
+        self._title = ""
+        self._in_h3 = False
+        self._section = None
+        self._row = None
+        self._cell = ""
+        self._in_cell = False
+        self._header = None
+        self._career = None
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "h3":
+            self._in_h3 = True
+            self._title = ""
+            self._header = None
+            self._career = None
+        elif tag in ("thead", "tbody", "tfoot"):
+            self._section = tag
+        elif tag == "tr":
+            self._row = []
+        elif tag in ("td", "th") and self._row is not None:
+            self._in_cell = True
+            self._cell = ""
+
+    def handle_endtag(self, tag):
+        if tag == "h3":
+            self._in_h3 = False
+        elif tag in ("td", "th") and self._in_cell:
+            self._row.append(self._cell.strip())
+            self._in_cell = False
+        elif tag == "tr" and self._row is not None:
+            if self._section == "thead":
+                self._header = self._row
+            elif self._section == "tfoot":
+                self._career = self._row
+            self._row = None
+        elif tag == "table" and self._title:
+            self.tables[self._title] = (self._header, self._career)
+        elif tag in ("thead", "tbody", "tfoot"):
+            self._section = None
+
+    def handle_data(self, data):
+        if self._in_h3:
+            self._title += data
+        elif self._in_cell:
+            self._cell += data
+
+
+def _stat_tables(html: str) -> dict:
+    parser = _StatTables()
+    parser.feed(html)
+    return parser.tables
+
+
+def _phone_column_hides(css: str) -> list[str]:
+    """th/td :nth-child rules set to display:none inside a 640px block.
+
+    A selector counted here is one that is not limited to the main players
+    table, so it also hits a season-stat table.
+    """
+    found = []
+    start = 0
+    css = re.sub(r"/\*.*?\*/", "", css, flags=re.DOTALL)
+    needle = "@media (max-width: 640px)"
+    while True:
+        at = css.find(needle, start)
+        if at < 0:
+            break
+        brace = css.find("{", at)
+        depth = 0
+        end = None
+        for i in range(brace, len(css)):
+            if css[i] == "{":
+                depth += 1
+            elif css[i] == "}":
+                depth -= 1
+                if depth == 0:
+                    end = i
+                    break
+        block = css[brace + 1:end]
+        start = end + 1
+        for match in re.finditer(r"([^{}]+)\{([^{}]*)\}", block):
+            body = re.sub(r"\s+", "", match.group(2))
+            if "display:none" not in body:
+                continue
+            for raw in match.group(1).split(","):
+                selector = " ".join(raw.split())
+                if ":nth-child(" not in selector:
+                    continue
+                if not re.search(r"\b(th|td)\b", selector):
+                    continue
+                if selector.startswith("#players-table"):
+                    continue
+                found.append(selector)
+    return found
+
+
+def test_career_row_matches_the_header():
+    """Career totals use the same columns, in the same order, as the header.
+
+    Clayton Beeter's pitching line is the case that showed the bug: on a
+    phone the shared stylesheet hid column 4 of every header and body (meant
+    for Pos on the main players table). Pitching column 4 is GS and batting
+    column 4 is AB. The career row lives in the footer, which that rule
+    skipped, so 6-8 (W-L) sat under SV.
+    """
+    pitching = {
+        "2024": {"pitching": {
+            "gamesPlayed": 5, "gamesStarted": 1, "wins": 1, "losses": 2,
+            "saves": 3, "inningsPitched": "10.0", "earnedRuns": 3,
+            "strikeOuts": 4, "hits": 8, "baseOnBalls": 2, "homeRuns": 1,
+        }},
+        "2025": {"pitching": {
+            "gamesPlayed": 74, "gamesStarted": 0, "wins": 5, "losses": 6,
+            "saves": 10, "inningsPitched": "67.0", "earnedRuns": 35,
+            "strikeOuts": 81, "hits": 45, "baseOnBalls": 48, "homeRuns": 10,
+        }},
+    }
+    pitching_html = render_player_sections(
+        {"id": 1, "name": "Career Arm", "position": "P", "season_stats": pitching},
+        None, CLUB_NAMES, TODAY, WINDOWS,
+    )
+    headers, career = _stat_tables(pitching_html)["Pitching"]
+    check(
+        "pitching header is the pitching column list",
+        headers == [label for _key, label in PITCHING_COLUMNS],
+    )
+    check("pitching career row has one cell per header", career is not None and len(career) == len(headers))
+    pitched = dict(zip(headers, career))
+    check("pitching Year cell is Career", pitched["Year"] == "Career")
+    check("pitching team cell on the career row is blank", pitched["Tm"] == "")
+    check("pitching GS stays in the GS column", pitched["GS"] == "1")
+    check("pitching W-L stays in the W-L column", pitched["W-L"] == "6-8")
+    check("pitching SV stays in the SV column", pitched["SV"] == "13")
+    check("pitching IP stays in the IP column", pitched["IP"] == "77.0")
+    check("pitching ERA stays in the ERA column", pitched["ERA"] == "4.44")
+    check("pitching SO stays in the SO column", pitched["SO"] == "85")
+
+    hitting = {
+        "2024": {"hitting": {
+            "gamesPlayed": 40, "atBats": 100, "hits": 25, "homeRuns": 4,
+            "rbi": 10, "stolenBases": 2, "runs": 20, "doubles": 5, "triples": 1,
+            "baseOnBalls": 10, "strikeOuts": 30,
+        }},
+        "2025": {"hitting": {
+            "gamesPlayed": 60, "atBats": 200, "hits": 50, "homeRuns": 8,
+            "rbi": 20, "stolenBases": 3, "runs": 30, "doubles": 10, "triples": 2,
+            "baseOnBalls": 15, "strikeOuts": 40,
+        }},
+    }
+    hitting_html = render_player_sections(
+        {"id": 2, "name": "Career Bat", "position": "CF", "season_stats": hitting},
+        None, CLUB_NAMES, TODAY, WINDOWS,
+    )
+    headers, career = _stat_tables(hitting_html)["Batting"]
+    check(
+        "batting header is the batting column list",
+        headers == [label for _key, label in HITTING_COLUMNS],
+    )
+    check("batting career row has one cell per header", career is not None and len(career) == len(headers))
+    batted = dict(zip(headers, career))
+    check("batting Year cell is Career", batted["Year"] == "Career")
+    check("batting team cell on the career row is blank", batted["Tm"] == "")
+    check("batting AB stays in the AB column", batted["AB"] == "300")
+    check("batting H stays in the H column", batted["H"] == "75")
+    check("batting HR stays in the HR column", batted["HR"] == "12")
+    check("batting AVG stays in the AVG column", batted["AVG"] == ".250")
+    check("batting OPS stays in the OPS column", batted["OPS"] == "–")
+
+    css = (ROOT / "docs" / "styles.css").read_text()
+    leaked = _phone_column_hides(css)
+    check(
+        "a phone does not hide a stat column the career row still shows",
+        leaked == [],
+    )
+    check(
+        "Pos stays hidden on the players table",
+        "#players-table thead th:nth-child(4)" in css
+        and "#players-table tbody td:nth-child(4)" in css,
+    )
+
+
 def test_sections_appear_only_when_there_is_data_and_collapse_rules_hold():
     baker_html = render_player_sections(
         {"id": 641329, "name": "Bryan Baker", "position": "P", "mlb_debut": "2021-09-05",
@@ -468,6 +659,7 @@ def main() -> None:
     test_november_placement_is_not_a_stay()
     test_timeline_uses_ids_and_drops_noise()
     test_which_stat_tables_show()
+    test_career_row_matches_the_header()
     test_stored_profiles_pick_the_right_tables()
     test_open_stay_does_not_change_the_page_hash_during_the_season()
     test_sections_appear_only_when_there_is_data_and_collapse_rules_hold()
