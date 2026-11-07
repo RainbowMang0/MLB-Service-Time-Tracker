@@ -236,9 +236,10 @@ def _site_header(current: str | None = None) -> str:
         f'<form class="top-search hide-phone" action="{BASE_PATH}" role="search">'
         '<input type="search" name="q" placeholder="Search a player or club" '
         'aria-label="Search a player or club" /></form>'
-        f'<a class="icon-btn show-phone" href="{BASE_PATH}?q=" aria-label="Search players">'
+        '<button type="button" class="icon-btn show-phone phone-search" '
+        'aria-label="Search players">'
         '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
-        '<circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg></a>'
+        '<circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg></button>'
         '<details class="menu"><summary class="icon-btn" aria-label="Menu">'
         '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
         '<path d="M4 7h16M4 12h16M4 17h16" /></svg>'
@@ -308,6 +309,21 @@ def _threshold_sentence() -> str:
         f"1.000 no matter how long a player is on a roster. {_yrs(ARBITRATION_YEARS)} "
         f"years reaches salary arbitration and {_yrs(FREE_AGENCY_YEARS)} reaches "
         "free agency —"
+    )
+
+
+# The one sentence every page uses for the estimate caveat. The longer
+# explanation of where a figure comes from lives on the service-time page.
+ESTIMATE_LINE = (
+    "Service time figures are estimates from public data, not official MLB numbers."
+)
+
+
+def _what_is(anchor: str = "") -> str:
+    """A small link to the one explainer, optionally a section on it."""
+    return (
+        f'<p class="what-is"><a href="{BASE_PATH}service-time.html{anchor}">'
+        "What is service time?</a></p>"
     )
 
 SOURCE_LABEL = {
@@ -602,6 +618,20 @@ def _club_phrase(player: dict) -> str:
     return f"with {club}" if player.get("on_40_man") else f"last with {club}"
 
 
+# A hand-written extension note sometimes cites an outside service-time
+# figure. That citation stays in the data file. It does not go on the page.
+_OUTSIDE_SOURCE_RE = re.compile(
+    r"\s*\b(?:FanGraphs|Baseball-Reference|Baseball Reference)\b"
+    r"(?:\d+(?:\.\d+)?|[^.])*?\.\s*",
+    re.IGNORECASE,
+)
+
+
+def _note_for_page(note: str) -> str:
+    cleaned = _OUTSIDE_SOURCE_RE.sub(" ", note or "")
+    return re.sub(r"\s{2,}", " ", cleaned).strip()
+
+
 def _salary_block(player: dict) -> str:
     """A labelled league-minimum salary ESTIMATE, pre-arbitration players only.
 
@@ -621,7 +651,7 @@ def _salary_block(player: dict) -> str:
         return ""
     name = html.escape(player.get("name") or "He")
     if record["status"] == salary_estimates.STATUS_EXTENSION:
-        note = html.escape(record.get("note") or "")
+        note = html.escape(_note_for_page(record.get("note") or ""))
         return (
             "<div class='salary-note salary-note-extension'>"
             f"<p><strong>Salary:</strong> {name} has a contract or extension on file "
@@ -637,8 +667,7 @@ def _salary_block(player: dict) -> str:
         "contract extension is on file for him, so his pay is most likely the "
         f"{minimum_year} MLB minimum of <b>${minimum:,}</b>. This is the league "
         "minimum from the Basic Agreement, not a confirmed figure for this "
-        "player — this project has no permitted source for actual salaries, "
-        "and a handful of pre-arbitration players sign extensions that this "
+        "player. A handful of pre-arbitration players sign extensions that this "
         "page could not detect. If one exists for him, his real pay is higher."
         "</p></div>"
     )
@@ -795,21 +824,7 @@ def render_club_index(by_club: dict[str, list[dict]], generated_at: str) -> str:
   {_crumbs(("Players", "../"), ("By club", None))}
   <h1>Service time by club</h1>
   <p class="subtitle">Every 40-man roster, and who on it reaches arbitration and free agency.</p>
-
-  <p class="lede">A player earns a day of major league <b>service time</b> for
-  every day he spends on a 40-man roster's active list or injured list --
-  not for how well he plays or how often he appears in a game. It is the
-  clock behind two milestones that shape a career: {_yrs(ARBITRATION_YEARS)}
-  years of service opens the door to salary arbitration, and
-  {_yrs(FREE_AGENCY_YEARS)} opens free agency, when a player can sign with any
-  club. A smaller group reaches arbitration a year early under the
-  <a href="{BASE_PATH}{SUPER_TWO_PAGE_PATH}">Super Two</a> rule.</p>
-
-  <p class="lede">This directory lists all 30 clubs' 40-man rosters side by
-  side, {total} players in total, so it is easy to compare how close each
-  roster is to turning over through arbitration and free agency. Click a
-  club below to see its roster sorted by service time, with who on it sits
-  closest to each threshold.</p>
+  {_what_is()}
 
   <table><thead><tr><th>Club</th><th class="n">Players</th>
   <th class="n">Free agency</th><th class="n">Arbitration</th>
@@ -820,10 +835,7 @@ def render_club_index(by_club: dict[str, list[dict]], generated_at: str) -> str:
     <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
     Eligibility counts describe players currently on a 40-man roster.
     <br /><br />
-    These figures are <strong>estimates</strong> reconstructed from public
-    roster transaction records. They are not official MLB or MLBPA figures —
-    those are not published. See
-    <a href="{BASE_PATH}{EXPLAINER_PATH}">how these figures are calculated</a>.
+    {ESTIMATE_LINE}
     Last updated {html.escape(generated_at[:10])}.
   </p>
 </div>{_site_footer()}{_search_script_tag()}</div>
@@ -1112,6 +1124,7 @@ def render_club(
   {_crumbs(("Players", "../"), (name, None))}
   <h1>{name} — service time</h1>
   <p class="subtitle">Every player on the 40-man roster, most service time first.</p>
+  {_what_is()}
 
   <div class="facts">
     <div><span>Players tracked</span><b class="big">{total}</b></div>
@@ -1132,10 +1145,7 @@ def render_club(
     <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
     Players near a threshold are estimates.
     <br /><br />
-    These figures are <strong>estimates</strong> reconstructed from public
-    roster transaction records. They are not official MLB or MLBPA figures —
-    those are not published. See
-    <a href="{BASE_PATH}{EXPLAINER_PATH}">how these figures are calculated</a>.
+    {ESTIMATE_LINE}
     Last updated {html.escape(generated_at[:10])}.
   </p>
 </div>{_site_footer()}{_search_script_tag()}</div>
@@ -1167,10 +1177,7 @@ def render_club_arbitration(
         "service-time data, not an official MLB/MLBPA figure."
     )
     body = (
-        "<p class='lede'>Players near a threshold are estimates. See the "
-        f"<a href=\"{BASE_PATH}{ARBITRATION_ELIGIBLE_PATH}\">full league-wide "
-        "list</a> for every club.</p>"
-        + _club_arb_table(players)
+        _club_arb_table(players)
         + f"<p class=\"actions\"><a href=\"{slug_}.html\">&larr; {name} roster</a></p>"
     )
     graph = [
@@ -1207,13 +1214,7 @@ def render_club_non_tender(
         "service-time data, not a prediction of the club's decision."
     )
     body = (
-        "<p class='lede'>A player makes this list if he is "
-        "arbitration-eligible and either in his final arbitration year "
-        f"before free agency, or played in fewer than "
-        f"{NON_TENDER_LOW_GAMES_THRESHOLD} games last season. See the "
-        f"<a href=\"{BASE_PATH}{NON_TENDER_WATCH_PATH}\">full league-wide "
-        "list</a> for every club.</p>"
-        + _club_non_tender_table(pairs)
+        _club_non_tender_table(pairs)
         + f"<p class=\"actions\"><a href=\"{slug_}.html\">&larr; {name} roster</a></p>"
     )
     graph = [
@@ -1252,11 +1253,6 @@ def render_club_free_agents(
         "data, not an official MLB/MLBPA figure."
     )
     body = (
-        "<p class='lede'>Year groups are a floor, not a projection of "
-        "playing time: they assume a player stays on a major league roster "
-        "every remaining day he possibly can. See the "
-        f"<a href=\"{BASE_PATH}{FREE_AGENTS_PATH}\">full league-wide list</a> "
-        "for every club and every year.</p>"
         "<h2>Free agents now</h2>"
         + _club_fa_table(fa_now, None)
         + f"<h2>Free agents after {next_season}</h2>"
@@ -1510,10 +1506,7 @@ def render(
     {_threshold_sentence()}
     <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
     <br /><br />
-    This figure is an <strong>estimate</strong> reconstructed from public roster
-    transaction records. It is not an official MLB or MLBPA figure — that is
-    not published. See
-    <a href="{BASE_PATH}{EXPLAINER_PATH}">how this figure is calculated</a>.
+    {ESTIMATE_LINE}
     Last updated {html.escape(generated_at[:10])}.
   </p>
 </div>{_site_footer()}{_search_script_tag()}</div>
@@ -2002,15 +1995,13 @@ def _alumni_shell(title: str, desc: str, url: str, header: str, crumbs: str,
   {crumbs}
   <h1>{html.escape(heading)}</h1>
   <p class="subtitle">{sub}</p>
+  {_what_is()}
   {body}
   <p class="foot">
     {_threshold_sentence()}
     <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
     <br /><br />
-    These figures are <strong>estimates</strong> reconstructed from public
-    roster transaction records. They are not official MLB or MLBPA figures —
-    those are not published. See
-    <a href="{BASE_PATH}{EXPLAINER_PATH}">how these figures are calculated</a>.
+    {ESTIMATE_LINE}
     Last updated {html.escape(generated_at[:10])}.
   </p>
 </div>{_site_footer()}{_search_script_tag()}</div>
@@ -2123,8 +2114,7 @@ def _write_alumni_pages(
         desc, url, _site_header("alumni/"),
         _crumbs(("Players", "../"), ("Previous players", None)),
         "Previous players",
-        f"{total:,} players who have come off a 40-man roster, by surname. "
-        "Their service time is final — it stopped when they did.",
+        f"{total:,} players who have come off a 40-man roster, by surname.",
         body, generated_at, graph,
     )
     (ALUMNI_DIR / "index.html").write_text(page, encoding="utf-8")
@@ -2312,14 +2302,18 @@ FOOTER_REQUIRED_LINE = (
 )
 
 
-PAGE_CSS = """/* GENERATED by scripts/write_player_pages.py -- edit that, not this.
+PAGE_CSS = """/* Generated stylesheet for the static pages. Edit the generator, not this file.
 
 Shared by every static page (player, club, 404). It used to be inlined into
 each of the 1,358 player pages, which cost ~1.4 KB apiece and, worse, could
 not be cached: clicking from one player to another re-downloaded the same
 rules every time. As a real file the browser fetches it once. */
 
-.wrap { max-width: 60rem; margin: 0 auto; padding: 24px clamp(16px,4vw,40px) 48px; }
+.wrap { max-width: min(60rem, 100%); margin: 0 auto; padding: 24px clamp(16px,4vw,40px) 48px;
+        overflow-x: clip; }
+.what-is { margin: 0.2rem 0 0.9rem; font-size: 0.85rem; }
+.what-is a { color: var(--accent); text-decoration: none; }
+.what-is a:hover { text-decoration: underline; }
 .wrap--narrow { max-width: 40rem; padding-top: 15vh; }
 .big { font-size: 2.6rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1; }
 .facts { display: flex; flex-wrap: wrap; gap: 1.75rem; margin: 1rem 0 1.4rem;
@@ -2388,7 +2382,7 @@ h1 { letter-spacing: -0.02em; }
 .wrap--narrow p { color: var(--text-secondary); line-height: 1.7; }
 .wrap--narrow a { color: var(--accent); }
 .actions { margin-top: 1.6rem; }
-/* The pre-arbitration salary estimate -- see salary_estimates.py. Same
+/* The pre-arbitration salary estimate. Same
    "note" treatment as .caveat, in the accent wash for an informational
    estimate and the warning wash for "this does not apply to him", so the
    two read as different levels of the same idea rather than unrelated UI. */
@@ -2404,7 +2398,7 @@ h1 { letter-spacing: -0.02em; }
                     padding: 0.5rem 0.6rem; }
 .arb-club-row a { color: var(--text-primary); }
 .arb-table .badge[title] { cursor: help; }
-.pp-section { margin: 1.6rem 0 0; }
+.pp-section { margin: 1.6rem 0 0; max-width: 100%; min-width: 0; }
 .pp-section > h2 { font-size: 1.15rem; margin: 0 0 0.35rem; }
 .pp-section h3 { font-size: 0.95rem; margin: 0.85rem 0 0.15rem; }
 .pp-section summary { display: flex; flex-wrap: wrap; align-items: baseline;
@@ -2416,7 +2410,14 @@ h1 { letter-spacing: -0.02em; }
 .pp-section summary h2 { margin: 0; font-size: 1.15rem; }
 .pp-sum { color: var(--text-muted); font-size: 0.8rem; font-variant-numeric: tabular-nums; }
 .pp-note { color: var(--text-muted); font-size: 0.8rem; line-height: 1.5; margin: 0.4rem 0 0; }
-.tbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 0.35rem; }
+.tbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 0.35rem;
+            max-width: 100%; }
+.wrap > table { display: block; width: 100%; max-width: 100%; overflow-x: auto;
+               -webkit-overflow-scrolling: touch; }
+.wrap > table > thead,
+.wrap > table > tbody,
+.wrap > table > tfoot { display: table; width: max-content; min-width: 100%;
+                        border-collapse: collapse; }
 .pp-tbl { font-variant-numeric: tabular-nums; font-size: 0.82rem; }
 .pp-tbl thead th { position: static; top: auto; cursor: default; background: var(--page-plane);
   backdrop-filter: none; letter-spacing: 0.04em; padding: 0.4rem 0.55rem; }
@@ -2718,11 +2719,12 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
   href="{BASE_PATH}{SUPER_TWO_PAGE_PATH}">Super Two</a> and free
   agency.</p>
 
-  <h2>It is roster time, not playing time</h2>
+  <h2 id="what-is-service-time">It is roster time, not playing time</h2>
   <p>A player earns a day of service for each day he spends on a major
   league <b>active roster or injured list</b>. He does not have to appear in
-  the game. A reliever who never warms up and the starter who throws a
-  shutout earn exactly the same day.</p>
+  the game, and the count is not a measure of performance. A reliever who
+  never warms up and the starter who throws a shutout earn exactly the same
+  day.</p>
   <p>Days on the injured list count, which surprises people — the reasoning
   is that an injured major leaguer is still a major leaguer. Days on the
   <b>bereavement, family medical emergency and paternity lists</b> count too.
@@ -2758,23 +2760,23 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
         further {quarter_days} days adds to what a player will eventually
         draw.</td>
       </tr>
-      <tr>
+      <tr id="super-two">
         <td class="n"><b>{s2_fig}</b></td><td class="n">{s2_days}</td>
-        <td><b>Super Two.</b> A player between two and three years who ranks
+        <td><b><a href="{BASE_PATH}{SUPER_TWO_PAGE_PATH}">Super Two</a>.</b> A player between two and three years who ranks
         in the top {SUPER_TWO_TOP_PERCENTILE}% of that class, with
         {SUPER_TWO_MIN_PRIOR_DAYS}+ days in the preceding season,
         reaches salary arbitration <b>a year early</b> — four trips through it
         instead of three. <b>The cutoff is not fixed</b>: it falls wherever
         the class falls that year.{s2_note}</td>
       </tr>
-      <tr>
+      <tr id="arbitration">
         <td class="n"><b>{_yrs(ARBITRATION_YEARS)}</b></td>
         <td class="n">{_days_for(ARBITRATION_YEARS):,}</td>
         <td><b>Salary arbitration.</b> Until now the club has set his salary
         near the league minimum. From here he can argue for a raise before an
         arbitration panel, and his pay starts to track his performance.</td>
       </tr>
-      <tr>
+      <tr id="free-agency">
         <td class="n"><b>{_yrs(FREE_AGENCY_YEARS)}</b></td>
         <td class="n">{_days_for(FREE_AGENCY_YEARS):,}</td>
         <td><b>Free agency.</b> The big one. He can sign with any club that
@@ -2813,7 +2815,7 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
   <h2>Where these come from</h2>
   <p class="foot-note">This site publishes its own reconstruction of service
   time, so it owes you the provenance of the rules it reconstructs against.
-  The first four thresholds are the ones the pipeline itself computes; the
+  The first four thresholds are the ones this site computes; the
   rest are not, and are sourced here.</p>
   <ul class="sources">
     <li><a href="https://www.mlb.com/glossary/transactions/service-time">MLB
@@ -2825,7 +2827,7 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
     <li><a href="https://www.mlb.com/glossary/transactions/salary-arbitration">MLB
       glossary — Salary arbitration</a> and
       <a href="https://www.mlb.com/glossary/transactions/free-agency">Free
-      agency</a>: the 3.000 and 6.000 thresholds.</li>
+      agency</a>: the {_yrs(ARBITRATION_YEARS)} and {_yrs(FREE_AGENCY_YEARS)} thresholds.</li>
     <li><a href="https://www.mlb.com/glossary/transactions/10-and-5-rights">MLB
       glossary — 10-and-5 rights</a>: ten years, five consecutive with the
       current club, full trade veto.</li>
@@ -2850,12 +2852,8 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
   legal, it is contested, and it is the reason a prospect's call-up date is
   news.</p>
 
-  <h2>What this site publishes</h2>
-  <p>MLB and the players' association keep the official ledger and <b>do not
-  publish it</b>. Every figure on this site is reconstructed from public
-  roster transactions and is an <b>estimate</b>, not an official
-  MLB/MLBPA figure. Where the record cannot see the start of a career, the
-  player's page says so and the number is a floor rather than an estimate.</p>
+  <h2 id="estimates">What this site publishes</h2>
+  <p>{ESTIMATE_LINE}</p>
 
   <p class="actions"><a href="{BASE_PATH}">Look up a player &rarr;</a></p>
 
@@ -3081,32 +3079,8 @@ def render_arbitration_eligible(
   {_crumbs(("Players", BASE_PATH), ("Arbitration eligible", None))}
 
   <h1>Arbitration-eligible players this winter{title_year}</h1>
-  <p class="subtitle">{len(eligible)} players across {club_count} clubs, by club and
-  service time.</p>
-
-  <p class="lede">Related this winter: the
-  <a href="{BASE_PATH}{NON_TENDER_WATCH_PATH}">non-tender watch list</a> and
-  this year's <a href="{BASE_PATH}{FREE_AGENTS_PATH}">free agents</a>.</p>
-
-  <p class="lede">A player becomes eligible for salary arbitration once he
-  reaches {_yrs(ARBITRATION_YEARS)} years of major league service time, and
-  stays eligible until he reaches free agency at {_yrs(FREE_AGENCY_YEARS)}.
-  A smaller group reaches it a year early under the <b>Super Two</b> rule:
-  players with 2.000-3.000 years of service who rank in the top
-  {SUPER_TWO_TOP_PERCENTILE}% of that class, with at least
-  {SUPER_TWO_MIN_PRIOR_DAYS} days of service in the preceding season. See
-  <a href="{BASE_PATH}{SUPER_TWO_PAGE_PATH}">the Super Two page</a> for how
-  that line is projected this year -- as a range, not one number.</p>
-
-  <p class="lede">{s2_count} of the {len(eligible)} players below are
-  included as Super Two rather than by standard service time, using the
-  cutoff this project had computed as of {html.escape((generated_at or "")[:10])}
-  -- that cutoff can still move as more of the season's data settles.</p>
-
-  <p class="lede">The {len(eligible)} players below are rostered players
-  whose service time estimate meets one of those two tests today. Teams
-  still choose whether to tender a contract to each of them; this page
-  reports eligibility, not any club's decision.{extension_sentence}{bubble_phrase}</p>
+  <p class="subtitle">{len(eligible)} rostered players are arbitration-eligible this winter.</p>
+  {_what_is("#arbitration")}
 
   <table class="arb-table"><thead><tr><th>Player</th><th class="n">Service time</th>
   <th>Status</th></tr></thead><tbody>{''.join(rows)}</tbody></table>
@@ -3115,11 +3089,7 @@ def render_arbitration_eligible(
     {_threshold_sentence()}
     <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
     <br /><br />
-    These figures are <strong>estimates</strong> reconstructed from public
-    roster transaction records. They are not official MLB or MLBPA figures —
-    those are not published, and this page does not predict which players a
-    club actually tenders. See
-    <a href="{BASE_PATH}{EXPLAINER_PATH}">how these figures are calculated</a>.
+    {ESTIMATE_LINE}
     Last updated {html.escape(generated_at[:10])}.
   </p>
 </div>{_site_footer()}{_search_script_tag()}</div>
@@ -3216,12 +3186,6 @@ def render_super_two(
     reported = rng.get("reported") if rng else None
 
     history = _s2_history_rows(db)
-    # How far this project's own computed cutoffs have missed the figures
-    # MLB Trade Rumors / the Associated Press eventually published, in the
-    # seasons where both exist -- read off the validator's own deltas rather
-    # than restated by hand, so this sentence cannot drift from what
-    # scripts/validate_super_two.py actually finds.
-    misses = [abs(row["delta"]) for row in history if row["delta"] is not None]
 
     statuses = [_s2_status(p, low_days, high_days) for p in class_players]
     projected_count = statuses.count("Projected Super Two")
@@ -3229,54 +3193,24 @@ def render_super_two(
     below_count = statuses.count("Below the projected range")
 
     s2_min_days = _RULES.require("arbitration.super_two.minimum_prior_season_days")
-    band_size = super_two_cutoff.get("band_size") if super_two_cutoff else None
-    band_phrase = ""
-    if (
-        super_two_cutoff
-        and isinstance(band_size, int)
-        and band_size != super_two_cutoff.get("class_size")
-    ):
-        band_phrase = (
-            f" {band_size} players sat between 2.000 and 3.000 years with at least "
-            f"one day that season; the {s2_min_days}-day rule decides who is ranked, "
-            "and it is applied before the top-percentile cut."
-        )
 
     if super_two_cutoff and is_range:
-        miss_phrase = (
-            f" In the {len(misses)} season{'s' if len(misses) != 1 else ''} with a "
-            f"published figure to check against, this project's computed cutoff has "
-            f"missed it by {min(misses)} to {max(misses)} days."
-            if misses else ""
-        )
         reported_note = ""
         if reported and reported.get("source"):
             reported_note = f" The high end is {html.escape(reported['source'])}."
         cutoff_block = (
-            f"<p class='lede'>After the <b>{season_measured}</b> season, "
-            f"{super_two_cutoff['class_size']} players had between 2.000 and 3.000 "
-            f"years and at least {s2_min_days} days of service that season, and the "
-            f"top {super_two_cutoff['qualifying_count']} of them (the top "
-            f"{SUPER_TWO_TOP_PERCENTILE}%) fell at or above "
-            f"<b>{rng['low']}</b> years of service ({low_days:,} days) -- this "
-            f"project's own computed cutoff. {band_phrase}"
-            f"<strong>Projected cutoff range: {rng['low']} to {rng['high']}</strong> "
-            f"years of service ({low_days:,}-{high_days:,} days).</p>"
-            "<p class='lede'>This is shown as a range, not a single number, "
-            f"because the computed figure is not exact.{miss_phrase}{reported_note} "
-            "The live class below is measured against both ends of the range.</p>"
+            f"<p class='lede'><strong>Projected cutoff range: {rng['low']} to "
+            f"{rng['high']}</strong> years of service "
+            f"({low_days:,}-{high_days:,} days).{reported_note}</p>"
         )
     elif super_two_cutoff:
         cutoff_block = (
-            f"<p class='lede'>After the <b>{season_measured}</b> season, "
-            f"{super_two_cutoff['class_size']} players had between 2.000 and 3.000 "
-            f"years and at least {s2_min_days} days of service that season, and the "
-            f"top {super_two_cutoff['qualifying_count']} of them (the top "
-            f"{SUPER_TWO_TOP_PERCENTILE}%) fell at or above "
-            f"<b>{super_two_cutoff['cutoff']}</b> years of service "
-            f"({super_two_cutoff['cutoff_days']:,} days). <strong>Projected "
-            f"cutoff: {super_two_cutoff['cutoff']}</strong>. That is the line "
-            "this site currently projects the live class against, below.</p>"
+            f"<p class='lede'><strong>Projected cutoff: {super_two_cutoff['cutoff']}</strong> "
+            f"years of service ({super_two_cutoff['cutoff_days']:,} days) after the "
+            f"{season_measured} season. {super_two_cutoff['class_size']} players had "
+            f"2.000-3.000 years and at least {s2_min_days} days that season; the top "
+            f"{super_two_cutoff['qualifying_count']} ({SUPER_TWO_TOP_PERCENTILE}%) "
+            "sit at or above this line.</p>"
         )
     else:
         cutoff_block = (
@@ -3369,42 +3303,19 @@ def render_super_two(
   2.000-3.000 year class: {projected_count} project as Super Two, {bubble_count}
   {'is' if bubble_count == 1 else 'are'} on the bubble, and {below_count} fall
   below the projected range.</p>
-
-  <p class="lede">A player with at least {_RULES.require('arbitration.super_two.service_range_years')[0]:.0f}
-  but fewer than {_RULES.require('arbitration.super_two.service_range_years')[1]:.0f}
-  years of major league service reaches arbitration a year early -- "Super
-  Two" -- if he ranks in the top {SUPER_TWO_TOP_PERCENTILE}% of that class,
-  by total service, and accrued at least {SUPER_TWO_MIN_PRIOR_DAYS} days of
-  service in the preceding season. MLB does not publish the class or the
-  cutoff; this project computes both from its own database of every
-  tracked player's season-by-season service time, which is close to the
-  league-wide population the rule is defined against.</p>
+  {_what_is("#super-two")}
 
   {cutoff_block}
 
-  <p class='lede'>The cutoff is <b>not fixed</b> -- it falls wherever that
-  year's class falls, and it has moved year to year historically. The
-  figures above and below are this project's own estimate, not an
-  official MLB/MLBPA number.</p>
-
   <h2>Who is in the class right now</h2>
-  <p>Every rostered player currently between 2.000 and 3.000 years of
-  service, most service time first. "Projected Super Two" means at or above
-  the high end of the range above; "On the bubble" means inside the range,
-  below the high end. Both also require the player to have reached
-  {SUPER_TWO_MIN_PRIOR_DAYS} days of service in the season being measured --
-  a player can sit above the low end of the range and still read as short
-  of that day floor if he has not reached it yet this season.</p>
 
   <table><thead><tr><th>Player</th><th>Club</th><th class="n">Service time</th>
   <th>Standing</th></tr></thead><tbody>{rows}</tbody></table>
 
   <h2>How this project's cutoffs have checked out</h2>
   <p>Computed cutoffs compared against published figures, where one has
-  been entered (data/reference_super_two.json). A miss here means a
-  per-player service-time defect somewhere in that season's data, not
-  necessarily the class or rounding rule -- see
-  scripts/validate_super_two.py.</p>
+  been entered. A miss here means a per-player service-time defect in that
+  season's data, not necessarily the class or rounding rule.</p>
 
   <table><thead><tr><th>Season</th><th class="n">This site</th>
   <th class="n">Published</th><th>Result</th></tr></thead>
@@ -3414,10 +3325,7 @@ def render_super_two(
     {_threshold_sentence()}
     <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
     <br /><br />
-    These figures are <strong>estimates</strong> reconstructed from public
-    roster transaction records. They are not official MLB or MLBPA figures —
-    those are not published. See
-    <a href="{BASE_PATH}{EXPLAINER_PATH}">how these figures are calculated</a>.
+    {ESTIMATE_LINE}
     Last updated {html.escape(generated_at[:10])}.
   </p>
 </div>{_site_footer()}{_search_script_tag()}</div>
@@ -3641,20 +3549,8 @@ def render_non_tender_watch(
   {_crumbs(("Players", BASE_PATH), ("Non-tender watch", None))}
 
   <h1>Non-tender watch{season_phrase}</h1>
-  <p class="subtitle">Clubs must tender or release every arbitration-eligible
-  player by the <b>{deadline}</b> non-tender deadline. {len(watch)} players
-  across {club_count} clubs meet this page's watch rule.</p>
-
-  <p class="lede"><b>The rule:</b> a player makes this list if he is
-  arbitration-eligible and either already in his final arbitration year
-  before free agency, or played in fewer than {NON_TENDER_LOW_GAMES_THRESHOLD}
-  games last season -- the two clearest service-time-and-playing-time signals
-  this data can support. This is not a probability and not a prediction of
-  what any club will do; it is the rule above, applied.</p>
-
-  <p class="lede">See the full <a href="{BASE_PATH}{ARBITRATION_ELIGIBLE_PATH}">
-  arbitration-eligible list</a> or this winter's
-  <a href="{BASE_PATH}{FREE_AGENTS_PATH}">free agents</a>.</p>
+  <p class="subtitle">{len(watch)} players meet this winter's non-tender watch.</p>
+  {_what_is("#arbitration")}
 
   <table class="arb-table"><thead><tr><th>Player</th><th class="n">Service time</th>
   <th>Why he's listed</th></tr></thead><tbody>{rows}</tbody></table>
@@ -3664,11 +3560,7 @@ def render_non_tender_watch(
     <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
     Players near a threshold are estimates.
     <br /><br />
-    These figures are <strong>estimates</strong> reconstructed from public
-    roster transaction records. They are not official MLB or MLBPA figures —
-    those are not published, and this page does not predict which players a
-    club actually non-tenders. See
-    <a href="{BASE_PATH}{EXPLAINER_PATH}">how these figures are calculated</a>.
+    {ESTIMATE_LINE}
     Last updated {html.escape((generated_at or "")[:10])}.
   </p>
 </div>{_site_footer()}{_search_script_tag()}</div>
@@ -3758,18 +3650,8 @@ def render_free_agents(
   {_crumbs(("Players", BASE_PATH), ("Free agents", None))}
 
   <h1>MLB free agents{season_phrase}</h1>
-  <p class="subtitle">{len(fa_now)} players across {club_count} clubs are
-  free-agent eligible now. Every other rostered player is grouped below by
-  the year he is projected to reach free agency.</p>
-
-  <p class="lede">A player reaches free agency at {_yrs(FREE_AGENCY_YEARS)}
-  years of major league service. The year groups below are a floor, not a
-  projection of playing time: they assume a player stays on a major league
-  roster every remaining day he possibly can, so an injury or a demotion can
-  only push a player's year later, never earlier. See
-  <a href="{BASE_PATH}{ARBITRATION_ELIGIBLE_PATH}">arbitration-eligible
-  players</a> or the <a href="{BASE_PATH}{NON_TENDER_WATCH_PATH}">non-tender
-  watch list</a> for who reaches the open market sooner by another route.</p>
+  <p class="subtitle">{len(fa_now)} players are free-agent eligible now, and everyone else is grouped by the year they could reach it.</p>
+  {_what_is("#free-agency")}
 
   <h2>Free agents now{season_phrase}</h2>
   <table class="arb-table"><thead><tr><th>Player</th><th>Club</th>
@@ -3782,10 +3664,7 @@ def render_free_agents(
     <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
     Players near a threshold are estimates.
     <br /><br />
-    These figures are <strong>estimates</strong> reconstructed from public
-    roster transaction records. They are not official MLB or MLBPA figures —
-    those are not published. See
-    <a href="{BASE_PATH}{EXPLAINER_PATH}">how these figures are calculated</a>.
+    {ESTIMATE_LINE}
     Last updated {html.escape((generated_at or "")[:10])}.
   </p>
 </div>{_site_footer()}{_search_script_tag()}</div>
@@ -3811,7 +3690,7 @@ def _write_404() -> None:
 {HEAD_TAGS}
 <title>Page not found | Big League Service Time Tracker</title>
 <meta name="robots" content="noindex" />
-<!-- GENERATED by scripts/write_player_pages.py -- edit that, not this.
+<!-- Generated error page. Edit the generator, not this file.
      Every URL here is site-absolute on purpose: this file is served for bad
      paths under /p/ too, where a relative "styles.css" would resolve against
      /p/ and 404 in turn, leaving an unstyled error page. -->

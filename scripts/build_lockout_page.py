@@ -802,6 +802,7 @@ def render(data: dict, now: dt.datetime) -> str:
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="styles.css" />
 <link rel="stylesheet" href="taxes.css" />
+<link rel="stylesheet" href="lockout.css" />
 </head>
 <body>
   <div class="viz-root">
@@ -1134,6 +1135,7 @@ def render_salary_cap(data: dict) -> str:
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="styles.css" />
 <link rel="stylesheet" href="taxes.css" />
+<link rel="stylesheet" href="lockout.css" />
 </head>
 <body>
   <div class="viz-root">

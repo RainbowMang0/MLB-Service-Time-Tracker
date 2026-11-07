@@ -51,10 +51,11 @@ rather than re-deriving it.
 
 WHAT IS DELIBERATELY NOT DONE
 ==============================
-* No dollar figure for any specific player's actual salary -- that remains
-  blocked for the reason docs/app.js already states in the stats tab (no
-  permitted source). This module estimates only the LEAGUE MINIMUM for a
-  category of player, which is a public CBA figure, not anyone's earnings.
+* No dollar figure for any specific player's actual salary. There is no
+  free, permitted, machine-readable source for one, which is why the stats
+  tab does not discuss earnings. This module estimates only the LEAGUE
+  MINIMUM for a category of player, which is a public CBA figure, not
+  anyone's earnings.
 * No network call. Both signals read files already on disk -- the cached
   transactions written by update_service_time.py's own daily job, and the
   hand-maintained extension list. This can run as `--recompute-derived`

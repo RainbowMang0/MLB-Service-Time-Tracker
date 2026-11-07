@@ -10,6 +10,8 @@
 html, body {
   margin: 0;
   padding: 0;
+  max-width: 100%;
+  overflow-x: clip;
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
@@ -571,6 +573,7 @@ thead th:focus-visible {
   border: 1px solid var(--glass-border);
   border-radius: 12px;
   overflow: auto;
+  max-width: 100%;
   background: var(--surface-1);
   box-shadow: 0 8px 34px var(--glass-shadow);
 }
@@ -973,8 +976,7 @@ body.profile-open { overflow: hidden; }
 }
 .profile-loading { background: var(--accent-wash); }
 
-/* The pre-arbitration salary estimate -- see scripts/salary_estimates.py and
-   salaryBlock() in app.js. Same "note" treatment as .profile-gap: the accent
+/* The pre-arbitration salary estimate. Same "note" treatment as .profile-gap: the accent
    wash for an informational estimate, the warning wash for "this does not
    apply to him", so the two read as different levels of one idea. */
 .profile-salary {
@@ -1175,8 +1177,7 @@ body.profile-open { overflow: hidden; }
 
 /* --- site navigation -------------------------------------------------------
    One strip across every page, hand-written and generated alike. The markup
-   is built by _site_nav() in write_player_pages.py for the four generated
-   templates and hand-copied into the five static pages; a test asserts the
+   is shared by the generated templates and the static pages; a test asserts the
    destination set matches, because this is the same "lands in N places and
    the Nth is the trap" shape as the analytics token.
 
@@ -1397,7 +1398,7 @@ body.profile-open { overflow: hidden; }
 summary.icon-btn::-webkit-details-marker { display: none; }
 
 /* Primary tabs. */
-.tabs { display: flex; gap: 2px; max-width: 84rem; margin: 0 auto; padding: 0 clamp(16px,4vw,40px); }
+.tabs { display: flex; gap: 2px; max-width: 84rem; margin: 0 auto; padding: 0 clamp(16px,4vw,40px); overflow-x: auto; }
 .tabs a { flex: 0 0 auto; min-height: 44px; display: inline-flex; align-items: center; gap: 0; padding: 0 12px; color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 550; border-bottom: 2px solid transparent; white-space: nowrap; }
 .tabs a:hover { color: var(--text-primary); }
 .tabs a[aria-current="page"] { color: var(--text-primary); border-bottom-color: var(--accent); }
@@ -1429,9 +1430,16 @@ summary.icon-btn::-webkit-details-marker { display: none; }
 
 /* Phone. */
 .show-phone { display: none; }
+.home-updated {
+  margin: -2px clamp(16px, 4vw, 40px) 14px;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
 @media (max-width: 640px) {
   .show-phone { display: inline-flex; }
   .hide-phone { display: none !important; }
+  .site-top.search-open .top-search.hide-phone { display: flex !important; min-width: 0; }
+  .site-top.search-open .top-search input { max-width: none; }
   .site-top-row { gap: 8px; padding: 8px 12px; }
   .tabs { padding: 0 6px; justify-content: space-between; }
   .tabs a { padding: 0 8px; font-size: 0.88rem; }

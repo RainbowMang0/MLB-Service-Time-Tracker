@@ -13,15 +13,14 @@
   // path. The fallback below keeps older deployments working.
   const DATA_URL = "data/index.json";
   const FULL_DATA_URL = "data/service_time.json";
-  // Per-player season detail, sharded by `id % 64` (see write_profiles() in
-  // scripts/update_service_time.py). Opening a profile fetches one ~12 KB
+  // Per-player season detail, sharded by `id % 64`. Opening a profile fetches one ~12 KB
   // file instead of the ~0.9 MB the whole breakdown would cost, so the table
   // load is unaffected for the visitors who never open one.
   const PROFILE_SHARDS = 64;
   const profileShardCache = new Map();
-  // The league-minimum salary ESTIMATE for clearly pre-arbitration players --
-  // see scripts/salary_estimates.py for the gating (pre-arb only, no known or
-  // detected contract extension). One small file, fetched once, lazily: most
+  // The league-minimum salary ESTIMATE for clearly pre-arbitration players.
+  // Shown only when he is clearly pre-arbitration and no contract extension
+  // is on file. One small file, fetched once, lazily: most
   // visitors never open a profile, so this should not cost anything on the
   // table's critical path either.
   const SALARY_URL = "data/salary_estimates.json";
@@ -36,7 +35,7 @@
   // --- CBA thresholds -----------------------------------------------------
   // These used to be literals here: 172, and 3/6 years inline at each call
   // site. That was a second implementation of the CBA rules, in a second
-  // language, which had to be edited in step with scripts/service_time.py or
+  // language, which had to be edited in step with the service-time rules or
   // the table and the static pages would disagree with each other.
   //
   // They now arrive in the `rules` block of index.json, stamped there by the
@@ -64,7 +63,7 @@
     if (!r || typeof r.full_year_days !== "number") {
       throw new Error(
         "This data file carries no CBA rules block. The data files were built " +
-          "by a pipeline older than this page; re-run the daily update."
+          "by an older data build; re-run the daily update."
       );
     }
     FULL_YEAR_DAYS = r.full_year_days;
@@ -149,7 +148,7 @@
   // hash routing is invisible to search engines, which is why those pages
   // exist at all. Clicking still opens the overlay; the link is the
   // fallback, and middle-click or "open in new tab" now work too.
-  // Must stay byte-for-byte in step with slug() in scripts/write_player_pages.py:
+  // Must stay byte-for-byte in step with the page generator's slug():
   // this builds the href, that builds the file, and a disagreement is a 404.
   // Accents are transliterated, not dropped -- NFKD splits an accented letter
   // into letter + combining mark, so removing the marks leaves ASCII behind.
@@ -170,7 +169,7 @@
       .replace(/^-|-$/g, "") || "player";
 
   // Which players HAVE a static page is decided by _should_publish() in
-  // scripts/write_player_pages.py, and the index ships the answer as a flag
+  // the page generator, and the index ships the answer as a flag
   // rather than letting this file re-derive it. The rule now depends on a
   // player's credited-season count, which the compact index deliberately does
   // not carry -- and a second copy of the rule in JS is exactly the drift the
@@ -183,7 +182,7 @@
 
   // Set from the payload. Super Two is no longer guessed at in the browser:
   // it depends on where a player ranks in the league-wide 2-3 year class, so
-  // the pipeline computes it (see scripts/super_two.py) and ships a flag.
+  // the daily job computes it and ships a flag.
   let superTwoCutoff = null;
   // The PUBLISHED cutoffs, for describing how the real boundary moves.
   // Null on any payload without them, and superTwoSpread() drops the claim.
@@ -243,8 +242,8 @@
     generated_at: null,
     source: "EMBEDDED FALLBACK SAMPLE (fetch of data/service_time.json failed)",
     disclaimer:
-      "Could not load data/service_time.json, so this page is showing a small embedded sample instead. " +
-      "Service time figures are always estimates derived from public transaction records, never official figures.",
+      "Could not load the published data, so this page is showing a small embedded sample instead. " +
+      "Service time figures are estimates from public data, not official MLB numbers.",
     // This sample is the last resort, so it carries its own thresholds: it has
     // to render without a data file, and applyRules() now runs on every path.
     // Hardcoding them here is honest in a way it would not be anywhere else --
@@ -813,10 +812,24 @@
     // club" box both just link to "?q=<term>"; this is the one line that
     // turns that into an actual filtered table on arrival, for a visitor
     // who lands here from another page's header instead of typing here.
+    const params = new URLSearchParams(location.search);
+    if (!params.has("q")) return;
+    const q = params.get("q") || "";
     const input = el("search-input");
-    if (!input) return;
-    const q = new URLSearchParams(location.search).get("q");
-    if (q) input.value = q;
+    if (q && input) input.value = q;
+    // An empty ?q= is the phone icon on a page that still links here.
+    // Open the header field instead of jumping down to the filters.
+    if (!q) {
+      const top = document.querySelector(".site-top");
+      const headerInput = document.querySelector('.top-search input[name="q"]');
+      if (top && headerInput) {
+        top.classList.add("search-open");
+        headerInput.focus({ preventScroll: true });
+      } else if (input) {
+        input.focus({ preventScroll: false });
+      }
+    }
+    history.replaceState(null, "", location.pathname + location.hash);
   }
 
   function wireFilters() {
@@ -1126,13 +1139,7 @@
 
     return `
       ${tables}
-      <p class="profile-foot">
-        Major league seasons only, from public data. One line per season.
-        <b>No WAR and no salary.</b> WAR is not published by MLB's API — the
-        public versions are Baseball-Reference's and FanGraphs' own
-        calculations, and neither permits automated extraction. Earnings need
-        salary data this project has no permitted source for.
-      </p>`;
+      <p class="profile-foot">Major league seasons only, from public data.</p>`;
   }
 
   /**
@@ -1140,12 +1147,25 @@
    *
    * `salary` is the fetched data/salary_estimates.json, or null if it has
    * not loaded (or failed to). Everything here is a lookup against what the
-   * pipeline already decided server-side (scripts/salary_estimates.py) --
+   * daily job already decided server-side --
    * this never re-derives "clearly pre-arbitration" or re-scans transaction
    * text, which would be a second copy of that logic in a second language.
    * Returns "" (no block) for anyone not in the payload at all, which is the
    * correct rendering of "the rule only applies to clearly pre-arb players".
    */
+  // A hand-written extension note sometimes cites an outside service-time
+  // figure. That citation stays in the data file. It does not go on the page.
+  function noteForPage(note) {
+    if (!note) return "";
+    return String(note)
+      .replace(
+        /\s*\b(?:FanGraphs|Baseball-Reference|Baseball Reference)\b(?:\d+(?:\.\d+)?|[^.])*?\.\s*/gi,
+        " "
+      )
+      .replace(/\s{2,}/g, " ")
+      .trim();
+  }
+
   function salaryBlock(profile, salary) {
     if (!salary || profile.id == null) return "";
     const ext = salary.extensions && salary.extensions[String(profile.id)];
@@ -1154,7 +1174,7 @@
         <p class="profile-salary profile-salary-extension">
           <strong>Salary:</strong> ${esc(profile.name)} has a contract or
           extension on file beyond the league minimum, so no salary estimate
-          is shown for him. ${esc(ext.note || "")}
+          is shown for him. ${esc(noteForPage(ext.note || ""))}
         </p>`;
     }
     const ids = salary.estimate_ids || [];
@@ -1167,8 +1187,7 @@
           pay is most likely the ${esc(salary.minimum_year)} MLB minimum of
           <b>$${Number(salary.minimum).toLocaleString("en-US")}</b>. This is
           the league minimum from the Basic Agreement, not a confirmed figure
-          for this player — this project has no permitted source for actual
-          salaries, and a handful of pre-arbitration players sign extensions
+          for this player. A handful of pre-arbitration players sign extensions
           this page could not detect. If one exists for him, his real pay is
           higher.
         </p>`;
@@ -1516,9 +1535,9 @@
     if (updatedLine) {
       if (data.generated_at) {
         const d = new Date(data.generated_at);
-        updatedLine.textContent = `Updated ${d.toLocaleDateString("en-US", {
+        updatedLine.textContent = `Last updated ${d.toLocaleDateString("en-US", {
           timeZone: "America/Chicago",
-          month: "short",
+          month: "long",
           day: "numeric",
           year: "numeric",
         })}`;

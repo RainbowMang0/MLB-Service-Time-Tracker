@@ -1955,7 +1955,12 @@ def test_nothing_published_claims_a_transaction_coverage_cutoff_year():
     )
     check(
         "the two published files describe the data identically",
-        body.count("figure is a floor rather than an estimate") == 1,
+        src.count("Service time figures are estimates from public data,") >= 2
+        and src.count("not official MLB numbers.") >= 2,
+    )
+    check(
+        "the database disclaimer no longer explains the floor",
+        "figure is a floor rather than an estimate" not in body,
     )
 
 
@@ -2208,6 +2213,7 @@ def test_salary_block_wording_matches_estimate_vs_extension():
     check("the estimate block appears", "salary-note-estimate" in page)
     check("...names the league minimum in dollars", "$780,000" in page or "$" in page)
     check("...calls it an estimate, not a confirmed figure", "estimate" in page.lower())
+    check("...and does not discuss a permitted source", "permitted source" not in page.lower())
     check("...the extension block does not also appear", "salary-note-extension" not in page)
 
     extended = dict(pre_arb, id=671739, name="Michael Harris II")
@@ -2215,6 +2221,11 @@ def test_salary_block_wording_matches_estimate_vs_extension():
     check("the extension block appears for a known-extension id", "salary-note-extension" in ext_page)
     check("...and the estimate block does not", "salary-note-estimate" not in ext_page)
     check("...no dollar figure is shown for him", "$780,000" not in ext_page)
+
+    sears = dict(pre_arb, id=676664, name="JP Sears")
+    sears_page = w.render(sears, {}, "2026-10-29T00:00:00+00:00")
+    check("an extension note is shown for JP Sears", "salary-note-extension" in sears_page)
+    check("...without naming an outside stat site", "FanGraphs" not in sears_page and "Baseball-Reference" not in sears_page)
 
 
 def test_the_profile_overlay_fetches_and_renders_the_same_salary_data():
@@ -2224,7 +2235,7 @@ def test_the_profile_overlay_fetches_and_renders_the_same_salary_data():
     SAME published docs/data/salary_estimates.json rather than each
     re-deriving "clearly pre-arbitration" in a second language. This pins
     the wiring on the JS side the way test_the_stats_tab_states_that_war_and_
-    salary_are_absent() pins the neighbouring "no salary data" sentence.
+    salary_are_absent() pins the stats-tab note.
     """
     ROOT = pathlib.Path(__file__).resolve().parents[1]
     app = (ROOT / "docs" / "app.js").read_text()
@@ -2493,19 +2504,31 @@ def test_the_stats_tab_states_that_war_and_salary_are_absent():
     Baseball-Reference's and FanGraphs' own calculations, and neither site
     permits automated extraction, which is the same line this project already
     drew over B-R's service-time figures. Salary has no permitted source
-    either.
+    either. That explanation stays in the comment above the stats tab.
 
-    A stats table that simply lacks those columns would read as an oversight.
-    Saying so is the difference between a gap and a silence, and it is the
-    same discipline as the panel that explains why the contract tool has no
-    decline branch.
+    The note a reader sees is one line. The page does not name those sites,
+    and it does not spell out sourcing or permission. A WAR column must not
+    quietly appear either.
     """
     import re
 
     ROOT = pathlib.Path(__file__).resolve().parents[1]
     app = (ROOT / "docs" / "app.js").read_text()
-    for phrase in ["No WAR and no salary", "Baseball-Reference", "FanGraphs"]:
-        check(f"the stats tab names {phrase!r}", phrase in app)
+    panel = app.split("function renderStatsPanel", 1)[1].split("function noteForPage", 1)[0]
+    visible = re.sub(r"//.*?$", "", panel, flags=re.M)
+    check(
+        "the stats tab says only the public-data line",
+        "Major league seasons only, from public data." in visible,
+    )
+    for phrase in [
+        "No WAR and no salary",
+        "One line per season",
+        "Baseball-Reference",
+        "FanGraphs",
+        "automated extraction",
+        "permitted source",
+    ]:
+        check(f"the stats tab does not say {phrase!r}", phrase not in visible)
 
     # And it must not quietly grow a WAR column.
     check("no WAR column is defined",
@@ -3009,9 +3032,11 @@ def test_non_tender_watch_selection_states_its_rule_and_picks_expected_players()
 
     html_out = wpp.render_non_tender_watch(watch, "2026-11-04T00:00:00+00:00", 2027)
     normalized = " ".join(html_out.split())
-    check("the page states the rule in one plain sentence",
-          "already in his final arbitration year before free agency, or played "
-          "in fewer than 20 games last season" in normalized)
+    check("the page states who it lists and points at the explainer",
+          "meet this winter's non-tender watch" in normalized
+          and "service-time.html#arbitration" in normalized)
+    check("a listed player's reason still reaches the page",
+          "final arbitration year before free agency" in normalized)
     check("a listed player's name reaches the page", "Final Year Only" in html_out)
     check("an excluded player's name does not", "Neither Signal" not in html_out)
 
@@ -5304,23 +5329,18 @@ def test_the_homepage_puts_numbers_before_the_long_explanation():
     index_html = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
 
     check("the homepage carries a one-line lede", '<p class="home-lede">' in index_html)
+    check("the homepage links to the service-time explainer",
+          'href="service-time.html"' in index_html)
+    check("the long homepage explainer is gone",
+          "intro-details" not in index_html and "More about service time" not in index_html)
 
     lede_pos = index_html.index('class="home-lede"')
     tiles_pos = index_html.index('class="stat-tiles"')
     controls_pos = index_html.index('class="controls"')
     table_pos = index_html.index('class="table-wrap"')
-    intro_details_pos = index_html.index('class="intro-details"')
     check(
-        "the lede, tiles and search all come before the long explanation",
-        lede_pos < tiles_pos < controls_pos < intro_details_pos,
-    )
-    check(
-        "the table itself also comes before the long explanation",
-        table_pos < intro_details_pos,
-    )
-    check(
-        "the long explanation is collapsed behind a <details>",
-        "<details class=\"intro-details\">" in index_html,
+        "the lede comes before the tiles, search and table",
+        lede_pos < tiles_pos < controls_pos < table_pos,
     )
 
     banned = "almost nothing to do with how well he plays"
@@ -5333,36 +5353,30 @@ def test_the_homepage_puts_numbers_before_the_long_explanation():
 
 def test_the_five_pages_carry_an_original_intro():
     """
-    Homepage, /t/, /service-time.html, /arbitration-eligible.html and
-    /super-two.html each need a short plain-language intro explaining what
-    service time is and why it matters, per the task. Pinned by a phrase
-    from each one's actual prose rather than just "length > 0", so a future
-    edit that deletes the intro (but leaves other text) is still caught.
+    The long "what is service time" essays used to open the homepage, the
+    club directory, the arbitration list and the Super Two page. Those
+    concepts now live once, on service-time.html. Each other page keeps one
+    sentence about what it lists and a link to that explainer.
     """
     ROOT = pathlib.Path(__file__).resolve().parents[1]
     index_html = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
     check(
-        "homepage explains what service time is and why it matters",
-        "clock that governs a player" in index_html
-        and "salary arbitration" in index_html
-        and "free agent" in index_html,
+        "homepage says what it lists and links to the explainer",
+        "Every MLB player's service time" in index_html
+        and 'href="service-time.html"' in index_html,
     )
     check(
-        "homepage explains how to use the table",
-        "Search or filter the table" in index_html,
+        "homepage no longer opens with the long essay",
+        "clock that governs a player" not in index_html,
     )
 
     import write_player_pages as w
-    club_index = w.render_club_index({"Atlanta Braves": []}, "2026-01-01")
-    club_index_normalized = " ".join(club_index.split())
+    club_index = " ".join(w.render_club_index({"Atlanta Braves": []}, "2026-01-01").split())
     check(
-        "/t/ explains what service time is and why it matters",
-        "A player earns a day of major league" in club_index_normalized
-        and "salary arbitration" in club_index_normalized,
-    )
-    check(
-        "/t/ explains how to use the directory",
-        "Click a club below" in club_index_normalized,
+        "/t/ says what it lists and links to the explainer",
+        "Every 40-man roster" in club_index
+        and "service-time.html" in club_index
+        and "how well he plays" not in club_index,
     )
 
     explainer = w.render_explainer("2026-01-01")
@@ -5371,18 +5385,27 @@ def test_the_five_pages_carry_an_original_intro():
         "It decides when he reaches" in explainer
         and "milestones below are the ones that matter most" not in explainer,
     )
-
-    arb = w.render_arbitration_eligible([], "2026-01-01", None, {})
     check(
-        "arbitration-eligible.html explains the rule and how the page is read",
-        "becomes eligible for salary arbitration" in arb
-        and "reports eligibility, not any club" in arb,
+        "the explainer has a section for each concept",
+        all(anchor in explainer for anchor in (
+            'id="what-is-service-time"', 'id="arbitration"',
+            'id="free-agency"', 'id="super-two"',
+        )),
+    )
+
+    arb = " ".join(w.render_arbitration_eligible([], "2026-01-01", None, {}).split())
+    check(
+        "arbitration-eligible.html lists the players and links to the explainer",
+        "arbitration-eligible this winter" in arb
+        and "service-time.html#arbitration" in arb
+        and "becomes eligible for salary arbitration" not in arb,
     )
 
     s2 = w.render_super_two([], {}, "2026-01-01", None)
     check(
-        "super-two.html explains the rule and how the page is read",
-        "reaches arbitration a year early" in s2 and "Who is in the class right now" in s2,
+        "super-two.html lists the class and links to the explainer",
+        "Who is in the class right now" in s2
+        and "service-time.html#super-two" in s2,
     )
 
 
