@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-06",
+ "generated_at": "2026-11-07",
  "source": "Measured from this project's own database: every player-season transition where the player was in the majors in the first season.",
  "method": "For each player-season in which a player accrued at least one day, record what he accrued the FOLLOWING season. Banded by cumulative credited service at the start of that following season. Excludes prorated seasons, the current unfinished season, and seasons credited by debut presumption rather than transactions.",
  "caveats": [
@@ -8,92 +8,92 @@
   "Bands with a small sample are marked enough_data: false and should not be presented as a distribution."
  ],
  "full_year_days": 172,
- "transitions": 16273,
+ "transitions": 16237,
  "min_band_sample": 100,
  "bands": [
   {
    "band": 0,
    "label": "0.000-1.000",
-   "sample": 6109,
+   "sample": 6227,
    "enough_data": true,
-   "p20": 33,
-   "p50": 123,
+   "p20": 31,
+   "p50": 116,
    "p80": 172,
-   "mean": 107.0,
-   "share_full_year": 0.373,
-   "share_zero": 0.071
+   "mean": 104.3,
+   "share_full_year": 0.347,
+   "share_zero": 0.075
   },
   {
    "band": 1,
    "label": "1.000-2.000",
-   "sample": 2164,
+   "sample": 2184,
    "enough_data": true,
-   "p20": 60,
+   "p20": 50,
    "p50": 172,
    "p80": 172,
-   "mean": 127.8,
-   "share_full_year": 0.564,
-   "share_zero": 0.063
+   "mean": 124.1,
+   "share_full_year": 0.525,
+   "share_zero": 0.067
   },
   {
    "band": 2,
    "label": "2.000-3.000",
-   "sample": 1681,
+   "sample": 1669,
    "enough_data": true,
-   "p20": 86,
+   "p20": 78,
    "p50": 172,
    "p80": 172,
-   "mean": 136.7,
-   "share_full_year": 0.64,
-   "share_zero": 0.055
+   "mean": 134.2,
+   "share_full_year": 0.596,
+   "share_zero": 0.052
   },
   {
    "band": 3,
    "label": "3.000-4.000",
-   "sample": 1327,
+   "sample": 1317,
    "enough_data": true,
-   "p20": 106,
+   "p20": 96,
    "p50": 172,
    "p80": 172,
-   "mean": 143.1,
-   "share_full_year": 0.705,
-   "share_zero": 0.04
+   "mean": 139.9,
+   "share_full_year": 0.654,
+   "share_zero": 0.038
   },
   {
    "band": 4,
    "label": "4.000-5.000",
-   "sample": 1326,
+   "sample": 1311,
    "enough_data": true,
-   "p20": 147,
+   "p20": 122,
    "p50": 172,
    "p80": 172,
-   "mean": 149.6,
-   "share_full_year": 0.768,
-   "share_zero": 0.036
+   "mean": 145.8,
+   "share_full_year": 0.697,
+   "share_zero": 0.034
   },
   {
    "band": 5,
    "label": "5.000-6.000",
-   "sample": 1040,
+   "sample": 1048,
    "enough_data": true,
-   "p20": 172,
+   "p20": 151,
    "p50": 172,
    "p80": 172,
-   "mean": 155.4,
-   "share_full_year": 0.81,
-   "share_zero": 0.024
+   "mean": 151.6,
+   "share_full_year": 0.761,
+   "share_zero": 0.028
   },
   {
    "band": 6,
    "label": "6.000+",
-   "sample": 2626,
+   "sample": 2481,
    "enough_data": true,
-   "p20": 172,
+   "p20": 147,
    "p50": 172,
    "p80": 172,
-   "mean": 155.9,
-   "share_full_year": 0.815,
-   "share_zero": 0.018
+   "mean": 152.3,
+   "share_full_year": 0.755,
+   "share_zero": 0.017
   }
  ]
 }

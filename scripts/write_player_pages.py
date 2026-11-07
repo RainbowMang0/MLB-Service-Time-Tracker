@@ -545,6 +545,19 @@ def _milestone_sentence(player: dict) -> str:
         return f"{service} years of service — already eligible for free agency."
 
     fa_days = _days_for(FREE_AGENCY_YEARS)
+    if (
+        player.get("contract_extension")
+        and player.get("on_40_man")
+        and player.get("arbitration_eligible")
+    ):
+        seasons = _min_seasons_to(fa_days - days_total)
+        return (
+            f"{service} years of service. A reported contract extension is on file, "
+            f"so this winter's arbitration list leaves him off. At least {seasons} "
+            f"more full season{'' if seasons == 1 else 's'} on an active roster or "
+            f"injured list to reach free agency ({_yrs(FREE_AGENCY_YEARS)})."
+        )
+
     if player.get("arbitration_eligible"):
         seasons = _min_seasons_to(fa_days - days_total)
         if player.get("super_two_candidate"):
@@ -2544,11 +2557,16 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
         s2_fig = html.escape(str(super_two_cutoff["cutoff"]))
         s2_days = f"{int(super_two_cutoff.get('cutoff_days') or 0):,}"
         s2_season = super_two_cutoff.get("season")
-        s2_note = (
-            f" After the {s2_season} season the line fell at <b>{s2_fig}</b>, "
-            "which is what this site currently projects against."
-            if s2_season else ""
-        )
+        if super_two_cutoff.get("official") and s2_season:
+            s2_note = (
+                f" After the {s2_season} season the official line is <b>{s2_fig}</b>."
+            )
+        else:
+            s2_note = (
+                f" After the {s2_season} season the line fell at <b>{s2_fig}</b>, "
+                "which is what this site currently projects against."
+                if s2_season else ""
+            )
     else:
         s2_fig, s2_days, s2_note = "varies", "—", ""
 
@@ -2885,6 +2903,10 @@ def select_arbitration_eligible(players: list[dict]) -> list[dict]:
     for p in players:
         if not p.get("on_40_man"):
             continue
+        # A reported extension buys out the hearing. Service time can still
+        # say he has crossed 3.000; he does not belong on this winter's list.
+        if p.get("contract_extension"):
+            continue
         days = int(p.get("service_days_total") or 0)
         if days >= fa_days:
             continue
@@ -2966,7 +2988,10 @@ def render_arbitration_eligible(
 
     See select_arbitration_eligible() for exactly who qualifies and why a
     departed player never appears here even if his stale flag says so.
+    A player with contract_extension set is left off even if the caller
+    passed him in: an extension buys out the hearing.
     """
+    eligible = [p for p in eligible if not p.get("contract_extension")]
     url = f"{SITE_URL}/{ARBITRATION_ELIGIBLE_PATH}"
     gen_year = int((generated_at or "")[:4]) if generated_at else None
     next_season = (
@@ -3079,7 +3104,12 @@ def render_arbitration_eligible(
 """
 
 
-def _s2_status(player: dict, low_days: int | None, high_days: int | None = None) -> str:
+def _s2_status(
+    player: dict,
+    low_days: int | None,
+    high_days: int | None = None,
+    official: bool = False,
+) -> str:
     """Plain-English standing of one player relative to the projected range.
 
     low_days/high_days come from super_two_cutoff["range"] (see
@@ -3097,7 +3127,13 @@ def _s2_status(player: dict, low_days: int | None, high_days: int | None = None)
     high_days = low_days if high_days is None else high_days
     days = int(player.get("service_days_total") or 0)
     if player.get("super_two_candidate"):
+        if official:
+            return "Super Two"
         return "Projected Super Two" if days >= high_days else "On the bubble"
+    if official:
+        if days >= low_days:
+            return "At or above the cutoff, short of the season's day floor"
+        return "Below the cutoff"
     if days == low_days:
         return "Right at the projected low end, short of the season's day floor"
     if days > low_days:
@@ -3166,17 +3202,14 @@ def render_super_two(
     reported = rng.get("reported") if rng else None
 
     history = _s2_history_rows(db)
-    # How far this project's own computed cutoffs have missed the figures
-    # MLB Trade Rumors / the Associated Press eventually published, in the
-    # seasons where both exist -- read off the validator's own deltas rather
-    # than restated by hand, so this sentence cannot drift from what
-    # scripts/validate_super_two.py actually finds.
-    misses = [abs(row["delta"]) for row in history if row["delta"] is not None]
 
-    statuses = [_s2_status(p, low_days, high_days) for p in class_players]
-    projected_count = statuses.count("Projected Super Two")
+    official_line = bool(super_two_cutoff and super_two_cutoff.get("official"))
+    statuses = [_s2_status(p, low_days, high_days, official=official_line) for p in class_players]
+    projected_count = sum(1 for s in statuses if s in ("Projected Super Two", "Super Two"))
     bubble_count = statuses.count("On the bubble")
-    below_count = statuses.count("Below the projected range")
+    below_count = sum(1 for s in statuses if s in ("Below the projected range", "Below the cutoff"))
+
+    s2_min_days = _RULES.require("arbitration.super_two.minimum_prior_season_days")
 
     if super_two_cutoff and is_range:
         reported_note = ""
@@ -3187,16 +3220,21 @@ def render_super_two(
             f"{rng['high']}</strong> years of service "
             f"({low_days:,}-{high_days:,} days).{reported_note}</p>"
         )
+    elif super_two_cutoff and super_two_cutoff.get("official"):
+        cutoff_block = (
+            f"<p class='lede'><strong>Official cutoff: {super_two_cutoff['cutoff']}</strong> "
+            f"years of service ({super_two_cutoff['cutoff_days']:,} days) after the "
+            f"{season_measured} season. A player at or above that line, with at least "
+            f"{s2_min_days} days of service in {season_measured}, is Super Two.</p>"
+        )
     elif super_two_cutoff:
         cutoff_block = (
-            f"<p class='lede'>After the <b>{season_measured}</b> season, the "
-            f"2.000-3.000 year class had {super_two_cutoff['class_size']} "
-            f"players, and the top {super_two_cutoff['qualifying_count']} of "
-            f"them (the top {SUPER_TWO_TOP_PERCENTILE}%) fell at or above "
-            f"<b>{super_two_cutoff['cutoff']}</b> years of service "
-            f"({super_two_cutoff['cutoff_days']:,} days). <strong>Projected "
-            f"cutoff: {super_two_cutoff['cutoff']}</strong>. That is the line "
-            "this site currently projects the live class against, below.</p>"
+            f"<p class='lede'><strong>Projected cutoff: {super_two_cutoff['cutoff']}</strong> "
+            f"years of service ({super_two_cutoff['cutoff_days']:,} days) after the "
+            f"{season_measured} season. {super_two_cutoff['class_size']} players had "
+            f"2.000-3.000 years and at least {s2_min_days} days that season; the top "
+            f"{super_two_cutoff['qualifying_count']} ({SUPER_TWO_TOP_PERCENTILE}%) "
+            "sit at or above this line.</p>"
         )
     else:
         cutoff_block = (
@@ -3211,6 +3249,12 @@ def render_super_two(
             f"{season_measured} season: {rng['low']} to {rng['high']} years of "
             "service. Estimated from this project's own data plus one "
             "unofficial reported figure, not an official MLB/MLBPA number."
+        )
+    elif super_two_cutoff and super_two_cutoff.get("official"):
+        desc = (
+            f"The official Super Two cutoff after the {season_measured} season "
+            f"is {super_two_cutoff['cutoff']} years of service. "
+            "A published figure, not this project's own estimate."
         )
     else:
         desc = (
@@ -3284,11 +3328,17 @@ def render_super_two(
 <div class="viz-root">{_site_header("super-two.html")}<div class="wrap">
   {_crumbs(("Players", BASE_PATH), ("Super Two", None))}
 
-  <h1>Super Two: this winter's projected cutoff</h1>
-  <p class="subtitle">Of {len(class_players)} players in the live
-  2.000-3.000 year class: {projected_count} project as Super Two, {bubble_count}
-  {'is' if bubble_count == 1 else 'are'} on the bubble, and {below_count} fall
-  below the projected range.</p>
+  <h1>{"Super Two: this winter's cutoff" if official_line else "Super Two: this winter's projected cutoff"}</h1>
+  <p class="subtitle">{
+    f"Of {len(class_players)} players in the live 2.000-3.000 year class: "
+    f"{projected_count} are Super Two and {below_count} fall below "
+    f"{super_two_cutoff['cutoff']}."
+    if official_line else
+    f"Of {len(class_players)} players in the live 2.000-3.000 year class: "
+    f"{projected_count} project as Super Two, {bubble_count} "
+    f"{'is' if bubble_count == 1 else 'are'} on the bubble, and {below_count} fall "
+    f"below the projected range."
+  }</p>
   {_what_is("#super-two")}
 
   {cutoff_block}
@@ -3384,6 +3434,8 @@ def select_non_tender_watch(arb_eligible: list[dict]) -> list[tuple[dict, list[s
     fa_days = _days_for(FREE_AGENCY_YEARS)
     out = []
     for p in arb_eligible:
+        if p.get("contract_extension"):
+            continue
         reasons = _non_tender_reasons(p, fa_days)
         if reasons:
             out.append((p, reasons))

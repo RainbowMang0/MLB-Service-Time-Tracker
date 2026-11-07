@@ -314,7 +314,26 @@ def check_config_published() -> list[str]:
 
 
 def main() -> None:
+    import validate_service_sanity
+
     problems = check_published() + check_links() + check_config_published()
+    sanity = validate_service_sanity.summarize(
+        json.loads((ROOT / "docs" / "data" / "service_time.json").read_text()).get("players") or []
+    )
+    print(
+        "Service-time sanity: "
+        f"{sanity['zero_despite_games']} season(s) with significant MLB games and ~0 days; "
+        f"{sanity['days_after_last_season']} season(s) with any days after the last MLB season "
+        f"({sanity['days_after_last_season_month']} of {validate_service_sanity.PHANTOM_MONTH_DAYS}+ days)."
+    )
+    if sanity["zero_despite_games"] or sanity["days_after_last_season_month"]:
+        problems.append(
+            "service-time sanity check failed "
+            f"({sanity['zero_despite_games']} games-without-days, "
+            f"{sanity['days_after_last_season_month']} seasons with "
+            f"{validate_service_sanity.PHANTOM_MONTH_DAYS}+ days after the last MLB season); "
+            "run scripts/validate_service_sanity.py for the names"
+        )
     if not problems:
         print("\nAll three published files agree.")
         return
