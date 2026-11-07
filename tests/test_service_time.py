@@ -961,6 +961,16 @@ def test_load_reported_cutoff_falls_back_gracefully():
         check("a well-formed file loads", loaded is not None)
         check("cutoff_days is parsed correctly", loaded["cutoff_days"] == 2 * S.FULL_YEAR_DAYS + 132)
         check("source and entered pass through", loaded["source"] == "reported" and loaded["entered"] == "2026-10-30")
+        check("a guess is not treated as official", loaded["official"] is False)
+
+        official = tmp / "official.json"
+        official.write_text(
+            '{"season": 2026, "cutoff": "2.133", "official": true, "source": "official"}'
+        )
+        loaded_official = S.load_reported_cutoff(path=official)
+        check("official: true is kept", loaded_official["official"] is True)
+        check("2.133 is 2 years and 133 days",
+              loaded_official["cutoff_days"] == 2 * S.FULL_YEAR_DAYS + 133)
 
         check("a season filter that matches keeps the figure",
               S.load_reported_cutoff(path=good, projected_season=2026) is not None)
@@ -1043,6 +1053,33 @@ def test_apply_super_two_sets_the_bubble_flag_from_a_reported_range():
     S.apply_super_two(db2, 2025, reported=None)
     check("with no reported figure, no one is flagged on the bubble",
           not any(p.get("super_two_bubble") for p in db2.values()))
+
+
+def test_an_official_cutoff_decides_who_is_super_two():
+    """A published figure replaces the computed line. Players under it are
+    out even when our own ranking had them in; players on it are in."""
+    import super_two as S  # noqa: PLC0415
+
+    db = _s2_league(100, year=2025)
+    computed = S.compute_cutoff(db, 2025)
+    line = computed["cutoff_days"]
+    reported = {
+        "season": 2025,
+        "cutoff_days": line + 1,
+        "cutoff": S.format_service(line + 1),
+        "official": True,
+    }
+    result = S.apply_super_two(db, 2025, reported=reported)
+    check("the figure the site shows is the official one", result["cutoff"] == reported["cutoff"])
+    check("the site does not show a range around a guess", result["range"]["is_range"] is False)
+    check("our own computed line is kept beside it", result["computed_cutoff_days"] == line)
+
+    at_computed = next(p for p in db.values() if p.get("service_days_total") == line)
+    check("a player under the official line is not Super Two",
+          at_computed["super_two_candidate"] is False)
+    on_or_above = [p for p in db.values() if p.get("service_days_total", 0) >= line + 1]
+    check("players at or above the official line stay Super Two",
+          len(on_or_above) > 0 and all(p["super_two_candidate"] for p in on_or_above))
 
 
 def test_super_two_declines_to_guess_from_a_tiny_population():
@@ -2566,8 +2603,10 @@ def test_the_super_two_prose_quotes_published_figures_not_our_own():
     hist = u._published_super_two_history()
     check("published history reaches the payload", bool(hist))
     check("it spans more than one season", hist and hist["count"] >= 2)
+    # 2009-2025 published figures. 2019 is the low end (2.115) and 2011 the
+    # high end (2.146). The old 2021-2025 window was 2.116 to 2.140.
     check("the range comes from published figures",
-          hist and hist["low"] == "2.116" and hist["high"] == "2.140")
+          hist and hist["low"] == "2.115" and hist["high"] == "2.146")
 
     ix = json.loads((ROOT / "docs" / "data" / "index.json").read_text())
     check("index.json carries super_two_published", bool(ix.get("super_two_published")))
@@ -6455,6 +6494,7 @@ if __name__ == "__main__":
     test_load_reported_cutoff_falls_back_gracefully()
     test_cutoff_range_orders_low_and_high_and_handles_no_reported_figure()
     test_apply_super_two_sets_the_bubble_flag_from_a_reported_range()
+    test_an_official_cutoff_decides_who_is_super_two()
     test_super_two_declines_to_guess_from_a_tiny_population()
     test_validate_super_two_counts_failures_and_would_exit_nonzero()
     test_qualifying_season_follows_the_season_being_played()

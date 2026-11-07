@@ -208,6 +208,9 @@ def load_reported_cutoff(
         "cutoff": format_service(cutoff_days, rules),
         "source": raw.get("source") or "",
         "entered": raw.get("entered") or "",
+        # True only when the file says so. A missing key is a guess, and a
+        # guess still only draws the range -- it does not move eligibility.
+        "official": raw.get("official") is True,
     }
 
 
@@ -428,16 +431,18 @@ def apply_super_two(
     after `reference_year` as the threshold. Returns the cutoff metadata, or
     None if it could not be computed (in which case flags are left alone).
 
-    `reported` is an optional hand-kept figure from load_reported_cutoff(),
-    for the one-sided range the site shows around the computed cutoff (see
-    cutoff_range()). It never changes WHO is flagged `super_two_candidate` --
-    that stays exactly "at or above this project's own computed cutoff",
-    the only number the rest of the site (selection, badges, salary gating)
-    has ever keyed off and the one every existing test already pins. It only
-    adds `super_two_bubble`: True for a candidate whose service sits below
-    the reported high end, i.e. inside the low-to-high band rather than
-    past all of it -- extra nuance a renderer can use, never a narrower
-    gate.
+    `reported` is an optional hand-kept figure from load_reported_cutoff().
+
+    While it is still a guess (`official` is not true), it only draws the
+    range around this project's computed cutoff. It does not change who is
+    flagged `super_two_candidate`. It adds `super_two_bubble` for a
+    candidate whose service sits below the reported high end.
+
+    Once the figure is official, it IS the line. The site shows that
+    number, not the computed one and not a range, and a player is Super
+    Two only when his service is at or above it (and he still has the
+    required days in the season being tested). A player our own math put
+    a day or two under that line is not Super Two.
 
     TWO DIFFERENT QUESTIONS, and it matters which one this answers.
 
@@ -471,9 +476,16 @@ def apply_super_two(
     if cutoff is None:
         return None
 
-    cutoff_days = cutoff["cutoff_days"]
-    rng = cutoff_range(cutoff, reported)
-    high_days = rng["high_days"] if rng else cutoff_days
+    computed_days = cutoff["cutoff_days"]
+    official = bool(
+        reported
+        and reported.get("official") is True
+        and reported.get("season") == cutoff.get("season")
+    )
+    # An official published line decides who qualifies. A guess does not.
+    line_days = reported["cutoff_days"] if official else computed_days
+    rng = cutoff_range(cutoff, None if official else reported)
+    high_days = rng["high_days"] if rng else line_days
     season_tested = qualifying_season(db, reference_year)
     eligible = 0
     bubble = 0
@@ -483,10 +495,16 @@ def apply_super_two(
         in_tested_season = _days_in(seasons, season_tested)
         is_super_two = (
             2 * FULL_YEAR_DAYS <= service < 3 * FULL_YEAR_DAYS
-            and service >= cutoff_days
+            and service >= line_days
             and in_tested_season >= SUPER_TWO_MIN_PRECEDING_SEASON_DAYS
         )
-        is_bubble = is_super_two and rng is not None and rng["is_range"] and service < high_days
+        is_bubble = (
+            not official
+            and is_super_two
+            and rng is not None
+            and rng["is_range"]
+            and service < high_days
+        )
         record["super_two_candidate"] = is_super_two
         record["super_two_bubble"] = is_bubble
         record["arbitration_eligible"] = (
@@ -495,6 +513,23 @@ def apply_super_two(
         eligible += is_super_two
         bubble += is_bubble
 
+    cutoff["official"] = official
+    if official:
+        cutoff["computed_cutoff"] = cutoff["cutoff"]
+        cutoff["computed_cutoff_days"] = computed_days
+        cutoff["cutoff"] = reported["cutoff"]
+        cutoff["cutoff_days"] = line_days
+        shown = format_service(line_days)
+        rng = {
+            "season": cutoff["season"],
+            "low_days": line_days,
+            "high_days": line_days,
+            "low": shown,
+            "high": shown,
+            "is_range": False,
+            "official": True,
+            "reported": reported,
+        }
     cutoff["range"] = rng
     cutoff["projected_candidates"] = eligible
     cutoff["projected_bubble"] = bubble
