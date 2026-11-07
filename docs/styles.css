@@ -840,8 +840,13 @@ tbody td.player-name { border-left-color: var(--club-d, var(--club, transparent)
      anyway, so the fix is to stop squeezing column one rather than to add
      more scrolling: Pos is the least informative column and gives up its
      width, and a player's name no longer wraps. Player and Service Time --
-     the pair this site exists to show -- stay side by side. */
-  thead th:nth-child(4), tbody td:nth-child(4) { display: none; }
+     the pair this site exists to show -- stay side by side.
+     The players table only. Left unscoped, the same nth-child(4) hid GS
+     on a pitching line and AB on a batting line. The career row is a
+     footer, which this rule does not name, so it kept the cell and every
+     figure after it sat one column off the header. */
+  #players-table thead th:nth-child(4),
+  #players-table tbody td:nth-child(4) { display: none; }
   tbody td.player-name { min-width: 8.5rem; }
   tbody td.player-name .player-link { white-space: nowrap; }
 
