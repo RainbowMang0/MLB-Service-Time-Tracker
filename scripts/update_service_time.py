@@ -51,11 +51,13 @@ import write_player_pages  # noqa: E402
 from write_player_pages import write_player_pages as _write_pages  # noqa: E402
 from service_time import (  # noqa: E402
     roster_start_before_debut,
-    is_active_start,
     is_active_stop,
+    is_free_agency_election,
     is_trade,
+    row_opens_roster,
     SeasonWindow,
     Transaction,
+    TRANSACTION_COVERAGE_START_YEAR,
     compute_service_time,
 )
 
@@ -98,12 +100,6 @@ CACHE_DIR = ROOT / "data" / "cache" / "transactions"
 
 MIN_TRANSACTION_YEAR = 2005  # don't bother reaching back further than this
 TODAY = dt.date.today()
-
-# "elected/declared free agency" means a player left the roster. It is NOT a
-# global stop keyword (no matching re-signing START exists -- see service_time.py),
-# so it is used only by _still_on_ml_roster. Deliberately does not match the
-# signing verb in "signed free agent RHP ...".
-_ELECTED_FREE_AGENCY_RE = re.compile(r"\b(?:elected|declared) free agency\b", re.I)
 
 # Stamped on every record. BUMP THIS whenever a change to the service-time
 # rules would give a stored player a different figure -- it is what tells the
@@ -190,7 +186,23 @@ _ELECTED_FREE_AGENCY_RE = re.compile(r"\b(?:elected|declared) free agency\b", re
 # interval must never add a day. 6 and 7 both move figures in BOTH directions --
 # 7 because the restricted-list stop and the lastPlayedDate fix remove days
 # while the DFA grace window and the counts=true exceptions add them.
-SERVICE_TIME_RULES_VERSION = 7
+#
+# 8  phantom seasons and zeroed real seasons, from the v7 recompute.
+#    (a) A bare "signed free agent" row filed the same day as a sibling that
+#        says "to a minor league contract" no longer opens an MLB stint
+#        (Snelten, Ravelo). (b) An assignment, release, outright, or
+#        retirement that names only a minor-league club is kept and closes
+#        an open stint -- the MLB-club filter had been dropping the very
+#        move that ended the career (Kaminsky, Jackson). (c) A free-agency
+#        election on the same day as an activation wins, so the activation
+#        does not reopen the clock (Almonte). A lone election is still not
+#        a global stop. (d) "reassigned ... to the minor leagues" is a stop.
+#    (e) Where the stat feed shows a substantial number of MLB games and the
+#        transaction walk credited almost none, the span from the first game
+#        to the last is credited, split by any stop the feed did record
+#        (Strange-Gordon 2017, Butler 2025-26, Allen 2025, Sears 2023-24).
+#        That fill only adds days, and only across a gap with no stop.
+SERVICE_TIME_RULES_VERSION = 8
 
 # The carry-in rule: presume a player is on a roster from his debut onward
 # rather than crediting him nothing until a start transaction happens to fire.
@@ -503,6 +515,26 @@ def mlb_team_ids() -> set[int]:
     return _MLB_TEAM_IDS
 
 
+_ASSIGNED_TO_RE = re.compile(r"\bassigned to\b", re.I)
+_REHAB_RE = re.compile(r"rehab", re.I)
+
+
+def _is_minor_assignment(txn: dict, mlb_ids: set[int]) -> bool:
+    """True when this row sends the player to a club that is not major league.
+
+    "Assigned to Durham" closes an open major-league stint. "Assigned to the
+    Yankees" does not -- that destination is a major-league club, and the
+    wording is how a spring-training roster note is phrased. A rehab
+    assignment keeps him on his major-league injured list, so it is never
+    this kind of departure.
+    """
+    desc = txn.get("description") or ""
+    if not _ASSIGNED_TO_RE.search(desc) or _REHAB_RE.search(desc):
+        return False
+    to_id = txn.get("to_team_id")
+    return isinstance(to_id, int) and to_id not in mlb_ids
+
+
 def _involves_mlb_club(txn: dict, mlb_ids: set[int]) -> bool:
     """
     True if this transaction involves an actual major league club.
@@ -604,7 +636,32 @@ def _build_seasons(
                 "src": src,
             }
         )
+        if detail.get("has_il"):
+            rows[-1]["il"] = True
     return rows
+
+
+def _stat_groups_with_games(stat: dict) -> dict[str, int]:
+    """{'hitting': games, 'pitching': games} for groups that have games.
+
+    The bio statline stores each group under that name. A missing or
+    non-numeric gamesPlayed reads as no games, which simply skips the
+    appearance fill for that group.
+    """
+    out: dict[str, int] = {}
+    if not isinstance(stat, dict):
+        return out
+    for group in ("hitting", "pitching"):
+        row = stat.get(group)
+        if not isinstance(row, dict):
+            continue
+        try:
+            games = int(row.get("gamesPlayed") or 0)
+        except (TypeError, ValueError):
+            games = 0
+        if games > 0:
+            out[group] = games
+    return out
 
 
 def _still_on_ml_roster(transactions: list[Transaction]) -> bool:
@@ -634,12 +691,24 @@ def _still_on_ml_roster(transactions: list[Transaction]) -> bool:
     'elected free agency', then only minor-league deals) read as still on a
     roster off a two-year-old selection and accrued phantom service to today.
     """
-    for t in sorted(transactions, key=lambda t: t.date, reverse=True):
-        if is_active_start(t.description):
-            return True
-        if is_active_stop(t.description) or _ELECTED_FREE_AGENCY_RE.search(t.description):
+    # Date-grouped, and a stop or a free-agency election wins over a start
+    # on the same day. Walking row by row made the answer depend on which
+    # of two same-day rows came first: an activation filed next to
+    # "elected free agency" (Yency Almonte, 2024-11-04) read as still on a
+    # roster and the clock ran on.
+    by_date: dict[dt.date, list[Transaction]] = {}
+    for t in transactions:
+        by_date.setdefault(t.date, []).append(t)
+    for day in sorted(by_date, reverse=True):
+        rows = by_date[day]
+        descs = [r.description for r in rows]
+        has_stop = any(is_active_stop(d) or r.minor_assignment for r, d in zip(rows, descs))
+        has_fa = any(is_free_agency_election(d) for d in descs)
+        has_start = any(row_opens_roster(d, descs) for d in descs)
+        has_trade = any(is_trade(d) for d in descs)
+        if has_stop or has_fa:
             return False
-        if is_trade(t.description):
+        if has_start or has_trade:
             return True
     return False
 
@@ -671,15 +740,28 @@ def build_player_record(
     raw_txns = _fetch_transactions_incremental(player_id, full_refresh, use_cache=use_cache)
 
     mlb_ids = mlb_team_ids()
-    transactions = [
-        Transaction(
-            date=dt.date.fromisoformat(t["date"]),
-            description=t["description"],
-            team=(t.get("team") or {}).get("name") if isinstance(t.get("team"), dict) else t.get("team"),
+    transactions = []
+    for t in raw_txns:
+        minor_assignment = _is_minor_assignment(t, mlb_ids)
+        desc = t.get("description") or ""
+        # A minor-league release, outright, retirement, or assignment is the
+        # move that ends a lot of careers. The MLB-club filter used to drop
+        # every one of them, so the earlier major-league signing stayed open.
+        if not (
+            _involves_mlb_club(t, mlb_ids)
+            or minor_assignment
+            or is_active_stop(desc)
+            or is_free_agency_election(desc)
+        ):
+            continue
+        transactions.append(
+            Transaction(
+                date=dt.date.fromisoformat(t["date"]),
+                description=desc,
+                team=(t.get("team") or {}).get("name") if isinstance(t.get("team"), dict) else t.get("team"),
+                minor_assignment=minor_assignment,
+            )
         )
-        for t in raw_txns
-        if _involves_mlb_club(t, mlb_ids)
-    ]
 
     # Clubs named by the transactions themselves, per season. Destination
     # first: "Team A sent X to Team B" is evidence about where he ended up.
@@ -841,10 +923,24 @@ def build_player_record(
             # 2022 and the stray offseason stop is ignored. A minor-league signing
             # or assignment (Aaron Sanchez's 2026 Royals minor-league deal) is
             # neither a start nor a trade, so it cannot stretch a career either.
-            roster_starts = [
-                t.date for t in transactions
-                if is_active_start(t.description) or is_trade(t.description)
-            ]
+            # A start that shares its day with a stop, a free-agency
+            # election, a minor-league assignment, or a minor-league-deal
+            # sibling did not leave him on a major-league roster. Counting
+            # it used to stretch the career through a season he had already
+            # left (Kaminsky's 2022 signing, closed the same morning by the
+            # assignment to Arkansas).
+            by_day: dict[dt.date, list[Transaction]] = {}
+            for t in transactions:
+                by_day.setdefault(t.date, []).append(t)
+            roster_starts = []
+            for day, rows in by_day.items():
+                descs = [r.description for r in rows]
+                if any(r.minor_assignment for r in rows):
+                    continue
+                if any(is_free_agency_election(d) or is_active_stop(d) for d in descs):
+                    continue
+                if any(row_opens_roster(d, descs) or is_trade(d) for d in descs):
+                    roster_starts.append(day)
             candidates = []
             if season_teams_bio:
                 candidates.append(dt.date(max(season_teams_bio), 12, 31))
@@ -886,38 +982,67 @@ def build_player_record(
 
     missing = _missing_seasons(debut_date, transactions)
 
-    result = compute_service_time(
-        transactions,
-        seasons,
-        # Carry-in anchors on the DEBUT, never on the floor's fallback.
-        # Those are the same date for anyone who has played, but for a player
-        # with no debut the floor falls back to his earliest major-league-club
-        # transaction -- which for a prospect is the day the club signed or
-        # drafted him. Presuming from that credited 34 players who have never
-        # appeared in a major league game, one of them 5.000 years: Leandro
-        # Lopez, signed 2021-01-15, still without a debut, read as a
-        # five-year veteran. A man who has not debuted has no major league
-        # service time to presume.
-        presume_active_from_debut=presume_active_from_debut and debut_date is not None,
-        # Seasons MLB's own splits say he appeared in. Without this the
-        # presumption has nothing to bound it -- see compute_service_time.
-        seasons_with_appearances=set(season_teams_bio),
-        # Seasons a top-two Rookie of the Year finish credits as a full year,
-        # keyed by this player's id. Empty for almost everyone.
-        roy_full_year_seasons=_ROY_FULL_YEAR_SEASONS.get(player_id),
-        accrual_floor=accrual_floor,
-        accrual_ceiling=accrual_ceiling,
-        # Stop the clock at horizon_end (today, for the daily job) rather than
-        # at the end of the current season -- otherwise every player currently
-        # on a roster is credited with the remaining weeks of a season that
-        # hasn't been played yet.
-        horizon_end=horizon_end,
-        # Rules v7: the DFA grace window and the hand-kept restricted-list
-        # service exceptions for this player.
-        dfa_limbo_days=_DFA_LIMBO_DAYS,
-        force_active_periods=force_active_periods,
-        force_inactive_periods=force_inactive_periods,
-    )
+    def _run_compute(appearance_dates: list[dt.date] | None = None):
+        return compute_service_time(
+            transactions,
+            seasons,
+            # Carry-in anchors on the DEBUT, never on the floor's fallback.
+            # Those are the same date for anyone who has played, but for a player
+            # with no debut the floor falls back to his earliest major-league-club
+            # transaction -- which for a prospect is the day the club signed or
+            # drafted him. Presuming from that credited 34 players who have never
+            # appeared in a major league game, one of them 5.000 years: Leandro
+            # Lopez, signed 2021-01-15, still without a debut, read as a
+            # five-year veteran. A man who has not debuted has no major league
+            # service time to presume.
+            presume_active_from_debut=presume_active_from_debut and debut_date is not None,
+            # Seasons MLB's own splits say he appeared in. Without this the
+            # presumption has nothing to bound it -- see compute_service_time.
+            seasons_with_appearances=set(season_teams_bio),
+            # Seasons a top-two Rookie of the Year finish credits as a full year,
+            # keyed by this player's id. Empty for almost everyone.
+            roy_full_year_seasons=_ROY_FULL_YEAR_SEASONS.get(player_id),
+            accrual_floor=accrual_floor,
+            accrual_ceiling=accrual_ceiling,
+            # Stop the clock at horizon_end (today, for the daily job) rather than
+            # at the end of the current season -- otherwise every player currently
+            # on a roster is credited with the remaining weeks of a season that
+            # hasn't been played yet.
+            horizon_end=horizon_end,
+            # Rules v7: the DFA grace window and the hand-kept restricted-list
+            # service exceptions for this player.
+            dfa_limbo_days=_DFA_LIMBO_DAYS,
+            force_active_periods=force_active_periods,
+            force_inactive_periods=force_inactive_periods,
+            appearance_dates=appearance_dates,
+        )
+
+    result = _run_compute()
+    # A season with a lot of MLB games and almost no credited days is a
+    # recall the transaction feed never recorded. Pull that season's game
+    # dates (one request per group) and credit the span they prove. Only
+    # seasons inside the transaction era: earlier careers are presumed, and
+    # a game log must not rewrite them.
+    appearance_dates: list[dt.date] = []
+    for year, stat in season_stats.items():
+        if year < TRANSACTION_COVERAGE_START_YEAR:
+            continue
+        groups = _stat_groups_with_games(stat)
+        if not groups:
+            continue
+        games = sum(groups.values())
+        credited = result.by_season.get(year, {}).get("credited_days", 0)
+        if games >= 20 and credited + 15 < games:
+            for group in groups:
+                try:
+                    appearance_dates.extend(mlb.appearance_dates(player_id, year, group))
+                except Exception:
+                    # A missing game log leaves the transaction figure in
+                    # place. The sanity check reports the season if it stays
+                    # near zero.
+                    pass
+    if appearance_dates:
+        result = _run_compute(appearance_dates)
 
     return {
         "id": player_id,
@@ -1563,6 +1688,25 @@ def publish_config() -> list[pathlib.Path]:
     return written
 
 
+def _stamp_contract_extensions(db: dict[str, dict]) -> None:
+    """Mark players whose extension the lists must honor.
+
+    Reads the transaction cache and data/contract_overrides.json. No API
+    calls. The service-time flag `arbitration_eligible` stays a service-time
+    fact; `contract_extension` is what takes him off the winter lists.
+    """
+    overrides = salary_estimates.load_contract_overrides()
+    for record in db.values():
+        pid = record.get("id")
+        try:
+            pid_int = int(pid) if pid is not None else None
+        except (TypeError, ValueError):
+            pid_int = None
+        record["contract_extension"] = salary_estimates.has_contract_extension(
+            pid_int, overrides
+        )
+
+
 def _write_outputs(db: dict[str, dict]) -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     publish_config()
@@ -1577,6 +1721,8 @@ def _write_outputs(db: dict[str, dict]) -> None:
     # every record exists -- see scripts/super_two.py. This replaces the flat
     # 86-day flag that compute_service_time() sets per player without any
     # league context.
+    _stamp_contract_extensions(db)
+
     reference_season = super_two.latest_complete_season(db, TODAY.year)
     # The hand-kept, unofficial reported cutoff (see data/super_two_reported.json)
     # only applies to the SAME season the computed cutoff was just measured

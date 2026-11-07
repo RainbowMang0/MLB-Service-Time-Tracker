@@ -529,6 +529,19 @@ def _milestone_sentence(player: dict) -> str:
         return f"{service} years of service — already eligible for free agency."
 
     fa_days = _days_for(FREE_AGENCY_YEARS)
+    if (
+        player.get("contract_extension")
+        and player.get("on_40_man")
+        and player.get("arbitration_eligible")
+    ):
+        seasons = _min_seasons_to(fa_days - days_total)
+        return (
+            f"{service} years of service. A reported contract extension is on file, "
+            f"so this winter's arbitration list leaves him off. At least {seasons} "
+            f"more full season{'' if seasons == 1 else 's'} on an active roster or "
+            f"injured list to reach free agency ({_yrs(FREE_AGENCY_YEARS)})."
+        )
+
     if player.get("arbitration_eligible"):
         seasons = _min_seasons_to(fa_days - days_total)
         if player.get("super_two_candidate"):
@@ -2887,6 +2900,10 @@ def select_arbitration_eligible(players: list[dict]) -> list[dict]:
     for p in players:
         if not p.get("on_40_man"):
             continue
+        # A reported extension buys out the hearing. Service time can still
+        # say he has crossed 3.000; he does not belong on this winter's list.
+        if p.get("contract_extension"):
+            continue
         days = int(p.get("service_days_total") or 0)
         if days >= fa_days:
             continue
@@ -2968,7 +2985,10 @@ def render_arbitration_eligible(
 
     See select_arbitration_eligible() for exactly who qualifies and why a
     departed player never appears here even if his stale flag says so.
+    A player with contract_extension set is left off even if the caller
+    passed him in: an extension buys out the hearing.
     """
+    eligible = [p for p in eligible if not p.get("contract_extension")]
     url = f"{SITE_URL}/{ARBITRATION_ELIGIBLE_PATH}"
     gen_year = int((generated_at or "")[:4]) if generated_at else None
     next_season = (
@@ -3208,6 +3228,20 @@ def render_super_two(
     bubble_count = statuses.count("On the bubble")
     below_count = statuses.count("Below the projected range")
 
+    s2_min_days = _RULES.require("arbitration.super_two.minimum_prior_season_days")
+    band_size = super_two_cutoff.get("band_size") if super_two_cutoff else None
+    band_phrase = ""
+    if (
+        super_two_cutoff
+        and isinstance(band_size, int)
+        and band_size != super_two_cutoff.get("class_size")
+    ):
+        band_phrase = (
+            f" {band_size} players sat between 2.000 and 3.000 years with at least "
+            f"one day that season; the {s2_min_days}-day rule decides who is ranked, "
+            "and it is applied before the top-percentile cut."
+        )
+
     if super_two_cutoff and is_range:
         miss_phrase = (
             f" In the {len(misses)} season{'s' if len(misses) != 1 else ''} with a "
@@ -3219,12 +3253,13 @@ def render_super_two(
         if reported and reported.get("source"):
             reported_note = f" The high end is {html.escape(reported['source'])}."
         cutoff_block = (
-            f"<p class='lede'>After the <b>{season_measured}</b> season, the "
-            f"2.000-3.000 year class had {super_two_cutoff['class_size']} "
-            f"players, and the top {super_two_cutoff['qualifying_count']} of "
-            f"them (the top {SUPER_TWO_TOP_PERCENTILE}%) fell at or above "
+            f"<p class='lede'>After the <b>{season_measured}</b> season, "
+            f"{super_two_cutoff['class_size']} players had between 2.000 and 3.000 "
+            f"years and at least {s2_min_days} days of service that season, and the "
+            f"top {super_two_cutoff['qualifying_count']} of them (the top "
+            f"{SUPER_TWO_TOP_PERCENTILE}%) fell at or above "
             f"<b>{rng['low']}</b> years of service ({low_days:,} days) -- this "
-            "project's own computed cutoff. "
+            f"project's own computed cutoff. {band_phrase}"
             f"<strong>Projected cutoff range: {rng['low']} to {rng['high']}</strong> "
             f"years of service ({low_days:,}-{high_days:,} days).</p>"
             "<p class='lede'>This is shown as a range, not a single number, "
@@ -3233,10 +3268,11 @@ def render_super_two(
         )
     elif super_two_cutoff:
         cutoff_block = (
-            f"<p class='lede'>After the <b>{season_measured}</b> season, the "
-            f"2.000-3.000 year class had {super_two_cutoff['class_size']} "
-            f"players, and the top {super_two_cutoff['qualifying_count']} of "
-            f"them (the top {SUPER_TWO_TOP_PERCENTILE}%) fell at or above "
+            f"<p class='lede'>After the <b>{season_measured}</b> season, "
+            f"{super_two_cutoff['class_size']} players had between 2.000 and 3.000 "
+            f"years and at least {s2_min_days} days of service that season, and the "
+            f"top {super_two_cutoff['qualifying_count']} of them (the top "
+            f"{SUPER_TWO_TOP_PERCENTILE}%) fell at or above "
             f"<b>{super_two_cutoff['cutoff']}</b> years of service "
             f"({super_two_cutoff['cutoff_days']:,} days). <strong>Projected "
             f"cutoff: {super_two_cutoff['cutoff']}</strong>. That is the line "
@@ -3454,6 +3490,8 @@ def select_non_tender_watch(arb_eligible: list[dict]) -> list[tuple[dict, list[s
     fa_days = _days_for(FREE_AGENCY_YEARS)
     out = []
     for p in arb_eligible:
+        if p.get("contract_extension"):
+            continue
         reasons = _non_tender_reasons(p, fa_days)
         if reasons:
             out.append((p, reasons))

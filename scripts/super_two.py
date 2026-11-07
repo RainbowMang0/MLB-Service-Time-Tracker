@@ -263,7 +263,10 @@ def _days_in(seasons: list[dict], year: int) -> int:
 
 
 def build_class(
-    db: dict[str, dict], year: int, ruleset: "cba.Ruleset | None" = None
+    db: dict[str, dict],
+    year: int,
+    ruleset: "cba.Ruleset | None" = None,
+    minimum_days: int | None = None,
 ) -> list[tuple[int, int, dict]]:
     """
     (service_days_through_year, days_in_year, record) for the 2-3 year class
@@ -284,7 +287,10 @@ def build_class(
     full_year = rules.require("service_time.days_per_credited_year")
     low_years, high_years = rules.require("arbitration.super_two.service_range_years")
     low_days, high_days = low_years * full_year, high_years * full_year
-    min_prior_days = rules.require("arbitration.super_two.minimum_prior_season_days")
+    min_prior_days = (
+        rules.require("arbitration.super_two.minimum_prior_season_days")
+        if minimum_days is None else minimum_days
+    )
     members = []
     for record in db.values():
         seasons = record.get("seasons")
@@ -323,6 +329,11 @@ def compute_cutoff(
     min_class_size = rules.require("arbitration.super_two.minimum_class_size")
 
     members = build_class(db, year, rules)
+    # The wider band: everyone at 2.000-3.000 years with at least one day in
+    # `year`. The 86-day rule defines the class BEFORE the 22% rank, so this
+    # count is reported beside class_size and is not what gets ranked. A
+    # page that quoted only one of the two numbers was the 138-vs-134 mismatch.
+    band = build_class(db, year, rules, minimum_days=1)
     if len(members) < min_class_size:
         return None
 
@@ -332,17 +343,20 @@ def compute_cutoff(
     if qualifying_count < 1:
         return None
 
+    min_days = rules.require("arbitration.super_two.minimum_prior_season_days")
     cutoff_days = members[qualifying_count - 1][0]
     return {
         "season": year,
         "cutoff_days": cutoff_days,
         "cutoff": format_service(cutoff_days),
         "class_size": len(members),
+        "band_size": len(band),
         "qualifying_count": qualifying_count,
         "method": (
-            f"top {SUPER_TWO_TOP_FRACTION:.0%} of the {len(members)} players at "
-            f"2.000-3.000 years after the {year} season, who also accrued "
-            f"{SUPER_TWO_MIN_PRECEDING_SEASON_DAYS}+ days that year"
+            f"top {SUPER_TWO_TOP_FRACTION:.0%} of the {len(members)} players with "
+            f"2.000-3.000 years who accrued {min_days}+ days in {year} "
+            f"(the eligible class, ranked after that day floor). "
+            f"{len(band)} players were in the 2.000-3.000 band with at least one day"
         ),
     }
 

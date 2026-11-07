@@ -857,6 +857,10 @@ def test_super_two_class_requires_86_days_not_just_any_accrual():
         "a player with <86 days in the season is not in the class at all",
         cutoff["class_size"] == 60,
     )
+    check(
+        "band_size still counts him, so the two numbers can disagree",
+        cutoff["band_size"] == 61,
+    )
     ranked = S.build_class(db, 2025)
     check(
         "...he does not appear in the ranked class either",
@@ -2794,37 +2798,36 @@ def test_super_two_status_labels_with_a_real_range():
           wpp._s2_status(equal_candidate, low, low) == "Projected Super Two")
 
 
-def test_known_extension_is_labelled_not_hidden_on_the_arbitration_page():
+def test_an_extended_player_leaves_the_arbitration_and_non_tender_lists():
     """
-    The brief asked that a player with a known contract/extension either be
-    excluded or clearly labelled. This project labels rather than excludes
-    (see render_arbitration_eligible's own docstring for why): the engine's
-    arbitration_eligible flag is about service time alone and stays correct
-    regardless of a contract, and hiding a rostered, eligible player risks
-    reading as an omission rather than a decision.
+    A reported extension buys out the hearing. Service time can still say
+    he has crossed the arbitration threshold; the winter lists leave him
+    off, and the non-tender watch is built from that same list.
     """
     import write_player_pages as wpp
 
     players = [
         {"id": 1, "name": "Has An Extension", "team": "A", "on_40_man": True,
          "service_days_total": 4 * wpp.FULL_YEAR_DAYS, "service_time": "4.000",
-         "super_two_candidate": False},
+         "super_two_candidate": False, "arbitration_eligible": True,
+         "contract_extension": True},
         {"id": 2, "name": "No Extension", "team": "A", "on_40_man": True,
          "service_days_total": 4 * wpp.FULL_YEAR_DAYS, "service_time": "4.000",
-         "super_two_candidate": False},
+         "super_two_candidate": False, "arbitration_eligible": True},
     ]
-    known = {1: {"note": "Signed a long extension while pre-arbitration."}}
-    html = wpp.render_arbitration_eligible(players, "2026-10-30T00:00:00+00:00", None, known)
-
-    check("both players still appear -- labelled, not excluded",
-          "Has An Extension" in html and "No Extension" in html)
-    check("the extension badge is attached to the right player",
-          html.index("Contract/extension on file") > html.index("Has An Extension") and
-          html.index("Has An Extension") < html.index("No Extension"))
-    check("the note text reaches the page",
-          "Signed a long extension while pre-arbitration." in html)
-    check("the player without a known extension carries no such badge",
-          html.split("No Extension</a>")[1].split("</tr>")[0].count("Contract/extension on file") == 0)
+    selected = wpp.select_arbitration_eligible(players)
+    check("the extended player is not selected", {p["id"] for p in selected} == {2})
+    html = wpp.render_arbitration_eligible(players, "2026-10-30T00:00:00+00:00", None, {})
+    check("the extended player is absent from the page", "Has An Extension" not in html)
+    check("the player without an extension stays on the page", "No Extension" in html)
+    watch = wpp.select_non_tender_watch(players)
+    check("the extended player is not on non-tender watch",
+          all(p["id"] != 1 for p, _reasons in watch))
+    sentence = wpp._milestone_sentence(players[0])
+    check("his page says the arbitration list leaves him off",
+          "arbitration list leaves him off" in sentence)
+    check("his page does not call him arbitration-eligible",
+          "arbitration-eligible" not in sentence)
 
 
 def test_the_super_two_page_shows_the_range_and_three_groups():
@@ -5962,10 +5965,10 @@ def test_new_transaction_fetches_store_type_dates_and_id_old_rows_still_read():
     check("the save received the same rows", saved.get("txns") == out)
 
 
-def test_rules_version_is_seven():
+def test_rules_version_is_eight():
     """The bump the backfill reads to know which players to recompute."""
     import update_service_time as u
-    check("SERVICE_TIME_RULES_VERSION is 7", u.SERVICE_TIME_RULES_VERSION == 7)
+    check("SERVICE_TIME_RULES_VERSION is 8", u.SERVICE_TIME_RULES_VERSION == 8)
 
 
 def test_the_dfa_grace_window_is_a_sourced_ruleset_value():
@@ -6010,23 +6013,31 @@ def test_the_player_level_v7_figures_hold_against_the_real_feed():
           ceiling is None or str(ceiling)[:4] <= "2022")
 
     # Rules v7 regression (QA HOLD on PR #25): a player who spent whole seasons
-    # on a major-league roster -- Marsh and Zastryzny on the 60-day IL,
-    # Bethancourt on minor-league deals then a late selection, NOT the IL -- and
-    # was THEN outrighted/DFA'd keeps that service up to the outright. The first
-    # fix capped them at their last APPEARANCE season and cratered each by one
-    # or two years; the roster-start career_end term restores them. Needs the
-    # live feed -- the outright post-dates the cached transactions. Lower
-    # bounds, well clear of each player's crater value, so a few days of live
-    # drift won't flap them.
+    # on a major-league roster -- Marsh and Zastryzny on the 60-day IL -- and
+    # was THEN outrighted keeps that IL service. The first fix capped them at
+    # their last APPEARANCE and cratered each by a year or two. Needs the live
+    # feed. Rules v8 additionally closes a stint on a minor-league assignment
+    # the old filter dropped, which removes phantom years spent in the minors
+    # (Zastryzny 2021-22, Bethancourt 2025). The floors stay clear of the
+    # cratered figures; the ceilings stay clear of those phantom years.
     marsh = days(679525, "Alec Marsh", False)
     check(f"Marsh keeps his 2025-26 IL service, not cratered to ~250d (got {marsh['service_days_total']})",
           marsh["service_days_total"] >= 560)
     beth = days(542194, "Christian Bethancourt", False)
-    check(f"Bethancourt keeps his roster service, not cratered (got {beth['service_days_total']})",
-          beth["service_days_total"] >= 1180)
+    beth_2025 = next((s["d"] for s in beth["seasons"] if s["y"] == 2025), 0)
+    beth_2026 = next((s["d"] for s in beth["seasons"] if s["y"] == 2026), 0)
+    check(f"Bethancourt keeps his real roster service (got {beth['service_days_total']})",
+          800 <= beth["service_days_total"] <= 1000)
+    check(f"Bethancourt's minor-league 2025 is not credited (got {beth_2025})", beth_2025 == 0)
+    check(f"Bethancourt's 2026 is the September selection, not a full year (got {beth_2026})",
+          beth_2026 <= 40)
     zast = days(642239, "Rob Zastryzny", False)
-    check(f"Zastryzny keeps his 2026 IL service, not cratered (got {zast['service_days_total']})",
-          zast["service_days_total"] >= 840)
+    zast_2021 = next((s["d"] for s in zast["seasons"] if s["y"] == 2021), 0)
+    zast_2026 = next((s["d"] for s in zast["seasons"] if s["y"] == 2026), 0)
+    check(f"Zastryzny keeps his IL service without the minor-league years (got {zast['service_days_total']})",
+          540 <= zast["service_days_total"] <= 700)
+    check(f"Zastryzny 2021 in the minors is not a full year (got {zast_2021})", zast_2021 <= 20)
+    check(f"Zastryzny's 2026 IL season is credited (got {zast_2026})", zast_2026 >= 160)
 
     # The opposite guard: Aaron Sanchez elected free agency after his last 2022
     # selection and has only signed minor-league deals since, so he must stay
@@ -6255,6 +6266,130 @@ def test_soto_accepted_delta_reflects_the_boundary_fix():
     check("Soto's accepted_delta is 5", soto["accepted_delta"] == 5)
 
 
+def test_a_bare_signing_beside_a_minor_league_deal_does_not_open_a_stint():
+    """The feed files two rows on one day: a bare 'signed free agent' and a
+    sibling that says 'to a minor league contract' (Snelten, Ravelo). Only
+    the sibling is true. The bare row must not open years of service."""
+    seasons = [SeasonWindow(y, dt.date(y, 3, 28), dt.date(y, 10, 1)) for y in (2021, 2022)]
+    txns = [
+        Transaction(dt.date(2020, 11, 16), "Chicago Cubs signed free agent P X."),
+        Transaction(dt.date(2020, 11, 16), "Chicago Cubs signed free agent P X to a minor league contract."),
+    ]
+    result = compute_service_time(txns, seasons, horizon_end=dt.date(2022, 10, 1))
+    check("the duplicate minor-league signing accrues nothing", result.total_days == 0)
+
+
+def test_a_minor_league_assignment_closes_an_open_signing():
+    """Kaminsky, 2022-04-06: 'Mariners signed free agent' with no minor-league
+    words, and the same day 'assigned to Arkansas Travelers'. The assignment
+    is the departure. Nothing after it should accrue."""
+    seasons = [SeasonWindow(y, dt.date(y, 3, 30), dt.date(y, 10, 1)) for y in (2020, 2022, 2023, 2024, 2025, 2026)]
+    txns = [
+        Transaction(dt.date(2020, 8, 15), "Cardinals selected the contract of LHP X."),
+        Transaction(dt.date(2020, 9, 18), "Cardinals sent LHP X outright to Memphis."),
+        Transaction(dt.date(2022, 4, 6), "Mariners signed free agent LHP X."),
+        Transaction(dt.date(2022, 4, 6), "LHP X assigned to Arkansas Travelers.", minor_assignment=True),
+    ]
+    result = compute_service_time(txns, seasons, horizon_end=dt.date(2026, 10, 1))
+    check("2020 still has the real stint", result.by_season[2020]["credited_days"] > 0)
+    check("2022 and after stay at zero",
+          all(result.by_season[y]["credited_days"] == 0 for y in range(2022, 2027)))
+
+
+def test_same_day_free_agency_cancels_the_activation():
+    """Almonte, 2024-11-04: activated off the 60-day IL and elected free
+    agency the same day. The activation must not reopen the clock through
+    later seasons."""
+    seasons = [SeasonWindow(y, dt.date(y, 3, 28), dt.date(y, 10, 1)) for y in (2024, 2025, 2026)]
+    txns = [
+        Transaction(dt.date(2024, 5, 11), "Cubs placed RHP X on the 15-day injured list."),
+        Transaction(dt.date(2024, 11, 4), "Cubs activated RHP X from the 60-day injured list."),
+        Transaction(dt.date(2024, 11, 4), "RHP X elected free agency."),
+    ]
+    result = compute_service_time(txns, seasons, horizon_end=dt.date(2026, 10, 1))
+    check("the 2024 injured-list season still counts", result.by_season[2024]["credited_days"] > 0)
+    check("2025 does not open off the election-day activation", result.by_season[2025]["credited_days"] == 0)
+    check("2026 does not either", result.by_season[2026]["credited_days"] == 0)
+    import update_service_time as u
+    check("he is not still on a major-league roster", u._still_on_ml_roster(txns) is False)
+
+
+def test_reassigned_to_the_minors_is_a_stop():
+    from service_time import is_active_stop
+    check(
+        "reassigned to the minor leagues stops the clock",
+        is_active_stop("New York Yankees reassigned RHP X to the minor leagues."),
+    )
+
+
+def test_appearances_fill_a_season_the_transactions_left_closed():
+    """Gordon 2017 / Sears 2023: a stop the feed never reversed, then a
+    season of games. The span from the first game to the last is credited.
+    A stop between two games (the suspension itself) is not filled."""
+    season = SeasonWindow(2017, dt.date(2017, 4, 2), dt.date(2017, 10, 1))
+    txns = [
+        Transaction(dt.date(2016, 4, 29), "Marlins placed 2B X on the restricted list."),
+    ]
+    # Games across the whole 2017 season, and none of them cross a stop
+    # inside the season.
+    dates = [dt.date(2017, 4, 3), dt.date(2017, 7, 1), dt.date(2017, 9, 30)]
+    result = compute_service_time(
+        txns, [season], horizon_end=dt.date(2017, 10, 1), appearance_dates=dates,
+    )
+    check("the played season is credited", result.by_season[2017]["credited_days"] >= 170)
+
+    # 2016: games before the April 29 suspension and after a July return.
+    # The suspension gap must stay empty.
+    s2016 = SeasonWindow(2016, dt.date(2016, 4, 3), dt.date(2016, 10, 2))
+    dates_2016 = [dt.date(2016, 4, 10), dt.date(2016, 4, 20), dt.date(2016, 8, 1), dt.date(2016, 9, 30)]
+    opened = [
+        Transaction(dt.date(2016, 4, 3), "Marlins activated 2B X."),
+        Transaction(dt.date(2016, 4, 29), "Marlins placed 2B X on the restricted list."),
+    ]
+    filled = compute_service_time(
+        opened, [s2016], horizon_end=dt.date(2016, 10, 2), appearance_dates=dates_2016,
+    )
+    # April 3-28 from the transactions (~26 days) plus August 1-September 30
+    # from the games (~61 days). The May-July suspension is not in either.
+    days = filled.by_season[2016]["credited_days"]
+    check("the suspension is not filled back in", 70 <= days <= 110)
+
+
+def test_service_sanity_flags_both_failure_modes():
+    import validate_service_sanity as sanity
+    players = [
+        {
+            "id": 1, "name": "Played And Zero", "on_40_man": True,
+            "season_stats": {"2025": {"hitting": {"gamesPlayed": 150}}},
+            "seasons": [{"y": 2025, "d": 0}],
+        },
+        {
+            "id": 2, "name": "Phantom Years", "on_40_man": False,
+            "season_stats": {"2020": {"pitching": {"gamesPlayed": 5}}},
+            "seasons": [{"y": 2020, "d": 96}, {"y": 2022, "d": 172}, {"y": 2023, "d": 172, "il": True}],
+        },
+        {
+            "id": 3, "name": "Pre Feed", "on_40_man": False,
+            "season_stats": {"2004": {"hitting": {"gamesPlayed": 162}}},
+            "seasons": [{"y": 2004, "d": 0}],
+        },
+    ]
+    report = sanity.summarize(players)
+    check("the played zero-day season is flagged", report["zero_despite_games"] == 1)
+    check("the phantom year is flagged and the IL year is not", report["days_after_last_season"] == 1)
+    check("a pre-2009 zero is not this check's problem", report["zero_sample"][0][2] == 2025)
+
+
+def test_moniak_override_is_an_extension():
+    import salary_estimates as se
+    overrides = se.load_contract_overrides()
+    check("Mickey Moniak is in the hand-kept override file", 666160 in overrides)
+    check("the override note says reported extension",
+          overrides[666160].get("note") == "reported extension")
+    check("has_contract_extension honors the file without a transaction",
+          se.has_contract_extension(666160, overrides) is True)
+
+
 if __name__ == "__main__":
     print("Running service_time.py tests...")
     test_single_full_season()
@@ -6378,7 +6513,7 @@ if __name__ == "__main__":
     test_super_two_class_selection_boundaries()
     test_super_two_status_labels_ties_and_boundaries()
     test_super_two_status_labels_with_a_real_range()
-    test_known_extension_is_labelled_not_hidden_on_the_arbitration_page()
+    test_an_extended_player_leaves_the_arbitration_and_non_tender_lists()
     test_the_super_two_page_shows_the_range_and_three_groups()
     test_arbitration_eligible_badge_distinguishes_the_bubble()
     test_the_offseason_pages_are_added_to_the_sitemap_and_workflows()
@@ -6440,7 +6575,14 @@ if __name__ == "__main__":
     test_the_service_time_exceptions_file_loads_and_validates()
     test_a_legacy_cache_without_team_ids_is_discarded_or_ignored()
     test_new_transaction_fetches_store_type_dates_and_id_old_rows_still_read()
-    test_rules_version_is_seven()
+    test_a_bare_signing_beside_a_minor_league_deal_does_not_open_a_stint()
+    test_a_minor_league_assignment_closes_an_open_signing()
+    test_same_day_free_agency_cancels_the_activation()
+    test_reassigned_to_the_minors_is_a_stop()
+    test_appearances_fill_a_season_the_transactions_left_closed()
+    test_service_sanity_flags_both_failure_modes()
+    test_moniak_override_is_an_extension()
+    test_rules_version_is_eight()
     test_the_dfa_grace_window_is_a_sourced_ruleset_value()
     test_the_player_level_v7_figures_hold_against_the_real_feed()
     test_a_tiebreaker_game_does_not_set_the_league_season_end()

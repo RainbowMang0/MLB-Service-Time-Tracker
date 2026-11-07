@@ -452,6 +452,39 @@ def get_player_transactions(
     return data.get("transactions", [])
 
 
+def appearance_dates(player_id: int, season: int, group: str) -> list[dt.date]:
+    """Dates this player appeared in a regular-season MLB game.
+
+    The game log is the stat feed's own list of days he was on the active
+    roster. Used only for a season whose transaction walk credited almost
+    no days despite a substantial number of games -- a missing recall. One
+    request per group (hitting or pitching).
+    """
+    data = _get(
+        f"/people/{player_id}/stats",
+        {
+            "stats": "gameLog",
+            "group": group,
+            "season": season,
+            "sportId": SPORT_ID_MLB,
+            "gameType": "R",
+        },
+    )
+    dates: list[dt.date] = []
+    for block in data.get("stats") or []:
+        for split in block.get("splits") or []:
+            if split.get("gameType") not in (None, "R"):
+                continue
+            raw = split.get("date")
+            if not raw:
+                continue
+            try:
+                dates.append(dt.date.fromisoformat(str(raw)[:10]))
+            except ValueError:
+                continue
+    return dates
+
+
 # Seasons whose window came from the HARDCODED estimate (a total outage of both
 # endpoints). Read by callers that need to know whether a run is trustworthy --
 # see estimated_season_windows(). An estimated window blocks publishing.

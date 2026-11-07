@@ -182,24 +182,25 @@ ACTIVE_STOP_KEYWORDS = [
                     # below _STOP_RE.
 ]
 
-# --- Why "elected free agency" is NOT a stop keyword ------------------------
-# It is by far the most common way a player's roster tenure ends: 799 rows
-# across the 1,356 cached transaction histories, phrased "RHP Some Name
-# elected free agency." Adding it here looks obviously correct and is
-# actively harmful, because there is no matching START keyword for the
-# re-signing that usually follows -- the feed says "Team signed free agent
-# RHP Some Name", and "signed" cannot be a start keyword since minor league
-# deals ("...to a minor league contract", 350+ rows) use the same verb.
+# --- Why a lone "elected free agency" is still NOT a global stop ------------
+# It is the most common way a roster tenure ends. Treating every election as
+# a stop looks right and is still harmful: the re-signing that usually
+# follows is not always a recognized start. Re-measured 2026-11-06 against
+# the cached 40-man histories, after major-league signings WERE made starts:
+# 118 rostered players would still lose a later season, because nothing the
+# parser reads as a start lands before the next opener. A lone election
+# therefore still does not close the clock. The retired-player case is
+# handled by `accrual_ceiling`.
 #
-# Measured over those 1,356 cached players: treating it as a stop drops 272
-# currently-rostered players' totals, because their clock stops at the first
-# free agency election and never restarts. Max Scherzer loses 628 days (3.6
-# years), Kenley Jansen 473, Nick Martinez 1,249. Every one of those is wrong.
-#
-# The retired-player problem this appears to solve (a career-ending election
-# leaving an interval open forever) is handled instead by `accrual_ceiling`,
-# which targets only players who are actually done playing. See
-# build_global_active_intervals().
+# Two narrower cases DO close it, and they are the phantom-season bug:
+#   * An election on the SAME DAY as an activation/signing. Clubs activate a
+#     player off the injured list and elect free agency in one paperwork
+#     day (Yency Almonte, 2024-11-04). The activation is not a return to the
+#     roster; the election is the outcome, and same-day stop-wins applies.
+#   * A minor-league release, outright, retirement, or assignment to a
+#     minor-league club. Those rows name only the affiliate, so the MLB-club
+#     filter used to drop them and an earlier major-league signing stayed
+#     open for years (Rob Kaminsky, Ryan Jackson, D.J. Snelten).
 
 # Some "placed on the ... list" transactions still accrue service time
 # (paternity, bereavement, and the 10/15/60-day injured list all count). Only a
@@ -230,6 +231,12 @@ class Transaction:
     date: dt.date
     description: str
     team: str | None = None
+    # Set by the pipeline when this row assigns the player to a minor-league
+    # club ("assigned to Durham Bulls"). The wording is not itself a stop --
+    # "assigned to the Yankees" is a spring-training roster note -- but a
+    # destination that is not a major-league club closes an open MLB stint.
+    # Default false so every existing caller is unchanged.
+    minor_assignment: bool = False
 
 
 @dataclass
@@ -290,10 +297,14 @@ _START_RE = re.compile(
 )
 
 _STOP_RE = re.compile(
-    r"\boptioned\b|\breleased\b|\boutrighted\b"
+    r"\boptioned\b|\breleased\b|\boutrighted\b|\bretired\b"
     rf"|designated{_NAME}for assignment"
     rf"|sent{_NAME}outright"
     rf"|sent{_NAME}to the minor"
+    # "reassigned ... to the minor leagues" is how an end-of-year or
+    # post-trade demotion is often phrased. It is a departure from the
+    # major-league roster, the same fact as "sent ... to the minor".
+    rf"|reassigned{_NAME}to the minor"
     # A restricted-list placement stops the clock (rules v7): the player is not
     # paid and earns no service. The exceptions that DO earn -- paid DV
     # administrative leave, 2020 opt-outs -- are restored per player from
@@ -368,6 +379,40 @@ _NON_STOPPING_RE = re.compile(
 # may start an MLB clock -- a minor league deal must never.
 _SIGNING_RE = re.compile(r"signed free agent|signed as a free agent", re.IGNORECASE)
 _MINOR_LEAGUE_DEAL_RE = re.compile(r"minor league (?:contract|deal)", re.IGNORECASE)
+_FREE_AGENCY_RE = re.compile(r"\b(?:elected|declared) free agency\b", re.IGNORECASE)
+
+
+def is_free_agency_election(desc: str) -> bool:
+    """'elected/declared free agency' -- a departure, not a global stop.
+
+    See the note above ACTIVE_STOP_KEYWORDS. Callers that need the
+    same-day exception (an activation on the election day does not reopen
+    the clock) should use `row_opens_roster` rather than treating every
+    election as a stop.
+    """
+    return bool(_FREE_AGENCY_RE.search(desc or ""))
+
+
+def row_opens_roster(desc: str, same_day: list[str]) -> bool:
+    """Would this description open an MLB interval, given the other rows
+    dated the same day?
+
+    A bare "Team signed free agent Name" is a major-league signing and
+    opens the clock. The feed often files that row NEXT TO a sibling that
+    says "to a minor league contract" (D.J. Snelten 2020-11-16, Rangel
+    Ravelo 2021-01-09). The sibling is the truth; the bare row must not
+    open a phantom stint. A same-day recall, selection, or injured-list
+    placement still opens one -- only the pure signing is suppressed.
+    """
+    if (
+        _SIGNING_RE.search(desc)
+        and not _MINOR_LEAGUE_DEAL_RE.search(desc)
+        and not _START_RE.search(desc)
+        and not _IL_PLACEMENT_RE.search(desc)
+        and any(_MINOR_LEAGUE_DEAL_RE.search(other) for other in same_day)
+    ):
+        return False
+    return _is_active_start(desc)
 
 
 # --- Going on a major league IL STARTS the clock, it does not merely fail to
@@ -590,6 +635,7 @@ def build_global_active_intervals(
     season_starts: list[dt.date] | None = None,
     force_active_periods: list[tuple[dt.date, dt.date]] | None = None,
     force_inactive_periods: list[tuple[dt.date, dt.date]] | None = None,
+    appearance_dates: list[dt.date] | None = None,
 ) -> list[tuple[dt.date, dt.date]]:
     """
     Walk a player's ENTIRE chronological transaction history (not bounded to
@@ -761,9 +807,19 @@ def build_global_active_intervals(
     day_order = sorted(by_date)
     for idx, day in enumerate(day_order):
         rows = by_date[day]
-        has_start = any(_is_active_start(r.description) for r in rows)
-        has_stop = any(_is_active_stop(r.description) for r in rows)
-        has_trade = any(is_trade(r.description) for r in rows)
+        descs = [r.description for r in rows]
+        has_start = any(row_opens_roster(d, descs) for d in descs)
+        has_stop = any(_is_active_stop(d) for d in descs) or any(
+            r.minor_assignment for r in rows
+        )
+        has_trade = any(is_trade(d) for d in descs)
+        # Same-day free-agency election beats an activation or signing.
+        # The activation is the paperwork that lets him elect; it is not a
+        # return to the roster (Yency Almonte, 2024-11-04). A lone election
+        # is still not a stop -- see the note above ACTIVE_STOP_KEYWORDS.
+        if any(is_free_agency_election(d) for d in descs) and has_start:
+            has_start = False
+            has_stop = True
 
         if has_stop:
             is_dfa = any(_DFA_RE.search(r.description) for r in rows)
@@ -862,11 +918,64 @@ def build_global_active_intervals(
             if lo <= hi:
                 intervals.append((lo, hi))
         intervals = _merge_intervals(intervals)
+    if appearance_dates:
+        intervals = _union_appearance_spans(
+            intervals, appearance_dates, transactions, horizon_end, accrual_floor
+        )
+
     if force_inactive_periods:
         for lo, hi in force_inactive_periods:
             intervals = _subtract_period(intervals, lo, hi)
 
     return intervals
+
+
+def _union_appearance_spans(
+    intervals: list[tuple[dt.date, dt.date]],
+    appearance_dates: list[dt.date],
+    transactions: list[Transaction],
+    horizon_end: dt.date,
+    accrual_floor: dt.date | None,
+) -> list[tuple[dt.date, dt.date]]:
+    """Credit roster time the transaction walk missed but the stat feed saw.
+
+    A player cannot appear in a major-league game unless he is on the active
+    roster that day. When the transaction feed drops a recall (Lawrence
+    Butler after 2024-05-14, JP Sears for all of 2023-24) or never records
+    the reinstatement that ends a restricted-list stop (Dee Strange-Gordon,
+    "roster status changed" on 2016-07-28), the walk stays closed through
+    seasons he played. Each appearance date is proof. Consecutive
+    appearances are one stint unless a stop falls strictly between them, so
+    a suspension or an option that the feed DID record is not filled back
+    in, and a season of starts with no stop in between becomes the span
+    from the first game to the last.
+    """
+    dates = sorted({
+        d for d in appearance_dates
+        if (accrual_floor is None or d >= accrual_floor) and d <= horizon_end
+    })
+    if not dates:
+        return intervals
+
+    by_date: dict[dt.date, list[Transaction]] = {}
+    for t in transactions:
+        if t.date <= horizon_end:
+            by_date.setdefault(t.date, []).append(t)
+    stop_dates = set()
+    for day, rows in by_date.items():
+        descs = [r.description for r in rows]
+        if any(r.minor_assignment for r in rows) or any(_is_active_stop(d) for d in descs):
+            stop_dates.add(day)
+
+    spans: list[tuple[dt.date, dt.date]] = []
+    start = prev = dates[0]
+    for day in dates[1:]:
+        if any(prev < stop < day for stop in stop_dates):
+            spans.append((start, prev))
+            start = day
+        prev = day
+    spans.append((start, prev))
+    return _merge_intervals(list(intervals) + spans)
 
 
 def _next_resolving_day(
@@ -1044,6 +1153,7 @@ def compute_service_time(
     dfa_limbo_days: int | None = None,
     force_active_periods: list[tuple[dt.date, dt.date]] | None = None,
     force_inactive_periods: list[tuple[dt.date, dt.date]] | None = None,
+    appearance_dates: list[dt.date] | None = None,
 ) -> ServiceTimeResult:
     """
     Compute total MLB service time across multiple seasons.
@@ -1133,12 +1243,17 @@ def compute_service_time(
         season_starts=[s.start for s in ordered_seasons],
         force_active_periods=force_active_periods,
         force_inactive_periods=force_inactive_periods,
+        appearance_dates=appearance_dates,
     )
 
     total_days = 0
     by_season: dict[int, dict] = {}
     years_with_transactions = {t.date.year for t in transactions}
     option_dates = {t.date for t in transactions if _OPTION_RE.search(t.description)}
+    # An injured-list placement inside an interval means a zero-game season
+    # can still be real service (a player who never appeared because he was
+    # hurt). The sanity check uses this so it does not call that season phantom.
+    il_dates = {t.date for t in transactions if _IL_PLACEMENT_RE.search(t.description)}
 
     for season in ordered_seasons:
         season_intervals = [
@@ -1172,12 +1287,19 @@ def compute_service_time(
         # full-year value is the ruleset's, never a literal.
         if roy_full_year_seasons and season.year in roy_full_year_seasons:
             credited_days = max(credited_days, full_year_days)
+        has_il = any(
+            s <= d <= e
+            for s, e in global_intervals
+            if e >= season.start and s <= season.end
+            for d in il_dates
+        )
         total_days += credited_days
         by_season[season.year] = {
             "raw_active_days": days,
             "prorated_days": prorated_days,
             "credited_days": credited_days,
             "intervals": [(s.isoformat(), e.isoformat()) for s, e in season_intervals],
+            "has_il": has_il,
         }
 
     total_years, remaining_days = divmod(total_days, full_year_days)
