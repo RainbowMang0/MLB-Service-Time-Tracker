@@ -524,6 +524,7 @@ def test_the_page_links_the_site_stylesheets():
     html_text = LOCKOUT_PAGE.read_text(encoding="utf-8")
     check('links styles.css', '<link rel="stylesheet" href="styles.css" />' in html_text)
     check('links taxes.css (for .tax-main/.panel/.panel-note)', '<link rel="stylesheet" href="taxes.css" />' in html_text)
+    check('links lockout.css', '<link rel="stylesheet" href="lockout.css" />' in html_text)
 
 
 def test_the_status_sentence_is_not_duplicated():

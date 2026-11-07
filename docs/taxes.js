@@ -800,7 +800,7 @@
     try {
       const [rules, states] = await Promise.all([
         // Published copies of config/tax/. config/ sits outside docs/ and so
-        // is not served; publish_config() in update_service_time.py copies it
+        // is not served; the daily job copies it
         // to docs/data/config/ on every run.
         fetch("data/config/tax/duty-day-rules.json").then((r) => r.json()),
         fetch("data/config/tax/2026-states.json").then((r) => r.json()),

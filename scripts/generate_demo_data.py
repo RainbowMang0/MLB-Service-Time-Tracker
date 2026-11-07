@@ -148,11 +148,8 @@ def main():
         "generated_at": dt.datetime.combine(TODAY, dt.time(8, 0), tzinfo=dt.timezone.utc).isoformat(),
         "source": "DEMO DATA -- hand-written sample transactions, not live MLB data",
         "disclaimer": (
-            "Service time figures are ESTIMATES computed from public roster "
-            "transaction records, not official MLB/MLBPA figures. This "
-            "specific file is sample/demo data for preview purposes -- run "
-            "scripts/update_service_time.py against the live MLB Stats API "
-            "to populate real data."
+            "Service time figures are estimates from public data, "
+            "not official MLB numbers."
         ),
         "player_count": len(players),
         "players": sorted(players, key=lambda p: p["name"]),
