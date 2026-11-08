@@ -813,11 +813,20 @@ def build_global_active_intervals(
             r.minor_assignment for r in rows
         )
         has_trade = any(is_trade(d) for d in descs)
-        # Same-day free-agency election beats an activation or signing.
-        # The activation is the paperwork that lets him elect; it is not a
-        # return to the roster (Yency Almonte, 2024-11-04). A lone election
-        # is still not a stop -- see the note above ACTIVE_STOP_KEYWORDS.
-        if any(is_free_agency_election(d) for d in descs) and has_start:
+        # Electing or declaring free agency beats an activation or signing,
+        # same-day or not. The activation is the paperwork that lets him
+        # elect; it is not a return to the roster (Yency Almonte,
+        # 2024-11-04). And a LONE election -- no same-day start at all -- is
+        # also a stop: without this, a player who sits out a season before
+        # re-signing (Michael Conforto, elected 2021-11-03, unsigned until
+        # 2023-01-06) keeps accruing through the gap season as phantom
+        # service. Measured over the cached histories this removes phantom
+        # days from Nick Martinez (~625d, a 2018 season spent in Japan before
+        # re-signing in 2022), Conforto (~182d, the 2022 season he sat out)
+        # and others with the same shape. The re-signing itself is already a
+        # recognized start (`row_opens_roster`/_SIGNING_RE), so a player who
+        # re-signs the same winter picks the clock back up at that signing.
+        if any(is_free_agency_election(d) for d in descs):
             has_start = False
             has_stop = True
 
@@ -869,6 +878,17 @@ def build_global_active_intervals(
                         close = limbo_end
                 intervals.append((active_since, close))
                 active_since = None
+            # A trade dated the SAME DAY as the DFA joins him to the new
+            # club's 40-man that day -- the DFA never actually left him off
+            # a roster, so the clock must not stop at all. Without this, the
+            # `elif has_trade` branch below can never fire (has_stop already
+            # took the day), so the reopening only happened on a LATER day
+            # that carried nothing but the trade, and a same-day DFA+trade
+            # under-credited the gap (Jonah Heim, DFA and traded both on
+            # 2026-05-04, under-credited ~146 days).
+            if is_dfa and has_trade and not has_non_dfa_stop:
+                active_since = day
+                last_stop_kind = None
         elif has_start:
             if active_since is None:
                 active_since = day

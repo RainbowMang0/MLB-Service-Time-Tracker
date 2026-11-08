@@ -966,5 +966,57 @@
     "team_id": null,
     "from_team_id": 484,
     "to_team_id": 134
+  },
+  {
+    "date": "2026-09-04",
+    "description": "Pittsburgh Pirates designated C Christian Bethancourt for assignment.",
+    "team": "Pittsburgh Pirates",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 134,
+    "typeCode": "DES",
+    "typeDesc": "Designated for Assignment",
+    "effectiveDate": "2026-09-04",
+    "resolutionDate": "2026-09-04",
+    "id": 941297
+  },
+  {
+    "date": "2026-09-07",
+    "description": "Pittsburgh Pirates sent C Christian Bethancourt outright to Indianapolis Indians.",
+    "team": "Indianapolis Indians",
+    "team_id": null,
+    "from_team_id": 134,
+    "to_team_id": 484,
+    "typeCode": "OUT",
+    "typeDesc": "Outrighted",
+    "effectiveDate": "2026-09-07",
+    "resolutionDate": null,
+    "id": 941562
+  },
+  {
+    "date": "2026-09-10",
+    "description": "Indianapolis Indians activated C Christian Bethancourt.",
+    "team": "Indianapolis Indians",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 484,
+    "typeCode": "SC",
+    "typeDesc": "Status Change",
+    "effectiveDate": "2026-09-10",
+    "resolutionDate": "2026-09-10",
+    "id": 941974
+  },
+  {
+    "date": "2026-11-02",
+    "description": "C Christian Bethancourt elected free agency.",
+    "team": "Indianapolis Indians",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 484,
+    "typeCode": "DFA",
+    "typeDesc": "Declared Free Agency",
+    "effectiveDate": "2026-11-02",
+    "resolutionDate": "2026-11-02",
+    "id": 949174
   }
 ]
