@@ -4766,14 +4766,29 @@ Christian Bethancourt stays 4.163. Heim's published total stays 6.099; the
 game dates had already filled the days the transaction walk was missing,
 and the walk now keeps those days on its own.
 
-Still short: Zac Gallen (6.155 → 6.061) and Tyler Kinley (8.001 → 7.109).
-Both came back in 2026 on an "assigned to <club>" row, which is not a
-signing, so the clock stays off until an injured-list placement. Treating
-every such assignment as a start would credit full seasons to players who
-never appeared. Anthony Banda goes the other way (5.132 → 6.039): a
-same-day DFA and trade on 2020-08-31 keeps the rest of that short season,
-and the 2020 proration turns it into about 79 days, ahead of an activation
-dated after the season.
+Still short, until rules v10: Zac Gallen (6.155 → 6.061) and Tyler Kinley
+(8.001 → 7.109). Both came back in 2026 on an "assigned to <club>" row,
+which is not a signing, so the clock stays off until an injured-list
+placement. Treating every such assignment as a start would credit full
+seasons to players who never appeared. Anthony Banda goes the other way
+(5.132 → 6.039): a same-day DFA and trade on 2020-08-31 keeps the rest of
+that short season, and the 2020 proration turns it into about 79 days,
+ahead of an activation dated after the season.
+
+## Rules v10 — an active-roster assignment restarts a stopped clock (2026-11-08)
+
+An "assigned to <major-league club>" row restarts a stopped clock on that
+date, the same way a signing does, but only when a later row shows he was
+on that club's active roster. An injured-list placement or an option, with
+no minor-league assignment, recall, or contract selection in between, is
+that proof. A same-day minor-league assignment still wins. Optional
+assignments, outrights, and rehab assignments do not restart anything.
+
+Re-measured on the 1,409 cached players with a debut. 3 totals rise, none
+fall. Zac Gallen 6.061 → 6.155, Tyler Kinley 7.109 → 8.001, Rowdy Tellez
+6.123 → 7.018 (optioned, traded, then assigned to the Brewers). The other
+1,406 stay put. Treating every assignment as a start had moved 35,
+including full phantom seasons.
 
 ## Working style notes
 

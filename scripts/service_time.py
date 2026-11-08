@@ -193,11 +193,12 @@ ACTIVE_STOP_KEYWORDS = [
 # games (a year in another league, or a summer spent unsigned). A player who
 # re-signs over the winter picks the clock back up on the signing.
 #
-# What still does not restart it: "assigned to <major-league club>" with no
-# signing. That wording is a spring-training roster note often enough that
-# treating every one as a start puts phantom years on players who never
-# appeared. Zac Gallen and Tyler Kinley came back to their clubs that way in
-# 2026 and are short the days before their first injured-list row. The
+# What restarts it after the election: a signing, a selection, a recall, an
+# injured-list placement, or an assignment onto the major-league active
+# roster. "Assigned to <club>" is that last one only when a later row shows
+# he was actually on the active roster — see _mlb_assignment_reopens. A
+# spring-training "assigned to the Yankees" is not, and neither is a
+# minor-league assignment, an optional assignment, or an outright. The
 # accrual ceiling still closes a career that ends with no election at all.
 #
 # Two related cases were already stops, and they stay stops:
@@ -245,6 +246,12 @@ class Transaction:
     # destination that is not a major-league club closes an open MLB stint.
     # Default false so every existing caller is unchanged.
     minor_assignment: bool = False
+    # Set by the pipeline when this row assigns him to one of the 30 clubs
+    # ("assigned to the Arizona Diamondbacks"). Not a start by itself: most
+    # of those rows are spring-training notes. The walk restarts a stopped
+    # clock only when a later row shows he was on that club's active roster.
+    # Default false so every existing caller is unchanged.
+    mlb_assignment: bool = False
 
 
 @dataclass
@@ -394,8 +401,8 @@ def is_free_agency_election(desc: str) -> bool:
     """'elected/declared free agency' -- this stops the clock.
 
     See the note above ACTIVE_STOP_KEYWORDS. A same-day activation does
-    not reopen it; the next recognized start (a signing, recall, or
-    injured-list placement) does.
+    not reopen it; the next recognized start (a signing, a recall, an
+    injured-list placement, or an assignment onto the active roster) does.
     """
     return bool(_FREE_AGENCY_RE.search(desc or ""))
 
@@ -838,6 +845,19 @@ def build_global_active_intervals(
             has_start = False
             has_stop = True
 
+        # An assignment onto the major-league active roster restarts a stopped
+        # clock, the same way a signing does. Same-day stop still wins (a
+        # minor-league assignment, an option, an outright, a release, or the
+        # free-agency election itself). See _mlb_assignment_reopens for why a
+        # bare "assigned to <club>" is not enough.
+        if (
+            not has_stop
+            and active_since is None
+            and any(r.mlb_assignment for r in rows)
+            and _mlb_assignment_reopens(idx, day_order, by_date)
+        ):
+            has_start = True
+
         if has_stop:
             is_dfa = any(_DFA_RE.search(r.description) for r in rows)
             # A same-day move that resolves the DFA: an outright, release or
@@ -1006,6 +1026,58 @@ def _union_appearance_spans(
     return _merge_intervals(list(intervals) + spans)
 
 
+def _assignment_followup(rows: list["Transaction"]) -> str:
+    """What a later day says about an earlier 'assigned to <MLB club>' row.
+
+    'yes' -- he was on that club's active roster (injured list or optioned).
+    'no'  -- he was still in the minors, or the next roster move is a new
+             start rather than proof the assignment stuck.
+    'skip' -- this day says nothing (a number change, a rehab, a status note).
+    """
+    if any(r.minor_assignment for r in rows):
+        return "no"
+    descs = [r.description for r in rows]
+    if any(_RECALL_RE.search(d) for d in descs) or any(_SELECT_RE.search(d) for d in descs):
+        return "no"
+    if any(_IL_PLACEMENT_RE.search(d) or _OPTION_RE.search(d) for d in descs):
+        return "yes"
+    if any(
+        is_free_agency_election(d) or _is_active_stop(d) or _is_active_start(d)
+        for d in descs
+    ):
+        return "no"
+    return "skip"
+
+
+def _mlb_assignment_reopens(
+    idx: int,
+    day_order: list[dt.date],
+    by_date: dict[dt.date, list["Transaction"]],
+) -> bool:
+    """Did this 'assigned to <MLB club>' row put him on the active roster?
+
+    The feed uses that wording for a real return (Zac Gallen, 2026-02-15,
+    elected free agency in November, on the injured list in July) and for a
+    spring-training roster note (Kevin Ginkel, assigned in March, contract
+    selected from Reno in August). The difference is the next row that
+    actually says where he was. An injured-list placement or an option means
+    he was on the active roster. A minor-league assignment, a recall, or a
+    contract selection means he was not, and the assignment must not open a
+    season he spent in the minors.
+
+    Measured on the cached histories: treating every such row as a start
+    moved 35 players, including full phantom seasons. Requiring this
+    confirmation moves three: Gallen, Tyler Kinley, and Rowdy Tellez (traded
+    while optioned, assigned to the Brewers the next day).
+    """
+    for later in day_order[idx + 1:]:
+        verdict = _assignment_followup(by_date[later])
+        if verdict == "skip":
+            continue
+        return verdict == "yes"
+    return False
+
+
 def _next_resolving_day(
     day_order: list[dt.date],
     idx: int,
@@ -1014,10 +1086,11 @@ def _next_resolving_day(
     """The first day after `day_order[idx]` carrying a move that resolves a DFA.
 
     A DFA ends on the next trade, waiver claim, outright/option/assignment or
-    release -- in feed terms, any start, stop or trade. Returns that date, or
-    None if nothing follows (the grace window then runs its full length).
+    release -- in feed terms, any start, stop, trade, or assignment that
+    actually put him back on the active roster. Returns that date, or None if
+    nothing follows (the grace window then runs its full length).
     """
-    for day in day_order[idx + 1:]:
+    for j, day in enumerate(day_order[idx + 1:], start=idx + 1):
         rows = by_date[day]
         if any(
             _is_active_start(r.description)
@@ -1025,6 +1098,8 @@ def _next_resolving_day(
             or is_trade(r.description)
             for r in rows
         ):
+            return day
+        if any(r.mlb_assignment for r in rows) and _mlb_assignment_reopens(j, day_order, by_date):
             return day
     return None
 
@@ -1108,6 +1183,13 @@ def _subtract_period(
 # "optioned" transaction date. That is how we tell an option gap from any other
 # gap without guessing: the feed's own word for the move that opened it.
 _OPTION_RE = re.compile(r"\boptioned\b", re.IGNORECASE)
+# A contract selection is the call-up. When it is the next roster move after
+# an "assigned to <club>" row, that assignment was a spring-training note and
+# he was still in the minors. See _mlb_assignment_reopens.
+_SELECT_RE = re.compile(
+    r"selected the contract|purchased the contract|contract selected",
+    re.IGNORECASE,
+)
 
 # How far before a club's Opening Day an option is still read as a spring-
 # training assignment that counts from Opening Day. Spring training runs ~6

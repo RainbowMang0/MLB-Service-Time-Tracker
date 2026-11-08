@@ -209,8 +209,20 @@ TODAY = dt.date.today()
 #    The falls are unsigned or out-of-league seasons (Fedde 2023, Lambert
 #    2025, Cortes 2026). A same-day trade keeps the days (Heim 2026). A
 #    return worded only as "assigned to <club>" still starts late (Gallen,
-#    Kinley).
-SERVICE_TIME_RULES_VERSION = 9
+#    Kinley). Rules v10 is that case.
+#
+# 10 an assignment onto the major-league active roster restarts a stopped
+#    clock, the same way a signing does. "Assigned to <MLB club>" is that
+#    return only when a later row shows he was on the active roster (an
+#    injured-list placement or an option) before any row that shows he was
+#    still in the minors (a minor-league assignment, a recall, or a contract
+#    selection). A same-day minor-league assignment still wins. Optional
+#    assignments, outrights, and rehab assignments do not restart anything.
+#    Re-measured on the 1,409 cached histories with a debut: 3 totals rise,
+#    none fall. Zac Gallen 6.061 -> 6.155, Tyler Kinley 7.109 -> 8.001,
+#    Rowdy Tellez 6.123 -> 7.018. The other 1,406 stay put -- treating every
+#    assignment as a start had moved 35, including full phantom seasons.
+SERVICE_TIME_RULES_VERSION = 10
 
 # The carry-in rule: presume a player is on a roster from his debut onward
 # rather than crediting him nothing until a start transaction happens to fire.
@@ -543,6 +555,29 @@ def _is_minor_assignment(txn: dict, mlb_ids: set[int]) -> bool:
     return isinstance(to_id, int) and to_id not in mlb_ids
 
 
+_NOT_ACTIVE_ASSIGNMENT_RE = re.compile(r"outright|\boption", re.I)
+
+
+def _is_mlb_assignment(txn: dict, mlb_ids: set[int]) -> bool:
+    """True when this row assigns the player to one of the 30 clubs.
+
+    The flag is not itself a start. Spring-training roster notes use the
+    same words, and so does a minor-league assignment read the wrong way.
+    build_global_active_intervals restarts a stopped clock only when a later
+    row shows he was on that club's active roster. Rehab, optional, and
+    outright assignments are never this kind of return.
+    """
+    desc = txn.get("description") or ""
+    if (
+        not _ASSIGNED_TO_RE.search(desc)
+        or _REHAB_RE.search(desc)
+        or _NOT_ACTIVE_ASSIGNMENT_RE.search(desc)
+    ):
+        return False
+    to_id = txn.get("to_team_id")
+    return isinstance(to_id, int) and to_id in mlb_ids
+
+
 def _involves_mlb_club(txn: dict, mlb_ids: set[int]) -> bool:
     """
     True if this transaction involves an actual major league club.
@@ -750,6 +785,7 @@ def build_player_record(
     transactions = []
     for t in raw_txns:
         minor_assignment = _is_minor_assignment(t, mlb_ids)
+        mlb_assignment = _is_mlb_assignment(t, mlb_ids)
         desc = t.get("description") or ""
         # A minor-league release, outright, retirement, or assignment is the
         # move that ends a lot of careers. The MLB-club filter used to drop
@@ -757,6 +793,7 @@ def build_player_record(
         if not (
             _involves_mlb_club(t, mlb_ids)
             or minor_assignment
+            or mlb_assignment
             or is_active_stop(desc)
             or is_free_agency_election(desc)
         ):
@@ -767,6 +804,7 @@ def build_player_record(
                 description=desc,
                 team=(t.get("team") or {}).get("name") if isinstance(t.get("team"), dict) else t.get("team"),
                 minor_assignment=minor_assignment,
+                mlb_assignment=mlb_assignment,
             )
         )
 

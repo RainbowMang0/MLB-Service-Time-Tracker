@@ -6050,9 +6050,11 @@ def _cached_roster_transactions(player_id: int) -> list[Transaction]:
     for row in raw:
         desc = row.get("description") or ""
         minor = u._is_minor_assignment(row, mlb_ids)
+        mlb_asg = u._is_mlb_assignment(row, mlb_ids)
         if not (
             u._involves_mlb_club(row, mlb_ids)
             or minor
+            or mlb_asg
             or is_active_stop(desc)
             or is_free_agency_election(desc)
         ):
@@ -6062,6 +6064,7 @@ def _cached_roster_transactions(player_id: int) -> list[Transaction]:
                 date=dt.date.fromisoformat(row["date"]),
                 description=desc,
                 minor_assignment=minor,
+                mlb_assignment=mlb_asg,
             )
         )
     return kept
@@ -6144,10 +6147,117 @@ def test_free_agency_and_same_day_trades_on_five_cached_careers():
           not _covers(beth, dt.date(2026, 9, 15)))
 
 
-def test_rules_version_is_nine():
+def test_rules_version_is_ten():
     """The bump the backfill reads to know which players to recompute."""
     import update_service_time as u
-    check("SERVICE_TIME_RULES_VERSION is 9", u.SERVICE_TIME_RULES_VERSION == 9)
+    check("SERVICE_TIME_RULES_VERSION is 10", u.SERVICE_TIME_RULES_VERSION == 10)
+
+
+def test_an_mlb_club_assignment_restarts_a_stopped_clock():
+    """Zac Gallen and Tyler Kinley came back in 2026 on "assigned to the
+    club", not a signing, so the free-agency stop left the clock off until
+    an injured-list row. That assignment is the return. A spring-training
+    assignment, a same-day minor-league assignment, an option, and an
+    outright are not.
+    """
+    gallen = _cached_intervals(668678, "2019-06-20")
+    check("Gallen's clock stays off after the 2025 free-agency election",
+          not _covers(gallen, dt.date(2025, 12, 1)))
+    check("Gallen is back on the clock in May 2026, from the February assignment",
+          _covers(gallen, dt.date(2026, 5, 1)))
+
+    kinley = _cached_intervals(641755, "2018-08-07")
+    check("Kinley's clock stays off after the 2025 free-agency election",
+          not _covers(kinley, dt.date(2025, 12, 1)))
+    check("Kinley is back on the clock in May 2026, from the January assignment",
+          _covers(kinley, dt.date(2026, 5, 1)))
+
+    # Otherwise off: optioned, traded, then assigned to the new club. The
+    # July 7 assignment is the return; the June option gap is not.
+    tellez = _cached_intervals(642133, "2018-08-09")
+    check("Tellez is not credited while optioned, before the Brewers assignment",
+          not _covers(tellez, dt.date(2021, 7, 1)))
+    check("Tellez's assignment to the Brewers restarts the clock",
+          _covers(tellez, dt.date(2021, 8, 15)))
+
+    # Spring note, then a contract selection: he was in the minors until the
+    # selection. The March assignment must not fill the summer.
+    ginkel = _cached_intervals(656464, "2019-08-17")
+    check("a spring assignment does not credit the months before a selection",
+          not _covers(ginkel, dt.date(2022, 6, 1)))
+
+    # Same-day minor-league assignment wins. Bruihl was in Buffalo until the
+    # June selection.
+    bruihl = _cached_intervals(677865, "2020-08-22")
+    check("a same-day minor-league assignment does not restart the clock",
+          not _covers(bruihl, dt.date(2025, 4, 15)))
+
+    import update_service_time as u
+    ids = {109}
+    check(
+        "an assignment to a major-league club is flagged as one",
+        u._is_mlb_assignment(
+            {"description": "RHP X assigned to Arizona Diamondbacks.", "to_team_id": 109},
+            ids,
+        ),
+    )
+    check(
+        "a minor-league assignment is not an active-roster return",
+        not u._is_mlb_assignment(
+            {"description": "RHP X assigned to Reno Aces.", "to_team_id": 2310},
+            ids,
+        ),
+    )
+    check(
+        "an outright assignment does not restart the clock",
+        not u._is_mlb_assignment(
+            {"description": "RHP X assigned outright to Reno Aces.", "to_team_id": 2310},
+            ids,
+        )
+        and not u._is_mlb_assignment(
+            {"description": "Arizona Diamondbacks assigned RHP X outright to the roster.", "to_team_id": 109},
+            ids,
+        ),
+    )
+    check(
+        "an optional assignment does not restart the clock",
+        not u._is_mlb_assignment(
+            {"description": "Arizona Diamondbacks optioned RHP X to Reno Aces.", "to_team_id": 2310},
+            ids,
+        ),
+    )
+    check(
+        "a rehab assignment does not restart the clock",
+        not u._is_mlb_assignment(
+            {"description": "Arizona Diamondbacks sent RHP X on a rehab assignment to Reno Aces.", "to_team_id": 2310},
+            ids,
+        ),
+    )
+
+    # Synthetic mirror of Gallen: election, assignment, then the injured list.
+    seasons = [SeasonWindow(2026, dt.date(2026, 3, 26), dt.date(2026, 9, 27))]
+    back = compute_service_time(
+        [
+            Transaction(dt.date(2025, 11, 2), "RHP X elected free agency."),
+            Transaction(
+                dt.date(2026, 2, 15),
+                "RHP X assigned to Arizona Diamondbacks.",
+                mlb_assignment=True,
+            ),
+            Transaction(
+                dt.date(2026, 7, 12),
+                "Arizona Diamondbacks placed RHP X on the 15-day injured list.",
+            ),
+        ],
+        seasons,
+        horizon_end=dt.date(2026, 9, 27),
+        accrual_floor=dt.date(2019, 6, 20),
+        dfa_limbo_days=7,
+    )
+    check(
+        "the assignment credits the season from Opening Day, not from the injured list",
+        back.by_season[2026]["credited_days"] == 172,
+    )
 
 
 def test_the_dfa_grace_window_is_a_sourced_ruleset_value():
@@ -6762,8 +6872,9 @@ if __name__ == "__main__":
     test_appearances_fill_a_season_the_transactions_left_closed()
     test_service_sanity_flags_both_failure_modes()
     test_moniak_override_is_an_extension()
-    test_rules_version_is_nine()
+    test_rules_version_is_ten()
     test_free_agency_and_same_day_trades_on_five_cached_careers()
+    test_an_mlb_club_assignment_restarts_a_stopped_clock()
     test_the_dfa_grace_window_is_a_sourced_ruleset_value()
     test_the_player_level_v7_figures_hold_against_the_real_feed()
     test_a_tiebreaker_game_does_not_set_the_league_season_end()
