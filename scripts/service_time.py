@@ -182,17 +182,25 @@ ACTIVE_STOP_KEYWORDS = [
                     # below _STOP_RE.
 ]
 
-# --- Why a lone "elected free agency" is still NOT a global stop ------------
-# It is the most common way a roster tenure ends. Treating every election as
-# a stop looks right and is still harmful: the re-signing that usually
-# follows is not always a recognized start. Re-measured 2026-11-06 against
-# the cached 40-man histories, after major-league signings WERE made starts:
-# 118 rostered players would still lose a later season, because nothing the
-# parser reads as a start lands before the next opener. A lone election
-# therefore still does not close the clock. The retired-player case is
-# handled by `accrual_ceiling`.
+# --- Electing or declaring free agency stops the clock ----------------------
+# It is the most common way a roster tenure ends. An earlier measurement
+# (2026-11-06) refused to make a lone election a stop: 118 cached players
+# would have lost a later season, because the re-signing was not always a
+# row the parser read as a start. Major-league signings are starts now
+# ("signed free agent" / "signed as a free agent"), and re-measuring the
+# cached histories on 2026-11-08 with that in place moved 17 of 1,441
+# players: 15 down, 2 up. The seasons that fall are ones with no major-league
+# games (a year in another league, or a summer spent unsigned). A player who
+# re-signs over the winter picks the clock back up on the signing.
 #
-# Two narrower cases DO close it, and they are the phantom-season bug:
+# What still does not restart it: "assigned to <major-league club>" with no
+# signing. That wording is a spring-training roster note often enough that
+# treating every one as a start puts phantom years on players who never
+# appeared. Zac Gallen and Tyler Kinley came back to their clubs that way in
+# 2026 and are short the days before their first injured-list row. The
+# accrual ceiling still closes a career that ends with no election at all.
+#
+# Two related cases were already stops, and they stay stops:
 #   * An election on the SAME DAY as an activation/signing. Clubs activate a
 #     player off the injured list and elect free agency in one paperwork
 #     day (Yency Almonte, 2024-11-04). The activation is not a return to the
@@ -383,12 +391,11 @@ _FREE_AGENCY_RE = re.compile(r"\b(?:elected|declared) free agency\b", re.IGNOREC
 
 
 def is_free_agency_election(desc: str) -> bool:
-    """'elected/declared free agency' -- a departure, not a global stop.
+    """'elected/declared free agency' -- this stops the clock.
 
-    See the note above ACTIVE_STOP_KEYWORDS. Callers that need the
-    same-day exception (an activation on the election day does not reopen
-    the clock) should use `row_opens_roster` rather than treating every
-    election as a stop.
+    See the note above ACTIVE_STOP_KEYWORDS. A same-day activation does
+    not reopen it; the next recognized start (a signing, recall, or
+    injured-list placement) does.
     """
     return bool(_FREE_AGENCY_RE.search(desc or ""))
 
@@ -675,9 +682,10 @@ def build_global_active_intervals(
     at which this player could still have been accruing, in practice the end
     of the last season he appeared in. It exists because a career does not
     always end with a transaction this parser recognizes -- a player's final
-    roster move is very often "elected free agency", which is deliberately
-    NOT a stop keyword (see ACTIVE_STOP_KEYWORDS), so the interval it leaves
-    open would otherwise run all the way to `horizon_end` and credit a
+    roster move is very often "elected free agency". That election now stops
+    the clock (see the note above ACTIVE_STOP_KEYWORDS). The ceiling is still
+    what closes a career that ends some other way the parser does not read
+    as a stop, so the open interval cannot run to `horizon_end` and credit a
     retired player for every season since. Lowering the horizon to the
     ceiling closes that interval at the right place and drops the later
     transactions along with it.

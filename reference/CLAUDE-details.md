@@ -4748,6 +4748,33 @@ list and the non-tender watch. Mickey Moniak (666160, 2026-08-04, reported
 extension) is the override; the transaction cache has no extension wording.
 `data/known_extensions.json` is still only the pre-arb salary list.
 
+## Rules v9 — free agency stops the clock (2026-11-08)
+
+Electing or declaring free agency stops the service-time clock even when
+nothing else happens that day. A trade on the same day as a DFA does not:
+the player joins the new club's roster, so the clock keeps running (Jonah
+Heim, 2026-05-04).
+
+Re-measured on the 1,441 cached histories. 1,424 totals do not move. 15 go
+down and 2 go up. The big drops are seasons with no major-league games:
+Erick Fedde 2023 (8.095 → 7.095), Peter Lambert 2025 (6.064 → 5.064),
+Nestor Cortes 2026 (6.161 → 6.015). Nick Martinez's 2018 season in Japan
+and Michael Conforto's 2022 sit-out were already absent from the published
+totals (no games and, for Martinez, a spring assignment that closed the
+interval before 2019). The election now closes the interval itself.
+Christian Bethancourt stays 4.163. Heim's published total stays 6.099; the
+game dates had already filled the days the transaction walk was missing,
+and the walk now keeps those days on its own.
+
+Still short: Zac Gallen (6.155 → 6.061) and Tyler Kinley (8.001 → 7.109).
+Both came back in 2026 on an "assigned to <club>" row, which is not a
+signing, so the clock stays off until an injured-list placement. Treating
+every such assignment as a start would credit full seasons to players who
+never appeared. Anthony Banda goes the other way (5.132 → 6.039): a
+same-day DFA and trade on 2020-08-31 keeps the rest of that short season,
+and the 2020 proration turns it into about 79 days, ahead of an activation
+dated after the season.
+
 ## Working style notes
 
 - The owner has been working from an **iPad via GitHub Codespaces**. Safari's

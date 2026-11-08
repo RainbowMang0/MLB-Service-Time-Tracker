@@ -195,14 +195,22 @@ TODAY = dt.date.today()
 #        an open stint -- the MLB-club filter had been dropping the very
 #        move that ended the career (Kaminsky, Jackson). (c) A free-agency
 #        election on the same day as an activation wins, so the activation
-#        does not reopen the clock (Almonte). A lone election is still not
-#        a global stop. (d) "reassigned ... to the minor leagues" is a stop.
+#        does not reopen the clock (Almonte). A lone election was not a
+#        global stop in v8; v9 makes it one. (d) "reassigned ... to the minor leagues" is a stop.
 #    (e) Where the stat feed shows a substantial number of MLB games and the
 #        transaction walk credited almost none, the span from the first game
 #        to the last is credited, split by any stop the feed did record
 #        (Strange-Gordon 2017, Butler 2025-26, Allen 2025, Sears 2023-24).
 #        That fill only adds days, and only across a gap with no stop.
-SERVICE_TIME_RULES_VERSION = 8
+#
+# 9  electing or declaring free agency always stops the clock, and a DFA
+#    with a trade on the same day does not stop it. Re-measured on the 1,441
+#    cached histories (2026-11-08): 15 totals fall, 2 rise, 1,424 unchanged.
+#    The falls are unsigned or out-of-league seasons (Fedde 2023, Lambert
+#    2025, Cortes 2026). A same-day trade keeps the days (Heim 2026). A
+#    return worded only as "assigned to <club>" still starts late (Gallen,
+#    Kinley).
+SERVICE_TIME_RULES_VERSION = 9
 
 # The carry-in rule: presume a player is on a roster from his debut onward
 # rather than crediting him nothing until a start transaction happens to fire.
@@ -680,12 +688,11 @@ def _still_on_ml_roster(transactions: list[Transaction]) -> bool:
     False if it is a STOP (release, outright, option, DFA, restricted list), a
     free-agency election, or if he has no major-league roster move at all.
 
-    A free-agency election counts as leaving HERE even though it is deliberately
-    not a global stop keyword (there is no matching START for the re-signing that
-    usually follows, so treating it as a stop everywhere wrecks 272 active
-    players -- see service_time.py). This guard only runs for a player who is NOT
-    currently rostered, and it reads the LATEST event: an active player who
-    elected free agency and re-signed has a later start/recall that wins first.
+    A free-agency election counts as leaving. The service-time walk stops the
+    clock on the same wording (rules v9); a later signing starts it again.
+    This guard only runs for a player who is NOT currently rostered, and it
+    reads the LATEST event: an active player who elected free agency and
+    re-signed has a later start/recall that wins first.
     Without this, a player who was selected to the 40-man and then elected free
     agency and drifted through the minors (Aaron Sanchez: 2022 selection, then
     'elected free agency', then only minor-league deals) read as still on a
