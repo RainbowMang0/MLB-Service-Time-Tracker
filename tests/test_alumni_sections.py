@@ -189,11 +189,12 @@ def test_page_gains_the_three_sections() -> None:
 
     compact = alumni.build_compact(player, _rows(), _stats(), NAMES, TODAY, WINDOWS)
     after = pages.render(player, NAMES, "2026-11-06T00:00:00+00:00", [], None, compact)
-    check("the injured list is on the page", 'id="injuries"' in after and ">10-day<" in after)
+    check("the injured list is on the page", 'id="injuries"' in after and "10-day · Hamstring" in after)
     check("season stats are on the page", 'id="stats"' in after and ">12<" in after and "public data" in after)
     check("career moves are on the page", 'id="moves"' in after and "Signed with the Washington Nationals" in after)
     check("the debut line is on the page", "Made his major league debut with the Washington Nationals" in after)
-    check("the feed sentence is not on the page", "hamstring" not in after.lower() and "oblique" not in after.lower())
+    check("the feed sentence is not on the page", "strain" not in after.lower() and "oblique" not in after.lower())
+    check("the derived body-part label shows, not the feed's own word", "Hamstring" in after)
     check("the service-time figure is untouched", ">4.000<" in after)
 
 
@@ -218,7 +219,7 @@ def test_thin_history_wording() -> None:
     compact = alumni.build_compact(player, thin_rows, {}, NAMES, TODAY, WINDOWS)
     check("the stored year is the first row", compact["il_record_year"] == 2016)
     html = render_player_sections(player, None, NAMES, TODAY, WINDOWS, compact)
-    check("the table and the thin note both show", ">10-day<" in html and "IL history in the public record begins in 2016." in html)
+    check("the table and the thin note both show", "10-day · Ribs/Side" in html and "IL history in the public record begins in 2016." in html)
     check("a thin record is not called a zero", "No major league injured-list time" not in html)
 
     empty = alumni.build_compact(
