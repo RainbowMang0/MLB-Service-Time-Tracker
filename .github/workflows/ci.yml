@@ -82,6 +82,9 @@ jobs:
       - name: Alumni page sections
         run: python tests/test_alumni_sections.py
 
+      - name: Injured-list body-part labels
+        run: python tests/test_injury_labels.py
+
       - name: Data query helper (fixtures only, no real data read)
         run: python tests/test_query_data.py
 
