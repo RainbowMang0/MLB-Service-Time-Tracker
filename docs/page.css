@@ -129,3 +129,21 @@ h1 { letter-spacing: -0.02em; }
   font-size: 0.9rem; line-height: 1.45; }
 .pp-tl time { display: block; color: var(--text-muted); font-size: 0.75rem;
   font-variant-numeric: tabular-nums; }
+.option-line { font-size: 1.02rem; margin: 0.85rem 0 0; max-width: 62ch;
+  font-variant-numeric: tabular-nums; }
+.opt-controls { display: flex; flex-wrap: wrap; gap: 8px; margin: 0.2rem 0 1rem; }
+.opt-controls input, .opt-controls select {
+  font: inherit; font-size: 0.95rem; padding: 10px 12px; border-radius: 9px;
+  border: 1px solid var(--glass-border); background: var(--glass-surface);
+  color: var(--text-primary); flex: 1 1 10rem; min-width: 0;
+}
+.opt-controls input { flex: 2 1 14rem; }
+.opt-more { margin: 0.2rem 0 0.8rem; max-width: 62ch; }
+.opt-more summary { cursor: pointer; color: var(--accent); }
+.opt-more p { margin: 0.45rem 0 0; color: var(--text-secondary); font-size: 0.92rem; }
+.opt-empty { color: var(--text-muted); margin: 0.4rem 0; }
+.facts b a { color: inherit; text-decoration: none; }
+.facts b a:hover { text-decoration: underline; }
+@media (max-width: 640px) {
+  .opt-controls input, .opt-controls select { flex-basis: 100%; }
+}

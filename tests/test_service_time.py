@@ -2989,7 +2989,7 @@ def test_the_offseason_pages_are_added_to_the_sitemap_and_workflows():
     core = (ROOT / "docs" / "sitemap-core.xml").read_text()
     for path in (
         wpp.ARBITRATION_ELIGIBLE_PATH, wpp.SUPER_TWO_PAGE_PATH,
-        wpp.NON_TENDER_WATCH_PATH, wpp.FREE_AGENTS_PATH,
+        wpp.NON_TENDER_WATCH_PATH, wpp.FREE_AGENTS_PATH, wpp.OPTIONS_PATH,
     ):
         check(f"sitemap-core.xml lists {path}", f"/{path}</loc>" in core)
 
@@ -3002,7 +3002,7 @@ def test_the_offseason_pages_are_added_to_the_sitemap_and_workflows():
                 f"docs/{p}" in body
                 for p in (
                     wpp.ARBITRATION_ELIGIBLE_PATH, wpp.SUPER_TWO_PAGE_PATH,
-                    wpp.NON_TENDER_WATCH_PATH, wpp.FREE_AGENTS_PATH,
+                    wpp.NON_TENDER_WATCH_PATH, wpp.FREE_AGENTS_PATH, wpp.OPTIONS_PATH,
                 )
             ),
         )
@@ -3329,6 +3329,7 @@ def _menu_sample_pages():
         "render_explainer": wpp.render_explainer("2026-01-01"),
         "render_arbitration_eligible": wpp.render_arbitration_eligible([], "2026-01-01", None, {}),
         "render_super_two": wpp.render_super_two([], {}, "2026-01-01", None),
+        "render_options": wpp.render_options([], {}, "2026-01-01"),
         "render_non_tender_watch": wpp.render_non_tender_watch([], "2026-01-01", 2027),
         "render_free_agents": wpp.render_free_agents([], {}, "2026-01-01"),
     }
@@ -3430,8 +3431,8 @@ def test_the_tab_row_matches_the_approved_phone_and_desktop_sets():
 
     check("phone tabs are exactly Players, Clubs, Arbitration, Super Two, in order",
           phone_labels == ["Players", "Clubs", "Arbitration", "Super Two"])
-    check("desktop tabs add Lockout and Previous players, in order",
-          all_labels == ["Players", "Clubs", "Arbitration", "Super Two", "Lockout", "Previous players"])
+    check("desktop tabs add Options, Lockout and Previous players, in order",
+          all_labels == ["Players", "Clubs", "Arbitration", "Super Two", "Options", "Lockout", "Previous players"])
 
 
 def test_the_sheet_lists_every_required_row_and_never_the_shelved_tools():
@@ -3453,7 +3454,7 @@ def test_the_sheet_lists_every_required_row_and_never_the_shelved_tools():
     sheet_text = sheet.group(0)
 
     for label in (
-        "Players", "Arbitration eligible", "Super Two",
+        "Players", "Arbitration eligible", "Super Two", "Out of options",
         "Previous players A", "Lockout tracker",
         "What is service time?", "About", "Neutrality", "Privacy",
     ):
@@ -3519,6 +3520,7 @@ def test_the_header_marks_the_right_tab_current_and_only_one():
         ("render_arbitration_eligible",
          wpp.render_arbitration_eligible([], "2026-01-01", None, {}), "Arbitration"),
         ("render_super_two", wpp.render_super_two([], {}, "2026-01-01", None), "Super Two"),
+        ("render_options", wpp.render_options([], {}, "2026-01-01"), "Options"),
     ]
     for label, html_text, tab in generated_cases:
         check(f"{label} marks exactly one tab current", len(current_labels(html_text)) == 1)
@@ -3605,7 +3607,8 @@ def test_the_footer_is_the_same_on_every_page():
     ROOT = pathlib.Path(__file__).resolve().parents[1]
     contact_link = "mailto:contact@bigleagueservicetime.com"
     required_hrefs = {
-        "", "t/", "arbitration-eligible.html", "super-two.html", f"{wpp.ALUMNI_DIR_NAME}/",
+        "", "t/", "arbitration-eligible.html", "super-two.html", "options.html",
+        f"{wpp.ALUMNI_DIR_NAME}/",
         "lockout.html", "service-time.html", "about.html", "neutrality.html", "privacy.html",
     }
 
@@ -5266,6 +5269,7 @@ def _generated_sample_pages():
         "render_explainer": w.render_explainer("2026-01-01"),
         "render_arbitration_eligible": w.render_arbitration_eligible([], "2026-01-01", None, {}),
         "render_super_two": w.render_super_two([], {}, "2026-01-01", None),
+        "render_options": w.render_options([], {}, "2026-01-01"),
     }
     return pages
 
