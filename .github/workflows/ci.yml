@@ -76,6 +76,9 @@ jobs:
       - name: Player page sections
         run: python tests/test_player_sections.py
 
+      - name: Option years
+        run: python tests/test_options.py
+
       - name: Alumni page sections
         run: python tests/test_alumni_sections.py
 

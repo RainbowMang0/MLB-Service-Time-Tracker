@@ -49,6 +49,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
 import alumni_sections  # noqa: E402
 import cba  # noqa: E402
+import options as option_years  # noqa: E402
 import player_sections  # noqa: E402
 import salary_estimates  # noqa: E402
 import super_two  # noqa: E402
@@ -138,6 +139,9 @@ NAV = [
     ("t/", "Clubs", None, {"phone", "desktop"}),
     ("arbitration-eligible.html", "Arbitration", "Arbitration eligible", {"phone", "desktop", "numbers"}),
     ("super-two.html", "Super Two", "Super Two", {"phone", "desktop", "numbers"}),
+    # Desktop tab plus the More sheet. Phone keeps four tabs; this page is
+    # one tap away in the sheet, which is the menu a phone actually uses.
+    ("options.html", "Options", "Out of options", {"desktop", "numbers"}),
     ("lockout.html", "Lockout", "Lockout tracker", {"desktop", "tools"}),
     ("alumni/", "Previous players", "Previous players A–Z", {"desktop", "numbers"}),
     ("service-time.html", None, "What is service time?", {"small"}),
@@ -1030,6 +1034,28 @@ def _club_offseason_section(
 """
 
 
+def _options_left_cell(player: dict, option_counts: dict | None) -> str:
+    """Options still left under the standard rule, or a dash when unknown."""
+    count = None if not option_counts else option_counts.get(player.get("id"))
+    # class is not the bare service-day cell. That one is normalised out of
+    # the page hash because it ticks every day. Options left does not, and
+    # a change in it is a real change to the page.
+    if count is None or count.incomplete or count.remaining is None:
+        return '<td class="n opt-left">—</td>'
+    return f'<td class="n opt-left">{count.remaining}</td>'
+
+
+def _out_of_options_count(players: list[dict], option_counts: dict | None) -> int:
+    if not option_counts:
+        return 0
+    total = 0
+    for player in players:
+        count = option_counts.get(player.get("id"))
+        if count is not None and count.out_of_options:
+            total += 1
+    return total
+
+
 def render_club(
     club: str,
     players: list[dict],
@@ -1038,6 +1064,7 @@ def render_club(
     non_tender: list[tuple[dict, list[str]]] | None = None,
     fa_next_season: list[dict] | None = None,
     next_season: int | None = None,
+    option_counts: dict | None = None,
 ) -> str:
     """A club's 40-man roster, by service time.
 
@@ -1054,6 +1081,10 @@ def render_club(
     fa = sum(1 for p in players if p.get("free_agent_eligible"))
     arb = sum(1 for p in players if p.get("arbitration_eligible"))
     s2 = sum(1 for p in players if p.get("super_two_candidate"))
+    out_of_options = _out_of_options_count(players, option_counts)
+    options_href = (
+        f"{BASE_PATH}{OPTIONS_PATH}?team={urllib.parse.quote(club)}&status=out"
+    )
 
     # Not "all N players on the 40-man": a club's 40-man can hold more than 40,
     # because players on the 60-day IL stay on it without counting against the
@@ -1071,6 +1102,7 @@ def render_club(
         f"<td>{html.escape(p.get('position') or '—')}</td>"
         f"<td class='n svc-col'>{_svc_cell(p)}</td>"
         f"<td class='n'>{p.get('service_days_total', 0)}</td>"
+        f"{_options_left_cell(p, option_counts)}"
         f"<td>{_status_badge(p)}</td></tr>"
         for p in sorted(
             players, key=lambda p: (-int(p.get("service_days_total") or 0), p.get("name") or "")
@@ -1131,12 +1163,13 @@ def render_club(
     <div><span>Free agency eligible</span><b class="big">{fa}</b></div>
     <div><span>Arbitration eligible</span><b class="big">{arb}</b></div>
     <div><span>Super Two track</span><b class="big">{s2}</b></div>
+    <div><span>Out of options</span><b class="big"><a href="{options_href}">{out_of_options}</a></b></div>
   </div>
 
   {_key_players_line(players)}
 
   <table><thead><tr><th>Player</th><th>Pos</th><th class="n">Service time</th>
-  <th class="n">Days</th><th>Status</th></tr></thead><tbody>{rows}</tbody></table>
+  <th class="n">Days</th><th class="n">Options left</th><th>Status</th></tr></thead><tbody>{rows}</tbody></table>
 
   {offseason_section}
 
@@ -1361,6 +1394,7 @@ def render(
     teammates: list[dict] | None = None,
     transactions: list[dict] | None = None,
     compact: dict | None = None,
+    option_count: option_years.OptionCount | None = None,
 ) -> str:
     name = html.escape(player.get("name") or "Player")
     service = html.escape(player.get("service_time") or "0.000")
@@ -1444,6 +1478,11 @@ def render(
         section_today = dt.date.fromisoformat((generated_at or "")[:10])
     except ValueError:
         section_today = dt.date.today()
+    if option_count is None:
+        option_count = option_years.summarize(
+            player, transactions, player_sections._windows(), section_today
+        )
+    option_line = html.escape(option_years.player_line(option_count))
     sections = player_sections.render_player_sections(
         player, transactions, team_names, section_today, compact=compact
     )
@@ -1493,6 +1532,7 @@ def render(
     <div><span>MLB debut</span>{debut}</div>
   </div>
 
+  <p class="option-line">{option_line}</p>
   <p class="milestone">{html.escape(_milestone_sentence(player))}</p>
 
   {caveat}
@@ -1655,6 +1695,271 @@ class _LastMod:
         return sum(1 for v in self.current.values() if v["lastmod"] == self.today)
 
 
+_OPTIONS_JS = """
+<script>
+(function () {
+  var table = document.getElementById("opt-table");
+  var controls = document.getElementById("opt-controls");
+  if (!table || !controls || !table.tBodies[0]) return;
+  controls.hidden = false;
+  var body = table.tBodies[0];
+  var rows = Array.prototype.slice.call(body.rows);
+  var search = document.getElementById("opt-search");
+  var team = document.getElementById("opt-team");
+  var pos = document.getElementById("opt-pos");
+  var status = document.getElementById("opt-status");
+  var empty = document.getElementById("opt-empty");
+  var sortKey = "team";
+  var sortDir = "asc";
+
+  function val(row, key) {
+    return row.getAttribute("data-" + key) || "";
+  }
+  function compare(a, b) {
+    var av = val(a, sortKey);
+    var bv = val(b, sortKey);
+    var an = Number(av);
+    var bn = Number(bv);
+    var cmp;
+    if (av !== "" && bv !== "" && !isNaN(an) && !isNaN(bn)) cmp = an - bn;
+    else cmp = av.localeCompare(bv);
+    if (cmp === 0) cmp = val(a, "name").localeCompare(val(b, "name"));
+    return sortDir === "asc" ? cmp : -cmp;
+  }
+  function apply() {
+    var q = (search.value || "").trim().toLowerCase();
+    var t = team.value;
+    var p = pos.value;
+    var s = status.value;
+    var shown = 0;
+    rows.sort(compare);
+    rows.forEach(function (row) {
+      var hay = (val(row, "name") + " " + val(row, "team")).toLowerCase();
+      var ok = (!t || val(row, "team") === t)
+        && (!p || val(row, "pos") === p)
+        && (!s || val(row, "status") === s)
+        && (!q || hay.indexOf(q) !== -1);
+      row.hidden = !ok;
+      if (ok) shown += 1;
+      body.appendChild(row);
+    });
+    if (empty) empty.hidden = shown !== 0;
+  }
+  function markSort() {
+    Array.prototype.forEach.call(table.tHead.rows[0].cells, function (th) {
+      if (th.getAttribute("data-key") === sortKey) {
+        th.setAttribute("aria-sort", sortDir === "asc" ? "ascending" : "descending");
+      } else {
+        th.removeAttribute("aria-sort");
+      }
+    });
+  }
+  Array.prototype.forEach.call(table.querySelectorAll("thead th[data-key]"), function (th) {
+    var sortBy = function () {
+      var key = th.getAttribute("data-key");
+      if (sortKey === key) sortDir = sortDir === "asc" ? "desc" : "asc";
+      else {
+        sortKey = key;
+        sortDir = (key === "name" || key === "team" || key === "pos" || key === "status") ? "asc" : "desc";
+      }
+      markSort();
+      apply();
+    };
+    th.addEventListener("click", sortBy);
+    th.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        sortBy();
+      }
+    });
+  });
+  [search, team, pos, status].forEach(function (el) {
+    if (!el) return;
+    el.addEventListener("input", apply);
+    el.addEventListener("change", apply);
+  });
+  var params = new URLSearchParams(location.search);
+  if (team && params.get("team")) team.value = params.get("team");
+  if (status && params.get("status")) status.value = params.get("status");
+  apply();
+})();
+</script>
+"""
+
+
+def _option_page_rows(
+    rostered: list[dict], option_counts: dict,
+) -> tuple[list[tuple[dict, option_years.OptionCount]], list[tuple[dict, option_years.OptionCount]], int]:
+    """Rostered players who are out of options, who have one left, and how many are unknown.
+
+    Unknown records are counted and left out of both lists. A number for them
+    would be a guess.
+    """
+    out: list[tuple[dict, option_years.OptionCount]] = []
+    one: list[tuple[dict, option_years.OptionCount]] = []
+    unknown = 0
+    for player in rostered:
+        count = option_counts.get(player.get("id"))
+        if count is None or count.incomplete or count.remaining is None or count.out_of_options is None:
+            unknown += 1
+            continue
+        if count.out_of_options:
+            out.append((player, count))
+        elif count.remaining == 1:
+            one.append((player, count))
+    return out, one, unknown
+
+
+def render_options(
+    rostered: list[dict],
+    option_counts: dict,
+    generated_at: str,
+) -> str:
+    """Players out of options, and players with one option year left, by team."""
+    out, one, unknown = _option_page_rows(rostered, option_counts)
+    listed = out + one
+    listed.sort(key=lambda pair: ((pair[0].get("team") or ""), (pair[0].get("name") or "")))
+    standard = int(_RULES.require("options.standard_option_years"))
+    url = f"{SITE_URL}/{OPTIONS_PATH}"
+    desc = (
+        f"{len(out)} MLB players are out of minor league options, and "
+        f"{len(one)} have one option year left, listed by team. "
+        "Counted from public data."
+    )
+    teams = sorted({p.get("team") or "" for p, _c in listed if p.get("team")})
+    positions = sorted({p.get("position") or "" for p, _c in listed if p.get("position")})
+    team_options = "".join(
+        f'<option value="{html.escape(team)}">{html.escape(team)}</option>' for team in teams
+    )
+    pos_options = "".join(
+        f'<option value="{html.escape(pos)}">{html.escape(pos)}</option>' for pos in positions
+    )
+
+    body_rows = []
+    for player, count in listed:
+        team = player.get("team") or ""
+        name = player.get("name") or ""
+        pos = player.get("position") or ""
+        status = "out" if count.out_of_options else "one"
+        status_label = "Out of options" if status == "out" else "1 left"
+        seasons = ", ".join(str(year) for year in count.used_years)
+        team_cell = (
+            f'<a href="{BASE_PATH}{club_path(team)}">{html.escape(team)}</a>' if team else "—"
+        )
+        body_rows.append(
+            "<tr"
+            f' data-name="{html.escape(name, quote=True)}"'
+            f' data-team="{html.escape(team, quote=True)}"'
+            f' data-pos="{html.escape(pos, quote=True)}"'
+            f' data-status="{status}"'
+            f' data-used="{count.used}"'
+            f' data-remaining="{count.remaining}"'
+            ">"
+            f'<td><a href="{BASE_PATH}{page_path(player)}">{html.escape(name)}</a></td>'
+            f'<td class="n">{count.remaining}</td>'
+            f"<td>{html.escape(seasons) or '—'}</td>"
+            f"<td>{team_cell}</td>"
+            f"<td>{html.escape(pos) or '—'}</td>"
+            f"<td>{status_label}</td>"
+            "</tr>"
+        )
+
+    more = (
+        "When a player is on the 40-man roster, his club can usually send him "
+        "to the minors and call him back without waivers. "
+        f"Most players can be sent down in {standard} separate seasons. "
+        "Once those seasons are used, the club generally has to pass him through "
+        "waivers before sending him down. These figures are our own counts from "
+        "public data. A short stay in the minors does not always use a season. "
+        "Some players qualify for an additional season because of injuries or a "
+        "short early career. That depends on records this site does not have, so "
+        "it is not guessed. A player whose public record starts after his career "
+        "began is left off this list. The league keeps the official record."
+    )
+    graph = [
+        {
+            "@type": "CollectionPage",
+            "name": "MLB players out of options",
+            "url": url,
+            "description": desc,
+        },
+        _breadcrumb_ld([
+            ("Big League Service Time Tracker", f"{SITE_URL}/"),
+            ("Out of options", url),
+        ]),
+    ]
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+{HEAD_TAGS}
+<title>MLB players out of options | Big League Service Time Tracker</title>
+<meta name="description" content="{html.escape(desc)}" />
+<link rel="canonical" href="{url}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="MLB players out of options" />
+<meta property="og:description" content="{html.escape(desc)}" />
+<meta property="og:url" content="{url}" />
+<meta name="twitter:card" content="summary" />
+{_ld_script(graph)}
+<link rel="icon" href="{BASE_PATH}favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="{BASE_PATH}styles.css" />
+<link rel="stylesheet" href="{BASE_PATH}page.css" />
+<script>
+  try {{
+    var t = localStorage.getItem("mlb-service-time-theme");
+    if (t) document.documentElement.setAttribute("data-theme", t);
+  }} catch (e) {{}}
+</script>
+</head>
+<body>
+<div class="viz-root">{_site_header(OPTIONS_PATH)}<div class="wrap">
+  {_crumbs(("Players", BASE_PATH), ("Out of options", None))}
+  <h1>Players out of options</h1>
+  <p class="subtitle">{len(out)} players on a 40-man roster are out of minor league options, and {len(one)} have one option year left.</p>
+  <details class="opt-more">
+    <summary>What an option year is</summary>
+    <p>{html.escape(more)}</p>
+  </details>
+  <div class="facts">
+    <div><span>Out of options</span><b class="big">{len(out)}</b></div>
+    <div><span>One left</span><b class="big">{len(one)}</b></div>
+    <div><span>Incomplete record</span><b class="big">{unknown}</b></div>
+  </div>
+  <div class="opt-controls" id="opt-controls" hidden>
+    <input type="search" id="opt-search" placeholder="Player or team" aria-label="Search player or team" />
+    <select id="opt-team" aria-label="Filter by team"><option value="">All teams</option>{team_options}</select>
+    <select id="opt-pos" aria-label="Filter by position"><option value="">All positions</option>{pos_options}</select>
+    <select id="opt-status" aria-label="Filter by options left">
+      <option value="">Out of options and one left</option>
+      <option value="out">Out of options</option>
+      <option value="one">One left</option>
+    </select>
+  </div>
+  <p class="opt-empty" id="opt-empty" hidden>No players match.</p>
+  <table id="opt-table"><thead><tr>
+    <th data-key="name" tabindex="0" role="button">Player</th>
+    <th data-key="remaining" class="n" tabindex="0" role="button">Options left</th>
+    <th data-key="used" tabindex="0" role="button">Seasons used</th>
+    <th data-key="team" tabindex="0" role="button" aria-sort="ascending">Team</th>
+    <th data-key="pos" tabindex="0" role="button">Pos</th>
+    <th data-key="status" tabindex="0" role="button">Status</th>
+  </tr></thead><tbody>{''.join(body_rows)}</tbody></table>
+  <p class="foot">
+    Options figures are our own counts from public data and can differ from the official record.
+    <br /><br />
+    {ESTIMATE_LINE}
+    Last updated {html.escape(generated_at[:10])}.
+  </p>
+</div>{_site_footer()}{_search_script_tag()}</div>
+{_OPTIONS_JS}
+{ANALYTICS}
+</body>
+</html>
+"""
+
+
 def write_player_pages(
     db: dict[str, dict],
     generated_at: str | None = None,
@@ -1699,6 +2004,12 @@ def write_player_pages(
     # Derived page data for players whose raw transactions were not stored.
     # A player who still has a transaction file keeps that path.
     compact_by_id = alumni_sections.load_store()
+    try:
+        option_today = dt.date.fromisoformat((generated_at or "")[:10])
+    except ValueError:
+        option_today = dt.date.today()
+    option_windows = player_sections._windows()
+    option_counts: dict = {}
 
     for player in published:
         # Only a currently-rostered player gets real teammates -- see the
@@ -1711,8 +2022,14 @@ def write_player_pages(
                 compact = compact_by_id.get(int(player.get("id")))
             except (TypeError, ValueError):
                 compact = None
+        option_count = option_years.summarize(
+            player, transactions, option_windows, option_today
+        )
+        if player.get("id") is not None:
+            option_counts[player["id"]] = option_count
         page = render(
-            player, team_names, generated_at, teammates, transactions, compact
+            player, team_names, generated_at, teammates, transactions, compact,
+            option_count,
         )
         rel = page_path(player)
         (DOCS / rel).write_text(page)
@@ -1735,6 +2052,7 @@ def write_player_pages(
     clubs = _write_club_pages(
         by_club, generated_at, lastmod,
         arb_eligible, non_tender_watch, fa_now, fa_by_year, next_season,
+        option_counts,
     )
     alumni = [p for p in published if not p.get("on_40_man")]
     alumni_pages = _write_alumni_pages(alumni, generated_at, lastmod) if alumni else []
@@ -1762,6 +2080,15 @@ def write_player_pages(
     fa_html = render_free_agents(fa_now, fa_by_year, generated_at)
     (DOCS / FREE_AGENTS_PATH).write_text(fa_html, encoding="utf-8")
     lastmod.record(FREE_AGENTS_PATH, fa_html)
+
+    opt_html = render_options(rostered, option_counts, generated_at)
+    (DOCS / OPTIONS_PATH).write_text(opt_html, encoding="utf-8")
+    lastmod.record(OPTIONS_PATH, opt_html)
+    opt_out, opt_one, opt_unknown = _option_page_rows(rostered, option_counts)
+    print(
+        f"Options: {len(opt_out)} out of options, {len(opt_one)} with one left, "
+        f"{opt_unknown} unknown (rostered)"
+    )
 
     _write_sitemap(published, clubs, alumni_pages, generated_at, lastmod)
     lastmod.save()
@@ -1887,6 +2214,7 @@ def _write_club_pages(
     fa_now: list[dict],
     fa_by_year: dict[int, list[dict]],
     next_season: int | None,
+    option_counts: dict | None = None,
 ) -> list[str]:
     """One roster page per club, plus three standalone offseason subpages
     each (arbitration-eligible, non-tender watch, free agents) -- so a
@@ -1903,7 +2231,10 @@ def _write_club_pages(
         club_nt = nt_by_club.get(club, [])
         club_fa_next = fa_next_by_club.get(club, [])
 
-        page = render_club(club, players, generated_at, club_arb, club_nt, club_fa_next, next_season)
+        page = render_club(
+            club, players, generated_at, club_arb, club_nt, club_fa_next, next_season,
+            option_counts,
+        )
         rel = club_path(club)
         (DOCS / rel).write_text(page)
         lastmod.record(rel, page)
@@ -2149,7 +2480,7 @@ def _write_sitemap(
     # one player's name.
     for path in (
         ARBITRATION_ELIGIBLE_PATH, SUPER_TWO_PAGE_PATH,
-        NON_TENDER_WATCH_PATH, FREE_AGENTS_PATH,
+        NON_TENDER_WATCH_PATH, FREE_AGENTS_PATH, OPTIONS_PATH,
     ):
         urls.append(
             f"  <url><loc>{SITE_URL}/{path}</loc>"
@@ -2433,6 +2764,24 @@ h1 { letter-spacing: -0.02em; }
   font-size: 0.9rem; line-height: 1.45; }
 .pp-tl time { display: block; color: var(--text-muted); font-size: 0.75rem;
   font-variant-numeric: tabular-nums; }
+.option-line { font-size: 1.02rem; margin: 0.85rem 0 0; max-width: 62ch;
+  font-variant-numeric: tabular-nums; }
+.opt-controls { display: flex; flex-wrap: wrap; gap: 8px; margin: 0.2rem 0 1rem; }
+.opt-controls input, .opt-controls select {
+  font: inherit; font-size: 0.95rem; padding: 10px 12px; border-radius: 9px;
+  border: 1px solid var(--glass-border); background: var(--glass-surface);
+  color: var(--text-primary); flex: 1 1 10rem; min-width: 0;
+}
+.opt-controls input { flex: 2 1 14rem; }
+.opt-more { margin: 0.2rem 0 0.8rem; max-width: 62ch; }
+.opt-more summary { cursor: pointer; color: var(--accent); }
+.opt-more p { margin: 0.45rem 0 0; color: var(--text-secondary); font-size: 0.92rem; }
+.opt-empty { color: var(--text-muted); margin: 0.4rem 0; }
+.facts b a { color: inherit; text-decoration: none; }
+.facts b a:hover { text-decoration: underline; }
+@media (max-width: 640px) {
+  .opt-controls input, .opt-controls select { flex-basis: 100%; }
+}
 """
 
 
@@ -2445,6 +2794,7 @@ ARBITRATION_ELIGIBLE_PATH = "arbitration-eligible.html"
 SUPER_TWO_PAGE_PATH = "super-two.html"
 NON_TENDER_WATCH_PATH = "non-tender-watch.html"
 FREE_AGENTS_PATH = "free-agents.html"
+OPTIONS_PATH = "options.html"
 
 # Pages that are hand-written rather than generated, but still belong in the
 # sitemap. Listed by hand for the same reason the workflows list their paths
@@ -2483,6 +2833,7 @@ def _site_footer() -> str:
             ("t/", "Clubs"),
             (ARBITRATION_ELIGIBLE_PATH, "Arbitration eligible"),
             (SUPER_TWO_PAGE_PATH, "Super Two"),
+            (OPTIONS_PATH, "Out of options"),
             (f"{ALUMNI_DIR_NAME}/", "Previous players A–Z"),
         )
     )
