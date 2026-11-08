@@ -239,11 +239,10 @@ def test_retired_player_clock_stops_at_final_season():
     Regression test from the first live backfill batch, which credited 246 of
     500 retired players with 15+ years of service.
 
-    A career usually ends with "elected free agency", which is deliberately
-    NOT a stop keyword (see the note in service_time.py -- treating it as one
-    breaks 272 active players). So the final interval stays open and, without
-    a ceiling, runs to horizon_end: Angel Guzman, who last pitched in 2010,
-    came out at 20.030 years.
+    A career usually ends with "elected free agency". That election now stops
+    the clock (rules v9), so Angel Guzman, who last pitched in 2010, no longer
+    needs the ceiling to avoid reading 20.030 years. The ceiling still matters
+    when the career ends with no election the parser can see.
     """
     seasons = [
         SeasonWindow(y, dt.date(y, 3, 30), dt.date(y, 10, 1)) for y in range(2009, 2027)
@@ -256,8 +255,12 @@ def test_retired_player_clock_stops_at_final_season():
 
     uncapped = compute_service_time(txns, seasons, horizon_end=today)
     check(
-        "without a ceiling a retired player accrues absurd service time",
-        uncapped.total_years >= 15,
+        "a free-agency election stops the clock without a ceiling",
+        uncapped.total_years < 15,
+    )
+    check(
+        "the election credits the seasons he played and nothing after",
+        uncapped.formatted == "2.000",
     )
 
     capped = compute_service_time(
@@ -274,11 +277,9 @@ def test_retired_player_clock_stops_at_final_season():
 
 def test_active_player_is_unaffected_by_free_agency_elections():
     """
-    The other half of the same finding: a player who elects free agency and
-    re-signs must keep accruing. There is no start keyword for the re-signing
-    ("Team signed free agent RHP X" -- "signed" can't be one, minor league
-    deals use it too), so if the election ever became a stop keyword this
-    player would freeze at his first election and never restart.
+    A player who elects free agency and re-signs must keep accruing. The
+    election stops the clock; "Team signed free agent" starts it again.
+    A minor-league deal uses the same verb and must not.
     """
     seasons = [
         SeasonWindow(y, dt.date(y, 3, 30), dt.date(y, 10, 1)) for y in range(2021, 2024)
@@ -290,7 +291,7 @@ def test_active_player_is_unaffected_by_free_agency_elections():
     ]
     result = compute_service_time(txns, seasons, horizon_end=dt.date(2023, 10, 1))
     check(
-        "free agency election does not stop an active player's clock",
+        "a re-signing after free agency restarts the clock",
         result.formatted == "3.000",
     )
 
@@ -5710,6 +5711,8 @@ def test_a_dfa_resolved_the_same_day_credits_no_limbo():
     iv3 = build_global_active_intervals(same_day_trade, dt.date(2024, 12, 31), dfa_limbo_days=7)
     check("a same-day DFA + trade credits no limbo",
           iv3[0] == (dt.date(2024, 5, 1), dt.date(2024, 7, 9)))
+    check("a same-day trade puts him on the new roster that day",
+          iv3[-1] == (dt.date(2024, 7, 10), dt.date(2024, 12, 31)))
 
     # Control: a DFA that stands alone still gets its grace window.
     alone = [
@@ -6027,10 +6030,124 @@ def test_new_transaction_fetches_store_type_dates_and_id_old_rows_still_read():
     check("the save received the same rows", saved.get("txns") == out)
 
 
-def test_rules_version_is_eight():
+def _cached_roster_transactions(player_id: int) -> list[Transaction]:
+    """The rows the publisher would keep, read from the on-disk cache.
+
+    No network. Team ids are the 30 clubs hardcoded for display, the same
+    set the publisher fetches.
+    """
+    import mlb_clubs
+    import update_service_time as u
+
+    u._MLB_TEAM_IDS = set(mlb_clubs.MLB_CLUB_IDS)
+    from service_time import is_free_agency_election
+
+    raw = json.loads(
+        (pathlib.Path(__file__).resolve().parents[1] / "data" / "cache" / "transactions" / f"{player_id}.json").read_text()
+    )
+    mlb_ids = u.mlb_team_ids()
+    kept = []
+    for row in raw:
+        desc = row.get("description") or ""
+        minor = u._is_minor_assignment(row, mlb_ids)
+        if not (
+            u._involves_mlb_club(row, mlb_ids)
+            or minor
+            or is_active_stop(desc)
+            or is_free_agency_election(desc)
+        ):
+            continue
+        kept.append(
+            Transaction(
+                date=dt.date.fromisoformat(row["date"]),
+                description=desc,
+                minor_assignment=minor,
+            )
+        )
+    return kept
+
+
+def _covers(intervals, day: dt.date) -> bool:
+    return any(start <= day <= end for start, end in intervals)
+
+
+def _cached_intervals(player_id: int, debut: str):
+    floor = dt.date.fromisoformat(debut)
+    return build_global_active_intervals(
+        _cached_roster_transactions(player_id),
+        dt.date(2026, 9, 27),
+        accrual_floor=floor,
+        accrual_ceiling=dt.date(2026, 9, 27),
+        presume_active_from=floor,
+        dfa_limbo_days=7,
+    )
+
+
+def test_free_agency_and_same_day_trades_on_five_cached_careers():
+    """The five careers this rule was checked against, from the cached histories.
+
+    Nick Martinez spent 2018 in Japan after electing free agency in December
+    2017. Michael Conforto sat out 2022. Nestor Cortes was not on a
+    major-league roster in 2026. Jonah Heim was designated and traded on the
+    same day in 2026, and the clock has to keep running. Christian
+    Bethancourt's 2024 election is in the offseason; it must not leave the
+    clock open into December.
+    """
+    martinez = _cached_intervals(607259, "2014-04-05")
+    check("Martinez's 2018 season in Japan is not service time",
+          not _covers(martinez, dt.date(2018, 6, 1)))
+    check("Martinez was on a roster in September 2017",
+          _covers(martinez, dt.date(2017, 9, 1)))
+    check("Martinez's clock restarts when he signs in 2022",
+          _covers(martinez, dt.date(2022, 6, 1)))
+
+    conforto = _cached_intervals(624424, "2015-07-24")
+    check("Conforto does not accrue the 2022 season he sat out",
+          not _covers(conforto, dt.date(2022, 6, 1)))
+    check("Conforto accrued in 2021", _covers(conforto, dt.date(2021, 6, 1)))
+    check("Conforto's clock restarts on the 2023 signing",
+          _covers(conforto, dt.date(2023, 6, 1)))
+
+    cortes = _cached_intervals(641482, "2018-03-31")
+    check("Cortes does not accrue a 2026 season he was not rostered for",
+          not _covers(cortes, dt.date(2026, 6, 1)))
+    check("Cortes accrued in 2025", _covers(cortes, dt.date(2025, 6, 1)))
+    seasons = [
+        SeasonWindow(y, dt.date(y, 3, 26), dt.date(y, 9, 27)) for y in range(2018, 2027)
+    ]
+    cortes_days = compute_service_time(
+        _cached_roster_transactions(641482),
+        seasons,
+        presume_active_from_debut=True,
+        horizon_end=dt.date(2026, 9, 27),
+        accrual_floor=dt.date(2018, 3, 31),
+        accrual_ceiling=dt.date(2026, 9, 27),
+        dfa_limbo_days=7,
+    )
+    check("Cortes's 2026 credited days are zero",
+          cortes_days.by_season[2026]["credited_days"] == 0)
+
+    heim = _cached_intervals(641680, "2020-08-25")
+    check("Heim stays on the clock after the same-day DFA and trade",
+          _covers(heim, dt.date(2026, 7, 1)))
+    check("Heim's trade day itself is on the clock",
+          _covers(heim, dt.date(2026, 5, 4)))
+
+    beth = _cached_intervals(542194, "2013-09-29")
+    check("Bethancourt's November 2024 election does not run into December",
+          not _covers(beth, dt.date(2024, 12, 1)))
+    check("Bethancourt's 2025 minor-league year is not service time",
+          not _covers(beth, dt.date(2025, 6, 1)))
+    check("Bethancourt's September 2026 call-up is on the clock",
+          _covers(beth, dt.date(2026, 9, 1)))
+    check("Bethancourt's outright a few days later stops it",
+          not _covers(beth, dt.date(2026, 9, 15)))
+
+
+def test_rules_version_is_nine():
     """The bump the backfill reads to know which players to recompute."""
     import update_service_time as u
-    check("SERVICE_TIME_RULES_VERSION is 8", u.SERVICE_TIME_RULES_VERSION == 8)
+    check("SERVICE_TIME_RULES_VERSION is 9", u.SERVICE_TIME_RULES_VERSION == 9)
 
 
 def test_the_dfa_grace_window_is_a_sourced_ruleset_value():
@@ -6645,7 +6762,8 @@ if __name__ == "__main__":
     test_appearances_fill_a_season_the_transactions_left_closed()
     test_service_sanity_flags_both_failure_modes()
     test_moniak_override_is_an_extension()
-    test_rules_version_is_eight()
+    test_rules_version_is_nine()
+    test_free_agency_and_same_day_trades_on_five_cached_careers()
     test_the_dfa_grace_window_is_a_sourced_ruleset_value()
     test_the_player_level_v7_figures_hold_against_the_real_feed()
     test_a_tiebreaker_game_does_not_set_the_league_season_end()

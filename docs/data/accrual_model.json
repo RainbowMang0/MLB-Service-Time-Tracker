@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07",
+ "generated_at": "2026-11-08",
  "source": "Measured from this project's own database: every player-season transition where the player was in the majors in the first season.",
  "method": "For each player-season in which a player accrued at least one day, record what he accrued the FOLLOWING season. Banded by cumulative credited service at the start of that following season. Excludes prorated seasons, the current unfinished season, and seasons credited by debut presumption rather than transactions.",
  "caveats": [
@@ -8,7 +8,7 @@
   "Bands with a small sample are marked enough_data: false and should not be presented as a distribution."
  ],
  "full_year_days": 172,
- "transitions": 16237,
+ "transitions": 16235,
  "min_band_sample": 100,
  "bands": [
   {
@@ -26,9 +26,9 @@
   {
    "band": 1,
    "label": "1.000-2.000",
-   "sample": 2184,
+   "sample": 2183,
    "enough_data": true,
-   "p20": 50,
+   "p20": 49,
    "p50": 172,
    "p80": 172,
    "mean": 124.1,
@@ -38,48 +38,48 @@
   {
    "band": 2,
    "label": "2.000-3.000",
-   "sample": 1669,
+   "sample": 1668,
    "enough_data": true,
    "p20": 78,
    "p50": 172,
    "p80": 172,
    "mean": 134.2,
-   "share_full_year": 0.596,
+   "share_full_year": 0.595,
    "share_zero": 0.052
   },
   {
    "band": 3,
    "label": "3.000-4.000",
-   "sample": 1317,
+   "sample": 1319,
    "enough_data": true,
    "p20": 96,
    "p50": 172,
    "p80": 172,
-   "mean": 139.9,
-   "share_full_year": 0.654,
-   "share_zero": 0.038
+   "mean": 139.7,
+   "share_full_year": 0.652,
+   "share_zero": 0.04
   },
   {
    "band": 4,
    "label": "4.000-5.000",
-   "sample": 1311,
+   "sample": 1310,
    "enough_data": true,
-   "p20": 122,
+   "p20": 123,
    "p50": 172,
    "p80": 172,
-   "mean": 145.8,
+   "mean": 145.9,
    "share_full_year": 0.697,
    "share_zero": 0.034
   },
   {
    "band": 5,
    "label": "5.000-6.000",
-   "sample": 1048,
+   "sample": 1047,
    "enough_data": true,
    "p20": 151,
    "p50": 172,
    "p80": 172,
-   "mean": 151.6,
+   "mean": 151.5,
    "share_full_year": 0.761,
    "share_zero": 0.028
   },
@@ -91,7 +91,7 @@
    "p20": 147,
    "p50": 172,
    "p80": 172,
-   "mean": 152.3,
+   "mean": 152.2,
    "share_full_year": 0.755,
    "share_zero": 0.017
   }
