@@ -374,5 +374,57 @@
     "team_id": null,
     "from_team_id": null,
     "to_team_id": 120
+  },
+  {
+    "date": "2026-11-02",
+    "description": "Washington Nationals designated DH Jos\u00e9 Tena for assignment.",
+    "team": "Washington Nationals",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 120,
+    "typeCode": "DES",
+    "typeDesc": "Designated for Assignment",
+    "effectiveDate": "2026-11-02",
+    "resolutionDate": "2026-11-02",
+    "id": 947874
+  },
+  {
+    "date": "2026-11-03",
+    "description": "DH Jos\u00e9 Tena assigned to Estrellas Orientales.",
+    "team": "Estrellas Orientales",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 669,
+    "typeCode": "ASG",
+    "typeDesc": "Assigned",
+    "effectiveDate": "2026-11-03",
+    "resolutionDate": "2026-11-03",
+    "id": 948183
+  },
+  {
+    "date": "2026-11-03",
+    "description": "Estrellas Orientales activated DH Jos\u00e9 Tena.",
+    "team": "Estrellas Orientales",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 669,
+    "typeCode": "SC",
+    "typeDesc": "Status Change",
+    "effectiveDate": "2026-11-03",
+    "resolutionDate": "2026-11-03",
+    "id": 948375
+  },
+  {
+    "date": "2026-11-06",
+    "description": "Cleveland Guardians claimed DH Jos\u00e9 Tena off waivers from Washington Nationals.",
+    "team": "Cleveland Guardians",
+    "team_id": null,
+    "from_team_id": 120,
+    "to_team_id": 114,
+    "typeCode": "CLW",
+    "typeDesc": "Claimed Off Waivers",
+    "effectiveDate": "2026-11-06",
+    "resolutionDate": null,
+    "id": 949808
   }
 ]
