@@ -37,9 +37,13 @@ WHAT IS CHECKED
   * each profile's season rows sum to that total
   * every absolute URL in every published page matches the site's own
     SITE_URL, and every internal link resolves to a file that exists
+  * every published player's rules_version against the code's current
+    version. This one is a warning with counts: most stored records stay
+    on older rules until a full replay, so a mismatch does not fail the run.
 
 Offline: reads only what is on disk, so it validates exactly what would be
-served. Exits non-zero on any disagreement.
+served. Exits non-zero on any disagreement. A rules-version mismatch is
+reported and does not change that exit.
 
     python scripts/validate_published.py
 """
@@ -313,13 +317,90 @@ def check_config_published() -> list[str]:
     return problems
 
 
+def rules_version_report(players, code_version: int) -> dict:
+    """How many published players were computed under `code_version`.
+
+    Cheap on purpose: one pass over records already loaded, no page reads.
+    `other` includes a missing rules_version. The caller prints this and
+    does not fail the run on it.
+    """
+    by_version: dict[str, int] = {}
+    total = 0
+    matched = 0
+    rostered = 0
+    rostered_matched = 0
+    for player in players:
+        total += 1
+        version = player.get("rules_version") if isinstance(player, dict) else None
+        key = "missing" if version is None else str(version)
+        by_version[key] = by_version.get(key, 0) + 1
+        is_match = version == code_version
+        if is_match:
+            matched += 1
+        on_roster = bool(player.get("on_40_man")) if isinstance(player, dict) else False
+        if on_roster:
+            rostered += 1
+            if is_match:
+                rostered_matched += 1
+    return {
+        "total": total,
+        "matched": matched,
+        "other": total - matched,
+        "code_version": code_version,
+        "by_version": by_version,
+        "rostered": rostered,
+        "rostered_matched": rostered_matched,
+        "rostered_other": rostered - rostered_matched,
+    }
+
+
+def format_rules_version_report(report: dict) -> str:
+    """Counts for the log. A mismatch is a warning, never a failure line."""
+    if report["other"]:
+        head = (
+            "WARNING: rules version: "
+            f"{report['matched']} of {report['total']} published players match "
+            f"the code (version {report['code_version']}); "
+            f"{report['other']} do not. This check does not fail the run."
+        )
+    else:
+        head = (
+            "Rules version: "
+            f"{report['matched']} of {report['total']} published players match "
+            f"the code (version {report['code_version']})."
+        )
+    def _version_order(item: tuple[str, int]) -> tuple:
+        key = item[0]
+        if key == "missing":
+            return (1, 0)
+        try:
+            return (0, int(key))
+        except ValueError:
+            return (0, 0)
+
+    lines = [head]
+    for key, count in sorted(report["by_version"].items(), key=_version_order):
+        label = "missing" if key == "missing" else f"version {key}"
+        lines.append(f"  {label}: {count}")
+    lines.append(
+        "  rostered: "
+        f"{report['rostered_matched']} match, {report['rostered_other']} do not"
+    )
+    return "\n".join(lines)
+
+
 def main() -> None:
     import validate_service_sanity
 
+    sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+    from update_service_time import SERVICE_TIME_RULES_VERSION
+
     problems = check_published() + check_links() + check_config_published()
-    sanity = validate_service_sanity.summarize(
-        json.loads((ROOT / "docs" / "data" / "service_time.json").read_text()).get("players") or []
-    )
+    players = json.loads(DB_FILE.read_text()).get("players") or []
+    # Warning only. Stored records stay on older rules until a full replay,
+    # so a mismatch here must not fail the run.
+    print(format_rules_version_report(rules_version_report(players, SERVICE_TIME_RULES_VERSION)))
+    sanity = validate_service_sanity.summarize(players)
     print(
         "Service-time sanity: "
         f"{sanity['zero_despite_games']} season(s) with significant MLB games and ~0 days; "

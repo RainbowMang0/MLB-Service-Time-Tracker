@@ -88,6 +88,13 @@ jobs:
       - name: Data query helper (fixtures only, no real data read)
         run: python tests/test_query_data.py
 
+      # The daily workflow skips a run only when a completion marker says a
+      # full roster refresh already finished today. A partial run must not
+      # count, and a rules-version mismatch in the published data warns
+      # without failing.
+      - name: Daily refresh completion marker, and rules-version warning
+        run: python tests/test_refresh_complete.py
+
       # Validates data/lockout_updates.json against its own schema (required
       # fields, real ISO dates, https sources) AND builds docs/lockout.html
       # from it, so a bad hand-edit to that one file fails here rather than
