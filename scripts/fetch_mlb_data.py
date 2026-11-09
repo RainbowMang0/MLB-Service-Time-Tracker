@@ -452,6 +452,23 @@ def get_player_transactions(
     return data.get("transactions", [])
 
 
+def get_league_transactions(start_date: dt.date, end_date: dt.date) -> list[dict]:
+    """Every transaction the public feed lists between two dates, inclusive.
+
+    No player and no sport filter: the same rows the per-player call returns,
+    for the whole feed at once. Callers use this to see who moved recently
+    without asking for each player separately.
+    """
+    data = _get(
+        "/transactions",
+        {
+            "startDate": start_date.isoformat(),
+            "endDate": end_date.isoformat(),
+        },
+    )
+    return data.get("transactions", [])
+
+
 def appearance_dates(player_id: int, season: int, group: str) -> list[dt.date]:
     """Dates this player appeared in a regular-season MLB game.
 

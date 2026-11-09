@@ -7,3 +7,7 @@ __pycache__/
 # (owner's rule: no third-party reference numbers in the tree). Validation
 # reads them from ST_REFERENCE_PATH; see data/reference_service_time.example.json.
 data/reference_service_time.json
+
+# A killed fetch can leave a half-written player file. The finished files
+# are renamed into place; these are not.
+data/raw_transactions/*.tmp

@@ -88,6 +88,9 @@ jobs:
       - name: Data query helper (fixtures only, no real data read)
         run: python tests/test_query_data.py
 
+      - name: Raw transaction store
+        run: python tests/test_raw_transactions.py
+
       # Validates data/lockout_updates.json against its own schema (required
       # fields, real ISO dates, https sources) AND builds docs/lockout.html
       # from it, so a bad hand-edit to that one file fails here rather than
