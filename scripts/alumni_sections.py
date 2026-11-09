@@ -34,6 +34,7 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
 from career_moves import build_moves  # noqa: E402
+import injury_labels  # noqa: E402
 from il_stints import SeasonWindows, build_stints  # noqa: E402
 from mlb_clubs import MLB_CLUB_IDS  # noqa: E402
 import player_sections  # noqa: E402
@@ -166,6 +167,12 @@ def _serialize_stint(stint) -> dict:
         "days": stint.days,
         "kind": stint.kind,
         "close": stint.close,
+        # The derived label only -- the feed text it came from is read in
+        # build_compact() and discarded, never written here.
+        "label": stint.label,
+        "label_source": stint.label_source,
+        "label_conflict": stint.label_conflict,
+        "multi": stint.multi,
     }
 
 
@@ -180,6 +187,7 @@ def build_compact(
     """Stints, move lines, and season lines. Feed sentences are not copied."""
     rows = [row for row in (transactions or []) if isinstance(row, dict)]
     stints = build_stints(rows, windows, today)
+    injury_labels.apply_labels(stints)
     debut, debut_club = player_sections._debut(player, rows)
     closes = {stint.end for stint in stints if stint.kind == "exact" and stint.end is not None}
     moves = build_moves(

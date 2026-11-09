@@ -80,6 +80,12 @@ class Stint:
     (the return is not in the record; `days` is a floor), or "open"
     (still out; `days` runs through today or the season's last day and
     must not be printed, because it changes every day of the season).
+
+    `reasons` is the placement/transfer rows' feed text, in date order,
+    kept only long enough for `scripts/injury_labels.py` to derive a
+    coarse body-part label at build time -- it is never stored or
+    published. `label`, `label_source`, `label_conflict`, and `multi`
+    are that derived result; a page prints only those four fields.
     """
 
     start: dt.date
@@ -93,6 +99,11 @@ class Stint:
     opened_without_placement: bool = False
     segments: list[tuple[dt.date, int]] = field(default_factory=list)
     last_placement_row: dt.date | None = None
+    reasons: list[tuple[dt.date, str, str]] = field(default_factory=list)
+    label: str | None = None
+    label_source: str | None = None
+    label_conflict: bool = False
+    multi: bool = False
 
     @property
     def lower_bound(self) -> bool:
@@ -109,6 +120,7 @@ class _Open:
     last_placement_row: dt.date
     opened_without_placement: bool = False
     season_year: int = 0
+    reasons: list[tuple[dt.date, str, str]] = field(default_factory=list)
 
 
 class SeasonWindows:
@@ -361,6 +373,7 @@ def _finalize(
         opened_without_placement=open_stint.opened_without_placement,
         segments=list(open_stint.segments),
         last_placement_row=open_stint.last_placement_row,
+        reasons=list(open_stint.reasons),
     )
 
 
@@ -373,6 +386,8 @@ def _open_from(
     *,
     without_placement: bool,
     how: str,
+    reason_kind: str = "",
+    desc: str = "",
 ) -> _Open | None:
     if club is None:
         return None
@@ -382,6 +397,9 @@ def _open_from(
     for extra in lengths:
         if all(extra != have for have, _, _how in lists):
             lists.append((extra, row_date, how))
+    reasons: list[tuple[dt.date, str, str]] = []
+    if reason_kind:
+        reasons.append((row_date, desc, reason_kind))
     return _Open(
         start=start,
         lists=lists,
@@ -391,6 +409,7 @@ def _open_from(
         last_placement_row=row_date,
         opened_without_placement=without_placement,
         season_year=start.year,
+        reasons=reasons,
     )
 
 
@@ -479,6 +498,7 @@ def build_stints(
         parsed = classify_row(row)
         if parsed is None:
             continue
+        desc = row.get("description") or ""
         if current is not None:
             nxt = windows.modal_start(current.season_year + 1)
             if nxt is not None and row_date >= nxt and not _is_continuation(current, parsed, row_date):
@@ -493,13 +513,15 @@ def build_stints(
                     if current.segments:
                         current.segments[0] = (start, current.segments[0][1])
                 _add_list(current, length, row_date, "place")
+                current.reasons.append((row_date, desc, "placement"))
                 current.last_evidence = max(current.last_evidence, row_date, start)
                 current.last_placement_row = row_date
                 continue
             if current is not None:
                 close("lower", "missed_return", None)
             opened = _open_from(
-                start, length, [], club, row_date, without_placement=False, how="place"
+                start, length, [], club, row_date, without_placement=False, how="place",
+                reason_kind="placement", desc=desc,
             )
             if opened is not None:
                 current = opened
@@ -511,6 +533,7 @@ def build_stints(
                 current = _open_from(
                     start, _from, [to_len], club, row_date,
                     without_placement=True, how="transfer",
+                    reason_kind="transfer", desc=desc,
                 )
                 continue
             if start < current.start:
@@ -519,6 +542,7 @@ def build_stints(
                     current.segments[0] = (start, current.segments[0][1])
             _add_list(current, _from, row_date, "transfer")
             _add_list(current, to_len, row_date, "transfer")
+            current.reasons.append((row_date, desc, "transfer"))
             current.last_evidence = max(current.last_evidence, row_date)
             current.last_placement_row = row_date
             continue

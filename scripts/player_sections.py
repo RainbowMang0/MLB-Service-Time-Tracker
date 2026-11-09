@@ -13,6 +13,7 @@ import json
 import pathlib
 
 from career_moves import Move, build_moves
+import injury_labels
 from il_stints import SeasonWindows, Stint, build_stints, list_label
 from mlb_clubs import MLB_CLUB_IDS, club_name
 from season_stat_tables import (
@@ -118,7 +119,7 @@ def _season_clubs(player: dict) -> dict[int, list[int]]:
 
 
 def _list_cell(stint: Stint, names: dict) -> str:
-    label = list_label(stint)
+    label = f"{list_label(stint)} · {injury_labels.display(stint.label)}"
     if len(stint.clubs) > 1:
         arrow = " → ".join(club_name(club, names, short=True) for club in stint.clubs)
         label = f"{label} ({arrow})"
@@ -214,7 +215,8 @@ def _injured_html(stints: list[Stint], names: dict, record_year: int | None = No
         "</table></div>"
         '<p class="pp-note">Regular-season days only. Days on the injured list '
         "still count as major league service time. At least means the return "
-        "date is not in the public record."
+        "date is not in the public record. Injury area, where publicly "
+        "reported. Some stints have no reported reason."
         f"{(' ' + _record_sentence(record_year)) if record_year else ''}</p>"
         "</details></section>"
     )
@@ -376,6 +378,7 @@ def _stint_from_compact(row: dict) -> Stint | None:
         days = int(row.get("days") or 0)
     except (TypeError, ValueError):
         days = 0
+    label = row.get("label")
     return Stint(
         start=start_day,
         end=end_day,
@@ -385,6 +388,14 @@ def _stint_from_compact(row: dict) -> Stint | None:
         kind=str(row.get("kind") or "exact"),
         close=str(row.get("close") or ""),
         last_evidence=end_day or start_day,
+        # No reason text is ever stored, so there is nothing to re-derive
+        # from here -- the label itself was computed and stored at fetch
+        # time, before the feed text was discarded. A record saved before
+        # labels existed simply has none, and displays as not disclosed.
+        label=label if isinstance(label, str) else None,
+        label_source=row.get("label_source") if isinstance(row.get("label_source"), str) else None,
+        label_conflict=bool(row.get("label_conflict")),
+        multi=bool(row.get("multi")),
     )
 
 
@@ -474,6 +485,7 @@ def render_player_sections(
     if transactions is not None:
         bounds = windows or _windows()
         stints = build_stints(transactions, bounds, today)
+        injury_labels.apply_labels(stints)
         parts.append(_injured_html(stints, names))
         debut, debut_club = _debut(player, transactions)
         closes = {s.end for s in stints if s.kind == "exact" and s.end is not None}

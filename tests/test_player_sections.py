@@ -180,7 +180,7 @@ def test_arrighetti_trade_does_not_close_the_stay():
     )
     check(
         "the traded stay names both clubs in our words",
-        "15-day (Astros → Blue Jays)" in html,
+        "15-day · Foot (Astros → Blue Jays)" in html,
     )
     check("the other player's name is not copied onto the page", "Varsho" not in html and "cash" not in html.lower())
 
@@ -430,8 +430,9 @@ def test_open_stay_does_not_change_the_page_hash_during_the_season():
     later = pages.render(player, {146: "Miami Marlins"}, "2026-06-15T00:00:00+00:00", [], txns)
     check("two days of an open stay hash the same", pages._content_key(early) == pages._content_key(later))
     check("the open stay is on the page", "since Jun 1" in early and 'pp-open">current' in early)
-    check("the injury description is not copied", "sprain" not in early.lower() and "elbow" not in early.lower())
+    check("the severity word is not copied", "sprain" not in early.lower())
     check("the feed sentence is not copied", "retroactive" not in early.lower())
+    check("the coarse body-part label shows in our own words, not the feed's", "Elbow" in early)
 
 
 class _StatTables(HTMLParser):
