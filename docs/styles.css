@@ -800,7 +800,7 @@ tbody td.player-name { border-left-color: var(--club-d, var(--club, transparent)
 @media (max-width: 640px) {
   .page-header { flex-direction: row; align-items: center; }
   .brand, .lockout-banner a, .sheet .site-links a, .profile-tab, .pp-section summary { min-height: 44px; min-width: 44px; }
-  .player-link, .home-lede a, .crumbs a, .page-footer a, .teammates a, .foot a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; max-width: 100%; }
+  .player-link, .home-lede a, .crumbs a, .page-footer a, .teammates a, .foot a, .list-links a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; max-width: 100%; }
   #players-table thead th { padding-top: 16px; padding-bottom: 16px; }
   .page-header-inner h1 { font-size: 1.25rem; }
   .brand-mark { width: 24px; height: 24px; }
