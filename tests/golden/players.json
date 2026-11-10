@@ -1,5 +1,5 @@
 {
-  "_note": "Hand-checked service time for a later publish guard. Each total is counted from MLB Stats API transaction dates and the championship-season calendar, under the 2022-26 agreement: 172 credited days is a year, a season cannot credit more than that, and 2020 is scaled up to a full year when the player was on the roster the whole shortened season. Days on the active roster or a major-league injured list count, including bereavement and paternity. Optional-assignment days count only when they total fewer than 20 in that season, and that same total of 20 or more uses an option year. The option date counts and the recall date does not. A spring option starts on Opening Day. The restricted list does not count, except Trevor Bauer's paid administrative leave. A tiebreaker game extends the season only for the clubs that played it. Opening Day is the first regular-season game within 187 days of the season's end, and a club that opened overseas earlier keeps that earlier date. An All-Star assignment, a winter-league assignment, and a minor-league all-star assignment are not demotions. Nothing here is copied from Baseball-Reference or any salary site. Transaction rows used for the count are in tests/golden/transactions/.",
+  "_note": "Hand-checked service time for a later publish guard. Each total is counted from MLB Stats API transaction dates and the championship-season calendar, under the 2022-26 agreement: 172 credited days is a year, a season cannot credit more than that, and 2020 is scaled up to a full year when the player was on the roster the whole shortened season. Days on the active roster or a major-league injured list count, including bereavement and paternity. Optional-assignment days count only when they total fewer than 20 in that season, and that same total of 20 or more uses an option year. The option date counts and the recall date does not. A spring option starts on Opening Day, which is that league-wide first game even when the player's own club opens a day or two later. The restricted list does not count, except Trevor Bauer's paid administrative leave. A tiebreaker game extends the season only for the clubs that played it. Opening Day is the first regular-season game within 187 days of the season's end, and a club that opened overseas earlier keeps that earlier date. An All-Star assignment, a winter-league assignment, and a minor-league all-star assignment are not demotions. Nothing here is copied from a salary site. The counts are from public transaction dates and the season calendar. Transaction rows used for the count are in tests/golden/transactions/.",
   "counted_through": "2026-11-09",
   "season_through": 2026,
   "players": [
@@ -15,7 +15,7 @@
       "option_years_used": [2022, 2023, 2024],
       "option_years_saved": [],
       "option_days": {"2022": 72, "2023": 115, "2024": 98},
-      "xfail": "A November 2023 winter-league assignment is treated as leaving the major-league roster, so 2024 credits the September 30 recall only (1 day) instead of the 89 days from Opening Day through the June 24 option plus that recall.",
+      "xfail": null,
       "seasons": [
         {"year": 2022, "credited_days": 110, "reason": "Recalled May 30, optioned June 1, recalled June 20, and stayed up through October 5. The spring and June optional assignments total more than 20 days, so they are not credited."},
         {"year": 2023, "credited_days": 71, "reason": "Three active stretches (April 10-14, April 25-May 7, August 10-October 1). Optional assignments in between total more than 20 days. The July 31 trade sent him to the minors until the August 10 recall."},
@@ -31,15 +31,15 @@
     {
       "mlbam_id": 545333,
       "name": "Trevor Bauer",
-      "service_time": "8.006",
-      "service_days": 1382,
+      "service_time": "8.007",
+      "service_days": 1383,
       "arbitration": true,
       "free_agency": true,
       "super_two_2026": false,
       "crossed": ["3 years", "6 years"],
       "option_years_used": [2012, 2013, 2014],
       "option_years_saved": [],
-      "option_days": {"2012": 161, "2013": 177, "2014": 49},
+      "option_days": {"2012": 163, "2013": 179, "2014": 50},
       "xfail": null,
       "seasons": [
         {"year": 2012, "credited_days": 20, "reason": "Recalled June 28 and optioned July 18. The recall on October 4 is after the season."},
@@ -52,7 +52,7 @@
         {"year": 2019, "credited_days": 172, "reason": "On the roster the whole season, including the July 31 trade to Cincinnati."},
         {"year": 2020, "credited_days": 172, "reason": "On the Reds roster for the whole shortened season, so the year scales to a full credited year."},
         {"year": 2021, "credited_days": 172, "reason": "Signed in February and on the Dodgers roster from Opening Day. The July 2 restricted-list placement was paid administrative leave under the joint domestic-violence policy, which keeps counting through the end of the season."},
-        {"year": 2022, "credited_days": 21, "reason": "Paid administrative leave from the Dodgers' Opening Day, April 8, through April 28. The suspension effective April 29 does not count, and he was released the next winter."}
+        {"year": 2022, "credited_days": 22, "reason": "Paid administrative leave from the league's first game, April 7, through April 28. The Dodgers opened their own schedule on April 8. The suspension effective April 29 does not count, and he was released the next winter."}
       ],
       "sources": [
         "https://statsapi.mlb.com/api/v1/transactions?playerId=545333",
@@ -103,7 +103,7 @@
       "option_years_used": [],
       "option_years_saved": [2014],
       "option_days": {"2014": 3},
-      "xfail": "An All-Star assignment is treated as a demotion. 2021 stops on July 12 and restarts at the August 3 injured list (164 days). 2022 stops on July 18 (101 days) and nothing restarts the clock, so 2023 credits nothing until the 2024 injured-list placement.",
+      "xfail": null,
       "seasons": [
         {"year": 2013, "credited_days": 111, "reason": "Selected June 11 and kept through September 29. September 30 was the Rangers-Rays tiebreaker, and the Pirates did not play it, so that day is not in the season."},
         {"year": 2014, "credited_days": 172, "reason": "On the roster the whole season, including two injured-list stints. Optioned August 29 and recalled September 1, three days, so that year is not an option year and the days count, under the cap."},
@@ -137,7 +137,7 @@
       "option_years_saved": [],
       "option_days": {"2019": 52},
       "open_case": "2019 counts as 134 days from the four roster stretches below, and the optional assignments add to 52 days, so none of them are credited back. One further day has not been found in the dated transactions or in the roster boundaries those dates draw. The total stays 8.048 until that day is identified. Do not invent it.",
-      "xfail": "The 2021 All-Star assignment is treated as a demotion, so 2021 stops on July 11 (102 days) and 2022 and 2023 credit nothing. 2024 restarts only for the two weeks after he is activated from the paternity list (14 days).",
+      "xfail": null,
       "seasons": [
         {"year": 2018, "credited_days": 86, "reason": "Selected July 8 and kept through October 1. October 1 was the Brewers' own tiebreaker against the Cubs, so that day counts for him."},
         {"year": 2019, "credited_days": 134, "reason": "Active March 28-April 18, May 1-June 21, June 28-July 30 (the 10-day injured list and the rehab stay on the roster), and September 3-29. Optional assignments of 12, 6, and 34 days total 52, so the year is used and those days are not credited. One day in this season is unresolved."},
@@ -191,7 +191,7 @@
       "option_years_used": [],
       "option_years_saved": [],
       "option_days": {},
-      "xfail": "All-Star assignments are treated as demotions. 2022 stops on July 18 (102 days). 2023 restarts only for the September injured list (16 days). 2024 stops at the All-Star game (105 days). 2025 does not restart until the April 20 activation from the paternity list (162 days), so the March 18 Tokyo opener is missed.",
+      "xfail": null,
       "seasons": [
         {"year": 2018, "credited_days": 172, "reason": "Selected March 28, the day before the Angels' opener, and kept all season. The elbow injured list counts. Being a two-way player does not split the clock."},
         {"year": 2019, "credited_days": 172, "reason": "Opened the season on the injured list (placement retroactive to March 25) and was activated May 7. Injured-list time counts, and he stayed up the rest of the year."},
@@ -218,7 +218,7 @@
       "crossed": ["3 years", "6 years"],
       "option_years_used": [2012, 2013],
       "option_years_saved": [],
-      "option_days": {"2012": 182, "2013": 52},
+      "option_days": {"2012": 183, "2013": 53},
       "xfail": null,
       "seasons": [
         {"year": 2012, "credited_days": 0, "reason": "Optioned in March and not recalled during the championship season, so the year is an option year and it credits no major-league service. He had not debuted."},
@@ -253,7 +253,7 @@
       "option_years_used": [2016, 2018],
       "option_years_saved": [2015],
       "option_days": {"2015": 10, "2016": 60, "2018": 91},
-      "xfail": "Three separate cuts. A 2015 minor-league all-star assignment drops June 22-25 (109 days instead of 113, after the 10-day option is credited back). 2016 starts on the Twins' April 4 opener instead of the league's first game on April 3 (122 instead of 123). The 2022 All-Star assignment stops the clock until the August 23 injured list (145 days instead of a full year).",
+      "xfail": null,
       "seasons": [
         {"year": 2015, "credited_days": 113, "reason": "Selected June 14 and kept through the August 10 option, then recalled August 20 through October 4. The optional assignment is 10 days, under 20, so those days are credited too. The June 22 Southern League all-star assignment is not a demotion."},
         {"year": 2016, "credited_days": 123, "reason": "On the roster from the league's first game, April 3, not the Twins' own April 4 opener, until the April 25 option; recalled May 31 until the August 8 option; recalled September 1 through October 2. Both optional assignments are well over 20 days together."},
@@ -284,7 +284,7 @@
       "option_years_used": [2026],
       "option_years_saved": [2024, 2025],
       "option_days": {"2024": 9, "2025": 12, "2026": 36},
-      "xfail": "2026 starts on the common opener, March 26, instead of the first domestic game, March 25. He was on the roster that day and the season is partial, so the day counts: 151 days in 2026 and 2.133 overall, not 150 and 2.132.",
+      "xfail": null,
       "seasons": [
         {"year": 2024, "credited_days": 154, "reason": "Selected April 30. The broken-hand injured list counts until the August 3 option. Recalled August 12 and kept through September 30. The optional assignment is 9 days, under 20, so those days are credited and the year is not used."},
         {"year": 2025, "credited_days": 172, "reason": "On the roster from Opening Day except an April 7-18 optional assignment (12 days, under 20, credited). The year still reaches the cap."},

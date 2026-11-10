@@ -30,6 +30,14 @@
     "    treated as high-risk. He kept his prorated salary and his service.",
     "  covid_opt_out              counts false. A 2020 opt-out by a player who",
     "    was not high-risk. He did not keep his salary or his service.",
+    "  covid_opt_out_return       counts true. A 2020 opt-out who later opted",
+    "    back in. The days before the return do not count. Service runs from",
+    "    the reported return, including days before the feed's activation.",
+    "    Nick Markakis returned on 2020-07-29.",
+    "  commissioner_suspension    counts true. A short suspension imposed by",
+    "    the commissioner for on-field conduct. Yuli Gurriel's five-game",
+    "    suspension that opened 2018 is the one. Drug suspensions are not",
+    "    this kind.",
     "",
     "Not listed: Kohl Stewart (mlbam id 640464) also opted out of 2020 as a",
     "high-risk player and kept his salary and service, but the feed records a",
@@ -267,6 +275,29 @@
       "source": [
         "https://www.mlb.com/news/jose-alvarado-suspended-80-games",
         "https://www.espn.com/mlb/story/_/id/45208600/phillies-reliever-jose-alvarado-suspended-80-games-mlb"
+      ]
+    },
+    {
+      "mlbam_id": 493329,
+      "name": "Yuli Gurriel",
+      "start": "2018-03-29",
+      "end": "2018-04-02",
+      "counts": true,
+      "kind": "commissioner_suspension",
+      "reason": "Five-game suspension imposed by the commissioner for on-field conduct, served on the restricted list from the 2018 opener. The feed places him on the restricted list on 2018-03-29 and on the 10-day disabled list on 2018-04-03, so the suspension days before the injured list are 2018-03-29 through 2018-04-02. Injured-list days after that already count. This is not a drug suspension.",
+      "source": "https://www.mlb.com/news/astros-yuli-gurriel-begins-suspension-c269971560"
+    },
+    {
+      "mlbam_id": 455976,
+      "name": "Nick Markakis",
+      "start": "2020-07-29",
+      "end": "2020-09-27",
+      "counts": true,
+      "kind": "covid_opt_out_return",
+      "reason": "The transaction file places Markakis on the restricted list on 2020-07-06 and activates him from that list on 2020-08-05. He was not a high-risk opt-out, so the days before he returned do not count. News reports say he opted back in on 2020-07-29. Service runs from that date through the end of the shortened season.",
+      "source": [
+        "https://apnews.com/braves-markakis-returns-3-weeks-after-opting-out-of-season-3a15e403edf87a0fc9474d84d2f24720",
+        "https://www.cbssports.com/mlb/news/nick-markakis-rejoins-atlanta-braves-after-initially-opting-out-of-2020-mlb-season/"
       ]
     }
   ]
