@@ -1,0 +1,1593 @@
+{
+  "player_id": 656756,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:727c37b1d46a2eac7b29db0ef3e93cc4c66f151e84401e45ffd9cd0072397f25",
+  "transactions": [
+    {
+      "id": 195877,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2014-06-19",
+      "effectiveDate": "2014-06-19",
+      "resolutionDate": "2014-06-19",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "New York Yankees signed LHP Jordan Montgomery."
+    },
+    {
+      "id": 195878,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "date": "2014-06-20",
+      "effectiveDate": "2014-06-20",
+      "resolutionDate": "2014-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jordan Montgomery assigned to GCL Yankees1."
+    },
+    {
+      "id": 199493,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "toTeam": {
+        "id": 4725,
+        "name": "GCL Yankees West",
+        "link": "/api/v1/teams/4725"
+      },
+      "date": "2014-07-08",
+      "effectiveDate": "2014-07-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jordan Montgomery assigned to GCL Yankees2 from GCL Yankees1."
+    },
+    {
+      "id": 201022,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 4725,
+        "name": "GCL Yankees West",
+        "link": "/api/v1/teams/4725"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2014-07-18",
+      "effectiveDate": "2014-07-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jordan Montgomery assigned to Staten Island Yankees from GCL Yankees2."
+    },
+    {
+      "id": 221288,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2015-04-08",
+      "effectiveDate": "2015-04-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jordan Montgomery assigned to Charleston RiverDogs from Staten Island Yankees."
+    },
+    {
+      "id": 225174,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2015-05-11",
+      "effectiveDate": "2015-05-11",
+      "resolutionDate": "2015-05-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charleston RiverDogs placed LHP Jordan Montgomery on the 7-day disabled list."
+    },
+    {
+      "id": 225866,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2015-05-18",
+      "effectiveDate": "2015-05-18",
+      "resolutionDate": "2015-05-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charleston RiverDogs activated LHP Jordan Montgomery from the 7-day disabled list."
+    },
+    {
+      "id": 228324,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2015-06-01",
+      "effectiveDate": "2015-06-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jordan Montgomery assigned to Tampa Yankees from Charleston RiverDogs."
+    },
+    {
+      "id": 260017,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2016-04-04",
+      "effectiveDate": "2016-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jordan Montgomery assigned to Trenton Thunder from Tampa Yankees."
+    },
+    {
+      "id": 281664,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2016-08-01",
+      "effectiveDate": "2016-08-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jordan Montgomery assigned to Scranton/Wilkes-Barre RailRiders from Trenton Thunder."
+    },
+    {
+      "id": 283901,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2016-08-14",
+      "effectiveDate": "2016-08-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jordan Montgomery assigned to Trenton Thunder from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 284162,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2016-08-16",
+      "effectiveDate": "2016-08-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jordan Montgomery assigned to Scranton/Wilkes-Barre RailRiders from Trenton Thunder."
+    },
+    {
+      "id": 297408,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-01-31",
+      "effectiveDate": "2017-01-31",
+      "resolutionDate": "2017-01-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Yankees invited non-roster LHP Jordan Montgomery to spring training."
+    },
+    {
+      "id": 304574,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2017-04-06",
+      "effectiveDate": "2017-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jordan Montgomery assigned to Tampa Yankees from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 304959,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2017-04-09",
+      "effectiveDate": "2017-04-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jordan Montgomery assigned to Scranton/Wilkes-Barre RailRiders from Tampa Yankees."
+    },
+    {
+      "id": 305300,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "date": "2017-04-10",
+      "effectiveDate": "2017-04-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jordan Montgomery assigned to Yankees Ext. Spring Training from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 305570,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-04-12",
+      "effectiveDate": "2017-07-08",
+      "typeCode": "CP",
+      "typeDesc": "Contract Purchased",
+      "description": "New York Yankees purchased contract of Jordan Montgomery from Yankees Ext. Spring Training."
+    },
+    {
+      "id": 323077,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2017-07-08",
+      "effectiveDate": "2017-07-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned LHP Jordan Montgomery to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 324167,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-07-14",
+      "effectiveDate": "2017-08-07",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled Jordan Montgomery from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 328080,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2017-08-07",
+      "effectiveDate": "2017-08-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned LHP Jordan Montgomery to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 328764,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-08-11",
+      "effectiveDate": "2017-08-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled Jordan Montgomery from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 329836,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2017-08-19",
+      "effectiveDate": "2017-08-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned LHP Jordan Montgomery to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 331042,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-08-30",
+      "effectiveDate": "2017-08-31",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled Jordan Montgomery from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 331107,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2017-08-31",
+      "effectiveDate": "2017-08-31",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned LHP Jordan Montgomery to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 331367,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-09-01",
+      "effectiveDate": "2017-09-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled LHP Jordan Montgomery from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 333427,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-10-03",
+      "effectiveDate": "2017-10-03",
+      "resolutionDate": "2017-10-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees reassigned LHP Jordan Montgomery to the minor leagues."
+    },
+    {
+      "id": 333645,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-10-03",
+      "effectiveDate": "2017-10-03",
+      "resolutionDate": "2017-10-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees activated LHP Jordan Montgomery."
+    },
+    {
+      "id": 351886,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2018-05-02",
+      "effectiveDate": "2018-05-02",
+      "resolutionDate": "2018-05-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees placed LHP Jordan Montgomery on the 10-day disabled list. Left elbow strain."
+    },
+    {
+      "id": 374508,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2018-08-13",
+      "effectiveDate": "2018-08-13",
+      "resolutionDate": "2018-08-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees transferred LHP Jordan Montgomery from the 10-day disabled list to the 60-day disabled list. Left elbow strain."
+    },
+    {
+      "id": 381868,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2018-11-01",
+      "effectiveDate": "2018-11-01",
+      "resolutionDate": "2018-11-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees activated LHP Jordan Montgomery from the 60-day injured list."
+    },
+    {
+      "id": 391844,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2019-03-23",
+      "effectiveDate": "2019-03-23",
+      "resolutionDate": "2019-03-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees placed LHP Jordan Montgomery on the 60-day injured list. Recovering from Tommy John surgery."
+    },
+    {
+      "id": 425489,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-08-25",
+      "effectiveDate": "2019-08-25",
+      "resolutionDate": "2019-08-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Yankees sent LHP Jordan Montgomery on a rehab assignment to Tampa Tarpons."
+    },
+    {
+      "id": 426510,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2019-08-30",
+      "effectiveDate": "2019-08-30",
+      "resolutionDate": "2019-08-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Yankees sent LHP Jordan Montgomery on a rehab assignment to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 427437,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2019-09-04",
+      "effectiveDate": "2019-09-04",
+      "resolutionDate": "2019-09-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Yankees sent LHP Jordan Montgomery on a rehab assignment to Trenton Thunder."
+    },
+    {
+      "id": 428018,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2019-09-15",
+      "effectiveDate": "2019-09-15",
+      "resolutionDate": "2019-09-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees activated LHP Jordan Montgomery from the 60-day injured list."
+    },
+    {
+      "id": 429154,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2019-10-04",
+      "effectiveDate": "2019-10-04",
+      "resolutionDate": "2019-10-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees reassigned LHP Jordan Montgomery to the minor leagues."
+    },
+    {
+      "id": 433371,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2019-10-20",
+      "effectiveDate": "2020-07-21",
+      "resolutionDate": "2019-10-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jordan Montgomery roster status changed by New York Yankees."
+    },
+    {
+      "id": 447811,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "date": "2020-07-21",
+      "effectiveDate": "2020-07-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned LHP Jordan Montgomery to Yankees Alternate Training Site."
+    },
+    {
+      "id": 448583,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2020-07-31",
+      "effectiveDate": "2020-07-31",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled LHP Jordan Montgomery from Yankees Alternate Training Site."
+    },
+    {
+      "id": 477790,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2020-07-31",
+      "effectiveDate": "2020-07-31",
+      "resolutionDate": "2020-07-31",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled P Jordan Montgomery."
+    },
+    {
+      "id": 478477,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2020-07-31",
+      "effectiveDate": "2020-07-31",
+      "resolutionDate": "2020-07-31",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled LHP Jordan Montgomery."
+    },
+    {
+      "id": 509443,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2021-08-03",
+      "effectiveDate": "2021-08-03",
+      "resolutionDate": "2021-08-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees placed LHP Jordan Montgomery on the 10-day injured list."
+    },
+    {
+      "id": 512333,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2021-08-17",
+      "effectiveDate": "2021-08-17",
+      "resolutionDate": "2021-08-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees activated LHP Jordan Montgomery from the 10-day injured list."
+    },
+    {
+      "id": 520215,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2021-10-05",
+      "effectiveDate": "2021-10-05",
+      "resolutionDate": "2021-10-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees reassigned LHP Jordan Montgomery to the minor leagues."
+    },
+    {
+      "id": 520959,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2021-10-06",
+      "effectiveDate": "2021-10-06",
+      "resolutionDate": "2021-10-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees activated LHP Jordan Montgomery."
+    },
+    {
+      "id": 642660,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2022-08-02",
+      "effectiveDate": "2022-08-02",
+      "resolutionDate": "2022-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals reassigned LHP Jordan Montgomery to the minor leagues."
+    },
+    {
+      "id": 642505,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2022-08-02",
+      "effectiveDate": "2022-08-02",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "New York Yankees traded LHP Jordan Montgomery to St. Louis Cardinals for CF Harrison Bader."
+    },
+    {
+      "id": 643259,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2022-08-04",
+      "effectiveDate": "2022-08-04",
+      "resolutionDate": "2022-08-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals activated LHP Jordan Montgomery."
+    },
+    {
+      "id": 667383,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2023-01-31",
+      "effectiveDate": "2023-01-31",
+      "resolutionDate": "2023-01-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals activated LHP Jordan Montgomery."
+    },
+    {
+      "id": 715988,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-07-30",
+      "effectiveDate": "2023-07-30",
+      "resolutionDate": "2023-07-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers reassigned LHP Jordan Montgomery to the minor leagues."
+    },
+    {
+      "id": 715903,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-07-30",
+      "effectiveDate": "2023-07-30",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "St. Louis Cardinals traded LHP Jordan Montgomery and RHP Chris Stratton to Texas Rangers for LHP John King, RHP Tekoah Roby and SS Thomas Saggese."
+    },
+    {
+      "id": 716662,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-08-01",
+      "effectiveDate": "2023-08-01",
+      "resolutionDate": "2023-08-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated LHP Jordan Montgomery."
+    },
+    {
+      "id": 730344,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-11-02",
+      "effectiveDate": "2023-11-02",
+      "resolutionDate": "2023-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Jordan Montgomery elected free agency."
+    },
+    {
+      "id": 758061,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2024-03-29",
+      "effectiveDate": "2024-03-29",
+      "resolutionDate": "2024-03-29",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Arizona Diamondbacks signed free agent LHP Jordan Montgomery."
+    },
+    {
+      "id": 758102,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 6038,
+        "link": "/api/v1/teams/6038"
+      },
+      "date": "2024-03-29",
+      "effectiveDate": "2024-03-29",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned LHP Jordan Montgomery to ACL D-backs Red."
+    },
+    {
+      "id": 758194,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 1991,
+        "name": "ACL D-backs",
+        "link": "/api/v1/teams/1991"
+      },
+      "date": "2024-03-30",
+      "effectiveDate": "2024-03-30",
+      "resolutionDate": "2024-03-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LHP Jordan Montgomery roster status changed by ACL D-backs Black."
+    },
+    {
+      "id": 758121,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2024-03-30",
+      "effectiveDate": "2024-03-30",
+      "resolutionDate": "2024-03-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jordan Montgomery assigned to Reno Aces."
+    },
+    {
+      "id": 761738,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 1991,
+        "name": "ACL D-backs",
+        "link": "/api/v1/teams/1991"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2024-04-07",
+      "effectiveDate": "2024-04-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jordan Montgomery assigned to Reno Aces from ACL D-backs."
+    },
+    {
+      "id": 764335,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2024-04-19",
+      "effectiveDate": "2024-04-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled LHP Jordan Montgomery from Reno Aces."
+    },
+    {
+      "id": 784626,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2024-07-02",
+      "effectiveDate": "2024-06-29",
+      "resolutionDate": "2024-06-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks placed LHP Jordan Montgomery on the 15-day injured list retroactive to June 29, 2024. Right knee inflammation."
+    },
+    {
+      "id": 788929,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2024-07-23",
+      "effectiveDate": "2024-07-23",
+      "resolutionDate": "2024-07-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated LHP Jordan Montgomery from the 15-day injured list."
+    },
+    {
+      "id": 822217,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-03-26",
+      "effectiveDate": "2025-03-26",
+      "resolutionDate": "2025-03-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks placed LHP Jordan Montgomery on the 60-day injured list. Sprained left ulnar collateral ligament."
+    },
+    {
+      "id": 860426,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2025-07-31",
+      "effectiveDate": "2025-07-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Arizona Diamondbacks traded RHP Shelby Miller and LHP Jordan Montgomery to Milwaukee Brewers for Player To Be Named Later."
+    },
+    {
+      "id": 874361,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2025-11-02",
+      "effectiveDate": "2025-11-02",
+      "resolutionDate": "2025-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Jordan Montgomery elected free agency."
+    },
+    {
+      "id": 886503,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-02-13",
+      "effectiveDate": "2026-02-13",
+      "resolutionDate": "2026-02-13",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent LHP Jordan Montgomery."
+    },
+    {
+      "id": 891092,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-03-08",
+      "effectiveDate": "2026-03-08",
+      "resolutionDate": "2026-03-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed LHP Jordan Montgomery on the 60-day injured list. Recovering from Tommy John surgery."
+    },
+    {
+      "id": 924578,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2026-06-21",
+      "effectiveDate": "2026-06-21",
+      "resolutionDate": "2026-06-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent LHP Jordan Montgomery on a rehab assignment to Frisco RoughRiders."
+    },
+    {
+      "id": 920904,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2026-06-21",
+      "effectiveDate": "2026-06-21",
+      "resolutionDate": "2026-06-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent LHP Jordan Montgomery on a rehab assignment to Frisco RoughRiders."
+    },
+    {
+      "id": 936070,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2026-07-02",
+      "effectiveDate": "2026-07-02",
+      "resolutionDate": "2026-07-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent LHP Jordan Montgomery on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 924579,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2026-07-02",
+      "effectiveDate": "2026-07-02",
+      "resolutionDate": "2026-07-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent LHP Jordan Montgomery on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 936071,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-08-07",
+      "effectiveDate": "2026-08-07",
+      "resolutionDate": "2026-08-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated LHP Jordan Montgomery from the 60-day injured list."
+    },
+    {
+      "id": 947367,
+      "person": {
+        "id": 656756,
+        "fullName": "Jordan Montgomery",
+        "link": "/api/v1/people/656756",
+        "nameSlug": "jordan-montgomery-656756"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-10-29",
+      "effectiveDate": "2026-10-29",
+      "resolutionDate": "2026-10-29",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Jordan Montgomery elected free agency."
+    }
+  ]
+}

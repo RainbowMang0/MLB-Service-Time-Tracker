@@ -1,0 +1,836 @@
+{
+  "player_id": 694362,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:05371df0f1b2fc0cc455aa6a83ef0a80b97987f45195e7084a718b986fdaadd1",
+  "transactions": [
+    {
+      "id": 507350,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "toTeam": {
+        "id": 3430,
+        "name": "ACL Reds",
+        "link": "/api/v1/teams/3430"
+      },
+      "date": "2021-07-26",
+      "effectiveDate": "2021-07-26",
+      "resolutionDate": "2021-07-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Blake Dunn assigned to ACL Reds."
+    },
+    {
+      "id": 507349,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2021-07-26",
+      "effectiveDate": "2021-07-26",
+      "resolutionDate": "2021-07-26",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Cincinnati Reds signed OF Blake Dunn."
+    },
+    {
+      "id": 511170,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "fromTeam": {
+        "id": 3430,
+        "name": "ACL Reds",
+        "link": "/api/v1/teams/3430"
+      },
+      "toTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "date": "2021-08-11",
+      "effectiveDate": "2021-08-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Blake Dunn assigned to Daytona Tortugas from ACL Reds."
+    },
+    {
+      "id": 513540,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "toTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "date": "2021-08-22",
+      "effectiveDate": "2021-08-21",
+      "resolutionDate": "2021-08-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Daytona Tortugas placed OF Blake Dunn on the 7-day injured list. Nasal fracture."
+    },
+    {
+      "id": 518034,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "toTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "date": "2021-09-17",
+      "effectiveDate": "2021-09-17",
+      "resolutionDate": "2021-09-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Daytona Tortugas activated OF Blake Dunn from the 7-day injured list."
+    },
+    {
+      "id": 518036,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "fromTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "toTeam": {
+        "id": 3430,
+        "name": "ACL Reds",
+        "link": "/api/v1/teams/3430"
+      },
+      "date": "2021-09-17",
+      "effectiveDate": "2021-09-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Blake Dunn assigned to ACL Reds from Daytona Tortugas."
+    },
+    {
+      "id": 620582,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "fromTeam": {
+        "id": 3430,
+        "name": "ACL Reds",
+        "link": "/api/v1/teams/3430"
+      },
+      "toTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "date": "2022-05-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Blake Dunn assigned to Daytona Tortugas from ACL Reds."
+    },
+    {
+      "id": 626166,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "toTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "date": "2022-06-03",
+      "effectiveDate": "2022-06-03",
+      "resolutionDate": "2022-06-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Daytona Tortugas placed OF Blake Dunn on the 7-day injured list."
+    },
+    {
+      "id": 638510,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "toTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "date": "2022-06-14",
+      "effectiveDate": "2022-06-14",
+      "resolutionDate": "2022-06-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Daytona Tortugas transferred OF Blake Dunn from the 7-day injured list to the 60-day injured list."
+    },
+    {
+      "id": 630976,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "toTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "date": "2022-06-14",
+      "effectiveDate": "2022-06-14",
+      "resolutionDate": "2022-06-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Daytona Tortugas transferred OF Blake Dunn from the 7-day injured list to the 60-day injured list."
+    },
+    {
+      "id": 648184,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "fromTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "toTeam": {
+        "id": 3430,
+        "name": "ACL Reds",
+        "link": "/api/v1/teams/3430"
+      },
+      "date": "2022-08-15",
+      "effectiveDate": "2022-08-15",
+      "resolutionDate": "2022-08-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Daytona Tortugas sent OF Blake Dunn on a rehab assignment to ACL Reds."
+    },
+    {
+      "id": 646549,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "fromTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "toTeam": {
+        "id": 3430,
+        "name": "ACL Reds",
+        "link": "/api/v1/teams/3430"
+      },
+      "date": "2022-08-15",
+      "effectiveDate": "2022-08-15",
+      "resolutionDate": "2022-08-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Daytona Tortugas sent OF Blake Dunn on a rehab assignment to ACL Reds."
+    },
+    {
+      "id": 648185,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "toTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "date": "2022-08-23",
+      "effectiveDate": "2022-08-23",
+      "resolutionDate": "2022-08-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Daytona Tortugas activated OF Blake Dunn from the 60-day injured list."
+    },
+    {
+      "id": 675761,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2023-03-14",
+      "effectiveDate": "2023-03-14",
+      "resolutionDate": "2023-03-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Blake Dunn and  assigned to Cincinnati Reds."
+    },
+    {
+      "id": 681622,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "fromTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "toTeam": {
+        "id": 459,
+        "name": "Dayton Dragons",
+        "link": "/api/v1/teams/459"
+      },
+      "date": "2023-04-04",
+      "effectiveDate": "2023-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Blake Dunn assigned to Dayton Dragons from Daytona Tortugas."
+    },
+    {
+      "id": 705623,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2023-06-06",
+      "effectiveDate": "2023-06-06",
+      "resolutionDate": "2023-06-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chattanooga Lookouts activated OF Blake Dunn."
+    },
+    {
+      "id": 701548,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "fromTeam": {
+        "id": 459,
+        "name": "Dayton Dragons",
+        "link": "/api/v1/teams/459"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2023-06-06",
+      "effectiveDate": "2023-06-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Blake Dunn assigned to Chattanooga Lookouts from Dayton Dragons."
+    },
+    {
+      "id": 736632,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2024-01-11",
+      "effectiveDate": "2024-01-11",
+      "resolutionDate": "2024-01-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Cincinnati Reds invited non-roster OF Blake Dunn to spring training."
+    },
+    {
+      "id": 757412,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "fromTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2024-03-27",
+      "effectiveDate": "2024-03-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Blake Dunn assigned to Louisville Bats from Chattanooga Lookouts."
+    },
+    {
+      "id": 777876,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2024-06-04",
+      "effectiveDate": "2024-06-04",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Cincinnati Reds selected the contract of OF Blake Dunn from Louisville Bats."
+    },
+    {
+      "id": 779812,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2024-06-13",
+      "effectiveDate": "2024-06-13",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cincinnati Reds optioned OF Blake Dunn to Louisville Bats."
+    },
+    {
+      "id": 782381,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2024-06-23",
+      "effectiveDate": "2024-06-23",
+      "resolutionDate": "2024-06-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Louisville Bats placed OF Blake Dunn on the 7-day injured list. Left face laceration."
+    },
+    {
+      "id": 783835,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2024-06-30",
+      "effectiveDate": "2024-06-30",
+      "resolutionDate": "2024-06-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Louisville Bats activated OF Blake Dunn from the 7-day injured list."
+    },
+    {
+      "id": 784740,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2024-07-03",
+      "effectiveDate": "2024-07-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cincinnati Reds recalled OF Blake Dunn from Louisville Bats."
+    },
+    {
+      "id": 786262,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2024-07-10",
+      "effectiveDate": "2024-07-10",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cincinnati Reds optioned OF Blake Dunn to Louisville Bats."
+    },
+    {
+      "id": 797374,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2024-09-02",
+      "effectiveDate": "2024-09-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cincinnati Reds recalled OF Blake Dunn from Louisville Bats."
+    },
+    {
+      "id": 828648,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "LF Blake Dunn changed number to 42."
+    },
+    {
+      "id": 829853,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "LF Blake Dunn changed number to 59."
+    },
+    {
+      "id": 835883,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2025-05-09",
+      "effectiveDate": "2025-05-09",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cincinnati Reds optioned LF Blake Dunn to Louisville Bats."
+    },
+    {
+      "id": 870765,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2025-09-29",
+      "effectiveDate": "2025-09-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cincinnati Reds recalled LF Blake Dunn from Louisville Bats."
+    },
+    {
+      "id": 871035,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2025-09-30",
+      "effectiveDate": "2025-09-30",
+      "resolutionDate": "2025-09-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LF Blake Dunn roster status changed by Cincinnati Reds."
+    },
+    {
+      "id": 871616,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2025-10-02",
+      "effectiveDate": "2025-10-02",
+      "resolutionDate": "2025-10-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds activated LF Blake Dunn."
+    },
+    {
+      "id": 893792,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2026-03-16",
+      "effectiveDate": "2026-03-16",
+      "resolutionDate": "2026-03-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Louisville Bats activated LF Blake Dunn."
+    },
+    {
+      "id": 891784,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2026-03-16",
+      "effectiveDate": "2026-03-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cincinnati Reds optioned LF Blake Dunn to Louisville Bats."
+    },
+    {
+      "id": 905507,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2026-05-03",
+      "effectiveDate": "2026-05-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cincinnati Reds recalled LF Blake Dunn from Louisville Bats."
+    },
+    {
+      "id": 923154,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2026-06-28",
+      "effectiveDate": "2026-06-27",
+      "resolutionDate": "2026-06-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds placed CF Blake Dunn on the 10-day injured list retroactive to June 27, 2026. Right elbow sprain."
+    },
+    {
+      "id": 935812,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2026-08-06",
+      "effectiveDate": "2026-08-06",
+      "resolutionDate": "2026-08-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds transferred CF Blake Dunn from the 10-day injured list to the 60-day injured list. Right elbow sprain."
+    },
+    {
+      "id": 947259,
+      "person": {
+        "id": 694362,
+        "fullName": "Blake Dunn",
+        "link": "/api/v1/people/694362",
+        "nameSlug": "blake-dunn-694362"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2026-10-29",
+      "effectiveDate": "2026-10-29",
+      "resolutionDate": "2026-10-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds activated CF Blake Dunn from the 60-day injured list."
+    }
+  ]
+}

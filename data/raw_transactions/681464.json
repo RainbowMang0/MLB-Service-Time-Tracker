@@ -1,0 +1,995 @@
+{
+  "player_id": 681464,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:72725cf83418e1f05468f0ccc9306f001fbec82761ca999456870664a4a540ad",
+  "transactions": [
+    {
+      "id": 359965,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2018-06-13",
+      "effectiveDate": "2018-06-13",
+      "resolutionDate": "2018-06-13",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "New York Yankees signed RHP Frank German."
+    },
+    {
+      "id": 363339,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 4725,
+        "name": "GCL Yankees West",
+        "link": "/api/v1/teams/4725"
+      },
+      "date": "2018-06-21",
+      "effectiveDate": "2018-06-21",
+      "resolutionDate": "2018-06-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Frank German assigned to GCL Yankees West."
+    },
+    {
+      "id": 364544,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "fromTeam": {
+        "id": 4725,
+        "name": "GCL Yankees West",
+        "link": "/api/v1/teams/4725"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2018-06-26",
+      "effectiveDate": "2018-06-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Frank German assigned to Staten Island Yankees from GCL Yankees West."
+    },
+    {
+      "id": 396758,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "fromTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-04-15",
+      "effectiveDate": "2019-04-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Frank German assigned to Tampa Tarpons from Staten Island Yankees."
+    },
+    {
+      "id": 415834,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-07-06",
+      "effectiveDate": "2019-07-04",
+      "resolutionDate": "2019-07-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Tarpons placed RHP Frank German on the 7-day injured list retroactive to July 4, 2019."
+    },
+    {
+      "id": 421110,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "date": "2019-08-01",
+      "effectiveDate": "2019-08-01",
+      "resolutionDate": "2019-08-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Tampa Tarpons sent RHP Frank German on a rehab assignment to GCL Yankees East."
+    },
+    {
+      "id": 422016,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 4725,
+        "name": "GCL Yankees West",
+        "link": "/api/v1/teams/4725"
+      },
+      "date": "2019-08-05",
+      "effectiveDate": "2019-08-05",
+      "resolutionDate": "2019-08-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Tampa Tarpons sent RHP Frank German on a rehab assignment to GCL Yankees West."
+    },
+    {
+      "id": 422998,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "date": "2019-08-10",
+      "effectiveDate": "2019-08-10",
+      "resolutionDate": "2019-08-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Tampa Tarpons sent RHP Frank German on a rehab assignment to GCL Yankees East."
+    },
+    {
+      "id": 423804,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-08-15",
+      "effectiveDate": "2019-08-15",
+      "resolutionDate": "2019-08-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Tarpons activated RHP Frank German from the 7-day injured list."
+    },
+    {
+      "id": 460457,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 414,
+        "name": "Salem RidgeYaks",
+        "link": "/api/v1/teams/414"
+      },
+      "date": "2021-01-25",
+      "effectiveDate": "2021-01-25",
+      "resolutionDate": "2021-01-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Frank German assigned to Salem Red Sox."
+    },
+    {
+      "id": 460456,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2021-01-25",
+      "effectiveDate": "2021-01-25",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "New York Yankees traded RHP Adam Ottavino and RHP Frank German to Boston Red Sox for Player To Be Named Later."
+    },
+    {
+      "id": 484037,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "fromTeam": {
+        "id": 414,
+        "name": "Salem RidgeYaks",
+        "link": "/api/v1/teams/414"
+      },
+      "toTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Frank German assigned to Portland Sea Dogs from Salem Red Sox."
+    },
+    {
+      "id": 612613,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2022-03-19",
+      "effectiveDate": "2022-03-19",
+      "resolutionDate": "2022-03-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Frank German roster status changed by Boston Red Sox."
+    },
+    {
+      "id": 607118,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2022-03-19",
+      "effectiveDate": "2022-03-19",
+      "resolutionDate": "2022-03-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Frank German assigned to Boston Red Sox."
+    },
+    {
+      "id": 624243,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "fromTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2022-05-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Frank German assigned to Worcester Red Sox from Portland Sea Dogs."
+    },
+    {
+      "id": 652873,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2022-09-17",
+      "effectiveDate": "2022-09-17",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Boston Red Sox selected the contract of RHP Frank German from Worcester Red Sox."
+    },
+    {
+      "id": 657018,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2022-10-24",
+      "effectiveDate": "2022-10-24",
+      "resolutionDate": "2022-10-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Franklin German assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 658529,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2022-10-24",
+      "effectiveDate": "2022-10-24",
+      "resolutionDate": "2022-10-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aguilas Cibaenas activated RHP Franklin German."
+    },
+    {
+      "id": 657163,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2022-10-24",
+      "effectiveDate": "2022-10-24",
+      "resolutionDate": "2022-10-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aguilas Cibaenas activated RHP Franklin German."
+    },
+    {
+      "id": 670891,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2022-10-24",
+      "effectiveDate": "2022-10-24",
+      "resolutionDate": "2022-10-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aguilas Cibaenas activated RHP Franklin German."
+    },
+    {
+      "id": 667307,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2023-01-30",
+      "effectiveDate": "2023-01-30",
+      "resolutionDate": "2023-01-30",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Boston Red Sox designated RHP Franklin German for assignment."
+    },
+    {
+      "id": 667844,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2023-02-03",
+      "effectiveDate": "2023-02-03",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Boston Red Sox traded RHP Franklin German to Chicago White Sox for RHP Theo Denlinger."
+    },
+    {
+      "id": 676579,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2023-03-20",
+      "effectiveDate": "2023-03-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago White Sox optioned RHP Franklin German and  to Charlotte Knights."
+    },
+    {
+      "id": 688406,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2023-05-02",
+      "effectiveDate": "2023-05-02",
+      "resolutionDate": "2023-05-02",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Chicago White Sox designated RHP Franklin German for assignment."
+    },
+    {
+      "id": 690227,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2023-05-07",
+      "effectiveDate": "2023-05-07",
+      "resolutionDate": "2023-05-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Franklin German roster status changed by Chicago White Sox."
+    },
+    {
+      "id": 690727,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2023-05-08",
+      "effectiveDate": "2023-05-08",
+      "resolutionDate": "2023-05-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Louisville Bats activated RHP Franklin German."
+    },
+    {
+      "id": 700986,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2023-05-08",
+      "effectiveDate": "2023-05-08",
+      "resolutionDate": "2023-05-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Louisville Bats activated RHP Frank German."
+    },
+    {
+      "id": 690225,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2023-05-08",
+      "effectiveDate": "2023-05-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cincinnati Reds optioned RHP Franklin German to Louisville Bats."
+    },
+    {
+      "id": 690224,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2023-05-08",
+      "effectiveDate": "2023-05-08",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Cincinnati Reds claimed RHP Franklin German off waivers from Chicago White Sox."
+    },
+    {
+      "id": 700985,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2023-06-05",
+      "effectiveDate": "2023-06-05",
+      "resolutionDate": "2023-06-05",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Cincinnati Reds designated RHP Frank German for assignment."
+    },
+    {
+      "id": 701522,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2023-06-06",
+      "effectiveDate": "2023-06-06",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Cincinnati Reds sent RHP Frank German outright to Louisville Bats."
+    },
+    {
+      "id": 702611,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2023-06-07",
+      "effectiveDate": "2023-06-07",
+      "resolutionDate": "2023-06-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Louisville Bats placed RHP Frank German on the 7-day injured list."
+    },
+    {
+      "id": 710170,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 3430,
+        "name": "ACL Reds",
+        "link": "/api/v1/teams/3430"
+      },
+      "date": "2023-07-08",
+      "effectiveDate": "2023-07-08",
+      "resolutionDate": "2023-07-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Louisville Bats sent RHP Frank German on a rehab assignment to ACL Reds."
+    },
+    {
+      "id": 710627,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 3430,
+        "name": "ACL Reds",
+        "link": "/api/v1/teams/3430"
+      },
+      "date": "2023-07-08",
+      "effectiveDate": "2023-07-08",
+      "resolutionDate": "2023-07-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Louisville Bats sent RHP Frank German on a rehab assignment to ACL Reds."
+    },
+    {
+      "id": 710628,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2023-07-11",
+      "effectiveDate": "2023-07-11",
+      "resolutionDate": "2023-07-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Louisville Bats activated RHP Frank German from the 7-day injured list."
+    },
+    {
+      "id": 710735,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2023-07-13",
+      "effectiveDate": "2023-07-13",
+      "resolutionDate": "2023-07-13",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Louisville Bats released RHP Frank German."
+    },
+    {
+      "id": 714648,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2023-07-26",
+      "effectiveDate": "2023-07-26",
+      "resolutionDate": "2023-07-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Frank German assigned to Worcester Red Sox."
+    },
+    {
+      "id": 714647,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2023-07-26",
+      "effectiveDate": "2023-07-26",
+      "resolutionDate": "2023-07-26",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Boston Red Sox signed free agent RHP Frank German to a minor league contract."
+    },
+    {
+      "id": 720683,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 471,
+        "name": "FCL Red Sox",
+        "link": "/api/v1/teams/471"
+      },
+      "date": "2023-08-19",
+      "effectiveDate": "2023-08-19",
+      "resolutionDate": "2023-08-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Worcester Red Sox sent RHP Frank German on a rehab assignment to FCL Red Sox."
+    },
+    {
+      "id": 722434,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 414,
+        "name": "Salem RidgeYaks",
+        "link": "/api/v1/teams/414"
+      },
+      "date": "2023-08-29",
+      "effectiveDate": "2023-08-29",
+      "resolutionDate": "2023-08-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Worcester Red Sox sent RHP Frank German on a rehab assignment to Salem Red Sox."
+    },
+    {
+      "id": 725979,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "date": "2023-09-12",
+      "effectiveDate": "2023-09-12",
+      "resolutionDate": "2023-09-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Worcester Red Sox sent RHP Frank German on a rehab assignment to Greenville Drive."
+    },
+    {
+      "id": 724588,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "date": "2023-09-12",
+      "effectiveDate": "2023-09-12",
+      "resolutionDate": "2023-09-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Worcester Red Sox sent RHP Frank German on a rehab assignment to Greenville Drive."
+    },
+    {
+      "id": 725980,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2023-09-21",
+      "effectiveDate": "2023-09-21",
+      "resolutionDate": "2023-09-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Worcester Red Sox activated RHP Frank German from the 7-day injured list."
+    },
+    {
+      "id": 734899,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2023-12-11",
+      "effectiveDate": "2023-12-11",
+      "resolutionDate": "2023-12-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Boston Red Sox invited non-roster RHP Frank German to spring training."
+    },
+    {
+      "id": 757453,
+      "person": {
+        "id": 681464,
+        "fullName": "Frank German",
+        "link": "/api/v1/people/681464",
+        "nameSlug": "frank-german-681464"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2024-03-27",
+      "effectiveDate": "2024-03-27",
+      "resolutionDate": "2024-03-27",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Worcester Red Sox released RHP Frank German."
+    }
+  ]
+}

@@ -1,0 +1,943 @@
+{
+  "player_id": 701121,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:b3daa771b2572d14fc52d18529850563134aba4b90f6fe8d6cfa4b56d4fbef64",
+  "transactions": [
+    {
+      "id": 490149,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2021-05-21",
+      "effectiveDate": "2021-05-21",
+      "resolutionDate": "2021-05-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Logan VanWey assigned to Trenton Thunder."
+    },
+    {
+      "id": 640930,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2022-07-28",
+      "effectiveDate": "2022-07-28",
+      "resolutionDate": "2022-07-28",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Houston Astros signed RHP Logan VanWey."
+    },
+    {
+      "id": 643434,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "toTeam": {
+        "id": 2000,
+        "name": "FCL Astros Orange",
+        "link": "/api/v1/teams/2000"
+      },
+      "date": "2022-08-05",
+      "effectiveDate": "2022-08-05",
+      "resolutionDate": "2022-08-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Logan VanWey assigned to FCL Astros Orange."
+    },
+    {
+      "id": 675800,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2023-03-15",
+      "effectiveDate": "2023-03-15",
+      "resolutionDate": "2023-03-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Logan VanWey assigned to Houston Astros."
+    },
+    {
+      "id": 677976,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2023-03-15",
+      "effectiveDate": "2023-03-15",
+      "resolutionDate": "2023-03-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Logan VanWey roster status changed by Houston Astros."
+    },
+    {
+      "id": 681191,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 2000,
+        "name": "FCL Astros Orange",
+        "link": "/api/v1/teams/2000"
+      },
+      "toTeam": {
+        "id": 573,
+        "name": "Asheville Tourists",
+        "link": "/api/v1/teams/573"
+      },
+      "date": "2023-04-03",
+      "effectiveDate": "2023-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Logan VanWey assigned to Asheville Tourists from FCL Astros Orange."
+    },
+    {
+      "id": 689574,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 573,
+        "name": "Asheville Tourists",
+        "link": "/api/v1/teams/573"
+      },
+      "toTeam": {
+        "id": 482,
+        "name": "Corpus Christi Hooks",
+        "link": "/api/v1/teams/482"
+      },
+      "date": "2023-05-05",
+      "effectiveDate": "2023-05-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Logan VanWey assigned to Corpus Christi Hooks from Asheville Tourists."
+    },
+    {
+      "id": 692092,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 482,
+        "name": "Corpus Christi Hooks",
+        "link": "/api/v1/teams/482"
+      },
+      "toTeam": {
+        "id": 573,
+        "name": "Asheville Tourists",
+        "link": "/api/v1/teams/573"
+      },
+      "date": "2023-05-15",
+      "effectiveDate": "2023-05-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Logan VanWey assigned to Asheville Tourists from Corpus Christi Hooks."
+    },
+    {
+      "id": 701459,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 573,
+        "name": "Asheville Tourists",
+        "link": "/api/v1/teams/573"
+      },
+      "toTeam": {
+        "id": 482,
+        "name": "Corpus Christi Hooks",
+        "link": "/api/v1/teams/482"
+      },
+      "date": "2023-06-06",
+      "effectiveDate": "2023-06-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Logan VanWey assigned to Corpus Christi Hooks from Asheville Tourists."
+    },
+    {
+      "id": 703585,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 482,
+        "name": "Corpus Christi Hooks",
+        "link": "/api/v1/teams/482"
+      },
+      "toTeam": {
+        "id": 573,
+        "name": "Asheville Tourists",
+        "link": "/api/v1/teams/573"
+      },
+      "date": "2023-06-13",
+      "effectiveDate": "2023-06-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Logan VanWey assigned to Asheville Tourists from Corpus Christi Hooks."
+    },
+    {
+      "id": 710043,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 573,
+        "name": "Asheville Tourists",
+        "link": "/api/v1/teams/573"
+      },
+      "toTeam": {
+        "id": 482,
+        "name": "Corpus Christi Hooks",
+        "link": "/api/v1/teams/482"
+      },
+      "date": "2023-07-07",
+      "effectiveDate": "2023-07-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Logan VanWey assigned to Corpus Christi Hooks from Asheville Tourists."
+    },
+    {
+      "id": 725843,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 482,
+        "name": "Corpus Christi Hooks",
+        "link": "/api/v1/teams/482"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2023-09-20",
+      "effectiveDate": "2023-09-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Logan VanWey assigned to Sugar Land Space Cowboys from Corpus Christi Hooks."
+    },
+    {
+      "id": 751764,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2024-02-25",
+      "effectiveDate": "2024-02-25",
+      "resolutionDate": "2024-02-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Logan VanWey assigned to Houston Astros."
+    },
+    {
+      "id": 810851,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2025-01-17",
+      "effectiveDate": "2025-01-17",
+      "resolutionDate": "2025-01-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Houston Astros invited non-roster RHP Logan VanWey to spring training."
+    },
+    {
+      "id": 826470,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2025-04-07",
+      "effectiveDate": "2025-04-07",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Houston Astros selected the contract of RHP Logan VanWey from Sugar Land Space Cowboys."
+    },
+    {
+      "id": 828540,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Logan VanWey changed number to 42."
+    },
+    {
+      "id": 829742,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Logan VanWey changed number to 64."
+    },
+    {
+      "id": 834817,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-05-04",
+      "effectiveDate": "2025-05-04",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned RHP Logan VanWey to Sugar Land Space Cowboys."
+    },
+    {
+      "id": 835893,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2025-05-09",
+      "effectiveDate": "2025-05-09",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Houston Astros recalled RHP Logan VanWey from Sugar Land Space Cowboys."
+    },
+    {
+      "id": 836306,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-05-11",
+      "effectiveDate": "2025-05-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned RHP Logan VanWey to Sugar Land Space Cowboys."
+    },
+    {
+      "id": 841312,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-05-28",
+      "effectiveDate": "2025-05-27",
+      "resolutionDate": "2025-05-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sugar Land Space Cowboys placed RHP Logan VanWey on the 7-day injured list retroactive to May 27, 2025."
+    },
+    {
+      "id": 851196,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-06-28",
+      "effectiveDate": "2025-06-28",
+      "resolutionDate": "2025-06-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sugar Land Space Cowboys activated RHP Logan VanWey from the 7-day injured list."
+    },
+    {
+      "id": 853005,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-07-05",
+      "effectiveDate": "2025-07-03",
+      "resolutionDate": "2025-07-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sugar Land Space Cowboys placed RHP Logan VanWey on the 7-day injured list retroactive to July 3, 2025."
+    },
+    {
+      "id": 855077,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-07-13",
+      "effectiveDate": "2025-07-13",
+      "resolutionDate": "2025-07-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sugar Land Space Cowboys activated RHP Logan VanWey from the 7-day injured list."
+    },
+    {
+      "id": 857941,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-07-23",
+      "effectiveDate": "2025-07-22",
+      "resolutionDate": "2025-07-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sugar Land Space Cowboys placed RHP Logan VanWey on the 7-day injured list retroactive to July 22, 2025."
+    },
+    {
+      "id": 859783,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-07-29",
+      "effectiveDate": "2025-07-29",
+      "resolutionDate": "2025-07-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sugar Land Space Cowboys activated RHP Logan VanWey from the 7-day injured list."
+    },
+    {
+      "id": 865174,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2025-08-19",
+      "effectiveDate": "2025-08-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Houston Astros recalled RHP Logan VanWey from Sugar Land Space Cowboys."
+    },
+    {
+      "id": 865752,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-08-22",
+      "effectiveDate": "2025-08-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned RHP Logan VanWey to Sugar Land Space Cowboys."
+    },
+    {
+      "id": 868068,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2025-09-06",
+      "effectiveDate": "2025-09-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Houston Astros recalled RHP Logan VanWey from Sugar Land Space Cowboys."
+    },
+    {
+      "id": 868403,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-09-09",
+      "effectiveDate": "2025-09-09",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned RHP Logan VanWey to Sugar Land Space Cowboys."
+    },
+    {
+      "id": 869377,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-09-13",
+      "effectiveDate": "2025-09-13",
+      "resolutionDate": "2025-09-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sugar Land Space Cowboys placed RHP Logan VanWey on the 7-day injured list."
+    },
+    {
+      "id": 870630,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2025-09-29",
+      "effectiveDate": "2025-09-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Houston Astros recalled RHP Logan VanWey from Sugar Land Space Cowboys."
+    },
+    {
+      "id": 878235,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-12-05",
+      "effectiveDate": "2025-12-05",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Houston Astros sent RHP Logan VanWey outright to Sugar Land Space Cowboys."
+    },
+    {
+      "id": 881428,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2026-01-16",
+      "effectiveDate": "2026-01-16",
+      "resolutionDate": "2026-01-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Houston Astros invited non-roster RHP Logan VanWey to spring training."
+    },
+    {
+      "id": 906912,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2026-05-08",
+      "effectiveDate": "2026-05-08",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Houston Astros selected the contract of RHP Logan VanWey from Sugar Land Space Cowboys."
+    },
+    {
+      "id": 907865,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2026-05-12",
+      "effectiveDate": "2026-05-12",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned RHP Logan VanWey to Sugar Land Space Cowboys."
+    },
+    {
+      "id": 912194,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2026-05-27",
+      "effectiveDate": "2026-05-27",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Houston Astros recalled RHP Logan VanWey from Sugar Land Space Cowboys."
+    },
+    {
+      "id": 914650,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2026-06-01",
+      "effectiveDate": "2026-06-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned RHP Logan VanWey to Sugar Land Space Cowboys."
+    },
+    {
+      "id": 921065,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2026-06-22",
+      "effectiveDate": "2026-06-22",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Houston Astros recalled RHP Logan VanWey from Sugar Land Space Cowboys."
+    },
+    {
+      "id": 921936,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2026-06-24",
+      "effectiveDate": "2026-06-24",
+      "resolutionDate": "2026-06-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sugar Land Space Cowboys activated RHP Logan VanWey."
+    },
+    {
+      "id": 921920,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2026-06-24",
+      "effectiveDate": "2026-06-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned RHP Logan VanWey to Sugar Land Space Cowboys."
+    },
+    {
+      "id": 943272,
+      "person": {
+        "id": 701121,
+        "fullName": "Logan VanWey",
+        "link": "/api/v1/people/701121",
+        "nameSlug": "logan-vanwey-701121"
+      },
+      "fromTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2026-09-19",
+      "effectiveDate": "2026-09-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Houston Astros recalled RHP Logan VanWey from Sugar Land Space Cowboys."
+    }
+  ]
+}

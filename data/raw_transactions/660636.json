@@ -1,0 +1,1907 @@
+{
+  "player_id": 660636,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:d88a660adb34277e0daa9b060ab955d0fc18922a62fb5bd42671a6249165a2f9",
+  "transactions": [
+    {
+      "id": 369944,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2014-12-18",
+      "effectiveDate": "2014-12-18",
+      "resolutionDate": "2014-12-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Yankees signed free agent SS Diego Castillo to a minor league contract."
+    },
+    {
+      "id": 227498,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 634,
+        "name": "DSL NYY Bombers",
+        "link": "/api/v1/teams/634"
+      },
+      "date": "2015-05-29",
+      "effectiveDate": "2015-05-29",
+      "resolutionDate": "2015-05-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego Castillo assigned to DSL Yankees1."
+    },
+    {
+      "id": 269100,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 634,
+        "name": "DSL NYY Bombers",
+        "link": "/api/v1/teams/634"
+      },
+      "toTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "date": "2016-06-03",
+      "effectiveDate": "2016-06-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego Castillo assigned to GCL Yankees East from DSL Yankees1."
+    },
+    {
+      "id": 274324,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "toTeam": {
+        "id": 4725,
+        "name": "GCL Yankees West",
+        "link": "/api/v1/teams/4725"
+      },
+      "date": "2016-06-23",
+      "effectiveDate": "2016-06-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego Castillo assigned to GCL Yankees West from GCL Yankees East."
+    },
+    {
+      "id": 303603,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 4725,
+        "name": "GCL Yankees West",
+        "link": "/api/v1/teams/4725"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2017-04-04",
+      "effectiveDate": "2017-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego Castillo assigned to Charleston RiverDogs from GCL Yankees West."
+    },
+    {
+      "id": 342929,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2018-02-26",
+      "effectiveDate": "2018-02-26",
+      "resolutionDate": "2018-02-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "IF Diego Castillo assigned to New York Yankees."
+    },
+    {
+      "id": 346466,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "toTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "date": "2018-04-01",
+      "effectiveDate": "2018-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego Castillo assigned to Yankees Extended Spring Training from Charleston RiverDogs."
+    },
+    {
+      "id": 348099,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2018-04-05",
+      "effectiveDate": "2018-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego Castillo assigned to Tampa Tarpons from Yankees Extended Spring Training."
+    },
+    {
+      "id": 380488,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 693,
+        "name": "Cardenales de Lara",
+        "link": "/api/v1/teams/693"
+      },
+      "date": "2018-10-11",
+      "effectiveDate": "2018-10-11",
+      "resolutionDate": "2018-10-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego Castillo assigned to Cardenales de Lara."
+    },
+    {
+      "id": 388758,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2019-02-24",
+      "effectiveDate": "2019-02-24",
+      "resolutionDate": "2019-02-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego Castillo assigned to New York Yankees."
+    },
+    {
+      "id": 403131,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-05-25",
+      "effectiveDate": "2019-05-23",
+      "resolutionDate": "2019-05-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Tarpons placed SS Diego Castillo on the 7-day injured list retroactive to May 23, 2019."
+    },
+    {
+      "id": 403947,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-05-30",
+      "effectiveDate": "2019-05-30",
+      "resolutionDate": "2019-05-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Tarpons activated SS Diego Castillo from the 7-day injured list."
+    },
+    {
+      "id": 427435,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2019-09-04",
+      "effectiveDate": "2019-09-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego Castillo assigned to Trenton Thunder from Tampa Tarpons."
+    },
+    {
+      "id": 427819,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-09-10",
+      "effectiveDate": "2019-09-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego Castillo assigned to Tampa Tarpons from Trenton Thunder."
+    },
+    {
+      "id": 464316,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-09-10",
+      "effectiveDate": "2019-09-10",
+      "resolutionDate": "2019-09-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego Castillo assigned to Tampa Tarpons."
+    },
+    {
+      "id": 439126,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2020-02-23",
+      "effectiveDate": "2020-02-23",
+      "resolutionDate": "2020-02-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "IF Diego Castillo assigned to New York Yankees."
+    },
+    {
+      "id": 468928,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 537,
+        "name": "Hudson Valley Renegades",
+        "link": "/api/v1/teams/537"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego Castillo assigned to Hudson Valley Renegades."
+    },
+    {
+      "id": 466666,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 537,
+        "name": "Hudson Valley Renegades",
+        "link": "/api/v1/teams/537"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego Castillo assigned to Hudson Valley Renegades."
+    },
+    {
+      "id": 482447,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 537,
+        "name": "Hudson Valley Renegades",
+        "link": "/api/v1/teams/537"
+      },
+      "toTeam": {
+        "id": 1956,
+        "name": "Somerset Patriots",
+        "link": "/api/v1/teams/1956"
+      },
+      "date": "2021-05-02",
+      "effectiveDate": "2021-05-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego Castillo assigned to Somerset Patriots from Hudson Valley Renegades."
+    },
+    {
+      "id": 488842,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 1956,
+        "name": "Somerset Patriots",
+        "link": "/api/v1/teams/1956"
+      },
+      "date": "2021-05-16",
+      "effectiveDate": "2021-05-16",
+      "resolutionDate": "2021-05-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Somerset Patriots placed SS Diego Castillo on the 7-day injured list."
+    },
+    {
+      "id": 489679,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 1956,
+        "name": "Somerset Patriots",
+        "link": "/api/v1/teams/1956"
+      },
+      "date": "2021-05-16",
+      "effectiveDate": "2021-05-16",
+      "resolutionDate": "2021-05-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Somerset Patriots placed SS Diego Castillo on the 7-day injured list."
+    },
+    {
+      "id": 487213,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 1956,
+        "name": "Somerset Patriots",
+        "link": "/api/v1/teams/1956"
+      },
+      "date": "2021-05-18",
+      "effectiveDate": "2021-05-16",
+      "resolutionDate": "2021-05-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Somerset Patriots placed SS Diego Castillo on the 7-day injured list."
+    },
+    {
+      "id": 491016,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 1956,
+        "name": "Somerset Patriots",
+        "link": "/api/v1/teams/1956"
+      },
+      "date": "2021-05-27",
+      "effectiveDate": "2021-05-27",
+      "resolutionDate": "2021-05-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Somerset Patriots activated SS Diego Castillo from the 7-day injured list."
+    },
+    {
+      "id": 507291,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 452,
+        "name": "Altoona Curve",
+        "link": "/api/v1/teams/452"
+      },
+      "date": "2021-07-26",
+      "effectiveDate": "2021-07-26",
+      "resolutionDate": "2021-07-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego Castillo assigned to Altoona Curve."
+    },
+    {
+      "id": 507290,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2021-07-26",
+      "effectiveDate": "2021-07-26",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "New York Yankees traded SS Hoy Park and SS Diego Castillo to Pittsburgh Pirates for RHP Clay Holmes."
+    },
+    {
+      "id": 507637,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 452,
+        "name": "Altoona Curve",
+        "link": "/api/v1/teams/452"
+      },
+      "date": "2021-07-28",
+      "effectiveDate": "2021-07-28",
+      "resolutionDate": "2021-07-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Altoona Curve activated SS Diego Castillo."
+    },
+    {
+      "id": 515233,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 452,
+        "name": "Altoona Curve",
+        "link": "/api/v1/teams/452"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2021-08-31",
+      "effectiveDate": "2021-08-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego Castillo assigned to Indianapolis Indians from Altoona Curve."
+    },
+    {
+      "id": 523770,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2021-11-07",
+      "effectiveDate": "2021-11-07",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Pittsburgh Pirates selected the contract of SS Diego Castillo from Indianapolis Indians."
+    },
+    {
+      "id": 615433,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2021-11-07",
+      "effectiveDate": "2021-11-07",
+      "resolutionDate": "2021-11-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pittsburgh Pirates activated SS Diego Castillo."
+    },
+    {
+      "id": 614893,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2021-11-07",
+      "effectiveDate": "2021-11-07",
+      "resolutionDate": "2021-11-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pittsburgh Pirates activated SS Diego Castillo."
+    },
+    {
+      "id": 641552,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2022-07-31",
+      "effectiveDate": "2022-07-31",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Pittsburgh Pirates optioned SS Diego Castillo to Indianapolis Indians."
+    },
+    {
+      "id": 651793,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2022-09-12",
+      "effectiveDate": "2022-09-12",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Pittsburgh Pirates recalled SS Diego Castillo,  and  from Indianapolis Indians."
+    },
+    {
+      "id": 670584,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 694,
+        "name": "Caribes de Anzoategui",
+        "link": "/api/v1/teams/694"
+      },
+      "date": "2022-11-01",
+      "effectiveDate": "2022-11-01",
+      "resolutionDate": "2022-11-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Caribes de Anzoategui activated SS Diego Castillo."
+    },
+    {
+      "id": 657518,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 694,
+        "name": "Caribes de Anzoategui",
+        "link": "/api/v1/teams/694"
+      },
+      "date": "2022-11-01",
+      "effectiveDate": "2022-11-01",
+      "resolutionDate": "2022-11-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego Castillo assigned to Caribes de Anzoategui."
+    },
+    {
+      "id": 663770,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2022-12-20",
+      "effectiveDate": "2022-12-20",
+      "resolutionDate": "2022-12-20",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Pittsburgh Pirates designated SS Diego Castillo for assignment."
+    },
+    {
+      "id": 665122,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2022-12-23",
+      "effectiveDate": "2022-12-23",
+      "resolutionDate": "2022-12-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated SS Diego Castillo."
+    },
+    {
+      "id": 663936,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2022-12-23",
+      "effectiveDate": "2022-12-23",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Pittsburgh Pirates traded SS Diego Castillo to Arizona Diamondbacks for RHP Scott Randall."
+    },
+    {
+      "id": 680128,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2023-03-19",
+      "effectiveDate": "2023-03-19",
+      "resolutionDate": "2023-03-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces activated SS Diego Castillo."
+    },
+    {
+      "id": 676371,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2023-03-19",
+      "effectiveDate": "2023-03-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned SS Diego Castillo to Reno Aces."
+    },
+    {
+      "id": 716159,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2023-07-31",
+      "effectiveDate": "2023-07-31",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled SS Diego Castillo from Reno Aces."
+    },
+    {
+      "id": 716675,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2023-08-01",
+      "effectiveDate": "2023-08-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned SS Diego Castillo to Reno Aces."
+    },
+    {
+      "id": 727530,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2023-10-02",
+      "effectiveDate": "2023-10-02",
+      "resolutionDate": "2023-10-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "SS Diego Castillo roster status changed by Arizona Diamondbacks."
+    },
+    {
+      "id": 727528,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2023-10-02",
+      "effectiveDate": "2023-10-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled SS Diego Castillo from Reno Aces."
+    },
+    {
+      "id": 730377,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2023-11-02",
+      "effectiveDate": "2023-11-02",
+      "resolutionDate": "2023-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated SS Diego Castillo."
+    },
+    {
+      "id": 735706,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2023-12-22",
+      "effectiveDate": "2023-12-22",
+      "resolutionDate": "2023-12-22",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Arizona Diamondbacks designated SS Diego Castillo for assignment."
+    },
+    {
+      "id": 736427,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-01-05",
+      "effectiveDate": "2024-01-05",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "New York Mets claimed SS Diego Castillo off waivers from Arizona Diamondbacks."
+    },
+    {
+      "id": 737567,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2024-01-19",
+      "effectiveDate": "2024-01-19",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "New York Yankees claimed SS Diego Castillo off waivers from New York Mets."
+    },
+    {
+      "id": 739307,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2024-02-05",
+      "effectiveDate": "2024-02-05",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Philadelphia Phillies claimed SS Diego Castillo off waivers from New York Yankees."
+    },
+    {
+      "id": 741284,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2024-02-13",
+      "effectiveDate": "2024-02-13",
+      "resolutionDate": "2024-02-13",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Philadelphia Phillies designated SS Diego Castillo for assignment."
+    },
+    {
+      "id": 741648,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2024-02-16",
+      "effectiveDate": "2024-02-16",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Baltimore Orioles claimed SS Diego Castillo off waivers from Philadelphia Phillies."
+    },
+    {
+      "id": 741837,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2024-02-18",
+      "effectiveDate": "2024-02-18",
+      "resolutionDate": "2024-02-18",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Baltimore Orioles designated SS Diego Castillo for assignment."
+    },
+    {
+      "id": 742597,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2024-02-20",
+      "effectiveDate": "2024-02-20",
+      "resolutionDate": "2024-02-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "SS Diego Castillo roster status changed by Baltimore Orioles."
+    },
+    {
+      "id": 742596,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2024-02-20",
+      "effectiveDate": "2024-02-20",
+      "resolutionDate": "2024-02-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Baltimore Orioles invited non-roster SS Diego Castillo to spring training."
+    },
+    {
+      "id": 742350,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2024-02-20",
+      "effectiveDate": "2024-02-20",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Baltimore Orioles sent SS Diego Castillo outright to Norfolk Tides."
+    },
+    {
+      "id": 761145,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2024-04-05",
+      "effectiveDate": "2024-04-05",
+      "resolutionDate": "2024-04-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Paul Saints activated SS Diego Castillo."
+    },
+    {
+      "id": 761107,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2024-04-05",
+      "effectiveDate": "2024-04-05",
+      "resolutionDate": "2024-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego Castillo assigned to St. Paul Saints."
+    },
+    {
+      "id": 761106,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2024-04-05",
+      "effectiveDate": "2024-04-05",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Baltimore Orioles traded SS Diego Castillo to Minnesota Twins for cash."
+    },
+    {
+      "id": 786932,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2024-07-14",
+      "effectiveDate": "2024-07-14",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Minnesota Twins selected the contract of SS Diego A. Castillo from St. Paul Saints."
+    },
+    {
+      "id": 789260,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2024-07-24",
+      "effectiveDate": "2024-07-24",
+      "resolutionDate": "2024-07-24",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Minnesota Twins designated SS Diego A. Castillo for assignment."
+    },
+    {
+      "id": 790057,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2024-07-26",
+      "effectiveDate": "2024-07-26",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Minnesota Twins sent SS Diego A. Castillo outright to St. Paul Saints."
+    },
+    {
+      "id": 801180,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2024-10-01",
+      "effectiveDate": "2024-10-01",
+      "resolutionDate": "2024-10-01",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "SS Diego A. Castillo elected free agency."
+    },
+    {
+      "id": 802514,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 694,
+        "name": "Caribes de Anzoategui",
+        "link": "/api/v1/teams/694"
+      },
+      "date": "2024-10-15",
+      "effectiveDate": "2024-10-15",
+      "resolutionDate": "2024-10-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego A. Castillo assigned to Caribes de Anzoategui."
+    },
+    {
+      "id": 802516,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 694,
+        "name": "Caribes de Anzoategui",
+        "link": "/api/v1/teams/694"
+      },
+      "toTeam": {
+        "id": 696,
+        "name": "Navegantes del Magallanes",
+        "link": "/api/v1/teams/696"
+      },
+      "date": "2024-10-16",
+      "effectiveDate": "2024-10-16",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Navegantes del Magallanes traded RHP Leonel Sequera and RF Romer Cuadrado to Caribes de Anzoategui for SS Diego A. Castillo."
+    },
+    {
+      "id": 820951,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2025-03-13",
+      "effectiveDate": "2025-03-13",
+      "resolutionDate": "2025-03-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego A. Castillo assigned to Syracuse Mets."
+    },
+    {
+      "id": 822625,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2025-03-13",
+      "effectiveDate": "2025-03-13",
+      "resolutionDate": "2025-03-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Mets activated SS Diego A. Castillo."
+    },
+    {
+      "id": 820950,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2025-03-13",
+      "effectiveDate": "2025-03-13",
+      "resolutionDate": "2025-03-13",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Mets signed free agent SS Diego A. Castillo to a minor league contract."
+    },
+    {
+      "id": 831068,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2025-04-18",
+      "effectiveDate": "2025-04-18",
+      "resolutionDate": "2025-04-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Mets transferred SS Diego A. Castillo to the Development List."
+    },
+    {
+      "id": 832083,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2025-04-25",
+      "effectiveDate": "2025-04-25",
+      "resolutionDate": "2025-04-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Mets activated SS Diego A. Castillo."
+    },
+    {
+      "id": 832590,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2025-04-27",
+      "effectiveDate": "2025-04-27",
+      "resolutionDate": "2025-04-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Mets transferred SS Diego A. Castillo to the Development List."
+    },
+    {
+      "id": 834908,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2025-05-04",
+      "effectiveDate": "2025-05-04",
+      "resolutionDate": "2025-05-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Mets activated SS Diego A. Castillo."
+    },
+    {
+      "id": 834907,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2025-05-04",
+      "effectiveDate": "2025-05-04",
+      "resolutionDate": "2025-05-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Mets activated SS Diego A. Castillo."
+    },
+    {
+      "id": 835795,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2025-05-08",
+      "effectiveDate": "2025-05-08",
+      "resolutionDate": "2025-05-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Mets transferred SS Diego A. Castillo to the Development List."
+    },
+    {
+      "id": 840081,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2025-05-22",
+      "effectiveDate": "2025-05-22",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "New York Mets traded SS Diego A. Castillo to Kansas City Royals."
+    },
+    {
+      "id": 840082,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2025-05-23",
+      "effectiveDate": "2025-05-23",
+      "resolutionDate": "2025-05-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego A. Castillo assigned to Omaha Storm Chasers."
+    },
+    {
+      "id": 866669,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2025-08-27",
+      "effectiveDate": "2025-08-27",
+      "resolutionDate": "2025-08-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Omaha Storm Chasers transferred SS Diego Castillo to the Development List."
+    },
+    {
+      "id": 867069,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2025-08-30",
+      "effectiveDate": "2025-08-30",
+      "resolutionDate": "2025-08-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Omaha Storm Chasers activated SS Diego Castillo."
+    },
+    {
+      "id": 876026,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "SS Diego Castillo elected free agency."
+    },
+    {
+      "id": 876552,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 696,
+        "name": "Navegantes del Magallanes",
+        "link": "/api/v1/teams/696"
+      },
+      "date": "2025-11-09",
+      "effectiveDate": "2025-11-09",
+      "resolutionDate": "2025-11-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego Castillo assigned to Navegantes del Magallanes."
+    },
+    {
+      "id": 878855,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 696,
+        "name": "Navegantes del Magallanes",
+        "link": "/api/v1/teams/696"
+      },
+      "toTeam": {
+        "id": 699,
+        "name": "Tigres de Aragua",
+        "link": "/api/v1/teams/699"
+      },
+      "date": "2025-12-15",
+      "effectiveDate": "2025-12-15",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Tigres de Aragua traded SS Gregory Barrios to Navegantes del Magallanes for SS Diego Castillo."
+    },
+    {
+      "id": 879028,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "fromTeam": {
+        "id": 699,
+        "name": "Tigres de Aragua",
+        "link": "/api/v1/teams/699"
+      },
+      "toTeam": {
+        "id": 693,
+        "name": "Cardenales de Lara",
+        "link": "/api/v1/teams/693"
+      },
+      "date": "2025-12-17",
+      "effectiveDate": "2025-12-17",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Cardenales de Lara traded SS Jermaine Palacios to Tigres de Aragua for SS Diego Castillo."
+    },
+    {
+      "id": 901361,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 447,
+        "name": "Algodoneros Union Laguna",
+        "link": "/api/v1/teams/447"
+      },
+      "date": "2026-04-17",
+      "effectiveDate": "2026-04-17",
+      "resolutionDate": "2026-04-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego Castillo assigned to Algodoneros Union Laguna."
+    },
+    {
+      "id": 903852,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 447,
+        "name": "Algodoneros Union Laguna",
+        "link": "/api/v1/teams/447"
+      },
+      "date": "2026-04-28",
+      "effectiveDate": "2026-04-28",
+      "resolutionDate": "2026-04-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Algodoneros Union Laguna placed SS Diego Castillo on the reserve list."
+    },
+    {
+      "id": 904759,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-04-29",
+      "effectiveDate": "2026-04-29",
+      "resolutionDate": "2026-04-29",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent SS Diego Castillo to a minor league contract."
+    },
+    {
+      "id": 941994,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2026-04-30",
+      "effectiveDate": "2026-09-10",
+      "resolutionDate": "2026-09-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express placed SS Diego Castillo on the 7-day injured list."
+    },
+    {
+      "id": 904760,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2026-04-30",
+      "effectiveDate": "2026-04-30",
+      "resolutionDate": "2026-04-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego Castillo assigned to Round Rock Express."
+    },
+    {
+      "id": 943596,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2026-09-21",
+      "effectiveDate": "2026-09-21",
+      "resolutionDate": "2026-09-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express activated SS Diego Castillo from the 7-day injured list."
+    },
+    {
+      "id": 949464,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 693,
+        "name": "Cardenales de Lara",
+        "link": "/api/v1/teams/693"
+      },
+      "date": "2026-10-13",
+      "effectiveDate": "2026-10-13",
+      "resolutionDate": "2026-10-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cardenales de Lara activated SS Diego Castillo."
+    },
+    {
+      "id": 945774,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 693,
+        "name": "Cardenales de Lara",
+        "link": "/api/v1/teams/693"
+      },
+      "date": "2026-10-13",
+      "effectiveDate": "2026-10-13",
+      "resolutionDate": "2026-10-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Diego Castillo assigned to Cardenales de Lara."
+    },
+    {
+      "id": 949097,
+      "person": {
+        "id": 660636,
+        "fullName": "Diego Castillo",
+        "link": "/api/v1/people/660636",
+        "nameSlug": "diego-castillo-660636"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "SS Diego Castillo elected free agency."
+    }
+  ]
+}

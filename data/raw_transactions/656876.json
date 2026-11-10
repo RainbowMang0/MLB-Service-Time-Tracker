@@ -1,0 +1,749 @@
+{
+  "player_id": 656876,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:461ce6e7b3ca39bcc64b6c7781583bb6d89c6819c356c083d7f9273fe1c4fba5",
+  "transactions": [
+    {
+      "id": 396323,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2018-06-21",
+      "effectiveDate": "2018-06-21",
+      "resolutionDate": "2018-06-21",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Milwaukee Brewers signed RHP Drew Rasmussen."
+    },
+    {
+      "id": 396324,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "date": "2019-04-12",
+      "effectiveDate": "2019-04-12",
+      "resolutionDate": "2019-04-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Drew Rasmussen assigned to Wisconsin Timber Rattlers."
+    },
+    {
+      "id": 396987,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "fromTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "toTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "date": "2019-04-16",
+      "effectiveDate": "2019-04-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Drew Rasmussen assigned to Carolina Mudcats from Wisconsin Timber Rattlers."
+    },
+    {
+      "id": 400423,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "fromTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "toTeam": {
+        "id": 5015,
+        "name": "Biloxi Shuckers",
+        "link": "/api/v1/teams/5015"
+      },
+      "date": "2019-05-08",
+      "effectiveDate": "2019-05-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Drew Rasmussen assigned to Biloxi Shuckers from Carolina Mudcats."
+    },
+    {
+      "id": 427747,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 5015,
+        "name": "Biloxi Shuckers",
+        "link": "/api/v1/teams/5015"
+      },
+      "date": "2019-09-08",
+      "effectiveDate": "2019-09-08",
+      "resolutionDate": "2019-09-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Biloxi Shuckers placed RHP Drew Rasmussen on the 7-day injured list."
+    },
+    {
+      "id": 428019,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 5015,
+        "name": "Biloxi Shuckers",
+        "link": "/api/v1/teams/5015"
+      },
+      "date": "2019-09-15",
+      "effectiveDate": "2019-09-15",
+      "resolutionDate": "2019-09-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Biloxi Shuckers activated RHP Drew Rasmussen from the 7-day injured list."
+    },
+    {
+      "id": 437680,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2020-01-31",
+      "effectiveDate": "2020-01-31",
+      "resolutionDate": "2020-01-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Milwaukee Brewers invited non-roster RHP Drew Rasmussen to spring training."
+    },
+    {
+      "id": 447734,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "fromTeam": {
+        "id": 5015,
+        "name": "Biloxi Shuckers",
+        "link": "/api/v1/teams/5015"
+      },
+      "toTeam": {
+        "id": 3260,
+        "name": "Brewers Alternate Training Site",
+        "link": "/api/v1/teams/3260"
+      },
+      "date": "2020-07-19",
+      "effectiveDate": "2020-07-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Drew Rasmussen assigned to Brewers Alternate Training Site from Biloxi Shuckers."
+    },
+    {
+      "id": 477814,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2020-08-13",
+      "effectiveDate": "2020-08-13",
+      "resolutionDate": "2020-08-13",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Milwaukee Brewers selected the contract of P Drew Rasmussen."
+    },
+    {
+      "id": 478525,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2020-08-13",
+      "effectiveDate": "2020-08-13",
+      "resolutionDate": "2020-08-13",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Milwaukee Brewers selected the contract of RHP Drew Rasmussen."
+    },
+    {
+      "id": 449321,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "fromTeam": {
+        "id": 3260,
+        "name": "Brewers Alternate Training Site",
+        "link": "/api/v1/teams/3260"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2020-08-13",
+      "effectiveDate": "2020-08-13",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Milwaukee Brewers selected the contract of RHP Drew Rasmussen from Brewers Alternate Training Site."
+    },
+    {
+      "id": 490060,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2021-05-21",
+      "effectiveDate": "2021-05-21",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Tampa Bay Rays traded SS Willy Adames and RHP Trevor Richards to Milwaukee Brewers for RHP J.P. Feyereisen and RHP Drew Rasmussen."
+    },
+    {
+      "id": 490220,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2021-05-21",
+      "effectiveDate": "2021-05-21",
+      "resolutionDate": "2021-05-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Drew Rasmussen assigned to Durham Bulls."
+    },
+    {
+      "id": 495166,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2021-06-19",
+      "effectiveDate": "2021-06-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled RHP Drew Rasmussen from Durham Bulls."
+    },
+    {
+      "id": 495354,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2021-06-21",
+      "effectiveDate": "2021-06-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned RHP Drew Rasmussen to Durham Bulls."
+    },
+    {
+      "id": 495979,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2021-06-24",
+      "effectiveDate": "2021-06-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled RHP Drew Rasmussen, , ,  and  from Durham Bulls."
+    },
+    {
+      "id": 631249,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2022-06-15",
+      "effectiveDate": "2022-06-12",
+      "resolutionDate": "2022-06-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays placed RHP Drew Rasmussen on the 15-day injured list retroactive to June 12, 2022. Left hamstring strain."
+    },
+    {
+      "id": 634602,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2022-07-02",
+      "effectiveDate": "2022-07-02",
+      "resolutionDate": "2022-07-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays activated RHP Drew Rasmussen from the 15-day injured list."
+    },
+    {
+      "id": 650767,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2022-09-06",
+      "effectiveDate": "2022-09-06",
+      "resolutionDate": "2022-09-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays placed RHP Drew Rasmussen on the paternity list."
+    },
+    {
+      "id": 651318,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2022-09-09",
+      "effectiveDate": "2022-09-09",
+      "resolutionDate": "2022-09-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays activated RHP Drew Rasmussen from the paternity list."
+    },
+    {
+      "id": 691510,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2023-05-12",
+      "effectiveDate": "2023-05-12",
+      "resolutionDate": "2023-05-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays placed RHP Drew Rasmussen on the 60-day injured list. Flexor strain."
+    },
+    {
+      "id": 731366,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2023-11-06",
+      "effectiveDate": "2023-11-06",
+      "resolutionDate": "2023-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays activated RHP Drew Rasmussen from the 60-day injured list."
+    },
+    {
+      "id": 742546,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2024-02-21",
+      "effectiveDate": "2024-02-21",
+      "resolutionDate": "2024-02-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays placed RHP Drew Rasmussen on the 60-day injured list. Recovery from right elbow surgery."
+    },
+    {
+      "id": 788511,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2024-07-21",
+      "effectiveDate": "2024-07-21",
+      "resolutionDate": "2024-07-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Tampa Bay Rays sent RHP Drew Rasmussen on a rehab assignment to Durham Bulls."
+    },
+    {
+      "id": 788472,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2024-07-21",
+      "effectiveDate": "2024-07-21",
+      "resolutionDate": "2024-07-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Tampa Bay Rays sent RHP Drew Rasmussen on a rehab assignment to Durham Bulls."
+    },
+    {
+      "id": 793348,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2024-08-07",
+      "effectiveDate": "2024-08-07",
+      "resolutionDate": "2024-08-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays activated RHP Drew Rasmussen from the 60-day injured list."
+    },
+    {
+      "id": 828269,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Drew Rasmussen changed number to 42."
+    },
+    {
+      "id": 829474,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Drew Rasmussen changed number to 57."
+    },
+    {
+      "id": 854725,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 159,
+        "name": "American League All-Stars",
+        "link": "/api/v1/teams/159"
+      },
+      "date": "2025-07-14",
+      "effectiveDate": "2025-07-14",
+      "resolutionDate": "2025-07-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Drew Rasmussen assigned to American League All-Stars."
+    },
+    {
+      "id": 897677,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2026-04-08",
+      "effectiveDate": "2026-04-08",
+      "resolutionDate": "2026-04-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays placed RHP Drew Rasmussen on the paternity list."
+    },
+    {
+      "id": 898317,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2026-04-11",
+      "effectiveDate": "2026-04-11",
+      "resolutionDate": "2026-04-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Drew Rasmussen roster status changed by Tampa Bay Rays."
+    },
+    {
+      "id": 898365,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2026-04-12",
+      "effectiveDate": "2026-04-12",
+      "resolutionDate": "2026-04-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays activated RHP Drew Rasmussen."
+    },
+    {
+      "id": 899032,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Drew Rasmussen changed number to 42."
+    },
+    {
+      "id": 899944,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Drew Rasmussen changed number to 57."
+    },
+    {
+      "id": 925169,
+      "person": {
+        "id": 656876,
+        "fullName": "Drew Rasmussen",
+        "link": "/api/v1/people/656876",
+        "nameSlug": "drew-rasmussen-656876"
+      },
+      "toTeam": {
+        "id": 159,
+        "name": "American League All-Stars",
+        "link": "/api/v1/teams/159"
+      },
+      "date": "2026-07-13",
+      "effectiveDate": "2026-07-13",
+      "resolutionDate": "2026-07-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "American League All-Stars activated RHP Drew Rasmussen."
+    }
+  ]
+}

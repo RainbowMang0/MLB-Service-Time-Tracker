@@ -1,0 +1,1631 @@
+{
+  "player_id": 672701,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:d9e843a95d8617187f3e8f5e179138891224e9f3a07d0e8c05213483bf13c3cf",
+  "transactions": [
+    {
+      "id": 290524,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2016-07-02",
+      "effectiveDate": "2016-07-02",
+      "resolutionDate": "2016-07-02",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Yankees signed free agent SS Jose Devers to a minor league contract."
+    },
+    {
+      "id": 313481,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 634,
+        "name": "DSL NYY Bombers",
+        "link": "/api/v1/teams/634"
+      },
+      "date": "2017-06-02",
+      "effectiveDate": "2017-06-02",
+      "resolutionDate": "2017-06-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Jose Devers assigned to DSL Yankees."
+    },
+    {
+      "id": 320344,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 634,
+        "name": "DSL NYY Bombers",
+        "link": "/api/v1/teams/634"
+      },
+      "toTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "date": "2017-06-26",
+      "effectiveDate": "2017-06-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Jose Devers assigned to GCL Yankees East from DSL Yankees."
+    },
+    {
+      "id": 338499,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2017-12-11",
+      "effectiveDate": "2017-12-11",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Miami Marlins traded DH Giancarlo Stanton and cash to New York Yankees for 2B Starlin Castro, RHP Jorge Guzman and SS Jose Devers."
+    },
+    {
+      "id": 338501,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 467,
+        "name": "FCL Marlins",
+        "link": "/api/v1/teams/467"
+      },
+      "date": "2017-12-11",
+      "effectiveDate": "2017-12-11",
+      "resolutionDate": "2017-12-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Jose Devers assigned to GCL Marlins."
+    },
+    {
+      "id": 350127,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 467,
+        "name": "FCL Marlins",
+        "link": "/api/v1/teams/467"
+      },
+      "toTeam": {
+        "id": 477,
+        "name": "Greensboro Grasshoppers",
+        "link": "/api/v1/teams/477"
+      },
+      "date": "2018-04-19",
+      "effectiveDate": "2018-04-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Jose Devers assigned to Greensboro Grasshoppers from GCL Marlins."
+    },
+    {
+      "id": 363000,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 74,
+        "name": "SAL North Division All-Stars",
+        "link": "/api/v1/teams/74"
+      },
+      "date": "2018-06-18",
+      "effectiveDate": "2018-06-18",
+      "resolutionDate": "2018-06-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Jose Devers assigned to SAL North Division All-Stars."
+    },
+    {
+      "id": 372648,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 477,
+        "name": "Greensboro Grasshoppers",
+        "link": "/api/v1/teams/477"
+      },
+      "date": "2018-08-02",
+      "effectiveDate": "2018-07-30",
+      "resolutionDate": "2018-07-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Greensboro Grasshoppers placed SS Jose Devers on the 7-day disabled list retroactive to July 30, 2018."
+    },
+    {
+      "id": 373290,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 477,
+        "name": "Greensboro Grasshoppers",
+        "link": "/api/v1/teams/477"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2018-08-06",
+      "effectiveDate": "2018-08-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Jose Devers assigned to Jupiter Hammerheads from Greensboro Grasshoppers."
+    },
+    {
+      "id": 375192,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2018-08-17",
+      "effectiveDate": "2018-08-08",
+      "resolutionDate": "2018-08-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jupiter Hammerheads placed SS Jose Devers on the 7-day disabled list retroactive to August 8, 2018."
+    },
+    {
+      "id": 379733,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2018-09-24",
+      "effectiveDate": "2018-09-24",
+      "resolutionDate": "2018-09-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jupiter Hammerheads activated SS Jose Devers from the 7-day injured list."
+    },
+    {
+      "id": 396990,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2019-04-16",
+      "effectiveDate": "2019-04-16",
+      "resolutionDate": "2019-04-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jupiter Hammerheads placed SS Jose Devers on the 7-day injured list."
+    },
+    {
+      "id": 398355,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2019-04-25",
+      "effectiveDate": "2019-04-25",
+      "resolutionDate": "2019-04-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jupiter Hammerheads activated SS Jose Devers from the 7-day injured list."
+    },
+    {
+      "id": 402475,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2019-05-21",
+      "effectiveDate": "2019-05-21",
+      "resolutionDate": "2019-05-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jupiter Hammerheads placed SS Jose Devers on the 7-day injured list."
+    },
+    {
+      "id": 422997,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "toTeam": {
+        "id": 467,
+        "name": "FCL Marlins",
+        "link": "/api/v1/teams/467"
+      },
+      "date": "2019-08-10",
+      "effectiveDate": "2019-08-10",
+      "resolutionDate": "2019-08-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Jupiter Hammerheads sent SS Jose Devers on a rehab assignment to GCL Marlins."
+    },
+    {
+      "id": 426176,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 527,
+        "name": "Salt River Rafters",
+        "link": "/api/v1/teams/527"
+      },
+      "date": "2019-08-28",
+      "effectiveDate": "2019-08-28",
+      "resolutionDate": "2019-08-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Jose Devers assigned to Salt River Rafters."
+    },
+    {
+      "id": 426331,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2019-08-29",
+      "effectiveDate": "2019-08-29",
+      "resolutionDate": "2019-08-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jupiter Hammerheads activated SS Jose Devers from the 7-day injured list."
+    },
+    {
+      "id": 426487,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "toTeam": {
+        "id": 500,
+        "name": "Clinton LumberKings",
+        "link": "/api/v1/teams/500"
+      },
+      "date": "2019-08-30",
+      "effectiveDate": "2019-08-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Jose Devers assigned to Clinton LumberKings from Jupiter Hammerheads."
+    },
+    {
+      "id": 436740,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 500,
+        "name": "Clinton LumberKings",
+        "link": "/api/v1/teams/500"
+      },
+      "date": "2019-11-20",
+      "effectiveDate": "2019-11-20",
+      "resolutionDate": "2019-11-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Clinton LumberKings placed SS Jose Devers on the reserve list."
+    },
+    {
+      "id": 436765,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2020-01-21",
+      "effectiveDate": "2020-01-21",
+      "resolutionDate": "2020-01-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins invited non-roster SS Jose Devers to spring training."
+    },
+    {
+      "id": 447670,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 500,
+        "name": "Clinton LumberKings",
+        "link": "/api/v1/teams/500"
+      },
+      "toTeam": {
+        "id": 3276,
+        "name": "Marlins Alternate Training Site",
+        "link": "/api/v1/teams/3276"
+      },
+      "date": "2020-07-19",
+      "effectiveDate": "2020-07-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Jose Devers assigned to Marlins Alternate Training Site from Clinton LumberKings."
+    },
+    {
+      "id": 453375,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 3276,
+        "name": "Marlins Alternate Training Site",
+        "link": "/api/v1/teams/3276"
+      },
+      "toTeam": {
+        "id": 500,
+        "name": "Clinton LumberKings",
+        "link": "/api/v1/teams/500"
+      },
+      "date": "2020-09-29",
+      "effectiveDate": "2020-09-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Jose Devers assigned to Clinton LumberKings from Marlins Alternate Training Site."
+    },
+    {
+      "id": 456646,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 500,
+        "name": "Clinton LumberKings",
+        "link": "/api/v1/teams/500"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2020-11-20",
+      "effectiveDate": "2020-11-20",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Miami Marlins selected the contract of SS Jose Devers from Clinton LumberKings."
+    },
+    {
+      "id": 473737,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2021-03-16",
+      "effectiveDate": "2021-03-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Miami Marlins optioned SS Jose Devers to Pensacola Blue Wahoos."
+    },
+    {
+      "id": 474437,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "toTeam": {
+        "id": 3276,
+        "name": "Marlins Alternate Training Site",
+        "link": "/api/v1/teams/3276"
+      },
+      "date": "2021-03-30",
+      "effectiveDate": "2021-03-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Jose Devers assigned to Marlins Alternate Training Site from Pensacola Blue Wahoos."
+    },
+    {
+      "id": 479088,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 3276,
+        "name": "Marlins Alternate Training Site",
+        "link": "/api/v1/teams/3276"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2021-04-22",
+      "effectiveDate": "2021-04-22",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Miami Marlins recalled SS Jose Devers from Marlins Alternate Training Site."
+    },
+    {
+      "id": 480575,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2021-04-22",
+      "effectiveDate": "2021-04-22",
+      "resolutionDate": "2021-04-22",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Miami Marlins recalled SS Jose Devers."
+    },
+    {
+      "id": 485883,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2021-05-08",
+      "effectiveDate": "2021-05-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Miami Marlins optioned SS Jose Devers to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 490438,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2021-05-23",
+      "effectiveDate": "2021-05-23",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Miami Marlins recalled SS Jose Devers from Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 494364,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2021-06-14",
+      "effectiveDate": "2021-06-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins placed SS Jose Devers on the 10-day injured list. Right shoulder impingement."
+    },
+    {
+      "id": 500896,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2021-07-03",
+      "effectiveDate": "2021-07-03",
+      "resolutionDate": "2021-07-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins sent SS Jose Devers on a rehab assignment to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 506076,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2021-07-20",
+      "effectiveDate": "2021-07-20",
+      "resolutionDate": "2021-07-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins placed SS Jose Devers on the 60-day injured list. Right shoulder impingement."
+    },
+    {
+      "id": 523648,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2021-11-05",
+      "effectiveDate": "2021-11-05",
+      "resolutionDate": "2021-11-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins activated SS Jose Devers from the 60-day injured list."
+    },
+    {
+      "id": 613111,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2022-04-07",
+      "effectiveDate": "2022-04-07",
+      "resolutionDate": "2022-04-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins placed SS Jose Devers on the 10-day injured list. Right shoulder impingement syndrome."
+    },
+    {
+      "id": 620903,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2022-05-12",
+      "effectiveDate": "2022-05-12",
+      "resolutionDate": "2022-05-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins sent SS Jose Devers on a rehab assignment to Jupiter Hammerheads."
+    },
+    {
+      "id": 621390,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2022-05-16",
+      "effectiveDate": "2022-05-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Miami Marlins optioned SS Jose Devers to Pensacola Blue Wahoos."
+    },
+    {
+      "id": 651174,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2022-09-08",
+      "effectiveDate": "2022-09-08",
+      "resolutionDate": "2022-09-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pensacola Blue Wahoos placed SS Jose Devers on the 7-day injured list."
+    },
+    {
+      "id": 655090,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2022-10-06",
+      "effectiveDate": "2022-10-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Miami Marlins recalled SS Jose Devers from Pensacola Blue Wahoos."
+    },
+    {
+      "id": 660433,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2022-11-15",
+      "effectiveDate": "2022-11-15",
+      "resolutionDate": "2022-11-15",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Miami Marlins designated SS Jose Devers for assignment."
+    },
+    {
+      "id": 682745,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2022-11-18",
+      "effectiveDate": "2022-11-18",
+      "resolutionDate": "2022-11-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jacksonville Jumbo Shrimp activated SS José Devers."
+    },
+    {
+      "id": 661256,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2022-11-18",
+      "effectiveDate": "2022-11-18",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Miami Marlins sent SS Jose Devers outright to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 673326,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2023-02-25",
+      "effectiveDate": "2023-02-25",
+      "resolutionDate": "2023-02-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS José Devers and  assigned to Miami Marlins."
+    },
+    {
+      "id": 682751,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2023-03-31",
+      "effectiveDate": "2023-03-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS José Devers assigned to Pensacola Blue Wahoos from Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 720934,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2023-08-18",
+      "effectiveDate": "2023-08-18",
+      "resolutionDate": "2023-08-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pensacola Blue Wahoos placed SS José Devers on the 7-day injured list."
+    },
+    {
+      "id": 727110,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2023-09-28",
+      "effectiveDate": "2023-09-28",
+      "resolutionDate": "2023-09-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pensacola Blue Wahoos activated SS José Devers from the 7-day injured list."
+    },
+    {
+      "id": 731124,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2023-11-04",
+      "effectiveDate": "2023-11-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS José Devers assigned to Jacksonville Jumbo Shrimp from Pensacola Blue Wahoos."
+    },
+    {
+      "id": 734783,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2023-12-08",
+      "effectiveDate": "2023-12-08",
+      "resolutionDate": "2023-12-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS José Devers assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 739323,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2024-02-05",
+      "effectiveDate": "2024-02-05",
+      "resolutionDate": "2024-02-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins invited non-roster SS José Devers to spring training."
+    },
+    {
+      "id": 765151,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2024-04-23",
+      "effectiveDate": "2024-04-21",
+      "resolutionDate": "2024-04-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jacksonville Jumbo Shrimp placed SS José Devers on the 7-day injured list retroactive to April 21, 2024."
+    },
+    {
+      "id": 777378,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 467,
+        "name": "FCL Marlins",
+        "link": "/api/v1/teams/467"
+      },
+      "date": "2024-05-10",
+      "effectiveDate": "2024-05-10",
+      "resolutionDate": "2024-05-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Jacksonville Jumbo Shrimp sent SS José Devers on a rehab assignment to FCL Marlins."
+    },
+    {
+      "id": 769880,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 467,
+        "name": "FCL Marlins",
+        "link": "/api/v1/teams/467"
+      },
+      "date": "2024-05-10",
+      "effectiveDate": "2024-05-10",
+      "resolutionDate": "2024-05-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Jacksonville Jumbo Shrimp sent SS José Devers on a rehab assignment to FCL Marlins."
+    },
+    {
+      "id": 783045,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 467,
+        "name": "FCL Marlins",
+        "link": "/api/v1/teams/467"
+      },
+      "date": "2024-06-26",
+      "effectiveDate": "2024-06-26",
+      "resolutionDate": "2024-06-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Jacksonville Jumbo Shrimp sent SS José Devers on a rehab assignment to FCL Marlins."
+    },
+    {
+      "id": 783621,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2024-06-29",
+      "effectiveDate": "2024-06-29",
+      "resolutionDate": "2024-06-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Jacksonville Jumbo Shrimp sent SS José Devers on a rehab assignment to Jupiter Hammerheads."
+    },
+    {
+      "id": 784756,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2024-07-03",
+      "effectiveDate": "2024-07-03",
+      "resolutionDate": "2024-07-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jacksonville Jumbo Shrimp activated SS José Devers from the 7-day injured list."
+    },
+    {
+      "id": 797116,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2024-08-31",
+      "effectiveDate": "2024-08-31",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Miami Marlins selected the contract of SS José Devers from Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 799526,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2024-09-19",
+      "effectiveDate": "2024-09-19",
+      "resolutionDate": "2024-09-19",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Miami Marlins designated SS José Devers for assignment."
+    },
+    {
+      "id": 799914,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2024-09-21",
+      "effectiveDate": "2024-09-21",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Miami Marlins sent SS José Devers outright to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 801053,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2024-10-01",
+      "effectiveDate": "2024-10-01",
+      "resolutionDate": "2024-10-01",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "SS José Devers elected free agency."
+    },
+    {
+      "id": 807513,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2024-11-29",
+      "effectiveDate": "2024-11-29",
+      "resolutionDate": "2024-11-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS José Devers assigned to Gwinnett Stripers."
+    },
+    {
+      "id": 807512,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2024-11-29",
+      "effectiveDate": "2024-11-29",
+      "resolutionDate": "2024-11-29",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent SS José Devers to a minor league contract."
+    },
+    {
+      "id": 812582,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2025-01-29",
+      "effectiveDate": "2025-01-29",
+      "resolutionDate": "2025-01-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Atlanta Braves invited non-roster SS José Devers to spring training."
+    },
+    {
+      "id": 815249,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2025-01-29",
+      "effectiveDate": "2025-01-29",
+      "resolutionDate": "2025-01-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "SS José Devers roster status changed by Atlanta Braves."
+    },
+    {
+      "id": 825302,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2025-04-03",
+      "effectiveDate": "2025-04-03",
+      "resolutionDate": "2025-04-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers placed SS José Devers on the temporarily inactive list."
+    },
+    {
+      "id": 827315,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2025-04-10",
+      "effectiveDate": "2025-04-10",
+      "resolutionDate": "2025-04-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers activated SS José Devers from the temporarily inactive list."
+    },
+    {
+      "id": 831822,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2025-04-23",
+      "effectiveDate": "2025-04-23",
+      "resolutionDate": "2025-04-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers placed SS José Devers on the 7-day injured list."
+    },
+    {
+      "id": 836853,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 464,
+        "name": "FCL Braves",
+        "link": "/api/v1/teams/464"
+      },
+      "date": "2025-05-13",
+      "effectiveDate": "2025-05-13",
+      "resolutionDate": "2025-05-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Gwinnett Stripers sent SS José Devers on a rehab assignment to FCL Braves."
+    },
+    {
+      "id": 839225,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2025-05-20",
+      "effectiveDate": "2025-05-20",
+      "resolutionDate": "2025-05-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers activated SS José Devers from the 7-day injured list."
+    },
+    {
+      "id": 844359,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2025-05-20",
+      "effectiveDate": "2025-06-03",
+      "resolutionDate": "2025-06-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers placed SS José Devers on the 7-day injured list."
+    },
+    {
+      "id": 846945,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "date": "2025-06-13",
+      "effectiveDate": "2025-06-13",
+      "resolutionDate": "2025-06-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Gwinnett Stripers sent SS José Devers on a rehab assignment to Rome Emperors."
+    },
+    {
+      "id": 848716,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2025-06-17",
+      "effectiveDate": "2025-06-17",
+      "resolutionDate": "2025-06-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers activated SS José Devers from the 7-day injured list."
+    },
+    {
+      "id": 853876,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2025-07-08",
+      "effectiveDate": "2025-07-07",
+      "resolutionDate": "2025-07-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers placed SS José Devers on the 7-day injured list retroactive to July 7, 2025."
+    },
+    {
+      "id": 856073,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2025-07-18",
+      "effectiveDate": "2025-07-18",
+      "resolutionDate": "2025-07-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers activated SS José Devers from the 7-day injured list."
+    },
+    {
+      "id": 858764,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2025-07-26",
+      "effectiveDate": "2025-07-26",
+      "resolutionDate": "2025-07-26",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Gwinnett Stripers released SS José Devers."
+    },
+    {
+      "id": 877570,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2025-11-21",
+      "effectiveDate": "2025-11-21",
+      "resolutionDate": "2025-11-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS José Devers assigned to Estrellas Orientales."
+    },
+    {
+      "id": 947201,
+      "person": {
+        "id": 672701,
+        "fullName": "José Devers",
+        "link": "/api/v1/people/672701",
+        "nameSlug": "jose-devers-672701"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2026-10-28",
+      "effectiveDate": "2026-10-28",
+      "resolutionDate": "2026-10-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS José Devers assigned to Estrellas Orientales."
+    }
+  ]
+}

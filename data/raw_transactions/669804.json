@@ -1,0 +1,837 @@
+{
+  "player_id": 669804,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:dcbe88b5e79543f51659b0b38a0cff15ae8f0bfe66d153e0b579e3d12bf094b4",
+  "transactions": [
+    {
+      "id": 268078,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2016-05-10",
+      "effectiveDate": "2016-05-10",
+      "resolutionDate": "2016-05-10",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent RHP Angel De Jesus to a minor league contract."
+    },
+    {
+      "id": 268079,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "toTeam": {
+        "id": 631,
+        "name": "DSL Tigers 1",
+        "link": "/api/v1/teams/631"
+      },
+      "date": "2016-06-02",
+      "effectiveDate": "2016-06-02",
+      "resolutionDate": "2016-06-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Angel De Jesus assigned to DSL Tigers."
+    },
+    {
+      "id": 277516,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "toTeam": {
+        "id": 631,
+        "name": "DSL Tigers 1",
+        "link": "/api/v1/teams/631"
+      },
+      "date": "2016-07-07",
+      "effectiveDate": "2016-07-07",
+      "resolutionDate": "2016-07-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "DSL Tigers activated RHP Angel De Jesus."
+    },
+    {
+      "id": 357823,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "fromTeam": {
+        "id": 631,
+        "name": "DSL Tigers 1",
+        "link": "/api/v1/teams/631"
+      },
+      "toTeam": {
+        "id": 2132,
+        "name": "DSL Tigers 2",
+        "link": "/api/v1/teams/2132"
+      },
+      "date": "2018-06-02",
+      "effectiveDate": "2018-06-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Angel De Jesus assigned to DSL Tigers2 from DSL Tigers1."
+    },
+    {
+      "id": 360434,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "fromTeam": {
+        "id": 2132,
+        "name": "DSL Tigers 2",
+        "link": "/api/v1/teams/2132"
+      },
+      "toTeam": {
+        "id": 473,
+        "name": "FCL Tigers",
+        "link": "/api/v1/teams/473"
+      },
+      "date": "2018-06-15",
+      "effectiveDate": "2018-06-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Angel De Jesus assigned to GCL Tigers East from DSL Tigers2."
+    },
+    {
+      "id": 376130,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "fromTeam": {
+        "id": 473,
+        "name": "FCL Tigers",
+        "link": "/api/v1/teams/473"
+      },
+      "toTeam": {
+        "id": 5071,
+        "name": "FCL Tigers West",
+        "link": "/api/v1/teams/5071"
+      },
+      "date": "2018-08-24",
+      "effectiveDate": "2018-08-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Angel De Jesus assigned to GCL Tigers West from GCL Tigers East."
+    },
+    {
+      "id": 392695,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "fromTeam": {
+        "id": 5071,
+        "name": "FCL Tigers West",
+        "link": "/api/v1/teams/5071"
+      },
+      "toTeam": {
+        "id": 582,
+        "name": "West Michigan Whitecaps",
+        "link": "/api/v1/teams/582"
+      },
+      "date": "2019-03-28",
+      "effectiveDate": "2019-03-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Angel De Jesus assigned to West Michigan Whitecaps from GCL Tigers West."
+    },
+    {
+      "id": 401246,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "fromTeam": {
+        "id": 582,
+        "name": "West Michigan Whitecaps",
+        "link": "/api/v1/teams/582"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2019-05-14",
+      "effectiveDate": "2019-05-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Angel De Jesus assigned to Lakeland Flying Tigers from West Michigan Whitecaps."
+    },
+    {
+      "id": 439327,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2020-02-25",
+      "effectiveDate": "2020-02-25",
+      "resolutionDate": "2020-02-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Angel De Jesus assigned to Detroit Tigers."
+    },
+    {
+      "id": 455612,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "fromTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2020-11-17",
+      "effectiveDate": "2020-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Angel De Jesus assigned to Toledo Mud Hens from Lakeland Flying Tigers."
+    },
+    {
+      "id": 480852,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "date": "2021-04-29",
+      "effectiveDate": "2021-04-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Angel De Jesus assigned to Erie SeaWolves from Toledo Mud Hens."
+    },
+    {
+      "id": 491860,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "fromTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2021-06-01",
+      "effectiveDate": "2021-06-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Angel De Jesus assigned to Toledo Mud Hens from Erie SeaWolves."
+    },
+    {
+      "id": 522717,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2021-10-27",
+      "effectiveDate": "2021-10-27",
+      "resolutionDate": "2021-10-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Angel De Jesus and  assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 600425,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2021-11-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Detroit Tigers selected the contract of RHP Angel De Jesus from Toledo Mud Hens."
+    },
+    {
+      "id": 607801,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2022-03-22",
+      "effectiveDate": "2022-03-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Detroit Tigers optioned RHP Angel De Jesus to Toledo Mud Hens."
+    },
+    {
+      "id": 616168,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2022-04-20",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled RHP Angel De Jesus from Toledo Mud Hens."
+    },
+    {
+      "id": 616970,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2022-04-24",
+      "effectiveDate": "2022-04-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Detroit Tigers optioned RHP Angel De Jesus to Toledo Mud Hens."
+    },
+    {
+      "id": 637697,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2022-07-15",
+      "effectiveDate": "2022-07-15",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled RHP Angel De Jesus from Toledo Mud Hens."
+    },
+    {
+      "id": 639117,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2022-07-22",
+      "effectiveDate": "2022-07-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Detroit Tigers optioned RHP Angel De Jesus to Toledo Mud Hens."
+    },
+    {
+      "id": 639738,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2022-07-24",
+      "effectiveDate": "2022-07-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled RHP Angel De Jesus from Toledo Mud Hens."
+    },
+    {
+      "id": 641895,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2022-08-01",
+      "effectiveDate": "2022-08-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Detroit Tigers optioned RHP Angel De Jesus to Toledo Mud Hens."
+    },
+    {
+      "id": 653757,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2022-09-24",
+      "effectiveDate": "2022-09-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled RHP Angel De Jesus from Toledo Mud Hens."
+    },
+    {
+      "id": 661800,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2022-11-28",
+      "effectiveDate": "2022-11-28",
+      "resolutionDate": "2022-11-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Angel De Jesus and  assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 663946,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2022-12-23",
+      "effectiveDate": "2022-12-23",
+      "resolutionDate": "2022-12-23",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Detroit Tigers designated RHP Angel De Jesus for assignment."
+    },
+    {
+      "id": 679029,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2023-01-05",
+      "effectiveDate": "2023-01-05",
+      "resolutionDate": "2023-01-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Angel De Jesus roster status changed by Detroit Tigers."
+    },
+    {
+      "id": 679930,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2023-01-06",
+      "effectiveDate": "2023-01-06",
+      "resolutionDate": "2023-01-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens activated RHP Angel De Jesus."
+    },
+    {
+      "id": 664757,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2023-01-06",
+      "effectiveDate": "2023-01-06",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Detroit Tigers sent RHP Angel De Jesus outright to Toledo Mud Hens."
+    },
+    {
+      "id": 680788,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "toTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "date": "2023-04-02",
+      "effectiveDate": "2023-04-02",
+      "resolutionDate": "2023-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Angel De Jesus assigned to Erie SeaWolves."
+    },
+    {
+      "id": 716907,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "toTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "date": "2023-07-30",
+      "effectiveDate": "2023-07-30",
+      "resolutionDate": "2023-07-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Erie SeaWolves placed RHP Angel De Jesus on the 7-day injured list."
+    },
+    {
+      "id": 716205,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "toTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "date": "2023-07-30",
+      "effectiveDate": "2023-07-30",
+      "resolutionDate": "2023-07-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Erie SeaWolves placed RHP Angel De Jesus on the 7-day injured list."
+    },
+    {
+      "id": 727250,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "toTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "date": "2023-09-28",
+      "effectiveDate": "2023-09-28",
+      "resolutionDate": "2023-09-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Erie SeaWolves activated RHP Angel De Jesus from the 7-day injured list."
+    },
+    {
+      "id": 731807,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "toTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "date": "2023-11-06",
+      "effectiveDate": "2023-11-06",
+      "resolutionDate": "2023-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Angel De Jesus elected free agency."
+    },
+    {
+      "id": 836953,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "toTeam": {
+        "id": 528,
+        "name": "Rieleros de Aguascalientes",
+        "link": "/api/v1/teams/528"
+      },
+      "date": "2025-05-13",
+      "effectiveDate": "2025-05-13",
+      "resolutionDate": "2025-05-13",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Rieleros de Aguascalientes signed free agent RHP Angel De Jesus."
+    },
+    {
+      "id": 845494,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "toTeam": {
+        "id": 528,
+        "name": "Rieleros de Aguascalientes",
+        "link": "/api/v1/teams/528"
+      },
+      "date": "2025-06-06",
+      "effectiveDate": "2025-06-06",
+      "resolutionDate": "2025-06-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rieleros de Aguascalientes placed RHP Angel De Jesus on the reserve list."
+    },
+    {
+      "id": 877630,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "toTeam": {
+        "id": 6483,
+        "name": "Jaguares de Nayarit",
+        "link": "/api/v1/teams/6483"
+      },
+      "date": "2025-11-23",
+      "effectiveDate": "2025-11-23",
+      "resolutionDate": "2025-11-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Angel De Jesus assigned to Jaguares de Nayarit."
+    },
+    {
+      "id": 878970,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "toTeam": {
+        "id": 6483,
+        "name": "Jaguares de Nayarit",
+        "link": "/api/v1/teams/6483"
+      },
+      "date": "2025-12-16",
+      "effectiveDate": "2025-12-16",
+      "resolutionDate": "2025-12-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jaguares de Nayarit placed RHP Angel De Jesus on the reserve list."
+    },
+    {
+      "id": 923499,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "toTeam": {
+        "id": 579,
+        "name": "Guerreros de Oaxaca",
+        "link": "/api/v1/teams/579"
+      },
+      "date": "2026-06-29",
+      "effectiveDate": "2026-06-29",
+      "resolutionDate": "2026-06-29",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Guerreros de Oaxaca signed free agent RHP Angel De Jesus."
+    },
+    {
+      "id": 925040,
+      "person": {
+        "id": 669804,
+        "fullName": "Angel De Jesus",
+        "link": "/api/v1/people/669804",
+        "nameSlug": "angel-de-jesus-669804"
+      },
+      "toTeam": {
+        "id": 579,
+        "name": "Guerreros de Oaxaca",
+        "link": "/api/v1/teams/579"
+      },
+      "date": "2026-07-04",
+      "effectiveDate": "2026-07-04",
+      "resolutionDate": "2026-07-04",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Guerreros de Oaxaca released RHP Angel De Jesus."
+    }
+  ]
+}

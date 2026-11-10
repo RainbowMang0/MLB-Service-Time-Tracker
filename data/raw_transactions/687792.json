@@ -1,0 +1,806 @@
+{
+  "player_id": 687792,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:36bd6a05d2e28be13ed7179f49710a3bd7110c0e20b1680571bd120f57b2bfac",
+  "transactions": [
+    {
+      "id": 411005,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2019-06-19",
+      "effectiveDate": "2019-06-19",
+      "resolutionDate": "2019-06-19",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Chicago Cubs signed LHP Davidjohn Herz."
+    },
+    {
+      "id": 419254,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "toTeam": {
+        "id": 1995,
+        "name": "AZL Cubs Red",
+        "link": "/api/v1/teams/1995"
+      },
+      "date": "2019-07-23",
+      "effectiveDate": "2019-07-23",
+      "resolutionDate": "2019-07-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Davidjohn Herz assigned to AZL Cubs 2."
+    },
+    {
+      "id": 482744,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "fromTeam": {
+        "id": 1995,
+        "name": "AZL Cubs Red",
+        "link": "/api/v1/teams/1995"
+      },
+      "toTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "date": "2021-05-02",
+      "effectiveDate": "2021-05-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Davidjohn Herz assigned to Myrtle Beach Pelicans from AZL Cubs Red."
+    },
+    {
+      "id": 515555,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "fromTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "toTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "date": "2021-09-02",
+      "effectiveDate": "2021-09-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP DJ Herz assigned to South Bend Cubs from Myrtle Beach Pelicans."
+    },
+    {
+      "id": 637753,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "fromTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2022-07-15",
+      "effectiveDate": "2022-07-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP DJ Herz assigned to Tennessee Smokies from South Bend Cubs."
+    },
+    {
+      "id": 650364,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2022-09-02",
+      "effectiveDate": "2022-09-02",
+      "resolutionDate": "2022-09-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tennessee Smokies transferred LHP DJ Herz to the Development List."
+    },
+    {
+      "id": 683108,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2022-09-11",
+      "effectiveDate": "2022-09-11",
+      "resolutionDate": "2022-09-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tennessee Smokies activated LHP DJ Herz."
+    },
+    {
+      "id": 651682,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2022-09-11",
+      "effectiveDate": "2022-09-11",
+      "resolutionDate": "2022-09-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tennessee Smokies activated LHP DJ Herz."
+    },
+    {
+      "id": 683109,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2023-04-06",
+      "effectiveDate": "2023-04-06",
+      "resolutionDate": "2023-04-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tennessee Smokies placed LHP DJ Herz on the 7-day injured list."
+    },
+    {
+      "id": 690800,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2023-05-09",
+      "effectiveDate": "2023-05-09",
+      "resolutionDate": "2023-05-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tennessee Smokies activated LHP DJ Herz from the 7-day injured list."
+    },
+    {
+      "id": 717940,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2023-07-31",
+      "effectiveDate": "2023-07-31",
+      "resolutionDate": "2023-07-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Harrisburg Senators activated LHP DJ Herz."
+    },
+    {
+      "id": 716178,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2023-07-31",
+      "effectiveDate": "2023-07-31",
+      "resolutionDate": "2023-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP DJ Herz assigned to Harrisburg Senators."
+    },
+    {
+      "id": 716140,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2023-07-31",
+      "effectiveDate": "2023-07-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Washington Nationals traded 3B Jeimer Candelario and cash to Chicago Cubs for LHP DJ Herz and SS Kevin Made."
+    },
+    {
+      "id": 726237,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "toTeam": {
+        "id": 544,
+        "name": "Scottsdale Scorpions",
+        "link": "/api/v1/teams/544"
+      },
+      "date": "2023-09-22",
+      "effectiveDate": "2023-09-22",
+      "resolutionDate": "2023-09-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scottsdale Scorpions activated LHP DJ Herz."
+    },
+    {
+      "id": 730760,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "toTeam": {
+        "id": 1311,
+        "name": "National League Fall Stars",
+        "link": "/api/v1/teams/1311"
+      },
+      "date": "2023-11-03",
+      "effectiveDate": "2023-11-03",
+      "resolutionDate": "2023-11-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP DJ Herz assigned to National League Fall Stars."
+    },
+    {
+      "id": 732889,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "fromTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2023-11-14",
+      "effectiveDate": "2023-11-14",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Washington Nationals selected the contract of LHP DJ Herz from Harrisburg Senators."
+    },
+    {
+      "id": 753371,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "toTeam": {
+        "id": 370,
+        "name": "Washington Nationals Prospects",
+        "link": "/api/v1/teams/370"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals Prospects activated LHP DJ Herz."
+    },
+    {
+      "id": 754791,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2024-03-11",
+      "effectiveDate": "2024-03-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Washington Nationals optioned LHP DJ Herz to Rochester Red Wings."
+    },
+    {
+      "id": 777770,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "fromTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2024-06-04",
+      "effectiveDate": "2024-06-04",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Washington Nationals recalled LHP DJ Herz from Rochester Red Wings."
+    },
+    {
+      "id": 785802,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2024-07-08",
+      "effectiveDate": "2024-07-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Washington Nationals optioned LHP DJ Herz to Rochester Red Wings."
+    },
+    {
+      "id": 788910,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "fromTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2024-07-23",
+      "effectiveDate": "2024-07-23",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Washington Nationals recalled LHP DJ Herz from Rochester Red Wings."
+    },
+    {
+      "id": 800488,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 466,
+        "name": "FCL Nationals",
+        "link": "/api/v1/teams/466"
+      },
+      "date": "2024-09-27",
+      "effectiveDate": "2024-09-27",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Washington Nationals optioned LHP DJ Herz to FCL Nationals."
+    },
+    {
+      "id": 801153,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "fromTeam": {
+        "id": 466,
+        "name": "FCL Nationals",
+        "link": "/api/v1/teams/466"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2024-10-01",
+      "effectiveDate": "2024-10-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Washington Nationals recalled LHP DJ Herz from FCL Nationals."
+    },
+    {
+      "id": 808801,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2024-12-19",
+      "effectiveDate": "2024-12-19",
+      "resolutionDate": "2024-12-19",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "LHP DJ Herz changed number to 77."
+    },
+    {
+      "id": 821884,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2025-03-24",
+      "effectiveDate": "2025-03-24",
+      "resolutionDate": "2025-03-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals placed LHP DJ Herz on the 15-day injured list."
+    },
+    {
+      "id": 822210,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2025-03-26",
+      "effectiveDate": "2025-03-26",
+      "resolutionDate": "2025-03-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals transferred LHP DJ Herz from the 15-day injured list to the 60-day injured list."
+    },
+    {
+      "id": 875346,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals activated LHP DJ Herz from the 60-day injured list."
+    },
+    {
+      "id": 886102,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2026-02-11",
+      "effectiveDate": "2026-02-11",
+      "resolutionDate": "2026-02-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals placed LHP DJ Herz on the 60-day injured list."
+    },
+    {
+      "id": 918814,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 466,
+        "name": "FCL Nationals",
+        "link": "/api/v1/teams/466"
+      },
+      "date": "2026-06-05",
+      "effectiveDate": "2026-06-05",
+      "resolutionDate": "2026-06-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals sent LHP DJ Herz on a rehab assignment to FCL Nationals."
+    },
+    {
+      "id": 916006,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 466,
+        "name": "FCL Nationals",
+        "link": "/api/v1/teams/466"
+      },
+      "date": "2026-06-05",
+      "effectiveDate": "2026-06-05",
+      "resolutionDate": "2026-06-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals sent LHP DJ Herz on a rehab assignment to FCL Nationals."
+    },
+    {
+      "id": 918815,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "date": "2026-06-16",
+      "effectiveDate": "2026-06-16",
+      "resolutionDate": "2026-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals sent LHP DJ Herz on a rehab assignment to Fredericksburg Nationals."
+    },
+    {
+      "id": 936324,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "date": "2026-08-08",
+      "effectiveDate": "2026-08-08",
+      "resolutionDate": "2026-08-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals sent LHP DJ Herz on a rehab assignment to Fredericksburg Nationals."
+    },
+    {
+      "id": 939491,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2026-08-14",
+      "effectiveDate": "2026-08-14",
+      "resolutionDate": "2026-08-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals sent LHP DJ Herz on a rehab assignment to Harrisburg Senators."
+    },
+    {
+      "id": 937603,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2026-08-14",
+      "effectiveDate": "2026-08-14",
+      "resolutionDate": "2026-08-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals sent LHP DJ Herz on a rehab assignment to Harrisburg Senators."
+    },
+    {
+      "id": 939493,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2026-08-26",
+      "effectiveDate": "2026-08-26",
+      "resolutionDate": "2026-08-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals sent LHP DJ Herz on a rehab assignment to Rochester Red Wings."
+    },
+    {
+      "id": 943391,
+      "person": {
+        "id": 687792,
+        "fullName": "DJ Herz",
+        "link": "/api/v1/people/687792",
+        "nameSlug": "dj-herz-687792"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2026-09-21",
+      "effectiveDate": "2026-09-21",
+      "resolutionDate": "2026-09-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals activated LHP DJ Herz from the 60-day injured list."
+    }
+  ]
+}

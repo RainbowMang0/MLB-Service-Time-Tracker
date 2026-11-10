@@ -1,0 +1,910 @@
+{
+  "player_id": 663554,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:da7872a513be8bdc28542f8543b92df1f33ccb89eda9ec8d72166736e225efbb",
+  "transactions": [
+    {
+      "id": 364282,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2018-06-25",
+      "effectiveDate": "2018-06-25",
+      "resolutionDate": "2018-06-25",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Detroit Tigers signed RHP Casey Mize."
+    },
+    {
+      "id": 371115,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 5071,
+        "name": "FCL Tigers West",
+        "link": "/api/v1/teams/5071"
+      },
+      "date": "2018-07-26",
+      "effectiveDate": "2018-07-26",
+      "resolutionDate": "2018-07-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Casey Mize assigned to GCL Tigers West."
+    },
+    {
+      "id": 371994,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "fromTeam": {
+        "id": 5071,
+        "name": "FCL Tigers West",
+        "link": "/api/v1/teams/5071"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2018-07-31",
+      "effectiveDate": "2018-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Casey Mize assigned to Lakeland Flying Tigers from GCL Tigers West."
+    },
+    {
+      "id": 386557,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2019-01-22",
+      "effectiveDate": "2019-01-22",
+      "resolutionDate": "2019-01-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers invited non-roster RHP Casey Mize to spring training."
+    },
+    {
+      "id": 398353,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "fromTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "toTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "date": "2019-04-25",
+      "effectiveDate": "2019-04-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Casey Mize assigned to Erie SeaWolves from Lakeland Flying Tigers."
+    },
+    {
+      "id": 409074,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "date": "2019-06-15",
+      "effectiveDate": "2019-06-14",
+      "resolutionDate": "2019-06-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Erie SeaWolves placed RHP Casey Mize on the 7-day injured list retroactive to June 14, 2019."
+    },
+    {
+      "id": 416496,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "fromTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2019-07-10",
+      "effectiveDate": "2019-07-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Casey Mize assigned to Lakeland Flying Tigers from Erie SeaWolves."
+    },
+    {
+      "id": 418498,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "fromTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "toTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "date": "2019-07-19",
+      "effectiveDate": "2019-07-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Casey Mize assigned to Erie SeaWolves from Lakeland Flying Tigers."
+    },
+    {
+      "id": 436563,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2020-01-16",
+      "effectiveDate": "2020-01-16",
+      "resolutionDate": "2020-01-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers invited non-roster RHP Casey Mize to spring training."
+    },
+    {
+      "id": 447044,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "fromTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "toTeam": {
+        "id": 3302,
+        "name": "Tigers Alternate Training Site",
+        "link": "/api/v1/teams/3302"
+      },
+      "date": "2020-07-17",
+      "effectiveDate": "2020-07-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Casey Mize assigned to Tigers Alternate Training Site from Erie SeaWolves."
+    },
+    {
+      "id": 449668,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "fromTeam": {
+        "id": 3302,
+        "name": "Tigers Alternate Training Site",
+        "link": "/api/v1/teams/3302"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2020-08-19",
+      "effectiveDate": "2020-08-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Detroit Tigers selected the contract of RHP Casey Mize from Tigers Alternate Training Site."
+    },
+    {
+      "id": 477389,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2020-08-19",
+      "effectiveDate": "2020-08-19",
+      "resolutionDate": "2020-08-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Detroit Tigers selected the contract of P Casey Mize."
+    },
+    {
+      "id": 478123,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2020-08-19",
+      "effectiveDate": "2020-08-19",
+      "resolutionDate": "2020-08-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Detroit Tigers selected the contract of RHP Casey Mize and."
+    },
+    {
+      "id": 615332,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2022-04-15",
+      "effectiveDate": "2022-04-15",
+      "resolutionDate": "2022-04-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers placed RHP Casey Mize on the 10-day injured list. Right elbow sprain."
+    },
+    {
+      "id": 620101,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2022-05-09",
+      "effectiveDate": "2022-05-09",
+      "resolutionDate": "2022-05-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers sent RHP Casey Mize on a rehab assignment to Toledo Mud Hens."
+    },
+    {
+      "id": 625400,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2022-05-31",
+      "effectiveDate": "2022-05-31",
+      "resolutionDate": "2022-05-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers placed RHP Casey Mize on the 60-day injured list. Right elbow sprain."
+    },
+    {
+      "id": 659360,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2022-11-10",
+      "effectiveDate": "2022-11-10",
+      "resolutionDate": "2022-11-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers activated RHP Casey Mize from the 60-day injured list."
+    },
+    {
+      "id": 671940,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2023-02-17",
+      "effectiveDate": "2023-02-17",
+      "resolutionDate": "2023-02-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers placed RHP Casey Mize on the 60-day injured list. Right elbow injury."
+    },
+    {
+      "id": 731281,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2023-11-06",
+      "effectiveDate": "2023-11-06",
+      "resolutionDate": "2023-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers activated RHP Casey Mize from the 60-day injured list."
+    },
+    {
+      "id": 790758,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2024-07-03",
+      "effectiveDate": "2024-07-03",
+      "resolutionDate": "2024-07-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers placed RHP Casey Mize on the 60-day injured list."
+    },
+    {
+      "id": 784814,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2024-07-03",
+      "effectiveDate": "2024-07-03",
+      "resolutionDate": "2024-07-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers placed RHP Casey Mize on the 15-day injured list. Left hamstring strain."
+    },
+    {
+      "id": 793585,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2024-08-08",
+      "effectiveDate": "2024-08-08",
+      "resolutionDate": "2024-08-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers sent RHP Casey Mize on a rehab assignment to Toledo Mud Hens."
+    },
+    {
+      "id": 796943,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2024-08-30",
+      "effectiveDate": "2024-08-30",
+      "resolutionDate": "2024-08-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers activated RHP Casey Mize from the 60-day injured list."
+    },
+    {
+      "id": 801411,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2024-10-05",
+      "effectiveDate": "2024-10-05",
+      "resolutionDate": "2024-10-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Casey Mize roster status changed by Detroit Tigers."
+    },
+    {
+      "id": 802188,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2024-10-13",
+      "effectiveDate": "2024-10-13",
+      "resolutionDate": "2024-10-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers activated RHP Casey Mize."
+    },
+    {
+      "id": 828588,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Casey Mize changed number to 42."
+    },
+    {
+      "id": 829792,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Casey Mize changed number to 12."
+    },
+    {
+      "id": 836067,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-05-10",
+      "effectiveDate": "2025-05-09",
+      "resolutionDate": "2025-05-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers placed RHP Casey Mize on the 15-day injured list retroactive to May 9, 2025. Left hamstring strain."
+    },
+    {
+      "id": 840423,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-05-24",
+      "effectiveDate": "2025-05-24",
+      "resolutionDate": "2025-05-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers activated RHP Casey Mize from the 15-day injured list."
+    },
+    {
+      "id": 854502,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 159,
+        "name": "American League All-Stars",
+        "link": "/api/v1/teams/159"
+      },
+      "date": "2025-07-14",
+      "effectiveDate": "2025-07-14",
+      "resolutionDate": "2025-07-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Casey Mize assigned to American League All-Stars."
+    },
+    {
+      "id": 899460,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Casey Mize changed number to 42."
+    },
+    {
+      "id": 900375,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Casey Mize changed number to 12."
+    },
+    {
+      "id": 904271,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-04-29",
+      "effectiveDate": "2026-04-29",
+      "resolutionDate": "2026-04-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers placed RHP Casey Mize on the 15-day injured list. Right adductor strain."
+    },
+    {
+      "id": 909454,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-05-16",
+      "effectiveDate": "2026-05-16",
+      "resolutionDate": "2026-05-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers activated RHP Casey Mize from the 15-day injured list."
+    },
+    {
+      "id": 913347,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-05-29",
+      "effectiveDate": "2026-05-28",
+      "resolutionDate": "2026-05-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers placed RHP Casey Mize on the 15-day injured list retroactive to May 28, 2026. Right adductor inflammation."
+    },
+    {
+      "id": 916860,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2026-06-09",
+      "effectiveDate": "2026-06-09",
+      "resolutionDate": "2026-06-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers sent RHP Casey Mize on a rehab assignment to Lakeland Flying Tigers."
+    },
+    {
+      "id": 919476,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-06-17",
+      "effectiveDate": "2026-06-17",
+      "resolutionDate": "2026-06-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers activated RHP Casey Mize from the 15-day injured list."
+    },
+    {
+      "id": 934597,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2026-08-03",
+      "effectiveDate": "2026-08-03",
+      "resolutionDate": "2026-08-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Casey Mize roster status changed by San Diego Padres."
+    },
+    {
+      "id": 934402,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2026-08-03",
+      "effectiveDate": "2026-08-03",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Detroit Tigers traded RHP Casey Mize and 3B Gage Workman to San Diego Padres for LHP Kash Mayfield and LHP Jackson Wolf."
+    },
+    {
+      "id": 935311,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2026-08-04",
+      "effectiveDate": "2026-08-04",
+      "resolutionDate": "2026-08-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres activated RHP Casey Mize."
+    },
+    {
+      "id": 944135,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2026-09-26",
+      "effectiveDate": "2026-09-26",
+      "resolutionDate": "2026-09-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres placed RHP Casey Mize on the 15-day injured list. Right ankle sprain."
+    },
+    {
+      "id": 945394,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2026-10-08",
+      "effectiveDate": "2026-10-08",
+      "resolutionDate": "2026-10-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres activated RHP Casey Mize from the 15-day injured list."
+    },
+    {
+      "id": 947368,
+      "person": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554",
+        "nameSlug": "casey-mize-663554"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2026-10-29",
+      "effectiveDate": "2026-10-29",
+      "resolutionDate": "2026-10-29",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Casey Mize elected free agency."
+    }
+  ]
+}

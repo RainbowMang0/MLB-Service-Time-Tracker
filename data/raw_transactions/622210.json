@@ -1,0 +1,743 @@
+{
+  "player_id": 622210,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:944c5ce626afc467346b08697b1e33d1c60e374220e5a996707348a95ada22cf",
+  "transactions": [
+    {
+      "id": 122402,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2012-06-11",
+      "effectiveDate": "2012-06-11",
+      "resolutionDate": "2012-06-11",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Toronto Blue Jays signed OF Ian Parmley."
+    },
+    {
+      "id": 123122,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "toTeam": {
+        "id": 435,
+        "name": "Vancouver Canadians",
+        "link": "/api/v1/teams/435"
+      },
+      "date": "2012-06-13",
+      "effectiveDate": "2012-06-13",
+      "resolutionDate": "2012-06-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Ian Parmley assigned to Vancouver Canadians."
+    },
+    {
+      "id": 165797,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "toTeam": {
+        "id": 4664,
+        "name": "NOR North Division All-Stars",
+        "link": "/api/v1/teams/4664"
+      },
+      "date": "2013-08-05",
+      "effectiveDate": "2013-08-05",
+      "resolutionDate": "2013-08-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Ian Parmley assigned to NOR North Division All-Stars."
+    },
+    {
+      "id": 183303,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "fromTeam": {
+        "id": 435,
+        "name": "Vancouver Canadians",
+        "link": "/api/v1/teams/435"
+      },
+      "toTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "date": "2014-03-31",
+      "effectiveDate": "2014-03-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Ian Parmley assigned to Lansing Lugnuts from Vancouver Canadians."
+    },
+    {
+      "id": 187358,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "toTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "date": "2014-04-30",
+      "effectiveDate": "2014-04-28",
+      "resolutionDate": "2014-04-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lansing Lugnuts placed OF Ian Parmley on the 7-day disabled list retroactive to April 28, 2014."
+    },
+    {
+      "id": 190002,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "toTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "date": "2014-05-24",
+      "effectiveDate": "2014-05-24",
+      "resolutionDate": "2014-05-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lansing Lugnuts activated OF Ian Parmley from the 7-day disabled list."
+    },
+    {
+      "id": 197673,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "toTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "date": "2014-06-27",
+      "effectiveDate": "2014-06-27",
+      "resolutionDate": "2014-06-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lansing Lugnuts placed OF Ian Parmley on the 7-day disabled list."
+    },
+    {
+      "id": 200268,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "fromTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "toTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "date": "2014-07-12",
+      "effectiveDate": "2014-07-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Ian Parmley assigned to Dunedin Blue Jays from Lansing Lugnuts."
+    },
+    {
+      "id": 203735,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "fromTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "toTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "date": "2014-08-06",
+      "effectiveDate": "2014-08-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Ian Parmley assigned to Lansing Lugnuts from Dunedin Blue Jays."
+    },
+    {
+      "id": 206337,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "fromTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "toTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "date": "2014-08-28",
+      "effectiveDate": "2014-08-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Ian Parmley assigned to Dunedin Blue Jays from Lansing Lugnuts."
+    },
+    {
+      "id": 225310,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "fromTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2015-05-14",
+      "effectiveDate": "2015-05-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Ian Parmley assigned to New Hampshire Fisher Cats from Dunedin Blue Jays."
+    },
+    {
+      "id": 228318,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "fromTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "toTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "date": "2015-06-01",
+      "effectiveDate": "2015-06-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Ian Parmley assigned to Dunedin Blue Jays from New Hampshire Fisher Cats."
+    },
+    {
+      "id": 233655,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "fromTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2015-06-22",
+      "effectiveDate": "2015-06-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Ian Parmley assigned to New Hampshire Fisher Cats from Dunedin Blue Jays."
+    },
+    {
+      "id": 239209,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2015-07-24",
+      "effectiveDate": "2015-07-23",
+      "resolutionDate": "2015-07-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New Hampshire Fisher Cats placed LF Ian Parmley on the 7-day disabled list retroactive to July 23, 2015."
+    },
+    {
+      "id": 242514,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2015-08-17",
+      "effectiveDate": "2015-08-17",
+      "resolutionDate": "2015-08-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New Hampshire Fisher Cats activated LF Ian Parmley from the 7-day disabled list."
+    },
+    {
+      "id": 242816,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "fromTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "toTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "date": "2015-08-19",
+      "effectiveDate": "2015-08-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Ian Parmley assigned to Dunedin Blue Jays from New Hampshire Fisher Cats."
+    },
+    {
+      "id": 259913,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "fromTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2016-04-04",
+      "effectiveDate": "2016-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Ian Parmley assigned to New Hampshire Fisher Cats from Dunedin Blue Jays."
+    },
+    {
+      "id": 280471,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2016-07-25",
+      "effectiveDate": "2016-07-25",
+      "resolutionDate": "2016-07-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New Hampshire Fisher Cats placed LF Ian Parmley on the 7-day disabled list."
+    },
+    {
+      "id": 282835,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2016-08-06",
+      "effectiveDate": "2016-08-06",
+      "resolutionDate": "2016-08-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New Hampshire Fisher Cats activated RF Ian Parmley from the 7-day disabled list."
+    },
+    {
+      "id": 298812,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2017-02-26",
+      "effectiveDate": "2017-02-26",
+      "resolutionDate": "2017-02-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Ian Parmley assigned to Toronto Blue Jays."
+    },
+    {
+      "id": 302984,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2017-04-03",
+      "effectiveDate": "2017-04-03",
+      "resolutionDate": "2017-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Ian Parmley assigned to Buffalo Bisons."
+    },
+    {
+      "id": 319104,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2017-06-23",
+      "effectiveDate": "2017-06-23",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Toronto Blue Jays recalled OF Ian Parmley from Buffalo Bisons."
+    },
+    {
+      "id": 321543,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2017-06-23",
+      "effectiveDate": "2017-06-23",
+      "resolutionDate": "2017-06-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays activated OF Ian Parmley."
+    },
+    {
+      "id": 321544,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2017-07-01",
+      "effectiveDate": "2017-07-01",
+      "resolutionDate": "2017-07-01",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Toronto Blue Jays designated OF Ian Parmley for assignment."
+    },
+    {
+      "id": 322022,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2017-07-03",
+      "effectiveDate": "2017-07-03",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Toronto Blue Jays sent OF Ian Parmley outright to Buffalo Bisons."
+    },
+    {
+      "id": 326406,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2017-07-28",
+      "effectiveDate": "2017-07-25",
+      "resolutionDate": "2017-07-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Buffalo Bisons placed OF Ian Parmley on the 7-day disabled list retroactive to July 25, 2017."
+    },
+    {
+      "id": 330589,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2017-08-25",
+      "effectiveDate": "2017-08-25",
+      "resolutionDate": "2017-08-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Buffalo Bisons activated RF Ian Parmley from the 7-day disabled list."
+    },
+    {
+      "id": 344270,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2018-03-17",
+      "effectiveDate": "2018-03-17",
+      "resolutionDate": "2018-03-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Ian Parmley assigned to Toronto Blue Jays."
+    },
+    {
+      "id": 350491,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 3256,
+        "name": "Blue Jays Alternate Training Site",
+        "link": "/api/v1/teams/3256"
+      },
+      "date": "2018-04-20",
+      "effectiveDate": "2018-04-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Ian Parmley assigned to Blue Jays Extended Spring Training from Buffalo Bisons."
+    },
+    {
+      "id": 351532,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "fromTeam": {
+        "id": 3256,
+        "name": "Blue Jays Alternate Training Site",
+        "link": "/api/v1/teams/3256"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2018-04-29",
+      "effectiveDate": "2018-04-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Ian Parmley assigned to Buffalo Bisons from Blue Jays Extended Spring Training."
+    },
+    {
+      "id": 360311,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2018-06-14",
+      "effectiveDate": "2018-06-13",
+      "resolutionDate": "2018-06-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Buffalo Bisons placed RF Ian Parmley on the 7-day disabled list retroactive to June 13, 2018."
+    },
+    {
+      "id": 363253,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2018-06-20",
+      "effectiveDate": "2018-06-20",
+      "resolutionDate": "2018-06-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Buffalo Bisons activated RF Ian Parmley from the 7-day disabled list."
+    },
+    {
+      "id": 364114,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2018-06-24",
+      "effectiveDate": "2018-06-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Ian Parmley assigned to New Hampshire Fisher Cats from Buffalo Bisons."
+    },
+    {
+      "id": 364417,
+      "person": {
+        "id": 622210,
+        "fullName": "Ian Parmley",
+        "link": "/api/v1/people/622210",
+        "nameSlug": "ian-parmley-622210"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2018-06-25",
+      "effectiveDate": "2018-06-25",
+      "resolutionDate": "2018-06-25",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "New Hampshire Fisher Cats released RF Ian Parmley."
+    }
+  ]
+}

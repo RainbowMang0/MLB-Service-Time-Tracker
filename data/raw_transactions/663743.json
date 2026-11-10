@@ -1,0 +1,889 @@
+{
+  "player_id": 663743,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:18b628c00757aa34e72f61d407d3e5efb64b2ac79f4094e1c634684bbedc7254",
+  "transactions": [
+    {
+      "id": 299165,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 5322,
+        "name": "Ole Miss Rebels",
+        "link": "/api/v1/teams/5322"
+      },
+      "date": "2017-02-28",
+      "effectiveDate": "2017-02-28",
+      "resolutionDate": "2017-02-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Nick Fortes assigned to Mississippi Rebels."
+    },
+    {
+      "id": 360720,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2018-06-13",
+      "effectiveDate": "2018-06-13",
+      "resolutionDate": "2018-06-13",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Miami Marlins signed C Nick Fortes."
+    },
+    {
+      "id": 360722,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 511,
+        "name": "Batavia Muckdogs",
+        "link": "/api/v1/teams/511"
+      },
+      "date": "2018-06-15",
+      "effectiveDate": "2018-06-15",
+      "resolutionDate": "2018-06-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Nick Fortes assigned to Batavia Muckdogs."
+    },
+    {
+      "id": 373003,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "fromTeam": {
+        "id": 511,
+        "name": "Batavia Muckdogs",
+        "link": "/api/v1/teams/511"
+      },
+      "toTeam": {
+        "id": 467,
+        "name": "FCL Marlins",
+        "link": "/api/v1/teams/467"
+      },
+      "date": "2018-08-04",
+      "effectiveDate": "2018-08-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Nick Fortes assigned to GCL Marlins from Batavia Muckdogs."
+    },
+    {
+      "id": 376481,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "fromTeam": {
+        "id": 467,
+        "name": "FCL Marlins",
+        "link": "/api/v1/teams/467"
+      },
+      "toTeam": {
+        "id": 511,
+        "name": "Batavia Muckdogs",
+        "link": "/api/v1/teams/511"
+      },
+      "date": "2018-08-26",
+      "effectiveDate": "2018-08-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Nick Fortes assigned to Batavia Muckdogs from GCL Marlins."
+    },
+    {
+      "id": 376676,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "fromTeam": {
+        "id": 511,
+        "name": "Batavia Muckdogs",
+        "link": "/api/v1/teams/511"
+      },
+      "toTeam": {
+        "id": 477,
+        "name": "Greensboro Grasshoppers",
+        "link": "/api/v1/teams/477"
+      },
+      "date": "2018-08-28",
+      "effectiveDate": "2018-09-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Nick Fortes assigned to Greensboro Grasshoppers from Batavia Muckdogs."
+    },
+    {
+      "id": 389470,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2019-03-02",
+      "effectiveDate": "2019-03-02",
+      "resolutionDate": "2019-03-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins invited non-roster C Nick Fortes to spring training."
+    },
+    {
+      "id": 393009,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "fromTeam": {
+        "id": 500,
+        "name": "Clinton LumberKings",
+        "link": "/api/v1/teams/500"
+      },
+      "toTeam": {
+        "id": 3276,
+        "name": "Marlins Alternate Training Site",
+        "link": "/api/v1/teams/3276"
+      },
+      "date": "2019-03-28",
+      "effectiveDate": "2019-03-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Nick Fortes assigned to Marlins Extended Spring Training from Clinton LumberKings."
+    },
+    {
+      "id": 393915,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "fromTeam": {
+        "id": 3276,
+        "name": "Marlins Alternate Training Site",
+        "link": "/api/v1/teams/3276"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2019-04-01",
+      "effectiveDate": "2019-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Nick Fortes assigned to Jupiter Hammerheads from Marlins Extended Spring Training."
+    },
+    {
+      "id": 397897,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2019-04-23",
+      "effectiveDate": "2019-04-22",
+      "resolutionDate": "2019-04-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jupiter Hammerheads placed C Nick Fortes on the 7-day injured list retroactive to April 22, 2019."
+    },
+    {
+      "id": 401749,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2019-05-17",
+      "effectiveDate": "2019-05-17",
+      "resolutionDate": "2019-05-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jupiter Hammerheads activated C Nick Fortes from the 7-day injured list."
+    },
+    {
+      "id": 412005,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2019-06-22",
+      "effectiveDate": "2019-06-22",
+      "resolutionDate": "2019-06-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jupiter Hammerheads placed C Nick Fortes on the 7-day injured list."
+    },
+    {
+      "id": 414160,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2019-06-29",
+      "effectiveDate": "2019-06-29",
+      "resolutionDate": "2019-06-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jupiter Hammerheads activated C Nick Fortes from the 7-day injured list."
+    },
+    {
+      "id": 440156,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2020-03-04",
+      "effectiveDate": "2020-03-04",
+      "resolutionDate": "2020-03-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Nick Fortes assigned to Miami Marlins."
+    },
+    {
+      "id": 449097,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2020-08-04",
+      "effectiveDate": "2020-08-04",
+      "resolutionDate": "2020-08-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins invited non-roster C Nick Fortes to spring training."
+    },
+    {
+      "id": 453234,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "fromTeam": {
+        "id": 3276,
+        "name": "Marlins Alternate Training Site",
+        "link": "/api/v1/teams/3276"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2020-09-29",
+      "effectiveDate": "2020-09-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Nick Fortes assigned to Jupiter Hammerheads from Marlins Alternate Training Site."
+    },
+    {
+      "id": 464172,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2020-09-29",
+      "effectiveDate": "2020-09-29",
+      "resolutionDate": "2020-09-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Nick Fortes assigned to Jupiter Hammerheads."
+    },
+    {
+      "id": 466512,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 554,
+        "name": "Beloit Sky Carp",
+        "link": "/api/v1/teams/554"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Nick Fortes assigned to Beloit Snappers."
+    },
+    {
+      "id": 468778,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 554,
+        "name": "Beloit Sky Carp",
+        "link": "/api/v1/teams/554"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Nick Fortes assigned to Beloit Snappers."
+    },
+    {
+      "id": 472623,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2021-02-21",
+      "effectiveDate": "2021-02-21",
+      "resolutionDate": "2021-02-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins invited non-roster C Nick Fortes to spring training."
+    },
+    {
+      "id": 474958,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2021-02-21",
+      "effectiveDate": "2021-02-21",
+      "resolutionDate": "2021-02-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Nick Fortes assigned to Miami Marlins ."
+    },
+    {
+      "id": 479839,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 3277,
+        "name": "Marlins Organization",
+        "link": "/api/v1/teams/3277"
+      },
+      "date": "2021-04-25",
+      "effectiveDate": "2021-04-25",
+      "resolutionDate": "2021-04-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Marlins Organization activated C Nick Fortes. ABS test."
+    },
+    {
+      "id": 483054,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "fromTeam": {
+        "id": 3276,
+        "name": "Marlins Alternate Training Site",
+        "link": "/api/v1/teams/3276"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Nick Fortes assigned to Pensacola Blue Wahoos from Marlins Alternate Training Site."
+    },
+    {
+      "id": 507147,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "fromTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2021-07-25",
+      "effectiveDate": "2021-07-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Nick Fortes assigned to Jacksonville Jumbo Shrimp from Pensacola Blue Wahoos."
+    },
+    {
+      "id": 518097,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2021-09-17",
+      "effectiveDate": "2021-09-17",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Miami Marlins selected the contract of C Nick Fortes from Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 608634,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2022-03-26",
+      "effectiveDate": "2022-03-26",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Miami Marlins optioned C Nick Fortes to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 624817,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2022-05-27",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Miami Marlins recalled C Nick Fortes from Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 661814,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2022-11-28",
+      "effectiveDate": "2022-11-28",
+      "resolutionDate": "2022-11-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins activated C Nick Fortes."
+    },
+    {
+      "id": 793362,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2024-08-07",
+      "effectiveDate": "2024-08-06",
+      "resolutionDate": "2024-08-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins placed C Nick Fortes on the 10-day injured list retroactive to August 6, 2024. Right quadriceps strain."
+    },
+    {
+      "id": 794909,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2024-08-16",
+      "effectiveDate": "2024-08-16",
+      "resolutionDate": "2024-08-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins activated C Nick Fortes from the 10-day injured list."
+    },
+    {
+      "id": 827594,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2025-04-11",
+      "effectiveDate": "2025-04-10",
+      "resolutionDate": "2025-04-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins placed C Nick Fortes on the 10-day injured list retroactive to April 10, 2025. Left oblique strain."
+    },
+    {
+      "id": 834923,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2025-05-01",
+      "effectiveDate": "2025-05-01",
+      "resolutionDate": "2025-05-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins sent C Nick Fortes on a rehab assignment to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 833392,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2025-05-01",
+      "effectiveDate": "2025-05-01",
+      "resolutionDate": "2025-05-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins sent C Nick Fortes on a rehab assignment to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 833351,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2025-05-01",
+      "effectiveDate": "2025-05-01",
+      "resolutionDate": "2025-05-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins sent C Nick Fortes on a rehab assignment to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 859439,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2025-05-04",
+      "effectiveDate": "2025-05-04",
+      "resolutionDate": "2025-05-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins activated C Nick Fortes from the 10-day injured list."
+    },
+    {
+      "id": 834936,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2025-05-04",
+      "effectiveDate": "2025-05-04",
+      "resolutionDate": "2025-05-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins activated C Nick Fortes from the 10-day injured list."
+    },
+    {
+      "id": 859438,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2025-07-28",
+      "effectiveDate": "2025-07-28",
+      "resolutionDate": "2025-07-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "C Nick Fortes roster status changed by Miami Marlins."
+    },
+    {
+      "id": 859585,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2025-07-29",
+      "effectiveDate": "2025-07-29",
+      "resolutionDate": "2025-07-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays activated C Nick Fortes."
+    },
+    {
+      "id": 859368,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2025-07-29",
+      "effectiveDate": "2025-07-29",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Miami Marlins traded C Nick Fortes to Tampa Bay Rays for LF Matthew Etzel."
+    },
+    {
+      "id": 899045,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "C Nick Fortes changed number to 42."
+    },
+    {
+      "id": 899948,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "C Nick Fortes changed number to 40."
+    }
+  ]
+}

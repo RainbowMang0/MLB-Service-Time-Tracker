@@ -1,0 +1,1706 @@
+{
+  "player_id": 664744,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:cc052d8ce4e7e1f2de76458133e6b4ce98e5ee98cbba9c9f005491c6bf9f2311",
+  "transactions": [
+    {
+      "id": 230584,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2015-06-15",
+      "effectiveDate": "2015-06-15",
+      "resolutionDate": "2015-06-15",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Toronto Blue Jays signed RHP Jose Espada."
+    },
+    {
+      "id": 234108,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 1390,
+        "name": "FCL Blue Jays",
+        "link": "/api/v1/teams/1390"
+      },
+      "date": "2015-06-24",
+      "effectiveDate": "2015-06-24",
+      "resolutionDate": "2015-06-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to GCL Blue Jays."
+    },
+    {
+      "id": 248234,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 687,
+        "name": "Gigantes de Carolina",
+        "link": "/api/v1/teams/687"
+      },
+      "date": "2015-10-29",
+      "effectiveDate": "2015-10-29",
+      "resolutionDate": "2015-10-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to Gigantes de Carolina."
+    },
+    {
+      "id": 290391,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 687,
+        "name": "Gigantes de Carolina",
+        "link": "/api/v1/teams/687"
+      },
+      "date": "2015-10-29",
+      "effectiveDate": "2015-10-29",
+      "resolutionDate": "2015-10-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gigantes de Carolina activated RHP Jose Espada."
+    },
+    {
+      "id": 274202,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 1390,
+        "name": "FCL Blue Jays",
+        "link": "/api/v1/teams/1390"
+      },
+      "toTeam": {
+        "id": 517,
+        "name": "Bluefield Ridge Runners",
+        "link": "/api/v1/teams/517"
+      },
+      "date": "2016-06-23",
+      "effectiveDate": "2016-06-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to Bluefield Blue Jays from GCL Blue Jays."
+    },
+    {
+      "id": 315569,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 517,
+        "name": "Bluefield Ridge Runners",
+        "link": "/api/v1/teams/517"
+      },
+      "toTeam": {
+        "id": 435,
+        "name": "Vancouver Canadians",
+        "link": "/api/v1/teams/435"
+      },
+      "date": "2017-06-12",
+      "effectiveDate": "2017-06-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to Vancouver Canadians from Bluefield Blue Jays."
+    },
+    {
+      "id": 393267,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 435,
+        "name": "Vancouver Canadians",
+        "link": "/api/v1/teams/435"
+      },
+      "toTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "date": "2019-04-01",
+      "effectiveDate": "2019-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to Lansing Lugnuts from Vancouver Canadians."
+    },
+    {
+      "id": 413508,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "toTeam": {
+        "id": 1390,
+        "name": "FCL Blue Jays",
+        "link": "/api/v1/teams/1390"
+      },
+      "date": "2019-06-27",
+      "effectiveDate": "2019-06-27",
+      "resolutionDate": "2019-06-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Lansing Lugnuts sent RHP Jose Espada on a rehab assignment to GCL Blue Jays."
+    },
+    {
+      "id": 414050,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "toTeam": {
+        "id": 517,
+        "name": "Bluefield Ridge Runners",
+        "link": "/api/v1/teams/517"
+      },
+      "date": "2019-06-29",
+      "effectiveDate": "2019-06-29",
+      "resolutionDate": "2019-06-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Lansing Lugnuts sent RHP Jose Espada on a rehab assignment to Bluefield Blue Jays."
+    },
+    {
+      "id": 422231,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "toTeam": {
+        "id": 1390,
+        "name": "FCL Blue Jays",
+        "link": "/api/v1/teams/1390"
+      },
+      "date": "2019-08-06",
+      "effectiveDate": "2019-08-06",
+      "resolutionDate": "2019-08-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Lansing Lugnuts sent RHP Jose Espada on a rehab assignment to GCL Blue Jays."
+    },
+    {
+      "id": 423964,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "date": "2019-08-15",
+      "effectiveDate": "2019-08-15",
+      "resolutionDate": "2019-08-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lansing Lugnuts activated RHP Jose Espada from the 7-day injured list."
+    },
+    {
+      "id": 423968,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "date": "2019-08-15",
+      "effectiveDate": "2019-08-15",
+      "resolutionDate": "2019-08-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lansing Lugnuts activated RHP Jose Espada from the 7-day injured list."
+    },
+    {
+      "id": 433189,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 687,
+        "name": "Gigantes de Carolina",
+        "link": "/api/v1/teams/687"
+      },
+      "date": "2019-11-07",
+      "effectiveDate": "2019-11-07",
+      "resolutionDate": "2019-11-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to Gigantes de Carolina."
+    },
+    {
+      "id": 435064,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2019-12-12",
+      "effectiveDate": "2019-12-12",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Pawtucket Red Sox claimed RHP Jose Espada off waivers from Lansing Lugnuts."
+    },
+    {
+      "id": 441407,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "date": "2020-03-08",
+      "effectiveDate": "2020-03-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to Greenville Drive from Pawtucket Red Sox."
+    },
+    {
+      "id": 456125,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2020-11-19",
+      "effectiveDate": "2020-11-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to Pawtucket Red Sox from Greenville Drive."
+    },
+    {
+      "id": 482559,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "date": "2021-05-02",
+      "effectiveDate": "2021-05-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to Greenville Drive from Worcester Red Sox."
+    },
+    {
+      "id": 523482,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 687,
+        "name": "Gigantes de Carolina",
+        "link": "/api/v1/teams/687"
+      },
+      "date": "2021-11-05",
+      "effectiveDate": "2021-11-05",
+      "resolutionDate": "2021-11-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada and  assigned to Gigantes de Carolina."
+    },
+    {
+      "id": 523897,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "date": "2021-11-07",
+      "effectiveDate": "2021-11-07",
+      "resolutionDate": "2021-11-07",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Jose Espada elected free agency."
+    },
+    {
+      "id": 604264,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 4704,
+        "name": "Equipo Nativos",
+        "link": "/api/v1/teams/4704"
+      },
+      "date": "2021-12-11",
+      "effectiveDate": "2021-12-11",
+      "resolutionDate": "2021-12-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Team Garcia activated RHP Jose Espada."
+    },
+    {
+      "id": 601669,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 4704,
+        "name": "Equipo Nativos",
+        "link": "/api/v1/teams/4704"
+      },
+      "date": "2021-12-11",
+      "effectiveDate": "2021-12-11",
+      "resolutionDate": "2021-12-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Team Garcia activated RHP Jose Espada."
+    },
+    {
+      "id": 634569,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "date": "2022-07-01",
+      "effectiveDate": "2022-07-01",
+      "resolutionDate": "2022-07-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to Fort Wayne TinCaps."
+    },
+    {
+      "id": 634567,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2022-07-01",
+      "effectiveDate": "2022-07-01",
+      "resolutionDate": "2022-07-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to San Diego Padres."
+    },
+    {
+      "id": 657870,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 687,
+        "name": "Gigantes de Carolina",
+        "link": "/api/v1/teams/687"
+      },
+      "date": "2022-11-04",
+      "effectiveDate": "2022-11-04",
+      "resolutionDate": "2022-11-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to Gigantes de Carolina."
+    },
+    {
+      "id": 663015,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 4704,
+        "name": "Equipo Nativos",
+        "link": "/api/v1/teams/4704"
+      },
+      "date": "2022-12-10",
+      "effectiveDate": "2022-12-10",
+      "resolutionDate": "2022-12-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Equipo Metro activated RHP Jose Espada."
+    },
+    {
+      "id": 673788,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 690,
+        "name": "Puerto Rico",
+        "link": "/api/v1/teams/690"
+      },
+      "date": "2023-01-27",
+      "effectiveDate": "2023-01-27",
+      "resolutionDate": "2023-01-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Puerto Rico activated RHP Jose Espada."
+    },
+    {
+      "id": 666915,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 690,
+        "name": "Puerto Rico",
+        "link": "/api/v1/teams/690"
+      },
+      "date": "2023-01-27",
+      "effectiveDate": "2023-01-27",
+      "resolutionDate": "2023-01-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to Puerto Rico."
+    },
+    {
+      "id": 668946,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 897,
+        "name": "Puerto Rico",
+        "link": "/api/v1/teams/897"
+      },
+      "date": "2023-02-09",
+      "effectiveDate": "2023-02-09",
+      "resolutionDate": "2023-02-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Puerto Rico activated RHP Jose Espada."
+    },
+    {
+      "id": 676171,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2023-03-17",
+      "effectiveDate": "2023-03-17",
+      "resolutionDate": "2023-03-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada and  assigned to San Diego Padres."
+    },
+    {
+      "id": 677705,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2023-03-28",
+      "effectiveDate": "2023-03-28",
+      "resolutionDate": "2023-03-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada and  assigned to San Antonio Missions."
+    },
+    {
+      "id": 706647,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2023-06-25",
+      "effectiveDate": "2023-06-25",
+      "resolutionDate": "2023-06-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Antonio Missions placed RHP Jose Espada on the temporarily inactive list."
+    },
+    {
+      "id": 708707,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2023-07-03",
+      "effectiveDate": "2023-07-03",
+      "resolutionDate": "2023-07-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Antonio Missions activated RHP Jose Espada from the temporarily inactive list."
+    },
+    {
+      "id": 719138,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2023-08-10",
+      "effectiveDate": "2023-08-10",
+      "resolutionDate": "2023-08-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "El Paso Chihuahuas activated RHP Jose Espada."
+    },
+    {
+      "id": 719069,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2023-08-10",
+      "effectiveDate": "2023-08-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to El Paso Chihuahuas from San Antonio Missions."
+    },
+    {
+      "id": 726312,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2023-09-22",
+      "effectiveDate": "2023-09-22",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "San Diego Padres selected the contract of RHP Jose Espada from El Paso Chihuahuas."
+    },
+    {
+      "id": 733297,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2023-11-17",
+      "effectiveDate": "2023-11-17",
+      "resolutionDate": "2023-11-17",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Jose Espada elected free agency."
+    },
+    {
+      "id": 734092,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 687,
+        "name": "Gigantes de Carolina",
+        "link": "/api/v1/teams/687"
+      },
+      "date": "2023-11-22",
+      "effectiveDate": "2023-11-22",
+      "resolutionDate": "2023-11-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gigantes de Carolina activated RHP Jose Espada."
+    },
+    {
+      "id": 733611,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 687,
+        "name": "Gigantes de Carolina",
+        "link": "/api/v1/teams/687"
+      },
+      "date": "2023-11-22",
+      "effectiveDate": "2023-11-22",
+      "resolutionDate": "2023-11-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to Gigantes de Carolina."
+    },
+    {
+      "id": 735158,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 687,
+        "name": "Gigantes de Carolina",
+        "link": "/api/v1/teams/687"
+      },
+      "date": "2023-11-22",
+      "effectiveDate": "2023-11-22",
+      "resolutionDate": "2023-11-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gigantes de Carolina activated RHP Jose Espada."
+    },
+    {
+      "id": 734093,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2023-11-25",
+      "effectiveDate": "2023-11-25",
+      "resolutionDate": "2023-11-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to El Paso Chihuahuas."
+    },
+    {
+      "id": 734091,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2023-11-25",
+      "effectiveDate": "2023-11-25",
+      "resolutionDate": "2023-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Diego Padres signed free agent RHP Jose Espada to a minor league contract."
+    },
+    {
+      "id": 735157,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2023-12-13",
+      "effectiveDate": "2023-12-13",
+      "resolutionDate": "2023-12-13",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "El Paso Chihuahuas released RHP Jose Espada."
+    },
+    {
+      "id": 807601,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 4704,
+        "name": "Equipo Nativos",
+        "link": "/api/v1/teams/4704"
+      },
+      "date": "2024-12-07",
+      "effectiveDate": "2024-12-07",
+      "resolutionDate": "2024-12-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to Equipo Nativos."
+    },
+    {
+      "id": 808967,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2024-12-17",
+      "effectiveDate": "2024-12-17",
+      "resolutionDate": "2024-12-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to El Paso Chihuahuas."
+    },
+    {
+      "id": 808966,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2024-12-17",
+      "effectiveDate": "2024-12-17",
+      "resolutionDate": "2024-12-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Diego Padres signed free agent RHP Jose Espada to a minor league contract."
+    },
+    {
+      "id": 814039,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2025-02-07",
+      "effectiveDate": "2025-02-07",
+      "resolutionDate": "2025-02-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres invited non-roster RHP Jose Espada to spring training."
+    },
+    {
+      "id": 823347,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2025-03-28",
+      "effectiveDate": "2025-03-28",
+      "resolutionDate": "2025-03-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Antonio Missions activated RHP Jose Espada."
+    },
+    {
+      "id": 822892,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2025-03-28",
+      "effectiveDate": "2025-03-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to San Antonio Missions from El Paso Chihuahuas."
+    },
+    {
+      "id": 846389,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2025-06-10",
+      "effectiveDate": "2025-06-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to El Paso Chihuahuas from San Antonio Missions."
+    },
+    {
+      "id": 857540,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2025-07-22",
+      "effectiveDate": "2025-07-22",
+      "resolutionDate": "2025-07-22",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "El Paso Chihuahuas released RHP Jose Espada."
+    },
+    {
+      "id": 858826,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2025-07-26",
+      "effectiveDate": "2025-07-26",
+      "resolutionDate": "2025-07-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to Norfolk Tides."
+    },
+    {
+      "id": 858825,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-07-26",
+      "effectiveDate": "2025-07-26",
+      "resolutionDate": "2025-07-26",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Baltimore Orioles signed free agent RHP Jose Espada to a minor league contract."
+    },
+    {
+      "id": 863760,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-08-11",
+      "effectiveDate": "2025-08-11",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Baltimore Orioles selected the contract of RHP Jose Espada from Norfolk Tides."
+    },
+    {
+      "id": 863761,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2025-08-11",
+      "effectiveDate": "2025-08-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Baltimore Orioles optioned RHP Jose Espada to Norfolk Tides."
+    },
+    {
+      "id": 870065,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-09-19",
+      "effectiveDate": "2025-09-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Baltimore Orioles recalled RHP Jose Espada from Norfolk Tides."
+    },
+    {
+      "id": 870291,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 599,
+        "name": "FCL Orioles",
+        "link": "/api/v1/teams/599"
+      },
+      "date": "2025-09-23",
+      "effectiveDate": "2025-09-23",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Baltimore Orioles optioned RHP Jose Espada to FCL Orioles."
+    },
+    {
+      "id": 886882,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-09-29",
+      "effectiveDate": "2025-09-29",
+      "resolutionDate": "2025-09-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles activated RHP Jose Espada."
+    },
+    {
+      "id": 870567,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 599,
+        "name": "FCL Orioles",
+        "link": "/api/v1/teams/599"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-09-29",
+      "effectiveDate": "2025-09-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Baltimore Orioles recalled RHP Jose Espada from FCL Orioles."
+    },
+    {
+      "id": 873114,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2025-10-15",
+      "effectiveDate": "2025-10-15",
+      "resolutionDate": "2025-10-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to Leones del Escogido."
+    },
+    {
+      "id": 876815,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2025-10-15",
+      "effectiveDate": "2025-10-15",
+      "resolutionDate": "2025-10-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Leones del Escogido activated RHP Jose Espada."
+    },
+    {
+      "id": 875064,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 686,
+        "name": "Criollos de Caguas",
+        "link": "/api/v1/teams/686"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to Criollos de Caguas."
+    },
+    {
+      "id": 876853,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2025-11-12",
+      "effectiveDate": "2025-11-12",
+      "resolutionDate": "2025-11-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to Leones del Escogido."
+    },
+    {
+      "id": 876816,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 4089,
+        "name": "LBPRC All-Stars",
+        "link": "/api/v1/teams/4089"
+      },
+      "date": "2025-11-14",
+      "effectiveDate": "2025-11-14",
+      "resolutionDate": "2025-11-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to LBPRC All-Stars."
+    },
+    {
+      "id": 885000,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 897,
+        "name": "Puerto Rico",
+        "link": "/api/v1/teams/897"
+      },
+      "date": "2026-02-05",
+      "effectiveDate": "2026-02-05",
+      "resolutionDate": "2026-02-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Puerto Rico activated RHP Jose Espada."
+    },
+    {
+      "id": 892087,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2026-03-18",
+      "effectiveDate": "2026-03-18",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Baltimore Orioles optioned RHP Jose Espada to Norfolk Tides."
+    },
+    {
+      "id": 902209,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-04-22",
+      "effectiveDate": "2026-04-22",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Baltimore Orioles recalled RHP Jose Espada from Norfolk Tides."
+    },
+    {
+      "id": 902882,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2026-04-24",
+      "effectiveDate": "2026-04-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Baltimore Orioles optioned RHP Jose Espada to Chesapeake Baysox."
+    },
+    {
+      "id": 902902,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2026-04-25",
+      "effectiveDate": "2026-04-25",
+      "resolutionDate": "2026-04-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chesapeake Baysox placed RHP Jose Espada on the temporarily inactive list."
+    },
+    {
+      "id": 904430,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-04-30",
+      "effectiveDate": "2026-04-30",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Baltimore Orioles recalled RHP Jose Espada from Chesapeake Baysox."
+    },
+    {
+      "id": 904802,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2026-05-01",
+      "effectiveDate": "2026-05-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Baltimore Orioles optioned RHP Jose Espada to Norfolk Tides."
+    },
+    {
+      "id": 907310,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-05-10",
+      "effectiveDate": "2026-05-10",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Baltimore Orioles recalled RHP Jose Espada from Norfolk Tides."
+    },
+    {
+      "id": 907704,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2026-05-12",
+      "effectiveDate": "2026-05-12",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Baltimore Orioles optioned RHP Jose Espada to Norfolk Tides."
+    },
+    {
+      "id": 909970,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-05-18",
+      "effectiveDate": "2026-05-18",
+      "resolutionDate": "2026-05-18",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Baltimore Orioles designated RHP Jose Espada for assignment."
+    },
+    {
+      "id": 910840,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2026-05-21",
+      "effectiveDate": "2026-05-21",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Baltimore Orioles sent RHP Jose Espada outright to Norfolk Tides."
+    },
+    {
+      "id": 933695,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 493,
+        "name": "Frederick Keys",
+        "link": "/api/v1/teams/493"
+      },
+      "date": "2026-07-31",
+      "effectiveDate": "2026-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to Frederick Keys from Norfolk Tides."
+    },
+    {
+      "id": 935029,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "fromTeam": {
+        "id": 493,
+        "name": "Frederick Keys",
+        "link": "/api/v1/teams/493"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2026-08-04",
+      "effectiveDate": "2026-08-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to Norfolk Tides from Frederick Keys."
+    },
+    {
+      "id": 946329,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2026-10-16",
+      "effectiveDate": "2026-10-16",
+      "resolutionDate": "2026-10-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to Leones del Escogido."
+    },
+    {
+      "id": 949081,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Jose Espada elected free agency."
+    },
+    {
+      "id": 949295,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 686,
+        "name": "Criollos de Caguas",
+        "link": "/api/v1/teams/686"
+      },
+      "date": "2026-11-04",
+      "effectiveDate": "2026-11-04",
+      "resolutionDate": "2026-11-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to Criollos de Caguas."
+    }
+  ]
+}

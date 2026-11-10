@@ -1,0 +1,872 @@
+{
+  "player_id": 686228,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:bd21b8c84c1bff19ccef416ea68978015d98b39d8aca8e611c87f29748b3df38",
+  "transactions": [
+    {
+      "id": 397044,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2019-04-15",
+      "effectiveDate": "2019-04-15",
+      "resolutionDate": "2019-04-15",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Seattle Mariners signed free agent RHP Juan Burgos to a minor league contract."
+    },
+    {
+      "id": 397050,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "toTeam": {
+        "id": 618,
+        "name": "DSL Mariners",
+        "link": "/api/v1/teams/618"
+      },
+      "date": "2019-04-16",
+      "effectiveDate": "2019-04-16",
+      "resolutionDate": "2019-04-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Burgos assigned to DSL Mariners."
+    },
+    {
+      "id": 495038,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "fromTeam": {
+        "id": 618,
+        "name": "DSL Mariners",
+        "link": "/api/v1/teams/618"
+      },
+      "toTeam": {
+        "id": 515,
+        "name": "Modesto Roadsters",
+        "link": "/api/v1/teams/515"
+      },
+      "date": "2021-06-18",
+      "effectiveDate": "2021-06-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Burgos assigned to Modesto Nuts from DSL Mariners."
+    },
+    {
+      "id": 495608,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "fromTeam": {
+        "id": 515,
+        "name": "Modesto Roadsters",
+        "link": "/api/v1/teams/515"
+      },
+      "toTeam": {
+        "id": 409,
+        "name": "ACL Mariners",
+        "link": "/api/v1/teams/409"
+      },
+      "date": "2021-06-22",
+      "effectiveDate": "2021-06-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Burgos assigned to AZL Mariners from Modesto Nuts."
+    },
+    {
+      "id": 612804,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "fromTeam": {
+        "id": 409,
+        "name": "ACL Mariners",
+        "link": "/api/v1/teams/409"
+      },
+      "toTeam": {
+        "id": 515,
+        "name": "Modesto Roadsters",
+        "link": "/api/v1/teams/515"
+      },
+      "date": "2022-04-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Burgos and  assigned to Modesto Nuts from ACL Mariners."
+    },
+    {
+      "id": 640274,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "fromTeam": {
+        "id": 515,
+        "name": "Modesto Roadsters",
+        "link": "/api/v1/teams/515"
+      },
+      "toTeam": {
+        "id": 409,
+        "name": "ACL Mariners",
+        "link": "/api/v1/teams/409"
+      },
+      "date": "2022-07-26",
+      "effectiveDate": "2022-07-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Burgos assigned to ACL Mariners from Modesto Nuts."
+    },
+    {
+      "id": 688629,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "fromTeam": {
+        "id": 409,
+        "name": "ACL Mariners",
+        "link": "/api/v1/teams/409"
+      },
+      "toTeam": {
+        "id": 515,
+        "name": "Modesto Roadsters",
+        "link": "/api/v1/teams/515"
+      },
+      "date": "2023-05-02",
+      "effectiveDate": "2023-05-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Burgos assigned to Modesto Nuts from ACL Mariners."
+    },
+    {
+      "id": 697604,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "toTeam": {
+        "id": 515,
+        "name": "Modesto Roadsters",
+        "link": "/api/v1/teams/515"
+      },
+      "date": "2023-05-31",
+      "effectiveDate": "2023-05-31",
+      "resolutionDate": "2023-05-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Modesto Nuts placed RHP Juan Burgos on the 7-day injured list."
+    },
+    {
+      "id": 697602,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "toTeam": {
+        "id": 515,
+        "name": "Modesto Roadsters",
+        "link": "/api/v1/teams/515"
+      },
+      "date": "2023-05-31",
+      "effectiveDate": "2023-05-31",
+      "resolutionDate": "2023-05-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Modesto Nuts placed RHP Juan Burgos on the 7-day injured list."
+    },
+    {
+      "id": 703208,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "toTeam": {
+        "id": 515,
+        "name": "Modesto Roadsters",
+        "link": "/api/v1/teams/515"
+      },
+      "date": "2023-06-10",
+      "effectiveDate": "2023-06-10",
+      "resolutionDate": "2023-06-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Modesto Nuts activated RHP Juan Burgos from the 7-day injured list."
+    },
+    {
+      "id": 733923,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "toTeam": {
+        "id": 688,
+        "name": "Indios de Mayaguez",
+        "link": "/api/v1/teams/688"
+      },
+      "date": "2023-11-28",
+      "effectiveDate": "2023-11-28",
+      "resolutionDate": "2023-11-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Burgos assigned to Indios de Mayaguez."
+    },
+    {
+      "id": 751382,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2024-02-24",
+      "effectiveDate": "2024-02-24",
+      "resolutionDate": "2024-02-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Burgos assigned to Seattle Mariners."
+    },
+    {
+      "id": 753530,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "toTeam": {
+        "id": 375,
+        "name": "Seattle Mariners Prospects",
+        "link": "/api/v1/teams/375"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners Prospects activated RHP Juan Burgos."
+    },
+    {
+      "id": 760005,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "toTeam": {
+        "id": 403,
+        "name": "Everett AquaSox",
+        "link": "/api/v1/teams/403"
+      },
+      "date": "2024-04-03",
+      "effectiveDate": "2024-04-03",
+      "resolutionDate": "2024-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Burgos assigned to Everett AquaSox."
+    },
+    {
+      "id": 816723,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2025-02-22",
+      "effectiveDate": "2025-02-22",
+      "resolutionDate": "2025-02-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Burgos assigned to Seattle Mariners."
+    },
+    {
+      "id": 820104,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "toTeam": {
+        "id": 375,
+        "name": "Seattle Mariners Prospects",
+        "link": "/api/v1/teams/375"
+      },
+      "date": "2025-03-13",
+      "effectiveDate": "2025-03-13",
+      "resolutionDate": "2025-03-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Burgos assigned to Seattle Mariners Prospects."
+    },
+    {
+      "id": 821777,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "fromTeam": {
+        "id": 403,
+        "name": "Everett AquaSox",
+        "link": "/api/v1/teams/403"
+      },
+      "toTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "date": "2025-03-23",
+      "effectiveDate": "2025-03-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Burgos assigned to Arkansas Travelers from Everett AquaSox."
+    },
+    {
+      "id": 850229,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "fromTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2025-06-24",
+      "effectiveDate": "2025-06-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Burgos assigned to Tacoma Rainiers from Arkansas Travelers."
+    },
+    {
+      "id": 851148,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2025-06-28",
+      "effectiveDate": "2025-06-28",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Seattle Mariners selected the contract of RHP Juan Burgos from Tacoma Rainiers."
+    },
+    {
+      "id": 858847,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2025-07-21",
+      "effectiveDate": "2025-07-21",
+      "resolutionDate": "2025-07-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tacoma Rainiers activated RHP Juan Burgos."
+    },
+    {
+      "id": 857006,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2025-07-21",
+      "effectiveDate": "2025-07-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned RHP Juan Burgos to Tacoma Rainiers."
+    },
+    {
+      "id": 860232,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2025-07-31",
+      "effectiveDate": "2025-07-31",
+      "resolutionDate": "2025-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Burgos assigned to Reno Aces."
+    },
+    {
+      "id": 860206,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-07-31",
+      "effectiveDate": "2025-07-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Arizona Diamondbacks traded 3B Eugenio Suárez to Seattle Mariners for 1B Tyler Locklear, RHP Hunter Cranton and RHP Juan Burgos."
+    },
+    {
+      "id": 860910,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2025-08-01",
+      "effectiveDate": "2025-08-01",
+      "resolutionDate": "2025-08-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces activated RHP Juan Burgos."
+    },
+    {
+      "id": 863449,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-08-09",
+      "effectiveDate": "2025-08-09",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled RHP Juan Burgos from Reno Aces."
+    },
+    {
+      "id": 870144,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-09-02",
+      "effectiveDate": "2025-09-02",
+      "resolutionDate": "2025-09-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks placed RHP Juan Burgos on the 15-day injured list. Right forearm contusion."
+    },
+    {
+      "id": 870136,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2025-09-19",
+      "effectiveDate": "2025-09-19",
+      "resolutionDate": "2025-09-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Arizona Diamondbacks sent RHP Juan Burgos on a rehab assignment to Reno Aces."
+    },
+    {
+      "id": 870145,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2025-09-19",
+      "effectiveDate": "2025-09-19",
+      "resolutionDate": "2025-09-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Arizona Diamondbacks sent RHP Juan Burgos on a rehab assignment to Reno Aces."
+    },
+    {
+      "id": 870729,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-09-29",
+      "effectiveDate": "2025-09-29",
+      "resolutionDate": "2025-09-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated RHP Juan Burgos from the 15-day injured list."
+    },
+    {
+      "id": 891046,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2026-03-08",
+      "effectiveDate": "2026-03-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Juan Burgos to Reno Aces."
+    },
+    {
+      "id": 922328,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-06-25",
+      "effectiveDate": "2026-06-25",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled RHP Juan Burgos from Reno Aces."
+    },
+    {
+      "id": 923763,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2026-06-30",
+      "effectiveDate": "2026-06-30",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Juan Burgos to Reno Aces."
+    },
+    {
+      "id": 929266,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-07-20",
+      "effectiveDate": "2026-07-20",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled RHP Juan Burgos from Reno Aces."
+    },
+    {
+      "id": 929832,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2026-07-21",
+      "effectiveDate": "2026-07-21",
+      "resolutionDate": "2026-07-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Juan Burgos roster status changed by Reno Aces."
+    },
+    {
+      "id": 929657,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2026-07-21",
+      "effectiveDate": "2026-07-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Juan Burgos to Reno Aces."
+    },
+    {
+      "id": 930695,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2026-07-23",
+      "effectiveDate": "2026-07-23",
+      "resolutionDate": "2026-07-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces activated RHP Juan Burgos."
+    },
+    {
+      "id": 939218,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-08-24",
+      "effectiveDate": "2026-08-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled RHP Juan Burgos from Reno Aces."
+    },
+    {
+      "id": 939910,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2026-08-28",
+      "effectiveDate": "2026-08-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Juan Burgos to Reno Aces."
+    },
+    {
+      "id": 944693,
+      "person": {
+        "id": 686228,
+        "fullName": "Juan Burgos",
+        "link": "/api/v1/people/686228",
+        "nameSlug": "juan-burgos-686228"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-09-28",
+      "effectiveDate": "2026-09-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled RHP Juan Burgos from Reno Aces."
+    }
+  ]
+}

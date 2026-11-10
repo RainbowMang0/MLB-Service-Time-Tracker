@@ -1,0 +1,964 @@
+{
+  "player_id": 668939,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:cb254113044834b0afdc03729c952d4fb5c1a08897ac191c9a384e9e4724c3e9",
+  "transactions": [
+    {
+      "id": 389899,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 3111,
+        "name": "Oregon State Beavers",
+        "link": "/api/v1/teams/3111"
+      },
+      "date": "2019-03-06",
+      "effectiveDate": "2019-03-06",
+      "resolutionDate": "2019-03-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Adley Rutschman assigned to Oregon State Beavers."
+    },
+    {
+      "id": 412929,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2019-06-24",
+      "effectiveDate": "2019-06-24",
+      "resolutionDate": "2019-06-24",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Baltimore Orioles signed C Adley Rutschman."
+    },
+    {
+      "id": 416074,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 599,
+        "name": "FCL Orioles",
+        "link": "/api/v1/teams/599"
+      },
+      "date": "2019-07-08",
+      "effectiveDate": "2019-07-08",
+      "resolutionDate": "2019-07-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Adley Rutschman assigned to GCL Orioles."
+    },
+    {
+      "id": 420079,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "fromTeam": {
+        "id": 599,
+        "name": "FCL Orioles",
+        "link": "/api/v1/teams/599"
+      },
+      "toTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "date": "2019-07-27",
+      "effectiveDate": "2019-07-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Adley Rutschman assigned to Aberdeen IronBirds from GCL Orioles."
+    },
+    {
+      "id": 424906,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "fromTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "toTeam": {
+        "id": 548,
+        "name": "Delmarva Shorebirds",
+        "link": "/api/v1/teams/548"
+      },
+      "date": "2019-08-21",
+      "effectiveDate": "2019-08-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Adley Rutschman assigned to Delmarva Shorebirds from Aberdeen IronBirds."
+    },
+    {
+      "id": 437332,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2020-01-28",
+      "effectiveDate": "2020-01-28",
+      "resolutionDate": "2020-01-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Baltimore Orioles invited non-roster C Adley Rutschman to spring training."
+    },
+    {
+      "id": 446630,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2020-07-10",
+      "effectiveDate": "2020-07-10",
+      "resolutionDate": "2020-07-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Baltimore Orioles invited non-roster C Adley Rutschman to spring training."
+    },
+    {
+      "id": 446907,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "fromTeam": {
+        "id": 548,
+        "name": "Delmarva Shorebirds",
+        "link": "/api/v1/teams/548"
+      },
+      "toTeam": {
+        "id": 3282,
+        "name": "Orioles Extended Spring Training",
+        "link": "/api/v1/teams/3282"
+      },
+      "date": "2020-07-17",
+      "effectiveDate": "2020-07-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Adley Rutschman assigned to Orioles Alternate Training Site from Delmarva Shorebirds."
+    },
+    {
+      "id": 453030,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "fromTeam": {
+        "id": 3282,
+        "name": "Orioles Extended Spring Training",
+        "link": "/api/v1/teams/3282"
+      },
+      "toTeam": {
+        "id": 548,
+        "name": "Delmarva Shorebirds",
+        "link": "/api/v1/teams/548"
+      },
+      "date": "2020-10-05",
+      "effectiveDate": "2020-10-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Adley Rutschman assigned to Delmarva Shorebirds from Orioles Alternate Training Site."
+    },
+    {
+      "id": 475343,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Adley Rutschman assigned to Baltimore Orioles ."
+    },
+    {
+      "id": 470206,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Adley Rutschman assigned to Baltimore Orioles."
+    },
+    {
+      "id": 481320,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "fromTeam": {
+        "id": 548,
+        "name": "Delmarva Shorebirds",
+        "link": "/api/v1/teams/548"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2021-04-30",
+      "effectiveDate": "2021-04-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Adley Rutschman assigned to Bowie Baysox from Delmarva Shorebirds."
+    },
+    {
+      "id": 502991,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2021-07-10",
+      "effectiveDate": "2021-07-10",
+      "resolutionDate": "2021-07-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Bowie Baysox placed C Adley Rutschman on the temporarily inactive list."
+    },
+    {
+      "id": 500221,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 320,
+        "name": "American League Futures",
+        "link": "/api/v1/teams/320"
+      },
+      "date": "2021-07-10",
+      "effectiveDate": "2021-07-10",
+      "resolutionDate": "2021-07-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "American League Futures activated C Adley Rutschman."
+    },
+    {
+      "id": 504354,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2021-07-13",
+      "effectiveDate": "2021-07-13",
+      "resolutionDate": "2021-07-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Bowie Baysox activated C Adley Rutschman from the temporarily inactive list."
+    },
+    {
+      "id": 510877,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "fromTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2021-08-10",
+      "effectiveDate": "2021-08-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Adley Rutschman assigned to Norfolk Tides from Bowie Baysox."
+    },
+    {
+      "id": 605943,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2022-03-13",
+      "effectiveDate": "2022-03-13",
+      "resolutionDate": "2022-03-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Baltimore Orioles invited non-roster C Adley Rutschman to spring training."
+    },
+    {
+      "id": 612623,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2022-03-13",
+      "effectiveDate": "2022-03-13",
+      "resolutionDate": "2022-03-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "C Adley Rutschman roster status changed by Baltimore Orioles."
+    },
+    {
+      "id": 613946,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2022-04-08",
+      "effectiveDate": "2022-04-08",
+      "resolutionDate": "2022-04-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Adley Rutschman assigned to Norfolk Tides."
+    },
+    {
+      "id": 617403,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "date": "2022-04-26",
+      "effectiveDate": "2022-04-26",
+      "resolutionDate": "2022-04-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Norfolk Tides sent C Adley Rutschman on a rehab assignment to Aberdeen IronBirds."
+    },
+    {
+      "id": 619249,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2022-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Adley Rutschman assigned to Bowie Baysox from Norfolk Tides."
+    },
+    {
+      "id": 619604,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "fromTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2022-05-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Adley Rutschman assigned to Norfolk Tides from Bowie Baysox."
+    },
+    {
+      "id": 623080,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2022-05-21",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Baltimore Orioles selected the contract of C Adley Rutschman,  and  from Norfolk Tides."
+    },
+    {
+      "id": 708518,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 159,
+        "name": "American League All-Stars",
+        "link": "/api/v1/teams/159"
+      },
+      "date": "2023-07-10",
+      "effectiveDate": "2023-07-10",
+      "resolutionDate": "2023-07-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Adley Rutschman assigned to American League All-Stars."
+    },
+    {
+      "id": 784863,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 159,
+        "name": "American League All-Stars",
+        "link": "/api/v1/teams/159"
+      },
+      "date": "2024-07-03",
+      "effectiveDate": "2024-07-03",
+      "resolutionDate": "2024-07-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Adley Rutschman assigned to American League All-Stars."
+    },
+    {
+      "id": 828735,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "C Adley Rutschman changed number to 42."
+    },
+    {
+      "id": 829935,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "C Adley Rutschman changed number to 35."
+    },
+    {
+      "id": 849548,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-06-21",
+      "effectiveDate": "2025-06-20",
+      "resolutionDate": "2025-06-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles placed C Adley Rutschman on the 10-day injured list retroactive to June 20, 2025. Left oblique strain."
+    },
+    {
+      "id": 857123,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2025-07-22",
+      "effectiveDate": "2025-07-22",
+      "resolutionDate": "2025-07-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Baltimore Orioles sent C Adley Rutschman on a rehab assignment to Norfolk Tides."
+    },
+    {
+      "id": 859258,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-07-28",
+      "effectiveDate": "2025-07-28",
+      "resolutionDate": "2025-07-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles activated C Adley Rutschman from the 10-day injured list."
+    },
+    {
+      "id": 865602,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-07-28",
+      "effectiveDate": "2025-07-28",
+      "resolutionDate": "2025-07-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles activated C Adley Rutschman from the 10-day injured list."
+    },
+    {
+      "id": 865604,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-08-21",
+      "effectiveDate": "2025-08-18",
+      "resolutionDate": "2025-08-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles placed C Adley Rutschman on the 10-day injured list retroactive to August 18, 2025. Right oblique strain."
+    },
+    {
+      "id": 869875,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2025-09-17",
+      "effectiveDate": "2025-09-17",
+      "resolutionDate": "2025-09-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Baltimore Orioles sent C Adley Rutschman on a rehab assignment to Norfolk Tides."
+    },
+    {
+      "id": 870237,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-09-22",
+      "effectiveDate": "2025-09-22",
+      "resolutionDate": "2025-09-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles activated C Adley Rutschman from the 10-day injured list."
+    },
+    {
+      "id": 898342,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-04-11",
+      "effectiveDate": "2026-04-11",
+      "resolutionDate": "2026-04-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles placed C Adley Rutschman on the 10-day injured list. Left ankle inflammation."
+    },
+    {
+      "id": 901960,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-04-21",
+      "effectiveDate": "2026-04-21",
+      "resolutionDate": "2026-04-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles activated C Adley Rutschman from the 10-day injured list."
+    },
+    {
+      "id": 920756,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-06-20",
+      "effectiveDate": "2026-06-19",
+      "resolutionDate": "2026-06-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles placed C Adley Rutschman on the 7-day injured list retroactive to June 19, 2026. Concussion."
+    },
+    {
+      "id": 923172,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-06-28",
+      "effectiveDate": "2026-06-28",
+      "resolutionDate": "2026-06-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles activated C Adley Rutschman from the 7-day injured list."
+    },
+    {
+      "id": 925162,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 159,
+        "name": "American League All-Stars",
+        "link": "/api/v1/teams/159"
+      },
+      "date": "2026-07-13",
+      "effectiveDate": "2026-07-13",
+      "resolutionDate": "2026-07-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "American League All-Stars activated C Adley Rutschman."
+    },
+    {
+      "id": 929139,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-07-20",
+      "effectiveDate": "2026-07-19",
+      "resolutionDate": "2026-07-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles placed C Adley Rutschman on the 10-day injured list retroactive to July 19, 2026. Left wrist inflammation."
+    },
+    {
+      "id": 936353,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-08-02",
+      "effectiveDate": "2026-08-02",
+      "resolutionDate": "2026-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "C Adley Rutschman roster status changed by Baltimore Orioles."
+    },
+    {
+      "id": 936351,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2026-08-03",
+      "effectiveDate": "2026-08-03",
+      "resolutionDate": "2026-08-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Boston Red Sox placed C Adley Rutschman on the 10-day injured list. Left wrist inflammation."
+    },
+    {
+      "id": 934330,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2026-08-03",
+      "effectiveDate": "2026-08-03",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Baltimore Orioles traded C Adley Rutschman, C Jake Rogers and cash to Boston Red Sox for RHP Kyson Witherspoon, CF Enddy Azocar, C Carlos Narváez, RHP Anthony Eyanson and Player To Be Named Later."
+    },
+    {
+      "id": 936352,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2026-08-08",
+      "effectiveDate": "2026-08-08",
+      "resolutionDate": "2026-08-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Boston Red Sox sent C Adley Rutschman on a rehab assignment to Worcester Red Sox."
+    },
+    {
+      "id": 937097,
+      "person": {
+        "id": 668939,
+        "fullName": "Adley Rutschman",
+        "link": "/api/v1/people/668939",
+        "nameSlug": "adley-rutschman-668939"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2026-08-11",
+      "effectiveDate": "2026-08-11",
+      "resolutionDate": "2026-08-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Boston Red Sox activated C Adley Rutschman from the 10-day injured list."
+    }
+  ]
+}

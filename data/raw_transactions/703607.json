@@ -1,0 +1,567 @@
+{
+  "player_id": 703607,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:55efb380951783be26fd07b098a79409ae3cba2ad9bd386b2b408ad3f131feeb",
+  "transactions": [
+    {
+      "id": 518790,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "toTeam": {
+        "id": 5058,
+        "name": "National",
+        "link": "/api/v1/teams/5058"
+      },
+      "date": "2021-09-23",
+      "effectiveDate": "2021-09-23",
+      "resolutionDate": "2021-09-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Henry Bolte and  assigned to National."
+    },
+    {
+      "id": 519341,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "toTeam": {
+        "id": 5092,
+        "name": "Future Stars Series - Blue",
+        "link": "/api/v1/teams/5092"
+      },
+      "date": "2021-09-29",
+      "effectiveDate": "2021-09-29",
+      "resolutionDate": "2021-09-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Future Stars Series - Blue activated OF Henry Bolte."
+    },
+    {
+      "id": 628621,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "toTeam": {
+        "id": 5580,
+        "name": "College Workout",
+        "link": "/api/v1/teams/5580"
+      },
+      "date": "2022-06-06",
+      "effectiveDate": "2022-06-06",
+      "resolutionDate": "2022-06-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Henry Bolte assigned to College Workout."
+    },
+    {
+      "id": 643317,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2022-07-25",
+      "effectiveDate": "2022-07-25",
+      "resolutionDate": "2022-07-25",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Oakland Athletics signed OF Henry Bolte."
+    },
+    {
+      "id": 643316,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "toTeam": {
+        "id": 5426,
+        "name": "ACL Athletics",
+        "link": "/api/v1/teams/5426"
+      },
+      "date": "2022-08-04",
+      "effectiveDate": "2022-08-04",
+      "resolutionDate": "2022-08-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Henry Bolte assigned to ACL Athletics."
+    },
+    {
+      "id": 643334,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "toTeam": {
+        "id": 5426,
+        "name": "ACL Athletics",
+        "link": "/api/v1/teams/5426"
+      },
+      "date": "2022-08-04",
+      "effectiveDate": "2022-08-04",
+      "resolutionDate": "2022-08-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "ACL Athletics activated OF Henry Bolte."
+    },
+    {
+      "id": 678040,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2023-03-12",
+      "effectiveDate": "2023-03-12",
+      "resolutionDate": "2023-03-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "OF Henry Bolte roster status changed by Oakland Athletics."
+    },
+    {
+      "id": 675419,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2023-03-12",
+      "effectiveDate": "2023-03-12",
+      "resolutionDate": "2023-03-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "OF Henry Bolte roster status changed by Oakland Athletics."
+    },
+    {
+      "id": 687118,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "fromTeam": {
+        "id": 5426,
+        "name": "ACL Athletics",
+        "link": "/api/v1/teams/5426"
+      },
+      "toTeam": {
+        "id": 524,
+        "name": "Stockton Ports",
+        "link": "/api/v1/teams/524"
+      },
+      "date": "2023-04-25",
+      "effectiveDate": "2023-04-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Henry Bolte assigned to Stockton Ports from ACL Athletics."
+    },
+    {
+      "id": 753098,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2024-03-04",
+      "effectiveDate": "2024-03-04",
+      "resolutionDate": "2024-03-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Henry Bolte assigned to Oakland Athletics."
+    },
+    {
+      "id": 753626,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "toTeam": {
+        "id": 372,
+        "name": "Athletics Prospects",
+        "link": "/api/v1/teams/372"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics Prospects activated OF Henry Bolte."
+    },
+    {
+      "id": 758748,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "fromTeam": {
+        "id": 524,
+        "name": "Stockton Ports",
+        "link": "/api/v1/teams/524"
+      },
+      "toTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "date": "2024-03-31",
+      "effectiveDate": "2024-03-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Henry Bolte assigned to Lansing Lugnuts from Stockton Ports."
+    },
+    {
+      "id": 784279,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "fromTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2024-07-01",
+      "effectiveDate": "2024-07-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Henry Bolte assigned to Midland RockHounds from Lansing Lugnuts."
+    },
+    {
+      "id": 800298,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "toTeam": {
+        "id": 555,
+        "name": "Mesa Solar Sox",
+        "link": "/api/v1/teams/555"
+      },
+      "date": "2024-09-25",
+      "effectiveDate": "2024-09-25",
+      "resolutionDate": "2024-09-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Henry Bolte assigned to Mesa Solar Sox."
+    },
+    {
+      "id": 810989,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2025-01-17",
+      "effectiveDate": "2025-01-17",
+      "resolutionDate": "2025-01-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Athletics invited non-roster RF Henry Bolte to spring training."
+    },
+    {
+      "id": 818880,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "toTeam": {
+        "id": 372,
+        "name": "Athletics Prospects",
+        "link": "/api/v1/teams/372"
+      },
+      "date": "2025-03-06",
+      "effectiveDate": "2025-03-06",
+      "resolutionDate": "2025-03-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "activated RF Henry Bolte."
+    },
+    {
+      "id": 851655,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2025-06-30",
+      "effectiveDate": "2025-06-30",
+      "resolutionDate": "2025-06-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Midland RockHounds placed OF Henry Bolte on the 7-day injured list."
+    },
+    {
+      "id": 854742,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2025-07-11",
+      "effectiveDate": "2025-07-11",
+      "resolutionDate": "2025-07-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Midland RockHounds activated OF Henry Bolte from the 7-day injured list."
+    },
+    {
+      "id": 857809,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2025-07-22",
+      "effectiveDate": "2025-07-22",
+      "resolutionDate": "2025-07-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Las Vegas Aviators activated OF Henry Bolte."
+    },
+    {
+      "id": 857813,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2025-07-22",
+      "effectiveDate": "2025-07-22",
+      "resolutionDate": "2025-07-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Las Vegas Aviators activated OF Henry Bolte."
+    },
+    {
+      "id": 857810,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2025-07-22",
+      "effectiveDate": "2025-07-22",
+      "resolutionDate": "2025-07-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Las Vegas Aviators activated OF Henry Bolte."
+    },
+    {
+      "id": 857491,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "fromTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2025-07-22",
+      "effectiveDate": "2025-07-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Henry Bolte assigned to Las Vegas Aviators from Midland RockHounds."
+    },
+    {
+      "id": 867396,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2025-09-02",
+      "effectiveDate": "2025-09-02",
+      "resolutionDate": "2025-09-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Las Vegas Aviators placed OF Henry Bolte on the 7-day injured list."
+    },
+    {
+      "id": 872090,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2025-09-28",
+      "effectiveDate": "2025-09-28",
+      "resolutionDate": "2025-09-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Las Vegas Aviators activated OF Henry Bolte from the 7-day injured list."
+    },
+    {
+      "id": 883076,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2026-01-28",
+      "effectiveDate": "2026-01-28",
+      "resolutionDate": "2026-01-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Athletics invited non-roster RF Henry Bolte to spring training."
+    },
+    {
+      "id": 890546,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "toTeam": {
+        "id": 372,
+        "name": "Athletics Prospects",
+        "link": "/api/v1/teams/372"
+      },
+      "date": "2026-03-05",
+      "effectiveDate": "2026-03-05",
+      "resolutionDate": "2026-03-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Henry Bolte assigned to Athletics Prospects."
+    },
+    {
+      "id": 907887,
+      "person": {
+        "id": 703607,
+        "fullName": "Henry Bolte",
+        "link": "/api/v1/people/703607",
+        "nameSlug": "henry-bolte-703607"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2026-05-12",
+      "effectiveDate": "2026-05-12",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Athletics selected the contract of RF Henry Bolte from Las Vegas Aviators."
+    }
+  ]
+}

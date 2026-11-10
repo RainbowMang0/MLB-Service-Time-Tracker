@@ -1,0 +1,930 @@
+{
+  "player_id": 683737,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:5422482bf6c62d4b3cce442c9930fc2f34df92f94f202a7080b26f17cae11585",
+  "transactions": [
+    {
+      "id": 416400,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2019-07-04",
+      "effectiveDate": "2019-07-04",
+      "resolutionDate": "2019-07-04",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Los Angeles Dodgers signed 2B Michael Busch."
+    },
+    {
+      "id": 417320,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2019-07-13",
+      "effectiveDate": "2019-07-13",
+      "resolutionDate": "2019-07-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Michael Busch assigned to AZL Dodgers Lasorda."
+    },
+    {
+      "id": 418819,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "fromTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2019-07-20",
+      "effectiveDate": "2019-07-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Michael Busch assigned to Great Lakes Loons from AZL Dodgers Lasorda."
+    },
+    {
+      "id": 422463,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2019-07-26",
+      "effectiveDate": "2019-07-26",
+      "resolutionDate": "2019-07-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons placed 2B Michael Busch on the 7-day injured list."
+    },
+    {
+      "id": 427670,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2019-09-07",
+      "effectiveDate": "2019-09-07",
+      "resolutionDate": "2019-09-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated 2B Michael Busch from the 7-day injured list."
+    },
+    {
+      "id": 429331,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 454,
+        "name": "Glendale Desert Dogs",
+        "link": "/api/v1/teams/454"
+      },
+      "date": "2019-10-05",
+      "effectiveDate": "2019-10-05",
+      "resolutionDate": "2019-10-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Michael Busch assigned to Glendale Desert Dogs."
+    },
+    {
+      "id": 446608,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2020-07-10",
+      "effectiveDate": "2020-07-10",
+      "resolutionDate": "2020-07-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers invited non-roster 2B Michael Busch to spring training."
+    },
+    {
+      "id": 447512,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "date": "2020-07-19",
+      "effectiveDate": "2020-07-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Michael Busch assigned to Dodgers Alternate Training Site from Great Lakes Loons."
+    },
+    {
+      "id": 462670,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2020-10-01",
+      "effectiveDate": "2020-10-01",
+      "resolutionDate": "2020-10-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Michael Busch assigned to Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 454018,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "fromTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2020-10-01",
+      "effectiveDate": "2020-10-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Michael Busch assigned to Rancho Cucamonga Quakes from Dodgers Alternate Training Site."
+    },
+    {
+      "id": 465063,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Michael Busch assigned to Great Lakes Loons."
+    },
+    {
+      "id": 467280,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Michael Busch assigned to Great Lakes Loons."
+    },
+    {
+      "id": 474991,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-02-16",
+      "effectiveDate": "2021-02-16",
+      "resolutionDate": "2021-02-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Michael Busch assigned to Los Angeles Dodgers ."
+    },
+    {
+      "id": 469616,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-02-16",
+      "effectiveDate": "2021-02-16",
+      "resolutionDate": "2021-02-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers invited non-roster 2B Michael Busch to spring training."
+    },
+    {
+      "id": 469916,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-02-16",
+      "effectiveDate": "2021-02-16",
+      "resolutionDate": "2021-02-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers invited non-roster 2B Michael Busch to spring training."
+    },
+    {
+      "id": 483429,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Michael Busch assigned to Tulsa Drillers from Great Lakes Loons."
+    },
+    {
+      "id": 500195,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 319,
+        "name": "National League Futures",
+        "link": "/api/v1/teams/319"
+      },
+      "date": "2021-07-10",
+      "effectiveDate": "2021-07-10",
+      "resolutionDate": "2021-07-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "National League Futures activated 2B Michael Busch."
+    },
+    {
+      "id": 517935,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2021-09-15",
+      "effectiveDate": "2021-09-15",
+      "resolutionDate": "2021-09-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers placed 2B Michael Busch on the 7-day injured list."
+    },
+    {
+      "id": 518995,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2021-09-23",
+      "effectiveDate": "2021-09-23",
+      "resolutionDate": "2021-09-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers activated 2B Michael Busch from the 7-day injured list."
+    },
+    {
+      "id": 612183,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2022-03-11",
+      "effectiveDate": "2022-03-11",
+      "resolutionDate": "2022-03-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "2B Michael Busch roster status changed by Los Angeles Dodgers."
+    },
+    {
+      "id": 605646,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2022-03-11",
+      "effectiveDate": "2022-03-11",
+      "resolutionDate": "2022-03-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers invited non-roster 2B Michael Busch to spring training."
+    },
+    {
+      "id": 621490,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "fromTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2022-05-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Michael Busch assigned to Oklahoma City Dodgers from Tulsa Drillers."
+    },
+    {
+      "id": 671700,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2022-11-15",
+      "effectiveDate": "2022-11-15",
+      "resolutionDate": "2022-11-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated 2B Michael Busch."
+    },
+    {
+      "id": 660203,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2022-11-15",
+      "effectiveDate": "2022-11-15",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Dodgers selected the contract of 2B Michael Busch from Oklahoma City Dodgers."
+    },
+    {
+      "id": 675785,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-03-15",
+      "effectiveDate": "2023-03-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned 2B Michael Busch to Oklahoma City Dodgers."
+    },
+    {
+      "id": 687088,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2023-04-25",
+      "effectiveDate": "2023-04-25",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled 2B Michael Busch and  from Oklahoma City Dodgers."
+    },
+    {
+      "id": 691551,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-05-11",
+      "effectiveDate": "2023-05-11",
+      "resolutionDate": "2023-05-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers activated 2B Michael Busch."
+    },
+    {
+      "id": 691331,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-05-11",
+      "effectiveDate": "2023-05-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned 2B Michael Busch to Oklahoma City Dodgers."
+    },
+    {
+      "id": 691531,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-05-12",
+      "effectiveDate": "2023-05-12",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned 2B Michael Busch to Oklahoma City Dodgers."
+    },
+    {
+      "id": 704727,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2023-06-16",
+      "effectiveDate": "2023-06-16",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled 2B Michael Busch from Oklahoma City Dodgers."
+    },
+    {
+      "id": 707342,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-06-27",
+      "effectiveDate": "2023-06-27",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned 2B Michael Busch to Oklahoma City Dodgers."
+    },
+    {
+      "id": 721191,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2023-08-22",
+      "effectiveDate": "2023-08-22",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled 2B Michael Busch from Oklahoma City Dodgers."
+    },
+    {
+      "id": 724082,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-09-08",
+      "effectiveDate": "2023-09-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned 2B Michael Busch to Oklahoma City Dodgers."
+    },
+    {
+      "id": 727603,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2023-10-02",
+      "effectiveDate": "2023-10-02",
+      "resolutionDate": "2023-10-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "2B Michael Busch roster status changed by Los Angeles Dodgers."
+    },
+    {
+      "id": 727598,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2023-10-02",
+      "effectiveDate": "2023-10-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled 2B Michael Busch from Oklahoma City Dodgers."
+    },
+    {
+      "id": 728403,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2023-10-12",
+      "effectiveDate": "2023-10-12",
+      "resolutionDate": "2023-10-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated 2B Michael Busch."
+    },
+    {
+      "id": 736617,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2024-01-11",
+      "effectiveDate": "2024-01-11",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Los Angeles Dodgers traded 2B Michael Busch and RHP Yency Almonte to Chicago Cubs for LHP Jackson Ferris and OF Zyhir Hope."
+    },
+    {
+      "id": 828675,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "1B Michael Busch changed number to 42."
+    },
+    {
+      "id": 829876,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "1B Michael Busch changed number to 29."
+    },
+    {
+      "id": 861053,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-08-02",
+      "effectiveDate": "2025-08-02",
+      "resolutionDate": "2025-08-02",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "1B Michael Busch changed number to 23."
+    },
+    {
+      "id": 861259,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-08-03",
+      "effectiveDate": "2025-08-03",
+      "resolutionDate": "2025-08-03",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "1B Michael Busch changed number to 29."
+    },
+    {
+      "id": 899584,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "1B Michael Busch changed number to 42."
+    },
+    {
+      "id": 900513,
+      "person": {
+        "id": 683737,
+        "fullName": "Michael Busch",
+        "link": "/api/v1/people/683737",
+        "nameSlug": "michael-busch-683737"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "1B Michael Busch changed number to 29."
+    }
+  ]
+}

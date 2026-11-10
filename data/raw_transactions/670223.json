@@ -1,0 +1,958 @@
+{
+  "player_id": 670223,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:4f91022ce724203b8fae7aa51ffd93dbe114291e1b2d0c997ad8f21cb468aba2",
+  "transactions": [
+    {
+      "id": 446275,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2020-06-26",
+      "effectiveDate": "2020-06-26",
+      "resolutionDate": "2020-06-26",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago Cubs signed free agent 1B Matt Mervis to a minor league contract."
+    },
+    {
+      "id": 446276,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 407,
+        "name": "ACL Cubs",
+        "link": "/api/v1/teams/407"
+      },
+      "date": "2020-07-02",
+      "effectiveDate": "2020-07-02",
+      "resolutionDate": "2020-07-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Matt Mervis assigned to AZL Cubs Blue."
+    },
+    {
+      "id": 486202,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "fromTeam": {
+        "id": 407,
+        "name": "ACL Cubs",
+        "link": "/api/v1/teams/407"
+      },
+      "toTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "date": "2021-05-11",
+      "effectiveDate": "2021-05-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Matt Mervis assigned to Myrtle Beach Pelicans from AZL Cubs Blue."
+    },
+    {
+      "id": 512099,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "date": "2021-08-15",
+      "effectiveDate": "2021-08-15",
+      "resolutionDate": "2021-08-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Myrtle Beach Pelicans placed 1B Matt Mervis on the 7-day injured list."
+    },
+    {
+      "id": 519588,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "fromTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2021-09-30",
+      "effectiveDate": "2021-09-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Matt Mervis assigned to Iowa Cubs from Myrtle Beach Pelicans."
+    },
+    {
+      "id": 613488,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "date": "2022-04-08",
+      "effectiveDate": "2022-04-08",
+      "resolutionDate": "2022-04-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Matt Mervis assigned to South Bend Cubs."
+    },
+    {
+      "id": 621569,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "fromTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2022-05-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Matt Mervis assigned to Tennessee Smokies from South Bend Cubs."
+    },
+    {
+      "id": 639440,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "fromTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2022-07-22",
+      "effectiveDate": "2022-07-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Matt Mervis assigned to Iowa Cubs from Tennessee Smokies."
+    },
+    {
+      "id": 670173,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 555,
+        "name": "Mesa Solar Sox",
+        "link": "/api/v1/teams/555"
+      },
+      "date": "2022-09-16",
+      "effectiveDate": "2022-09-16",
+      "resolutionDate": "2022-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mesa Solar Sox activated 1B Matt Mervis."
+    },
+    {
+      "id": 652492,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 555,
+        "name": "Mesa Solar Sox",
+        "link": "/api/v1/teams/555"
+      },
+      "date": "2022-09-16",
+      "effectiveDate": "2022-09-16",
+      "resolutionDate": "2022-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mesa Solar Sox activated 1B Matt Mervis."
+    },
+    {
+      "id": 657782,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 1311,
+        "name": "National League Fall Stars",
+        "link": "/api/v1/teams/1311"
+      },
+      "date": "2022-11-05",
+      "effectiveDate": "2022-11-05",
+      "resolutionDate": "2022-11-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Matt Mervis assigned to National League Fall Stars."
+    },
+    {
+      "id": 678764,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2023-02-06",
+      "effectiveDate": "2023-02-06",
+      "resolutionDate": "2023-02-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "1B Matt Mervis roster status changed by Chicago Cubs."
+    },
+    {
+      "id": 668314,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2023-02-06",
+      "effectiveDate": "2023-02-06",
+      "resolutionDate": "2023-02-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago Cubs invited non-roster 1B Matt Mervis to spring training."
+    },
+    {
+      "id": 669202,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 840,
+        "name": "Israel",
+        "link": "/api/v1/teams/840"
+      },
+      "date": "2023-02-09",
+      "effectiveDate": "2023-02-09",
+      "resolutionDate": "2023-02-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Israel activated 1B Matt Mervis."
+    },
+    {
+      "id": 689358,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2023-05-05",
+      "effectiveDate": "2023-05-05",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Chicago Cubs selected the contract of 1B Matt Mervis from Iowa Cubs."
+    },
+    {
+      "id": 704681,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2023-06-15",
+      "effectiveDate": "2023-06-15",
+      "resolutionDate": "2023-06-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs activated 1B Matt Mervis."
+    },
+    {
+      "id": 704448,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2023-06-15",
+      "effectiveDate": "2023-06-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned 1B Matt Mervis to Iowa Cubs."
+    },
+    {
+      "id": 727563,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2023-10-02",
+      "effectiveDate": "2023-10-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled 1B Matt Mervis from Iowa Cubs."
+    },
+    {
+      "id": 757994,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2024-03-17",
+      "effectiveDate": "2024-03-17",
+      "resolutionDate": "2024-03-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs activated 1B Matt Mervis."
+    },
+    {
+      "id": 755694,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2024-03-17",
+      "effectiveDate": "2024-03-17",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned 1B Matt Mervis to Iowa Cubs."
+    },
+    {
+      "id": 765214,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2024-04-23",
+      "effectiveDate": "2024-04-23",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled 1B Matt Mervis from Iowa Cubs."
+    },
+    {
+      "id": 768882,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2024-05-04",
+      "effectiveDate": "2024-05-04",
+      "resolutionDate": "2024-05-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs activated 1B Matt Mervis."
+    },
+    {
+      "id": 768085,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2024-05-04",
+      "effectiveDate": "2024-05-04",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned 1B Matt Mervis to Iowa Cubs."
+    },
+    {
+      "id": 785010,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2024-07-04",
+      "effectiveDate": "2024-07-04",
+      "resolutionDate": "2024-07-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs placed 1B Matt Mervis on the 7-day injured list."
+    },
+    {
+      "id": 795549,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2024-08-20",
+      "effectiveDate": "2024-08-20",
+      "resolutionDate": "2024-08-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs activated 1B Matt Mervis from the 7-day injured list."
+    },
+    {
+      "id": 801021,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2024-10-01",
+      "effectiveDate": "2024-10-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled 1B Matt Mervis from Iowa Cubs."
+    },
+    {
+      "id": 809266,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2024-12-29",
+      "effectiveDate": "2024-12-29",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Miami Marlins traded SS Vidal Bruján to Chicago Cubs for 1B Matt Mervis and cash."
+    },
+    {
+      "id": 828079,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "1B Matt Mervis changed number to 42."
+    },
+    {
+      "id": 829282,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "1B Matt Mervis changed number to 36."
+    },
+    {
+      "id": 841913,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2025-05-30",
+      "effectiveDate": "2025-05-30",
+      "resolutionDate": "2025-05-30",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Miami Marlins designated 1B Matt Mervis for assignment."
+    },
+    {
+      "id": 843714,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2025-06-02",
+      "effectiveDate": "2025-06-02",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Miami Marlins sent 1B Matt Mervis outright to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 850410,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2025-06-24",
+      "effectiveDate": "2025-06-24",
+      "resolutionDate": "2025-06-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jacksonville Jumbo Shrimp placed 1B Matt Mervis on the 7-day injured list."
+    },
+    {
+      "id": 853991,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2025-07-08",
+      "effectiveDate": "2025-07-08",
+      "resolutionDate": "2025-07-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jacksonville Jumbo Shrimp activated 1B Matt Mervis from the 7-day injured list."
+    },
+    {
+      "id": 862281,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2025-08-04",
+      "effectiveDate": "2025-08-04",
+      "resolutionDate": "2025-08-04",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Jacksonville Jumbo Shrimp released 1B Matt Mervis."
+    },
+    {
+      "id": 864085,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-08-12",
+      "effectiveDate": "2025-08-12",
+      "resolutionDate": "2025-08-12",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Arizona Diamondbacks signed free agent 1B Matt Mervis to a minor league contract."
+    },
+    {
+      "id": 864086,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2025-08-12",
+      "effectiveDate": "2025-08-12",
+      "resolutionDate": "2025-08-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Matt Mervis assigned to Reno Aces."
+    },
+    {
+      "id": 875405,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "1B Matt Mervis elected free agency."
+    },
+    {
+      "id": 894294,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2025-12-31",
+      "effectiveDate": "2025-12-31",
+      "resolutionDate": "2025-12-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rochester Red Wings activated 1B Matt Mervis."
+    },
+    {
+      "id": 880680,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2025-12-31",
+      "effectiveDate": "2025-12-31",
+      "resolutionDate": "2025-12-31",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Washington Nationals signed free agent 1B Matt Mervis to a minor league contract."
+    },
+    {
+      "id": 880681,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2025-12-31",
+      "effectiveDate": "2025-12-31",
+      "resolutionDate": "2025-12-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Matt Mervis assigned to Rochester Red Wings."
+    },
+    {
+      "id": 884809,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 840,
+        "name": "Israel",
+        "link": "/api/v1/teams/840"
+      },
+      "date": "2026-02-05",
+      "effectiveDate": "2026-02-05",
+      "resolutionDate": "2026-02-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Israel activated 1B Matt Mervis."
+    },
+    {
+      "id": 895767,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2026-03-31",
+      "effectiveDate": "2026-03-31",
+      "resolutionDate": "2026-03-31",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Rochester Red Wings released 1B Matt Mervis."
+    },
+    {
+      "id": 908114,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 447,
+        "name": "Algodoneros Union Laguna",
+        "link": "/api/v1/teams/447"
+      },
+      "date": "2026-05-12",
+      "effectiveDate": "2026-05-12",
+      "resolutionDate": "2026-05-12",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Algodoneros Union Laguna signed free agent 1B Matt Mervis."
+    },
+    {
+      "id": 911389,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 447,
+        "name": "Algodoneros Union Laguna",
+        "link": "/api/v1/teams/447"
+      },
+      "date": "2026-05-24",
+      "effectiveDate": "2026-05-24",
+      "resolutionDate": "2026-05-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Algodoneros Union Laguna placed 1B Matt Mervis on the reserve list."
+    },
+    {
+      "id": 917326,
+      "person": {
+        "id": 670223,
+        "fullName": "Matt Mervis",
+        "link": "/api/v1/people/670223",
+        "nameSlug": "matt-mervis-670223"
+      },
+      "toTeam": {
+        "id": 447,
+        "name": "Algodoneros Union Laguna",
+        "link": "/api/v1/teams/447"
+      },
+      "date": "2026-06-10",
+      "effectiveDate": "2026-06-10",
+      "resolutionDate": "2026-06-10",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Algodoneros Union Laguna released 1B Matt Mervis."
+    }
+  ]
+}

@@ -1,0 +1,779 @@
+{
+  "player_id": 687863,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:8b2a28c92f0235439445dfa3ed5942e7ad224174462856ab559c68eef6f405c6",
+  "transactions": [
+    {
+      "id": 420206,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2019-07-22",
+      "effectiveDate": "2019-07-22",
+      "resolutionDate": "2019-07-22",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Chicago Cubs signed RHP Porter Hodge."
+    },
+    {
+      "id": 420207,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "toTeam": {
+        "id": 407,
+        "name": "ACL Cubs",
+        "link": "/api/v1/teams/407"
+      },
+      "date": "2019-07-27",
+      "effectiveDate": "2019-07-27",
+      "resolutionDate": "2019-07-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Porter Hodge assigned to AZL Cubs 1."
+    },
+    {
+      "id": 512024,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "fromTeam": {
+        "id": 407,
+        "name": "ACL Cubs",
+        "link": "/api/v1/teams/407"
+      },
+      "toTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "date": "2021-08-15",
+      "effectiveDate": "2021-08-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Porter Hodge assigned to Myrtle Beach Pelicans from ACL Cubs."
+    },
+    {
+      "id": 638844,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "fromTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "toTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "date": "2022-07-21",
+      "effectiveDate": "2022-07-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Porter Hodge assigned to South Bend Cubs from Myrtle Beach Pelicans."
+    },
+    {
+      "id": 681674,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "fromTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2023-04-04",
+      "effectiveDate": "2023-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Porter Hodge and  assigned to Tennessee Smokies from South Bend Cubs."
+    },
+    {
+      "id": 720507,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2023-08-09",
+      "effectiveDate": "2023-08-09",
+      "resolutionDate": "2023-08-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tennessee Smokies transferred RHP Porter Hodge to the Development List."
+    },
+    {
+      "id": 720508,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2023-08-16",
+      "effectiveDate": "2023-08-16",
+      "resolutionDate": "2023-08-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tennessee Smokies activated RHP Porter Hodge."
+    },
+    {
+      "id": 732956,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "fromTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2023-11-14",
+      "effectiveDate": "2023-11-14",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Chicago Cubs selected the contract of RHP Porter Hodge from Tennessee Smokies."
+    },
+    {
+      "id": 754023,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "toTeam": {
+        "id": 107,
+        "name": "Chicago Cubs Prospects",
+        "link": "/api/v1/teams/107"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs Prospects activated RHP Porter Hodge."
+    },
+    {
+      "id": 754386,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2024-03-08",
+      "effectiveDate": "2024-03-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned RHP Porter Hodge to Tennessee Smokies."
+    },
+    {
+      "id": 756287,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2024-03-21",
+      "effectiveDate": "2024-03-21",
+      "resolutionDate": "2024-03-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Porter Hodge assigned to Chicago Cubs."
+    },
+    {
+      "id": 763032,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "fromTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2024-04-12",
+      "effectiveDate": "2024-04-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Porter Hodge assigned to Iowa Cubs from Tennessee Smokies."
+    },
+    {
+      "id": 772343,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2024-05-17",
+      "effectiveDate": "2024-05-17",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled RHP Porter Hodge from Iowa Cubs."
+    },
+    {
+      "id": 778578,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2024-06-07",
+      "effectiveDate": "2024-06-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned RHP Porter Hodge to Iowa Cubs."
+    },
+    {
+      "id": 781555,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2024-06-19",
+      "effectiveDate": "2024-06-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled RHP Porter Hodge from Iowa Cubs."
+    },
+    {
+      "id": 828682,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Porter Hodge changed number to 42."
+    },
+    {
+      "id": 829885,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Porter Hodge changed number to 37."
+    },
+    {
+      "id": 839285,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-05-20",
+      "effectiveDate": "2025-05-18",
+      "resolutionDate": "2025-05-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs placed RHP Porter Hodge on the 15-day injured list retroactive to May 18, 2025. Left oblique strain."
+    },
+    {
+      "id": 850268,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2025-06-13",
+      "effectiveDate": "2025-06-13",
+      "resolutionDate": "2025-06-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago Cubs sent RHP Porter Hodge on a rehab assignment to Iowa Cubs."
+    },
+    {
+      "id": 847038,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2025-06-13",
+      "effectiveDate": "2025-06-13",
+      "resolutionDate": "2025-06-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago Cubs sent RHP Porter Hodge on a rehab assignment to Iowa Cubs."
+    },
+    {
+      "id": 850269,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-06-24",
+      "effectiveDate": "2025-06-24",
+      "resolutionDate": "2025-06-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated RHP Porter Hodge from the 15-day injured list."
+    },
+    {
+      "id": 854166,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-07-09",
+      "effectiveDate": "2025-07-09",
+      "resolutionDate": "2025-07-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs placed RHP Porter Hodge on the 15-day injured list. Right shoulder impingement."
+    },
+    {
+      "id": 858840,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2025-07-26",
+      "effectiveDate": "2025-07-26",
+      "resolutionDate": "2025-07-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago Cubs sent RHP Porter Hodge on a rehab assignment to Iowa Cubs."
+    },
+    {
+      "id": 859938,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2025-07-26",
+      "effectiveDate": "2025-07-26",
+      "resolutionDate": "2025-07-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago Cubs sent RHP Porter Hodge on a rehab assignment to Iowa Cubs."
+    },
+    {
+      "id": 867113,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-07-29",
+      "effectiveDate": "2025-07-29",
+      "resolutionDate": "2025-07-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs reassigned RHP Porter Hodge to the minor leagues."
+    },
+    {
+      "id": 859939,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-07-30",
+      "effectiveDate": "2025-07-30",
+      "resolutionDate": "2025-07-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated RHP Porter Hodge from the 15-day injured list."
+    },
+    {
+      "id": 859940,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2025-07-30",
+      "effectiveDate": "2025-07-30",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned RHP Porter Hodge to Iowa Cubs."
+    },
+    {
+      "id": 867105,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-08-31",
+      "effectiveDate": "2025-08-31",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled RHP Porter Hodge from Iowa Cubs."
+    },
+    {
+      "id": 870187,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2025-09-20",
+      "effectiveDate": "2025-09-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned RHP Porter Hodge to Iowa Cubs."
+    },
+    {
+      "id": 870756,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-09-29",
+      "effectiveDate": "2025-09-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled RHP Porter Hodge from Iowa Cubs."
+    },
+    {
+      "id": 871001,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-09-30",
+      "effectiveDate": "2025-09-30",
+      "resolutionDate": "2025-09-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Porter Hodge roster status changed by Chicago Cubs."
+    },
+    {
+      "id": 872081,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-10-12",
+      "effectiveDate": "2025-10-12",
+      "resolutionDate": "2025-10-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated RHP Porter Hodge."
+    },
+    {
+      "id": 893490,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-03-25",
+      "effectiveDate": "2026-03-22",
+      "resolutionDate": "2026-03-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs placed RHP Porter Hodge on the 15-day injured list retroactive to March 22, 2026. Right elbow strain."
+    },
+    {
+      "id": 902879,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-04-24",
+      "effectiveDate": "2026-04-24",
+      "resolutionDate": "2026-04-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs transferred RHP Porter Hodge from the 15-day injured list to the 60-day injured list. Right elbow strain."
+    },
+    {
+      "id": 947825,
+      "person": {
+        "id": 687863,
+        "fullName": "Porter Hodge",
+        "link": "/api/v1/people/687863",
+        "nameSlug": "porter-hodge-687863"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated RHP Porter Hodge from the 60-day injured list."
+    }
+  ]
+}

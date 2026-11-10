@@ -1,0 +1,2509 @@
+{
+  "player_id": 645801,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:d812a17f706a9674f0610225bd3d80b569ea4263776d7012352e805e4bb8b715",
+  "transactions": [
+    {
+      "id": 370756,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2013-07-17",
+      "effectiveDate": "2013-07-17",
+      "resolutionDate": "2013-07-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Yankees signed free agent 1B Mike Ford to a minor league contract."
+    },
+    {
+      "id": 165413,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2013-07-23",
+      "effectiveDate": "2013-07-23",
+      "resolutionDate": "2013-07-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to Staten Island Yankees."
+    },
+    {
+      "id": 183123,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2014-03-31",
+      "effectiveDate": "2014-03-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to Charleston RiverDogs from Staten Island Yankees."
+    },
+    {
+      "id": 192309,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2014-06-07",
+      "effectiveDate": "2014-06-07",
+      "resolutionDate": "2014-06-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charleston RiverDogs placed 1B Mike Ford on the 7-day disabled list."
+    },
+    {
+      "id": 196635,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2014-06-21",
+      "effectiveDate": "2014-06-21",
+      "resolutionDate": "2014-06-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charleston RiverDogs activated 1B Mike Ford from the 7-day disabled list."
+    },
+    {
+      "id": 200948,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2014-07-17",
+      "effectiveDate": "2014-07-17",
+      "resolutionDate": "2014-07-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charleston RiverDogs placed 1B Mike Ford on the 7-day disabled list."
+    },
+    {
+      "id": 203374,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2014-08-03",
+      "effectiveDate": "2014-08-19",
+      "resolutionDate": "2014-08-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mike Ford roster status changed by Charleston RiverDogs."
+    },
+    {
+      "id": 205484,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2014-08-19",
+      "effectiveDate": "2014-08-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Mike Ford assigned to Tampa Yankees from Charleston RiverDogs."
+    },
+    {
+      "id": 205488,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2014-08-19",
+      "effectiveDate": "2014-08-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to Tampa Yankees from Charleston RiverDogs."
+    },
+    {
+      "id": 229200,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 76,
+        "name": "FSL North Division All-Stars",
+        "link": "/api/v1/teams/76"
+      },
+      "date": "2015-06-19",
+      "effectiveDate": "2015-06-19",
+      "resolutionDate": "2015-06-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to FSL North Division All-Stars."
+    },
+    {
+      "id": 262510,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2016-04-18",
+      "effectiveDate": "2016-04-18",
+      "resolutionDate": "2016-04-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Yankees placed 1B Mike Ford on the 7-day disabled list."
+    },
+    {
+      "id": 265028,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2016-05-10",
+      "effectiveDate": "2016-05-10",
+      "resolutionDate": "2016-05-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Yankees transferred 1B Mike Ford from the 7-day disabled list to the 60-day disabled list."
+    },
+    {
+      "id": 279129,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2016-07-16",
+      "effectiveDate": "2016-07-16",
+      "resolutionDate": "2016-07-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Tampa Yankees sent 1B Mike Ford on a rehab assignment to Staten Island Yankees."
+    },
+    {
+      "id": 279641,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2016-07-20",
+      "effectiveDate": "2016-07-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to Trenton Thunder from Tampa Yankees."
+    },
+    {
+      "id": 287630,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2016-09-20",
+      "effectiveDate": "2016-09-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to Scranton/Wilkes-Barre RailRiders from Trenton Thunder."
+    },
+    {
+      "id": 301258,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-03-25",
+      "effectiveDate": "2017-03-25",
+      "resolutionDate": "2017-03-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to New York Yankees."
+    },
+    {
+      "id": 303143,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2017-04-03",
+      "effectiveDate": "2017-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to Trenton Thunder from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 310451,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2017-05-14",
+      "effectiveDate": "2017-05-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to Scranton/Wilkes-Barre RailRiders from Trenton Thunder."
+    },
+    {
+      "id": 311836,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2017-05-24",
+      "effectiveDate": "2017-05-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to Trenton Thunder from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 322477,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2017-07-05",
+      "effectiveDate": "2017-07-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to Scranton/Wilkes-Barre RailRiders from Trenton Thunder."
+    },
+    {
+      "id": 322950,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2017-07-07",
+      "effectiveDate": "2017-07-07",
+      "resolutionDate": "2017-07-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders placed 1B Mike Ford on the 7-day disabled list."
+    },
+    {
+      "id": 324825,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2017-07-18",
+      "effectiveDate": "2017-07-18",
+      "resolutionDate": "2017-07-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders activated 1B Mike Ford from the 7-day disabled list."
+    },
+    {
+      "id": 327349,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2017-08-02",
+      "effectiveDate": "2017-08-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to Trenton Thunder from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 332066,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2017-09-06",
+      "effectiveDate": "2017-09-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to Scranton/Wilkes-Barre RailRiders from Trenton Thunder."
+    },
+    {
+      "id": 335200,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2017-10-14",
+      "effectiveDate": "2017-10-14",
+      "resolutionDate": "2017-10-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to Estrellas Orientales."
+    },
+    {
+      "id": 338732,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2017-12-14",
+      "effectiveDate": "2017-12-14",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Seattle Mariners claimed 1B Mike Ford off waivers from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 345207,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2018-03-24",
+      "effectiveDate": "2018-03-24",
+      "resolutionDate": "2018-03-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 345206,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2018-03-24",
+      "effectiveDate": "2018-03-24",
+      "typeCode": "RTN",
+      "typeDesc": "Returned",
+      "description": "1B Mike Ford returned to New York Yankees from Seattle Mariners."
+    },
+    {
+      "id": 358592,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2018-06-08",
+      "effectiveDate": "2018-06-08",
+      "resolutionDate": "2018-06-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders placed 1B Mike Ford on the 7-day disabled list."
+    },
+    {
+      "id": 365697,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2018-07-02",
+      "effectiveDate": "2018-07-02",
+      "resolutionDate": "2018-07-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Scranton/Wilkes-Barre RailRiders sent 1B Mike Ford on a rehab assignment to Staten Island Yankees."
+    },
+    {
+      "id": 368209,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2018-07-12",
+      "effectiveDate": "2018-07-12",
+      "resolutionDate": "2018-07-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders activated 1B Mike Ford from the 7-day injured list."
+    },
+    {
+      "id": 387415,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2019-02-01",
+      "effectiveDate": "2019-02-01",
+      "resolutionDate": "2019-02-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Yankees invited non-roster 1B Mike Ford to spring training."
+    },
+    {
+      "id": 396924,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2019-04-16",
+      "effectiveDate": "2019-05-04",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Yankees selected the contract of Mike Ford from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 405709,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2019-04-20",
+      "effectiveDate": "2019-04-20",
+      "resolutionDate": "2019-04-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 399704,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2019-05-04",
+      "effectiveDate": "2019-05-04",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned 1B Mike Ford to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 414618,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2019-07-02",
+      "effectiveDate": "2019-07-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled Mike Ford from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 415742,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2019-07-06",
+      "effectiveDate": "2019-07-06",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned 1B Mike Ford to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 421824,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2019-08-03",
+      "effectiveDate": "2019-08-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled 1B Mike Ford from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 423144,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2019-08-11",
+      "effectiveDate": "2019-08-11",
+      "resolutionDate": "2019-08-11",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "Mike Ford changed number to 36."
+    },
+    {
+      "id": 429161,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2019-10-04",
+      "effectiveDate": "2019-10-04",
+      "resolutionDate": "2019-10-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees reassigned 1B Mike Ford to the minor leagues."
+    },
+    {
+      "id": 433369,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2019-10-20",
+      "effectiveDate": "2019-10-20",
+      "resolutionDate": "2019-10-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees activated 1B Mike Ford."
+    },
+    {
+      "id": 438397,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2020-02-14",
+      "effectiveDate": "2020-02-14",
+      "resolutionDate": "2020-02-14",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "Mike Ford changed number to 36."
+    },
+    {
+      "id": 449711,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2020-08-20",
+      "effectiveDate": "2020-09-15",
+      "resolutionDate": "2020-08-20",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "Mike Ford changed number to ."
+    },
+    {
+      "id": 451438,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "date": "2020-09-15",
+      "effectiveDate": "2020-09-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned 1B Mike Ford to Yankees Alternate Training Site."
+    },
+    {
+      "id": 452269,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2020-09-28",
+      "effectiveDate": "2020-09-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled 1B Mike Ford from Yankees Alternate Training Site."
+    },
+    {
+      "id": 473794,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2021-03-19",
+      "effectiveDate": "2021-03-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned 1B Mike Ford to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 476609,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2021-04-09",
+      "effectiveDate": "2021-04-09",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled 1B Mike Ford from Yankees Alternate Training Site."
+    },
+    {
+      "id": 476676,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "date": "2021-04-10",
+      "effectiveDate": "2021-04-10",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned 1B Mike Ford to Yankees Alternate Training Site."
+    },
+    {
+      "id": 478921,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2021-04-20",
+      "effectiveDate": "2021-04-20",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled 1B Mike Ford from Yankees Alternate Training Site."
+    },
+    {
+      "id": 492102,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2021-06-02",
+      "effectiveDate": "2021-06-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned 1B Mike Ford to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 494106,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2021-06-12",
+      "effectiveDate": "2021-06-12",
+      "resolutionDate": "2021-06-12",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Yankees designated 1B Mike Ford for assignment."
+    },
+    {
+      "id": 494849,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2021-06-17",
+      "effectiveDate": "2021-06-17",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "New York Yankees traded 1B Mike Ford to Tampa Bay Rays for Player To Be Named Later and cash."
+    },
+    {
+      "id": 494852,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2021-06-17",
+      "effectiveDate": "2021-06-17",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned 1B Mike Ford to Durham Bulls."
+    },
+    {
+      "id": 513381,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2021-08-21",
+      "effectiveDate": "2021-08-21",
+      "resolutionDate": "2021-08-21",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Tampa Bay Rays designated 1B Mike Ford for assignment."
+    },
+    {
+      "id": 513716,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2021-08-23",
+      "effectiveDate": "2021-08-23",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Washington Nationals claimed 1B Mike Ford off waivers from Tampa Bay Rays."
+    },
+    {
+      "id": 513897,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2021-08-23",
+      "effectiveDate": "2021-08-23",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Washington Nationals optioned 1B Mike Ford to Rochester Red Wings."
+    },
+    {
+      "id": 520533,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2021-10-05",
+      "effectiveDate": "2021-10-05",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Washington Nationals recalled 1B Mike Ford from Rochester Red Wings."
+    },
+    {
+      "id": 601099,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2021-11-30",
+      "effectiveDate": "2021-11-30",
+      "resolutionDate": "2021-11-30",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "1B Mike Ford elected free agency."
+    },
+    {
+      "id": 606370,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2022-03-16",
+      "effectiveDate": "2022-03-16",
+      "resolutionDate": "2022-03-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Seattle Mariners signed free agent 1B Mike Ford to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 611683,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2022-03-16",
+      "effectiveDate": "2022-03-16",
+      "resolutionDate": "2022-03-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "1B Mike Ford roster status changed by Seattle Mariners."
+    },
+    {
+      "id": 606905,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2022-03-18",
+      "effectiveDate": "2022-03-18",
+      "resolutionDate": "2022-03-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to Tacoma Rainiers."
+    },
+    {
+      "id": 610445,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2022-04-05",
+      "effectiveDate": "2022-04-05",
+      "resolutionDate": "2022-04-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tacoma Rainiers placed 1B Mike Ford on the temporarily inactive list."
+    },
+    {
+      "id": 611444,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2022-04-06",
+      "effectiveDate": "2022-04-06",
+      "resolutionDate": "2022-04-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tacoma Rainiers activated 1B Mike Ford from the temporarily inactive list."
+    },
+    {
+      "id": 616041,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2022-04-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Seattle Mariners selected the contract of 1B Mike Ford from Tacoma Rainiers."
+    },
+    {
+      "id": 617138,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2022-04-25",
+      "effectiveDate": "2022-04-25",
+      "resolutionDate": "2022-04-25",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Seattle Mariners designated 1B Mike Ford for assignment."
+    },
+    {
+      "id": 617137,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2022-04-25",
+      "effectiveDate": "2022-04-25",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned 1B Mike Ford to Tacoma Rainiers."
+    },
+    {
+      "id": 619263,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2022-05-03",
+      "effectiveDate": "2022-05-03",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned 1B Mike Ford to Sacramento River Cats."
+    },
+    {
+      "id": 620736,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2022-05-11",
+      "effectiveDate": "2022-05-11",
+      "resolutionDate": "2022-05-11",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "San Francisco Giants designated 1B Mike Ford for assignment."
+    },
+    {
+      "id": 620873,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2022-05-12",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "San Francisco Giants traded 1B Mike Ford to Seattle Mariners for cash."
+    },
+    {
+      "id": 621021,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2022-05-13",
+      "effectiveDate": "2022-05-13",
+      "resolutionDate": "2022-05-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners activated 1B Mike Ford."
+    },
+    {
+      "id": 627455,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2022-06-05",
+      "effectiveDate": "2022-06-05",
+      "resolutionDate": "2022-06-05",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Seattle Mariners designated 1B Mike Ford for assignment."
+    },
+    {
+      "id": 630032,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2022-06-10",
+      "effectiveDate": "2022-06-10",
+      "resolutionDate": "2022-06-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to Gwinnett Stripers."
+    },
+    {
+      "id": 630031,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2022-06-10",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Atlanta Braves claimed 1B Mike Ford off waivers from Seattle Mariners."
+    },
+    {
+      "id": 630048,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2022-06-10",
+      "effectiveDate": "2022-06-10",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned 1B Mike Ford to Gwinnett Stripers."
+    },
+    {
+      "id": 632081,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2022-06-20",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled 1B Mike Ford and  from Gwinnett Stripers."
+    },
+    {
+      "id": 635062,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2022-07-04",
+      "effectiveDate": "2022-07-04",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned 1B Mike Ford to Gwinnett Stripers."
+    },
+    {
+      "id": 635978,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2022-07-08",
+      "effectiveDate": "2022-07-08",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled 1B Mike Ford from Gwinnett Stripers."
+    },
+    {
+      "id": 636622,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2022-07-11",
+      "effectiveDate": "2022-07-11",
+      "resolutionDate": "2022-07-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers activated 1B Mike Ford."
+    },
+    {
+      "id": 636567,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2022-07-11",
+      "effectiveDate": "2022-07-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned 1B Mike Ford to Gwinnett Stripers."
+    },
+    {
+      "id": 639735,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2022-07-24",
+      "effectiveDate": "2022-07-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled 1B Mike Ford from Gwinnett Stripers."
+    },
+    {
+      "id": 642387,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2022-08-02",
+      "effectiveDate": "2022-08-02",
+      "resolutionDate": "2022-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves placed 1B Mike Ford on the 10-day injured list. Neck strain."
+    },
+    {
+      "id": 645361,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2022-08-10",
+      "effectiveDate": "2022-08-10",
+      "resolutionDate": "2022-08-10",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Atlanta Braves designated 1B Mike Ford for assignment."
+    },
+    {
+      "id": 645363,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2022-08-10",
+      "effectiveDate": "2022-08-10",
+      "resolutionDate": "2022-08-10",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Atlanta Braves released 1B Mike Ford."
+    },
+    {
+      "id": 645364,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2022-08-10",
+      "effectiveDate": "2022-08-10",
+      "resolutionDate": "2022-08-10",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Atlanta Braves released 1B Mike Ford."
+    },
+    {
+      "id": 646916,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2022-08-16",
+      "effectiveDate": "2022-08-16",
+      "resolutionDate": "2022-08-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to Salt Lake Bees."
+    },
+    {
+      "id": 646915,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2022-08-16",
+      "effectiveDate": "2022-08-16",
+      "resolutionDate": "2022-08-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Angels signed free agent 1B Mike Ford to a minor league contract."
+    },
+    {
+      "id": 648661,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2022-08-25",
+      "effectiveDate": "2022-08-25",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Angels selected the contract of 1B Mike Ford from Salt Lake Bees."
+    },
+    {
+      "id": 654240,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2022-09-28",
+      "effectiveDate": "2022-09-28",
+      "resolutionDate": "2022-09-28",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Los Angeles Angels designated 1B Mike Ford for assignment."
+    },
+    {
+      "id": 654477,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2022-10-02",
+      "effectiveDate": "2022-10-02",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Los Angeles Angels sent 1B Mike Ford outright to Salt Lake Bees."
+    },
+    {
+      "id": 655417,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2022-10-07",
+      "effectiveDate": "2022-10-07",
+      "resolutionDate": "2022-10-07",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "1B Mike Ford elected free agency."
+    },
+    {
+      "id": 665230,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2023-01-09",
+      "effectiveDate": "2023-01-09",
+      "resolutionDate": "2023-01-09",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Seattle Mariners signed free agent 1B Mike Ford to a minor league contract."
+    },
+    {
+      "id": 679759,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2023-01-13",
+      "effectiveDate": "2023-01-13",
+      "resolutionDate": "2023-01-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tacoma Rainiers activated 1B Mike Ford."
+    },
+    {
+      "id": 665229,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2023-01-13",
+      "effectiveDate": "2023-01-13",
+      "resolutionDate": "2023-01-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to Tacoma Rainiers."
+    },
+    {
+      "id": 678847,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2023-01-31",
+      "effectiveDate": "2023-01-31",
+      "resolutionDate": "2023-01-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "1B Mike Ford roster status changed by Seattle Mariners."
+    },
+    {
+      "id": 667402,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2023-01-31",
+      "effectiveDate": "2023-01-31",
+      "resolutionDate": "2023-01-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Seattle Mariners invited non-roster 1B Mike Ford to spring training."
+    },
+    {
+      "id": 698052,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2023-06-02",
+      "effectiveDate": "2023-06-02",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Seattle Mariners selected the contract of 1B Mike Ford from Tacoma Rainiers."
+    },
+    {
+      "id": 732918,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2023-11-14",
+      "effectiveDate": "2023-11-14",
+      "resolutionDate": "2023-11-14",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Seattle Mariners designated 1B Mike Ford for assignment."
+    },
+    {
+      "id": 733303,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2023-11-17",
+      "effectiveDate": "2023-11-17",
+      "resolutionDate": "2023-11-17",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "1B Mike Ford elected free agency."
+    },
+    {
+      "id": 756824,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2024-02-24",
+      "effectiveDate": "2024-02-24",
+      "resolutionDate": "2024-02-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "1B Mike Ford roster status changed by Cincinnati Reds."
+    },
+    {
+      "id": 751279,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2024-02-24",
+      "effectiveDate": "2024-02-24",
+      "resolutionDate": "2024-02-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cincinnati Reds signed free agent 1B Mike Ford to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 751280,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2024-02-24",
+      "effectiveDate": "2024-02-24",
+      "resolutionDate": "2024-02-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to Louisville Bats."
+    },
+    {
+      "id": 756823,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2024-03-24",
+      "effectiveDate": "2024-03-24",
+      "resolutionDate": "2024-03-24",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Louisville Bats released 1B Mike Ford."
+    },
+    {
+      "id": 758057,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2024-03-29",
+      "effectiveDate": "2024-03-29",
+      "resolutionDate": "2024-03-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to Louisville Bats."
+    },
+    {
+      "id": 758058,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2024-03-29",
+      "effectiveDate": "2024-03-29",
+      "resolutionDate": "2024-03-29",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cincinnati Reds signed free agent 1B Mike Ford to a minor league contract."
+    },
+    {
+      "id": 766992,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2024-03-29",
+      "effectiveDate": "2024-03-29",
+      "resolutionDate": "2024-03-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Louisville Bats activated 1B Mike Ford."
+    },
+    {
+      "id": 766993,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2024-05-02",
+      "effectiveDate": "2024-05-02",
+      "resolutionDate": "2024-05-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Louisville Bats transferred 1B Mike Ford to the Development List."
+    },
+    {
+      "id": 768242,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2024-05-04",
+      "effectiveDate": "2024-05-04",
+      "resolutionDate": "2024-05-04",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Louisville Bats released 1B Mike Ford."
+    },
+    {
+      "id": 769228,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2024-05-08",
+      "effectiveDate": "2024-05-08",
+      "resolutionDate": "2024-05-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds activated 1B Mike Ford."
+    },
+    {
+      "id": 769134,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2024-05-08",
+      "effectiveDate": "2024-05-08",
+      "resolutionDate": "2024-05-08",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cincinnati Reds signed free agent 1B Mike Ford."
+    },
+    {
+      "id": 774559,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2024-05-29",
+      "effectiveDate": "2024-05-29",
+      "resolutionDate": "2024-05-29",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Cincinnati Reds designated 1B Mike Ford for assignment."
+    },
+    {
+      "id": 775268,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2024-05-31",
+      "effectiveDate": "2024-05-31",
+      "resolutionDate": "2024-05-31",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "1B Mike Ford elected free agency."
+    },
+    {
+      "id": 809778,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2024-12-31",
+      "effectiveDate": "2024-12-31",
+      "resolutionDate": "2024-12-31",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent 1B Mike Ford to a minor league contract."
+    },
+    {
+      "id": 814320,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2024-12-31",
+      "effectiveDate": "2024-12-31",
+      "resolutionDate": "2024-12-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "1B Mike Ford roster status changed by Minnesota Twins."
+    },
+    {
+      "id": 809779,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2024-12-31",
+      "effectiveDate": "2024-12-31",
+      "resolutionDate": "2024-12-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Ford assigned to St. Paul Saints."
+    },
+    {
+      "id": 822504,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2024-12-31",
+      "effectiveDate": "2024-12-31",
+      "resolutionDate": "2024-12-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Paul Saints activated 1B Mike Ford."
+    },
+    {
+      "id": 843691,
+      "person": {
+        "id": 645801,
+        "fullName": "Mike Ford",
+        "link": "/api/v1/people/645801",
+        "nameSlug": "mike-ford-645801"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2025-06-02",
+      "effectiveDate": "2025-06-02",
+      "resolutionDate": "2025-06-02",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "St. Paul Saints released 1B Mike Ford."
+    }
+  ]
+}

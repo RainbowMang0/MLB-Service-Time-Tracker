@@ -1,0 +1,620 @@
+{
+  "player_id": 807713,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:2a4d8a41f2a2d2414062d1eaf4b4813f6a36cb16be9c80239a9751c320a2e037",
+  "transactions": [
+    {
+      "id": 704279,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "toTeam": {
+        "id": 5580,
+        "name": "College Workout",
+        "link": "/api/v1/teams/5580"
+      },
+      "date": "2023-06-15",
+      "effectiveDate": "2023-06-15",
+      "resolutionDate": "2023-06-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Matt Shaw assigned to College Workout."
+    },
+    {
+      "id": 711612,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2023-07-16",
+      "effectiveDate": "2023-07-16",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Chicago Cubs signed SS Matt Shaw."
+    },
+    {
+      "id": 715048,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "toTeam": {
+        "id": 407,
+        "name": "ACL Cubs",
+        "link": "/api/v1/teams/407"
+      },
+      "date": "2023-07-27",
+      "effectiveDate": "2023-07-27",
+      "resolutionDate": "2023-07-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Matt Shaw assigned to ACL Cubs."
+    },
+    {
+      "id": 716613,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "toTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "date": "2023-08-01",
+      "effectiveDate": "2023-08-01",
+      "resolutionDate": "2023-08-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "South Bend Cubs activated SS Matt Shaw."
+    },
+    {
+      "id": 716547,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "fromTeam": {
+        "id": 407,
+        "name": "ACL Cubs",
+        "link": "/api/v1/teams/407"
+      },
+      "toTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "date": "2023-08-01",
+      "effectiveDate": "2023-08-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Matt Shaw assigned to South Bend Cubs from ACL Cubs."
+    },
+    {
+      "id": 722583,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2023-08-29",
+      "effectiveDate": "2023-08-29",
+      "resolutionDate": "2023-08-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tennessee Smokies activated SS Matt Shaw."
+    },
+    {
+      "id": 722577,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "fromTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2023-08-29",
+      "effectiveDate": "2023-08-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Matt Shaw assigned to Tennessee Smokies from South Bend Cubs."
+    },
+    {
+      "id": 740045,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2024-02-09",
+      "effectiveDate": "2024-02-09",
+      "resolutionDate": "2024-02-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago Cubs invited non-roster SS Matt Shaw to spring training."
+    },
+    {
+      "id": 754001,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "toTeam": {
+        "id": 107,
+        "name": "Chicago Cubs Prospects",
+        "link": "/api/v1/teams/107"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs Prospects activated SS Matt Shaw."
+    },
+    {
+      "id": 784460,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "toTeam": {
+        "id": 319,
+        "name": "National League Futures",
+        "link": "/api/v1/teams/319"
+      },
+      "date": "2024-07-14",
+      "effectiveDate": "2024-07-14",
+      "resolutionDate": "2024-07-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "National League Futures activated SS Matt Shaw."
+    },
+    {
+      "id": 784483,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "toTeam": {
+        "id": 319,
+        "name": "National League Futures",
+        "link": "/api/v1/teams/319"
+      },
+      "date": "2024-07-14",
+      "effectiveDate": "2024-07-14",
+      "resolutionDate": "2024-07-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "National League Futures activated SS Matt Shaw."
+    },
+    {
+      "id": 793259,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "fromTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2024-08-06",
+      "effectiveDate": "2024-08-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Matt Shaw assigned to Iowa Cubs from Tennessee Smokies."
+    },
+    {
+      "id": 814125,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-02-07",
+      "effectiveDate": "2025-02-07",
+      "resolutionDate": "2025-02-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago Cubs invited non-roster 2B Matt Shaw to spring training."
+    },
+    {
+      "id": 820707,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-03-17",
+      "effectiveDate": "2025-03-17",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Chicago Cubs selected the contract of 2B Matt Shaw from Iowa Cubs."
+    },
+    {
+      "id": 830024,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-04-14",
+      "effectiveDate": "2025-04-14",
+      "resolutionDate": "2025-04-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs reassigned 2B Matt Shaw to the minor leagues."
+    },
+    {
+      "id": 828671,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "2B Matt Shaw changed number to 42."
+    },
+    {
+      "id": 830025,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs reassigned 2B Matt Shaw to the minor leagues."
+    },
+    {
+      "id": 829106,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned 2B Matt Shaw to Iowa Cubs."
+    },
+    {
+      "id": 839122,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-05-19",
+      "effectiveDate": "2025-05-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled 2B Matt Shaw from Iowa Cubs."
+    },
+    {
+      "id": 861068,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-08-02",
+      "effectiveDate": "2025-08-02",
+      "resolutionDate": "2025-08-02",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "3B Matt Shaw changed number to 23."
+    },
+    {
+      "id": 861274,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-08-03",
+      "effectiveDate": "2025-08-03",
+      "resolutionDate": "2025-08-03",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "3B Matt Shaw changed number to 6."
+    },
+    {
+      "id": 899573,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "3B Matt Shaw changed number to 42."
+    },
+    {
+      "id": 900500,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "3B Matt Shaw changed number to 6."
+    },
+    {
+      "id": 910961,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-05-22",
+      "effectiveDate": "2026-05-20",
+      "resolutionDate": "2026-05-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs placed RF Matt Shaw on the 10-day injured list retroactive to May 20, 2026. Mid-back tightness."
+    },
+    {
+      "id": 915372,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2026-06-02",
+      "effectiveDate": "2026-06-02",
+      "resolutionDate": "2026-06-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago Cubs sent RF Matt Shaw on a rehab assignment to Iowa Cubs."
+    },
+    {
+      "id": 917042,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-06-09",
+      "effectiveDate": "2026-06-09",
+      "resolutionDate": "2026-06-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated RF Matt Shaw from the 10-day injured list."
+    },
+    {
+      "id": 923470,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-06-29",
+      "effectiveDate": "2026-06-29",
+      "resolutionDate": "2026-06-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs placed RF Matt Shaw on the 10-day injured list. left-hand sprain."
+    },
+    {
+      "id": 938502,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2026-08-19",
+      "effectiveDate": "2026-08-19",
+      "resolutionDate": "2026-08-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago Cubs sent RF Matt Shaw on a rehab assignment to Iowa Cubs."
+    },
+    {
+      "id": 939745,
+      "person": {
+        "id": 807713,
+        "fullName": "Matt Shaw",
+        "link": "/api/v1/people/807713",
+        "nameSlug": "matt-shaw-807713"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-08-28",
+      "effectiveDate": "2026-08-28",
+      "resolutionDate": "2026-08-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated RF Matt Shaw from the 10-day injured list."
+    }
+  ]
+}

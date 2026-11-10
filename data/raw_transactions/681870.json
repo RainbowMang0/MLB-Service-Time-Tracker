@@ -1,0 +1,870 @@
+{
+  "player_id": 681870,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:0a80735e5313a1fdc924576433755abfa55ffc466117bbbcc1db0ab4af7c274e",
+  "transactions": [
+    {
+      "id": 362136,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2018-06-18",
+      "effectiveDate": "2018-06-18",
+      "resolutionDate": "2018-06-18",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "San Diego Padres signed LHP Erik Sabrowski."
+    },
+    {
+      "id": 362135,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "date": "2018-06-18",
+      "effectiveDate": "2018-06-18",
+      "resolutionDate": "2018-06-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Erik Sabrowski assigned to AZL Padres 1."
+    },
+    {
+      "id": 368281,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "date": "2018-07-12",
+      "effectiveDate": "2018-07-12",
+      "resolutionDate": "2018-07-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "AZL Padres 1 transferred LHP Erik Sabrowski from the 7-day disabled list to the 60-day disabled list."
+    },
+    {
+      "id": 380063,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "date": "2018-09-26",
+      "effectiveDate": "2018-09-26",
+      "resolutionDate": "2018-09-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "AZL Padres 1 activated LHP Erik Sabrowski from the 60-day injured list."
+    },
+    {
+      "id": 400248,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "fromTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "toTeam": {
+        "id": 5316,
+        "name": "AZL Padres 2",
+        "link": "/api/v1/teams/5316"
+      },
+      "date": "2019-05-07",
+      "effectiveDate": "2019-05-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Erik Sabrowski assigned to AZL Padres 2 from AZL Padres 1."
+    },
+    {
+      "id": 410402,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 5316,
+        "name": "AZL Padres 2",
+        "link": "/api/v1/teams/5316"
+      },
+      "date": "2019-06-18",
+      "effectiveDate": "2019-06-18",
+      "resolutionDate": "2019-06-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "AZL Padres 2 placed LHP Erik Sabrowski on the 60-day injured list."
+    },
+    {
+      "id": 430456,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 5316,
+        "name": "AZL Padres 2",
+        "link": "/api/v1/teams/5316"
+      },
+      "date": "2019-09-13",
+      "effectiveDate": "2019-09-13",
+      "resolutionDate": "2019-09-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "AZL Padres 2 activated LHP Erik Sabrowski from the 60-day injured list."
+    },
+    {
+      "id": 485687,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "fromTeam": {
+        "id": 5316,
+        "name": "AZL Padres 2",
+        "link": "/api/v1/teams/5316"
+      },
+      "toTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "date": "2021-05-04",
+      "effectiveDate": "2021-05-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Erik Sabrowski assigned to Fort Wayne TinCaps from AZL Padres 2."
+    },
+    {
+      "id": 494046,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "date": "2021-06-11",
+      "effectiveDate": "2021-06-11",
+      "resolutionDate": "2021-06-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Fort Wayne TinCaps activated LHP Erik Sabrowski."
+    },
+    {
+      "id": 513335,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "date": "2021-08-20",
+      "effectiveDate": "2021-08-20",
+      "resolutionDate": "2021-08-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Fort Wayne TinCaps placed LHP Erik Sabrowski on the 7-day injured list."
+    },
+    {
+      "id": 519008,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "date": "2021-09-23",
+      "effectiveDate": "2021-09-23",
+      "resolutionDate": "2021-09-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Fort Wayne TinCaps activated LHP Erik Sabrowski from the 7-day injured list."
+    },
+    {
+      "id": 601389,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "fromTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2021-12-08",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Columbus Clippers claimed LHP Erik Sabrowski off waivers from Fort Wayne TinCaps."
+    },
+    {
+      "id": 617909,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "date": "2022-04-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Erik Sabrowski assigned to Akron RubberDucks from Columbus Clippers."
+    },
+    {
+      "id": 658903,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "date": "2022-11-10",
+      "effectiveDate": "2022-11-10",
+      "resolutionDate": "2022-11-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Akron RubberDucks activated LHP Erik Sabrowski."
+    },
+    {
+      "id": 680471,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "fromTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2023-03-31",
+      "effectiveDate": "2023-03-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Erik Sabrowski assigned to Columbus Clippers from Akron RubberDucks."
+    },
+    {
+      "id": 696976,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "date": "2023-05-30",
+      "effectiveDate": "2023-05-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Erik Sabrowski assigned to Akron RubberDucks from Columbus Clippers."
+    },
+    {
+      "id": 710021,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "date": "2023-07-07",
+      "effectiveDate": "2023-07-07",
+      "resolutionDate": "2023-07-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Akron RubberDucks placed LHP Erik Sabrowski on the 7-day injured list."
+    },
+    {
+      "id": 710020,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "date": "2023-07-07",
+      "effectiveDate": "2023-07-07",
+      "resolutionDate": "2023-07-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Akron RubberDucks placed LHP Erik Sabrowski on the 7-day injured list."
+    },
+    {
+      "id": 715830,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "date": "2023-07-30",
+      "effectiveDate": "2023-07-30",
+      "resolutionDate": "2023-07-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Akron RubberDucks activated LHP Erik Sabrowski from the 7-day injured list."
+    },
+    {
+      "id": 726037,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 490,
+        "name": "Peoria Javelinas",
+        "link": "/api/v1/teams/490"
+      },
+      "date": "2023-09-22",
+      "effectiveDate": "2023-09-22",
+      "resolutionDate": "2023-09-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Peoria Javelinas activated LHP Erik Sabrowski."
+    },
+    {
+      "id": 751670,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2024-02-25",
+      "effectiveDate": "2024-02-25",
+      "resolutionDate": "2024-02-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Erik Sabrowski assigned to Cleveland Guardians."
+    },
+    {
+      "id": 758378,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "fromTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2024-03-29",
+      "effectiveDate": "2024-03-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Erik Sabrowski assigned to Columbus Clippers from Akron RubberDucks."
+    },
+    {
+      "id": 763812,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "date": "2024-04-16",
+      "effectiveDate": "2024-04-16",
+      "resolutionDate": "2024-04-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Akron RubberDucks activated LHP Erik Sabrowski."
+    },
+    {
+      "id": 763683,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "date": "2024-04-16",
+      "effectiveDate": "2024-04-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Erik Sabrowski assigned to Akron RubberDucks from Columbus Clippers."
+    },
+    {
+      "id": 773747,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "fromTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2024-05-24",
+      "effectiveDate": "2024-05-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Erik Sabrowski assigned to Columbus Clippers from Akron RubberDucks."
+    },
+    {
+      "id": 783656,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2024-06-29",
+      "effectiveDate": "2024-06-29",
+      "resolutionDate": "2024-06-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbus Clippers placed LHP Erik Sabrowski on the 7-day injured list."
+    },
+    {
+      "id": 785227,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2024-07-05",
+      "effectiveDate": "2024-07-05",
+      "resolutionDate": "2024-07-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbus Clippers activated LHP Erik Sabrowski from the 7-day injured list."
+    },
+    {
+      "id": 796680,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2024-08-28",
+      "effectiveDate": "2024-08-28",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Cleveland Guardians selected the contract of LHP Erik Sabrowski from Columbus Clippers."
+    },
+    {
+      "id": 822332,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2025-03-27",
+      "effectiveDate": "2025-03-24",
+      "resolutionDate": "2025-03-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cleveland Guardians placed LHP Erik Sabrowski on the 15-day injured list retroactive to March 24, 2025. Left elbow inflammation."
+    },
+    {
+      "id": 832194,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2025-04-26",
+      "effectiveDate": "2025-04-26",
+      "resolutionDate": "2025-04-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cleveland Guardians transferred LHP Erik Sabrowski from the 15-day injured list to the 60-day injured list. Left elbow inflammation."
+    },
+    {
+      "id": 841723,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 5374,
+        "name": "ACL Guardians",
+        "link": "/api/v1/teams/5374"
+      },
+      "date": "2025-05-29",
+      "effectiveDate": "2025-05-29",
+      "resolutionDate": "2025-05-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Cleveland Guardians sent LHP Erik Sabrowski on a rehab assignment to ACL Guardians."
+    },
+    {
+      "id": 845502,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "date": "2025-06-06",
+      "effectiveDate": "2025-06-06",
+      "resolutionDate": "2025-06-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Cleveland Guardians sent LHP Erik Sabrowski on a rehab assignment to Akron RubberDucks."
+    },
+    {
+      "id": 846292,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2025-06-10",
+      "effectiveDate": "2025-06-10",
+      "resolutionDate": "2025-06-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Cleveland Guardians sent LHP Erik Sabrowski on a rehab assignment to Columbus Clippers."
+    },
+    {
+      "id": 851035,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2025-06-27",
+      "effectiveDate": "2025-06-27",
+      "resolutionDate": "2025-06-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cleveland Guardians activated LHP Erik Sabrowski from the 60-day injured list."
+    },
+    {
+      "id": 899497,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "LHP Erik Sabrowski changed number to 42."
+    },
+    {
+      "id": 900424,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "LHP Erik Sabrowski changed number to 62."
+    },
+    {
+      "id": 911478,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2026-05-25",
+      "effectiveDate": "2026-05-22",
+      "resolutionDate": "2026-05-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cleveland Guardians placed LHP Erik Sabrowski on the 15-day injured list retroactive to May 22, 2026. Left elbow inflammation."
+    },
+    {
+      "id": 920187,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "date": "2026-06-17",
+      "effectiveDate": "2026-06-17",
+      "resolutionDate": "2026-06-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Cleveland Guardians sent LHP Erik Sabrowski on a rehab assignment to Akron RubberDucks."
+    },
+    {
+      "id": 919497,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "date": "2026-06-17",
+      "effectiveDate": "2026-06-17",
+      "resolutionDate": "2026-06-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Cleveland Guardians sent LHP Erik Sabrowski on a rehab assignment to Akron RubberDucks."
+    },
+    {
+      "id": 920242,
+      "person": {
+        "id": 681870,
+        "fullName": "Erik Sabrowski",
+        "link": "/api/v1/people/681870",
+        "nameSlug": "erik-sabrowski-681870"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2026-06-19",
+      "effectiveDate": "2026-06-19",
+      "resolutionDate": "2026-06-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cleveland Guardians activated LHP Erik Sabrowski from the 15-day injured list."
+    }
+  ]
+}

@@ -563,14 +563,9 @@ def run_refresh(
 
 
 def _league_rows_for_window(start: dt.date, end: dt.date) -> list:
-    """One request per day. A single multi-day response is large on a
-    busy week, and a failed day can be retried on its own."""
-    rows: list = []
-    day = start
-    while day <= end:
-        rows.extend(fetch_league_transactions(day, day))
-        day += dt.timedelta(days=1)
-    return rows
+    """One request for the whole lookback. A busy few days is still a
+    single response, and the daily job is supposed to ask once."""
+    return list(fetch_league_transactions(start, end))
 
 
 def run_window(

@@ -1,0 +1,836 @@
+{
+  "player_id": 804556,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:fbab2d4285eb70d442cbae9bf2ccb2e7bd7aa79de192664c24b0918112d685ff",
+  "transactions": [
+    {
+      "id": 624364,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 449,
+        "name": "Williamsport Crosscutters",
+        "link": "/api/v1/teams/449"
+      },
+      "date": "2022-05-25",
+      "effectiveDate": "2022-05-25",
+      "resolutionDate": "2022-05-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Nett assigned to Williamsport Crosscutters."
+    },
+    {
+      "id": 641817,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2022-08-01",
+      "effectiveDate": "2022-08-01",
+      "resolutionDate": "2022-08-01",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Diego Padres signed free agent RHP Braden Nett to a minor league contract."
+    },
+    {
+      "id": 646010,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "date": "2022-08-12",
+      "effectiveDate": "2022-08-12",
+      "resolutionDate": "2022-08-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Nett assigned to ACL Padres."
+    },
+    {
+      "id": 683689,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "date": "2023-04-06",
+      "effectiveDate": "2023-04-06",
+      "resolutionDate": "2023-04-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lake Elsinore Storm placed RHP Braden Nett on the 60-day injured list."
+    },
+    {
+      "id": 683688,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "fromTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "toTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "date": "2023-04-06",
+      "effectiveDate": "2023-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Nett assigned to Lake Elsinore Storm from ACL Padres."
+    },
+    {
+      "id": 703610,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "fromTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "toTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "date": "2023-06-13",
+      "effectiveDate": "2023-06-13",
+      "resolutionDate": "2023-06-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Lake Elsinore Storm sent RHP Braden Nett on a rehab assignment to ACL Padres."
+    },
+    {
+      "id": 721290,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "date": "2023-08-21",
+      "effectiveDate": "2023-08-21",
+      "resolutionDate": "2023-08-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lake Elsinore Storm activated RHP Braden Nett."
+    },
+    {
+      "id": 721018,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "fromTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "toTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "date": "2023-08-21",
+      "effectiveDate": "2023-08-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Nett assigned to Lake Elsinore Storm from ACL Padres."
+    },
+    {
+      "id": 726038,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 490,
+        "name": "Peoria Javelinas",
+        "link": "/api/v1/teams/490"
+      },
+      "date": "2023-09-22",
+      "effectiveDate": "2023-09-22",
+      "resolutionDate": "2023-09-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Peoria Javelinas activated RHP Braden Nett."
+    },
+    {
+      "id": 730765,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 1311,
+        "name": "National League Fall Stars",
+        "link": "/api/v1/teams/1311"
+      },
+      "date": "2023-11-03",
+      "effectiveDate": "2023-11-03",
+      "resolutionDate": "2023-11-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Nett assigned to National League Fall Stars."
+    },
+    {
+      "id": 752323,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2024-02-28",
+      "effectiveDate": "2024-02-28",
+      "resolutionDate": "2024-02-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Nett assigned to San Diego Padres."
+    },
+    {
+      "id": 753554,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 374,
+        "name": "San Diego Padres Prospects",
+        "link": "/api/v1/teams/374"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres Prospects activated RHP Braden Nett."
+    },
+    {
+      "id": 759655,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "fromTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "toTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "date": "2024-04-02",
+      "effectiveDate": "2024-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Nett assigned to Fort Wayne TinCaps from Lake Elsinore Storm."
+    },
+    {
+      "id": 761484,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "date": "2024-04-05",
+      "effectiveDate": "2024-04-05",
+      "resolutionDate": "2024-04-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Fort Wayne TinCaps transferred RHP Braden Nett to the Development List."
+    },
+    {
+      "id": 763326,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "date": "2024-04-14",
+      "effectiveDate": "2024-04-14",
+      "resolutionDate": "2024-04-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Fort Wayne TinCaps activated RHP Braden Nett."
+    },
+    {
+      "id": 769485,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "date": "2024-05-09",
+      "effectiveDate": "2024-05-09",
+      "resolutionDate": "2024-05-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Fort Wayne TinCaps placed RHP Braden Nett on the 7-day injured list."
+    },
+    {
+      "id": 776300,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "date": "2024-06-02",
+      "effectiveDate": "2024-06-02",
+      "resolutionDate": "2024-06-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Fort Wayne TinCaps activated RHP Braden Nett from the 7-day injured list."
+    },
+    {
+      "id": 798484,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2024-09-07",
+      "effectiveDate": "2024-09-07",
+      "resolutionDate": "2024-09-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Antonio Missions activated RHP Braden Nett."
+    },
+    {
+      "id": 823354,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2024-09-07",
+      "effectiveDate": "2024-09-07",
+      "resolutionDate": "2024-09-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Antonio Missions activated RHP Braden Nett."
+    },
+    {
+      "id": 860237,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2024-09-07",
+      "effectiveDate": "2024-09-07",
+      "resolutionDate": "2024-09-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Antonio Missions activated RHP Braden Nett."
+    },
+    {
+      "id": 798482,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2024-09-07",
+      "effectiveDate": "2024-09-07",
+      "resolutionDate": "2024-09-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Antonio Missions activated RHP Braden Nett."
+    },
+    {
+      "id": 798188,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "fromTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2024-09-07",
+      "effectiveDate": "2024-09-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Nett assigned to San Antonio Missions from Fort Wayne TinCaps."
+    },
+    {
+      "id": 806089,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 4087,
+        "name": "Senadores de San Juan",
+        "link": "/api/v1/teams/4087"
+      },
+      "date": "2024-11-12",
+      "effectiveDate": "2024-11-12",
+      "resolutionDate": "2024-11-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Nett assigned to Senadores de San Juan."
+    },
+    {
+      "id": 814041,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2025-02-07",
+      "effectiveDate": "2025-02-07",
+      "resolutionDate": "2025-02-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres invited non-roster RHP Braden Nett to spring training."
+    },
+    {
+      "id": 818921,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 374,
+        "name": "San Diego Padres Prospects",
+        "link": "/api/v1/teams/374"
+      },
+      "date": "2025-03-06",
+      "effectiveDate": "2025-03-06",
+      "resolutionDate": "2025-03-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "activated RHP Braden Nett."
+    },
+    {
+      "id": 860238,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2025-07-31",
+      "effectiveDate": "2025-07-31",
+      "resolutionDate": "2025-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Nett assigned to Midland RockHounds."
+    },
+    {
+      "id": 860233,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2025-07-31",
+      "effectiveDate": "2025-07-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Athletics traded RHP Mason Miller and LHP JP Sears to San Diego Padres for RHP Henry Baez, RHP Eduarniel Núñez, SS Leo De Vries and RHP Braden Nett."
+    },
+    {
+      "id": 862659,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2025-08-05",
+      "effectiveDate": "2025-08-05",
+      "resolutionDate": "2025-08-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Midland RockHounds activated RHP Braden Nett."
+    },
+    {
+      "id": 877246,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "fromTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2025-11-18",
+      "effectiveDate": "2025-11-18",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Athletics selected the contract of RHP Braden Nett from Midland RockHounds."
+    },
+    {
+      "id": 890544,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 372,
+        "name": "Athletics Prospects",
+        "link": "/api/v1/teams/372"
+      },
+      "date": "2026-03-05",
+      "effectiveDate": "2026-03-05",
+      "resolutionDate": "2026-03-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Nett assigned to Athletics Prospects."
+    },
+    {
+      "id": 891169,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2026-03-08",
+      "effectiveDate": "2026-03-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Athletics optioned RHP Braden Nett to Las Vegas Aviators."
+    },
+    {
+      "id": 894249,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2026-03-27",
+      "effectiveDate": "2026-03-27",
+      "resolutionDate": "2026-03-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Las Vegas Aviators placed RHP Braden Nett on the 7-day injured list."
+    },
+    {
+      "id": 903024,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2026-04-25",
+      "effectiveDate": "2026-04-25",
+      "resolutionDate": "2026-04-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Las Vegas Aviators activated RHP Braden Nett from the 7-day injured list."
+    },
+    {
+      "id": 903763,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2026-04-28",
+      "effectiveDate": "2026-04-27",
+      "resolutionDate": "2026-04-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Las Vegas Aviators placed RHP Braden Nett on the 7-day injured list retroactive to April 27, 2026."
+    },
+    {
+      "id": 913840,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2026-05-30",
+      "effectiveDate": "2026-05-30",
+      "resolutionDate": "2026-05-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Las Vegas Aviators activated RHP Braden Nett from the 7-day injured list."
+    },
+    {
+      "id": 920263,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 5426,
+        "name": "ACL Athletics",
+        "link": "/api/v1/teams/5426"
+      },
+      "date": "2026-06-19",
+      "effectiveDate": "2026-06-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Nett assigned to ACL Athletics from Las Vegas Aviators."
+    },
+    {
+      "id": 925626,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "fromTeam": {
+        "id": 5426,
+        "name": "ACL Athletics",
+        "link": "/api/v1/teams/5426"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2026-07-07",
+      "effectiveDate": "2026-07-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Nett assigned to Las Vegas Aviators from ACL Athletics."
+    },
+    {
+      "id": 936165,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2026-08-07",
+      "effectiveDate": "2026-08-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Nett assigned to Midland RockHounds from Las Vegas Aviators."
+    },
+    {
+      "id": 944344,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "fromTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2026-09-28",
+      "effectiveDate": "2026-09-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Athletics recalled RHP Braden Nett from Midland RockHounds."
+    }
+  ]
+}

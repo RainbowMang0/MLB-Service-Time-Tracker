@@ -1,0 +1,727 @@
+{
+  "player_id": 672773,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:f063fdcba20a9ccd37b1e58c1ed42761139646d9f341da69d01e9a5f4ed286b1",
+  "transactions": [
+    {
+      "id": 290599,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2016-10-01",
+      "effectiveDate": "2016-10-01",
+      "resolutionDate": "2016-10-01",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Arizona Diamondbacks signed free agent RHP Elvis Luciano to a minor league contract."
+    },
+    {
+      "id": 291138,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 610,
+        "name": "DSL Arizona Black",
+        "link": "/api/v1/teams/610"
+      },
+      "date": "2016-10-25",
+      "effectiveDate": "2016-10-25",
+      "resolutionDate": "2016-10-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Elvis Luciano assigned to DSL D-backs."
+    },
+    {
+      "id": 329260,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "fromTeam": {
+        "id": 610,
+        "name": "DSL Arizona Black",
+        "link": "/api/v1/teams/610"
+      },
+      "toTeam": {
+        "id": 1991,
+        "name": "ACL D-backs",
+        "link": "/api/v1/teams/1991"
+      },
+      "date": "2017-08-15",
+      "effectiveDate": "2017-08-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Elvis Luciano assigned to AZL D-backs from DSL D-backs1."
+    },
+    {
+      "id": 331735,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "fromTeam": {
+        "id": 1991,
+        "name": "ACL D-backs",
+        "link": "/api/v1/teams/1991"
+      },
+      "toTeam": {
+        "id": 518,
+        "name": "Missoula PaddleHeads",
+        "link": "/api/v1/teams/518"
+      },
+      "date": "2017-09-03",
+      "effectiveDate": "2017-09-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Elvis Luciano assigned to Missoula Osprey from AZL D-backs."
+    },
+    {
+      "id": 358355,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2018-06-06",
+      "effectiveDate": "2018-06-06",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Kansas City Royals traded LF Jon Jay to Arizona Diamondbacks for Elvis Luciano and Gabe Speier."
+    },
+    {
+      "id": 358361,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 483,
+        "name": "Burlington Sock Puppets",
+        "link": "/api/v1/teams/483"
+      },
+      "date": "2018-06-06",
+      "effectiveDate": "2018-06-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Elvis Luciano assigned to Burlington Royals from Kansas City Royals."
+    },
+    {
+      "id": 377106,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "fromTeam": {
+        "id": 483,
+        "name": "Burlington Sock Puppets",
+        "link": "/api/v1/teams/483"
+      },
+      "toTeam": {
+        "id": 444,
+        "name": "Idaho Falls Chukars",
+        "link": "/api/v1/teams/444"
+      },
+      "date": "2018-08-31",
+      "effectiveDate": "2018-08-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Elvis Luciano assigned to Idaho Falls Chukars from Burlington Royals."
+    },
+    {
+      "id": 384773,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "fromTeam": {
+        "id": 444,
+        "name": "Idaho Falls Chukars",
+        "link": "/api/v1/teams/444"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2018-12-13",
+      "effectiveDate": "2018-12-13",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Toronto Blue Jays claimed RHP Elvis Luciano off waivers from Idaho Falls Chukars."
+    },
+    {
+      "id": 402868,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2019-05-24",
+      "effectiveDate": "2019-05-24",
+      "resolutionDate": "2019-05-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays placed RHP Elvis Luciano on the bereavement list."
+    },
+    {
+      "id": 403844,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2019-05-29",
+      "effectiveDate": "2019-05-29",
+      "resolutionDate": "2019-05-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays activated RHP Elvis Luciano from the bereavement list."
+    },
+    {
+      "id": 408284,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2019-06-13",
+      "effectiveDate": "2019-06-13",
+      "resolutionDate": "2019-06-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays placed RHP Elvis Luciano on the 10-day injured list. Right elbow sprain."
+    },
+    {
+      "id": 409847,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2019-06-17",
+      "effectiveDate": "2019-06-17",
+      "resolutionDate": "2019-06-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays transferred RHP Elvis Luciano from the 10-day injured list to the 60-day injured list. Right elbow sprain."
+    },
+    {
+      "id": 427917,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2019-09-12",
+      "effectiveDate": "2019-09-12",
+      "resolutionDate": "2019-09-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays activated RHP Elvis Luciano from the 60-day injured list."
+    },
+    {
+      "id": 471188,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2019-10-14",
+      "effectiveDate": "2019-10-14",
+      "resolutionDate": "2019-10-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Elvis Luciano assigned to Tigres del Licey."
+    },
+    {
+      "id": 430825,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2019-10-14",
+      "effectiveDate": "2019-10-14",
+      "resolutionDate": "2019-10-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Elvis Luciano assigned to Tigres del Licey."
+    },
+    {
+      "id": 440696,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2020-03-09",
+      "effectiveDate": "2020-03-09",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Toronto Blue Jays optioned RHP Elvis Luciano to New Hampshire Fisher Cats."
+    },
+    {
+      "id": 447742,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "fromTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "toTeam": {
+        "id": 3256,
+        "name": "Blue Jays Alternate Training Site",
+        "link": "/api/v1/teams/3256"
+      },
+      "date": "2020-06-30",
+      "effectiveDate": "2020-06-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Elvis Luciano assigned to Blue Jays Alternate Training Site from New Hampshire Fisher Cats."
+    },
+    {
+      "id": 446248,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2020-07-01",
+      "effectiveDate": "2020-06-30",
+      "resolutionDate": "2020-06-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays placed RHP Elvis Luciano on the 10-day injured list retroactive to June 30, 2020."
+    },
+    {
+      "id": 452308,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "fromTeam": {
+        "id": 3256,
+        "name": "Blue Jays Alternate Training Site",
+        "link": "/api/v1/teams/3256"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2020-09-28",
+      "effectiveDate": "2020-09-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Toronto Blue Jays recalled RHP Elvis Luciano from Blue Jays Alternate Training Site."
+    },
+    {
+      "id": 452379,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2020-09-29",
+      "effectiveDate": "2020-09-29",
+      "resolutionDate": "2020-09-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays reassigned RHP Elvis Luciano to the minor leagues."
+    },
+    {
+      "id": 452754,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2020-10-01",
+      "effectiveDate": "2020-10-01",
+      "resolutionDate": "2020-10-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays activated RHP Elvis Luciano."
+    },
+    {
+      "id": 473735,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2021-03-16",
+      "effectiveDate": "2021-03-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Toronto Blue Jays optioned P Elvis Luciano to Buffalo Bisons."
+    },
+    {
+      "id": 490560,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2021-05-24",
+      "effectiveDate": "2021-05-24",
+      "resolutionDate": "2021-05-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New Hampshire Fisher Cats placed RHP Elvis Luciano on the 7-day injured list."
+    },
+    {
+      "id": 495214,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2021-06-19",
+      "effectiveDate": "2021-06-19",
+      "resolutionDate": "2021-06-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New Hampshire Fisher Cats activated RHP Elvis Luciano from the 7-day injured list."
+    },
+    {
+      "id": 506100,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2021-07-20",
+      "effectiveDate": "2021-07-20",
+      "resolutionDate": "2021-07-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New Hampshire Fisher Cats placed RHP Elvis Luciano on the 7-day injured list."
+    },
+    {
+      "id": 512934,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2021-08-18",
+      "effectiveDate": "2021-08-18",
+      "resolutionDate": "2021-08-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New Hampshire Fisher Cats activated RHP Elvis Luciano from the 7-day injured list."
+    },
+    {
+      "id": 513701,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2021-08-23",
+      "effectiveDate": "2021-08-23",
+      "resolutionDate": "2021-08-23",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Toronto Blue Jays released RHP Elvis Luciano."
+    },
+    {
+      "id": 515470,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2021-08-30",
+      "effectiveDate": "2021-08-30",
+      "resolutionDate": "2021-08-30",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Toronto Blue Jays signed free agent RHP Elvis Luciano to a minor league contract."
+    },
+    {
+      "id": 515469,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2021-09-01",
+      "effectiveDate": "2021-09-01",
+      "resolutionDate": "2021-09-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Elvis Luciano assigned to New Hampshire Fisher Cats."
+    },
+    {
+      "id": 615603,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2022-04-15",
+      "effectiveDate": "2022-04-15",
+      "resolutionDate": "2022-04-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New Hampshire Fisher Cats placed RHP Elvis Luciano on the 7-day injured list."
+    },
+    {
+      "id": 638410,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2022-07-13",
+      "effectiveDate": "2022-07-13",
+      "resolutionDate": "2022-07-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Elvis Luciano roster status changed by New Hampshire Fisher Cats."
+    },
+    {
+      "id": 637618,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2022-07-13",
+      "effectiveDate": "2022-07-13",
+      "resolutionDate": "2022-07-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Elvis Luciano roster status changed by New Hampshire Fisher Cats."
+    },
+    {
+      "id": 659925,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2022-11-10",
+      "effectiveDate": "2022-11-10",
+      "resolutionDate": "2022-11-10",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Elvis Luciano elected free agency."
+    },
+    {
+      "id": 819229,
+      "person": {
+        "id": 672773,
+        "fullName": "Elvis Luciano",
+        "link": "/api/v1/people/672773",
+        "nameSlug": "elvis-luciano-672773"
+      },
+      "toTeam": {
+        "id": 241,
+        "name": "Tokyo Yomiuri Giants",
+        "link": "/api/v1/teams/241"
+      },
+      "date": "2025-03-07",
+      "effectiveDate": "2025-03-07",
+      "resolutionDate": "2025-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tokyo Yomiuri Giants transferred RHP Elvis Luciano to the Development List."
+    }
+  ]
+}

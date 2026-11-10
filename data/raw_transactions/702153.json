@@ -1,0 +1,520 @@
+{
+  "player_id": 702153,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:63d01f8e255fb0b2e024004ab426c1b919dffc0e5347e6315fb9d945f06dae7b",
+  "transactions": [
+    {
+      "id": 645645,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2022-08-10",
+      "effectiveDate": "2022-08-10",
+      "resolutionDate": "2022-08-10",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Milwaukee Brewers signed LHP Brian Fitzpatrick."
+    },
+    {
+      "id": 645646,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "toTeam": {
+        "id": 5430,
+        "name": "ACL Brewers Blue",
+        "link": "/api/v1/teams/5430"
+      },
+      "date": "2022-08-11",
+      "effectiveDate": "2022-08-11",
+      "resolutionDate": "2022-08-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Brian Fitzpatrick assigned to ACL Brewers Blue."
+    },
+    {
+      "id": 683570,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "toTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "date": "2023-04-06",
+      "effectiveDate": "2023-04-06",
+      "resolutionDate": "2023-04-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Carolina Mudcats placed LHP Brian Fitzpatrick on the 60-day injured list."
+    },
+    {
+      "id": 683569,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "fromTeam": {
+        "id": 5430,
+        "name": "ACL Brewers Blue",
+        "link": "/api/v1/teams/5430"
+      },
+      "toTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "date": "2023-04-06",
+      "effectiveDate": "2023-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Brian Fitzpatrick assigned to Carolina Mudcats from ACL Brewers Blue."
+    },
+    {
+      "id": 708799,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "fromTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "toTeam": {
+        "id": 406,
+        "name": "ACL Brewers",
+        "link": "/api/v1/teams/406"
+      },
+      "date": "2023-07-04",
+      "effectiveDate": "2023-07-04",
+      "resolutionDate": "2023-07-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Carolina Mudcats sent LHP Brian Fitzpatrick on a rehab assignment to ACL Brewers."
+    },
+    {
+      "id": 716417,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "toTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "date": "2023-08-01",
+      "effectiveDate": "2023-08-01",
+      "resolutionDate": "2023-08-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Carolina Mudcats activated LHP Brian Fitzpatrick from the 60-day injured list."
+    },
+    {
+      "id": 730997,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "toTeam": {
+        "id": 4065,
+        "name": "Brisbane Bandits",
+        "link": "/api/v1/teams/4065"
+      },
+      "date": "2023-11-05",
+      "effectiveDate": "2023-11-05",
+      "resolutionDate": "2023-11-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Brian Fitzpatrick assigned to Brisbane Bandits."
+    },
+    {
+      "id": 758612,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "fromTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "toTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "date": "2024-03-31",
+      "effectiveDate": "2024-03-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Brian Fitzpatrick assigned to Wisconsin Timber Rattlers from Carolina Mudcats."
+    },
+    {
+      "id": 795021,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "toTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "date": "2024-08-16",
+      "effectiveDate": "2024-08-16",
+      "resolutionDate": "2024-08-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Wisconsin Timber Rattlers placed LHP Brian Fitzpatrick on the 7-day injured list."
+    },
+    {
+      "id": 799652,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "toTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "date": "2024-09-19",
+      "effectiveDate": "2024-09-19",
+      "resolutionDate": "2024-09-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Wisconsin Timber Rattlers activated LHP Brian Fitzpatrick from the 7-day injured list."
+    },
+    {
+      "id": 821450,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2025-03-21",
+      "effectiveDate": "2025-03-21",
+      "resolutionDate": "2025-03-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Brian Fitzpatrick assigned to Milwaukee Brewers."
+    },
+    {
+      "id": 827717,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "fromTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "toTeam": {
+        "id": 5015,
+        "name": "Biloxi Shuckers",
+        "link": "/api/v1/teams/5015"
+      },
+      "date": "2025-04-12",
+      "effectiveDate": "2025-04-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Brian Fitzpatrick assigned to Biloxi Shuckers from Wisconsin Timber Rattlers."
+    },
+    {
+      "id": 837637,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "toTeam": {
+        "id": 5015,
+        "name": "Biloxi Shuckers",
+        "link": "/api/v1/teams/5015"
+      },
+      "date": "2025-05-14",
+      "effectiveDate": "2025-05-14",
+      "resolutionDate": "2025-05-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Biloxi Shuckers placed LHP Brian Fitzpatrick on the 7-day injured list."
+    },
+    {
+      "id": 861442,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "toTeam": {
+        "id": 5015,
+        "name": "Biloxi Shuckers",
+        "link": "/api/v1/teams/5015"
+      },
+      "date": "2025-06-18",
+      "effectiveDate": "2025-06-18",
+      "resolutionDate": "2025-06-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Biloxi Shuckers activated LHP Brian Fitzpatrick from the 7-day injured list."
+    },
+    {
+      "id": 849008,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "toTeam": {
+        "id": 5015,
+        "name": "Biloxi Shuckers",
+        "link": "/api/v1/teams/5015"
+      },
+      "date": "2025-06-18",
+      "effectiveDate": "2025-06-18",
+      "resolutionDate": "2025-06-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Biloxi Shuckers activated LHP Brian Fitzpatrick from the 7-day injured list."
+    },
+    {
+      "id": 893991,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2025-08-08",
+      "effectiveDate": "2025-08-08",
+      "resolutionDate": "2025-08-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Nashville Sounds activated LHP Brian Fitzpatrick."
+    },
+    {
+      "id": 863199,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "fromTeam": {
+        "id": 5015,
+        "name": "Biloxi Shuckers",
+        "link": "/api/v1/teams/5015"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2025-08-08",
+      "effectiveDate": "2025-08-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Brian Fitzpatrick assigned to Nashville Sounds from Biloxi Shuckers."
+    },
+    {
+      "id": 887498,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-02-22",
+      "effectiveDate": "2026-02-22",
+      "resolutionDate": "2026-02-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Brian Fitzpatrick assigned to Milwaukee Brewers."
+    },
+    {
+      "id": 889917,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "toTeam": {
+        "id": 387,
+        "name": "Milwaukee Brewers Prospects",
+        "link": "/api/v1/teams/387"
+      },
+      "date": "2026-03-05",
+      "effectiveDate": "2026-03-05",
+      "resolutionDate": "2026-03-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Brian Fitzpatrick assigned to Milwaukee Brewers Prospects."
+    },
+    {
+      "id": 904216,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-04-29",
+      "effectiveDate": "2026-04-29",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Milwaukee Brewers selected the contract of LHP Brian Fitzpatrick from Nashville Sounds."
+    },
+    {
+      "id": 909322,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2026-05-15",
+      "effectiveDate": "2026-05-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned LHP Brian Fitzpatrick to Nashville Sounds."
+    },
+    {
+      "id": 916141,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-06-05",
+      "effectiveDate": "2026-06-05",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Milwaukee Brewers recalled LHP Brian Fitzpatrick from Nashville Sounds."
+    },
+    {
+      "id": 916391,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-06-06",
+      "effectiveDate": "2026-06-06",
+      "resolutionDate": "2026-06-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers placed LHP Brian Fitzpatrick on the 15-day injured list. Left elbow injury."
+    },
+    {
+      "id": 917076,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-06-09",
+      "effectiveDate": "2026-06-09",
+      "resolutionDate": "2026-06-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers transferred LHP Brian Fitzpatrick from the 15-day injured list to the 60-day injured list. Left elbow injury."
+    }
+  ]
+}

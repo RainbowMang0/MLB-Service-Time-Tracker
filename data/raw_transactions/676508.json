@@ -1,0 +1,851 @@
+{
+  "player_id": 676508,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:64a2a9590928a22ff224fd41930251d7b734896478cc3829eedc44568e8fce33",
+  "transactions": [
+    {
+      "id": 438071,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 5486,
+        "name": "Connecticut Huskies",
+        "link": "/api/v1/teams/5486"
+      },
+      "date": "2020-02-10",
+      "effectiveDate": "2020-02-10",
+      "resolutionDate": "2020-02-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Casparius assigned to Connecticut Huskies."
+    },
+    {
+      "id": 515633,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-07-23",
+      "effectiveDate": "2021-07-23",
+      "resolutionDate": "2021-07-23",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Los Angeles Dodgers signed RHP Ben Casparius."
+    },
+    {
+      "id": 515634,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2021-09-02",
+      "effectiveDate": "2021-09-02",
+      "resolutionDate": "2021-09-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Casparius assigned to ACL Dodgers."
+    },
+    {
+      "id": 517922,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "fromTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2021-09-16",
+      "effectiveDate": "2021-09-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Casparius assigned to Rancho Cucamonga Quakes from ACL Dodgers."
+    },
+    {
+      "id": 624911,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "fromTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2022-05-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Casparius assigned to Great Lakes Loons from Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 696080,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2023-05-25",
+      "effectiveDate": "2023-05-25",
+      "resolutionDate": "2023-05-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers activated RHP Ben Casparius."
+    },
+    {
+      "id": 696015,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2023-05-25",
+      "effectiveDate": "2023-05-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Casparius assigned to Tulsa Drillers from Great Lakes Loons."
+    },
+    {
+      "id": 711274,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2023-07-10",
+      "effectiveDate": "2023-07-10",
+      "resolutionDate": "2023-07-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers transferred RHP Ben Casparius to the Development List."
+    },
+    {
+      "id": 712599,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2023-07-19",
+      "effectiveDate": "2023-07-19",
+      "resolutionDate": "2023-07-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers activated RHP Ben Casparius."
+    },
+    {
+      "id": 726126,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 454,
+        "name": "Glendale Desert Dogs",
+        "link": "/api/v1/teams/454"
+      },
+      "date": "2023-09-22",
+      "effectiveDate": "2023-09-22",
+      "resolutionDate": "2023-09-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Glendale Desert Dogs activated RHP Ben Casparius."
+    },
+    {
+      "id": 768601,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "fromTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2024-05-07",
+      "effectiveDate": "2024-05-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Casparius assigned to Oklahoma City Baseball Club from Tulsa Drillers."
+    },
+    {
+      "id": 772258,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2024-05-16",
+      "effectiveDate": "2024-05-16",
+      "resolutionDate": "2024-05-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Baseball Club placed RHP Ben Casparius on the temporarily inactive list."
+    },
+    {
+      "id": 773200,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2024-05-21",
+      "effectiveDate": "2024-05-21",
+      "resolutionDate": "2024-05-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Baseball Club activated RHP Ben Casparius from the temporarily inactive list."
+    },
+    {
+      "id": 781900,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2024-06-19",
+      "effectiveDate": "2024-06-19",
+      "resolutionDate": "2024-06-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Baseball Club placed RHP Ben Casparius on the 7-day injured list."
+    },
+    {
+      "id": 786905,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2024-07-14",
+      "effectiveDate": "2024-07-14",
+      "resolutionDate": "2024-07-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Baseball Club activated RHP Ben Casparius from the 7-day injured list."
+    },
+    {
+      "id": 795125,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2024-08-18",
+      "effectiveDate": "2024-08-18",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Dodgers selected the contract of RHP Ben Casparius from Oklahoma City Baseball Club."
+    },
+    {
+      "id": 796097,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2024-08-21",
+      "effectiveDate": "2024-08-21",
+      "resolutionDate": "2024-08-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Baseball Club activated RHP Ben Casparius."
+    },
+    {
+      "id": 795750,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2024-08-21",
+      "effectiveDate": "2024-08-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned RHP Ben Casparius to Oklahoma City Baseball Club."
+    },
+    {
+      "id": 797140,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2024-08-31",
+      "effectiveDate": "2024-08-31",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled RHP Ben Casparius from Oklahoma City Baseball Club."
+    },
+    {
+      "id": 797307,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2024-09-01",
+      "effectiveDate": "2024-09-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned RHP Ben Casparius to Oklahoma City Baseball Club."
+    },
+    {
+      "id": 799761,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2024-09-20",
+      "effectiveDate": "2024-09-20",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled RHP Ben Casparius from Oklahoma City Baseball Club."
+    },
+    {
+      "id": 800045,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2024-09-24",
+      "effectiveDate": "2024-09-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned RHP Ben Casparius to Oklahoma City Baseball Club."
+    },
+    {
+      "id": 800466,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2024-09-26",
+      "effectiveDate": "2024-09-26",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled RHP Ben Casparius from Oklahoma City Baseball Club."
+    },
+    {
+      "id": 800585,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2024-09-28",
+      "effectiveDate": "2024-09-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned RHP Ben Casparius to ACL Dodgers."
+    },
+    {
+      "id": 801485,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "fromTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2024-09-30",
+      "effectiveDate": "2024-09-30",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled RHP Ben Casparius from ACL Dodgers."
+    },
+    {
+      "id": 801486,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2024-10-05",
+      "effectiveDate": "2024-10-05",
+      "resolutionDate": "2024-10-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Ben Casparius roster status changed by Los Angeles Dodgers."
+    },
+    {
+      "id": 801487,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2024-10-08",
+      "effectiveDate": "2024-10-08",
+      "resolutionDate": "2024-10-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated RHP Ben Casparius."
+    },
+    {
+      "id": 828491,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Ben Casparius changed number to 42."
+    },
+    {
+      "id": 829694,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Ben Casparius changed number to 78."
+    },
+    {
+      "id": 868444,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2025-09-09",
+      "effectiveDate": "2025-09-09",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned RHP Ben Casparius to Oklahoma City Comets."
+    },
+    {
+      "id": 870791,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-09-29",
+      "effectiveDate": "2025-09-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled RHP Ben Casparius from Oklahoma City Comets."
+    },
+    {
+      "id": 871088,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-09-30",
+      "effectiveDate": "2025-09-30",
+      "resolutionDate": "2025-09-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Ben Casparius roster status changed by Los Angeles Dodgers."
+    },
+    {
+      "id": 872130,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-10-13",
+      "effectiveDate": "2025-10-13",
+      "resolutionDate": "2025-10-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated RHP Ben Casparius."
+    },
+    {
+      "id": 873822,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-10-24",
+      "effectiveDate": "2025-10-24",
+      "resolutionDate": "2025-10-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Ben Casparius roster status changed by Los Angeles Dodgers."
+    },
+    {
+      "id": 874454,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-11-02",
+      "effectiveDate": "2025-11-02",
+      "resolutionDate": "2025-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated RHP Ben Casparius."
+    },
+    {
+      "id": 898700,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2026-04-13",
+      "effectiveDate": "2026-04-13",
+      "resolutionDate": "2026-04-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed RHP Ben Casparius on the 15-day injured list. Right shoulder inflammation."
+    },
+    {
+      "id": 910037,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2026-05-18",
+      "effectiveDate": "2026-05-18",
+      "resolutionDate": "2026-05-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers transferred RHP Ben Casparius from the 15-day injured list to the 60-day injured list. Right shoulder inflammation."
+    },
+    {
+      "id": 931273,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2026-07-25",
+      "effectiveDate": "2026-07-25",
+      "resolutionDate": "2026-07-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers sent RHP Ben Casparius on a rehab assignment to Oklahoma City Comets."
+    },
+    {
+      "id": 947836,
+      "person": {
+        "id": 676508,
+        "fullName": "Ben Casparius",
+        "link": "/api/v1/people/676508",
+        "nameSlug": "ben-casparius-676508"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated RHP Ben Casparius from the 60-day injured list."
+    }
+  ]
+}

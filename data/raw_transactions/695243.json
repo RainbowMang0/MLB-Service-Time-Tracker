@@ -1,0 +1,849 @@
+{
+  "player_id": 695243,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:5d7d062e89f43757337a706d6d9c69e81a5246d3fb219aad48ae8aa3a923d274",
+  "transactions": [
+    {
+      "id": 506276,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2021-07-21",
+      "effectiveDate": "2021-07-21",
+      "resolutionDate": "2021-07-21",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Oakland Athletics signed RHP Mason Miller."
+    },
+    {
+      "id": 512670,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 3255,
+        "name": "Athletics Organization",
+        "link": "/api/v1/teams/3255"
+      },
+      "date": "2021-08-17",
+      "effectiveDate": "2021-08-17",
+      "resolutionDate": "2021-08-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Mason Miller assigned to Athletics Organization."
+    },
+    {
+      "id": 516726,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "fromTeam": {
+        "id": 3255,
+        "name": "Athletics Organization",
+        "link": "/api/v1/teams/3255"
+      },
+      "toTeam": {
+        "id": 5426,
+        "name": "ACL Athletics",
+        "link": "/api/v1/teams/5426"
+      },
+      "date": "2021-09-09",
+      "effectiveDate": "2021-09-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Mason Miller assigned to ACL Athletics from Athletics Organization."
+    },
+    {
+      "id": 618189,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "fromTeam": {
+        "id": 5426,
+        "name": "ACL Athletics",
+        "link": "/api/v1/teams/5426"
+      },
+      "toTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "date": "2022-04-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Mason Miller assigned to Lansing Lugnuts from ACL Athletics."
+    },
+    {
+      "id": 647968,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "fromTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "toTeam": {
+        "id": 5426,
+        "name": "ACL Athletics",
+        "link": "/api/v1/teams/5426"
+      },
+      "date": "2022-08-23",
+      "effectiveDate": "2022-08-23",
+      "resolutionDate": "2022-08-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Lansing Lugnuts sent RHP Mason Miller on a rehab assignment to ACL Athletics."
+    },
+    {
+      "id": 648733,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "date": "2022-08-25",
+      "effectiveDate": "2022-08-25",
+      "resolutionDate": "2022-08-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lansing Lugnuts activated RHP Mason Miller from the 60-day injured list."
+    },
+    {
+      "id": 652465,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "fromTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2022-09-15",
+      "effectiveDate": "2022-09-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Mason Miller assigned to Las Vegas Aviators from Lansing Lugnuts."
+    },
+    {
+      "id": 652499,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 555,
+        "name": "Mesa Solar Sox",
+        "link": "/api/v1/teams/555"
+      },
+      "date": "2022-09-16",
+      "effectiveDate": "2022-09-16",
+      "resolutionDate": "2022-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mesa Solar Sox activated RHP Mason Miller."
+    },
+    {
+      "id": 670166,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 555,
+        "name": "Mesa Solar Sox",
+        "link": "/api/v1/teams/555"
+      },
+      "date": "2022-09-16",
+      "effectiveDate": "2022-09-16",
+      "resolutionDate": "2022-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mesa Solar Sox activated RHP Mason Miller."
+    },
+    {
+      "id": 653860,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "date": "2022-09-26",
+      "effectiveDate": "2022-09-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Mason Miller assigned to Lansing Lugnuts from Las Vegas Aviators."
+    },
+    {
+      "id": 663747,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2022-12-20",
+      "effectiveDate": "2022-12-20",
+      "resolutionDate": "2022-12-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Oakland Athletics invited non-roster RHP Mason Miller to spring training."
+    },
+    {
+      "id": 679064,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2022-12-20",
+      "effectiveDate": "2022-12-20",
+      "resolutionDate": "2022-12-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Mason Miller roster status changed by Oakland Athletics."
+    },
+    {
+      "id": 682476,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2023-04-06",
+      "effectiveDate": "2023-04-06",
+      "resolutionDate": "2023-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Mason Miller assigned to Midland RockHounds."
+    },
+    {
+      "id": 684150,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "fromTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2023-04-11",
+      "effectiveDate": "2023-04-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Mason Miller assigned to Las Vegas Aviators from Midland RockHounds."
+    },
+    {
+      "id": 685760,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2023-04-19",
+      "effectiveDate": "2023-04-19",
+      "resolutionDate": "2023-04-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics activated RHP Mason Miller."
+    },
+    {
+      "id": 685755,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2023-04-19",
+      "effectiveDate": "2023-04-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Oakland Athletics selected the contract of RHP Mason Miller from Las Vegas Aviators."
+    },
+    {
+      "id": 691269,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2023-05-11",
+      "effectiveDate": "2023-05-08",
+      "resolutionDate": "2023-05-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics placed RHP Mason Miller on the 15-day injured list retroactive to May 8, 2023. Tightness in right forearm."
+    },
+    {
+      "id": 708020,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2023-06-30",
+      "effectiveDate": "2023-06-30",
+      "resolutionDate": "2023-06-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics transferred RHP Mason Miller from the 15-day injured list to the 60-day injured list. Tightness in right forearm."
+    },
+    {
+      "id": 720300,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 524,
+        "name": "Stockton Ports",
+        "link": "/api/v1/teams/524"
+      },
+      "date": "2023-08-16",
+      "effectiveDate": "2023-08-16",
+      "resolutionDate": "2023-08-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Oakland Athletics sent RHP Mason Miller on a rehab assignment to Stockton Ports."
+    },
+    {
+      "id": 721642,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2023-08-23",
+      "effectiveDate": "2023-08-23",
+      "resolutionDate": "2023-08-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Oakland Athletics sent RHP Mason Miller on a rehab assignment to Las Vegas Aviators."
+    },
+    {
+      "id": 723797,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2023-09-06",
+      "effectiveDate": "2023-09-06",
+      "resolutionDate": "2023-09-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics activated RHP Mason Miller from the 60-day injured list."
+    },
+    {
+      "id": 739304,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2024-02-05",
+      "effectiveDate": "2024-02-05",
+      "resolutionDate": "2024-02-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics activated RHP Mason Miller."
+    },
+    {
+      "id": 785698,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 159,
+        "name": "American League All-Stars",
+        "link": "/api/v1/teams/159"
+      },
+      "date": "2024-07-15",
+      "effectiveDate": "2024-07-15",
+      "resolutionDate": "2024-07-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Mason Miller assigned to American League All-Stars."
+    },
+    {
+      "id": 789689,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2024-07-25",
+      "effectiveDate": "2024-07-23",
+      "resolutionDate": "2024-07-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics placed RHP Mason Miller on the 15-day injured list retroactive to July 23, 2024. Broken left hand."
+    },
+    {
+      "id": 793342,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2024-08-07",
+      "effectiveDate": "2024-08-07",
+      "resolutionDate": "2024-08-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics activated RHP Mason Miller from the 15-day injured list."
+    },
+    {
+      "id": 828427,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Mason Miller changed number to 42."
+    },
+    {
+      "id": 829627,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Mason Miller changed number to 19."
+    },
+    {
+      "id": 860551,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2025-07-31",
+      "effectiveDate": "2025-07-31",
+      "resolutionDate": "2025-07-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Mason Miller roster status changed by San Diego Padres."
+    },
+    {
+      "id": 860233,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2025-07-31",
+      "effectiveDate": "2025-07-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Athletics traded RHP Mason Miller and LHP JP Sears to San Diego Padres for RHP Henry Baez, RHP Eduarniel Núñez, SS Leo De Vries and RHP Braden Nett."
+    },
+    {
+      "id": 860798,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2025-08-01",
+      "effectiveDate": "2025-08-01",
+      "resolutionDate": "2025-08-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres activated RHP Mason Miller."
+    },
+    {
+      "id": 884544,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 940,
+        "name": "United States",
+        "link": "/api/v1/teams/940"
+      },
+      "date": "2026-02-05",
+      "effectiveDate": "2026-02-05",
+      "resolutionDate": "2026-02-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "United States activated RHP Mason Miller."
+    },
+    {
+      "id": 899121,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Mason Miller changed number to 42."
+    },
+    {
+      "id": 900043,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Mason Miller changed number to 22."
+    },
+    {
+      "id": 918618,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2026-06-15",
+      "effectiveDate": "2026-06-15",
+      "resolutionDate": "2026-06-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres placed RHP Mason Miller on the bereavement list."
+    },
+    {
+      "id": 920268,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2026-06-19",
+      "effectiveDate": "2026-06-19",
+      "resolutionDate": "2026-06-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres activated RHP Mason Miller from the bereavement list."
+    },
+    {
+      "id": 925142,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 160,
+        "name": "National League All-Stars",
+        "link": "/api/v1/teams/160"
+      },
+      "date": "2026-07-13",
+      "effectiveDate": "2026-07-13",
+      "resolutionDate": "2026-07-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "National League All-Stars activated RHP Mason Miller."
+    },
+    {
+      "id": 942789,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2026-09-15",
+      "effectiveDate": "2026-09-15",
+      "resolutionDate": "2026-09-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Mason Miller changed number to 21."
+    },
+    {
+      "id": 942870,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2026-09-16",
+      "effectiveDate": "2026-09-16",
+      "resolutionDate": "2026-09-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Mason Miller changed number to 22."
+    },
+    {
+      "id": 945209,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2026-10-06",
+      "effectiveDate": "2026-10-06",
+      "resolutionDate": "2026-10-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres placed RHP Mason Miller on the paternity list."
+    },
+    {
+      "id": 945348,
+      "person": {
+        "id": 695243,
+        "fullName": "Mason Miller",
+        "link": "/api/v1/people/695243",
+        "nameSlug": "mason-miller-695243"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2026-10-07",
+      "effectiveDate": "2026-10-07",
+      "resolutionDate": "2026-10-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres activated RHP Mason Miller from the paternity list."
+    }
+  ]
+}

@@ -1,0 +1,1382 @@
+{
+  "player_id": 656981,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:323cd01d0b8b4ad1d274b49d4dc8131ed4dada2ffcc5339174f2e6070c6a2eb3",
+  "transactions": [
+    {
+      "id": 306372,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 225,
+        "link": "/api/v1/teams/225"
+      },
+      "date": "2017-04-18",
+      "effectiveDate": "2017-04-18",
+      "resolutionDate": "2017-04-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Peter Solomon assigned to Notre Dame Fighting Irish."
+    },
+    {
+      "id": 318585,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2017-06-22",
+      "effectiveDate": "2017-06-22",
+      "resolutionDate": "2017-06-22",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Houston Astros signed RHP Peter Solomon."
+    },
+    {
+      "id": 323508,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 1998,
+        "name": "FCL Astros",
+        "link": "/api/v1/teams/1998"
+      },
+      "date": "2017-07-11",
+      "effectiveDate": "2017-07-11",
+      "resolutionDate": "2017-07-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Peter Solomon assigned to GCL Astros."
+    },
+    {
+      "id": 324004,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 1998,
+        "name": "FCL Astros",
+        "link": "/api/v1/teams/1998"
+      },
+      "toTeam": {
+        "id": 413,
+        "name": "Greeneville Flyboys",
+        "link": "/api/v1/teams/413"
+      },
+      "date": "2017-07-14",
+      "effectiveDate": "2017-07-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Peter Solomon assigned to Greeneville Astros from GCL Astros."
+    },
+    {
+      "id": 331601,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 413,
+        "name": "Greeneville Flyboys",
+        "link": "/api/v1/teams/413"
+      },
+      "toTeam": {
+        "id": 1998,
+        "name": "FCL Astros",
+        "link": "/api/v1/teams/1998"
+      },
+      "date": "2017-09-01",
+      "effectiveDate": "2017-09-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Peter Solomon assigned to GCL Astros from Greeneville Astros."
+    },
+    {
+      "id": 345920,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 1998,
+        "name": "FCL Astros",
+        "link": "/api/v1/teams/1998"
+      },
+      "toTeam": {
+        "id": 565,
+        "name": "Quad Cities River Bandits",
+        "link": "/api/v1/teams/565"
+      },
+      "date": "2018-03-30",
+      "effectiveDate": "2018-03-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Peter Solomon assigned to Quad Cities River Bandits from GCL Astros."
+    },
+    {
+      "id": 358255,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 71,
+        "name": "MWL West Division All-Stars",
+        "link": "/api/v1/teams/71"
+      },
+      "date": "2018-06-18",
+      "effectiveDate": "2018-06-18",
+      "resolutionDate": "2018-06-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Peter Solomon assigned to MID West Division All-Stars."
+    },
+    {
+      "id": 364753,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 565,
+        "name": "Quad Cities River Bandits",
+        "link": "/api/v1/teams/565"
+      },
+      "date": "2018-06-27",
+      "effectiveDate": "2018-06-27",
+      "resolutionDate": "2018-06-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Quad Cities River Bandits placed RHP Peter Solomon on the temporarily inactive list."
+    },
+    {
+      "id": 365447,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 565,
+        "name": "Quad Cities River Bandits",
+        "link": "/api/v1/teams/565"
+      },
+      "date": "2018-06-27",
+      "effectiveDate": "2018-06-27",
+      "resolutionDate": "2018-06-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Quad Cities River Bandits activated RHP Peter Solomon."
+    },
+    {
+      "id": 370620,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 565,
+        "name": "Quad Cities River Bandits",
+        "link": "/api/v1/teams/565"
+      },
+      "toTeam": {
+        "id": 3712,
+        "name": "Fayetteville Woodpeckers",
+        "link": "/api/v1/teams/3712"
+      },
+      "date": "2018-07-24",
+      "effectiveDate": "2018-07-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Peter Solomon assigned to Buies Creek Astros from Quad Cities River Bandits."
+    },
+    {
+      "id": 388802,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2019-02-24",
+      "effectiveDate": "2019-02-24",
+      "resolutionDate": "2019-02-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Peter Solomon assigned to Houston Astros."
+    },
+    {
+      "id": 397066,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 3712,
+        "name": "Fayetteville Woodpeckers",
+        "link": "/api/v1/teams/3712"
+      },
+      "date": "2019-04-16",
+      "effectiveDate": "2019-04-16",
+      "resolutionDate": "2019-04-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Fayetteville Woodpeckers placed RHP Peter Solomon on the 7-day injured list."
+    },
+    {
+      "id": 430079,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 3712,
+        "name": "Fayetteville Woodpeckers",
+        "link": "/api/v1/teams/3712"
+      },
+      "date": "2019-10-08",
+      "effectiveDate": "2019-10-08",
+      "resolutionDate": "2019-10-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Fayetteville Woodpeckers activated RHP Peter Solomon from the 7-day injured list."
+    },
+    {
+      "id": 470040,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2020-11-20",
+      "effectiveDate": "2020-11-20",
+      "resolutionDate": "2020-11-20",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Houston Astros selected the contract of RHP Peter Solomon."
+    },
+    {
+      "id": 456660,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 3712,
+        "name": "Fayetteville Woodpeckers",
+        "link": "/api/v1/teams/3712"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2020-11-20",
+      "effectiveDate": "2020-11-20",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Houston Astros selected the contract of RHP Peter Solomon from Fayetteville Woodpeckers."
+    },
+    {
+      "id": 473728,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2021-03-16",
+      "effectiveDate": "2021-03-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned P Peter Solomon to Sugar Land Skeeters."
+    },
+    {
+      "id": 478785,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 3252,
+        "name": "Astros Alternate Training Site",
+        "link": "/api/v1/teams/3252"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2021-04-17",
+      "effectiveDate": "2021-04-17",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Houston Astros recalled RHP Peter Solomon from Astros Alternate Training Site."
+    },
+    {
+      "id": 479068,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 3252,
+        "name": "Astros Alternate Training Site",
+        "link": "/api/v1/teams/3252"
+      },
+      "date": "2021-04-22",
+      "effectiveDate": "2021-04-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned RHP Peter Solomon to Astros Alternate Training Site."
+    },
+    {
+      "id": 480247,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 3252,
+        "name": "Astros Alternate Training Site",
+        "link": "/api/v1/teams/3252"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2021-04-26",
+      "effectiveDate": "2021-04-26",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Houston Astros recalled RHP Peter Solomon from Astros Alternate Training Site."
+    },
+    {
+      "id": 481407,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 3252,
+        "name": "Astros Alternate Training Site",
+        "link": "/api/v1/teams/3252"
+      },
+      "date": "2021-04-30",
+      "effectiveDate": "2021-04-30",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned RHP Peter Solomon to Astros Alternate Training Site."
+    },
+    {
+      "id": 485104,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 3252,
+        "name": "Astros Alternate Training Site",
+        "link": "/api/v1/teams/3252"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2021-05-05",
+      "effectiveDate": "2021-05-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Peter Solomon assigned to Sugar Land Skeeters from Astros Alternate Training Site."
+    },
+    {
+      "id": 492752,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2021-06-05",
+      "effectiveDate": "2021-06-05",
+      "resolutionDate": "2021-06-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Peter Solomon roster status changed by Sugar Land Skeeters."
+    },
+    {
+      "id": 493098,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2021-06-07",
+      "effectiveDate": "2021-06-07",
+      "resolutionDate": "2021-06-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sugar Land Skeeters activated RHP Peter Solomon."
+    },
+    {
+      "id": 500461,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2021-07-01",
+      "effectiveDate": "2021-07-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Houston Astros recalled RHP Peter Solomon from Sugar Land Skeeters."
+    },
+    {
+      "id": 501179,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2021-07-05",
+      "effectiveDate": "2021-07-05",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned RHP Peter Solomon to Sugar Land Skeeters."
+    },
+    {
+      "id": 518248,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2021-09-18",
+      "effectiveDate": "2021-09-18",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Houston Astros recalled RHP Peter Solomon from Sugar Land Skeeters."
+    },
+    {
+      "id": 518447,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2021-09-20",
+      "effectiveDate": "2021-09-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned RHP Peter Solomon to Sugar Land Skeeters."
+    },
+    {
+      "id": 518937,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2021-09-24",
+      "effectiveDate": "2021-09-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Houston Astros recalled RHP Peter Solomon from Sugar Land Skeeters."
+    },
+    {
+      "id": 519562,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2021-09-30",
+      "effectiveDate": "2021-09-30",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned RHP Peter Solomon to Sugar Land Skeeters."
+    },
+    {
+      "id": 523362,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2021-11-03",
+      "effectiveDate": "2021-11-03",
+      "resolutionDate": "2021-11-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros activated RHP Peter Solomon."
+    },
+    {
+      "id": 610506,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2022-03-28",
+      "effectiveDate": "2022-03-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned RHP Peter Solomon to Sugar Land Space Cowboys."
+    },
+    {
+      "id": 650180,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2022-09-01",
+      "effectiveDate": "2022-09-01",
+      "resolutionDate": "2022-09-01",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Houston Astros designated RHP Peter Solomon for assignment."
+    },
+    {
+      "id": 650577,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2022-09-04",
+      "effectiveDate": "2022-09-04",
+      "resolutionDate": "2022-09-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Peter Solomon assigned to Indianapolis Indians."
+    },
+    {
+      "id": 650576,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2022-09-04",
+      "effectiveDate": "2022-09-04",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Pittsburgh Pirates claimed RHP Peter Solomon off waivers from Houston Astros."
+    },
+    {
+      "id": 655142,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2022-10-06",
+      "effectiveDate": "2022-10-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Pittsburgh Pirates recalled RHP Peter Solomon from Indianapolis Indians."
+    },
+    {
+      "id": 659177,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2022-11-10",
+      "effectiveDate": "2022-11-10",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Pittsburgh Pirates sent RHP Peter Solomon outright to Indianapolis Indians."
+    },
+    {
+      "id": 680104,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2022-12-07",
+      "effectiveDate": "2022-12-07",
+      "resolutionDate": "2022-12-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces activated RHP Peter Solomon."
+    },
+    {
+      "id": 662738,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2022-12-07",
+      "effectiveDate": "2022-12-07",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Reno Aces claimed RHP Peter Solomon off waivers from Indianapolis Indians."
+    },
+    {
+      "id": 667915,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2023-02-03",
+      "effectiveDate": "2023-02-03",
+      "resolutionDate": "2023-02-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Arizona Diamondbacks invited non-roster RHP Peter Solomon and  to spring training."
+    },
+    {
+      "id": 683824,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2023-04-09",
+      "effectiveDate": "2023-04-09",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Arizona Diamondbacks selected the contract of RHP Peter Solomon,  and  from Reno Aces."
+    },
+    {
+      "id": 688792,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2023-05-03",
+      "effectiveDate": "2023-05-03",
+      "resolutionDate": "2023-05-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces activated RHP Peter Solomon."
+    },
+    {
+      "id": 688748,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2023-05-03",
+      "effectiveDate": "2023-05-03",
+      "resolutionDate": "2023-05-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces activated RHP Peter Solomon."
+    },
+    {
+      "id": 688667,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2023-05-03",
+      "effectiveDate": "2023-05-03",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Peter Solomon to Reno Aces."
+    },
+    {
+      "id": 696837,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2023-05-29",
+      "effectiveDate": "2023-05-29",
+      "resolutionDate": "2023-05-29",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Arizona Diamondbacks designated RHP Peter Solomon for assignment."
+    },
+    {
+      "id": 697858,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2023-06-01",
+      "effectiveDate": "2023-06-01",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Arizona Diamondbacks sent RHP Peter Solomon outright to Reno Aces."
+    },
+    {
+      "id": 705384,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 5368,
+        "name": "Amarillo Sod Poodles",
+        "link": "/api/v1/teams/5368"
+      },
+      "date": "2023-06-20",
+      "effectiveDate": "2023-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Peter Solomon assigned to Amarillo Sod Poodles from Reno Aces."
+    },
+    {
+      "id": 712165,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 5368,
+        "name": "Amarillo Sod Poodles",
+        "link": "/api/v1/teams/5368"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2023-07-18",
+      "effectiveDate": "2023-07-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Peter Solomon assigned to Reno Aces from Amarillo Sod Poodles."
+    },
+    {
+      "id": 718911,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 5368,
+        "name": "Amarillo Sod Poodles",
+        "link": "/api/v1/teams/5368"
+      },
+      "date": "2023-08-09",
+      "effectiveDate": "2023-08-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Peter Solomon assigned to Amarillo Sod Poodles from Reno Aces."
+    },
+    {
+      "id": 722993,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "fromTeam": {
+        "id": 5368,
+        "name": "Amarillo Sod Poodles",
+        "link": "/api/v1/teams/5368"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2023-09-01",
+      "effectiveDate": "2023-09-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Peter Solomon assigned to Reno Aces from Amarillo Sod Poodles."
+    },
+    {
+      "id": 727867,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2023-10-03",
+      "effectiveDate": "2023-10-03",
+      "resolutionDate": "2023-10-03",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Peter Solomon elected free agency."
+    },
+    {
+      "id": 770563,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-05-12",
+      "effectiveDate": "2024-05-12",
+      "resolutionDate": "2024-05-12",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent RHP Peter Solomon to a minor league contract."
+    },
+    {
+      "id": 770564,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2024-05-12",
+      "effectiveDate": "2024-05-12",
+      "resolutionDate": "2024-05-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Peter Solomon assigned to Round Rock Express."
+    },
+    {
+      "id": 786812,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2024-07-13",
+      "effectiveDate": "2024-07-13",
+      "resolutionDate": "2024-07-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express transferred RHP Peter Solomon to the Development List."
+    },
+    {
+      "id": 789027,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2024-07-23",
+      "effectiveDate": "2024-07-23",
+      "resolutionDate": "2024-07-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express activated RHP Peter Solomon."
+    },
+    {
+      "id": 805147,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "resolutionDate": "2024-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Peter Solomon elected free agency."
+    },
+    {
+      "id": 832927,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-04-22",
+      "effectiveDate": "2025-04-22",
+      "resolutionDate": "2025-04-22",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago Cubs signed free agent RHP Peter Solomon to a minor league contract."
+    },
+    {
+      "id": 832928,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2025-04-30",
+      "effectiveDate": "2025-04-30",
+      "resolutionDate": "2025-04-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Peter Solomon assigned to Iowa Cubs."
+    },
+    {
+      "id": 832929,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2025-04-30",
+      "effectiveDate": "2025-04-30",
+      "resolutionDate": "2025-04-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Peter Solomon assigned to Iowa Cubs."
+    },
+    {
+      "id": 839870,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2025-05-20",
+      "effectiveDate": "2025-05-20",
+      "resolutionDate": "2025-05-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs placed RHP Peter Solomon on the 7-day injured list."
+    },
+    {
+      "id": 842950,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2025-06-01",
+      "effectiveDate": "2025-06-01",
+      "resolutionDate": "2025-06-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs activated RHP Peter Solomon from the 7-day injured list."
+    },
+    {
+      "id": 845898,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2025-06-08",
+      "effectiveDate": "2025-06-08",
+      "resolutionDate": "2025-06-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs placed RHP Peter Solomon on the 7-day injured list."
+    },
+    {
+      "id": 859773,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2025-06-08",
+      "effectiveDate": "2025-06-08",
+      "resolutionDate": "2025-06-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs placed RHP Peter Solomon on the 7-day injured list."
+    },
+    {
+      "id": 863383,
+      "person": {
+        "id": 656981,
+        "fullName": "Peter Solomon",
+        "link": "/api/v1/people/656981",
+        "nameSlug": "peter-solomon-656981"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2025-08-08",
+      "effectiveDate": "2025-08-08",
+      "resolutionDate": "2025-08-08",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Iowa Cubs released RHP Peter Solomon."
+    }
+  ]
+}

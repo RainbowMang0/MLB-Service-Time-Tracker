@@ -1,0 +1,1585 @@
+{
+  "player_id": 642456,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:3dce8584d39dc7065506038441cda920eb9ec0c5c9594f1937787dd1f0f5d8ba",
+  "transactions": [
+    {
+      "id": 370554,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2012-07-03",
+      "effectiveDate": "2012-07-03",
+      "resolutionDate": "2012-07-03",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Oakland Athletics signed free agent LF Luis Barrera to a minor league contract."
+    },
+    {
+      "id": 228067,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 602,
+        "name": "DSL Athletics",
+        "link": "/api/v1/teams/602"
+      },
+      "toTeam": {
+        "id": 405,
+        "name": "AZL Athletics Green",
+        "link": "/api/v1/teams/405"
+      },
+      "date": "2015-05-19",
+      "effectiveDate": "2015-05-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Luis Barrera assigned to AZL Athletics from DSL Athletics."
+    },
+    {
+      "id": 271336,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 405,
+        "name": "AZL Athletics Green",
+        "link": "/api/v1/teams/405"
+      },
+      "toTeam": {
+        "id": 462,
+        "name": "Vermont Lake Monsters",
+        "link": "/api/v1/teams/462"
+      },
+      "date": "2016-06-15",
+      "effectiveDate": "2016-06-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Luis Barrera assigned to Vermont Lake Monsters from AZL Athletics."
+    },
+    {
+      "id": 282522,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 462,
+        "name": "Vermont Lake Monsters",
+        "link": "/api/v1/teams/462"
+      },
+      "toTeam": {
+        "id": 554,
+        "name": "Beloit Sky Carp",
+        "link": "/api/v1/teams/554"
+      },
+      "date": "2016-08-05",
+      "effectiveDate": "2016-08-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Luis Barrera assigned to Beloit Snappers from Vermont Lake Monsters."
+    },
+    {
+      "id": 307753,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 554,
+        "name": "Beloit Sky Carp",
+        "link": "/api/v1/teams/554"
+      },
+      "date": "2017-04-26",
+      "effectiveDate": "2017-04-26",
+      "resolutionDate": "2017-04-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Beloit Snappers placed LF Luis Barrera on the 7-day disabled list."
+    },
+    {
+      "id": 309631,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 554,
+        "name": "Beloit Sky Carp",
+        "link": "/api/v1/teams/554"
+      },
+      "date": "2017-05-09",
+      "effectiveDate": "2017-05-09",
+      "resolutionDate": "2017-05-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Beloit Snappers activated LF Luis Barrera from the 7-day disabled list."
+    },
+    {
+      "id": 323640,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 554,
+        "name": "Beloit Sky Carp",
+        "link": "/api/v1/teams/554"
+      },
+      "toTeam": {
+        "id": 524,
+        "name": "Stockton Ports",
+        "link": "/api/v1/teams/524"
+      },
+      "date": "2017-07-12",
+      "effectiveDate": "2017-07-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Luis Barrera assigned to Stockton Ports from Beloit Snappers."
+    },
+    {
+      "id": 332123,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 524,
+        "name": "Stockton Ports",
+        "link": "/api/v1/teams/524"
+      },
+      "toTeam": {
+        "id": 554,
+        "name": "Beloit Sky Carp",
+        "link": "/api/v1/teams/554"
+      },
+      "date": "2017-09-06",
+      "effectiveDate": "2017-09-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Luis Barrera assigned to Beloit Snappers from Stockton Ports."
+    },
+    {
+      "id": 339728,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2018-01-08",
+      "effectiveDate": "2018-01-08",
+      "resolutionDate": "2018-01-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Luis Barrera assigned to Tigres del Licey."
+    },
+    {
+      "id": 347027,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 554,
+        "name": "Beloit Sky Carp",
+        "link": "/api/v1/teams/554"
+      },
+      "toTeam": {
+        "id": 524,
+        "name": "Stockton Ports",
+        "link": "/api/v1/teams/524"
+      },
+      "date": "2018-04-02",
+      "effectiveDate": "2018-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Luis Barrera assigned to Stockton Ports from Beloit Snappers."
+    },
+    {
+      "id": 368838,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 524,
+        "name": "Stockton Ports",
+        "link": "/api/v1/teams/524"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2018-07-15",
+      "effectiveDate": "2018-07-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Luis Barrera assigned to Midland RockHounds from Stockton Ports."
+    },
+    {
+      "id": 376604,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2018-08-27",
+      "effectiveDate": "2018-08-27",
+      "resolutionDate": "2018-08-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Midland RockHounds placed CF Luis Barrera on the 7-day disabled list."
+    },
+    {
+      "id": 377062,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2018-08-30",
+      "effectiveDate": "2018-08-30",
+      "resolutionDate": "2018-08-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Midland RockHounds activated CF Luis Barrera from the 7-day disabled list."
+    },
+    {
+      "id": 383708,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2018-11-20",
+      "effectiveDate": "2019-03-03",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Oakland Athletics selected the contract of Luis Barrera from Midland RockHounds."
+    },
+    {
+      "id": 383624,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2018-11-20",
+      "effectiveDate": "2018-11-20",
+      "resolutionDate": "2018-11-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Luis Barrera assigned to Tigres del Licey."
+    },
+    {
+      "id": 385597,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2018-12-27",
+      "effectiveDate": "2018-12-27",
+      "resolutionDate": "2018-12-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tigres del Licey placed OF Luis Barrera on the reserve list."
+    },
+    {
+      "id": 389564,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2019-03-03",
+      "effectiveDate": "2019-03-03",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Oakland Athletics optioned CF Luis Barrera to Las Vegas Aviators."
+    },
+    {
+      "id": 393837,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2019-04-01",
+      "effectiveDate": "2019-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Luis Barrera assigned to Midland RockHounds from Las Vegas Aviators."
+    },
+    {
+      "id": 397775,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2019-04-20",
+      "effectiveDate": "2019-04-20",
+      "resolutionDate": "2019-04-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Midland RockHounds placed CF Luis Barrera on the 7-day injured list."
+    },
+    {
+      "id": 400087,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2019-05-06",
+      "effectiveDate": "2019-05-06",
+      "resolutionDate": "2019-05-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Midland RockHounds activated CF Luis Barrera from the 7-day injured list."
+    },
+    {
+      "id": 414495,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2019-07-01",
+      "effectiveDate": "2019-07-01",
+      "resolutionDate": "2019-07-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Midland RockHounds placed CF Luis Barrera on the 7-day injured list."
+    },
+    {
+      "id": 427776,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2019-09-09",
+      "effectiveDate": "2019-09-09",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Oakland Athletics recalled CF Luis Barrera from Midland RockHounds."
+    },
+    {
+      "id": 427777,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2019-09-09",
+      "effectiveDate": "2019-09-09",
+      "resolutionDate": "2019-09-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics placed CF Luis Barrera on the 60-day injured list. Right shoulder surgery."
+    },
+    {
+      "id": 431929,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2019-10-31",
+      "effectiveDate": "2020-03-07",
+      "resolutionDate": "2019-10-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Luis Barrera roster status changed by Oakland Athletics."
+    },
+    {
+      "id": 440355,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2020-03-07",
+      "effectiveDate": "2020-03-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Oakland Athletics optioned CF Luis Barrera to Las Vegas Aviators."
+    },
+    {
+      "id": 447289,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 3254,
+        "name": "Athletics Alternate Training Site",
+        "link": "/api/v1/teams/3254"
+      },
+      "date": "2020-07-18",
+      "effectiveDate": "2020-07-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Luis Barrera assigned to Athletics Alternate Training Site from Las Vegas Aviators."
+    },
+    {
+      "id": 452287,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 3254,
+        "name": "Athletics Alternate Training Site",
+        "link": "/api/v1/teams/3254"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2020-09-28",
+      "effectiveDate": "2020-09-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Oakland Athletics recalled CF Luis Barrera from Athletics Alternate Training Site."
+    },
+    {
+      "id": 452453,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2020-09-29",
+      "effectiveDate": "2020-09-29",
+      "resolutionDate": "2020-09-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics reassigned CF Luis Barrera to the minor leagues."
+    },
+    {
+      "id": 453270,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2020-10-09",
+      "effectiveDate": "2020-10-09",
+      "resolutionDate": "2020-10-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics activated CF Luis Barrera."
+    },
+    {
+      "id": 455544,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2020-11-15",
+      "effectiveDate": "2020-11-15",
+      "resolutionDate": "2020-11-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Luis Barrera assigned to Tigres del Licey."
+    },
+    {
+      "id": 471211,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2020-11-15",
+      "effectiveDate": "2020-11-15",
+      "resolutionDate": "2020-11-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Luis Barrera assigned to Tigres del Licey."
+    },
+    {
+      "id": 473542,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2021-03-15",
+      "effectiveDate": "2021-03-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Oakland Athletics optioned LF Luis Barrera to Las Vegas Aviators."
+    },
+    {
+      "id": 483505,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "resolutionDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Luis Barrera assigned to Las Vegas Aviators."
+    },
+    {
+      "id": 483464,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 3254,
+        "name": "Athletics Alternate Training Site",
+        "link": "/api/v1/teams/3254"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Luis Barrera assigned to Las Vegas Aviators from Athletics Alternate Training Site."
+    },
+    {
+      "id": 487116,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2021-05-18",
+      "effectiveDate": "2021-05-18",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Oakland Athletics recalled LF Luis Barrera from Las Vegas Aviators."
+    },
+    {
+      "id": 491022,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2021-05-27",
+      "effectiveDate": "2021-05-27",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Oakland Athletics optioned LF Luis Barrera to Las Vegas Aviators."
+    },
+    {
+      "id": 519140,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2021-09-27",
+      "effectiveDate": "2021-09-27",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Oakland Athletics recalled LF Luis Barrera from Las Vegas Aviators."
+    },
+    {
+      "id": 522669,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2021-10-27",
+      "effectiveDate": "2021-10-27",
+      "resolutionDate": "2021-10-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Luis Barrera assigned to Tigres del Licey."
+    },
+    {
+      "id": 614344,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2022-03-20",
+      "effectiveDate": "2022-03-20",
+      "resolutionDate": "2022-03-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Las Vegas Aviators activated LF Luis Barrera."
+    },
+    {
+      "id": 607598,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2022-03-20",
+      "effectiveDate": "2022-03-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Oakland Athletics optioned LF Luis Barrera to Las Vegas Aviators."
+    },
+    {
+      "id": 614343,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2022-04-11",
+      "effectiveDate": "2022-04-11",
+      "resolutionDate": "2022-04-11",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Oakland Athletics designated LF Luis Barrera for assignment."
+    },
+    {
+      "id": 615208,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2022-04-15",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Oakland Athletics sent LF Luis Barrera outright to Las Vegas Aviators."
+    },
+    {
+      "id": 651387,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2022-06-20",
+      "effectiveDate": "2022-06-20",
+      "resolutionDate": "2022-06-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Las Vegas Aviators activated LF Luis Barrera."
+    },
+    {
+      "id": 632380,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2022-06-20",
+      "effectiveDate": "2022-06-20",
+      "resolutionDate": "2022-06-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Las Vegas Aviators activated LF Luis Barrera."
+    },
+    {
+      "id": 620159,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2022-06-20",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Oakland Athletics selected the contract of LF Luis Barrera and  from Las Vegas Aviators."
+    },
+    {
+      "id": 632135,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2022-06-20",
+      "effectiveDate": "2022-06-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Oakland Athletics optioned LF Luis Barrera to Las Vegas Aviators."
+    },
+    {
+      "id": 651386,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2022-09-09",
+      "effectiveDate": "2022-09-09",
+      "resolutionDate": "2022-09-09",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Oakland Athletics designated LF Luis Barrera for assignment."
+    },
+    {
+      "id": 652037,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2022-09-11",
+      "effectiveDate": "2022-09-11",
+      "resolutionDate": "2022-09-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Las Vegas Aviators activated LF Luis Barrera."
+    },
+    {
+      "id": 651759,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2022-09-11",
+      "effectiveDate": "2022-09-11",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Oakland Athletics sent LF Luis Barrera outright to Las Vegas Aviators."
+    },
+    {
+      "id": 655466,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2022-10-10",
+      "effectiveDate": "2022-10-10",
+      "resolutionDate": "2022-10-10",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LF Luis Barrera elected free agency."
+    },
+    {
+      "id": 656116,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2022-10-15",
+      "effectiveDate": "2022-10-15",
+      "resolutionDate": "2022-10-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Luis Barrera assigned to Tigres del Licey."
+    },
+    {
+      "id": 663853,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2022-12-15",
+      "effectiveDate": "2022-12-15",
+      "resolutionDate": "2022-12-15",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Angels signed free agent LF Luis Barrera to a minor league contract."
+    },
+    {
+      "id": 670099,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2022-12-15",
+      "effectiveDate": "2022-12-15",
+      "resolutionDate": "2022-12-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LF Luis Barrera roster status changed by Los Angeles Angels."
+    },
+    {
+      "id": 676994,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2022-12-15",
+      "effectiveDate": "2022-12-15",
+      "resolutionDate": "2022-12-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LF Luis Barrera roster status changed by Los Angeles Angels."
+    },
+    {
+      "id": 663854,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2022-12-22",
+      "effectiveDate": "2022-12-22",
+      "resolutionDate": "2022-12-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Luis Barrera assigned to Salt Lake Bees."
+    },
+    {
+      "id": 667233,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 1191,
+        "name": "Dominican Republic",
+        "link": "/api/v1/teams/1191"
+      },
+      "date": "2023-01-30",
+      "effectiveDate": "2023-01-30",
+      "resolutionDate": "2023-01-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Luis Barrera and  assigned to Dominican Republic."
+    },
+    {
+      "id": 676993,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2023-03-24",
+      "effectiveDate": "2023-03-24",
+      "resolutionDate": "2023-03-24",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Salt Lake Bees released LF Luis Barrera."
+    },
+    {
+      "id": 689582,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 560,
+        "name": "Acereros del Norte",
+        "link": "/api/v1/teams/560"
+      },
+      "date": "2023-05-05",
+      "effectiveDate": "2023-05-05",
+      "resolutionDate": "2023-05-05",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Acereros del Norte signed free agent LF Luis Barrera."
+    },
+    {
+      "id": 691136,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 560,
+        "name": "Acereros del Norte",
+        "link": "/api/v1/teams/560"
+      },
+      "date": "2023-05-10",
+      "effectiveDate": "2023-05-10",
+      "resolutionDate": "2023-05-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Acereros del Norte placed LF Luis Barrera on the 7-day injured list."
+    },
+    {
+      "id": 695909,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 560,
+        "name": "Acereros del Norte",
+        "link": "/api/v1/teams/560"
+      },
+      "date": "2023-05-24",
+      "effectiveDate": "2023-05-24",
+      "resolutionDate": "2023-05-24",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Acereros del Norte released LF Luis Barrera."
+    },
+    {
+      "id": 762804,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 569,
+        "name": "Tigres de Quintana Roo",
+        "link": "/api/v1/teams/569"
+      },
+      "date": "2023-05-28",
+      "effectiveDate": "2023-05-28",
+      "resolutionDate": "2023-05-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tigres de Quintana Roo activated LF Luis Barrera."
+    },
+    {
+      "id": 696776,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 569,
+        "name": "Tigres de Quintana Roo",
+        "link": "/api/v1/teams/569"
+      },
+      "date": "2023-05-28",
+      "effectiveDate": "2023-05-28",
+      "resolutionDate": "2023-05-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Luis Barrera assigned to Tigres de Quintana Roo."
+    },
+    {
+      "id": 729266,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2023-10-19",
+      "effectiveDate": "2023-10-19",
+      "resolutionDate": "2023-10-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Luis Barrera assigned to Tigres del Licey."
+    },
+    {
+      "id": 738543,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 1191,
+        "name": "Dominican Republic",
+        "link": "/api/v1/teams/1191"
+      },
+      "date": "2024-02-01",
+      "effectiveDate": "2024-02-01",
+      "resolutionDate": "2024-02-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Luis Barrera assigned to Dominican Republic."
+    },
+    {
+      "id": 773620,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 569,
+        "name": "Tigres de Quintana Roo",
+        "link": "/api/v1/teams/569"
+      },
+      "date": "2024-05-23",
+      "effectiveDate": "2024-05-23",
+      "resolutionDate": "2024-05-23",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Tigres de Quintana Roo released LF Luis Barrera."
+    },
+    {
+      "id": 774174,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 523,
+        "name": "Piratas de Campeche",
+        "link": "/api/v1/teams/523"
+      },
+      "date": "2024-05-27",
+      "effectiveDate": "2024-05-27",
+      "resolutionDate": "2024-05-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Luis Barrera assigned to Piratas de Campeche."
+    },
+    {
+      "id": 774472,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 523,
+        "name": "Piratas de Campeche",
+        "link": "/api/v1/teams/523"
+      },
+      "date": "2024-05-28",
+      "effectiveDate": "2024-05-28",
+      "resolutionDate": "2024-05-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Piratas de Campeche activated LF Luis Barrera from the reserve list."
+    },
+    {
+      "id": 830600,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 579,
+        "name": "Guerreros de Oaxaca",
+        "link": "/api/v1/teams/579"
+      },
+      "date": "2024-06-27",
+      "effectiveDate": "2024-06-27",
+      "resolutionDate": "2024-06-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Guerreros de Oaxaca activated OF Luis Barrera."
+    },
+    {
+      "id": 783395,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "fromTeam": {
+        "id": 523,
+        "name": "Piratas de Campeche",
+        "link": "/api/v1/teams/523"
+      },
+      "toTeam": {
+        "id": 579,
+        "name": "Guerreros de Oaxaca",
+        "link": "/api/v1/teams/579"
+      },
+      "date": "2024-06-27",
+      "effectiveDate": "2024-06-27",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Piratas de Campeche traded LF Luis Barrera to Guerreros de Oaxaca."
+    },
+    {
+      "id": 841716,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 579,
+        "name": "Guerreros de Oaxaca",
+        "link": "/api/v1/teams/579"
+      },
+      "date": "2025-05-29",
+      "effectiveDate": "2025-05-29",
+      "resolutionDate": "2025-05-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Guerreros de Oaxaca placed OF Luis Barrera on the reserve list."
+    },
+    {
+      "id": 873215,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2025-10-15",
+      "effectiveDate": "2025-10-15",
+      "resolutionDate": "2025-10-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Luis Barrera assigned to Tigres del Licey."
+    },
+    {
+      "id": 880726,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 693,
+        "name": "Cardenales de Lara",
+        "link": "/api/v1/teams/693"
+      },
+      "date": "2026-01-13",
+      "effectiveDate": "2026-01-13",
+      "resolutionDate": "2026-01-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Luis Barrera assigned to Cardenales de Lara."
+    },
+    {
+      "id": 900975,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 579,
+        "name": "Guerreros de Oaxaca",
+        "link": "/api/v1/teams/579"
+      },
+      "date": "2026-04-17",
+      "effectiveDate": "2026-04-17",
+      "resolutionDate": "2026-04-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Guerreros de Oaxaca activated OF Luis Barrera."
+    },
+    {
+      "id": 947223,
+      "person": {
+        "id": 642456,
+        "fullName": "Luis Barrera",
+        "link": "/api/v1/people/642456",
+        "nameSlug": "luis-barrera-642456"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2026-10-28",
+      "effectiveDate": "2026-10-28",
+      "resolutionDate": "2026-10-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Luis Barrera assigned to Tigres del Licey."
+    }
+  ]
+}

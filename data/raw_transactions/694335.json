@@ -1,0 +1,743 @@
+{
+  "player_id": 694335,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:e846a675c7460206310a5b6e9d66b1a2305791cf8a6242432360b824a0ecf25e",
+  "transactions": [
+    {
+      "id": 506304,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2021-07-21",
+      "effectiveDate": "2021-07-21",
+      "resolutionDate": "2021-07-21",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Toronto Blue Jays signed RHP Matt Svanson."
+    },
+    {
+      "id": 509256,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "toTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "date": "2021-08-03",
+      "effectiveDate": "2021-08-03",
+      "resolutionDate": "2021-08-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Svanson assigned to Dunedin Blue Jays."
+    },
+    {
+      "id": 639654,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "fromTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "toTeam": {
+        "id": 435,
+        "name": "Vancouver Canadians",
+        "link": "/api/v1/teams/435"
+      },
+      "date": "2022-07-23",
+      "effectiveDate": "2022-07-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Svanson assigned to Vancouver Canadians from Dunedin Blue Jays."
+    },
+    {
+      "id": 683146,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "toTeam": {
+        "id": 435,
+        "name": "Vancouver Canadians",
+        "link": "/api/v1/teams/435"
+      },
+      "date": "2023-04-06",
+      "effectiveDate": "2023-04-06",
+      "resolutionDate": "2023-04-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Vancouver Canadians placed RHP Matt Svanson on the 7-day injured list."
+    },
+    {
+      "id": 687275,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "toTeam": {
+        "id": 435,
+        "name": "Vancouver Canadians",
+        "link": "/api/v1/teams/435"
+      },
+      "date": "2023-04-06",
+      "effectiveDate": "2023-04-06",
+      "resolutionDate": "2023-04-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Vancouver Canadians placed RHP Matt Svanson on the 7-day injured list."
+    },
+    {
+      "id": 687217,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "fromTeam": {
+        "id": 435,
+        "name": "Vancouver Canadians",
+        "link": "/api/v1/teams/435"
+      },
+      "toTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "date": "2023-04-25",
+      "effectiveDate": "2023-04-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Svanson assigned to Dunedin Blue Jays from Vancouver Canadians."
+    },
+    {
+      "id": 688565,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "toTeam": {
+        "id": 435,
+        "name": "Vancouver Canadians",
+        "link": "/api/v1/teams/435"
+      },
+      "date": "2023-05-02",
+      "effectiveDate": "2023-05-02",
+      "resolutionDate": "2023-05-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Vancouver Canadians activated RHP Matt Svanson."
+    },
+    {
+      "id": 716133,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "fromTeam": {
+        "id": 435,
+        "name": "Vancouver Canadians",
+        "link": "/api/v1/teams/435"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2023-07-31",
+      "effectiveDate": "2023-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Svanson assigned to New Hampshire Fisher Cats from Vancouver Canadians."
+    },
+    {
+      "id": 716425,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "toTeam": {
+        "id": 440,
+        "name": "Ozarks Springbirds",
+        "link": "/api/v1/teams/440"
+      },
+      "date": "2023-08-01",
+      "effectiveDate": "2023-08-01",
+      "resolutionDate": "2023-08-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Svanson assigned to Springfield Cardinals."
+    },
+    {
+      "id": 716423,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2023-08-01",
+      "effectiveDate": "2023-08-01",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "St. Louis Cardinals traded SS Paul DeJong and cash to Toronto Blue Jays for RHP Matt Svanson."
+    },
+    {
+      "id": 751310,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2024-02-24",
+      "effectiveDate": "2024-02-24",
+      "resolutionDate": "2024-02-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Svanson assigned to St. Louis Cardinals."
+    },
+    {
+      "id": 754650,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2024-02-24",
+      "effectiveDate": "2024-02-24",
+      "resolutionDate": "2024-02-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Matt Svanson roster status changed by St. Louis Cardinals."
+    },
+    {
+      "id": 800107,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "toTeam": {
+        "id": 454,
+        "name": "Glendale Desert Dogs",
+        "link": "/api/v1/teams/454"
+      },
+      "date": "2024-09-25",
+      "effectiveDate": "2024-09-25",
+      "resolutionDate": "2024-09-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Svanson assigned to Glendale Desert Dogs."
+    },
+    {
+      "id": 819385,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2024-11-19",
+      "effectiveDate": "2024-11-19",
+      "resolutionDate": "2024-11-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals activated RHP Matt Svanson."
+    },
+    {
+      "id": 819386,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2024-11-19",
+      "effectiveDate": "2024-11-19",
+      "resolutionDate": "2024-11-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals activated RHP Matt Svanson."
+    },
+    {
+      "id": 806492,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "fromTeam": {
+        "id": 440,
+        "name": "Ozarks Springbirds",
+        "link": "/api/v1/teams/440"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2024-11-19",
+      "effectiveDate": "2024-11-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "St. Louis Cardinals selected the contract of RHP Matt Svanson from Springfield Cardinals."
+    },
+    {
+      "id": 822989,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2025-03-07",
+      "effectiveDate": "2025-03-07",
+      "resolutionDate": "2025-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Memphis Redbirds activated RHP Matt Svanson."
+    },
+    {
+      "id": 819371,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2025-03-08",
+      "effectiveDate": "2025-03-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "St. Louis Cardinals optioned RHP Matt Svanson to Memphis Redbirds."
+    },
+    {
+      "id": 830040,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "St. Louis Cardinals recalled RHP Matt Svanson from Memphis Redbirds."
+    },
+    {
+      "id": 834351,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2025-05-02",
+      "effectiveDate": "2025-05-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "St. Louis Cardinals optioned RHP Matt Svanson to Memphis Redbirds."
+    },
+    {
+      "id": 837563,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2025-05-14",
+      "effectiveDate": "2025-05-14",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "St. Louis Cardinals recalled RHP Matt Svanson from Memphis Redbirds."
+    },
+    {
+      "id": 837733,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2025-05-15",
+      "effectiveDate": "2025-05-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "St. Louis Cardinals optioned RHP Matt Svanson to Memphis Redbirds."
+    },
+    {
+      "id": 840246,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2025-05-23",
+      "effectiveDate": "2025-05-23",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "St. Louis Cardinals recalled RHP Matt Svanson from Memphis Redbirds."
+    },
+    {
+      "id": 845938,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2025-06-09",
+      "effectiveDate": "2025-06-09",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "St. Louis Cardinals optioned RHP Matt Svanson to Memphis Redbirds."
+    },
+    {
+      "id": 850573,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2025-06-25",
+      "effectiveDate": "2025-06-25",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "St. Louis Cardinals recalled RHP Matt Svanson from Memphis Redbirds."
+    },
+    {
+      "id": 854804,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2025-07-12",
+      "effectiveDate": "2025-07-12",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "St. Louis Cardinals optioned RHP Matt Svanson to Memphis Redbirds."
+    },
+    {
+      "id": 859272,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2025-07-28",
+      "effectiveDate": "2025-07-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "St. Louis Cardinals recalled RHP Matt Svanson from Memphis Redbirds."
+    },
+    {
+      "id": 899053,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Matt Svanson changed number to 42."
+    },
+    {
+      "id": 899963,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Matt Svanson changed number to 49."
+    },
+    {
+      "id": 911337,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2026-05-24",
+      "effectiveDate": "2026-05-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "St. Louis Cardinals optioned RHP Matt Svanson to Memphis Redbirds."
+    },
+    {
+      "id": 916097,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2026-06-05",
+      "effectiveDate": "2026-06-05",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "St. Louis Cardinals recalled RHP Matt Svanson from Memphis Redbirds."
+    },
+    {
+      "id": 933827,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2026-08-01",
+      "effectiveDate": "2026-08-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "St. Louis Cardinals optioned RHP Matt Svanson to Memphis Redbirds."
+    },
+    {
+      "id": 944481,
+      "person": {
+        "id": 694335,
+        "fullName": "Matt Svanson",
+        "link": "/api/v1/people/694335",
+        "nameSlug": "matt-svanson-694335"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2026-09-28",
+      "effectiveDate": "2026-09-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "St. Louis Cardinals recalled RHP Matt Svanson from Memphis Redbirds."
+    }
+  ]
+}

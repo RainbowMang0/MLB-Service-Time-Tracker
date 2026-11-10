@@ -1,0 +1,924 @@
+{
+  "player_id": 680723,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:8de7caa4b87e1eeed05b88362b8a9bed0f9a1c1f61eb441ea49f0b209485e5f7",
+  "transactions": [
+    {
+      "id": 363810,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2018-06-22",
+      "effectiveDate": "2018-06-22",
+      "resolutionDate": "2018-06-22",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Baltimore Orioles signed LHP Drew Rom."
+    },
+    {
+      "id": 364508,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 599,
+        "name": "FCL Orioles",
+        "link": "/api/v1/teams/599"
+      },
+      "date": "2018-06-26",
+      "effectiveDate": "2018-06-26",
+      "resolutionDate": "2018-06-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Drew Rom assigned to GCL Orioles."
+    },
+    {
+      "id": 392969,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "fromTeam": {
+        "id": 599,
+        "name": "FCL Orioles",
+        "link": "/api/v1/teams/599"
+      },
+      "toTeam": {
+        "id": 548,
+        "name": "Delmarva Shorebirds",
+        "link": "/api/v1/teams/548"
+      },
+      "date": "2019-03-29",
+      "effectiveDate": "2019-03-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Drew Rom assigned to Delmarva Shorebirds from GCL Orioles."
+    },
+    {
+      "id": 481779,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "fromTeam": {
+        "id": 548,
+        "name": "Delmarva Shorebirds",
+        "link": "/api/v1/teams/548"
+      },
+      "toTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "date": "2021-04-30",
+      "effectiveDate": "2021-04-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Drew Rom assigned to Aberdeen IronBirds from Delmarva Shorebirds."
+    },
+    {
+      "id": 508660,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "fromTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2021-07-31",
+      "effectiveDate": "2021-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Drew Rom assigned to Bowie Baysox from Aberdeen IronBirds."
+    },
+    {
+      "id": 619774,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2022-05-07",
+      "effectiveDate": "2022-05-07",
+      "resolutionDate": "2022-05-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Bowie Baysox placed LHP Drew Rom on the 7-day injured list."
+    },
+    {
+      "id": 624472,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2022-05-25",
+      "effectiveDate": "2022-05-25",
+      "resolutionDate": "2022-05-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Bowie Baysox activated LHP Drew Rom from the 7-day injured list."
+    },
+    {
+      "id": 646892,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "fromTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2022-08-16",
+      "effectiveDate": "2022-08-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Drew Rom assigned to Norfolk Tides from Bowie Baysox."
+    },
+    {
+      "id": 667688,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2022-11-15",
+      "effectiveDate": "2022-11-15",
+      "resolutionDate": "2022-11-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles activated LHP Drew Rom."
+    },
+    {
+      "id": 660250,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2022-11-15",
+      "effectiveDate": "2022-11-15",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Baltimore Orioles selected the contract of LHP Drew Rom from Norfolk Tides."
+    },
+    {
+      "id": 679582,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2023-03-13",
+      "effectiveDate": "2023-03-13",
+      "resolutionDate": "2023-03-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Norfolk Tides activated LHP Drew Rom."
+    },
+    {
+      "id": 675612,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2023-03-13",
+      "effectiveDate": "2023-03-13",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Baltimore Orioles optioned LHP Drew Rom to Norfolk Tides."
+    },
+    {
+      "id": 690612,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2023-05-09",
+      "effectiveDate": "2023-05-09",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Baltimore Orioles recalled LHP Drew Rom from Norfolk Tides."
+    },
+    {
+      "id": 691224,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2023-05-11",
+      "effectiveDate": "2023-05-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Baltimore Orioles optioned LHP Drew Rom to Norfolk Tides."
+    },
+    {
+      "id": 716640,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2023-08-01",
+      "effectiveDate": "2023-08-01",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "St. Louis Cardinals traded RHP Jack Flaherty to Baltimore Orioles for 2B César Prieto, LHP Drew Rom and RHP Zack Showalter."
+    },
+    {
+      "id": 718915,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2023-08-09",
+      "effectiveDate": "2023-08-09",
+      "resolutionDate": "2023-08-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Drew Rom assigned to Memphis Redbirds."
+    },
+    {
+      "id": 720956,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2023-08-21",
+      "effectiveDate": "2023-08-21",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "St. Louis Cardinals recalled LHP Drew Rom from Memphis Redbirds."
+    },
+    {
+      "id": 757345,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2024-03-27",
+      "effectiveDate": "2024-03-25",
+      "resolutionDate": "2024-03-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals placed LHP Drew Rom on the 15-day injured list retroactive to March 25, 2024. Left shoulder biceps tendinitis."
+    },
+    {
+      "id": 766548,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2024-04-30",
+      "effectiveDate": "2024-04-30",
+      "resolutionDate": "2024-04-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals transferred LHP Drew Rom from the 15-day injured list to the 60-day injured list. Left shoulder biceps tendinitis."
+    },
+    {
+      "id": 806455,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2024-11-01",
+      "effectiveDate": "2024-11-01",
+      "resolutionDate": "2024-11-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals activated LHP Drew Rom from the 60-day injured list."
+    },
+    {
+      "id": 806494,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2024-11-19",
+      "effectiveDate": "2024-11-19",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "St. Louis Cardinals sent LHP Drew Rom outright to Memphis Redbirds."
+    },
+    {
+      "id": 810654,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2025-01-16",
+      "effectiveDate": "2025-01-16",
+      "resolutionDate": "2025-01-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "St. Louis Cardinals invited non-roster LHP Drew Rom to spring training."
+    },
+    {
+      "id": 822988,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2025-03-28",
+      "effectiveDate": "2025-03-28",
+      "resolutionDate": "2025-03-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Memphis Redbirds placed LHP Drew Rom on the 7-day injured list."
+    },
+    {
+      "id": 833430,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 279,
+        "name": "Palm Beach Cardinals",
+        "link": "/api/v1/teams/279"
+      },
+      "date": "2025-05-01",
+      "effectiveDate": "2025-05-01",
+      "resolutionDate": "2025-05-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Memphis Redbirds sent LHP Drew Rom on a rehab assignment to Palm Beach Cardinals."
+    },
+    {
+      "id": 838935,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 279,
+        "name": "Palm Beach Cardinals",
+        "link": "/api/v1/teams/279"
+      },
+      "date": "2025-05-01",
+      "effectiveDate": "2025-05-01",
+      "resolutionDate": "2025-05-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent LHP Drew Rom on a rehab assignment to Palm Beach Cardinals."
+    },
+    {
+      "id": 838934,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2025-05-18",
+      "effectiveDate": "2025-05-18",
+      "resolutionDate": "2025-05-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Memphis Redbirds activated LHP Drew Rom from the 7-day injured list."
+    },
+    {
+      "id": 845989,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2025-06-09",
+      "effectiveDate": "2025-06-09",
+      "resolutionDate": "2025-06-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Memphis Redbirds placed LHP Drew Rom on the 7-day injured list."
+    },
+    {
+      "id": 861347,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2025-06-09",
+      "effectiveDate": "2025-06-09",
+      "resolutionDate": "2025-06-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Memphis Redbirds placed LHP Drew Rom on the 7-day injured list."
+    },
+    {
+      "id": 871699,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2025-09-25",
+      "effectiveDate": "2025-09-25",
+      "resolutionDate": "2025-09-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Memphis Redbirds activated LHP Drew Rom from the 7-day injured list."
+    },
+    {
+      "id": 876116,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Drew Rom elected free agency."
+    },
+    {
+      "id": 880092,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2025-12-17",
+      "effectiveDate": "2025-12-17",
+      "resolutionDate": "2025-12-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Drew Rom assigned to Nashville Sounds."
+    },
+    {
+      "id": 880091,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2025-12-17",
+      "effectiveDate": "2025-12-17",
+      "resolutionDate": "2025-12-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Milwaukee Brewers signed free agent LHP Drew Rom to a minor league contract."
+    },
+    {
+      "id": 880643,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-01-10",
+      "effectiveDate": "2026-01-10",
+      "resolutionDate": "2026-01-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Milwaukee Brewers invited non-roster LHP Drew Rom to spring training."
+    },
+    {
+      "id": 916390,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-06-06",
+      "effectiveDate": "2026-06-06",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Milwaukee Brewers selected the contract of LHP Drew Rom from Nashville Sounds."
+    },
+    {
+      "id": 921047,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2026-06-22",
+      "effectiveDate": "2026-06-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned LHP Drew Rom to Nashville Sounds."
+    },
+    {
+      "id": 925250,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-07-05",
+      "effectiveDate": "2026-07-05",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Milwaukee Brewers recalled LHP Drew Rom from Nashville Sounds."
+    },
+    {
+      "id": 926754,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2026-07-10",
+      "effectiveDate": "2026-07-10",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned LHP Drew Rom to Nashville Sounds."
+    },
+    {
+      "id": 936545,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-08-09",
+      "effectiveDate": "2026-08-09",
+      "resolutionDate": "2026-08-09",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Milwaukee Brewers designated LHP Drew Rom for assignment."
+    },
+    {
+      "id": 937021,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2026-08-11",
+      "effectiveDate": "2026-08-11",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Athletics claimed LHP Drew Rom off waivers from Milwaukee Brewers."
+    },
+    {
+      "id": 937187,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2026-08-12",
+      "effectiveDate": "2026-08-12",
+      "resolutionDate": "2026-08-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Athletics activated LHP Drew Rom."
+    },
+    {
+      "id": 939882,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2026-08-28",
+      "effectiveDate": "2026-08-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Athletics optioned LHP Drew Rom to Las Vegas Aviators."
+    },
+    {
+      "id": 942253,
+      "person": {
+        "id": 680723,
+        "fullName": "Drew Rom",
+        "link": "/api/v1/people/680723",
+        "nameSlug": "drew-rom-680723"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2026-09-13",
+      "effectiveDate": "2026-09-13",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Athletics recalled LHP Drew Rom from Las Vegas Aviators."
+    }
+  ]
+}

@@ -1,0 +1,805 @@
+{
+  "player_id": 699130,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:1d739755c35537b91a6f8cc78a0316429904330f2857c7e37fb38894ce18c321",
+  "transactions": [
+    {
+      "id": 459994,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2021-01-15",
+      "effectiveDate": "2021-01-15",
+      "resolutionDate": "2021-01-15",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Milwaukee Brewers signed free agent SS Jadher Areinamo to a minor league contract."
+    },
+    {
+      "id": 469442,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 607,
+        "name": "DSL Brewers Blue",
+        "link": "/api/v1/teams/607"
+      },
+      "date": "2021-02-13",
+      "effectiveDate": "2021-02-13",
+      "resolutionDate": "2021-02-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Jadher Areinamo assigned to DSL Brewers."
+    },
+    {
+      "id": 503173,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "fromTeam": {
+        "id": 607,
+        "name": "DSL Brewers Blue",
+        "link": "/api/v1/teams/607"
+      },
+      "toTeam": {
+        "id": 2101,
+        "name": "DSL Brewers Gold",
+        "link": "/api/v1/teams/2101"
+      },
+      "date": "2021-07-10",
+      "effectiveDate": "2021-07-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Jadher Areinamo assigned to DSL Brewers2 from DSL Brewers1."
+    },
+    {
+      "id": 610367,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2022-04-04",
+      "effectiveDate": "2022-04-04",
+      "resolutionDate": "2022-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Jadher Areinamo assigned to Milwaukee Brewers."
+    },
+    {
+      "id": 612123,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2022-04-04",
+      "effectiveDate": "2022-04-04",
+      "resolutionDate": "2022-04-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "SS Jadher Areinamo roster status changed by Milwaukee Brewers."
+    },
+    {
+      "id": 624647,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "fromTeam": {
+        "id": 2101,
+        "name": "DSL Brewers Gold",
+        "link": "/api/v1/teams/2101"
+      },
+      "toTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "date": "2022-05-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Jadher Areinamo assigned to Wisconsin Timber Rattlers from DSL Brewers2."
+    },
+    {
+      "id": 628915,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "fromTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "toTeam": {
+        "id": 406,
+        "name": "ACL Brewers",
+        "link": "/api/v1/teams/406"
+      },
+      "date": "2022-06-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Jadher Areinamo assigned to ACL Brewers Gold from Wisconsin Timber Rattlers."
+    },
+    {
+      "id": 641871,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "fromTeam": {
+        "id": 406,
+        "name": "ACL Brewers",
+        "link": "/api/v1/teams/406"
+      },
+      "toTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "date": "2022-08-01",
+      "effectiveDate": "2022-08-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Jadher Areinamo assigned to Carolina Mudcats from ACL Brewers Gold."
+    },
+    {
+      "id": 676261,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2023-03-18",
+      "effectiveDate": "2023-03-18",
+      "resolutionDate": "2023-03-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Jadher Areinamo assigned to Milwaukee Brewers."
+    },
+    {
+      "id": 677698,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2023-03-18",
+      "effectiveDate": "2023-03-18",
+      "resolutionDate": "2023-03-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "SS Jadher Areinamo roster status changed by Milwaukee Brewers."
+    },
+    {
+      "id": 729372,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2023-10-20",
+      "effectiveDate": "2023-10-20",
+      "resolutionDate": "2023-10-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Jadher Areinamo assigned to Tiburones de La Guaira."
+    },
+    {
+      "id": 736323,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2023-10-20",
+      "effectiveDate": "2023-10-20",
+      "resolutionDate": "2023-10-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tiburones de La Guaira activated SS Jadher Areinamo."
+    },
+    {
+      "id": 752741,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2024-03-01",
+      "effectiveDate": "2024-03-01",
+      "resolutionDate": "2024-03-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Jadher Areinamo assigned to Milwaukee Brewers."
+    },
+    {
+      "id": 753729,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 387,
+        "name": "Milwaukee Brewers Prospects",
+        "link": "/api/v1/teams/387"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers Prospects activated SS Jadher Areinamo."
+    },
+    {
+      "id": 758605,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "fromTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "toTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "date": "2024-03-31",
+      "effectiveDate": "2024-03-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Jadher Areinamo assigned to Wisconsin Timber Rattlers from Carolina Mudcats."
+    },
+    {
+      "id": 790452,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "date": "2024-07-26",
+      "effectiveDate": "2024-07-26",
+      "resolutionDate": "2024-07-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Wisconsin Timber Rattlers placed SS Jadher Areinamo on the 7-day injured list."
+    },
+    {
+      "id": 859341,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "date": "2024-08-02",
+      "effectiveDate": "2024-08-02",
+      "resolutionDate": "2024-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Wisconsin Timber Rattlers activated 2B Jadher Areinamo from the 7-day injured list."
+    },
+    {
+      "id": 792066,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "date": "2024-08-02",
+      "effectiveDate": "2024-08-02",
+      "resolutionDate": "2024-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Wisconsin Timber Rattlers activated SS Jadher Areinamo from the 7-day injured list."
+    },
+    {
+      "id": 820500,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2025-02-23",
+      "effectiveDate": "2025-02-23",
+      "resolutionDate": "2025-02-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "2B Jadher Areinamo roster status changed by Milwaukee Brewers."
+    },
+    {
+      "id": 816886,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2025-02-23",
+      "effectiveDate": "2025-02-23",
+      "resolutionDate": "2025-02-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Jadher Areinamo assigned to Milwaukee Brewers."
+    },
+    {
+      "id": 818533,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 387,
+        "name": "Milwaukee Brewers Prospects",
+        "link": "/api/v1/teams/387"
+      },
+      "date": "2025-03-06",
+      "effectiveDate": "2025-03-06",
+      "resolutionDate": "2025-03-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "activated 2B Jadher Areinamo."
+    },
+    {
+      "id": 859676,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 421,
+        "name": "Montgomery Biscuits",
+        "link": "/api/v1/teams/421"
+      },
+      "date": "2025-07-28",
+      "effectiveDate": "2025-07-28",
+      "resolutionDate": "2025-07-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Montgomery Biscuits activated 2B Jadher Areinamo."
+    },
+    {
+      "id": 859956,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 421,
+        "name": "Montgomery Biscuits",
+        "link": "/api/v1/teams/421"
+      },
+      "date": "2025-07-28",
+      "effectiveDate": "2025-07-28",
+      "resolutionDate": "2025-07-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Montgomery Biscuits activated 2B Jadher Areinamo."
+    },
+    {
+      "id": 859340,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2025-07-28",
+      "effectiveDate": "2025-07-28",
+      "resolutionDate": "2025-07-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "2B Jadher Areinamo roster status changed by Tampa Bay Rays."
+    },
+    {
+      "id": 859337,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2025-07-28",
+      "effectiveDate": "2025-07-28",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Tampa Bay Rays traded C Danny Jansen and cash to Milwaukee Brewers for 2B Jadher Areinamo."
+    },
+    {
+      "id": 872981,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2025-10-15",
+      "effectiveDate": "2025-10-15",
+      "resolutionDate": "2025-10-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Jadher Areinamo assigned to Tiburones de La Guaira."
+    },
+    {
+      "id": 877300,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "fromTeam": {
+        "id": 421,
+        "name": "Montgomery Biscuits",
+        "link": "/api/v1/teams/421"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2025-11-18",
+      "effectiveDate": "2025-11-18",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Tampa Bay Rays selected the contract of RHP Alex Cook and 2B Jadher Areinamo from Montgomery Biscuits."
+    },
+    {
+      "id": 889530,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 378,
+        "name": "Tampa Bay Rays Prospects",
+        "link": "/api/v1/teams/378"
+      },
+      "date": "2026-03-05",
+      "effectiveDate": "2026-03-05",
+      "resolutionDate": "2026-03-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Jadher Areinamo assigned to Tampa Bay Rays Prospects."
+    },
+    {
+      "id": 890645,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 421,
+        "name": "Montgomery Biscuits",
+        "link": "/api/v1/teams/421"
+      },
+      "date": "2026-03-05",
+      "effectiveDate": "2026-03-05",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned 2B Jadher Areinamo to Montgomery Biscuits."
+    },
+    {
+      "id": 897053,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 421,
+        "name": "Montgomery Biscuits",
+        "link": "/api/v1/teams/421"
+      },
+      "date": "2026-04-03",
+      "effectiveDate": "2026-04-03",
+      "resolutionDate": "2026-04-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Montgomery Biscuits placed 2B Jadher Areinamo on the 7-day injured list."
+    },
+    {
+      "id": 898869,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 421,
+        "name": "Montgomery Biscuits",
+        "link": "/api/v1/teams/421"
+      },
+      "date": "2026-04-14",
+      "effectiveDate": "2026-04-14",
+      "resolutionDate": "2026-04-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Montgomery Biscuits activated 2B Jadher Areinamo from the 7-day injured list."
+    },
+    {
+      "id": 931762,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 421,
+        "name": "Montgomery Biscuits",
+        "link": "/api/v1/teams/421"
+      },
+      "date": "2026-04-14",
+      "effectiveDate": "2026-07-28",
+      "resolutionDate": "2026-07-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Montgomery Biscuits placed 2B Jadher Areinamo on the 7-day injured list."
+    },
+    {
+      "id": 940890,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 421,
+        "name": "Montgomery Biscuits",
+        "link": "/api/v1/teams/421"
+      },
+      "date": "2026-09-02",
+      "effectiveDate": "2026-09-02",
+      "resolutionDate": "2026-09-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Montgomery Biscuits activated 2B Jadher Areinamo from the 7-day injured list."
+    },
+    {
+      "id": 941406,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2026-09-05",
+      "effectiveDate": "2026-09-05",
+      "resolutionDate": "2026-09-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls activated 2B Jadher Areinamo."
+    },
+    {
+      "id": 941366,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "fromTeam": {
+        "id": 421,
+        "name": "Montgomery Biscuits",
+        "link": "/api/v1/teams/421"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2026-09-05",
+      "effectiveDate": "2026-09-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Jadher Areinamo assigned to Durham Bulls from Montgomery Biscuits."
+    },
+    {
+      "id": 944974,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2026-09-28",
+      "effectiveDate": "2026-09-28",
+      "resolutionDate": "2026-09-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "2B Jadher Areinamo roster status changed by Tampa Bay Rays."
+    },
+    {
+      "id": 944612,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2026-09-28",
+      "effectiveDate": "2026-09-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled 2B Jadher Areinamo from Durham Bulls."
+    },
+    {
+      "id": 947787,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays activated 2B Jadher Areinamo."
+    }
+  ]
+}

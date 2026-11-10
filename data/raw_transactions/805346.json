@@ -1,0 +1,531 @@
+{
+  "player_id": 805346,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:c96dbe7310178c6d0db7f42f4fb585dcc9f877701b27dc5bd5cf375cc64a1a41",
+  "transactions": [
+    {
+      "id": 640448,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "toTeam": {
+        "id": 5580,
+        "name": "College Workout",
+        "link": "/api/v1/teams/5580"
+      },
+      "date": "2022-07-11",
+      "effectiveDate": "2022-07-11",
+      "resolutionDate": "2022-07-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "College Workout activated SS Ben Ross."
+    },
+    {
+      "id": 636574,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "toTeam": {
+        "id": 5580,
+        "name": "College Workout",
+        "link": "/api/v1/teams/5580"
+      },
+      "date": "2022-07-11",
+      "effectiveDate": "2022-07-11",
+      "resolutionDate": "2022-07-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Ben Ross assigned to College Workout."
+    },
+    {
+      "id": 640449,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2022-07-26",
+      "effectiveDate": "2022-07-26",
+      "resolutionDate": "2022-07-26",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Minnesota Twins signed SS Ben Ross."
+    },
+    {
+      "id": 645556,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "toTeam": {
+        "id": 474,
+        "name": "FCL Twins",
+        "link": "/api/v1/teams/474"
+      },
+      "date": "2022-08-11",
+      "effectiveDate": "2022-08-11",
+      "resolutionDate": "2022-08-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Ben Ross assigned to FCL Twins."
+    },
+    {
+      "id": 646755,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "toTeam": {
+        "id": 509,
+        "name": "Fort Myers Mighty Mussels",
+        "link": "/api/v1/teams/509"
+      },
+      "date": "2022-08-16",
+      "effectiveDate": "2022-08-16",
+      "resolutionDate": "2022-08-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Fort Myers Mighty Mussels activated SS Ben Ross."
+    },
+    {
+      "id": 646615,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "fromTeam": {
+        "id": 474,
+        "name": "FCL Twins",
+        "link": "/api/v1/teams/474"
+      },
+      "toTeam": {
+        "id": 509,
+        "name": "Fort Myers Mighty Mussels",
+        "link": "/api/v1/teams/509"
+      },
+      "date": "2022-08-16",
+      "effectiveDate": "2022-08-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Ben Ross assigned to Fort Myers Mighty Mussels from FCL Twins."
+    },
+    {
+      "id": 673095,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2023-02-25",
+      "effectiveDate": "2023-02-25",
+      "resolutionDate": "2023-02-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Ben Ross assigned to Minnesota Twins."
+    },
+    {
+      "id": 678567,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2023-02-25",
+      "effectiveDate": "2023-02-25",
+      "resolutionDate": "2023-02-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "SS Ben Ross roster status changed by Minnesota Twins."
+    },
+    {
+      "id": 681008,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "toTeam": {
+        "id": 492,
+        "name": "Cedar Rapids Kernels",
+        "link": "/api/v1/teams/492"
+      },
+      "date": "2023-04-03",
+      "effectiveDate": "2023-04-03",
+      "resolutionDate": "2023-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Ben Ross assigned to Cedar Rapids Kernels."
+    },
+    {
+      "id": 758968,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "toTeam": {
+        "id": 3898,
+        "name": "Wichita Wind Surge",
+        "link": "/api/v1/teams/3898"
+      },
+      "date": "2023-09-04",
+      "effectiveDate": "2023-09-04",
+      "resolutionDate": "2023-09-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Wichita Wind Surge activated SS Ben Ross."
+    },
+    {
+      "id": 723515,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "fromTeam": {
+        "id": 492,
+        "name": "Cedar Rapids Kernels",
+        "link": "/api/v1/teams/492"
+      },
+      "toTeam": {
+        "id": 3898,
+        "name": "Wichita Wind Surge",
+        "link": "/api/v1/teams/3898"
+      },
+      "date": "2023-09-04",
+      "effectiveDate": "2023-09-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Ben Ross assigned to Wichita Wind Surge from Cedar Rapids Kernels."
+    },
+    {
+      "id": 752974,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2024-03-03",
+      "effectiveDate": "2024-03-03",
+      "resolutionDate": "2024-03-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "SS Ben Ross roster status changed by Minnesota Twins."
+    },
+    {
+      "id": 752935,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2024-03-03",
+      "effectiveDate": "2024-03-03",
+      "resolutionDate": "2024-03-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Ben Ross assigned to Minnesota Twins."
+    },
+    {
+      "id": 753716,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "toTeam": {
+        "id": 381,
+        "name": "Minnesota Twins Prospects",
+        "link": "/api/v1/teams/381"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Minnesota Twins Prospects activated SS Ben Ross."
+    },
+    {
+      "id": 800189,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "toTeam": {
+        "id": 527,
+        "name": "Salt River Rafters",
+        "link": "/api/v1/teams/527"
+      },
+      "date": "2024-09-25",
+      "effectiveDate": "2024-09-25",
+      "resolutionDate": "2024-09-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Ben Ross assigned to Salt River Rafters."
+    },
+    {
+      "id": 819083,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2025-03-07",
+      "effectiveDate": "2025-03-07",
+      "resolutionDate": "2025-03-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Ben Ross assigned to Minnesota Twins."
+    },
+    {
+      "id": 819084,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "toTeam": {
+        "id": 381,
+        "name": "Minnesota Twins Prospects",
+        "link": "/api/v1/teams/381"
+      },
+      "date": "2025-03-07",
+      "effectiveDate": "2025-03-07",
+      "resolutionDate": "2025-03-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Ben Ross assigned to."
+    },
+    {
+      "id": 886951,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-02-20",
+      "effectiveDate": "2026-02-20",
+      "resolutionDate": "2026-02-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Ben Ross assigned to Minnesota Twins."
+    },
+    {
+      "id": 886957,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-02-20",
+      "effectiveDate": "2026-02-20",
+      "resolutionDate": "2026-02-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "SS Ben Ross roster status changed by Minnesota Twins."
+    },
+    {
+      "id": 886952,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-02-20",
+      "effectiveDate": "2026-02-20",
+      "resolutionDate": "2026-02-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Ben Ross assigned to Minnesota Twins."
+    },
+    {
+      "id": 891800,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "toTeam": {
+        "id": 381,
+        "name": "Minnesota Twins Prospects",
+        "link": "/api/v1/teams/381"
+      },
+      "date": "2026-03-16",
+      "effectiveDate": "2026-03-16",
+      "resolutionDate": "2026-03-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Ben Ross assigned to Minnesota Twins Prospects."
+    },
+    {
+      "id": 902756,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "fromTeam": {
+        "id": 3898,
+        "name": "Wichita Wind Surge",
+        "link": "/api/v1/teams/3898"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2026-04-24",
+      "effectiveDate": "2026-04-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Ben Ross assigned to St. Paul Saints from Wichita Wind Surge."
+    },
+    {
+      "id": 940380,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "fromTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-09-01",
+      "effectiveDate": "2026-09-01",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Minnesota Twins selected the contract of SS Ben Ross from St. Paul Saints."
+    },
+    {
+      "id": 942121,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2026-09-12",
+      "effectiveDate": "2026-09-12",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Minnesota Twins optioned SS Ben Ross to St. Paul Saints."
+    },
+    {
+      "id": 942947,
+      "person": {
+        "id": 805346,
+        "fullName": "Ben Ross",
+        "link": "/api/v1/people/805346",
+        "nameSlug": "ben-ross-805346"
+      },
+      "fromTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-09-16",
+      "effectiveDate": "2026-09-16",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Minnesota Twins recalled SS Ben Ross from St. Paul Saints."
+    }
+  ]
+}

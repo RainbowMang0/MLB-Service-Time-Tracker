@@ -1,0 +1,751 @@
+{
+  "player_id": 676782,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:b14f7cd8fc3dd3befa15dbb632300a4cf8f6dd5d3f90b745156c9dcef59432b7",
+  "transactions": [
+    {
+      "id": 317654,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2017-06-20",
+      "effectiveDate": "2017-06-20",
+      "resolutionDate": "2017-06-20",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Oakland Athletics signed CF Raymond McDonald."
+    },
+    {
+      "id": 319159,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "toTeam": {
+        "id": 405,
+        "name": "AZL Athletics Green",
+        "link": "/api/v1/teams/405"
+      },
+      "date": "2017-06-23",
+      "effectiveDate": "2017-06-23",
+      "resolutionDate": "2017-06-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Mickey McDonald assigned to AZL Athletics."
+    },
+    {
+      "id": 326831,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "fromTeam": {
+        "id": 405,
+        "name": "AZL Athletics Green",
+        "link": "/api/v1/teams/405"
+      },
+      "toTeam": {
+        "id": 462,
+        "name": "Vermont Lake Monsters",
+        "link": "/api/v1/teams/462"
+      },
+      "date": "2017-07-30",
+      "effectiveDate": "2017-07-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Mickey McDonald assigned to Vermont Lake Monsters from AZL Athletics."
+    },
+    {
+      "id": 346696,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "fromTeam": {
+        "id": 462,
+        "name": "Vermont Lake Monsters",
+        "link": "/api/v1/teams/462"
+      },
+      "toTeam": {
+        "id": 554,
+        "name": "Beloit Sky Carp",
+        "link": "/api/v1/teams/554"
+      },
+      "date": "2018-04-02",
+      "effectiveDate": "2018-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Mickey McDonald assigned to Beloit Snappers from Vermont Lake Monsters."
+    },
+    {
+      "id": 373202,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "fromTeam": {
+        "id": 554,
+        "name": "Beloit Sky Carp",
+        "link": "/api/v1/teams/554"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2018-08-05",
+      "effectiveDate": "2018-08-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Mickey McDonald assigned to Midland RockHounds from Beloit Snappers."
+    },
+    {
+      "id": 373704,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "fromTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "toTeam": {
+        "id": 554,
+        "name": "Beloit Sky Carp",
+        "link": "/api/v1/teams/554"
+      },
+      "date": "2018-08-08",
+      "effectiveDate": "2018-08-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Mickey McDonald assigned to Beloit Snappers from Midland RockHounds."
+    },
+    {
+      "id": 393866,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "fromTeam": {
+        "id": 554,
+        "name": "Beloit Sky Carp",
+        "link": "/api/v1/teams/554"
+      },
+      "toTeam": {
+        "id": 524,
+        "name": "Stockton Ports",
+        "link": "/api/v1/teams/524"
+      },
+      "date": "2019-04-01",
+      "effectiveDate": "2019-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Mickey McDonald assigned to Stockton Ports from Beloit Snappers."
+    },
+    {
+      "id": 418109,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "fromTeam": {
+        "id": 524,
+        "name": "Stockton Ports",
+        "link": "/api/v1/teams/524"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2019-07-17",
+      "effectiveDate": "2019-07-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Mickey McDonald assigned to Midland RockHounds from Stockton Ports."
+    },
+    {
+      "id": 442334,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "fromTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "toTeam": {
+        "id": 524,
+        "name": "Stockton Ports",
+        "link": "/api/v1/teams/524"
+      },
+      "date": "2019-11-19",
+      "effectiveDate": "2019-11-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Mickey McDonald assigned to Stockton Ports from Midland RockHounds."
+    },
+    {
+      "id": 439093,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2020-02-23",
+      "effectiveDate": "2020-02-23",
+      "resolutionDate": "2020-02-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Mickey McDonald assigned to Oakland Athletics."
+    },
+    {
+      "id": 456321,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "fromTeam": {
+        "id": 524,
+        "name": "Stockton Ports",
+        "link": "/api/v1/teams/524"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2020-11-19",
+      "effectiveDate": "2020-11-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Mickey McDonald assigned to Midland RockHounds from Stockton Ports."
+    },
+    {
+      "id": 489352,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2020-11-20",
+      "effectiveDate": "2020-11-20",
+      "resolutionDate": "2020-11-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Mickey McDonald assigned to Midland RockHounds."
+    },
+    {
+      "id": 488511,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2020-11-20",
+      "effectiveDate": "2020-11-20",
+      "resolutionDate": "2020-11-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Mickey McDonald assigned to Midland RockHounds."
+    },
+    {
+      "id": 493480,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "fromTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2021-06-08",
+      "effectiveDate": "2021-06-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Mickey McDonald assigned to Las Vegas Aviators from Midland RockHounds."
+    },
+    {
+      "id": 495099,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2021-06-18",
+      "effectiveDate": "2021-06-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Mickey McDonald assigned to Midland RockHounds from Las Vegas Aviators."
+    },
+    {
+      "id": 507356,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2021-07-26",
+      "effectiveDate": "2021-07-26",
+      "resolutionDate": "2021-07-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Mickey McDonald assigned to Las Vegas Aviators."
+    },
+    {
+      "id": 611884,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2022-03-11",
+      "effectiveDate": "2022-03-11",
+      "resolutionDate": "2022-03-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "CF Mickey McDonald roster status changed by Oakland Athletics."
+    },
+    {
+      "id": 605718,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2022-03-11",
+      "effectiveDate": "2022-03-11",
+      "resolutionDate": "2022-03-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Oakland Athletics invited non-roster CF Mickey McDonald to spring training."
+    },
+    {
+      "id": 616134,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2022-04-20",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Oakland Athletics selected the contract of CF Mickey McDonald from Las Vegas Aviators."
+    },
+    {
+      "id": 618511,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2022-04-29",
+      "effectiveDate": "2022-04-29",
+      "resolutionDate": "2022-04-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Las Vegas Aviators activated CF Mickey McDonald."
+    },
+    {
+      "id": 618509,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2022-04-29",
+      "effectiveDate": "2022-04-29",
+      "resolutionDate": "2022-04-29",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Oakland Athletics designated CF Mickey McDonald for assignment."
+    },
+    {
+      "id": 618266,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2022-04-29",
+      "effectiveDate": "2022-04-29",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Oakland Athletics optioned CF Mickey McDonald to Las Vegas Aviators."
+    },
+    {
+      "id": 618991,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2022-05-02",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Oakland Athletics sent CF Mickey McDonald outright to Las Vegas Aviators."
+    },
+    {
+      "id": 626088,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2022-05-12",
+      "effectiveDate": "2022-05-12",
+      "resolutionDate": "2022-05-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Las Vegas Aviators placed CF Mickey McDonald on the 7-day injured list."
+    },
+    {
+      "id": 626089,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2022-06-02",
+      "effectiveDate": "2022-06-02",
+      "resolutionDate": "2022-06-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Las Vegas Aviators activated CF Mickey McDonald from the 7-day injured list."
+    },
+    {
+      "id": 633814,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2022-06-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Mickey McDonald assigned to Midland RockHounds from Las Vegas Aviators."
+    },
+    {
+      "id": 635076,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "fromTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2022-07-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Mickey McDonald assigned to Las Vegas Aviators from Midland RockHounds."
+    },
+    {
+      "id": 642797,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2022-08-03",
+      "effectiveDate": "2022-08-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Mickey McDonald assigned to Midland RockHounds from Las Vegas Aviators."
+    },
+    {
+      "id": 680529,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2022-08-21",
+      "effectiveDate": "2022-08-21",
+      "resolutionDate": "2022-08-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Las Vegas Aviators activated CF Mickey McDonald."
+    },
+    {
+      "id": 647752,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "fromTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2022-08-21",
+      "effectiveDate": "2022-08-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Mickey McDonald assigned to Las Vegas Aviators from Midland RockHounds."
+    },
+    {
+      "id": 678041,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2023-03-12",
+      "effectiveDate": "2023-03-12",
+      "resolutionDate": "2023-03-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "CF Mickey McDonald roster status changed by Oakland Athletics."
+    },
+    {
+      "id": 675421,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2023-03-12",
+      "effectiveDate": "2023-03-12",
+      "resolutionDate": "2023-03-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "CF Mickey McDonald roster status changed by Oakland Athletics."
+    },
+    {
+      "id": 680530,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2023-03-31",
+      "effectiveDate": "2023-03-31",
+      "resolutionDate": "2023-03-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Las Vegas Aviators placed CF Mickey McDonald on the 7-day injured list."
+    },
+    {
+      "id": 715508,
+      "person": {
+        "id": 676782,
+        "fullName": "Mickey McDonald",
+        "link": "/api/v1/people/676782",
+        "nameSlug": "mickey-mcdonald-676782"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2023-04-21",
+      "effectiveDate": "2023-04-21",
+      "resolutionDate": "2023-04-21",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Las Vegas Aviators released CF Mickey McDonald."
+    }
+  ]
+}

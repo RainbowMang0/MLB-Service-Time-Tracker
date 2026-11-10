@@ -1,0 +1,1092 @@
+{
+  "player_id": 680701,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:3ba75c61231f176d8000c49d957fc7881d034eae6aa2ed66779d9ff63dfc7e0e",
+  "transactions": [
+    {
+      "id": 367766,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2018-07-03",
+      "effectiveDate": "2018-07-03",
+      "resolutionDate": "2018-07-03",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Los Angeles Dodgers signed LHP John Rooney."
+    },
+    {
+      "id": 369561,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 2690,
+        "name": "AZL Dodgers 2",
+        "link": "/api/v1/teams/2690"
+      },
+      "date": "2018-07-18",
+      "effectiveDate": "2018-07-18",
+      "resolutionDate": "2018-07-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP John Rooney assigned to AZL Dodgers."
+    },
+    {
+      "id": 371680,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "fromTeam": {
+        "id": 2690,
+        "name": "AZL Dodgers 2",
+        "link": "/api/v1/teams/2690"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2018-07-28",
+      "effectiveDate": "2018-07-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP John Rooney assigned to Great Lakes Loons from AZL Dodgers."
+    },
+    {
+      "id": 375949,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2018-08-22",
+      "effectiveDate": "2018-08-22",
+      "resolutionDate": "2018-08-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons placed LHP John Rooney on the 7-day disabled list."
+    },
+    {
+      "id": 377407,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2018-09-01",
+      "effectiveDate": "2018-09-01",
+      "resolutionDate": "2018-09-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated LHP John Rooney from the 7-day injured list."
+    },
+    {
+      "id": 393663,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2019-04-01",
+      "effectiveDate": "2019-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP John Rooney assigned to AZL Dodgers 2 from Great Lakes Loons."
+    },
+    {
+      "id": 401630,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "fromTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2019-05-16",
+      "effectiveDate": "2019-05-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP John Rooney assigned to Great Lakes Loons from AZL Dodgers 2."
+    },
+    {
+      "id": 408673,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2019-06-14",
+      "effectiveDate": "2019-06-14",
+      "resolutionDate": "2019-06-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons placed LHP John Rooney on the temporarily inactive list."
+    },
+    {
+      "id": 411039,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2019-06-19",
+      "effectiveDate": "2019-06-19",
+      "resolutionDate": "2019-06-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated LHP John Rooney from the temporarily inactive list."
+    },
+    {
+      "id": 418091,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2019-07-17",
+      "effectiveDate": "2019-07-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP John Rooney assigned to Rancho Cucamonga Quakes from Great Lakes Loons."
+    },
+    {
+      "id": 463024,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2019-07-17",
+      "effectiveDate": "2019-07-17",
+      "resolutionDate": "2019-07-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP John Rooney assigned to Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 467630,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP John Rooney assigned to Great Lakes Loons."
+    },
+    {
+      "id": 465415,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP John Rooney assigned to Great Lakes Loons."
+    },
+    {
+      "id": 483386,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP John Rooney assigned to Tulsa Drillers from Great Lakes Loons."
+    },
+    {
+      "id": 495307,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2021-06-20",
+      "effectiveDate": "2021-06-20",
+      "resolutionDate": "2021-06-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers placed LHP John Rooney on the 7-day injured list."
+    },
+    {
+      "id": 512117,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2021-08-14",
+      "effectiveDate": "2021-08-14",
+      "resolutionDate": "2021-08-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers placed LHP John Rooney on the 60-day injured list."
+    },
+    {
+      "id": 524203,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2021-11-07",
+      "effectiveDate": "2021-11-07",
+      "resolutionDate": "2021-11-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers activated LHP John Rooney from the 60-day injured list."
+    },
+    {
+      "id": 676547,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2023-03-12",
+      "effectiveDate": "2023-03-12",
+      "resolutionDate": "2023-03-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LHP John Rooney roster status changed by Los Angeles Dodgers."
+    },
+    {
+      "id": 675407,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2023-03-12",
+      "effectiveDate": "2023-03-12",
+      "resolutionDate": "2023-03-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP John Rooney assigned to Los Angeles Dodgers."
+    },
+    {
+      "id": 709300,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "fromTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-07-05",
+      "effectiveDate": "2023-07-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP John Rooney assigned to Oklahoma City Dodgers from Tulsa Drillers."
+    },
+    {
+      "id": 742723,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2024-02-22",
+      "effectiveDate": "2024-02-22",
+      "resolutionDate": "2024-02-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP John Rooney assigned to Los Angeles Dodgers."
+    },
+    {
+      "id": 753798,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 369,
+        "name": "Los Angeles Dodgers Prospects",
+        "link": "/api/v1/teams/369"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers Prospects activated LHP John Rooney."
+    },
+    {
+      "id": 756928,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2024-03-24",
+      "effectiveDate": "2024-03-24",
+      "resolutionDate": "2024-03-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP John Rooney assigned to Los Angeles Dodgers."
+    },
+    {
+      "id": 709339,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2024-10-26",
+      "effectiveDate": "2023-07-05",
+      "resolutionDate": "2023-07-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers activated LHP John Rooney."
+    },
+    {
+      "id": 805390,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "resolutionDate": "2024-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP John Rooney elected free agency."
+    },
+    {
+      "id": 807062,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2024-11-13",
+      "effectiveDate": "2024-11-13",
+      "resolutionDate": "2024-11-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP John Rooney assigned to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 840482,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2024-11-13",
+      "effectiveDate": "2024-11-13",
+      "resolutionDate": "2024-11-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jacksonville Jumbo Shrimp activated LHP John Rooney."
+    },
+    {
+      "id": 814428,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2024-11-13",
+      "effectiveDate": "2024-11-13",
+      "resolutionDate": "2024-11-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LHP John Rooney roster status changed by Miami Marlins."
+    },
+    {
+      "id": 807063,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2024-11-13",
+      "effectiveDate": "2024-11-13",
+      "resolutionDate": "2024-11-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP John Rooney assigned to Miami Marlins."
+    },
+    {
+      "id": 861291,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2025-08-03",
+      "effectiveDate": "2025-08-03",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Miami Marlins traded LHP John Rooney to Houston Astros for cash."
+    },
+    {
+      "id": 862433,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-08-05",
+      "effectiveDate": "2025-08-05",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned LHP John Rooney to Sugar Land Space Cowboys."
+    },
+    {
+      "id": 862868,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-08-06",
+      "effectiveDate": "2025-08-06",
+      "resolutionDate": "2025-08-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sugar Land Space Cowboys activated LHP John Rooney."
+    },
+    {
+      "id": 866023,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "fromTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2025-08-24",
+      "effectiveDate": "2025-08-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Houston Astros recalled LHP John Rooney from Sugar Land Space Cowboys."
+    },
+    {
+      "id": 866305,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2025-08-26",
+      "effectiveDate": "2025-08-25",
+      "resolutionDate": "2025-08-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros placed LHP John Rooney on the 15-day injured list retroactive to August 25, 2025. Left elbow inflammation."
+    },
+    {
+      "id": 867677,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2025-09-03",
+      "effectiveDate": "2025-09-03",
+      "resolutionDate": "2025-09-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros transferred LHP John Rooney from the 15-day injured list to the 60-day injured list."
+    },
+    {
+      "id": 875963,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP John Rooney elected free agency."
+    },
+    {
+      "id": 875245,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros activated LHP John Rooney from the 60-day injured list."
+    },
+    {
+      "id": 875247,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Houston Astros sent LHP John Rooney outright to Sugar Land Space Cowboys."
+    },
+    {
+      "id": 883242,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2025-11-15",
+      "effectiveDate": "2025-11-15",
+      "resolutionDate": "2025-11-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LHP John Rooney roster status changed by Tampa Bay Rays."
+    },
+    {
+      "id": 877369,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2025-11-15",
+      "effectiveDate": "2025-11-15",
+      "resolutionDate": "2025-11-15",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Tampa Bay Rays signed free agent LHP John Rooney to a minor league contract."
+    },
+    {
+      "id": 877370,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2025-11-15",
+      "effectiveDate": "2025-11-15",
+      "resolutionDate": "2025-11-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP John Rooney assigned to Durham Bulls."
+    },
+    {
+      "id": 894038,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2026-03-27",
+      "effectiveDate": "2026-03-27",
+      "resolutionDate": "2026-03-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls placed LHP John Rooney on the 7-day injured list."
+    },
+    {
+      "id": 905443,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 2498,
+        "name": "Bowling Green Hot Rods",
+        "link": "/api/v1/teams/2498"
+      },
+      "date": "2026-05-02",
+      "effectiveDate": "2026-05-02",
+      "resolutionDate": "2026-05-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Durham Bulls sent LHP John Rooney on a rehab assignment to Bowling Green Hot Rods."
+    },
+    {
+      "id": 907599,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2026-05-12",
+      "effectiveDate": "2026-05-12",
+      "resolutionDate": "2026-05-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls activated LHP John Rooney from the 7-day injured list."
+    },
+    {
+      "id": 907689,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2026-05-12",
+      "effectiveDate": "2026-05-12",
+      "resolutionDate": "2026-05-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls activated LHP John Rooney from the 7-day injured list."
+    },
+    {
+      "id": 925361,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2026-07-05",
+      "effectiveDate": "2026-07-05",
+      "resolutionDate": "2026-07-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls placed LHP John Rooney on the 7-day injured list."
+    },
+    {
+      "id": 933620,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2026-07-31",
+      "effectiveDate": "2026-07-31",
+      "resolutionDate": "2026-07-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls activated LHP John Rooney from the 7-day injured list."
+    },
+    {
+      "id": 937412,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2026-08-13",
+      "effectiveDate": "2026-08-13",
+      "resolutionDate": "2026-08-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls placed LHP John Rooney on the 7-day injured list."
+    },
+    {
+      "id": 938756,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2026-08-21",
+      "effectiveDate": "2026-08-21",
+      "resolutionDate": "2026-08-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls activated LHP John Rooney from the 7-day injured list."
+    },
+    {
+      "id": 938933,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2026-08-22",
+      "effectiveDate": "2026-08-22",
+      "resolutionDate": "2026-08-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls transferred LHP John Rooney to the Development List."
+    },
+    {
+      "id": 941405,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2026-09-05",
+      "effectiveDate": "2026-09-05",
+      "resolutionDate": "2026-09-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls activated LHP John Rooney from the Development List."
+    },
+    {
+      "id": 948963,
+      "person": {
+        "id": 680701,
+        "fullName": "John Rooney",
+        "link": "/api/v1/people/680701",
+        "nameSlug": "john-rooney-680701"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP John Rooney elected free agency."
+    }
+  ]
+}

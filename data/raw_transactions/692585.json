@@ -1,0 +1,810 @@
+{
+  "player_id": 692585,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:1b208df7f15a7db0ba38856758b5aed94523545b48411ee01387135c05e06b5e",
+  "transactions": [
+    {
+      "id": 431254,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2019-07-12",
+      "effectiveDate": "2019-07-12",
+      "resolutionDate": "2019-07-12",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Colorado Rockies signed free agent OF Yanquiel Fernandez to a minor league contract."
+    },
+    {
+      "id": 502088,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 629,
+        "name": "DSL Rockies",
+        "link": "/api/v1/teams/629"
+      },
+      "date": "2021-07-09",
+      "effectiveDate": "2021-07-09",
+      "resolutionDate": "2021-07-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Yanquiel Fernandez assigned to DSL Rockies."
+    },
+    {
+      "id": 682796,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2022-04-05",
+      "effectiveDate": "2022-04-05",
+      "resolutionDate": "2022-04-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Fresno Grizzlies activated RF Yanquiel Fernandez."
+    },
+    {
+      "id": 611262,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "fromTeam": {
+        "id": 629,
+        "name": "DSL Rockies",
+        "link": "/api/v1/teams/629"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2022-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Yanquiel Fernandez assigned to Fresno Grizzlies from DSL Rockies."
+    },
+    {
+      "id": 674669,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2023-03-06",
+      "effectiveDate": "2023-03-06",
+      "resolutionDate": "2023-03-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Yanquiel Fernandez and  assigned to Colorado Rockies."
+    },
+    {
+      "id": 685556,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 486,
+        "name": "Spokane Indians",
+        "link": "/api/v1/teams/486"
+      },
+      "date": "2023-04-11",
+      "effectiveDate": "2023-04-11",
+      "resolutionDate": "2023-04-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Spokane Indians activated RF Yanquiel Fernandez."
+    },
+    {
+      "id": 684217,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "fromTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "toTeam": {
+        "id": 486,
+        "name": "Spokane Indians",
+        "link": "/api/v1/teams/486"
+      },
+      "date": "2023-04-11",
+      "effectiveDate": "2023-04-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Yanquiel Fernandez assigned to Spokane Indians from Fresno Grizzlies."
+    },
+    {
+      "id": 705626,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "fromTeam": {
+        "id": 486,
+        "name": "Spokane Indians",
+        "link": "/api/v1/teams/486"
+      },
+      "toTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "date": "2023-06-20",
+      "effectiveDate": "2023-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Yanquiel Fernandez assigned to Hartford Yard Goats from Spokane Indians."
+    },
+    {
+      "id": 707016,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 319,
+        "name": "National League Futures",
+        "link": "/api/v1/teams/319"
+      },
+      "date": "2023-07-07",
+      "effectiveDate": "2023-07-07",
+      "resolutionDate": "2023-07-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "National League Futures activated RF Yanquiel Fernandez."
+    },
+    {
+      "id": 715058,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "date": "2023-07-26",
+      "effectiveDate": "2023-07-26",
+      "resolutionDate": "2023-07-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Hartford Yard Goats placed RF Yanquiel Fernandez on the 7-day injured list."
+    },
+    {
+      "id": 717970,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "date": "2023-08-05",
+      "effectiveDate": "2023-08-05",
+      "resolutionDate": "2023-08-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Hartford Yard Goats activated RF Yanquiel Fernandez from the 7-day injured list."
+    },
+    {
+      "id": 730578,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 689,
+        "name": "Leones de Ponce",
+        "link": "/api/v1/teams/689"
+      },
+      "date": "2023-11-03",
+      "effectiveDate": "2023-11-03",
+      "resolutionDate": "2023-11-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Yanquiel Fernandez assigned to Leones de Ponce."
+    },
+    {
+      "id": 732921,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "fromTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2023-11-14",
+      "effectiveDate": "2023-11-14",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Colorado Rockies selected the contract of RF Yanquiel Fernandez from Hartford Yard Goats."
+    },
+    {
+      "id": 753935,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 365,
+        "name": "Colorado Rockies Prospects",
+        "link": "/api/v1/teams/365"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Colorado Rockies Prospects activated RF Yanquiel Fernandez."
+    },
+    {
+      "id": 761087,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "date": "2024-03-08",
+      "effectiveDate": "2024-03-08",
+      "resolutionDate": "2024-03-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Hartford Yard Goats activated RF Yanquiel Fernandez."
+    },
+    {
+      "id": 754344,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "date": "2024-03-08",
+      "effectiveDate": "2024-03-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Colorado Rockies optioned RF Yanquiel Fernandez to Hartford Yard Goats."
+    },
+    {
+      "id": 764676,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "date": "2024-04-21",
+      "effectiveDate": "2024-04-21",
+      "resolutionDate": "2024-04-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Hartford Yard Goats placed RF Yanquiel Fernandez on the temporarily inactive list."
+    },
+    {
+      "id": 765383,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "date": "2024-04-24",
+      "effectiveDate": "2024-04-24",
+      "resolutionDate": "2024-04-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Hartford Yard Goats activated RF Yanquiel Fernandez from the temporarily inactive list."
+    },
+    {
+      "id": 793806,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2024-08-06",
+      "effectiveDate": "2024-08-06",
+      "resolutionDate": "2024-08-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Albuquerque Isotopes activated RF Yanquiel Fernandez."
+    },
+    {
+      "id": 793116,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "fromTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2024-08-06",
+      "effectiveDate": "2024-08-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Yanquiel Fernandez assigned to Albuquerque Isotopes from Hartford Yard Goats."
+    },
+    {
+      "id": 801046,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "fromTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2024-10-01",
+      "effectiveDate": "2024-10-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Colorado Rockies recalled RF Yanquiel Fernandez from Albuquerque Isotopes."
+    },
+    {
+      "id": 805610,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 689,
+        "name": "Leones de Ponce",
+        "link": "/api/v1/teams/689"
+      },
+      "date": "2024-11-07",
+      "effectiveDate": "2024-11-07",
+      "resolutionDate": "2024-11-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Yanquiel Fernandez assigned to Leones de Ponce."
+    },
+    {
+      "id": 807825,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 4705,
+        "name": "Equipo Importados",
+        "link": "/api/v1/teams/4705"
+      },
+      "date": "2024-12-07",
+      "effectiveDate": "2024-12-07",
+      "resolutionDate": "2024-12-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Equipo Importados activated RF Yanquiel Fernandez."
+    },
+    {
+      "id": 807567,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 4705,
+        "name": "Equipo Importados",
+        "link": "/api/v1/teams/4705"
+      },
+      "date": "2024-12-07",
+      "effectiveDate": "2024-12-07",
+      "resolutionDate": "2024-12-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Yanquiel Fernandez assigned to Equipo Importados."
+    },
+    {
+      "id": 822794,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2025-03-11",
+      "effectiveDate": "2025-03-11",
+      "resolutionDate": "2025-03-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Albuquerque Isotopes activated RF Yanquiel Fernandez."
+    },
+    {
+      "id": 819754,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2025-03-11",
+      "effectiveDate": "2025-03-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Colorado Rockies optioned RF Yanquiel Fernandez to Albuquerque Isotopes."
+    },
+    {
+      "id": 851626,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2025-07-01",
+      "effectiveDate": "2025-07-01",
+      "resolutionDate": "2025-07-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Colorado Rockies reassigned RF Yanquiel Fernández to the minor leagues."
+    },
+    {
+      "id": 851872,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "fromTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2025-07-01",
+      "effectiveDate": "2025-07-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Colorado Rockies recalled RF Yanquiel Fernández from Albuquerque Isotopes."
+    },
+    {
+      "id": 883069,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2026-01-28",
+      "effectiveDate": "2026-01-28",
+      "resolutionDate": "2026-01-28",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Colorado Rockies designated RF Yanquiel Fernández for assignment."
+    },
+    {
+      "id": 884215,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2026-02-04",
+      "effectiveDate": "2026-02-04",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "New York Yankees claimed RF Yanquiel Fernández off waivers from Colorado Rockies."
+    },
+    {
+      "id": 885622,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2026-02-09",
+      "effectiveDate": "2026-02-09",
+      "resolutionDate": "2026-02-09",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Yankees designated RF Yanquiel Fernández for assignment."
+    },
+    {
+      "id": 886622,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2026-02-16",
+      "effectiveDate": "2026-02-16",
+      "resolutionDate": "2026-02-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Yankees invited non-roster RF Yanquiel Fernández to spring training."
+    },
+    {
+      "id": 894180,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2026-02-16",
+      "effectiveDate": "2026-02-16",
+      "resolutionDate": "2026-02-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders activated RF Yanquiel Fernández."
+    },
+    {
+      "id": 886621,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2026-02-16",
+      "effectiveDate": "2026-02-16",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "New York Yankees sent RF Yanquiel Fernández outright to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 913303,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2026-05-29",
+      "effectiveDate": "2026-05-29",
+      "resolutionDate": "2026-05-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders placed RF Yanquiel Fernández on the 7-day injured list."
+    },
+    {
+      "id": 916375,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2026-06-06",
+      "effectiveDate": "2026-06-06",
+      "resolutionDate": "2026-06-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders activated RF Yanquiel Fernández from the 7-day injured list."
+    },
+    {
+      "id": 929819,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2026-06-06",
+      "effectiveDate": "2026-06-06",
+      "resolutionDate": "2026-06-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders activated RF Yanquiel Fernández from the 7-day injured list."
+    },
+    {
+      "id": 948804,
+      "person": {
+        "id": 692585,
+        "fullName": "Yanquiel Fernández",
+        "link": "/api/v1/people/692585",
+        "nameSlug": "yanquiel-fernandez-692585"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RF Yanquiel Fernández elected free agency."
+    }
+  ]
+}

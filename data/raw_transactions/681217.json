@@ -1,0 +1,1186 @@
+{
+  "player_id": 681217,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:e1448968ed3aea5ffcac3ed4ab4c96bf36cc49949b7b8466d9492e5ea2d5bf43",
+  "transactions": [
+    {
+      "id": 508881,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2021-07-31",
+      "effectiveDate": "2021-07-31",
+      "resolutionDate": "2021-07-31",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Los Angeles Angels signed RHP Chase Silseth."
+    },
+    {
+      "id": 515140,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 404,
+        "name": "ACL Angels",
+        "link": "/api/v1/teams/404"
+      },
+      "date": "2021-08-31",
+      "effectiveDate": "2021-08-31",
+      "resolutionDate": "2021-08-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Chase Silseth assigned to ACL Angels."
+    },
+    {
+      "id": 516138,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 404,
+        "name": "ACL Angels",
+        "link": "/api/v1/teams/404"
+      },
+      "toTeam": {
+        "id": 559,
+        "name": "Rocket City Trash Pandas",
+        "link": "/api/v1/teams/559"
+      },
+      "date": "2021-09-06",
+      "effectiveDate": "2021-09-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Chase Silseth and  assigned to Rocket City Trash Pandas from ACL Angels."
+    },
+    {
+      "id": 621097,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 559,
+        "name": "Rocket City Trash Pandas",
+        "link": "/api/v1/teams/559"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2022-05-13",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Angels selected the contract of RHP Chase Silseth from Rocket City Trash Pandas."
+    },
+    {
+      "id": 629531,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 559,
+        "name": "Rocket City Trash Pandas",
+        "link": "/api/v1/teams/559"
+      },
+      "date": "2022-06-07",
+      "effectiveDate": "2022-06-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned RHP Chase Silseth to Rocket City Trash Pandas."
+    },
+    {
+      "id": 633774,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 559,
+        "name": "Rocket City Trash Pandas",
+        "link": "/api/v1/teams/559"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2022-06-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled RHP Chase Silseth from Rocket City Trash Pandas."
+    },
+    {
+      "id": 636881,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 559,
+        "name": "Rocket City Trash Pandas",
+        "link": "/api/v1/teams/559"
+      },
+      "date": "2022-07-11",
+      "effectiveDate": "2022-07-11",
+      "resolutionDate": "2022-07-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rocket City Trash Pandas activated RHP Chase Silseth."
+    },
+    {
+      "id": 636519,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 559,
+        "name": "Rocket City Trash Pandas",
+        "link": "/api/v1/teams/559"
+      },
+      "date": "2022-07-11",
+      "effectiveDate": "2022-07-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned RHP Chase Silseth to Rocket City Trash Pandas."
+    },
+    {
+      "id": 641495,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 559,
+        "name": "Rocket City Trash Pandas",
+        "link": "/api/v1/teams/559"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2022-07-30",
+      "effectiveDate": "2022-07-30",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled RHP Chase Silseth from Rocket City Trash Pandas."
+    },
+    {
+      "id": 641568,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2022-07-31",
+      "effectiveDate": "2022-07-31",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned RHP Chase Silseth to Salt Lake Bees."
+    },
+    {
+      "id": 642822,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 559,
+        "name": "Rocket City Trash Pandas",
+        "link": "/api/v1/teams/559"
+      },
+      "date": "2022-08-03",
+      "effectiveDate": "2022-08-03",
+      "resolutionDate": "2022-08-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rocket City Trash Pandas activated RHP Chase Silseth."
+    },
+    {
+      "id": 642819,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 559,
+        "name": "Rocket City Trash Pandas",
+        "link": "/api/v1/teams/559"
+      },
+      "date": "2022-08-03",
+      "effectiveDate": "2022-08-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Chase Silseth assigned to Rocket City Trash Pandas from Salt Lake Bees."
+    },
+    {
+      "id": 645811,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 559,
+        "name": "Rocket City Trash Pandas",
+        "link": "/api/v1/teams/559"
+      },
+      "date": "2022-08-11",
+      "effectiveDate": "2022-08-11",
+      "resolutionDate": "2022-08-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Chase Silseth roster status changed by Rocket City Trash Pandas."
+    },
+    {
+      "id": 646435,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 559,
+        "name": "Rocket City Trash Pandas",
+        "link": "/api/v1/teams/559"
+      },
+      "date": "2022-08-14",
+      "effectiveDate": "2022-08-14",
+      "resolutionDate": "2022-08-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rocket City Trash Pandas activated RHP Chase Silseth."
+    },
+    {
+      "id": 654181,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 3251,
+        "name": "Angels Organization",
+        "link": "/api/v1/teams/3251"
+      },
+      "date": "2022-09-28",
+      "effectiveDate": "2022-09-28",
+      "resolutionDate": "2022-09-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Chase Silseth and  assigned to Angels Organization."
+    },
+    {
+      "id": 654935,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 559,
+        "name": "Rocket City Trash Pandas",
+        "link": "/api/v1/teams/559"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2022-10-06",
+      "effectiveDate": "2022-10-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled RHP Chase Silseth from Rocket City Trash Pandas."
+    },
+    {
+      "id": 680025,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2023-03-21",
+      "effectiveDate": "2023-03-21",
+      "resolutionDate": "2023-03-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt Lake Bees activated RHP Chase Silseth."
+    },
+    {
+      "id": 676581,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2023-03-21",
+      "effectiveDate": "2023-03-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned RHP Chase Silseth to Salt Lake Bees."
+    },
+    {
+      "id": 687371,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2023-04-26",
+      "effectiveDate": "2023-04-26",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled RHP Chase Silseth from Salt Lake Bees."
+    },
+    {
+      "id": 701584,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2023-06-03",
+      "effectiveDate": "2023-06-03",
+      "resolutionDate": "2023-06-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt Lake Bees activated RHP Chase Silseth."
+    },
+    {
+      "id": 698396,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2023-06-03",
+      "effectiveDate": "2023-06-03",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned RHP Chase Silseth to Salt Lake Bees."
+    },
+    {
+      "id": 712442,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2023-07-19",
+      "effectiveDate": "2023-07-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled RHP Chase Silseth from Salt Lake Bees."
+    },
+    {
+      "id": 722404,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2023-08-29",
+      "effectiveDate": "2023-08-27",
+      "resolutionDate": "2023-08-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Angels placed RHP Chase Silseth on the 7-day injured list retroactive to August 27, 2023. Concussion."
+    },
+    {
+      "id": 725422,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2023-09-17",
+      "effectiveDate": "2023-09-17",
+      "resolutionDate": "2023-09-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Angels sent RHP Chase Silseth on a rehab assignment to Salt Lake Bees."
+    },
+    {
+      "id": 726963,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2023-09-28",
+      "effectiveDate": "2023-09-28",
+      "resolutionDate": "2023-09-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Angels activated RHP Chase Silseth from the 7-day injured list."
+    },
+    {
+      "id": 761848,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2024-04-08",
+      "effectiveDate": "2024-04-08",
+      "resolutionDate": "2024-04-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Angels placed RHP Chase Silseth on the 15-day injured list. Right elbow inflammation."
+    },
+    {
+      "id": 766599,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2024-04-30",
+      "effectiveDate": "2024-04-30",
+      "resolutionDate": "2024-04-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Angels transferred RHP Chase Silseth from the 15-day injured list to the 60-day injured list. Right elbow inflammation."
+    },
+    {
+      "id": 775334,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 404,
+        "name": "ACL Angels",
+        "link": "/api/v1/teams/404"
+      },
+      "date": "2024-05-31",
+      "effectiveDate": "2024-05-31",
+      "resolutionDate": "2024-05-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Angels sent RHP Chase Silseth on a rehab assignment to ACL Angels."
+    },
+    {
+      "id": 782910,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2024-06-11",
+      "effectiveDate": "2024-06-11",
+      "resolutionDate": "2024-06-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Angels sent RHP Chase Silseth on a rehab assignment to Salt Lake Bees."
+    },
+    {
+      "id": 779417,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2024-06-11",
+      "effectiveDate": "2024-06-11",
+      "resolutionDate": "2024-06-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Angels sent RHP Chase Silseth on a rehab assignment to Salt Lake Bees."
+    },
+    {
+      "id": 782911,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2024-06-25",
+      "effectiveDate": "2024-06-25",
+      "resolutionDate": "2024-06-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Angels activated RHP Chase Silseth from the 60-day injured list."
+    },
+    {
+      "id": 782912,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2024-06-25",
+      "effectiveDate": "2024-06-25",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned RHP Chase Silseth to Salt Lake Bees."
+    },
+    {
+      "id": 794717,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2024-07-31",
+      "effectiveDate": "2024-07-31",
+      "resolutionDate": "2024-07-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt Lake Bees placed RHP Chase Silseth on the 7-day injured list."
+    },
+    {
+      "id": 791730,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2024-07-31",
+      "effectiveDate": "2024-07-31",
+      "resolutionDate": "2024-07-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt Lake Bees placed RHP Chase Silseth on the 7-day injured list."
+    },
+    {
+      "id": 800845,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2024-10-01",
+      "effectiveDate": "2024-10-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled RHP Chase Silseth from Salt Lake Bees."
+    },
+    {
+      "id": 820746,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2025-03-18",
+      "effectiveDate": "2025-03-18",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned RHP Chase Silseth to Salt Lake Bees."
+    },
+    {
+      "id": 839329,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2025-05-20",
+      "effectiveDate": "2025-05-20",
+      "resolutionDate": "2025-05-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt Lake Bees placed RHP Chase Silseth on the 7-day injured list."
+    },
+    {
+      "id": 852939,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 404,
+        "name": "ACL Angels",
+        "link": "/api/v1/teams/404"
+      },
+      "date": "2025-07-05",
+      "effectiveDate": "2025-07-05",
+      "resolutionDate": "2025-07-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Salt Lake Bees sent RHP Chase Silseth on a rehab assignment to ACL Angels."
+    },
+    {
+      "id": 858586,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2025-07-25",
+      "effectiveDate": "2025-07-25",
+      "resolutionDate": "2025-07-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt Lake Bees activated RHP Chase Silseth from the 7-day injured list."
+    },
+    {
+      "id": 865489,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2025-08-20",
+      "effectiveDate": "2025-08-20",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled RHP Chase Silseth from Salt Lake Bees."
+    },
+    {
+      "id": 865693,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2025-08-21",
+      "effectiveDate": "2025-08-21",
+      "resolutionDate": "2025-08-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt Lake Bees activated RHP Chase Silseth."
+    },
+    {
+      "id": 865631,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2025-08-21",
+      "effectiveDate": "2025-08-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned RHP Chase Silseth to Salt Lake Bees."
+    },
+    {
+      "id": 866066,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2025-08-24",
+      "effectiveDate": "2025-08-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled RHP Chase Silseth from Salt Lake Bees."
+    },
+    {
+      "id": 867608,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2025-09-03",
+      "effectiveDate": "2025-09-03",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned RHP Chase Silseth to Salt Lake Bees."
+    },
+    {
+      "id": 868072,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2025-09-06",
+      "effectiveDate": "2025-09-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled RHP Chase Silseth from Salt Lake Bees."
+    },
+    {
+      "id": 868177,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2025-09-07",
+      "effectiveDate": "2025-09-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned RHP Chase Silseth to Salt Lake Bees."
+    },
+    {
+      "id": 868886,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2025-09-11",
+      "effectiveDate": "2025-09-11",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled RHP Chase Silseth from Salt Lake Bees."
+    },
+    {
+      "id": 899371,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Chase Silseth changed number to 42."
+    },
+    {
+      "id": 900292,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Chase Silseth changed number to 63."
+    },
+    {
+      "id": 933295,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Angels activated RHP Chase Silseth."
+    },
+    {
+      "id": 933296,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2026-07-28",
+      "effectiveDate": "2026-07-28",
+      "resolutionDate": "2026-07-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Chase Silseth roster status changed by Los Angeles Angels."
+    },
+    {
+      "id": 933275,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-07-29",
+      "effectiveDate": "2026-07-29",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Los Angeles Angels traded C Logan O'Hoppe and RHP Chase Silseth to Texas Rangers for SS Angel Arredondo."
+    },
+    {
+      "id": 933659,
+      "person": {
+        "id": 681217,
+        "fullName": "Chase Silseth",
+        "link": "/api/v1/people/681217",
+        "nameSlug": "chase-silseth-681217"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-07-31",
+      "effectiveDate": "2026-07-31",
+      "resolutionDate": "2026-07-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated RHP Chase Silseth."
+    }
+  ]
+}

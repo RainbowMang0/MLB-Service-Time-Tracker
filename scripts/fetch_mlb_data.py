@@ -469,6 +469,14 @@ def get_league_transactions(start_date: dt.date, end_date: dt.date) -> list[dict
     return data.get("transactions", [])
 
 
+def get_season_record(year: int) -> dict:
+    """The /seasons row for one year: spring training, the regular season,
+    and the postseason, as dates. Empty when that year is not published."""
+    data = _get("/seasons", {"sportId": SPORT_ID_MLB, "season": year})
+    seasons = data.get("seasons") or []
+    return seasons[0] if seasons and isinstance(seasons[0], dict) else {}
+
+
 def appearance_dates(player_id: int, season: int, group: str) -> list[dt.date]:
     """Dates this player appeared in a regular-season MLB game.
 

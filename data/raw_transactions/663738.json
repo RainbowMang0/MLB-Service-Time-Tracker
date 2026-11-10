@@ -1,0 +1,1415 @@
+{
+  "player_id": 663738,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:41f356e4dd4ea816f7cb0adda1598a327b4271252392aac43b6882e99863e8ec",
+  "transactions": [
+    {
+      "id": 358981,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2018-06-10",
+      "effectiveDate": "2018-06-10",
+      "resolutionDate": "2018-06-10",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Kansas City Royals signed LHP Daniel Lynch."
+    },
+    {
+      "id": 362956,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 483,
+        "name": "Burlington Sock Puppets",
+        "link": "/api/v1/teams/483"
+      },
+      "date": "2018-06-19",
+      "effectiveDate": "2018-06-19",
+      "resolutionDate": "2018-06-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Daniel Lynch assigned to Burlington Royals."
+    },
+    {
+      "id": 367826,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 483,
+        "name": "Burlington Sock Puppets",
+        "link": "/api/v1/teams/483"
+      },
+      "toTeam": {
+        "id": 495,
+        "name": "Lexington Legends",
+        "link": "/api/v1/teams/495"
+      },
+      "date": "2018-07-11",
+      "effectiveDate": "2018-07-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Daniel Lynch assigned to Lexington Legends from Burlington Royals."
+    },
+    {
+      "id": 393646,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 495,
+        "name": "Lexington Legends",
+        "link": "/api/v1/teams/495"
+      },
+      "toTeam": {
+        "id": 426,
+        "name": "Wilmington Blue Rocks",
+        "link": "/api/v1/teams/426"
+      },
+      "date": "2019-04-01",
+      "effectiveDate": "2019-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Daniel Lynch assigned to Wilmington Blue Rocks from Lexington Legends."
+    },
+    {
+      "id": 407271,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 426,
+        "name": "Wilmington Blue Rocks",
+        "link": "/api/v1/teams/426"
+      },
+      "date": "2019-06-11",
+      "effectiveDate": "2019-06-11",
+      "resolutionDate": "2019-06-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Wilmington Blue Rocks placed LHP Daniel Lynch on the 7-day injured list."
+    },
+    {
+      "id": 418848,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 426,
+        "name": "Wilmington Blue Rocks",
+        "link": "/api/v1/teams/426"
+      },
+      "toTeam": {
+        "id": 412,
+        "name": "ACL Royals",
+        "link": "/api/v1/teams/412"
+      },
+      "date": "2019-07-20",
+      "effectiveDate": "2019-07-20",
+      "resolutionDate": "2019-07-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Wilmington Blue Rocks sent LHP Daniel Lynch on a rehab assignment to AZL Royals."
+    },
+    {
+      "id": 421686,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 426,
+        "name": "Wilmington Blue Rocks",
+        "link": "/api/v1/teams/426"
+      },
+      "toTeam": {
+        "id": 483,
+        "name": "Burlington Sock Puppets",
+        "link": "/api/v1/teams/483"
+      },
+      "date": "2019-08-03",
+      "effectiveDate": "2019-08-03",
+      "resolutionDate": "2019-08-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Wilmington Blue Rocks sent LHP Daniel Lynch on a rehab assignment to Burlington Royals."
+    },
+    {
+      "id": 423434,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 426,
+        "name": "Wilmington Blue Rocks",
+        "link": "/api/v1/teams/426"
+      },
+      "date": "2019-08-13",
+      "effectiveDate": "2019-08-13",
+      "resolutionDate": "2019-08-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Wilmington Blue Rocks activated LHP Daniel Lynch from the 7-day injured list."
+    },
+    {
+      "id": 426201,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 542,
+        "name": "Surprise Saguaros",
+        "link": "/api/v1/teams/542"
+      },
+      "date": "2019-08-28",
+      "effectiveDate": "2019-08-28",
+      "resolutionDate": "2019-08-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Daniel Lynch assigned to Surprise Saguaros."
+    },
+    {
+      "id": 436381,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2020-01-13",
+      "effectiveDate": "2020-01-13",
+      "resolutionDate": "2020-01-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Kansas City Royals invited non-roster LHP Daniel Lynch to spring training."
+    },
+    {
+      "id": 447224,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 426,
+        "name": "Wilmington Blue Rocks",
+        "link": "/api/v1/teams/426"
+      },
+      "toTeam": {
+        "id": 3300,
+        "name": "Royals Alternate Training Site",
+        "link": "/api/v1/teams/3300"
+      },
+      "date": "2020-07-18",
+      "effectiveDate": "2020-07-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Daniel Lynch assigned to Royals Alternate Training Site from Wilmington Blue Rocks."
+    },
+    {
+      "id": 464174,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 426,
+        "name": "Wilmington Blue Rocks",
+        "link": "/api/v1/teams/426"
+      },
+      "date": "2020-10-06",
+      "effectiveDate": "2020-10-06",
+      "resolutionDate": "2020-10-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Daniel Lynch assigned to Wilmington Blue Rocks."
+    },
+    {
+      "id": 453051,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 3300,
+        "name": "Royals Alternate Training Site",
+        "link": "/api/v1/teams/3300"
+      },
+      "toTeam": {
+        "id": 426,
+        "name": "Wilmington Blue Rocks",
+        "link": "/api/v1/teams/426"
+      },
+      "date": "2020-10-06",
+      "effectiveDate": "2020-10-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Daniel Lynch assigned to Wilmington Blue Rocks from Royals Alternate Training Site."
+    },
+    {
+      "id": 475063,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2021-02-05",
+      "effectiveDate": "2021-02-05",
+      "resolutionDate": "2021-02-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "P Daniel Lynch assigned to Kansas City Royals ."
+    },
+    {
+      "id": 461677,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2021-02-05",
+      "effectiveDate": "2021-02-05",
+      "resolutionDate": "2021-02-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Kansas City Royals invited non-roster LHP Daniel Lynch to spring training."
+    },
+    {
+      "id": 469993,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2021-02-05",
+      "effectiveDate": "2021-02-05",
+      "resolutionDate": "2021-02-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Kansas City Royals invited non-roster LHP Daniel Lynch to spring training."
+    },
+    {
+      "id": 468780,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 565,
+        "name": "Quad Cities River Bandits",
+        "link": "/api/v1/teams/565"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Daniel Lynch assigned to Quad Cities River Bandits."
+    },
+    {
+      "id": 466514,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 565,
+        "name": "Quad Cities River Bandits",
+        "link": "/api/v1/teams/565"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Daniel Lynch assigned to Quad Cities River Bandits."
+    },
+    {
+      "id": 480923,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 3300,
+        "name": "Royals Alternate Training Site",
+        "link": "/api/v1/teams/3300"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2021-04-29",
+      "effectiveDate": "2021-04-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Daniel Lynch assigned to Omaha Storm Chasers from Royals Alternate Training Site."
+    },
+    {
+      "id": 483675,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Kansas City Royals selected the contract of LHP Daniel Lynch from Omaha Storm Chasers."
+    },
+    {
+      "id": 486565,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2021-05-14",
+      "effectiveDate": "2021-05-14",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Kansas City Royals optioned LHP Daniel Lynch to Omaha Storm Chasers."
+    },
+    {
+      "id": 507102,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2021-07-25",
+      "effectiveDate": "2021-07-25",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Kansas City Royals recalled LHP Daniel Lynch from Omaha Storm Chasers."
+    },
+    {
+      "id": 519594,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2021-09-30",
+      "effectiveDate": "2021-09-30",
+      "resolutionDate": "2021-09-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Kansas City Royals placed LHP Daniel Lynch on the 10-day injured list. Right hand contusion."
+    },
+    {
+      "id": 520080,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2021-10-05",
+      "effectiveDate": "2021-10-05",
+      "resolutionDate": "2021-10-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Kansas City Royals activated LHP Daniel Lynch from the 10-day injured list."
+    },
+    {
+      "id": 633100,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2022-06-24",
+      "effectiveDate": "2022-06-23",
+      "resolutionDate": "2022-06-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Kansas City Royals placed LHP Daniel Lynch on the 15-day injured list retroactive to June 23, 2022. Left index finger blister."
+    },
+    {
+      "id": 635645,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2022-07-06",
+      "effectiveDate": "2022-07-06",
+      "resolutionDate": "2022-07-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Kansas City Royals sent LHP Daniel Lynch on a rehab assignment to Omaha Storm Chasers."
+    },
+    {
+      "id": 636555,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2022-07-11",
+      "effectiveDate": "2022-07-11",
+      "resolutionDate": "2022-07-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Kansas City Royals activated LHP Daniel Lynch."
+    },
+    {
+      "id": 638178,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2022-07-18",
+      "effectiveDate": "2022-07-17",
+      "resolutionDate": "2022-07-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Kansas City Royals placed LHP Daniel Lynch on the 15-day injured list retroactive to July 17, 2022. Blister."
+    },
+    {
+      "id": 640012,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2022-07-25",
+      "effectiveDate": "2022-07-25",
+      "resolutionDate": "2022-07-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Kansas City Royals sent LHP Daniel Lynch on a rehab assignment to Omaha Storm Chasers."
+    },
+    {
+      "id": 641910,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2022-08-01",
+      "effectiveDate": "2022-08-01",
+      "resolutionDate": "2022-08-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Kansas City Royals activated LHP Daniel Lynch from the 15-day injured list."
+    },
+    {
+      "id": 679472,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2023-03-30",
+      "effectiveDate": "2023-03-27",
+      "resolutionDate": "2023-03-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Kansas City Royals placed LHP Daniel Lynch on the 15-day injured list retroactive to March 27, 2023. Left rotator cuff strain."
+    },
+    {
+      "id": 688163,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 1350,
+        "name": "Northwest Arkansas Naturals",
+        "link": "/api/v1/teams/1350"
+      },
+      "date": "2023-05-02",
+      "effectiveDate": "2023-05-02",
+      "resolutionDate": "2023-05-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Kansas City Royals sent LHP Daniel Lynch on a rehab assignment to Northwest Arkansas Naturals."
+    },
+    {
+      "id": 689851,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 1350,
+        "name": "Northwest Arkansas Naturals",
+        "link": "/api/v1/teams/1350"
+      },
+      "date": "2023-05-02",
+      "effectiveDate": "2023-05-02",
+      "resolutionDate": "2023-05-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Kansas City Royals sent LHP Daniel Lynch on a rehab assignment to Northwest Arkansas Naturals."
+    },
+    {
+      "id": 689853,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2023-05-07",
+      "effectiveDate": "2023-05-07",
+      "resolutionDate": "2023-05-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Kansas City Royals sent LHP Daniel Lynch on a rehab assignment to Omaha Storm Chasers."
+    },
+    {
+      "id": 696750,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2023-05-28",
+      "effectiveDate": "2023-05-28",
+      "resolutionDate": "2023-05-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Kansas City Royals activated LHP Daniel Lynch from the 15-day injured list."
+    },
+    {
+      "id": 712525,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2023-07-19",
+      "effectiveDate": "2023-07-19",
+      "resolutionDate": "2023-07-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Kansas City Royals placed LHP Daniel Lynch IV on the 15-day injured list. Left shoulder strain."
+    },
+    {
+      "id": 723818,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2023-09-06",
+      "effectiveDate": "2023-09-06",
+      "resolutionDate": "2023-09-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Kansas City Royals transferred LHP Daniel Lynch IV from the 15-day injured list to the 60-day injured list. Left shoulder strain."
+    },
+    {
+      "id": 725981,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2023-09-21",
+      "effectiveDate": "2023-09-21",
+      "resolutionDate": "2023-09-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Kansas City Royals sent LHP Daniel Lynch IV on a rehab assignment to Omaha Storm Chasers."
+    },
+    {
+      "id": 727371,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2023-09-21",
+      "effectiveDate": "2023-09-21",
+      "resolutionDate": "2023-09-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Kansas City Royals sent LHP Daniel Lynch IV on a rehab assignment to Omaha Storm Chasers."
+    },
+    {
+      "id": 725963,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2023-09-21",
+      "effectiveDate": "2023-09-21",
+      "resolutionDate": "2023-09-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Kansas City Royals sent LHP Daniel Lynch IV on a rehab assignment to Omaha Storm Chasers."
+    },
+    {
+      "id": 729765,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 542,
+        "name": "Surprise Saguaros",
+        "link": "/api/v1/teams/542"
+      },
+      "date": "2023-10-26",
+      "effectiveDate": "2023-10-26",
+      "resolutionDate": "2023-10-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Daniel Lynch IV assigned to Surprise Saguaros."
+    },
+    {
+      "id": 729971,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2023-10-30",
+      "effectiveDate": "2023-10-30",
+      "resolutionDate": "2023-10-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Daniel Lynch IV assigned to Leones del Escogido."
+    },
+    {
+      "id": 730265,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2023-11-02",
+      "effectiveDate": "2023-11-02",
+      "resolutionDate": "2023-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Kansas City Royals activated LHP Daniel Lynch IV."
+    },
+    {
+      "id": 742534,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2024-02-21",
+      "effectiveDate": "2024-02-21",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "LHP Daniel Lynch IV changed number to 41."
+    },
+    {
+      "id": 756336,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2024-03-22",
+      "effectiveDate": "2024-03-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Kansas City Royals optioned LHP Daniel Lynch IV to Omaha Storm Chasers."
+    },
+    {
+      "id": 768332,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2024-05-05",
+      "effectiveDate": "2024-05-05",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Kansas City Royals recalled LHP Daniel Lynch IV from Omaha Storm Chasers."
+    },
+    {
+      "id": 770223,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2024-05-10",
+      "effectiveDate": "2024-05-10",
+      "resolutionDate": "2024-05-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Omaha Storm Chasers activated LHP Daniel Lynch IV."
+    },
+    {
+      "id": 770174,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2024-05-10",
+      "effectiveDate": "2024-05-10",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Kansas City Royals optioned LHP Daniel Lynch IV to Omaha Storm Chasers."
+    },
+    {
+      "id": 774868,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2024-05-30",
+      "effectiveDate": "2024-05-30",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Kansas City Royals recalled LHP Daniel Lynch IV from Omaha Storm Chasers."
+    },
+    {
+      "id": 775282,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2024-05-31",
+      "effectiveDate": "2024-05-31",
+      "resolutionDate": "2024-05-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Omaha Storm Chasers activated LHP Daniel Lynch IV."
+    },
+    {
+      "id": 775278,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2024-05-31",
+      "effectiveDate": "2024-05-31",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Kansas City Royals optioned LHP Daniel Lynch IV to Omaha Storm Chasers."
+    },
+    {
+      "id": 776276,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2024-06-02",
+      "effectiveDate": "2024-06-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Kansas City Royals recalled LHP Daniel Lynch IV from Omaha Storm Chasers."
+    },
+    {
+      "id": 779869,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2024-06-13",
+      "effectiveDate": "2024-06-13",
+      "resolutionDate": "2024-06-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Omaha Storm Chasers activated LHP Daniel Lynch IV."
+    },
+    {
+      "id": 779761,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2024-06-13",
+      "effectiveDate": "2024-06-13",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Kansas City Royals optioned LHP Daniel Lynch IV to Omaha Storm Chasers."
+    },
+    {
+      "id": 796208,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2024-08-26",
+      "effectiveDate": "2024-08-26",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Kansas City Royals recalled LHP Daniel Lynch IV from Omaha Storm Chasers."
+    },
+    {
+      "id": 828532,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "LHP Daniel Lynch IV changed number to 42."
+    },
+    {
+      "id": 829735,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "LHP Daniel Lynch IV changed number to 41."
+    },
+    {
+      "id": 853497,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2025-07-06",
+      "effectiveDate": "2025-07-06",
+      "resolutionDate": "2025-07-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Kansas City Royals placed LHP Daniel Lynch IV on the 15-day injured list. Left elbow nerve irritation."
+    },
+    {
+      "id": 859535,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 1350,
+        "name": "Northwest Arkansas Naturals",
+        "link": "/api/v1/teams/1350"
+      },
+      "date": "2025-07-26",
+      "effectiveDate": "2025-07-26",
+      "resolutionDate": "2025-07-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Kansas City Royals sent LHP Daniel Lynch IV on a rehab assignment to Northwest Arkansas Naturals."
+    },
+    {
+      "id": 858785,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 1350,
+        "name": "Northwest Arkansas Naturals",
+        "link": "/api/v1/teams/1350"
+      },
+      "date": "2025-07-26",
+      "effectiveDate": "2025-07-26",
+      "resolutionDate": "2025-07-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Kansas City Royals sent LHP Daniel Lynch IV on a rehab assignment to Northwest Arkansas Naturals."
+    },
+    {
+      "id": 859536,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2025-07-29",
+      "effectiveDate": "2025-07-29",
+      "resolutionDate": "2025-07-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Kansas City Royals sent LHP Daniel Lynch IV on a rehab assignment to Omaha Storm Chasers."
+    },
+    {
+      "id": 861306,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2025-08-03",
+      "effectiveDate": "2025-08-03",
+      "resolutionDate": "2025-08-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Kansas City Royals activated LHP Daniel Lynch IV from the 15-day injured list."
+    },
+    {
+      "id": 899392,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "LHP Daniel Lynch IV changed number to 42."
+    },
+    {
+      "id": 900323,
+      "person": {
+        "id": 663738,
+        "fullName": "Daniel Lynch IV",
+        "link": "/api/v1/people/663738",
+        "nameSlug": "daniel-lynch-iv-663738"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "LHP Daniel Lynch IV changed number to 41."
+    }
+  ]
+}

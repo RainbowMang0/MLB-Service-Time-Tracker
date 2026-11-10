@@ -1,0 +1,829 @@
+{
+  "player_id": 668678,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:1f958b24aa50e5860e4c7e67a9dfd25e78e9ecedb6b9f9259e183d82ce229545",
+  "transactions": [
+    {
+      "id": 274625,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2016-06-23",
+      "effectiveDate": "2016-06-23",
+      "resolutionDate": "2016-06-23",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "St. Louis Cardinals signed RHP Zac Gallen."
+    },
+    {
+      "id": 274626,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 1370,
+        "name": "FCL Cardinals",
+        "link": "/api/v1/teams/1370"
+      },
+      "date": "2016-06-24",
+      "effectiveDate": "2016-06-24",
+      "resolutionDate": "2016-06-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Zac Gallen assigned to GCL Cardinals."
+    },
+    {
+      "id": 303808,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "fromTeam": {
+        "id": 1370,
+        "name": "FCL Cardinals",
+        "link": "/api/v1/teams/1370"
+      },
+      "toTeam": {
+        "id": 279,
+        "name": "Palm Beach Cardinals",
+        "link": "/api/v1/teams/279"
+      },
+      "date": "2017-04-04",
+      "effectiveDate": "2017-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Zac Gallen assigned to Palm Beach Cardinals from GCL Cardinals."
+    },
+    {
+      "id": 314104,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "fromTeam": {
+        "id": 279,
+        "name": "Palm Beach Cardinals",
+        "link": "/api/v1/teams/279"
+      },
+      "toTeam": {
+        "id": 440,
+        "name": "Ozarks Springbirds",
+        "link": "/api/v1/teams/440"
+      },
+      "date": "2017-06-03",
+      "effectiveDate": "2017-06-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Zac Gallen assigned to Springfield Cardinals from Palm Beach Cardinals."
+    },
+    {
+      "id": 312965,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 77,
+        "name": "FSL South Division All-Stars",
+        "link": "/api/v1/teams/77"
+      },
+      "date": "2017-06-16",
+      "effectiveDate": "2017-06-16",
+      "resolutionDate": "2017-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Zac Gallen assigned to FSL South Division All-Stars."
+    },
+    {
+      "id": 320395,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "fromTeam": {
+        "id": 440,
+        "name": "Ozarks Springbirds",
+        "link": "/api/v1/teams/440"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2017-06-26",
+      "effectiveDate": "2017-06-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Zac Gallen assigned to Memphis Redbirds from Springfield Cardinals."
+    },
+    {
+      "id": 323411,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 440,
+        "name": "Ozarks Springbirds",
+        "link": "/api/v1/teams/440"
+      },
+      "date": "2017-07-10",
+      "effectiveDate": "2017-07-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Zac Gallen assigned to Springfield Cardinals from Memphis Redbirds."
+    },
+    {
+      "id": 331755,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "fromTeam": {
+        "id": 440,
+        "name": "Ozarks Springbirds",
+        "link": "/api/v1/teams/440"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2017-09-03",
+      "effectiveDate": "2017-09-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Zac Gallen assigned to Memphis Redbirds from Springfield Cardinals."
+    },
+    {
+      "id": 338819,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2017-12-14",
+      "effectiveDate": "2017-12-14",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Miami Marlins traded LF Marcell Ozuna to St. Louis Cardinals for LHP Daniel Castano, RF Magneuris Sierra, RHP Sandy Alcantara and RHP Zac Gallen."
+    },
+    {
+      "id": 341294,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2018-02-08",
+      "effectiveDate": "2018-02-08",
+      "resolutionDate": "2018-02-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins invited non-roster RHP Zac Gallen to spring training."
+    },
+    {
+      "id": 341295,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2018-02-08",
+      "effectiveDate": "2018-02-08",
+      "resolutionDate": "2018-02-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Zac Gallen assigned to New Orleans Baby Cakes."
+    },
+    {
+      "id": 386491,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2019-01-22",
+      "effectiveDate": "2019-01-22",
+      "resolutionDate": "2019-01-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins invited non-roster RHP Zac Gallen to spring training."
+    },
+    {
+      "id": 411298,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "fromTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2019-06-20",
+      "effectiveDate": "2019-06-20",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Miami Marlins selected the contract of RHP Zac Gallen from New Orleans Baby Cakes."
+    },
+    {
+      "id": 420939,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2019-07-31",
+      "effectiveDate": "2019-07-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Miami Marlins traded RHP Zac Gallen to Arizona Diamondbacks."
+    },
+    {
+      "id": 421845,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2019-08-03",
+      "effectiveDate": "2019-08-03",
+      "resolutionDate": "2019-08-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated RHP Zac Gallen."
+    },
+    {
+      "id": 435812,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2020-01-03",
+      "effectiveDate": "2020-01-03",
+      "resolutionDate": "2020-01-03",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "Zac Gallen changed number to 23."
+    },
+    {
+      "id": 476009,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2021-04-01",
+      "effectiveDate": "2021-03-29",
+      "resolutionDate": "2021-03-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks placed P Zac Gallen on the 10 day disabled list."
+    },
+    {
+      "id": 478255,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2021-04-13",
+      "effectiveDate": "2021-04-13",
+      "resolutionDate": "2021-04-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated P Zac Gallen from the 10 day injured list."
+    },
+    {
+      "id": 477574,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2021-04-13",
+      "effectiveDate": "2021-04-13",
+      "resolutionDate": "2021-04-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated P Zac Gallen from the 10 day injured list."
+    },
+    {
+      "id": 476907,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2021-04-13",
+      "effectiveDate": "2021-04-13",
+      "resolutionDate": "2021-04-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated P Zac Gallen from the 10 day injured list."
+    },
+    {
+      "id": 486346,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2021-05-12",
+      "effectiveDate": "2021-05-09",
+      "resolutionDate": "2021-05-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks placed RHP Zac Gallen on the 10-day injured list. Right elbow sprain."
+    },
+    {
+      "id": 494847,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2021-06-17",
+      "effectiveDate": "2021-06-17",
+      "resolutionDate": "2021-06-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated RHP Zac Gallen from the 10-day injured list."
+    },
+    {
+      "id": 500902,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2021-07-03",
+      "effectiveDate": "2021-07-03",
+      "resolutionDate": "2021-07-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks placed RHP Zac Gallen on the 10-day injured list. Right hamstring strain."
+    },
+    {
+      "id": 505425,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2021-07-17",
+      "effectiveDate": "2021-07-17",
+      "resolutionDate": "2021-07-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated RHP Zac Gallen from the 10-day injured list."
+    },
+    {
+      "id": 708470,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 160,
+        "name": "National League All-Stars",
+        "link": "/api/v1/teams/160"
+      },
+      "date": "2023-07-10",
+      "effectiveDate": "2023-07-10",
+      "resolutionDate": "2023-07-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Zac Gallen assigned to National League All-Stars."
+    },
+    {
+      "id": 775341,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2024-05-31",
+      "effectiveDate": "2024-05-31",
+      "resolutionDate": "2024-05-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks placed RHP Zac Gallen on the 15-day injured list. Right hamstring strain."
+    },
+    {
+      "id": 783650,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2024-06-29",
+      "effectiveDate": "2024-06-29",
+      "resolutionDate": "2024-06-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated RHP Zac Gallen from the 15-day injured list."
+    },
+    {
+      "id": 828773,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Zac Gallen changed number to 42."
+    },
+    {
+      "id": 829971,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Zac Gallen changed number to 23."
+    },
+    {
+      "id": 874297,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-11-02",
+      "effectiveDate": "2025-11-02",
+      "resolutionDate": "2025-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Zac Gallen elected free agency."
+    },
+    {
+      "id": 886549,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-02-15",
+      "effectiveDate": "2026-02-15",
+      "resolutionDate": "2026-02-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Zac Gallen assigned to Arizona Diamondbacks."
+    },
+    {
+      "id": 899713,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Zac Gallen changed number to 42."
+    },
+    {
+      "id": 900636,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Zac Gallen changed number to 23."
+    },
+    {
+      "id": 927176,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-07-12",
+      "effectiveDate": "2026-07-09",
+      "resolutionDate": "2026-07-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks placed RHP Zac Gallen on the 15-day injured list retroactive to July 9, 2026. Right elbow inflammation."
+    },
+    {
+      "id": 934425,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-08-03",
+      "effectiveDate": "2026-08-03",
+      "resolutionDate": "2026-08-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks transferred RHP Zac Gallen from the 15-day injured list to the 60-day injured list. Right elbow inflammation."
+    },
+    {
+      "id": 940160,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2026-08-30",
+      "effectiveDate": "2026-08-30",
+      "resolutionDate": "2026-08-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Arizona Diamondbacks sent RHP Zac Gallen on a rehab assignment to Reno Aces."
+    },
+    {
+      "id": 941838,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2026-08-30",
+      "effectiveDate": "2026-08-30",
+      "resolutionDate": "2026-08-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Arizona Diamondbacks sent RHP Zac Gallen on a rehab assignment to Reno Aces."
+    },
+    {
+      "id": 941839,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-09-09",
+      "effectiveDate": "2026-09-09",
+      "resolutionDate": "2026-09-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated RHP Zac Gallen from the 60-day injured list."
+    },
+    {
+      "id": 947396,
+      "person": {
+        "id": 668678,
+        "fullName": "Zac Gallen",
+        "link": "/api/v1/people/668678",
+        "nameSlug": "zac-gallen-668678"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-10-29",
+      "effectiveDate": "2026-10-29",
+      "resolutionDate": "2026-10-29",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Zac Gallen elected free agency."
+    }
+  ]
+}

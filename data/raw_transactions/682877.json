@@ -1,0 +1,939 @@
+{
+  "player_id": 682877,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:ef39d901a9f1988fcb725fa44c03ed06967e57369e92a32d695b68ad8d1e1960",
+  "transactions": [
+    {
+      "id": 367442,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2018-07-07",
+      "effectiveDate": "2018-07-07",
+      "resolutionDate": "2018-07-07",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Colorado Rockies signed free agent SS Juan Brito to a minor league contract."
+    },
+    {
+      "id": 404137,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 629,
+        "name": "DSL Rockies",
+        "link": "/api/v1/teams/629"
+      },
+      "date": "2019-05-31",
+      "effectiveDate": "2019-05-31",
+      "resolutionDate": "2019-05-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Brito assigned to DSL Rockies."
+    },
+    {
+      "id": 497386,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "fromTeam": {
+        "id": 629,
+        "name": "DSL Rockies",
+        "link": "/api/v1/teams/629"
+      },
+      "toTeam": {
+        "id": 1994,
+        "name": "ACL Rockies",
+        "link": "/api/v1/teams/1994"
+      },
+      "date": "2021-06-28",
+      "effectiveDate": "2021-06-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Brito assigned to ACL Rockies from DSL Rockies."
+    },
+    {
+      "id": 611254,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "fromTeam": {
+        "id": 1994,
+        "name": "ACL Rockies",
+        "link": "/api/v1/teams/1994"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2022-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Brito assigned to Fresno Grizzlies from ACL Rockies."
+    },
+    {
+      "id": 631477,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2022-06-16",
+      "effectiveDate": "2022-06-15",
+      "resolutionDate": "2022-06-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Fresno Grizzlies placed SS Juan Brito on the 7-day injured list retroactive to June 15, 2022."
+    },
+    {
+      "id": 634512,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2022-07-01",
+      "effectiveDate": "2022-07-01",
+      "resolutionDate": "2022-07-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Fresno Grizzlies activated SS Juan Brito from the 7-day injured list."
+    },
+    {
+      "id": 660401,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 437,
+        "name": "Lake County Captains",
+        "link": "/api/v1/teams/437"
+      },
+      "date": "2022-11-15",
+      "effectiveDate": "2022-11-15",
+      "resolutionDate": "2022-11-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Brito assigned to Lake County Captains."
+    },
+    {
+      "id": 660400,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2022-11-15",
+      "effectiveDate": "2022-11-15",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Cleveland Guardians traded 3B Nolan Jones to Colorado Rockies for SS Juan Brito."
+    },
+    {
+      "id": 675770,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2023-03-15",
+      "effectiveDate": "2023-03-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cleveland Guardians optioned SS Juan Brito to Columbus Clippers."
+    },
+    {
+      "id": 682289,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 437,
+        "name": "Lake County Captains",
+        "link": "/api/v1/teams/437"
+      },
+      "date": "2023-04-05",
+      "effectiveDate": "2023-04-05",
+      "resolutionDate": "2023-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Brito assigned to Lake County Captains."
+    },
+    {
+      "id": 696183,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "fromTeam": {
+        "id": 437,
+        "name": "Lake County Captains",
+        "link": "/api/v1/teams/437"
+      },
+      "toTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "date": "2023-05-26",
+      "effectiveDate": "2023-05-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Brito assigned to Akron RubberDucks from Lake County Captains."
+    },
+    {
+      "id": 725658,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "fromTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2023-09-19",
+      "effectiveDate": "2023-09-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Brito assigned to Columbus Clippers from Akron RubberDucks."
+    },
+    {
+      "id": 727331,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2023-10-02",
+      "effectiveDate": "2023-10-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cleveland Guardians recalled SS Juan Brito from Columbus Clippers."
+    },
+    {
+      "id": 729230,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 668,
+        "name": "Toros del Este",
+        "link": "/api/v1/teams/668"
+      },
+      "date": "2023-10-19",
+      "effectiveDate": "2023-10-19",
+      "resolutionDate": "2023-10-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Brito assigned to Toros del Este."
+    },
+    {
+      "id": 738998,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2024-02-01",
+      "effectiveDate": "2024-02-01",
+      "resolutionDate": "2024-02-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cleveland Guardians activated SS Juan Brito."
+    },
+    {
+      "id": 754836,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2024-03-12",
+      "effectiveDate": "2024-03-12",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cleveland Guardians optioned SS Juan Brito to Columbus Clippers."
+    },
+    {
+      "id": 755065,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 364,
+        "name": "Cleveland Guardians Prospects",
+        "link": "/api/v1/teams/364"
+      },
+      "date": "2024-03-13",
+      "effectiveDate": "2024-03-13",
+      "resolutionDate": "2024-03-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Brito assigned to Cleveland Guardians Prospects."
+    },
+    {
+      "id": 800779,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2024-10-01",
+      "effectiveDate": "2024-10-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cleveland Guardians recalled SS Juan Brito from Columbus Clippers."
+    },
+    {
+      "id": 802917,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2024-10-20",
+      "effectiveDate": "2024-10-20",
+      "resolutionDate": "2024-10-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cleveland Guardians activated SS Juan Brito."
+    },
+    {
+      "id": 821442,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2025-03-21",
+      "effectiveDate": "2025-03-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cleveland Guardians optioned SS Juan Brito to Columbus Clippers."
+    },
+    {
+      "id": 832168,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2025-04-24",
+      "effectiveDate": "2025-04-24",
+      "resolutionDate": "2025-04-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbus Clippers placed SS Juan Brito on the 7-day injured list."
+    },
+    {
+      "id": 850515,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 5374,
+        "name": "ACL Guardians",
+        "link": "/api/v1/teams/5374"
+      },
+      "date": "2025-06-12",
+      "effectiveDate": "2025-06-12",
+      "resolutionDate": "2025-06-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent SS Juan Brito on a rehab assignment to ACL Guardians."
+    },
+    {
+      "id": 846688,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 5374,
+        "name": "ACL Guardians",
+        "link": "/api/v1/teams/5374"
+      },
+      "date": "2025-06-12",
+      "effectiveDate": "2025-06-12",
+      "resolutionDate": "2025-06-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Columbus Clippers sent SS Juan Brito on a rehab assignment to ACL Guardians."
+    },
+    {
+      "id": 850511,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2025-06-25",
+      "effectiveDate": "2025-06-25",
+      "resolutionDate": "2025-06-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbus Clippers activated SS Juan Brito from the 7-day injured list."
+    },
+    {
+      "id": 853941,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2025-07-08",
+      "effectiveDate": "2025-07-08",
+      "resolutionDate": "2025-07-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbus Clippers placed SS Juan Brito on the 7-day injured list."
+    },
+    {
+      "id": 870167,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2025-07-08",
+      "effectiveDate": "2025-07-08",
+      "resolutionDate": "2025-07-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbus Clippers placed SS Juan Brito on the 7-day injured list."
+    },
+    {
+      "id": 870937,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2025-09-29",
+      "effectiveDate": "2025-09-29",
+      "resolutionDate": "2025-09-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "SS Juan Brito roster status changed by Cleveland Guardians."
+    },
+    {
+      "id": 870591,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2025-09-29",
+      "effectiveDate": "2025-09-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cleveland Guardians recalled SS Juan Brito from Columbus Clippers."
+    },
+    {
+      "id": 871629,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2025-10-03",
+      "effectiveDate": "2025-10-03",
+      "resolutionDate": "2025-10-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cleveland Guardians activated SS Juan Brito."
+    },
+    {
+      "id": 878029,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 668,
+        "name": "Toros del Este",
+        "link": "/api/v1/teams/668"
+      },
+      "date": "2025-12-02",
+      "effectiveDate": "2025-12-02",
+      "resolutionDate": "2025-12-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Brito assigned to Toros del Este."
+    },
+    {
+      "id": 890288,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 364,
+        "name": "Cleveland Guardians Prospects",
+        "link": "/api/v1/teams/364"
+      },
+      "date": "2026-03-05",
+      "effectiveDate": "2026-03-05",
+      "resolutionDate": "2026-03-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Brito assigned to Cleveland Guardians Prospects."
+    },
+    {
+      "id": 892390,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2026-03-19",
+      "effectiveDate": "2026-03-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cleveland Guardians optioned SS Juan Brito to Columbus Clippers."
+    },
+    {
+      "id": 897419,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2026-04-07",
+      "effectiveDate": "2026-04-07",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cleveland Guardians recalled SS Juan Brito from Columbus Clippers."
+    },
+    {
+      "id": 899506,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "SS Juan Brito changed number to 42."
+    },
+    {
+      "id": 900439,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "SS Juan Brito changed number to 34."
+    },
+    {
+      "id": 903573,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2026-04-28",
+      "effectiveDate": "2026-04-28",
+      "resolutionDate": "2026-04-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbus Clippers activated 2B Juan Brito."
+    },
+    {
+      "id": 903556,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2026-04-28",
+      "effectiveDate": "2026-04-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cleveland Guardians optioned 2B Juan Brito to Columbus Clippers."
+    },
+    {
+      "id": 934276,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2026-08-03",
+      "effectiveDate": "2026-08-03",
+      "resolutionDate": "2026-08-03",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Cleveland Guardians designated 2B Juan Brito for assignment."
+    },
+    {
+      "id": 934386,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2026-08-03",
+      "effectiveDate": "2026-08-03",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Cincinnati Reds traded DH Nathaniel Lowe and cash to Cleveland Guardians for RHP Alejandro Rivera and 2B Juan Brito."
+    },
+    {
+      "id": 934507,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2026-08-03",
+      "effectiveDate": "2026-08-04",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cincinnati Reds optioned 2B Juan Brito to Louisville Bats."
+    },
+    {
+      "id": 935092,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2026-08-04",
+      "effectiveDate": "2026-08-04",
+      "resolutionDate": "2026-08-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Louisville Bats activated 2B Juan Brito."
+    },
+    {
+      "id": 940385,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2026-09-01",
+      "effectiveDate": "2026-09-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cincinnati Reds recalled 2B Juan Brito from Louisville Bats."
+    },
+    {
+      "id": 946765,
+      "person": {
+        "id": 682877,
+        "fullName": "Juan Brito",
+        "link": "/api/v1/people/682877",
+        "nameSlug": "juan-brito-682877"
+      },
+      "toTeam": {
+        "id": 668,
+        "name": "Toros del Este",
+        "link": "/api/v1/teams/668"
+      },
+      "date": "2026-10-20",
+      "effectiveDate": "2026-10-20",
+      "resolutionDate": "2026-10-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Juan Brito assigned to Toros del Este."
+    }
+  ]
+}

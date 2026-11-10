@@ -211,8 +211,8 @@ def test_window_replaces_the_date_range_and_full_fetches_gaps():
 
     def fake_league(start, end):
         league_calls.append((start, end))
-        # One day of the three-day window. The other days are empty.
-        if start != TODAY:
+        # The daily window is one request covering the whole lookback.
+        if not (start <= TODAY <= end):
             return []
         return [
             raw_row(

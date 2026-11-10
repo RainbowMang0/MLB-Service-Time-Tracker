@@ -1,0 +1,984 @@
+{
+  "player_id": 628338,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:e0a3ebf65f67d69c177bcbb9116f7c6fb9fca8e701bd43c4699e0b9bafa7f7e2",
+  "transactions": [
+    {
+      "id": 255641,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2016-03-01",
+      "effectiveDate": "2016-03-13",
+      "resolutionDate": "2016-03-01",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Seattle Mariners signed free agent Guillermo Heredia."
+    },
+    {
+      "id": 256817,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 104,
+        "name": "Jackson Generals",
+        "link": "/api/v1/teams/104"
+      },
+      "date": "2016-03-13",
+      "effectiveDate": "2016-03-13",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned CF Guillermo Heredia to Jackson Generals."
+    },
+    {
+      "id": 269727,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "toTeam": {
+        "id": 68,
+        "name": "SOU North Division All-Stars",
+        "link": "/api/v1/teams/68"
+      },
+      "date": "2016-06-20",
+      "effectiveDate": "2016-06-20",
+      "resolutionDate": "2016-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Guillermo Heredia assigned to SOU North Division All-Stars."
+    },
+    {
+      "id": 274570,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "toTeam": {
+        "id": 104,
+        "name": "Jackson Generals",
+        "link": "/api/v1/teams/104"
+      },
+      "date": "2016-06-23",
+      "effectiveDate": "2016-06-23",
+      "resolutionDate": "2016-06-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "CF Guillermo Heredia roster status changed by Jackson Generals."
+    },
+    {
+      "id": 274572,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2016-06-23",
+      "effectiveDate": "2016-06-23",
+      "resolutionDate": "2016-06-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Guillermo Heredia assigned to Tacoma Rainiers."
+    },
+    {
+      "id": 281101,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2016-07-29",
+      "effectiveDate": "2016-08-10",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled Guillermo Heredia from Tacoma Rainiers."
+    },
+    {
+      "id": 283399,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2016-08-10",
+      "effectiveDate": "2016-08-10",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned CF Guillermo Heredia to Tacoma Rainiers."
+    },
+    {
+      "id": 284910,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2016-08-22",
+      "effectiveDate": "2018-04-22",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled Guillermo Heredia from Tacoma Rainiers."
+    },
+    {
+      "id": 350648,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2018-04-22",
+      "effectiveDate": "2018-04-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned LF Guillermo Heredia to Tacoma Rainiers."
+    },
+    {
+      "id": 351770,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2018-05-01",
+      "effectiveDate": "2018-08-20",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled Guillermo Heredia from Tacoma Rainiers."
+    },
+    {
+      "id": 375613,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2018-08-20",
+      "effectiveDate": "2018-08-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned LF Guillermo Heredia to Tacoma Rainiers."
+    },
+    {
+      "id": 376609,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2018-08-27",
+      "effectiveDate": "2018-08-27",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled LF Guillermo Heredia from Tacoma Rainiers."
+    },
+    {
+      "id": 382830,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2018-11-08",
+      "effectiveDate": "2019-07-16",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Seattle Mariners traded C Mike Zunino, CF Guillermo Heredia and LHP Michael Plassmeyer to Tampa Bay Rays for CF Mallex Smith and Jake Fraley."
+    },
+    {
+      "id": 383057,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2018-11-13",
+      "effectiveDate": "2018-11-13",
+      "resolutionDate": "2018-11-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Guillermo Heredia assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 417824,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2019-07-16",
+      "effectiveDate": "2019-07-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned CF Guillermo Heredia to Durham Bulls."
+    },
+    {
+      "id": 418427,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2019-07-18",
+      "effectiveDate": "2019-07-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled Guillermo Heredia from Durham Bulls."
+    },
+    {
+      "id": 418590,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2019-07-19",
+      "effectiveDate": "2019-07-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned CF Guillermo Heredia to Durham Bulls."
+    },
+    {
+      "id": 418876,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2019-07-21",
+      "effectiveDate": "2019-08-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled Guillermo Heredia from Durham Bulls."
+    },
+    {
+      "id": 425393,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2019-08-24",
+      "effectiveDate": "2019-08-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned CF Guillermo Heredia to Durham Bulls."
+    },
+    {
+      "id": 427136,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2019-09-03",
+      "effectiveDate": "2019-09-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled CF Guillermo Heredia from Durham Bulls."
+    },
+    {
+      "id": 429057,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2019-10-02",
+      "effectiveDate": "2019-10-02",
+      "resolutionDate": "2019-10-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays reassigned CF Guillermo Heredia to the minor leagues."
+    },
+    {
+      "id": 433384,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2019-10-11",
+      "effectiveDate": "2019-10-11",
+      "resolutionDate": "2019-10-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays activated CF Guillermo Heredia."
+    },
+    {
+      "id": 434608,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2019-12-02",
+      "effectiveDate": "2019-12-02",
+      "resolutionDate": "2019-12-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "CF Guillermo Heredia elected free agency."
+    },
+    {
+      "id": 436350,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2020-01-09",
+      "effectiveDate": "2020-08-06",
+      "resolutionDate": "2020-01-09",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Pittsburgh Pirates signed free agent Guillermo Heredia."
+    },
+    {
+      "id": 448889,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 3288,
+        "name": "Pirates Alternate Training Site",
+        "link": "/api/v1/teams/3288"
+      },
+      "date": "2020-08-06",
+      "effectiveDate": "2020-08-06",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Pittsburgh Pirates optioned CF Guillermo Heredia to Pirates Alternate Training Site."
+    },
+    {
+      "id": 449930,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2020-08-24",
+      "effectiveDate": "2020-08-24",
+      "resolutionDate": "2020-08-24",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Pittsburgh Pirates designated CF Guillermo Heredia for assignment."
+    },
+    {
+      "id": 450162,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "toTeam": {
+        "id": 3278,
+        "name": "Mets Alternate Training Site",
+        "link": "/api/v1/teams/3278"
+      },
+      "date": "2020-08-28",
+      "effectiveDate": "2020-08-28",
+      "resolutionDate": "2020-08-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Guillermo Heredia assigned to Mets Alternate Training Site."
+    },
+    {
+      "id": 450161,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2020-08-28",
+      "effectiveDate": "2020-08-28",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "New York Mets claimed CF Guillermo Heredia off waivers from Pittsburgh Pirates."
+    },
+    {
+      "id": 451786,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 3278,
+        "name": "Mets Alternate Training Site",
+        "link": "/api/v1/teams/3278"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2020-09-21",
+      "effectiveDate": "2020-09-21",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Mets recalled CF Guillermo Heredia from Mets Alternate Training Site."
+    },
+    {
+      "id": 472638,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2021-02-21",
+      "effectiveDate": "2021-02-21",
+      "resolutionDate": "2021-02-21",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Mets designated CF Guillermo Heredia for assignment."
+    },
+    {
+      "id": 472758,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2021-02-24",
+      "effectiveDate": "2021-02-24",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Atlanta Braves claimed CF Guillermo Heredia off waivers from New York Mets."
+    },
+    {
+      "id": 473986,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 3258,
+        "name": "Braves Alternate Training Site",
+        "link": "/api/v1/teams/3258"
+      },
+      "date": "2021-03-25",
+      "effectiveDate": "2021-03-25",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned LF Guillermo Heredia to Braves Alternate Training Site."
+    },
+    {
+      "id": 477502,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2021-04-14",
+      "effectiveDate": "2021-04-14",
+      "resolutionDate": "2021-04-14",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled LF Guillermo Heredia."
+    },
+    {
+      "id": 478710,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2021-04-14",
+      "effectiveDate": "2021-04-14",
+      "resolutionDate": "2021-04-14",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled LF Guillermo Heredia."
+    },
+    {
+      "id": 476966,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 3258,
+        "name": "Braves Alternate Training Site",
+        "link": "/api/v1/teams/3258"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2021-04-14",
+      "effectiveDate": "2021-04-14",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled LF Guillermo Heredia from Braves Alternate Training Site."
+    },
+    {
+      "id": 482135,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2021-05-01",
+      "effectiveDate": "2021-04-30",
+      "resolutionDate": "2021-04-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves placed LF Guillermo Heredia on the 10-day injured list. Right hamstring inflammation."
+    },
+    {
+      "id": 486592,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2021-05-14",
+      "effectiveDate": "2021-05-14",
+      "resolutionDate": "2021-05-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Atlanta Braves sent LF Guillermo Heredia on a rehab assignment to Gwinnett Stripers."
+    },
+    {
+      "id": 486780,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2021-05-15",
+      "effectiveDate": "2021-05-15",
+      "resolutionDate": "2021-05-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves activated LF Guillermo Heredia."
+    },
+    {
+      "id": 644880,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2022-08-07",
+      "effectiveDate": "2022-08-07",
+      "resolutionDate": "2022-08-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers activated LF Guillermo Heredia."
+    },
+    {
+      "id": 644132,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2022-08-07",
+      "effectiveDate": "2022-08-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned LF Guillermo Heredia to Gwinnett Stripers."
+    },
+    {
+      "id": 646038,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2022-08-12",
+      "effectiveDate": "2022-08-12",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled LF Guillermo Heredia from Gwinnett Stripers."
+    },
+    {
+      "id": 660232,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2022-11-15",
+      "effectiveDate": "2022-11-15",
+      "resolutionDate": "2022-11-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Guillermo Heredia assigned to Estrellas Orientales."
+    },
+    {
+      "id": 660395,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2022-11-15",
+      "effectiveDate": "2022-11-15",
+      "resolutionDate": "2022-11-15",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Atlanta Braves designated LF Guillermo Heredia for assignment."
+    },
+    {
+      "id": 661216,
+      "person": {
+        "id": 628338,
+        "fullName": "Guillermo Heredia",
+        "link": "/api/v1/people/628338",
+        "nameSlug": "guillermo-heredia-628338"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2022-11-18",
+      "effectiveDate": "2022-11-18",
+      "resolutionDate": "2022-11-18",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LF Guillermo Heredia elected free agency."
+    }
+  ]
+}

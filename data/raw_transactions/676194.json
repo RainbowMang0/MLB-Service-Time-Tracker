@@ -1,0 +1,862 @@
+{
+  "player_id": 676194,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:e858bbdd399556008fb87aa911db4dded3ebc0d14a8e221fc389cbd13221d942",
+  "transactions": [
+    {
+      "id": 317574,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2017-06-20",
+      "effectiveDate": "2017-06-20",
+      "resolutionDate": "2017-06-20",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Washington Nationals signed RHP Jackson Tetreault."
+    },
+    {
+      "id": 320002,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 466,
+        "name": "FCL Nationals",
+        "link": "/api/v1/teams/466"
+      },
+      "date": "2017-06-26",
+      "effectiveDate": "2017-06-26",
+      "resolutionDate": "2017-06-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jackson Tetreault assigned to GCL Nationals."
+    },
+    {
+      "id": 321979,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "fromTeam": {
+        "id": 466,
+        "name": "FCL Nationals",
+        "link": "/api/v1/teams/466"
+      },
+      "toTeam": {
+        "id": 458,
+        "name": "Auburn Doubledays",
+        "link": "/api/v1/teams/458"
+      },
+      "date": "2017-07-03",
+      "effectiveDate": "2017-07-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jackson Tetreault assigned to Auburn Doubledays from GCL Nationals."
+    },
+    {
+      "id": 347782,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "fromTeam": {
+        "id": 458,
+        "name": "Auburn Doubledays",
+        "link": "/api/v1/teams/458"
+      },
+      "toTeam": {
+        "id": 563,
+        "name": "Hagerstown Suns",
+        "link": "/api/v1/teams/563"
+      },
+      "date": "2018-04-04",
+      "effectiveDate": "2018-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jackson Tetreault assigned to Hagerstown Suns from Auburn Doubledays."
+    },
+    {
+      "id": 358269,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 563,
+        "name": "Hagerstown Suns",
+        "link": "/api/v1/teams/563"
+      },
+      "date": "2018-06-06",
+      "effectiveDate": "2018-06-06",
+      "resolutionDate": "2018-06-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Hagerstown Suns placed RHP Jackson Tetreault on the 7-day disabled list."
+    },
+    {
+      "id": 360837,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 563,
+        "name": "Hagerstown Suns",
+        "link": "/api/v1/teams/563"
+      },
+      "date": "2018-06-15",
+      "effectiveDate": "2018-06-15",
+      "resolutionDate": "2018-06-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Hagerstown Suns activated RHP Jackson Tetreault from the 7-day disabled list."
+    },
+    {
+      "id": 374605,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "fromTeam": {
+        "id": 563,
+        "name": "Hagerstown Suns",
+        "link": "/api/v1/teams/563"
+      },
+      "toTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "date": "2018-08-14",
+      "effectiveDate": "2018-08-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jackson Tetreault assigned to Potomac Nationals from Hagerstown Suns."
+    },
+    {
+      "id": 398967,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "fromTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2019-04-29",
+      "effectiveDate": "2019-04-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jackson Tetreault assigned to Harrisburg Senators from Potomac Nationals."
+    },
+    {
+      "id": 403767,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2019-05-29",
+      "effectiveDate": "2019-05-29",
+      "resolutionDate": "2019-05-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Harrisburg Senators placed RHP Jackson Tetreault on the 7-day injured list."
+    },
+    {
+      "id": 407336,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2019-06-11",
+      "effectiveDate": "2019-06-11",
+      "resolutionDate": "2019-06-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Harrisburg Senators activated RHP Jackson Tetreault from the 7-day injured list."
+    },
+    {
+      "id": 423679,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "fromTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "toTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "date": "2019-08-14",
+      "effectiveDate": "2019-08-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jackson Tetreault assigned to Potomac Nationals from Harrisburg Senators."
+    },
+    {
+      "id": 463374,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2020-11-17",
+      "effectiveDate": "2020-11-17",
+      "resolutionDate": "2020-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jackson Tetreault assigned to Fresno Grizzlies."
+    },
+    {
+      "id": 455691,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "fromTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2020-11-17",
+      "effectiveDate": "2020-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jackson Tetreault assigned to Fresno Grizzlies from Fredericksburg Nationals."
+    },
+    {
+      "id": 467982,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jackson Tetreault assigned to Rochester Red Wings."
+    },
+    {
+      "id": 465722,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jackson Tetreault assigned to Rochester Red Wings."
+    },
+    {
+      "id": 483149,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jackson Tetreault assigned to Rochester Red Wings."
+    },
+    {
+      "id": 479428,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 3281,
+        "name": "Nationals Organization",
+        "link": "/api/v1/teams/3281"
+      },
+      "date": "2021-04-25",
+      "effectiveDate": "2021-04-25",
+      "resolutionDate": "2021-04-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Nationals Organization activated RHP Jackson Tetreault. ABS test."
+    },
+    {
+      "id": 485614,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2021-05-04",
+      "effectiveDate": "2021-05-04",
+      "resolutionDate": "2021-05-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jackson Tetreault assigned to Harrisburg Senators."
+    },
+    {
+      "id": 497658,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "fromTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "toTeam": {
+        "id": 466,
+        "name": "FCL Nationals",
+        "link": "/api/v1/teams/466"
+      },
+      "date": "2021-06-29",
+      "effectiveDate": "2021-06-29",
+      "resolutionDate": "2021-06-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Harrisburg Senators sent RHP Jackson Tetreault on a rehab assignment to FCL Nationals."
+    },
+    {
+      "id": 501846,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "fromTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "toTeam": {
+        "id": 466,
+        "name": "FCL Nationals",
+        "link": "/api/v1/teams/466"
+      },
+      "date": "2021-06-29",
+      "effectiveDate": "2021-06-29",
+      "resolutionDate": "2021-06-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Harrisburg Senators sent RHP Jackson Tetreault on a rehab assignment to FCL Nationals."
+    },
+    {
+      "id": 501851,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "fromTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "toTeam": {
+        "id": 426,
+        "name": "Wilmington Blue Rocks",
+        "link": "/api/v1/teams/426"
+      },
+      "date": "2021-07-08",
+      "effectiveDate": "2021-07-08",
+      "resolutionDate": "2021-07-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Harrisburg Senators sent RHP Jackson Tetreault on a rehab assignment to Wilmington Blue Rocks."
+    },
+    {
+      "id": 505980,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2021-07-20",
+      "effectiveDate": "2021-07-20",
+      "resolutionDate": "2021-07-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Harrisburg Senators activated RHP Jackson Tetreault."
+    },
+    {
+      "id": 518643,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "fromTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2021-09-21",
+      "effectiveDate": "2021-09-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jackson Tetreault assigned to Rochester Red Wings from Harrisburg Senators."
+    },
+    {
+      "id": 630981,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "fromTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2022-06-14",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Washington Nationals selected the contract of RHP Jackson Tetreault from Rochester Red Wings."
+    },
+    {
+      "id": 634998,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2022-07-04",
+      "effectiveDate": "2022-07-03",
+      "resolutionDate": "2022-07-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals placed RHP Jackson Tetreault on the 15-day injured list retroactive to July 3, 2022. Right scapula stress fracture."
+    },
+    {
+      "id": 636370,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2022-07-10",
+      "effectiveDate": "2022-07-10",
+      "resolutionDate": "2022-07-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals transferred RHP Jackson Tetreault from the 15-day injured list to the 60-day injured list. Right scapula stress fracture."
+    },
+    {
+      "id": 659420,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2022-11-10",
+      "effectiveDate": "2022-11-10",
+      "resolutionDate": "2022-11-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals activated RHP Jackson Tetreault from the 60-day injured list."
+    },
+    {
+      "id": 671248,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2022-11-14",
+      "effectiveDate": "2022-11-14",
+      "resolutionDate": "2022-11-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Jackson Tetreault roster status changed by Washington Nationals."
+    },
+    {
+      "id": 679990,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2022-11-15",
+      "effectiveDate": "2022-11-15",
+      "resolutionDate": "2022-11-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rochester Red Wings activated RHP Jackson Tetreault."
+    },
+    {
+      "id": 660209,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2022-11-15",
+      "effectiveDate": "2022-11-15",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Washington Nationals sent RHP Jackson Tetreault outright to Rochester Red Wings."
+    },
+    {
+      "id": 679991,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2023-03-31",
+      "effectiveDate": "2023-03-31",
+      "resolutionDate": "2023-03-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rochester Red Wings placed RHP Jackson Tetreault on the 7-day injured list."
+    },
+    {
+      "id": 695184,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "fromTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "toTeam": {
+        "id": 426,
+        "name": "Wilmington Blue Rocks",
+        "link": "/api/v1/teams/426"
+      },
+      "date": "2023-05-23",
+      "effectiveDate": "2023-05-23",
+      "resolutionDate": "2023-05-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Rochester Red Wings sent RHP Jackson Tetreault on a rehab assignment to Wilmington Blue Rocks."
+    },
+    {
+      "id": 704795,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2023-06-16",
+      "effectiveDate": "2023-06-16",
+      "resolutionDate": "2023-06-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rochester Red Wings placed RHP Jackson Tetreault on the 60-day injured list."
+    },
+    {
+      "id": 732421,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2023-11-06",
+      "effectiveDate": "2023-11-06",
+      "resolutionDate": "2023-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Jackson Tetreault elected free agency."
+    },
+    {
+      "id": 731169,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2023-11-06",
+      "effectiveDate": "2023-11-06",
+      "resolutionDate": "2023-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rochester Red Wings activated RHP Jackson Tetreault from the 60-day injured list."
+    },
+    {
+      "id": 773914,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2024-05-25",
+      "effectiveDate": "2024-05-25",
+      "resolutionDate": "2024-05-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago Cubs signed free agent RHP Jackson Tetreault to a minor league contract."
+    },
+    {
+      "id": 773915,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 407,
+        "name": "ACL Cubs",
+        "link": "/api/v1/teams/407"
+      },
+      "date": "2024-05-25",
+      "effectiveDate": "2024-05-25",
+      "resolutionDate": "2024-05-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jackson Tetreault assigned to ACL Cubs."
+    },
+    {
+      "id": 789849,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 407,
+        "name": "ACL Cubs",
+        "link": "/api/v1/teams/407"
+      },
+      "date": "2024-07-25",
+      "effectiveDate": "2024-07-25",
+      "resolutionDate": "2024-07-25",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "ACL Cubs released RHP Jackson Tetreault."
+    },
+    {
+      "id": 911110,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 523,
+        "name": "Piratas de Campeche",
+        "link": "/api/v1/teams/523"
+      },
+      "date": "2026-05-22",
+      "effectiveDate": "2026-05-22",
+      "resolutionDate": "2026-05-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jackson Tetreault assigned to Piratas de Campeche."
+    },
+    {
+      "id": 919575,
+      "person": {
+        "id": 676194,
+        "fullName": "Jackson Tetreault",
+        "link": "/api/v1/people/676194",
+        "nameSlug": "jackson-tetreault-676194"
+      },
+      "toTeam": {
+        "id": 523,
+        "name": "Piratas de Campeche",
+        "link": "/api/v1/teams/523"
+      },
+      "date": "2026-06-17",
+      "effectiveDate": "2026-06-17",
+      "resolutionDate": "2026-06-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Piratas de Campeche placed RHP Jackson Tetreault on the reserve list."
+    }
+  ]
+}

@@ -1,0 +1,943 @@
+{
+  "player_id": 622217,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:81f051166faec039f3148730706f3858e304b509f7653c70f66c6311abbe9b05",
+  "transactions": [
+    {
+      "id": 128265,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2012-07-04",
+      "effectiveDate": "2012-07-04",
+      "resolutionDate": "2012-07-04",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Los Angeles Angels signed LHP Chris O'Grady."
+    },
+    {
+      "id": 128266,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 519,
+        "name": "Orem Owlz",
+        "link": "/api/v1/teams/519"
+      },
+      "date": "2012-07-05",
+      "effectiveDate": "2012-07-05",
+      "resolutionDate": "2012-07-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chris O'Grady assigned to Orem Owlz."
+    },
+    {
+      "id": 162466,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "fromTeam": {
+        "id": 519,
+        "name": "Orem Owlz",
+        "link": "/api/v1/teams/519"
+      },
+      "toTeam": {
+        "id": 420,
+        "name": "Burlington Bees",
+        "link": "/api/v1/teams/420"
+      },
+      "date": "2013-07-02",
+      "effectiveDate": "2013-07-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris O'Grady assigned to Burlington Bees from Orem Owlz."
+    },
+    {
+      "id": 184469,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "fromTeam": {
+        "id": 420,
+        "name": "Burlington Bees",
+        "link": "/api/v1/teams/420"
+      },
+      "toTeam": {
+        "id": 401,
+        "name": "Inland Empire 66ers",
+        "link": "/api/v1/teams/401"
+      },
+      "date": "2014-04-02",
+      "effectiveDate": "2014-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris O'Grady assigned to Inland Empire 66ers from Burlington Bees."
+    },
+    {
+      "id": 207134,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 555,
+        "name": "Mesa Solar Sox",
+        "link": "/api/v1/teams/555"
+      },
+      "date": "2014-09-03",
+      "effectiveDate": "2014-09-03",
+      "resolutionDate": "2014-09-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris O'Grady assigned to Mesa Solar Sox."
+    },
+    {
+      "id": 217132,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2015-03-14",
+      "effectiveDate": "2015-03-14",
+      "resolutionDate": "2015-03-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris O'Grady assigned to Los Angeles Angels."
+    },
+    {
+      "id": 219808,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "fromTeam": {
+        "id": 401,
+        "name": "Inland Empire 66ers",
+        "link": "/api/v1/teams/401"
+      },
+      "toTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "date": "2015-04-04",
+      "effectiveDate": "2015-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris O'Grady assigned to Arkansas Travelers from Inland Empire 66ers."
+    },
+    {
+      "id": 230385,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 64,
+        "name": "TEX North Division All-Stars",
+        "link": "/api/v1/teams/64"
+      },
+      "date": "2015-06-29",
+      "effectiveDate": "2015-06-29",
+      "resolutionDate": "2015-06-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris O'Grady assigned to TEX North Division All-Stars."
+    },
+    {
+      "id": 235632,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "fromTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2015-07-01",
+      "effectiveDate": "2015-07-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris O'Grady assigned to Salt Lake Bees from Arkansas Travelers."
+    },
+    {
+      "id": 239582,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "date": "2015-07-27",
+      "effectiveDate": "2015-07-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris O'Grady assigned to Arkansas Travelers from Salt Lake Bees."
+    },
+    {
+      "id": 251561,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2015-12-10",
+      "effectiveDate": "2015-12-10",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Cincinnati Reds claimed LHP Chris O'Grady off waivers from Los Angeles Angels."
+    },
+    {
+      "id": 258715,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2016-03-30",
+      "effectiveDate": "2016-03-30",
+      "typeCode": "RTN",
+      "typeDesc": "Returned",
+      "description": "LHP Chris O'Grady returned to Los Angeles Angels from Cincinnati Reds."
+    },
+    {
+      "id": 260929,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2016-04-06",
+      "effectiveDate": "2016-04-06",
+      "resolutionDate": "2016-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris O'Grady assigned to Salt Lake Bees."
+    },
+    {
+      "id": 262183,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2016-04-14",
+      "effectiveDate": "2016-04-14",
+      "resolutionDate": "2016-04-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt Lake Bees placed LHP Chris O'Grady on the 7-day disabled list. Right hip impingement"
+    },
+    {
+      "id": 262977,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2016-04-21",
+      "effectiveDate": "2016-04-21",
+      "resolutionDate": "2016-04-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt Lake Bees activated LHP Chris O'Grady from the 7-day disabled list."
+    },
+    {
+      "id": 263324,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2016-04-25",
+      "effectiveDate": "2016-04-25",
+      "resolutionDate": "2016-04-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt Lake Bees placed LHP Chris O'Grady on the temporarily inactive list."
+    },
+    {
+      "id": 263538,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2016-04-26",
+      "effectiveDate": "2016-04-26",
+      "resolutionDate": "2016-04-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt Lake Bees activated LHP Chris O'Grady from the temporarily inactive list."
+    },
+    {
+      "id": 265118,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 404,
+        "name": "ACL Angels",
+        "link": "/api/v1/teams/404"
+      },
+      "date": "2016-05-10",
+      "effectiveDate": "2016-05-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris O'Grady assigned to AZL Angels from Salt Lake Bees."
+    },
+    {
+      "id": 265341,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "fromTeam": {
+        "id": 404,
+        "name": "ACL Angels",
+        "link": "/api/v1/teams/404"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2016-05-12",
+      "effectiveDate": "2016-05-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris O'Grady assigned to Salt Lake Bees from AZL Angels."
+    },
+    {
+      "id": 275294,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "date": "2016-06-25",
+      "effectiveDate": "2016-06-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris O'Grady assigned to Arkansas Travelers from Salt Lake Bees."
+    },
+    {
+      "id": 275364,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "date": "2016-06-25",
+      "effectiveDate": "2016-06-25",
+      "resolutionDate": "2016-06-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LHP Chris O'Grady roster status changed by Arkansas Travelers."
+    },
+    {
+      "id": 275365,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2016-06-25",
+      "effectiveDate": "2016-06-25",
+      "resolutionDate": "2016-06-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris O'Grady assigned to Salt Lake Bees."
+    },
+    {
+      "id": 276171,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "date": "2016-06-30",
+      "effectiveDate": "2016-06-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris O'Grady assigned to Arkansas Travelers from Salt Lake Bees."
+    },
+    {
+      "id": 286592,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "date": "2016-09-04",
+      "effectiveDate": "2016-09-21",
+      "resolutionDate": "2016-09-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chris O'Grady roster status changed by Arkansas Travelers."
+    },
+    {
+      "id": 288116,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 417,
+        "name": "Mobile BayBears",
+        "link": "/api/v1/teams/417"
+      },
+      "date": "2016-09-30",
+      "effectiveDate": "2016-09-30",
+      "resolutionDate": "2016-09-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mobile BayBears activated LHP Chris O'Grady from the temporarily inactive list."
+    },
+    {
+      "id": 293633,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2016-11-21",
+      "effectiveDate": "2016-11-21",
+      "resolutionDate": "2016-11-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris O'Grady assigned to Estrellas Orientales."
+    },
+    {
+      "id": 295638,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "fromTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2016-12-26",
+      "effectiveDate": "2016-12-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chris O'Grady assigned to Aguilas Cibaenas from Estrellas Orientales."
+    },
+    {
+      "id": 295929,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "fromTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2017-01-02",
+      "effectiveDate": "2017-01-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris O'Grady assigned to Aguilas Cibaenas from Estrellas Orientales."
+    },
+    {
+      "id": 298988,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2017-02-27",
+      "effectiveDate": "2017-02-27",
+      "resolutionDate": "2017-02-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris O'Grady assigned to Los Angeles Angels."
+    },
+    {
+      "id": 304769,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 417,
+        "name": "Mobile BayBears",
+        "link": "/api/v1/teams/417"
+      },
+      "date": "2017-04-07",
+      "effectiveDate": "2017-04-07",
+      "resolutionDate": "2017-04-07",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Mobile BayBears released LHP Chris O'Grady."
+    },
+    {
+      "id": 309370,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2017-05-06",
+      "effectiveDate": "2017-05-06",
+      "resolutionDate": "2017-05-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris O'Grady assigned to New Orleans Baby Cakes."
+    },
+    {
+      "id": 309369,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2017-05-06",
+      "effectiveDate": "2017-05-06",
+      "resolutionDate": "2017-05-06",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Miami Marlins signed LHP Chris O'Grady."
+    },
+    {
+      "id": 312378,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "fromTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2017-05-29",
+      "effectiveDate": "2017-05-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris O'Grady assigned to Jacksonville Jumbo Shrimp from New Orleans Baby Cakes."
+    },
+    {
+      "id": 312497,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2017-05-30",
+      "effectiveDate": "2017-05-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris O'Grady assigned to New Orleans Baby Cakes from Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 316104,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "fromTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2017-06-15",
+      "effectiveDate": "2017-06-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris O'Grady assigned to Jacksonville Jumbo Shrimp from New Orleans Baby Cakes."
+    },
+    {
+      "id": 317220,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2017-06-19",
+      "effectiveDate": "2017-06-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris O'Grady assigned to New Orleans Baby Cakes from Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 323029,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "fromTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2017-07-07",
+      "effectiveDate": "2017-07-07",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Miami Marlins recalled LHP Chris O'Grady from New Orleans Baby Cakes."
+    },
+    {
+      "id": 328264,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2017-08-08",
+      "effectiveDate": "2017-08-08",
+      "resolutionDate": "2017-08-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins placed LHP Chris O'Grady on the 10-day disabled list. Strained right oblique."
+    },
+    {
+      "id": 332810,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2017-09-19",
+      "effectiveDate": "2017-09-19",
+      "resolutionDate": "2017-09-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins activated LHP Chris O'Grady from the 10-day disabled list."
+    },
+    {
+      "id": 350162,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2018-04-19",
+      "effectiveDate": "2018-04-17",
+      "resolutionDate": "2018-04-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins placed LHP Chris O'Grady on the 10-day disabled list retroactive to April 17, 2018. Left shoulder sprain."
+    },
+    {
+      "id": 360766,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2018-06-15",
+      "effectiveDate": "2018-06-15",
+      "resolutionDate": "2018-06-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins transferred LHP Chris O'Grady from the 10-day disabled list to the 60-day disabled list. Left shoulder sprain."
+    },
+    {
+      "id": 380663,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2018-10-12",
+      "effectiveDate": "2018-10-12",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Miami Marlins sent LHP Chris O'Grady outright to New Orleans Baby Cakes."
+    },
+    {
+      "id": 382315,
+      "person": {
+        "id": 622217,
+        "fullName": "Chris O'Grady",
+        "link": "/api/v1/people/622217",
+        "nameSlug": "chris-o-grady-622217"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2018-11-02",
+      "effectiveDate": "2018-11-02",
+      "resolutionDate": "2018-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Chris O'Grady elected free agency."
+    }
+  ]
+}

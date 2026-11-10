@@ -1,0 +1,730 @@
+{
+  "player_id": 666374,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:64fe01ac04833b911c182ff4987fa1751a050cba8b0b72290f348cbefac8aee7",
+  "transactions": [
+    {
+      "id": 410259,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2019-06-17",
+      "effectiveDate": "2019-06-17",
+      "resolutionDate": "2019-06-17",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "San Diego Padres signed RHP Matt Brash."
+    },
+    {
+      "id": 410295,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "toTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "date": "2019-06-18",
+      "effectiveDate": "2019-06-18",
+      "resolutionDate": "2019-06-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Brash assigned to AZL Padres 1."
+    },
+    {
+      "id": 413168,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "fromTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "toTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "date": "2019-06-25",
+      "effectiveDate": "2019-06-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Brash assigned to Fort Wayne TinCaps from AZL Padres 1."
+    },
+    {
+      "id": 418713,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "fromTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "toTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "date": "2019-07-12",
+      "effectiveDate": "2019-07-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Brash assigned to AZL Padres 1 from Fort Wayne TinCaps."
+    },
+    {
+      "id": 428617,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "toTeam": {
+        "id": 374,
+        "name": "San Diego Padres Prospects",
+        "link": "/api/v1/teams/374"
+      },
+      "date": "2019-09-27",
+      "effectiveDate": "2019-09-27",
+      "resolutionDate": "2019-09-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Brash assigned to San Diego Padres Futures."
+    },
+    {
+      "id": 470727,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "toTeam": {
+        "id": 374,
+        "name": "San Diego Padres Prospects",
+        "link": "/api/v1/teams/374"
+      },
+      "date": "2019-09-27",
+      "effectiveDate": "2019-09-27",
+      "resolutionDate": "2019-09-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Brash assigned to San Diego Padres Futures."
+    },
+    {
+      "id": 451575,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2020-09-17",
+      "effectiveDate": "2020-09-17",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "San Diego Padres traded RHP Matt Brash to Seattle Mariners."
+    },
+    {
+      "id": 451576,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "toTeam": {
+        "id": 3274,
+        "name": "Mariners Alternate Training Site",
+        "link": "/api/v1/teams/3274"
+      },
+      "date": "2020-09-17",
+      "effectiveDate": "2020-09-17",
+      "resolutionDate": "2020-09-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Brash assigned to Mariners Alternate Training Site."
+    },
+    {
+      "id": 453106,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "fromTeam": {
+        "id": 3274,
+        "name": "Mariners Alternate Training Site",
+        "link": "/api/v1/teams/3274"
+      },
+      "toTeam": {
+        "id": 409,
+        "name": "ACL Mariners",
+        "link": "/api/v1/teams/409"
+      },
+      "date": "2020-09-29",
+      "effectiveDate": "2020-09-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Brash assigned to AZL Mariners from Mariners Alternate Training Site."
+    },
+    {
+      "id": 481624,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "fromTeam": {
+        "id": 409,
+        "name": "ACL Mariners",
+        "link": "/api/v1/teams/409"
+      },
+      "toTeam": {
+        "id": 403,
+        "name": "Everett AquaSox",
+        "link": "/api/v1/teams/403"
+      },
+      "date": "2021-04-30",
+      "effectiveDate": "2021-04-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Brash assigned to Everett AquaSox from AZL Mariners."
+    },
+    {
+      "id": 504815,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "fromTeam": {
+        "id": 403,
+        "name": "Everett AquaSox",
+        "link": "/api/v1/teams/403"
+      },
+      "toTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "date": "2021-07-14",
+      "effectiveDate": "2021-07-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Brash assigned to Arkansas Travelers from Everett AquaSox."
+    },
+    {
+      "id": 519047,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "fromTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2021-09-25",
+      "effectiveDate": "2021-09-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Brash assigned to Tacoma Rainiers from Arkansas Travelers."
+    },
+    {
+      "id": 519176,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2021-09-28",
+      "effectiveDate": "2021-09-28",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Seattle Mariners selected the contract of RHP Matt Brash,  and  from Tacoma Rainiers."
+    },
+    {
+      "id": 619562,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2022-05-05",
+      "effectiveDate": "2022-05-05",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned RHP Matt Brash to Tacoma Rainiers."
+    },
+    {
+      "id": 636317,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2022-07-09",
+      "effectiveDate": "2022-07-09",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled RHP Matt Brash from Tacoma Rainiers."
+    },
+    {
+      "id": 640175,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2022-07-26",
+      "effectiveDate": "2022-07-26",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned RHP Matt Brash to Tacoma Rainiers."
+    },
+    {
+      "id": 640837,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2022-07-28",
+      "effectiveDate": "2022-07-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled RHP Matt Brash,  and  from Tacoma Rainiers."
+    },
+    {
+      "id": 669453,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "toTeam": {
+        "id": 784,
+        "name": "Canada",
+        "link": "/api/v1/teams/784"
+      },
+      "date": "2023-02-09",
+      "effectiveDate": "2023-02-09",
+      "resolutionDate": "2023-02-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Canada activated RHP Matt Brash."
+    },
+    {
+      "id": 757676,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2024-03-28",
+      "effectiveDate": "2024-03-25",
+      "resolutionDate": "2024-03-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners placed RHP Matt Brash on the 15-day injured list retroactive to March 25, 2024. Right elbow inflammation."
+    },
+    {
+      "id": 769191,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2024-05-08",
+      "effectiveDate": "2024-05-08",
+      "resolutionDate": "2024-05-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners transferred RHP Matt Brash from the 15-day injured list to the 60-day injured list. Right elbow inflammation."
+    },
+    {
+      "id": 804082,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "resolutionDate": "2024-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners activated RHP Matt Brash from the 60-day injured list."
+    },
+    {
+      "id": 822427,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2025-03-27",
+      "effectiveDate": "2025-03-24",
+      "resolutionDate": "2025-03-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners placed RHP Matt Brash on the 15-day injured list retroactive to March 24, 2025. Right UCL sprain."
+    },
+    {
+      "id": 827801,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2025-04-13",
+      "effectiveDate": "2025-04-13",
+      "resolutionDate": "2025-04-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Seattle Mariners sent RHP Matt Brash on a rehab assignment to Tacoma Rainiers."
+    },
+    {
+      "id": 834742,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2025-05-03",
+      "effectiveDate": "2025-05-03",
+      "resolutionDate": "2025-05-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners activated RHP Matt Brash from the 15-day injured list."
+    },
+    {
+      "id": 899079,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Matt Brash changed number to 42."
+    },
+    {
+      "id": 900011,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Matt Brash changed number to 47."
+    },
+    {
+      "id": 905032,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2026-05-01",
+      "effectiveDate": "2026-04-30",
+      "resolutionDate": "2026-04-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners placed RHP Matt Brash on the 15-day injured list retroactive to April 30, 2026. Right lat inflammation."
+    },
+    {
+      "id": 909028,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2026-05-14",
+      "effectiveDate": "2026-05-14",
+      "resolutionDate": "2026-05-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Seattle Mariners sent RHP Matt Brash on a rehab assignment to Tacoma Rainiers."
+    },
+    {
+      "id": 910594,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2026-05-14",
+      "effectiveDate": "2026-05-14",
+      "resolutionDate": "2026-05-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Seattle Mariners sent RHP Matt Brash on a rehab assignment to Tacoma Rainiers."
+    },
+    {
+      "id": 910595,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2026-05-20",
+      "effectiveDate": "2026-05-20",
+      "resolutionDate": "2026-05-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners activated RHP Matt Brash from the 15-day injured list."
+    },
+    {
+      "id": 917298,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2026-06-10",
+      "effectiveDate": "2026-06-09",
+      "resolutionDate": "2026-06-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners placed RHP Matt Brash on the 15-day injured list retroactive to June 9, 2026. Right lat strain."
+    },
+    {
+      "id": 938864,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2026-08-21",
+      "effectiveDate": "2026-08-21",
+      "resolutionDate": "2026-08-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners transferred RHP Matt Brash from the 15-day injured list to the 60-day injured list. Right lat strain."
+    },
+    {
+      "id": 947681,
+      "person": {
+        "id": 666374,
+        "fullName": "Matt Brash",
+        "link": "/api/v1/people/666374",
+        "nameSlug": "matt-brash-666374"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners activated RHP Matt Brash from the 60-day injured list."
+    }
+  ]
+}

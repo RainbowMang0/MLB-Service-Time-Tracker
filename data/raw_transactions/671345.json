@@ -1,0 +1,888 @@
+{
+  "player_id": 671345,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:989fb7b5a2ff78aa19359558bb1a16ed7b9321bc682f59264b0e85dd26f2171b",
+  "transactions": [
+    {
+      "id": 282171,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2016-08-02",
+      "effectiveDate": "2016-08-02",
+      "resolutionDate": "2016-08-02",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent RHP Jason Foley to a minor league contract."
+    },
+    {
+      "id": 282173,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "toTeam": {
+        "id": 5071,
+        "name": "FCL Tigers West",
+        "link": "/api/v1/teams/5071"
+      },
+      "date": "2016-08-04",
+      "effectiveDate": "2016-08-04",
+      "resolutionDate": "2016-08-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jason Foley assigned to GCL Tigers West."
+    },
+    {
+      "id": 283493,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "fromTeam": {
+        "id": 5071,
+        "name": "FCL Tigers West",
+        "link": "/api/v1/teams/5071"
+      },
+      "toTeam": {
+        "id": 571,
+        "name": "Norwich Sea Unicorns",
+        "link": "/api/v1/teams/571"
+      },
+      "date": "2016-08-11",
+      "effectiveDate": "2016-08-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jason Foley assigned to Connecticut Tigers from GCL Tigers West."
+    },
+    {
+      "id": 302204,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "fromTeam": {
+        "id": 571,
+        "name": "Norwich Sea Unicorns",
+        "link": "/api/v1/teams/571"
+      },
+      "toTeam": {
+        "id": 582,
+        "name": "West Michigan Whitecaps",
+        "link": "/api/v1/teams/582"
+      },
+      "date": "2017-04-01",
+      "effectiveDate": "2017-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jason Foley assigned to West Michigan Whitecaps from Connecticut Tigers."
+    },
+    {
+      "id": 318280,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "fromTeam": {
+        "id": 582,
+        "name": "West Michigan Whitecaps",
+        "link": "/api/v1/teams/582"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2017-06-22",
+      "effectiveDate": "2017-06-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jason Foley assigned to Lakeland Flying Tigers from West Michigan Whitecaps."
+    },
+    {
+      "id": 324504,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2017-07-17",
+      "effectiveDate": "2017-07-13",
+      "resolutionDate": "2017-07-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lakeland Flying Tigers placed RHP Jason Foley on the 7-day disabled list retroactive to July 13, 2017."
+    },
+    {
+      "id": 334326,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2017-09-08",
+      "effectiveDate": "2017-09-08",
+      "resolutionDate": "2017-09-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lakeland Flying Tigers activated RHP Jason Foley from the 7-day disabled list."
+    },
+    {
+      "id": 346007,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2018-03-30",
+      "effectiveDate": "2018-03-30",
+      "resolutionDate": "2018-03-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lakeland Flying Tigers placed RHP Jason Foley on the 7-day disabled list."
+    },
+    {
+      "id": 379738,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2018-09-15",
+      "effectiveDate": "2018-09-15",
+      "resolutionDate": "2018-09-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lakeland Flying Tigers activated RHP Jason Foley from the 7-day injured list."
+    },
+    {
+      "id": 436076,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "fromTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2019-11-15",
+      "effectiveDate": "2019-11-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jason Foley assigned to Toledo Mud Hens from Lakeland Flying Tigers."
+    },
+    {
+      "id": 439013,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2020-02-23",
+      "effectiveDate": "2020-02-23",
+      "resolutionDate": "2020-02-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jason Foley assigned to Detroit Tigers."
+    },
+    {
+      "id": 441482,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "date": "2020-03-18",
+      "effectiveDate": "2020-03-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jason Foley assigned to Erie SeaWolves from Toledo Mud Hens."
+    },
+    {
+      "id": 450677,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2020-09-03",
+      "effectiveDate": "2020-09-03",
+      "resolutionDate": "2020-09-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers invited non-roster RHP Jason Foley to spring training."
+    },
+    {
+      "id": 453336,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "fromTeam": {
+        "id": 3302,
+        "name": "Tigers Alternate Training Site",
+        "link": "/api/v1/teams/3302"
+      },
+      "toTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "date": "2020-10-10",
+      "effectiveDate": "2020-10-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jason Foley assigned to Erie SeaWolves from Tigers Alternate Training Site."
+    },
+    {
+      "id": 455619,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "fromTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2020-11-17",
+      "effectiveDate": "2020-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jason Foley assigned to Toledo Mud Hens from Erie SeaWolves."
+    },
+    {
+      "id": 472966,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2021-03-01",
+      "effectiveDate": "2021-03-01",
+      "resolutionDate": "2021-03-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "P Jason Foley assigned to Detroit Tigers ."
+    },
+    {
+      "id": 475133,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2021-03-01",
+      "effectiveDate": "2021-03-01",
+      "resolutionDate": "2021-03-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "P Jason Foley assigned to Detroit Tigers ."
+    },
+    {
+      "id": 484276,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "fromTeam": {
+        "id": 3302,
+        "name": "Tigers Alternate Training Site",
+        "link": "/api/v1/teams/3302"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2021-05-04",
+      "effectiveDate": "2021-05-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jason Foley assigned to Toledo Mud Hens from Tigers Alternate Training Site."
+    },
+    {
+      "id": 492813,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2021-06-06",
+      "effectiveDate": "2021-06-06",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Detroit Tigers selected the contract of RHP Jason Foley from Toledo Mud Hens."
+    },
+    {
+      "id": 494611,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2021-06-15",
+      "effectiveDate": "2021-06-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Detroit Tigers optioned RHP Jason Foley to Toledo Mud Hens."
+    },
+    {
+      "id": 514498,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2021-08-27",
+      "effectiveDate": "2021-08-27",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled RHP Jason Foley from Toledo Mud Hens."
+    },
+    {
+      "id": 514856,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2021-08-30",
+      "effectiveDate": "2021-08-30",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Detroit Tigers optioned RHP Jason Foley to Toledo Mud Hens."
+    },
+    {
+      "id": 517279,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2021-09-14",
+      "effectiveDate": "2021-09-14",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled RHP Jason Foley,  and  from Toledo Mud Hens."
+    },
+    {
+      "id": 616973,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2022-04-24",
+      "effectiveDate": "2022-04-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Detroit Tigers optioned RHP Jason Foley to Toledo Mud Hens."
+    },
+    {
+      "id": 620825,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2022-05-12",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled RHP Jason Foley,  and  from Toledo Mud Hens."
+    },
+    {
+      "id": 718876,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2023-08-09",
+      "effectiveDate": "2023-08-09",
+      "resolutionDate": "2023-08-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers placed RHP Jason Foley on the bereavement list."
+    },
+    {
+      "id": 719425,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2023-08-12",
+      "effectiveDate": "2023-08-12",
+      "resolutionDate": "2023-08-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers activated RHP Jason Foley from the bereavement list."
+    },
+    {
+      "id": 822074,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2025-03-25",
+      "effectiveDate": "2025-03-25",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Detroit Tigers optioned RHP Jason Foley to Toledo Mud Hens."
+    },
+    {
+      "id": 831699,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2025-04-22",
+      "effectiveDate": "2025-04-22",
+      "resolutionDate": "2025-04-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens placed RHP Jason Foley on the 7-day injured list."
+    },
+    {
+      "id": 844910,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-06-04",
+      "effectiveDate": "2025-06-04",
+      "resolutionDate": "2025-06-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers placed RHP Jason Foley on the 60-day injured list. Recovery from right shoulder surgery."
+    },
+    {
+      "id": 844904,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-06-04",
+      "effectiveDate": "2025-06-04",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled RHP Jason Foley from Toledo Mud Hens."
+    },
+    {
+      "id": 875237,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers activated RHP Jason Foley from the 60-day injured list."
+    },
+    {
+      "id": 877285,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-11-18",
+      "effectiveDate": "2025-11-18",
+      "resolutionDate": "2025-11-18",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Detroit Tigers designated RHP Jason Foley for assignment."
+    },
+    {
+      "id": 877538,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-11-21",
+      "effectiveDate": "2025-11-21",
+      "resolutionDate": "2025-11-21",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Jason Foley elected free agency."
+    },
+    {
+      "id": 878947,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2025-12-16",
+      "effectiveDate": "2025-12-16",
+      "resolutionDate": "2025-12-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Francisco Giants signed free agent RHP Jason Foley."
+    },
+    {
+      "id": 886514,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2026-02-13",
+      "effectiveDate": "2026-02-13",
+      "resolutionDate": "2026-02-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Francisco Giants placed RHP Jason Foley on the 60-day injured list. Recovery from right shoulder surgery."
+    },
+    {
+      "id": 907322,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 476,
+        "name": "San Jose Giants",
+        "link": "/api/v1/teams/476"
+      },
+      "date": "2026-05-10",
+      "effectiveDate": "2026-05-10",
+      "resolutionDate": "2026-05-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Francisco Giants sent RHP Jason Foley on a rehab assignment to San Jose Giants."
+    },
+    {
+      "id": 907719,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2026-05-12",
+      "effectiveDate": "2026-05-12",
+      "resolutionDate": "2026-05-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Francisco Giants sent RHP Jason Foley on a rehab assignment to Sacramento River Cats."
+    },
+    {
+      "id": 927119,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2026-07-12",
+      "effectiveDate": "2026-07-12",
+      "resolutionDate": "2026-07-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Francisco Giants activated RHP Jason Foley from the 60-day injured list."
+    },
+    {
+      "id": 947282,
+      "person": {
+        "id": 671345,
+        "fullName": "Jason Foley",
+        "link": "/api/v1/people/671345",
+        "nameSlug": "jason-foley-671345"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2026-10-29",
+      "effectiveDate": "2026-10-29",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "San Francisco Giants sent RHP Jason Foley outright to Sacramento River Cats."
+    }
+  ]
+}

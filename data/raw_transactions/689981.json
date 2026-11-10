@@ -1,0 +1,952 @@
+{
+  "player_id": 689981,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:f799fba8ae6eaea410a93894b31d26764f473b8bb0238cb42e209042143e217b",
+  "transactions": [
+    {
+      "id": 508010,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2021-07-28",
+      "effectiveDate": "2021-07-28",
+      "resolutionDate": "2021-07-28",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "San Diego Padres signed RHP River Ryan."
+    },
+    {
+      "id": 608855,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2021-07-28",
+      "effectiveDate": "2021-07-28",
+      "resolutionDate": "2021-07-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "IF River Ryan roster status changed by San Diego Padres."
+    },
+    {
+      "id": 508011,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "date": "2021-07-29",
+      "effectiveDate": "2021-07-29",
+      "resolutionDate": "2021-07-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP River Ryan assigned to ACL Padres."
+    },
+    {
+      "id": 608853,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "date": "2021-07-29",
+      "effectiveDate": "2021-07-29",
+      "resolutionDate": "2021-07-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "ACL Padres activated IF River Ryan."
+    },
+    {
+      "id": 608854,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2022-03-27",
+      "effectiveDate": "2022-03-27",
+      "resolutionDate": "2022-03-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "IF River Ryan roster status changed by San Diego Padres."
+    },
+    {
+      "id": 608852,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2022-03-28",
+      "effectiveDate": "2022-03-28",
+      "resolutionDate": "2022-03-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "IF River Ryan assigned to ACL Dodgers."
+    },
+    {
+      "id": 608769,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2022-03-28",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Los Angeles Dodgers traded 1B Matt Beaty to San Diego Padres for RHP River Ryan."
+    },
+    {
+      "id": 624825,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "fromTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2022-05-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "IF River Ryan assigned to Rancho Cucamonga Quakes from ACL Dodgers."
+    },
+    {
+      "id": 635044,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2022-07-04",
+      "effectiveDate": "2022-07-04",
+      "resolutionDate": "2022-07-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rancho Cucamonga Quakes placed IF River Ryan on the temporarily inactive list."
+    },
+    {
+      "id": 636202,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2022-07-09",
+      "effectiveDate": "2022-07-09",
+      "resolutionDate": "2022-07-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rancho Cucamonga Quakes activated IF River Ryan from the temporarily inactive list."
+    },
+    {
+      "id": 681633,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2022-08-02",
+      "effectiveDate": "2022-08-02",
+      "resolutionDate": "2022-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated RHP River Ryan."
+    },
+    {
+      "id": 643745,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2022-08-02",
+      "effectiveDate": "2022-08-02",
+      "resolutionDate": "2022-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated IF River Ryan."
+    },
+    {
+      "id": 642396,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "fromTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2022-08-02",
+      "effectiveDate": "2022-08-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "IF River Ryan assigned to Great Lakes Loons from Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 703848,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2023-04-03",
+      "effectiveDate": "2023-04-03",
+      "resolutionDate": "2023-04-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers activated RHP River Ryan."
+    },
+    {
+      "id": 681636,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2023-04-03",
+      "effectiveDate": "2023-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP River Ryan assigned to Tulsa Drillers from Great Lakes Loons."
+    },
+    {
+      "id": 724734,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-09-12",
+      "effectiveDate": "2023-09-12",
+      "resolutionDate": "2023-09-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers activated RHP River Ryan."
+    },
+    {
+      "id": 758020,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-09-12",
+      "effectiveDate": "2024-03-29",
+      "resolutionDate": "2024-03-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers placed RHP River Ryan on the 7-day injured list."
+    },
+    {
+      "id": 724690,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "fromTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-09-12",
+      "effectiveDate": "2023-09-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP River Ryan assigned to Oklahoma City Dodgers from Tulsa Drillers."
+    },
+    {
+      "id": 738163,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2024-01-26",
+      "effectiveDate": "2024-01-26",
+      "resolutionDate": "2024-01-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers invited non-roster RHP River Ryan to spring training."
+    },
+    {
+      "id": 759794,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2024-03-29",
+      "effectiveDate": "2024-03-29",
+      "resolutionDate": "2024-03-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Baseball Club placed RHP River Ryan on the 60-day injured list."
+    },
+    {
+      "id": 778840,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2024-06-03",
+      "effectiveDate": "2024-06-03",
+      "resolutionDate": "2024-06-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Oklahoma City Baseball Club sent RHP River Ryan on a rehab assignment to ACL Dodgers."
+    },
+    {
+      "id": 777676,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2024-06-03",
+      "effectiveDate": "2024-06-03",
+      "resolutionDate": "2024-06-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Oklahoma City Baseball Club sent RHP River Ryan on a rehab assignment to ACL Dodgers."
+    },
+    {
+      "id": 778841,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2024-06-09",
+      "effectiveDate": "2024-06-09",
+      "resolutionDate": "2024-06-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Oklahoma City Baseball Club sent RHP River Ryan on a rehab assignment to Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 780362,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2024-06-15",
+      "effectiveDate": "2024-06-15",
+      "resolutionDate": "2024-06-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Baseball Club activated RHP River Ryan from the 60-day injured list."
+    },
+    {
+      "id": 786711,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2024-07-13",
+      "effectiveDate": "2024-07-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP River Ryan assigned to ACL Dodgers from Oklahoma City Baseball Club."
+    },
+    {
+      "id": 788706,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "fromTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2024-07-22",
+      "effectiveDate": "2024-07-22",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Dodgers selected the contract of RHP River Ryan from ACL Dodgers."
+    },
+    {
+      "id": 794034,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2024-08-11",
+      "effectiveDate": "2024-08-11",
+      "resolutionDate": "2024-08-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed RHP River Ryan on the 15-day injured list. Right forearm tightness."
+    },
+    {
+      "id": 795293,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2024-08-19",
+      "effectiveDate": "2024-08-19",
+      "resolutionDate": "2024-08-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers transferred RHP River Ryan from the 15-day injured list to the 60-day injured list. Right forearm tightness."
+    },
+    {
+      "id": 804621,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "resolutionDate": "2024-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated RHP River Ryan from the 60-day injured list."
+    },
+    {
+      "id": 815307,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-02-13",
+      "effectiveDate": "2025-02-13",
+      "resolutionDate": "2025-02-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed RHP River Ryan on the 60-day injured list."
+    },
+    {
+      "id": 875309,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated RHP River Ryan from the 60-day injured list."
+    },
+    {
+      "id": 890021,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 369,
+        "name": "Los Angeles Dodgers Prospects",
+        "link": "/api/v1/teams/369"
+      },
+      "date": "2026-03-05",
+      "effectiveDate": "2026-03-05",
+      "resolutionDate": "2026-03-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP River Ryan assigned to Los Angeles Dodgers Prospects."
+    },
+    {
+      "id": 892396,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2026-03-19",
+      "effectiveDate": "2026-03-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned RHP River Ryan to Oklahoma City Comets."
+    },
+    {
+      "id": 893896,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2026-03-25",
+      "effectiveDate": "2026-03-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP River Ryan assigned to ACL Dodgers from Oklahoma City Comets."
+    },
+    {
+      "id": 897185,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "fromTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2026-04-04",
+      "effectiveDate": "2026-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP River Ryan assigned to Oklahoma City Comets from ACL Dodgers."
+    },
+    {
+      "id": 901536,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2026-04-17",
+      "effectiveDate": "2026-04-17",
+      "resolutionDate": "2026-04-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Comets placed RHP River Ryan on the 7-day injured list."
+    },
+    {
+      "id": 909338,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2026-05-15",
+      "effectiveDate": "2026-05-15",
+      "resolutionDate": "2026-05-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Comets activated RHP River Ryan from the 7-day injured list."
+    },
+    {
+      "id": 923000,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2026-06-26",
+      "effectiveDate": "2026-06-26",
+      "resolutionDate": "2026-06-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Comets placed RHP River Ryan on the 7-day injured list."
+    },
+    {
+      "id": 934488,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-08-02",
+      "effectiveDate": "2026-08-02",
+      "resolutionDate": "2026-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers reassigned RHP River Ryan to the minor leagues."
+    },
+    {
+      "id": 934076,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-08-02",
+      "effectiveDate": "2026-08-02",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Los Angeles Dodgers traded CF Zyhir Hope, RHP River Ryan and RHP Brady Smith to Detroit Tigers for LHP Tarik Skubal."
+    },
+    {
+      "id": 934080,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2026-08-02",
+      "effectiveDate": "2026-08-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Detroit Tigers optioned RHP River Ryan to Toledo Mud Hens."
+    },
+    {
+      "id": 942651,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2026-09-08",
+      "effectiveDate": "2026-09-08",
+      "resolutionDate": "2026-09-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens activated RHP River Ryan."
+    },
+    {
+      "id": 941788,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2026-09-08",
+      "effectiveDate": "2026-09-08",
+      "resolutionDate": "2026-09-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens activated RHP River Ryan."
+    },
+    {
+      "id": 943396,
+      "person": {
+        "id": 689981,
+        "fullName": "River Ryan",
+        "link": "/api/v1/people/689981",
+        "nameSlug": "river-ryan-689981"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-09-21",
+      "effectiveDate": "2026-09-21",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled RHP River Ryan from Toledo Mud Hens."
+    }
+  ]
+}

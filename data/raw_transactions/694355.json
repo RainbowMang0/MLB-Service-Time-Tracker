@@ -1,0 +1,654 @@
+{
+  "player_id": 694355,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:2b42c6de3da397164e24495c6469615820958eaf9d95b56f3e320fc23b75f4e3",
+  "transactions": [
+    {
+      "id": 445738,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2020-06-23",
+      "effectiveDate": "2020-06-23",
+      "resolutionDate": "2020-06-23",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Kansas City Royals signed OF Tyler Gentry."
+    },
+    {
+      "id": 446340,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "toTeam": {
+        "id": 412,
+        "name": "ACL Royals",
+        "link": "/api/v1/teams/412"
+      },
+      "date": "2020-07-03",
+      "effectiveDate": "2020-07-03",
+      "resolutionDate": "2020-07-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Tyler Gentry assigned to AZL Royals."
+    },
+    {
+      "id": 480985,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "fromTeam": {
+        "id": 412,
+        "name": "ACL Royals",
+        "link": "/api/v1/teams/412"
+      },
+      "toTeam": {
+        "id": 565,
+        "name": "Quad Cities River Bandits",
+        "link": "/api/v1/teams/565"
+      },
+      "date": "2021-04-29",
+      "effectiveDate": "2021-04-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Tyler Gentry assigned to Quad Cities River Bandits from AZL Royals."
+    },
+    {
+      "id": 504789,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "toTeam": {
+        "id": 565,
+        "name": "Quad Cities River Bandits",
+        "link": "/api/v1/teams/565"
+      },
+      "date": "2021-07-14",
+      "effectiveDate": "2021-07-14",
+      "resolutionDate": "2021-07-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Quad Cities River Bandits placed OF Tyler Gentry on the 7-day injured list."
+    },
+    {
+      "id": 509218,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "toTeam": {
+        "id": 565,
+        "name": "Quad Cities River Bandits",
+        "link": "/api/v1/teams/565"
+      },
+      "date": "2021-08-02",
+      "effectiveDate": "2021-08-02",
+      "resolutionDate": "2021-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Quad Cities River Bandits placed OF Tyler Gentry on the 60-day injured list."
+    },
+    {
+      "id": 524161,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "toTeam": {
+        "id": 565,
+        "name": "Quad Cities River Bandits",
+        "link": "/api/v1/teams/565"
+      },
+      "date": "2021-11-06",
+      "effectiveDate": "2021-11-06",
+      "resolutionDate": "2021-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Quad Cities River Bandits activated OF Tyler Gentry from the 60-day injured list."
+    },
+    {
+      "id": 630925,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "fromTeam": {
+        "id": 565,
+        "name": "Quad Cities River Bandits",
+        "link": "/api/v1/teams/565"
+      },
+      "toTeam": {
+        "id": 1350,
+        "name": "Northwest Arkansas Naturals",
+        "link": "/api/v1/teams/1350"
+      },
+      "date": "2022-06-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Tyler Gentry assigned to Northwest Arkansas Naturals from Quad Cities River Bandits."
+    },
+    {
+      "id": 652556,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "toTeam": {
+        "id": 542,
+        "name": "Surprise Saguaros",
+        "link": "/api/v1/teams/542"
+      },
+      "date": "2022-09-16",
+      "effectiveDate": "2022-09-16",
+      "resolutionDate": "2022-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Surprise Saguaros activated OF Tyler Gentry."
+    },
+    {
+      "id": 665157,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2023-01-11",
+      "effectiveDate": "2023-01-11",
+      "resolutionDate": "2023-01-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Kansas City Royals invited non-roster OF Tyler Gentry to spring training."
+    },
+    {
+      "id": 677569,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2023-01-11",
+      "effectiveDate": "2023-01-11",
+      "resolutionDate": "2023-01-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "OF Tyler Gentry roster status changed by Kansas City Royals."
+    },
+    {
+      "id": 680369,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "fromTeam": {
+        "id": 1350,
+        "name": "Northwest Arkansas Naturals",
+        "link": "/api/v1/teams/1350"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2023-03-31",
+      "effectiveDate": "2023-03-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Tyler Gentry assigned to Omaha Storm Chasers from Northwest Arkansas Naturals."
+    },
+    {
+      "id": 732967,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "fromTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2023-11-14",
+      "effectiveDate": "2023-11-14",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Kansas City Royals selected the contract of OF Tyler Gentry from Omaha Storm Chasers."
+    },
+    {
+      "id": 753836,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "toTeam": {
+        "id": 368,
+        "name": "Kansas City Royals Prospects",
+        "link": "/api/v1/teams/368"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Kansas City Royals Prospects activated OF Tyler Gentry."
+    },
+    {
+      "id": 755060,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2024-03-12",
+      "effectiveDate": "2024-03-12",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Kansas City Royals optioned OF Tyler Gentry to Omaha Storm Chasers."
+    },
+    {
+      "id": 757026,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "fromTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "toTeam": {
+        "id": 1350,
+        "name": "Northwest Arkansas Naturals",
+        "link": "/api/v1/teams/1350"
+      },
+      "date": "2024-03-25",
+      "effectiveDate": "2024-03-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Tyler Gentry assigned to Northwest Arkansas Naturals from Omaha Storm Chasers."
+    },
+    {
+      "id": 757712,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "fromTeam": {
+        "id": 1350,
+        "name": "Northwest Arkansas Naturals",
+        "link": "/api/v1/teams/1350"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2024-03-28",
+      "effectiveDate": "2024-03-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Tyler Gentry assigned to Omaha Storm Chasers from Northwest Arkansas Naturals."
+    },
+    {
+      "id": 796153,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "fromTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2024-08-25",
+      "effectiveDate": "2024-08-25",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Kansas City Royals recalled OF Tyler Gentry from Omaha Storm Chasers."
+    },
+    {
+      "id": 797193,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2024-09-01",
+      "effectiveDate": "2024-09-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Kansas City Royals optioned OF Tyler Gentry to Omaha Storm Chasers."
+    },
+    {
+      "id": 800799,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "fromTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2024-09-30",
+      "effectiveDate": "2024-10-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Kansas City Royals recalled RF Tyler Gentry from Omaha Storm Chasers."
+    },
+    {
+      "id": 801736,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2024-10-11",
+      "effectiveDate": "2024-10-11",
+      "resolutionDate": "2024-10-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Kansas City Royals activated RF Tyler Gentry."
+    },
+    {
+      "id": 818584,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "toTeam": {
+        "id": 368,
+        "name": "Kansas City Royals Prospects",
+        "link": "/api/v1/teams/368"
+      },
+      "date": "2025-03-06",
+      "effectiveDate": "2025-03-06",
+      "resolutionDate": "2025-03-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "activated RF Tyler Gentry."
+    },
+    {
+      "id": 857406,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2025-03-10",
+      "effectiveDate": "2025-03-10",
+      "resolutionDate": "2025-03-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Omaha Storm Chasers activated RF Tyler Gentry."
+    },
+    {
+      "id": 819686,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2025-03-10",
+      "effectiveDate": "2025-03-10",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Kansas City Royals optioned RF Tyler Gentry to Omaha Storm Chasers."
+    },
+    {
+      "id": 857405,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2025-07-22",
+      "effectiveDate": "2025-07-22",
+      "resolutionDate": "2025-07-22",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Kansas City Royals designated RF Tyler Gentry for assignment."
+    },
+    {
+      "id": 859098,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2025-07-27",
+      "effectiveDate": "2025-07-27",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Kansas City Royals sent RF Tyler Gentry outright to Omaha Storm Chasers."
+    },
+    {
+      "id": 886943,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2026-02-20",
+      "effectiveDate": "2026-02-20",
+      "resolutionDate": "2026-02-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Tyler Gentry assigned to Kansas City Royals."
+    },
+    {
+      "id": 893671,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2026-03-24",
+      "effectiveDate": "2026-03-24",
+      "resolutionDate": "2026-03-24",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Omaha Storm Chasers released RF Tyler Gentry."
+    },
+    {
+      "id": 898291,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2026-04-11",
+      "effectiveDate": "2026-04-11",
+      "resolutionDate": "2026-04-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Tyler Gentry assigned to Toledo Mud Hens."
+    },
+    {
+      "id": 898290,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-04-11",
+      "effectiveDate": "2026-04-11",
+      "resolutionDate": "2026-04-11",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent OF Tyler Gentry to a minor league contract."
+    },
+    {
+      "id": 936734,
+      "person": {
+        "id": 694355,
+        "fullName": "Tyler Gentry",
+        "link": "/api/v1/people/694355",
+        "nameSlug": "tyler-gentry-694355"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2026-08-10",
+      "effectiveDate": "2026-08-10",
+      "resolutionDate": "2026-08-10",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Toledo Mud Hens released OF Tyler Gentry."
+    }
+  ]
+}

@@ -1,0 +1,971 @@
+{
+  "player_id": 630263,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:bb3c79462d7a35d893f3850953b2aa9f6fc2bc51b5952e0f44b9b4fdb50dd98b",
+  "transactions": [
+    {
+      "id": 143917,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 2290,
+        "name": "Michigan Wolverines",
+        "link": "/api/v1/teams/2290"
+      },
+      "date": "2013-02-20",
+      "effectiveDate": "2013-02-20",
+      "resolutionDate": "2013-02-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP James Bourque assigned to University of Michigan Wolverines."
+    },
+    {
+      "id": 195258,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2014-06-18",
+      "effectiveDate": "2014-06-18",
+      "resolutionDate": "2014-06-18",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Washington Nationals signed RHP James Bourque."
+    },
+    {
+      "id": 195259,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 466,
+        "name": "FCL Nationals",
+        "link": "/api/v1/teams/466"
+      },
+      "date": "2014-06-19",
+      "effectiveDate": "2014-06-19",
+      "resolutionDate": "2014-06-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP James Bourque assigned to GCL Nationals."
+    },
+    {
+      "id": 197441,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "fromTeam": {
+        "id": 466,
+        "name": "FCL Nationals",
+        "link": "/api/v1/teams/466"
+      },
+      "toTeam": {
+        "id": 458,
+        "name": "Auburn Doubledays",
+        "link": "/api/v1/teams/458"
+      },
+      "date": "2014-06-26",
+      "effectiveDate": "2014-06-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP James Bourque assigned to Auburn Doubledays from GCL Nationals."
+    },
+    {
+      "id": 232032,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 458,
+        "name": "Auburn Doubledays",
+        "link": "/api/v1/teams/458"
+      },
+      "date": "2015-06-19",
+      "effectiveDate": "2015-06-19",
+      "resolutionDate": "2015-06-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Auburn Doubledays placed RHP James Bourque on the 7-day disabled list."
+    },
+    {
+      "id": 246374,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 458,
+        "name": "Auburn Doubledays",
+        "link": "/api/v1/teams/458"
+      },
+      "date": "2015-09-11",
+      "effectiveDate": "2015-09-11",
+      "resolutionDate": "2015-09-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Auburn Doubledays activated RHP James Bourque from the 7-day disabled list."
+    },
+    {
+      "id": 269770,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "fromTeam": {
+        "id": 458,
+        "name": "Auburn Doubledays",
+        "link": "/api/v1/teams/458"
+      },
+      "toTeam": {
+        "id": 563,
+        "name": "Hagerstown Suns",
+        "link": "/api/v1/teams/563"
+      },
+      "date": "2016-06-07",
+      "effectiveDate": "2016-06-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP James Bourque assigned to Hagerstown Suns from Auburn Doubledays."
+    },
+    {
+      "id": 330471,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 563,
+        "name": "Hagerstown Suns",
+        "link": "/api/v1/teams/563"
+      },
+      "date": "2017-08-24",
+      "effectiveDate": "2017-08-22",
+      "resolutionDate": "2017-08-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Hagerstown Suns placed RHP James Bourque on the 7-day disabled list retroactive to August 22, 2017."
+    },
+    {
+      "id": 334477,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 563,
+        "name": "Hagerstown Suns",
+        "link": "/api/v1/teams/563"
+      },
+      "date": "2017-09-27",
+      "effectiveDate": "2017-09-27",
+      "resolutionDate": "2017-09-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Hagerstown Suns activated RHP James Bourque from the 7-day disabled list."
+    },
+    {
+      "id": 347797,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "fromTeam": {
+        "id": 563,
+        "name": "Hagerstown Suns",
+        "link": "/api/v1/teams/563"
+      },
+      "toTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "date": "2018-04-04",
+      "effectiveDate": "2018-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP James Bourque assigned to Potomac Nationals from Hagerstown Suns."
+    },
+    {
+      "id": 368378,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "fromTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2018-07-13",
+      "effectiveDate": "2018-07-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP James Bourque assigned to Harrisburg Senators from Potomac Nationals."
+    },
+    {
+      "id": 383471,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "fromTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2018-11-19",
+      "effectiveDate": "2019-03-08",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Washington Nationals selected the contract of James Bourque from Harrisburg Senators."
+    },
+    {
+      "id": 390153,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2019-03-08",
+      "effectiveDate": "2019-03-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Washington Nationals optioned RHP James Bourque to Fresno Grizzlies."
+    },
+    {
+      "id": 394315,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "fromTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2019-04-02",
+      "effectiveDate": "2019-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP James Bourque assigned to Harrisburg Senators from Fresno Grizzlies."
+    },
+    {
+      "id": 403159,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "fromTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2019-05-25",
+      "effectiveDate": "2019-05-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Washington Nationals recalled James Bourque from Harrisburg Senators."
+    },
+    {
+      "id": 403834,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2019-05-29",
+      "effectiveDate": "2019-05-29",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Washington Nationals optioned RHP James Bourque to Fresno Grizzlies."
+    },
+    {
+      "id": 428962,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "fromTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2019-09-30",
+      "effectiveDate": "2019-09-30",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Washington Nationals recalled RHP James Bourque from Fresno Grizzlies."
+    },
+    {
+      "id": 428992,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2019-10-01",
+      "effectiveDate": "2019-10-01",
+      "resolutionDate": "2019-10-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals reassigned RHP James Bourque to the minor leagues."
+    },
+    {
+      "id": 433328,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2019-10-31",
+      "effectiveDate": "2020-03-26",
+      "resolutionDate": "2019-10-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "James Bourque roster status changed by Washington Nationals."
+    },
+    {
+      "id": 441747,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2020-03-26",
+      "effectiveDate": "2020-03-26",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Washington Nationals optioned RHP James Bourque to Harrisburg Senators."
+    },
+    {
+      "id": 448098,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "fromTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2020-07-23",
+      "effectiveDate": "2020-08-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Washington Nationals recalled James Bourque from Harrisburg Senators."
+    },
+    {
+      "id": 448905,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 3280,
+        "name": "Nationals Alternate Training Site",
+        "link": "/api/v1/teams/3280"
+      },
+      "date": "2020-08-06",
+      "effectiveDate": "2020-08-06",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Washington Nationals optioned RHP James Bourque to Nationals Alternate Training Site."
+    },
+    {
+      "id": 450982,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "fromTeam": {
+        "id": 3280,
+        "name": "Nationals Alternate Training Site",
+        "link": "/api/v1/teams/3280"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2020-09-07",
+      "effectiveDate": "2020-09-07",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Washington Nationals recalled RHP James Bourque from Nationals Alternate Training Site."
+    },
+    {
+      "id": 451784,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2020-09-21",
+      "effectiveDate": "2020-09-21",
+      "resolutionDate": "2020-09-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals placed RHP James Bourque on the 10-day injured list. Right elbow strain."
+    },
+    {
+      "id": 452215,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2020-09-28",
+      "effectiveDate": "2020-09-28",
+      "resolutionDate": "2020-09-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals activated RHP James Bourque from the 10-day injured list."
+    },
+    {
+      "id": 453399,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2020-10-13",
+      "effectiveDate": "2020-10-13",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Washington Nationals sent RHP James Bourque outright to Fresno Grizzlies."
+    },
+    {
+      "id": 455124,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2020-11-02",
+      "effectiveDate": "2020-11-02",
+      "resolutionDate": "2020-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP James Bourque elected free agency."
+    },
+    {
+      "id": 470139,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2020-12-13",
+      "effectiveDate": "2020-12-13",
+      "resolutionDate": "2020-12-13",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago Cubs signed free agent RHP James Bourque to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 475282,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2020-12-13",
+      "effectiveDate": "2020-12-13",
+      "resolutionDate": "2020-12-13",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago Cubs signed free agent P James Bourque."
+    },
+    {
+      "id": 458627,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2020-12-13",
+      "effectiveDate": "2020-12-13",
+      "resolutionDate": "2020-12-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP James Bourque assigned to Iowa Cubs."
+    },
+    {
+      "id": 458626,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2020-12-13",
+      "effectiveDate": "2020-12-13",
+      "resolutionDate": "2020-12-13",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago Cubs signed free agent RHP James Bourque to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 481122,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2021-04-30",
+      "effectiveDate": "2021-04-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP James Bourque assigned to Tennessee Smokies from Iowa Cubs."
+    },
+    {
+      "id": 485615,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2021-05-04",
+      "effectiveDate": "2021-05-04",
+      "resolutionDate": "2021-05-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tennessee Smokies placed RHP James Bourque on the 7-day injured list."
+    },
+    {
+      "id": 494942,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2021-06-18",
+      "effectiveDate": "2021-06-18",
+      "resolutionDate": "2021-06-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tennessee Smokies placed RHP James Bourque on the 60-day injured list."
+    },
+    {
+      "id": 523549,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2021-11-05",
+      "effectiveDate": "2021-11-05",
+      "resolutionDate": "2021-11-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tennessee Smokies activated RHP James Bourque from the 60-day injured list."
+    },
+    {
+      "id": 612568,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2022-03-18",
+      "effectiveDate": "2022-03-18",
+      "resolutionDate": "2022-03-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP James Bourque roster status changed by Chicago Cubs."
+    },
+    {
+      "id": 607036,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2022-03-18",
+      "effectiveDate": "2022-03-18",
+      "resolutionDate": "2022-03-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP James Bourque assigned to Chicago Cubs."
+    },
+    {
+      "id": 610519,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2022-04-05",
+      "effectiveDate": "2022-04-05",
+      "resolutionDate": "2022-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP James Bourque assigned to Iowa Cubs."
+    },
+    {
+      "id": 620695,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2022-04-05",
+      "effectiveDate": "2022-05-11",
+      "resolutionDate": "2022-05-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs placed RHP James Bourque on the 7-day injured list."
+    },
+    {
+      "id": 633174,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2022-06-24",
+      "effectiveDate": "2022-06-24",
+      "resolutionDate": "2022-06-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP James Bourque roster status changed by Iowa Cubs."
+    },
+    {
+      "id": 659276,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2022-11-10",
+      "effectiveDate": "2022-11-10",
+      "resolutionDate": "2022-11-10",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP James Bourque elected free agency."
+    },
+    {
+      "id": 692961,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2023-05-17",
+      "effectiveDate": "2023-05-17",
+      "resolutionDate": "2023-05-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Diego Padres signed free agent RHP James Bourque to a minor league contract."
+    },
+    {
+      "id": 692962,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "date": "2023-05-18",
+      "effectiveDate": "2023-05-18",
+      "resolutionDate": "2023-05-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP James Bourque assigned to ACL Padres."
+    },
+    {
+      "id": 701660,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2023-06-06",
+      "effectiveDate": "2023-06-06",
+      "resolutionDate": "2023-06-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP James Bourque assigned to San Antonio Missions."
+    },
+    {
+      "id": 714423,
+      "person": {
+        "id": 630263,
+        "fullName": "James Bourque",
+        "link": "/api/v1/people/630263",
+        "nameSlug": "james-bourque-630263"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2023-07-25",
+      "effectiveDate": "2023-07-25",
+      "resolutionDate": "2023-07-25",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "San Antonio Missions released RHP James Bourque."
+    }
+  ]
+}

@@ -1,0 +1,1362 @@
+{
+  "player_id": 643446,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:f1f57aa25c9b2e4f51adfe9868519cb5553b3d87863f07d75d626f64ab4cc2df",
+  "transactions": [
+    {
+      "id": 159653,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2013-06-19",
+      "effectiveDate": "2013-06-19",
+      "resolutionDate": "2013-06-19",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "New York Mets signed SS Jeff McNeil."
+    },
+    {
+      "id": 159654,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 506,
+        "name": "Kingsport Axmen",
+        "link": "/api/v1/teams/506"
+      },
+      "date": "2013-06-20",
+      "effectiveDate": "2013-06-20",
+      "resolutionDate": "2013-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Jeff McNeil assigned to Kingsport Mets."
+    },
+    {
+      "id": 182889,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "fromTeam": {
+        "id": 506,
+        "name": "Kingsport Axmen",
+        "link": "/api/v1/teams/506"
+      },
+      "toTeam": {
+        "id": 543,
+        "name": "Savannah Sand Gnats",
+        "link": "/api/v1/teams/543"
+      },
+      "date": "2014-03-30",
+      "effectiveDate": "2014-03-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Jeff McNeil assigned to Savannah Sand Gnats from Kingsport Mets."
+    },
+    {
+      "id": 195511,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "fromTeam": {
+        "id": 543,
+        "name": "Savannah Sand Gnats",
+        "link": "/api/v1/teams/543"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2014-06-19",
+      "effectiveDate": "2014-06-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Jeff McNeil assigned to St. Lucie Mets from Savannah Sand Gnats."
+    },
+    {
+      "id": 216715,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2015-03-07",
+      "effectiveDate": "2015-03-07",
+      "resolutionDate": "2015-03-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Jeff McNeil assigned to New York Mets."
+    },
+    {
+      "id": 229216,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 77,
+        "name": "FSL South Division All-Stars",
+        "link": "/api/v1/teams/77"
+      },
+      "date": "2015-06-19",
+      "effectiveDate": "2015-06-19",
+      "resolutionDate": "2015-06-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Jeff McNeil assigned to FSL South Division All-Stars."
+    },
+    {
+      "id": 244159,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 527,
+        "name": "Salt River Rafters",
+        "link": "/api/v1/teams/527"
+      },
+      "date": "2015-09-01",
+      "effectiveDate": "2015-09-01",
+      "resolutionDate": "2015-09-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Jeff McNeil assigned to Salt River Rafters."
+    },
+    {
+      "id": 244709,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "fromTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2015-09-03",
+      "effectiveDate": "2015-09-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Jeff McNeil assigned to Binghamton Mets from St. Lucie Mets."
+    },
+    {
+      "id": 256226,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2016-03-06",
+      "effectiveDate": "2016-03-06",
+      "resolutionDate": "2016-03-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Jeff McNeil assigned to New York Mets."
+    },
+    {
+      "id": 263074,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2016-04-22",
+      "effectiveDate": "2016-04-21",
+      "resolutionDate": "2016-04-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Binghamton Mets placed 2B Jeff McNeil on the 7-day disabled list retroactive to April 21, 2016."
+    },
+    {
+      "id": 287961,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2016-09-26",
+      "effectiveDate": "2016-09-26",
+      "resolutionDate": "2016-09-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Binghamton Mets activated 2B Jeff McNeil from the 7-day disabled list."
+    },
+    {
+      "id": 304397,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2017-04-06",
+      "effectiveDate": "2017-04-06",
+      "resolutionDate": "2017-04-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Binghamton Rumble Ponies placed 2B Jeff McNeil on the 7-day disabled list."
+    },
+    {
+      "id": 307637,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2017-04-24",
+      "effectiveDate": "2017-04-24",
+      "resolutionDate": "2017-04-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Binghamton Rumble Ponies activated 2B Jeff McNeil from the 7-day disabled list."
+    },
+    {
+      "id": 307638,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "fromTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2017-04-25",
+      "effectiveDate": "2017-04-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Jeff McNeil assigned to St. Lucie Mets from Binghamton Rumble Ponies."
+    },
+    {
+      "id": 308576,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2017-05-01",
+      "effectiveDate": "2017-05-01",
+      "resolutionDate": "2017-05-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Lucie Mets placed 2B Jeff McNeil on the 7-day disabled list."
+    },
+    {
+      "id": 322921,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2017-07-07",
+      "effectiveDate": "2017-07-07",
+      "resolutionDate": "2017-07-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Lucie Mets activated 2B Jeff McNeil from the 7-day disabled list."
+    },
+    {
+      "id": 329560,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "fromTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2017-08-17",
+      "effectiveDate": "2017-08-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Jeff McNeil assigned to Las Vegas 51s from St. Lucie Mets."
+    },
+    {
+      "id": 342877,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2018-02-26",
+      "effectiveDate": "2018-02-26",
+      "resolutionDate": "2018-02-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Jeff McNeil assigned to New York Mets."
+    },
+    {
+      "id": 348202,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2018-04-05",
+      "effectiveDate": "2018-04-05",
+      "resolutionDate": "2018-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Jeff McNeil assigned to Binghamton Rumble Ponies."
+    },
+    {
+      "id": 348553,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2018-04-07",
+      "effectiveDate": "2018-04-06",
+      "resolutionDate": "2018-04-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Binghamton Rumble Ponies placed 3B Jeff McNeil on the 7-day disabled list retroactive to April 6, 2018."
+    },
+    {
+      "id": 349404,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2018-04-13",
+      "effectiveDate": "2018-04-13",
+      "resolutionDate": "2018-04-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Binghamton Rumble Ponies activated 2B Jeff McNeil from the 7-day disabled list."
+    },
+    {
+      "id": 361078,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "fromTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2018-06-16",
+      "effectiveDate": "2018-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Jeff McNeil assigned to Las Vegas 51s from Binghamton Rumble Ponies."
+    },
+    {
+      "id": 370770,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2018-07-24",
+      "effectiveDate": "2018-07-24",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Mets selected the contract of 2B Jeff McNeil from Las Vegas 51s."
+    },
+    {
+      "id": 400840,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2019-02-08",
+      "effectiveDate": "2019-02-08",
+      "resolutionDate": "2019-02-08",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "Jeff McNeil changed number to 6."
+    },
+    {
+      "id": 402700,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2019-05-23",
+      "effectiveDate": "2019-05-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets placed LF Jeff McNeil on the 10-day injured list. Left hamstring strain"
+    },
+    {
+      "id": 405864,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2019-06-04",
+      "effectiveDate": "2019-06-04",
+      "resolutionDate": "2019-06-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated LF Jeff McNeil from the 10-day injured list."
+    },
+    {
+      "id": 423710,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2019-08-14",
+      "effectiveDate": "2019-08-14",
+      "resolutionDate": "2019-08-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets placed LF Jeff McNeil on the 10-day injured list. Low-grade left hamstring strain."
+    },
+    {
+      "id": 425048,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2019-08-22",
+      "effectiveDate": "2019-08-22",
+      "resolutionDate": "2019-08-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Mets sent OF Jeff McNeil on a rehab assignment to Syracuse Mets."
+    },
+    {
+      "id": 425275,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2019-08-23",
+      "effectiveDate": "2019-08-23",
+      "resolutionDate": "2019-08-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Mets sent OF Jeff McNeil on a rehab assignment to Brooklyn Cyclones."
+    },
+    {
+      "id": 425394,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2019-08-24",
+      "effectiveDate": "2019-08-24",
+      "resolutionDate": "2019-08-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated LF Jeff McNeil from the 10-day injured list."
+    },
+    {
+      "id": 428472,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2019-09-26",
+      "effectiveDate": "2019-09-26",
+      "resolutionDate": "2019-09-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets placed LF Jeff McNeil on the 60-day injured list. Right wrist fracture."
+    },
+    {
+      "id": 480615,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2019-11-04",
+      "effectiveDate": "2019-11-04",
+      "resolutionDate": "2019-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated 2B Jeff McNeil from the 60-day injured list."
+    },
+    {
+      "id": 479132,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2019-11-04",
+      "effectiveDate": "2019-11-04",
+      "resolutionDate": "2019-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated 2B Jeff McNeil from the 60-day injured list."
+    },
+    {
+      "id": 477251,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2019-11-04",
+      "effectiveDate": "2019-11-04",
+      "resolutionDate": "2019-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated 2B Jeff McNeil from the 60 day injured list."
+    },
+    {
+      "id": 477607,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2019-11-04",
+      "effectiveDate": "2019-11-04",
+      "resolutionDate": "2019-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated 2B Jeff McNeil from the 60 day injured list."
+    },
+    {
+      "id": 432331,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2019-11-04",
+      "effectiveDate": "2019-11-04",
+      "resolutionDate": "2019-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated 3B Jeff McNeil from the 60-day injured list."
+    },
+    {
+      "id": 479279,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2019-11-04",
+      "effectiveDate": "2019-11-04",
+      "resolutionDate": "2019-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated 2B Jeff McNeil from the 60-day injured list."
+    },
+    {
+      "id": 487023,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2021-05-17",
+      "effectiveDate": "2021-05-17",
+      "resolutionDate": "2021-05-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets placed 2B Jeff McNeil on the 10-day injured list. Strained left hamstring."
+    },
+    {
+      "id": 494246,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2021-06-13",
+      "effectiveDate": "2021-06-13",
+      "resolutionDate": "2021-06-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Mets sent 2B Jeff McNeil on a rehab assignment to Brooklyn Cyclones."
+    },
+    {
+      "id": 494554,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2021-06-15",
+      "effectiveDate": "2021-06-15",
+      "resolutionDate": "2021-06-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Mets sent 2B Jeff McNeil on a rehab assignment to Syracuse Mets."
+    },
+    {
+      "id": 495387,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2021-06-21",
+      "effectiveDate": "2021-06-21",
+      "resolutionDate": "2021-06-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated 2B Jeff McNeil."
+    },
+    {
+      "id": 601048,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2021-12-01",
+      "effectiveDate": "2021-12-01",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "2B Jeff McNeil,  and  changed number to 1."
+    },
+    {
+      "id": 636619,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2022-07-11",
+      "effectiveDate": "2022-07-11",
+      "resolutionDate": "2022-07-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets placed 2B Jeff McNeil on the paternity list."
+    },
+    {
+      "id": 637485,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2022-07-14",
+      "effectiveDate": "2022-07-14",
+      "resolutionDate": "2022-07-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated 2B Jeff McNeil from the paternity list."
+    },
+    {
+      "id": 636483,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 160,
+        "name": "National League All-Stars",
+        "link": "/api/v1/teams/160"
+      },
+      "date": "2022-07-18",
+      "effectiveDate": "2022-07-18",
+      "resolutionDate": "2022-07-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Jeff McNeil assigned to National League All-Stars."
+    },
+    {
+      "id": 668876,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 940,
+        "name": "United States",
+        "link": "/api/v1/teams/940"
+      },
+      "date": "2023-02-09",
+      "effectiveDate": "2023-02-09",
+      "resolutionDate": "2023-02-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "United States activated 2B Jeff McNeil."
+    },
+    {
+      "id": 726970,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2023-09-28",
+      "effectiveDate": "2023-09-28",
+      "resolutionDate": "2023-09-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets placed 2B Jeff McNeil on the 10-day injured list. Left elbow sprain."
+    },
+    {
+      "id": 727640,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2023-10-02",
+      "effectiveDate": "2023-10-02",
+      "resolutionDate": "2023-10-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated 2B Jeff McNeil from the 10-day injured list."
+    },
+    {
+      "id": 798265,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-09-08",
+      "effectiveDate": "2024-09-07",
+      "resolutionDate": "2024-09-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets placed 2B Jeff McNeil on the 10-day injured list retroactive to September 7, 2024. Right wrist fracture."
+    },
+    {
+      "id": 800965,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-09-30",
+      "effectiveDate": "2024-09-30",
+      "resolutionDate": "2024-09-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated 2B Jeff McNeil from the 10-day injured list."
+    },
+    {
+      "id": 800967,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-10-01",
+      "effectiveDate": "2024-10-01",
+      "resolutionDate": "2024-10-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "2B Jeff McNeil roster status changed by New York Mets."
+    },
+    {
+      "id": 801844,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 544,
+        "name": "Scottsdale Scorpions",
+        "link": "/api/v1/teams/544"
+      },
+      "date": "2024-10-11",
+      "effectiveDate": "2024-10-11",
+      "resolutionDate": "2024-10-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Jeff McNeil assigned to Scottsdale Scorpions."
+    },
+    {
+      "id": 802170,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-10-13",
+      "effectiveDate": "2024-10-13",
+      "resolutionDate": "2024-10-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated 2B Jeff McNeil."
+    },
+    {
+      "id": 822443,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2025-03-27",
+      "effectiveDate": "2025-03-24",
+      "resolutionDate": "2025-03-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets placed 2B Jeff McNeil on the 10-day injured list retroactive to March 24, 2025. Right oblique strain."
+    },
+    {
+      "id": 827638,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2025-04-11",
+      "effectiveDate": "2025-04-11",
+      "resolutionDate": "2025-04-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Mets sent 2B Jeff McNeil on a rehab assignment to St. Lucie Mets."
+    },
+    {
+      "id": 831252,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2025-04-11",
+      "effectiveDate": "2025-04-11",
+      "resolutionDate": "2025-04-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Mets sent 2B Jeff McNeil on a rehab assignment to St. Lucie Mets."
+    },
+    {
+      "id": 831253,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2025-04-19",
+      "effectiveDate": "2025-04-19",
+      "resolutionDate": "2025-04-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Mets sent 2B Jeff McNeil on a rehab assignment to Binghamton Rumble Ponies."
+    },
+    {
+      "id": 831622,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2025-04-19",
+      "effectiveDate": "2025-04-19",
+      "resolutionDate": "2025-04-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Mets sent 2B Jeff McNeil on a rehab assignment to Binghamton Rumble Ponies."
+    },
+    {
+      "id": 831623,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2025-04-22",
+      "effectiveDate": "2025-04-22",
+      "resolutionDate": "2025-04-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Mets sent 2B Jeff McNeil on a rehab assignment to Syracuse Mets."
+    },
+    {
+      "id": 832040,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2025-04-24",
+      "effectiveDate": "2025-04-24",
+      "resolutionDate": "2025-04-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated 2B Jeff McNeil from the 10-day injured list."
+    },
+    {
+      "id": 879490,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2025-12-22",
+      "effectiveDate": "2025-12-22",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "New York Mets traded 2B Jeff McNeil and cash to Athletics for RHP Yordan Rodriguez."
+    },
+    {
+      "id": 899687,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "2B Jeff McNeil changed number to 42."
+    },
+    {
+      "id": 900605,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "2B Jeff McNeil changed number to 22."
+    },
+    {
+      "id": 947760,
+      "person": {
+        "id": 643446,
+        "fullName": "Jeff McNeil",
+        "link": "/api/v1/people/643446",
+        "nameSlug": "jeff-mcneil-643446"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "2B Jeff McNeil elected free agency."
+    }
+  ]
+}

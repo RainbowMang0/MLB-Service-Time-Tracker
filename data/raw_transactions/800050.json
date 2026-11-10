@@ -1,0 +1,892 @@
+{
+  "player_id": 800050,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:0cc0d5963d97e4ea2e7eaa84feb4cc8201f91465b74e3beaa46016f1f97fa96d",
+  "transactions": [
+    {
+      "id": 646732,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 5580,
+        "name": "College Workout",
+        "link": "/api/v1/teams/5580"
+      },
+      "date": "2022-06-11",
+      "effectiveDate": "2022-06-11",
+      "resolutionDate": "2022-06-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "College Workout activated OF Chase DeLauter."
+    },
+    {
+      "id": 630183,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 5580,
+        "name": "College Workout",
+        "link": "/api/v1/teams/5580"
+      },
+      "date": "2022-06-11",
+      "effectiveDate": "2022-06-11",
+      "resolutionDate": "2022-06-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Chase DeLauter and  assigned to College Workout."
+    },
+    {
+      "id": 646730,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2022-07-30",
+      "effectiveDate": "2022-07-30",
+      "resolutionDate": "2022-07-30",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Cleveland Guardians signed OF Chase DeLauter."
+    },
+    {
+      "id": 646731,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 3273,
+        "name": "Guardians Organization",
+        "link": "/api/v1/teams/3273"
+      },
+      "date": "2022-08-16",
+      "effectiveDate": "2022-08-16",
+      "resolutionDate": "2022-08-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Chase DeLauter assigned to Guardians Organization."
+    },
+    {
+      "id": 674624,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "fromTeam": {
+        "id": 3273,
+        "name": "Guardians Organization",
+        "link": "/api/v1/teams/3273"
+      },
+      "toTeam": {
+        "id": 5374,
+        "name": "ACL Guardians",
+        "link": "/api/v1/teams/5374"
+      },
+      "date": "2023-03-06",
+      "effectiveDate": "2023-03-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Chase DeLauter assigned to ACL Guardians from Guardians Organization."
+    },
+    {
+      "id": 683390,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "fromTeam": {
+        "id": 5374,
+        "name": "ACL Guardians",
+        "link": "/api/v1/teams/5374"
+      },
+      "toTeam": {
+        "id": 437,
+        "name": "Lake County Captains",
+        "link": "/api/v1/teams/437"
+      },
+      "date": "2023-04-05",
+      "effectiveDate": "2023-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Chase DeLauter assigned to Lake County Captains from ACL Guardians."
+    },
+    {
+      "id": 683391,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 437,
+        "name": "Lake County Captains",
+        "link": "/api/v1/teams/437"
+      },
+      "date": "2023-04-06",
+      "effectiveDate": "2023-04-06",
+      "resolutionDate": "2023-04-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lake County Captains placed OF Chase DeLauter on the 60-day injured list."
+    },
+    {
+      "id": 701351,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "fromTeam": {
+        "id": 437,
+        "name": "Lake County Captains",
+        "link": "/api/v1/teams/437"
+      },
+      "toTeam": {
+        "id": 5374,
+        "name": "ACL Guardians",
+        "link": "/api/v1/teams/5374"
+      },
+      "date": "2023-06-05",
+      "effectiveDate": "2023-06-05",
+      "resolutionDate": "2023-06-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Lake County Captains sent OF Chase DeLauter on a rehab assignment to ACL Guardians."
+    },
+    {
+      "id": 707756,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 437,
+        "name": "Lake County Captains",
+        "link": "/api/v1/teams/437"
+      },
+      "date": "2023-06-29",
+      "effectiveDate": "2023-06-29",
+      "resolutionDate": "2023-06-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lake County Captains activated OF Chase DeLauter from the 60-day injured list."
+    },
+    {
+      "id": 707758,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 437,
+        "name": "Lake County Captains",
+        "link": "/api/v1/teams/437"
+      },
+      "date": "2023-06-29",
+      "effectiveDate": "2023-06-29",
+      "resolutionDate": "2023-06-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lake County Captains activated OF Chase DeLauter from the 60-day injured list."
+    },
+    {
+      "id": 724573,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "fromTeam": {
+        "id": 437,
+        "name": "Lake County Captains",
+        "link": "/api/v1/teams/437"
+      },
+      "toTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "date": "2023-09-12",
+      "effectiveDate": "2023-09-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Chase DeLauter assigned to Akron RubberDucks from Lake County Captains."
+    },
+    {
+      "id": 726015,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 490,
+        "name": "Peoria Javelinas",
+        "link": "/api/v1/teams/490"
+      },
+      "date": "2023-09-22",
+      "effectiveDate": "2023-09-22",
+      "resolutionDate": "2023-09-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Peoria Javelinas activated OF Chase DeLauter."
+    },
+    {
+      "id": 730754,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 1310,
+        "name": "American League Fall Stars",
+        "link": "/api/v1/teams/1310"
+      },
+      "date": "2023-11-03",
+      "effectiveDate": "2023-11-03",
+      "resolutionDate": "2023-11-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Chase DeLauter assigned to American League Fall Stars."
+    },
+    {
+      "id": 751431,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2024-02-24",
+      "effectiveDate": "2024-02-24",
+      "resolutionDate": "2024-02-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Chase DeLauter assigned to Cleveland Guardians."
+    },
+    {
+      "id": 753961,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 364,
+        "name": "Cleveland Guardians Prospects",
+        "link": "/api/v1/teams/364"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cleveland Guardians Prospects activated OF Chase DeLauter."
+    },
+    {
+      "id": 767155,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "date": "2024-05-02",
+      "effectiveDate": "2024-05-02",
+      "resolutionDate": "2024-05-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Akron RubberDucks placed OF Chase DeLauter on the 7-day injured list."
+    },
+    {
+      "id": 774360,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "date": "2024-05-28",
+      "effectiveDate": "2024-05-28",
+      "resolutionDate": "2024-05-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Akron RubberDucks activated OF Chase DeLauter from the 7-day injured list."
+    },
+    {
+      "id": 779107,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "date": "2024-06-10",
+      "effectiveDate": "2024-06-10",
+      "resolutionDate": "2024-06-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Akron RubberDucks placed OF Chase DeLauter on the 7-day injured list."
+    },
+    {
+      "id": 788215,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "fromTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "toTeam": {
+        "id": 5374,
+        "name": "ACL Guardians",
+        "link": "/api/v1/teams/5374"
+      },
+      "date": "2024-07-20",
+      "effectiveDate": "2024-07-20",
+      "resolutionDate": "2024-07-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Akron RubberDucks sent OF Chase DeLauter on a rehab assignment to ACL Guardians."
+    },
+    {
+      "id": 790222,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "fromTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "toTeam": {
+        "id": 5374,
+        "name": "ACL Guardians",
+        "link": "/api/v1/teams/5374"
+      },
+      "date": "2024-07-20",
+      "effectiveDate": "2024-07-20",
+      "resolutionDate": "2024-07-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Akron RubberDucks sent OF Chase DeLauter on a rehab assignment to ACL Guardians."
+    },
+    {
+      "id": 790223,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "date": "2024-07-27",
+      "effectiveDate": "2024-07-27",
+      "resolutionDate": "2024-07-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Akron RubberDucks activated OF Chase DeLauter from the 7-day injured list."
+    },
+    {
+      "id": 795503,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2024-08-19",
+      "effectiveDate": "2024-08-19",
+      "resolutionDate": "2024-08-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbus Clippers activated OF Chase DeLauter."
+    },
+    {
+      "id": 795244,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "fromTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2024-08-19",
+      "effectiveDate": "2024-08-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Chase DeLauter assigned to Columbus Clippers from Akron RubberDucks."
+    },
+    {
+      "id": 796987,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2024-08-30",
+      "effectiveDate": "2024-08-30",
+      "resolutionDate": "2024-08-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbus Clippers placed OF Chase DeLauter on the 7-day injured list."
+    },
+    {
+      "id": 823168,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2024-09-24",
+      "effectiveDate": "2024-09-24",
+      "resolutionDate": "2024-09-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbus Clippers activated RF Chase DeLauter from the 7-day injured list."
+    },
+    {
+      "id": 800029,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2024-09-24",
+      "effectiveDate": "2024-09-24",
+      "resolutionDate": "2024-09-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbus Clippers activated RF Chase DeLauter from the 7-day injured list."
+    },
+    {
+      "id": 800057,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 542,
+        "name": "Surprise Saguaros",
+        "link": "/api/v1/teams/542"
+      },
+      "date": "2024-09-25",
+      "effectiveDate": "2024-09-25",
+      "resolutionDate": "2024-09-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Chase DeLauter assigned to Surprise Saguaros."
+    },
+    {
+      "id": 809953,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2025-01-14",
+      "effectiveDate": "2025-01-14",
+      "resolutionDate": "2025-01-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Cleveland Guardians invited non-roster RF Chase DeLauter to spring training."
+    },
+    {
+      "id": 823169,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2025-03-28",
+      "effectiveDate": "2025-03-28",
+      "resolutionDate": "2025-03-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbus Clippers placed RF Chase DeLauter on the 7-day injured list."
+    },
+    {
+      "id": 839524,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 5374,
+        "name": "ACL Guardians",
+        "link": "/api/v1/teams/5374"
+      },
+      "date": "2025-05-05",
+      "effectiveDate": "2025-05-05",
+      "resolutionDate": "2025-05-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Columbus Clippers sent RF Chase DeLauter on a rehab assignment to ACL Guardians."
+    },
+    {
+      "id": 835200,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 5374,
+        "name": "ACL Guardians",
+        "link": "/api/v1/teams/5374"
+      },
+      "date": "2025-05-05",
+      "effectiveDate": "2025-05-05",
+      "resolutionDate": "2025-05-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Columbus Clippers sent RF Chase DeLauter on a rehab assignment to ACL Guardians."
+    },
+    {
+      "id": 857861,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2025-05-22",
+      "effectiveDate": "2025-07-23",
+      "resolutionDate": "2025-07-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbus Clippers placed RF Chase DeLauter on the 7-day injured list."
+    },
+    {
+      "id": 839906,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2025-05-22",
+      "effectiveDate": "2025-05-22",
+      "resolutionDate": "2025-05-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbus Clippers activated RF Chase DeLauter from the 7-day injured list."
+    },
+    {
+      "id": 864869,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2025-07-23",
+      "effectiveDate": "2025-07-23",
+      "resolutionDate": "2025-07-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbus Clippers placed RF Chase DeLauter on the 7-day injured list."
+    },
+    {
+      "id": 868564,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 542,
+        "name": "Surprise Saguaros",
+        "link": "/api/v1/teams/542"
+      },
+      "date": "2025-09-10",
+      "effectiveDate": "2025-09-10",
+      "resolutionDate": "2025-09-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Chase DeLauter assigned to Surprise Saguaros."
+    },
+    {
+      "id": 870940,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2025-09-30",
+      "effectiveDate": "2025-09-30",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Cleveland Guardians selected the contract of RF Chase DeLauter from Columbus Clippers."
+    },
+    {
+      "id": 879098,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2025-12-17",
+      "effectiveDate": "2025-12-17",
+      "resolutionDate": "2025-12-17",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RF Chase DeLauter changed number to 14."
+    },
+    {
+      "id": 890308,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 364,
+        "name": "Cleveland Guardians Prospects",
+        "link": "/api/v1/teams/364"
+      },
+      "date": "2026-03-05",
+      "effectiveDate": "2026-03-05",
+      "resolutionDate": "2026-03-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Chase DeLauter assigned to Cleveland Guardians Prospects."
+    },
+    {
+      "id": 899513,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RF Chase DeLauter changed number to 42."
+    },
+    {
+      "id": 900436,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RF Chase DeLauter changed number to 24."
+    },
+    {
+      "id": 919527,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2026-06-17",
+      "effectiveDate": "2026-06-14",
+      "resolutionDate": "2026-06-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cleveland Guardians placed RF Chase DeLauter on the 10-day injured list retroactive to June 14, 2026. Right side rib fracture."
+    },
+    {
+      "id": 923169,
+      "person": {
+        "id": 800050,
+        "fullName": "Chase DeLauter",
+        "link": "/api/v1/people/800050",
+        "nameSlug": "chase-delauter-800050"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2026-06-28",
+      "effectiveDate": "2026-06-28",
+      "resolutionDate": "2026-06-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cleveland Guardians activated RF Chase DeLauter from the 10-day injured list."
+    }
+  ]
+}

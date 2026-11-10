@@ -1,0 +1,860 @@
+{
+  "player_id": 686826,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:ac084e27441e2b73f3c77b55b918360aa4a59c658e27892e22f66439baf332bc",
+  "transactions": [
+    {
+      "id": 446145,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "toTeam": {
+        "id": 419,
+        "name": "Hillsboro Hops",
+        "link": "/api/v1/teams/419"
+      },
+      "date": "2020-06-29",
+      "effectiveDate": "2020-06-29",
+      "resolutionDate": "2020-06-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Bryce Jarvis assigned to Hillsboro Hops."
+    },
+    {
+      "id": 446156,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2020-06-29",
+      "effectiveDate": "2020-06-29",
+      "resolutionDate": "2020-06-29",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Arizona Diamondbacks signed RHP Bryce Jarvis."
+    },
+    {
+      "id": 447486,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "fromTeam": {
+        "id": 419,
+        "name": "Hillsboro Hops",
+        "link": "/api/v1/teams/419"
+      },
+      "toTeam": {
+        "id": 3266,
+        "name": "Diamondbacks Alternate Training Site",
+        "link": "/api/v1/teams/3266"
+      },
+      "date": "2020-07-19",
+      "effectiveDate": "2020-07-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Bryce Jarvis assigned to Diamondbacks Alternate Training Site from Hillsboro Hops."
+    },
+    {
+      "id": 452942,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "fromTeam": {
+        "id": 3266,
+        "name": "Diamondbacks Alternate Training Site",
+        "link": "/api/v1/teams/3266"
+      },
+      "toTeam": {
+        "id": 419,
+        "name": "Hillsboro Hops",
+        "link": "/api/v1/teams/419"
+      },
+      "date": "2020-09-29",
+      "effectiveDate": "2020-09-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Bryce Jarvis assigned to Hillsboro Hops from Diamondbacks Alternate Training Site."
+    },
+    {
+      "id": 462561,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "toTeam": {
+        "id": 419,
+        "name": "Hillsboro Hops",
+        "link": "/api/v1/teams/419"
+      },
+      "date": "2020-09-29",
+      "effectiveDate": "2020-09-29",
+      "resolutionDate": "2020-09-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Bryce Jarvis assigned to Hillsboro Hops."
+    },
+    {
+      "id": 467167,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "toTeam": {
+        "id": 3267,
+        "name": "Diamondbacks Organization",
+        "link": "/api/v1/teams/3267"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Bryce Jarvis assigned to Diamondbacks Organization."
+    },
+    {
+      "id": 464952,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "toTeam": {
+        "id": 3267,
+        "name": "Diamondbacks Organization",
+        "link": "/api/v1/teams/3267"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Bryce Jarvis assigned to Diamondbacks Organization."
+    },
+    {
+      "id": 483729,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "fromTeam": {
+        "id": 3267,
+        "name": "Diamondbacks Organization",
+        "link": "/api/v1/teams/3267"
+      },
+      "toTeam": {
+        "id": 419,
+        "name": "Hillsboro Hops",
+        "link": "/api/v1/teams/419"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Bryce Jarvis assigned to Hillsboro Hops from Diamondbacks Organization."
+    },
+    {
+      "id": 495425,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "fromTeam": {
+        "id": 419,
+        "name": "Hillsboro Hops",
+        "link": "/api/v1/teams/419"
+      },
+      "toTeam": {
+        "id": 5368,
+        "name": "Amarillo Sod Poodles",
+        "link": "/api/v1/teams/5368"
+      },
+      "date": "2021-06-21",
+      "effectiveDate": "2021-06-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Bryce Jarvis assigned to Amarillo Sod Poodles from Hillsboro Hops."
+    },
+    {
+      "id": 504709,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "toTeam": {
+        "id": 5368,
+        "name": "Amarillo Sod Poodles",
+        "link": "/api/v1/teams/5368"
+      },
+      "date": "2021-07-13",
+      "effectiveDate": "2021-07-13",
+      "resolutionDate": "2021-07-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Amarillo Sod Poodles placed RHP Bryce Jarvis on the 7-day injured list."
+    },
+    {
+      "id": 512615,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "fromTeam": {
+        "id": 5368,
+        "name": "Amarillo Sod Poodles",
+        "link": "/api/v1/teams/5368"
+      },
+      "toTeam": {
+        "id": 1991,
+        "name": "ACL D-backs",
+        "link": "/api/v1/teams/1991"
+      },
+      "date": "2021-08-17",
+      "effectiveDate": "2021-08-17",
+      "resolutionDate": "2021-08-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Amarillo Sod Poodles sent RHP Bryce Jarvis on a rehab assignment to ACL D-backs."
+    },
+    {
+      "id": 514537,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "toTeam": {
+        "id": 5368,
+        "name": "Amarillo Sod Poodles",
+        "link": "/api/v1/teams/5368"
+      },
+      "date": "2021-08-27",
+      "effectiveDate": "2021-08-27",
+      "resolutionDate": "2021-08-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Amarillo Sod Poodles activated RHP Bryce Jarvis."
+    },
+    {
+      "id": 633224,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "toTeam": {
+        "id": 5368,
+        "name": "Amarillo Sod Poodles",
+        "link": "/api/v1/teams/5368"
+      },
+      "date": "2021-08-27",
+      "effectiveDate": "2022-06-25",
+      "resolutionDate": "2022-06-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Amarillo Sod Poodles placed RHP Bryce Jarvis on the 7-day injured list."
+    },
+    {
+      "id": 607129,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2022-03-19",
+      "effectiveDate": "2022-03-19",
+      "resolutionDate": "2022-03-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Bryce Jarvis and  assigned to Arizona Diamondbacks."
+    },
+    {
+      "id": 635586,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "toTeam": {
+        "id": 5368,
+        "name": "Amarillo Sod Poodles",
+        "link": "/api/v1/teams/5368"
+      },
+      "date": "2022-07-06",
+      "effectiveDate": "2022-07-06",
+      "resolutionDate": "2022-07-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Amarillo Sod Poodles activated RHP Bryce Jarvis from the 7-day injured list."
+    },
+    {
+      "id": 667908,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2023-02-03",
+      "effectiveDate": "2023-02-03",
+      "resolutionDate": "2023-02-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Arizona Diamondbacks invited non-roster RHP Bryce Jarvis and  to spring training."
+    },
+    {
+      "id": 687200,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2023-04-25",
+      "effectiveDate": "2023-04-25",
+      "resolutionDate": "2023-04-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces activated RHP Bryce Jarvis."
+    },
+    {
+      "id": 686979,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "fromTeam": {
+        "id": 5368,
+        "name": "Amarillo Sod Poodles",
+        "link": "/api/v1/teams/5368"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2023-04-25",
+      "effectiveDate": "2023-04-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Bryce Jarvis assigned to Reno Aces from Amarillo Sod Poodles."
+    },
+    {
+      "id": 719564,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2023-08-13",
+      "effectiveDate": "2023-08-13",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Arizona Diamondbacks selected the contract of RHP Bryce Jarvis from Reno Aces."
+    },
+    {
+      "id": 723991,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2023-09-07",
+      "effectiveDate": "2023-09-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Bryce Jarvis to Reno Aces."
+    },
+    {
+      "id": 725425,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2023-09-17",
+      "effectiveDate": "2023-09-17",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled RHP Bryce Jarvis from Reno Aces."
+    },
+    {
+      "id": 728329,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2023-10-07",
+      "effectiveDate": "2023-10-07",
+      "resolutionDate": "2023-10-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Bryce Jarvis roster status changed by Arizona Diamondbacks."
+    },
+    {
+      "id": 730376,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2023-11-02",
+      "effectiveDate": "2023-11-02",
+      "resolutionDate": "2023-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated RHP Bryce Jarvis."
+    },
+    {
+      "id": 792206,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2024-08-02",
+      "effectiveDate": "2024-07-31",
+      "resolutionDate": "2024-07-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks placed RHP Bryce Jarvis on the 15-day injured list retroactive to July 31, 2024. Sprained right elbow."
+    },
+    {
+      "id": 793086,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2024-08-06",
+      "effectiveDate": "2024-08-06",
+      "resolutionDate": "2024-08-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks transferred RHP Bryce Jarvis from the 15-day injured list to the 60-day injured list."
+    },
+    {
+      "id": 804592,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "resolutionDate": "2024-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated RHP Bryce Jarvis from the 60-day injured list."
+    },
+    {
+      "id": 828759,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Bryce Jarvis changed number to 42."
+    },
+    {
+      "id": 829958,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Bryce Jarvis changed number to 40."
+    },
+    {
+      "id": 831217,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2025-04-19",
+      "effectiveDate": "2025-04-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Bryce Jarvis to Reno Aces."
+    },
+    {
+      "id": 846369,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-06-10",
+      "effectiveDate": "2025-06-10",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled RHP Bryce Jarvis from Reno Aces."
+    },
+    {
+      "id": 848244,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2025-06-15",
+      "effectiveDate": "2025-06-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Bryce Jarvis to Reno Aces."
+    },
+    {
+      "id": 853486,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-07-06",
+      "effectiveDate": "2025-07-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled RHP Bryce Jarvis from Reno Aces."
+    },
+    {
+      "id": 854195,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2025-07-09",
+      "effectiveDate": "2025-07-09",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Bryce Jarvis to Reno Aces."
+    },
+    {
+      "id": 865406,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-08-20",
+      "effectiveDate": "2025-08-20",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled RHP Bryce Jarvis from Reno Aces."
+    },
+    {
+      "id": 868164,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2025-09-07",
+      "effectiveDate": "2025-09-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Bryce Jarvis to Reno Aces."
+    },
+    {
+      "id": 870445,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-09-26",
+      "effectiveDate": "2025-09-26",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled RHP Bryce Jarvis from Reno Aces."
+    },
+    {
+      "id": 878696,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-12-12",
+      "effectiveDate": "2025-12-12",
+      "resolutionDate": "2025-12-12",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Arizona Diamondbacks designated RHP Bryce Jarvis for assignment."
+    },
+    {
+      "id": 879320,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2025-12-19",
+      "effectiveDate": "2025-12-19",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Arizona Diamondbacks sent RHP Bryce Jarvis outright to Reno Aces."
+    },
+    {
+      "id": 883549,
+      "person": {
+        "id": 686826,
+        "fullName": "Bryce Jarvis",
+        "link": "/api/v1/people/686826",
+        "nameSlug": "bryce-jarvis-686826"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-01-30",
+      "effectiveDate": "2026-01-30",
+      "resolutionDate": "2026-01-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Arizona Diamondbacks invited non-roster RHP Bryce Jarvis to spring training."
+    }
+  ]
+}

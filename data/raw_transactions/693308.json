@@ -1,0 +1,894 @@
+{
+  "player_id": 693308,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:fdf35bdf9138d3e6d55f95b6e909a88498bcf26acd1795653ba134a3cb34156b",
+  "transactions": [
+    {
+      "id": 446575,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 1390,
+        "name": "FCL Blue Jays",
+        "link": "/api/v1/teams/1390"
+      },
+      "date": "2020-07-08",
+      "effectiveDate": "2020-07-08",
+      "resolutionDate": "2020-07-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Nick Frasso assigned to GCL Blue Jays."
+    },
+    {
+      "id": 446571,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2020-07-08",
+      "effectiveDate": "2020-07-08",
+      "resolutionDate": "2020-07-08",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Toronto Blue Jays signed RHP Nick Frasso."
+    },
+    {
+      "id": 480262,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 3257,
+        "name": "Blue Jays Organization",
+        "link": "/api/v1/teams/3257"
+      },
+      "date": "2021-04-26",
+      "effectiveDate": "2021-04-26",
+      "resolutionDate": "2021-04-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Blue Jays Organization activated RHP Nick Frasso. ABS Test."
+    },
+    {
+      "id": 487389,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "fromTeam": {
+        "id": 1390,
+        "name": "FCL Blue Jays",
+        "link": "/api/v1/teams/1390"
+      },
+      "toTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "date": "2021-05-19",
+      "effectiveDate": "2021-05-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Nick Frasso assigned to Dunedin Blue Jays from GCL Blue Jays."
+    },
+    {
+      "id": 492690,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "date": "2021-06-04",
+      "effectiveDate": "2021-06-04",
+      "resolutionDate": "2021-06-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Dunedin Blue Jays placed RHP Nick Frasso on the 7-day injured list."
+    },
+    {
+      "id": 500702,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "date": "2021-07-02",
+      "effectiveDate": "2021-06-04",
+      "resolutionDate": "2021-06-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Dunedin Blue Jays placed RHP Nick Frasso on the 60-day injured list."
+    },
+    {
+      "id": 524793,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "date": "2021-11-07",
+      "effectiveDate": "2021-11-07",
+      "resolutionDate": "2021-11-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Dunedin Blue Jays activated RHP Nick Frasso from the 60-day injured list."
+    },
+    {
+      "id": 614164,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "date": "2022-04-08",
+      "effectiveDate": "2022-04-08",
+      "resolutionDate": "2022-04-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Dunedin Blue Jays placed RHP Nick Frasso on the 7-day injured list."
+    },
+    {
+      "id": 621199,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "date": "2022-05-14",
+      "effectiveDate": "2022-05-14",
+      "resolutionDate": "2022-05-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Dunedin Blue Jays activated RHP Nick Frasso from the 7-day injured list."
+    },
+    {
+      "id": 642486,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 435,
+        "name": "Vancouver Canadians",
+        "link": "/api/v1/teams/435"
+      },
+      "date": "2022-06-28",
+      "effectiveDate": "2022-06-28",
+      "resolutionDate": "2022-06-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Vancouver Canadians activated RHP Nick Frasso."
+    },
+    {
+      "id": 633597,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "fromTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "toTeam": {
+        "id": 435,
+        "name": "Vancouver Canadians",
+        "link": "/api/v1/teams/435"
+      },
+      "date": "2022-06-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Nick Frasso assigned to Vancouver Canadians from Dunedin Blue Jays."
+    },
+    {
+      "id": 642487,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2022-08-02",
+      "effectiveDate": "2022-08-02",
+      "resolutionDate": "2022-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Nick Frasso roster status changed by Los Angeles Dodgers."
+    },
+    {
+      "id": 642488,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2022-08-02",
+      "effectiveDate": "2022-08-02",
+      "resolutionDate": "2022-08-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Nick Frasso assigned to Great Lakes Loons."
+    },
+    {
+      "id": 642482,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2022-08-02",
+      "effectiveDate": "2022-08-02",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Los Angeles Dodgers traded RHP Mitch White and 2B Alex De Jesus to Toronto Blue Jays for RHP Nick Frasso and LHP Moises Brito."
+    },
+    {
+      "id": 648679,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2022-08-25",
+      "effectiveDate": "2022-08-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Nick Frasso assigned to Tulsa Drillers from Great Lakes Loons."
+    },
+    {
+      "id": 722255,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "fromTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-08-27",
+      "effectiveDate": "2023-08-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Nick Frasso assigned to Oklahoma City Dodgers from Tulsa Drillers."
+    },
+    {
+      "id": 726335,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-09-22",
+      "effectiveDate": "2023-09-22",
+      "resolutionDate": "2023-09-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers transferred RHP Nick Frasso to the Development List."
+    },
+    {
+      "id": 727838,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-10-03",
+      "effectiveDate": "2023-10-03",
+      "resolutionDate": "2023-10-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers activated RHP Nick Frasso."
+    },
+    {
+      "id": 732995,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2023-11-14",
+      "effectiveDate": "2023-11-14",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Dodgers selected the contract of RHP Nick Frasso from Oklahoma City Dodgers."
+    },
+    {
+      "id": 753057,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2024-03-03",
+      "effectiveDate": "2024-03-03",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned RHP Nick Frasso to Oklahoma City Baseball Club."
+    },
+    {
+      "id": 756098,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2024-03-20",
+      "effectiveDate": "2024-03-20",
+      "resolutionDate": "2024-03-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Baseball Club placed RHP Nick Frasso on the 60-day injured list."
+    },
+    {
+      "id": 795889,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2024-08-22",
+      "effectiveDate": "2024-08-22",
+      "resolutionDate": "2024-08-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Baseball Club placed RHP Nick Frasso on the full-season injured list."
+    },
+    {
+      "id": 801050,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2024-10-01",
+      "effectiveDate": "2024-10-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled RHP Nick Frasso from Oklahoma City Baseball Club."
+    },
+    {
+      "id": 804626,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "resolutionDate": "2024-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated RHP Nick Frasso."
+    },
+    {
+      "id": 817903,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2025-03-02",
+      "effectiveDate": "2025-03-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned RHP Nick Frasso to Oklahoma City Comets."
+    },
+    {
+      "id": 854379,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2025-07-10",
+      "effectiveDate": "2025-07-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Nick Frasso assigned to ACL Dodgers from Oklahoma City Comets."
+    },
+    {
+      "id": 856256,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "fromTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2025-07-18",
+      "effectiveDate": "2025-07-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Nick Frasso assigned to Oklahoma City Comets from ACL Dodgers."
+    },
+    {
+      "id": 870512,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-09-27",
+      "effectiveDate": "2025-09-27",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled RHP Nick Frasso from Oklahoma City Comets."
+    },
+    {
+      "id": 875310,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated RHP Nick Frasso from the 60-day injured list."
+    },
+    {
+      "id": 877550,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-11-21",
+      "effectiveDate": "2025-11-21",
+      "resolutionDate": "2025-11-21",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Nick Frasso elected free agency."
+    },
+    {
+      "id": 879007,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-12-16",
+      "effectiveDate": "2025-12-16",
+      "resolutionDate": "2025-12-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Dodgers signed free agent RHP Nick Frasso to a minor league contract."
+    },
+    {
+      "id": 879008,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2025-12-17",
+      "effectiveDate": "2025-12-17",
+      "resolutionDate": "2025-12-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Nick Frasso assigned to Oklahoma City Comets."
+    },
+    {
+      "id": 894215,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2026-03-27",
+      "effectiveDate": "2026-03-27",
+      "resolutionDate": "2026-03-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Comets placed RHP Nick Frasso on the 7-day injured list."
+    },
+    {
+      "id": 903188,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2026-04-26",
+      "effectiveDate": "2026-04-26",
+      "resolutionDate": "2026-04-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Comets activated RHP Nick Frasso from the 7-day injured list."
+    },
+    {
+      "id": 929105,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2026-06-06",
+      "effectiveDate": "2026-06-06",
+      "resolutionDate": "2026-06-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Comets activated RHP Nick Frasso."
+    },
+    {
+      "id": 916425,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2026-06-06",
+      "effectiveDate": "2026-06-06",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned RHP Nick Frasso to Oklahoma City Comets."
+    },
+    {
+      "id": 916424,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2026-06-06",
+      "effectiveDate": "2026-06-06",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Dodgers selected the contract of RHP Nick Frasso from Oklahoma City Comets."
+    },
+    {
+      "id": 929102,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2026-07-20",
+      "effectiveDate": "2026-07-20",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Colorado Rockies traded RHP Seth Halvorsen to Los Angeles Dodgers for RHP Nick Frasso and OF Landyn Vidourek."
+    },
+    {
+      "id": 929106,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2026-07-20",
+      "effectiveDate": "2026-07-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Colorado Rockies optioned RHP Nick Frasso to Albuquerque Isotopes."
+    },
+    {
+      "id": 929731,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2026-07-21",
+      "effectiveDate": "2026-07-21",
+      "resolutionDate": "2026-07-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Albuquerque Isotopes activated RHP Nick Frasso."
+    },
+    {
+      "id": 934449,
+      "person": {
+        "id": 693308,
+        "fullName": "Nick Frasso",
+        "link": "/api/v1/people/693308",
+        "nameSlug": "nick-frasso-693308"
+      },
+      "fromTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2026-08-03",
+      "effectiveDate": "2026-08-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Colorado Rockies recalled RHP Nick Frasso from Albuquerque Isotopes."
+    }
+  ]
+}

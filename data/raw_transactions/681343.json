@@ -1,0 +1,591 @@
+{
+  "player_id": 681343,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:064ea757ab4f94b54cb3a689b998c3af428964979a2902526e445936743e163e",
+  "transactions": [
+    {
+      "id": 634260,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2021-07-27",
+      "effectiveDate": "2021-07-27",
+      "resolutionDate": "2021-07-27",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Milwaukee Brewers signed free agent RHP Shane Smith to a minor league contract."
+    },
+    {
+      "id": 634261,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "toTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "date": "2022-06-12",
+      "effectiveDate": "2022-06-12",
+      "resolutionDate": "2022-06-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Shane Smith assigned to Carolina Mudcats."
+    },
+    {
+      "id": 634262,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "toTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "date": "2022-06-28",
+      "effectiveDate": "2022-06-28",
+      "resolutionDate": "2022-06-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Carolina Mudcats transferred RHP Shane Smith from the 7-day injured list to the 60-day injured list."
+    },
+    {
+      "id": 648939,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "fromTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "toTeam": {
+        "id": 406,
+        "name": "ACL Brewers",
+        "link": "/api/v1/teams/406"
+      },
+      "date": "2022-08-16",
+      "effectiveDate": "2022-08-16",
+      "resolutionDate": "2022-08-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Carolina Mudcats sent RHP Shane Smith on a rehab assignment to ACL Brewers Gold."
+    },
+    {
+      "id": 646823,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "fromTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "toTeam": {
+        "id": 406,
+        "name": "ACL Brewers",
+        "link": "/api/v1/teams/406"
+      },
+      "date": "2022-08-16",
+      "effectiveDate": "2022-08-16",
+      "resolutionDate": "2022-08-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Carolina Mudcats sent RHP Shane Smith on a rehab assignment to ACL Brewers Gold."
+    },
+    {
+      "id": 660634,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "toTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "date": "2022-11-08",
+      "effectiveDate": "2022-11-08",
+      "resolutionDate": "2022-11-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Carolina Mudcats activated RHP Shane Smith from the 60-day injured list."
+    },
+    {
+      "id": 707429,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "fromTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "toTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "date": "2023-06-28",
+      "effectiveDate": "2023-06-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Shane Smith assigned to Wisconsin Timber Rattlers from Carolina Mudcats."
+    },
+    {
+      "id": 724933,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "fromTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "toTeam": {
+        "id": 5015,
+        "name": "Biloxi Shuckers",
+        "link": "/api/v1/teams/5015"
+      },
+      "date": "2023-09-13",
+      "effectiveDate": "2023-09-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Shane Smith assigned to Biloxi Shuckers from Wisconsin Timber Rattlers."
+    },
+    {
+      "id": 726194,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "toTeam": {
+        "id": 542,
+        "name": "Surprise Saguaros",
+        "link": "/api/v1/teams/542"
+      },
+      "date": "2023-09-22",
+      "effectiveDate": "2023-09-22",
+      "resolutionDate": "2023-09-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Surprise Saguaros activated RHP Shane Smith."
+    },
+    {
+      "id": 751948,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2024-02-26",
+      "effectiveDate": "2024-02-26",
+      "resolutionDate": "2024-02-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Shane Smith assigned to Milwaukee Brewers."
+    },
+    {
+      "id": 753735,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "toTeam": {
+        "id": 387,
+        "name": "Milwaukee Brewers Prospects",
+        "link": "/api/v1/teams/387"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers Prospects activated RHP Shane Smith."
+    },
+    {
+      "id": 797431,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "fromTeam": {
+        "id": 5015,
+        "name": "Biloxi Shuckers",
+        "link": "/api/v1/teams/5015"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2024-09-03",
+      "effectiveDate": "2024-09-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Shane Smith assigned to Nashville Sounds from Biloxi Shuckers."
+    },
+    {
+      "id": 815074,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2024-12-11",
+      "effectiveDate": "2024-12-11",
+      "resolutionDate": "2024-12-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago White Sox activated RHP Shane Smith."
+    },
+    {
+      "id": 808039,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2024-12-11",
+      "effectiveDate": "2024-12-11",
+      "typeCode": "R5",
+      "typeDesc": "Rule 5 Selection",
+      "description": "Chicago White Sox purchased contract of RHP Shane Smith from Milwaukee Brewers in the Rule 5 Draft."
+    },
+    {
+      "id": 828114,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Shane Smith changed number to 42."
+    },
+    {
+      "id": 829312,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Shane Smith changed number to 64."
+    },
+    {
+      "id": 853550,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "toTeam": {
+        "id": 159,
+        "name": "American League All-Stars",
+        "link": "/api/v1/teams/159"
+      },
+      "date": "2025-07-14",
+      "effectiveDate": "2025-07-14",
+      "resolutionDate": "2025-07-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "American League All-Stars activated RHP Shane Smith."
+    },
+    {
+      "id": 856499,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2025-07-19",
+      "effectiveDate": "2025-07-16",
+      "resolutionDate": "2025-07-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago White Sox placed RHP Shane Smith on the 15-day injured list retroactive to July 16, 2025. Left ankle sprain."
+    },
+    {
+      "id": 860858,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2025-08-01",
+      "effectiveDate": "2025-08-01",
+      "resolutionDate": "2025-08-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago White Sox activated RHP Shane Smith from the 15-day injured list."
+    },
+    {
+      "id": 897566,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2026-04-08",
+      "effectiveDate": "2026-04-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago White Sox optioned RHP Shane Smith to Charlotte Knights."
+    },
+    {
+      "id": 905827,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2026-05-02",
+      "effectiveDate": "2026-05-02",
+      "resolutionDate": "2026-05-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights placed RHP Shane Smith on the 7-day injured list."
+    },
+    {
+      "id": 924225,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "fromTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "toTeam": {
+        "id": 580,
+        "name": "Winston-Salem Dash",
+        "link": "/api/v1/teams/580"
+      },
+      "date": "2026-07-01",
+      "effectiveDate": "2026-07-01",
+      "resolutionDate": "2026-07-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Charlotte Knights sent RHP Shane Smith on a rehab assignment to Winston-Salem Dash."
+    },
+    {
+      "id": 927117,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "fromTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "toTeam": {
+        "id": 580,
+        "name": "Winston-Salem Dash",
+        "link": "/api/v1/teams/580"
+      },
+      "date": "2026-07-01",
+      "effectiveDate": "2026-07-01",
+      "resolutionDate": "2026-07-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Charlotte Knights sent RHP Shane Smith on a rehab assignment to Winston-Salem Dash."
+    },
+    {
+      "id": 927121,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2026-07-12",
+      "effectiveDate": "2026-07-12",
+      "resolutionDate": "2026-07-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights activated RHP Shane Smith from the 7-day injured list."
+    },
+    {
+      "id": 944368,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "fromTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2026-09-28",
+      "effectiveDate": "2026-09-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago White Sox recalled RHP Shane Smith from Charlotte Knights."
+    },
+    {
+      "id": 944536,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2026-09-29",
+      "effectiveDate": "2026-09-29",
+      "resolutionDate": "2026-09-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Shane Smith roster status changed by Chicago White Sox."
+    },
+    {
+      "id": 947129,
+      "person": {
+        "id": 681343,
+        "fullName": "Shane Smith",
+        "link": "/api/v1/people/681343",
+        "nameSlug": "shane-smith-681343"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2026-10-11",
+      "effectiveDate": "2026-10-11",
+      "resolutionDate": "2026-10-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago White Sox activated RHP Shane Smith."
+    }
+  ]
+}
