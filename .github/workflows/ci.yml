@@ -1,6 +1,10 @@
 name: CI
 
-# Every offline check, on every push and pull request.
+# Every offline check, once per pull-request update and on pushes to main.
+#
+# A pull request used to run this twice: once for the push to the branch and
+# again for the pull_request event. Push is limited to main so a commit on a
+# PR branch produces one run. A push straight to main still runs once.
 #
 # WHY THIS EXISTS
 # ===============
@@ -25,7 +29,7 @@ name: CI
 
 on:
   push:
-    branches: ["**"]
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
@@ -69,6 +73,12 @@ jobs:
       # dependency, pinned in requirements.txt, installed in about five seconds.
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      # 600-line cap (allowlist for files already over it) and a single
+      # club-name table. Also fails if a suite under tests/ is not named
+      # in this workflow.
+      - name: File size cap and single club-name table
+        run: python scripts/check_code_standards.py
 
       - name: Service-time engine and CBA rulesets
         run: python tests/test_service_time.py
@@ -128,6 +138,12 @@ jobs:
       # the Tokyo/Los Angeles timezone-independence checks.
       - name: CBA & lockout tracker page (browser-side countdown logic)
         run: node --test tests/lockout.test.cjs
+
+      # Header search suggestions. This file was not named by the steps
+      # above, so it never ran. check_code_standards.py fails if another
+      # suite under tests/ is left out the same way.
+      - name: Header search suggestions
+        run: node --test tests/typeahead.test.cjs
 
       # The three published files are derived from the database and are the
       # only two a visitor ever reads, so a bad derivation ships wrong numbers
