@@ -48,6 +48,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
 import alumni_sections  # noqa: E402
 import cba  # noqa: E402
+import contracts  # noqa: E402
 import list_links  # noqa: E402
 from mlb_clubs import CLUB_ABBR, CLUB_NAMES, name_for_record  # noqa: E402
 import options as option_years  # noqa: E402
@@ -501,7 +502,7 @@ def _min_seasons_to(days_needed: int) -> int:
     return -(-days_needed // FULL_YEAR_DAYS)
 
 
-def _milestone_sentence(player: dict) -> str:
+def _milestone_sentence(player: dict, season: int | None = None) -> str:
     """A plain-English statement of standing relative to the CBA thresholds.
 
     Every number here is read off the ruleset the same way `_threshold_sentence()`
@@ -535,25 +536,19 @@ def _milestone_sentence(player: dict) -> str:
             return f"His career closed at {service} years of service, short of arbitration eligibility."
         return "He never accrued a day of major league service time."
 
+    covered = bool(season) and contracts.covers(player.get("id"), season)
     if player.get("free_agent_eligible"):
+        if covered:
+            return f"{service} years of service."
         return f"{service} years of service — already eligible for free agency."
 
     fa_days = _days_for(FREE_AGENCY_YEARS)
-    if (
-        player.get("contract_extension")
-        and player.get("on_40_man")
-        and player.get("arbitration_eligible")
-    ):
-        seasons = _min_seasons_to(fa_days - days_total)
-        return (
-            f"{service} years of service. A reported contract extension is on file, "
-            f"so this winter's arbitration list leaves him off. At least {seasons} "
-            f"more full season{'' if seasons == 1 else 's'} on an active roster or "
-            f"injured list to reach free agency ({_yrs(FREE_AGENCY_YEARS)})."
-        )
-
     if player.get("arbitration_eligible"):
         seasons = _min_seasons_to(fa_days - days_total)
+        if covered:
+            return (f"{service} years of service — at least {seasons} more full "
+                    f"season{'' if seasons == 1 else 's'} on an active roster or injured list "
+                    f"to reach free agency ({_yrs(FREE_AGENCY_YEARS)}).")
         if player.get("super_two_candidate"):
             track = " on the Super Two bubble" if player.get("super_two_bubble") else " on the Super Two track"
         else:
@@ -667,12 +662,13 @@ def _salary_block(player: dict) -> str:
     )
 
 
-def _description(player: dict) -> str:
+def _description(player: dict, season: int | None = None) -> str:
     name = player.get("name") or "This player"
     service = player.get("service_time") or "0.000"
     where = _club_phrase(player) or "in the major leagues"
+    standing = contracts.label_for(player.get("id"), season) or _status(player)
     return page_titles.player_meta(
-        name, service, int(player.get("service_days_total") or 0), where, _status(player)
+        name, service, int(player.get("service_days_total") or 0), where, standing
     )
 
 
@@ -893,7 +889,7 @@ def _status_badge(player: dict) -> str:
     return f"<span class='badge {cls}'>{label}</span>"
 
 
-def _key_players_line(players: list[dict]) -> str:
+def _key_players_line(players: list[dict], season: int | None = None) -> str:
     """Name-only links to the players on this roster already at a threshold.
 
     "Phillies arbitration eligible" is a far commoner search than any single
@@ -915,12 +911,13 @@ def _key_players_line(players: list[dict]) -> str:
             for p in sorted(group, key=lambda p: p.get("name") or "")
         )
 
-    fa = [p for p in players if p.get("free_agent_eligible")]
+    def _open(p: dict) -> bool: return not (season and contracts.covers(p.get("id"), season))
+    fa = [p for p in players if p.get("free_agent_eligible") and _open(p)]
     s2 = [p for p in players if p.get("super_two_candidate")]
     already_shown = {p["id"] for p in fa} | {p["id"] for p in s2}
     arb = [
         p for p in players
-        if p.get("arbitration_eligible") and p["id"] not in already_shown
+        if p.get("arbitration_eligible") and p["id"] not in already_shown and _open(p)
     ]
 
     parts = []
@@ -1013,6 +1010,7 @@ def _club_offseason_section(
   &middot; <a href="{BASE_PATH}{NON_TENDER_WATCH_PATH}">league-wide</a></p>
 
   <h3>{fa_heading}</h3>
+  <p class="foot-note">{contracts.PROJECTION_NOTE}</p>
   {_club_fa_table(fa_next_season, next_season)}
   <p class="foot-note"><a href="{slug_}-free-agents.html">Full {html.escape(club)} free agents</a>
   &middot; <a href="{BASE_PATH}{FREE_AGENTS_PATH}">league-wide</a></p>
@@ -1078,7 +1076,7 @@ def render_club(
     desc = page_titles.club_roster_meta(club, total, fa, arb)
 
     rows = "".join(
-        f"<tr><td><a href=\"../{page_path(p)}\">{html.escape(p.get('name') or '')}</a></td>"
+        f"<tr><td>{contracts.roster_name(p.get('id'), next_season, '../' + page_path(p), p.get('name') or '')}</td>"
         f"<td>{html.escape(p.get('position') or '—')}</td>"
         f"<td class='n svc-col'>{_svc_cell(p)}</td>"
         f"<td class='n'>{p.get('service_days_total', 0)}</td>"
@@ -1145,7 +1143,7 @@ def render_club(
     <div><span>Out of options</span><b class="big"><a href="{options_href}">{out_of_options}</a></b></div>
   </div>
 
-  {_key_players_line(players)}
+  {_key_players_line(players, next_season)}
 
   <table><thead><tr><th>Player</th><th>Pos</th><th class="n">Service time</th>
   <th class="n">Days</th><th class="n">Options left</th><th>Status</th></tr></thead><tbody>{rows}</tbody></table>
@@ -1251,7 +1249,8 @@ def render_club_free_agents(
     fa_core = page_titles.club_fa_core(club, len(fa_now), next_season)
     desc = page_titles.club_fa_meta(club, len(fa_now), len(fa_next_season), next_season)
     body = (
-        "<h2>Free agents now</h2>"
+        f"<p class=\"foot-note\">{contracts.PROJECTION_NOTE}</p>"
+        + "<h2>Free agents now</h2>"
         + _club_fa_table(fa_now, None)
         + f"<h2>Free agents after {next_season}</h2>"
         + _club_fa_table(fa_next_season, next_season)
@@ -1410,7 +1409,8 @@ def render(
     raw_service = player.get("service_time") or "0.000"
     service = html.escape(raw_service)
     url = f"{SITE_URL}/{page_path(player)}"
-    desc = html.escape(_description(player))
+    coming = int(year) + 1 if (year := (generated_at or "")[:4]).isdigit() else None
+    desc = html.escape(_description(player, coming))
     raw_club = player.get("team") or ""
     club = html.escape(raw_club)
     # Past tense for a former player -- see _club_phrase(). Link the club
@@ -1538,7 +1538,7 @@ def render(
 <div class="viz-root">{header}<div class="wrap">
   {crumbs}
   <h1>{name} service time</h1>
-  <p class="subtitle">{club_label}{' · ' if club_label and position else ''}{position} · {html.escape(_status(player))}</p>
+  <p class="subtitle">{club_label}{' · ' if club_label and position else ''}{position}{'' if contracts.label_for(player.get('id'), coming) else ' · ' + html.escape(_status(player))}</p>{contracts.signed_block(player.get("id"), coming)}
   {_player_links(player, option_count, season_index)}
   <p class="lede">{lede}</p>
 
@@ -1549,7 +1549,7 @@ def render(
   </div>
 
   <p class="option-line">{option_line}</p>
-  <p class="milestone">{html.escape(_milestone_sentence(player))}</p>
+  <p class="milestone">{html.escape(_milestone_sentence(player, coming))}</p>
 
   {caveat}
   {_salary_block(player)}
@@ -2087,12 +2087,12 @@ def write_player_pages(
     # guaranteed to have a page -- any on_40_man player is always in
     # `published`, see _should_publish(). Computed once, up front, because
     # _write_club_pages() needs the same league-wide lists filtered per club.
-    arb_eligible = select_arbitration_eligible(published)
-    non_tender_watch = select_non_tender_watch(arb_eligible)
-    rostered = [p for p in published if p.get("on_40_man")]
-    fa_now = select_free_agents_now(rostered)
     gen_year = int((generated_at or "")[:4]) if generated_at else None
     next_season = gen_year + 1 if gen_year else None
+    arb_eligible = select_arbitration_eligible(published, next_season)
+    non_tender_watch = select_non_tender_watch(arb_eligible, next_season)
+    rostered = [p for p in published if p.get("on_40_man")]
+    fa_now = select_free_agents_now(rostered, next_season)
     fa_by_year = select_free_agents_by_year(rostered, next_season) if next_season else {}
 
     clubs = _write_club_pages(
@@ -2833,8 +2833,8 @@ h1 { letter-spacing: -0.02em; }
 @media (max-width: 640px) {
   .opt-controls input, .opt-controls select { flex-basis: 100%; }
 }
-.faq h3 { font-size: 1.02rem; margin: 1.15rem 0 0.2rem; line-height: 1.35; }
-.faq p { margin: 0.15rem 0 0; }
+.faq h3 { font-size: 1.02rem; margin: 1.15rem 0 0.2rem; line-height: 1.35; } .faq p { margin: 0.15rem 0 0; }
+.signed-through { font-size: 0.95rem; line-height: 1.45; margin: 0.35rem 0 0; max-width: 40rem; } .roster-signed { display: block; margin-top: 0.12rem; max-width: 12rem; font-size: 0.75rem; line-height: 1.35; color: var(--text-muted); white-space: normal; }
 """
 
 
@@ -3286,7 +3286,7 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
 # ---------------------------------------------------------------------------
 
 
-def select_arbitration_eligible(players: list[dict]) -> list[dict]:
+def select_arbitration_eligible(players: list[dict], season: int | None = None, contract_index: dict | None = None) -> list[dict]:
     """Rostered players arbitration-eligible this coming offseason.
 
     That is 3+ credited years but short of free agency, OR a Super Two
@@ -3309,9 +3309,7 @@ def select_arbitration_eligible(players: list[dict]) -> list[dict]:
     for p in players:
         if not p.get("on_40_man"):
             continue
-        # A reported extension buys out the hearing. Service time can still
-        # say he has crossed 3.000; he does not belong on this winter's list.
-        if p.get("contract_extension"):
+        if season is not None and contracts.covers(p.get("id"), season, contract_index):
             continue
         days = int(p.get("service_days_total") or 0)
         if days >= fa_days:
@@ -3394,10 +3392,8 @@ def render_arbitration_eligible(
 
     See select_arbitration_eligible() for exactly who qualifies and why a
     departed player never appears here even if his stale flag says so.
-    A player with contract_extension set is left off even if the caller
-    passed him in: an extension buys out the hearing.
+    A contract covering next_season is left off even if the caller passed him in.
     """
-    eligible = [p for p in eligible if not p.get("contract_extension")]
     url = f"{SITE_URL}/{ARBITRATION_ELIGIBLE_PATH}"
     gen_year = int((generated_at or "")[:4]) if generated_at else None
     next_season = (
@@ -3405,6 +3401,8 @@ def render_arbitration_eligible(
         if super_two_cutoff and super_two_cutoff.get("season")
         else (gen_year + 1 if gen_year else None)
     )
+    if next_season:
+        eligible = [p for p in eligible if not contracts.covers(p.get("id"), next_season)]
     s2_count = sum(1 for p in eligible if p.get("super_two_candidate"))
     standard_count = len(eligible) - s2_count
 
@@ -3799,7 +3797,7 @@ def _non_tender_reasons(player: dict, fa_days: int) -> list[str]:
     return reasons
 
 
-def select_non_tender_watch(arb_eligible: list[dict]) -> list[tuple[dict, list[str]]]:
+def select_non_tender_watch(arb_eligible: list[dict], season: int | None = None, contract_index: dict | None = None) -> list[tuple[dict, list[str]]]:
     """Which arbitration-eligible players are realistic non-tender risks.
 
     THE RULE, stated once here and printed verbatim (in plain language) at
@@ -3819,7 +3817,7 @@ def select_non_tender_watch(arb_eligible: list[dict]) -> list[tuple[dict, list[s
     fa_days = _days_for(FREE_AGENCY_YEARS)
     out = []
     for p in arb_eligible:
-        if p.get("contract_extension"):
+        if season is not None and contracts.covers(p.get("id"), season, contract_index):
             continue
         reasons = _non_tender_reasons(p, fa_days)
         if reasons:
@@ -3827,14 +3825,15 @@ def select_non_tender_watch(arb_eligible: list[dict]) -> list[tuple[dict, list[s
     return out
 
 
-def select_free_agents_now(players: list[dict]) -> list[dict]:
+def select_free_agents_now(players: list[dict], season: int | None = None, contract_index: dict | None = None) -> list[dict]:
     """Rostered players already free-agent eligible this winter.
 
     Restricted to on_40_man for the same reason select_arbitration_eligible
     is: a long-departed player's free_agent_eligible flag is frozen and says
     nothing about this offseason's free agent class.
     """
-    return [p for p in players if p.get("on_40_man") and p.get("free_agent_eligible")]
+    return [p for p in players if p.get("on_40_man") and p.get("free_agent_eligible")
+            and contracts.filing_year(None, p.get("id"), season, contract_index) is None]
 
 
 def free_agency_year(player: dict, next_season: int) -> int | None:
@@ -3858,13 +3857,15 @@ def free_agency_year(player: dict, next_season: int) -> int | None:
 
 
 def select_free_agents_by_year(
-    players: list[dict], next_season: int
+    players: list[dict], next_season: int, contract_index: dict | None = None,
 ) -> dict[int, list[dict]]:
-    """Every rostered, not-yet-eligible player, grouped by the earliest
-    season he could reach free agency. See free_agency_year()."""
+    """Service-time free-agent year, moved to the last guaranteed season when a deal runs longer."""
     by_year: dict[int, list[dict]] = {}
     for p in players:
-        year = free_agency_year(p, next_season)
+        if not p.get("on_40_man"):
+            continue
+        service_year = None if p.get("free_agent_eligible") else free_agency_year(p, next_season)
+        year = contracts.filing_year(service_year, p.get("id"), next_season, contract_index)
         if year is not None:
             by_year.setdefault(year, []).append(p)
     return by_year
@@ -4061,6 +4062,7 @@ def render_free_agents(
 
   <h1>MLB free agents{season_phrase}</h1>
   <p class="subtitle">{len(fa_now)} players are free-agent eligible now, and everyone else is grouped by the year they could reach it.</p>
+  <p class="foot-note">{contracts.PROJECTION_NOTE}</p>
   {list_links.related_league_line(FREE_AGENTS_PATH, BASE_PATH)}
   {_what_is("#free-agency")}
 

@@ -46,6 +46,7 @@ import cba  # noqa: E402
 import mlb_clubs  # noqa: E402
 import fetch_mlb_data as mlb  # noqa: E402
 import refresh_complete  # noqa: E402
+import contracts  # noqa: E402
 import salary_estimates  # noqa: E402
 import service_time_exceptions  # noqa: E402
 import super_two  # noqa: E402
@@ -2055,22 +2056,20 @@ def publish_config() -> list[pathlib.Path]:
 
 
 def _stamp_contract_extensions(db: dict[str, dict]) -> None:
-    """Mark players whose extension the lists must honor.
+    """Mark players whose guaranteed deal covers the coming season.
 
-    Reads the transaction cache and data/contract_overrides.json. No API
-    calls. The service-time flag `arbitration_eligible` stays a service-time
-    fact; `contract_extension` is what takes him off the winter lists.
+    Reads data/reference/contracts.json. No API calls. Service-time totals
+    and `arbitration_eligible` stay service-time facts. The lists themselves
+    read the contracts file, so a missing stamp does not put him back on.
     """
-    overrides = salary_estimates.load_contract_overrides()
+    coming = TODAY.year + 1
     for record in db.values():
         pid = record.get("id")
         try:
             pid_int = int(pid) if pid is not None else None
         except (TypeError, ValueError):
             pid_int = None
-        record["contract_extension"] = salary_estimates.has_contract_extension(
-            pid_int, overrides
-        )
+        record["contract_extension"] = contracts.covers(pid_int, coming)
 
 
 def _write_outputs(db: dict[str, dict]) -> None:

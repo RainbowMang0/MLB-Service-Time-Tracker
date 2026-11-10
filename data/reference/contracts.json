@@ -1,0 +1,1728 @@
+{
+  "_schema": [
+    "Deals that name both a first and a last guaranteed season. id is the MLB person id.",
+    "guaranteed_seasons is inclusive. option_years are not guaranteed.",
+    "status is signed, option_exercised when an option covering a guaranteed season was exercised, or unconfirmed when the club has not confirmed the deal. An unconfirmed row is kept here and does not change a list or a page.",
+    "source_url and unconfirmed stay in this file and are not shown on the site.",
+    "No salary figures. A player with no row is left unchanged.",
+    "Aroldis Chapman (547973): 2027 is a vesting option and the year-end physical was not confirmed, so 2027 is not a guaranteed season."
+  ],
+  "contracts": [
+    {
+      "id": 694297,
+      "name": "Brandon Pfaadt",
+      "club": "Arizona Diamondbacks",
+      "signed": "2025-03-28",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2030
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/ketel-marte-d-backs-contract-extension-2025",
+      "unconfirmed": "Five-year (2026-30) terms from prior research. The Marte MLB.com story notes the club's recent extensions including Justin Martinez; Pfaadt's year range was not re-read in a dedicated PR this pass."
+    },
+    {
+      "id": 669203,
+      "name": "Corbin Burnes",
+      "club": "Arizona Diamondbacks",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2025,
+        "last": 2030
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "option_exercised",
+      "source_url": "https://www.mlb.com/news/mlb-players-with-2027-options-and-opt-outs",
+      "unconfirmed": "Nov 2, 2026 option-decision article: he opted in, with four years left on the six-year deal signed before the 2025 season. That remaining window is taken as 2027-30 on a 2025-30 deal. Confirm the first season against a dedicated signing story if republishing."
+    },
+    {
+      "id": 682998,
+      "name": "Corbin Carroll",
+      "club": "Arizona Diamondbacks",
+      "signed": "2023-03-11",
+      "guaranteed_seasons": {
+        "first": 2023,
+        "last": 2030
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/ketel-marte-d-backs-contract-extension-2025",
+      "unconfirmed": "Marte MLB.com story: Carroll signed an eight-year deal prior to 2023. 2023-30 range from prior research."
+    },
+    {
+      "id": 672695,
+      "name": "Geraldo Perdomo",
+      "club": "Arizona Diamondbacks",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2029
+      },
+      "option_years": [
+        2030
+      ],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/geraldo-perdomo-d-backs-extension",
+      "unconfirmed": "Signed date not taken from the pages opened this pass. Four guaranteed years 2026-29 plus a 2030 club option, per MLB.com and AP."
+    },
+    {
+      "id": 679885,
+      "name": "Justin Martinez",
+      "club": "Arizona Diamondbacks",
+      "signed": "2025-03-21",
+      "guaranteed_seasons": {
+        "first": 2025,
+        "last": 2029
+      },
+      "option_years": [],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/ketel-marte-d-backs-contract-extension-2025",
+      "unconfirmed": "Five-year deal mentioned in the Marte MLB.com story; 2025-29 from prior research. nextfa lists a club option on him after 2029, so option_type=club but option_years not stated in the pages opened this pass."
+    },
+    {
+      "id": 606466,
+      "name": "Ketel Marte",
+      "club": "Arizona Diamondbacks",
+      "signed": "2025-04-02",
+      "guaranteed_seasons": {
+        "first": 2025,
+        "last": 2030
+      },
+      "option_years": [
+        2031
+      ],
+      "option_type": "player",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/ketel-marte-d-backs-contract-extension-2025",
+      "unconfirmed": "This is his 2025 extension (through 2030, player option for 2031, opt-out after 2030), not the 2018 or 2022 deals in the old research file. Already past arbitration."
+    },
+    {
+      "id": 667670,
+      "name": "Brent Rooker",
+      "club": "Athletics",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2025,
+        "last": 2029
+      },
+      "option_years": [
+        2030
+      ],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/press-release/press-release-athletics-agree-to-terms-with-dh-of-brent-rooker-on-five-year-contract-extension",
+      "unconfirmed": "Signed date not taken from the pages opened this pass. Club announcement: five years through 2029, club option for 2030. First guaranteed season (2025 vs 2026) not restated in the snippets; 2025 used because the deal was a 2025 extension covering remaining control plus FA years — treat 2025 start as unconfirmed if republishing terms."
+    },
+    {
+      "id": 805779,
+      "name": "Jacob Wilson",
+      "club": "Athletics",
+      "signed": "2026-01-30",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2032
+      },
+      "option_years": [
+        2033
+      ],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlbtraderumors.com/2026/01/athletics-jacob-wilson-extension-seven-years.html"
+    },
+    {
+      "id": 671732,
+      "name": "Lawrence Butler",
+      "club": "Athletics",
+      "signed": "2025-03-06",
+      "guaranteed_seasons": {
+        "first": 2025,
+        "last": 2031
+      },
+      "option_years": [
+        2032
+      ],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://apnews.com/article/athletics-as-butler-contract-a4f42f18fca6a446ec3ae405da190e01"
+    },
+    {
+      "id": 622663,
+      "name": "Luis Severino",
+      "club": "Athletics",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2027,
+        "last": 2027
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "option_exercised",
+      "source_url": "https://www.mlb.com/news/mlb-players-with-2027-options-and-opt-outs",
+      "unconfirmed": "Nov 2, 2026 option-decision article: he opted into his 2027 player option. The next-FA-classes article lists him as a free agent after 2027."
+    },
+    {
+      "id": 691016,
+      "name": "Tyler Soderstrom",
+      "club": "Athletics",
+      "signed": "2025-12-29",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2032
+      },
+      "option_years": [
+        2033
+      ],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/tyler-soderstrom-signs-deal-at-a-s-future-las-vegas-home",
+      "unconfirmed": "Agreement reported around Christmas 2025; made official Monday, Dec 29, 2025 (MLB.com). Seven years through 2032 implies a 2026 start. Club option for 2033."
+    },
+    {
+      "id": 663586,
+      "name": "Austin Riley",
+      "club": "Atlanta Braves",
+      "signed": "2022-08-01",
+      "guaranteed_seasons": {
+        "first": 2023,
+        "last": 2032
+      },
+      "option_years": [],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlbtraderumors.com/2022/08/braves-sign-austin-riley-to-ten-year-extension.html",
+      "unconfirmed": "Ten-year (2023-32) from prior research and the MLBTR announcement. MLBTR tracker listed one option; option year not copied from an opened article this pass."
+    },
+    {
+      "id": 671739,
+      "name": "Michael Harris II",
+      "club": "Atlanta Braves",
+      "signed": "2022-08-16",
+      "guaranteed_seasons": {
+        "first": 2023,
+        "last": 2030
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/extension-candidates-for-2026-season",
+      "unconfirmed": "Eight-year (2023-30) from prior research. Braves' extension record is discussed in the 2026 candidates story; a dedicated announcement was not re-opened this pass."
+    },
+    {
+      "id": 645277,
+      "name": "Ozzie Albies",
+      "club": "Atlanta Braves",
+      "signed": "2019-04-11",
+      "guaranteed_seasons": {
+        "first": 2019,
+        "last": 2027
+      },
+      "option_years": [],
+      "option_type": "club",
+      "status": "option_exercised",
+      "source_url": "https://www.mlb.com/news/mlb-players-with-2027-options-and-opt-outs",
+      "unconfirmed": "2027 club option was exercised Nov 2, 2026. Original 2019 extension years from prior research; later restructuring not independently re-sourced this pass."
+    },
+    {
+      "id": 660670,
+      "name": "Ronald Acuña Jr.",
+      "club": "Atlanta Braves",
+      "signed": "2019-04-02",
+      "guaranteed_seasons": {
+        "first": 2019,
+        "last": 2027
+      },
+      "option_years": [
+        2028
+      ],
+      "option_type": "club",
+      "status": "option_exercised",
+      "source_url": "https://www.mlb.com/news/mlb-players-with-2027-options-and-opt-outs",
+      "unconfirmed": "MLB.com option-decision story: 2026 was the final guaranteed year of the 2019 extension, with two club options after that. The 2027 club option was exercised Nov 2, 2026. A further 2028 club option is implied by 'two more years' and nextfa listing him as a potential FA after 2028 (option). First/last originally guaranteed years follow prior research plus this option update."
+    },
+    {
+      "id": 675911,
+      "name": "Spencer Strider",
+      "club": "Atlanta Braves",
+      "signed": "2022-10-10",
+      "guaranteed_seasons": {
+        "first": 2023,
+        "last": 2028
+      },
+      "option_years": [],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/baseball-s-next-free-agent-classes",
+      "unconfirmed": "Six-year (2023-28) from prior research. nextfa lists him as a potential FA after 2028, with a club option noted in the after-2028 section."
+    },
+    {
+      "id": 680694,
+      "name": "Kyle Bradish",
+      "club": "Baltimore Orioles",
+      "signed": "2026-07-18",
+      "guaranteed_seasons": {
+        "first": 2027,
+        "last": 2031
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/press-release/press-release-orioles-kyle-bradish-agree-to-terms-on-a-five-year-contract-extension",
+      "unconfirmed": "Signed-date taken from contemporaneous reporting around the July 18, 2026 announcement (AP/MLBTR). Official PR confirms a five-year extension covering 2027-31."
+    },
+    {
+      "id": 624413,
+      "name": "Pete Alonso",
+      "club": "Baltimore Orioles",
+      "signed": "2025-12-11",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2030
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/pete-alonso-orioles-contract"
+    },
+    {
+      "id": 664854,
+      "name": "Ryan Helsley",
+      "club": "Baltimore Orioles",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2027,
+        "last": 2027
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "option_exercised",
+      "source_url": "https://www.mlb.com/news/mlb-players-with-2027-options-and-opt-outs",
+      "unconfirmed": "Nov 2, 2026 option-decision article: he opted into his 2027 player option. Original deal date/years not re-sourced this pass."
+    },
+    {
+      "id": 694212,
+      "name": "Samuel Basallo",
+      "club": "Baltimore Orioles",
+      "signed": "2025-08-22",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2033
+      },
+      "option_years": [
+        2034
+      ],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/earliest-contract-extensions-in-mlb-history-c269677352",
+      "unconfirmed": "Earliest-extensions roundup: eight-year deal plus a 2034 club option, signed four games into his debut (August 2025). Calendar day and 2026-33 start/end from prior research. Verify mlbam_id."
+    },
+    {
+      "id": 547973,
+      "name": "Aroldis Chapman",
+      "club": "Boston Red Sox",
+      "signed": "2025-08-31",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2026
+      },
+      "option_years": [
+        2027
+      ],
+      "option_type": "vesting",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/aroldis-chapman-triggers-vesting-option-for-2027",
+      "unconfirmed": "Original terms from the Aug 31, 2025 club PR: one-year extension for 2026 with a vesting/mutual option for 2027 (https://www.mlb.com/press-release/red-sox-and-eight-time-all-star-aroldis-chapman-agree-on-one-year-contract-extension-through-2026-season). The Aug 16, 2026 MLB.com story says the 2027 option triggered when he passed 40 innings, provided he passed an end-of-year physical. This pass did not open a later allowed page confirming the physical. He was not on MLB.com's Nov 2, 2026 free-agent snapshot after option decisions."
+    },
+    {
+      "id": 678394,
+      "name": "Brayan Bello",
+      "club": "Boston Red Sox",
+      "signed": "2024-03-07",
+      "guaranteed_seasons": {
+        "first": 2024,
+        "last": 2029
+      },
+      "option_years": [],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/press-release/press-release-brayan-bello-6-year-contract-extension",
+      "unconfirmed": "Six-year (2024-29) range from prior research. nextfa lists a club option on him after 2029. Re-open the PR if exact option year needs to be quoted."
+    },
+    {
+      "id": 678882,
+      "name": "Ceddanne Rafaela",
+      "club": "Boston Red Sox",
+      "signed": "2024-04-10",
+      "guaranteed_seasons": {
+        "first": 2024,
+        "last": 2031
+      },
+      "option_years": [
+        2032
+      ],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/press-release/press-release-red-sox-and-infielder-outfielder-ceddanne-rafaela-agree-on-eight-year-contract-extension-through-2031-season",
+      "unconfirmed": "Club PR, April 10, 2024: eight-year extension spanning 2024-2031, club option for 2032. Agreement had been reported two days earlier."
+    },
+    {
+      "id": 676979,
+      "name": "Garrett Crochet",
+      "club": "Boston Red Sox",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2031
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/press-release/press-release-red-sox-and-left-handed-pitcher-garrett-crochet-agree-on-6-year-contract-extension-through-2031-season",
+      "unconfirmed": "Signed date not copied this pass. Club PR: six-year extension through the 2031 season. First guaranteed season (whether 2026 is included) follows the PR's 'through 2031' plus the MLB.com 2025-extensions list calling it a 6-year deal."
+    },
+    {
+      "id": 676477,
+      "name": "Garrett Whitlock",
+      "club": "Boston Red Sox",
+      "signed": "2022-04-10",
+      "guaranteed_seasons": {
+        "first": 2023,
+        "last": 2027
+      },
+      "option_years": [
+        2028
+      ],
+      "option_type": "club",
+      "status": "option_exercised",
+      "source_url": "https://www.mlb.com/press-release/red-sox-exercise-rhp-garrett-whitlock-s-2027-club-option",
+      "unconfirmed": "Original four-year extension covered 2023-26 with club options for 2027 and 2028. The Red Sox exercised the 2027 option on Nov 1, 2026, so he is under contract through 2027; 2028 remains a club option."
+    },
+    {
+      "id": 692225,
+      "name": "Kristian Campbell",
+      "club": "Boston Red Sox",
+      "signed": "2025-04-02",
+      "guaranteed_seasons": {
+        "first": 2025,
+        "last": 2032
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/earliest-contract-extensions-in-mlb-history-c269677352",
+      "unconfirmed": "Early-career eight-year deal cited in the earliest-extensions roundup. Precise 2025-32 range from prior research."
+    },
+    {
+      "id": 807799,
+      "name": "Masataka Yoshida",
+      "club": "Boston Red Sox",
+      "signed": "2022-12-07",
+      "guaranteed_seasons": {
+        "first": 2023,
+        "last": 2027
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/baseball-s-next-free-agent-classes",
+      "unconfirmed": "Five-year (2023-27) from prior research. nextfa lists him as a potential free agent after 2027. Posted-player deal."
+    },
+    {
+      "id": 624133,
+      "name": "Ranger Suarez",
+      "club": "Boston Red Sox",
+      "signed": "2026-01-21",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2030
+      },
+      "option_years": [
+        2031
+      ],
+      "option_type": "mutual",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/ranger-suarez-red-sox-contract",
+      "unconfirmed": "MLB.com Jan 21, 2026 story reports a five-year contract with a mutual option for 2031. First and last guaranteed seasons taken as 2026-2030 from that length plus the 2031 option year. Signed date is the story date; the article does not name an earlier agreement date."
+    },
+    {
+      "id": 701350,
+      "name": "Roman Anthony",
+      "club": "Boston Red Sox",
+      "signed": "2025-08-06",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2033
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/earliest-contract-extensions-in-mlb-history-c269677352",
+      "unconfirmed": "Cited in the earliest-extensions roundup as an eight-year deal shortly after debut. 2026-33 range and Aug 6 date from prior research. Verify mlbam_id."
+    },
+    {
+      "id": 608324,
+      "name": "Alex Bregman",
+      "club": "Chicago Cubs",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2025,
+        "last": 2027
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/largest-contracts-in-mlb-history-c300060780",
+      "unconfirmed": "MLB.com largest free-agent contracts (AAV list): 2025-27, originally listed with the Red Sox. He is now on the Cubs. Exact signing date and whether any later option exists were not copied this pass."
+    },
+    {
+      "id": 663538,
+      "name": "Nico Hoerner",
+      "club": "Chicago Cubs",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2027,
+        "last": 2032
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/cubs-sign-nico-hoerner-to-6-year-extension",
+      "unconfirmed": "Signed date not taken from the pages opened this pass. This is his later six-year deal (2027-32), not the March 2023 three-year deal that ran through 2026."
+    },
+    {
+      "id": 691718,
+      "name": "Pete Crow-Armstrong",
+      "club": "Chicago Cubs",
+      "signed": "2026-03-24",
+      "guaranteed_seasons": {
+        "first": 2027,
+        "last": 2032
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/pete-crow-armstrong-contract-extension-cubs"
+    },
+    {
+      "id": 808959,
+      "name": "Munetaka Murakami",
+      "club": "Chicago White Sox",
+      "signed": "2025-12-21",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2027
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://apnews.com/article/white-sox-murakami-b8c8ccd00b97b2d5a6f7eedb11df70d6"
+    },
+    {
+      "id": 695505,
+      "name": "Chase Burns",
+      "club": "Cincinnati Reds",
+      "signed": "2026-07-16",
+      "guaranteed_seasons": {
+        "first": 2027,
+        "last": 2033
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlbtraderumors.com/2026/07/reds-extend-chase-burns-seven-years-105-million.html"
+    },
+    {
+      "id": 668881,
+      "name": "Hunter Greene",
+      "club": "Cincinnati Reds",
+      "signed": "2023-04-18",
+      "guaranteed_seasons": {
+        "first": 2023,
+        "last": 2028
+      },
+      "option_years": [],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/baseball-s-next-free-agent-classes",
+      "unconfirmed": "Six-year (2023-28) from prior research. nextfa lists a club option after 2028."
+    },
+    {
+      "id": 663647,
+      "name": "Ke'Bryan Hayes",
+      "club": "Cincinnati Reds",
+      "signed": "2022-04-07",
+      "guaranteed_seasons": {
+        "first": 2022,
+        "last": 2029
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/mitch-keller-reflects-on-contract-extension-with-pirates",
+      "unconfirmed": "Eight-year (2022-29) from prior research. The Keller MLB.com story notes the Pirates had extended Hayes (he has since been traded to Cincinnati)."
+    },
+    {
+      "id": 608070,
+      "name": "José Ramírez",
+      "club": "Cleveland Guardians",
+      "signed": "2026-01-29",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2032
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/jose-ramirez-2026-extension-with-guardians",
+      "unconfirmed": "Supersedes the remaining years of his 2022 extension. Already past arbitration."
+    },
+    {
+      "id": 676440,
+      "name": "Tanner Bibee",
+      "club": "Cleveland Guardians",
+      "signed": "2025-03-22",
+      "guaranteed_seasons": {
+        "first": 2025,
+        "last": 2029
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/extension-candidates-for-2026-season",
+      "unconfirmed": "Five-year (2025-29) terms from prior research; not re-opened against a dedicated Guardians announcement this pass."
+    },
+    {
+      "id": 678662,
+      "name": "Ezequiel Tovar",
+      "club": "Colorado Rockies",
+      "signed": "2024-03-26",
+      "guaranteed_seasons": {
+        "first": 2024,
+        "last": 2030
+      },
+      "option_years": [
+        2031
+      ],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/ezequiel-tovar-contract-extension",
+      "unconfirmed": "MLB.com and the club post: seven-year extension through 2030, club option for 2031, announced March 26, 2024. A seven-year deal through 2030 announced that spring is taken as 2024-30."
+    },
+    {
+      "id": 666160,
+      "name": "Mickey Moniak",
+      "club": "Colorado Rockies",
+      "signed": "2026-08-04",
+      "guaranteed_seasons": {
+        "first": 2027,
+        "last": 2028
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/press-release/colorado-rockies-agree-to-contract-extension-with-mickey-moniak"
+    },
+    {
+      "id": 690993,
+      "name": "Colt Keith",
+      "club": "Detroit Tigers",
+      "signed": "2024-01-28",
+      "guaranteed_seasons": {
+        "first": 2024,
+        "last": 2029
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/press-release/press-release-tigers-sign-colt-keith-to-contract-extension",
+      "unconfirmed": "Six-year (2024-29) range from prior research; Tigers PR confirms an extension. Re-open the PR if exact years need to be quoted."
+    },
+    {
+      "id": 623454,
+      "name": "Drew Anderson",
+      "club": "Detroit Tigers",
+      "signed": "2025-12-05",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2027
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "option_exercised",
+      "source_url": "https://www.mlb.com/news/mlb-players-with-2027-options-and-opt-outs",
+      "unconfirmed": "Original AP report was a 2026 deal plus a 2027 club option; that 2027 option was exercised (Nov 2, 2026)."
+    },
+    {
+      "id": 664285,
+      "name": "Framber Valdez",
+      "club": "Detroit Tigers",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2028
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/largest-contracts-in-mlb-history-c300060780",
+      "unconfirmed": "MLB.com largest free-agent contracts (AAV list): 2026-28. The next-FA-classes article lists an opt-out that could make him a free agent after 2027. Exact signing date not copied this pass."
+    },
+    {
+      "id": 805808,
+      "name": "Kevin McGonigle",
+      "club": "Detroit Tigers",
+      "signed": "2026-04-15",
+      "guaranteed_seasons": {
+        "first": 2027,
+        "last": 2034
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/earliest-contract-extensions-in-mlb-history-c269677352",
+      "unconfirmed": "Signed date from prior sourced research; years 2027-34 confirmed in that research file and consistent with the earliest-extensions roundup (eight-year deal)."
+    },
+    {
+      "id": 670623,
+      "name": "Isaac Paredes",
+      "club": "Houston Astros",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2027,
+        "last": 2027
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "option_exercised",
+      "source_url": "https://www.mlb.com/news/mlb-players-with-2027-options-and-opt-outs",
+      "unconfirmed": "Not a long-term extension: Houston exercised his 2027 club option (Nov 2, 2026), avoiding arbitration for 2027. He remains a potential free agent after 2027."
+    },
+    {
+      "id": 514888,
+      "name": "Jose Altuve",
+      "club": "Houston Astros",
+      "signed": "2024-02-06",
+      "guaranteed_seasons": {
+        "first": 2025,
+        "last": 2029
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/jose-altuve-signs-contract-extension-with-astros",
+      "unconfirmed": "MLB.com: five-year extension starts in 2025 and runs through his age-39 season (2029)."
+    },
+    {
+      "id": 837227,
+      "name": "Tatsuya Imai",
+      "club": "Houston Astros",
+      "signed": "2026-01-01",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2028
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "option_exercised",
+      "source_url": "https://apnews.com/article/tatsuya-imai-astros-contract-c1616ce611e0365f27cfb9d2be226c09",
+      "unconfirmed": "He opted in (Nov 2, 2026); article said two years left on the three-year deal."
+    },
+    {
+      "id": 670541,
+      "name": "Yordan Alvarez",
+      "club": "Houston Astros",
+      "signed": "2022-06-03",
+      "guaranteed_seasons": {
+        "first": 2023,
+        "last": 2028
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlbtraderumors.com/2022/06/astros-extend-yordan-alvarez.html",
+      "unconfirmed": "Six-year (2023-28) from prior research. MLB.com next-FA-classes lists him as a free agent after 2028. Confirm the MLBTR URL still resolves."
+    },
+    {
+      "id": 677951,
+      "name": "Bobby Witt Jr.",
+      "club": "Kansas City Royals",
+      "signed": "2024-02-05",
+      "guaranteed_seasons": {
+        "first": 2024,
+        "last": 2034
+      },
+      "option_years": [
+        2035,
+        2036,
+        2037
+      ],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/largest-contract-extensions-in-mlb-history",
+      "unconfirmed": "MLB.com largest-extensions: 11 years through 2034, plus a three-year club option covering 2035-37. Also includes four opt-outs (not listed in option_type). Signed date from prior research."
+    },
+    {
+      "id": 666142,
+      "name": "Cole Ragans",
+      "club": "Kansas City Royals",
+      "signed": "2025-02-14",
+      "guaranteed_seasons": {
+        "first": 2025,
+        "last": 2027
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/baseball-s-next-free-agent-classes",
+      "unconfirmed": "Three-year (2025-27) terms from prior research. MLB.com next-FA-classes list places him as a potential free agent after 2028 if later options apply — 2028 status unconfirmed here; guaranteed end left at 2027."
+    },
+    {
+      "id": 672580,
+      "name": "Maikel Garcia",
+      "club": "Kansas City Royals",
+      "signed": "2025-12-16",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2030
+      },
+      "option_years": [
+        2031
+      ],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/press-release/royals-announce-five-year-contract-extension-with-maikel-garcia",
+      "unconfirmed": "Club PR: five years through 2030, club option for 2031, covering his first four arbitration years and first free-agency year, so the guaranteed window is 2026-30."
+    },
+    {
+      "id": 608379,
+      "name": "Michael Wacha",
+      "club": "Kansas City Royals",
+      "signed": "2024-11-03",
+      "guaranteed_seasons": {
+        "first": 2025,
+        "last": 2027
+      },
+      "option_years": [
+        2028
+      ],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/michael-wacha-royals-3-year-contract",
+      "unconfirmed": "MLB.com: three-year extension beginning in 2025, club option for 2028, agreed Sunday (Nov 3, 2024) ahead of the Nov 4 story. Replaced a prior deal that had a player option."
+    },
+    {
+      "id": 664062,
+      "name": "Tony Gonsolin",
+      "club": "Kansas City Royals",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2027,
+        "last": 2027
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "option_exercised",
+      "source_url": "https://www.mlb.com/news/mlb-players-with-2027-options-and-opt-outs",
+      "unconfirmed": "Nov 2, 2026 option-decision article: the Royals exercised his 2027 club option on the one-year deal they signed him to in August 2026. Not a long-term extension."
+    },
+    {
+      "id": 545361,
+      "name": "Mike Trout",
+      "club": "Los Angeles Angels",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2019,
+        "last": 2030
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/largest-contract-extensions-in-mlb-history",
+      "unconfirmed": "2019 extension, runs through 2030. Signed date not copied this pass."
+    },
+    {
+      "id": 518692,
+      "name": "Freddie Freeman",
+      "club": "Los Angeles Dodgers",
+      "signed": "2022-03-18",
+      "guaranteed_seasons": {
+        "first": 2022,
+        "last": 2027
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/freddie-freeman-dodgers-deal",
+      "unconfirmed": "MLB.com: six-year deal announced Friday, March 18, 2022. The next-FA-classes article lists him as a free agent after 2027, so the six years are taken as 2022-27."
+    },
+    {
+      "id": 808975,
+      "name": "Hyeseong Kim",
+      "club": "Los Angeles Dodgers",
+      "signed": "2025-01-03",
+      "guaranteed_seasons": {
+        "first": 2025,
+        "last": 2027
+      },
+      "option_years": [
+        2028,
+        2029
+      ],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://apnews.com/article/dodgers-hyeseong-kim-3472e91ccd82125adf8ad90ec466bebf",
+      "unconfirmed": "Prior research and AP: 2025-27 plus 2028-29 options. nextfa lists a two-year club option. Option type taken as club."
+    },
+    {
+      "id": 663656,
+      "name": "Kyle Tucker",
+      "club": "Los Angeles Dodgers",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2029
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/largest-contracts-in-mlb-history-c300060780",
+      "unconfirmed": "MLB.com largest free-agent contracts (AAV list): 2026-29. The next-FA-classes article lists opt-outs that could make him a free agent earlier than 2029. Exact signing date not copied this pass."
+    },
+    {
+      "id": 605141,
+      "name": "Mookie Betts",
+      "club": "Los Angeles Dodgers",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2020,
+        "last": 2032
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/largest-contract-extensions-in-mlb-history",
+      "unconfirmed": "2020 extension, runs through 2032. Signed date not copied this pass."
+    },
+    {
+      "id": 660271,
+      "name": "Shohei Ohtani",
+      "club": "Los Angeles Dodgers",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2024,
+        "last": 2033
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/largest-contracts-in-mlb-history-c300060780",
+      "unconfirmed": "MLB.com largest free-agent contracts: 10 years, 2024-2033, signed December 2023. Exact calendar day not copied this pass."
+    },
+    {
+      "id": 669242,
+      "name": "Tommy Edman",
+      "club": "Los Angeles Dodgers",
+      "signed": "2024-11-29",
+      "guaranteed_seasons": {
+        "first": 2025,
+        "last": 2029
+      },
+      "option_years": [
+        2030
+      ],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/press-release/release-dodgers-extend-tommy-edman-11-29-24",
+      "unconfirmed": "PR: five years through 2029, club option for 2030. First guaranteed season not spelled out as 2025 in the first paragraph; 2025 is the season after the Nov 29, 2024 signing and is consistent with a five-year deal through 2029."
+    },
+    {
+      "id": 669257,
+      "name": "Will Smith",
+      "club": "Los Angeles Dodgers",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2024,
+        "last": 2033
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/press-release/press-release-dodgers-sign-catcher-will-smith-to-10-year-extension",
+      "unconfirmed": "Club PR: 10-year extension through 2033. Signed date not copied this pass (during the 2024 season / Seoul Series context in the PR)."
+    },
+    {
+      "id": 808967,
+      "name": "Yoshinobu Yamamoto",
+      "club": "Los Angeles Dodgers",
+      "signed": "2023-12-21",
+      "guaranteed_seasons": {
+        "first": 2024,
+        "last": 2035
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/baseball-s-next-free-agent-classes",
+      "unconfirmed": "12-year (2024-35) from prior research. nextfa lists an opt-out (after 2029 section). Posted-player deal, not a club-control extension. Re-source to a Dodgers/MLB.com announcement if republishing."
+    },
+    {
+      "id": 676879,
+      "name": "Aaron Ashby",
+      "club": "Milwaukee Brewers",
+      "signed": "2022-07-23",
+      "guaranteed_seasons": {
+        "first": 2023,
+        "last": 2027
+      },
+      "option_years": [],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/baseball-s-next-free-agent-classes",
+      "unconfirmed": "Five-year (2023-27) from prior research. nextfa lists club options after 2027 and 2028. 2027 option decision was not found in the Nov 2 option-decision article excerpt opened this pass — if the 2027 option was the first option year, status should be re-checked. Guaranteed years left at 2027."
+    },
+    {
+      "id": 806198,
+      "name": "Cooper Pratt",
+      "club": "Milwaukee Brewers",
+      "signed": "2026-04-03",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2033
+      },
+      "option_years": [],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/earliest-contract-extensions-in-mlb-history-c269677352",
+      "unconfirmed": "Two club option years reported in prior research and the earliest-extensions roundup; option years not stated as 2034-35 in the roundup body excerpt, so option_years left blank."
+    },
+    {
+      "id": 694192,
+      "name": "Jackson Chourio",
+      "club": "Milwaukee Brewers",
+      "signed": "2023-12-04",
+      "guaranteed_seasons": {
+        "first": 2024,
+        "last": 2031
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/earliest-contract-extensions-in-mlb-history-c269677352",
+      "unconfirmed": "Cited in the earliest-extensions roundup. 2024-31 range and Dec 4, 2023 date from prior research."
+    },
+    {
+      "id": 800325,
+      "name": "Luis Lara",
+      "club": "Milwaukee Brewers",
+      "signed": "2026-06-09",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2032
+      },
+      "option_years": [
+        2033,
+        2034,
+        2035
+      ],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlbtraderumors.com/2026/06/brewers-luis-lara-agree-to-extension.html",
+      "unconfirmed": "Signed pre-debut."
+    },
+    {
+      "id": 661388,
+      "name": "William Contreras",
+      "club": "Milwaukee Brewers",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2027,
+        "last": 2027
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "option_exercised",
+      "source_url": "https://www.mlb.com/news/mlb-players-with-2027-options-and-opt-outs",
+      "unconfirmed": "Not a long-term extension: Milwaukee exercised his 2027 club option (Nov 2, 2026), so he will not go through arbitration for 2027. He remains a potential free agent after 2027."
+    },
+    {
+      "id": 596019,
+      "name": "Francisco Lindor",
+      "club": "New York Mets",
+      "signed": "2021-03-31",
+      "guaranteed_seasons": {
+        "first": 2022,
+        "last": 2031
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/largest-contract-extensions-in-mlb-history",
+      "unconfirmed": "MLB.com: 10-year extension agreed March 31, took effect in 2022, runs through 2031."
+    },
+    {
+      "id": 665742,
+      "name": "Juan Soto",
+      "club": "New York Mets",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2025,
+        "last": 2039
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/largest-contracts-in-mlb-history-c300060780",
+      "unconfirmed": "MLB.com largest free-agent contracts: 15 years, 2025-2039, agreed prior to the 2025 season. Exact calendar day not copied this pass. The next-FA-classes article also notes an opt-out (listed after 2029)."
+    },
+    {
+      "id": 673540,
+      "name": "Kodai Senga",
+      "club": "New York Mets",
+      "signed": "2022-12-10",
+      "guaranteed_seasons": {
+        "first": 2023,
+        "last": 2027
+      },
+      "option_years": [],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/baseball-s-next-free-agent-classes",
+      "unconfirmed": "Five-year (2023-27) from prior research. nextfa lists a club option after 2027."
+    },
+    {
+      "id": 592450,
+      "name": "Aaron Judge",
+      "club": "New York Yankees",
+      "signed": "2022-12-20",
+      "guaranteed_seasons": {
+        "first": 2023,
+        "last": 2031
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/aaron-judge-signs-nine-year-contract-with-yankees",
+      "unconfirmed": "Yankees announcement in the MLB.com story: nine-year contract through 2031, announced Dec 20, 2022. Agreement had been reported about two weeks earlier. Year range also in the largest free-agent contracts roundup (2023-31)."
+    },
+    {
+      "id": 543037,
+      "name": "Gerrit Cole",
+      "club": "New York Yankees",
+      "signed": "2019-12-16",
+      "guaranteed_seasons": {
+        "first": 2020,
+        "last": 2028
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/largest-contracts-in-mlb-history-c300060780",
+      "unconfirmed": "MLB.com largest free-agent contracts: 9 years, 2020-28. The original signing story (published Dec 16, 2019) also noted an opt-out after the fifth year; that window has already passed. He is still listed as a free agent after 2028."
+    },
+    {
+      "id": 519317,
+      "name": "Giancarlo Stanton",
+      "club": "New York Yankees",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2015,
+        "last": 2028
+      },
+      "option_years": [],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/largest-contract-extensions-in-mlb-history",
+      "unconfirmed": "2014 extension, runs through 2028 (now with the Yankees). nextfa lists a club option around the end of the deal; option year not copied this pass."
+    },
+    {
+      "id": 608331,
+      "name": "Max Fried",
+      "club": "New York Yankees",
+      "signed": "2024-12-17",
+      "guaranteed_seasons": {
+        "first": 2025,
+        "last": 2032
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/press-release/press-release-yankees-sign-lhp-max-fried",
+      "unconfirmed": "PR announces an eight-year contract extending through 2032; first guaranteed season taken as 2025 from that length and end year."
+    },
+    {
+      "id": 605400,
+      "name": "Aaron Nola",
+      "club": "Philadelphia Phillies",
+      "signed": "2023-11-19",
+      "guaranteed_seasons": {
+        "first": 2024,
+        "last": 2030
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/press-release/press-release-phillies-sign-aaron-nola-to-seven-year-contract",
+      "unconfirmed": "PR announces a seven-year contract through 2030; first guaranteed season taken as 2024 from that length and end year."
+    },
+    {
+      "id": 547180,
+      "name": "Bryce Harper",
+      "club": "Philadelphia Phillies",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2019,
+        "last": 2031
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/largest-contracts-in-mlb-history-c300060780",
+      "unconfirmed": "MLB.com largest free-agent contracts: 13 years, 2019-31. Exact signing date not copied this pass (spring 2019)."
+    },
+    {
+      "id": 650911,
+      "name": "Cristopher Sánchez",
+      "club": "Philadelphia Phillies",
+      "signed": "2026-03-22",
+      "guaranteed_seasons": {
+        "first": 2027,
+        "last": 2032
+      },
+      "option_years": [
+        2033
+      ],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/cristopher-sanchez-extension-with-phillies-through-2032",
+      "unconfirmed": "This is the March 22, 2026 restructuring, not the original 2024 four-year extension. MLB.com: new six-year contract through 2032, club option for 2033; the club said it kept the prior deal's years through 2030 and added 2031-32. First guaranteed season of the new six-year window is taken as 2027."
+    },
+    {
+      "id": 607208,
+      "name": "Trea Turner",
+      "club": "Philadelphia Phillies",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2023,
+        "last": 2033
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/largest-contracts-in-mlb-history-c300060780",
+      "unconfirmed": "MLB.com largest free-agent contracts: 11 years, 2023-33. Exact calendar day not copied this pass."
+    },
+    {
+      "id": 554430,
+      "name": "Zack Wheeler",
+      "club": "Philadelphia Phillies",
+      "signed": "2024-03-04",
+      "guaranteed_seasons": {
+        "first": 2025,
+        "last": 2027
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/zack-wheeler-phillies-extension",
+      "unconfirmed": "Three-year extension announced around March 4, 2024 (Phillies post in the MLB.com story). No options. MLB.com next-FA-classes lists him as a free agent after 2027, so guaranteed years taken as 2025-27."
+    },
+    {
+      "id": 668804,
+      "name": "Bryan Reynolds",
+      "club": "Pittsburgh Pirates",
+      "signed": "2023-04-26",
+      "guaranteed_seasons": {
+        "first": 2023,
+        "last": 2030
+      },
+      "option_years": [
+        2031
+      ],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/bryan-reynolds-extension-with-pirates",
+      "unconfirmed": "This is the later eight-year deal (through 2030, club option for 2031), not the 2022-23 contract in the old research file. MLB.com: the deal begins now (April 2023) and buys out his remaining arbitration years."
+    },
+    {
+      "id": 804606,
+      "name": "Konnor Griffin",
+      "club": "Pittsburgh Pirates",
+      "signed": "2026-04-08",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2034
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/konnor-griffin-contract-extension",
+      "unconfirmed": "Announcement described as Wednesday morning; April 8, 2026 used from prior sourced research and the April 9 MLB.com story. Years through 2034 confirmed."
+    },
+    {
+      "id": 656605,
+      "name": "Mitch Keller",
+      "club": "Pittsburgh Pirates",
+      "signed": "2024-02-23",
+      "guaranteed_seasons": {
+        "first": 2024,
+        "last": 2028
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/mitch-keller-reflects-on-contract-extension-with-pirates",
+      "unconfirmed": "Five-year deal agreed Friday (Pirates post Feb 23, 2024). Start/end years not spelled out in the excerpt; 2024-28 is inferred from a five-year signing in Feb 2024 plus MLB.com listing him as a potential free agent after 2028. Marked unconfirmed for the exact first/last season."
+    },
+    {
+      "id": 665487,
+      "name": "Fernando Tatis Jr.",
+      "club": "San Diego Padres",
+      "signed": "2021-02-17",
+      "guaranteed_seasons": {
+        "first": 2021,
+        "last": 2034
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/largest-contract-extensions-in-mlb-history",
+      "unconfirmed": "MLB.com largest-extensions: 14 years, signed in 2021, runs through 2034. Exact calendar day from prior research."
+    },
+    {
+      "id": 701538,
+      "name": "Jackson Merrill",
+      "club": "San Diego Padres",
+      "signed": "2025-04-02",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2034
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/extension-candidates-for-2026-season",
+      "unconfirmed": "Nine-year deal listed among 2025 signings in the MLB.com 2026 extension-candidates story. 2026-34 year range from prior research; not re-checked word-for-word against a Padres PR this pass."
+    },
+    {
+      "id": 630105,
+      "name": "Jake Cronenworth",
+      "club": "San Diego Padres",
+      "signed": "2023-04-01",
+      "guaranteed_seasons": {
+        "first": 2024,
+        "last": 2030
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/jake-cronenworth-contract-extension-padres"
+    },
+    {
+      "id": 606996,
+      "name": "Kyle Hart",
+      "club": "San Diego Padres",
+      "signed": "2025-11-17",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2027
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "option_exercised",
+      "source_url": "https://www.mlb.com/news/mlb-players-with-2027-options-and-opt-outs",
+      "unconfirmed": "2027 club option was exercised (Nov 2, 2026)."
+    },
+    {
+      "id": 592518,
+      "name": "Manny Machado",
+      "club": "San Diego Padres",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2023,
+        "last": 2033
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/largest-contract-extensions-in-mlb-history",
+      "unconfirmed": "2023 extension replaced the remaining years of his 2019 free-agent contract with a new 11-year deal through 2033. Signed date not copied this pass."
+    },
+    {
+      "id": 823550,
+      "name": "Sung-Mun Song",
+      "club": "San Diego Padres",
+      "signed": "2025-12-19",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2029
+      },
+      "option_years": [
+        2029
+      ],
+      "option_type": "player",
+      "status": "signed",
+      "source_url": "https://apnews.com/article/sung-mun-song-padres-contract-433ce3f9d9bdb0caeb65923cd28e1931",
+      "unconfirmed": "Prior research: 2026-29 with a 2029 player option. If the last guaranteed year is 2028 and 2029 is only a player option, last_guaranteed_season may be 2028 — left at 2029 with this note."
+    },
+    {
+      "id": 593428,
+      "name": "Xander Bogaerts",
+      "club": "San Diego Padres",
+      "signed": "2022-12-09",
+      "guaranteed_seasons": {
+        "first": 2023,
+        "last": 2033
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/largest-contracts-in-mlb-history-c300060780",
+      "unconfirmed": "MLB.com largest free-agent contracts: 11 years, 2023-33. Dedicated signing story published Dec 9, 2022 (agreed Friday). That story said the deal has no opt-outs."
+    },
+    {
+      "id": 673513,
+      "name": "Yuki Matsui",
+      "club": "San Diego Padres",
+      "signed": "2023-12-23",
+      "guaranteed_seasons": {
+        "first": 2024,
+        "last": 2028
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "option_exercised",
+      "source_url": "https://www.mlb.com/news/mlb-players-with-2027-options-and-opt-outs",
+      "unconfirmed": "Five-year deal (2024-28) from prior research. He opted in (two years left on the five-year deal) in the Nov 2, 2026 option-decision article."
+    },
+    {
+      "id": 808982,
+      "name": "Jung Hoo Lee",
+      "club": "San Francisco Giants",
+      "signed": "2023-12-12",
+      "guaranteed_seasons": {
+        "first": 2024,
+        "last": 2029
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/baseball-s-next-free-agent-classes",
+      "unconfirmed": "Six-year (2024-29) from prior research. nextfa lists an opt-out. Posted-player deal."
+    },
+    {
+      "id": 657277,
+      "name": "Logan Webb",
+      "club": "San Francisco Giants",
+      "signed": "2023-04-14",
+      "guaranteed_seasons": {
+        "first": 2024,
+        "last": 2028
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/logan-webb-agrees-to-5-year-extension-with-giants",
+      "unconfirmed": "MLB.com, April 14, 2023: five-year extension that kicks in the next year and runs through at least 2028, buying out his last two arbitration years and first three free-agency years (2024-28)."
+    },
+    {
+      "id": 656305,
+      "name": "Matt Chapman",
+      "club": "San Francisco Giants",
+      "signed": "2024-09-05",
+      "guaranteed_seasons": {
+        "first": 2025,
+        "last": 2030
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/giants/news/matt-chapman-signs-6-year-deal-with-giants",
+      "unconfirmed": "MLB.com: six-year extension announced Sept 5, 2024, keeping him through 2030. The story describes the next six seasons with a 2025 signing bonus, so the guaranteed window is taken as 2025-30."
+    },
+    {
+      "id": 646240,
+      "name": "Rafael Devers",
+      "club": "San Francisco Giants",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2024,
+        "last": 2033
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/largest-contract-extensions-in-mlb-history",
+      "unconfirmed": "2023 extension with Boston, 10 years through 2033. He was traded to the Giants in June 2025; the deal travels with him. Signed date and whether 2023 or 2024 is the first year of the new money not copied this pass."
+    },
+    {
+      "id": 642715,
+      "name": "Willy Adames",
+      "club": "San Francisco Giants",
+      "signed": "2024-12-10",
+      "guaranteed_seasons": {
+        "first": 2025,
+        "last": 2031
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/giants-sticking-with-willy-adames-at-shortstop",
+      "unconfirmed": "Seven-year free-agent signing announced Dec 10, 2024 (https://www.mlb.com/news/willy-adames-giants-contract). First guaranteed season taken as 2025 from a seven-year deal through 2031. The later MLB.com story is the source that states he remains under contract through 2031."
+    },
+    {
+      "id": 662253,
+      "name": "Andrés Muñoz",
+      "club": "Seattle Mariners",
+      "signed": "2021-12-01",
+      "guaranteed_seasons": {
+        "first": 2022,
+        "last": 2027
+      },
+      "option_years": [
+        2028
+      ],
+      "option_type": "club",
+      "status": "option_exercised",
+      "source_url": "https://www.mlb.com/news/mlb-players-with-2027-options-and-opt-outs",
+      "unconfirmed": "Original four-year extension (2022-25) included later club options. The 2027 club option was exercised (Nov 2, 2026 decision article); a 2028 club option remains."
+    },
+    {
+      "id": 663728,
+      "name": "Cal Raleigh",
+      "club": "Seattle Mariners",
+      "signed": "2025-03-27",
+      "guaranteed_seasons": {
+        "first": 2025,
+        "last": 2030
+      },
+      "option_years": [
+        2031
+      ],
+      "option_type": "vesting",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/cal-raleigh-mariners-extension",
+      "unconfirmed": "2031 is a vesting player option (with a buyout), per MLB.com. Formal club announcement was the next day (March 26-27 reporting)."
+    },
+    {
+      "id": 806068,
+      "name": "Colt Emerson",
+      "club": "Seattle Mariners",
+      "signed": "2026-04-01",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2033
+      },
+      "option_years": [
+        2034
+      ],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/earliest-contract-extensions-in-mlb-history-c269677352",
+      "unconfirmed": "Signed pre-debut. Exact calendar day may be March/April 2026; April 1 used from prior research and the earliest-extensions roundup (March 2026 / April 1 reporting)."
+    },
+    {
+      "id": 647304,
+      "name": "Josh Naylor",
+      "club": "Seattle Mariners",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2030
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/press-release/mariners-sign-first-baseman-josh-naylor-to-five-year-contract-through-2030",
+      "unconfirmed": "Free-agent signing, not a club-control extension. Club PR: five-year contract through 2030. Signed date not copied this pass."
+    },
+    {
+      "id": 677594,
+      "name": "Julio Rodríguez",
+      "club": "Seattle Mariners",
+      "signed": "2022-08-26",
+      "guaranteed_seasons": {
+        "first": 2023,
+        "last": 2034
+      },
+      "option_years": [],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/extension-candidates-for-2026-season",
+      "unconfirmed": "12-year (2023-34) from prior research and consistent with the candidates story (signed through at least 2030). nextfa lists a club option on him after 2029. Option year not copied this pass."
+    },
+    {
+      "id": 802139,
+      "name": "JJ Wetherholt",
+      "club": "St. Louis Cardinals",
+      "signed": "2026-07-10",
+      "guaranteed_seasons": {
+        "first": 2027,
+        "last": 2034
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://apnews.com/article/st-louis-cardinals-jj-wetherholt-contract-552c36a816d3d8fd086ff7085da405ac"
+    },
+    {
+      "id": 608369,
+      "name": "Corey Seager",
+      "club": "Texas Rangers",
+      "signed": "2021-12-01",
+      "guaranteed_seasons": {
+        "first": 2022,
+        "last": 2031
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/largest-contracts-in-mlb-history-c300060780",
+      "unconfirmed": "MLB.com largest free-agent contracts: 10 years, 2022-31. Rangers announcement date Dec 1, 2021 from the dedicated MLB.com signing story."
+    },
+    {
+      "id": 594798,
+      "name": "Jacob deGrom",
+      "club": "Texas Rangers",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2023,
+        "last": 2027
+      },
+      "option_years": [
+        2028
+      ],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/largest-contracts-in-mlb-history-c300060780",
+      "unconfirmed": "MLB.com largest free-agent contracts (AAV list): 2023-27. The next-FA-classes article (published Nov 6, 2026, after 2027 option decisions) lists a club option in the after-2027 section and has him as a potential free agent after 2028 if that option is exercised. Exact signing date not copied this pass."
+    },
+    {
+      "id": 672386,
+      "name": "Alejandro Kirk",
+      "club": "Toronto Blue Jays",
+      "signed": "2025-03-25",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2030
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/alejandro-kirk-blue-jays-extension",
+      "unconfirmed": "Agreement reported Tuesday and announced on the club's March 25, 2025 post; MLB.com story published March 26. Deal buys out his final arbitration year (2026) and the four seasons that follow, through 2030."
+    },
+    {
+      "id": 665926,
+      "name": "Andrés Giménez",
+      "club": "Toronto Blue Jays",
+      "signed": "2023-03-28",
+      "guaranteed_seasons": {
+        "first": 2023,
+        "last": 2029
+      },
+      "option_years": [],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/baseball-s-next-free-agent-classes",
+      "unconfirmed": "Seven-year (2023-29) from prior research. nextfa lists a club option on him after 2029. He has since been traded to Toronto; deal travels with him."
+    },
+    {
+      "id": 664074,
+      "name": "Cody Ponce",
+      "club": "Toronto Blue Jays",
+      "signed": "2025-12-11",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2028
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/cody-ponce-blue-jays-free-agent-contract",
+      "unconfirmed": "Returned from the KBO; three-year deal (2026-28)."
+    },
+    {
+      "id": 672960,
+      "name": "Kazuma Okamoto",
+      "club": "Toronto Blue Jays",
+      "signed": "2026-01-03",
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2029
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://apnews.com/article/okamoto-blue-jays-contract-8243d4a7e367ffbbc5ebeab90c8c52e5"
+    },
+    {
+      "id": 665489,
+      "name": "Vladimir Guerrero Jr.",
+      "club": "Toronto Blue Jays",
+      "signed": null,
+      "guaranteed_seasons": {
+        "first": 2026,
+        "last": 2039
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/press-release/press-release-blue-jays-sign-vladimir-guerrero-jr-to-14-year-contract-extension",
+      "unconfirmed": "Signed date not copied this pass. 14-year extension signed in 2025, runs through 2039, per MLB.com (largest-extensions roundup and the club PR)."
+    },
+    {
+      "id": 676917,
+      "name": "Cade Cavalli",
+      "club": "Washington Nationals",
+      "signed": "2026-09-18",
+      "guaranteed_seasons": {
+        "first": 2027,
+        "last": 2030
+      },
+      "option_years": [
+        2031
+      ],
+      "option_type": "club",
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/cade-cavalli-contract-extension-with-nationals",
+      "unconfirmed": "MLB.com: he had been under club control through 2030; the deal covers 2027-30 with a 2031 club option. buys_out_fa=n for guaranteed years (option could add a FA year)."
+    },
+    {
+      "id": 696285,
+      "name": "Jacob Young",
+      "club": "Washington Nationals",
+      "signed": "2026-11-06",
+      "guaranteed_seasons": {
+        "first": 2027,
+        "last": 2030
+      },
+      "option_years": [
+        2031
+      ],
+      "option_type": "club",
+      "status": "unconfirmed",
+      "source_url": "https://www.mlb.com/news/jacob-young-contract-extension-nationals",
+      "unconfirmed": "Nationals had not confirmed the agreement in the MLB.com report; date taken from The Washington Post (Nov 6, 2026). Covers his three remaining arbitration years and one free-agency year, through at least 2030, with a club option for 2031."
+    },
+    {
+      "id": 660688,
+      "name": "Keibert Ruiz",
+      "club": "Washington Nationals",
+      "signed": "2023-03-11",
+      "guaranteed_seasons": {
+        "first": 2023,
+        "last": 2030
+      },
+      "option_years": [],
+      "option_type": null,
+      "status": "signed",
+      "source_url": "https://www.mlb.com/news/cade-cavalli-contract-extension-with-nationals",
+      "unconfirmed": "The Cavalli MLB.com story recalls Ruiz's eight-year extension during Spring Training 2023. 2023-30 range from prior research."
+    }
+  ]
+}
