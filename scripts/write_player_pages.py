@@ -1013,8 +1013,7 @@ def _club_offseason_section(
   <p class="foot-note">{contracts.PROJECTION_NOTE}</p>
   {_club_fa_table(fa_next_season, next_season)}
   <p class="foot-note"><a href="{slug_}-free-agents.html">Full {html.escape(club)} free agents</a>
-  &middot; <a href="{BASE_PATH}{FREE_AGENTS_PATH}">league-wide</a></p>
-{rule5_site.offseason_link(club, slug_, BASE_PATH, CLUB_DIR)}"""
+  &middot; <a href="{BASE_PATH}{FREE_AGENTS_PATH}">league-wide</a></p>{rule5_site.offseason_link(club, slug_, BASE_PATH, CLUB_DIR)}"""
 
 
 def _options_left_cell(player: dict, option_counts: dict | None) -> str:
@@ -2298,8 +2297,7 @@ def _write_club_pages(
         _keep(club_free_agents_path(club), fa_page)
 
     directory = render_club_index(by_club, generated_at)
-    _keep(f"{CLUB_DIR_NAME}/index.html", directory)
-    rule5_site.keep(CLUB_DIR, kept)
+    _keep(f"{CLUB_DIR_NAME}/index.html", directory); rule5_site.keep(CLUB_DIR, kept)
     _prune_html(CLUB_DIR, kept)
     return sorted(by_club)
 
