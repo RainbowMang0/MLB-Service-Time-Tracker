@@ -1,0 +1,1620 @@
+{
+  "player_id": 518560,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:062c06953cb40d18fa6e59dedb22caf28b796e836c7769c2a695c480494fd32d",
+  "transactions": [
+    {
+      "id": 22388,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "date": "2009-08-23",
+      "effectiveDate": "2009-08-23",
+      "resolutionDate": "2009-08-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rome Braves placed RHP Paul Clemens on the 7-day disabled list."
+    },
+    {
+      "id": 28514,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "date": "2009-09-25",
+      "effectiveDate": "2009-09-25",
+      "resolutionDate": "2009-09-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Paul Clemens roster status changed by Rome Braves."
+    },
+    {
+      "id": 42632,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "toTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "date": "2010-05-08",
+      "effectiveDate": "2010-05-08",
+      "resolutionDate": "2010-05-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Paul Clemens assigned to Myrtle Beach Pelicans from Rome Braves."
+    },
+    {
+      "id": 45264,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "toTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "date": "2010-05-20",
+      "effectiveDate": "2010-05-20",
+      "resolutionDate": "2010-05-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Paul Clemens assigned to Rome Braves from Myrtle Beach Pelicans."
+    },
+    {
+      "id": 45820,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "toTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "date": "2010-05-23",
+      "effectiveDate": "2010-05-23",
+      "resolutionDate": "2010-05-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Paul Clemens assigned to Myrtle Beach Pelicans from Rome Braves."
+    },
+    {
+      "id": 82355,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 481,
+        "name": "Hill City Howlers",
+        "link": "/api/v1/teams/481"
+      },
+      "toTeam": {
+        "id": 430,
+        "name": "Mississippi Mud Monsters",
+        "link": "/api/v1/teams/430"
+      },
+      "date": "2011-04-06",
+      "effectiveDate": "2011-04-06",
+      "resolutionDate": "2011-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Paul Clemens assigned to Mississippi Braves from Lynchburg Hillcats."
+    },
+    {
+      "id": 98703,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 430,
+        "name": "Mississippi Mud Monsters",
+        "link": "/api/v1/teams/430"
+      },
+      "toTeam": {
+        "id": 482,
+        "name": "Corpus Christi Hooks",
+        "link": "/api/v1/teams/482"
+      },
+      "date": "2011-07-31",
+      "effectiveDate": "2011-07-31",
+      "resolutionDate": "2011-07-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Houston Astros Traded CF Michael Bourn to Atlanta Braves; Atlanta Braves Traded CF Jordan Schafer and RHP Juan Abreu to Houston Astros and Mississippi Braves Traded RHP Paul Clemens and LHP Brett Oberholtzer to Corpus Christi Hooks."
+    },
+    {
+      "id": 99078,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 482,
+        "name": "Corpus Christi Hooks",
+        "link": "/api/v1/teams/482"
+      },
+      "date": "2011-08-02",
+      "effectiveDate": "2011-08-02",
+      "resolutionDate": "2011-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Paul Clemens roster status changed by Corpus Christi Hooks."
+    },
+    {
+      "id": 102364,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 482,
+        "name": "Corpus Christi Hooks",
+        "link": "/api/v1/teams/482"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2011-09-01",
+      "effectiveDate": "2011-09-01",
+      "resolutionDate": "2011-09-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Paul Clemens assigned to Oklahoma City RedHawks from Corpus Christi Hooks."
+    },
+    {
+      "id": 106707,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2011-11-18",
+      "effectiveDate": "2012-03-15",
+      "resolutionDate": "2011-11-18",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Houston Astros selected the contract of Paul Clemens from Oklahoma City RedHawks."
+    },
+    {
+      "id": 110464,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2012-03-15",
+      "effectiveDate": "2012-03-15",
+      "resolutionDate": "2012-03-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned RHP Paul Clemens to Oklahoma City RedHawks."
+    },
+    {
+      "id": 115616,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2012-04-19",
+      "effectiveDate": "2012-04-18",
+      "resolutionDate": "2012-04-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City RedHawks placed RHP Paul Clemens on the 7-day disabled list retroactive to April 18, 2012."
+    },
+    {
+      "id": 116443,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2012-04-28",
+      "effectiveDate": "2012-04-28",
+      "resolutionDate": "2012-04-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City RedHawks activated RHP Paul Clemens from the 7-day disabled list."
+    },
+    {
+      "id": 126142,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2012-06-20",
+      "effectiveDate": "2012-06-20",
+      "resolutionDate": "2012-06-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City RedHawks placed RHP Paul Clemens on the temporarily inactive list."
+    },
+    {
+      "id": 126627,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2012-06-24",
+      "effectiveDate": "2012-06-24",
+      "resolutionDate": "2012-06-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Paul Clemens roster status changed by Oklahoma City RedHawks."
+    },
+    {
+      "id": 130818,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 482,
+        "name": "Corpus Christi Hooks",
+        "link": "/api/v1/teams/482"
+      },
+      "date": "2012-07-26",
+      "effectiveDate": "2012-07-26",
+      "resolutionDate": "2012-07-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Paul Clemens assigned to Corpus Christi Hooks from Oklahoma City RedHawks."
+    },
+    {
+      "id": 136521,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 482,
+        "name": "Corpus Christi Hooks",
+        "link": "/api/v1/teams/482"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2012-10-04",
+      "effectiveDate": "2013-03-17",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Houston Astros recalled Paul Clemens from Corpus Christi Hooks."
+    },
+    {
+      "id": 145120,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2013-03-17",
+      "effectiveDate": "2013-03-17",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned Paul Clemens to Oklahoma City RedHawks."
+    },
+    {
+      "id": 149031,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2013-04-08",
+      "effectiveDate": "2013-07-27",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Houston Astros recalled Paul Clemens from Oklahoma City RedHawks."
+    },
+    {
+      "id": 165893,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2013-07-27",
+      "effectiveDate": "2013-07-27",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned Paul Clemens to Oklahoma City RedHawks."
+    },
+    {
+      "id": 169441,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2013-08-27",
+      "effectiveDate": "2014-03-09",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Houston Astros recalled Paul Clemens from Oklahoma City RedHawks."
+    },
+    {
+      "id": 180397,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2014-03-09",
+      "effectiveDate": "2014-03-09",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned RHP Paul Clemens to Oklahoma City RedHawks."
+    },
+    {
+      "id": 185636,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2014-04-12",
+      "effectiveDate": "2014-05-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Houston Astros recalled Paul Clemens from Oklahoma City RedHawks."
+    },
+    {
+      "id": 187513,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2014-05-02",
+      "effectiveDate": "2014-05-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned RHP Paul Clemens to Oklahoma City RedHawks."
+    },
+    {
+      "id": 188325,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2014-05-09",
+      "effectiveDate": "2014-05-17",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Houston Astros recalled Paul Clemens from Oklahoma City RedHawks."
+    },
+    {
+      "id": 189220,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2014-05-17",
+      "effectiveDate": "2014-05-17",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned RHP Paul Clemens to Oklahoma City RedHawks."
+    },
+    {
+      "id": 191279,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2014-06-01",
+      "effectiveDate": "2014-06-08",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Houston Astros recalled Paul Clemens from Oklahoma City RedHawks."
+    },
+    {
+      "id": 192301,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2014-06-08",
+      "effectiveDate": "2014-06-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned RHP Paul Clemens to Oklahoma City RedHawks."
+    },
+    {
+      "id": 194259,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2014-06-15",
+      "effectiveDate": "2014-06-21",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Houston Astros recalled Paul Clemens from Oklahoma City RedHawks."
+    },
+    {
+      "id": 196543,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2014-06-21",
+      "effectiveDate": "2014-06-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned RHP Paul Clemens to Oklahoma City RedHawks."
+    },
+    {
+      "id": 202302,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2014-07-27",
+      "effectiveDate": "2014-08-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Houston Astros recalled Paul Clemens from Oklahoma City RedHawks."
+    },
+    {
+      "id": 203711,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2014-08-06",
+      "effectiveDate": "2014-10-03",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned Paul Clemens to Oklahoma City RedHawks."
+    },
+    {
+      "id": 206971,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2014-09-02",
+      "effectiveDate": "2014-09-02",
+      "resolutionDate": "2014-09-02",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Houston Astros designated RHP Paul Clemens for assignment."
+    },
+    {
+      "id": 207235,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2014-09-05",
+      "effectiveDate": "2014-09-05",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Houston Astros sent Paul Clemens outright to Oklahoma City RedHawks."
+    },
+    {
+      "id": 210921,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2014-11-03",
+      "effectiveDate": "2014-11-03",
+      "resolutionDate": "2014-11-03",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Paul Clemens elected free agency."
+    },
+    {
+      "id": 211900,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2014-11-20",
+      "effectiveDate": "2014-11-20",
+      "resolutionDate": "2014-11-20",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent RHP Paul Clemens to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 211901,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2014-11-21",
+      "effectiveDate": "2014-11-21",
+      "resolutionDate": "2014-11-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Paul Clemens assigned to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 224580,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2015-05-08",
+      "effectiveDate": "2015-05-07",
+      "resolutionDate": "2015-05-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lehigh Valley IronPigs placed RHP Paul Clemens on the 7-day disabled list retroactive to May 7, 2015. right foot strain"
+    },
+    {
+      "id": 230700,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 566,
+        "name": "Clearwater Threshers",
+        "link": "/api/v1/teams/566"
+      },
+      "date": "2015-06-16",
+      "effectiveDate": "2015-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Paul Clemens assigned to Clearwater Threshers from Lehigh Valley IronPigs."
+    },
+    {
+      "id": 231146,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 566,
+        "name": "Clearwater Threshers",
+        "link": "/api/v1/teams/566"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2015-06-17",
+      "effectiveDate": "2015-06-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Paul Clemens assigned to Lehigh Valley IronPigs from Clearwater Threshers."
+    },
+    {
+      "id": 234607,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2015-06-26",
+      "effectiveDate": "2015-06-26",
+      "resolutionDate": "2015-06-26",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Lehigh Valley IronPigs released RHP Paul Clemens."
+    },
+    {
+      "id": 240682,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2015-08-01",
+      "effectiveDate": "2015-08-01",
+      "resolutionDate": "2015-08-01",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Kansas City Royals signed free agent RHP Paul Clemens to a minor league contract."
+    },
+    {
+      "id": 240683,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2015-08-02",
+      "effectiveDate": "2015-08-02",
+      "resolutionDate": "2015-08-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Paul Clemens assigned to Omaha Storm Chasers."
+    },
+    {
+      "id": 242703,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "toTeam": {
+        "id": 1350,
+        "name": "Northwest Arkansas Naturals",
+        "link": "/api/v1/teams/1350"
+      },
+      "date": "2015-08-18",
+      "effectiveDate": "2015-08-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Paul Clemens assigned to Northwest Arkansas Naturals from Omaha Storm Chasers."
+    },
+    {
+      "id": 245622,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2015-09-20",
+      "effectiveDate": "2015-09-20",
+      "resolutionDate": "2015-09-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Paul Clemens assigned to Tiburones de La Guaira."
+    },
+    {
+      "id": 250593,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 1350,
+        "name": "Northwest Arkansas Naturals",
+        "link": "/api/v1/teams/1350"
+      },
+      "date": "2015-11-06",
+      "effectiveDate": "2015-11-06",
+      "resolutionDate": "2015-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Paul Clemens elected free agency."
+    },
+    {
+      "id": 249405,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 1350,
+        "name": "Northwest Arkansas Naturals",
+        "link": "/api/v1/teams/1350"
+      },
+      "date": "2015-11-06",
+      "effectiveDate": "2015-11-06",
+      "resolutionDate": "2015-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Northwest Arkansas Naturals activated RHP Paul Clemens."
+    },
+    {
+      "id": 251105,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2015-11-24",
+      "effectiveDate": "2015-11-24",
+      "resolutionDate": "2015-11-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Miami Marlins signed free agent RHP Paul Clemens to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 251106,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2015-12-02",
+      "effectiveDate": "2015-12-02",
+      "resolutionDate": "2015-12-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Paul Clemens assigned to New Orleans Zephyrs."
+    },
+    {
+      "id": 272702,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2016-06-19",
+      "effectiveDate": "2016-06-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Miami Marlins selected the contract of RHP Paul Clemens from New Orleans Zephyrs."
+    },
+    {
+      "id": 275722,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2016-06-28",
+      "effectiveDate": "2016-06-28",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "San Diego Padres claimed RHP Paul Clemens off waivers from Miami Marlins."
+    },
+    {
+      "id": 276413,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2016-07-01",
+      "effectiveDate": "2016-07-01",
+      "resolutionDate": "2016-07-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres activated RHP Paul Clemens."
+    },
+    {
+      "id": 300933,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2017-03-20",
+      "effectiveDate": "2017-03-20",
+      "resolutionDate": "2017-03-20",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "San Diego Padres released RHP Paul Clemens."
+    },
+    {
+      "id": 304504,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2017-03-30",
+      "effectiveDate": "2017-03-30",
+      "resolutionDate": "2017-03-30",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent RHP Paul Clemens to a minor league contract."
+    },
+    {
+      "id": 304505,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2017-04-06",
+      "effectiveDate": "2017-04-06",
+      "resolutionDate": "2017-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Paul Clemens assigned to Chattanooga Lookouts."
+    },
+    {
+      "id": 310684,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2017-05-15",
+      "effectiveDate": "2017-05-15",
+      "resolutionDate": "2017-05-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chattanooga Lookouts placed RHP Paul Clemens on the 7-day disabled list."
+    },
+    {
+      "id": 316449,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2017-06-17",
+      "effectiveDate": "2017-06-17",
+      "resolutionDate": "2017-06-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chattanooga Lookouts activated RHP Paul Clemens from the 7-day disabled list."
+    },
+    {
+      "id": 326436,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2017-07-28",
+      "effectiveDate": "2017-07-28",
+      "resolutionDate": "2017-07-28",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Chattanooga Lookouts released RHP Paul Clemens."
+    },
+    {
+      "id": 335207,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2017-10-14",
+      "effectiveDate": "2017-10-14",
+      "resolutionDate": "2017-10-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Paul Clemens assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 344854,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 496,
+        "name": "Leones de Yucatan",
+        "link": "/api/v1/teams/496"
+      },
+      "date": "2018-03-22",
+      "effectiveDate": "2018-03-22",
+      "resolutionDate": "2018-03-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Paul Clemens assigned to Leones de Yucatan."
+    },
+    {
+      "id": 346160,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 496,
+        "name": "Leones de Yucatan",
+        "link": "/api/v1/teams/496"
+      },
+      "date": "2018-03-30",
+      "effectiveDate": "2018-03-30",
+      "resolutionDate": "2018-03-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Leones de Yucatan placed RHP Paul Clemens on the reserve list."
+    },
+    {
+      "id": 349575,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 496,
+        "name": "Leones de Yucatan",
+        "link": "/api/v1/teams/496"
+      },
+      "date": "2018-04-14",
+      "effectiveDate": "2018-04-14",
+      "resolutionDate": "2018-04-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Leones de Yucatan activated RHP Paul Clemens."
+    },
+    {
+      "id": 355847,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 496,
+        "name": "Leones de Yucatan",
+        "link": "/api/v1/teams/496"
+      },
+      "date": "2018-04-14",
+      "effectiveDate": "2018-04-14",
+      "resolutionDate": "2018-04-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Leones de Yucatan placed RHP Paul Clemens on the reserve list."
+    },
+    {
+      "id": 398292,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 5431,
+        "name": "High Point Rockers",
+        "link": "/api/v1/teams/5431"
+      },
+      "date": "2019-04-24",
+      "effectiveDate": "2019-04-24",
+      "resolutionDate": "2019-04-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "High Point Rockers signed free agent RHP Paul Clemens."
+    },
+    {
+      "id": 403535,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 5431,
+        "name": "High Point Rockers",
+        "link": "/api/v1/teams/5431"
+      },
+      "date": "2019-05-28",
+      "effectiveDate": "2019-05-28",
+      "resolutionDate": "2019-05-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "High Point Rockers placed RHP Paul Clemens on the 7-day injured list."
+    },
+    {
+      "id": 417015,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 5431,
+        "name": "High Point Rockers",
+        "link": "/api/v1/teams/5431"
+      },
+      "date": "2019-07-12",
+      "effectiveDate": "2019-07-12",
+      "resolutionDate": "2019-07-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "High Point Rockers activated RHP Paul Clemens from the 7-day injured list."
+    },
+    {
+      "id": 420880,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 5431,
+        "name": "High Point Rockers",
+        "link": "/api/v1/teams/5431"
+      },
+      "date": "2019-07-31",
+      "effectiveDate": "2019-07-31",
+      "resolutionDate": "2019-07-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "High Point Rockers placed RHP Paul Clemens on the temporarily inactive list."
+    },
+    {
+      "id": 421515,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 5431,
+        "name": "High Point Rockers",
+        "link": "/api/v1/teams/5431"
+      },
+      "date": "2019-08-02",
+      "effectiveDate": "2019-08-02",
+      "resolutionDate": "2019-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "High Point Rockers activated RHP Paul Clemens from the temporarily inactive list."
+    },
+    {
+      "id": 422885,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 5431,
+        "name": "High Point Rockers",
+        "link": "/api/v1/teams/5431"
+      },
+      "date": "2019-08-09",
+      "effectiveDate": "2019-08-09",
+      "resolutionDate": "2019-08-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "High Point Rockers placed RHP Paul Clemens on the temporarily inactive list."
+    },
+    {
+      "id": 423178,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 5431,
+        "name": "High Point Rockers",
+        "link": "/api/v1/teams/5431"
+      },
+      "date": "2019-08-11",
+      "effectiveDate": "2019-08-11",
+      "resolutionDate": "2019-08-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "High Point Rockers activated RHP Paul Clemens from the temporarily inactive list."
+    },
+    {
+      "id": 423362,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 5431,
+        "name": "High Point Rockers",
+        "link": "/api/v1/teams/5431"
+      },
+      "date": "2019-08-12",
+      "effectiveDate": "2019-08-12",
+      "resolutionDate": "2019-08-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "High Point Rockers placed RHP Paul Clemens on the temporarily inactive list."
+    },
+    {
+      "id": 423713,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 5431,
+        "name": "High Point Rockers",
+        "link": "/api/v1/teams/5431"
+      },
+      "date": "2019-08-14",
+      "effectiveDate": "2019-08-14",
+      "resolutionDate": "2019-08-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "High Point Rockers activated RHP Paul Clemens from the temporarily inactive list."
+    },
+    {
+      "id": 427442,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 5431,
+        "name": "High Point Rockers",
+        "link": "/api/v1/teams/5431"
+      },
+      "date": "2019-09-04",
+      "effectiveDate": "2019-09-04",
+      "resolutionDate": "2019-09-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "High Point Rockers placed RHP Paul Clemens on the temporarily inactive list."
+    },
+    {
+      "id": 428042,
+      "person": {
+        "id": 518560,
+        "fullName": "Paul Clemens",
+        "link": "/api/v1/people/518560",
+        "nameSlug": "paul-clemens-518560"
+      },
+      "toTeam": {
+        "id": 5431,
+        "name": "High Point Rockers",
+        "link": "/api/v1/teams/5431"
+      },
+      "date": "2019-09-16",
+      "effectiveDate": "2019-09-16",
+      "resolutionDate": "2019-09-16",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "High Point Rockers released RHP Paul Clemens."
+    }
+  ]
+}

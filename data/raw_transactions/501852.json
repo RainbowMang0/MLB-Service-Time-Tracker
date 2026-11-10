@@ -1,0 +1,927 @@
+{
+  "player_id": 501852,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:f930534ee74640d8a8f5c7ede9d3ddc8b8f1cd748cdc783c232981b0334b8d3f",
+  "transactions": [
+    {
+      "id": 14280,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "toTeam": {
+        "id": 515,
+        "name": "Modesto Roadsters",
+        "link": "/api/v1/teams/515"
+      },
+      "date": "2009-06-29",
+      "effectiveDate": "2009-06-29",
+      "resolutionDate": "2009-06-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Modesto Nuts placed RHP Bruce Billings on the 7-day disabled list."
+    },
+    {
+      "id": 20114,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "toTeam": {
+        "id": 515,
+        "name": "Modesto Roadsters",
+        "link": "/api/v1/teams/515"
+      },
+      "date": "2009-08-06",
+      "effectiveDate": "2009-08-06",
+      "resolutionDate": "2009-08-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Modesto Nuts activated RHP Bruce Billings from the 7-day disabled list."
+    },
+    {
+      "id": 35716,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "fromTeam": {
+        "id": 515,
+        "name": "Modesto Roadsters",
+        "link": "/api/v1/teams/515"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2010-04-03",
+      "effectiveDate": "2010-04-03",
+      "resolutionDate": "2010-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Bruce Billings assigned to Tulsa Drillers from Modesto Nuts."
+    },
+    {
+      "id": 69000,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "toTeam": {
+        "id": 544,
+        "name": "Scottsdale Scorpions",
+        "link": "/api/v1/teams/544"
+      },
+      "date": "2010-08-31",
+      "effectiveDate": "2010-08-31",
+      "resolutionDate": "2010-08-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Bruce Billings assigned to Scottsdale Scorpions."
+    },
+    {
+      "id": 74483,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "fromTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2010-11-19",
+      "effectiveDate": "2010-11-19",
+      "resolutionDate": "2010-11-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Colorado Rockies selected the contract of Bruce Billings from Tulsa Drillers."
+    },
+    {
+      "id": 78857,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 551,
+        "name": "Rocky Mountain Vibes",
+        "link": "/api/v1/teams/551"
+      },
+      "date": "2011-03-13",
+      "effectiveDate": "2011-05-24",
+      "resolutionDate": "2011-03-13",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Colorado Rockies optioned Bruce Billings to Colorado Springs Sky Sox."
+    },
+    {
+      "id": 87140,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "fromTeam": {
+        "id": 551,
+        "name": "Rocky Mountain Vibes",
+        "link": "/api/v1/teams/551"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2011-05-25",
+      "effectiveDate": "2011-05-25",
+      "resolutionDate": "2011-05-25",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Colorado Rockies recalled Bruce Billings from Colorado Springs Sky Sox."
+    },
+    {
+      "id": 87744,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 551,
+        "name": "Rocky Mountain Vibes",
+        "link": "/api/v1/teams/551"
+      },
+      "date": "2011-05-28",
+      "effectiveDate": "2011-05-28",
+      "resolutionDate": "2011-05-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Colorado Rockies optioned Bruce Billings to Colorado Springs Sky Sox."
+    },
+    {
+      "id": 94770,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2011-06-30",
+      "effectiveDate": "2011-06-30",
+      "resolutionDate": "2011-06-30",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Oakland Athletics traded 2B Mark Ellis to Colorado Rockies for RHP Bruce Billings."
+    },
+    {
+      "id": 95008,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2011-07-01",
+      "effectiveDate": "2011-07-01",
+      "resolutionDate": "2011-07-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Bruce Billings assigned to Sacramento River Cats."
+    },
+    {
+      "id": 100277,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2011-08-13",
+      "effectiveDate": "2011-08-14",
+      "resolutionDate": "2011-08-13",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Oakland Athletics recalled Bruce Billings from Sacramento River Cats."
+    },
+    {
+      "id": 101706,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2011-08-26",
+      "effectiveDate": "2011-08-26",
+      "resolutionDate": "2011-08-26",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Oakland Athletics optioned Bruce Billings to Sacramento River Cats."
+    },
+    {
+      "id": 102010,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2011-08-30",
+      "effectiveDate": "2011-08-31",
+      "resolutionDate": "2011-08-30",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Oakland Athletics sent Bruce Billings outright to Sacramento River Cats."
+    },
+    {
+      "id": 113192,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2012-04-03",
+      "effectiveDate": "2012-04-03",
+      "resolutionDate": "2012-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Bruce Billings assigned to Midland RockHounds from Sacramento River Cats."
+    },
+    {
+      "id": 115389,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "fromTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2012-04-16",
+      "effectiveDate": "2012-04-16",
+      "resolutionDate": "2012-04-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Bruce Billings assigned to Sacramento River Cats from Midland RockHounds."
+    },
+    {
+      "id": 137412,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2012-10-14",
+      "effectiveDate": "2012-10-14",
+      "resolutionDate": "2012-10-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Bruce Billings assigned to Estrellas de Oriente."
+    },
+    {
+      "id": 142209,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2013-01-09",
+      "effectiveDate": "2013-01-09",
+      "resolutionDate": "2013-01-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Oakland Athletics invited non-roster RHP Bruce Billings to spring training."
+    },
+    {
+      "id": 174637,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2013-11-04",
+      "effectiveDate": "2013-11-04",
+      "resolutionDate": "2013-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Bruce Billings elected free agency."
+    },
+    {
+      "id": 177721,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2013-12-24",
+      "effectiveDate": "2013-12-24",
+      "resolutionDate": "2013-12-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Yankees signed free agent RHP Bruce Billings to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 184684,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2014-04-03",
+      "effectiveDate": "2014-04-03",
+      "resolutionDate": "2014-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Bruce Billings assigned to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 185076,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2014-04-06",
+      "effectiveDate": "2014-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Bruce Billings assigned to Staten Island Yankees from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 185240,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "fromTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2014-04-08",
+      "effectiveDate": "2014-04-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Bruce Billings assigned to Scranton/Wilkes-Barre RailRiders from Staten Island Yankees."
+    },
+    {
+      "id": 186777,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2014-04-24",
+      "effectiveDate": "2014-04-24",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Yankees selected the contract of RHP Bruce Billings from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 187100,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2014-04-27",
+      "effectiveDate": "2014-04-26",
+      "resolutionDate": "2014-04-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees placed RHP Bruce Billings on the 15-day disabled list retroactive to April 26, 2014. Right forearm strain."
+    },
+    {
+      "id": 189066,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2014-05-15",
+      "effectiveDate": "2014-05-15",
+      "resolutionDate": "2014-05-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees activated RHP Bruce Billings from the 15-day disabled list."
+    },
+    {
+      "id": 188948,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2014-05-15",
+      "effectiveDate": "2014-05-15",
+      "resolutionDate": "2014-05-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Yankees sent RHP Bruce Billings on a rehab assignment to Trenton Thunder."
+    },
+    {
+      "id": 189067,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2014-05-15",
+      "effectiveDate": "2014-05-15",
+      "resolutionDate": "2014-05-15",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Yankees designated RHP Bruce Billings for assignment."
+    },
+    {
+      "id": 189379,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2014-05-18",
+      "effectiveDate": "2014-05-18",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "New York Yankees sent RHP Bruce Billings outright to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 189441,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2014-05-19",
+      "effectiveDate": "2014-05-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Bruce Billings assigned to Staten Island Yankees from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 190291,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "fromTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2014-05-27",
+      "effectiveDate": "2014-05-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Bruce Billings assigned to Scranton/Wilkes-Barre RailRiders from Staten Island Yankees."
+    },
+    {
+      "id": 199182,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2014-07-06",
+      "effectiveDate": "2014-07-08",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Yankees selected the contract of Bruce Billings from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 199601,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2014-07-08",
+      "effectiveDate": "2014-07-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned RHP Bruce Billings to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 201743,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2014-07-23",
+      "effectiveDate": "2014-07-23",
+      "resolutionDate": "2014-07-23",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Yankees designated RHP Bruce Billings for assignment."
+    },
+    {
+      "id": 202146,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2014-07-25",
+      "effectiveDate": "2014-07-25",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "New York Yankees sent RHP Bruce Billings outright to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 203293,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2014-08-02",
+      "effectiveDate": "2014-08-02",
+      "resolutionDate": "2014-08-02",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Scranton/Wilkes-Barre RailRiders released RHP Bruce Billings."
+    },
+    {
+      "id": 203942,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2014-08-07",
+      "effectiveDate": "2014-09-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Bruce Billings assigned to Albuquerque Isotopes from Los Angeles Dodgers."
+    },
+    {
+      "id": 210918,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2014-11-03",
+      "effectiveDate": "2014-11-03",
+      "resolutionDate": "2014-11-03",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Bruce Billings elected free agency."
+    },
+    {
+      "id": 211894,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2014-11-19",
+      "effectiveDate": "2014-11-19",
+      "resolutionDate": "2014-11-19",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Washington Nationals signed free agent RHP Bruce Billings to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 211895,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2014-11-19",
+      "effectiveDate": "2014-11-19",
+      "resolutionDate": "2014-11-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Bruce Billings assigned to Syracuse Chiefs."
+    },
+    {
+      "id": 247814,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2015-10-19",
+      "effectiveDate": "2015-10-19",
+      "resolutionDate": "2015-10-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Bruce Billings assigned to Leones del Escogido."
+    },
+    {
+      "id": 249277,
+      "person": {
+        "id": 501852,
+        "fullName": "Bruce Billings",
+        "link": "/api/v1/people/501852",
+        "nameSlug": "bruce-billings-501852"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2015-11-06",
+      "effectiveDate": "2015-11-06",
+      "resolutionDate": "2015-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Bruce Billings elected free agency."
+    }
+  ]
+}

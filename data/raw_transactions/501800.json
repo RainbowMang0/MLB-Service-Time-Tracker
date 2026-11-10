@@ -1,0 +1,1290 @@
+{
+  "player_id": 501800,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:5e8248c5684e82638895d345da1267f5f213ea90e85d50d4ef36de0ed2a29316",
+  "transactions": [
+    {
+      "id": 370853,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2006-06-13",
+      "effectiveDate": "2006-06-13",
+      "resolutionDate": "2006-06-13",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "St. Louis Cardinals signed 3B Allen Craig."
+    },
+    {
+      "id": 103482,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 1174,
+        "name": "State College Spikes",
+        "link": "/api/v1/teams/1174"
+      },
+      "date": "2006-06-18",
+      "effectiveDate": "2006-06-18",
+      "resolutionDate": "2006-06-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Allen Craig assigned to State College Spikes."
+    },
+    {
+      "id": 13835,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2009-06-26",
+      "effectiveDate": "2009-06-25",
+      "resolutionDate": "2009-06-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Memphis Redbirds placed 1B Allen Craig on the 7-day disabled list retroactive to June 25, 2009."
+    },
+    {
+      "id": 15418,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2009-07-07",
+      "effectiveDate": "2009-07-07",
+      "resolutionDate": "2009-07-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Allen Craig roster status changed by Memphis Redbirds."
+    },
+    {
+      "id": 29174,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2009-11-18",
+      "effectiveDate": "2010-04-26",
+      "resolutionDate": "2009-11-18",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "St. Louis Cardinals selected the contract of Allen Craig from Memphis Redbirds."
+    },
+    {
+      "id": 40628,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2010-04-26",
+      "effectiveDate": "2010-04-26",
+      "resolutionDate": "2010-04-26",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "St. Louis Cardinals optioned Allen Craig to Memphis Redbirds."
+    },
+    {
+      "id": 48860,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2010-05-31",
+      "effectiveDate": "2010-06-01",
+      "resolutionDate": "2010-06-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "St. Louis Cardinals recalled Allen Craig from Memphis Redbirds."
+    },
+    {
+      "id": 49011,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2010-06-01",
+      "effectiveDate": "2010-06-02",
+      "resolutionDate": "2010-06-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "St. Louis Cardinals optioned Allen Craig to Memphis Redbirds."
+    },
+    {
+      "id": 62631,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2010-07-15",
+      "effectiveDate": "2010-07-23",
+      "resolutionDate": "2010-07-15",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "St. Louis Cardinals recalled Allen Craig from Memphis Redbirds."
+    },
+    {
+      "id": 63703,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2010-07-23",
+      "effectiveDate": "2010-07-23",
+      "resolutionDate": "2010-07-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Allen Craig assigned to Memphis Redbirds."
+    },
+    {
+      "id": 63818,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2010-07-23",
+      "effectiveDate": "2010-07-23",
+      "resolutionDate": "2010-07-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "St. Louis Cardinals optioned Allen Craig to Memphis Redbirds."
+    },
+    {
+      "id": 65446,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2010-08-03",
+      "effectiveDate": "2010-08-04",
+      "resolutionDate": "2010-08-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "St. Louis Cardinals recalled Allen Craig from Memphis Redbirds."
+    },
+    {
+      "id": 68737,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2010-08-30",
+      "effectiveDate": "2010-08-31",
+      "resolutionDate": "2010-08-30",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "St. Louis Cardinals optioned Allen Craig to Memphis Redbirds."
+    },
+    {
+      "id": 70259,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2010-09-18",
+      "effectiveDate": "2010-09-19",
+      "resolutionDate": "2010-09-18",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "St. Louis Cardinals recalled Allen Craig from Memphis Redbirds."
+    },
+    {
+      "id": 83634,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2011-04-19",
+      "effectiveDate": "2011-04-17",
+      "resolutionDate": "2011-04-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals placed LF Allen Craig on the 15-day disabled list retroactive to April 17, 2011. Left groin strain."
+    },
+    {
+      "id": 84458,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 440,
+        "name": "Ozarks Springbirds",
+        "link": "/api/v1/teams/440"
+      },
+      "date": "2011-04-29",
+      "effectiveDate": "2011-04-29",
+      "resolutionDate": "2011-04-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent LF Allen Craig on a rehab assignment to Springfield Cardinals."
+    },
+    {
+      "id": 84687,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2011-05-02",
+      "effectiveDate": "2011-05-02",
+      "resolutionDate": "2011-05-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals activated LF Allen Craig from the 15-day disabled list."
+    },
+    {
+      "id": 89916,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2011-06-12",
+      "effectiveDate": "2011-06-08",
+      "resolutionDate": "2011-06-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals placed LF Allen Craig on the 15-day disabled list retroactive to June 8, 2011. right knee contusion"
+    },
+    {
+      "id": 97906,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2011-07-23",
+      "effectiveDate": "2011-07-23",
+      "resolutionDate": "2011-07-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent 2B Allen Craig on a rehab assignment to Memphis Redbirds."
+    },
+    {
+      "id": 99988,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2011-08-10",
+      "effectiveDate": "2011-08-10",
+      "resolutionDate": "2011-08-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals activated LF Allen Craig from the 15-day disabled list."
+    },
+    {
+      "id": 112430,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2012-04-01",
+      "effectiveDate": "2012-03-26",
+      "resolutionDate": "2012-03-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals placed LF Allen Craig on the 15-day disabled list retroactive to March 26, 2012. Recovering from November 2011 right knee surgery."
+    },
+    {
+      "id": 115785,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 279,
+        "name": "Palm Beach Cardinals",
+        "link": "/api/v1/teams/279"
+      },
+      "date": "2012-04-21",
+      "effectiveDate": "2012-04-21",
+      "resolutionDate": "2012-04-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent LF Allen Craig on a rehab assignment to Palm Beach Cardinals."
+    },
+    {
+      "id": 116290,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2012-04-26",
+      "effectiveDate": "2012-04-26",
+      "resolutionDate": "2012-04-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent LF Allen Craig on a rehab assignment to Memphis Redbirds."
+    },
+    {
+      "id": 116676,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2012-05-01",
+      "effectiveDate": "2012-05-01",
+      "resolutionDate": "2012-05-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals activated RF Allen Craig from the 15-day disabled list."
+    },
+    {
+      "id": 118480,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2012-05-18",
+      "effectiveDate": "2012-05-17",
+      "resolutionDate": "2012-05-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals placed RF Allen Craig on the 15-day disabled list retroactive to May 17, 2012. Left hamstring strain."
+    },
+    {
+      "id": 120134,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2012-06-01",
+      "effectiveDate": "2012-06-01",
+      "resolutionDate": "2012-06-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals activated 1B Allen Craig from the 15-day disabled list."
+    },
+    {
+      "id": 171755,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2013-10-03",
+      "effectiveDate": "2013-10-03",
+      "resolutionDate": "2013-10-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals reassigned 1B Allen Craig to the minor leagues."
+    },
+    {
+      "id": 173231,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2013-10-23",
+      "effectiveDate": "2013-10-23",
+      "resolutionDate": "2013-10-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals activated RF Allen Craig."
+    },
+    {
+      "id": 202819,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2014-07-31",
+      "effectiveDate": "2014-07-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Boston Red Sox traded RHP John Lackey, LHP Corey Littrell and cash to St. Louis Cardinals for RF Allen Craig and RHP Joe Kelly."
+    },
+    {
+      "id": 203079,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2014-08-01",
+      "effectiveDate": "2014-08-01",
+      "resolutionDate": "2014-08-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Boston Red Sox activated RF Allen Craig."
+    },
+    {
+      "id": 203708,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2014-08-05",
+      "effectiveDate": "2014-08-02",
+      "resolutionDate": "2014-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Boston Red Sox placed RF Allen Craig on the 15-day disabled list retroactive to August 2, 2014. Left foot sprain."
+    },
+    {
+      "id": 205351,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2014-08-18",
+      "effectiveDate": "2014-08-18",
+      "resolutionDate": "2014-08-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Boston Red Sox sent OF Allen Craig on a rehab assignment to Pawtucket Red Sox."
+    },
+    {
+      "id": 205731,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2014-08-21",
+      "effectiveDate": "2015-05-10",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Boston Red Sox recalled Allen Craig from Pawtucket Red Sox."
+    },
+    {
+      "id": 224874,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2015-05-10",
+      "effectiveDate": "2015-05-10",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Boston Red Sox optioned RF Allen Craig to Pawtucket Red Sox."
+    },
+    {
+      "id": 225855,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2015-05-18",
+      "effectiveDate": "2015-05-18",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Boston Red Sox sent Allen Craig outright to Pawtucket Red Sox."
+    },
+    {
+      "id": 244407,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2015-09-01",
+      "effectiveDate": "2015-09-01",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Boston Red Sox selected the contract of 1B Allen Craig from Pawtucket Red Sox."
+    },
+    {
+      "id": 249433,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2015-11-06",
+      "effectiveDate": "2015-11-06",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Boston Red Sox sent LF Allen Craig outright to Pawtucket Red Sox."
+    },
+    {
+      "id": 253307,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2016-01-13",
+      "effectiveDate": "2016-01-13",
+      "resolutionDate": "2016-01-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Boston Red Sox invited non-roster 1B Allen Craig to spring training."
+    },
+    {
+      "id": 262160,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2016-04-14",
+      "effectiveDate": "2016-04-14",
+      "resolutionDate": "2016-04-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pawtucket Red Sox placed LF Allen Craig on the 7-day disabled list."
+    },
+    {
+      "id": 265709,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2016-05-16",
+      "effectiveDate": "2016-05-16",
+      "resolutionDate": "2016-05-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pawtucket Red Sox activated LF Allen Craig from the 7-day disabled list."
+    },
+    {
+      "id": 266652,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2016-05-24",
+      "effectiveDate": "2016-05-20",
+      "resolutionDate": "2016-05-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pawtucket Red Sox placed LF Allen Craig on the 7-day disabled list retroactive to May 20, 2016."
+    },
+    {
+      "id": 282875,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2016-05-24",
+      "effectiveDate": "2016-05-20",
+      "resolutionDate": "2016-05-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pawtucket Red Sox placed LF Allen Craig on the 7-day disabled list retroactive to May 20, 2016."
+    },
+    {
+      "id": 282874,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 558,
+        "name": "Lowell Spinners",
+        "link": "/api/v1/teams/558"
+      },
+      "date": "2016-07-28",
+      "effectiveDate": "2016-07-28",
+      "resolutionDate": "2016-07-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent LF Allen Craig on a rehab assignment to Lowell Spinners."
+    },
+    {
+      "id": 280914,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 558,
+        "name": "Lowell Spinners",
+        "link": "/api/v1/teams/558"
+      },
+      "date": "2016-07-28",
+      "effectiveDate": "2016-07-28",
+      "resolutionDate": "2016-07-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Pawtucket Red Sox sent LF Allen Craig on a rehab assignment to Lowell Spinners."
+    },
+    {
+      "id": 282202,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "fromTeam": {
+        "id": 558,
+        "name": "Lowell Spinners",
+        "link": "/api/v1/teams/558"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2016-08-04",
+      "effectiveDate": "2016-08-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Allen Craig assigned to Pawtucket Red Sox from Lowell Spinners."
+    },
+    {
+      "id": 282484,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2016-08-04",
+      "effectiveDate": "2016-08-04",
+      "resolutionDate": "2016-08-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pawtucket Red Sox activated LF Allen Craig from the 7-day disabled list."
+    },
+    {
+      "id": 283848,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2016-08-14",
+      "effectiveDate": "2016-08-14",
+      "resolutionDate": "2016-08-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pawtucket Red Sox activated OF Allen Craig from the 7-day disabled list."
+    },
+    {
+      "id": 296745,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2017-01-18",
+      "effectiveDate": "2017-01-18",
+      "resolutionDate": "2017-01-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Boston Red Sox invited non-roster 1B Allen Craig to spring training."
+    },
+    {
+      "id": 321376,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2017-06-30",
+      "effectiveDate": "2017-06-30",
+      "resolutionDate": "2017-06-30",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Pawtucket Red Sox released OF Allen Craig."
+    },
+    {
+      "id": 342002,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2018-01-22",
+      "effectiveDate": "2018-01-22",
+      "resolutionDate": "2018-01-22",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Diego Padres signed free agent OF Allen Craig to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 342001,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2018-02-18",
+      "effectiveDate": "2018-02-18",
+      "resolutionDate": "2018-02-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Allen Craig assigned to El Paso Chihuahuas."
+    },
+    {
+      "id": 350497,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2018-04-20",
+      "effectiveDate": "2018-04-19",
+      "resolutionDate": "2018-04-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "El Paso Chihuahuas placed 1B Allen Craig on the 7-day disabled list retroactive to April 19, 2018."
+    },
+    {
+      "id": 351172,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2018-04-26",
+      "effectiveDate": "2018-04-26",
+      "resolutionDate": "2018-04-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "El Paso Chihuahuas activated 1B Allen Craig from the 7-day disabled list."
+    },
+    {
+      "id": 375886,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2018-08-22",
+      "effectiveDate": "2018-08-22",
+      "resolutionDate": "2018-08-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "El Paso Chihuahuas placed 1B Allen Craig on the temporarily inactive list."
+    },
+    {
+      "id": 376766,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2018-08-28",
+      "effectiveDate": "2018-08-28",
+      "resolutionDate": "2018-08-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "El Paso Chihuahuas activated 1B Allen Craig from the temporarily inactive list."
+    },
+    {
+      "id": 382435,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2018-11-02",
+      "effectiveDate": "2018-11-02",
+      "resolutionDate": "2018-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "1B Allen Craig elected free agency."
+    },
+    {
+      "id": 385377,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2018-12-21",
+      "effectiveDate": "2018-12-21",
+      "resolutionDate": "2018-12-21",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Diego Padres signed free agent 1B Allen Craig to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 385378,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2018-12-21",
+      "effectiveDate": "2018-12-21",
+      "resolutionDate": "2018-12-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Allen Craig assigned to El Paso Chihuahuas."
+    },
+    {
+      "id": 391387,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2019-03-19",
+      "effectiveDate": "2019-03-19",
+      "resolutionDate": "2019-03-19",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "El Paso Chihuahuas released 1B Allen Craig."
+    },
+    {
+      "id": 391386,
+      "person": {
+        "id": 501800,
+        "fullName": "Allen Craig",
+        "link": "/api/v1/people/501800",
+        "nameSlug": "allen-craig-501800"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2019-03-19",
+      "effectiveDate": "2019-03-19",
+      "resolutionDate": "2019-03-19",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "San Diego Padres released 1B Allen Craig."
+    }
+  ]
+}

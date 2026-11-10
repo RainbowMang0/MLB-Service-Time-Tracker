@@ -1,0 +1,751 @@
+{
+  "player_id": 543223,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:ec229790c1ecec3065db1b95bdc528d07db02cb6ae3286befe1a06c8b0b4bd7c",
+  "transactions": [
+    {
+      "id": 9487,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2009-06-14",
+      "effectiveDate": "2009-06-14",
+      "resolutionDate": "2009-06-14",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Toronto Blue Jays signed OF Brad Glenn."
+    },
+    {
+      "id": 10812,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 458,
+        "name": "Auburn Doubledays",
+        "link": "/api/v1/teams/458"
+      },
+      "date": "2009-06-19",
+      "effectiveDate": "2009-06-19",
+      "resolutionDate": "2009-06-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Brad Glenn assigned to Auburn Doubledays from Toronto Blue Jays."
+    },
+    {
+      "id": 35447,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "fromTeam": {
+        "id": 458,
+        "name": "Auburn Doubledays",
+        "link": "/api/v1/teams/458"
+      },
+      "toTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "date": "2010-04-02",
+      "effectiveDate": "2010-04-02",
+      "resolutionDate": "2010-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Brad Glenn assigned to Lansing Lugnuts from Auburn Doubledays."
+    },
+    {
+      "id": 59459,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "date": "2010-06-30",
+      "effectiveDate": "2010-06-30",
+      "resolutionDate": "2010-06-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lansing Lugnuts placed OF Brad Glenn on the 7-day disabled list."
+    },
+    {
+      "id": 61438,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "date": "2010-07-07",
+      "effectiveDate": "2010-07-07",
+      "resolutionDate": "2010-07-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Brad Glenn roster status changed by Lansing Lugnuts."
+    },
+    {
+      "id": 80010,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2011-03-28",
+      "effectiveDate": "2011-03-28",
+      "resolutionDate": "2011-03-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Brad Glenn assigned to Toronto Blue Jays."
+    },
+    {
+      "id": 82322,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "fromTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "toTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "date": "2011-04-06",
+      "effectiveDate": "2011-04-06",
+      "resolutionDate": "2011-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Brad Glenn assigned to Dunedin Blue Jays from Lansing Lugnuts."
+    },
+    {
+      "id": 96703,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "date": "2011-07-12",
+      "effectiveDate": "2011-07-12",
+      "resolutionDate": "2011-07-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Dunedin Blue Jays placed OF Brad Glenn on the 7-day disabled list."
+    },
+    {
+      "id": 97482,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "date": "2011-07-20",
+      "effectiveDate": "2011-07-20",
+      "resolutionDate": "2011-07-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Brad Glenn roster status changed by Dunedin Blue Jays."
+    },
+    {
+      "id": 112156,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "fromTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2012-03-31",
+      "effectiveDate": "2012-03-31",
+      "resolutionDate": "2012-03-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Brad Glenn assigned to New Hampshire Fisher Cats from Dunedin Blue Jays."
+    },
+    {
+      "id": 121980,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2012-06-08",
+      "effectiveDate": "2012-06-08",
+      "resolutionDate": "2012-06-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New Hampshire Fisher Cats placed OF Brad Glenn on the 7-day disabled list."
+    },
+    {
+      "id": 127053,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2012-06-27",
+      "effectiveDate": "2012-06-27",
+      "resolutionDate": "2012-06-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New Hampshire Fisher Cats activated RF Brad Glenn from the 7-day disabled list."
+    },
+    {
+      "id": 144739,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2013-03-12",
+      "effectiveDate": "2013-03-12",
+      "resolutionDate": "2013-03-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Brad Glenn assigned to Toronto Blue Jays."
+    },
+    {
+      "id": 150277,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2013-04-21",
+      "effectiveDate": "2013-04-21",
+      "resolutionDate": "2013-04-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New Hampshire Fisher Cats placed RF Brad Glenn on the temporarily inactive list."
+    },
+    {
+      "id": 150767,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2013-04-26",
+      "effectiveDate": "2013-04-26",
+      "resolutionDate": "2013-04-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Brad Glenn roster status changed by New Hampshire Fisher Cats."
+    },
+    {
+      "id": 161551,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 66,
+        "name": "EAS Eastern Division All-Stars",
+        "link": "/api/v1/teams/66"
+      },
+      "date": "2013-07-09",
+      "effectiveDate": "2013-07-09",
+      "resolutionDate": "2013-07-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Brad Glenn assigned to EAS Eastern Division All-Stars."
+    },
+    {
+      "id": 168225,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "fromTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2013-08-15",
+      "effectiveDate": "2013-08-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Brad Glenn assigned to Buffalo Bisons from New Hampshire Fisher Cats."
+    },
+    {
+      "id": 173963,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2013-11-01",
+      "effectiveDate": "2013-11-01",
+      "resolutionDate": "2013-11-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Brad Glenn assigned to Tiburones de La Guaira."
+    },
+    {
+      "id": 180629,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2014-03-11",
+      "effectiveDate": "2014-03-11",
+      "resolutionDate": "2014-03-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Brad Glenn assigned to Toronto Blue Jays."
+    },
+    {
+      "id": 183322,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2014-03-31",
+      "effectiveDate": "2014-05-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Brad Glenn assigned to New Hampshire Fisher Cats from Buffalo Bisons."
+    },
+    {
+      "id": 189133,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "fromTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2014-05-16",
+      "effectiveDate": "2014-05-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Brad Glenn assigned to Buffalo Bisons from New Hampshire Fisher Cats."
+    },
+    {
+      "id": 191470,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2014-06-02",
+      "effectiveDate": "2014-05-31",
+      "resolutionDate": "2014-05-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Buffalo Bisons placed OF Brad Glenn on the 7-day disabled list retroactive to May 31, 2014."
+    },
+    {
+      "id": 192211,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2014-06-07",
+      "effectiveDate": "2014-06-07",
+      "resolutionDate": "2014-06-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Buffalo Bisons activated OF Brad Glenn from the 7-day disabled list."
+    },
+    {
+      "id": 197306,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2014-06-25",
+      "effectiveDate": "2014-06-25",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Toronto Blue Jays selected the contract of RF Brad Glenn from Buffalo Bisons."
+    },
+    {
+      "id": 199212,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2014-07-06",
+      "effectiveDate": "2014-07-06",
+      "resolutionDate": "2014-07-06",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Toronto Blue Jays designated RF Brad Glenn for assignment."
+    },
+    {
+      "id": 199608,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2014-07-08",
+      "effectiveDate": "2014-07-08",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Toronto Blue Jays sent RF Brad Glenn outright to Buffalo Bisons."
+    },
+    {
+      "id": 205456,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2014-08-19",
+      "effectiveDate": "2014-08-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Brad Glenn assigned to New Hampshire Fisher Cats from Buffalo Bisons."
+    },
+    {
+      "id": 213533,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2014-11-07",
+      "effectiveDate": "2014-11-07",
+      "resolutionDate": "2014-11-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "OF Brad Glenn roster status changed by Leones del Escogido."
+    },
+    {
+      "id": 211165,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2014-11-07",
+      "effectiveDate": "2014-11-07",
+      "resolutionDate": "2014-11-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Brad Glenn assigned to Leones del Escogido."
+    },
+    {
+      "id": 213534,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2014-12-26",
+      "effectiveDate": "2014-12-26",
+      "resolutionDate": "2014-12-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Brad Glenn assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 218297,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2015-03-28",
+      "effectiveDate": "2015-03-28",
+      "resolutionDate": "2015-03-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Brad Glenn assigned to Toronto Blue Jays."
+    },
+    {
+      "id": 221530,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2015-04-09",
+      "effectiveDate": "2015-04-09",
+      "resolutionDate": "2015-04-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Brad Glenn assigned to Buffalo Bisons."
+    },
+    {
+      "id": 236925,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2015-07-08",
+      "effectiveDate": "2015-07-08",
+      "resolutionDate": "2015-07-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Buffalo Bisons placed OF Brad Glenn on the 7-day disabled list."
+    },
+    {
+      "id": 245936,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2015-09-24",
+      "effectiveDate": "2015-09-24",
+      "resolutionDate": "2015-09-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Buffalo Bisons activated OF Brad Glenn from the 7-day disabled list."
+    },
+    {
+      "id": 249459,
+      "person": {
+        "id": 543223,
+        "fullName": "Brad Glenn",
+        "link": "/api/v1/people/543223",
+        "nameSlug": "brad-glenn-543223"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2015-11-06",
+      "effectiveDate": "2015-11-06",
+      "resolutionDate": "2015-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "OF Brad Glenn elected free agency."
+    }
+  ]
+}

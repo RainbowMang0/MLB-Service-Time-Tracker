@@ -1,0 +1,1650 @@
+{
+  "player_id": 571863,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:7824f5ae3a12ae04c33bd4238e2e424c6dcb3aedc122c984bedc9b339f1e60ab",
+  "transactions": [
+    {
+      "id": 123972,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2012-06-15",
+      "effectiveDate": "2012-06-15",
+      "resolutionDate": "2012-06-15",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "New York Mets signed RHP Matthew Koch."
+    },
+    {
+      "id": 123973,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2012-06-16",
+      "effectiveDate": "2012-06-16",
+      "resolutionDate": "2012-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Matthew Koch assigned to Brooklyn Cyclones."
+    },
+    {
+      "id": 148368,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "toTeam": {
+        "id": 543,
+        "name": "Savannah Sand Gnats",
+        "link": "/api/v1/teams/543"
+      },
+      "date": "2013-04-03",
+      "effectiveDate": "2013-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matthew Koch assigned to Savannah Sand Gnats from Brooklyn Cyclones."
+    },
+    {
+      "id": 166792,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 543,
+        "name": "Savannah Sand Gnats",
+        "link": "/api/v1/teams/543"
+      },
+      "date": "2013-08-03",
+      "effectiveDate": "2013-08-03",
+      "resolutionDate": "2013-08-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Savannah Sand Gnats placed RHP Matthew Koch on the 7-day disabled list. head injury"
+    },
+    {
+      "id": 172149,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 543,
+        "name": "Savannah Sand Gnats",
+        "link": "/api/v1/teams/543"
+      },
+      "date": "2013-09-24",
+      "effectiveDate": "2013-09-24",
+      "resolutionDate": "2013-09-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Savannah Sand Gnats activated RHP Matthew Koch from the 7-day disabled list."
+    },
+    {
+      "id": 184751,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 543,
+        "name": "Savannah Sand Gnats",
+        "link": "/api/v1/teams/543"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2014-04-03",
+      "effectiveDate": "2014-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matthew Koch assigned to St. Lucie Mets from Savannah Sand Gnats."
+    },
+    {
+      "id": 206753,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2014-09-01",
+      "effectiveDate": "2014-09-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Koch assigned to Binghamton Mets from St. Lucie Mets."
+    },
+    {
+      "id": 243935,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "toTeam": {
+        "id": 417,
+        "name": "Mobile BayBears",
+        "link": "/api/v1/teams/417"
+      },
+      "date": "2015-08-30",
+      "effectiveDate": "2015-08-30",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Arizona Diamondbacks Traded RHP Addison Reed to New York Mets; St. Lucie Mets Traded Miller Diaz to Visalia Rawhide and Binghamton Mets Traded RHP Matt Koch to Mobile BayBears."
+    },
+    {
+      "id": 250498,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 417,
+        "name": "Mobile BayBears",
+        "link": "/api/v1/teams/417"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2015-11-20",
+      "effectiveDate": "2016-03-14",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Arizona Diamondbacks selected the contract of Matt Koch from Mobile BayBears."
+    },
+    {
+      "id": 256907,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 417,
+        "name": "Mobile BayBears",
+        "link": "/api/v1/teams/417"
+      },
+      "date": "2016-03-14",
+      "effectiveDate": "2016-03-14",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Matt Koch to Mobile BayBears."
+    },
+    {
+      "id": 263028,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 417,
+        "name": "Mobile BayBears",
+        "link": "/api/v1/teams/417"
+      },
+      "date": "2016-04-22",
+      "effectiveDate": "2016-04-22",
+      "resolutionDate": "2016-04-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mobile BayBears placed RHP Matt Koch on the 7-day disabled list."
+    },
+    {
+      "id": 266345,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 417,
+        "name": "Mobile BayBears",
+        "link": "/api/v1/teams/417"
+      },
+      "date": "2016-05-21",
+      "effectiveDate": "2016-05-21",
+      "resolutionDate": "2016-05-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mobile BayBears activated RHP Matt Koch from the 7-day disabled list."
+    },
+    {
+      "id": 267373,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 417,
+        "name": "Mobile BayBears",
+        "link": "/api/v1/teams/417"
+      },
+      "date": "2016-05-30",
+      "effectiveDate": "2016-05-28",
+      "resolutionDate": "2016-05-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mobile BayBears placed RHP Matt Koch on the 7-day disabled list retroactive to May 28, 2016."
+    },
+    {
+      "id": 270608,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 417,
+        "name": "Mobile BayBears",
+        "link": "/api/v1/teams/417"
+      },
+      "date": "2016-06-13",
+      "effectiveDate": "2016-06-13",
+      "resolutionDate": "2016-06-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mobile BayBears activated RHP Matt Koch from the 7-day disabled list."
+    },
+    {
+      "id": 281554,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 417,
+        "name": "Mobile BayBears",
+        "link": "/api/v1/teams/417"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2016-08-01",
+      "effectiveDate": "2016-08-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Koch assigned to Reno Aces from Mobile BayBears."
+    },
+    {
+      "id": 286793,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2016-09-06",
+      "effectiveDate": "2017-03-20",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled Matt Koch from Reno Aces."
+    },
+    {
+      "id": 292043,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2016-11-07",
+      "effectiveDate": "2016-11-07",
+      "resolutionDate": "2016-11-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Koch assigned to Tigres del Licey."
+    },
+    {
+      "id": 300910,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2017-03-20",
+      "effectiveDate": "2017-03-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Matt Koch to Reno Aces."
+    },
+    {
+      "id": 305030,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2017-04-09",
+      "effectiveDate": "2017-04-09",
+      "resolutionDate": "2017-04-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces placed RHP Matt Koch on the 7-day disabled list."
+    },
+    {
+      "id": 317705,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2017-04-09",
+      "effectiveDate": "2017-06-20",
+      "resolutionDate": "2017-06-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces placed RHP Matt Koch on the 7-day disabled list."
+    },
+    {
+      "id": 317706,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2017-04-09",
+      "effectiveDate": "2017-06-20",
+      "resolutionDate": "2017-06-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces placed RHP Matt Koch on the 7-day disabled list."
+    },
+    {
+      "id": 317703,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 419,
+        "name": "Hillsboro Hops",
+        "link": "/api/v1/teams/419"
+      },
+      "date": "2017-06-20",
+      "effectiveDate": "2017-06-20",
+      "resolutionDate": "2017-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Koch assigned to Hillsboro Hops."
+    },
+    {
+      "id": 317704,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 419,
+        "name": "Hillsboro Hops",
+        "link": "/api/v1/teams/419"
+      },
+      "date": "2017-06-20",
+      "effectiveDate": "2017-06-20",
+      "resolutionDate": "2017-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Reno Aces sent RHP Matt Koch on a rehab assignment to Hillsboro Hops."
+    },
+    {
+      "id": 321410,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2017-06-30",
+      "effectiveDate": "2017-06-30",
+      "resolutionDate": "2017-06-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Koch assigned to Reno Aces."
+    },
+    {
+      "id": 325077,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2017-07-20",
+      "effectiveDate": "2017-07-22",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled Matt Koch from Reno Aces."
+    },
+    {
+      "id": 325485,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2017-07-22",
+      "effectiveDate": "2017-07-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Matt Koch to Reno Aces."
+    },
+    {
+      "id": 327827,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2017-07-25",
+      "effectiveDate": "2017-07-25",
+      "resolutionDate": "2017-07-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces placed RHP Matt Koch on the 7-day disabled list."
+    },
+    {
+      "id": 327977,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2017-08-05",
+      "effectiveDate": "2017-08-05",
+      "resolutionDate": "2017-08-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces activated RHP Matt Koch from the 7-day disabled list."
+    },
+    {
+      "id": 330001,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2017-08-21",
+      "effectiveDate": "2017-08-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled Matt Koch from Reno Aces."
+    },
+    {
+      "id": 330399,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2017-08-24",
+      "effectiveDate": "2017-08-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Matt Koch to Reno Aces."
+    },
+    {
+      "id": 333306,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2017-10-02",
+      "effectiveDate": "2017-10-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled RHP Matt Koch from Reno Aces."
+    },
+    {
+      "id": 333485,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2017-10-04",
+      "effectiveDate": "2017-10-04",
+      "resolutionDate": "2017-10-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks reassigned RHP Matt Koch to the minor leagues."
+    },
+    {
+      "id": 340995,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2017-10-10",
+      "effectiveDate": "2018-03-22",
+      "resolutionDate": "2017-10-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Matt Koch roster status changed by Arizona Diamondbacks."
+    },
+    {
+      "id": 344936,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2018-03-22",
+      "effectiveDate": "2018-03-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Matt Koch to Reno Aces."
+    },
+    {
+      "id": 347427,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2018-04-03",
+      "effectiveDate": "2018-04-08",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled Matt Koch from Reno Aces."
+    },
+    {
+      "id": 348589,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2018-04-08",
+      "effectiveDate": "2018-04-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Matt Koch to Reno Aces."
+    },
+    {
+      "id": 350460,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2018-04-20",
+      "effectiveDate": "2018-06-20",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled Matt Koch from Reno Aces."
+    },
+    {
+      "id": 363278,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2018-06-20",
+      "effectiveDate": "2018-06-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Matt Koch to Reno Aces."
+    },
+    {
+      "id": 367245,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2018-07-08",
+      "effectiveDate": "2018-07-08",
+      "resolutionDate": "2018-07-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces placed RHP Matt Koch on the temporarily inactive list."
+    },
+    {
+      "id": 368122,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2018-07-12",
+      "effectiveDate": "2018-07-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled Matt Koch from Reno Aces."
+    },
+    {
+      "id": 370632,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2018-07-24",
+      "effectiveDate": "2018-07-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Matt Koch to Reno Aces."
+    },
+    {
+      "id": 377488,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2018-09-01",
+      "effectiveDate": "2018-09-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled RHP Matt Koch from Reno Aces."
+    },
+    {
+      "id": 398900,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2019-04-28",
+      "effectiveDate": "2019-04-28",
+      "resolutionDate": "2019-04-28",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Arizona Diamondbacks designated RHP Matt Koch for assignment."
+    },
+    {
+      "id": 399599,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2019-05-03",
+      "effectiveDate": "2019-05-03",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Arizona Diamondbacks sent RHP Matt Koch outright to Reno Aces."
+    },
+    {
+      "id": 432576,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2019-11-04",
+      "effectiveDate": "2019-11-04",
+      "resolutionDate": "2019-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Matt Koch elected free agency."
+    },
+    {
+      "id": 480997,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2021-04-23",
+      "effectiveDate": "2021-04-23",
+      "resolutionDate": "2021-04-23",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cleveland Indians signed free agent RHP Matt Koch to a minor league contract."
+    },
+    {
+      "id": 481005,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 5374,
+        "name": "ACL Guardians",
+        "link": "/api/v1/teams/5374"
+      },
+      "date": "2021-04-23",
+      "effectiveDate": "2021-04-23",
+      "resolutionDate": "2021-04-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Koch assigned to AZL Indians Blue."
+    },
+    {
+      "id": 486858,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 5374,
+        "name": "ACL Guardians",
+        "link": "/api/v1/teams/5374"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2021-05-15",
+      "effectiveDate": "2021-05-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Koch assigned to Columbus Clippers from AZL Indians Blue."
+    },
+    {
+      "id": 523999,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2021-11-07",
+      "effectiveDate": "2021-11-07",
+      "resolutionDate": "2021-11-07",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Matt Koch elected free agency."
+    },
+    {
+      "id": 605675,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2022-03-10",
+      "effectiveDate": "2022-03-10",
+      "resolutionDate": "2022-03-10",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Seattle Mariners signed free agent RHP Matt Koch to a minor league contract."
+    },
+    {
+      "id": 605676,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2022-03-11",
+      "effectiveDate": "2022-03-11",
+      "resolutionDate": "2022-03-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Koch assigned to Tacoma Rainiers."
+    },
+    {
+      "id": 611705,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2022-03-18",
+      "effectiveDate": "2022-03-18",
+      "resolutionDate": "2022-03-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Matt Koch roster status changed by Seattle Mariners."
+    },
+    {
+      "id": 606900,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2022-03-18",
+      "effectiveDate": "2022-03-18",
+      "resolutionDate": "2022-03-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Koch assigned to Seattle Mariners."
+    },
+    {
+      "id": 614734,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2022-04-13",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Seattle Mariners selected the contract of RHP Matt Koch,  and  from Tacoma Rainiers."
+    },
+    {
+      "id": 618205,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2022-04-29",
+      "effectiveDate": "2022-04-29",
+      "resolutionDate": "2022-04-29",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Seattle Mariners designated RHP Matt Koch for assignment."
+    },
+    {
+      "id": 619565,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2022-05-05",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Seattle Mariners sent RHP Matt Koch outright to Tacoma Rainiers."
+    },
+    {
+      "id": 640579,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2022-07-26",
+      "effectiveDate": "2022-07-26",
+      "resolutionDate": "2022-07-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tacoma Rainiers placed RHP Matt Koch on the 7-day injured list."
+    },
+    {
+      "id": 646278,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2022-08-13",
+      "effectiveDate": "2022-08-13",
+      "resolutionDate": "2022-08-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tacoma Rainiers activated RHP Matt Koch from the 7-day injured list."
+    },
+    {
+      "id": 656053,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2022-10-13",
+      "effectiveDate": "2022-10-13",
+      "resolutionDate": "2022-10-13",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Matt Koch elected free agency."
+    },
+    {
+      "id": 661850,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2022-11-22",
+      "effectiveDate": "2022-11-22",
+      "resolutionDate": "2022-11-22",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Colorado Rockies signed free agent RHP Matt Koch to a minor league contract."
+    },
+    {
+      "id": 661849,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2022-11-29",
+      "effectiveDate": "2022-11-29",
+      "resolutionDate": "2022-11-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Koch assigned to Albuquerque Isotopes."
+    },
+    {
+      "id": 671326,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2023-01-27",
+      "effectiveDate": "2023-01-27",
+      "resolutionDate": "2023-01-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Matt Koch roster status changed by Colorado Rockies."
+    },
+    {
+      "id": 666826,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2023-01-27",
+      "effectiveDate": "2023-01-27",
+      "resolutionDate": "2023-01-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Colorado Rockies invited non-roster RHP Matt Koch to spring training."
+    },
+    {
+      "id": 678916,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2023-01-27",
+      "effectiveDate": "2023-01-27",
+      "resolutionDate": "2023-01-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Matt Koch roster status changed by Colorado Rockies."
+    },
+    {
+      "id": 707275,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2023-06-27",
+      "effectiveDate": "2023-06-27",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Colorado Rockies selected the contract of RHP Matt Koch from Albuquerque Isotopes."
+    },
+    {
+      "id": 729071,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2023-10-18",
+      "effectiveDate": "2023-10-18",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Colorado Rockies sent RHP Matt Koch outright to Albuquerque Isotopes."
+    },
+    {
+      "id": 729467,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2023-10-20",
+      "effectiveDate": "2023-10-20",
+      "resolutionDate": "2023-10-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Matt Koch elected free agency."
+    },
+    {
+      "id": 739062,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2023-12-18",
+      "effectiveDate": "2023-12-18",
+      "resolutionDate": "2023-12-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Matt Koch roster status changed by Colorado Rockies."
+    },
+    {
+      "id": 735415,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2023-12-18",
+      "effectiveDate": "2023-12-18",
+      "resolutionDate": "2023-12-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Colorado Rockies signed free agent RHP Matt Koch to a minor league contract."
+    },
+    {
+      "id": 735416,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2023-12-19",
+      "effectiveDate": "2023-12-19",
+      "resolutionDate": "2023-12-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Koch assigned to Albuquerque Isotopes."
+    },
+    {
+      "id": 772687,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2024-05-19",
+      "effectiveDate": "2024-05-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Colorado Rockies selected the contract of RHP Matt Koch from Albuquerque Isotopes."
+    },
+    {
+      "id": 773806,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2024-05-24",
+      "effectiveDate": "2024-05-24",
+      "resolutionDate": "2024-05-24",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Colorado Rockies designated RHP Matt Koch for assignment."
+    },
+    {
+      "id": 774166,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2024-05-27",
+      "effectiveDate": "2024-05-27",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Colorado Rockies sent RHP Matt Koch outright to Albuquerque Isotopes."
+    },
+    {
+      "id": 799412,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2024-09-17",
+      "effectiveDate": "2024-09-17",
+      "resolutionDate": "2024-09-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Albuquerque Isotopes placed RHP Matt Koch on the temporarily inactive list."
+    },
+    {
+      "id": 799638,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2024-09-19",
+      "effectiveDate": "2024-09-19",
+      "resolutionDate": "2024-09-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Albuquerque Isotopes activated RHP Matt Koch from the temporarily inactive list."
+    },
+    {
+      "id": 800739,
+      "person": {
+        "id": 571863,
+        "fullName": "Matt Koch",
+        "link": "/api/v1/people/571863",
+        "nameSlug": "matt-koch-571863"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2024-09-30",
+      "effectiveDate": "2024-09-30",
+      "resolutionDate": "2024-09-30",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Matt Koch elected free agency."
+    }
+  ]
+}

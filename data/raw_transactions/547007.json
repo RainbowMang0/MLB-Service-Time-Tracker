@@ -1,0 +1,1344 @@
+{
+  "player_id": 547007,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:d2ed178fe5c90da7eda266100c2cbb12da1d476830ccf7d4f7ff9d0d3680b395",
+  "transactions": [
+    {
+      "id": 123985,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2012-06-15",
+      "effectiveDate": "2012-06-15",
+      "resolutionDate": "2012-06-15",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "New York Mets signed RHP Robert Whalen."
+    },
+    {
+      "id": 123986,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2012-06-16",
+      "effectiveDate": "2012-06-16",
+      "resolutionDate": "2012-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Robert Whalen assigned to Brooklyn Cyclones."
+    },
+    {
+      "id": 134132,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "toTeam": {
+        "id": 506,
+        "name": "Kingsport Axmen",
+        "link": "/api/v1/teams/506"
+      },
+      "date": "2012-08-25",
+      "effectiveDate": "2012-08-25",
+      "resolutionDate": "2012-08-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Robert Whalen assigned to Kingsport Mets from Brooklyn Cyclones."
+    },
+    {
+      "id": 182883,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 506,
+        "name": "Kingsport Axmen",
+        "link": "/api/v1/teams/506"
+      },
+      "toTeam": {
+        "id": 543,
+        "name": "Savannah Sand Gnats",
+        "link": "/api/v1/teams/543"
+      },
+      "date": "2014-03-30",
+      "effectiveDate": "2014-03-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Robert Whalen assigned to Savannah Sand Gnats from Kingsport Mets."
+    },
+    {
+      "id": 187658,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 543,
+        "name": "Savannah Sand Gnats",
+        "link": "/api/v1/teams/543"
+      },
+      "date": "2014-05-02",
+      "effectiveDate": "2014-05-02",
+      "resolutionDate": "2014-05-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Savannah Sand Gnats placed RHP Robert Whalen on the 7-day disabled list. Hand infection."
+    },
+    {
+      "id": 198957,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 543,
+        "name": "Savannah Sand Gnats",
+        "link": "/api/v1/teams/543"
+      },
+      "toTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "date": "2014-07-05",
+      "effectiveDate": "2014-07-05",
+      "resolutionDate": "2014-07-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Savannah Sand Gnats sent RHP Robert Whalen on a rehab assignment to GCL Mets."
+    },
+    {
+      "id": 201491,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 543,
+        "name": "Savannah Sand Gnats",
+        "link": "/api/v1/teams/543"
+      },
+      "date": "2014-07-21",
+      "effectiveDate": "2014-07-21",
+      "resolutionDate": "2014-07-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Savannah Sand Gnats activated RHP Rob Whalen from the 7-day disabled list."
+    },
+    {
+      "id": 219516,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 543,
+        "name": "Savannah Sand Gnats",
+        "link": "/api/v1/teams/543"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2015-04-03",
+      "effectiveDate": "2015-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Rob Whalen assigned to St. Lucie Mets from Savannah Sand Gnats."
+    },
+    {
+      "id": 236112,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2015-07-02",
+      "effectiveDate": "2015-07-02",
+      "resolutionDate": "2015-07-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Lucie Mets placed RHP Rob Whalen on the 7-day disabled list."
+    },
+    {
+      "id": 238249,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2015-07-17",
+      "effectiveDate": "2015-07-17",
+      "resolutionDate": "2015-07-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Lucie Mets activated RHP Rob Whalen from the 7-day disabled list."
+    },
+    {
+      "id": 239278,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2015-07-24",
+      "effectiveDate": "2015-07-24",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "New York Mets traded RHP John Gant and RHP Rob Whalen to Atlanta Braves for 3B Juan Uribe, LF Kelly Johnson and cash."
+    },
+    {
+      "id": 239433,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "date": "2015-07-25",
+      "effectiveDate": "2015-07-25",
+      "resolutionDate": "2015-07-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Rob Whalen assigned to Carolina Mudcats."
+    },
+    {
+      "id": 242055,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "date": "2015-08-13",
+      "effectiveDate": "2015-08-13",
+      "resolutionDate": "2015-08-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Carolina Mudcats placed RHP Rob Whalen on the 7-day disabled list."
+    },
+    {
+      "id": 246080,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "date": "2015-09-28",
+      "effectiveDate": "2015-09-28",
+      "resolutionDate": "2015-09-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Carolina Mudcats activated RHP Rob Whalen from the 7-day disabled list."
+    },
+    {
+      "id": 259757,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "toTeam": {
+        "id": 430,
+        "name": "Mississippi Mud Monsters",
+        "link": "/api/v1/teams/430"
+      },
+      "date": "2016-04-04",
+      "effectiveDate": "2016-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Rob Whalen assigned to Mississippi Braves from Carolina Mudcats."
+    },
+    {
+      "id": 278513,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 430,
+        "name": "Mississippi Mud Monsters",
+        "link": "/api/v1/teams/430"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2016-07-14",
+      "effectiveDate": "2016-07-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Rob Whalen assigned to Gwinnett Braves from Mississippi Braves."
+    },
+    {
+      "id": 282092,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2016-08-03",
+      "effectiveDate": "2016-08-03",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Atlanta Braves selected the contract of RHP Rob Whalen from Gwinnett Braves."
+    },
+    {
+      "id": 285244,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2016-08-25",
+      "effectiveDate": "2016-08-25",
+      "resolutionDate": "2016-08-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves placed RHP Rob Whalen on the 15-day disabled list. Right shoulder fatigue."
+    },
+    {
+      "id": 287421,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2016-09-17",
+      "effectiveDate": "2016-09-17",
+      "resolutionDate": "2016-09-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves transferred RHP Rob Whalen from the 15-day disabled list to the 60-day disabled list. Right shoulder fatigue."
+    },
+    {
+      "id": 291904,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2016-11-04",
+      "effectiveDate": "2016-11-04",
+      "resolutionDate": "2016-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves activated RHP Rob Whalen from the 60-day disabled list."
+    },
+    {
+      "id": 294123,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2016-11-28",
+      "effectiveDate": "2016-11-28",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Atlanta Braves traded RHP Max Povse and RHP Rob Whalen to Seattle Mariners for RF Alex Jackson and Player To Be Named Later."
+    },
+    {
+      "id": 302094,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2017-03-31",
+      "effectiveDate": "2017-03-31",
+      "resolutionDate": "2017-03-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners placed RHP Rob Whalen on the 10-day disabled list. Right shoulder inflammation."
+    },
+    {
+      "id": 307870,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2017-04-27",
+      "effectiveDate": "2017-04-27",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned RHP Rob Whalen to Tacoma Rainiers."
+    },
+    {
+      "id": 307869,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2017-04-27",
+      "effectiveDate": "2017-04-27",
+      "resolutionDate": "2017-04-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners reassigned RHP Rob Whalen to the minor leagues."
+    },
+    {
+      "id": 309324,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2017-05-06",
+      "effectiveDate": "2017-05-07",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled Rob Whalen from Tacoma Rainiers."
+    },
+    {
+      "id": 309431,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2017-05-07",
+      "effectiveDate": "2017-05-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned RHP Rob Whalen to Tacoma Rainiers."
+    },
+    {
+      "id": 311822,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2017-05-24",
+      "effectiveDate": "2017-05-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled Rob Whalen from Tacoma Rainiers."
+    },
+    {
+      "id": 312259,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2017-05-28",
+      "effectiveDate": "2017-05-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned RHP Rob Whalen to Tacoma Rainiers."
+    },
+    {
+      "id": 316410,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2017-06-17",
+      "effectiveDate": "2017-06-18",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled Rob Whalen from Tacoma Rainiers."
+    },
+    {
+      "id": 316576,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "date": "2017-06-18",
+      "effectiveDate": "2017-06-18",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned RHP Rob Whalen to Arkansas Travelers."
+    },
+    {
+      "id": 322840,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2017-06-22",
+      "effectiveDate": "2017-07-06",
+      "resolutionDate": "2017-07-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tacoma Rainiers placed RHP Rob Whalen on the 7-day disabled list."
+    },
+    {
+      "id": 318713,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2017-06-22",
+      "effectiveDate": "2017-06-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Rob Whalen assigned to Tacoma Rainiers from Arkansas Travelers."
+    },
+    {
+      "id": 326822,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2017-07-08",
+      "effectiveDate": "2017-07-08",
+      "resolutionDate": "2017-07-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners placed RHP Rob Whalen on the restricted list."
+    },
+    {
+      "id": 333286,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2017-10-02",
+      "effectiveDate": "2017-10-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled RHP Rob Whalen from Tacoma Rainiers."
+    },
+    {
+      "id": 335680,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2017-10-02",
+      "effectiveDate": "2017-10-02",
+      "resolutionDate": "2017-10-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners placed RHP Rob Whalen on the restricted list."
+    },
+    {
+      "id": 335681,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2017-10-26",
+      "effectiveDate": "2018-03-19",
+      "resolutionDate": "2017-10-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rob Whalen roster status changed by Seattle Mariners."
+    },
+    {
+      "id": 344588,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2018-03-19",
+      "effectiveDate": "2018-03-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned RHP Rob Whalen to Tacoma Rainiers."
+    },
+    {
+      "id": 360328,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2018-06-14",
+      "effectiveDate": "2018-06-18",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled Rob Whalen from Tacoma Rainiers."
+    },
+    {
+      "id": 361823,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2018-06-18",
+      "effectiveDate": "2018-06-18",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned RHP Rob Whalen to Tacoma Rainiers."
+    },
+    {
+      "id": 364395,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2018-06-25",
+      "effectiveDate": "2018-06-25",
+      "resolutionDate": "2018-06-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tacoma Rainiers placed RHP Rob Whalen on the 7-day disabled list."
+    },
+    {
+      "id": 366951,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 403,
+        "name": "Everett AquaSox",
+        "link": "/api/v1/teams/403"
+      },
+      "date": "2018-07-06",
+      "effectiveDate": "2018-07-06",
+      "resolutionDate": "2018-07-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Tacoma Rainiers sent RHP Rob Whalen on a rehab assignment to Everett AquaSox."
+    },
+    {
+      "id": 369163,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2018-07-16",
+      "effectiveDate": "2018-07-16",
+      "resolutionDate": "2018-07-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tacoma Rainiers activated RHP Rob Whalen from the 7-day disabled list."
+    },
+    {
+      "id": 374528,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 403,
+        "name": "Everett AquaSox",
+        "link": "/api/v1/teams/403"
+      },
+      "date": "2018-08-13",
+      "effectiveDate": "2018-08-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Rob Whalen assigned to Everett AquaSox from Tacoma Rainiers."
+    },
+    {
+      "id": 376385,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 403,
+        "name": "Everett AquaSox",
+        "link": "/api/v1/teams/403"
+      },
+      "toTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "date": "2018-08-25",
+      "effectiveDate": "2018-08-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Rob Whalen assigned to Arkansas Travelers from Everett AquaSox."
+    },
+    {
+      "id": 377346,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2018-09-01",
+      "effectiveDate": "2018-09-01",
+      "resolutionDate": "2018-09-01",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Seattle Mariners designated RHP Rob Whalen for assignment."
+    },
+    {
+      "id": 377989,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2018-09-05",
+      "effectiveDate": "2018-09-05",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Seattle Mariners sent RHP Rob Whalen outright to Tacoma Rainiers."
+    },
+    {
+      "id": 389854,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2019-03-05",
+      "effectiveDate": "2019-03-05",
+      "resolutionDate": "2019-03-05",
+      "typeCode": "RET",
+      "typeDesc": "Retired",
+      "description": "RHP Rob Whalen retired."
+    },
+    {
+      "id": 437285,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2020-01-27",
+      "effectiveDate": "2020-01-27",
+      "resolutionDate": "2020-01-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Rob Whalen assigned to Binghamton Rumble Ponies."
+    },
+    {
+      "id": 437284,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2020-01-27",
+      "effectiveDate": "2020-01-27",
+      "resolutionDate": "2020-01-27",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Mets signed free agent RHP Rob Whalen to a minor league contract."
+    },
+    {
+      "id": 438792,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2020-02-22",
+      "effectiveDate": "2020-02-22",
+      "resolutionDate": "2020-02-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Rob Whalen assigned to New York Mets."
+    },
+    {
+      "id": 444622,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2020-05-28",
+      "effectiveDate": "2020-05-28",
+      "resolutionDate": "2020-05-28",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Binghamton Rumble Ponies released RHP Rob Whalen."
+    },
+    {
+      "id": 473182,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 525,
+        "name": "Charleston Dirty Birds",
+        "link": "/api/v1/teams/525"
+      },
+      "date": "2021-03-05",
+      "effectiveDate": "2021-03-05",
+      "resolutionDate": "2021-03-05",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "West Virginia Power signed free agent P Rob Whalen."
+    },
+    {
+      "id": 485854,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2021-05-01",
+      "effectiveDate": "2021-05-01",
+      "resolutionDate": "2021-05-01",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent RHP Rob Whalen to a minor league contract."
+    },
+    {
+      "id": 485860,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 3898,
+        "name": "Wichita Wind Surge",
+        "link": "/api/v1/teams/3898"
+      },
+      "date": "2021-05-04",
+      "effectiveDate": "2021-05-04",
+      "resolutionDate": "2021-05-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Rob Whalen assigned to Wichita Wind Surge."
+    },
+    {
+      "id": 486859,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 3898,
+        "name": "Wichita Wind Surge",
+        "link": "/api/v1/teams/3898"
+      },
+      "date": "2021-05-15",
+      "effectiveDate": "2021-05-15",
+      "resolutionDate": "2021-05-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Wichita Wind Surge activated RHP Rob Whalen."
+    },
+    {
+      "id": 490073,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "fromTeam": {
+        "id": 3898,
+        "name": "Wichita Wind Surge",
+        "link": "/api/v1/teams/3898"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2021-05-21",
+      "effectiveDate": "2021-05-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Rob Whalen assigned to St. Paul Saints from Wichita Wind Surge."
+    },
+    {
+      "id": 510766,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2021-08-10",
+      "effectiveDate": "2021-08-10",
+      "resolutionDate": "2021-08-10",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "St. Paul Saints released RHP Rob Whalen."
+    },
+    {
+      "id": 662273,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 688,
+        "name": "Indios de Mayaguez",
+        "link": "/api/v1/teams/688"
+      },
+      "date": "2022-12-01",
+      "effectiveDate": "2022-12-01",
+      "resolutionDate": "2022-12-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Rob Whalen assigned to Indios de Mayaguez."
+    },
+    {
+      "id": 666354,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 560,
+        "name": "Acereros del Norte",
+        "link": "/api/v1/teams/560"
+      },
+      "date": "2023-01-20",
+      "effectiveDate": "2023-01-20",
+      "resolutionDate": "2023-01-20",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Acereros del Norte signed free agent RHP Rob Whalen."
+    },
+    {
+      "id": 673777,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 690,
+        "name": "Puerto Rico",
+        "link": "/api/v1/teams/690"
+      },
+      "date": "2023-01-27",
+      "effectiveDate": "2023-01-27",
+      "resolutionDate": "2023-01-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Puerto Rico activated RHP Rob Whalen from the reserve list."
+    },
+    {
+      "id": 666909,
+      "person": {
+        "id": 547007,
+        "fullName": "Rob Whalen",
+        "link": "/api/v1/people/547007",
+        "nameSlug": "rob-whalen-547007"
+      },
+      "toTeam": {
+        "id": 690,
+        "name": "Puerto Rico",
+        "link": "/api/v1/teams/690"
+      },
+      "date": "2023-01-27",
+      "effectiveDate": "2023-01-27",
+      "resolutionDate": "2023-01-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Rob Whalen assigned to Puerto Rico."
+    }
+  ]
+}

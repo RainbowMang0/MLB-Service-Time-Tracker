@@ -1,0 +1,1565 @@
+{
+  "player_id": 543734,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:2fd36cf6a40adef23162229acfb61ae1531cd2f2b6a69f31de58a3b340dec3f5",
+  "transactions": [
+    {
+      "id": 15436,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2009-07-06",
+      "effectiveDate": "2009-07-06",
+      "resolutionDate": "2009-07-06",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Chicago Cubs signed LHP Chris Rusin."
+    },
+    {
+      "id": 15437,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 407,
+        "name": "ACL Cubs",
+        "link": "/api/v1/teams/407"
+      },
+      "date": "2009-07-07",
+      "effectiveDate": "2009-07-07",
+      "resolutionDate": "2009-07-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chris Rusin assigned to AZL Cubs from Chicago Cubs."
+    },
+    {
+      "id": 17818,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 407,
+        "name": "ACL Cubs",
+        "link": "/api/v1/teams/407"
+      },
+      "toTeam": {
+        "id": 480,
+        "name": "Boise Hawks",
+        "link": "/api/v1/teams/480"
+      },
+      "date": "2009-07-24",
+      "effectiveDate": "2009-07-24",
+      "resolutionDate": "2009-07-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chris Rusin assigned to Boise Hawks from AZL Cubs."
+    },
+    {
+      "id": 36344,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 480,
+        "name": "Boise Hawks",
+        "link": "/api/v1/teams/480"
+      },
+      "toTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "date": "2010-04-05",
+      "effectiveDate": "2010-04-05",
+      "resolutionDate": "2010-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris Rusin assigned to Daytona Cubs from Boise Hawks."
+    },
+    {
+      "id": 39655,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "date": "2010-04-16",
+      "effectiveDate": "2010-04-16",
+      "resolutionDate": "2010-04-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Daytona Cubs placed LHP Chris Rusin on the 7-day disabled list."
+    },
+    {
+      "id": 39648,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "date": "2010-04-19",
+      "effectiveDate": "2010-04-19",
+      "resolutionDate": "2010-04-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chris Rusin roster status changed by Daytona Cubs."
+    },
+    {
+      "id": 41277,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "date": "2010-04-30",
+      "effectiveDate": "2010-04-30",
+      "resolutionDate": "2010-04-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chris Rusin roster status changed by Daytona Cubs."
+    },
+    {
+      "id": 65186,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2010-08-02",
+      "effectiveDate": "2010-08-02",
+      "resolutionDate": "2010-08-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris Rusin assigned to Tennessee Smokies from Daytona Cubs."
+    },
+    {
+      "id": 69768,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2010-09-05",
+      "effectiveDate": "2010-09-05",
+      "resolutionDate": "2010-09-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tennessee Smokies placed LHP Chris Rusin on the 7-day disabled list."
+    },
+    {
+      "id": 70594,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2010-09-19",
+      "effectiveDate": "2010-09-19",
+      "resolutionDate": "2010-09-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chris Rusin roster status changed by Tennessee Smokies."
+    },
+    {
+      "id": 78095,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2011-03-06",
+      "effectiveDate": "2011-03-06",
+      "resolutionDate": "2011-03-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris Rusin assigned to Chicago Cubs."
+    },
+    {
+      "id": 95564,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2011-07-05",
+      "effectiveDate": "2011-07-05",
+      "resolutionDate": "2011-07-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chris Rusin assigned to Iowa Cubs from Tennessee Smokies."
+    },
+    {
+      "id": 104994,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2011-10-14",
+      "effectiveDate": "2011-10-14",
+      "resolutionDate": "2011-10-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris Rusin assigned to Leones del Escogido."
+    },
+    {
+      "id": 108929,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2012-01-30",
+      "effectiveDate": "2012-01-30",
+      "resolutionDate": "2012-01-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago Cubs invited non-roster LHP Chris Rusin to spring training."
+    },
+    {
+      "id": 133685,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2012-08-21",
+      "effectiveDate": "2012-08-25",
+      "resolutionDate": "2012-08-21",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Chicago Cubs selected the contract of Chris Rusin from Iowa Cubs."
+    },
+    {
+      "id": 134050,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2012-08-25",
+      "effectiveDate": "2012-08-25",
+      "resolutionDate": "2012-08-25",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned Chris Rusin to Iowa Cubs."
+    },
+    {
+      "id": 134700,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2012-08-31",
+      "effectiveDate": "2012-09-04",
+      "resolutionDate": "2012-08-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chris Rusin assigned to Tennessee Smokies from Iowa Cubs."
+    },
+    {
+      "id": 135276,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2012-09-04",
+      "effectiveDate": "2013-03-22",
+      "resolutionDate": "2012-09-04",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled Chris Rusin."
+    },
+    {
+      "id": 145600,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2013-03-22",
+      "effectiveDate": "2013-03-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned Chris Rusin to Iowa Cubs."
+    },
+    {
+      "id": 162447,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2013-07-02",
+      "effectiveDate": "2013-07-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled Chris Rusin from Iowa Cubs."
+    },
+    {
+      "id": 162764,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2013-07-03",
+      "effectiveDate": "2013-07-03",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned Chris Rusin to Iowa Cubs."
+    },
+    {
+      "id": 162400,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 63,
+        "name": "Pacific Coast League All-Stars",
+        "link": "/api/v1/teams/63"
+      },
+      "date": "2013-07-16",
+      "effectiveDate": "2013-07-16",
+      "resolutionDate": "2013-07-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris Rusin assigned to Pacific Coast League All-Stars."
+    },
+    {
+      "id": 165239,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2013-07-22",
+      "effectiveDate": "2014-03-30",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled Chris Rusin from Iowa Cubs."
+    },
+    {
+      "id": 182921,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2014-03-30",
+      "effectiveDate": "2014-03-30",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned LHP Chris Rusin to Iowa Cubs."
+    },
+    {
+      "id": 185611,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2014-04-12",
+      "effectiveDate": "2014-04-13",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled Chris Rusin from Iowa Cubs."
+    },
+    {
+      "id": 185681,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2014-04-13",
+      "effectiveDate": "2014-04-13",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned LHP Chris Rusin to Iowa Cubs."
+    },
+    {
+      "id": 199009,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2014-07-05",
+      "effectiveDate": "2014-07-09",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled Chris Rusin from Iowa Cubs."
+    },
+    {
+      "id": 199756,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2014-07-09",
+      "effectiveDate": "2014-07-09",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned LHP Chris Rusin to Iowa Cubs."
+    },
+    {
+      "id": 202777,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2014-07-30",
+      "effectiveDate": "2014-08-10",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled Chris Rusin from Iowa Cubs."
+    },
+    {
+      "id": 204246,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2014-08-10",
+      "effectiveDate": "2014-08-10",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned LHP Chris Rusin to Iowa Cubs."
+    },
+    {
+      "id": 208135,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2014-09-27",
+      "effectiveDate": "2014-09-27",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Colorado Rockies claimed LHP Chris Rusin off waivers from Chicago Cubs."
+    },
+    {
+      "id": 208284,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2014-09-29",
+      "effectiveDate": "2015-03-22",
+      "resolutionDate": "2014-09-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chris Rusin roster status changed by Colorado Rockies."
+    },
+    {
+      "id": 217770,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2015-03-22",
+      "effectiveDate": "2015-03-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Colorado Rockies optioned LHP Chris Rusin to Albuquerque Isotopes."
+    },
+    {
+      "id": 224452,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2015-05-06",
+      "effectiveDate": "2015-05-07",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Colorado Rockies recalled Chris Rusin from Albuquerque Isotopes."
+    },
+    {
+      "id": 224537,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2015-05-07",
+      "effectiveDate": "2015-05-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Colorado Rockies optioned LHP Chris Rusin to Albuquerque Isotopes."
+    },
+    {
+      "id": 226787,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2015-05-26",
+      "effectiveDate": "2015-05-26",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Colorado Rockies recalled LHP Chris Rusin from Albuquerque Isotopes."
+    },
+    {
+      "id": 271024,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2016-06-14",
+      "effectiveDate": "2015-06-09",
+      "resolutionDate": "2015-06-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Colorado Rockies placed LHP Chris Rusin on the 15-day disabled list retroactive to June 9, 2015. Left shoulder strain"
+    },
+    {
+      "id": 278602,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2016-07-14",
+      "effectiveDate": "2016-07-14",
+      "resolutionDate": "2016-07-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Colorado Rockies sent LHP Chris Rusin on a rehab assignment to Albuquerque Isotopes."
+    },
+    {
+      "id": 280841,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2016-07-27",
+      "effectiveDate": "2016-07-27",
+      "resolutionDate": "2016-07-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Colorado Rockies activated LHP Chris Rusin from the 15-day disabled list."
+    },
+    {
+      "id": 302571,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2017-04-02",
+      "effectiveDate": "2017-03-30",
+      "resolutionDate": "2017-03-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Colorado Rockies placed LHP Chris Rusin on the 10-day disabled list retroactive to March 30, 2017. Right oblique strain."
+    },
+    {
+      "id": 304603,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2017-04-06",
+      "effectiveDate": "2017-04-06",
+      "resolutionDate": "2017-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Colorado Rockies sent LHP Chris Rusin on a rehab assignment to Albuquerque Isotopes."
+    },
+    {
+      "id": 305013,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2017-04-09",
+      "effectiveDate": "2017-04-09",
+      "resolutionDate": "2017-04-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Colorado Rockies activated LHP Chris Rusin from the 10-day disabled list."
+    },
+    {
+      "id": 350775,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2018-04-23",
+      "effectiveDate": "2018-04-23",
+      "resolutionDate": "2018-04-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Colorado Rockies placed LHP Chris Rusin on the 10-day disabled list. Right intercostal muscle strain."
+    },
+    {
+      "id": 352319,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2018-05-04",
+      "effectiveDate": "2018-05-04",
+      "resolutionDate": "2018-05-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Colorado Rockies activated LHP Chris Rusin from the 10-day disabled list."
+    },
+    {
+      "id": 370817,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2018-07-24",
+      "effectiveDate": "2018-07-24",
+      "resolutionDate": "2018-07-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Colorado Rockies placed LHP Chris Rusin on the 10-day disabled list. Left plantar fascitis."
+    },
+    {
+      "id": 372967,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2018-08-03",
+      "effectiveDate": "2018-08-03",
+      "resolutionDate": "2018-08-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Colorado Rockies sent LHP Chris Rusin on a rehab assignment to Albuquerque Isotopes."
+    },
+    {
+      "id": 373925,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2018-08-09",
+      "effectiveDate": "2018-08-09",
+      "resolutionDate": "2018-08-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Colorado Rockies activated LHP Chris Rusin from the 10-day injured list."
+    },
+    {
+      "id": 392596,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2019-03-28",
+      "effectiveDate": "2019-03-25",
+      "resolutionDate": "2019-03-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Colorado Rockies placed LHP Chris Rusin on the 10-day injured list retroactive to March 25, 2019. Mid-back strain."
+    },
+    {
+      "id": 399996,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2019-05-05",
+      "effectiveDate": "2019-05-05",
+      "resolutionDate": "2019-05-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Colorado Rockies sent LHP Chris Rusin on a rehab assignment to Albuquerque Isotopes."
+    },
+    {
+      "id": 401973,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "date": "2019-05-18",
+      "effectiveDate": "2019-05-18",
+      "resolutionDate": "2019-05-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Colorado Rockies sent LHP Chris Rusin on a rehab assignment to Hartford Yard Goats."
+    },
+    {
+      "id": 403533,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2019-05-28",
+      "effectiveDate": "2019-05-28",
+      "resolutionDate": "2019-05-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Colorado Rockies sent LHP Chris Rusin on a rehab assignment to Albuquerque Isotopes."
+    },
+    {
+      "id": 404609,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2019-05-31",
+      "effectiveDate": "2019-05-31",
+      "resolutionDate": "2019-05-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Colorado Rockies activated LHP Chris Rusin from the 10-day injured list."
+    },
+    {
+      "id": 406440,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2019-06-07",
+      "effectiveDate": "2019-06-07",
+      "resolutionDate": "2019-06-07",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Colorado Rockies designated LHP Chris Rusin for assignment."
+    },
+    {
+      "id": 407827,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2019-06-12",
+      "effectiveDate": "2019-06-12",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Colorado Rockies sent LHP Chris Rusin outright to Albuquerque Isotopes."
+    },
+    {
+      "id": 413963,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2019-06-28",
+      "effectiveDate": "2019-06-26",
+      "resolutionDate": "2019-06-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Albuquerque Isotopes placed LHP Chris Rusin on the 7-day injured list retroactive to June 26, 2019."
+    },
+    {
+      "id": 415464,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2019-07-05",
+      "effectiveDate": "2019-07-05",
+      "resolutionDate": "2019-07-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Albuquerque Isotopes activated LHP Chris Rusin from the 7-day injured list."
+    },
+    {
+      "id": 429115,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2019-10-03",
+      "effectiveDate": "2019-10-03",
+      "resolutionDate": "2019-10-03",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Chris Rusin elected free agency."
+    },
+    {
+      "id": 436889,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2020-01-22",
+      "effectiveDate": "2020-01-22",
+      "resolutionDate": "2020-01-22",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent LHP Chris Rusin to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 436894,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2020-01-23",
+      "effectiveDate": "2020-01-23",
+      "resolutionDate": "2020-01-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris Rusin assigned to Gwinnett Stripers."
+    },
+    {
+      "id": 447628,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 3258,
+        "name": "Braves Alternate Training Site",
+        "link": "/api/v1/teams/3258"
+      },
+      "date": "2020-07-19",
+      "effectiveDate": "2020-07-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris Rusin assigned to Braves Alternate Training Site from Gwinnett Stripers."
+    },
+    {
+      "id": 448591,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 3258,
+        "name": "Braves Alternate Training Site",
+        "link": "/api/v1/teams/3258"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2020-08-01",
+      "effectiveDate": "2020-08-01",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Atlanta Braves selected the contract of LHP Chris Rusin from Braves Alternate Training Site."
+    },
+    {
+      "id": 448750,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2020-08-04",
+      "effectiveDate": "2020-08-06",
+      "resolutionDate": "2020-08-04",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Atlanta Braves designated Chris Rusin for assignment."
+    },
+    {
+      "id": 448949,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 3258,
+        "name": "Braves Alternate Training Site",
+        "link": "/api/v1/teams/3258"
+      },
+      "date": "2020-08-06",
+      "effectiveDate": "2020-08-06",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Atlanta Braves sent LHP Chris Rusin outright to Braves Alternate Training Site."
+    },
+    {
+      "id": 450906,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2020-09-05",
+      "effectiveDate": "2020-09-05",
+      "resolutionDate": "2020-09-05",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Atlanta Braves released LHP Chris Rusin."
+    },
+    {
+      "id": 478260,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "date": "2021-04-15",
+      "effectiveDate": "2021-04-15",
+      "resolutionDate": "2021-04-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris Rusin assigned to Hartford Yard Goats."
+    },
+    {
+      "id": 478148,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2021-04-15",
+      "effectiveDate": "2021-04-15",
+      "resolutionDate": "2021-04-15",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Colorado Rockies signed free agent LHP Chris Rusin to a minor league contract."
+    },
+    {
+      "id": 481187,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "toTeam": {
+        "id": 3299,
+        "name": "Rockies Organization",
+        "link": "/api/v1/teams/3299"
+      },
+      "date": "2021-04-30",
+      "effectiveDate": "2021-04-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris Rusin assigned to Rockies Organization from Hartford Yard Goats."
+    },
+    {
+      "id": 483308,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "fromTeam": {
+        "id": 3299,
+        "name": "Rockies Organization",
+        "link": "/api/v1/teams/3299"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris Rusin assigned to Albuquerque Isotopes from Rockies Organization."
+    },
+    {
+      "id": 483347,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "resolutionDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Chris Rusin assigned to Albuquerque Isotopes."
+    },
+    {
+      "id": 514390,
+      "person": {
+        "id": 543734,
+        "fullName": "Chris Rusin",
+        "link": "/api/v1/people/543734",
+        "nameSlug": "chris-rusin-543734"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2021-08-26",
+      "effectiveDate": "2021-08-26",
+      "resolutionDate": "2021-08-26",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Albuquerque Isotopes released LHP Chris Rusin."
+    }
+  ]
+}

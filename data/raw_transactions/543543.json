@@ -1,0 +1,1720 @@
+{
+  "player_id": 543543,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:0692c0cc10ddb4646abaa05c273192b878f0ced0e55bc805bed9a3a839c800be",
+  "transactions": [
+    {
+      "id": 100563,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2011-08-15",
+      "effectiveDate": "2011-08-15",
+      "resolutionDate": "2011-08-15",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Seattle Mariners signed SS Brad Miller."
+    },
+    {
+      "id": 100998,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 500,
+        "name": "Clinton LumberKings",
+        "link": "/api/v1/teams/500"
+      },
+      "date": "2011-08-19",
+      "effectiveDate": "2011-08-19",
+      "resolutionDate": "2011-08-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Brad Miller assigned to Clinton LumberKings from Seattle Mariners."
+    },
+    {
+      "id": 109782,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2012-03-07",
+      "effectiveDate": "2012-03-07",
+      "resolutionDate": "2012-03-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Brad Miller assigned to Seattle Mariners."
+    },
+    {
+      "id": 113799,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 500,
+        "name": "Clinton LumberKings",
+        "link": "/api/v1/teams/500"
+      },
+      "toTeam": {
+        "id": 504,
+        "name": "High Desert Mavericks",
+        "link": "/api/v1/teams/504"
+      },
+      "date": "2012-04-04",
+      "effectiveDate": "2012-04-04",
+      "resolutionDate": "2012-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Brad Miller assigned to High Desert Mavericks from Clinton LumberKings."
+    },
+    {
+      "id": 130426,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 504,
+        "name": "High Desert Mavericks",
+        "link": "/api/v1/teams/504"
+      },
+      "toTeam": {
+        "id": 104,
+        "name": "Jackson Generals",
+        "link": "/api/v1/teams/104"
+      },
+      "date": "2012-07-23",
+      "effectiveDate": "2012-07-23",
+      "resolutionDate": "2012-07-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Brad Miller assigned to Jackson Generals from High Desert Mavericks."
+    },
+    {
+      "id": 142331,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2013-01-11",
+      "effectiveDate": "2013-01-11",
+      "resolutionDate": "2013-01-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Seattle Mariners invited non-roster SS Brad Miller to spring training."
+    },
+    {
+      "id": 153964,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 104,
+        "name": "Jackson Generals",
+        "link": "/api/v1/teams/104"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2013-05-24",
+      "effectiveDate": "2013-05-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Brad Miller assigned to Tacoma Rainiers from Jackson Generals."
+    },
+    {
+      "id": 161936,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2013-06-28",
+      "effectiveDate": "2013-06-28",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Seattle Mariners selected the contract of SS Brad Miller from Tacoma Rainiers."
+    },
+    {
+      "id": 249192,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2015-11-05",
+      "effectiveDate": "2015-11-05",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Seattle Mariners traded 2B Brad Miller, 1B Logan Morrison and RHP Danny Farquhar to Tampa Bay Rays for RHP Nate Karns, LHP C.J. Riefenhauser and CF Boog Powell."
+    },
+    {
+      "id": 311008,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2017-05-18",
+      "effectiveDate": "2017-05-18",
+      "resolutionDate": "2017-05-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays placed 2B Brad Miller on the 10-day disabled list. Left abdominal strain."
+    },
+    {
+      "id": 312832,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 2730,
+        "name": "Charlotte Stone Crabs",
+        "link": "/api/v1/teams/2730"
+      },
+      "date": "2017-05-31",
+      "effectiveDate": "2017-05-31",
+      "resolutionDate": "2017-05-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Tampa Bay Rays sent 2B Brad Miller on a rehab assignment to Charlotte Stone Crabs."
+    },
+    {
+      "id": 313005,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2017-06-01",
+      "effectiveDate": "2017-06-01",
+      "resolutionDate": "2017-06-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays activated 2B Brad Miller from the 10-day disabled list."
+    },
+    {
+      "id": 314665,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2017-06-07",
+      "effectiveDate": "2017-06-07",
+      "resolutionDate": "2017-06-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays placed 2B Brad Miller on the 10-day disabled list. Right groin strain."
+    },
+    {
+      "id": 321374,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 2730,
+        "name": "Charlotte Stone Crabs",
+        "link": "/api/v1/teams/2730"
+      },
+      "date": "2017-06-30",
+      "effectiveDate": "2017-06-30",
+      "resolutionDate": "2017-06-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Tampa Bay Rays sent 2B Brad Miller on a rehab assignment to Charlotte Stone Crabs."
+    },
+    {
+      "id": 322068,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2017-07-03",
+      "effectiveDate": "2017-07-03",
+      "resolutionDate": "2017-07-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Tampa Bay Rays sent 2B Brad Miller on a rehab assignment to Durham Bulls."
+    },
+    {
+      "id": 322900,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2017-07-07",
+      "effectiveDate": "2017-07-07",
+      "resolutionDate": "2017-07-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays activated 2B Brad Miller from the 10-day disabled list."
+    },
+    {
+      "id": 348869,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2018-04-09",
+      "effectiveDate": "2018-04-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays placed 2B Brad Miller on the 10-day disabled list. Left groin strain."
+    },
+    {
+      "id": 349951,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 2730,
+        "name": "Charlotte Stone Crabs",
+        "link": "/api/v1/teams/2730"
+      },
+      "date": "2018-04-17",
+      "effectiveDate": "2018-04-17",
+      "resolutionDate": "2018-04-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Tampa Bay Rays sent 2B Brad Miller on a rehab assignment to Charlotte Stone Crabs."
+    },
+    {
+      "id": 350447,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2018-04-20",
+      "effectiveDate": "2018-04-20",
+      "resolutionDate": "2018-04-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays activated 1B Brad Miller."
+    },
+    {
+      "id": 358468,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2018-06-07",
+      "effectiveDate": "2018-06-07",
+      "resolutionDate": "2018-06-07",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Tampa Bay Rays designated 1B Brad Miller for assignment."
+    },
+    {
+      "id": 358975,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2018-06-10",
+      "effectiveDate": "2018-06-11",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Tampa Bay Rays traded cash and 1B Brad Miller to Milwaukee Brewers for 1B Ji-Man Choi."
+    },
+    {
+      "id": 359058,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 551,
+        "name": "Rocky Mountain Vibes",
+        "link": "/api/v1/teams/551"
+      },
+      "date": "2018-06-11",
+      "effectiveDate": "2018-06-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned 1B Brad Miller to Colorado Springs Sky Sox."
+    },
+    {
+      "id": 360378,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 551,
+        "name": "Rocky Mountain Vibes",
+        "link": "/api/v1/teams/551"
+      },
+      "date": "2018-06-14",
+      "effectiveDate": "2018-06-14",
+      "resolutionDate": "2018-06-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Colorado Springs Sky Sox activated 1B Brad Miller."
+    },
+    {
+      "id": 363931,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 551,
+        "name": "Rocky Mountain Vibes",
+        "link": "/api/v1/teams/551"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2018-06-23",
+      "effectiveDate": "2018-06-23",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Milwaukee Brewers recalled 2B Brad Miller from Colorado Springs Sky Sox."
+    },
+    {
+      "id": 371657,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2018-07-28",
+      "effectiveDate": "2018-07-28",
+      "resolutionDate": "2018-07-28",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Milwaukee Brewers designated 2B Brad Miller for assignment."
+    },
+    {
+      "id": 372241,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2018-07-31",
+      "effectiveDate": "2018-07-31",
+      "resolutionDate": "2018-07-31",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Milwaukee Brewers released 2B Brad Miller."
+    },
+    {
+      "id": 389491,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2019-03-02",
+      "effectiveDate": "2019-03-02",
+      "resolutionDate": "2019-03-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Brad Miller assigned to Los Angeles Dodgers."
+    },
+    {
+      "id": 391682,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2019-03-21",
+      "effectiveDate": "2019-03-21",
+      "resolutionDate": "2019-03-21",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Los Angeles Dodgers released 2B Brad Miller."
+    },
+    {
+      "id": 391983,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2019-03-24",
+      "effectiveDate": "2019-03-24",
+      "resolutionDate": "2019-03-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cleveland Indians signed free agent 2B Brad Miller."
+    },
+    {
+      "id": 396820,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2019-04-15",
+      "effectiveDate": "2019-04-15",
+      "resolutionDate": "2019-04-15",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Cleveland Indians designated 2B Brad Miller for assignment."
+    },
+    {
+      "id": 397404,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2019-04-17",
+      "effectiveDate": "2019-04-17",
+      "resolutionDate": "2019-04-17",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "2B Brad Miller elected free agency."
+    },
+    {
+      "id": 397202,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2019-04-17",
+      "effectiveDate": "2019-04-17",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Cleveland Indians sent 2B Brad Miller outright to Columbus Clippers."
+    },
+    {
+      "id": 405712,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2019-04-20",
+      "effectiveDate": "2019-04-20",
+      "resolutionDate": "2019-04-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Brad Miller assigned to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 397829,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2019-04-22",
+      "effectiveDate": "2019-04-22",
+      "resolutionDate": "2019-04-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Brad Miller assigned to Staten Island Yankees."
+    },
+    {
+      "id": 397828,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2019-04-22",
+      "effectiveDate": "2019-04-22",
+      "resolutionDate": "2019-04-22",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Yankees signed free agent 2B Brad Miller to a minor league contract."
+    },
+    {
+      "id": 397952,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2019-04-23",
+      "effectiveDate": "2019-04-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Brad Miller assigned to Scranton/Wilkes-Barre RailRiders from Staten Island Yankees."
+    },
+    {
+      "id": 408728,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2019-06-13",
+      "effectiveDate": "2019-06-13",
+      "resolutionDate": "2019-06-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Brad Miller assigned to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 408722,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2019-06-13",
+      "effectiveDate": "2019-06-13",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Philadelphia Phillies traded cash to New York Yankees for 2B Brad Miller."
+    },
+    {
+      "id": 408729,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2019-06-14",
+      "effectiveDate": "2019-06-14",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Philadelphia Phillies selected the contract of 2B Brad Miller from Lehigh Valley IronPigs."
+    },
+    {
+      "id": 419535,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2019-07-24",
+      "effectiveDate": "2019-07-24",
+      "resolutionDate": "2019-07-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies placed 2B Brad Miller on the 10-day injured list. Right hip flexor strain."
+    },
+    {
+      "id": 421895,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2019-08-04",
+      "effectiveDate": "2019-08-04",
+      "resolutionDate": "2019-08-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies activated 2B Brad Miller from the 10-day injured list."
+    },
+    {
+      "id": 431881,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2019-10-31",
+      "effectiveDate": "2019-10-31",
+      "resolutionDate": "2019-10-31",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "2B Brad Miller elected free agency."
+    },
+    {
+      "id": 438173,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2020-02-12",
+      "effectiveDate": "2020-02-12",
+      "resolutionDate": "2020-02-12",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "St. Louis Cardinals signed free agent 2B Brad Miller."
+    },
+    {
+      "id": 447910,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2020-07-22",
+      "effectiveDate": "2020-07-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals placed 2B Brad Miller on the 10-day injured list retroactive to July 20, 2020. Right ankle bursitis."
+    },
+    {
+      "id": 448764,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2020-08-04",
+      "effectiveDate": "2020-08-04",
+      "resolutionDate": "2020-08-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals activated 2B Brad Miller from the 10-day injured list."
+    },
+    {
+      "id": 454300,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2020-10-28",
+      "effectiveDate": "2020-10-28",
+      "resolutionDate": "2020-10-28",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "2B Brad Miller elected free agency."
+    },
+    {
+      "id": 477199,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2021-02-17",
+      "effectiveDate": "2021-02-17",
+      "resolutionDate": "2021-02-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent SS Brad Miller."
+    },
+    {
+      "id": 470266,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2021-02-17",
+      "effectiveDate": "2021-02-17",
+      "resolutionDate": "2021-02-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent 2B Brad Miller."
+    },
+    {
+      "id": 480702,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2021-02-17",
+      "effectiveDate": "2021-02-17",
+      "resolutionDate": "2021-02-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent SS Brad Miller."
+    },
+    {
+      "id": 478453,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2021-02-17",
+      "effectiveDate": "2021-02-17",
+      "resolutionDate": "2021-02-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent SS Brad Miller."
+    },
+    {
+      "id": 523163,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2021-11-03",
+      "effectiveDate": "2021-11-03",
+      "resolutionDate": "2021-11-03",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "SS Brad Miller elected free agency."
+    },
+    {
+      "id": 606523,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-03-17",
+      "effectiveDate": "2022-03-17",
+      "resolutionDate": "2022-03-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent SS Brad Miller."
+    },
+    {
+      "id": 615394,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-03-17",
+      "effectiveDate": "2022-03-17",
+      "resolutionDate": "2022-03-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated SS Brad Miller."
+    },
+    {
+      "id": 614857,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-03-17",
+      "effectiveDate": "2022-03-17",
+      "resolutionDate": "2022-03-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated SS Brad Miller."
+    },
+    {
+      "id": 625206,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-05-30",
+      "effectiveDate": "2022-05-30",
+      "resolutionDate": "2022-05-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed SS Brad Miller on the 10-day injured list. Right hip impingement."
+    },
+    {
+      "id": 630076,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-06-10",
+      "effectiveDate": "2022-06-10",
+      "resolutionDate": "2022-06-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated SS Brad Miller from the 10-day injured list."
+    },
+    {
+      "id": 638734,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-07-21",
+      "effectiveDate": "2022-07-18",
+      "resolutionDate": "2022-07-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed SS Brad Miller on the 10-day injured list retroactive to July 18, 2022. Neck strain."
+    },
+    {
+      "id": 641529,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2022-07-30",
+      "effectiveDate": "2022-07-30",
+      "resolutionDate": "2022-07-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent SS Brad Miller on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 642617,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2022-08-02",
+      "effectiveDate": "2022-08-02",
+      "resolutionDate": "2022-08-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent SS Brad Miller on a rehab assignment to Frisco RoughRiders."
+    },
+    {
+      "id": 643622,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-08-05",
+      "effectiveDate": "2022-08-05",
+      "resolutionDate": "2022-08-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated SS Brad Miller from the 10-day injured list."
+    },
+    {
+      "id": 651321,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-08-05",
+      "effectiveDate": "2022-08-05",
+      "resolutionDate": "2022-08-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated SS Brad Miller from the 10-day injured list."
+    },
+    {
+      "id": 653008,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-09-09",
+      "effectiveDate": "2022-09-09",
+      "resolutionDate": "2022-09-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed SS Brad Miller on the 60-day injured list."
+    },
+    {
+      "id": 651332,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-09-09",
+      "effectiveDate": "2022-09-09",
+      "resolutionDate": "2022-09-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed SS Brad Miller on the 10-day injured list. Right hip strain."
+    },
+    {
+      "id": 659188,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-11-10",
+      "effectiveDate": "2022-11-10",
+      "resolutionDate": "2022-11-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated SS Brad Miller from the 60-day injured list."
+    },
+    {
+      "id": 698395,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-06-03",
+      "effectiveDate": "2023-05-31",
+      "resolutionDate": "2023-05-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed SS Brad Miller on the 10-day injured list retroactive to May 31, 2023. Right oblique strain."
+    },
+    {
+      "id": 703649,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2023-06-13",
+      "effectiveDate": "2023-06-13",
+      "resolutionDate": "2023-06-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent SS Brad Miller on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 705294,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2023-06-13",
+      "effectiveDate": "2023-06-13",
+      "resolutionDate": "2023-06-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent SS Brad Miller on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 705302,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2023-06-20",
+      "effectiveDate": "2023-06-20",
+      "resolutionDate": "2023-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent SS Brad Miller on a rehab assignment to Frisco RoughRiders."
+    },
+    {
+      "id": 705295,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2023-06-20",
+      "effectiveDate": "2023-06-20",
+      "resolutionDate": "2023-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent SS Brad Miller on a rehab assignment to Frisco RoughRiders."
+    },
+    {
+      "id": 707560,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2023-06-28",
+      "effectiveDate": "2023-06-28",
+      "resolutionDate": "2023-06-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent SS Brad Miller on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 708066,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-06-30",
+      "effectiveDate": "2023-06-30",
+      "resolutionDate": "2023-06-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated SS Brad Miller from the 10-day injured list."
+    },
+    {
+      "id": 717112,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-08-02",
+      "effectiveDate": "2023-08-02",
+      "resolutionDate": "2023-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed SS Brad Miller on the 10-day injured list. Left hamstring strain."
+    },
+    {
+      "id": 723170,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2023-09-01",
+      "effectiveDate": "2023-09-01",
+      "resolutionDate": "2023-09-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent SS Brad Miller on a rehab assignment to Frisco RoughRiders."
+    },
+    {
+      "id": 724179,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-09-08",
+      "effectiveDate": "2023-09-08",
+      "resolutionDate": "2023-09-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed SS Brad Miller on the 60-day injured list. Left hamstring strain."
+    },
+    {
+      "id": 730335,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-11-02",
+      "effectiveDate": "2023-11-02",
+      "resolutionDate": "2023-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "SS Brad Miller elected free agency."
+    },
+    {
+      "id": 730334,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-11-02",
+      "effectiveDate": "2023-11-02",
+      "resolutionDate": "2023-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated SS Brad Miller from the 60-day injured list."
+    },
+    {
+      "id": 753271,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2024-03-06",
+      "effectiveDate": "2024-03-06",
+      "resolutionDate": "2024-03-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Brad Miller assigned to El Paso Chihuahuas."
+    },
+    {
+      "id": 755420,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2024-03-06",
+      "effectiveDate": "2024-03-06",
+      "resolutionDate": "2024-03-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "El Paso Chihuahuas activated SS Brad Miller."
+    },
+    {
+      "id": 753270,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2024-03-06",
+      "effectiveDate": "2024-03-06",
+      "resolutionDate": "2024-03-06",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Diego Padres signed free agent SS Brad Miller to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 755419,
+      "person": {
+        "id": 543543,
+        "fullName": "Brad Miller",
+        "link": "/api/v1/people/543543",
+        "nameSlug": "brad-miller-543543"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2024-03-13",
+      "effectiveDate": "2024-03-13",
+      "resolutionDate": "2024-03-13",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "San Diego Padres released SS Brad Miller."
+    }
+  ]
+}
