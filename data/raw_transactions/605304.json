@@ -1,0 +1,981 @@
+{
+  "player_id": 605304,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:84cc84f4e2ac82263d4b5c94f897d95b76ed0c3b08a74d4a8386491623b1d136",
+  "transactions": [
+    {
+      "id": 96543,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2011-07-12",
+      "effectiveDate": "2011-07-12",
+      "resolutionDate": "2011-07-12",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Chicago White Sox signed RHP Erik Johnson."
+    },
+    {
+      "id": 96542,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "toTeam": {
+        "id": 581,
+        "name": "Great Falls Voyagers",
+        "link": "/api/v1/teams/581"
+      },
+      "date": "2011-07-13",
+      "effectiveDate": "2011-07-13",
+      "resolutionDate": "2011-07-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Erik Johnson assigned to Great Falls Voyagers."
+    },
+    {
+      "id": 121152,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 581,
+        "name": "Great Falls Voyagers",
+        "link": "/api/v1/teams/581"
+      },
+      "toTeam": {
+        "id": 487,
+        "name": "Kannapolis Cannon Ballers",
+        "link": "/api/v1/teams/487"
+      },
+      "date": "2012-06-02",
+      "effectiveDate": "2012-06-02",
+      "resolutionDate": "2012-06-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Erik Johnson assigned to Kannapolis Intimidators from Great Falls Voyagers."
+    },
+    {
+      "id": 130154,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 487,
+        "name": "Kannapolis Cannon Ballers",
+        "link": "/api/v1/teams/487"
+      },
+      "toTeam": {
+        "id": 580,
+        "name": "Winston-Salem Dash",
+        "link": "/api/v1/teams/580"
+      },
+      "date": "2012-07-21",
+      "effectiveDate": "2012-07-21",
+      "resolutionDate": "2012-07-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Erik Johnson assigned to Winston-Salem Dash from Kannapolis Intimidators."
+    },
+    {
+      "id": 142283,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2013-01-10",
+      "effectiveDate": "2013-01-10",
+      "resolutionDate": "2013-01-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago White Sox invited non-roster RHP Erik Johnson to spring training."
+    },
+    {
+      "id": 148162,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 580,
+        "name": "Winston-Salem Dash",
+        "link": "/api/v1/teams/580"
+      },
+      "toTeam": {
+        "id": 247,
+        "name": "Birmingham Barons",
+        "link": "/api/v1/teams/247"
+      },
+      "date": "2013-04-03",
+      "effectiveDate": "2013-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Erik Johnson assigned to Birmingham Barons from Winston-Salem Dash."
+    },
+    {
+      "id": 161096,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 247,
+        "name": "Birmingham Barons",
+        "link": "/api/v1/teams/247"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2013-06-23",
+      "effectiveDate": "2013-06-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Erik Johnson assigned to Charlotte Knights from Birmingham Barons."
+    },
+    {
+      "id": 162931,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2013-07-04",
+      "effectiveDate": "2013-07-04",
+      "resolutionDate": "2013-07-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights placed RHP Erik Johnson on the 7-day disabled list."
+    },
+    {
+      "id": 162386,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "toTeam": {
+        "id": 68,
+        "name": "SOU North Division All-Stars",
+        "link": "/api/v1/teams/68"
+      },
+      "date": "2013-07-16",
+      "effectiveDate": "2013-07-16",
+      "resolutionDate": "2013-07-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Erik Johnson assigned to SOU North Division All-Stars."
+    },
+    {
+      "id": 165983,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2013-07-28",
+      "effectiveDate": "2013-07-28",
+      "resolutionDate": "2013-07-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Erik Johnson roster status changed by Charlotte Knights."
+    },
+    {
+      "id": 170464,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2013-09-03",
+      "effectiveDate": "2014-04-27",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Chicago White Sox selected the contract of Erik Johnson from Charlotte Knights."
+    },
+    {
+      "id": 187049,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2014-04-27",
+      "effectiveDate": "2014-04-27",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago White Sox optioned RHP Erik Johnson to Charlotte Knights."
+    },
+    {
+      "id": 205182,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2014-08-16",
+      "effectiveDate": "2014-08-16",
+      "resolutionDate": "2014-08-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights placed RHP Erik Johnson on the 7-day disabled list."
+    },
+    {
+      "id": 207355,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2014-09-02",
+      "effectiveDate": "2014-09-02",
+      "resolutionDate": "2014-09-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights activated RHP Erik Johnson from the 7-day disabled list."
+    },
+    {
+      "id": 208251,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2014-09-29",
+      "effectiveDate": "2015-04-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago White Sox recalled Erik Johnson from Charlotte Knights."
+    },
+    {
+      "id": 219125,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2015-04-02",
+      "effectiveDate": "2015-04-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago White Sox optioned RHP Erik Johnson to Charlotte Knights."
+    },
+    {
+      "id": 235767,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "toTeam": {
+        "id": 62,
+        "name": "International League All-Stars",
+        "link": "/api/v1/teams/62"
+      },
+      "date": "2015-07-14",
+      "effectiveDate": "2015-07-14",
+      "resolutionDate": "2015-07-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Erik Johnson assigned to International League All-Stars."
+    },
+    {
+      "id": 244286,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2015-09-01",
+      "effectiveDate": "2016-03-21",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago White Sox recalled Erik Johnson from Charlotte Knights."
+    },
+    {
+      "id": 257544,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2016-03-21",
+      "effectiveDate": "2016-03-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago White Sox optioned RHP Erik Johnson to Charlotte Knights."
+    },
+    {
+      "id": 262587,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2016-04-19",
+      "effectiveDate": "2016-04-25",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago White Sox recalled Erik Johnson from Charlotte Knights."
+    },
+    {
+      "id": 263295,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2016-04-25",
+      "effectiveDate": "2016-04-25",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago White Sox optioned RHP Erik Johnson to Charlotte Knights."
+    },
+    {
+      "id": 264532,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2016-05-05",
+      "effectiveDate": "2016-05-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago White Sox recalled Erik Johnson from Charlotte Knights."
+    },
+    {
+      "id": 264578,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2016-05-06",
+      "effectiveDate": "2016-05-06",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago White Sox optioned RHP Erik Johnson to Charlotte Knights."
+    },
+    {
+      "id": 266618,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2016-05-23",
+      "effectiveDate": "2016-05-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago White Sox recalled Erik Johnson from Charlotte Knights."
+    },
+    {
+      "id": 266623,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2016-05-24",
+      "effectiveDate": "2016-05-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago White Sox optioned RHP Erik Johnson to Charlotte Knights."
+    },
+    {
+      "id": 269369,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2016-06-04",
+      "effectiveDate": "2016-06-04",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "San Diego Padres traded RHP James Shields and cash to Chicago White Sox for Erik Johnson and 3B Fernando Tatis Jr.."
+    },
+    {
+      "id": 269409,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2016-06-05",
+      "effectiveDate": "2016-06-05",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned RHP Erik Johnson to El Paso Chihuahuas."
+    },
+    {
+      "id": 269598,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "date": "2016-06-06",
+      "effectiveDate": "2016-06-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Erik Johnson assigned to Lake Elsinore Storm from El Paso Chihuahuas."
+    },
+    {
+      "id": 270433,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2016-06-11",
+      "effectiveDate": "2016-06-11",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Diego Padres recalled RHP Erik Johnson from Lake Elsinore Storm."
+    },
+    {
+      "id": 276414,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2016-07-01",
+      "effectiveDate": "2016-06-29",
+      "resolutionDate": "2016-06-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres placed RHP Erik Johnson on the 15-day disabled list retroactive to June 29, 2016. Right elbow sprain."
+    },
+    {
+      "id": 283943,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2016-08-15",
+      "effectiveDate": "2016-08-15",
+      "resolutionDate": "2016-08-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres transferred RHP Erik Johnson from the 15-day disabled list to the 60-day disabled list. Right elbow sprain."
+    },
+    {
+      "id": 292151,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2016-11-07",
+      "effectiveDate": "2016-11-07",
+      "resolutionDate": "2016-11-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres activated RHP Erik Johnson from the 60-day disabled list."
+    },
+    {
+      "id": 294369,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2016-12-02",
+      "effectiveDate": "2016-12-02",
+      "resolutionDate": "2016-12-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Erik Johnson elected free agency."
+    },
+    {
+      "id": 295791,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2016-12-11",
+      "effectiveDate": "2016-12-11",
+      "resolutionDate": "2016-12-11",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Diego Padres signed free agent RHP Erik Johnson to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 295792,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2016-12-28",
+      "effectiveDate": "2016-12-28",
+      "resolutionDate": "2016-12-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Erik Johnson assigned to El Paso Chihuahuas."
+    },
+    {
+      "id": 307137,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2017-04-06",
+      "effectiveDate": "2017-04-06",
+      "resolutionDate": "2017-04-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "El Paso Chihuahuas placed RHP Erik Johnson on the 60-day disabled list."
+    },
+    {
+      "id": 333907,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2017-09-26",
+      "effectiveDate": "2017-09-26",
+      "resolutionDate": "2017-09-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "El Paso Chihuahuas activated RHP Erik Johnson from the 60-day disabled list."
+    },
+    {
+      "id": 336421,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2017-11-06",
+      "effectiveDate": "2017-11-06",
+      "resolutionDate": "2017-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Erik Johnson elected free agency."
+    },
+    {
+      "id": 343475,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2018-03-06",
+      "effectiveDate": "2018-03-06",
+      "resolutionDate": "2018-03-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Erik Johnson assigned to San Diego Padres."
+    },
+    {
+      "id": 349659,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2018-04-16",
+      "effectiveDate": "2018-04-16",
+      "resolutionDate": "2018-04-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Erik Johnson assigned to San Antonio Missions."
+    },
+    {
+      "id": 365940,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2018-07-03",
+      "effectiveDate": "2018-07-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Erik Johnson assigned to El Paso Chihuahuas from San Antonio Missions."
+    },
+    {
+      "id": 366807,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2018-07-06",
+      "effectiveDate": "2018-07-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Erik Johnson assigned to San Antonio Missions from El Paso Chihuahuas."
+    },
+    {
+      "id": 367836,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "fromTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2018-07-11",
+      "effectiveDate": "2018-07-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Erik Johnson assigned to El Paso Chihuahuas from San Antonio Missions."
+    },
+    {
+      "id": 382437,
+      "person": {
+        "id": 605304,
+        "fullName": "Erik Johnson",
+        "link": "/api/v1/people/605304",
+        "nameSlug": "erik-johnson-605304"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2018-11-02",
+      "effectiveDate": "2018-11-02",
+      "resolutionDate": "2018-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Erik Johnson elected free agency."
+    }
+  ]
+}

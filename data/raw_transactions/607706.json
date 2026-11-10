@@ -1,0 +1,1572 @@
+{
+  "player_id": 607706,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:c1188891e517847eebbe684fdb1f3d6d1f4a05f1e3c78302ab13cbd2de702eae",
+  "transactions": [
+    {
+      "id": 128598,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2012-07-02",
+      "effectiveDate": "2012-07-02",
+      "resolutionDate": "2012-07-02",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Los Angeles Angels signed LHP Michael Roth."
+    },
+    {
+      "id": 128599,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 519,
+        "name": "Orem Owlz",
+        "link": "/api/v1/teams/519"
+      },
+      "date": "2012-07-07",
+      "effectiveDate": "2012-07-07",
+      "resolutionDate": "2012-07-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Michael Roth assigned to Orem Owlz from Los Angeles Angels."
+    },
+    {
+      "id": 144070,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2013-02-25",
+      "effectiveDate": "2013-02-25",
+      "resolutionDate": "2013-02-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Michael Roth assigned to Los Angeles Angels."
+    },
+    {
+      "id": 146990,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 519,
+        "name": "Orem Owlz",
+        "link": "/api/v1/teams/519"
+      },
+      "toTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "date": "2013-03-31",
+      "effectiveDate": "2013-03-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Michael Roth assigned to Arkansas Travelers from Orem Owlz."
+    },
+    {
+      "id": 149512,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2013-04-13",
+      "effectiveDate": "2013-04-30",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Angels selected the contract of Michael Roth from Arkansas Travelers."
+    },
+    {
+      "id": 151132,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "date": "2013-04-30",
+      "effectiveDate": "2013-04-30",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned Michael Roth to Arkansas Travelers."
+    },
+    {
+      "id": 152378,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2013-05-10",
+      "effectiveDate": "2013-05-16",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled Michael Roth from Arkansas Travelers."
+    },
+    {
+      "id": 153106,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2013-05-16",
+      "effectiveDate": "2013-05-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned Michael Roth to Salt Lake Bees."
+    },
+    {
+      "id": 161670,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2013-06-27",
+      "effectiveDate": "2013-07-23",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled Michael Roth from Arkansas Travelers."
+    },
+    {
+      "id": 165269,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "date": "2013-07-23",
+      "effectiveDate": "2013-07-23",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned Michael Roth to Arkansas Travelers."
+    },
+    {
+      "id": 171369,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2013-09-30",
+      "effectiveDate": "2014-03-10",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled Michael Roth from Arkansas Travelers."
+    },
+    {
+      "id": 180665,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2014-03-10",
+      "effectiveDate": "2014-03-10",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned LHP Michael Roth to Salt Lake Bees."
+    },
+    {
+      "id": 181971,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "date": "2014-03-27",
+      "effectiveDate": "2014-03-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Michael Roth assigned to Arkansas Travelers from Salt Lake Bees."
+    },
+    {
+      "id": 187128,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2014-04-27",
+      "effectiveDate": "2014-04-27",
+      "resolutionDate": "2014-04-27",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Los Angeles Angels designated LHP Michael Roth for assignment."
+    },
+    {
+      "id": 187494,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "date": "2014-05-01",
+      "effectiveDate": "2014-05-01",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Los Angeles Angels sent Michael Roth outright to Arkansas Travelers."
+    },
+    {
+      "id": 192422,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 64,
+        "name": "TEX North Division All-Stars",
+        "link": "/api/v1/teams/64"
+      },
+      "date": "2014-06-23",
+      "effectiveDate": "2014-06-23",
+      "resolutionDate": "2014-06-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Michael Roth assigned to TEX North Division All-Stars."
+    },
+    {
+      "id": 199090,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2014-07-05",
+      "effectiveDate": "2014-07-06",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Angels selected the contract of Michael Roth from Arkansas Travelers."
+    },
+    {
+      "id": 199196,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "date": "2014-07-06",
+      "effectiveDate": "2014-07-06",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned LHP Michael Roth to Arkansas Travelers."
+    },
+    {
+      "id": 203142,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2014-08-01",
+      "effectiveDate": "2014-08-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled Michael Roth from Arkansas Travelers."
+    },
+    {
+      "id": 203353,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "date": "2014-08-03",
+      "effectiveDate": "2014-08-03",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned LHP Michael Roth to Arkansas Travelers."
+    },
+    {
+      "id": 206552,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2014-08-30",
+      "effectiveDate": "2014-08-30",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled LHP Michael Roth from Arkansas Travelers."
+    },
+    {
+      "id": 208661,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2014-10-02",
+      "effectiveDate": "2014-10-02",
+      "resolutionDate": "2014-10-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Angels reassigned LHP Michael Roth to the minor leagues."
+    },
+    {
+      "id": 209430,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2014-10-13",
+      "effectiveDate": "2014-10-13",
+      "resolutionDate": "2014-10-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Angels activated LHP Michael Roth."
+    },
+    {
+      "id": 211814,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2014-11-20",
+      "effectiveDate": "2014-11-20",
+      "resolutionDate": "2014-11-20",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Los Angeles Angels designated LHP Michael Roth for assignment."
+    },
+    {
+      "id": 212110,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2014-11-25",
+      "effectiveDate": "2014-11-25",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Los Angeles Angels sent LHP Michael Roth outright to Salt Lake Bees."
+    },
+    {
+      "id": 212198,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2014-11-26",
+      "effectiveDate": "2014-11-26",
+      "resolutionDate": "2014-11-26",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Michael Roth elected free agency."
+    },
+    {
+      "id": 213946,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2015-01-06",
+      "effectiveDate": "2015-01-06",
+      "resolutionDate": "2015-01-06",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cleveland Indians signed free agent LHP Michael Roth to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 213947,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2015-01-06",
+      "effectiveDate": "2015-01-06",
+      "resolutionDate": "2015-01-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Michael Roth assigned to Columbus Clippers."
+    },
+    {
+      "id": 239778,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2015-07-28",
+      "effectiveDate": "2015-08-03",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Cleveland Indians selected the contract of Michael Roth from Columbus Clippers."
+    },
+    {
+      "id": 240823,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2015-08-03",
+      "effectiveDate": "2015-08-03",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cleveland Indians optioned LHP Michael Roth to Columbus Clippers."
+    },
+    {
+      "id": 241111,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2015-08-05",
+      "effectiveDate": "2015-08-05",
+      "resolutionDate": "2015-08-05",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Cleveland Indians designated LHP Michael Roth for assignment."
+    },
+    {
+      "id": 241334,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2015-08-07",
+      "effectiveDate": "2015-08-07",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Cleveland Indians sent LHP Michael Roth outright to Columbus Clippers."
+    },
+    {
+      "id": 245362,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2015-09-15",
+      "effectiveDate": "2015-09-15",
+      "resolutionDate": "2015-09-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbus Clippers placed LHP Michael Roth on the reserve list."
+    },
+    {
+      "id": 245948,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2015-09-25",
+      "effectiveDate": "2015-09-25",
+      "resolutionDate": "2015-09-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbus Clippers activated LHP Michael Roth."
+    },
+    {
+      "id": 246711,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2015-10-05",
+      "effectiveDate": "2015-10-05",
+      "resolutionDate": "2015-10-05",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Michael Roth elected free agency."
+    },
+    {
+      "id": 247564,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2015-10-16",
+      "effectiveDate": "2015-10-16",
+      "resolutionDate": "2015-10-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Michael Roth assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 252396,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2015-10-16",
+      "effectiveDate": "2015-10-16",
+      "resolutionDate": "2015-10-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LHP Michael Roth roster status changed by Aguilas Cibaenas."
+    },
+    {
+      "id": 252397,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2015-12-22",
+      "effectiveDate": "2015-12-22",
+      "resolutionDate": "2015-12-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Michael Roth assigned to Leones del Escogido."
+    },
+    {
+      "id": 255258,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2016-02-21",
+      "effectiveDate": "2016-02-21",
+      "resolutionDate": "2016-02-21",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent LHP Michael Roth to a minor league contract."
+    },
+    {
+      "id": 255599,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2016-02-29",
+      "effectiveDate": "2016-02-29",
+      "resolutionDate": "2016-02-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Michael Roth assigned to Round Rock Express."
+    },
+    {
+      "id": 261518,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2016-04-09",
+      "effectiveDate": "2016-04-09",
+      "resolutionDate": "2016-04-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express placed LHP Michael Roth on the 7-day disabled list."
+    },
+    {
+      "id": 262407,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2016-04-16",
+      "effectiveDate": "2016-04-16",
+      "resolutionDate": "2016-04-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express activated LHP Michael Roth from the 7-day disabled list."
+    },
+    {
+      "id": 275597,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2016-06-27",
+      "effectiveDate": "2016-06-27",
+      "resolutionDate": "2016-06-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express placed LHP Michael Roth on the temporarily inactive list."
+    },
+    {
+      "id": 276687,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2016-07-03",
+      "effectiveDate": "2016-07-03",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Texas Rangers selected the contract of LHP Michael Roth from Round Rock Express."
+    },
+    {
+      "id": 277056,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2016-07-05",
+      "effectiveDate": "2016-07-06",
+      "resolutionDate": "2016-07-05",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Texas Rangers designated Michael Roth for assignment."
+    },
+    {
+      "id": 277257,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2016-07-06",
+      "effectiveDate": "2016-07-06",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Texas Rangers optioned LHP Michael Roth to Round Rock Express."
+    },
+    {
+      "id": 276111,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 63,
+        "name": "Pacific Coast League All-Stars",
+        "link": "/api/v1/teams/63"
+      },
+      "date": "2016-07-12",
+      "effectiveDate": "2016-07-12",
+      "resolutionDate": "2016-07-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Michael Roth assigned to Pacific Coast League All-Stars."
+    },
+    {
+      "id": 287119,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2016-09-11",
+      "effectiveDate": "2016-09-11",
+      "resolutionDate": "2016-09-11",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Texas Rangers designated LHP Michael Roth for assignment."
+    },
+    {
+      "id": 287460,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2016-09-17",
+      "effectiveDate": "2016-09-17",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Texas Rangers sent LHP Michael Roth outright to Round Rock Express."
+    },
+    {
+      "id": 288500,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2016-10-03",
+      "effectiveDate": "2016-10-03",
+      "resolutionDate": "2016-10-03",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Michael Roth elected free agency."
+    },
+    {
+      "id": 297473,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2016-11-14",
+      "effectiveDate": "2016-11-14",
+      "resolutionDate": "2016-11-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LHP Michael Roth roster status changed by San Francisco Giants."
+    },
+    {
+      "id": 293897,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2016-11-14",
+      "effectiveDate": "2016-11-14",
+      "resolutionDate": "2016-11-14",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Francisco Giants signed free agent LHP Michael Roth to a minor league contract."
+    },
+    {
+      "id": 297474,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2017-02-01",
+      "effectiveDate": "2017-02-01",
+      "resolutionDate": "2017-02-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Michael Roth assigned to Sacramento River Cats."
+    },
+    {
+      "id": 314417,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2017-06-05",
+      "effectiveDate": "2017-05-31",
+      "resolutionDate": "2017-05-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sacramento River Cats placed LHP Michael Roth on the 7-day disabled list retroactive to May 31, 2017. Blister."
+    },
+    {
+      "id": 316604,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2017-06-18",
+      "effectiveDate": "2017-06-18",
+      "resolutionDate": "2017-06-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sacramento River Cats activated LHP Michael Roth from the 7-day disabled list."
+    },
+    {
+      "id": 322001,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2017-07-02",
+      "effectiveDate": "2017-07-02",
+      "resolutionDate": "2017-07-02",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Sacramento River Cats released LHP Michael Roth."
+    },
+    {
+      "id": 323339,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2017-07-09",
+      "effectiveDate": "2017-07-09",
+      "resolutionDate": "2017-07-09",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Tampa Bay Rays signed free agent LHP Michael Roth."
+    },
+    {
+      "id": 323340,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2017-07-09",
+      "effectiveDate": "2017-07-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Michael Roth assigned to Durham Bulls from Tampa Bay Rays."
+    },
+    {
+      "id": 330600,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2017-08-25",
+      "effectiveDate": "2017-08-25",
+      "resolutionDate": "2017-08-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls placed LHP Michael Roth on the 7-day disabled list."
+    },
+    {
+      "id": 333861,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2017-09-20",
+      "effectiveDate": "2017-09-20",
+      "resolutionDate": "2017-09-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls activated LHP Michael Roth from the 7-day disabled list."
+    },
+    {
+      "id": 337009,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2017-11-06",
+      "effectiveDate": "2017-11-06",
+      "resolutionDate": "2017-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Michael Roth elected free agency."
+    },
+    {
+      "id": 339460,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2018-01-02",
+      "effectiveDate": "2018-01-02",
+      "resolutionDate": "2018-01-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Michael Roth assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 342208,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2018-01-26",
+      "effectiveDate": "2018-01-26",
+      "resolutionDate": "2018-01-26",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago Cubs signed free agent LHP Michael Roth to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 342209,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2018-02-21",
+      "effectiveDate": "2018-02-21",
+      "resolutionDate": "2018-02-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Michael Roth assigned to Iowa Cubs."
+    },
+    {
+      "id": 353440,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2018-05-11",
+      "effectiveDate": "2018-05-09",
+      "resolutionDate": "2018-05-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs placed LHP Michael Roth on the 7-day disabled list retroactive to May 9, 2018."
+    },
+    {
+      "id": 355143,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2018-05-25",
+      "effectiveDate": "2018-05-25",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Iowa Cubs traded LHP Michael Roth to Round Rock Express."
+    },
+    {
+      "id": 373961,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2018-08-09",
+      "effectiveDate": "2018-08-07",
+      "resolutionDate": "2018-08-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express placed LHP Michael Roth on the 7-day disabled list retroactive to August 7, 2018."
+    },
+    {
+      "id": 374664,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2018-08-14",
+      "effectiveDate": "2018-08-14",
+      "resolutionDate": "2018-08-14",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Round Rock Express released LHP Michael Roth."
+    },
+    {
+      "id": 384456,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2018-12-04",
+      "effectiveDate": "2018-12-04",
+      "resolutionDate": "2018-12-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aguilas Cibaenas reassigned LHP Michael Roth to the minor leagues."
+    },
+    {
+      "id": 440333,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 821,
+        "name": "Great Britain",
+        "link": "/api/v1/teams/821"
+      },
+      "date": "2020-03-07",
+      "effectiveDate": "2020-03-07",
+      "resolutionDate": "2020-03-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Michael Roth and  assigned to Great Britain."
+    },
+    {
+      "id": 652165,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 821,
+        "name": "Great Britain",
+        "link": "/api/v1/teams/821"
+      },
+      "date": "2022-09-13",
+      "effectiveDate": "2022-09-13",
+      "resolutionDate": "2022-09-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Michael Roth assigned to Great Britain."
+    },
+    {
+      "id": 669873,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 821,
+        "name": "Great Britain",
+        "link": "/api/v1/teams/821"
+      },
+      "date": "2023-02-09",
+      "effectiveDate": "2023-02-09",
+      "resolutionDate": "2023-02-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Britain activated LHP Michael Roth."
+    },
+    {
+      "id": 669239,
+      "person": {
+        "id": 607706,
+        "fullName": "Michael Roth",
+        "link": "/api/v1/people/607706",
+        "nameSlug": "michael-roth-607706"
+      },
+      "toTeam": {
+        "id": 821,
+        "name": "Great Britain",
+        "link": "/api/v1/teams/821"
+      },
+      "date": "2023-02-09",
+      "effectiveDate": "2023-02-09",
+      "resolutionDate": "2023-02-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Britain activated LHP Michael Roth."
+    }
+  ]
+}

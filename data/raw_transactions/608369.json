@@ -1,0 +1,1471 @@
+{
+  "player_id": 608369,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:73c25e826819148b08bb0bab2794a2aeb1a4dd3bdbbba3a28087772dd8b0c502",
+  "transactions": [
+    {
+      "id": 127591,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2012-06-30",
+      "effectiveDate": "2012-06-30",
+      "resolutionDate": "2012-06-30",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Los Angeles Dodgers signed SS Corey Seager."
+    },
+    {
+      "id": 128022,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 530,
+        "name": "Ogden Raptors",
+        "link": "/api/v1/teams/530"
+      },
+      "date": "2012-07-04",
+      "effectiveDate": "2012-07-04",
+      "resolutionDate": "2012-07-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Corey Seager assigned to Ogden Raptors."
+    },
+    {
+      "id": 144465,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2013-03-06",
+      "effectiveDate": "2013-03-06",
+      "resolutionDate": "2013-03-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Corey Seager assigned to Los Angeles Dodgers."
+    },
+    {
+      "id": 146232,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "fromTeam": {
+        "id": 530,
+        "name": "Ogden Raptors",
+        "link": "/api/v1/teams/530"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2013-03-28",
+      "effectiveDate": "2013-03-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Corey Seager assigned to Rancho Cucamonga Quakes from Ogden Raptors."
+    },
+    {
+      "id": 147347,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "fromTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2013-03-31",
+      "effectiveDate": "2013-03-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Corey Seager assigned to Great Lakes Loons from Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 152386,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2013-05-10",
+      "effectiveDate": "2013-05-10",
+      "resolutionDate": "2013-05-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons placed SS Corey Seager on the 7-day disabled list."
+    },
+    {
+      "id": 155215,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2013-06-02",
+      "effectiveDate": "2013-06-02",
+      "resolutionDate": "2013-06-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Corey Seager roster status changed by Great Lakes Loons."
+    },
+    {
+      "id": 166745,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2013-08-02",
+      "effectiveDate": "2013-08-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Corey Seager assigned to Rancho Cucamonga Quakes from Great Lakes Loons."
+    },
+    {
+      "id": 173466,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 1311,
+        "name": "National League Fall Stars",
+        "link": "/api/v1/teams/1311"
+      },
+      "date": "2013-11-01",
+      "effectiveDate": "2013-11-01",
+      "resolutionDate": "2013-11-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Corey Seager assigned to AFL West Fall Stars."
+    },
+    {
+      "id": 180449,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2014-03-09",
+      "effectiveDate": "2014-03-09",
+      "resolutionDate": "2014-03-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Corey Seager assigned to Los Angeles Dodgers."
+    },
+    {
+      "id": 187106,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2014-04-27",
+      "effectiveDate": "2014-04-24",
+      "resolutionDate": "2014-04-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rancho Cucamonga Quakes placed SS Corey Seager on the 7-day disabled list retroactive to April 24, 2014. hamstring injury"
+    },
+    {
+      "id": 187728,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2014-05-03",
+      "effectiveDate": "2014-05-03",
+      "resolutionDate": "2014-05-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rancho Cucamonga Quakes activated SS Corey Seager from the 7-day disabled list."
+    },
+    {
+      "id": 191811,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 72,
+        "name": "CAL North Division All-Stars",
+        "link": "/api/v1/teams/72"
+      },
+      "date": "2014-06-16",
+      "effectiveDate": "2014-06-16",
+      "resolutionDate": "2014-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Corey Seager assigned to California League All-Stars."
+    },
+    {
+      "id": 200317,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2014-07-12",
+      "effectiveDate": "2014-07-12",
+      "resolutionDate": "2014-07-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rancho Cucamonga Quakes placed SS Corey Seager on the temporarily inactive list."
+    },
+    {
+      "id": 201050,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "fromTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2014-07-18",
+      "effectiveDate": "2014-09-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Corey Seager assigned to Chattanooga Lookouts from Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 214087,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2015-01-09",
+      "effectiveDate": "2015-01-09",
+      "resolutionDate": "2015-01-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers invited non-roster SS Corey Seager to spring training."
+    },
+    {
+      "id": 223902,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "fromTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2015-05-01",
+      "effectiveDate": "2015-05-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Corey Seager assigned to Oklahoma City Dodgers from Tulsa Drillers."
+    },
+    {
+      "id": 235596,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 63,
+        "name": "Pacific Coast League All-Stars",
+        "link": "/api/v1/teams/63"
+      },
+      "date": "2015-07-14",
+      "effectiveDate": "2015-07-14",
+      "resolutionDate": "2015-07-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Corey Seager assigned to Pacific Coast League All-Stars."
+    },
+    {
+      "id": 244729,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2015-09-03",
+      "effectiveDate": "2015-09-03",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Dodgers selected the contract of SS Corey Seager from Oklahoma City Dodgers."
+    },
+    {
+      "id": 335139,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2017-10-14",
+      "effectiveDate": "2017-10-14",
+      "resolutionDate": "2017-10-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers reassigned SS Corey Seager to the minor leagues."
+    },
+    {
+      "id": 335502,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2017-10-24",
+      "effectiveDate": "2017-10-24",
+      "resolutionDate": "2017-10-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated SS Corey Seager."
+    },
+    {
+      "id": 351663,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2018-04-30",
+      "effectiveDate": "2018-04-30",
+      "resolutionDate": "2018-04-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed SS Corey Seager on the 10-day disabled list. Right UCL sprain."
+    },
+    {
+      "id": 353583,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2018-05-12",
+      "effectiveDate": "2018-05-12",
+      "resolutionDate": "2018-05-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers transferred SS Corey Seager from the 10-day disabled list to the 60-day disabled list. Right UCL surgery."
+    },
+    {
+      "id": 382033,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2018-11-02",
+      "effectiveDate": "2018-11-02",
+      "resolutionDate": "2018-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated SS Corey Seager from the 60-day injured list."
+    },
+    {
+      "id": 408121,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2019-06-13",
+      "effectiveDate": "2019-06-12",
+      "resolutionDate": "2019-06-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed SS Corey Seager on the 10-day injured list retroactive to June 12, 2019. Left hamstring strain."
+    },
+    {
+      "id": 415485,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2019-07-05",
+      "effectiveDate": "2019-07-05",
+      "resolutionDate": "2019-07-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers sent SS Corey Seager on a rehab assignment to Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 477324,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2019-07-10",
+      "effectiveDate": "2019-07-10",
+      "resolutionDate": "2019-07-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated SS Corey Seager."
+    },
+    {
+      "id": 478057,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2019-07-10",
+      "effectiveDate": "2019-07-10",
+      "resolutionDate": "2019-07-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated SS Corey Seager."
+    },
+    {
+      "id": 416519,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2019-07-10",
+      "effectiveDate": "2019-07-10",
+      "resolutionDate": "2019-07-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated SS Corey Seager from the 10-day injured list."
+    },
+    {
+      "id": 486930,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-05-16",
+      "effectiveDate": "2021-05-16",
+      "resolutionDate": "2021-05-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed SS Corey Seager on the 10-day injured list. Right hand fracture."
+    },
+    {
+      "id": 500291,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-06-30",
+      "effectiveDate": "2021-06-30",
+      "resolutionDate": "2021-06-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed SS Corey Seager on the 60-day injured list. Right hand fracture."
+    },
+    {
+      "id": 505421,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2021-07-17",
+      "effectiveDate": "2021-07-17",
+      "resolutionDate": "2021-07-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers sent SS Corey Seager on a rehab assignment to ACL Dodgers."
+    },
+    {
+      "id": 507560,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2021-07-27",
+      "effectiveDate": "2021-07-27",
+      "resolutionDate": "2021-07-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers sent SS Corey Seager on a rehab assignment to ACL Dodgers."
+    },
+    {
+      "id": 508300,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-07-30",
+      "effectiveDate": "2021-07-30",
+      "resolutionDate": "2021-07-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated SS Corey Seager."
+    },
+    {
+      "id": 523128,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-11-03",
+      "effectiveDate": "2021-11-03",
+      "resolutionDate": "2021-11-03",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "SS Corey Seager elected free agency."
+    },
+    {
+      "id": 615396,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2021-12-01",
+      "effectiveDate": "2021-12-01",
+      "resolutionDate": "2021-12-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated SS Corey Seager."
+    },
+    {
+      "id": 600996,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2021-12-01",
+      "effectiveDate": "2021-12-01",
+      "resolutionDate": "2021-12-01",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent SS Corey Seager."
+    },
+    {
+      "id": 614861,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2021-12-01",
+      "effectiveDate": "2021-12-01",
+      "resolutionDate": "2021-12-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated SS Corey Seager."
+    },
+    {
+      "id": 637470,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 159,
+        "name": "American League All-Stars",
+        "link": "/api/v1/teams/159"
+      },
+      "date": "2022-07-14",
+      "effectiveDate": "2022-07-14",
+      "resolutionDate": "2022-07-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Corey Seager assigned to American League All-Stars."
+    },
+    {
+      "id": 684284,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-04-12",
+      "effectiveDate": "2023-04-12",
+      "resolutionDate": "2023-04-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed SS Corey Seager on the 10-day injured list. Left hamstring strain."
+    },
+    {
+      "id": 691090,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2023-05-11",
+      "effectiveDate": "2023-05-11",
+      "resolutionDate": "2023-05-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent SS Corey Seager on a rehab assignment to Frisco RoughRiders."
+    },
+    {
+      "id": 691246,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2023-05-11",
+      "effectiveDate": "2023-05-11",
+      "resolutionDate": "2023-05-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent SS Corey Seager on a rehab assignment to Frisco RoughRiders."
+    },
+    {
+      "id": 692697,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-05-17",
+      "effectiveDate": "2023-05-17",
+      "resolutionDate": "2023-05-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated SS Corey Seager from the 10-day injured list."
+    },
+    {
+      "id": 707855,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 159,
+        "name": "American League All-Stars",
+        "link": "/api/v1/teams/159"
+      },
+      "date": "2023-07-10",
+      "effectiveDate": "2023-07-10",
+      "resolutionDate": "2023-07-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "American League All-Stars activated SS Corey Seager."
+    },
+    {
+      "id": 713533,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-07-22",
+      "effectiveDate": "2023-07-22",
+      "resolutionDate": "2023-07-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed SS Corey Seager on the 10-day injured list. Right thumb sprain."
+    },
+    {
+      "id": 717113,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-08-02",
+      "effectiveDate": "2023-08-02",
+      "resolutionDate": "2023-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated SS Corey Seager from the 10-day injured list."
+    },
+    {
+      "id": 787026,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 159,
+        "name": "American League All-Stars",
+        "link": "/api/v1/teams/159"
+      },
+      "date": "2024-07-15",
+      "effectiveDate": "2024-07-15",
+      "resolutionDate": "2024-07-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Corey Seager assigned to American League All-Stars."
+    },
+    {
+      "id": 797865,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-09-04",
+      "effectiveDate": "2024-09-04",
+      "resolutionDate": "2024-09-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed SS Corey Seager on the 10-day injured list. Right hip discomfort."
+    },
+    {
+      "id": 798900,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-09-13",
+      "effectiveDate": "2024-09-13",
+      "resolutionDate": "2024-09-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed SS Corey Seager on the 10-day injured list. Right hip discomfort."
+    },
+    {
+      "id": 804586,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "resolutionDate": "2024-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated SS Corey Seager from the 60-day injured list."
+    },
+    {
+      "id": 828245,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "SS Corey Seager changed number to 42."
+    },
+    {
+      "id": 829452,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "SS Corey Seager changed number to 5."
+    },
+    {
+      "id": 834770,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-04-23",
+      "effectiveDate": "2025-04-23",
+      "resolutionDate": "2025-04-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed SS Corey Seager on the 10-day injured list. Right hamstring strain."
+    },
+    {
+      "id": 831893,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-04-23",
+      "effectiveDate": "2025-04-23",
+      "resolutionDate": "2025-04-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed SS Corey Seager on the 10-day injured list. Right hamstring strain."
+    },
+    {
+      "id": 834771,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-05-03",
+      "effectiveDate": "2025-05-03",
+      "resolutionDate": "2025-05-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated SS Corey Seager from the 10-day injured list."
+    },
+    {
+      "id": 836874,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-05-13",
+      "effectiveDate": "2025-05-13",
+      "resolutionDate": "2025-05-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed SS Corey Seager on the 10-day injured list. Right hamstring strain."
+    },
+    {
+      "id": 841246,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-05-28",
+      "effectiveDate": "2025-05-28",
+      "resolutionDate": "2025-05-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated SS Corey Seager from the 10-day injured list."
+    },
+    {
+      "id": 866967,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-08-29",
+      "effectiveDate": "2025-08-29",
+      "resolutionDate": "2025-08-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed SS Corey Seager on the 10-day injured list."
+    },
+    {
+      "id": 870719,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-09-29",
+      "effectiveDate": "2025-09-29",
+      "resolutionDate": "2025-09-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated SS Corey Seager from the 10-day injured list."
+    },
+    {
+      "id": 898994,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "SS Corey Seager changed number to 42."
+    },
+    {
+      "id": 899912,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "SS Corey Seager changed number to 5."
+    },
+    {
+      "id": 910026,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-05-18",
+      "effectiveDate": "2026-05-15",
+      "resolutionDate": "2026-05-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed SS Corey Seager on the 10-day injured list retroactive to May 15, 2026. Lower back inflammation."
+    },
+    {
+      "id": 915128,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2026-06-02",
+      "effectiveDate": "2026-06-02",
+      "resolutionDate": "2026-06-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent SS Corey Seager on a rehab assignment to Frisco RoughRiders."
+    },
+    {
+      "id": 915848,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-06-04",
+      "effectiveDate": "2026-06-04",
+      "resolutionDate": "2026-06-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated SS Corey Seager from the 10-day injured list."
+    },
+    {
+      "id": 918681,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-06-15",
+      "effectiveDate": "2026-06-12",
+      "resolutionDate": "2026-06-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed SS Corey Seager on the 7-day injured list retroactive to June 12, 2026. Concussion."
+    },
+    {
+      "id": 922267,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-06-25",
+      "effectiveDate": "2026-06-25",
+      "resolutionDate": "2026-06-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated SS Corey Seager from the 7-day injured list."
+    },
+    {
+      "id": 923959,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-07-01",
+      "effectiveDate": "2026-07-01",
+      "resolutionDate": "2026-07-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed SS Corey Seager on the 10-day injured list. Lower back inflammation."
+    },
+    {
+      "id": 932190,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2026-07-28",
+      "effectiveDate": "2026-07-28",
+      "resolutionDate": "2026-07-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent SS Corey Seager on a rehab assignment to Frisco RoughRiders."
+    },
+    {
+      "id": 933657,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2026-07-28",
+      "effectiveDate": "2026-07-28",
+      "resolutionDate": "2026-07-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent SS Corey Seager on a rehab assignment to Frisco RoughRiders."
+    },
+    {
+      "id": 933658,
+      "person": {
+        "id": 608369,
+        "fullName": "Corey Seager",
+        "link": "/api/v1/people/608369",
+        "nameSlug": "corey-seager-608369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-07-31",
+      "effectiveDate": "2026-07-31",
+      "resolutionDate": "2026-07-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated SS Corey Seager from the 10-day injured list."
+    }
+  ]
+}

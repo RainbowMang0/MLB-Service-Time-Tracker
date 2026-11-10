@@ -1,0 +1,1888 @@
+{
+  "player_id": 592761,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:8987f0d9d3e7cece8e5b692fcf0286e33da5f027e53f8a1761ec1881525c8819",
+  "transactions": [
+    {
+      "id": 186830,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2013-06-11",
+      "effectiveDate": "2013-06-11",
+      "resolutionDate": "2013-06-11",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "New York Yankees signed LHP Caleb Smith."
+    },
+    {
+      "id": 161131,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2013-06-23",
+      "effectiveDate": "2013-06-23",
+      "resolutionDate": "2013-06-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Caleb Smith assigned to Staten Island Yankees."
+    },
+    {
+      "id": 169668,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2013-08-29",
+      "effectiveDate": "2013-08-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Caleb Smith assigned to Trenton Thunder from Staten Island Yankees."
+    },
+    {
+      "id": 170230,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2013-09-01",
+      "effectiveDate": "2013-09-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Caleb Smith assigned to Tampa Yankees from Trenton Thunder."
+    },
+    {
+      "id": 183113,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2014-03-31",
+      "effectiveDate": "2014-03-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Caleb Smith assigned to Charleston RiverDogs from Tampa Yankees."
+    },
+    {
+      "id": 186882,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2014-04-25",
+      "effectiveDate": "2014-04-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Caleb Smith assigned to Staten Island Yankees from Charleston RiverDogs."
+    },
+    {
+      "id": 187307,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2014-04-30",
+      "effectiveDate": "2014-04-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Caleb Smith assigned to Charleston RiverDogs from Staten Island Yankees."
+    },
+    {
+      "id": 200658,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2014-07-16",
+      "effectiveDate": "2014-07-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Caleb Smith assigned to Tampa Yankees from Charleston RiverDogs."
+    },
+    {
+      "id": 204289,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2014-08-10",
+      "effectiveDate": "2014-08-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Caleb Smith assigned to Trenton Thunder from Tampa Yankees."
+    },
+    {
+      "id": 204826,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2014-08-14",
+      "effectiveDate": "2014-08-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Caleb Smith assigned to Tampa Yankees from Trenton Thunder."
+    },
+    {
+      "id": 220751,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2015-04-07",
+      "effectiveDate": "2015-04-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Caleb Smith assigned to Trenton Thunder from Tampa Yankees."
+    },
+    {
+      "id": 224293,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2015-05-05",
+      "effectiveDate": "2015-05-05",
+      "resolutionDate": "2015-05-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Trenton Thunder placed LHP Caleb Smith on the 7-day disabled list. Left Hand injury"
+    },
+    {
+      "id": 225553,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2015-05-15",
+      "effectiveDate": "2015-05-15",
+      "resolutionDate": "2015-05-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Trenton Thunder activated LHP Caleb Smith from the 7-day disabled list."
+    },
+    {
+      "id": 225993,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2015-05-19",
+      "effectiveDate": "2015-05-16",
+      "resolutionDate": "2015-05-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Trenton Thunder placed LHP Caleb Smith on the 7-day disabled list retroactive to May 16, 2015."
+    },
+    {
+      "id": 226533,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2015-05-24",
+      "effectiveDate": "2015-05-24",
+      "resolutionDate": "2015-05-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Trenton Thunder activated LHP Caleb Smith from the 7-day disabled list."
+    },
+    {
+      "id": 243542,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2015-08-26",
+      "effectiveDate": "2015-08-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Caleb Smith assigned to Scranton/Wilkes-Barre RailRiders from Trenton Thunder."
+    },
+    {
+      "id": 243669,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2015-08-27",
+      "effectiveDate": "2015-08-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Caleb Smith assigned to Trenton Thunder from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 257965,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2016-03-25",
+      "effectiveDate": "2016-03-25",
+      "resolutionDate": "2016-03-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Caleb Smith assigned to New York Yankees."
+    },
+    {
+      "id": 264952,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2016-05-08",
+      "effectiveDate": "2016-05-08",
+      "resolutionDate": "2016-05-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Trenton Thunder placed LHP Caleb Smith on the 7-day disabled list. Right hamstring injury."
+    },
+    {
+      "id": 265542,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2016-05-14",
+      "effectiveDate": "2016-05-14",
+      "resolutionDate": "2016-05-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Trenton Thunder activated LHP Caleb Smith from the 7-day disabled list."
+    },
+    {
+      "id": 283330,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2016-08-09",
+      "effectiveDate": "2016-08-09",
+      "resolutionDate": "2016-08-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Trenton Thunder placed LHP Caleb Smith on the temporarily inactive list."
+    },
+    {
+      "id": 283769,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2016-08-13",
+      "effectiveDate": "2016-08-13",
+      "resolutionDate": "2016-08-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Trenton Thunder activated LHP Caleb Smith from the temporarily inactive list."
+    },
+    {
+      "id": 294599,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2016-12-08",
+      "effectiveDate": "2016-12-08",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Milwaukee Brewers claimed LHP Caleb Smith off waivers from New York Yankees."
+    },
+    {
+      "id": 294625,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2016-12-08",
+      "effectiveDate": "2016-12-08",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Milwaukee Brewers traded LHP Caleb Smith to Chicago Cubs."
+    },
+    {
+      "id": 301620,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-03-28",
+      "effectiveDate": "2017-03-28",
+      "typeCode": "RTN",
+      "typeDesc": "Returned",
+      "description": "LHP Caleb Smith returned to New York Yankees from Chicago Cubs."
+    },
+    {
+      "id": 301764,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2017-03-29",
+      "effectiveDate": "2017-03-29",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned LHP Caleb Smith to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 303125,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2017-04-03",
+      "effectiveDate": "2017-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Caleb Smith assigned to Trenton Thunder from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 305771,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2017-04-13",
+      "effectiveDate": "2017-04-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Caleb Smith assigned to Scranton/Wilkes-Barre RailRiders from Trenton Thunder."
+    },
+    {
+      "id": 324401,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-07-16",
+      "effectiveDate": "2017-07-30",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Yankees selected the contract of Caleb Smith from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 326776,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2017-07-30",
+      "effectiveDate": "2017-07-30",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned LHP Caleb Smith to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 329072,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-08-13",
+      "effectiveDate": "2017-08-14",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled Caleb Smith from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 329135,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2017-08-14",
+      "effectiveDate": "2017-08-14",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned LHP Caleb Smith to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 329275,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-08-15",
+      "effectiveDate": "2017-08-31",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled Caleb Smith from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 331108,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2017-08-31",
+      "effectiveDate": "2017-08-31",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned LHP Caleb Smith to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 331770,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-09-03",
+      "effectiveDate": "2017-09-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled LHP Caleb Smith from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 332735,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-09-16",
+      "effectiveDate": "2017-09-13",
+      "resolutionDate": "2017-09-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees placed LHP Caleb Smith on the 10-day disabled list retroactive to September 13, 2017. Viral infection."
+    },
+    {
+      "id": 333155,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-10-01",
+      "effectiveDate": "2017-10-01",
+      "resolutionDate": "2017-10-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees activated LHP Caleb Smith from the 10-day disabled list."
+    },
+    {
+      "id": 333428,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-10-03",
+      "effectiveDate": "2017-10-03",
+      "resolutionDate": "2017-10-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees reassigned LHP Caleb Smith to the minor leagues."
+    },
+    {
+      "id": 335590,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-10-22",
+      "effectiveDate": "2017-10-22",
+      "resolutionDate": "2017-10-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees activated LHP Caleb Smith."
+    },
+    {
+      "id": 337522,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2017-11-20",
+      "effectiveDate": "2017-11-20",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "New York Yankees traded LHP Caleb Smith and OF Garrett Cooper to Miami Marlins for Future Considerations and RHP Michael King."
+    },
+    {
+      "id": 360768,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2018-06-15",
+      "effectiveDate": "2018-06-15",
+      "resolutionDate": "2018-06-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins placed LHP Caleb Smith on the bereavement list."
+    },
+    {
+      "id": 362189,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2018-06-18",
+      "effectiveDate": "2018-06-18",
+      "resolutionDate": "2018-06-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins activated LHP Caleb Smith from the bereavement list."
+    },
+    {
+      "id": 364411,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2018-06-25",
+      "effectiveDate": "2018-06-25",
+      "resolutionDate": "2018-06-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins placed LHP Caleb Smith on the 10-day disabled list. Left shoulder tightness."
+    },
+    {
+      "id": 367393,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2018-07-09",
+      "effectiveDate": "2018-07-09",
+      "resolutionDate": "2018-07-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins transferred LHP Caleb Smith from the 10-day disabled list to the 60-day disabled list. Left shoulder tightness."
+    },
+    {
+      "id": 436880,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2018-10-31",
+      "effectiveDate": "2018-10-31",
+      "resolutionDate": "2018-10-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins activated LHP Caleb Smith from the 60-day injured list."
+    },
+    {
+      "id": 381774,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2018-10-31",
+      "effectiveDate": "2018-10-31",
+      "resolutionDate": "2018-10-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins activated LHP Caleb Smith from the 60-day injured list."
+    },
+    {
+      "id": 436884,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2019-06-07",
+      "effectiveDate": "2019-06-07",
+      "resolutionDate": "2019-06-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins placed LHP Caleb Smith on the 10-day injured list. Left hip inflammation"
+    },
+    {
+      "id": 412912,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2019-06-24",
+      "effectiveDate": "2019-06-24",
+      "resolutionDate": "2019-06-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins sent LHP Caleb Smith on a rehab assignment to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 436885,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2019-07-06",
+      "effectiveDate": "2019-07-06",
+      "resolutionDate": "2019-07-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins activated LHP Caleb Smith from the 10-day injured list."
+    },
+    {
+      "id": 448797,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2020-08-04",
+      "effectiveDate": "2020-08-04",
+      "resolutionDate": "2020-08-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins placed LHP Caleb Smith on the 10-day injured list."
+    },
+    {
+      "id": 450413,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2020-08-31",
+      "effectiveDate": "2020-08-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Arizona Diamondbacks traded CF Starling Marte to Miami Marlins for Player To Be Named Later, LHP Caleb Smith and RHP Humberto Mejia."
+    },
+    {
+      "id": 477570,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2020-09-11",
+      "effectiveDate": "2020-09-11",
+      "resolutionDate": "2020-09-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated P Caleb Smith."
+    },
+    {
+      "id": 451253,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2020-09-11",
+      "effectiveDate": "2020-09-11",
+      "resolutionDate": "2020-09-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated LHP Caleb Smith."
+    },
+    {
+      "id": 478251,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2020-09-11",
+      "effectiveDate": "2020-09-11",
+      "resolutionDate": "2020-09-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated P Caleb Smith."
+    },
+    {
+      "id": 516921,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2021-09-11",
+      "effectiveDate": "2021-09-11",
+      "resolutionDate": "2021-09-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LHP Caleb Smith roster status changed by Arizona Diamondbacks."
+    },
+    {
+      "id": 518625,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2021-09-22",
+      "effectiveDate": "2021-09-22",
+      "resolutionDate": "2021-09-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated LHP Caleb Smith."
+    },
+    {
+      "id": 615052,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2021-09-22",
+      "effectiveDate": "2021-09-22",
+      "resolutionDate": "2021-09-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated LHP Caleb Smith."
+    },
+    {
+      "id": 615589,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2021-09-22",
+      "effectiveDate": "2021-09-22",
+      "resolutionDate": "2021-09-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated LHP Caleb Smith."
+    },
+    {
+      "id": 608130,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2022-03-24",
+      "effectiveDate": "2022-03-24",
+      "resolutionDate": "2022-03-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LHP Caleb Smith roster status changed by Arizona Diamondbacks."
+    },
+    {
+      "id": 615678,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2022-04-17",
+      "effectiveDate": "2022-04-17",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned LHP Caleb Smith to Reno Aces."
+    },
+    {
+      "id": 618337,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2022-04-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled LHP Caleb Smith from Reno Aces."
+    },
+    {
+      "id": 641898,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2022-08-01",
+      "effectiveDate": "2022-08-01",
+      "resolutionDate": "2022-08-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks placed LHP Caleb Smith on the 15-day injured list. Right hand fracture."
+    },
+    {
+      "id": 648944,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 1991,
+        "name": "ACL D-backs",
+        "link": "/api/v1/teams/1991"
+      },
+      "date": "2022-08-23",
+      "effectiveDate": "2022-08-23",
+      "resolutionDate": "2022-08-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Arizona Diamondbacks sent LHP Caleb Smith on a rehab assignment to ACL D-backs Black."
+    },
+    {
+      "id": 648009,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 1991,
+        "name": "ACL D-backs",
+        "link": "/api/v1/teams/1991"
+      },
+      "date": "2022-08-23",
+      "effectiveDate": "2022-08-23",
+      "resolutionDate": "2022-08-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Arizona Diamondbacks sent LHP Caleb Smith on a rehab assignment to ACL D-backs Black."
+    },
+    {
+      "id": 649063,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2022-08-26",
+      "effectiveDate": "2022-08-26",
+      "resolutionDate": "2022-08-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Arizona Diamondbacks sent LHP Caleb Smith on a rehab assignment to Reno Aces."
+    },
+    {
+      "id": 649385,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2022-08-26",
+      "effectiveDate": "2022-08-26",
+      "resolutionDate": "2022-08-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Arizona Diamondbacks sent LHP Caleb Smith on a rehab assignment to Reno Aces."
+    },
+    {
+      "id": 649044,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2022-08-26",
+      "effectiveDate": "2022-08-26",
+      "resolutionDate": "2022-08-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Arizona Diamondbacks sent LHP Caleb Smith on a rehab assignment to Reno Aces."
+    },
+    {
+      "id": 649386,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2022-08-29",
+      "effectiveDate": "2022-08-29",
+      "resolutionDate": "2022-08-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated LHP Caleb Smith from the 15-day injured list."
+    },
+    {
+      "id": 660352,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2022-11-15",
+      "effectiveDate": "2022-11-15",
+      "resolutionDate": "2022-11-15",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Arizona Diamondbacks designated LHP Caleb Smith for assignment."
+    },
+    {
+      "id": 661214,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2022-11-18",
+      "effectiveDate": "2022-11-18",
+      "resolutionDate": "2022-11-18",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Caleb Smith elected free agency."
+    },
+    {
+      "id": 680284,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2023-02-12",
+      "effectiveDate": "2023-02-12",
+      "resolutionDate": "2023-02-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians activated LHP Caleb Smith."
+    },
+    {
+      "id": 671299,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2023-02-12",
+      "effectiveDate": "2023-02-12",
+      "resolutionDate": "2023-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Caleb Smith assigned to Indianapolis Indians."
+    },
+    {
+      "id": 670146,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2023-02-12",
+      "effectiveDate": "2023-02-12",
+      "resolutionDate": "2023-02-12",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Pittsburgh Pirates signed free agent LHP Caleb Smith to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 678674,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2023-02-12",
+      "effectiveDate": "2023-02-12",
+      "resolutionDate": "2023-02-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LHP Caleb Smith roster status changed by Pittsburgh Pirates."
+    },
+    {
+      "id": 684161,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2023-04-11",
+      "effectiveDate": "2023-04-10",
+      "resolutionDate": "2023-04-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians placed LHP Caleb Smith on the 7-day injured list retroactive to April 10, 2023."
+    },
+    {
+      "id": 686058,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2023-04-20",
+      "effectiveDate": "2023-04-20",
+      "resolutionDate": "2023-04-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians activated LHP Caleb Smith from the 7-day injured list."
+    },
+    {
+      "id": 697841,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2023-06-01",
+      "effectiveDate": "2023-06-01",
+      "resolutionDate": "2023-06-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians placed LHP Caleb Smith on the 7-day injured list."
+    },
+    {
+      "id": 704717,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2023-06-01",
+      "effectiveDate": "2023-06-01",
+      "resolutionDate": "2023-06-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians placed LHP Caleb Smith on the 7-day injured list."
+    },
+    {
+      "id": 708144,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2023-06-27",
+      "effectiveDate": "2023-06-27",
+      "resolutionDate": "2023-06-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LHP Caleb Smith roster status changed by Indianapolis Indians."
+    },
+    {
+      "id": 732166,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2023-11-06",
+      "effectiveDate": "2023-11-06",
+      "resolutionDate": "2023-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Caleb Smith elected free agency."
+    },
+    {
+      "id": 802220,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 676,
+        "name": "Mayos de Navojoa",
+        "link": "/api/v1/teams/676"
+      },
+      "date": "2024-10-13",
+      "effectiveDate": "2024-10-13",
+      "resolutionDate": "2024-10-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Caleb Smith assigned to Mayos de Navojoa."
+    },
+    {
+      "id": 808676,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 676,
+        "name": "Mayos de Navojoa",
+        "link": "/api/v1/teams/676"
+      },
+      "date": "2024-11-06",
+      "effectiveDate": "2024-11-06",
+      "resolutionDate": "2024-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mayos de Navojoa placed LHP Caleb Smith on the reserve list."
+    },
+    {
+      "id": 805432,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 676,
+        "name": "Mayos de Navojoa",
+        "link": "/api/v1/teams/676"
+      },
+      "date": "2024-11-06",
+      "effectiveDate": "2024-11-06",
+      "resolutionDate": "2024-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mayos de Navojoa placed LHP Caleb Smith on the reserve list."
+    },
+    {
+      "id": 830735,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 575,
+        "name": "Dorados de Chihuahua",
+        "link": "/api/v1/teams/575"
+      },
+      "date": "2025-04-17",
+      "effectiveDate": "2025-04-17",
+      "resolutionDate": "2025-04-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Caleb Smith assigned to Dorados de Chihuahua."
+    },
+    {
+      "id": 851399,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 732,
+        "name": "LMB All-Stars",
+        "link": "/api/v1/teams/732"
+      },
+      "date": "2025-06-29",
+      "effectiveDate": "2025-06-29",
+      "resolutionDate": "2025-06-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Caleb Smith assigned to LMB All-Stars."
+    },
+    {
+      "id": 873262,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2025-10-15",
+      "effectiveDate": "2025-10-15",
+      "resolutionDate": "2025-10-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Caleb Smith assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 945470,
+      "person": {
+        "id": 592761,
+        "fullName": "Caleb Smith",
+        "link": "/api/v1/people/592761",
+        "nameSlug": "caleb-smith-592761"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2026-10-12",
+      "effectiveDate": "2026-10-12",
+      "resolutionDate": "2026-10-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Caleb Smith assigned to Tiburones de La Guaira."
+    }
+  ]
+}

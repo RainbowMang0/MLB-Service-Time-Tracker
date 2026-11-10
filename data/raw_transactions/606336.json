@@ -1,0 +1,1206 @@
+{
+  "player_id": 606336,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:3a3f26f6499a873c7cd1014858d5ff1bdd8a817c76ae9ba53a2b88178751c5d1",
+  "transactions": [
+    {
+      "id": 87865,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2011-05-27",
+      "effectiveDate": "2011-05-27",
+      "resolutionDate": "2011-05-27",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Texas Rangers signed SS Luis Marte."
+    },
+    {
+      "id": 87866,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 625,
+        "name": "DSL Rangers Blue",
+        "link": "/api/v1/teams/625"
+      },
+      "date": "2011-05-28",
+      "effectiveDate": "2011-05-28",
+      "resolutionDate": "2011-05-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Luis Marte assigned to DSL Rangers from Texas Rangers."
+    },
+    {
+      "id": 101274,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "fromTeam": {
+        "id": 625,
+        "name": "DSL Rangers Blue",
+        "link": "/api/v1/teams/625"
+      },
+      "toTeam": {
+        "id": 411,
+        "name": "ACL Rangers",
+        "link": "/api/v1/teams/411"
+      },
+      "date": "2011-08-22",
+      "effectiveDate": "2011-08-22",
+      "resolutionDate": "2011-08-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Luis Marte assigned to AZL Rangers from DSL Rangers."
+    },
+    {
+      "id": 148193,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "fromTeam": {
+        "id": 411,
+        "name": "ACL Rangers",
+        "link": "/api/v1/teams/411"
+      },
+      "toTeam": {
+        "id": 448,
+        "name": "Hickory Crawdads",
+        "link": "/api/v1/teams/448"
+      },
+      "date": "2013-04-03",
+      "effectiveDate": "2013-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Hickory Crawdads from AZL Rangers."
+    },
+    {
+      "id": 185722,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 448,
+        "name": "Hickory Crawdads",
+        "link": "/api/v1/teams/448"
+      },
+      "date": "2014-04-13",
+      "effectiveDate": "2014-04-13",
+      "resolutionDate": "2014-04-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Hickory Crawdads placed SS Luis Marte on the 7-day disabled list. injured left hand"
+    },
+    {
+      "id": 192328,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 448,
+        "name": "Hickory Crawdads",
+        "link": "/api/v1/teams/448"
+      },
+      "date": "2014-06-08",
+      "effectiveDate": "2014-06-08",
+      "resolutionDate": "2014-06-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Hickory Crawdads activated SS Luis Marte from the 7-day disabled list."
+    },
+    {
+      "id": 216830,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2015-03-08",
+      "effectiveDate": "2015-03-08",
+      "resolutionDate": "2015-03-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "IF Luis Marte assigned to Texas Rangers."
+    },
+    {
+      "id": 219200,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "fromTeam": {
+        "id": 448,
+        "name": "Hickory Crawdads",
+        "link": "/api/v1/teams/448"
+      },
+      "toTeam": {
+        "id": 504,
+        "name": "High Desert Mavericks",
+        "link": "/api/v1/teams/504"
+      },
+      "date": "2015-04-02",
+      "effectiveDate": "2015-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to High Desert Mavericks from Hickory Crawdads."
+    },
+    {
+      "id": 231938,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "fromTeam": {
+        "id": 504,
+        "name": "High Desert Mavericks",
+        "link": "/api/v1/teams/504"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2015-06-18",
+      "effectiveDate": "2015-06-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Frisco RoughRiders from High Desert Mavericks."
+    },
+    {
+      "id": 245366,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "fromTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2015-09-15",
+      "effectiveDate": "2015-09-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Round Rock Express from Frisco RoughRiders."
+    },
+    {
+      "id": 257365,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2016-03-18",
+      "effectiveDate": "2016-03-18",
+      "resolutionDate": "2016-03-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Texas Rangers."
+    },
+    {
+      "id": 258500,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2016-03-29",
+      "effectiveDate": "2016-03-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Frisco RoughRiders from Round Rock Express."
+    },
+    {
+      "id": 263713,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2016-04-24",
+      "effectiveDate": "2016-04-24",
+      "resolutionDate": "2016-04-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Frisco RoughRiders placed SS Luis Marte on the 7-day disabled list."
+    },
+    {
+      "id": 274497,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "fromTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "toTeam": {
+        "id": 411,
+        "name": "ACL Rangers",
+        "link": "/api/v1/teams/411"
+      },
+      "date": "2016-06-23",
+      "effectiveDate": "2016-06-23",
+      "resolutionDate": "2016-06-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Frisco RoughRiders sent SS Luis Marte on a rehab assignment to AZL Rangers."
+    },
+    {
+      "id": 276178,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2016-06-30",
+      "effectiveDate": "2016-06-30",
+      "resolutionDate": "2016-06-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Frisco RoughRiders activated SS Luis Marte from the 7-day disabled list."
+    },
+    {
+      "id": 290844,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2016-10-20",
+      "effectiveDate": "2016-10-20",
+      "resolutionDate": "2016-10-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 298864,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2017-02-26",
+      "effectiveDate": "2017-02-26",
+      "resolutionDate": "2017-02-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Texas Rangers."
+    },
+    {
+      "id": 304237,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2017-04-05",
+      "effectiveDate": "2017-04-05",
+      "resolutionDate": "2017-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Round Rock Express."
+    },
+    {
+      "id": 308778,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2017-05-02",
+      "effectiveDate": "2017-05-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Frisco RoughRiders from Round Rock Express."
+    },
+    {
+      "id": 309343,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "fromTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2017-05-06",
+      "effectiveDate": "2017-05-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Round Rock Express from Frisco RoughRiders."
+    },
+    {
+      "id": 312785,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2017-05-31",
+      "effectiveDate": "2017-05-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Frisco RoughRiders from Round Rock Express."
+    },
+    {
+      "id": 324449,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "fromTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2017-07-16",
+      "effectiveDate": "2017-07-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Round Rock Express from Frisco RoughRiders."
+    },
+    {
+      "id": 327959,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2017-08-05",
+      "effectiveDate": "2017-08-02",
+      "resolutionDate": "2017-08-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express placed SS Luis Marte on the 7-day disabled list retroactive to August 2, 2017."
+    },
+    {
+      "id": 328787,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2017-08-11",
+      "effectiveDate": "2017-08-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Frisco RoughRiders from Round Rock Express."
+    },
+    {
+      "id": 337018,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2017-11-06",
+      "effectiveDate": "2017-11-06",
+      "resolutionDate": "2017-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "SS Luis Marte elected free agency."
+    },
+    {
+      "id": 342700,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2018-02-24",
+      "effectiveDate": "2018-02-24",
+      "resolutionDate": "2018-02-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Texas Rangers."
+    },
+    {
+      "id": 345490,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2018-03-27",
+      "effectiveDate": "2018-03-27",
+      "resolutionDate": "2018-03-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Frisco RoughRiders."
+    },
+    {
+      "id": 349561,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2018-04-14",
+      "effectiveDate": "2018-04-14",
+      "resolutionDate": "2018-04-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Frisco RoughRiders placed SS Luis Marte on the temporarily inactive list."
+    },
+    {
+      "id": 350431,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2018-04-20",
+      "effectiveDate": "2018-04-20",
+      "resolutionDate": "2018-04-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Frisco RoughRiders activated SS Luis Marte from the temporarily inactive list."
+    },
+    {
+      "id": 354321,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2018-05-18",
+      "effectiveDate": "2018-05-18",
+      "resolutionDate": "2018-05-18",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Frisco RoughRiders released SS Luis Marte."
+    },
+    {
+      "id": 354920,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2018-05-23",
+      "effectiveDate": "2018-05-23",
+      "resolutionDate": "2018-05-23",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent SS Luis Marte to a minor league contract."
+    },
+    {
+      "id": 354921,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 430,
+        "name": "Mississippi Mud Monsters",
+        "link": "/api/v1/teams/430"
+      },
+      "date": "2018-05-23",
+      "effectiveDate": "2018-05-23",
+      "resolutionDate": "2018-05-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Mississippi Braves."
+    },
+    {
+      "id": 367988,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "fromTeam": {
+        "id": 430,
+        "name": "Mississippi Mud Monsters",
+        "link": "/api/v1/teams/430"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2018-07-11",
+      "effectiveDate": "2018-07-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Gwinnett Stripers from Mississippi Braves."
+    },
+    {
+      "id": 380842,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2018-10-13",
+      "effectiveDate": "2018-10-13",
+      "resolutionDate": "2018-10-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 387088,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2019-01-28",
+      "effectiveDate": "2019-01-28",
+      "resolutionDate": "2019-01-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Atlanta Braves invited non-roster SS Luis Marte to spring training."
+    },
+    {
+      "id": 432607,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2019-11-04",
+      "effectiveDate": "2019-11-04",
+      "resolutionDate": "2019-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "SS Luis Marte elected free agency."
+    },
+    {
+      "id": 433649,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2019-11-17",
+      "effectiveDate": "2019-11-17",
+      "resolutionDate": "2019-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 435583,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 693,
+        "name": "Cardenales de Lara",
+        "link": "/api/v1/teams/693"
+      },
+      "date": "2019-12-27",
+      "effectiveDate": "2019-12-27",
+      "resolutionDate": "2019-12-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Cardenales de Lara."
+    },
+    {
+      "id": 457410,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2020-12-02",
+      "effectiveDate": "2020-12-02",
+      "resolutionDate": "2020-12-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Luis Marte assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 471289,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2020-12-02",
+      "effectiveDate": "2020-12-02",
+      "resolutionDate": "2020-12-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Luis Marte assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 460940,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 3898,
+        "name": "Wichita Wind Surge",
+        "link": "/api/v1/teams/3898"
+      },
+      "date": "2021-01-19",
+      "effectiveDate": "2021-01-19",
+      "resolutionDate": "2021-01-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Wichita Wind Surge."
+    },
+    {
+      "id": 474953,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2021-01-19",
+      "effectiveDate": "2021-01-19",
+      "resolutionDate": "2021-01-19",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Miami Marlins signed free agent SS Luis Marte."
+    },
+    {
+      "id": 469259,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 3898,
+        "name": "Wichita Wind Surge",
+        "link": "/api/v1/teams/3898"
+      },
+      "date": "2021-01-19",
+      "effectiveDate": "2021-01-19",
+      "resolutionDate": "2021-01-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Wichita Wind Surge."
+    },
+    {
+      "id": 460939,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2021-01-19",
+      "effectiveDate": "2021-01-19",
+      "resolutionDate": "2021-01-19",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Miami Marlins signed free agent SS Luis Marte to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 469258,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 482010,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "fromTeam": {
+        "id": 3276,
+        "name": "Marlins Alternate Training Site",
+        "link": "/api/v1/teams/3276"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2021-05-01",
+      "effectiveDate": "2021-05-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Marte assigned to Jacksonville Jumbo Shrimp from Marlins Alternate Training Site."
+    },
+    {
+      "id": 491174,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2021-05-28",
+      "effectiveDate": "2021-05-28",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Miami Marlins selected the contract of SS Luis Marte from Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 492284,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2021-06-03",
+      "effectiveDate": "2021-06-03",
+      "resolutionDate": "2021-06-03",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Miami Marlins designated SS Luis Marte for assignment."
+    },
+    {
+      "id": 492884,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2021-06-06",
+      "effectiveDate": "2021-06-06",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Miami Marlins sent SS Luis Marte outright to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 495133,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2021-06-19",
+      "effectiveDate": "2021-06-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Miami Marlins selected the contract of SS Luis Marte from Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 500319,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2021-06-30",
+      "effectiveDate": "2021-06-30",
+      "resolutionDate": "2021-06-30",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Miami Marlins designated SS Luis Marte for assignment."
+    },
+    {
+      "id": 500744,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2021-07-02",
+      "effectiveDate": "2021-07-02",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Miami Marlins sent SS Luis Marte outright to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 507876,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2021-07-26",
+      "effectiveDate": "2021-07-26",
+      "resolutionDate": "2021-07-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jacksonville Jumbo Shrimp placed SS Luis Marte on the 60-day injured list."
+    },
+    {
+      "id": 523575,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2021-11-05",
+      "effectiveDate": "2021-11-05",
+      "resolutionDate": "2021-11-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jacksonville Jumbo Shrimp activated SS Luis Marte from the 60-day injured list."
+    },
+    {
+      "id": 524257,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2021-11-07",
+      "effectiveDate": "2021-11-07",
+      "resolutionDate": "2021-11-07",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "SS Luis Marte elected free agency."
+    },
+    {
+      "id": 601463,
+      "person": {
+        "id": 606336,
+        "fullName": "Luis Marté",
+        "link": "/api/v1/people/606336",
+        "nameSlug": "luis-marte-606336"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2021-12-08",
+      "effectiveDate": "2021-12-08",
+      "resolutionDate": "2021-12-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gigantes del Cibao activated SS Luis Marte."
+    }
+  ]
+}

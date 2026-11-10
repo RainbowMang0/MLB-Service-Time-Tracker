@@ -1,0 +1,1428 @@
+{
+  "player_id": 595885,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:6b7f0ea1e4e0351cb7500fe8eda7258ab94378ac3effc25adc423daa56e6fb44",
+  "transactions": [
+    {
+      "id": 101255,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2011-08-21",
+      "effectiveDate": "2011-08-21",
+      "resolutionDate": "2011-08-21",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "New York Yankees signed C Greg Bird."
+    },
+    {
+      "id": 101256,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "date": "2011-08-22",
+      "effectiveDate": "2011-08-22",
+      "resolutionDate": "2011-08-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Greg Bird assigned to GCL Yankees."
+    },
+    {
+      "id": 131381,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "fromTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2012-07-31",
+      "effectiveDate": "2012-07-31",
+      "resolutionDate": "2012-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Greg Bird assigned to Staten Island Yankees from GCL Yankees."
+    },
+    {
+      "id": 131997,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "fromTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "toTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "date": "2012-08-04",
+      "effectiveDate": "2012-08-05",
+      "resolutionDate": "2012-08-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Greg Bird assigned to GCL Yankees from Staten Island Yankees."
+    },
+    {
+      "id": 134055,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "fromTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2012-08-25",
+      "effectiveDate": "2012-08-25",
+      "resolutionDate": "2012-08-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Greg Bird assigned to Staten Island Yankees from GCL Yankees."
+    },
+    {
+      "id": 143193,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2013-01-31",
+      "effectiveDate": "2013-01-31",
+      "resolutionDate": "2013-01-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Yankees invited non-roster 1B Greg Bird to spring training."
+    },
+    {
+      "id": 146789,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "fromTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2013-03-30",
+      "effectiveDate": "2013-03-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Greg Bird assigned to Charleston RiverDogs from Staten Island Yankees."
+    },
+    {
+      "id": 183119,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "fromTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2014-03-31",
+      "effectiveDate": "2014-03-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Greg Bird assigned to Tampa Yankees from Charleston RiverDogs."
+    },
+    {
+      "id": 184743,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2014-04-03",
+      "effectiveDate": "2014-04-03",
+      "resolutionDate": "2014-04-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Yankees placed 1B Greg Bird on the 7-day disabled list."
+    },
+    {
+      "id": 188103,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2014-05-07",
+      "effectiveDate": "2014-05-07",
+      "resolutionDate": "2014-05-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Yankees activated 1B Greg Bird from the 7-day disabled list."
+    },
+    {
+      "id": 203233,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2014-08-02",
+      "effectiveDate": "2014-08-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Greg Bird assigned to Trenton Thunder from Tampa Yankees."
+    },
+    {
+      "id": 210399,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 1310,
+        "name": "American League Fall Stars",
+        "link": "/api/v1/teams/1310"
+      },
+      "date": "2014-10-30",
+      "effectiveDate": "2014-10-30",
+      "resolutionDate": "2014-10-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Greg Bird assigned to AFL East Fall Stars."
+    },
+    {
+      "id": 215137,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2015-02-05",
+      "effectiveDate": "2015-02-05",
+      "resolutionDate": "2015-02-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Yankees invited non-roster 1B Greg Bird to spring training."
+    },
+    {
+      "id": 224684,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2015-05-08",
+      "effectiveDate": "2015-05-08",
+      "resolutionDate": "2015-05-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Trenton Thunder placed 1B Greg Bird on the 7-day disabled list."
+    },
+    {
+      "id": 228724,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2015-06-04",
+      "effectiveDate": "2015-06-04",
+      "resolutionDate": "2015-06-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Trenton Thunder activated 1B Greg Bird from the 7-day disabled list."
+    },
+    {
+      "id": 236284,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2015-07-04",
+      "effectiveDate": "2015-07-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Greg Bird assigned to Scranton/Wilkes-Barre RailRiders from Trenton Thunder."
+    },
+    {
+      "id": 242020,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2015-08-13",
+      "effectiveDate": "2015-08-13",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Yankees selected the contract of 1B Greg Bird from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 259562,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2016-04-03",
+      "effectiveDate": "2016-03-25",
+      "resolutionDate": "2016-03-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees placed 1B Greg Bird on the 15-day disabled list retroactive to March 25, 2016. Recovering from February 2016 right labrum surgery"
+    },
+    {
+      "id": 265489,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2016-05-14",
+      "effectiveDate": "2016-05-14",
+      "resolutionDate": "2016-05-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees transferred 1B Greg Bird from the 15-day disabled list to the 60-day disabled list. Recovering from February 2016 right labrum surgery"
+    },
+    {
+      "id": 289640,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2016-10-10",
+      "effectiveDate": "2016-10-10",
+      "resolutionDate": "2016-10-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees activated 1B Greg Bird from the 60-day disabled list."
+    },
+    {
+      "id": 308685,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-05-02",
+      "effectiveDate": "2017-05-02",
+      "resolutionDate": "2017-05-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees placed 1B Greg Bird on the 10-day disabled list. Right ankle bruise."
+    },
+    {
+      "id": 312898,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2017-06-01",
+      "effectiveDate": "2017-06-01",
+      "resolutionDate": "2017-06-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Yankees sent 1B Greg Bird on a rehab assignment to Tampa Yankees."
+    },
+    {
+      "id": 314826,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2017-06-08",
+      "effectiveDate": "2017-06-08",
+      "resolutionDate": "2017-06-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Yankees sent 1B Greg Bird on a rehab assignment to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 321145,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-06-29",
+      "effectiveDate": "2017-06-29",
+      "resolutionDate": "2017-06-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees transferred 1B Greg Bird from the 10-day disabled list to the 60-day disabled list. Right ankle bruise."
+    },
+    {
+      "id": 329420,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2017-08-16",
+      "effectiveDate": "2017-08-16",
+      "resolutionDate": "2017-08-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Yankees sent 1B Greg Bird on a rehab assignment to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 330643,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-08-26",
+      "effectiveDate": "2017-08-26",
+      "resolutionDate": "2017-08-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees activated 1B Greg Bird from the 60-day disabled list."
+    },
+    {
+      "id": 345698,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2018-03-29",
+      "effectiveDate": "2018-03-26",
+      "resolutionDate": "2018-03-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees placed 1B Greg Bird on the 10-day disabled list retroactive to March 26, 2018. Right ankle surgery."
+    },
+    {
+      "id": 353190,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2018-05-10",
+      "effectiveDate": "2018-05-10",
+      "resolutionDate": "2018-05-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Yankees sent 1B Greg Bird on a rehab assignment to Tampa Tarpons."
+    },
+    {
+      "id": 353793,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2018-05-14",
+      "effectiveDate": "2018-05-14",
+      "resolutionDate": "2018-05-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Yankees sent 1B Greg Bird on a rehab assignment to Trenton Thunder."
+    },
+    {
+      "id": 362340,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2018-05-15",
+      "effectiveDate": "2018-05-15",
+      "resolutionDate": "2018-05-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Greg Bird assigned to New York Yankees."
+    },
+    {
+      "id": 354600,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2018-05-21",
+      "effectiveDate": "2018-05-21",
+      "resolutionDate": "2018-05-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Yankees sent 1B Greg Bird on a rehab assignment to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 355193,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2018-05-26",
+      "effectiveDate": "2018-05-26",
+      "resolutionDate": "2018-05-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees activated 1B Greg Bird from the 10-day disabled list."
+    },
+    {
+      "id": 396929,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2019-04-16",
+      "effectiveDate": "2019-04-14",
+      "resolutionDate": "2019-04-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees placed 1B Greg Bird on the 10-day injured list retroactive to April 14, 2019. Left plantar fascia tear."
+    },
+    {
+      "id": 401086,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2019-05-12",
+      "effectiveDate": "2019-05-12",
+      "resolutionDate": "2019-05-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees transferred 1B Greg Bird from the 10-day injured list to the 60-day injured list. Left plantar fascia tear."
+    },
+    {
+      "id": 431123,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2019-10-22",
+      "effectiveDate": "2019-10-22",
+      "resolutionDate": "2019-10-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Greg Bird assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 432219,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2019-11-04",
+      "effectiveDate": "2019-11-04",
+      "resolutionDate": "2019-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees activated 1B Greg Bird from the 60-day injured list."
+    },
+    {
+      "id": 434003,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2019-11-20",
+      "effectiveDate": "2019-11-20",
+      "resolutionDate": "2019-11-20",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Yankees designated 1B Greg Bird for assignment."
+    },
+    {
+      "id": 434311,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2019-11-27",
+      "effectiveDate": "2019-11-27",
+      "resolutionDate": "2019-11-27",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "1B Greg Bird elected free agency."
+    },
+    {
+      "id": 437802,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2020-02-04",
+      "effectiveDate": "2020-02-04",
+      "resolutionDate": "2020-02-04",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent 1B Greg Bird to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 437803,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2020-02-05",
+      "effectiveDate": "2020-02-05",
+      "resolutionDate": "2020-02-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Greg Bird assigned to Nashville Sounds."
+    },
+    {
+      "id": 447425,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 3290,
+        "name": "Rangers Alternate Training Site",
+        "link": "/api/v1/teams/3290"
+      },
+      "date": "2020-07-19",
+      "effectiveDate": "2020-07-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Greg Bird assigned to Rangers Alternate Training Site from Nashville Sounds."
+    },
+    {
+      "id": 448567,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "fromTeam": {
+        "id": 3290,
+        "name": "Rangers Alternate Training Site",
+        "link": "/api/v1/teams/3290"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2020-07-31",
+      "effectiveDate": "2020-07-31",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Texas Rangers selected the contract of 1B Greg Bird from Rangers Alternate Training Site."
+    },
+    {
+      "id": 448803,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2020-08-04",
+      "effectiveDate": "2020-08-01",
+      "resolutionDate": "2020-08-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed 1B Greg Bird on the 10-day injured list retroactive to August 1, 2020. Right calf strain."
+    },
+    {
+      "id": 449259,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2020-08-11",
+      "effectiveDate": "2020-08-11",
+      "resolutionDate": "2020-08-11",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Texas Rangers designated 1B Greg Bird for assignment."
+    },
+    {
+      "id": 449367,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2020-08-14",
+      "effectiveDate": "2020-08-14",
+      "resolutionDate": "2020-08-14",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "1B Greg Bird elected free agency."
+    },
+    {
+      "id": 451497,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 3286,
+        "name": "Phillies Alternate Training Site",
+        "link": "/api/v1/teams/3286"
+      },
+      "date": "2020-09-15",
+      "effectiveDate": "2020-09-15",
+      "resolutionDate": "2020-09-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Greg Bird assigned to Phillies Alternate Training Site."
+    },
+    {
+      "id": 451496,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2020-09-15",
+      "effectiveDate": "2020-09-15",
+      "resolutionDate": "2020-09-15",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent 1B Greg Bird to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 462298,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2021-02-11",
+      "effectiveDate": "2021-02-11",
+      "resolutionDate": "2021-02-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Greg Bird assigned to Albuquerque Isotopes."
+    },
+    {
+      "id": 475143,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2021-02-11",
+      "effectiveDate": "2021-02-11",
+      "resolutionDate": "2021-02-11",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Colorado Rockies signed free agent 1B Greg Bird."
+    },
+    {
+      "id": 462286,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2021-02-11",
+      "effectiveDate": "2021-02-11",
+      "resolutionDate": "2021-02-11",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Colorado Rockies signed free agent 1B Greg Bird to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 483344,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "resolutionDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Greg Bird assigned to Albuquerque Isotopes."
+    },
+    {
+      "id": 483316,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "fromTeam": {
+        "id": 3298,
+        "name": "Rockies Alternate Training Site",
+        "link": "/api/v1/teams/3298"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Greg Bird assigned to Albuquerque Isotopes from Rockies Alternate Training Site."
+    },
+    {
+      "id": 524010,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2021-11-07",
+      "effectiveDate": "2021-11-07",
+      "resolutionDate": "2021-11-07",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "1B Greg Bird elected free agency."
+    },
+    {
+      "id": 605851,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2022-03-13",
+      "effectiveDate": "2022-03-13",
+      "resolutionDate": "2022-03-13",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Toronto Blue Jays signed free agent 1B Greg Bird to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 610346,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2022-03-13",
+      "effectiveDate": "2022-03-13",
+      "resolutionDate": "2022-03-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "1B Greg Bird roster status changed by Toronto Blue Jays."
+    },
+    {
+      "id": 606495,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2022-03-14",
+      "effectiveDate": "2022-03-14",
+      "resolutionDate": "2022-03-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Greg Bird assigned to Buffalo Bisons."
+    },
+    {
+      "id": 610345,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2022-04-04",
+      "effectiveDate": "2022-04-04",
+      "resolutionDate": "2022-04-04",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Buffalo Bisons released 1B Greg Bird."
+    },
+    {
+      "id": 611447,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2022-04-06",
+      "effectiveDate": "2022-04-06",
+      "resolutionDate": "2022-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Greg Bird assigned to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 611448,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2022-04-06",
+      "effectiveDate": "2022-04-06",
+      "resolutionDate": "2022-04-06",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Yankees signed free agent 1B Greg Bird to a minor league contract."
+    },
+    {
+      "id": 637147,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2022-07-13",
+      "effectiveDate": "2022-07-13",
+      "resolutionDate": "2022-07-13",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Scranton/Wilkes-Barre RailRiders released 1B Greg Bird."
+    },
+    {
+      "id": 731039,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 4067,
+        "name": "Melbourne Aces",
+        "link": "/api/v1/teams/4067"
+      },
+      "date": "2023-11-05",
+      "effectiveDate": "2023-11-05",
+      "resolutionDate": "2023-11-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Greg Bird assigned to Melbourne Aces."
+    },
+    {
+      "id": 762349,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 6304,
+        "name": "Charros de Jalisco",
+        "link": "/api/v1/teams/6304"
+      },
+      "date": "2024-04-11",
+      "effectiveDate": "2024-04-11",
+      "resolutionDate": "2024-04-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Greg Bird assigned to Charros de Jalisco."
+    },
+    {
+      "id": 773695,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 732,
+        "name": "LMB All-Stars",
+        "link": "/api/v1/teams/732"
+      },
+      "date": "2024-05-24",
+      "effectiveDate": "2024-05-24",
+      "resolutionDate": "2024-05-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Greg Bird assigned to Mexican League Norte All-Stars."
+    },
+    {
+      "id": 788746,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "fromTeam": {
+        "id": 6304,
+        "name": "Charros de Jalisco",
+        "link": "/api/v1/teams/6304"
+      },
+      "toTeam": {
+        "id": 447,
+        "name": "Algodoneros Union Laguna",
+        "link": "/api/v1/teams/447"
+      },
+      "date": "2024-07-23",
+      "effectiveDate": "2024-07-23",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Charros de Jalisco traded 1B Greg Bird to Algodoneros Union Laguna for RHP Steven Fuentes."
+    },
+    {
+      "id": 830400,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 447,
+        "name": "Algodoneros Union Laguna",
+        "link": "/api/v1/teams/447"
+      },
+      "date": "2024-08-04",
+      "effectiveDate": "2024-08-04",
+      "resolutionDate": "2024-08-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Vaqueros Union Laguna activated 1B Greg Bird from the reserve list."
+    },
+    {
+      "id": 792617,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 447,
+        "name": "Algodoneros Union Laguna",
+        "link": "/api/v1/teams/447"
+      },
+      "date": "2024-08-04",
+      "effectiveDate": "2024-08-04",
+      "resolutionDate": "2024-08-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Algodoneros Union Laguna activated 1B Greg Bird from the reserve list."
+    },
+    {
+      "id": 804784,
+      "person": {
+        "id": 595885,
+        "fullName": "Greg Bird",
+        "link": "/api/v1/people/595885",
+        "nameSlug": "greg-bird-595885"
+      },
+      "toTeam": {
+        "id": 4067,
+        "name": "Melbourne Aces",
+        "link": "/api/v1/teams/4067"
+      },
+      "date": "2024-11-05",
+      "effectiveDate": "2024-11-05",
+      "resolutionDate": "2024-11-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Greg Bird assigned to Melbourne Aces."
+    }
+  ]
+}

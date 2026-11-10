@@ -1,0 +1,2192 @@
+{
+  "player_id": 572143,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:3c2bcf0859ac7adefe037e728681714d7d93ccfd49aa159290d2047d3f2ec569",
+  "transactions": [
+    {
+      "id": 100573,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2011-08-15",
+      "effectiveDate": "2011-08-15",
+      "resolutionDate": "2011-08-15",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "San Diego Padres signed RHP Burch Smith."
+    },
+    {
+      "id": 101608,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "date": "2011-08-25",
+      "effectiveDate": "2011-08-25",
+      "resolutionDate": "2011-08-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Burch Smith assigned to AZL Padres."
+    },
+    {
+      "id": 114465,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "date": "2012-04-05",
+      "effectiveDate": "2012-04-05",
+      "resolutionDate": "2012-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Burch Smith assigned to Lake Elsinore Storm."
+    },
+    {
+      "id": 148475,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2013-04-03",
+      "effectiveDate": "2013-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Burch Smith assigned to San Antonio Missions from Lake Elsinore Storm."
+    },
+    {
+      "id": 152475,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2013-05-11",
+      "effectiveDate": "2013-05-23",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "San Diego Padres selected the contract of Burch Smith from San Antonio Missions."
+    },
+    {
+      "id": 153763,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 549,
+        "name": "Tucson Padres",
+        "link": "/api/v1/teams/549"
+      },
+      "date": "2013-05-23",
+      "effectiveDate": "2013-05-23",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned Burch Smith to Tucson Padres."
+    },
+    {
+      "id": 156100,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 549,
+        "name": "Tucson Padres",
+        "link": "/api/v1/teams/549"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2013-06-08",
+      "effectiveDate": "2013-06-11",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Diego Padres recalled Burch Smith from Tucson Padres."
+    },
+    {
+      "id": 157010,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 549,
+        "name": "Tucson Padres",
+        "link": "/api/v1/teams/549"
+      },
+      "date": "2013-06-11",
+      "effectiveDate": "2013-06-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned Burch Smith to Tucson Padres."
+    },
+    {
+      "id": 161820,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 549,
+        "name": "Tucson Padres",
+        "link": "/api/v1/teams/549"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2013-06-28",
+      "effectiveDate": "2013-07-05",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Diego Padres recalled Burch Smith from Tucson Padres."
+    },
+    {
+      "id": 163004,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 549,
+        "name": "Tucson Padres",
+        "link": "/api/v1/teams/549"
+      },
+      "date": "2013-07-05",
+      "effectiveDate": "2013-07-05",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned Burch Smith to Tucson Padres."
+    },
+    {
+      "id": 170391,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 549,
+        "name": "Tucson Padres",
+        "link": "/api/v1/teams/549"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2013-09-02",
+      "effectiveDate": "2014-03-16",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Diego Padres recalled Burch Smith from Tucson Padres."
+    },
+    {
+      "id": 170699,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 490,
+        "name": "Peoria Javelinas",
+        "link": "/api/v1/teams/490"
+      },
+      "date": "2013-09-05",
+      "effectiveDate": "2013-09-05",
+      "resolutionDate": "2013-09-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Burch Smith assigned to Peoria Javelinas."
+    },
+    {
+      "id": 181168,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2014-03-16",
+      "effectiveDate": "2014-03-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned RHP Burch Smith to El Paso Chihuahuas."
+    },
+    {
+      "id": 185978,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2014-04-15",
+      "effectiveDate": "2014-04-15",
+      "resolutionDate": "2014-04-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "El Paso Chihuahuas placed RHP Burch Smith on the 7-day disabled list."
+    },
+    {
+      "id": 207800,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 542,
+        "name": "Surprise Saguaros",
+        "link": "/api/v1/teams/542"
+      },
+      "date": "2014-09-24",
+      "effectiveDate": "2014-09-24",
+      "resolutionDate": "2014-09-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Burch Smith assigned to Surprise Saguaros."
+    },
+    {
+      "id": 208337,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2014-09-29",
+      "effectiveDate": "2014-09-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Diego Padres recalled RHP Burch Smith from El Paso Chihuahuas."
+    },
+    {
+      "id": 213284,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2014-12-19",
+      "effectiveDate": "2015-03-20",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Tampa Bay Rays traded CF Wil Myers, C Ryan Hanigan, LHP Jose Castillo and RHP Gerardo Reyes to San Diego Padres for C Rene Rivera, RHP Burch Smith and 1B Jake Bauers."
+    },
+    {
+      "id": 217618,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2015-03-20",
+      "effectiveDate": "2015-03-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned RHP Burch Smith to Durham Bulls."
+    },
+    {
+      "id": 220164,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2015-04-06",
+      "effectiveDate": "2015-04-06",
+      "resolutionDate": "2015-04-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls placed RHP Burch Smith on the 7-day disabled list."
+    },
+    {
+      "id": 221270,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2015-04-08",
+      "effectiveDate": "2015-04-08",
+      "resolutionDate": "2015-04-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays placed RHP Burch Smith on the 60-day disabled list. Recovering from April 2015 Tommy John surgery"
+    },
+    {
+      "id": 221268,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2015-04-08",
+      "effectiveDate": "2015-04-08",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled RHP Burch Smith from Durham Bulls."
+    },
+    {
+      "id": 249548,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2015-11-06",
+      "effectiveDate": "2015-11-06",
+      "resolutionDate": "2015-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays activated RHP Burch Smith from the 60-day disabled list."
+    },
+    {
+      "id": 250478,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2015-11-20",
+      "effectiveDate": "2015-11-20",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Tampa Bay Rays sent RHP Burch Smith outright to Durham Bulls."
+    },
+    {
+      "id": 261394,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2016-04-07",
+      "effectiveDate": "2016-04-07",
+      "resolutionDate": "2016-04-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls placed RHP Burch Smith on the 7-day disabled list."
+    },
+    {
+      "id": 287564,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2016-09-06",
+      "effectiveDate": "2016-09-06",
+      "resolutionDate": "2016-09-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls activated RHP Burch Smith from the 7-day disabled list."
+    },
+    {
+      "id": 303512,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2017-04-04",
+      "effectiveDate": "2017-04-04",
+      "resolutionDate": "2017-04-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls placed RHP Burch Smith on the 7-day disabled list."
+    },
+    {
+      "id": 320206,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 2003,
+        "name": "FCL Rays",
+        "link": "/api/v1/teams/2003"
+      },
+      "date": "2017-06-26",
+      "effectiveDate": "2017-06-26",
+      "resolutionDate": "2017-06-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent RHP Burch Smith on a rehab assignment to GCL Rays."
+    },
+    {
+      "id": 324767,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 2730,
+        "name": "Charlotte Stone Crabs",
+        "link": "/api/v1/teams/2730"
+      },
+      "date": "2017-06-29",
+      "effectiveDate": "2017-06-29",
+      "resolutionDate": "2017-06-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Burch Smith assigned to Charlotte Stone Crabs."
+    },
+    {
+      "id": 321501,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 2003,
+        "name": "FCL Rays",
+        "link": "/api/v1/teams/2003"
+      },
+      "toTeam": {
+        "id": 2730,
+        "name": "Charlotte Stone Crabs",
+        "link": "/api/v1/teams/2730"
+      },
+      "date": "2017-07-01",
+      "effectiveDate": "2017-07-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Burch Smith assigned to Charlotte Stone Crabs from GCL Rays."
+    },
+    {
+      "id": 330016,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 2730,
+        "name": "Charlotte Stone Crabs",
+        "link": "/api/v1/teams/2730"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2017-08-21",
+      "effectiveDate": "2017-08-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Burch Smith assigned to Durham Bulls from Charlotte Stone Crabs."
+    },
+    {
+      "id": 332806,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2017-09-19",
+      "effectiveDate": "2017-09-19",
+      "resolutionDate": "2017-09-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls placed RHP Burch Smith on the temporarily inactive list."
+    },
+    {
+      "id": 333862,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2017-09-20",
+      "effectiveDate": "2017-09-20",
+      "resolutionDate": "2017-09-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls activated RHP Burch Smith from the temporarily inactive list."
+    },
+    {
+      "id": 338724,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2017-12-14",
+      "effectiveDate": "2017-12-14",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "New York Mets claimed RHP Burch Smith off waivers from Durham Bulls."
+    },
+    {
+      "id": 338800,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2017-12-14",
+      "effectiveDate": "2017-12-14",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "New York Mets traded RHP Burch Smith to Kansas City Royals for Future Considerations."
+    },
+    {
+      "id": 384023,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2018-11-26",
+      "effectiveDate": "2018-11-26",
+      "resolutionDate": "2018-11-26",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Kansas City Royals designated RHP Burch Smith for assignment."
+    },
+    {
+      "id": 384259,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2018-11-30",
+      "effectiveDate": "2018-11-30",
+      "resolutionDate": "2018-11-30",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Burch Smith elected free agency."
+    },
+    {
+      "id": 384258,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2018-11-30",
+      "effectiveDate": "2018-11-30",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Kansas City Royals sent RHP Burch Smith outright to Omaha Storm Chasers."
+    },
+    {
+      "id": 387468,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2019-01-11",
+      "effectiveDate": "2019-01-11",
+      "resolutionDate": "2019-01-11",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Milwaukee Brewers signed free agent RHP Burch Smith to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 387469,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2019-02-04",
+      "effectiveDate": "2019-02-04",
+      "resolutionDate": "2019-02-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Burch Smith assigned to San Antonio Missions."
+    },
+    {
+      "id": 399952,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2019-05-05",
+      "effectiveDate": "2019-05-12",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Milwaukee Brewers selected the contract of Burch Smith from San Antonio Missions."
+    },
+    {
+      "id": 401080,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2019-05-12",
+      "effectiveDate": "2019-05-12",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned RHP Burch Smith to San Antonio Missions."
+    },
+    {
+      "id": 413193,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2019-06-25",
+      "effectiveDate": "2019-06-25",
+      "resolutionDate": "2019-06-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Antonio Missions placed RHP Burch Smith on the temporarily inactive list."
+    },
+    {
+      "id": 413674,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2019-06-27",
+      "effectiveDate": "2019-06-27",
+      "resolutionDate": "2019-06-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Antonio Missions activated RHP Burch Smith from the temporarily inactive list."
+    },
+    {
+      "id": 415812,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2019-07-06",
+      "effectiveDate": "2019-07-07",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Milwaukee Brewers recalled Burch Smith from San Antonio Missions."
+    },
+    {
+      "id": 415914,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2019-07-07",
+      "effectiveDate": "2019-07-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned RHP Burch Smith to San Antonio Missions."
+    },
+    {
+      "id": 417614,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2019-07-15",
+      "effectiveDate": "2019-07-20",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Milwaukee Brewers recalled Burch Smith from San Antonio Missions."
+    },
+    {
+      "id": 418813,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2019-07-20",
+      "effectiveDate": "2019-07-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned RHP Burch Smith to San Antonio Missions."
+    },
+    {
+      "id": 419138,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2019-07-22",
+      "effectiveDate": "2019-07-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Milwaukee Brewers recalled Burch Smith from San Antonio Missions."
+    },
+    {
+      "id": 419506,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2019-07-24",
+      "effectiveDate": "2019-07-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned RHP Burch Smith to San Antonio Missions."
+    },
+    {
+      "id": 422901,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2019-08-09",
+      "effectiveDate": "2019-08-09",
+      "resolutionDate": "2019-08-09",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Milwaukee Brewers designated RHP Burch Smith for assignment."
+    },
+    {
+      "id": 423312,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2019-08-12",
+      "effectiveDate": "2019-08-15",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "San Francisco Giants claimed Burch Smith off waivers from Milwaukee Brewers."
+    },
+    {
+      "id": 423975,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2019-08-15",
+      "effectiveDate": "2019-08-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned RHP Burch Smith to Sacramento River Cats."
+    },
+    {
+      "id": 426898,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2019-09-01",
+      "effectiveDate": "2019-09-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Francisco Giants recalled RHP Burch Smith from Sacramento River Cats."
+    },
+    {
+      "id": 438053,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2020-02-10",
+      "effectiveDate": "2020-02-10",
+      "resolutionDate": "2020-02-10",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "San Francisco Giants designated RHP Burch Smith for assignment."
+    },
+    {
+      "id": 438443,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2020-02-15",
+      "effectiveDate": "2020-02-15",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "San Francisco Giants traded RHP Burch Smith to Oakland Athletics for cash."
+    },
+    {
+      "id": 448140,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2020-07-24",
+      "effectiveDate": "2020-07-24",
+      "resolutionDate": "2020-07-24",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "Burch Smith changed number to 46."
+    },
+    {
+      "id": 449464,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2020-08-16",
+      "effectiveDate": "2020-08-16",
+      "resolutionDate": "2020-08-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics placed RHP Burch Smith on the 10-day injured list. Right forearm strain."
+    },
+    {
+      "id": 450054,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2020-08-26",
+      "effectiveDate": "2020-08-26",
+      "resolutionDate": "2020-08-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics transferred RHP Burch Smith from the 10-day injured list to the 60-day injured list. Right forearm strain."
+    },
+    {
+      "id": 454415,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2020-10-28",
+      "effectiveDate": "2020-10-28",
+      "resolutionDate": "2020-10-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics activated RHP Burch Smith from the 60-day injured list."
+    },
+    {
+      "id": 476501,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2021-04-06",
+      "effectiveDate": "2021-04-04",
+      "resolutionDate": "2021-04-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics placed P Burch Smith on the 10 day disabled list."
+    },
+    {
+      "id": 485307,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2021-05-06",
+      "effectiveDate": "2021-05-06",
+      "resolutionDate": "2021-05-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Oakland Athletics sent RHP Burch Smith on a rehab assignment to Las Vegas Aviators."
+    },
+    {
+      "id": 485775,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2021-05-08",
+      "effectiveDate": "2021-05-08",
+      "resolutionDate": "2021-05-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics activated RHP Burch Smith."
+    },
+    {
+      "id": 517309,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2021-09-14",
+      "effectiveDate": "2021-09-14",
+      "resolutionDate": "2021-09-14",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Oakland Athletics designated RHP Burch Smith for assignment."
+    },
+    {
+      "id": 517964,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2021-09-16",
+      "effectiveDate": "2021-09-16",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Oakland Athletics sent RHP Burch Smith outright to Las Vegas Aviators."
+    },
+    {
+      "id": 521639,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2021-10-12",
+      "effectiveDate": "2021-10-12",
+      "resolutionDate": "2021-10-12",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Burch Smith elected free agency."
+    },
+    {
+      "id": 729755,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2023-10-25",
+      "effectiveDate": "2023-10-25",
+      "resolutionDate": "2023-10-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Burch Smith assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 738739,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2024-01-02",
+      "effectiveDate": "2024-01-02",
+      "resolutionDate": "2024-01-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Burch Smith roster status changed by Tampa Bay Rays."
+    },
+    {
+      "id": 736398,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2024-01-02",
+      "effectiveDate": "2024-01-02",
+      "resolutionDate": "2024-01-02",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Tampa Bay Rays signed free agent RHP Burch Smith to a minor league contract."
+    },
+    {
+      "id": 736399,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2024-01-04",
+      "effectiveDate": "2024-01-04",
+      "resolutionDate": "2024-01-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Burch Smith assigned to Durham Bulls."
+    },
+    {
+      "id": 757982,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2024-01-04",
+      "effectiveDate": "2024-01-04",
+      "resolutionDate": "2024-01-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls activated RHP Burch Smith."
+    },
+    {
+      "id": 757388,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2024-03-27",
+      "effectiveDate": "2024-03-27",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Tampa Bay Rays traded RHP Burch Smith to Miami Marlins for cash."
+    },
+    {
+      "id": 780032,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2024-06-14",
+      "effectiveDate": "2024-06-14",
+      "resolutionDate": "2024-06-14",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Miami Marlins designated RHP Burch Smith for assignment."
+    },
+    {
+      "id": 781906,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2024-06-20",
+      "effectiveDate": "2024-06-20",
+      "resolutionDate": "2024-06-20",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Miami Marlins released RHP Burch Smith."
+    },
+    {
+      "id": 783503,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2024-06-27",
+      "effectiveDate": "2024-06-27",
+      "resolutionDate": "2024-06-27",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Baltimore Orioles signed free agent RHP Burch Smith to a minor league contract."
+    },
+    {
+      "id": 784345,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2024-07-01",
+      "effectiveDate": "2024-07-01",
+      "resolutionDate": "2024-07-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Burch Smith assigned to Norfolk Tides."
+    },
+    {
+      "id": 786339,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2024-07-11",
+      "effectiveDate": "2024-07-11",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Baltimore Orioles selected the contract of RHP Burch Smith from Norfolk Tides."
+    },
+    {
+      "id": 799737,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2024-09-20",
+      "effectiveDate": "2024-09-18",
+      "resolutionDate": "2024-09-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles placed RHP Burch Smith on the 15-day injured list retroactive to September 18, 2024. Right adductor groin strain."
+    },
+    {
+      "id": 801313,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2024-10-03",
+      "effectiveDate": "2024-10-03",
+      "resolutionDate": "2024-10-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles activated RHP Burch Smith from the 15-day injured list."
+    },
+    {
+      "id": 803388,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2024-10-31",
+      "effectiveDate": "2024-10-31",
+      "resolutionDate": "2024-10-31",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Burch Smith elected free agency."
+    },
+    {
+      "id": 809901,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2025-01-06",
+      "effectiveDate": "2025-01-06",
+      "resolutionDate": "2025-01-06",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Pittsburgh Pirates signed free agent RHP Burch Smith to a minor league contract."
+    },
+    {
+      "id": 809902,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2025-01-13",
+      "effectiveDate": "2025-01-13",
+      "resolutionDate": "2025-01-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Burch Smith roster status changed by Pittsburgh Pirates."
+    },
+    {
+      "id": 810551,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2025-01-13",
+      "effectiveDate": "2025-01-13",
+      "resolutionDate": "2025-01-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Burch Smith assigned to Indianapolis Indians."
+    },
+    {
+      "id": 823094,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2025-03-28",
+      "effectiveDate": "2025-03-28",
+      "resolutionDate": "2025-03-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians placed RHP Burch Smith on the 7-day injured list."
+    },
+    {
+      "id": 831279,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 3390,
+        "name": "Bradenton Marauders",
+        "link": "/api/v1/teams/3390"
+      },
+      "date": "2025-04-19",
+      "effectiveDate": "2025-04-19",
+      "resolutionDate": "2025-04-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Indianapolis Indians sent RHP Burch Smith on a rehab assignment to Bradenton Marauders."
+    },
+    {
+      "id": 831544,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2025-04-22",
+      "effectiveDate": "2025-04-22",
+      "resolutionDate": "2025-04-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians activated RHP Burch Smith from the 7-day injured list."
+    },
+    {
+      "id": 832415,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2025-04-26",
+      "effectiveDate": "2025-04-26",
+      "resolutionDate": "2025-04-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians placed RHP Burch Smith on the 7-day injured list."
+    },
+    {
+      "id": 856608,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2025-05-26",
+      "effectiveDate": "2025-05-26",
+      "resolutionDate": "2025-05-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians activated RHP Burch Smith from the 7-day injured list."
+    },
+    {
+      "id": 840818,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2025-05-26",
+      "effectiveDate": "2025-05-26",
+      "resolutionDate": "2025-05-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians activated RHP Burch Smith from the 7-day injured list."
+    },
+    {
+      "id": 859157,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2025-07-27",
+      "effectiveDate": "2025-07-27",
+      "resolutionDate": "2025-07-27",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Indianapolis Indians released RHP Burch Smith."
+    },
+    {
+      "id": 876551,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2025-11-09",
+      "effectiveDate": "2025-11-09",
+      "resolutionDate": "2025-11-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Burch Smith assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 886356,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-12-23",
+      "effectiveDate": "2025-12-23",
+      "resolutionDate": "2025-12-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Burch Smith roster status changed by Detroit Tigers."
+    },
+    {
+      "id": 880194,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2025-12-23",
+      "effectiveDate": "2025-12-23",
+      "resolutionDate": "2025-12-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Burch Smith assigned to Toledo Mud Hens."
+    },
+    {
+      "id": 880195,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-12-23",
+      "effectiveDate": "2025-12-23",
+      "resolutionDate": "2025-12-23",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent RHP Burch Smith to a minor league contract."
+    },
+    {
+      "id": 894386,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2025-12-23",
+      "effectiveDate": "2025-12-23",
+      "resolutionDate": "2025-12-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens activated RHP Burch Smith."
+    },
+    {
+      "id": 902252,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-04-22",
+      "effectiveDate": "2026-04-22",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Detroit Tigers selected the contract of RHP Burch Smith from Toledo Mud Hens."
+    },
+    {
+      "id": 911108,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-05-22",
+      "effectiveDate": "2026-05-22",
+      "resolutionDate": "2026-05-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers placed RHP Burch Smith on the 15-day injured list. Right shoulder inflammation."
+    },
+    {
+      "id": 921456,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-06-23",
+      "effectiveDate": "2026-06-23",
+      "resolutionDate": "2026-06-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers transferred RHP Burch Smith from the 15-day injured list to the 60-day injured list. Right shoulder inflammation."
+    },
+    {
+      "id": 928423,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2026-07-17",
+      "effectiveDate": "2026-07-17",
+      "resolutionDate": "2026-07-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers sent RHP Burch Smith on a rehab assignment to Lakeland Flying Tigers."
+    },
+    {
+      "id": 934831,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2026-07-21",
+      "effectiveDate": "2026-07-21",
+      "resolutionDate": "2026-07-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers sent RHP Burch Smith on a rehab assignment to Toledo Mud Hens."
+    },
+    {
+      "id": 929724,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2026-07-21",
+      "effectiveDate": "2026-07-21",
+      "resolutionDate": "2026-07-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers sent RHP Burch Smith on a rehab assignment to Toledo Mud Hens."
+    },
+    {
+      "id": 947312,
+      "person": {
+        "id": 572143,
+        "fullName": "Burch Smith",
+        "link": "/api/v1/people/572143",
+        "nameSlug": "burch-smith-572143"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-10-29",
+      "effectiveDate": "2026-10-29",
+      "resolutionDate": "2026-10-29",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Burch Smith elected free agency."
+    }
+  ]
+}

@@ -1,0 +1,3009 @@
+{
+  "player_id": 621199,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:5698b6c3435fcd418c8b535941c929383fe130963d72f038957896ad587c03ed",
+  "transactions": [
+    {
+      "id": 123966,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2012-06-15",
+      "effectiveDate": "2012-06-15",
+      "resolutionDate": "2012-06-15",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "New York Mets signed RHP Matt Bowman."
+    },
+    {
+      "id": 123968,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2012-06-16",
+      "effectiveDate": "2012-06-16",
+      "resolutionDate": "2012-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Matthew Bowman assigned to Brooklyn Cyclones."
+    },
+    {
+      "id": 148366,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "toTeam": {
+        "id": 543,
+        "name": "Savannah Sand Gnats",
+        "link": "/api/v1/teams/543"
+      },
+      "date": "2013-04-03",
+      "effectiveDate": "2013-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Matthew Bowman assigned to Savannah Sand Gnats from Brooklyn Cyclones."
+    },
+    {
+      "id": 151940,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 543,
+        "name": "Savannah Sand Gnats",
+        "link": "/api/v1/teams/543"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2013-05-07",
+      "effectiveDate": "2013-05-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matthew Bowman assigned to St. Lucie Mets from Savannah Sand Gnats."
+    },
+    {
+      "id": 168575,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2013-08-16",
+      "effectiveDate": "2013-08-16",
+      "resolutionDate": "2013-08-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Lucie Mets placed RHP Matthew Bowman on the 7-day disabled list."
+    },
+    {
+      "id": 171307,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2013-09-24",
+      "effectiveDate": "2013-09-24",
+      "resolutionDate": "2013-09-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Lucie Mets activated RHP Matthew Bowman from the 7-day disabled list."
+    },
+    {
+      "id": 184725,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2014-04-03",
+      "effectiveDate": "2014-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matthew Bowman assigned to Binghamton Mets from St. Lucie Mets."
+    },
+    {
+      "id": 198897,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2014-07-04",
+      "effectiveDate": "2014-07-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matthew Bowman assigned to Las Vegas 51s from Binghamton Mets."
+    },
+    {
+      "id": 200958,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2014-07-17",
+      "effectiveDate": "2014-07-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matthew Bowman assigned to Binghamton Mets from Las Vegas 51s."
+    },
+    {
+      "id": 202265,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2014-07-26",
+      "effectiveDate": "2014-07-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matthew Bowman assigned to Las Vegas 51s from Binghamton Mets."
+    },
+    {
+      "id": 202354,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2014-07-27",
+      "effectiveDate": "2014-07-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matthew Bowman assigned to Binghamton Mets from Las Vegas 51s."
+    },
+    {
+      "id": 204657,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2014-08-13",
+      "effectiveDate": "2014-08-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matthew Bowman assigned to Las Vegas 51s from Binghamton Mets."
+    },
+    {
+      "id": 207238,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2014-09-05",
+      "effectiveDate": "2014-09-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman assigned to St. Lucie Mets from Las Vegas 51s."
+    },
+    {
+      "id": 215100,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2015-02-03",
+      "effectiveDate": "2015-02-03",
+      "resolutionDate": "2015-02-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Mets invited non-roster RHP Matt Bowman to spring training."
+    },
+    {
+      "id": 226001,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2015-03-18",
+      "effectiveDate": "2015-03-18",
+      "resolutionDate": "2015-03-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Matt Bowman roster status changed by New York Mets."
+    },
+    {
+      "id": 220776,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2015-04-07",
+      "effectiveDate": "2015-04-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman assigned to Las Vegas 51s from St. Lucie Mets."
+    },
+    {
+      "id": 224074,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2015-05-02",
+      "effectiveDate": "2015-05-02",
+      "resolutionDate": "2015-05-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Las Vegas 51s placed RHP Matt Bowman on the 7-day disabled list."
+    },
+    {
+      "id": 225112,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2015-05-12",
+      "effectiveDate": "2015-05-12",
+      "resolutionDate": "2015-05-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Las Vegas 51s activated RHP Matt Bowman from the 7-day disabled list."
+    },
+    {
+      "id": 251559,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2015-12-10",
+      "effectiveDate": "2015-12-10",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "St. Louis Cardinals claimed RHP Matt Bowman off waivers from New York Mets."
+    },
+    {
+      "id": 354240,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2018-05-18",
+      "effectiveDate": "2018-05-17",
+      "resolutionDate": "2018-05-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals placed RHP Matt Bowman on the 10-day disabled list retroactive to May 17, 2018. Blisters on right middle and index fingers."
+    },
+    {
+      "id": 358393,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2018-06-07",
+      "effectiveDate": "2018-06-07",
+      "resolutionDate": "2018-06-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "St. Louis Cardinals sent RHP Matt Bowman on a rehab assignment to Memphis Redbirds."
+    },
+    {
+      "id": 360759,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2018-06-15",
+      "effectiveDate": "2018-06-15",
+      "resolutionDate": "2018-06-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals activated RHP Matt Bowman from the 10-day disabled list."
+    },
+    {
+      "id": 362969,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2018-06-19",
+      "effectiveDate": "2018-06-19",
+      "resolutionDate": "2018-06-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals placed RHP Matt Bowman on the 10-day disabled list. Blisters on right middle finger."
+    },
+    {
+      "id": 365125,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2018-06-29",
+      "effectiveDate": "2018-06-29",
+      "resolutionDate": "2018-06-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "St. Louis Cardinals sent RHP Matt Bowman on a rehab assignment to Memphis Redbirds."
+    },
+    {
+      "id": 366633,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2018-07-05",
+      "effectiveDate": "2018-07-05",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "St. Louis Cardinals optioned RHP Matt Bowman to Memphis Redbirds."
+    },
+    {
+      "id": 369556,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2018-07-18",
+      "effectiveDate": "2018-07-21",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "St. Louis Cardinals recalled Matt Bowman from Memphis Redbirds."
+    },
+    {
+      "id": 370121,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2018-07-21",
+      "effectiveDate": "2018-07-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "St. Louis Cardinals optioned RHP Matt Bowman to Memphis Redbirds."
+    },
+    {
+      "id": 374616,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2018-08-14",
+      "effectiveDate": "2018-08-14",
+      "resolutionDate": "2018-08-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Memphis Redbirds placed RHP Matt Bowman on the 7-day disabled list."
+    },
+    {
+      "id": 379034,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2018-10-01",
+      "effectiveDate": "2018-10-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "St. Louis Cardinals recalled RHP Matt Bowman from Memphis Redbirds."
+    },
+    {
+      "id": 381928,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2018-11-02",
+      "effectiveDate": "2018-11-02",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Cincinnati Reds claimed RHP Matt Bowman off waivers from St. Louis Cardinals."
+    },
+    {
+      "id": 385466,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2018-12-22",
+      "effectiveDate": "2019-03-23",
+      "resolutionDate": "2018-12-22",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "Matt Bowman changed number to ."
+    },
+    {
+      "id": 391885,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2019-03-23",
+      "effectiveDate": "2019-03-23",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cincinnati Reds optioned RHP Matt Bowman to Louisville Bats."
+    },
+    {
+      "id": 399309,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2019-05-01",
+      "effectiveDate": "2019-05-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cincinnati Reds recalled Matt Bowman from Louisville Bats."
+    },
+    {
+      "id": 399537,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2019-05-03",
+      "effectiveDate": "2019-05-03",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cincinnati Reds optioned RHP Matt Bowman to Louisville Bats."
+    },
+    {
+      "id": 402832,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2019-05-24",
+      "effectiveDate": "2019-07-20",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cincinnati Reds recalled Matt Bowman from Louisville Bats."
+    },
+    {
+      "id": 418835,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2019-07-20",
+      "effectiveDate": "2019-07-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cincinnati Reds optioned RHP Matt Bowman to Louisville Bats."
+    },
+    {
+      "id": 423820,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2019-08-15",
+      "effectiveDate": "2019-08-17",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cincinnati Reds recalled Matt Bowman from Louisville Bats."
+    },
+    {
+      "id": 424197,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2019-08-17",
+      "effectiveDate": "2019-08-17",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cincinnati Reds optioned RHP Matt Bowman to Louisville Bats."
+    },
+    {
+      "id": 426822,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2019-09-01",
+      "effectiveDate": "2020-07-20",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cincinnati Reds recalled Matt Bowman from Louisville Bats."
+    },
+    {
+      "id": 448565,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2020-07-31",
+      "effectiveDate": "2020-07-31",
+      "resolutionDate": "2020-07-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds transferred RHP Matt Bowman from the 10-day injured list to the 60-day injured list. Right elbow sprain."
+    },
+    {
+      "id": 453497,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2020-10-14",
+      "effectiveDate": "2020-10-14",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Cincinnati Reds sent RHP Matt Bowman outright to Louisville Bats."
+    },
+    {
+      "id": 453717,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2020-10-16",
+      "effectiveDate": "2020-10-16",
+      "resolutionDate": "2020-10-16",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Matt Bowman elected free agency."
+    },
+    {
+      "id": 458662,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2020-12-14",
+      "effectiveDate": "2020-12-14",
+      "resolutionDate": "2020-12-14",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Yankees signed free agent RHP Matt Bowman to a minor league contract."
+    },
+    {
+      "id": 458663,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2020-12-14",
+      "effectiveDate": "2020-12-14",
+      "resolutionDate": "2020-12-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman assigned to Trenton Thunder."
+    },
+    {
+      "id": 464517,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2020-12-14",
+      "effectiveDate": "2020-12-14",
+      "resolutionDate": "2020-12-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman assigned to Trenton Thunder."
+    },
+    {
+      "id": 466861,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 1956,
+        "name": "Somerset Patriots",
+        "link": "/api/v1/teams/1956"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman assigned to Somerset Patriots."
+    },
+    {
+      "id": 469126,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 1956,
+        "name": "Somerset Patriots",
+        "link": "/api/v1/teams/1956"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman assigned to Somerset Patriots."
+    },
+    {
+      "id": 482418,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 1956,
+        "name": "Somerset Patriots",
+        "link": "/api/v1/teams/1956"
+      },
+      "toTeam": {
+        "id": 3309,
+        "name": "Yankees Organization",
+        "link": "/api/v1/teams/3309"
+      },
+      "date": "2021-05-02",
+      "effectiveDate": "2021-05-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman assigned to Yankees Organization from Somerset Patriots."
+    },
+    {
+      "id": 485757,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 3309,
+        "name": "Yankees Organization",
+        "link": "/api/v1/teams/3309"
+      },
+      "toTeam": {
+        "id": 1956,
+        "name": "Somerset Patriots",
+        "link": "/api/v1/teams/1956"
+      },
+      "date": "2021-05-04",
+      "effectiveDate": "2021-05-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman assigned to Somerset Patriots from Yankees Organization."
+    },
+    {
+      "id": 524453,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 1956,
+        "name": "Somerset Patriots",
+        "link": "/api/v1/teams/1956"
+      },
+      "date": "2021-11-07",
+      "effectiveDate": "2021-11-07",
+      "resolutionDate": "2021-11-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Somerset Patriots activated RHP Matt Bowman."
+    },
+    {
+      "id": 611925,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2022-03-13",
+      "effectiveDate": "2022-03-13",
+      "resolutionDate": "2022-03-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Matt Bowman roster status changed by New York Yankees."
+    },
+    {
+      "id": 605836,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2022-03-13",
+      "effectiveDate": "2022-03-13",
+      "resolutionDate": "2022-03-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Yankees invited non-roster RHP Matt Bowman to spring training."
+    },
+    {
+      "id": 610926,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2022-04-05",
+      "effectiveDate": "2022-04-05",
+      "resolutionDate": "2022-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman assigned to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 624385,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2022-05-24",
+      "effectiveDate": "2022-05-24",
+      "resolutionDate": "2022-05-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders transferred RHP Matt Bowman from the 7-day injured list to the 60-day injured list."
+    },
+    {
+      "id": 629291,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2022-06-01",
+      "effectiveDate": "2022-06-01",
+      "resolutionDate": "2022-06-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Matt Bowman roster status changed by Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 659669,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2022-11-10",
+      "effectiveDate": "2022-11-10",
+      "resolutionDate": "2022-11-10",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Matt Bowman elected free agency."
+    },
+    {
+      "id": 665221,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2023-01-05",
+      "effectiveDate": "2023-01-05",
+      "resolutionDate": "2023-01-05",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Yankees signed free agent RHP Matt Bowman to a minor league contract."
+    },
+    {
+      "id": 665220,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2023-01-13",
+      "effectiveDate": "2023-01-13",
+      "resolutionDate": "2023-01-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman and  assigned to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 668426,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2023-02-07",
+      "effectiveDate": "2023-02-07",
+      "resolutionDate": "2023-02-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Yankees invited non-roster RHP Matt Bowman to spring training."
+    },
+    {
+      "id": 678717,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2023-02-07",
+      "effectiveDate": "2023-02-07",
+      "resolutionDate": "2023-02-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Matt Bowman roster status changed by New York Yankees."
+    },
+    {
+      "id": 713600,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2023-07-20",
+      "effectiveDate": "2023-07-20",
+      "resolutionDate": "2023-07-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders activated RHP Matt Bowman."
+    },
+    {
+      "id": 712778,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2023-07-20",
+      "effectiveDate": "2023-07-20",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Yankees selected the contract of RHP Matt Bowman from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 712780,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2023-07-20",
+      "effectiveDate": "2023-07-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned RHP Matt Bowman to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 724336,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2023-09-10",
+      "effectiveDate": "2023-09-10",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled RHP Matt Bowman from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 725112,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2023-09-14",
+      "effectiveDate": "2023-09-14",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned RHP Matt Bowman to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 726615,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2023-09-25",
+      "effectiveDate": "2023-09-25",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled RHP Matt Bowman from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 731157,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2023-11-06",
+      "effectiveDate": "2023-11-06",
+      "resolutionDate": "2023-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Matt Bowman elected free agency."
+    },
+    {
+      "id": 731162,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2023-11-06",
+      "effectiveDate": "2023-11-06",
+      "resolutionDate": "2023-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Matt Bowman elected free agency."
+    },
+    {
+      "id": 738013,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2024-01-24",
+      "effectiveDate": "2024-01-24",
+      "resolutionDate": "2024-01-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent RHP Matt Bowman to a minor league contract."
+    },
+    {
+      "id": 738014,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2024-01-25",
+      "effectiveDate": "2024-01-25",
+      "resolutionDate": "2024-01-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman assigned to St. Paul Saints."
+    },
+    {
+      "id": 763128,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2024-04-13",
+      "effectiveDate": "2024-04-13",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Minnesota Twins selected the contract of RHP Matt Bowman from St. Paul Saints."
+    },
+    {
+      "id": 766314,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2024-04-30",
+      "effectiveDate": "2024-04-30",
+      "resolutionDate": "2024-04-30",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Minnesota Twins designated RHP Matt Bowman for assignment."
+    },
+    {
+      "id": 766994,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2024-05-02",
+      "effectiveDate": "2024-05-03",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Minnesota Twins traded RHP Matt Bowman to Arizona Diamondbacks for cash."
+    },
+    {
+      "id": 774068,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2024-05-26",
+      "effectiveDate": "2024-05-26",
+      "resolutionDate": "2024-05-26",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Arizona Diamondbacks designated RHP Matt Bowman for assignment."
+    },
+    {
+      "id": 775337,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2024-05-31",
+      "effectiveDate": "2024-05-31",
+      "resolutionDate": "2024-05-31",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Matt Bowman elected free agency."
+    },
+    {
+      "id": 775336,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2024-05-31",
+      "effectiveDate": "2024-05-31",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Arizona Diamondbacks sent RHP Matt Bowman outright to Reno Aces."
+    },
+    {
+      "id": 777853,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2024-06-04",
+      "effectiveDate": "2024-06-04",
+      "resolutionDate": "2024-06-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces activated RHP Matt Bowman."
+    },
+    {
+      "id": 777873,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2024-06-04",
+      "effectiveDate": "2024-06-04",
+      "resolutionDate": "2024-06-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman assigned to Tacoma Rainiers."
+    },
+    {
+      "id": 777872,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2024-06-04",
+      "effectiveDate": "2024-06-04",
+      "resolutionDate": "2024-06-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman assigned to Seattle Mariners."
+    },
+    {
+      "id": 778872,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2024-06-09",
+      "effectiveDate": "2024-06-09",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Seattle Mariners selected the contract of RHP Matt Bowman from Tacoma Rainiers."
+    },
+    {
+      "id": 779386,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2024-06-11",
+      "effectiveDate": "2024-06-11",
+      "resolutionDate": "2024-06-11",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Seattle Mariners designated RHP Matt Bowman for assignment."
+    },
+    {
+      "id": 780108,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2024-06-14",
+      "effectiveDate": "2024-06-14",
+      "resolutionDate": "2024-06-14",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Matt Bowman elected free agency."
+    },
+    {
+      "id": 780107,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2024-06-14",
+      "effectiveDate": "2024-06-14",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Seattle Mariners sent RHP Matt Bowman outright to Tacoma Rainiers."
+    },
+    {
+      "id": 780944,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2024-06-16",
+      "effectiveDate": "2024-06-16",
+      "resolutionDate": "2024-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman assigned to Tacoma Rainiers."
+    },
+    {
+      "id": 780943,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2024-06-16",
+      "effectiveDate": "2024-06-16",
+      "resolutionDate": "2024-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman assigned to Seattle Mariners."
+    },
+    {
+      "id": 784417,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2024-07-01",
+      "effectiveDate": "2024-07-01",
+      "resolutionDate": "2024-07-01",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Matt Bowman elected free agency."
+    },
+    {
+      "id": 785039,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2024-07-04",
+      "effectiveDate": "2024-07-04",
+      "resolutionDate": "2024-07-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman assigned to St. Paul Saints."
+    },
+    {
+      "id": 785038,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2024-07-04",
+      "effectiveDate": "2024-07-04",
+      "resolutionDate": "2024-07-04",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent RHP Matt Bowman to a minor league contract."
+    },
+    {
+      "id": 794117,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2024-08-12",
+      "effectiveDate": "2024-08-12",
+      "resolutionDate": "2024-08-12",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "St. Paul Saints released RHP Matt Bowman."
+    },
+    {
+      "id": 795788,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2024-08-15",
+      "effectiveDate": "2024-08-15",
+      "resolutionDate": "2024-08-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Norfolk Tides activated RHP Matt Bowman."
+    },
+    {
+      "id": 794734,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2024-08-15",
+      "effectiveDate": "2024-08-15",
+      "resolutionDate": "2024-08-15",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Baltimore Orioles signed free agent RHP Matt Bowman to a minor league contract."
+    },
+    {
+      "id": 794753,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2024-08-15",
+      "effectiveDate": "2024-08-15",
+      "resolutionDate": "2024-08-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Norfolk Tides activated RHP Matt Bowman."
+    },
+    {
+      "id": 794735,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2024-08-15",
+      "effectiveDate": "2024-08-15",
+      "resolutionDate": "2024-08-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman assigned to Norfolk Tides."
+    },
+    {
+      "id": 794736,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2024-08-16",
+      "effectiveDate": "2024-08-16",
+      "resolutionDate": "2024-08-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Norfolk Tides activated RHP Matt Bowman."
+    },
+    {
+      "id": 795799,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2024-08-22",
+      "effectiveDate": "2024-08-22",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Baltimore Orioles selected the contract of RHP Matt Bowman from Norfolk Tides."
+    },
+    {
+      "id": 800808,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2024-10-01",
+      "effectiveDate": "2024-10-01",
+      "resolutionDate": "2024-10-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Matt Bowman roster status changed by Baltimore Orioles."
+    },
+    {
+      "id": 801321,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2024-10-03",
+      "effectiveDate": "2024-10-03",
+      "resolutionDate": "2024-10-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles activated RHP Matt Bowman."
+    },
+    {
+      "id": 803812,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "resolutionDate": "2024-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Matt Bowman elected free agency."
+    },
+    {
+      "id": 803810,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Baltimore Orioles sent RHP Matt Bowman outright to Norfolk Tides."
+    },
+    {
+      "id": 809001,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2024-12-23",
+      "effectiveDate": "2024-12-23",
+      "resolutionDate": "2024-12-23",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Baltimore Orioles signed free agent RHP Matt Bowman to a minor league contract."
+    },
+    {
+      "id": 809002,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2024-12-23",
+      "effectiveDate": "2024-12-23",
+      "resolutionDate": "2024-12-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman assigned to Norfolk Tides."
+    },
+    {
+      "id": 821624,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2024-12-23",
+      "effectiveDate": "2024-12-23",
+      "resolutionDate": "2024-12-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Matt Bowman roster status changed by Baltimore Orioles."
+    },
+    {
+      "id": 821625,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-03-23",
+      "effectiveDate": "2025-03-23",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Baltimore Orioles selected the contract of RHP Matt Bowman from Norfolk Tides."
+    },
+    {
+      "id": 822425,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2025-03-27",
+      "effectiveDate": "2025-03-27",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Baltimore Orioles sent RHP Matt Bowman outright to Norfolk Tides."
+    },
+    {
+      "id": 823125,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2025-03-28",
+      "effectiveDate": "2025-03-28",
+      "resolutionDate": "2025-03-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Norfolk Tides activated RHP Matt Bowman from the reserve list."
+    },
+    {
+      "id": 823328,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-03-30",
+      "effectiveDate": "2025-03-30",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Baltimore Orioles selected the contract of RHP Matt Bowman from Norfolk Tides."
+    },
+    {
+      "id": 828718,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Matt Bowman changed number to 42."
+    },
+    {
+      "id": 829922,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Matt Bowman changed number to 51."
+    },
+    {
+      "id": 835697,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-05-08",
+      "effectiveDate": "2025-05-08",
+      "resolutionDate": "2025-05-08",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Baltimore Orioles designated RHP Matt Bowman for assignment."
+    },
+    {
+      "id": 836091,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2025-05-10",
+      "effectiveDate": "2025-05-10",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Baltimore Orioles sent RHP Matt Bowman outright to Norfolk Tides."
+    },
+    {
+      "id": 841229,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-05-28",
+      "effectiveDate": "2025-05-28",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Baltimore Orioles selected the contract of RHP Matt Bowman from Norfolk Tides."
+    },
+    {
+      "id": 845740,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-06-08",
+      "effectiveDate": "2025-06-08",
+      "resolutionDate": "2025-06-08",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Baltimore Orioles designated RHP Matt Bowman for assignment."
+    },
+    {
+      "id": 846373,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2025-06-10",
+      "effectiveDate": "2025-06-10",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Baltimore Orioles sent RHP Matt Bowman outright to Norfolk Tides."
+    },
+    {
+      "id": 851269,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-06-29",
+      "effectiveDate": "2025-06-29",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Baltimore Orioles selected the contract of RHP Matt Bowman from Norfolk Tides."
+    },
+    {
+      "id": 852170,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-07-02",
+      "effectiveDate": "2025-07-02",
+      "resolutionDate": "2025-07-02",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Baltimore Orioles designated RHP Matt Bowman for assignment."
+    },
+    {
+      "id": 853759,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2025-07-04",
+      "effectiveDate": "2025-07-04",
+      "resolutionDate": "2025-07-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Norfolk Tides activated RHP Matt Bowman."
+    },
+    {
+      "id": 852815,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2025-07-04",
+      "effectiveDate": "2025-07-04",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Baltimore Orioles sent RHP Matt Bowman outright to Norfolk Tides."
+    },
+    {
+      "id": 865712,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-08-22",
+      "effectiveDate": "2025-08-22",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Baltimore Orioles selected the contract of RHP Matt Bowman from Norfolk Tides."
+    },
+    {
+      "id": 866249,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-08-26",
+      "effectiveDate": "2025-08-26",
+      "resolutionDate": "2025-08-26",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Baltimore Orioles designated RHP Matt Bowman for assignment."
+    },
+    {
+      "id": 866955,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-08-29",
+      "effectiveDate": "2025-08-29",
+      "resolutionDate": "2025-08-29",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Baltimore Orioles released RHP Matt Bowman."
+    },
+    {
+      "id": 867075,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2025-08-30",
+      "effectiveDate": "2025-08-30",
+      "resolutionDate": "2025-08-30",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Houston Astros signed free agent RHP Matt Bowman to a minor league contract."
+    },
+    {
+      "id": 867076,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-08-30",
+      "effectiveDate": "2025-08-30",
+      "resolutionDate": "2025-08-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman assigned to Sugar Land Space Cowboys."
+    },
+    {
+      "id": 867077,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-08-30",
+      "effectiveDate": "2025-08-30",
+      "resolutionDate": "2025-08-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sugar Land Space Cowboys activated RHP Matt Bowman."
+    },
+    {
+      "id": 875438,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Matt Bowman elected free agency."
+    },
+    {
+      "id": 883371,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2026-01-26",
+      "effectiveDate": "2026-01-26",
+      "resolutionDate": "2026-01-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman assigned to St. Paul Saints."
+    },
+    {
+      "id": 883370,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-01-26",
+      "effectiveDate": "2026-01-26",
+      "resolutionDate": "2026-01-26",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent RHP Matt Bowman to a minor league contract."
+    },
+    {
+      "id": 893334,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-01-26",
+      "effectiveDate": "2026-01-26",
+      "resolutionDate": "2026-01-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Matt Bowman roster status changed by Minnesota Twins."
+    },
+    {
+      "id": 884828,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 840,
+        "name": "Israel",
+        "link": "/api/v1/teams/840"
+      },
+      "date": "2026-02-05",
+      "effectiveDate": "2026-02-05",
+      "resolutionDate": "2026-02-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Israel activated RHP Matt Bowman."
+    },
+    {
+      "id": 893336,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 840,
+        "name": "Israel",
+        "link": "/api/v1/teams/840"
+      },
+      "date": "2026-02-05",
+      "effectiveDate": "2026-02-05",
+      "resolutionDate": "2026-02-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Israel activated RHP Matt Bowman."
+    },
+    {
+      "id": 893335,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2026-03-24",
+      "effectiveDate": "2026-03-24",
+      "resolutionDate": "2026-03-24",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "St. Paul Saints released RHP Matt Bowman."
+    },
+    {
+      "id": 893860,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-03-25",
+      "effectiveDate": "2026-03-25",
+      "resolutionDate": "2026-03-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent RHP Matt Bowman to a minor league contract."
+    },
+    {
+      "id": 893861,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2026-03-26",
+      "effectiveDate": "2026-03-26",
+      "resolutionDate": "2026-03-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman assigned to St. Paul Saints."
+    },
+    {
+      "id": 910677,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2026-05-20",
+      "effectiveDate": "2026-05-20",
+      "resolutionDate": "2026-05-20",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "St. Paul Saints released RHP Matt Bowman."
+    },
+    {
+      "id": 912006,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2026-05-27",
+      "effectiveDate": "2026-05-27",
+      "resolutionDate": "2026-05-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman assigned to Buffalo Bisons."
+    },
+    {
+      "id": 912005,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2026-05-27",
+      "effectiveDate": "2026-05-27",
+      "resolutionDate": "2026-05-27",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Toronto Blue Jays signed free agent RHP Matt Bowman to a minor league contract."
+    },
+    {
+      "id": 924280,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2026-07-01",
+      "effectiveDate": "2026-07-01",
+      "resolutionDate": "2026-07-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Buffalo Bisons placed RHP Matt Bowman on the temporarily inactive list."
+    },
+    {
+      "id": 925012,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2026-07-04",
+      "effectiveDate": "2026-07-04",
+      "resolutionDate": "2026-07-04",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Buffalo Bisons released RHP Matt Bowman."
+    },
+    {
+      "id": 926027,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-07-08",
+      "effectiveDate": "2026-07-08",
+      "resolutionDate": "2026-07-08",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent RHP Matt Bowman to a minor league contract."
+    },
+    {
+      "id": 926029,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2026-07-08",
+      "effectiveDate": "2026-07-08",
+      "resolutionDate": "2026-07-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Bowman assigned to St. Paul Saints."
+    },
+    {
+      "id": 949155,
+      "person": {
+        "id": 621199,
+        "fullName": "Matt Bowman",
+        "link": "/api/v1/people/621199",
+        "nameSlug": "matt-bowman-621199"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Matt Bowman elected free agency."
+    }
+  ]
+}

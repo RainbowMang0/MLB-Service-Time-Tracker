@@ -1,0 +1,1592 @@
+{
+  "player_id": 605301,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:ae005dc0e8439fb1203af8e822939a43841be4d890b9f86087b3db42c5d75789",
+  "transactions": [
+    {
+      "id": 96490,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2011-07-12",
+      "effectiveDate": "2011-07-12",
+      "resolutionDate": "2011-07-12",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Boston Red Sox signed OF Williams Jerez."
+    },
+    {
+      "id": 96491,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 471,
+        "name": "FCL Red Sox",
+        "link": "/api/v1/teams/471"
+      },
+      "date": "2011-07-13",
+      "effectiveDate": "2011-07-13",
+      "resolutionDate": "2011-07-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Williams Jerez assigned to GCL Red Sox."
+    },
+    {
+      "id": 122463,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 471,
+        "name": "FCL Red Sox",
+        "link": "/api/v1/teams/471"
+      },
+      "toTeam": {
+        "id": 558,
+        "name": "Lowell Spinners",
+        "link": "/api/v1/teams/558"
+      },
+      "date": "2012-06-11",
+      "effectiveDate": "2012-06-11",
+      "resolutionDate": "2012-06-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Williams Jerez assigned to Lowell Spinners from GCL Red Sox."
+    },
+    {
+      "id": 129915,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 558,
+        "name": "Lowell Spinners",
+        "link": "/api/v1/teams/558"
+      },
+      "date": "2012-07-19",
+      "effectiveDate": "2012-07-19",
+      "resolutionDate": "2012-07-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lowell Spinners placed OF Williams Jerez on the 7-day disabled list."
+    },
+    {
+      "id": 136486,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 558,
+        "name": "Lowell Spinners",
+        "link": "/api/v1/teams/558"
+      },
+      "date": "2012-09-20",
+      "effectiveDate": "2012-09-20",
+      "resolutionDate": "2012-09-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lowell Spinners activated OF Williams Jerez from the 7-day disabled list."
+    },
+    {
+      "id": 193224,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 558,
+        "name": "Lowell Spinners",
+        "link": "/api/v1/teams/558"
+      },
+      "toTeam": {
+        "id": 471,
+        "name": "FCL Red Sox",
+        "link": "/api/v1/teams/471"
+      },
+      "date": "2014-06-12",
+      "effectiveDate": "2014-06-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to GCL Red Sox from Lowell Spinners."
+    },
+    {
+      "id": 204729,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 471,
+        "name": "FCL Red Sox",
+        "link": "/api/v1/teams/471"
+      },
+      "toTeam": {
+        "id": 558,
+        "name": "Lowell Spinners",
+        "link": "/api/v1/teams/558"
+      },
+      "date": "2014-08-13",
+      "effectiveDate": "2014-08-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to Lowell Spinners from GCL Red Sox."
+    },
+    {
+      "id": 220801,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 558,
+        "name": "Lowell Spinners",
+        "link": "/api/v1/teams/558"
+      },
+      "toTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "date": "2015-04-07",
+      "effectiveDate": "2015-04-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to Greenville Drive from Lowell Spinners."
+    },
+    {
+      "id": 228785,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "toTeam": {
+        "id": 414,
+        "name": "Salem RidgeYaks",
+        "link": "/api/v1/teams/414"
+      },
+      "date": "2015-06-04",
+      "effectiveDate": "2015-06-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to Salem Red Sox from Greenville Drive."
+    },
+    {
+      "id": 234238,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 414,
+        "name": "Salem RidgeYaks",
+        "link": "/api/v1/teams/414"
+      },
+      "toTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "date": "2015-06-24",
+      "effectiveDate": "2015-06-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to Portland Sea Dogs from Salem Red Sox."
+    },
+    {
+      "id": 250423,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2015-11-20",
+      "effectiveDate": "2016-03-15",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Boston Red Sox selected the contract of Williams Jerez from Portland Sea Dogs."
+    },
+    {
+      "id": 257064,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "date": "2016-03-15",
+      "effectiveDate": "2016-03-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Boston Red Sox optioned LHP Williams Jerez to Portland Sea Dogs."
+    },
+    {
+      "id": 288435,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2016-10-03",
+      "effectiveDate": "2016-10-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Boston Red Sox recalled LHP Williams Jerez from Portland Sea Dogs."
+    },
+    {
+      "id": 289252,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2016-10-06",
+      "effectiveDate": "2016-10-06",
+      "resolutionDate": "2016-10-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Boston Red Sox reassigned LHP Williams Jerez to the minor leagues."
+    },
+    {
+      "id": 289956,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2016-10-12",
+      "effectiveDate": "2016-10-12",
+      "resolutionDate": "2016-10-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Boston Red Sox activated LHP Williams Jerez."
+    },
+    {
+      "id": 290908,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2016-10-20",
+      "effectiveDate": "2016-10-20",
+      "resolutionDate": "2016-10-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to Estrellas Orientales."
+    },
+    {
+      "id": 294672,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2016-12-08",
+      "effectiveDate": "2016-12-08",
+      "resolutionDate": "2016-12-08",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Boston Red Sox designated LHP Williams Jerez for assignment."
+    },
+    {
+      "id": 295167,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2016-12-16",
+      "effectiveDate": "2016-12-16",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Boston Red Sox sent LHP Williams Jerez outright to Pawtucket Red Sox."
+    },
+    {
+      "id": 299432,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2017-03-04",
+      "effectiveDate": "2017-03-04",
+      "resolutionDate": "2017-03-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to Boston Red Sox."
+    },
+    {
+      "id": 299786,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 940,
+        "name": "United States",
+        "link": "/api/v1/teams/940"
+      },
+      "date": "2017-03-09",
+      "effectiveDate": "2017-03-09",
+      "resolutionDate": "2017-03-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to United States."
+    },
+    {
+      "id": 303365,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "date": "2017-04-04",
+      "effectiveDate": "2017-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to Portland Sea Dogs from Pawtucket Red Sox."
+    },
+    {
+      "id": 323313,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 66,
+        "name": "EAS Eastern Division All-Stars",
+        "link": "/api/v1/teams/66"
+      },
+      "date": "2017-07-11",
+      "effectiveDate": "2017-07-11",
+      "resolutionDate": "2017-07-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to EAS Eastern Division All-Stars."
+    },
+    {
+      "id": 327112,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2017-08-01",
+      "effectiveDate": "2017-08-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to Pawtucket Red Sox from Portland Sea Dogs."
+    },
+    {
+      "id": 335174,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2017-10-14",
+      "effectiveDate": "2017-10-14",
+      "resolutionDate": "2017-10-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to Estrellas Orientales."
+    },
+    {
+      "id": 335847,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2017-11-02",
+      "effectiveDate": "2018-03-11",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Boston Red Sox selected the contract of Williams Jerez from Pawtucket Red Sox."
+    },
+    {
+      "id": 343816,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2018-03-11",
+      "effectiveDate": "2018-03-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Boston Red Sox optioned LHP Williams Jerez to Pawtucket Red Sox."
+    },
+    {
+      "id": 371978,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2018-07-31",
+      "effectiveDate": "2018-07-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Los Angeles Angels traded 2B Ian Kinsler and cash to Boston Red Sox for RHP Ty Buttrey and LHP Williams Jerez."
+    },
+    {
+      "id": 372159,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2018-07-31",
+      "effectiveDate": "2018-07-31",
+      "resolutionDate": "2018-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to Salt Lake Bees."
+    },
+    {
+      "id": 372634,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2018-08-02",
+      "effectiveDate": "2018-08-02",
+      "resolutionDate": "2018-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt Lake Bees activated LHP Williams Jerez."
+    },
+    {
+      "id": 373607,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2018-08-07",
+      "effectiveDate": "2018-08-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled Williams Jerez from Salt Lake Bees."
+    },
+    {
+      "id": 376761,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2018-08-28",
+      "effectiveDate": "2018-08-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned LHP Williams Jerez to Salt Lake Bees."
+    },
+    {
+      "id": 378180,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2018-09-07",
+      "effectiveDate": "2019-03-15",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled Williams Jerez from Salt Lake Bees."
+    },
+    {
+      "id": 390843,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2019-03-15",
+      "effectiveDate": "2019-03-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned LHP Williams Jerez to Salt Lake Bees."
+    },
+    {
+      "id": 392246,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2019-03-26",
+      "effectiveDate": "2019-03-26",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned LHP Williams Jerez to Sacramento River Cats."
+    },
+    {
+      "id": 392215,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2019-03-26",
+      "effectiveDate": "2019-03-26",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Los Angeles Angels traded LHP Williams Jerez to San Francisco Giants for RHP Chris Stratton."
+    },
+    {
+      "id": 400294,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2019-05-07",
+      "effectiveDate": "2019-05-08",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Francisco Giants recalled Williams Jerez from Sacramento River Cats."
+    },
+    {
+      "id": 400501,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2019-05-08",
+      "effectiveDate": "2019-05-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned LHP Williams Jerez to Sacramento River Cats."
+    },
+    {
+      "id": 403818,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2019-05-29",
+      "effectiveDate": "2019-05-30",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Francisco Giants recalled Williams Jerez from Sacramento River Cats."
+    },
+    {
+      "id": 403880,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2019-05-30",
+      "effectiveDate": "2019-05-30",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned LHP Williams Jerez to Sacramento River Cats."
+    },
+    {
+      "id": 418403,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2019-07-18",
+      "effectiveDate": "2019-07-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Francisco Giants recalled Williams Jerez from Sacramento River Cats."
+    },
+    {
+      "id": 418601,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2019-07-19",
+      "effectiveDate": "2019-07-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned LHP Williams Jerez to Sacramento River Cats."
+    },
+    {
+      "id": 422296,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2019-08-06",
+      "effectiveDate": "2019-08-15",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Francisco Giants recalled Williams Jerez from Sacramento River Cats."
+    },
+    {
+      "id": 423946,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2019-08-15",
+      "effectiveDate": "2019-08-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned LHP Williams Jerez to Sacramento River Cats."
+    },
+    {
+      "id": 427861,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2019-09-10",
+      "effectiveDate": "2019-09-12",
+      "resolutionDate": "2019-09-10",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "San Francisco Giants designated Williams Jerez for assignment."
+    },
+    {
+      "id": 427966,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2019-09-13",
+      "effectiveDate": "2019-09-13",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Pittsburgh Pirates claimed LHP Williams Jerez off waivers from San Francisco Giants."
+    },
+    {
+      "id": 432552,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2019-11-06",
+      "effectiveDate": "2019-11-06",
+      "resolutionDate": "2019-11-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to Estrellas Orientales."
+    },
+    {
+      "id": 433939,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2019-11-20",
+      "effectiveDate": "2019-11-27",
+      "resolutionDate": "2019-11-20",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Pittsburgh Pirates designated Williams Jerez for assignment."
+    },
+    {
+      "id": 434337,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2019-11-27",
+      "effectiveDate": "2019-11-27",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Pittsburgh Pirates sent LHP Williams Jerez outright to Indianapolis Indians."
+    },
+    {
+      "id": 452483,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2020-09-28",
+      "effectiveDate": "2020-09-28",
+      "resolutionDate": "2020-09-28",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Williams Jerez elected free agency."
+    },
+    {
+      "id": 456759,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2020-11-23",
+      "effectiveDate": "2020-11-23",
+      "resolutionDate": "2020-11-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to Estrellas Orientales."
+    },
+    {
+      "id": 490209,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2021-05-21",
+      "effectiveDate": "2021-05-21",
+      "resolutionDate": "2021-05-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to Tacoma Rainiers."
+    },
+    {
+      "id": 490208,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2021-05-21",
+      "effectiveDate": "2021-05-21",
+      "resolutionDate": "2021-05-21",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Seattle Mariners signed free agent LHP Williams Jerez to a minor league contract."
+    },
+    {
+      "id": 509926,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2021-08-05",
+      "effectiveDate": "2021-08-05",
+      "resolutionDate": "2021-08-05",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Tacoma Rainiers released LHP Williams Jerez."
+    },
+    {
+      "id": 616098,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2022-04-20",
+      "effectiveDate": "2022-04-20",
+      "resolutionDate": "2022-04-20",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Staten Island Ferry Hawks signed free agent LHP Williams Jerez."
+    },
+    {
+      "id": 619180,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2022-05-03",
+      "effectiveDate": "2022-05-03",
+      "resolutionDate": "2022-05-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Staten Island Ferry Hawks placed LHP Williams Jerez on the temporarily inactive list."
+    },
+    {
+      "id": 656286,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2022-10-15",
+      "effectiveDate": "2022-10-15",
+      "resolutionDate": "2022-10-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to Estrellas Orientales."
+    },
+    {
+      "id": 656489,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2022-10-15",
+      "effectiveDate": "2022-10-15",
+      "resolutionDate": "2022-10-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Estrellas Orientales activated LHP Williams Jerez from the temporarily inactive list."
+    },
+    {
+      "id": 656417,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2022-10-15",
+      "effectiveDate": "2022-10-15",
+      "resolutionDate": "2022-10-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Estrellas Orientales activated LHP Williams Jerez from the temporarily inactive list."
+    },
+    {
+      "id": 673755,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 1191,
+        "name": "Dominican Republic",
+        "link": "/api/v1/teams/1191"
+      },
+      "date": "2023-01-30",
+      "effectiveDate": "2023-01-30",
+      "resolutionDate": "2023-01-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Dominican Republic activated LHP Williams Jerez."
+    },
+    {
+      "id": 667252,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 1191,
+        "name": "Dominican Republic",
+        "link": "/api/v1/teams/1191"
+      },
+      "date": "2023-01-30",
+      "effectiveDate": "2023-01-30",
+      "resolutionDate": "2023-01-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to Dominican Republic."
+    },
+    {
+      "id": 683299,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 525,
+        "name": "Charleston Dirty Birds",
+        "link": "/api/v1/teams/525"
+      },
+      "date": "2023-04-07",
+      "effectiveDate": "2023-04-07",
+      "resolutionDate": "2023-04-07",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Charleston Dirty Birds signed free agent LHP Williams Jerez."
+    },
+    {
+      "id": 716055,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 525,
+        "name": "Charleston Dirty Birds",
+        "link": "/api/v1/teams/525"
+      },
+      "date": "2023-07-31",
+      "effectiveDate": "2023-07-31",
+      "resolutionDate": "2023-07-31",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Charleston Dirty Birds released LHP Williams Jerez."
+    },
+    {
+      "id": 735934,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2023-10-19",
+      "effectiveDate": "2023-10-19",
+      "resolutionDate": "2023-10-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aguilas Cibaenas activated LHP Williams Jerez."
+    },
+    {
+      "id": 729168,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2023-10-19",
+      "effectiveDate": "2023-10-19",
+      "resolutionDate": "2023-10-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 735935,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2023-12-27",
+      "effectiveDate": "2023-12-27",
+      "resolutionDate": "2023-12-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to Tigres del Licey."
+    },
+    {
+      "id": 738512,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 1191,
+        "name": "Dominican Republic",
+        "link": "/api/v1/teams/1191"
+      },
+      "date": "2024-02-01",
+      "effectiveDate": "2024-02-01",
+      "resolutionDate": "2024-02-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to Dominican Republic."
+    },
+    {
+      "id": 762869,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 5010,
+        "name": "Toros de Tijuana",
+        "link": "/api/v1/teams/5010"
+      },
+      "date": "2024-04-11",
+      "effectiveDate": "2024-04-11",
+      "resolutionDate": "2024-04-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to Toros de Tijuana."
+    },
+    {
+      "id": 772262,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 5010,
+        "name": "Toros de Tijuana",
+        "link": "/api/v1/teams/5010"
+      },
+      "date": "2024-05-16",
+      "effectiveDate": "2024-05-16",
+      "resolutionDate": "2024-05-16",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Toros de Tijuana released LHP Williams Jerez."
+    },
+    {
+      "id": 775974,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 579,
+        "name": "Guerreros de Oaxaca",
+        "link": "/api/v1/teams/579"
+      },
+      "date": "2024-06-01",
+      "effectiveDate": "2024-06-01",
+      "resolutionDate": "2024-06-01",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Guerreros de Oaxaca signed free agent LHP Williams Jerez."
+    },
+    {
+      "id": 802769,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2024-10-18",
+      "effectiveDate": "2024-10-18",
+      "resolutionDate": "2024-10-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 849800,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 520,
+        "name": "Pericos de Puebla",
+        "link": "/api/v1/teams/520"
+      },
+      "date": "2025-06-22",
+      "effectiveDate": "2025-06-22",
+      "resolutionDate": "2025-06-22",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Pericos de Puebla signed free agent LHP Williams Jerez."
+    },
+    {
+      "id": 864597,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 520,
+        "name": "Pericos de Puebla",
+        "link": "/api/v1/teams/520"
+      },
+      "date": "2025-08-15",
+      "effectiveDate": "2025-08-15",
+      "resolutionDate": "2025-08-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pericos de Puebla placed LHP Williams Jerez on the reserve list."
+    },
+    {
+      "id": 865528,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 520,
+        "name": "Pericos de Puebla",
+        "link": "/api/v1/teams/520"
+      },
+      "date": "2025-08-20",
+      "effectiveDate": "2025-08-20",
+      "resolutionDate": "2025-08-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to Pericos de Puebla."
+    }
+  ]
+}

@@ -1,0 +1,3182 @@
+{
+  "player_id": 605218,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:6d011171793b6a08b62a62901e490b26cbd08ecb9596ead738024234bd091472",
+  "transactions": [
+    {
+      "id": 125763,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2011-08-15",
+      "effectiveDate": "2011-08-15",
+      "resolutionDate": "2011-08-15",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Texas Rangers signed RHP C.J. Edwards."
+    },
+    {
+      "id": 125764,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 411,
+        "name": "ACL Rangers",
+        "link": "/api/v1/teams/411"
+      },
+      "date": "2012-06-20",
+      "effectiveDate": "2012-06-20",
+      "resolutionDate": "2012-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C.J. Edwards assigned to AZL Rangers."
+    },
+    {
+      "id": 128833,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 411,
+        "name": "ACL Rangers",
+        "link": "/api/v1/teams/411"
+      },
+      "toTeam": {
+        "id": 486,
+        "name": "Spokane Indians",
+        "link": "/api/v1/teams/486"
+      },
+      "date": "2012-07-10",
+      "effectiveDate": "2012-07-10",
+      "resolutionDate": "2012-07-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C.J. Edwards assigned to Spokane Indians from AZL Rangers."
+    },
+    {
+      "id": 148199,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 486,
+        "name": "Spokane Indians",
+        "link": "/api/v1/teams/486"
+      },
+      "toTeam": {
+        "id": 448,
+        "name": "Hickory Crawdads",
+        "link": "/api/v1/teams/448"
+      },
+      "date": "2013-04-03",
+      "effectiveDate": "2013-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP C.J. Edwards assigned to Hickory Crawdads from Spokane Indians."
+    },
+    {
+      "id": 155171,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 448,
+        "name": "Hickory Crawdads",
+        "link": "/api/v1/teams/448"
+      },
+      "date": "2013-06-02",
+      "effectiveDate": "2013-06-02",
+      "resolutionDate": "2013-06-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Hickory Crawdads placed RHP C.J. Edwards on the 7-day disabled list."
+    },
+    {
+      "id": 155984,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 448,
+        "name": "Hickory Crawdads",
+        "link": "/api/v1/teams/448"
+      },
+      "date": "2013-06-07",
+      "effectiveDate": "2013-06-07",
+      "resolutionDate": "2013-06-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Hickory Crawdads activated RHP C.J. Edwards from the 7-day disabled list."
+    },
+    {
+      "id": 155380,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 74,
+        "name": "SAL North Division All-Stars",
+        "link": "/api/v1/teams/74"
+      },
+      "date": "2013-06-17",
+      "effectiveDate": "2013-06-17",
+      "resolutionDate": "2013-06-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP C.J. Edwards assigned to SAL North Division All-Stars."
+    },
+    {
+      "id": 165237,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2013-07-22",
+      "effectiveDate": "2013-07-22",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Chicago Cubs traded RHP Matt Garza to Texas Rangers for RHP C.J. Edwards, RHP Justin Grimm, 1B Mike Olt and Player To Be Named Later."
+    },
+    {
+      "id": 165266,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "date": "2013-07-23",
+      "effectiveDate": "2013-07-23",
+      "resolutionDate": "2013-07-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP C.J. Edwards assigned to Daytona Cubs."
+    },
+    {
+      "id": 181720,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2014-03-25",
+      "effectiveDate": "2014-03-25",
+      "resolutionDate": "2014-03-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP C.J. Edwards assigned to Chicago Cubs."
+    },
+    {
+      "id": 182825,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "toTeam": {
+        "id": 3264,
+        "name": "Cubs Alternate Training Site",
+        "link": "/api/v1/teams/3264"
+      },
+      "date": "2014-03-28",
+      "effectiveDate": "2014-03-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP C.J. Edwards assigned to Cubs Extended Spring Training from Daytona Cubs."
+    },
+    {
+      "id": 184613,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 3264,
+        "name": "Cubs Alternate Training Site",
+        "link": "/api/v1/teams/3264"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2014-04-02",
+      "effectiveDate": "2014-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP C.J. Edwards assigned to Tennessee Smokies from Cubs Extended Spring Training."
+    },
+    {
+      "id": 187333,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2014-04-30",
+      "effectiveDate": "2014-04-25",
+      "resolutionDate": "2014-04-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tennessee Smokies placed RHP C.J. Edwards on the 7-day disabled list retroactive to April 25, 2014."
+    },
+    {
+      "id": 201834,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "toTeam": {
+        "id": 407,
+        "name": "ACL Cubs",
+        "link": "/api/v1/teams/407"
+      },
+      "date": "2014-07-23",
+      "effectiveDate": "2014-07-23",
+      "resolutionDate": "2014-07-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Tennessee Smokies sent RHP C.J. Edwards on a rehab assignment to AZL Cubs."
+    },
+    {
+      "id": 203266,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2014-08-02",
+      "effectiveDate": "2014-08-02",
+      "resolutionDate": "2014-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tennessee Smokies activated RHP C.J. Edwards from the 7-day disabled list."
+    },
+    {
+      "id": 211844,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2014-11-20",
+      "effectiveDate": "2015-03-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Chicago Cubs selected the contract of Carl Edwards Jr. from Tennessee Smokies."
+    },
+    {
+      "id": 217510,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2015-03-19",
+      "effectiveDate": "2015-03-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned RHP C.J. Edwards to Iowa Cubs."
+    },
+    {
+      "id": 220408,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2015-04-06",
+      "effectiveDate": "2015-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Carl Edwards Jr. assigned to Tennessee Smokies from Iowa Cubs."
+    },
+    {
+      "id": 227776,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2015-05-29",
+      "effectiveDate": "2015-05-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Carl Edwards Jr. assigned to Iowa Cubs from Tennessee Smokies."
+    },
+    {
+      "id": 237467,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2015-07-11",
+      "effectiveDate": "2015-07-11",
+      "resolutionDate": "2015-07-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs placed RHP Carl Edwards Jr. on the temporarily inactive list."
+    },
+    {
+      "id": 238171,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2015-07-16",
+      "effectiveDate": "2015-07-16",
+      "resolutionDate": "2015-07-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs activated RHP Carl Edwards Jr. from the temporarily inactive list."
+    },
+    {
+      "id": 242718,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2015-08-18",
+      "effectiveDate": "2015-08-18",
+      "resolutionDate": "2015-08-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs placed RHP Carl Edwards Jr. on the 7-day disabled list."
+    },
+    {
+      "id": 244712,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2015-09-03",
+      "effectiveDate": "2015-09-03",
+      "resolutionDate": "2015-09-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs activated RHP Carl Edwards Jr. from the 7-day disabled list."
+    },
+    {
+      "id": 245023,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2015-09-07",
+      "effectiveDate": "2015-09-07",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled RHP Carl Edwards Jr. from Iowa Cubs."
+    },
+    {
+      "id": 246827,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2015-10-07",
+      "effectiveDate": "2015-10-07",
+      "resolutionDate": "2015-10-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs reassigned RHP Carl Edwards Jr. to the minor leagues."
+    },
+    {
+      "id": 247960,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2015-10-22",
+      "effectiveDate": "2016-03-18",
+      "resolutionDate": "2015-10-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Carl Edwards Jr. roster status changed by Chicago Cubs."
+    },
+    {
+      "id": 257315,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2016-03-18",
+      "effectiveDate": "2016-03-18",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned RHP Carl Edwards Jr. to Iowa Cubs."
+    },
+    {
+      "id": 257777,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 107,
+        "name": "Chicago Cubs Prospects",
+        "link": "/api/v1/teams/107"
+      },
+      "date": "2016-03-22",
+      "effectiveDate": "2016-03-22",
+      "resolutionDate": "2016-03-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Carl Edwards Jr. assigned to Chicago Cubs Futures."
+    },
+    {
+      "id": 265139,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2016-05-11",
+      "effectiveDate": "2016-05-12",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled Carl Edwards Jr. from Iowa Cubs."
+    },
+    {
+      "id": 265244,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2016-05-12",
+      "effectiveDate": "2016-05-12",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned RHP Carl Edwards Jr. to Iowa Cubs."
+    },
+    {
+      "id": 273235,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2016-06-20",
+      "effectiveDate": "2016-06-20",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled RHP Carl Edwards Jr. from Iowa Cubs."
+    },
+    {
+      "id": 305841,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2017-04-14",
+      "effectiveDate": "2017-04-14",
+      "resolutionDate": "2017-04-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs placed RHP Carl Edwards Jr. on the bereavement list."
+    },
+    {
+      "id": 306273,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2017-04-17",
+      "effectiveDate": "2017-04-17",
+      "resolutionDate": "2017-04-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated RHP Carl Edwards Jr. from the bereavement list."
+    },
+    {
+      "id": 355763,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2018-05-30",
+      "effectiveDate": "2018-05-30",
+      "resolutionDate": "2018-05-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs placed RHP Carl Edwards Jr. on the 10-day disabled list. Right shoulder inflammation."
+    },
+    {
+      "id": 365199,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2018-06-29",
+      "effectiveDate": "2018-06-29",
+      "resolutionDate": "2018-06-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago Cubs sent RHP Carl Edwards Jr. on a rehab assignment to Iowa Cubs."
+    },
+    {
+      "id": 366703,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2018-07-06",
+      "effectiveDate": "2018-07-06",
+      "resolutionDate": "2018-07-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated RHP Carl Edwards Jr. from the 10-day disabled list."
+    },
+    {
+      "id": 368749,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2018-07-14",
+      "effectiveDate": "2018-07-14",
+      "resolutionDate": "2018-07-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs placed RHP Carl Edwards Jr. on the paternity list."
+    },
+    {
+      "id": 369215,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2018-07-16",
+      "effectiveDate": "2018-07-16",
+      "resolutionDate": "2018-07-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated RHP Carl Edwards Jr. from the paternity list."
+    },
+    {
+      "id": 395581,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2019-04-06",
+      "effectiveDate": "2019-04-06",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned RHP Carl Edwards Jr. to Iowa Cubs."
+    },
+    {
+      "id": 397232,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2019-04-17",
+      "effectiveDate": "2019-04-15",
+      "resolutionDate": "2019-04-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs placed RHP Carl Edwards Jr. on the 7-day injured list retroactive to April 15, 2019."
+    },
+    {
+      "id": 398241,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2019-04-24",
+      "effectiveDate": "2019-04-24",
+      "resolutionDate": "2019-04-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs activated RHP Carl Edwards Jr. from the 7-day injured list."
+    },
+    {
+      "id": 398242,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2019-04-24",
+      "effectiveDate": "2019-04-24",
+      "resolutionDate": "2019-04-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Carl Edwards Jr. roster status changed by Iowa Cubs."
+    },
+    {
+      "id": 400104,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2019-05-06",
+      "effectiveDate": "2019-05-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled RHP Carl Edwards Jr. from Iowa Cubs."
+    },
+    {
+      "id": 408327,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2019-06-13",
+      "effectiveDate": "2019-06-10",
+      "resolutionDate": "2019-06-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs placed RHP Carl Edwards Jr. on the 10-day injured list retroactive to June 10, 2019. Left throracic strain."
+    },
+    {
+      "id": 414560,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2019-07-01",
+      "effectiveDate": "2019-07-01",
+      "resolutionDate": "2019-07-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago Cubs sent RHP Carl Edwards Jr. on a rehab assignment to Iowa Cubs."
+    },
+    {
+      "id": 418476,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2019-07-19",
+      "effectiveDate": "2019-07-22",
+      "resolutionDate": "2019-07-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Carl Edwards Jr. roster status changed by Chicago Cubs."
+    },
+    {
+      "id": 419157,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2019-07-22",
+      "effectiveDate": "2019-07-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned RHP Carl Edwards Jr. to Iowa Cubs."
+    },
+    {
+      "id": 421001,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2019-07-31",
+      "effectiveDate": "2019-08-01",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "San Diego Padres traded LHP Brad Wieck to Chicago Cubs for RHP Carl Edwards Jr.."
+    },
+    {
+      "id": 421376,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2019-08-01",
+      "effectiveDate": "2019-08-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned RHP Carl Edwards Jr. to El Paso Chihuahuas."
+    },
+    {
+      "id": 423200,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2019-08-11",
+      "effectiveDate": "2019-08-11",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Diego Padres recalled RHP Carl Edwards Jr. from El Paso Chihuahuas."
+    },
+    {
+      "id": 423588,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2019-08-13",
+      "effectiveDate": "2019-08-13",
+      "resolutionDate": "2019-08-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres placed RHP Carl Edwards Jr. on the 10-day injured list. Right shoulder strain."
+    },
+    {
+      "id": 428938,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2019-09-30",
+      "effectiveDate": "2019-09-30",
+      "resolutionDate": "2019-09-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres activated RHP Carl Edwards Jr. from the 10-day injured list."
+    },
+    {
+      "id": 433318,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2019-11-04",
+      "effectiveDate": "2019-11-04",
+      "resolutionDate": "2019-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Carl Edwards Jr. elected free agency."
+    },
+    {
+      "id": 433317,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2019-11-04",
+      "effectiveDate": "2019-11-04",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "San Diego Padres sent RHP Carl Edwards Jr. outright to El Paso Chihuahuas."
+    },
+    {
+      "id": 434764,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2019-12-04",
+      "effectiveDate": "2019-12-04",
+      "resolutionDate": "2019-12-04",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Seattle Mariners signed free agent RHP Carl Edwards Jr.."
+    },
+    {
+      "id": 449166,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2020-08-10",
+      "effectiveDate": "2020-08-07",
+      "resolutionDate": "2020-08-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners placed RHP Carl Edwards Jr. on the 10-day injured list retroactive to August 7, 2020. Right forearm strain."
+    },
+    {
+      "id": 450059,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2020-08-26",
+      "effectiveDate": "2020-08-26",
+      "resolutionDate": "2020-08-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners transferred RHP Carl Edwards Jr. from the 10-day injured list to the 60-day injured list. Right forearm strain."
+    },
+    {
+      "id": 453963,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2020-10-22",
+      "effectiveDate": "2020-10-22",
+      "resolutionDate": "2020-10-22",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Carl Edwards Jr. elected free agency."
+    },
+    {
+      "id": 453960,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2020-10-22",
+      "effectiveDate": "2020-10-22",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Seattle Mariners sent RHP Carl Edwards Jr. outright to Tacoma Rainiers."
+    },
+    {
+      "id": 461580,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2021-02-02",
+      "effectiveDate": "2021-02-02",
+      "resolutionDate": "2021-02-02",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent RHP Carl Edwards Jr. to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 469550,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2021-02-15",
+      "effectiveDate": "2021-02-15",
+      "resolutionDate": "2021-02-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Carl Edwards Jr. assigned to Gwinnett Stripers."
+    },
+    {
+      "id": 474028,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2021-03-25",
+      "effectiveDate": "2021-03-25",
+      "resolutionDate": "2021-03-25",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Atlanta Braves released P Carl Edwards Jr.."
+    },
+    {
+      "id": 476140,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2021-03-31",
+      "effectiveDate": "2021-03-31",
+      "resolutionDate": "2021-03-31",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent P Carl Edwards Jr.."
+    },
+    {
+      "id": 484468,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 3258,
+        "name": "Braves Alternate Training Site",
+        "link": "/api/v1/teams/3258"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2021-05-04",
+      "effectiveDate": "2021-05-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Carl Edwards Jr. assigned to Gwinnett Stripers from Braves Alternate Training Site."
+    },
+    {
+      "id": 485487,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2021-05-07",
+      "effectiveDate": "2021-05-07",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Atlanta Braves selected the contract of RHP Carl Edwards Jr. from Gwinnett Stripers."
+    },
+    {
+      "id": 485806,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2021-05-08",
+      "effectiveDate": "2021-05-08",
+      "resolutionDate": "2021-05-08",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Atlanta Braves designated RHP Carl Edwards Jr. for assignment."
+    },
+    {
+      "id": 486060,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2021-05-10",
+      "effectiveDate": "2021-05-10",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Atlanta Braves sent RHP Carl Edwards Jr. outright to Gwinnett Stripers."
+    },
+    {
+      "id": 486061,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2021-05-10",
+      "effectiveDate": "2021-05-10",
+      "resolutionDate": "2021-05-10",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Carl Edwards Jr. elected free agency."
+    },
+    {
+      "id": 486661,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2021-05-14",
+      "effectiveDate": "2021-05-14",
+      "resolutionDate": "2021-05-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Carl Edwards Jr. assigned to Buffalo Bisons."
+    },
+    {
+      "id": 486668,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2021-05-14",
+      "effectiveDate": "2021-05-14",
+      "resolutionDate": "2021-05-14",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Toronto Blue Jays signed RHP Carl Edwards Jr.."
+    },
+    {
+      "id": 491641,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2021-05-29",
+      "effectiveDate": "2021-05-29",
+      "resolutionDate": "2021-05-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Carl Edwards Jr. roster status changed by Buffalo Bisons."
+    },
+    {
+      "id": 491668,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2021-05-30",
+      "effectiveDate": "2021-05-30",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Toronto Blue Jays selected the contract of RHP Carl Edwards Jr. from Buffalo Bisons."
+    },
+    {
+      "id": 494788,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2021-06-16",
+      "effectiveDate": "2021-06-16",
+      "resolutionDate": "2021-06-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays placed RHP Carl Edwards Jr. on the 10-day injured list. Left oblique strain."
+    },
+    {
+      "id": 494908,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2021-06-17",
+      "effectiveDate": "2021-06-17",
+      "resolutionDate": "2021-06-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays placed RHP Carl Edwards Jr. on the 60-day injured list. Left oblique strain."
+    },
+    {
+      "id": 508468,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 1390,
+        "name": "FCL Blue Jays",
+        "link": "/api/v1/teams/1390"
+      },
+      "date": "2021-07-31",
+      "effectiveDate": "2021-07-31",
+      "resolutionDate": "2021-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Toronto Blue Jays sent RHP Carl Edwards Jr. on a rehab assignment to FCL Blue Jays."
+    },
+    {
+      "id": 511041,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "date": "2021-08-10",
+      "effectiveDate": "2021-08-10",
+      "resolutionDate": "2021-08-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Toronto Blue Jays sent RHP Carl Edwards Jr. on a rehab assignment to Dunedin Blue Jays."
+    },
+    {
+      "id": 511763,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2021-08-14",
+      "effectiveDate": "2021-08-14",
+      "resolutionDate": "2021-08-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Toronto Blue Jays sent RHP Carl Edwards Jr. on a rehab assignment to Buffalo Bisons."
+    },
+    {
+      "id": 515014,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2021-08-29",
+      "effectiveDate": "2021-08-29",
+      "resolutionDate": "2021-08-29",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Toronto Blue Jays released RHP Carl Edwards Jr.."
+    },
+    {
+      "id": 515317,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2021-08-31",
+      "effectiveDate": "2021-08-31",
+      "resolutionDate": "2021-08-31",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago White Sox signed free agent RHP Carl Edwards Jr. to a minor league contract."
+    },
+    {
+      "id": 515357,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2021-09-01",
+      "effectiveDate": "2021-09-01",
+      "resolutionDate": "2021-09-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Carl Edwards Jr. assigned to Charlotte Knights."
+    },
+    {
+      "id": 524040,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2021-11-07",
+      "effectiveDate": "2021-11-07",
+      "resolutionDate": "2021-11-07",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Carl Edwards Jr. elected free agency."
+    },
+    {
+      "id": 605513,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2022-03-08",
+      "effectiveDate": "2022-03-08",
+      "resolutionDate": "2022-03-08",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Washington Nationals signed free agent RHP Carl Edwards Jr. to a minor league contract."
+    },
+    {
+      "id": 605514,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2022-03-09",
+      "effectiveDate": "2022-03-09",
+      "resolutionDate": "2022-03-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Carl Edwards Jr. assigned to Rochester Red Wings."
+    },
+    {
+      "id": 605982,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2022-03-14",
+      "effectiveDate": "2022-03-14",
+      "resolutionDate": "2022-03-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals invited non-roster RHP Carl Edwards Jr. to spring training."
+    },
+    {
+      "id": 611524,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2022-03-14",
+      "effectiveDate": "2022-03-14",
+      "resolutionDate": "2022-03-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Carl Edwards Jr. roster status changed by Washington Nationals."
+    },
+    {
+      "id": 684671,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2022-05-10",
+      "effectiveDate": "2022-05-10",
+      "resolutionDate": "2022-05-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals activated RHP Carl Edwards Jr.."
+    },
+    {
+      "id": 684943,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2022-05-10",
+      "effectiveDate": "2022-05-10",
+      "resolutionDate": "2022-05-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals activated RHP Carl Edwards Jr.."
+    },
+    {
+      "id": 620568,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2022-05-10",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Washington Nationals selected the contract of RHP Carl Edwards Jr. from Rochester Red Wings."
+    },
+    {
+      "id": 705836,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2023-06-21",
+      "effectiveDate": "2023-06-21",
+      "resolutionDate": "2023-06-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals placed RHP Carl Edwards Jr. on the 15-day injured list. Right shoulder inflammation."
+    },
+    {
+      "id": 720466,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 466,
+        "name": "FCL Nationals",
+        "link": "/api/v1/teams/466"
+      },
+      "date": "2023-08-14",
+      "effectiveDate": "2023-08-14",
+      "resolutionDate": "2023-08-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals sent RHP Carl Edwards Jr. on a rehab assignment to FCL Nationals."
+    },
+    {
+      "id": 719646,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 466,
+        "name": "FCL Nationals",
+        "link": "/api/v1/teams/466"
+      },
+      "date": "2023-08-14",
+      "effectiveDate": "2023-08-14",
+      "resolutionDate": "2023-08-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals sent RHP Carl Edwards Jr. on a rehab assignment to FCL Nationals."
+    },
+    {
+      "id": 720467,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 426,
+        "name": "Wilmington Blue Rocks",
+        "link": "/api/v1/teams/426"
+      },
+      "date": "2023-08-17",
+      "effectiveDate": "2023-08-17",
+      "resolutionDate": "2023-08-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals sent RHP Carl Edwards Jr. on a rehab assignment to Wilmington Blue Rocks."
+    },
+    {
+      "id": 720477,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 426,
+        "name": "Wilmington Blue Rocks",
+        "link": "/api/v1/teams/426"
+      },
+      "date": "2023-08-17",
+      "effectiveDate": "2023-08-17",
+      "resolutionDate": "2023-08-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals sent RHP Carl Edwards Jr. on a rehab assignment to Wilmington Blue Rocks."
+    },
+    {
+      "id": 720475,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 426,
+        "name": "Wilmington Blue Rocks",
+        "link": "/api/v1/teams/426"
+      },
+      "date": "2023-08-17",
+      "effectiveDate": "2023-08-17",
+      "resolutionDate": "2023-08-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals sent RHP Carl Edwards Jr. on a rehab assignment to Wilmington Blue Rocks."
+    },
+    {
+      "id": 722312,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2023-08-28",
+      "effectiveDate": "2023-08-28",
+      "resolutionDate": "2023-08-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals placed RHP Carl Edwards Jr. on the 60-day injured list. Right shoulder inflammation."
+    },
+    {
+      "id": 730432,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2023-11-02",
+      "effectiveDate": "2023-11-02",
+      "resolutionDate": "2023-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals activated RHP Carl Edwards Jr. from the 60-day injured list."
+    },
+    {
+      "id": 730433,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2023-11-02",
+      "effectiveDate": "2023-11-02",
+      "resolutionDate": "2023-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Carl Edwards Jr. elected free agency."
+    },
+    {
+      "id": 740035,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2024-02-06",
+      "effectiveDate": "2024-02-06",
+      "resolutionDate": "2024-02-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Carl Edwards Jr. roster status changed by Chicago Cubs."
+    },
+    {
+      "id": 739618,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2024-02-06",
+      "effectiveDate": "2024-02-06",
+      "resolutionDate": "2024-02-06",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago Cubs signed free agent RHP Carl Edwards Jr. to a minor league contract."
+    },
+    {
+      "id": 756709,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2024-02-06",
+      "effectiveDate": "2024-02-06",
+      "resolutionDate": "2024-02-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Carl Edwards Jr. roster status changed by Chicago Cubs."
+    },
+    {
+      "id": 739619,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2024-02-07",
+      "effectiveDate": "2024-02-07",
+      "resolutionDate": "2024-02-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Carl Edwards Jr. assigned to Iowa Cubs."
+    },
+    {
+      "id": 756708,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2024-03-24",
+      "effectiveDate": "2024-03-24",
+      "resolutionDate": "2024-03-24",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Iowa Cubs released RHP Carl Edwards Jr.."
+    },
+    {
+      "id": 761229,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2024-04-04",
+      "effectiveDate": "2024-04-04",
+      "resolutionDate": "2024-04-04",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago Cubs signed free agent RHP Carl Edwards Jr. to a minor league contract."
+    },
+    {
+      "id": 761227,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2024-04-05",
+      "effectiveDate": "2024-04-05",
+      "resolutionDate": "2024-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Carl Edwards Jr. assigned to Iowa Cubs."
+    },
+    {
+      "id": 781073,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2024-06-16",
+      "effectiveDate": "2024-06-16",
+      "resolutionDate": "2024-06-16",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Iowa Cubs released RHP Carl Edwards Jr.."
+    },
+    {
+      "id": 784938,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2024-07-04",
+      "effectiveDate": "2024-07-04",
+      "resolutionDate": "2024-07-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Carl Edwards Jr. assigned to San Diego Padres."
+    },
+    {
+      "id": 784939,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "date": "2024-07-04",
+      "effectiveDate": "2024-07-04",
+      "resolutionDate": "2024-07-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Carl Edwards Jr. assigned to ACL Padres."
+    },
+    {
+      "id": 786830,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2024-07-10",
+      "effectiveDate": "2024-07-10",
+      "resolutionDate": "2024-07-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "El Paso Chihuahuas activated RHP Carl Edwards Jr.."
+    },
+    {
+      "id": 786231,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2024-07-10",
+      "effectiveDate": "2024-07-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Carl Edwards Jr. assigned to El Paso Chihuahuas from ACL Padres."
+    },
+    {
+      "id": 793499,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2024-08-08",
+      "effectiveDate": "2024-08-08",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "San Diego Padres selected the contract of RHP Carl Edwards Jr. from El Paso Chihuahuas."
+    },
+    {
+      "id": 794167,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2024-08-12",
+      "effectiveDate": "2024-08-12",
+      "resolutionDate": "2024-08-12",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "San Diego Padres designated RHP Carl Edwards Jr. for assignment."
+    },
+    {
+      "id": 794606,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2024-08-14",
+      "effectiveDate": "2024-08-14",
+      "resolutionDate": "2024-08-14",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Carl Edwards Jr. elected free agency."
+    },
+    {
+      "id": 794605,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2024-08-14",
+      "effectiveDate": "2024-08-14",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "San Diego Padres sent RHP Carl Edwards Jr. outright to El Paso Chihuahuas."
+    },
+    {
+      "id": 795773,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2024-08-19",
+      "effectiveDate": "2024-08-19",
+      "resolutionDate": "2024-08-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Carl Edwards Jr. roster status changed by San Diego Padres."
+    },
+    {
+      "id": 795601,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2024-08-19",
+      "effectiveDate": "2024-08-19",
+      "resolutionDate": "2024-08-19",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Diego Padres signed free agent RHP Carl Edwards Jr. to a minor league contract."
+    },
+    {
+      "id": 795987,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2024-08-20",
+      "effectiveDate": "2024-08-20",
+      "resolutionDate": "2024-08-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "El Paso Chihuahuas activated RHP Carl Edwards Jr.."
+    },
+    {
+      "id": 795602,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2024-08-20",
+      "effectiveDate": "2024-08-20",
+      "resolutionDate": "2024-08-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Carl Edwards Jr. assigned to El Paso Chihuahuas."
+    },
+    {
+      "id": 799481,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2024-09-18",
+      "effectiveDate": "2024-09-18",
+      "resolutionDate": "2024-09-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "El Paso Chihuahuas transferred RHP Carl Edwards Jr. to the Development List."
+    },
+    {
+      "id": 799955,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2024-09-22",
+      "effectiveDate": "2024-09-22",
+      "resolutionDate": "2024-09-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "El Paso Chihuahuas activated RHP Carl Edwards Jr.."
+    },
+    {
+      "id": 801640,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 680,
+        "name": "Yaquis de Obregon",
+        "link": "/api/v1/teams/680"
+      },
+      "date": "2024-10-11",
+      "effectiveDate": "2024-10-11",
+      "resolutionDate": "2024-10-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Carl Edwards Jr. assigned to Yaquis de Obregon."
+    },
+    {
+      "id": 805314,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "resolutionDate": "2024-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Carl Edwards Jr. elected free agency."
+    },
+    {
+      "id": 808699,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 680,
+        "name": "Yaquis de Obregon",
+        "link": "/api/v1/teams/680"
+      },
+      "date": "2024-11-05",
+      "effectiveDate": "2024-11-05",
+      "resolutionDate": "2024-11-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Yaquis de Obregon placed RHP Carl Edwards Jr. on the reserve list."
+    },
+    {
+      "id": 804924,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 680,
+        "name": "Yaquis de Obregon",
+        "link": "/api/v1/teams/680"
+      },
+      "date": "2024-11-05",
+      "effectiveDate": "2024-11-05",
+      "resolutionDate": "2024-11-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Yaquis de Obregon placed RHP Carl Edwards Jr. on the reserve list."
+    },
+    {
+      "id": 822090,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2025-03-21",
+      "effectiveDate": "2025-03-21",
+      "resolutionDate": "2025-03-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Carl Edwards Jr. assigned to Salt Lake Bees."
+    },
+    {
+      "id": 822089,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2025-03-21",
+      "effectiveDate": "2025-03-21",
+      "resolutionDate": "2025-03-21",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Angels signed free agent RHP Carl Edwards Jr. to a minor league contract."
+    },
+    {
+      "id": 831836,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2025-04-23",
+      "effectiveDate": "2025-04-23",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Angels selected the contract of RHP Carl Edwards Jr. from Salt Lake Bees."
+    },
+    {
+      "id": 832222,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2025-04-26",
+      "effectiveDate": "2025-04-26",
+      "resolutionDate": "2025-04-26",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Los Angeles Angels designated RHP Carl Edwards Jr. for assignment."
+    },
+    {
+      "id": 832490,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2025-04-28",
+      "effectiveDate": "2025-04-28",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Los Angeles Angels sent RHP Carl Edwards Jr. outright to Salt Lake Bees."
+    },
+    {
+      "id": 832984,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2025-04-30",
+      "effectiveDate": "2025-04-30",
+      "resolutionDate": "2025-04-30",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Carl Edwards Jr. elected free agency."
+    },
+    {
+      "id": 835202,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 569,
+        "name": "Tigres de Quintana Roo",
+        "link": "/api/v1/teams/569"
+      },
+      "date": "2025-05-05",
+      "effectiveDate": "2025-05-05",
+      "resolutionDate": "2025-05-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Carl Edwards Jr. assigned to Tigres de Quintana Roo."
+    },
+    {
+      "id": 856365,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 569,
+        "name": "Tigres de Quintana Roo",
+        "link": "/api/v1/teams/569"
+      },
+      "date": "2025-07-18",
+      "effectiveDate": "2025-07-18",
+      "resolutionDate": "2025-07-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tigres de Quintana Roo placed RHP Carl Edwards Jr. on the reserve list."
+    },
+    {
+      "id": 857353,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 569,
+        "name": "Tigres de Quintana Roo",
+        "link": "/api/v1/teams/569"
+      },
+      "date": "2025-07-21",
+      "effectiveDate": "2025-07-21",
+      "resolutionDate": "2025-07-21",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Tigres de Quintana Roo released RHP Carl Edwards Jr.."
+    },
+    {
+      "id": 857355,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2025-07-22",
+      "effectiveDate": "2025-07-22",
+      "resolutionDate": "2025-07-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Carl Edwards Jr. assigned to Round Rock Express."
+    },
+    {
+      "id": 857354,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-07-22",
+      "effectiveDate": "2025-07-22",
+      "resolutionDate": "2025-07-22",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent RHP Carl Edwards Jr. to a minor league contract."
+    },
+    {
+      "id": 868155,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-09-07",
+      "effectiveDate": "2025-09-07",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Texas Rangers selected the contract of RHP Carl Edwards Jr. from Round Rock Express."
+    },
+    {
+      "id": 870106,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-09-19",
+      "effectiveDate": "2025-09-19",
+      "resolutionDate": "2025-09-19",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Texas Rangers designated RHP Carl Edwards Jr. for assignment."
+    },
+    {
+      "id": 871910,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-10-06",
+      "effectiveDate": "2025-10-06",
+      "resolutionDate": "2025-10-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Carl Edwards Jr. elected free agency."
+    },
+    {
+      "id": 878442,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2025-12-08",
+      "effectiveDate": "2025-12-08",
+      "resolutionDate": "2025-12-08",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Mets signed free agent RHP Carl Edwards Jr. to a minor league contract."
+    },
+    {
+      "id": 878443,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2025-12-08",
+      "effectiveDate": "2025-12-08",
+      "resolutionDate": "2025-12-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Carl Edwards Jr. assigned to Syracuse Mets."
+    },
+    {
+      "id": 885470,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2025-12-08",
+      "effectiveDate": "2025-12-08",
+      "resolutionDate": "2025-12-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Carl Edwards Jr. roster status changed by New York Mets."
+    },
+    {
+      "id": 902739,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-04-24",
+      "effectiveDate": "2026-04-24",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Mets selected the contract of RHP Carl Edwards Jr. from Syracuse Mets."
+    },
+    {
+      "id": 904492,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-04-30",
+      "effectiveDate": "2026-04-30",
+      "resolutionDate": "2026-04-30",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Mets designated RHP Carl Edwards Jr. for assignment."
+    },
+    {
+      "id": 905721,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2026-05-03",
+      "effectiveDate": "2026-05-03",
+      "resolutionDate": "2026-05-03",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Carl Edwards Jr. elected free agency."
+    },
+    {
+      "id": 905610,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2026-05-03",
+      "effectiveDate": "2026-05-03",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "New York Mets sent RHP Carl Edwards Jr. outright to Syracuse Mets."
+    },
+    {
+      "id": 907111,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-05-08",
+      "effectiveDate": "2026-05-08",
+      "resolutionDate": "2026-05-08",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent RHP Carl Edwards Jr. to a minor league contract."
+    },
+    {
+      "id": 907112,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2026-05-08",
+      "effectiveDate": "2026-05-08",
+      "resolutionDate": "2026-05-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Carl Edwards Jr. assigned to Toledo Mud Hens."
+    },
+    {
+      "id": 949454,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2026-10-17",
+      "effectiveDate": "2026-10-17",
+      "resolutionDate": "2026-10-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aguilas Cibaenas activated RHP Carl Edwards Jr.."
+    },
+    {
+      "id": 946505,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2026-10-17",
+      "effectiveDate": "2026-10-17",
+      "resolutionDate": "2026-10-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Carl Edwards Jr. assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 949167,
+      "person": {
+        "id": 605218,
+        "fullName": "Carl Edwards Jr.",
+        "link": "/api/v1/people/605218",
+        "nameSlug": "carl-edwards-jr-605218"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Carl Edwards Jr. elected free agency."
+    }
+  ]
+}

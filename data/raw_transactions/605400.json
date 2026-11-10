@@ -1,0 +1,694 @@
+{
+  "player_id": 605400,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:6071d9f83dc82b35ee22fc15fb0be2054ba44611f68cb9e545660374575f1fdf",
+  "transactions": [
+    {
+      "id": 192626,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2014-06-10",
+      "effectiveDate": "2014-06-10",
+      "resolutionDate": "2014-06-10",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Philadelphia Phillies signed RHP Aaron Nola."
+    },
+    {
+      "id": 196916,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 566,
+        "name": "Clearwater Threshers",
+        "link": "/api/v1/teams/566"
+      },
+      "date": "2014-06-23",
+      "effectiveDate": "2014-06-23",
+      "resolutionDate": "2014-06-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Aaron Nola assigned to Clearwater Threshers."
+    },
+    {
+      "id": 200714,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 566,
+        "name": "Clearwater Threshers",
+        "link": "/api/v1/teams/566"
+      },
+      "date": "2014-07-16",
+      "effectiveDate": "2014-07-16",
+      "resolutionDate": "2014-07-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Clearwater Threshers placed RHP Aaron Nola on the temporarily inactive list."
+    },
+    {
+      "id": 201189,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 566,
+        "name": "Clearwater Threshers",
+        "link": "/api/v1/teams/566"
+      },
+      "date": "2014-07-19",
+      "effectiveDate": "2014-07-19",
+      "resolutionDate": "2014-07-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Clearwater Threshers activated RHP Aaron Nola from the temporarily inactive list."
+    },
+    {
+      "id": 203444,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "fromTeam": {
+        "id": 566,
+        "name": "Clearwater Threshers",
+        "link": "/api/v1/teams/566"
+      },
+      "toTeam": {
+        "id": 522,
+        "name": "Reading Fightin Phils",
+        "link": "/api/v1/teams/522"
+      },
+      "date": "2014-08-04",
+      "effectiveDate": "2014-08-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Aaron Nola assigned to Reading Fightin Phils from Clearwater Threshers."
+    },
+    {
+      "id": 218188,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2015-03-27",
+      "effectiveDate": "2015-03-27",
+      "resolutionDate": "2015-03-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Aaron Nola assigned to Philadelphia Phillies."
+    },
+    {
+      "id": 230294,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "fromTeam": {
+        "id": 522,
+        "name": "Reading Fightin Phils",
+        "link": "/api/v1/teams/522"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2015-06-14",
+      "effectiveDate": "2015-06-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Aaron Nola assigned to Lehigh Valley IronPigs from Reading Fightin Phils."
+    },
+    {
+      "id": 238703,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2015-07-21",
+      "effectiveDate": "2015-07-21",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Philadelphia Phillies selected the contract of RHP Aaron Nola from Lehigh Valley IronPigs."
+    },
+    {
+      "id": 282019,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2016-08-03",
+      "effectiveDate": "2016-07-29",
+      "resolutionDate": "2016-07-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies placed RHP Aaron Nola on the 15-day disabled list retroactive to July 29, 2016. Strained right elbow."
+    },
+    {
+      "id": 284323,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2016-08-17",
+      "effectiveDate": "2016-08-17",
+      "resolutionDate": "2016-08-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies placed RHP Aaron Nola on the 60-day disabled list."
+    },
+    {
+      "id": 291663,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2016-11-03",
+      "effectiveDate": "2016-11-03",
+      "resolutionDate": "2016-11-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies activated RHP Aaron Nola from the 60-day disabled list."
+    },
+    {
+      "id": 307373,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2017-04-24",
+      "effectiveDate": "2017-04-21",
+      "resolutionDate": "2017-04-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies placed RHP Aaron Nola on the 10-day disabled list retroactive to April 21, 2017. Lower back strain."
+    },
+    {
+      "id": 309747,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2017-05-09",
+      "effectiveDate": "2017-05-09",
+      "resolutionDate": "2017-05-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Philadelphia Phillies sent RHP Aaron Nola on a rehab assignment to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 311416,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2017-05-21",
+      "effectiveDate": "2017-05-21",
+      "resolutionDate": "2017-05-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies activated RHP Aaron Nola from the 10-day injured list."
+    },
+    {
+      "id": 477206,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2017-05-21",
+      "effectiveDate": "2017-05-21",
+      "resolutionDate": "2017-05-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies activated P Aaron Nola."
+    },
+    {
+      "id": 478449,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2017-05-21",
+      "effectiveDate": "2017-05-21",
+      "resolutionDate": "2017-05-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies activated RHP Aaron Nola."
+    },
+    {
+      "id": 503500,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2021-07-11",
+      "effectiveDate": "2021-07-11",
+      "resolutionDate": "2021-07-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies placed RHP Aaron Nola on the 10-day injured list."
+    },
+    {
+      "id": 506009,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2021-07-20",
+      "effectiveDate": "2021-07-20",
+      "resolutionDate": "2021-07-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies activated RHP Aaron Nola from the 10-day injured list."
+    },
+    {
+      "id": 636912,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2022-07-12",
+      "effectiveDate": "2022-07-12",
+      "resolutionDate": "2022-07-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies placed RHP Aaron Nola on the restricted list."
+    },
+    {
+      "id": 637538,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2022-07-14",
+      "effectiveDate": "2022-07-14",
+      "resolutionDate": "2022-07-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies activated RHP Aaron Nola from the restricted list."
+    },
+    {
+      "id": 730416,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2023-11-02",
+      "effectiveDate": "2023-11-02",
+      "resolutionDate": "2023-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Aaron Nola elected free agency."
+    },
+    {
+      "id": 733391,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2023-11-19",
+      "effectiveDate": "2023-11-19",
+      "resolutionDate": "2023-11-19",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent RHP Aaron Nola."
+    },
+    {
+      "id": 828161,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Aaron Nola changed number to 42."
+    },
+    {
+      "id": 829359,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Aaron Nola changed number to 27."
+    },
+    {
+      "id": 838209,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2025-05-16",
+      "effectiveDate": "2025-05-15",
+      "resolutionDate": "2025-05-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies placed RHP Aaron Nola on the 15-day injured list retroactive to May 15, 2025. Right ankle sprain."
+    },
+    {
+      "id": 849146,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2025-06-19",
+      "effectiveDate": "2025-06-19",
+      "resolutionDate": "2025-06-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies transferred RHP Aaron Nola from the 15-day injured list to the 60-day injured list. Right ankle sprain."
+    },
+    {
+      "id": 860679,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2025-08-01",
+      "effectiveDate": "2025-08-01",
+      "resolutionDate": "2025-08-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Philadelphia Phillies sent RHP Aaron Nola on a rehab assignment to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 864855,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2025-08-17",
+      "effectiveDate": "2025-08-17",
+      "resolutionDate": "2025-08-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies activated RHP Aaron Nola from the 60-day injured list."
+    },
+    {
+      "id": 884962,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 841,
+        "name": "Italy",
+        "link": "/api/v1/teams/841"
+      },
+      "date": "2026-02-05",
+      "effectiveDate": "2026-02-05",
+      "resolutionDate": "2026-02-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Italy activated RHP Aaron Nola."
+    },
+    {
+      "id": 899192,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Aaron Nola changed number to 42."
+    },
+    {
+      "id": 900100,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Aaron Nola changed number to 27."
+    },
+    {
+      "id": 913202,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2026-05-29",
+      "effectiveDate": "2026-05-29",
+      "resolutionDate": "2026-05-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies placed RHP Aaron Nola on the paternity list."
+    },
+    {
+      "id": 915162,
+      "person": {
+        "id": 605400,
+        "fullName": "Aaron Nola",
+        "link": "/api/v1/people/605400",
+        "nameSlug": "aaron-nola-605400"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2026-06-02",
+      "effectiveDate": "2026-06-02",
+      "resolutionDate": "2026-06-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies activated RHP Aaron Nola from the paternity list."
+    }
+  ]
+}

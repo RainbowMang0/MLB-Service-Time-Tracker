@@ -1,0 +1,915 @@
+{
+  "player_id": 605222,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:2c4fa14d7123fad20b8d450eb43f76421160f4727510ef130cb7fd46a0a283c2",
+  "transactions": [
+    {
+      "id": 96486,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2011-07-12",
+      "effectiveDate": "2011-07-12",
+      "resolutionDate": "2011-07-12",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Florida Marlins signed RHP Jake Esch."
+    },
+    {
+      "id": 96487,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "toTeam": {
+        "id": 467,
+        "name": "FCL Marlins",
+        "link": "/api/v1/teams/467"
+      },
+      "date": "2011-07-13",
+      "effectiveDate": "2011-07-13",
+      "resolutionDate": "2011-07-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Jake Esch assigned to GCL Marlins."
+    },
+    {
+      "id": 99540,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "fromTeam": {
+        "id": 467,
+        "name": "FCL Marlins",
+        "link": "/api/v1/teams/467"
+      },
+      "toTeam": {
+        "id": 489,
+        "name": "Jamestown Jammers",
+        "link": "/api/v1/teams/489"
+      },
+      "date": "2011-08-06",
+      "effectiveDate": "2011-08-06",
+      "resolutionDate": "2011-08-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Jake Esch assigned to Jamestown Jammers from GCL Marlins."
+    },
+    {
+      "id": 132015,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "fromTeam": {
+        "id": 489,
+        "name": "Jamestown Jammers",
+        "link": "/api/v1/teams/489"
+      },
+      "toTeam": {
+        "id": 477,
+        "name": "Greensboro Grasshoppers",
+        "link": "/api/v1/teams/477"
+      },
+      "date": "2012-08-04",
+      "effectiveDate": "2012-08-04",
+      "resolutionDate": "2012-08-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Jake Esch assigned to Greensboro Grasshoppers from Jamestown Jammers."
+    },
+    {
+      "id": 148539,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "fromTeam": {
+        "id": 477,
+        "name": "Greensboro Grasshoppers",
+        "link": "/api/v1/teams/477"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2013-04-03",
+      "effectiveDate": "2013-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jake Esch assigned to Jupiter Hammerheads from Greensboro Grasshoppers."
+    },
+    {
+      "id": 150404,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2013-04-23",
+      "effectiveDate": "2013-04-21",
+      "resolutionDate": "2013-04-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jupiter Hammerheads placed RHP Jake Esch on the 7-day disabled list retroactive to April 21, 2013. right biceps tendinitis"
+    },
+    {
+      "id": 153140,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2013-05-17",
+      "effectiveDate": "2013-05-17",
+      "resolutionDate": "2013-05-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jupiter Hammerheads activated RHP Jake Esch from the 7-day disabled list."
+    },
+    {
+      "id": 186716,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2014-04-21",
+      "effectiveDate": "2014-04-21",
+      "resolutionDate": "2014-04-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jupiter Hammerheads placed RHP Jake Esch on the 7-day disabled list. Infection of right middle finger."
+    },
+    {
+      "id": 187147,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2014-04-28",
+      "effectiveDate": "2014-04-28",
+      "resolutionDate": "2014-04-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jupiter Hammerheads activated RHP Jake Esch from the 7-day disabled list."
+    },
+    {
+      "id": 219381,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "fromTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2015-04-03",
+      "effectiveDate": "2015-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jake Esch assigned to Jacksonville Suns from Jupiter Hammerheads."
+    },
+    {
+      "id": 222255,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2015-04-15",
+      "effectiveDate": "2015-04-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jake Esch assigned to New Orleans Zephyrs from Jacksonville Suns."
+    },
+    {
+      "id": 222951,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "fromTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2015-04-23",
+      "effectiveDate": "2015-04-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jake Esch assigned to Jacksonville Suns from New Orleans Zephyrs."
+    },
+    {
+      "id": 229583,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "toTeam": {
+        "id": 69,
+        "name": "SOU South Division All-Stars",
+        "link": "/api/v1/teams/69"
+      },
+      "date": "2015-06-22",
+      "effectiveDate": "2015-06-22",
+      "resolutionDate": "2015-06-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jake Esch assigned to SOU South Division All-Stars."
+    },
+    {
+      "id": 242964,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2015-07-15",
+      "effectiveDate": "2015-07-15",
+      "resolutionDate": "2015-07-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jacksonville Suns placed RHP Jake Esch on the 7-day disabled list."
+    },
+    {
+      "id": 237868,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2015-07-15",
+      "effectiveDate": "2015-07-15",
+      "resolutionDate": "2015-07-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jacksonville Suns placed RHP Jake Esch on the 7-day disabled list."
+    },
+    {
+      "id": 241587,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 467,
+        "name": "FCL Marlins",
+        "link": "/api/v1/teams/467"
+      },
+      "date": "2015-08-10",
+      "effectiveDate": "2015-08-10",
+      "resolutionDate": "2015-08-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Jacksonville Suns sent RHP Jake Esch on a rehab assignment to GCL Marlins."
+    },
+    {
+      "id": 242965,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2015-08-20",
+      "effectiveDate": "2015-08-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jake Esch assigned to New Orleans Zephyrs from Jacksonville Suns."
+    },
+    {
+      "id": 250503,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "fromTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2015-11-20",
+      "effectiveDate": "2016-03-16",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Miami Marlins selected the contract of Jake Esch from New Orleans Zephyrs."
+    },
+    {
+      "id": 257086,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2016-03-16",
+      "effectiveDate": "2016-03-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Miami Marlins optioned RHP Jake Esch to Jacksonville Suns."
+    },
+    {
+      "id": 270003,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "toTeam": {
+        "id": 69,
+        "name": "SOU South Division All-Stars",
+        "link": "/api/v1/teams/69"
+      },
+      "date": "2016-06-20",
+      "effectiveDate": "2016-06-20",
+      "resolutionDate": "2016-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jake Esch assigned to SOU South Division All-Stars."
+    },
+    {
+      "id": 283244,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2016-08-09",
+      "effectiveDate": "2016-08-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jake Esch assigned to New Orleans Zephyrs from Jacksonville Suns."
+    },
+    {
+      "id": 285913,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "fromTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2016-08-31",
+      "effectiveDate": "2017-03-10",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Miami Marlins recalled Jake Esch from New Orleans Zephyrs."
+    },
+    {
+      "id": 299850,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2017-03-10",
+      "effectiveDate": "2017-03-10",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Miami Marlins optioned RHP Jake Esch to New Orleans Baby Cakes."
+    },
+    {
+      "id": 300031,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2017-03-11",
+      "effectiveDate": "2017-03-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Miami Marlins optioned RHP Jake Esch to New Orleans Baby Cakes."
+    },
+    {
+      "id": 302044,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2017-03-31",
+      "effectiveDate": "2017-03-31",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "San Diego Padres claimed RHP Jake Esch off waivers from Miami Marlins."
+    },
+    {
+      "id": 303547,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2017-04-04",
+      "effectiveDate": "2017-04-04",
+      "resolutionDate": "2017-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jake Esch assigned to San Antonio Missions."
+    },
+    {
+      "id": 305587,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "fromTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2017-04-12",
+      "effectiveDate": "2017-04-14",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Diego Padres recalled Jake Esch from San Antonio Missions."
+    },
+    {
+      "id": 305880,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2017-04-14",
+      "effectiveDate": "2017-04-14",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned RHP Jake Esch to El Paso Chihuahuas."
+    },
+    {
+      "id": 306315,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2017-04-18",
+      "effectiveDate": "2017-04-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jake Esch assigned to San Antonio Missions from El Paso Chihuahuas."
+    },
+    {
+      "id": 308543,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2017-05-01",
+      "effectiveDate": "2017-05-01",
+      "resolutionDate": "2017-05-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Antonio Missions placed RHP Jake Esch on the 7-day disabled list."
+    },
+    {
+      "id": 315293,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2017-06-11",
+      "effectiveDate": "2017-06-11",
+      "resolutionDate": "2017-06-11",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "San Diego Padres designated RHP Jake Esch for assignment."
+    },
+    {
+      "id": 315580,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2017-06-12",
+      "effectiveDate": "2017-06-12",
+      "resolutionDate": "2017-06-12",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "San Diego Padres released RHP Jake Esch."
+    },
+    {
+      "id": 318000,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2017-06-21",
+      "effectiveDate": "2017-06-21",
+      "resolutionDate": "2017-06-21",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Diego Padres signed free agent RHP Jake Esch to a minor league contract."
+    },
+    {
+      "id": 318001,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2017-06-21",
+      "effectiveDate": "2017-06-21",
+      "resolutionDate": "2017-06-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jake Esch assigned to San Antonio Missions."
+    },
+    {
+      "id": 320962,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "fromTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "toTeam": {
+        "id": 5316,
+        "name": "AZL Padres 2",
+        "link": "/api/v1/teams/5316"
+      },
+      "date": "2017-06-28",
+      "effectiveDate": "2017-06-28",
+      "resolutionDate": "2017-06-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Antonio Missions sent RHP Jake Esch on a rehab assignment to AZL Padres 2."
+    },
+    {
+      "id": 321832,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "fromTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "toTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "date": "2017-07-02",
+      "effectiveDate": "2017-07-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jake Esch assigned to Lake Elsinore Storm from San Antonio Missions."
+    },
+    {
+      "id": 329246,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "fromTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2017-08-15",
+      "effectiveDate": "2017-08-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jake Esch assigned to San Antonio Missions from Lake Elsinore Storm."
+    },
+    {
+      "id": 336921,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2017-11-06",
+      "effectiveDate": "2017-11-06",
+      "resolutionDate": "2017-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Jake Esch elected free agency."
+    },
+    {
+      "id": 440316,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "toTeam": {
+        "id": 821,
+        "name": "Great Britain",
+        "link": "/api/v1/teams/821"
+      },
+      "date": "2020-03-07",
+      "effectiveDate": "2020-03-07",
+      "resolutionDate": "2020-03-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jake Esch and  assigned to Great Britain."
+    },
+    {
+      "id": 669876,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "toTeam": {
+        "id": 821,
+        "name": "Great Britain",
+        "link": "/api/v1/teams/821"
+      },
+      "date": "2023-02-09",
+      "effectiveDate": "2023-02-09",
+      "resolutionDate": "2023-02-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Britain activated RHP Jake Esch."
+    },
+    {
+      "id": 669256,
+      "person": {
+        "id": 605222,
+        "fullName": "Jake Esch",
+        "link": "/api/v1/people/605222",
+        "nameSlug": "jake-esch-605222"
+      },
+      "toTeam": {
+        "id": 821,
+        "name": "Great Britain",
+        "link": "/api/v1/teams/821"
+      },
+      "date": "2023-02-09",
+      "effectiveDate": "2023-02-09",
+      "resolutionDate": "2023-02-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Britain activated RHP Jake Esch."
+    }
+  ]
+}

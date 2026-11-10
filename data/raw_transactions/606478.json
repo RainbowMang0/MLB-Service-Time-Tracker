@@ -1,0 +1,876 @@
+{
+  "player_id": 606478,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:ea8d62f39008c8f8b67475e1db40848d54a723e2cbc30ea8ca585de1da8ed293",
+  "transactions": [
+    {
+      "id": 88242,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2011-05-30",
+      "effectiveDate": "2011-05-30",
+      "resolutionDate": "2011-05-30",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Chicago Cubs signed RHP Pedro Araujo."
+    },
+    {
+      "id": 88243,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 609,
+        "name": "DSL Cubs Blue",
+        "link": "/api/v1/teams/609"
+      },
+      "date": "2011-05-31",
+      "effectiveDate": "2011-05-31",
+      "resolutionDate": "2011-05-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Pedro Araujo assigned to DSL Cubs1 from Chicago Cubs."
+    },
+    {
+      "id": 88335,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "toTeam": {
+        "id": 2270,
+        "name": "DSL Cubs Red",
+        "link": "/api/v1/teams/2270"
+      },
+      "date": "2011-05-31",
+      "effectiveDate": "2011-05-31",
+      "resolutionDate": "2011-05-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Pedro Araujo assigned to DSL Cubs2."
+    },
+    {
+      "id": 154653,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "fromTeam": {
+        "id": 2270,
+        "name": "DSL Cubs Red",
+        "link": "/api/v1/teams/2270"
+      },
+      "toTeam": {
+        "id": 609,
+        "name": "DSL Cubs Blue",
+        "link": "/api/v1/teams/609"
+      },
+      "date": "2013-05-31",
+      "effectiveDate": "2013-05-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to DSL Cubs from DSL Cubs2."
+    },
+    {
+      "id": 196720,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "fromTeam": {
+        "id": 609,
+        "name": "DSL Cubs Blue",
+        "link": "/api/v1/teams/609"
+      },
+      "toTeam": {
+        "id": 407,
+        "name": "ACL Cubs",
+        "link": "/api/v1/teams/407"
+      },
+      "date": "2014-06-21",
+      "effectiveDate": "2014-06-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to AZL Cubs from DSL Cubs."
+    },
+    {
+      "id": 197188,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "toTeam": {
+        "id": 407,
+        "name": "ACL Cubs",
+        "link": "/api/v1/teams/407"
+      },
+      "date": "2014-06-24",
+      "effectiveDate": "2014-06-24",
+      "resolutionDate": "2014-06-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "AZL Cubs activated RHP Pedro Araujo."
+    },
+    {
+      "id": 231206,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "fromTeam": {
+        "id": 407,
+        "name": "ACL Cubs",
+        "link": "/api/v1/teams/407"
+      },
+      "toTeam": {
+        "id": 461,
+        "name": "Eugene Emeralds",
+        "link": "/api/v1/teams/461"
+      },
+      "date": "2015-06-17",
+      "effectiveDate": "2015-06-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to Eugene Emeralds from AZL Cubs."
+    },
+    {
+      "id": 239807,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "toTeam": {
+        "id": 5026,
+        "name": "Northwest League All-Stars",
+        "link": "/api/v1/teams/5026"
+      },
+      "date": "2015-08-03",
+      "effectiveDate": "2015-08-03",
+      "resolutionDate": "2015-08-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to Northwest League All-Stars."
+    },
+    {
+      "id": 267085,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "fromTeam": {
+        "id": 461,
+        "name": "Eugene Emeralds",
+        "link": "/api/v1/teams/461"
+      },
+      "toTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "date": "2016-05-27",
+      "effectiveDate": "2016-05-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to South Bend Cubs from Eugene Emeralds."
+    },
+    {
+      "id": 276103,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "fromTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "toTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "date": "2016-06-30",
+      "effectiveDate": "2016-06-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to Myrtle Beach Pelicans from South Bend Cubs."
+    },
+    {
+      "id": 283663,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "fromTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "toTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "date": "2016-08-12",
+      "effectiveDate": "2016-08-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to South Bend Cubs from Myrtle Beach Pelicans."
+    },
+    {
+      "id": 290854,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2016-10-20",
+      "effectiveDate": "2016-10-20",
+      "resolutionDate": "2016-10-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 303880,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "fromTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "toTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "date": "2017-04-04",
+      "effectiveDate": "2017-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to Myrtle Beach Pelicans from South Bend Cubs."
+    },
+    {
+      "id": 309114,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "toTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "date": "2017-05-05",
+      "effectiveDate": "2017-05-03",
+      "resolutionDate": "2017-05-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Myrtle Beach Pelicans placed RHP Pedro Araujo on the 7-day disabled list retroactive to May 3, 2017."
+    },
+    {
+      "id": 310212,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "toTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "date": "2017-05-12",
+      "effectiveDate": "2017-05-12",
+      "resolutionDate": "2017-05-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Myrtle Beach Pelicans activated RHP Pedro Araujo from the 7-day disabled list."
+    },
+    {
+      "id": 317639,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "toTeam": {
+        "id": 5319,
+        "name": "CAR South Division All-Stars",
+        "link": "/api/v1/teams/5319"
+      },
+      "date": "2017-06-20",
+      "effectiveDate": "2017-06-20",
+      "resolutionDate": "2017-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to CAR South Division All-Stars."
+    },
+    {
+      "id": 328790,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "fromTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2017-08-11",
+      "effectiveDate": "2017-08-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to Tennessee Smokies from Myrtle Beach Pelicans."
+    },
+    {
+      "id": 329551,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "fromTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2017-08-17",
+      "effectiveDate": "2017-08-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to Iowa Cubs from Tennessee Smokies."
+    },
+    {
+      "id": 329680,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "date": "2017-08-18",
+      "effectiveDate": "2017-08-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to Myrtle Beach Pelicans from Iowa Cubs."
+    },
+    {
+      "id": 338742,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "fromTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2017-12-14",
+      "effectiveDate": "2017-12-14",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Baltimore Orioles claimed RHP Pedro Araujo off waivers from Myrtle Beach Pelicans."
+    },
+    {
+      "id": 359168,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2018-06-11",
+      "effectiveDate": "2018-06-11",
+      "resolutionDate": "2018-06-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles placed RHP Pedro Araujo on the 10-day disabled list. Right elbow sprain."
+    },
+    {
+      "id": 378340,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2018-09-11",
+      "effectiveDate": "2018-09-11",
+      "resolutionDate": "2018-09-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles transferred RHP Pedro Araujo from the 10-day disabled list to the 60-day disabled list. Right elbow sprain."
+    },
+    {
+      "id": 381024,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2018-10-15",
+      "effectiveDate": "2018-10-15",
+      "resolutionDate": "2018-10-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 381915,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2018-11-02",
+      "effectiveDate": "2018-11-02",
+      "resolutionDate": "2018-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles activated RHP Pedro Araujo from the 60-day injured list."
+    },
+    {
+      "id": 383053,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2018-11-13",
+      "effectiveDate": "2018-11-13",
+      "resolutionDate": "2018-11-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aguilas Cibaenas placed RHP Pedro Araujo on the reserve list."
+    },
+    {
+      "id": 394682,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2019-04-03",
+      "effectiveDate": "2019-04-03",
+      "resolutionDate": "2019-04-03",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Baltimore Orioles designated RHP Pedro Araujo for assignment."
+    },
+    {
+      "id": 395502,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2019-04-05",
+      "effectiveDate": "2019-04-05",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Baltimore Orioles sent RHP Pedro Araujo outright to Norfolk Tides."
+    },
+    {
+      "id": 395854,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2019-04-08",
+      "effectiveDate": "2019-04-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to Bowie Baysox from Norfolk Tides."
+    },
+    {
+      "id": 408925,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "fromTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2019-06-14",
+      "effectiveDate": "2019-06-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to Norfolk Tides from Bowie Baysox."
+    },
+    {
+      "id": 409229,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2019-06-16",
+      "effectiveDate": "2019-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to Bowie Baysox from Norfolk Tides."
+    },
+    {
+      "id": 413157,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "fromTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2019-06-25",
+      "effectiveDate": "2019-06-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to Norfolk Tides from Bowie Baysox."
+    },
+    {
+      "id": 413806,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2019-06-28",
+      "effectiveDate": "2019-06-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to Bowie Baysox from Norfolk Tides."
+    },
+    {
+      "id": 420166,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "fromTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2019-07-27",
+      "effectiveDate": "2019-07-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to Norfolk Tides from Bowie Baysox."
+    },
+    {
+      "id": 420659,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2019-07-30",
+      "effectiveDate": "2019-07-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to Bowie Baysox from Norfolk Tides."
+    },
+    {
+      "id": 421115,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2019-08-01",
+      "effectiveDate": "2019-08-01",
+      "resolutionDate": "2019-08-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Bowie Baysox placed RHP Pedro Araujo on the 7-day injured list."
+    },
+    {
+      "id": 427042,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "fromTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2019-09-02",
+      "effectiveDate": "2019-09-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to Norfolk Tides from Bowie Baysox."
+    },
+    {
+      "id": 427439,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2019-09-04",
+      "effectiveDate": "2019-09-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to Bowie Baysox from Norfolk Tides."
+    },
+    {
+      "id": 430553,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2019-10-12",
+      "effectiveDate": "2019-10-12",
+      "resolutionDate": "2019-10-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Pedro Araujo assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 432610,
+      "person": {
+        "id": 606478,
+        "fullName": "Pedro Araújo",
+        "link": "/api/v1/people/606478",
+        "nameSlug": "pedro-araujo-606478"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2019-11-04",
+      "effectiveDate": "2019-11-04",
+      "resolutionDate": "2019-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Pedro Araujo elected free agency."
+    }
+  ]
+}

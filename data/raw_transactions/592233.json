@@ -1,0 +1,1575 @@
+{
+  "player_id": 592233,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:3be5681d9b068f74cdd9c8c2927b49c0994c4a87052be25e52142a0c3cff4632",
+  "transactions": [
+    {
+      "id": 165752,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2013-07-12",
+      "effectiveDate": "2013-07-12",
+      "resolutionDate": "2013-07-12",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Baltimore Orioles signed RHP Stefan Crichton."
+    },
+    {
+      "id": 165753,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 599,
+        "name": "FCL Orioles",
+        "link": "/api/v1/teams/599"
+      },
+      "date": "2013-07-26",
+      "effectiveDate": "2013-07-26",
+      "resolutionDate": "2013-07-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Stefan Crichton assigned to GCL Orioles."
+    },
+    {
+      "id": 192528,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 599,
+        "name": "FCL Orioles",
+        "link": "/api/v1/teams/599"
+      },
+      "toTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "date": "2014-06-09",
+      "effectiveDate": "2014-06-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Stefan Crichton assigned to Aberdeen IronBirds from GCL Orioles."
+    },
+    {
+      "id": 219749,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "toTeam": {
+        "id": 548,
+        "name": "Delmarva Shorebirds",
+        "link": "/api/v1/teams/548"
+      },
+      "date": "2015-04-04",
+      "effectiveDate": "2015-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Stefan Crichton assigned to Delmarva Shorebirds from Aberdeen IronBirds."
+    },
+    {
+      "id": 235400,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 548,
+        "name": "Delmarva Shorebirds",
+        "link": "/api/v1/teams/548"
+      },
+      "date": "2015-06-30",
+      "effectiveDate": "2015-06-30",
+      "resolutionDate": "2015-06-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Delmarva Shorebirds placed RHP Stefan Crichton on the temporarily inactive list."
+    },
+    {
+      "id": 236096,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 548,
+        "name": "Delmarva Shorebirds",
+        "link": "/api/v1/teams/548"
+      },
+      "date": "2015-07-03",
+      "effectiveDate": "2015-07-03",
+      "resolutionDate": "2015-07-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Delmarva Shorebirds activated RHP Stefan Crichton from the temporarily inactive list."
+    },
+    {
+      "id": 241629,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 548,
+        "name": "Delmarva Shorebirds",
+        "link": "/api/v1/teams/548"
+      },
+      "toTeam": {
+        "id": 493,
+        "name": "Frederick Keys",
+        "link": "/api/v1/teams/493"
+      },
+      "date": "2015-08-10",
+      "effectiveDate": "2015-08-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Stefan Crichton assigned to Frederick Keys from Delmarva Shorebirds."
+    },
+    {
+      "id": 245183,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 493,
+        "name": "Frederick Keys",
+        "link": "/api/v1/teams/493"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2015-09-09",
+      "effectiveDate": "2015-09-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Stefan Crichton assigned to Bowie Baysox from Frederick Keys."
+    },
+    {
+      "id": 256883,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2016-03-14",
+      "effectiveDate": "2016-03-14",
+      "resolutionDate": "2016-03-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Stefan Crichton assigned to Baltimore Orioles."
+    },
+    {
+      "id": 287684,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 490,
+        "name": "Peoria Javelinas",
+        "link": "/api/v1/teams/490"
+      },
+      "date": "2016-09-21",
+      "effectiveDate": "2016-09-21",
+      "resolutionDate": "2016-09-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Stefan Crichton assigned to Peoria Javelinas."
+    },
+    {
+      "id": 298436,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2017-02-24",
+      "effectiveDate": "2017-02-24",
+      "resolutionDate": "2017-02-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Stefan Crichton assigned to Baltimore Orioles."
+    },
+    {
+      "id": 302973,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2017-04-03",
+      "effectiveDate": "2017-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Stefan Crichton assigned to Norfolk Tides from Bowie Baysox."
+    },
+    {
+      "id": 305775,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2017-04-13",
+      "effectiveDate": "2017-04-15",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Baltimore Orioles selected the contract of Stefan Crichton from Norfolk Tides."
+    },
+    {
+      "id": 305964,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2017-04-15",
+      "effectiveDate": "2017-04-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Baltimore Orioles optioned Stefan Crichton to Norfolk Tides."
+    },
+    {
+      "id": 306194,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2017-04-16",
+      "effectiveDate": "2017-04-25",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Baltimore Orioles recalled Stefan Crichton from Norfolk Tides."
+    },
+    {
+      "id": 307648,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2017-04-25",
+      "effectiveDate": "2017-04-25",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Baltimore Orioles optioned RHP Stefan Crichton to Norfolk Tides."
+    },
+    {
+      "id": 309194,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2017-05-05",
+      "effectiveDate": "2017-05-07",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Baltimore Orioles recalled Stefan Crichton from Norfolk Tides."
+    },
+    {
+      "id": 309402,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2017-05-07",
+      "effectiveDate": "2017-05-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Baltimore Orioles optioned RHP Stefan Crichton to Norfolk Tides."
+    },
+    {
+      "id": 310921,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2017-05-17",
+      "effectiveDate": "2017-05-23",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Baltimore Orioles recalled Stefan Crichton from Norfolk Tides."
+    },
+    {
+      "id": 311690,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2017-05-23",
+      "effectiveDate": "2017-05-23",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Baltimore Orioles optioned RHP Stefan Crichton to Norfolk Tides."
+    },
+    {
+      "id": 314975,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2017-06-09",
+      "effectiveDate": "2017-06-11",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Baltimore Orioles recalled Stefan Crichton from Norfolk Tides."
+    },
+    {
+      "id": 315229,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2017-06-11",
+      "effectiveDate": "2017-06-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Baltimore Orioles optioned RHP Stefan Crichton to Norfolk Tides."
+    },
+    {
+      "id": 319430,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2017-06-24",
+      "effectiveDate": "2017-06-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Baltimore Orioles recalled RHP Stefan Crichton from Norfolk Tides."
+    },
+    {
+      "id": 321289,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2017-06-30",
+      "effectiveDate": "2017-06-28",
+      "resolutionDate": "2017-06-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles placed RHP Stefan Crichton on the 10-day disabled list retroactive to June 28, 2017. Right shoulder strain."
+    },
+    {
+      "id": 323656,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 599,
+        "name": "FCL Orioles",
+        "link": "/api/v1/teams/599"
+      },
+      "date": "2017-07-12",
+      "effectiveDate": "2017-07-12",
+      "resolutionDate": "2017-07-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Baltimore Orioles sent RHP Stefan Crichton on a rehab assignment to GCL Orioles."
+    },
+    {
+      "id": 324556,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2017-07-17",
+      "effectiveDate": "2017-07-17",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Baltimore Orioles optioned RHP Stefan Crichton to Norfolk Tides."
+    },
+    {
+      "id": 333216,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2017-10-02",
+      "effectiveDate": "2018-03-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Baltimore Orioles recalled Stefan Crichton from Norfolk Tides."
+    },
+    {
+      "id": 343471,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2018-03-06",
+      "effectiveDate": "2018-03-06",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Baltimore Orioles optioned RHP Stefan Crichton to Norfolk Tides."
+    },
+    {
+      "id": 345754,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2018-03-29",
+      "effectiveDate": "2018-03-29",
+      "resolutionDate": "2018-03-29",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Baltimore Orioles designated RHP Stefan Crichton for assignment."
+    },
+    {
+      "id": 346907,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 104,
+        "name": "Jackson Generals",
+        "link": "/api/v1/teams/104"
+      },
+      "date": "2018-04-02",
+      "effectiveDate": "2018-04-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Stefan Crichton to Jackson Generals."
+    },
+    {
+      "id": 346653,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2018-04-02",
+      "effectiveDate": "2018-04-02",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Baltimore Orioles traded RHP Stefan Crichton to Arizona Diamondbacks for cash."
+    },
+    {
+      "id": 347513,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 104,
+        "name": "Jackson Generals",
+        "link": "/api/v1/teams/104"
+      },
+      "toTeam": {
+        "id": 3266,
+        "name": "Diamondbacks Alternate Training Site",
+        "link": "/api/v1/teams/3266"
+      },
+      "date": "2018-04-03",
+      "effectiveDate": "2018-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Stefan Crichton assigned to Diamondbacks Extended Spring Training from Jackson Generals."
+    },
+    {
+      "id": 348882,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 3266,
+        "name": "Diamondbacks Alternate Training Site",
+        "link": "/api/v1/teams/3266"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2018-04-09",
+      "effectiveDate": "2018-04-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Stefan Crichton assigned to Reno Aces from Diamondbacks Extended Spring Training."
+    },
+    {
+      "id": 354465,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2018-05-19",
+      "effectiveDate": "2018-05-19",
+      "resolutionDate": "2018-05-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces placed RHP Stefan Crichton on the 7-day disabled list. Right shoulder inflammation."
+    },
+    {
+      "id": 363998,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2018-06-23",
+      "effectiveDate": "2018-06-23",
+      "resolutionDate": "2018-06-23",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Arizona Diamondbacks released RHP Stefan Crichton."
+    },
+    {
+      "id": 382663,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2018-06-27",
+      "effectiveDate": "2018-06-27",
+      "resolutionDate": "2018-06-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Stefan Crichton assigned to Reno Aces."
+    },
+    {
+      "id": 382662,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2018-06-27",
+      "effectiveDate": "2018-06-27",
+      "resolutionDate": "2018-06-27",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Arizona Diamondbacks signed free agent RHP Stefan Crichton to a minor league contract."
+    },
+    {
+      "id": 382664,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2018-09-24",
+      "effectiveDate": "2018-09-24",
+      "resolutionDate": "2018-09-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces activated RHP Stefan Crichton from the 7-day injured list."
+    },
+    {
+      "id": 387330,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2019-01-31",
+      "effectiveDate": "2019-01-31",
+      "resolutionDate": "2019-01-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Arizona Diamondbacks invited non-roster RHP Stefan Crichton to spring training."
+    },
+    {
+      "id": 399976,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 3266,
+        "name": "Diamondbacks Alternate Training Site",
+        "link": "/api/v1/teams/3266"
+      },
+      "date": "2019-05-05",
+      "effectiveDate": "2019-05-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Stefan Crichton assigned to Diamondbacks Extended Spring Training from Reno Aces."
+    },
+    {
+      "id": 400327,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 3266,
+        "name": "Diamondbacks Alternate Training Site",
+        "link": "/api/v1/teams/3266"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2019-05-07",
+      "effectiveDate": "2019-05-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Stefan Crichton assigned to Reno Aces from Diamondbacks Extended Spring Training."
+    },
+    {
+      "id": 403613,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2019-05-28",
+      "effectiveDate": "2019-06-03",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Arizona Diamondbacks selected the contract of Stefan Crichton from Reno Aces."
+    },
+    {
+      "id": 405749,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2019-06-03",
+      "effectiveDate": "2019-06-03",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Stefan Crichton to Reno Aces."
+    },
+    {
+      "id": 407696,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2019-06-12",
+      "effectiveDate": "2019-06-27",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled Stefan Crichton from Reno Aces."
+    },
+    {
+      "id": 413622,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2019-06-27",
+      "effectiveDate": "2019-06-27",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Stefan Crichton to Reno Aces."
+    },
+    {
+      "id": 418828,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2019-07-20",
+      "effectiveDate": "2019-07-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled Stefan Crichton from Reno Aces."
+    },
+    {
+      "id": 420413,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2019-07-28",
+      "effectiveDate": "2019-07-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Stefan Crichton to Reno Aces."
+    },
+    {
+      "id": 421337,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2019-08-01",
+      "effectiveDate": "2019-08-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled Stefan Crichton from Reno Aces."
+    },
+    {
+      "id": 421798,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2019-08-03",
+      "effectiveDate": "2019-08-03",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Stefan Crichton to Reno Aces."
+    },
+    {
+      "id": 423884,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2019-08-15",
+      "effectiveDate": "2019-08-18",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled Stefan Crichton from Reno Aces."
+    },
+    {
+      "id": 424404,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2019-08-18",
+      "effectiveDate": "2019-08-18",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Stefan Crichton to Reno Aces."
+    },
+    {
+      "id": 478256,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2019-09-01",
+      "effectiveDate": "2019-09-01",
+      "resolutionDate": "2019-09-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled P Stefan Crichton."
+    },
+    {
+      "id": 426883,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2019-09-01",
+      "effectiveDate": "2019-09-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled RHP Stefan Crichton from Reno Aces."
+    },
+    {
+      "id": 477575,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2019-09-01",
+      "effectiveDate": "2019-09-01",
+      "resolutionDate": "2019-09-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled P Stefan Crichton."
+    },
+    {
+      "id": 495852,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2021-06-23",
+      "effectiveDate": "2021-06-23",
+      "resolutionDate": "2021-06-23",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Arizona Diamondbacks designated RHP Stefan Crichton for assignment."
+    },
+    {
+      "id": 496590,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2021-06-27",
+      "effectiveDate": "2021-06-27",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Arizona Diamondbacks sent RHP Stefan Crichton outright to Reno Aces."
+    },
+    {
+      "id": 497529,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2021-06-28",
+      "effectiveDate": "2021-06-28",
+      "resolutionDate": "2021-06-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces transferred RHP Stefan Crichton to the Development List."
+    },
+    {
+      "id": 504193,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2021-07-13",
+      "effectiveDate": "2021-07-13",
+      "resolutionDate": "2021-07-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces activated RHP Stefan Crichton."
+    },
+    {
+      "id": 508362,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2021-07-30",
+      "effectiveDate": "2021-07-30",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Arizona Diamondbacks selected the contract of RHP Stefan Crichton from Reno Aces."
+    },
+    {
+      "id": 509090,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2021-08-02",
+      "effectiveDate": "2021-08-02",
+      "typeCode": "RTN",
+      "typeDesc": "Returned",
+      "description": "RHP Stefan Crichton returned to Reno Aces from Arizona Diamondbacks."
+    },
+    {
+      "id": 520595,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2021-09-03",
+      "effectiveDate": "2021-09-03",
+      "resolutionDate": "2021-09-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces placed RHP Stefan Crichton on the 7-day injured list."
+    },
+    {
+      "id": 520596,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2021-10-04",
+      "effectiveDate": "2021-10-04",
+      "resolutionDate": "2021-10-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces activated RHP Stefan Crichton from the 7-day injured list."
+    },
+    {
+      "id": 617395,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 5368,
+        "name": "Amarillo Sod Poodles",
+        "link": "/api/v1/teams/5368"
+      },
+      "date": "2021-11-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Stefan Crichton assigned to Amarillo Sod Poodles from Reno Aces."
+    },
+    {
+      "id": 606628,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2022-03-17",
+      "effectiveDate": "2022-03-17",
+      "resolutionDate": "2022-03-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Stefan Crichton assigned to Arizona Diamondbacks."
+    },
+    {
+      "id": 612730,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2022-03-17",
+      "effectiveDate": "2022-03-17",
+      "resolutionDate": "2022-03-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Stefan Crichton roster status changed by Arizona Diamondbacks."
+    },
+    {
+      "id": 617396,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 5368,
+        "name": "Amarillo Sod Poodles",
+        "link": "/api/v1/teams/5368"
+      },
+      "date": "2022-04-08",
+      "effectiveDate": "2022-04-08",
+      "resolutionDate": "2022-04-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Amarillo Sod Poodles placed RHP Stefan Crichton on the 60-day injured list."
+    },
+    {
+      "id": 652216,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2022-09-13",
+      "effectiveDate": "2022-09-13",
+      "resolutionDate": "2022-09-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces activated RHP Stefan Crichton."
+    },
+    {
+      "id": 652175,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "fromTeam": {
+        "id": 5368,
+        "name": "Amarillo Sod Poodles",
+        "link": "/api/v1/teams/5368"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2022-09-13",
+      "effectiveDate": "2022-09-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Stefan Crichton assigned to Reno Aces from Amarillo Sod Poodles."
+    },
+    {
+      "id": 667895,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2023-02-03",
+      "effectiveDate": "2023-02-03",
+      "resolutionDate": "2023-02-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Arizona Diamondbacks invited non-roster RHP Stefan Crichton and  to spring training."
+    },
+    {
+      "id": 679836,
+      "person": {
+        "id": 592233,
+        "fullName": "Stefan Crichton",
+        "link": "/api/v1/people/592233",
+        "nameSlug": "stefan-crichton-592233"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2023-03-01",
+      "effectiveDate": "2023-03-01",
+      "resolutionDate": "2023-03-01",
+      "typeCode": "RET",
+      "typeDesc": "Retired",
+      "description": "RHP Stefan Crichton retired."
+    }
+  ]
+}
