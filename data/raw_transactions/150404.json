@@ -1,0 +1,635 @@
+{
+  "player_id": 150404,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:6cdaa1b97619191f09c5f9cf1f18fe986cccd154b5a746203f9dddec1c536f15",
+  "transactions": [
+    {
+      "id": 18062,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2009-07-25",
+      "effectiveDate": "2009-07-21",
+      "resolutionDate": "2009-07-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs placed LHP Ted Lilly on the 15-day disabled list retroactive to July 21, 2009. Left shoulder inflammation."
+    },
+    {
+      "id": 20669,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 443,
+        "name": "Peoria Chiefs",
+        "link": "/api/v1/teams/443"
+      },
+      "date": "2009-08-12",
+      "effectiveDate": "2009-08-12",
+      "resolutionDate": "2009-08-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent LHP Ted Lilly on a rehab assignment to Peoria Chiefs."
+    },
+    {
+      "id": 21622,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2009-08-17",
+      "effectiveDate": "2009-08-17",
+      "resolutionDate": "2009-08-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated LHP Ted Lilly from the 15-day disabled list."
+    },
+    {
+      "id": 35996,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2010-04-04",
+      "effectiveDate": "2010-03-26",
+      "resolutionDate": "2010-03-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs placed LHP Ted Lilly on the 15-day disabled list retroactive to March 26, 2010. Recovering from November 2009 left shoulder surgery."
+    },
+    {
+      "id": 38742,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2010-04-14",
+      "effectiveDate": "2010-04-14",
+      "resolutionDate": "2010-04-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent LHP Ted Lilly on a rehab assignment to Iowa Cubs."
+    },
+    {
+      "id": 39678,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 443,
+        "name": "Peoria Chiefs",
+        "link": "/api/v1/teams/443"
+      },
+      "date": "2010-04-19",
+      "effectiveDate": "2010-04-19",
+      "resolutionDate": "2010-04-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent LHP Ted Lilly on a rehab assignment to Peoria Chiefs."
+    },
+    {
+      "id": 40358,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2010-04-24",
+      "effectiveDate": "2010-04-24",
+      "resolutionDate": "2010-04-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Ted Lilly roster status changed by Chicago Cubs."
+    },
+    {
+      "id": 64904,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2010-07-31",
+      "effectiveDate": "2010-07-31",
+      "resolutionDate": "2010-07-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Chicago Cubs Traded LHP Ted Lilly and 2B Ryan Theriot to Los Angeles Dodgers; Los Angeles Dodgers Traded Blake DeWitt to Chicago Cubs; Chattanooga Lookouts Traded RHP Kyle Smit to Tennessee Smokies and Great Lakes Loons Traded RHP Brett Wallach to Peoria Chiefs."
+    },
+    {
+      "id": 114070,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2012-04-04",
+      "effectiveDate": "2012-03-26",
+      "resolutionDate": "2012-03-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed LHP Ted Lilly on the 15-day disabled list retroactive to March 26, 2012. Neck stiffness."
+    },
+    {
+      "id": 114787,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2012-04-08",
+      "effectiveDate": "2012-04-08",
+      "resolutionDate": "2012-04-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent LHP Ted Lilly on a rehab assignment to Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 115230,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2012-04-14",
+      "effectiveDate": "2012-04-14",
+      "resolutionDate": "2012-04-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated LHP Ted Lilly from the 15-day disabled list."
+    },
+    {
+      "id": 119542,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2012-05-28",
+      "effectiveDate": "2012-05-24",
+      "resolutionDate": "2012-05-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed LHP Ted Lilly on the 15-day disabled list retroactive to May 24, 2012. Left shoulder inflammation."
+    },
+    {
+      "id": 127903,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2012-07-02",
+      "effectiveDate": "2012-07-02",
+      "resolutionDate": "2012-07-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers transferred LHP Ted Lilly from the 15-day disabled list to the 60-day disabled list."
+    },
+    {
+      "id": 131211,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2012-07-29",
+      "effectiveDate": "2012-07-29",
+      "resolutionDate": "2012-07-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent LHP Ted Lilly on a rehab assignment to Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 133075,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2012-08-14",
+      "effectiveDate": "2012-08-14",
+      "resolutionDate": "2012-08-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent LHP Ted Lilly on a rehab assignment to Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 138070,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2012-10-29",
+      "effectiveDate": "2012-10-29",
+      "resolutionDate": "2012-10-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated LHP Ted Lilly from the 60-day disabled list."
+    },
+    {
+      "id": 147270,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2013-03-31",
+      "effectiveDate": "2013-03-28",
+      "resolutionDate": "2013-03-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed LHP Ted Lilly on the 15-day disabled list retroactive to March 28, 2013. Recovering from September 2012 left shoulder surgery."
+    },
+    {
+      "id": 148866,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2013-04-05",
+      "effectiveDate": "2013-04-05",
+      "resolutionDate": "2013-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Ted Lilly assigned to Rancho Cucamonga Quakes from Los Angeles Dodgers."
+    },
+    {
+      "id": 149093,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "fromTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2013-04-09",
+      "effectiveDate": "2013-04-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Ted Lilly assigned to Albuquerque Isotopes from Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 149790,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "fromTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2013-04-16",
+      "effectiveDate": "2013-04-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Albuquerque Isotopes sent LHP Ted Lilly on a rehab assignment to Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 150540,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2013-04-24",
+      "effectiveDate": "2013-04-24",
+      "resolutionDate": "2013-04-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated LHP Ted Lilly from the 15-day disabled list."
+    },
+    {
+      "id": 151487,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2013-05-03",
+      "effectiveDate": "2013-04-30",
+      "resolutionDate": "2013-04-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed LHP Ted Lilly on the 15-day disabled list retroactive to April 30, 2013. Right rib cage strain."
+    },
+    {
+      "id": 152987,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2013-05-15",
+      "effectiveDate": "2013-05-15",
+      "resolutionDate": "2013-05-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers sent LHP Ted Lilly on a rehab assignment to Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 153517,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2013-05-20",
+      "effectiveDate": "2013-05-20",
+      "resolutionDate": "2013-05-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated LHP Ted Lilly from the 15-day disabled list."
+    },
+    {
+      "id": 156189,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2013-06-09",
+      "effectiveDate": "2013-06-05",
+      "resolutionDate": "2013-06-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed LHP Ted Lilly on the 15-day disabled list retroactive to June 5, 2013. Neck sprain."
+    },
+    {
+      "id": 162129,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2013-06-30",
+      "effectiveDate": "2013-06-30",
+      "resolutionDate": "2013-06-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers sent LHP Ted Lilly on a rehab assignment to Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 165537,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2013-07-24",
+      "effectiveDate": "2013-07-24",
+      "resolutionDate": "2013-07-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated LHP Ted Lilly from the 15-day disabled list."
+    },
+    {
+      "id": 165703,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2013-07-25",
+      "effectiveDate": "2013-07-25",
+      "resolutionDate": "2013-07-25",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Los Angeles Dodgers designated LHP Ted Lilly for assignment."
+    },
+    {
+      "id": 166748,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2013-08-02",
+      "effectiveDate": "2013-08-02",
+      "resolutionDate": "2013-08-02",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Los Angeles Dodgers released LHP Ted Lilly."
+    },
+    {
+      "id": 173587,
+      "person": {
+        "id": 150404,
+        "fullName": "Ted Lilly",
+        "link": "/api/v1/people/150404",
+        "nameSlug": "ted-lilly-150404"
+      },
+      "toTeam": {
+        "id": 696,
+        "name": "Navegantes del Magallanes",
+        "link": "/api/v1/teams/696"
+      },
+      "date": "2013-10-30",
+      "effectiveDate": "2013-10-30",
+      "resolutionDate": "2013-10-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Ted Lilly assigned to Navegantes del Magallanes."
+    }
+  ]
+}

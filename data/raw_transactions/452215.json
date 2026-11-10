@@ -1,0 +1,920 @@
+{
+  "player_id": 452215,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:cc9685063fe1aad54c222d3820c2066b85853ba19e4a709c1ecaed19baabd3b3",
+  "transactions": [
+    {
+      "id": 3617,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "fromTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2009-05-01",
+      "effectiveDate": "2009-05-01",
+      "resolutionDate": "2009-05-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Luke Montz assigned to Harrisburg Senators from Syracuse Chiefs."
+    },
+    {
+      "id": 6596,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "fromTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2009-05-27",
+      "effectiveDate": "2009-05-27",
+      "resolutionDate": "2009-05-27",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Washington Nationals recalled Luke Montz from Harrisburg Senators."
+    },
+    {
+      "id": 6791,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2009-05-28",
+      "effectiveDate": "2009-05-28",
+      "resolutionDate": "2009-05-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Washington Nationals optioned C Luke Montz to Harrisburg Senators."
+    },
+    {
+      "id": 24605,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2009-09-10",
+      "effectiveDate": "2009-09-10",
+      "resolutionDate": "2009-09-10",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Washington Nationals designated C Luke Montz for assignment."
+    },
+    {
+      "id": 24606,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2009-09-10",
+      "effectiveDate": "2009-09-10",
+      "resolutionDate": "2009-09-10",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Harrisburg Senators designated C Luke Montz for assignment."
+    },
+    {
+      "id": 24714,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2009-09-14",
+      "effectiveDate": "2009-09-14",
+      "resolutionDate": "2009-09-15",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Washington Nationals sent C Luke Montz outright to Syracuse Chiefs."
+    },
+    {
+      "id": 28838,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2009-11-09",
+      "effectiveDate": "2009-11-09",
+      "resolutionDate": "2009-11-09",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Luke Montz elected free agency."
+    },
+    {
+      "id": 32855,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2010-01-05",
+      "effectiveDate": "2010-01-05",
+      "resolutionDate": "2010-01-05",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Mets signed free agent C Luke Montz to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 31159,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2010-01-05",
+      "effectiveDate": "2010-01-05",
+      "resolutionDate": "2010-01-05",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Buffalo Bisons signed free agent Luke Montz."
+    },
+    {
+      "id": 37693,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2010-04-08",
+      "effectiveDate": "2010-04-08",
+      "resolutionDate": "2010-04-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Luke Montz assigned to Binghamton Mets from Buffalo Bisons."
+    },
+    {
+      "id": 42469,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2010-05-07",
+      "effectiveDate": "2010-05-05",
+      "resolutionDate": "2010-05-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Luke Montz roster status changed by Binghamton Mets."
+    },
+    {
+      "id": 63674,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "date": "2010-07-23",
+      "effectiveDate": "2010-07-23",
+      "resolutionDate": "2010-07-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent C Luke Montz on a rehab assignment to GCL Mets."
+    },
+    {
+      "id": 64594,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "fromTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2010-07-29",
+      "effectiveDate": "2010-07-29",
+      "resolutionDate": "2010-07-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Luke Montz assigned to St. Lucie Mets from Binghamton Mets."
+    },
+    {
+      "id": 65546,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "fromTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2010-08-04",
+      "effectiveDate": "2010-08-04",
+      "resolutionDate": "2010-08-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Luke Montz assigned to Binghamton Mets from St. Lucie Mets."
+    },
+    {
+      "id": 74084,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2010-11-06",
+      "effectiveDate": "2010-11-06",
+      "resolutionDate": "2010-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Luke Montz elected free agency."
+    },
+    {
+      "id": 78043,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2011-01-28",
+      "effectiveDate": "2011-01-28",
+      "resolutionDate": "2011-01-28",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Jacksonville Suns signed free agent C Luke Montz."
+    },
+    {
+      "id": 80166,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2011-03-29",
+      "effectiveDate": "2011-03-29",
+      "resolutionDate": "2011-03-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Luke Montz assigned to Florida Marlins."
+    },
+    {
+      "id": 106059,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2011-11-02",
+      "effectiveDate": "2011-11-02",
+      "resolutionDate": "2011-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Luke Montz elected free agency."
+    },
+    {
+      "id": 106576,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2011-11-12",
+      "effectiveDate": "2011-11-12",
+      "resolutionDate": "2011-11-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Luke Montz assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 107078,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2011-11-21",
+      "effectiveDate": "2011-11-21",
+      "resolutionDate": "2011-11-21",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New Orleans Zephyrs signed free agent C Luke Montz."
+    },
+    {
+      "id": 108674,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2012-01-20",
+      "effectiveDate": "2011-11-21",
+      "resolutionDate": "2012-01-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins invited non-roster C Luke Montz to spring training."
+    },
+    {
+      "id": 131680,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2012-07-30",
+      "effectiveDate": "2012-07-30",
+      "resolutionDate": "2012-07-30",
+      "typeCode": "SU",
+      "typeDesc": "Suspension",
+      "description": "C Luke Montz suspended."
+    },
+    {
+      "id": 131681,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2012-08-01",
+      "effectiveDate": "2012-08-01",
+      "resolutionDate": "2012-08-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New Orleans Zephyrs activated C Luke Montz."
+    },
+    {
+      "id": 138343,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 673,
+        "name": "Aguilas de Mexicali",
+        "link": "/api/v1/teams/673"
+      },
+      "date": "2012-11-02",
+      "effectiveDate": "2012-11-02",
+      "resolutionDate": "2012-11-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Luke Montz assigned to Aguilas de Mexicali."
+    },
+    {
+      "id": 139072,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2012-11-02",
+      "effectiveDate": "2012-11-02",
+      "resolutionDate": "2012-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Luke Montz elected free agency."
+    },
+    {
+      "id": 140066,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2012-11-09",
+      "effectiveDate": "2012-11-09",
+      "resolutionDate": "2012-11-09",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Oakland Athletics signed free agent C Luke Montz to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 151218,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2013-05-01",
+      "effectiveDate": "2013-05-31",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Oakland Athletics selected the contract of Luke Montz from Sacramento River Cats."
+    },
+    {
+      "id": 154670,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2013-05-31",
+      "effectiveDate": "2013-05-31",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Oakland Athletics optioned C Luke Montz to Sacramento River Cats."
+    },
+    {
+      "id": 162994,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2013-07-05",
+      "effectiveDate": "2013-07-05",
+      "resolutionDate": "2013-07-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sacramento River Cats placed C Luke Montz on the 7-day disabled list."
+    },
+    {
+      "id": 170278,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2013-09-01",
+      "effectiveDate": "2013-09-01",
+      "resolutionDate": "2013-09-01",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Oakland Athletics designated DH Luke Montz for assignment."
+    },
+    {
+      "id": 170529,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2013-09-03",
+      "effectiveDate": "2013-09-03",
+      "resolutionDate": "2013-09-03",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Oakland Athletics released DH Luke Montz."
+    },
+    {
+      "id": 175623,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2013-10-12",
+      "effectiveDate": "2013-10-12",
+      "resolutionDate": "2013-10-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Luke Montz assigned to Sacramento River Cats."
+    },
+    {
+      "id": 175622,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2013-10-12",
+      "effectiveDate": "2013-10-12",
+      "resolutionDate": "2013-10-12",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Oakland Athletics signed free agent C Luke Montz to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 196468,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2014-04-01",
+      "effectiveDate": "2014-09-24",
+      "resolutionDate": "2014-04-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Luke Montz roster status changed by Sacramento River Cats."
+    },
+    {
+      "id": 196470,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 405,
+        "name": "AZL Athletics Green",
+        "link": "/api/v1/teams/405"
+      },
+      "date": "2014-06-20",
+      "effectiveDate": "2014-06-20",
+      "resolutionDate": "2014-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Sacramento River Cats sent C Luke Montz on a rehab assignment to AZL Athletics."
+    },
+    {
+      "id": 204324,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 405,
+        "name": "AZL Athletics Green",
+        "link": "/api/v1/teams/405"
+      },
+      "date": "2014-08-10",
+      "effectiveDate": "2014-08-10",
+      "resolutionDate": "2014-08-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Sacramento River Cats sent C Luke Montz on a rehab assignment to AZL Athletics."
+    },
+    {
+      "id": 208833,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 673,
+        "name": "Aguilas de Mexicali",
+        "link": "/api/v1/teams/673"
+      },
+      "date": "2014-10-07",
+      "effectiveDate": "2014-10-07",
+      "resolutionDate": "2014-10-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Luke Montz assigned to Aguilas de Mexicali."
+    },
+    {
+      "id": 210473,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 673,
+        "name": "Aguilas de Mexicali",
+        "link": "/api/v1/teams/673"
+      },
+      "date": "2014-10-31",
+      "effectiveDate": "2014-10-31",
+      "resolutionDate": "2014-10-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aguilas de Mexicali placed 1B Luke Montz on the reserve list."
+    },
+    {
+      "id": 211598,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 673,
+        "name": "Aguilas de Mexicali",
+        "link": "/api/v1/teams/673"
+      },
+      "date": "2014-11-17",
+      "effectiveDate": "2014-11-17",
+      "resolutionDate": "2014-11-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aguilas de Mexicali activated 1B Luke Montz."
+    },
+    {
+      "id": 213139,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2014-12-04",
+      "effectiveDate": "2014-12-04",
+      "resolutionDate": "2014-12-04",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Boston Red Sox signed free agent C Luke Montz to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 212607,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 673,
+        "name": "Aguilas de Mexicali",
+        "link": "/api/v1/teams/673"
+      },
+      "date": "2014-12-05",
+      "effectiveDate": "2014-12-05",
+      "resolutionDate": "2014-12-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aguilas de Mexicali placed 1B Luke Montz on the reserve list."
+    },
+    {
+      "id": 213140,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2014-12-17",
+      "effectiveDate": "2014-12-17",
+      "resolutionDate": "2014-12-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Luke Montz assigned to Pawtucket Red Sox."
+    },
+    {
+      "id": 234673,
+      "person": {
+        "id": 452215,
+        "fullName": "Luke Montz",
+        "link": "/api/v1/people/452215",
+        "nameSlug": "luke-montz-452215"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2015-06-26",
+      "effectiveDate": "2015-06-26",
+      "resolutionDate": "2015-06-26",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Pawtucket Red Sox released C Luke Montz."
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "player_id": 111838,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:586350a0301c82aa2313a78da99654d5819a14c2439f822bec61a62f296f466e",
+  "transactions": [
+    {
+      "id": 20651,
+      "person": {
+        "id": 111838,
+        "fullName": "Paul Byrd",
+        "link": "/api/v1/people/111838",
+        "nameSlug": "paul-byrd-111838"
+      },
+      "toTeam": {
+        "id": 471,
+        "name": "FCL Red Sox",
+        "link": "/api/v1/teams/471"
+      },
+      "date": "2009-08-10",
+      "effectiveDate": "2009-08-10",
+      "resolutionDate": "2009-08-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Paul Byrd assigned to GCL Red Sox."
+    },
+    {
+      "id": 21749,
+      "person": {
+        "id": 111838,
+        "fullName": "Paul Byrd",
+        "link": "/api/v1/people/111838",
+        "nameSlug": "paul-byrd-111838"
+      },
+      "fromTeam": {
+        "id": 471,
+        "name": "FCL Red Sox",
+        "link": "/api/v1/teams/471"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2009-08-19",
+      "effectiveDate": "2009-08-29",
+      "resolutionDate": "2009-08-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Paul Byrd assigned to Pawtucket Red Sox from GCL Red Sox."
+    },
+    {
+      "id": 23171,
+      "person": {
+        "id": 111838,
+        "fullName": "Paul Byrd",
+        "link": "/api/v1/people/111838",
+        "nameSlug": "paul-byrd-111838"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2009-08-30",
+      "effectiveDate": "2009-08-30",
+      "resolutionDate": "2009-08-30",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Boston Red Sox selected the contract of RHP Paul Byrd from Pawtucket Red Sox."
+    },
+    {
+      "id": 29389,
+      "person": {
+        "id": 111838,
+        "fullName": "Paul Byrd",
+        "link": "/api/v1/people/111838",
+        "nameSlug": "paul-byrd-111838"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2009-11-13",
+      "effectiveDate": "2009-11-13",
+      "resolutionDate": "2009-11-13",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Paul Byrd elected free agency."
+    }
+  ]
+}

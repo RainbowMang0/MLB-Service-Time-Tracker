@@ -1,0 +1,962 @@
+{
+  "player_id": 488811,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:c3d2501ee4fac8cb1d40261e86abc3878dce1f1608c9a4a8790f8b2649704c98",
+  "transactions": [
+    {
+      "id": 1943,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2009-04-12",
+      "effectiveDate": "2009-04-12",
+      "resolutionDate": "2009-04-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sacramento River Cats placed OF Aaron Cunningham on the 7-day disabled list. Separated right shoulder."
+    },
+    {
+      "id": 4435,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2009-05-10",
+      "effectiveDate": "2009-05-10",
+      "resolutionDate": "2009-05-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aaron Cunningham roster status changed by Sacramento River Cats."
+    },
+    {
+      "id": 5073,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2009-05-15",
+      "effectiveDate": "2009-05-20",
+      "resolutionDate": "2009-05-15",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Oakland Athletics recalled LF Aaron Cunningham from Sacramento River Cats."
+    },
+    {
+      "id": 7618,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2009-05-15",
+      "effectiveDate": "2009-05-15",
+      "resolutionDate": "2009-05-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics activated LF Aaron Cunningham."
+    },
+    {
+      "id": 5799,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2009-05-21",
+      "effectiveDate": "2009-05-21",
+      "resolutionDate": "2009-05-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Oakland Athletics optioned Aaron Cunningham to Sacramento River Cats."
+    },
+    {
+      "id": 7573,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2009-05-30",
+      "effectiveDate": "2009-06-12",
+      "resolutionDate": "2009-05-30",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Oakland Athletics recalled Aaron Cunningham from Sacramento River Cats."
+    },
+    {
+      "id": 9317,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2009-06-12",
+      "effectiveDate": "2009-06-13",
+      "resolutionDate": "2009-06-12",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Oakland Athletics optioned Aaron Cunningham to Sacramento River Cats."
+    },
+    {
+      "id": 20419,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2009-08-08",
+      "effectiveDate": "2009-08-08",
+      "resolutionDate": "2009-08-08",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Oakland Athletics recalled OF Aaron Cunningham from Sacramento River Cats."
+    },
+    {
+      "id": 21637,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2009-08-17",
+      "effectiveDate": "2009-08-17",
+      "resolutionDate": "2009-08-17",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Oakland Athletics optioned Aaron Cunningham to Sacramento River Cats."
+    },
+    {
+      "id": 26955,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2009-10-19",
+      "effectiveDate": "2009-10-19",
+      "resolutionDate": "2009-10-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aaron Cunningham roster status changed by Oakland Athletics."
+    },
+    {
+      "id": 28977,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 694,
+        "name": "Caribes de Anzoategui",
+        "link": "/api/v1/teams/694"
+      },
+      "date": "2009-11-17",
+      "effectiveDate": "2009-11-17",
+      "resolutionDate": "2009-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Aaron Cunningham assigned to Caribes de Anzoategui."
+    },
+    {
+      "id": 31447,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2010-01-16",
+      "effectiveDate": "2010-03-28",
+      "resolutionDate": "2010-01-16",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "San Diego Padres Traded 3B Kevin Kouzmanoff to Oakland Athletics; Oakland Athletics Traded RF Aaron Cunningham and LF Scott Hairston to San Diego Padres and San Antonio Missions Traded 2B Eric Sogard to Midland RockHounds."
+    },
+    {
+      "id": 34865,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 248,
+        "name": "Portland Beavers",
+        "link": "/api/v1/teams/248"
+      },
+      "date": "2010-03-28",
+      "effectiveDate": "2010-03-28",
+      "resolutionDate": "2010-03-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned Aaron Cunningham to Portland Beavers."
+    },
+    {
+      "id": 51305,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "fromTeam": {
+        "id": 248,
+        "name": "Portland Beavers",
+        "link": "/api/v1/teams/248"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2010-06-11",
+      "effectiveDate": "2010-07-01",
+      "resolutionDate": "2010-06-11",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Diego Padres recalled Aaron Cunningham from Portland Beavers."
+    },
+    {
+      "id": 59864,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 248,
+        "name": "Portland Beavers",
+        "link": "/api/v1/teams/248"
+      },
+      "date": "2010-07-01",
+      "effectiveDate": "2010-07-01",
+      "resolutionDate": "2010-07-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned Aaron Cunningham to Portland Beavers."
+    },
+    {
+      "id": 60351,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "fromTeam": {
+        "id": 248,
+        "name": "Portland Beavers",
+        "link": "/api/v1/teams/248"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2010-07-03",
+      "effectiveDate": "2010-07-03",
+      "resolutionDate": "2010-07-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Diego Padres recalled Aaron Cunningham from Portland Beavers."
+    },
+    {
+      "id": 64767,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 248,
+        "name": "Portland Beavers",
+        "link": "/api/v1/teams/248"
+      },
+      "date": "2010-07-30",
+      "effectiveDate": "2010-07-30",
+      "resolutionDate": "2010-07-30",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned Aaron Cunningham to Portland Beavers."
+    },
+    {
+      "id": 68727,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "fromTeam": {
+        "id": 248,
+        "name": "Portland Beavers",
+        "link": "/api/v1/teams/248"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2010-08-30",
+      "effectiveDate": "2010-08-31",
+      "resolutionDate": "2010-08-30",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Diego Padres recalled Aaron Cunningham from Portland Beavers."
+    },
+    {
+      "id": 80066,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 549,
+        "name": "Tucson Padres",
+        "link": "/api/v1/teams/549"
+      },
+      "date": "2011-03-28",
+      "effectiveDate": "2011-03-28",
+      "resolutionDate": "2011-03-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned Aaron Cunningham to Tucson Padres."
+    },
+    {
+      "id": 88337,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "fromTeam": {
+        "id": 549,
+        "name": "Tucson Padres",
+        "link": "/api/v1/teams/549"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2011-06-01",
+      "effectiveDate": "2011-06-01",
+      "resolutionDate": "2011-06-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Diego Padres recalled Aaron Cunningham from Tucson Padres."
+    },
+    {
+      "id": 89476,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 549,
+        "name": "Tucson Padres",
+        "link": "/api/v1/teams/549"
+      },
+      "date": "2011-06-09",
+      "effectiveDate": "2011-06-09",
+      "resolutionDate": "2011-06-09",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned RF Aaron Cunningham to Tucson Padres."
+    },
+    {
+      "id": 97064,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 549,
+        "name": "Tucson Padres",
+        "link": "/api/v1/teams/549"
+      },
+      "date": "2011-07-17",
+      "effectiveDate": "2011-07-17",
+      "resolutionDate": "2011-07-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tucson Padres placed RF Aaron Cunningham on the 7-day disabled list. concussion"
+    },
+    {
+      "id": 97910,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 549,
+        "name": "Tucson Padres",
+        "link": "/api/v1/teams/549"
+      },
+      "date": "2011-07-23",
+      "effectiveDate": "2011-07-23",
+      "resolutionDate": "2011-07-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aaron Cunningham roster status changed by Tucson Padres."
+    },
+    {
+      "id": 98935,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "fromTeam": {
+        "id": 549,
+        "name": "Tucson Padres",
+        "link": "/api/v1/teams/549"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2011-08-01",
+      "effectiveDate": "2011-08-01",
+      "resolutionDate": "2011-08-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Diego Padres recalled Aaron Cunningham from Tucson Padres."
+    },
+    {
+      "id": 107688,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2011-12-16",
+      "effectiveDate": "2011-12-16",
+      "resolutionDate": "2011-12-16",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "San Diego Padres Traded RF Aaron Cunningham to Cleveland Indians and Columbus Clippers Traded RHP Cory Burns to Tucson Padres."
+    },
+    {
+      "id": 130719,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2012-07-25",
+      "effectiveDate": "2012-07-25",
+      "resolutionDate": "2012-07-25",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Cleveland Indians designated Aaron Cunningham for assignment."
+    },
+    {
+      "id": 131078,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2012-07-28",
+      "effectiveDate": "2012-07-28",
+      "resolutionDate": "2012-07-28",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Cleveland Indians sent RF Aaron Cunningham outright to Columbus Clippers."
+    },
+    {
+      "id": 138772,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2012-11-02",
+      "effectiveDate": "2012-11-02",
+      "resolutionDate": "2012-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RF Aaron Cunningham elected free agency."
+    },
+    {
+      "id": 139603,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2012-11-12",
+      "effectiveDate": "2012-11-12",
+      "resolutionDate": "2012-11-12",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent RF Aaron Cunningham to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 174713,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2013-11-04",
+      "effectiveDate": "2013-11-04",
+      "resolutionDate": "2013-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "OF Aaron Cunningham elected free agency."
+    },
+    {
+      "id": 174922,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2013-11-11",
+      "effectiveDate": "2013-11-11",
+      "resolutionDate": "2013-11-11",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago Cubs signed free agent RF Aaron Cunningham to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 175662,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2013-11-11",
+      "effectiveDate": "2013-11-11",
+      "resolutionDate": "2013-11-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Aaron Cunningham assigned to Iowa Cubs."
+    },
+    {
+      "id": 180742,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2014-03-12",
+      "effectiveDate": "2014-03-12",
+      "resolutionDate": "2014-03-12",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Chicago Cubs released RF Aaron Cunningham."
+    },
+    {
+      "id": 181830,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2014-03-26",
+      "effectiveDate": "2014-03-26",
+      "resolutionDate": "2014-03-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Aaron Cunningham assigned to Arizona Diamondbacks."
+    },
+    {
+      "id": 184646,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2014-04-02",
+      "effectiveDate": "2014-04-02",
+      "resolutionDate": "2014-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Aaron Cunningham assigned to Reno Aces."
+    },
+    {
+      "id": 203384,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2014-08-03",
+      "effectiveDate": "2014-08-03",
+      "resolutionDate": "2014-08-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LF Aaron Cunningham roster status changed by Reno Aces."
+    },
+    {
+      "id": 203811,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2014-08-06",
+      "effectiveDate": "2014-08-06",
+      "resolutionDate": "2014-08-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces activated LF Aaron Cunningham."
+    },
+    {
+      "id": 205285,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2014-08-17",
+      "effectiveDate": "2014-08-17",
+      "resolutionDate": "2014-08-17",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Reno Aces released LF Aaron Cunningham."
+    },
+    {
+      "id": 207120,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2014-09-02",
+      "effectiveDate": "2014-09-02",
+      "resolutionDate": "2014-09-02",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Arizona Diamondbacks signed free agent LF Aaron Cunningham to a minor league contract."
+    },
+    {
+      "id": 207121,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2014-09-03",
+      "effectiveDate": "2014-09-03",
+      "resolutionDate": "2014-09-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Aaron Cunningham assigned to Reno Aces."
+    },
+    {
+      "id": 214108,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2015-01-07",
+      "effectiveDate": "2015-01-07",
+      "resolutionDate": "2015-01-07",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Arizona Diamondbacks signed free agent LF Aaron Cunningham to a minor league contract."
+    },
+    {
+      "id": 214109,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 417,
+        "name": "Mobile BayBears",
+        "link": "/api/v1/teams/417"
+      },
+      "date": "2015-01-12",
+      "effectiveDate": "2015-01-12",
+      "resolutionDate": "2015-01-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Aaron Cunningham assigned to Mobile BayBears."
+    },
+    {
+      "id": 217885,
+      "person": {
+        "id": 488811,
+        "fullName": "Aaron Cunningham",
+        "link": "/api/v1/people/488811",
+        "nameSlug": "aaron-cunningham-488811"
+      },
+      "toTeam": {
+        "id": 417,
+        "name": "Mobile BayBears",
+        "link": "/api/v1/teams/417"
+      },
+      "date": "2015-03-23",
+      "effectiveDate": "2015-03-23",
+      "resolutionDate": "2015-03-23",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Mobile BayBears released LF Aaron Cunningham."
+    }
+  ]
+}

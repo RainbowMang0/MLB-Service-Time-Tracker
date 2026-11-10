@@ -1,0 +1,997 @@
+{
+  "player_id": 453454,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:b4572fb99db9f78cd42cdfbd809b756dec905ec86b43644cf32c063f5e574eed",
+  "transactions": [
+    {
+      "id": 24428,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 551,
+        "name": "Rocky Mountain Vibes",
+        "link": "/api/v1/teams/551"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2009-09-08",
+      "effectiveDate": "2009-09-08",
+      "resolutionDate": "2009-09-08",
+      "typeCode": "PUR",
+      "typeDesc": "Purchase",
+      "description": "Colorado Rockies purchased SS Mike McCoy from Colorado Springs Sky Sox."
+    },
+    {
+      "id": 25407,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "toTeam": {
+        "id": 678,
+        "name": "Tomateros de Culiacan",
+        "link": "/api/v1/teams/678"
+      },
+      "date": "2009-10-06",
+      "effectiveDate": "2009-10-06",
+      "resolutionDate": "2009-10-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Mike McCoy assigned to Tomateros de Culiacan."
+    },
+    {
+      "id": 25495,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2009-10-06",
+      "effectiveDate": "2009-10-06",
+      "resolutionDate": "2009-10-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Colorado Rockies reassigned SS Mike McCoy to the minor leagues."
+    },
+    {
+      "id": 26896,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2009-10-19",
+      "effectiveDate": "2009-10-19",
+      "resolutionDate": "2009-10-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mike McCoy roster status changed by Colorado Rockies."
+    },
+    {
+      "id": 27937,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2009-11-09",
+      "effectiveDate": "2009-11-09",
+      "resolutionDate": "2009-11-09",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Toronto Blue Jays claimed Mike McCoy off waivers from Colorado Rockies."
+    },
+    {
+      "id": 53901,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2010-06-18",
+      "effectiveDate": "2010-06-18",
+      "resolutionDate": "2010-06-18",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Toronto Blue Jays optioned SS Mike McCoy to Las Vegas 51s."
+    },
+    {
+      "id": 55544,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2010-06-21",
+      "effectiveDate": "2010-06-21",
+      "resolutionDate": "2010-06-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mike McCoy roster status changed by Las Vegas 51s."
+    },
+    {
+      "id": 63630,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2010-07-22",
+      "effectiveDate": "2010-07-23",
+      "resolutionDate": "2010-07-22",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Toronto Blue Jays recalled Mike McCoy from Las Vegas 51s."
+    },
+    {
+      "id": 64415,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2010-07-28",
+      "effectiveDate": "2010-07-29",
+      "resolutionDate": "2010-07-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Toronto Blue Jays optioned Mike McCoy to Las Vegas 51s."
+    },
+    {
+      "id": 68568,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2010-08-29",
+      "effectiveDate": "2010-08-30",
+      "resolutionDate": "2010-08-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Toronto Blue Jays recalled Mike McCoy from Las Vegas 51s."
+    },
+    {
+      "id": 82903,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2011-04-10",
+      "effectiveDate": "2011-04-11",
+      "resolutionDate": "2011-04-10",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Toronto Blue Jays optioned Mike McCoy to Las Vegas 51s."
+    },
+    {
+      "id": 83332,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2011-04-15",
+      "effectiveDate": "2011-04-15",
+      "resolutionDate": "2011-04-15",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Toronto Blue Jays recalled Mike McCoy from Las Vegas 51s."
+    },
+    {
+      "id": 83473,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2011-04-18",
+      "effectiveDate": "2011-04-18",
+      "resolutionDate": "2011-04-18",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Toronto Blue Jays optioned Mike McCoy to Las Vegas 51s."
+    },
+    {
+      "id": 83960,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2011-04-23",
+      "effectiveDate": "2011-04-23",
+      "resolutionDate": "2011-04-23",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Toronto Blue Jays recalled Mike McCoy from Las Vegas 51s."
+    },
+    {
+      "id": 85237,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2011-05-08",
+      "effectiveDate": "2011-05-09",
+      "resolutionDate": "2011-05-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Toronto Blue Jays optioned 2B Mike McCoy to Las Vegas 51s."
+    },
+    {
+      "id": 85420,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2011-05-10",
+      "effectiveDate": "2011-05-10",
+      "resolutionDate": "2011-05-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mike McCoy roster status changed by Las Vegas 51s."
+    },
+    {
+      "id": 86617,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2011-05-20",
+      "effectiveDate": "2011-05-20",
+      "resolutionDate": "2011-05-20",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Toronto Blue Jays recalled Mike McCoy from Las Vegas 51s."
+    },
+    {
+      "id": 86781,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2011-05-23",
+      "effectiveDate": "2011-05-23",
+      "resolutionDate": "2011-05-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Toronto Blue Jays optioned Mike McCoy to Las Vegas 51s."
+    },
+    {
+      "id": 87736,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2011-05-28",
+      "effectiveDate": "2011-06-23",
+      "resolutionDate": "2011-05-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Toronto Blue Jays recalled Mike McCoy from Las Vegas 51s."
+    },
+    {
+      "id": 93679,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2011-06-23",
+      "effectiveDate": "2011-07-02",
+      "resolutionDate": "2011-06-23",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Toronto Blue Jays optioned Mike McCoy to Las Vegas 51s."
+    },
+    {
+      "id": 95211,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2011-07-03",
+      "effectiveDate": "2011-07-03",
+      "resolutionDate": "2011-07-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Toronto Blue Jays recalled Mike McCoy from Las Vegas 51s."
+    },
+    {
+      "id": 98426,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2011-07-28",
+      "effectiveDate": "2011-07-28",
+      "resolutionDate": "2011-07-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Toronto Blue Jays optioned Mike McCoy to Las Vegas 51s."
+    },
+    {
+      "id": 100437,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2011-08-15",
+      "effectiveDate": "2011-08-15",
+      "resolutionDate": "2011-08-14",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Toronto Blue Jays recalled Mike McCoy from Las Vegas 51s."
+    },
+    {
+      "id": 111426,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2012-03-28",
+      "effectiveDate": "2012-03-28",
+      "resolutionDate": "2012-03-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Toronto Blue Jays optioned Mike McCoy to Las Vegas 51s."
+    },
+    {
+      "id": 119587,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2012-05-29",
+      "effectiveDate": "2012-05-30",
+      "resolutionDate": "2012-05-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Toronto Blue Jays recalled Mike McCoy from Las Vegas 51s."
+    },
+    {
+      "id": 126609,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2012-06-25",
+      "effectiveDate": "2012-06-25",
+      "resolutionDate": "2012-06-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Toronto Blue Jays optioned Mike McCoy to Las Vegas 51s."
+    },
+    {
+      "id": 132715,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2012-08-11",
+      "effectiveDate": "2012-08-11",
+      "resolutionDate": "2012-08-11",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Toronto Blue Jays recalled 2B Mike McCoy from Las Vegas 51s."
+    },
+    {
+      "id": 140128,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2012-11-20",
+      "effectiveDate": "2012-11-30",
+      "resolutionDate": "2012-11-20",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Toronto Blue Jays designated Mike McCoy for assignment."
+    },
+    {
+      "id": 140686,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2012-11-30",
+      "effectiveDate": "2012-11-30",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Toronto Blue Jays sent 2B Mike McCoy outright to Buffalo Bisons."
+    },
+    {
+      "id": 174193,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2013-11-04",
+      "effectiveDate": "2013-11-04",
+      "resolutionDate": "2013-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "2B Mike McCoy elected free agency."
+    },
+    {
+      "id": 174945,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2013-11-08",
+      "effectiveDate": "2013-11-08",
+      "resolutionDate": "2013-11-08",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Boston Red Sox signed free agent 2B Mike McCoy to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 183804,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2014-04-01",
+      "effectiveDate": "2014-04-01",
+      "resolutionDate": "2014-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Mike McCoy assigned to Pawtucket Red Sox."
+    },
+    {
+      "id": 205372,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2014-08-18",
+      "effectiveDate": "2014-08-17",
+      "resolutionDate": "2014-08-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pawtucket Red Sox placed SS Mike McCoy on the 7-day disabled list retroactive to August 17, 2014. left calf strain"
+    },
+    {
+      "id": 206418,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2014-08-29",
+      "effectiveDate": "2014-08-29",
+      "resolutionDate": "2014-08-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pawtucket Red Sox activated SS Mike McCoy from the 7-day disabled list."
+    },
+    {
+      "id": 207131,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "date": "2014-09-02",
+      "effectiveDate": "2014-09-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Mike McCoy assigned to Greenville Drive from Pawtucket Red Sox."
+    },
+    {
+      "id": 207213,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2014-09-05",
+      "effectiveDate": "2014-09-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Mike McCoy assigned to Pawtucket Red Sox from Greenville Drive."
+    },
+    {
+      "id": 207305,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "date": "2014-09-09",
+      "effectiveDate": "2014-09-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Mike McCoy assigned to Portland Sea Dogs from Pawtucket Red Sox."
+    },
+    {
+      "id": 207472,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "fromTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2014-09-11",
+      "effectiveDate": "2014-09-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Mike McCoy assigned to Pawtucket Red Sox from Portland Sea Dogs."
+    },
+    {
+      "id": 216381,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2015-02-23",
+      "effectiveDate": "2015-02-23",
+      "resolutionDate": "2015-02-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Mike McCoy assigned to El Paso Chihuahuas."
+    },
+    {
+      "id": 216362,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2015-02-23",
+      "effectiveDate": "2015-02-23",
+      "resolutionDate": "2015-02-23",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Diego Padres signed free agent OF Mike McCoy to a minor league contract."
+    },
+    {
+      "id": 217409,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2015-03-17",
+      "effectiveDate": "2015-03-17",
+      "resolutionDate": "2015-03-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Mike McCoy assigned to San Diego Padres."
+    },
+    {
+      "id": 217410,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2015-03-17",
+      "effectiveDate": "2015-03-17",
+      "resolutionDate": "2015-03-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Mike McCoy assigned to San Diego Padres."
+    },
+    {
+      "id": 249709,
+      "person": {
+        "id": 453454,
+        "fullName": "Mike McCoy",
+        "link": "/api/v1/people/453454",
+        "nameSlug": "mike-mccoy-453454"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2015-11-07",
+      "effectiveDate": "2015-11-07",
+      "resolutionDate": "2015-11-07",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "2B Mike McCoy elected free agency."
+    }
+  ]
+}

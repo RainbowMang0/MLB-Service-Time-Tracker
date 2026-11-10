@@ -1,0 +1,735 @@
+{
+  "player_id": 448242,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:b454d1bdebeae7367f452020f6c7abf35abdc8a2adf7d14e95e276476146ed37",
+  "transactions": [
+    {
+      "id": 657584,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2006-03-16",
+      "effectiveDate": "2006-03-16",
+      "resolutionDate": "2006-03-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Nashville Sounds activated CF Tony Gwynn Jr.."
+    },
+    {
+      "id": 5804,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2009-05-21",
+      "effectiveDate": "2009-05-20",
+      "resolutionDate": "2009-05-21",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Nashville Sounds Traded CF Tony Gwynn to San Diego Padres and San Diego Padres Traded CF Jody Gerut to Milwaukee Brewers."
+    },
+    {
+      "id": 67570,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2010-08-19",
+      "effectiveDate": "2010-08-19",
+      "resolutionDate": "2010-08-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres placed CF Tony Gwynn on the 15-day disabled list. Fractured hamate bone in right hand"
+    },
+    {
+      "id": 70186,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2010-09-13",
+      "effectiveDate": "2010-09-13",
+      "resolutionDate": "2010-09-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres activated CF Tony Gwynn from the 15-day disabled list."
+    },
+    {
+      "id": 75086,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2010-12-02",
+      "effectiveDate": "2010-12-02",
+      "resolutionDate": "2010-12-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "CF Tony Gwynn elected free agency."
+    },
+    {
+      "id": 75442,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2010-12-11",
+      "effectiveDate": "2010-12-11",
+      "resolutionDate": "2010-12-11",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Dodgers signed free agent CF Tony Gwynn."
+    },
+    {
+      "id": 132205,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2012-08-06",
+      "effectiveDate": "2012-08-06",
+      "resolutionDate": "2012-08-06",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Los Angeles Dodgers designated Tony Gwynn for assignment."
+    },
+    {
+      "id": 132510,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2012-08-08",
+      "effectiveDate": "2012-08-09",
+      "resolutionDate": "2012-08-09",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Los Angeles Dodgers sent CF Tony Gwynn outright to Albuquerque Isotopes."
+    },
+    {
+      "id": 132820,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2012-08-12",
+      "effectiveDate": "2012-08-12",
+      "resolutionDate": "2012-08-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Albuquerque Isotopes activated LF Tony Gwynn."
+    },
+    {
+      "id": 143439,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2013-02-05",
+      "effectiveDate": "2013-02-05",
+      "resolutionDate": "2013-02-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers invited non-roster CF Tony Gwynn to spring training."
+    },
+    {
+      "id": 161682,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2013-06-27",
+      "effectiveDate": "2013-06-27",
+      "resolutionDate": "2013-06-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Albuquerque Isotopes placed LF Tony Gwynn on the 7-day disabled list. right toe contusion"
+    },
+    {
+      "id": 163906,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "fromTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "toTeam": {
+        "id": 2690,
+        "name": "AZL Dodgers 2",
+        "link": "/api/v1/teams/2690"
+      },
+      "date": "2013-07-11",
+      "effectiveDate": "2013-07-11",
+      "resolutionDate": "2013-07-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Albuquerque Isotopes sent LF Tony Gwynn on a rehab assignment to AZL Dodgers."
+    },
+    {
+      "id": 164714,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2013-07-18",
+      "effectiveDate": "2013-07-18",
+      "resolutionDate": "2013-07-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Albuquerque Isotopes activated OF Tony Gwynn from the 7-day disabled list."
+    },
+    {
+      "id": 174179,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2013-11-04",
+      "effectiveDate": "2013-11-04",
+      "resolutionDate": "2013-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "OF Tony Gwynn elected free agency."
+    },
+    {
+      "id": 177067,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2013-12-18",
+      "effectiveDate": "2013-12-18",
+      "resolutionDate": "2013-12-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent LF Tony Gwynn to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 182432,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2013-12-18",
+      "effectiveDate": "2013-12-18",
+      "resolutionDate": "2013-12-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Tony Gwynn assigned to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 182436,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2014-03-29",
+      "effectiveDate": "2014-03-29",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Philadelphia Phillies selected the contract of CF Tony Gwynn Jr. from Lehigh Valley IronPigs."
+    },
+    {
+      "id": 194547,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2014-06-16",
+      "effectiveDate": "2014-06-16",
+      "resolutionDate": "2014-06-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies placed CF Tony Gwynn Jr. on the bereavement list."
+    },
+    {
+      "id": 197046,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2014-06-23",
+      "effectiveDate": "2014-06-23",
+      "resolutionDate": "2014-06-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies placed CF Tony Gwynn Jr. on the restricted list."
+    },
+    {
+      "id": 197128,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2014-06-24",
+      "effectiveDate": "2014-06-24",
+      "resolutionDate": "2014-06-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies activated CF Tony Gwynn Jr. from the restricted list."
+    },
+    {
+      "id": 201447,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2014-07-21",
+      "effectiveDate": "2014-07-21",
+      "resolutionDate": "2014-07-21",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Philadelphia Phillies designated CF Tony Gwynn Jr. for assignment."
+    },
+    {
+      "id": 202434,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2014-07-27",
+      "effectiveDate": "2014-07-27",
+      "resolutionDate": "2014-07-27",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Philadelphia Phillies released CF Tony Gwynn Jr.."
+    },
+    {
+      "id": 204356,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2014-08-11",
+      "effectiveDate": "2014-08-11",
+      "resolutionDate": "2014-08-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Tony Gwynn Jr. assigned to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 204355,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2014-08-11",
+      "effectiveDate": "2014-08-11",
+      "resolutionDate": "2014-08-11",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent OF Tony Gwynn Jr. to a minor league contract."
+    },
+    {
+      "id": 206926,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2014-09-02",
+      "effectiveDate": "2014-09-02",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Philadelphia Phillies selected the contract of CF Tony Gwynn Jr. from Lehigh Valley IronPigs."
+    },
+    {
+      "id": 209198,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2014-10-09",
+      "effectiveDate": "2014-10-09",
+      "resolutionDate": "2014-10-09",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "CF Tony Gwynn Jr. elected free agency."
+    },
+    {
+      "id": 216775,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2015-03-03",
+      "effectiveDate": "2015-03-03",
+      "resolutionDate": "2015-03-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Tony Gwynn Jr. assigned to Syracuse Chiefs."
+    },
+    {
+      "id": 216523,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2015-03-03",
+      "effectiveDate": "2015-03-03",
+      "resolutionDate": "2015-03-03",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Washington Nationals signed free agent CF Tony Gwynn Jr. to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 225882,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2015-05-18",
+      "effectiveDate": "2015-05-18",
+      "resolutionDate": "2015-05-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Chiefs placed CF Tony Gwynn Jr. on the temporarily inactive list."
+    },
+    {
+      "id": 226317,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2015-05-22",
+      "effectiveDate": "2015-05-22",
+      "resolutionDate": "2015-05-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Chiefs activated CF Tony Gwynn Jr. from the temporarily inactive list."
+    },
+    {
+      "id": 234947,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2015-06-28",
+      "effectiveDate": "2015-06-28",
+      "resolutionDate": "2015-06-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Chiefs placed CF Tony Gwynn Jr. on the temporarily inactive list."
+    },
+    {
+      "id": 236362,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2015-07-05",
+      "effectiveDate": "2015-07-05",
+      "resolutionDate": "2015-07-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Chiefs activated CF Tony Gwynn Jr. from the temporarily inactive list."
+    },
+    {
+      "id": 240733,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2015-08-03",
+      "effectiveDate": "2015-08-03",
+      "resolutionDate": "2015-08-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Chiefs placed CF Tony Gwynn Jr. on the 7-day disabled list."
+    },
+    {
+      "id": 245988,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2015-09-14",
+      "effectiveDate": "2015-09-14",
+      "resolutionDate": "2015-09-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Chiefs activated CF Tony Gwynn Jr. from the 7-day disabled list."
+    },
+    {
+      "id": 249505,
+      "person": {
+        "id": 448242,
+        "fullName": "Tony Gwynn Jr.",
+        "link": "/api/v1/people/448242",
+        "nameSlug": "tony-gwynn-jr-448242"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2015-11-06",
+      "effectiveDate": "2015-11-06",
+      "resolutionDate": "2015-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "CF Tony Gwynn Jr. elected free agency."
+    }
+  ]
+}

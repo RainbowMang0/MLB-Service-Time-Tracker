@@ -1,0 +1,92 @@
+{
+  "player_id": 119853,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:1200ad0574a96fca6a709c4960d66f63233fdff3c16ff06d30ec829d819c08cd",
+  "transactions": [
+    {
+      "id": 9097,
+      "person": {
+        "id": 119853,
+        "fullName": "Greg Norton",
+        "link": "/api/v1/people/119853",
+        "nameSlug": "greg-norton-119853"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2009-06-11",
+      "effectiveDate": "2009-06-11",
+      "resolutionDate": "2009-06-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves placed 1B Greg Norton on the 15-day disabled list. Strained right hamstring."
+    },
+    {
+      "id": 11933,
+      "person": {
+        "id": 119853,
+        "fullName": "Greg Norton",
+        "link": "/api/v1/people/119853",
+        "nameSlug": "greg-norton-119853"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2009-06-21",
+      "effectiveDate": "2009-06-21",
+      "resolutionDate": "2009-06-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Atlanta Braves sent LF Greg Norton on a rehab assignment to Gwinnett Braves."
+    },
+    {
+      "id": 16145,
+      "person": {
+        "id": 119853,
+        "fullName": "Greg Norton",
+        "link": "/api/v1/people/119853",
+        "nameSlug": "greg-norton-119853"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2009-07-12",
+      "effectiveDate": "2009-07-12",
+      "resolutionDate": "2009-07-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves activated 1B Greg Norton from the 15-day disabled list."
+    },
+    {
+      "id": 29383,
+      "person": {
+        "id": 119853,
+        "fullName": "Greg Norton",
+        "link": "/api/v1/people/119853",
+        "nameSlug": "greg-norton-119853"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2009-11-05",
+      "effectiveDate": "2009-11-05",
+      "resolutionDate": "2009-11-05",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "1B Greg Norton elected free agency."
+    }
+  ]
+}

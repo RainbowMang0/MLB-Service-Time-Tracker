@@ -1,0 +1,745 @@
+{
+  "player_id": 453974,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:8095c1d0ae6f08f31c1756f6970e064ad2cbfd99da0a732abd4a285970a5f066",
+  "transactions": [
+    {
+      "id": 660501,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "toTeam": {
+        "id": 511,
+        "name": "Batavia Muckdogs",
+        "link": "/api/v1/teams/511"
+      },
+      "date": "2005-06-21",
+      "effectiveDate": "2005-06-21",
+      "resolutionDate": "2005-06-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Batavia Muckdogs activated C Lou Marson."
+    },
+    {
+      "id": 660502,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "toTeam": {
+        "id": 511,
+        "name": "Batavia Muckdogs",
+        "link": "/api/v1/teams/511"
+      },
+      "date": "2005-06-21",
+      "effectiveDate": "2005-06-21",
+      "resolutionDate": "2005-06-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Batavia Muckdogs activated C Lou Marson."
+    },
+    {
+      "id": 142805,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "toTeam": {
+        "id": 566,
+        "name": "Clearwater Threshers",
+        "link": "/api/v1/teams/566"
+      },
+      "date": "2007-11-19",
+      "effectiveDate": "2007-11-19",
+      "resolutionDate": "2007-11-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "C Lou Marson roster status changed by Clearwater Threshers."
+    },
+    {
+      "id": 1918,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2009-04-10",
+      "effectiveDate": "2009-04-10",
+      "resolutionDate": "2009-04-10",
+      "typeCode": "RES",
+      "typeDesc": "Reserved",
+      "description": "Lehigh Valley IronPigs placed C Lou Marson on the reserve list."
+    },
+    {
+      "id": 1919,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2009-04-11",
+      "effectiveDate": "2009-05-02",
+      "resolutionDate": "2009-04-11",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Philadelphia Phillies recalled C Lou Marson from Lehigh Valley IronPigs."
+    },
+    {
+      "id": 3684,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2009-05-02",
+      "effectiveDate": "2009-05-02",
+      "resolutionDate": "2009-05-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Philadelphia Phillies optioned Lou Marson to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 18915,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2009-07-30",
+      "effectiveDate": "2009-07-30",
+      "resolutionDate": "2009-07-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Lou Marson assigned to Cleveland Indians."
+    },
+    {
+      "id": 18914,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2009-07-30",
+      "effectiveDate": "2009-07-30",
+      "resolutionDate": "2009-07-29",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Lehigh Valley IronPigs traded C Lou Marson to Columbus Clippers."
+    },
+    {
+      "id": 24320,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2009-09-07",
+      "effectiveDate": "2009-09-07",
+      "resolutionDate": "2009-09-07",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cleveland Indians recalled Lou Marson from Columbus Clippers."
+    },
+    {
+      "id": 51160,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2010-06-11",
+      "effectiveDate": "2010-06-11",
+      "resolutionDate": "2010-06-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cleveland Indians optioned Lou Marson to Columbus Clippers."
+    },
+    {
+      "id": 65399,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2010-08-03",
+      "effectiveDate": "2010-08-03",
+      "resolutionDate": "2010-08-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cleveland Indians recalled C Lou Marson from Columbus Clippers."
+    },
+    {
+      "id": 149137,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2013-04-09",
+      "effectiveDate": "2013-04-09",
+      "resolutionDate": "2013-04-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cleveland Indians placed C Lou Marson on the 15-day disabled list. Cervical neck strain."
+    },
+    {
+      "id": 149704,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2013-04-16",
+      "effectiveDate": "2013-04-16",
+      "resolutionDate": "2013-04-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Cleveland Indians sent C Lou Marson on a rehab assignment to Columbus Clippers."
+    },
+    {
+      "id": 150518,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2013-04-24",
+      "effectiveDate": "2013-04-24",
+      "resolutionDate": "2013-04-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cleveland Indians activated C Lou Marson from the 15-day disabled list."
+    },
+    {
+      "id": 150889,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2013-04-28",
+      "effectiveDate": "2013-04-25",
+      "resolutionDate": "2013-04-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cleveland Indians placed C Lou Marson on the 15-day disabled list retroactive to April 25, 2013. right shoulder inflammation"
+    },
+    {
+      "id": 154380,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "date": "2013-05-29",
+      "effectiveDate": "2013-05-29",
+      "resolutionDate": "2013-05-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cleveland Indians sent C Lou Marson on a rehab assignment to Akron Aeros."
+    },
+    {
+      "id": 154532,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2013-05-30",
+      "effectiveDate": "2013-05-30",
+      "resolutionDate": "2013-05-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cleveland Indians sent C Lou Marson on a rehab assignment to Columbus Clippers."
+    },
+    {
+      "id": 163233,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2013-07-07",
+      "effectiveDate": "2013-07-07",
+      "resolutionDate": "2013-07-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cleveland Indians transferred C Lou Marson from the 15-day disabled list to the 60-day disabled list. right shoulder inflammation"
+    },
+    {
+      "id": 166945,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2013-08-04",
+      "effectiveDate": "2013-08-04",
+      "resolutionDate": "2013-08-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cleveland Indians sent C Lou Marson on a rehab assignment to Columbus Clippers."
+    },
+    {
+      "id": 174130,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2013-11-04",
+      "effectiveDate": "2013-11-04",
+      "resolutionDate": "2013-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cleveland Indians activated C Lou Marson from the 60-day disabled list."
+    },
+    {
+      "id": 175534,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2013-12-02",
+      "effectiveDate": "2013-12-02",
+      "resolutionDate": "2013-12-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Lou Marson elected free agency."
+    },
+    {
+      "id": 177069,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2013-12-18",
+      "effectiveDate": "2013-12-18",
+      "resolutionDate": "2013-12-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent C Lou Marson to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 180938,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2014-03-14",
+      "effectiveDate": "2014-03-14",
+      "resolutionDate": "2014-03-14",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Philadelphia Phillies released C Lou Marson."
+    },
+    {
+      "id": 188935,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2014-05-08",
+      "effectiveDate": "2014-05-08",
+      "resolutionDate": "2014-05-08",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cincinnati Reds signed free agent C Lou Marson to a minor league contract."
+    },
+    {
+      "id": 198609,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2014-07-02",
+      "effectiveDate": "2014-07-02",
+      "resolutionDate": "2014-07-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Lou Marson assigned to Pensacola Blue Wahoos."
+    },
+    {
+      "id": 201524,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2014-07-21",
+      "effectiveDate": "2014-07-21",
+      "resolutionDate": "2014-07-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pensacola Blue Wahoos placed C Lou Marson on the 7-day disabled list. strained right shoulder"
+    },
+    {
+      "id": 207801,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2014-09-17",
+      "effectiveDate": "2014-09-17",
+      "resolutionDate": "2014-09-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pensacola Blue Wahoos activated C Lou Marson from the 7-day disabled list."
+    },
+    {
+      "id": 215825,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2015-01-30",
+      "effectiveDate": "2015-01-30",
+      "resolutionDate": "2015-01-30",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cincinnati Reds signed free agent C Lou Marson to a minor league contract."
+    },
+    {
+      "id": 215934,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "toTeam": {
+        "id": 513,
+        "name": "Billings Mustangs",
+        "link": "/api/v1/teams/513"
+      },
+      "date": "2015-02-05",
+      "effectiveDate": "2015-02-05",
+      "resolutionDate": "2015-02-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Lou Marson assigned to Billings Mustangs."
+    },
+    {
+      "id": 228343,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "fromTeam": {
+        "id": 513,
+        "name": "Billings Mustangs",
+        "link": "/api/v1/teams/513"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2015-06-01",
+      "effectiveDate": "2015-06-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Lou Marson assigned to Pensacola Blue Wahoos from Billings Mustangs."
+    },
+    {
+      "id": 233816,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2015-06-22",
+      "effectiveDate": "2015-06-22",
+      "resolutionDate": "2015-06-22",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Pensacola Blue Wahoos released C Lou Marson."
+    },
+    {
+      "id": 254908,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2016-02-08",
+      "effectiveDate": "2016-02-08",
+      "resolutionDate": "2016-02-08",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Angels signed free agent C Lou Marson to a minor league contract."
+    },
+    {
+      "id": 254909,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2016-02-16",
+      "effectiveDate": "2016-02-16",
+      "resolutionDate": "2016-02-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Lou Marson assigned to Salt Lake Bees."
+    },
+    {
+      "id": 260931,
+      "person": {
+        "id": 453974,
+        "fullName": "Lou Marson",
+        "link": "/api/v1/people/453974",
+        "nameSlug": "lou-marson-453974"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 3250,
+        "name": "Angels Alternate Training Site",
+        "link": "/api/v1/teams/3250"
+      },
+      "date": "2016-04-06",
+      "effectiveDate": "2016-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Lou Marson assigned to Angels Ext. Spring Training from Salt Lake Bees."
+    }
+  ]
+}

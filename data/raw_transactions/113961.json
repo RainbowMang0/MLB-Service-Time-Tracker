@@ -1,0 +1,92 @@
+{
+  "player_id": 113961,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:0ec5d3e564641223db3bd75d1c42c4954c710d99467afcffbcdabddfac7eb29f",
+  "transactions": [
+    {
+      "id": 9262,
+      "person": {
+        "id": 113961,
+        "fullName": "Scott Eyre",
+        "link": "/api/v1/people/113961",
+        "nameSlug": "scott-eyre-113961"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2009-06-12",
+      "effectiveDate": "2009-06-12",
+      "resolutionDate": "2009-06-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies placed LHP Scott Eyre on the 15-day disabled list. Left calf strain."
+    },
+    {
+      "id": 14621,
+      "person": {
+        "id": 113961,
+        "fullName": "Scott Eyre",
+        "link": "/api/v1/people/113961",
+        "nameSlug": "scott-eyre-113961"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 522,
+        "name": "Reading Fightin Phils",
+        "link": "/api/v1/teams/522"
+      },
+      "date": "2009-07-01",
+      "effectiveDate": "2009-07-01",
+      "resolutionDate": "2009-07-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Philadelphia Phillies sent LHP Scott Eyre on a rehab assignment to Reading Phillies."
+    },
+    {
+      "id": 15098,
+      "person": {
+        "id": 113961,
+        "fullName": "Scott Eyre",
+        "link": "/api/v1/people/113961",
+        "nameSlug": "scott-eyre-113961"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2009-07-05",
+      "effectiveDate": "2009-07-05",
+      "resolutionDate": "2009-07-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies activated LHP Scott Eyre from the 15-day disabled list."
+    },
+    {
+      "id": 29484,
+      "person": {
+        "id": 113961,
+        "fullName": "Scott Eyre",
+        "link": "/api/v1/people/113961",
+        "nameSlug": "scott-eyre-113961"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2009-11-12",
+      "effectiveDate": "2009-11-12",
+      "resolutionDate": "2009-11-12",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Scott Eyre elected free agency."
+    }
+  ]
+}

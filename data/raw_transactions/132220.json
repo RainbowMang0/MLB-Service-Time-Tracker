@@ -1,0 +1,52 @@
+{
+  "player_id": 132220,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:e192cdb401313eeca6a02127f16f730ff13f843298c6ad50735c28d66bb30d47",
+  "transactions": [
+    {
+      "id": 19194,
+      "person": {
+        "id": 132220,
+        "fullName": "Jarrod Washburn",
+        "link": "/api/v1/people/132220",
+        "nameSlug": "jarrod-washburn-132220"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2009-07-31",
+      "effectiveDate": "2009-07-31",
+      "resolutionDate": "2009-07-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Seattle Mariners Traded LHP Jarrod Washburn to Detroit Tigers; Lakeland Flying Tigers Traded LHP Mauricio Robles to High Desert Mavericks and Detroit Tigers Traded LHP Luke French to Seattle Mariners."
+    },
+    {
+      "id": 29418,
+      "person": {
+        "id": 132220,
+        "fullName": "Jarrod Washburn",
+        "link": "/api/v1/people/132220",
+        "nameSlug": "jarrod-washburn-132220"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2009-11-05",
+      "effectiveDate": "2009-11-05",
+      "resolutionDate": "2009-11-05",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Jarrod Washburn elected free agency."
+    }
+  ]
+}

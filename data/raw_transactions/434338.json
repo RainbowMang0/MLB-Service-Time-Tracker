@@ -1,0 +1,302 @@
+{
+  "player_id": 434338,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:c89fe6036097453fd3e3defaaf48cf47a70546dae3ca34d109ec197d9c201dd8",
+  "transactions": [
+    {
+      "id": 1628,
+      "person": {
+        "id": 434338,
+        "fullName": "Joe Dillon",
+        "link": "/api/v1/people/434338",
+        "nameSlug": "joe-dillon-434338"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2009-04-08",
+      "effectiveDate": "2009-05-08",
+      "resolutionDate": "2009-04-08",
+      "typeCode": "RES",
+      "typeDesc": "Reserved",
+      "description": "Sacramento River Cats placed Joe Dillon on the reserve list."
+    },
+    {
+      "id": 4404,
+      "person": {
+        "id": 434338,
+        "fullName": "Joe Dillon",
+        "link": "/api/v1/people/434338",
+        "nameSlug": "joe-dillon-434338"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2009-05-09",
+      "effectiveDate": "2009-05-09",
+      "resolutionDate": "2009-05-09",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Sacramento River Cats traded 2B Joe Dillon to Durham Bulls."
+    },
+    {
+      "id": 4642,
+      "person": {
+        "id": 434338,
+        "fullName": "Joe Dillon",
+        "link": "/api/v1/people/434338",
+        "nameSlug": "joe-dillon-434338"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2009-05-12",
+      "effectiveDate": "2009-05-25",
+      "resolutionDate": "2009-05-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Joe Dillon roster status changed by Durham Bulls."
+    },
+    {
+      "id": 6516,
+      "person": {
+        "id": 434338,
+        "fullName": "Joe Dillon",
+        "link": "/api/v1/people/434338",
+        "nameSlug": "joe-dillon-434338"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2009-05-26",
+      "effectiveDate": "2009-05-26",
+      "resolutionDate": "2009-05-26",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled 2B Joe Dillon from Durham Bulls."
+    },
+    {
+      "id": 20454,
+      "person": {
+        "id": 434338,
+        "fullName": "Joe Dillon",
+        "link": "/api/v1/people/434338",
+        "nameSlug": "joe-dillon-434338"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2009-08-08",
+      "effectiveDate": "2009-08-08",
+      "resolutionDate": "2009-08-08",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Tampa Bay Rays designated 2B Joe Dillon for assignment."
+    },
+    {
+      "id": 21039,
+      "person": {
+        "id": 434338,
+        "fullName": "Joe Dillon",
+        "link": "/api/v1/people/434338",
+        "nameSlug": "joe-dillon-434338"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2009-08-12",
+      "effectiveDate": "2009-08-12",
+      "resolutionDate": "2009-08-13",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Tampa Bay Rays sent 3B Joe Dillon outright to Durham Bulls."
+    },
+    {
+      "id": 25541,
+      "person": {
+        "id": 434338,
+        "fullName": "Joe Dillon",
+        "link": "/api/v1/people/434338",
+        "nameSlug": "joe-dillon-434338"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2009-10-05",
+      "effectiveDate": "2009-10-05",
+      "resolutionDate": "2009-10-05",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "3B Joe Dillon elected free agency."
+    },
+    {
+      "id": 30832,
+      "person": {
+        "id": 434338,
+        "fullName": "Joe Dillon",
+        "link": "/api/v1/people/434338",
+        "nameSlug": "joe-dillon-434338"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2009-12-18",
+      "effectiveDate": "2009-12-18",
+      "resolutionDate": "2009-12-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Tampa Bay Rays signed free agent 2B Joe Dillon to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 35529,
+      "person": {
+        "id": 434338,
+        "fullName": "Joe Dillon",
+        "link": "/api/v1/people/434338",
+        "nameSlug": "joe-dillon-434338"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2009-12-18",
+      "effectiveDate": "2009-12-18",
+      "resolutionDate": "2009-12-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Durham Bulls signed free agent 2B Joe Dillon."
+    },
+    {
+      "id": 47359,
+      "person": {
+        "id": 434338,
+        "fullName": "Joe Dillon",
+        "link": "/api/v1/people/434338",
+        "nameSlug": "joe-dillon-434338"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2010-05-28",
+      "effectiveDate": "2010-05-28",
+      "resolutionDate": "2010-05-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls placed 2B Joe Dillon on the 7-day disabled list. Hamstring injury."
+    },
+    {
+      "id": 51824,
+      "person": {
+        "id": 434338,
+        "fullName": "Joe Dillon",
+        "link": "/api/v1/people/434338",
+        "nameSlug": "joe-dillon-434338"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2010-06-14",
+      "effectiveDate": "2010-06-14",
+      "resolutionDate": "2010-06-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls activated 2B Joe Dillon from the 7-day disabled list."
+    },
+    {
+      "id": 67673,
+      "person": {
+        "id": 434338,
+        "fullName": "Joe Dillon",
+        "link": "/api/v1/people/434338",
+        "nameSlug": "joe-dillon-434338"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2010-08-18",
+      "effectiveDate": "2010-08-18",
+      "resolutionDate": "2010-08-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls placed 2B Joe Dillon on the 7-day disabled list. Hamstring injury."
+    },
+    {
+      "id": 68255,
+      "person": {
+        "id": 434338,
+        "fullName": "Joe Dillon",
+        "link": "/api/v1/people/434338",
+        "nameSlug": "joe-dillon-434338"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2010-08-25",
+      "effectiveDate": "2010-08-25",
+      "resolutionDate": "2010-08-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls activated 2B Joe Dillon from the 7-day disabled list."
+    },
+    {
+      "id": 73904,
+      "person": {
+        "id": 434338,
+        "fullName": "Joe Dillon",
+        "link": "/api/v1/people/434338",
+        "nameSlug": "joe-dillon-434338"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2010-11-06",
+      "effectiveDate": "2010-11-06",
+      "resolutionDate": "2010-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "2B Joe Dillon elected free agency."
+    }
+  ]
+}

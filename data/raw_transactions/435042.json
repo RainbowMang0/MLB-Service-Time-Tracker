@@ -1,0 +1,712 @@
+{
+  "player_id": 435042,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:5b8e2d0dce472733085029244e165b39183249449078c49725630f030cdf220d",
+  "transactions": [
+    {
+      "id": 3569,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2009-05-01",
+      "effectiveDate": "2009-04-30",
+      "resolutionDate": "2009-04-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago White Sox placed CF Brian Anderson on the 15-day disabled list retroactive to April 30, 2009. Strained right oblique"
+    },
+    {
+      "id": 4756,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2009-05-13",
+      "effectiveDate": "2009-05-13",
+      "resolutionDate": "2009-05-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago White Sox sent CF Brian Anderson on a rehab assignment to Charlotte Knights."
+    },
+    {
+      "id": 5512,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2009-05-19",
+      "effectiveDate": "2009-05-19",
+      "resolutionDate": "2009-05-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Brian Anderson roster status changed by Chicago White Sox."
+    },
+    {
+      "id": 17237,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2009-07-20",
+      "effectiveDate": "2009-07-20",
+      "resolutionDate": "2009-07-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago White Sox optioned Brian Anderson to Charlotte Knights."
+    },
+    {
+      "id": 18584,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "fromTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2009-07-28",
+      "effectiveDate": "2009-07-28",
+      "resolutionDate": "2009-07-28",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Charlotte Knights traded CF Brian Anderson to Pawtucket Red Sox."
+    },
+    {
+      "id": 18585,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2009-07-28",
+      "effectiveDate": "2009-07-28",
+      "resolutionDate": "2009-07-28",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Chicago White Sox traded CF Brian Anderson to Boston Red Sox."
+    },
+    {
+      "id": 21390,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2009-08-15",
+      "effectiveDate": "2009-08-21",
+      "resolutionDate": "2009-08-15",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Boston Red Sox recalled Brian Anderson from Pawtucket Red Sox."
+    },
+    {
+      "id": 22167,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2009-08-21",
+      "effectiveDate": "2009-08-21",
+      "resolutionDate": "2009-08-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Boston Red Sox optioned Brian Anderson to Pawtucket Red Sox."
+    },
+    {
+      "id": 23599,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2009-09-01",
+      "effectiveDate": "2009-09-01",
+      "resolutionDate": "2009-09-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Boston Red Sox recalled RF Brian Anderson from Pawtucket Red Sox."
+    },
+    {
+      "id": 30618,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2009-12-13",
+      "effectiveDate": "2009-12-13",
+      "resolutionDate": "2009-12-13",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RF Brian Anderson elected free agency."
+    },
+    {
+      "id": 30994,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2009-12-23",
+      "effectiveDate": "2010-04-02",
+      "resolutionDate": "2009-12-23",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Kansas City Royals signed free agent Brian Anderson."
+    },
+    {
+      "id": 35367,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 444,
+        "name": "Idaho Falls Chukars",
+        "link": "/api/v1/teams/444"
+      },
+      "date": "2010-04-02",
+      "effectiveDate": "2010-04-02",
+      "resolutionDate": "2010-04-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Kansas City Royals optioned RHP Brian Anderson to Idaho Falls Chukars."
+    },
+    {
+      "id": 54838,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "toTeam": {
+        "id": 444,
+        "name": "Idaho Falls Chukars",
+        "link": "/api/v1/teams/444"
+      },
+      "date": "2010-06-15",
+      "effectiveDate": "2010-06-15",
+      "resolutionDate": "2010-06-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Brian Anderson roster status changed by Idaho Falls Chukars."
+    },
+    {
+      "id": 60699,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "toTeam": {
+        "id": 412,
+        "name": "ACL Royals",
+        "link": "/api/v1/teams/412"
+      },
+      "date": "2010-07-04",
+      "effectiveDate": "2010-07-04",
+      "resolutionDate": "2010-07-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Brian Anderson assigned to AZL Royals."
+    },
+    {
+      "id": 65453,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "fromTeam": {
+        "id": 412,
+        "name": "ACL Royals",
+        "link": "/api/v1/teams/412"
+      },
+      "toTeam": {
+        "id": 420,
+        "name": "Burlington Bees",
+        "link": "/api/v1/teams/420"
+      },
+      "date": "2010-08-03",
+      "effectiveDate": "2010-08-03",
+      "resolutionDate": "2010-08-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Brian Anderson assigned to Burlington Bees from AZL Royals."
+    },
+    {
+      "id": 67087,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "fromTeam": {
+        "id": 420,
+        "name": "Burlington Bees",
+        "link": "/api/v1/teams/420"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2010-08-16",
+      "effectiveDate": "2010-08-16",
+      "resolutionDate": "2010-08-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Brian Anderson assigned to Omaha Royals from Burlington Bees."
+    },
+    {
+      "id": 72003,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2010-10-13",
+      "effectiveDate": "2010-10-13",
+      "resolutionDate": "2010-10-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Kansas City Royals activated RHP Brian Anderson."
+    },
+    {
+      "id": 73822,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2010-11-10",
+      "effectiveDate": "2010-11-17",
+      "resolutionDate": "2010-11-10",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Kansas City Royals designated Brian Anderson for assignment."
+    },
+    {
+      "id": 74373,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2010-11-17",
+      "effectiveDate": "2010-11-18",
+      "resolutionDate": "2010-11-18",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Kansas City Royals sent Brian Anderson outright to Omaha Royals."
+    },
+    {
+      "id": 75231,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2010-12-01",
+      "effectiveDate": "2010-12-01",
+      "resolutionDate": "2010-12-01",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Scranton/Wilkes-Barre Yankees signed free agent RHP Brian Anderson."
+    },
+    {
+      "id": 75521,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2010-12-15",
+      "effectiveDate": "2010-12-15",
+      "resolutionDate": "2010-12-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Yankees invited non-roster RHP Brian Anderson to spring training."
+    },
+    {
+      "id": 83192,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2011-04-07",
+      "effectiveDate": "2011-04-07",
+      "resolutionDate": "2011-04-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Brian Anderson assigned to Staten Island Yankees from Scranton/Wilkes-Barre Yankees."
+    },
+    {
+      "id": 83193,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "fromTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2011-04-14",
+      "effectiveDate": "2011-04-14",
+      "resolutionDate": "2011-04-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Brian Anderson assigned to Trenton Thunder from Staten Island Yankees."
+    },
+    {
+      "id": 84922,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2011-05-04",
+      "effectiveDate": "2011-05-04",
+      "resolutionDate": "2011-05-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Trenton Thunder placed RHP Brian Anderson on the 7-day disabled list."
+    },
+    {
+      "id": 87335,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2011-05-27",
+      "effectiveDate": "2011-05-27",
+      "resolutionDate": "2011-05-27",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Trenton Thunder released RHP Brian Anderson."
+    },
+    {
+      "id": 109639,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2012-02-21",
+      "effectiveDate": "2012-02-21",
+      "resolutionDate": "2012-02-21",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Dodgers signed free agent Brian Anderson."
+    },
+    {
+      "id": 114987,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2012-04-07",
+      "effectiveDate": "2012-04-07",
+      "resolutionDate": "2012-04-07",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Colorado Rockies signed free agent Brian Anderson."
+    },
+    {
+      "id": 140762,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "toTeam": {
+        "id": 689,
+        "name": "Leones de Ponce",
+        "link": "/api/v1/teams/689"
+      },
+      "date": "2012-12-01",
+      "effectiveDate": "2012-12-01",
+      "resolutionDate": "2012-12-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Brian Anderson assigned to Leones de Ponce."
+    },
+    {
+      "id": 214392,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2015-01-15",
+      "effectiveDate": "2015-01-15",
+      "resolutionDate": "2015-01-15",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago White Sox signed free agent CF Brian Anderson to a minor league contract."
+    },
+    {
+      "id": 214393,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2015-01-19",
+      "effectiveDate": "2015-01-19",
+      "resolutionDate": "2015-01-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Brian Anderson assigned to Charlotte Knights."
+    },
+    {
+      "id": 221915,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2015-04-02",
+      "effectiveDate": "2015-04-02",
+      "resolutionDate": "2015-04-02",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Chicago White Sox released CF Brian Anderson."
+    },
+    {
+      "id": 219339,
+      "person": {
+        "id": 435042,
+        "fullName": "Brian Anderson",
+        "link": "/api/v1/people/435042",
+        "nameSlug": "brian-anderson-435042"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2015-04-02",
+      "effectiveDate": "2015-04-02",
+      "resolutionDate": "2015-04-02",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Charlotte Knights released CF Brian Anderson."
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "player_id": 123790,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:8562ad1e42fb6afd1042462e970f179e912c4bfec89742d41a944544a72cc9a2",
+  "transactions": [
+    {
+      "id": 1205,
+      "person": {
+        "id": 123790,
+        "fullName": "Billy Wagner",
+        "link": "/api/v1/people/123790",
+        "nameSlug": "billy-wagner-123790"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2009-04-05",
+      "effectiveDate": "2009-03-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets placed LHP Billy Wagner on the 15-day disabled list retroactive to March 27, 2009."
+    },
+    {
+      "id": 8384,
+      "person": {
+        "id": 123790,
+        "fullName": "Billy Wagner",
+        "link": "/api/v1/people/123790",
+        "nameSlug": "billy-wagner-123790"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2009-06-05",
+      "effectiveDate": "2009-06-05",
+      "resolutionDate": "2009-06-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets transferred LHP Billy Wagner from the 15-day disabled list to the 60-day disabled list."
+    },
+    {
+      "id": 19230,
+      "person": {
+        "id": 123790,
+        "fullName": "Billy Wagner",
+        "link": "/api/v1/people/123790",
+        "nameSlug": "billy-wagner-123790"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2009-07-31",
+      "effectiveDate": "2009-07-31",
+      "resolutionDate": "2009-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Billy Wagner assigned to St. Lucie Mets."
+    },
+    {
+      "id": 19619,
+      "person": {
+        "id": 123790,
+        "fullName": "Billy Wagner",
+        "link": "/api/v1/people/123790",
+        "nameSlug": "billy-wagner-123790"
+      },
+      "fromTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "toTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "date": "2009-08-03",
+      "effectiveDate": "2009-08-03",
+      "resolutionDate": "2009-08-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Billy Wagner assigned to GCL Mets from St. Lucie Mets."
+    },
+    {
+      "id": 19993,
+      "person": {
+        "id": 123790,
+        "fullName": "Billy Wagner",
+        "link": "/api/v1/people/123790",
+        "nameSlug": "billy-wagner-123790"
+      },
+      "fromTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2009-08-05",
+      "effectiveDate": "2009-08-05",
+      "resolutionDate": "2009-08-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Billy Wagner assigned to St. Lucie Mets from GCL Mets."
+    },
+    {
+      "id": 20942,
+      "person": {
+        "id": 123790,
+        "fullName": "Billy Wagner",
+        "link": "/api/v1/people/123790",
+        "nameSlug": "billy-wagner-123790"
+      },
+      "fromTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "toTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "date": "2009-08-12",
+      "effectiveDate": "2009-08-12",
+      "resolutionDate": "2009-08-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Billy Wagner assigned to GCL Mets from St. Lucie Mets."
+    },
+    {
+      "id": 21253,
+      "person": {
+        "id": 123790,
+        "fullName": "Billy Wagner",
+        "link": "/api/v1/people/123790",
+        "nameSlug": "billy-wagner-123790"
+      },
+      "fromTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2009-08-14",
+      "effectiveDate": "2009-08-14",
+      "resolutionDate": "2009-08-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "GCL Mets sent LHP Billy Wagner on a rehab assignment to St. Lucie Mets."
+    },
+    {
+      "id": 22063,
+      "person": {
+        "id": 123790,
+        "fullName": "Billy Wagner",
+        "link": "/api/v1/people/123790",
+        "nameSlug": "billy-wagner-123790"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2009-08-20",
+      "effectiveDate": "2009-08-20",
+      "resolutionDate": "2009-08-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Billy Wagner roster status changed by New York Mets."
+    },
+    {
+      "id": 22566,
+      "person": {
+        "id": 123790,
+        "fullName": "Billy Wagner",
+        "link": "/api/v1/people/123790",
+        "nameSlug": "billy-wagner-123790"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2009-08-25",
+      "effectiveDate": "2009-08-25",
+      "resolutionDate": "2009-08-25",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "New York Mets traded LHP Billy Wagner to Boston Red Sox."
+    },
+    {
+      "id": 22808,
+      "person": {
+        "id": 123790,
+        "fullName": "Billy Wagner",
+        "link": "/api/v1/people/123790",
+        "nameSlug": "billy-wagner-123790"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2009-08-27",
+      "effectiveDate": "2009-08-27",
+      "resolutionDate": "2009-08-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Boston Red Sox activated LHP Billy Wagner."
+    },
+    {
+      "id": 29391,
+      "person": {
+        "id": 123790,
+        "fullName": "Billy Wagner",
+        "link": "/api/v1/people/123790",
+        "nameSlug": "billy-wagner-123790"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2009-11-05",
+      "effectiveDate": "2009-11-05",
+      "resolutionDate": "2009-11-05",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Billy Wagner elected free agency."
+    },
+    {
+      "id": 30220,
+      "person": {
+        "id": 123790,
+        "fullName": "Billy Wagner",
+        "link": "/api/v1/people/123790",
+        "nameSlug": "billy-wagner-123790"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2009-12-02",
+      "effectiveDate": "2009-12-02",
+      "resolutionDate": "2009-12-02",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent LHP Billy Wagner."
+    },
+    {
+      "id": 71798,
+      "person": {
+        "id": 123790,
+        "fullName": "Billy Wagner",
+        "link": "/api/v1/people/123790",
+        "nameSlug": "billy-wagner-123790"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2010-10-10",
+      "effectiveDate": "2010-10-10",
+      "resolutionDate": "2010-10-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves placed LHP Billy Wagner on the 15-day disabled list. Left oblique"
+    },
+    {
+      "id": 71921,
+      "person": {
+        "id": 123790,
+        "fullName": "Billy Wagner",
+        "link": "/api/v1/people/123790",
+        "nameSlug": "billy-wagner-123790"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2010-10-13",
+      "effectiveDate": "2010-10-13",
+      "resolutionDate": "2010-10-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves activated LHP Billy Wagner from the 15-day disabled list."
+    },
+    {
+      "id": 80391,
+      "person": {
+        "id": 123790,
+        "fullName": "Billy Wagner",
+        "link": "/api/v1/people/123790",
+        "nameSlug": "billy-wagner-123790"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2011-03-30",
+      "effectiveDate": "2011-03-30",
+      "resolutionDate": "2011-03-30",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Atlanta Braves released LHP Billy Wagner."
+    }
+  ]
+}

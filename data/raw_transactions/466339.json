@@ -1,0 +1,712 @@
+{
+  "player_id": 466339,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:3f7483db0956179b5cbf4f2a2c85c095ebd8fbc6b5eb100bc63dc83b3748beaa",
+  "transactions": [
+    {
+      "id": 3819,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2009-05-03",
+      "effectiveDate": "2009-05-03",
+      "resolutionDate": "2009-05-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chattanooga Lookouts placed LHP Victor Garate on the 7-day disabled list."
+    },
+    {
+      "id": 6033,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2009-05-22",
+      "effectiveDate": "2009-05-22",
+      "resolutionDate": "2009-05-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chattanooga Lookouts activated LHP Victor Garate from the 7-day disabled list."
+    },
+    {
+      "id": 23813,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2009-09-02",
+      "effectiveDate": "2009-09-02",
+      "resolutionDate": "2009-09-02",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Washington Nationals claimed LHP Victor Garate off waivers from Los Angeles Dodgers."
+    },
+    {
+      "id": 23814,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2009-09-02",
+      "effectiveDate": "2009-09-02",
+      "resolutionDate": "2009-09-02",
+      "typeCode": "WA",
+      "typeDesc": "Waived",
+      "description": "Chattanooga Lookouts placed LHP Victor Garate on waivers."
+    },
+    {
+      "id": 24028,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2009-09-04",
+      "effectiveDate": "2009-09-04",
+      "resolutionDate": "2009-09-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Victor Garate roster status changed by Washington Nationals."
+    },
+    {
+      "id": 25555,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 695,
+        "name": "Leones del Caracas",
+        "link": "/api/v1/teams/695"
+      },
+      "date": "2009-10-07",
+      "effectiveDate": "2009-10-07",
+      "resolutionDate": "2009-10-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Garate assigned to Leones del Caracas."
+    },
+    {
+      "id": 31708,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2010-01-08",
+      "effectiveDate": "2010-01-08",
+      "resolutionDate": "2010-01-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals invited non-roster LHP Victor Garate to spring training."
+    },
+    {
+      "id": 31211,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2010-01-08",
+      "effectiveDate": "2010-01-08",
+      "resolutionDate": "2010-01-08",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Washington Nationals sent Victor Garate outright to Syracuse Chiefs."
+    },
+    {
+      "id": 35880,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "fromTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2010-04-04",
+      "effectiveDate": "2010-04-04",
+      "resolutionDate": "2010-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Victor Garate assigned to Harrisburg Senators from Syracuse Chiefs."
+    },
+    {
+      "id": 44558,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "fromTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2010-05-17",
+      "effectiveDate": "2010-05-17",
+      "resolutionDate": "2010-05-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Garate assigned to Syracuse Chiefs from Harrisburg Senators."
+    },
+    {
+      "id": 64229,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2010-07-26",
+      "effectiveDate": "2010-07-26",
+      "resolutionDate": "2010-07-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Victor Garate roster status changed by Syracuse Chiefs."
+    },
+    {
+      "id": 68760,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "fromTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2010-08-31",
+      "effectiveDate": "2010-08-31",
+      "resolutionDate": "2010-08-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Garate assigned to Harrisburg Senators from Syracuse Chiefs."
+    },
+    {
+      "id": 74172,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2010-11-06",
+      "effectiveDate": "2010-11-06",
+      "resolutionDate": "2010-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Victor Garate elected free agency."
+    },
+    {
+      "id": 75253,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2010-12-07",
+      "effectiveDate": "2010-12-07",
+      "resolutionDate": "2010-12-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Garate assigned to New Orleans Zephyrs."
+    },
+    {
+      "id": 75252,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2010-12-07",
+      "effectiveDate": "2010-12-07",
+      "resolutionDate": "2010-12-07",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Florida Marlins signed free agent LHP Victor Garate to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 95642,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2011-07-05",
+      "effectiveDate": "2011-07-06",
+      "resolutionDate": "2011-07-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New Orleans Zephyrs placed LHP Victor Garate on the 7-day disabled list."
+    },
+    {
+      "id": 98505,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2011-07-29",
+      "effectiveDate": "2011-07-29",
+      "resolutionDate": "2011-07-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New Orleans Zephyrs activated LHP Victor Garate from the 7-day disabled list."
+    },
+    {
+      "id": 106054,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2011-11-02",
+      "effectiveDate": "2011-11-02",
+      "resolutionDate": "2011-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Victor Garate elected free agency."
+    },
+    {
+      "id": 108433,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2011-12-29",
+      "effectiveDate": "2011-12-29",
+      "resolutionDate": "2011-12-29",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Milwaukee Brewers signed free agent LHP Victor Garate to a minor league contract."
+    },
+    {
+      "id": 112795,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2012-04-02",
+      "effectiveDate": "2012-04-02",
+      "resolutionDate": "2012-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Garate assigned to Nashville Sounds."
+    },
+    {
+      "id": 129173,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2012-07-12",
+      "effectiveDate": "2012-07-12",
+      "resolutionDate": "2012-07-12",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Nashville Sounds released LHP Victor Garate."
+    },
+    {
+      "id": 135820,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 695,
+        "name": "Leones del Caracas",
+        "link": "/api/v1/teams/695"
+      },
+      "date": "2012-09-26",
+      "effectiveDate": "2012-09-26",
+      "resolutionDate": "2012-09-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Garate assigned to Leones del Caracas."
+    },
+    {
+      "id": 142773,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2013-01-16",
+      "effectiveDate": "2013-01-16",
+      "resolutionDate": "2013-01-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Dodgers signed free agent Victor Garate."
+    },
+    {
+      "id": 144454,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 867,
+        "name": "Mexico",
+        "link": "/api/v1/teams/867"
+      },
+      "date": "2013-03-06",
+      "effectiveDate": "2013-03-06",
+      "resolutionDate": "2013-03-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Garate assigned to Mexico."
+    },
+    {
+      "id": 149729,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 502,
+        "name": "Saraperos de Saltillo",
+        "link": "/api/v1/teams/502"
+      },
+      "date": "2013-04-16",
+      "effectiveDate": "2013-04-16",
+      "resolutionDate": "2013-04-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Saraperos de Saltillo signed free agent LHP Victor Garate."
+    },
+    {
+      "id": 172454,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 695,
+        "name": "Leones del Caracas",
+        "link": "/api/v1/teams/695"
+      },
+      "date": "2013-10-09",
+      "effectiveDate": "2013-10-09",
+      "resolutionDate": "2013-10-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Garate assigned to Leones del Caracas."
+    },
+    {
+      "id": 197374,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 502,
+        "name": "Saraperos de Saltillo",
+        "link": "/api/v1/teams/502"
+      },
+      "date": "2014-06-25",
+      "effectiveDate": "2014-06-25",
+      "resolutionDate": "2014-06-25",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Saraperos de Saltillo released LHP Victor Garate."
+    },
+    {
+      "id": 253150,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2016-01-12",
+      "effectiveDate": "2016-01-12",
+      "resolutionDate": "2016-01-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Garate assigned to Tiburones de La Guaira."
+    },
+    {
+      "id": 261345,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 502,
+        "name": "Saraperos de Saltillo",
+        "link": "/api/v1/teams/502"
+      },
+      "date": "2016-04-07",
+      "effectiveDate": "2016-04-07",
+      "resolutionDate": "2016-04-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Garate assigned to Saraperos de Saltillo."
+    },
+    {
+      "id": 270113,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 502,
+        "name": "Saraperos de Saltillo",
+        "link": "/api/v1/teams/502"
+      },
+      "date": "2016-06-08",
+      "effectiveDate": "2016-06-08",
+      "resolutionDate": "2016-06-08",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Saraperos de Saltillo released LHP Victor Garate."
+    },
+    {
+      "id": 288217,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 695,
+        "name": "Leones del Caracas",
+        "link": "/api/v1/teams/695"
+      },
+      "date": "2016-10-02",
+      "effectiveDate": "2016-10-02",
+      "resolutionDate": "2016-10-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Garate assigned to Leones del Caracas."
+    },
+    {
+      "id": 334721,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 699,
+        "name": "Tigres de Aragua",
+        "link": "/api/v1/teams/699"
+      },
+      "date": "2017-10-09",
+      "effectiveDate": "2017-10-09",
+      "resolutionDate": "2017-10-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Garate assigned to Tigres de Aragua."
+    },
+    {
+      "id": 338245,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 4684,
+        "name": "Estrellas Occidente",
+        "link": "/api/v1/teams/4684"
+      },
+      "date": "2017-12-04",
+      "effectiveDate": "2017-12-04",
+      "resolutionDate": "2017-12-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Garate assigned to Estrellas Occidente."
+    },
+    {
+      "id": 380429,
+      "person": {
+        "id": 466339,
+        "fullName": "Victor Garate",
+        "link": "/api/v1/people/466339",
+        "nameSlug": "victor-garate-466339"
+      },
+      "toTeam": {
+        "id": 692,
+        "name": "Aguilas del Zulia",
+        "link": "/api/v1/teams/692"
+      },
+      "date": "2018-10-11",
+      "effectiveDate": "2018-10-11",
+      "resolutionDate": "2018-10-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Garate assigned to Aguilas del Zulia."
+    }
+  ]
+}

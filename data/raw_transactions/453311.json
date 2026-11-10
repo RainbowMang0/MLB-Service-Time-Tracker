@@ -1,0 +1,368 @@
+{
+  "player_id": 453311,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:2261ec0e3f9115142d7c3e281548b48f861ea1c623cf2cd9cb449e383e803aef",
+  "transactions": [
+    {
+      "id": 235817,
+      "person": {
+        "id": 453311,
+        "fullName": "Tim Lincecum",
+        "link": "/api/v1/people/453311",
+        "nameSlug": "tim-lincecum-453311"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2015-07-02",
+      "effectiveDate": "2015-06-28",
+      "resolutionDate": "2015-06-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Francisco Giants placed RHP Tim Lincecum on the 15-day disabled list retroactive to June 28, 2015. Right forearm contusion"
+    },
+    {
+      "id": 245031,
+      "person": {
+        "id": 453311,
+        "fullName": "Tim Lincecum",
+        "link": "/api/v1/people/453311",
+        "nameSlug": "tim-lincecum-453311"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2015-09-07",
+      "effectiveDate": "2015-09-07",
+      "resolutionDate": "2015-09-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Francisco Giants transferred RHP Tim Lincecum from the 15-day disabled list to the 60-day disabled list. September 2015 left hip surgery"
+    },
+    {
+      "id": 248713,
+      "person": {
+        "id": 453311,
+        "fullName": "Tim Lincecum",
+        "link": "/api/v1/people/453311",
+        "nameSlug": "tim-lincecum-453311"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2015-11-02",
+      "effectiveDate": "2015-11-02",
+      "resolutionDate": "2015-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Tim Lincecum elected free agency."
+    },
+    {
+      "id": 266203,
+      "person": {
+        "id": 453311,
+        "fullName": "Tim Lincecum",
+        "link": "/api/v1/people/453311",
+        "nameSlug": "tim-lincecum-453311"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2016-05-20",
+      "effectiveDate": "2016-05-20",
+      "resolutionDate": "2016-05-20",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Angels signed free agent RHP Tim Lincecum."
+    },
+    {
+      "id": 266399,
+      "person": {
+        "id": 453311,
+        "fullName": "Tim Lincecum",
+        "link": "/api/v1/people/453311",
+        "nameSlug": "tim-lincecum-453311"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2016-05-21",
+      "effectiveDate": "2016-05-22",
+      "resolutionDate": "2016-05-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tim Lincecum roster status changed by Los Angeles Angels."
+    },
+    {
+      "id": 266377,
+      "person": {
+        "id": 453311,
+        "fullName": "Tim Lincecum",
+        "link": "/api/v1/people/453311",
+        "nameSlug": "tim-lincecum-453311"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2016-05-21",
+      "effectiveDate": "2016-05-21",
+      "resolutionDate": "2016-05-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Angels activated RHP Tim Lincecum."
+    },
+    {
+      "id": 266457,
+      "person": {
+        "id": 453311,
+        "fullName": "Tim Lincecum",
+        "link": "/api/v1/people/453311",
+        "nameSlug": "tim-lincecum-453311"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2016-05-22",
+      "effectiveDate": "2016-05-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned RHP Tim Lincecum to Salt Lake Bees."
+    },
+    {
+      "id": 272566,
+      "person": {
+        "id": 453311,
+        "fullName": "Tim Lincecum",
+        "link": "/api/v1/people/453311",
+        "nameSlug": "tim-lincecum-453311"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2016-06-18",
+      "effectiveDate": "2016-06-18",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled RHP Tim Lincecum from Salt Lake Bees."
+    },
+    {
+      "id": 282880,
+      "person": {
+        "id": 453311,
+        "fullName": "Tim Lincecum",
+        "link": "/api/v1/people/453311",
+        "nameSlug": "tim-lincecum-453311"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2016-08-06",
+      "effectiveDate": "2016-08-09",
+      "resolutionDate": "2016-08-06",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Los Angeles Angels designated Tim Lincecum for assignment."
+    },
+    {
+      "id": 283321,
+      "person": {
+        "id": 453311,
+        "fullName": "Tim Lincecum",
+        "link": "/api/v1/people/453311",
+        "nameSlug": "tim-lincecum-453311"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2016-08-09",
+      "effectiveDate": "2016-08-09",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned RHP Tim Lincecum to Salt Lake Bees."
+    },
+    {
+      "id": 288467,
+      "person": {
+        "id": 453311,
+        "fullName": "Tim Lincecum",
+        "link": "/api/v1/people/453311",
+        "nameSlug": "tim-lincecum-453311"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2016-10-03",
+      "effectiveDate": "2016-10-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled RHP Tim Lincecum from Salt Lake Bees."
+    },
+    {
+      "id": 292174,
+      "person": {
+        "id": 453311,
+        "fullName": "Tim Lincecum",
+        "link": "/api/v1/people/453311",
+        "nameSlug": "tim-lincecum-453311"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2016-11-03",
+      "effectiveDate": "2016-11-03",
+      "resolutionDate": "2016-11-03",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Tim Lincecum elected free agency."
+    },
+    {
+      "id": 343476,
+      "person": {
+        "id": 453311,
+        "fullName": "Tim Lincecum",
+        "link": "/api/v1/people/453311",
+        "nameSlug": "tim-lincecum-453311"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2018-03-07",
+      "effectiveDate": "2018-03-07",
+      "resolutionDate": "2018-03-07",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent RHP Tim Lincecum."
+    },
+    {
+      "id": 345784,
+      "person": {
+        "id": 453311,
+        "fullName": "Tim Lincecum",
+        "link": "/api/v1/people/453311",
+        "nameSlug": "tim-lincecum-453311"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2018-03-29",
+      "effectiveDate": "2018-03-26",
+      "resolutionDate": "2018-03-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed RHP Tim Lincecum on the 10-day disabled list retroactive to March 26, 2018. Blister on right middle finger."
+    },
+    {
+      "id": 349645,
+      "person": {
+        "id": 453311,
+        "fullName": "Tim Lincecum",
+        "link": "/api/v1/people/453311",
+        "nameSlug": "tim-lincecum-453311"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2018-04-15",
+      "effectiveDate": "2018-04-15",
+      "resolutionDate": "2018-04-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers transferred RHP Tim Lincecum from the 10-day disabled list to the 60-day disabled list. Blister on right middle finger."
+    },
+    {
+      "id": 352837,
+      "person": {
+        "id": 453311,
+        "fullName": "Tim Lincecum",
+        "link": "/api/v1/people/453311",
+        "nameSlug": "tim-lincecum-453311"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2018-05-07",
+      "effectiveDate": "2018-05-07",
+      "resolutionDate": "2018-05-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Tim Lincecum on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 358151,
+      "person": {
+        "id": 453311,
+        "fullName": "Tim Lincecum",
+        "link": "/api/v1/people/453311",
+        "nameSlug": "tim-lincecum-453311"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2018-06-05",
+      "effectiveDate": "2018-06-05",
+      "resolutionDate": "2018-06-05",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Texas Rangers released RHP Tim Lincecum."
+    }
+  ]
+}

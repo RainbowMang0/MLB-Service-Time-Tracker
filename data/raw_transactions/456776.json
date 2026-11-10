@@ -1,0 +1,998 @@
+{
+  "player_id": 456776,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:e7b1b3382cd0a5be11862d5d2de14b2435e5b214286b84b021e958ad0d6bcd25",
+  "transactions": [
+    {
+      "id": 19118,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "fromTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "toTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "date": "2009-07-31",
+      "effectiveDate": "2009-07-31",
+      "resolutionDate": "2009-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Alex Torres assigned to Arkansas Travelers from Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 23012,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "fromTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "toTeam": {
+        "id": 421,
+        "name": "Montgomery Biscuits",
+        "link": "/api/v1/teams/421"
+      },
+      "date": "2009-08-29",
+      "effectiveDate": "2009-08-29",
+      "resolutionDate": "2009-08-29",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Rancho Cucamonga Quakes Traded 3B Matthew Sweeney to Charlotte Stone Crabs; Arkansas Travelers Traded LHP Alex Torres to Montgomery Biscuits and Tampa Bay Rays Traded LHP Scott Kazmir to Los Angeles Angels."
+    },
+    {
+      "id": 23251,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 421,
+        "name": "Montgomery Biscuits",
+        "link": "/api/v1/teams/421"
+      },
+      "date": "2009-08-31",
+      "effectiveDate": "2009-08-31",
+      "resolutionDate": "2009-08-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Alex Torres roster status changed by Montgomery Biscuits."
+    },
+    {
+      "id": 25674,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 696,
+        "name": "Navegantes del Magallanes",
+        "link": "/api/v1/teams/696"
+      },
+      "date": "2009-10-07",
+      "effectiveDate": "2009-10-07",
+      "resolutionDate": "2009-10-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Alex Torres assigned to Navegantes del Magallanes."
+    },
+    {
+      "id": 29267,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "fromTeam": {
+        "id": 421,
+        "name": "Montgomery Biscuits",
+        "link": "/api/v1/teams/421"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2009-11-19",
+      "effectiveDate": "2009-11-19",
+      "resolutionDate": "2009-11-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Tampa Bay Rays selected the contract of Alex Torres from Montgomery Biscuits."
+    },
+    {
+      "id": 33308,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 421,
+        "name": "Montgomery Biscuits",
+        "link": "/api/v1/teams/421"
+      },
+      "date": "2010-03-15",
+      "effectiveDate": "2010-03-15",
+      "resolutionDate": "2010-03-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned Alex Torres to Montgomery Biscuits."
+    },
+    {
+      "id": 72089,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2010-10-13",
+      "effectiveDate": "2010-10-13",
+      "resolutionDate": "2010-10-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Alex Torres roster status changed by Tampa Bay Rays."
+    },
+    {
+      "id": 73058,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 692,
+        "name": "Aguilas del Zulia",
+        "link": "/api/v1/teams/692"
+      },
+      "date": "2010-10-23",
+      "effectiveDate": "2010-10-23",
+      "resolutionDate": "2010-10-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Alex Torres assigned to Aguilas del Zulia."
+    },
+    {
+      "id": 78614,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2011-03-11",
+      "effectiveDate": "2011-03-11",
+      "resolutionDate": "2011-03-12",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned Alex Torres to Durham Bulls."
+    },
+    {
+      "id": 97245,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2011-07-18",
+      "effectiveDate": "2011-07-18",
+      "resolutionDate": "2011-07-18",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled Alex Torres from Durham Bulls."
+    },
+    {
+      "id": 97306,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2011-07-19",
+      "effectiveDate": "2011-07-20",
+      "resolutionDate": "2011-07-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned Alex Torres to Durham Bulls."
+    },
+    {
+      "id": 103246,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2011-09-14",
+      "effectiveDate": "2011-09-14",
+      "resolutionDate": "2011-09-14",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled Alex Torres from Durham Bulls."
+    },
+    {
+      "id": 103562,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2011-09-30",
+      "effectiveDate": "2011-09-30",
+      "resolutionDate": "2011-09-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Alex Torres roster status changed by Tampa Bay Rays."
+    },
+    {
+      "id": 110018,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2012-03-12",
+      "effectiveDate": "2012-03-12",
+      "resolutionDate": "2012-03-12",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned Alex Torres to Durham Bulls."
+    },
+    {
+      "id": 126534,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2012-06-24",
+      "effectiveDate": "2012-06-25",
+      "resolutionDate": "2012-06-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled Alex Torres from Durham Bulls."
+    },
+    {
+      "id": 126661,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2012-06-25",
+      "effectiveDate": "2012-06-26",
+      "resolutionDate": "2012-06-25",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned LHP Alex Torres to Durham Bulls."
+    },
+    {
+      "id": 132031,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2012-08-04",
+      "effectiveDate": "2012-08-01",
+      "resolutionDate": "2012-08-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls placed LHP Alex Torres on the 7-day disabled list retroactive to August 1, 2012."
+    },
+    {
+      "id": 132713,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 2003,
+        "name": "FCL Rays",
+        "link": "/api/v1/teams/2003"
+      },
+      "date": "2012-08-11",
+      "effectiveDate": "2012-08-11",
+      "resolutionDate": "2012-08-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent LHP Alex Torres on a rehab assignment to GCL Rays."
+    },
+    {
+      "id": 134380,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2012-08-28",
+      "effectiveDate": "2012-08-28",
+      "resolutionDate": "2012-08-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Alex Torres roster status changed by Durham Bulls."
+    },
+    {
+      "id": 136426,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2012-10-04",
+      "effectiveDate": "2013-03-12",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled Alex Torres from Durham Bulls."
+    },
+    {
+      "id": 137253,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 692,
+        "name": "Aguilas del Zulia",
+        "link": "/api/v1/teams/692"
+      },
+      "date": "2012-10-11",
+      "effectiveDate": "2012-10-11",
+      "resolutionDate": "2012-10-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Alex Torres assigned to Aguilas del Zulia."
+    },
+    {
+      "id": 143864,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 944,
+        "name": "Venezuela",
+        "link": "/api/v1/teams/944"
+      },
+      "date": "2013-02-21",
+      "effectiveDate": "2013-02-21",
+      "resolutionDate": "2013-02-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Alex Torres assigned to Venezuela."
+    },
+    {
+      "id": 144747,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2013-03-12",
+      "effectiveDate": "2013-03-12",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned Alex Torres to Durham Bulls."
+    },
+    {
+      "id": 153042,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2013-05-16",
+      "effectiveDate": "2013-05-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled Alex Torres from Durham Bulls."
+    },
+    {
+      "id": 153398,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2013-05-19",
+      "effectiveDate": "2013-05-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned Alex Torres to Durham Bulls."
+    },
+    {
+      "id": 154926,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2013-06-01",
+      "effectiveDate": "2013-06-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled Alex Torres from Durham Bulls."
+    },
+    {
+      "id": 174857,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 692,
+        "name": "Aguilas del Zulia",
+        "link": "/api/v1/teams/692"
+      },
+      "date": "2013-11-13",
+      "effectiveDate": "2013-11-13",
+      "resolutionDate": "2013-11-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Alex Torres assigned to Aguilas del Zulia."
+    },
+    {
+      "id": 178232,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2014-01-22",
+      "effectiveDate": "2014-01-22",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "San Diego Padres traded 2B Logan Forsythe, RHP Brad Boxberger, Matt Andriese, RHP Matt Lollis and SS Maxx Tissenbaum to Tampa Bay Rays for LHP Alex Torres and RHP Jesse Hahn."
+    },
+    {
+      "id": 211146,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 692,
+        "name": "Aguilas del Zulia",
+        "link": "/api/v1/teams/692"
+      },
+      "date": "2014-11-06",
+      "effectiveDate": "2014-11-06",
+      "resolutionDate": "2014-11-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Alex Torres assigned to Aguilas del Zulia."
+    },
+    {
+      "id": 218483,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2015-03-30",
+      "effectiveDate": "2015-03-30",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "San Diego Padres traded LHP Alex Torres to New York Mets for RHP Cory Mazzoni and Player To Be Named Later."
+    },
+    {
+      "id": 241025,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2015-08-05",
+      "effectiveDate": "2015-08-05",
+      "resolutionDate": "2015-08-05",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Mets designated LHP Alex Torres for assignment."
+    },
+    {
+      "id": 241575,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2015-08-08",
+      "effectiveDate": "2015-08-08",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "New York Mets sent LHP Alex Torres outright to Las Vegas 51s."
+    },
+    {
+      "id": 249919,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2015-11-06",
+      "effectiveDate": "2015-11-06",
+      "resolutionDate": "2015-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Alex Torres elected free agency."
+    },
+    {
+      "id": 253097,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2016-01-07",
+      "effectiveDate": "2016-01-07",
+      "resolutionDate": "2016-01-07",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent LHP Alex Torres to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 259586,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2016-04-01",
+      "effectiveDate": "2016-04-01",
+      "resolutionDate": "2016-04-01",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Atlanta Braves released LHP Alex Torres."
+    },
+    {
+      "id": 263564,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2016-04-15",
+      "effectiveDate": "2016-04-15",
+      "resolutionDate": "2016-04-15",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Francisco Giants signed free agent LHP Alex Torres to a minor league contract."
+    },
+    {
+      "id": 263565,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2016-04-26",
+      "effectiveDate": "2016-04-26",
+      "resolutionDate": "2016-04-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Alex Torres assigned to Sacramento River Cats."
+    },
+    {
+      "id": 288860,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 699,
+        "name": "Tigres de Aragua",
+        "link": "/api/v1/teams/699"
+      },
+      "date": "2016-10-04",
+      "effectiveDate": "2016-10-04",
+      "resolutionDate": "2016-10-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Alex Torres assigned to Tigres de Aragua."
+    },
+    {
+      "id": 292740,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2016-11-07",
+      "effectiveDate": "2016-11-07",
+      "resolutionDate": "2016-11-07",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Alex Torres elected free agency."
+    },
+    {
+      "id": 336825,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2017-11-13",
+      "effectiveDate": "2017-11-13",
+      "resolutionDate": "2017-11-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Alex Torres assigned to Tiburones de La Guaira."
+    },
+    {
+      "id": 381713,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 696,
+        "name": "Navegantes del Magallanes",
+        "link": "/api/v1/teams/696"
+      },
+      "date": "2018-10-30",
+      "effectiveDate": "2018-10-30",
+      "resolutionDate": "2018-10-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Alex Torres assigned to Navegantes del Magallanes."
+    },
+    {
+      "id": 431965,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 693,
+        "name": "Cardenales de Lara",
+        "link": "/api/v1/teams/693"
+      },
+      "date": "2019-11-01",
+      "effectiveDate": "2019-11-01",
+      "resolutionDate": "2019-11-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Alex Torres assigned to Cardenales de Lara."
+    },
+    {
+      "id": 433896,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "fromTeam": {
+        "id": 693,
+        "name": "Cardenales de Lara",
+        "link": "/api/v1/teams/693"
+      },
+      "toTeam": {
+        "id": 694,
+        "name": "Caribes de Anzoategui",
+        "link": "/api/v1/teams/694"
+      },
+      "date": "2019-11-20",
+      "effectiveDate": "2019-11-20",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Cardenales de Lara traded LHP Alex Torres to Caribes de Anzoategui for 1B Luis Jimenez."
+    },
+    {
+      "id": 436616,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 569,
+        "name": "Tigres de Quintana Roo",
+        "link": "/api/v1/teams/569"
+      },
+      "date": "2020-01-15",
+      "effectiveDate": "2020-01-15",
+      "resolutionDate": "2020-01-15",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Tigres de Quintana Roo signed free agent LHP Alex Torres."
+    },
+    {
+      "id": 442803,
+      "person": {
+        "id": 456776,
+        "fullName": "Alex Torres",
+        "link": "/api/v1/people/456776",
+        "nameSlug": "alex-torres-456776"
+      },
+      "toTeam": {
+        "id": 569,
+        "name": "Tigres de Quintana Roo",
+        "link": "/api/v1/teams/569"
+      },
+      "date": "2020-04-06",
+      "effectiveDate": "2020-04-06",
+      "resolutionDate": "2020-04-06",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Tigres de Quintana Roo released LHP Alex Torres."
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "player_id": 114260,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:288afc380e691c180089f92d286b4d2431b7ddfdcacf6eee6844b6e0a73c3bb4",
+  "transactions": [
+    {
+      "id": 1213,
+      "person": {
+        "id": 114260,
+        "fullName": "Cliff Floyd",
+        "link": "/api/v1/people/114260",
+        "nameSlug": "cliff-floyd-114260"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2009-04-06",
+      "effectiveDate": "2009-04-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres placed OF Cliff Floyd on the 15-day disabled list retroactive to April 5, 2009."
+    },
+    {
+      "id": 5556,
+      "person": {
+        "id": 114260,
+        "fullName": "Cliff Floyd",
+        "link": "/api/v1/people/114260",
+        "nameSlug": "cliff-floyd-114260"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "date": "2009-05-19",
+      "effectiveDate": "2009-05-19",
+      "resolutionDate": "2009-05-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres sent DH Cliff Floyd on a rehab assignment to Lake Elsinore Storm."
+    },
+    {
+      "id": 7540,
+      "person": {
+        "id": 114260,
+        "fullName": "Cliff Floyd",
+        "link": "/api/v1/people/114260",
+        "nameSlug": "cliff-floyd-114260"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2009-05-30",
+      "effectiveDate": "2009-05-30",
+      "resolutionDate": "2009-05-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres activated OF Cliff Floyd from the 15-day disabled list."
+    },
+    {
+      "id": 11140,
+      "person": {
+        "id": 114260,
+        "fullName": "Cliff Floyd",
+        "link": "/api/v1/people/114260",
+        "nameSlug": "cliff-floyd-114260"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2009-06-19",
+      "effectiveDate": "2009-06-19",
+      "resolutionDate": "2009-06-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres placed DH Cliff Floyd on the 60-day disabled list. torn labrum in right shoulder"
+    },
+    {
+      "id": 25836,
+      "person": {
+        "id": 114260,
+        "fullName": "Cliff Floyd",
+        "link": "/api/v1/people/114260",
+        "nameSlug": "cliff-floyd-114260"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2009-10-08",
+      "effectiveDate": "2009-10-08",
+      "resolutionDate": "2009-10-08",
+      "typeCode": "WA",
+      "typeDesc": "Waived",
+      "description": "San Diego Padres placed DH Cliff Floyd on waivers."
+    }
+  ]
+}

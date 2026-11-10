@@ -1,0 +1,821 @@
+{
+  "player_id": 462136,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:744331dff554ea7bf4436b7c330e7f0fa622c4c9b8316178a081277cc99076be",
+  "transactions": [
+    {
+      "id": 15442,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2009-07-08",
+      "effectiveDate": "2009-07-08",
+      "resolutionDate": "2009-07-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Chiefs placed RHP Marco Estrada on the 7-day disabled list."
+    },
+    {
+      "id": 17279,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2009-07-20",
+      "effectiveDate": "2009-07-20",
+      "resolutionDate": "2009-07-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Marco Estrada roster status changed by Syracuse Chiefs."
+    },
+    {
+      "id": 24442,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "fromTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2009-09-08",
+      "effectiveDate": "2009-09-08",
+      "resolutionDate": "2009-09-08",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Washington Nationals recalled Marco Estrada from Syracuse Chiefs."
+    },
+    {
+      "id": 31828,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2010-01-28",
+      "effectiveDate": "2010-01-28",
+      "resolutionDate": "2010-01-28",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Washington Nationals designated RHP Marco Estrada for assignment."
+    },
+    {
+      "id": 32074,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2010-02-03",
+      "effectiveDate": "2010-04-04",
+      "resolutionDate": "2010-02-03",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Milwaukee Brewers claimed Marco Estrada off waivers from Washington Nationals."
+    },
+    {
+      "id": 36043,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2010-04-04",
+      "effectiveDate": "2010-04-04",
+      "resolutionDate": "2010-04-04",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned Marco Estrada to Nashville Sounds."
+    },
+    {
+      "id": 44699,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2010-05-18",
+      "effectiveDate": "2010-06-01",
+      "resolutionDate": "2010-05-18",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Milwaukee Brewers recalled Marco Estrada from Nashville Sounds."
+    },
+    {
+      "id": 48940,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2010-06-01",
+      "effectiveDate": "2010-06-02",
+      "resolutionDate": "2010-06-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned Marco Estrada to Nashville Sounds."
+    },
+    {
+      "id": 71718,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2010-10-08",
+      "effectiveDate": "2010-10-08",
+      "resolutionDate": "2010-10-08",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Milwaukee Brewers sent Marco Estrada outright to Nashville Sounds."
+    },
+    {
+      "id": 77754,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2011-03-01",
+      "effectiveDate": "2011-03-01",
+      "resolutionDate": "2011-03-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Marco Estrada assigned to Milwaukee Brewers."
+    },
+    {
+      "id": 82299,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2011-04-06",
+      "effectiveDate": "2011-04-06",
+      "resolutionDate": "2011-04-06",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Milwaukee Brewers selected the contract of RHP Marco Estrada from Nashville Sounds."
+    },
+    {
+      "id": 119059,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2012-05-24",
+      "effectiveDate": "2012-05-24",
+      "resolutionDate": "2012-05-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers placed RHP Marco Estrada on the 15-day disabled list. Right quadriceps strain."
+    },
+    {
+      "id": 123783,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2012-06-16",
+      "effectiveDate": "2012-06-16",
+      "resolutionDate": "2012-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent RHP Marco Estrada on a rehab assignment to Nashville Sounds."
+    },
+    {
+      "id": 126923,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2012-06-26",
+      "effectiveDate": "2012-06-26",
+      "resolutionDate": "2012-06-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated RHP Marco Estrada from the 15-day disabled list."
+    },
+    {
+      "id": 155617,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2013-06-05",
+      "effectiveDate": "2013-06-04",
+      "resolutionDate": "2013-06-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers placed RHP Marco Estrada on the 15-day disabled list retroactive to June 4, 2013. Left hamstring strain."
+    },
+    {
+      "id": 161031,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "date": "2013-06-23",
+      "effectiveDate": "2013-06-23",
+      "resolutionDate": "2013-06-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers sent RHP Marco Estrada on a rehab assignment to Wisconsin Timber Rattlers."
+    },
+    {
+      "id": 166204,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 406,
+        "name": "ACL Brewers",
+        "link": "/api/v1/teams/406"
+      },
+      "date": "2013-07-29",
+      "effectiveDate": "2013-07-29",
+      "resolutionDate": "2013-07-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers sent RHP Marco Estrada on a rehab assignment to AZL Brewers."
+    },
+    {
+      "id": 166653,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2013-08-02",
+      "effectiveDate": "2013-08-02",
+      "resolutionDate": "2013-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers sent RHP Marco Estrada on a rehab assignment to Nashville Sounds."
+    },
+    {
+      "id": 167253,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2013-08-07",
+      "effectiveDate": "2013-08-07",
+      "resolutionDate": "2013-08-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated RHP Marco Estrada from the 15-day disabled list."
+    },
+    {
+      "id": 210534,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2014-11-01",
+      "effectiveDate": "2014-11-01",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Toronto Blue Jays traded 1B Adam Lind to Milwaukee Brewers for RHP Marco Estrada."
+    },
+    {
+      "id": 248731,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2015-11-02",
+      "effectiveDate": "2015-11-02",
+      "resolutionDate": "2015-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Marco Estrada elected free agency."
+    },
+    {
+      "id": 250112,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2015-11-13",
+      "effectiveDate": "2015-11-13",
+      "resolutionDate": "2015-11-13",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Toronto Blue Jays signed free agent RHP Marco Estrada."
+    },
+    {
+      "id": 259509,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2016-04-03",
+      "effectiveDate": "2016-03-26",
+      "resolutionDate": "2016-03-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays placed RHP Marco Estrada on the 15-day disabled list retroactive to March 26, 2016. Back soreness"
+    },
+    {
+      "id": 261609,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2016-04-10",
+      "effectiveDate": "2016-04-10",
+      "resolutionDate": "2016-04-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays activated RHP Marco Estrada from the 15-day disabled list."
+    },
+    {
+      "id": 277349,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2016-07-06",
+      "effectiveDate": "2016-07-03",
+      "resolutionDate": "2016-07-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays placed RHP Marco Estrada on the 15-day disabled list retroactive to July 3, 2016. Back injury."
+    },
+    {
+      "id": 280068,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2016-07-22",
+      "effectiveDate": "2016-07-22",
+      "resolutionDate": "2016-07-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays activated RHP Marco Estrada from the 15-day disabled list."
+    },
+    {
+      "id": 368440,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2018-07-13",
+      "effectiveDate": "2018-07-13",
+      "resolutionDate": "2018-07-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays placed RHP Marco Estrada on the 10-day disabled list. Left gluteus strain."
+    },
+    {
+      "id": 370642,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2018-07-24",
+      "effectiveDate": "2018-07-24",
+      "resolutionDate": "2018-07-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Toronto Blue Jays sent RHP Marco Estrada on a rehab assignment to Buffalo Bisons."
+    },
+    {
+      "id": 371973,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2018-07-30",
+      "effectiveDate": "2018-07-30",
+      "resolutionDate": "2018-07-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays activated RHP Marco Estrada."
+    },
+    {
+      "id": 381632,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2018-10-29",
+      "effectiveDate": "2018-10-29",
+      "resolutionDate": "2018-10-29",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Marco Estrada elected free agency."
+    },
+    {
+      "id": 386837,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2019-01-25",
+      "effectiveDate": "2019-01-25",
+      "resolutionDate": "2019-01-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Oakland Athletics signed free agent RHP Marco Estrada."
+    },
+    {
+      "id": 397227,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2019-04-17",
+      "effectiveDate": "2019-04-17",
+      "resolutionDate": "2019-04-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics placed RHP Marco Estrada on the 10-day injured list. Lumbar strain."
+    },
+    {
+      "id": 414672,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2019-07-02",
+      "effectiveDate": "2019-07-02",
+      "resolutionDate": "2019-07-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics transferred RHP Marco Estrada from the 10-day injured list to the 60-day injured list. Lumbar strain."
+    },
+    {
+      "id": 419833,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 5426,
+        "name": "ACL Athletics",
+        "link": "/api/v1/teams/5426"
+      },
+      "date": "2019-07-25",
+      "effectiveDate": "2019-07-25",
+      "resolutionDate": "2019-07-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Oakland Athletics sent RHP Marco Estrada on a rehab assignment to AZL Athletics Gold."
+    },
+    {
+      "id": 420692,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 524,
+        "name": "Stockton Ports",
+        "link": "/api/v1/teams/524"
+      },
+      "date": "2019-07-30",
+      "effectiveDate": "2019-07-30",
+      "resolutionDate": "2019-07-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Oakland Athletics sent RHP Marco Estrada on a rehab assignment to Stockton Ports."
+    },
+    {
+      "id": 424061,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2019-08-16",
+      "effectiveDate": "2019-08-16",
+      "resolutionDate": "2019-08-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Oakland Athletics sent RHP Marco Estrada on a rehab assignment to Las Vegas Aviators."
+    },
+    {
+      "id": 424746,
+      "person": {
+        "id": 462136,
+        "fullName": "Marco Estrada",
+        "link": "/api/v1/people/462136",
+        "nameSlug": "marco-estrada-462136"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2019-08-20",
+      "effectiveDate": "2019-08-20",
+      "resolutionDate": "2019-08-20",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Oakland Athletics released RHP Marco Estrada."
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "player_id": 493161,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:139a4504353e7ae578b0fd5a5d6a07879abc69181f5acc582b5a888295202e96",
+  "transactions": [
+    {
+      "id": 169420,
+      "person": {
+        "id": 493161,
+        "fullName": "Yasuhiko Yabuta",
+        "link": "/api/v1/people/493161",
+        "nameSlug": "yasuhiko-yabuta-493161"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2008-08-06",
+      "effectiveDate": "2008-08-06",
+      "resolutionDate": "2008-08-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Yasuhiko Yabuta roster status changed by Kansas City Royals."
+    },
+    {
+      "id": 169421,
+      "person": {
+        "id": 493161,
+        "fullName": "Yasuhiko Yabuta",
+        "link": "/api/v1/people/493161",
+        "nameSlug": "yasuhiko-yabuta-493161"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2008-11-03",
+      "effectiveDate": "2008-11-03",
+      "resolutionDate": "2008-11-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Yasuhiko Yabuta roster status changed by Kansas City Royals."
+    },
+    {
+      "id": 2653,
+      "person": {
+        "id": 493161,
+        "fullName": "Yasuhiko Yabuta",
+        "link": "/api/v1/people/493161",
+        "nameSlug": "yasuhiko-yabuta-493161"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2009-04-21",
+      "effectiveDate": "2009-04-21",
+      "resolutionDate": "2009-04-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Yasuhiko Yabuta assigned to Omaha Royals from Kansas City Royals."
+    },
+    {
+      "id": 22534,
+      "person": {
+        "id": 493161,
+        "fullName": "Yasuhiko Yabuta",
+        "link": "/api/v1/people/493161",
+        "nameSlug": "yasuhiko-yabuta-493161"
+      },
+      "fromTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2009-08-24",
+      "effectiveDate": "2009-08-24",
+      "resolutionDate": "2009-08-25",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Kansas City Royals selected the contract of RHP Yasuhiko Yabuta from Omaha Royals."
+    },
+    {
+      "id": 27930,
+      "person": {
+        "id": 493161,
+        "fullName": "Yasuhiko Yabuta",
+        "link": "/api/v1/people/493161",
+        "nameSlug": "yasuhiko-yabuta-493161"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2009-11-09",
+      "effectiveDate": "2009-11-09",
+      "resolutionDate": "2009-11-09",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Yasuhiko Yabuta elected free agency."
+    }
+  ]
+}

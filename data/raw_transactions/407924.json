@@ -1,0 +1,932 @@
+{
+  "player_id": 407924,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:31ea37ce011dc5ec75851fb1b891264d35a6a6c049a137e7a6ae962172a9be75",
+  "transactions": [
+    {
+      "id": 5988,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2009-05-22",
+      "effectiveDate": "2009-08-27",
+      "resolutionDate": "2009-05-22",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled Manny Acosta from Gwinnett Braves."
+    },
+    {
+      "id": 22826,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2009-08-27",
+      "effectiveDate": "2009-08-28",
+      "resolutionDate": "2009-08-27",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned Manny Acosta to Gwinnett Braves."
+    },
+    {
+      "id": 24251,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2009-09-06",
+      "effectiveDate": "2010-03-27",
+      "resolutionDate": "2009-09-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled Manny Acosta from Gwinnett Braves."
+    },
+    {
+      "id": 30169,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 677,
+        "name": "Naranjeros de Hermosillo",
+        "link": "/api/v1/teams/677"
+      },
+      "date": "2009-11-29",
+      "effectiveDate": "2009-11-29",
+      "resolutionDate": "2009-11-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Manny Acosta assigned to Naranjeros de Hermosillo."
+    },
+    {
+      "id": 34813,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2010-03-27",
+      "effectiveDate": "2010-03-27",
+      "resolutionDate": "2010-03-29",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned Manny Acosta to Gwinnett Braves."
+    },
+    {
+      "id": 35036,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2010-03-30",
+      "effectiveDate": "2010-03-30",
+      "resolutionDate": "2010-03-31",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "New York Mets claimed RHP Manny Acosta off waivers from Atlanta Braves."
+    },
+    {
+      "id": 35037,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2010-03-31",
+      "effectiveDate": "2010-03-31",
+      "resolutionDate": "2010-03-31",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Mets optioned Manny Acosta to Buffalo Bisons."
+    },
+    {
+      "id": 39933,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2010-04-21",
+      "effectiveDate": "2010-04-22",
+      "resolutionDate": "2010-04-21",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Mets recalled Manny Acosta from Buffalo Bisons."
+    },
+    {
+      "id": 39934,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2010-04-21",
+      "effectiveDate": "2010-04-21",
+      "resolutionDate": "2010-04-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Manny Acosta roster status changed by New York Mets."
+    },
+    {
+      "id": 45799,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2010-05-23",
+      "effectiveDate": "2010-05-24",
+      "resolutionDate": "2010-05-23",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Mets optioned Manny Acosta to Buffalo Bisons."
+    },
+    {
+      "id": 63682,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2010-07-23",
+      "effectiveDate": "2010-07-24",
+      "resolutionDate": "2010-07-23",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Mets recalled Manny Acosta from Buffalo Bisons."
+    },
+    {
+      "id": 71825,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 697,
+        "name": "Bravos de Margarita",
+        "link": "/api/v1/teams/697"
+      },
+      "date": "2010-10-11",
+      "effectiveDate": "2010-10-11",
+      "resolutionDate": "2010-10-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Manny Acosta assigned to Bravos de Margarita."
+    },
+    {
+      "id": 80151,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2011-03-29",
+      "effectiveDate": "2011-03-29",
+      "resolutionDate": "2011-03-29",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Mets designated Manny Acosta for assignment."
+    },
+    {
+      "id": 82719,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2011-04-07",
+      "effectiveDate": "2011-04-07",
+      "resolutionDate": "2011-04-07",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "New York Mets sent RHP Manny Acosta outright to Buffalo Bisons."
+    },
+    {
+      "id": 83134,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2011-04-13",
+      "effectiveDate": "2011-04-13",
+      "resolutionDate": "2011-04-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Manny Acosta roster status changed by Buffalo Bisons."
+    },
+    {
+      "id": 88651,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2011-06-03",
+      "effectiveDate": "2011-06-03",
+      "resolutionDate": "2011-06-03",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Mets selected the contract of RHP Manny Acosta from Buffalo Bisons."
+    },
+    {
+      "id": 119708,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2012-05-29",
+      "effectiveDate": "2012-05-29",
+      "resolutionDate": "2012-05-29",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Mets designated Manny Acosta for assignment."
+    },
+    {
+      "id": 120127,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2012-05-31",
+      "effectiveDate": "2012-06-01",
+      "resolutionDate": "2012-06-01",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "New York Mets sent RHP Manny Acosta outright to Buffalo Bisons."
+    },
+    {
+      "id": 121436,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2012-06-03",
+      "effectiveDate": "2012-06-03",
+      "resolutionDate": "2012-06-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Manny Acosta roster status changed by Buffalo Bisons."
+    },
+    {
+      "id": 130516,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2012-07-24",
+      "effectiveDate": "2012-07-24",
+      "resolutionDate": "2012-07-24",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Mets selected the contract of RHP Manny Acosta from Buffalo Bisons."
+    },
+    {
+      "id": 139862,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 890,
+        "name": "Panama",
+        "link": "/api/v1/teams/890"
+      },
+      "date": "2012-11-14",
+      "effectiveDate": "2012-11-14",
+      "resolutionDate": "2012-11-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Manny Acosta assigned to Panama."
+    },
+    {
+      "id": 140741,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2012-11-30",
+      "effectiveDate": "2012-11-30",
+      "resolutionDate": "2012-11-30",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Manny Acosta elected free agency."
+    },
+    {
+      "id": 182638,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 532,
+        "name": "Diablos Rojos del Mexico",
+        "link": "/api/v1/teams/532"
+      },
+      "date": "2014-03-29",
+      "effectiveDate": "2014-03-29",
+      "resolutionDate": "2014-03-29",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Diablos Rojos del Mexico signed free agent RHP Manny Acosta."
+    },
+    {
+      "id": 209025,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 693,
+        "name": "Cardenales de Lara",
+        "link": "/api/v1/teams/693"
+      },
+      "date": "2014-10-09",
+      "effectiveDate": "2014-10-09",
+      "resolutionDate": "2014-10-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Manny Acosta assigned to Cardenales de Lara."
+    },
+    {
+      "id": 213886,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 674,
+        "name": "Charros de Jalisco",
+        "link": "/api/v1/teams/674"
+      },
+      "date": "2015-01-01",
+      "effectiveDate": "2015-01-01",
+      "resolutionDate": "2015-01-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Manny Acosta assigned to Charros de Jalisco."
+    },
+    {
+      "id": 215340,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 532,
+        "name": "Diablos Rojos del Mexico",
+        "link": "/api/v1/teams/532"
+      },
+      "date": "2015-02-06",
+      "effectiveDate": "2015-02-06",
+      "resolutionDate": "2015-02-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Diablos Rojos del Mexico placed RHP Manny Acosta on the reserve list."
+    },
+    {
+      "id": 219188,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 532,
+        "name": "Diablos Rojos del Mexico",
+        "link": "/api/v1/teams/532"
+      },
+      "date": "2015-04-01",
+      "effectiveDate": "2015-04-01",
+      "resolutionDate": "2015-04-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Diablos Rojos del Mexico activated RHP Manny Acosta."
+    },
+    {
+      "id": 224015,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 532,
+        "name": "Diablos Rojos del Mexico",
+        "link": "/api/v1/teams/532"
+      },
+      "date": "2015-05-02",
+      "effectiveDate": "2015-05-02",
+      "resolutionDate": "2015-05-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Diablos Rojos del Mexico placed RHP Manny Acosta on the 60-day disabled list."
+    },
+    {
+      "id": 258832,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 532,
+        "name": "Diablos Rojos del Mexico",
+        "link": "/api/v1/teams/532"
+      },
+      "date": "2016-03-31",
+      "effectiveDate": "2016-03-31",
+      "resolutionDate": "2016-03-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Diablos Rojos del Mexico activated RHP Manny Acosta from the 60-day disabled list."
+    },
+    {
+      "id": 280846,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 532,
+        "name": "Diablos Rojos del Mexico",
+        "link": "/api/v1/teams/532"
+      },
+      "date": "2016-07-27",
+      "effectiveDate": "2016-07-27",
+      "resolutionDate": "2016-07-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Diablos Rojos del Mexico placed RHP Manny Acosta on the reserve list."
+    },
+    {
+      "id": 280876,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 532,
+        "name": "Diablos Rojos del Mexico",
+        "link": "/api/v1/teams/532"
+      },
+      "date": "2016-07-27",
+      "effectiveDate": "2016-07-27",
+      "resolutionDate": "2016-07-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Manny Acosta assigned to Diablos Rojos del Mexico."
+    },
+    {
+      "id": 287858,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 532,
+        "name": "Diablos Rojos del Mexico",
+        "link": "/api/v1/teams/532"
+      },
+      "date": "2016-09-23",
+      "effectiveDate": "2016-09-23",
+      "resolutionDate": "2016-09-23",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Diablos Rojos del Mexico released RHP Manny Acosta."
+    },
+    {
+      "id": 333637,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 680,
+        "name": "Yaquis de Obregon",
+        "link": "/api/v1/teams/680"
+      },
+      "date": "2017-10-04",
+      "effectiveDate": "2017-10-04",
+      "resolutionDate": "2017-10-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Manny Acosta assigned to Yaquis de Obregon."
+    },
+    {
+      "id": 338156,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 579,
+        "name": "Guerreros de Oaxaca",
+        "link": "/api/v1/teams/579"
+      },
+      "date": "2017-12-04",
+      "effectiveDate": "2017-12-04",
+      "resolutionDate": "2017-12-04",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Guerreros de Oaxaca signed free agent RHP Manny Acosta."
+    },
+    {
+      "id": 341254,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 579,
+        "name": "Guerreros de Oaxaca",
+        "link": "/api/v1/teams/579"
+      },
+      "date": "2018-02-07",
+      "effectiveDate": "2018-02-07",
+      "resolutionDate": "2018-02-07",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Guerreros de Oaxaca released RHP Manny Acosta."
+    },
+    {
+      "id": 342082,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 562,
+        "name": "Sultanes de Monterrey",
+        "link": "/api/v1/teams/562"
+      },
+      "date": "2018-02-20",
+      "effectiveDate": "2018-02-20",
+      "resolutionDate": "2018-02-20",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Sultanes de Monterrey signed free agent RHP Manny Acosta."
+    },
+    {
+      "id": 344732,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 562,
+        "name": "Sultanes de Monterrey",
+        "link": "/api/v1/teams/562"
+      },
+      "date": "2018-03-22",
+      "effectiveDate": "2018-03-22",
+      "resolutionDate": "2018-03-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sultanes de Monterrey activated RHP Manny Acosta."
+    },
+    {
+      "id": 374182,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 562,
+        "name": "Sultanes de Monterrey",
+        "link": "/api/v1/teams/562"
+      },
+      "date": "2018-08-10",
+      "effectiveDate": "2018-08-10",
+      "resolutionDate": "2018-08-10",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Sultanes de Monterrey released RHP Manny Acosta."
+    },
+    {
+      "id": 375051,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 532,
+        "name": "Diablos Rojos del Mexico",
+        "link": "/api/v1/teams/532"
+      },
+      "date": "2018-08-16",
+      "effectiveDate": "2018-08-16",
+      "resolutionDate": "2018-08-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Diablos Rojos del Mexico signed free agent RHP Manny Acosta."
+    },
+    {
+      "id": 394826,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 434,
+        "name": "Bravos de Leon",
+        "link": "/api/v1/teams/434"
+      },
+      "date": "2019-04-03",
+      "effectiveDate": "2019-04-03",
+      "resolutionDate": "2019-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Manny Acosta assigned to Bravos de Leon."
+    },
+    {
+      "id": 432448,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 696,
+        "name": "Navegantes del Magallanes",
+        "link": "/api/v1/teams/696"
+      },
+      "date": "2019-11-05",
+      "effectiveDate": "2019-11-05",
+      "resolutionDate": "2019-11-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Manny Acosta assigned to Navegantes del Magallanes."
+    },
+    {
+      "id": 440448,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 890,
+        "name": "Panama",
+        "link": "/api/v1/teams/890"
+      },
+      "date": "2020-03-07",
+      "effectiveDate": "2020-03-07",
+      "resolutionDate": "2020-03-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Manny Acosta and  assigned to Panama."
+    },
+    {
+      "id": 473260,
+      "person": {
+        "id": 407924,
+        "fullName": "Manny Acosta",
+        "link": "/api/v1/people/407924",
+        "nameSlug": "manny-acosta-407924"
+      },
+      "toTeam": {
+        "id": 434,
+        "name": "Bravos de Leon",
+        "link": "/api/v1/teams/434"
+      },
+      "date": "2021-03-09",
+      "effectiveDate": "2021-03-09",
+      "resolutionDate": "2021-03-09",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Bravos de Leon released P Manny Acosta."
+    }
+  ]
+}

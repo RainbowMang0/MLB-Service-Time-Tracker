@@ -1,0 +1,115 @@
+{
+  "player_id": 276545,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:255fd880eb73eeb2a4867269e550a4c6e19bff9fddc53aac3d03bd3d63212f07",
+  "transactions": [
+    {
+      "id": 134291,
+      "person": {
+        "id": 276545,
+        "fullName": "Michael Young",
+        "link": "/api/v1/people/276545",
+        "nameSlug": "michael-young-276545"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2012-08-27",
+      "effectiveDate": "2012-08-27",
+      "resolutionDate": "2012-08-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Michael Young roster status changed by Texas Rangers."
+    },
+    {
+      "id": 141143,
+      "person": {
+        "id": 276545,
+        "fullName": "Michael Young",
+        "link": "/api/v1/people/276545",
+        "nameSlug": "michael-young-276545"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2012-12-09",
+      "effectiveDate": "2012-12-09",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Texas Rangers traded 3B Michael Young to Philadelphia Phillies for RHP Josh Lindblom and RHP Lisalverto Bonilla."
+    },
+    {
+      "id": 154428,
+      "person": {
+        "id": 276545,
+        "fullName": "Michael Young",
+        "link": "/api/v1/people/276545",
+        "nameSlug": "michael-young-276545"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2013-05-29",
+      "effectiveDate": "2013-05-29",
+      "resolutionDate": "2013-05-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies placed 3B Michael Young on the bereavement list."
+    },
+    {
+      "id": 155297,
+      "person": {
+        "id": 276545,
+        "fullName": "Michael Young",
+        "link": "/api/v1/people/276545",
+        "nameSlug": "michael-young-276545"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2013-06-03",
+      "effectiveDate": "2013-06-03",
+      "resolutionDate": "2013-06-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Michael Young roster status changed by Philadelphia Phillies."
+    },
+    {
+      "id": 170155,
+      "person": {
+        "id": 276545,
+        "fullName": "Michael Young",
+        "link": "/api/v1/people/276545",
+        "nameSlug": "michael-young-276545"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2013-09-01",
+      "effectiveDate": "2013-09-01",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Philadelphia Phillies traded 3B Michael Young to Los Angeles Dodgers for LHP Rob Rasmussen."
+    }
+  ]
+}

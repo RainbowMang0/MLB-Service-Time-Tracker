@@ -1,0 +1,67 @@
+{
+  "player_id": 150144,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:8ed9f84cdba00d087b4646aea8148f74343f32d0497fdca8b0259d36a09a3d74",
+  "transactions": [
+    {
+      "id": 34738,
+      "person": {
+        "id": 150144,
+        "fullName": "Bobby Seay",
+        "link": "/api/v1/people/150144",
+        "nameSlug": "bobby-seay-150144"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2010-03-27",
+      "effectiveDate": "2010-03-26",
+      "resolutionDate": "2010-03-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers placed LHP Bobby Seay on the 15-day disabled list retroactive to March 26, 2010. Left shoulder strain"
+    },
+    {
+      "id": 44598,
+      "person": {
+        "id": 150144,
+        "fullName": "Bobby Seay",
+        "link": "/api/v1/people/150144",
+        "nameSlug": "bobby-seay-150144"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2010-05-17",
+      "effectiveDate": "2010-05-17",
+      "resolutionDate": "2010-05-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers transferred LHP Bobby Seay from the 15-day disabled list to the 60-day disabled list."
+    },
+    {
+      "id": 73335,
+      "person": {
+        "id": 150144,
+        "fullName": "Bobby Seay",
+        "link": "/api/v1/people/150144",
+        "nameSlug": "bobby-seay-150144"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2010-11-07",
+      "effectiveDate": "2010-11-07",
+      "resolutionDate": "2010-11-07",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Bobby Seay elected free agency."
+    }
+  ]
+}

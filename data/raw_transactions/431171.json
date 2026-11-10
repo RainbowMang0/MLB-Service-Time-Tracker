@@ -1,0 +1,639 @@
+{
+  "player_id": 431171,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:f006f49da25b47a1be8f181be9a7e73d505146febba177c053208e56650ce46d",
+  "transactions": [
+    {
+      "id": 107510,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2011-12-13",
+      "effectiveDate": "2011-12-13",
+      "resolutionDate": "2011-12-13",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Milwaukee Brewers traded 1B Casey McGehee to Pittsburgh Pirates for RHP Jose Veras."
+    },
+    {
+      "id": 131427,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2012-07-31",
+      "effectiveDate": "2012-07-31",
+      "resolutionDate": "2012-07-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "New York Yankees traded RHP Chad Qualls to Pittsburgh Pirates for 1B Casey McGehee."
+    },
+    {
+      "id": 131559,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2012-08-01",
+      "effectiveDate": "2012-08-01",
+      "resolutionDate": "2012-08-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Casey McGehee roster status changed by New York Yankees."
+    },
+    {
+      "id": 134397,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2012-08-28",
+      "effectiveDate": "2012-08-28",
+      "resolutionDate": "2012-08-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned Casey McGehee to Charleston RiverDogs."
+    },
+    {
+      "id": 135329,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "fromTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2012-09-04",
+      "effectiveDate": "2012-09-05",
+      "resolutionDate": "2012-09-04",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled Casey McGehee from Charleston RiverDogs."
+    },
+    {
+      "id": 137831,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2012-10-19",
+      "effectiveDate": "2012-10-19",
+      "resolutionDate": "2012-10-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees activated 1B Casey McGehee."
+    },
+    {
+      "id": 138064,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2012-10-30",
+      "effectiveDate": "2012-10-30",
+      "resolutionDate": "2012-10-30",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "1B Casey McGehee elected free agency."
+    },
+    {
+      "id": 177073,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2013-12-18",
+      "effectiveDate": "2013-12-18",
+      "resolutionDate": "2013-12-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Miami Marlins signed free agent 3B Casey McGehee."
+    },
+    {
+      "id": 213360,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2014-12-20",
+      "effectiveDate": "2014-12-20",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Miami Marlins traded 3B Casey McGehee to San Francisco Giants for RHP Kendry Flores and RHP Luis Castillo."
+    },
+    {
+      "id": 226594,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2015-05-24",
+      "effectiveDate": "2015-05-26",
+      "resolutionDate": "2015-05-24",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "San Francisco Giants designated Casey McGehee for assignment."
+    },
+    {
+      "id": 226798,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2015-05-26",
+      "effectiveDate": "2015-05-26",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned 3B Casey McGehee to Sacramento River Cats."
+    },
+    {
+      "id": 228952,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2015-06-05",
+      "effectiveDate": "2015-06-05",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Francisco Giants recalled 3B Casey McGehee from Sacramento River Cats."
+    },
+    {
+      "id": 235328,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2015-06-30",
+      "effectiveDate": "2015-06-30",
+      "resolutionDate": "2015-06-30",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "San Francisco Giants designated 3B Casey McGehee for assignment."
+    },
+    {
+      "id": 236965,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2015-07-08",
+      "effectiveDate": "2015-07-08",
+      "resolutionDate": "2015-07-08",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "San Francisco Giants released 3B Casey McGehee."
+    },
+    {
+      "id": 237228,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2015-07-10",
+      "effectiveDate": "2015-07-10",
+      "resolutionDate": "2015-07-10",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Miami Marlins signed free agent 3B Casey McGehee."
+    },
+    {
+      "id": 248620,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2015-11-02",
+      "effectiveDate": "2015-11-02",
+      "resolutionDate": "2015-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "3B Casey McGehee elected free agency."
+    },
+    {
+      "id": 255346,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2016-02-23",
+      "effectiveDate": "2016-02-23",
+      "resolutionDate": "2016-02-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Casey McGehee assigned to Toledo Mud Hens."
+    },
+    {
+      "id": 255345,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2016-02-23",
+      "effectiveDate": "2016-02-23",
+      "resolutionDate": "2016-02-23",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent 3B Casey McGehee to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 258330,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2016-03-28",
+      "effectiveDate": "2016-03-28",
+      "resolutionDate": "2016-03-28",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Detroit Tigers released 3B Casey McGehee."
+    },
+    {
+      "id": 258745,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2016-03-30",
+      "effectiveDate": "2016-03-30",
+      "resolutionDate": "2016-03-30",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent 3B Casey McGehee to a minor league contract."
+    },
+    {
+      "id": 260801,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2016-04-06",
+      "effectiveDate": "2016-04-06",
+      "resolutionDate": "2016-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Casey McGehee assigned to Toledo Mud Hens."
+    },
+    {
+      "id": 272640,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2016-06-18",
+      "effectiveDate": "2016-06-18",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Detroit Tigers selected the contract of 3B Casey McGehee from Toledo Mud Hens."
+    },
+    {
+      "id": 273112,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2016-06-18",
+      "effectiveDate": "2016-06-18",
+      "resolutionDate": "2016-06-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Casey McGehee assigned to Detroit Tigers."
+    },
+    {
+      "id": 273102,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2016-06-20",
+      "effectiveDate": "2016-06-20",
+      "resolutionDate": "2016-06-20",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Detroit Tigers designated 3B Casey McGehee for assignment."
+    },
+    {
+      "id": 273552,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2016-06-21",
+      "effectiveDate": "2016-06-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Detroit Tigers optioned 3B Casey McGehee to Toledo Mud Hens."
+    },
+    {
+      "id": 282896,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2016-08-07",
+      "effectiveDate": "2016-08-30",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled Casey McGehee from Toledo Mud Hens."
+    },
+    {
+      "id": 285744,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2016-08-30",
+      "effectiveDate": "2016-08-30",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Detroit Tigers optioned 3B Casey McGehee to Toledo Mud Hens."
+    },
+    {
+      "id": 286808,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2016-09-06",
+      "effectiveDate": "2016-09-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled 3B Casey McGehee from Toledo Mud Hens."
+    },
+    {
+      "id": 292161,
+      "person": {
+        "id": 431171,
+        "fullName": "Casey McGehee",
+        "link": "/api/v1/people/431171",
+        "nameSlug": "casey-mcgehee-431171"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2016-11-03",
+      "effectiveDate": "2016-11-03",
+      "resolutionDate": "2016-11-03",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "3B Casey McGehee elected free agency."
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "player_id": 150439,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:f2d256c8c47e7381d2aa936b60baf14ff3046ba18ba35a01ad62a3c71c011547",
+  "transactions": [
+    {
+      "id": 31652,
+      "person": {
+        "id": 150439,
+        "fullName": "Gary Matthews Jr.",
+        "link": "/api/v1/people/150439",
+        "nameSlug": "gary-matthews-jr-150439"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2010-01-22",
+      "effectiveDate": "2010-01-22",
+      "resolutionDate": "2010-01-22",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Los Angeles Angels traded cash and CF Gary Matthews to New York Mets for RHP Brian Stokes."
+    },
+    {
+      "id": 49735,
+      "person": {
+        "id": 150439,
+        "fullName": "Gary Matthews Jr.",
+        "link": "/api/v1/people/150439",
+        "nameSlug": "gary-matthews-jr-150439"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2010-06-04",
+      "effectiveDate": "2010-06-04",
+      "resolutionDate": "2010-06-04",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Mets designated CF Gary Matthews for assignment."
+    },
+    {
+      "id": 57341,
+      "person": {
+        "id": 150439,
+        "fullName": "Gary Matthews Jr.",
+        "link": "/api/v1/people/150439",
+        "nameSlug": "gary-matthews-jr-150439"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2010-06-24",
+      "effectiveDate": "2010-06-24",
+      "resolutionDate": "2010-06-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cincinnati Reds signed free agent OF Gary Matthews to a minor league contract."
+    },
+    {
+      "id": 57342,
+      "person": {
+        "id": 150439,
+        "fullName": "Gary Matthews Jr.",
+        "link": "/api/v1/people/150439",
+        "nameSlug": "gary-matthews-jr-150439"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2010-06-24",
+      "effectiveDate": "2010-06-24",
+      "resolutionDate": "2010-06-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Gary Matthews assigned to Louisville Bats from Cincinnati Reds."
+    },
+    {
+      "id": 63955,
+      "person": {
+        "id": 150439,
+        "fullName": "Gary Matthews Jr.",
+        "link": "/api/v1/people/150439",
+        "nameSlug": "gary-matthews-jr-150439"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2010-07-23",
+      "effectiveDate": "2010-07-23",
+      "resolutionDate": "2010-07-23",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Louisville Bats released OF Gary Matthews."
+    }
+  ]
+}

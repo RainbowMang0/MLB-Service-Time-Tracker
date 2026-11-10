@@ -1,0 +1,645 @@
+{
+  "player_id": 453531,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:6706814409bb397946fea443561144b40ef6520334238a1426e1a854f1cf63ed",
+  "transactions": [
+    {
+      "id": 142663,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2008-07-11",
+      "effectiveDate": "2008-07-11",
+      "resolutionDate": "2008-07-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tacoma Rainiers placed C Rob Johnson on the temporarily inactive list."
+    },
+    {
+      "id": 142664,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2008-09-02",
+      "effectiveDate": "2008-09-02",
+      "resolutionDate": "2008-09-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "C Rob Johnson roster status changed by Tacoma Rainiers."
+    },
+    {
+      "id": 9379,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2009-06-13",
+      "effectiveDate": "2009-06-13",
+      "resolutionDate": "2009-06-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners placed C Rob Johnson on the bereavement list."
+    },
+    {
+      "id": 11073,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2009-06-19",
+      "effectiveDate": "2009-06-19",
+      "resolutionDate": "2009-06-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rob Johnson roster status changed by Seattle Mariners."
+    },
+    {
+      "id": 65354,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2010-08-03",
+      "effectiveDate": "2010-08-03",
+      "resolutionDate": "2010-08-03",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned C Rob Johnson to Tacoma Rainiers."
+    },
+    {
+      "id": 69704,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2010-09-04",
+      "effectiveDate": "2010-09-04",
+      "resolutionDate": "2010-09-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rob Johnson roster status changed by Tacoma Rainiers."
+    },
+    {
+      "id": 72073,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2010-10-13",
+      "effectiveDate": "2010-10-13",
+      "resolutionDate": "2010-10-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners activated C Rob Johnson."
+    },
+    {
+      "id": 75471,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2010-12-13",
+      "effectiveDate": "2010-12-13",
+      "resolutionDate": "2010-12-13",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Seattle Mariners designated Rob Johnson for assignment."
+    },
+    {
+      "id": 75701,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2010-12-21",
+      "effectiveDate": "2010-12-21",
+      "resolutionDate": "2010-12-21",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Seattle Mariners traded C Rob Johnson to San Diego Padres."
+    },
+    {
+      "id": 105192,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2011-10-25",
+      "effectiveDate": "2011-10-25",
+      "resolutionDate": "2011-10-25",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Rob Johnson elected free agency."
+    },
+    {
+      "id": 107824,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2011-12-22",
+      "effectiveDate": "2011-12-22",
+      "resolutionDate": "2011-12-22",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Mets signed free agent C Rob Johnson to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 114162,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2012-04-05",
+      "effectiveDate": "2012-04-05",
+      "resolutionDate": "2012-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Rob Johnson assigned to Buffalo Bisons."
+    },
+    {
+      "id": 116329,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2012-04-25",
+      "effectiveDate": "2012-04-25",
+      "resolutionDate": "2012-04-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Buffalo Bisons placed C Rob Johnson on the 7-day disabled list."
+    },
+    {
+      "id": 116833,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2012-05-02",
+      "effectiveDate": "2012-05-02",
+      "resolutionDate": "2012-05-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rob Johnson roster status changed by Buffalo Bisons."
+    },
+    {
+      "id": 117420,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2012-05-08",
+      "effectiveDate": "2012-05-08",
+      "resolutionDate": "2012-05-08",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Mets selected the contract of Rob Johnson from Buffalo Bisons."
+    },
+    {
+      "id": 120518,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2012-06-01",
+      "effectiveDate": "2012-06-02",
+      "resolutionDate": "2012-06-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Mets optioned Rob Johnson to Buffalo Bisons."
+    },
+    {
+      "id": 130767,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2012-07-26",
+      "effectiveDate": "2012-07-27",
+      "resolutionDate": "2012-07-26",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Mets recalled Rob Johnson from Buffalo Bisons."
+    },
+    {
+      "id": 133954,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2012-08-15",
+      "effectiveDate": "2012-08-15",
+      "resolutionDate": "2012-08-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets placed C Rob Johnson on the 15-day disabled list. Torn ligament in his left thumb."
+    },
+    {
+      "id": 133144,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2012-08-15",
+      "effectiveDate": "2012-08-15",
+      "resolutionDate": "2012-08-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Mets optioned Rob Johnson to Buffalo Bisons."
+    },
+    {
+      "id": 135225,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2012-09-04",
+      "effectiveDate": "2012-09-04",
+      "resolutionDate": "2012-09-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rob Johnson roster status changed by New York Mets."
+    },
+    {
+      "id": 137585,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2012-10-16",
+      "effectiveDate": "2012-10-16",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "New York Mets sent Rob Johnson outright to Las Vegas 51s."
+    },
+    {
+      "id": 137616,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2012-10-17",
+      "effectiveDate": "2012-10-17",
+      "resolutionDate": "2012-10-17",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Rob Johnson elected free agency."
+    },
+    {
+      "id": 139628,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2012-11-13",
+      "effectiveDate": "2012-11-13",
+      "resolutionDate": "2012-11-13",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "St. Louis Cardinals signed free agent C Rob Johnson to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 152573,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2013-05-12",
+      "effectiveDate": "2013-05-11",
+      "resolutionDate": "2013-05-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Memphis Redbirds placed C Rob Johnson on the 7-day disabled list retroactive to May 11, 2013."
+    },
+    {
+      "id": 153411,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2013-05-19",
+      "effectiveDate": "2013-05-19",
+      "resolutionDate": "2013-05-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rob Johnson roster status changed by Memphis Redbirds."
+    },
+    {
+      "id": 163514,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2013-07-09",
+      "effectiveDate": "2013-07-09",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "St. Louis Cardinals selected the contract of C Rob Johnson from Memphis Redbirds."
+    },
+    {
+      "id": 171753,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2013-10-03",
+      "effectiveDate": "2013-10-03",
+      "resolutionDate": "2013-10-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals reassigned C Rob Johnson to the minor leagues."
+    },
+    {
+      "id": 174016,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2013-11-01",
+      "effectiveDate": "2013-11-01",
+      "resolutionDate": "2013-11-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals activated C Rob Johnson."
+    },
+    {
+      "id": 174156,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2013-11-04",
+      "effectiveDate": "2013-11-04",
+      "resolutionDate": "2013-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Rob Johnson elected free agency."
+    },
+    {
+      "id": 178832,
+      "person": {
+        "id": 453531,
+        "fullName": "Rob Johnson",
+        "link": "/api/v1/people/453531",
+        "nameSlug": "rob-johnson-453531"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2014-02-10",
+      "effectiveDate": "2014-02-10",
+      "resolutionDate": "2014-02-10",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Diego Padres signed free agent RHP Rob Johnson to a minor league contract."
+    }
+  ]
+}

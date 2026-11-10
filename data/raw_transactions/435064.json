@@ -1,0 +1,1596 @@
+{
+  "player_id": 435064,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:727b760ecff822476feb715b88c7413a46b193c1cd5c830860088efb394dcb86",
+  "transactions": [
+    {
+      "id": 2106,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2009-04-15",
+      "effectiveDate": "2009-04-15",
+      "resolutionDate": "2009-04-15",
+      "typeCode": "RES",
+      "typeDesc": "Reserved",
+      "description": "Salt Lake Bees placed C Bobby Wilson on the reserve list."
+    },
+    {
+      "id": 2491,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2009-04-19",
+      "effectiveDate": "2009-04-19",
+      "resolutionDate": "2009-04-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Bobby Wilson roster status changed by Salt Lake Bees."
+    },
+    {
+      "id": 15869,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2009-05-12",
+      "effectiveDate": "2009-05-12",
+      "resolutionDate": "2009-05-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Angels activated C Bobby Wilson."
+    },
+    {
+      "id": 4569,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2009-05-12",
+      "effectiveDate": "2009-05-16",
+      "resolutionDate": "2009-05-12",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled C Bobby Wilson from Salt Lake Bees."
+    },
+    {
+      "id": 5180,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2009-05-16",
+      "effectiveDate": "2009-05-16",
+      "resolutionDate": "2009-05-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned Bobby Wilson to Salt Lake Bees."
+    },
+    {
+      "id": 15857,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2009-07-10",
+      "effectiveDate": "2009-07-20",
+      "resolutionDate": "2009-07-10",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled Bobby Wilson from Salt Lake Bees."
+    },
+    {
+      "id": 17208,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2009-07-20",
+      "effectiveDate": "2009-07-21",
+      "resolutionDate": "2009-07-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned Bobby Wilson to Salt Lake Bees."
+    },
+    {
+      "id": 19215,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2009-07-31",
+      "effectiveDate": "2009-07-31",
+      "resolutionDate": "2009-07-31",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled Bobby Wilson from Salt Lake Bees."
+    },
+    {
+      "id": 19857,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2009-08-04",
+      "effectiveDate": "2009-08-04",
+      "resolutionDate": "2009-08-04",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned Bobby Wilson to Salt Lake Bees."
+    },
+    {
+      "id": 23398,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2009-09-01",
+      "effectiveDate": "2009-09-01",
+      "resolutionDate": "2009-09-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled Bobby Wilson from Salt Lake Bees."
+    },
+    {
+      "id": 28200,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 691,
+        "name": "Lobos de Arecibo",
+        "link": "/api/v1/teams/691"
+      },
+      "date": "2009-11-11",
+      "effectiveDate": "2009-11-11",
+      "resolutionDate": "2009-11-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Bobby Wilson assigned to Lobos de Arecibo."
+    },
+    {
+      "id": 40309,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2010-04-24",
+      "effectiveDate": "2010-04-24",
+      "resolutionDate": "2010-04-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Angels placed C Bobby Wilson on the 15-day disabled list. Concussion and strained left ankle"
+    },
+    {
+      "id": 43188,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2010-05-11",
+      "effectiveDate": "2010-05-11",
+      "resolutionDate": "2010-05-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Bobby Wilson assigned to Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 43739,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2010-05-13",
+      "effectiveDate": "2010-05-13",
+      "resolutionDate": "2010-05-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Rancho Cucamonga Quakes sent C Bobby Wilson on a rehab assignment to Salt Lake Bees."
+    },
+    {
+      "id": 44421,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2010-05-17",
+      "effectiveDate": "2010-05-17",
+      "resolutionDate": "2010-05-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Angels activated C Bobby Wilson from the 15-day disabled list."
+    },
+    {
+      "id": 72486,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 4087,
+        "name": "Senadores de San Juan",
+        "link": "/api/v1/teams/4087"
+      },
+      "date": "2010-10-22",
+      "effectiveDate": "2010-10-22",
+      "resolutionDate": "2010-10-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Bobby Wilson assigned to Senadores de San Juan."
+    },
+    {
+      "id": 121645,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2012-06-05",
+      "effectiveDate": "2012-06-05",
+      "resolutionDate": "2012-06-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Angels placed C Bobby Wilson on the 7-day disabled list. Concussion."
+    },
+    {
+      "id": 123200,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 401,
+        "name": "Inland Empire 66ers",
+        "link": "/api/v1/teams/401"
+      },
+      "date": "2012-06-13",
+      "effectiveDate": "2012-06-13",
+      "resolutionDate": "2012-06-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Bobby Wilson assigned to Inland Empire 66ers."
+    },
+    {
+      "id": 124000,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 401,
+        "name": "Inland Empire 66ers",
+        "link": "/api/v1/teams/401"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2012-06-16",
+      "effectiveDate": "2012-06-16",
+      "resolutionDate": "2012-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Inland Empire 66ers sent C Bobby Wilson on a rehab assignment to Salt Lake Bees."
+    },
+    {
+      "id": 125200,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2012-06-18",
+      "effectiveDate": "2012-06-18",
+      "resolutionDate": "2012-06-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Bobby Wilson roster status changed by Los Angeles Angels."
+    },
+    {
+      "id": 137838,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2012-10-22",
+      "effectiveDate": "2012-10-22",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Toronto Blue Jays claimed C Bobby Wilson off waivers from Los Angeles Angels."
+    },
+    {
+      "id": 140727,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2012-11-30",
+      "effectiveDate": "2012-11-30",
+      "resolutionDate": "2012-11-30",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Bobby Wilson elected free agency."
+    },
+    {
+      "id": 142425,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2013-01-10",
+      "effectiveDate": "2013-01-10",
+      "resolutionDate": "2013-01-10",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Yankees signed free agent C Bobby Wilson to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 174635,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2013-11-04",
+      "effectiveDate": "2013-11-04",
+      "resolutionDate": "2013-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Bobby Wilson elected free agency."
+    },
+    {
+      "id": 175573,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2013-11-24",
+      "effectiveDate": "2013-11-24",
+      "resolutionDate": "2013-11-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Arizona Diamondbacks signed free agent C Bobby Wilson to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 175620,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 417,
+        "name": "Mobile BayBears",
+        "link": "/api/v1/teams/417"
+      },
+      "date": "2013-11-24",
+      "effectiveDate": "2013-11-24",
+      "resolutionDate": "2013-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Bobby Wilson assigned to Mobile BayBears."
+    },
+    {
+      "id": 184648,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2014-04-02",
+      "effectiveDate": "2014-04-02",
+      "resolutionDate": "2014-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Bobby Wilson assigned to Reno Aces."
+    },
+    {
+      "id": 207528,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2014-09-15",
+      "effectiveDate": "2014-09-15",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Arizona Diamondbacks selected the contract of C Bobby Wilson from Reno Aces."
+    },
+    {
+      "id": 208874,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2014-10-07",
+      "effectiveDate": "2014-10-07",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Arizona Diamondbacks sent C Bobby Wilson outright to Reno Aces."
+    },
+    {
+      "id": 209130,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2014-10-09",
+      "effectiveDate": "2014-10-09",
+      "resolutionDate": "2014-10-09",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Bobby Wilson elected free agency."
+    },
+    {
+      "id": 213008,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2014-12-12",
+      "effectiveDate": "2014-12-12",
+      "resolutionDate": "2014-12-12",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Tampa Bay Rays signed free agent C Bobby Wilson to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 219924,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2015-03-01",
+      "effectiveDate": "2015-03-01",
+      "resolutionDate": "2015-03-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Bobby Wilson assigned to Durham Bulls."
+    },
+    {
+      "id": 219922,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2015-04-05",
+      "effectiveDate": "2015-04-05",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Tampa Bay Rays selected the contract of C Bobby Wilson from Durham Bulls."
+    },
+    {
+      "id": 229915,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2015-06-12",
+      "effectiveDate": "2015-06-12",
+      "resolutionDate": "2015-06-12",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Tampa Bay Rays designated C Bobby Wilson for assignment."
+    },
+    {
+      "id": 230296,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2015-06-14",
+      "effectiveDate": "2015-06-14",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Tampa Bay Rays sent C Bobby Wilson outright to Durham Bulls."
+    },
+    {
+      "id": 239926,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2015-07-29",
+      "effectiveDate": "2015-07-29",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Tampa Bay Rays selected the contract of C Bobby Wilson from Durham Bulls."
+    },
+    {
+      "id": 240267,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2015-07-31",
+      "effectiveDate": "2015-07-31",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Texas Rangers claimed C Bobby Wilson off waivers from Tampa Bay Rays."
+    },
+    {
+      "id": 247078,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2015-10-08",
+      "effectiveDate": "2015-10-08",
+      "resolutionDate": "2015-10-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers reassigned C Bobby Wilson to the minor leagues."
+    },
+    {
+      "id": 247431,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2015-10-15",
+      "effectiveDate": "2015-10-15",
+      "resolutionDate": "2015-10-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated C Bobby Wilson."
+    },
+    {
+      "id": 249100,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2015-11-04",
+      "effectiveDate": "2015-11-04",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Texas Rangers sent C Bobby Wilson outright to Round Rock Express."
+    },
+    {
+      "id": 249528,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2015-11-05",
+      "effectiveDate": "2015-11-05",
+      "resolutionDate": "2015-11-05",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Bobby Wilson elected free agency."
+    },
+    {
+      "id": 251909,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2015-12-15",
+      "effectiveDate": "2015-12-15",
+      "resolutionDate": "2015-12-15",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent C Bobby Wilson to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 258593,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2016-03-29",
+      "effectiveDate": "2016-03-29",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Detroit Tigers traded C Bryan Holaday to Texas Rangers for C Bobby Wilson and RHP Myles Jaye."
+    },
+    {
+      "id": 258728,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2016-03-30",
+      "effectiveDate": "2016-03-30",
+      "resolutionDate": "2016-03-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Bobby Wilson assigned to Toledo Mud Hens."
+    },
+    {
+      "id": 262018,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2016-04-12",
+      "effectiveDate": "2016-04-12",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Detroit Tigers selected the contract of C Bobby Wilson from Toledo Mud Hens."
+    },
+    {
+      "id": 264302,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2016-05-03",
+      "effectiveDate": "2016-05-03",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Detroit Tigers traded C Bobby Wilson to Texas Rangers for LHP Chad Bell."
+    },
+    {
+      "id": 264443,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2016-05-03",
+      "effectiveDate": "2016-05-03",
+      "resolutionDate": "2016-05-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated C Bobby Wilson."
+    },
+    {
+      "id": 281610,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2016-08-01",
+      "effectiveDate": "2016-08-01",
+      "resolutionDate": "2016-08-01",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Texas Rangers designated C Bobby Wilson for assignment."
+    },
+    {
+      "id": 282227,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2016-08-04",
+      "effectiveDate": "2016-08-04",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Tampa Bay Rays claimed C Bobby Wilson off waivers from Texas Rangers."
+    },
+    {
+      "id": 282573,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2016-08-05",
+      "effectiveDate": "2016-08-05",
+      "resolutionDate": "2016-08-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays activated C Bobby Wilson."
+    },
+    {
+      "id": 293206,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2016-11-16",
+      "effectiveDate": "2016-11-16",
+      "resolutionDate": "2016-11-16",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Bobby Wilson elected free agency."
+    },
+    {
+      "id": 296595,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2017-01-03",
+      "effectiveDate": "2017-01-03",
+      "resolutionDate": "2017-01-03",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Dodgers signed free agent C Bobby Wilson to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 296596,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2017-01-12",
+      "effectiveDate": "2017-01-12",
+      "resolutionDate": "2017-01-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Bobby Wilson assigned to Oklahoma City Dodgers."
+    },
+    {
+      "id": 323793,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2017-07-10",
+      "effectiveDate": "2017-07-10",
+      "resolutionDate": "2017-07-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers placed C Bobby Wilson on the 7-day disabled list."
+    },
+    {
+      "id": 326293,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2017-07-27",
+      "effectiveDate": "2017-07-27",
+      "resolutionDate": "2017-07-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers activated C Bobby Wilson from the 7-day disabled list."
+    },
+    {
+      "id": 336679,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2017-11-06",
+      "effectiveDate": "2017-11-06",
+      "resolutionDate": "2017-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Bobby Wilson elected free agency."
+    },
+    {
+      "id": 337923,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2017-11-30",
+      "effectiveDate": "2017-11-30",
+      "resolutionDate": "2017-11-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Bobby Wilson assigned to Rochester Red Wings."
+    },
+    {
+      "id": 337922,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2017-11-30",
+      "effectiveDate": "2017-11-30",
+      "resolutionDate": "2017-11-30",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent C Bobby Wilson to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 352541,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2018-05-05",
+      "effectiveDate": "2018-05-05",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Minnesota Twins selected the contract of C Bobby Wilson from Rochester Red Wings."
+    },
+    {
+      "id": 376146,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2018-08-24",
+      "effectiveDate": "2018-08-24",
+      "resolutionDate": "2018-08-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Minnesota Twins placed C Bobby Wilson on the 10-day disabled list. Right ankle sprain."
+    },
+    {
+      "id": 377049,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2018-08-30",
+      "effectiveDate": "2018-08-30",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Minnesota Twins traded C Bobby Wilson to Chicago Cubs for C Chris Gimenez and Player To Be Named Later."
+    },
+    {
+      "id": 378900,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2018-09-28",
+      "effectiveDate": "2018-09-28",
+      "resolutionDate": "2018-09-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated C Bobby Wilson from the 10-day disabled list."
+    },
+    {
+      "id": 381656,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2018-10-29",
+      "effectiveDate": "2018-10-29",
+      "resolutionDate": "2018-10-29",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Bobby Wilson elected free agency."
+    },
+    {
+      "id": 384501,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2018-12-05",
+      "effectiveDate": "2018-12-05",
+      "resolutionDate": "2018-12-05",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent C Bobby Wilson to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 384502,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2018-12-05",
+      "effectiveDate": "2018-12-05",
+      "resolutionDate": "2018-12-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Bobby Wilson assigned to Toledo Mud Hens."
+    },
+    {
+      "id": 391716,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2019-03-22",
+      "effectiveDate": "2019-03-22",
+      "resolutionDate": "2019-03-22",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Detroit Tigers released C Bobby Wilson."
+    },
+    {
+      "id": 392668,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2019-03-25",
+      "effectiveDate": "2019-03-25",
+      "resolutionDate": "2019-03-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent C Bobby Wilson to a minor league contract."
+    },
+    {
+      "id": 392669,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2019-03-28",
+      "effectiveDate": "2019-03-28",
+      "resolutionDate": "2019-03-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Bobby Wilson assigned to Toledo Mud Hens."
+    },
+    {
+      "id": 398506,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2019-04-26",
+      "effectiveDate": "2019-04-26",
+      "resolutionDate": "2019-04-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens placed C Bobby Wilson on the 7-day injured list."
+    },
+    {
+      "id": 401446,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2019-05-15",
+      "effectiveDate": "2019-05-15",
+      "resolutionDate": "2019-05-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens activated C Bobby Wilson from the 7-day injured list."
+    },
+    {
+      "id": 409057,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2019-06-15",
+      "effectiveDate": "2019-06-15",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Detroit Tigers selected the contract of C Bobby Wilson from Toledo Mud Hens."
+    },
+    {
+      "id": 420753,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2019-07-30",
+      "effectiveDate": "2019-07-30",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Detroit Tigers sent C Bobby Wilson outright to Toledo Mud Hens."
+    },
+    {
+      "id": 425192,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2019-08-14",
+      "effectiveDate": "2019-08-14",
+      "resolutionDate": "2019-08-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens placed C Bobby Wilson on the 7-day injured list."
+    },
+    {
+      "id": 428835,
+      "person": {
+        "id": 435064,
+        "fullName": "Bobby Wilson",
+        "link": "/api/v1/people/435064",
+        "nameSlug": "bobby-wilson-435064"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2019-09-30",
+      "effectiveDate": "2019-09-30",
+      "resolutionDate": "2019-09-30",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Bobby Wilson elected free agency."
+    }
+  ]
+}

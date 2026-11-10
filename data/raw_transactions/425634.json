@@ -1,0 +1,582 @@
+{
+  "player_id": 425634,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:3e51ec7b6fb9d92a94a54a62cb89f4f8bc84379e2e18df95130e2e29e266a08a",
+  "transactions": [
+    {
+      "id": 657498,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2005-04-06",
+      "effectiveDate": "2005-04-06",
+      "resolutionDate": "2005-04-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens activated 1B Mike Hessman."
+    },
+    {
+      "id": 26235,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2009-10-14",
+      "effectiveDate": "2009-10-14",
+      "resolutionDate": "2009-10-14",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "3B Mike Hessman elected free agency."
+    },
+    {
+      "id": 30411,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2009-12-03",
+      "effectiveDate": "2009-12-03",
+      "resolutionDate": "2009-12-03",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Mets signed free agent 3B Mike Hessman to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 37955,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2010-04-09",
+      "effectiveDate": "2010-04-09",
+      "resolutionDate": "2010-04-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Mike Hessman assigned to Buffalo Bisons from New York Mets."
+    },
+    {
+      "id": 51848,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2010-06-14",
+      "effectiveDate": "2010-06-10",
+      "resolutionDate": "2010-06-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Buffalo Bisons placed 3B Mike Hessman on the 7-day disabled list retroactive to June 10, 2010."
+    },
+    {
+      "id": 63048,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "date": "2010-07-18",
+      "effectiveDate": "2010-07-18",
+      "resolutionDate": "2010-07-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent 3B Mike Hessman on a rehab assignment to GCL Mets."
+    },
+    {
+      "id": 63160,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2010-07-19",
+      "effectiveDate": "2010-07-19",
+      "resolutionDate": "2010-07-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mike Hessman roster status changed by Buffalo Bisons."
+    },
+    {
+      "id": 64266,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2010-07-26",
+      "effectiveDate": "2010-11-04",
+      "resolutionDate": "2010-07-26",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Mets selected the contract of Mike Hessman from Buffalo Bisons."
+    },
+    {
+      "id": 71710,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 694,
+        "name": "Caribes de Anzoategui",
+        "link": "/api/v1/teams/694"
+      },
+      "date": "2010-10-08",
+      "effectiveDate": "2010-10-08",
+      "resolutionDate": "2010-10-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Mike Hessman assigned to Caribes de Anzoategui."
+    },
+    {
+      "id": 73170,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2010-11-04",
+      "effectiveDate": "2010-11-05",
+      "resolutionDate": "2010-11-04",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "New York Mets sent Mike Hessman outright to Buffalo Bisons."
+    },
+    {
+      "id": 109103,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2012-01-30",
+      "effectiveDate": "2012-01-30",
+      "resolutionDate": "2012-01-30",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Houston Astros signed free agent 3B Mike Hessman to a minor league contract."
+    },
+    {
+      "id": 113127,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2012-04-03",
+      "effectiveDate": "2012-04-03",
+      "resolutionDate": "2012-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Mike Hessman assigned to Oklahoma City RedHawks."
+    },
+    {
+      "id": 138693,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2012-11-02",
+      "effectiveDate": "2012-11-02",
+      "resolutionDate": "2012-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "3B Mike Hessman elected free agency."
+    },
+    {
+      "id": 139894,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2012-11-12",
+      "effectiveDate": "2012-11-12",
+      "resolutionDate": "2012-11-12",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cincinnati Reds signed free agent 3B Mike Hessman to a minor league contract."
+    },
+    {
+      "id": 147364,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2013-04-01",
+      "effectiveDate": "2013-04-01",
+      "resolutionDate": "2013-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Hessman assigned to Louisville Bats."
+    },
+    {
+      "id": 174316,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2013-11-04",
+      "effectiveDate": "2013-11-04",
+      "resolutionDate": "2013-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "1B Mike Hessman elected free agency."
+    },
+    {
+      "id": 175606,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2013-11-25",
+      "effectiveDate": "2013-11-25",
+      "resolutionDate": "2013-11-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Mike Hessman assigned to Toledo Mud Hens."
+    },
+    {
+      "id": 175581,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2013-11-25",
+      "effectiveDate": "2013-11-25",
+      "resolutionDate": "2013-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent 1B Mike Hessman to a minor league contract."
+    },
+    {
+      "id": 198505,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 62,
+        "name": "International League All-Stars",
+        "link": "/api/v1/teams/62"
+      },
+      "date": "2014-07-15",
+      "effectiveDate": "2014-07-15",
+      "resolutionDate": "2014-07-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Mike Hessman assigned to International League All-Stars."
+    },
+    {
+      "id": 206217,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2014-08-27",
+      "effectiveDate": "2014-08-27",
+      "resolutionDate": "2014-08-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens placed 3B Mike Hessman on the temporarily inactive list."
+    },
+    {
+      "id": 206478,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2014-08-30",
+      "effectiveDate": "2014-08-30",
+      "resolutionDate": "2014-08-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens activated 3B Mike Hessman from the temporarily inactive list."
+    },
+    {
+      "id": 206477,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2014-08-30",
+      "effectiveDate": "2014-08-30",
+      "resolutionDate": "2014-08-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens activated 3B Mike Hessman from the temporarily inactive list."
+    },
+    {
+      "id": 208935,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 699,
+        "name": "Tigres de Aragua",
+        "link": "/api/v1/teams/699"
+      },
+      "date": "2014-10-08",
+      "effectiveDate": "2014-10-08",
+      "resolutionDate": "2014-10-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Mike Hessman assigned to Tigres de Aragua."
+    },
+    {
+      "id": 212067,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 678,
+        "name": "Tomateros de Culiacan",
+        "link": "/api/v1/teams/678"
+      },
+      "date": "2014-11-23",
+      "effectiveDate": "2014-11-23",
+      "resolutionDate": "2014-11-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Mike Hessman assigned to Tomateros de Culiacan."
+    },
+    {
+      "id": 212332,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 678,
+        "name": "Tomateros de Culiacan",
+        "link": "/api/v1/teams/678"
+      },
+      "date": "2014-11-30",
+      "effectiveDate": "2014-11-30",
+      "resolutionDate": "2014-11-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tomateros de Culiacan placed 3B Mike Hessman on the reserve list."
+    },
+    {
+      "id": 244521,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2015-08-24",
+      "effectiveDate": "2015-08-24",
+      "resolutionDate": "2015-08-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens placed 3B Mike Hessman on the 7-day disabled list."
+    },
+    {
+      "id": 244522,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2015-09-01",
+      "effectiveDate": "2015-09-01",
+      "resolutionDate": "2015-09-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens activated 3B Mike Hessman from the 7-day disabled list."
+    },
+    {
+      "id": 249503,
+      "person": {
+        "id": 425634,
+        "fullName": "Mike Hessman",
+        "link": "/api/v1/people/425634",
+        "nameSlug": "mike-hessman-425634"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2015-11-06",
+      "effectiveDate": "2015-11-06",
+      "resolutionDate": "2015-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "3B Mike Hessman elected free agency."
+    }
+  ]
+}

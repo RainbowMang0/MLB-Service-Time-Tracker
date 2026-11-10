@@ -1,0 +1,687 @@
+{
+  "player_id": 459345,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:743e5aed7c85d418ca3082dcfe0e8acf00fd8b646d802cb2f4a107b8a80b80a0",
+  "transactions": [
+    {
+      "id": 2993,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2009-04-25",
+      "effectiveDate": "2009-04-25",
+      "resolutionDate": "2009-04-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Eric Hacker assigned to Scranton/Wilkes-Barre Yankees from Trenton Thunder."
+    },
+    {
+      "id": 4410,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2009-05-09",
+      "effectiveDate": "2009-05-09",
+      "resolutionDate": "2009-05-09",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Yankees designated RHP Eric Hacker for assignment."
+    },
+    {
+      "id": 4407,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2009-05-10",
+      "effectiveDate": "2009-05-10",
+      "resolutionDate": "2009-05-10",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Scranton/Wilkes-Barre Yankees designated RHP Eric Hacker for assignment."
+    },
+    {
+      "id": 5201,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2009-05-16",
+      "effectiveDate": "2009-05-16",
+      "resolutionDate": "2009-05-16",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "New York Yankees Traded RHP Eric Hacker to Pittsburgh Pirates and Indianapolis Indians Traded RHP Romulo Sanchez to Scranton/Wilkes-Barre Yankees."
+    },
+    {
+      "id": 5432,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2009-05-16",
+      "effectiveDate": "2009-05-16",
+      "resolutionDate": "2009-05-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Pittsburgh Pirates optioned Eric Hacker to Indianapolis Indians."
+    },
+    {
+      "id": 5433,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2009-05-19",
+      "effectiveDate": "2009-05-19",
+      "resolutionDate": "2009-05-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Eric Hacker roster status changed by Indianapolis Indians."
+    },
+    {
+      "id": 24352,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2009-09-08",
+      "effectiveDate": "2009-09-08",
+      "resolutionDate": "2009-09-08",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Pittsburgh Pirates recalled Eric Hacker from Indianapolis Indians."
+    },
+    {
+      "id": 27813,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2009-11-06",
+      "effectiveDate": "2009-11-06",
+      "resolutionDate": "2009-11-06",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Pittsburgh Pirates sent RHP Eric Hacker outright to Indianapolis Indians."
+    },
+    {
+      "id": 28711,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2009-11-09",
+      "effectiveDate": "2009-11-09",
+      "resolutionDate": "2009-11-09",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Eric Hacker elected free agency."
+    },
+    {
+      "id": 31592,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2010-01-21",
+      "effectiveDate": "2010-01-21",
+      "resolutionDate": "2010-01-21",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Francisco Giants signed free agent RHP Eric Hacker to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 36519,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2010-04-05",
+      "effectiveDate": "2010-04-05",
+      "resolutionDate": "2010-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Eric Hacker assigned to Fresno Grizzlies from San Francisco Giants."
+    },
+    {
+      "id": 39138,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "fromTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "toTeam": {
+        "id": 3270,
+        "name": "Giants Alternate Training Site",
+        "link": "/api/v1/teams/3270"
+      },
+      "date": "2010-04-16",
+      "effectiveDate": "2010-04-16",
+      "resolutionDate": "2010-04-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Eric Hacker assigned to Giants Extended Spring Training from Fresno Grizzlies."
+    },
+    {
+      "id": 39717,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "toTeam": {
+        "id": 3270,
+        "name": "Giants Alternate Training Site",
+        "link": "/api/v1/teams/3270"
+      },
+      "date": "2010-04-20",
+      "effectiveDate": "2010-04-20",
+      "resolutionDate": "2010-04-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Giants Extended Spring Training activated RHP Eric Hacker."
+    },
+    {
+      "id": 73555,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2010-11-06",
+      "effectiveDate": "2010-11-06",
+      "resolutionDate": "2010-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Eric Hacker elected free agency."
+    },
+    {
+      "id": 75075,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2010-11-09",
+      "effectiveDate": "2011-03-14",
+      "resolutionDate": "2010-11-09",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent Eric Hacker."
+    },
+    {
+      "id": 78887,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2011-03-14",
+      "effectiveDate": "2011-03-14",
+      "resolutionDate": "2011-03-14",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Minnesota Twins optioned Eric Hacker to Rochester Red Wings."
+    },
+    {
+      "id": 83560,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "fromTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2011-04-19",
+      "effectiveDate": "2011-04-19",
+      "resolutionDate": "2011-04-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Minnesota Twins recalled Eric Hacker from Rochester Red Wings."
+    },
+    {
+      "id": 84333,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2011-04-28",
+      "effectiveDate": "2011-04-28",
+      "resolutionDate": "2011-04-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Minnesota Twins optioned RHP Eric Hacker to Rochester Red Wings."
+    },
+    {
+      "id": 97102,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2011-06-18",
+      "effectiveDate": "2011-06-19",
+      "resolutionDate": "2011-07-17",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Minnesota Twins sent Eric Hacker outright to Rochester Red Wings."
+    },
+    {
+      "id": 104046,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2011-10-04",
+      "effectiveDate": "2011-10-04",
+      "resolutionDate": "2011-10-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Eric Hacker elected free agency."
+    },
+    {
+      "id": 108659,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2011-12-28",
+      "effectiveDate": "2011-12-28",
+      "resolutionDate": "2011-12-28",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Francisco Giants signed free agent RHP Eric Hacker to a minor league contract."
+    },
+    {
+      "id": 114497,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2012-04-05",
+      "effectiveDate": "2012-04-05",
+      "resolutionDate": "2012-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Eric Hacker assigned to Fresno Grizzlies."
+    },
+    {
+      "id": 116359,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "fromTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2012-04-27",
+      "effectiveDate": "2012-04-28",
+      "resolutionDate": "2012-04-27",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "San Francisco Giants selected the contract of Eric Hacker from Fresno Grizzlies."
+    },
+    {
+      "id": 116400,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2012-04-28",
+      "effectiveDate": "2012-04-28",
+      "resolutionDate": "2012-04-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned Eric Hacker to Fresno Grizzlies."
+    },
+    {
+      "id": 133267,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "fromTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2012-08-17",
+      "effectiveDate": "2012-08-18",
+      "resolutionDate": "2012-08-17",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Francisco Giants recalled Eric Hacker from Fresno Grizzlies."
+    },
+    {
+      "id": 134135,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2012-08-26",
+      "effectiveDate": "2012-08-26",
+      "resolutionDate": "2012-08-26",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned RHP Eric Hacker to Fresno Grizzlies."
+    },
+    {
+      "id": 135319,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2012-09-04",
+      "effectiveDate": "2012-09-07",
+      "resolutionDate": "2012-09-04",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "San Francisco Giants designated Eric Hacker for assignment."
+    },
+    {
+      "id": 135537,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2012-09-07",
+      "effectiveDate": "2012-09-08",
+      "resolutionDate": "2012-09-10",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "San Francisco Giants sent Eric Hacker outright to Fresno Grizzlies."
+    },
+    {
+      "id": 140476,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2012-11-14",
+      "effectiveDate": "2012-11-14",
+      "resolutionDate": "2012-11-14",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Francisco Giants signed free agent RHP Eric Hacker to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 142582,
+      "person": {
+        "id": 459345,
+        "fullName": "Eric Hacker",
+        "link": "/api/v1/people/459345",
+        "nameSlug": "eric-hacker-459345"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2013-01-11",
+      "effectiveDate": "2013-01-11",
+      "resolutionDate": "2013-01-11",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "San Francisco Giants released RHP Eric Hacker."
+    }
+  ]
+}

@@ -1,0 +1,747 @@
+{
+  "player_id": 452221,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:346a9b9cecb89d4a8b6232f508b1352d12885661ae06313aca2ad1fd2c0c5b2a",
+  "transactions": [
+    {
+      "id": 143380,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2008-07-08",
+      "effectiveDate": "2008-07-08",
+      "resolutionDate": "2008-07-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LF Eric Patterson roster status changed by Chicago Cubs."
+    },
+    {
+      "id": 3377,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2009-04-29",
+      "effectiveDate": "2009-05-04",
+      "resolutionDate": "2009-04-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Oakland Athletics recalled Eric Patterson from Sacramento River Cats."
+    },
+    {
+      "id": 3858,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2009-05-04",
+      "effectiveDate": "2009-05-04",
+      "resolutionDate": "2009-05-04",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Oakland Athletics optioned Eric Patterson to Sacramento River Cats."
+    },
+    {
+      "id": 22971,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2009-07-24",
+      "effectiveDate": "2009-07-24",
+      "resolutionDate": "2009-07-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics activated LF Eric Patterson."
+    },
+    {
+      "id": 17846,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2009-07-24",
+      "effectiveDate": "2009-08-05",
+      "resolutionDate": "2009-07-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Oakland Athletics recalled LF Eric Patterson from Sacramento River Cats."
+    },
+    {
+      "id": 19994,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2009-08-05",
+      "effectiveDate": "2009-08-05",
+      "resolutionDate": "2009-08-05",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Oakland Athletics optioned Eric Patterson to Sacramento River Cats."
+    },
+    {
+      "id": 22961,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2009-08-28",
+      "effectiveDate": "2010-06-27",
+      "resolutionDate": "2009-08-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Oakland Athletics recalled Eric Patterson from Sacramento River Cats."
+    },
+    {
+      "id": 56740,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2010-06-22",
+      "effectiveDate": "2010-06-22",
+      "resolutionDate": "2010-06-22",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Oakland Athletics designated Eric Patterson for assignment."
+    },
+    {
+      "id": 58178,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2010-06-27",
+      "effectiveDate": "2010-06-27",
+      "resolutionDate": "2010-06-27",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Salem Red Sox Traded LHP Fabian Williamson to Stockton Ports and Oakland Athletics Traded CF Eric Patterson to Boston Red Sox."
+    },
+    {
+      "id": 67373,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2010-08-16",
+      "effectiveDate": "2010-08-16",
+      "resolutionDate": "2010-08-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Boston Red Sox placed CF Eric Patterson on the 15-day disabled list."
+    },
+    {
+      "id": 67358,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2010-08-17",
+      "effectiveDate": "2010-08-17",
+      "resolutionDate": "2010-08-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Eric Patterson roster status changed by Boston Red Sox."
+    },
+    {
+      "id": 68402,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2010-08-27",
+      "effectiveDate": "2010-08-27",
+      "resolutionDate": "2010-08-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent OF Eric Patterson on a rehab assignment to Pawtucket Red Sox."
+    },
+    {
+      "id": 69292,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2010-09-01",
+      "effectiveDate": "2010-09-01",
+      "resolutionDate": "2010-09-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Eric Patterson roster status changed by Boston Red Sox."
+    },
+    {
+      "id": 72336,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2010-10-21",
+      "effectiveDate": "2010-10-21",
+      "resolutionDate": "2010-10-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Eric Patterson assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 75568,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2010-12-16",
+      "effectiveDate": "2010-12-16",
+      "resolutionDate": "2010-12-16",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Boston Red Sox traded CF Eric Patterson to San Diego Padres."
+    },
+    {
+      "id": 80068,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2011-03-28",
+      "effectiveDate": "2011-03-22",
+      "resolutionDate": "2011-03-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres placed CF Eric Patterson on the 15-day disabled list retroactive to March 22, 2011. Strained left hamstring."
+    },
+    {
+      "id": 82448,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "date": "2011-04-06",
+      "effectiveDate": "2011-04-06",
+      "resolutionDate": "2011-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent CF Eric Patterson on a rehab assignment to Lake Elsinore Storm."
+    },
+    {
+      "id": 82901,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2011-04-10",
+      "effectiveDate": "2011-04-10",
+      "resolutionDate": "2011-04-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres activated CF Eric Patterson from the 15-day disabled list."
+    },
+    {
+      "id": 89474,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2011-06-09",
+      "effectiveDate": "2011-06-09",
+      "resolutionDate": "2011-06-09",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "San Diego Padres designated Eric Patterson for assignment."
+    },
+    {
+      "id": 91330,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 549,
+        "name": "Tucson Padres",
+        "link": "/api/v1/teams/549"
+      },
+      "date": "2011-06-16",
+      "effectiveDate": "2011-06-17",
+      "resolutionDate": "2011-06-16",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "San Diego Padres sent CF Eric Patterson outright to Tucson Padres."
+    },
+    {
+      "id": 92083,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 549,
+        "name": "Tucson Padres",
+        "link": "/api/v1/teams/549"
+      },
+      "date": "2011-06-18",
+      "effectiveDate": "2011-06-18",
+      "resolutionDate": "2011-06-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tucson Padres activated CF Eric Patterson."
+    },
+    {
+      "id": 95443,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 549,
+        "name": "Tucson Padres",
+        "link": "/api/v1/teams/549"
+      },
+      "date": "2011-07-04",
+      "effectiveDate": "2011-07-04",
+      "resolutionDate": "2011-07-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tucson Padres placed CF Eric Patterson on the 7-day disabled list. right wrist sprain"
+    },
+    {
+      "id": 96701,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 549,
+        "name": "Tucson Padres",
+        "link": "/api/v1/teams/549"
+      },
+      "date": "2011-07-14",
+      "effectiveDate": "2011-07-14",
+      "resolutionDate": "2011-07-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tucson Padres activated CF Eric Patterson from the 7-day disabled list."
+    },
+    {
+      "id": 100243,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 549,
+        "name": "Tucson Padres",
+        "link": "/api/v1/teams/549"
+      },
+      "date": "2011-08-12",
+      "effectiveDate": "2011-08-12",
+      "resolutionDate": "2011-08-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tucson Padres placed CF Eric Patterson on the 7-day disabled list. right wrist sprain"
+    },
+    {
+      "id": 101546,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 549,
+        "name": "Tucson Padres",
+        "link": "/api/v1/teams/549"
+      },
+      "date": "2011-08-24",
+      "effectiveDate": "2011-08-24",
+      "resolutionDate": "2011-08-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tucson Padres activated CF Eric Patterson from the 7-day disabled list."
+    },
+    {
+      "id": 107677,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 549,
+        "name": "Tucson Padres",
+        "link": "/api/v1/teams/549"
+      },
+      "date": "2011-12-09",
+      "effectiveDate": "2011-12-09",
+      "resolutionDate": "2011-12-09",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Tucson Padres released CF Eric Patterson."
+    },
+    {
+      "id": 108183,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2011-12-16",
+      "effectiveDate": "2011-12-16",
+      "resolutionDate": "2011-12-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent CF Eric Patterson to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 112694,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2012-04-02",
+      "effectiveDate": "2012-04-02",
+      "resolutionDate": "2012-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Eric Patterson assigned to Toledo Mud Hens."
+    },
+    {
+      "id": 124935,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2012-06-17",
+      "effectiveDate": "2012-06-17",
+      "resolutionDate": "2012-06-17",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Toledo Mud Hens released 2B Eric Patterson."
+    },
+    {
+      "id": 164173,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 559,
+        "name": "Rocket City Trash Pandas",
+        "link": "/api/v1/teams/559"
+      },
+      "date": "2013-07-13",
+      "effectiveDate": "2013-07-13",
+      "resolutionDate": "2013-07-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Eric Patterson assigned to Huntsville Stars."
+    },
+    {
+      "id": 164172,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2013-07-13",
+      "effectiveDate": "2013-07-13",
+      "resolutionDate": "2013-07-13",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Milwaukee Brewers signed free agent 2B Eric Patterson to a minor league contract."
+    },
+    {
+      "id": 172901,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 559,
+        "name": "Rocket City Trash Pandas",
+        "link": "/api/v1/teams/559"
+      },
+      "date": "2013-09-26",
+      "effectiveDate": "2013-09-26",
+      "resolutionDate": "2013-09-26",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Huntsville Stars released 2B Eric Patterson."
+    },
+    {
+      "id": 177965,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2014-01-10",
+      "effectiveDate": "2014-01-10",
+      "resolutionDate": "2014-01-10",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago White Sox signed free agent 2B Eric Patterson to a minor league contract."
+    },
+    {
+      "id": 178104,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2014-01-22",
+      "effectiveDate": "2014-01-22",
+      "resolutionDate": "2014-01-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Eric Patterson assigned to Charlotte Knights."
+    },
+    {
+      "id": 182015,
+      "person": {
+        "id": 452221,
+        "fullName": "Eric Patterson",
+        "link": "/api/v1/people/452221",
+        "nameSlug": "eric-patterson-452221"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2014-03-20",
+      "effectiveDate": "2014-03-20",
+      "resolutionDate": "2014-03-20",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Chicago White Sox released 2B Eric Patterson."
+    }
+  ]
+}

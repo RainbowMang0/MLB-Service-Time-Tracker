@@ -1,0 +1,142 @@
+{
+  "player_id": 400136,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:69c3c120f396c8589653f697262d7e2cb4edbf6dd55ea5066b7f26030cd949e3",
+  "transactions": [
+    {
+      "id": 4121,
+      "person": {
+        "id": 400136,
+        "fullName": "Jason Smith",
+        "link": "/api/v1/people/400136",
+        "nameSlug": "jason-smith-400136"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2009-05-06",
+      "effectiveDate": "2009-05-06",
+      "resolutionDate": "2009-05-06",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Houston Astros designated 2B Jason Smith for assignment."
+    },
+    {
+      "id": 4346,
+      "person": {
+        "id": 400136,
+        "fullName": "Jason Smith",
+        "link": "/api/v1/people/400136",
+        "nameSlug": "jason-smith-400136"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2009-05-09",
+      "effectiveDate": "2009-05-09",
+      "resolutionDate": "2009-05-09",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Houston Astros sent Jason Smith outright to Round Rock Express."
+    },
+    {
+      "id": 4451,
+      "person": {
+        "id": 400136,
+        "fullName": "Jason Smith",
+        "link": "/api/v1/people/400136",
+        "nameSlug": "jason-smith-400136"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2009-05-10",
+      "effectiveDate": "2009-05-10",
+      "resolutionDate": "2009-05-10",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Houston Astros selected the contract of 2B Jason Smith from Round Rock Express."
+    },
+    {
+      "id": 5947,
+      "person": {
+        "id": 400136,
+        "fullName": "Jason Smith",
+        "link": "/api/v1/people/400136",
+        "nameSlug": "jason-smith-400136"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2009-05-22",
+      "effectiveDate": "2009-05-22",
+      "resolutionDate": "2009-05-22",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Houston Astros designated 2B Jason Smith for assignment."
+    },
+    {
+      "id": 6562,
+      "person": {
+        "id": 400136,
+        "fullName": "Jason Smith",
+        "link": "/api/v1/people/400136",
+        "nameSlug": "jason-smith-400136"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2009-05-26",
+      "effectiveDate": "2009-05-26",
+      "resolutionDate": "2009-05-27",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Houston Astros sent 2B Jason Smith outright to Round Rock Express."
+    },
+    {
+      "id": 25512,
+      "person": {
+        "id": 400136,
+        "fullName": "Jason Smith",
+        "link": "/api/v1/people/400136",
+        "nameSlug": "jason-smith-400136"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2009-10-06",
+      "effectiveDate": "2009-10-06",
+      "resolutionDate": "2009-10-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "2B Jason Smith roster status changed by Round Rock Express."
+    }
+  ]
+}

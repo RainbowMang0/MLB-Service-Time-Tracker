@@ -1,0 +1,112 @@
+{
+  "player_id": 114354,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:6da03ea2887625f0543863004fbf49134d04f4cd4903598ea0d09b0153aebdfe",
+  "transactions": [
+    {
+      "id": 1792,
+      "person": {
+        "id": 114354,
+        "fullName": "Chad Fox",
+        "link": "/api/v1/people/114354",
+        "nameSlug": "chad-fox-114354"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2009-04-09",
+      "effectiveDate": "2008-12-03",
+      "resolutionDate": "2009-04-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chad Fox assigned to Iowa Cubs."
+    },
+    {
+      "id": 4097,
+      "person": {
+        "id": 114354,
+        "fullName": "Chad Fox",
+        "link": "/api/v1/people/114354",
+        "nameSlug": "chad-fox-114354"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2009-05-06",
+      "effectiveDate": "2009-05-06",
+      "resolutionDate": "2009-05-06",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Chicago Cubs selected the contract of RHP Chad Fox from Iowa Cubs."
+    },
+    {
+      "id": 4413,
+      "person": {
+        "id": 114354,
+        "fullName": "Chad Fox",
+        "link": "/api/v1/people/114354",
+        "nameSlug": "chad-fox-114354"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2009-05-10",
+      "effectiveDate": "2009-05-10",
+      "resolutionDate": "2009-05-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs placed RHP Chad Fox on the 15-day disabled list. Right elbow inflammation."
+    },
+    {
+      "id": 26230,
+      "person": {
+        "id": 114354,
+        "fullName": "Chad Fox",
+        "link": "/api/v1/people/114354",
+        "nameSlug": "chad-fox-114354"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2009-10-14",
+      "effectiveDate": "2009-10-14",
+      "resolutionDate": "2009-10-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated RHP Chad Fox from the 15-day disabled list."
+    },
+    {
+      "id": 29393,
+      "person": {
+        "id": 114354,
+        "fullName": "Chad Fox",
+        "link": "/api/v1/people/114354",
+        "nameSlug": "chad-fox-114354"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2009-11-13",
+      "effectiveDate": "2009-11-13",
+      "resolutionDate": "2009-11-13",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Chad Fox elected free agency."
+    }
+  ]
+}

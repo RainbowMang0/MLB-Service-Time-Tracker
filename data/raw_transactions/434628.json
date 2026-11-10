@@ -1,0 +1,676 @@
+{
+  "player_id": 434628,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:5c08d70ef3d8370678febc04044990d621118856843fef4bd1d73dde473bd7f3",
+  "transactions": [
+    {
+      "id": 657602,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2005-07-17",
+      "effectiveDate": "2005-07-17",
+      "resolutionDate": "2005-07-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls activated RHP Jason Hammel."
+    },
+    {
+      "id": 1404,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 551,
+        "name": "Rocky Mountain Vibes",
+        "link": "/api/v1/teams/551"
+      },
+      "date": "2009-04-06",
+      "effectiveDate": "2009-04-06",
+      "resolutionDate": "2009-04-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Colorado Rockies optioned Jason Hammel to Colorado Springs Sky Sox."
+    },
+    {
+      "id": 1406,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "fromTeam": {
+        "id": 551,
+        "name": "Rocky Mountain Vibes",
+        "link": "/api/v1/teams/551"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2009-04-08",
+      "effectiveDate": "2009-04-08",
+      "resolutionDate": "2009-04-08",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Colorado Rockies recalled RHP Jason Hammel from Colorado Springs Sky Sox."
+    },
+    {
+      "id": 40888,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2010-04-27",
+      "effectiveDate": "2010-04-27",
+      "resolutionDate": "2010-04-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Colorado Rockies placed RHP Jason Hammel on the 15-day disabled list. Strained right groin."
+    },
+    {
+      "id": 42476,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 551,
+        "name": "Rocky Mountain Vibes",
+        "link": "/api/v1/teams/551"
+      },
+      "date": "2010-05-07",
+      "effectiveDate": "2010-05-07",
+      "resolutionDate": "2010-05-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent RHP Jason Hammel on a rehab assignment to Colorado Springs Sky Sox."
+    },
+    {
+      "id": 44159,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2010-05-15",
+      "effectiveDate": "2011-08-31",
+      "resolutionDate": "2010-05-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jason Hammel roster status changed by Colorado Rockies."
+    },
+    {
+      "id": 103005,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2011-09-06",
+      "effectiveDate": "2011-09-06",
+      "resolutionDate": "2011-09-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Jason Hammel assigned to Colorado Rockies."
+    },
+    {
+      "id": 109124,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2012-02-06",
+      "effectiveDate": "2012-02-06",
+      "resolutionDate": "2012-02-06",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Baltimore Orioles traded RHP Jeremy Guthrie to Colorado Rockies for RHP Jason Hammel and RHP Matt Lindstrom."
+    },
+    {
+      "id": 129402,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2012-07-15",
+      "effectiveDate": "2012-07-14",
+      "resolutionDate": "2012-07-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles placed RHP Jason Hammel on the 15-day disabled list retroactive to July 14, 2012. Right knee injury."
+    },
+    {
+      "id": 134973,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 493,
+        "name": "Frederick Keys",
+        "link": "/api/v1/teams/493"
+      },
+      "date": "2012-09-01",
+      "effectiveDate": "2012-09-01",
+      "resolutionDate": "2012-09-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent RHP Jason Hammel on a rehab assignment to Frederick Keys."
+    },
+    {
+      "id": 135442,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2012-09-06",
+      "effectiveDate": "2012-09-06",
+      "resolutionDate": "2012-09-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles activated RHP Jason Hammel from the 15-day disabled list."
+    },
+    {
+      "id": 136837,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2012-10-07",
+      "effectiveDate": "2012-10-07",
+      "resolutionDate": "2012-10-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles activated RHP Jason Hammel."
+    },
+    {
+      "id": 166421,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2013-07-31",
+      "effectiveDate": "2013-07-29",
+      "resolutionDate": "2013-07-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles placed RHP Jason Hammel on the 15-day disabled list retroactive to July 29, 2013. Right flexor mass strain."
+    },
+    {
+      "id": 169637,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2013-08-29",
+      "effectiveDate": "2013-08-29",
+      "resolutionDate": "2013-08-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles sent RHP Jason Hammel on a rehab assignment to Bowie Baysox."
+    },
+    {
+      "id": 170565,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "date": "2013-09-03",
+      "effectiveDate": "2013-09-03",
+      "resolutionDate": "2013-09-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles sent RHP Jason Hammel on a rehab assignment to Aberdeen IronBirds."
+    },
+    {
+      "id": 170685,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2013-09-05",
+      "effectiveDate": "2013-09-05",
+      "resolutionDate": "2013-09-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles activated RHP Jason Hammel from the 15-day disabled list."
+    },
+    {
+      "id": 178811,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2014-02-13",
+      "effectiveDate": "2014-02-13",
+      "resolutionDate": "2014-02-13",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago Cubs signed free agent RHP Jason Hammel."
+    },
+    {
+      "id": 198981,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2014-07-05",
+      "effectiveDate": "2014-07-05",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Chicago Cubs traded RHP Jason Hammel and RHP Jeff Samardzija to Oakland Athletics for SS Addison Russell, CF Billy McKinney, RHP Dan Straily and cash."
+    },
+    {
+      "id": 199448,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2014-07-07",
+      "effectiveDate": "2014-07-07",
+      "resolutionDate": "2014-07-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics activated RHP Jason Hammel."
+    },
+    {
+      "id": 210854,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2014-10-30",
+      "effectiveDate": "2014-10-30",
+      "resolutionDate": "2014-10-30",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Jason Hammel elected free agency."
+    },
+    {
+      "id": 213001,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2014-12-12",
+      "effectiveDate": "2014-12-12",
+      "resolutionDate": "2014-12-12",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago Cubs signed free agent RHP Jason Hammel."
+    },
+    {
+      "id": 246828,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2015-10-07",
+      "effectiveDate": "2015-10-07",
+      "resolutionDate": "2015-10-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs reassigned RHP Jason Hammel to the minor leagues."
+    },
+    {
+      "id": 247163,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2015-10-09",
+      "effectiveDate": "2015-10-09",
+      "resolutionDate": "2015-10-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated RHP Jason Hammel."
+    },
+    {
+      "id": 281928,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2016-08-03",
+      "effectiveDate": "2016-08-03",
+      "resolutionDate": "2016-08-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs placed RHP Jason Hammel on the bereavement list."
+    },
+    {
+      "id": 283300,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2016-08-09",
+      "effectiveDate": "2016-08-09",
+      "resolutionDate": "2016-08-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated RHP Jason Hammel from the bereavement list."
+    },
+    {
+      "id": 289534,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2016-10-07",
+      "effectiveDate": "2016-10-07",
+      "resolutionDate": "2016-10-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs reassigned RHP Jason Hammel to the minor leagues."
+    },
+    {
+      "id": 291775,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2016-11-03",
+      "effectiveDate": "2016-11-03",
+      "resolutionDate": "2016-11-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated RHP Jason Hammel."
+    },
+    {
+      "id": 291979,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2016-11-06",
+      "effectiveDate": "2016-11-06",
+      "resolutionDate": "2016-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Jason Hammel elected free agency."
+    },
+    {
+      "id": 297644,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2017-02-08",
+      "effectiveDate": "2017-02-08",
+      "resolutionDate": "2017-02-08",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Kansas City Royals signed free agent RHP Jason Hammel."
+    },
+    {
+      "id": 381795,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2018-10-31",
+      "effectiveDate": "2018-10-31",
+      "resolutionDate": "2018-10-31",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Jason Hammel elected free agency."
+    },
+    {
+      "id": 387426,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2019-02-01",
+      "effectiveDate": "2019-02-01",
+      "resolutionDate": "2019-02-01",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent RHP Jason Hammel to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 392011,
+      "person": {
+        "id": 434628,
+        "fullName": "Jason Hammel",
+        "link": "/api/v1/people/434628",
+        "nameSlug": "jason-hammel-434628"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2019-03-24",
+      "effectiveDate": "2019-03-24",
+      "resolutionDate": "2019-03-24",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Texas Rangers released RHP Jason Hammel."
+    }
+  ]
+}
