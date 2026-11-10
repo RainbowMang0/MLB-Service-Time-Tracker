@@ -1,7 +1,9 @@
-# Code files already over the 600-line cap on 2026-11-10 (main 693c4358ab).
+# Code files already over the 600-line cap.
 # A listed file may shrink. It may not grow past the count on its line.
 # A file that is not listed may not pass 600 lines. Do not raise a count
 # to get a change through CI; split the file instead.
+# Counts through main 693c4358ab, plus the rulebook files from #48
+# (7c4449a5a4) at the size they already had when this branch merged main.
 docs/app.js 1563
 docs/contract-page.js 712
 docs/contract.js 666
@@ -11,9 +13,12 @@ docs/taxes.js 826
 scripts/build_lockout_page.py 1243
 scripts/fetch_mlb_data.py 860
 scripts/raw_transactions.py 794
+scripts/rulebook.py 1465
+scripts/rulebook_report.py 917
 scripts/service_time.py 1432
 scripts/update_service_time.py 2231
 scripts/write_player_pages.py 4156
 tests/test_lockout.py 1052
 tests/test_player_sections.py 672
+tests/test_rulebook.py 882
 tests/test_service_time.py 7032
