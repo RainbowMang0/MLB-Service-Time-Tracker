@@ -1,0 +1,143 @@
+{
+  "rules_version": "rulebook-1",
+  "compared_with": "service-time walk version 10 on the same saved transactions",
+  "counted_through": "2026-11-09",
+  "players_compared": 5609,
+  "match": 3078,
+  "differ": 2531,
+  "up": 2236,
+  "down": 295,
+  "net_days": 137490,
+  "prior_rules_change": {
+    "players_changed": 399,
+    "up": 295,
+    "down": 104
+  },
+  "by_rule": [
+    {
+      "rule_id": "accrual.league-opener",
+      "players": 1475
+    },
+    {
+      "rule_id": "neutral.all-star",
+      "players": 461
+    },
+    {
+      "rule_id": "neutral.winter-league",
+      "players": 256
+    },
+    {
+      "rule_id": "accrual.option-under-20",
+      "players": 95
+    },
+    {
+      "rule_id": "count.dfa",
+      "players": 49
+    },
+    {
+      "rule_id": "stop.free-agency",
+      "players": 29
+    },
+    {
+      "rule_id": "accrual.trade-resolves-dfa",
+      "players": 27
+    },
+    {
+      "rule_id": "stop.assigned-minors",
+      "players": 24
+    },
+    {
+      "rule_id": "start.recalled",
+      "players": 20
+    },
+    {
+      "rule_id": "accrual.tiebreaker-through-2021",
+      "players": 14
+    },
+    {
+      "rule_id": "accrual.shortened-2020",
+      "players": 13
+    },
+    {
+      "rule_id": "count.dl-15",
+      "players": 12
+    },
+    {
+      "rule_id": "stop.option",
+      "players": 8
+    },
+    {
+      "rule_id": "count.il-10",
+      "players": 7
+    },
+    {
+      "rule_id": "accrual.international-opener",
+      "players": 7
+    },
+    {
+      "rule_id": "stop.restricted",
+      "players": 6
+    },
+    {
+      "rule_id": "count.il-15",
+      "players": 4
+    },
+    {
+      "rule_id": "count.concussion-7",
+      "players": 4
+    },
+    {
+      "rule_id": "start.selected",
+      "players": 4
+    },
+    {
+      "rule_id": "stop.reassigned-minors",
+      "players": 3
+    },
+    {
+      "rule_id": "start.purchased",
+      "players": 3
+    },
+    {
+      "rule_id": "stop.outright",
+      "players": 2
+    },
+    {
+      "rule_id": "count.suspension",
+      "players": 2
+    },
+    {
+      "rule_id": "exception.paid_administrative_leave",
+      "players": 2
+    },
+    {
+      "rule_id": "stop.taxi-squad",
+      "players": 1
+    },
+    {
+      "rule_id": "count.paternity",
+      "players": 1
+    },
+    {
+      "rule_id": "count.il-60",
+      "players": 1
+    },
+    {
+      "rule_id": "start.activated",
+      "players": 1
+    }
+  ],
+  "on_40_man_differ": 319,
+  "alumni_differ": 2212,
+  "differences_of_25_days_or_more": 701,
+  "threshold_crossers": 159,
+  "unknown_transactions": 13,
+  "unknown_on_40_man": 0,
+  "ambiguous_restricted_list": 293,
+  "sanity_failures": 0,
+  "determinism": {
+    "first_hash": "18159f6e800b774178462316104fd56197bcdb15245c10c7a43a6e4c0fae2079",
+    "second_hash": "18159f6e800b774178462316104fd56197bcdb15245c10c7a43a6e4c0fae2079",
+    "identical": true
+  }
+}

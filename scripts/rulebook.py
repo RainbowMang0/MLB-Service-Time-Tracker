@@ -712,17 +712,17 @@ def evaluate(
             and day >= floor
             and active_since is None
             and last_stop is None
-            # Still on an optional assignment that started before this date:
-            # the first game is not evidence he was on the active list.
-            and not on_option
         ):
-            rule = "accrual.pre-debut-roster" if floor < debut else "accrual.presume-from-debut"
-            open_service(floor if day > floor else day, rule)
-            if day > floor:
-                # The floor itself had no row. Open from the floor, then
-                # let today's row close it if today is a stop.
-                pass
-            presumed = True
+            # An option that opened before the first major-league game does
+            # not cancel that game. The call-up row is often missing. End the
+            # option the day before and start from the floor. An option that
+            # starts on or after the floor still keeps him down.
+            if on_option and option_start is not None and option_start < floor:
+                end_option(floor - dt.timedelta(days=1))
+            if not on_option:
+                rule = "accrual.pre-debut-roster" if debut is not None and floor < debut else "accrual.presume-from-debut"
+                open_service(floor if day > floor else day, rule)
+                presumed = True
         elif floor is not None and day >= floor:
             presumed = True
 
@@ -975,6 +975,13 @@ def evaluate(
             credited = min(credited, cap)
             if "accrual.roy-full-year" not in season_rules:
                 season_rules.append("accrual.roy-full-year")
+        cal_row = calendar.seasons[year]
+        if start < cal_row.first_domestic:
+            season_rules.append("accrual.international-opener")
+        else:
+            season_rules.append("accrual.league-opener")
+        if year <= 2021 and end > cal_row.championship_end:
+            season_rules.append("accrual.tiebreaker-through-2021")
         if year == 2020 and "accrual.shortened-2020" not in season_rules:
             season_rules.append("accrual.shortened-2020")
         if year == 2022 and "accrual.lockout-2022" not in season_rules:
@@ -1010,6 +1017,22 @@ def evaluate(
 
     used = [year for year, days in sorted(option_days.items()) if days >= option_threshold]
     saved = [year for year, days in sorted(option_days.items()) if 0 < days < option_threshold]
+    notable_rules = sorted({
+        hit.id for _day, _row, hit in rows
+        if hit is not None and hit.id in {
+            "neutral.all-star",
+            "neutral.winter-league",
+            "neutral.national-team",
+            "stop.taxi-squad",
+            "count.suspension",
+            "count.admin-leave",
+            "count.military",
+            "count.family-medical",
+            "stop.restricted",
+            "count.dfa",
+            "stop.free-agency",
+        }
+    })
     il_out = [
         {"start": a.isoformat(), "end": b.isoformat(), "days": _span_days(a, b), "rule": rule}
         for a, b, rule in il_spells
@@ -1028,6 +1051,7 @@ def evaluate(
         "option_years_saved": saved,
         "option_days": {str(year): days for year, days in sorted(option_days.items())},
         "il_ranges": il_out,
+        "notable_rules": notable_rules,
         "unknowns": unknowns,
         "ambiguous": ambiguous,
     }
