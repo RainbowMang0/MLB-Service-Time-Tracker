@@ -1,0 +1,1014 @@
+{
+  "_readme": [
+    "Rulebook for major-league service time and optional assignments.",
+    "Each rule has one effect: start, stop, count_away, or neutral.",
+    "First match wins. A later rule is a fallback for rows the earlier rule did not take.",
+    "Era limits are inclusive years. A row outside those years falls through to a wider rule or to the unknown list.",
+    "Citations are sections of the job 2 rules reference (CBA, Major League Rules, and public reporting).",
+    "Thresholds that already live in config/cba are named by key and are not copied here.",
+    "Open questions are listed and are not silent decisions. The working rule is the note on each one."
+  ],
+  "version": "rulebook-1",
+  "effects": [
+    "start",
+    "stop",
+    "count_away",
+    "neutral"
+  ],
+  "rules": [
+    {
+      "id": "neutral.rehab",
+      "effect": "neutral",
+      "cite": "§4",
+      "tags": [
+        "rehab"
+      ],
+      "description": "rehab",
+      "note": "A rehab assignment while on a major-league injured list is still major-league service. The assignment itself does not start or stop the clock."
+    },
+    {
+      "id": "neutral.all-star",
+      "effect": "neutral",
+      "cite": "§11",
+      "tags": [
+        "exhibition"
+      ],
+      "description": "all-stars?|all stars?|\\bfutures\\b|world baseball classic",
+      "note": "All-Star, Futures, and World Baseball Classic assignments are exhibitions. They are not demotions and not call-ups."
+    },
+    {
+      "id": "neutral.national-team",
+      "effect": "neutral",
+      "cite": "§11",
+      "tags": [
+        "exhibition"
+      ],
+      "team_name": "^(Dominican Republic|Puerto Rico|Venezuela|Mexico|Cuba|Japan|Korea|Republic of Korea|Netherlands|Italy|Israel|Colombia|Panama|Nicaragua|Australia|Canada|United States|Chinese Taipei|Great Britain|Czech Republic|Brazil|USA)$|national team",
+      "note": "A national-team assignment is an exhibition, including winter and spring events."
+    },
+    {
+      "id": "neutral.spring-invite",
+      "effect": "neutral",
+      "cite": "§9",
+      "tags": [
+        "spring"
+      ],
+      "description": "invited\\b.{0,80}\\bspring|non-roster",
+      "note": "A non-roster spring-training invite does not put the player on the active list."
+    },
+    {
+      "id": "neutral.number-change",
+      "effect": "neutral",
+      "cite": "§11",
+      "tags": [],
+      "type_codes": [
+        "NUM"
+      ],
+      "description": "changed number|number change",
+      "note": "A uniform-number change is not a roster move. Either the type code or the sentence is enough."
+    },
+    {
+      "id": "neutral.roster-status",
+      "effect": "neutral",
+      "cite": "§11",
+      "description": "roster status changed",
+      "note": "The sentence does not say whether the player joined or left a list, so it cannot move the clock. A reinstatement phrased only this way is a known limit, not a guess that he was called up."
+    },
+    {
+      "id": "neutral.draft",
+      "effect": "neutral",
+      "cite": "§11",
+      "type_codes": [
+        "DR"
+      ],
+      "description": "\\bdrafted\\b",
+      "not_description": "rule 5",
+      "note": "An amateur or minor-league draft is not a major-league roster move."
+    },
+    {
+      "id": "neutral.minor-signing",
+      "effect": "neutral",
+      "cite": "§11",
+      "description": "minor league (?:contract|deal)",
+      "note": "A minor-league contract does not start major-league service."
+    },
+    {
+      "id": "neutral.amateur-signing",
+      "effect": "neutral",
+      "cite": "§11",
+      "type_codes": [
+        "SGN"
+      ],
+      "not_description": "free agent|minor league",
+      "note": "A first signing by the club, before any major-league roster move, does not start service."
+    },
+    {
+      "id": "start.mlb-signing",
+      "effect": "start",
+      "cite": "§11",
+      "tags": [
+        "signing"
+      ],
+      "description": "signed free agent|signed as a free agent",
+      "not_description": "minor league",
+      "mlb": "required",
+      "note": "A major-league free-agent signing starts the clock. The type code SFA is enough when the sentence is short. A minor-league contract is an earlier rule, and a same-day minor-league sibling suppresses a bare signing.",
+      "type_codes": [
+        "SFA"
+      ]
+    },
+    {
+      "id": "start.selected",
+      "effect": "start",
+      "cite": "§11",
+      "tags": [
+        "selection"
+      ],
+      "type_codes": [
+        "SE"
+      ],
+      "description": "selected the contract|contract selected",
+      "mlb": "required",
+      "note": "Contract selected adds the player to the major-league active list. The type code or the sentence matches; a major-league club must be a party."
+    },
+    {
+      "id": "start.rule5",
+      "effect": "start",
+      "cite": "§11",
+      "type_codes": [
+        "R5"
+      ],
+      "mlb": "required",
+      "note": "A major-league Rule 5 selection puts him on the selecting club. Service runs on the active list or the major-league injured list from the next opener unless he is returned first."
+    },
+    {
+      "id": "neutral.rule5-minors",
+      "effect": "neutral",
+      "cite": "§11",
+      "type_codes": [
+        "R5M"
+      ],
+      "note": "The minor-league phase of the Rule 5 draft is not a major-league roster move."
+    },
+    {
+      "id": "start.purchased",
+      "effect": "start",
+      "cite": "§11",
+      "tags": [
+        "selection"
+      ],
+      "type_codes": [
+        "CP",
+        "PUR"
+      ],
+      "description": "purchased the contract|purchased contract",
+      "mlb": "required",
+      "note": "A purchased major-league contract starts the clock. PUR counts only when a major-league club is the buyer; a foreign-league purchase fails this rule and is neutral."
+    },
+    {
+      "id": "neutral.purchase-other",
+      "effect": "neutral",
+      "cite": "§11",
+      "type_codes": [
+        "PUR"
+      ],
+      "mlb": "forbidden",
+      "note": "A purchase by a club that is not one of the 30 does not start major-league service."
+    },
+    {
+      "id": "start.recalled",
+      "effect": "start",
+      "cite": "§2",
+      "tags": [
+        "recall"
+      ],
+      "type_codes": [
+        "CU"
+      ],
+      "description": "\\brecalled\\b",
+      "mlb": "required",
+      "note": "A recall from optional assignment, including from a 2020 alternate site, returns him to the major-league active list. The recall date is not an option day."
+    },
+    {
+      "id": "neutral.recall-minors",
+      "effect": "neutral",
+      "cite": "§3",
+      "description": "\\brecalled\\b",
+      "mlb": "forbidden",
+      "note": "A recall between minor-league clubs is not a major-league recall."
+    },
+    {
+      "id": "stop.taxi-squad",
+      "effect": "stop",
+      "cite": "§7",
+      "tags": [
+        "taxi"
+      ],
+      "description": "alternate (?:training )?site|taxi squad",
+      "not_description": "\\brecalled\\b|\\boptioned\\b|selected the contract|injured list|disabled list",
+      "note": "2020 taxi-squad and alternate-site days are not major-league service. A recall, option, selection, or injured-list row is classified by its own rule."
+    },
+    {
+      "id": "stop.option",
+      "effect": "stop",
+      "cite": "§2",
+      "tags": [
+        "option"
+      ],
+      "type_codes": [
+        "OPT"
+      ],
+      "description": "\\boptioned\\b",
+      "note": "An optional assignment stops major-league service. The option date counts toward the option tally; the recall date does not. Under-20 championship-season days are credited back as service and do not burn an option year (§2, Art. XXI(B))."
+    },
+    {
+      "id": "stop.outright",
+      "effect": "stop",
+      "cite": "§1",
+      "tags": [
+        "outright"
+      ],
+      "type_codes": [
+        "OUT"
+      ],
+      "description": "\\boutright",
+      "note": "An outright assignment ends designated-player status and major-league service. A preseason outright does not earn Opening Day."
+    },
+    {
+      "id": "stop.released",
+      "effect": "stop",
+      "cite": "§1",
+      "tags": [
+        "release"
+      ],
+      "type_codes": [
+        "REL"
+      ],
+      "description": "\\breleased\\b",
+      "note": "A release stops service. It does not restart until a later major-league signing, selection, or recall."
+    },
+    {
+      "id": "count.dfa",
+      "effect": "count_away",
+      "cite": "§1",
+      "tags": [
+        "dfa"
+      ],
+      "type_codes": [
+        "DES"
+      ],
+      "description": "designated\\b.{0,60}\\bfor assignment",
+      "note": "In-season designated-player days count until an outright, a release, or the end of the era's DFA window. The designation day itself counts. A trade, claim, or new major-league deal restarts service. A preseason DFA does not earn Opening Day. The type code DES is the designation; the type code DFA in this feed is free agency and is a different rule."
+    },
+    {
+      "id": "stop.free-agency",
+      "effect": "stop",
+      "cite": "§1",
+      "tags": [
+        "free-agency"
+      ],
+      "type_codes": [
+        "DFA"
+      ],
+      "description": "\\b(?:elected|declared) free agency\\b",
+      "note": "Electing or declaring free agency stops the clock until a new major-league deal. In this feed the type code DFA means declared free agency, not designated for assignment."
+    },
+    {
+      "id": "stop.retired",
+      "effect": "stop",
+      "cite": "§6",
+      "tags": [
+        "retired"
+      ],
+      "type_codes": [
+        "RET"
+      ],
+      "description": "\\bretired\\b",
+      "not_description": "voluntarily retired",
+      "note": "Retirement stops service."
+    },
+    {
+      "id": "stop.voluntarily-retired",
+      "effect": "stop",
+      "cite": "§6",
+      "tags": [
+        "retired"
+      ],
+      "description": "voluntarily retired",
+      "note": "The voluntarily retired list is outside the service rule that treats the injured list and a disciplinary suspension as time on the active list. It stops service."
+    },
+    {
+      "id": "stop.deceased",
+      "effect": "stop",
+      "cite": "§6",
+      "type_codes": [
+        "DEC"
+      ],
+      "description": "\\bdied\\b",
+      "note": "Death ends the clock."
+    },
+    {
+      "id": "stop.ineligible",
+      "effect": "stop",
+      "cite": "§6",
+      "tags": [
+        "ineligible"
+      ],
+      "type_codes": [
+        "DEI"
+      ],
+      "description": "declared ineligible|disqualified list|placed\\b.{0,40}\\bdisqualified",
+      "note": "The ineligible and disqualified lists are outside the active-list service rule. They stop service."
+    },
+    {
+      "id": "count.admin-leave",
+      "effect": "count_away",
+      "cite": "§6",
+      "tags": [
+        "admin-leave"
+      ],
+      "description": "administrative leave",
+      "mlb": "required",
+      "note": "Paid administrative leave under the joint domestic-violence policy keeps salary and service. The sentence says administrative leave, so it is not the ambiguous restricted-list case."
+    },
+    {
+      "id": "stop.restricted",
+      "effect": "stop",
+      "cite": "§6",
+      "tags": [
+        "restricted",
+        "ambiguous"
+      ],
+      "description": "restricted list",
+      "mlb": "required",
+      "note": "The restricted list does not earn service by default (no pay, no service). Paid leave, a 2020 high-risk opt-out, and a drug-suspension mitigation are not visible in the sentence; those spells come from the exceptions file. A restricted-list row with no exception is classified as a stop and flagged as ambiguous rather than guessed.",
+      "not_description": "\\bactivated\\b|\\breinstated\\b"
+    },
+    {
+      "id": "count.suspension",
+      "effect": "count_away",
+      "cite": "§6",
+      "tags": [
+        "suspension"
+      ],
+      "type_codes": [
+        "SU"
+      ],
+      "description": "\\bsuspended\\b|suspended list",
+      "not_description": "restricted list",
+      "mlb": "required",
+      "note": "An on-field or club disciplinary suspension counts while away. A drug suspension is generally the restricted list instead, and does not count unless an exception says so. The type code SU is this disciplinary suspension."
+    },
+    {
+      "id": "neutral.suspension-minors",
+      "effect": "neutral",
+      "cite": "§6",
+      "description": "\\bsuspended\\b",
+      "mlb": "forbidden",
+      "note": "A minor-league suspension does not start major-league service."
+    },
+    {
+      "id": "count.military",
+      "effect": "count_away",
+      "cite": "§6",
+      "tags": [
+        "military"
+      ],
+      "description": "military",
+      "mlb": "required",
+      "note": "Military duty counts while away within the written caps (up to two years of active duty, up to thirty days of National Guard emergency duty). Longer spells are an open question and are not trimmed, because the feed does not state the kind of duty."
+    },
+    {
+      "id": "count.paternity",
+      "effect": "count_away",
+      "cite": "§5",
+      "tags": [
+        "paternity"
+      ],
+      "description": "paternity",
+      "mlb": "required",
+      "note": "Paternity leave counts while away. Each paid day is a day of major-league service."
+    },
+    {
+      "id": "count.bereavement",
+      "effect": "count_away",
+      "cite": "§5",
+      "tags": [
+        "bereavement"
+      ],
+      "description": "bereavement",
+      "mlb": "required",
+      "note": "Bereavement leave counts while away."
+    },
+    {
+      "id": "count.family-medical",
+      "effect": "count_away",
+      "cite": "§5",
+      "tags": [
+        "family-medical"
+      ],
+      "description": "family medical",
+      "mlb": "required",
+      "note": "Family medical emergency leave counts while away, the same list as bereavement."
+    },
+    {
+      "id": "neutral.minor-personal-list",
+      "effect": "neutral",
+      "cite": "§5",
+      "description": "paternity|bereavement|family medical|military|administrative leave",
+      "mlb": "forbidden",
+      "note": "A minor-league personal or military list does not start major-league service."
+    },
+    {
+      "id": "count.covid-il",
+      "effect": "count_away",
+      "cite": "§7",
+      "tags": [
+        "il",
+        "covid"
+      ],
+      "description": "covid-19 related injured list|covid-19 injured list",
+      "not_description": "\\bactivated\\b|\\breinstated\\b|non-covid",
+      "years": [
+        2020,
+        2020
+      ],
+      "mlb": "required",
+      "note": "The 2020 COVID-19 related injured list counts, then the year's proration runs. A note that says non-COVID is an ordinary injured-list row."
+    },
+    {
+      "id": "start.activated",
+      "effect": "start",
+      "cite": "§3",
+      "tags": [
+        "activation"
+      ],
+      "description": "\\bactivated\\b|\\breinstated\\b",
+      "mlb": "required",
+      "note": "Activation or reinstatement by a major-league club puts him on the active list, including the return from the injured list, paternity, bereavement, or the restricted list. The return from the restricted list restarts a clock the placement had stopped."
+    },
+    {
+      "id": "start.reinstated-code",
+      "effect": "start",
+      "cite": "§6",
+      "type_codes": [
+        "RE"
+      ],
+      "mlb": "required",
+      "note": "The reinstated type code is a return to the major-league club."
+    },
+    {
+      "id": "count.il-15",
+      "effect": "count_away",
+      "cite": "§3",
+      "tags": [
+        "il"
+      ],
+      "description": "15-day (?:injured|disabled) list",
+      "not_description": "\\bactivated\\b|\\breinstated\\b|rehab",
+      "years": [
+        2020,
+        2026
+      ],
+      "mlb": "required",
+      "note": "The 15-day injured list counts. It was announced for pitchers in 2020 and is the pitcher list under the 2022 agreement. Whether 2021 used 10 or 15 days is an open question; either length still counts, and a 2021 row that says 15-day is caught by the injured-list fallback."
+    },
+    {
+      "id": "count.il-10",
+      "effect": "count_away",
+      "cite": "§3",
+      "tags": [
+        "il"
+      ],
+      "description": "10-day (?:injured|disabled) list",
+      "not_description": "\\bactivated\\b|\\breinstated\\b|rehab",
+      "years": [
+        2017,
+        2026
+      ],
+      "mlb": "required",
+      "note": "The 10-day list replaced the 15-day disabled list in 2017. It counts. From 2019 the list is named the injured list."
+    },
+    {
+      "id": "count.il-60",
+      "effect": "count_away",
+      "cite": "§3",
+      "tags": [
+        "il"
+      ],
+      "description": "60-day (?:injured|disabled) list",
+      "not_description": "\\bactivated\\b|\\breinstated\\b|rehab",
+      "years": [
+        2019,
+        2026
+      ],
+      "mlb": "required",
+      "note": "The 60-day injured list counts. It does not count against the active-list limit, and it is still an injured list."
+    },
+    {
+      "id": "count.dl-60",
+      "effect": "count_away",
+      "cite": "§3",
+      "tags": [
+        "il"
+      ],
+      "description": "60-day disabled list",
+      "not_description": "\\bactivated\\b|\\breinstated\\b|rehab",
+      "years": [
+        1990,
+        2018
+      ],
+      "mlb": "required",
+      "note": "The 60-day disabled list is the pre-2019 name. It counts."
+    },
+    {
+      "id": "count.dl-15",
+      "effect": "count_away",
+      "cite": "§3",
+      "tags": [
+        "il"
+      ],
+      "description": "15-day disabled list",
+      "not_description": "\\bactivated\\b|\\breinstated\\b|rehab",
+      "years": [
+        1986,
+        2016
+      ],
+      "mlb": "required",
+      "note": "Through 2016 the standard list was the 15-day disabled list. It counts."
+    },
+    {
+      "id": "count.dl-10",
+      "effect": "count_away",
+      "cite": "§3",
+      "tags": [
+        "il"
+      ],
+      "description": "10-day disabled list",
+      "not_description": "\\bactivated\\b|\\breinstated\\b|rehab",
+      "years": [
+        2017,
+        2018
+      ],
+      "mlb": "required",
+      "note": "2017 and 2018 used the 10-day disabled list. It counts."
+    },
+    {
+      "id": "count.il-45",
+      "effect": "count_away",
+      "cite": "§7",
+      "tags": [
+        "il"
+      ],
+      "description": "45-day injured list",
+      "not_description": "\\bactivated\\b|\\breinstated\\b|rehab",
+      "years": [
+        2020,
+        2020
+      ],
+      "mlb": "required",
+      "note": "In 2020 the 60-day list was cut to 45 days. It is still an injured list and counts before proration."
+    },
+    {
+      "id": "count.concussion-7",
+      "effect": "count_away",
+      "cite": "§3",
+      "tags": [
+        "il"
+      ],
+      "description": "7-day (?:injured|disabled) list",
+      "not_description": "\\bactivated\\b|\\breinstated\\b|rehab",
+      "years": [
+        2011,
+        2026
+      ],
+      "mlb": "required",
+      "note": "The 7-day list is the acute-concussion list. It counts."
+    },
+    {
+      "id": "count.il-transfer",
+      "effect": "count_away",
+      "cite": "§3",
+      "tags": [
+        "il",
+        "il-transfer"
+      ],
+      "description": "transferred\\b.{0,80}(?:injured|disabled) list",
+      "mlb": "required",
+      "note": "A transfer from one major-league injured list to another stays on the injured list. Service continues."
+    },
+    {
+      "id": "count.il-fallback",
+      "effect": "count_away",
+      "cite": "§3",
+      "tags": [
+        "il"
+      ],
+      "description": "(?:injured|disabled) list",
+      "not_description": "\\bactivated\\b|\\breinstated\\b|rehab",
+      "mlb": "required",
+      "note": "Any other major-league injured or disabled list counts, including a length whose era note is still open. A minor-league list does not match this rule."
+    },
+    {
+      "id": "neutral.trade",
+      "effect": "neutral",
+      "cite": "§1",
+      "tags": [
+        "trade"
+      ],
+      "type_codes": [
+        "TR"
+      ],
+      "description": "\\btraded\\b",
+      "note": "A trade between major-league clubs does not itself start or stop service. Out of a DFA, a trade restarts service unless the same day also options, outrights, or releases him. That restart is an accrual rule, not a second effect of this row."
+    },
+    {
+      "id": "neutral.claim",
+      "effect": "neutral",
+      "cite": "§11",
+      "tags": [
+        "claim"
+      ],
+      "type_codes": [
+        "CLW"
+      ],
+      "description": "claimed\\b.{0,50}\\boff waivers",
+      "mlb": "required",
+      "note": "A waiver claim moves him onto the new club's reserve list. It is not automatically an active-list start. Service follows the next roster move. Out of a DFA, the claim restarts service unless the same day options him."
+    },
+    {
+      "id": "neutral.claim-minors",
+      "effect": "neutral",
+      "cite": "§11",
+      "description": "claimed\\b.{0,50}\\boff waivers",
+      "mlb": "forbidden",
+      "note": "A claim between clubs that are not major league does not start major-league service."
+    },
+    {
+      "id": "neutral.mlb-assignment",
+      "effect": "neutral",
+      "cite": "§11",
+      "tags": [
+        "assignment"
+      ],
+      "type_codes": [
+        "ASG"
+      ],
+      "description": "\\bassigned to\\b",
+      "destination": "mlb",
+      "not_description": "rehab|all-star|all star|futures",
+      "note": "Assigned to one of the 30 clubs is usually a spring-training note. It restarts a stopped clock only when a later row shows he was on that club's active list (an injured-list placement or an option)."
+    },
+    {
+      "id": "stop.reassigned-minors",
+      "effect": "stop",
+      "cite": "§3",
+      "tags": [
+        "minors"
+      ],
+      "description": "reassigned\\b.{0,80}\\bminor",
+      "note": "Reassigned to the minor leagues leaves the major-league roster."
+    },
+    {
+      "id": "neutral.winter-league",
+      "effect": "neutral",
+      "cite": "§11",
+      "tags": [
+        "winter"
+      ],
+      "type_codes": [
+        "ASG"
+      ],
+      "description": "\\bassigned to\\b",
+      "destination": "not_mlb",
+      "season": "offseason",
+      "not_description": "rehab",
+      "note": "An offseason assignment to a winter-league club does not end an open major-league roster. The name pattern is the winter leagues (Dominican, Venezuelan, Puerto Rican, Mexican Pacific). An offseason assignment to a domestic affiliate still stops the clock. A championship-season assignment to a Mexican League club is a departure and is the minors rule, not this one.",
+      "team_name": "\\b(?:del|de la|de los|de las|de)\\b|\\b(?:LIDOM|LVBP|LMP|LBPRC|CPBL)\\b"
+    },
+    {
+      "id": "stop.assigned-minors",
+      "effect": "stop",
+      "cite": "§3",
+      "tags": [
+        "minors"
+      ],
+      "type_codes": [
+        "ASG"
+      ],
+      "description": "\\bassigned to\\b",
+      "destination": "not_mlb",
+      "not_description": "rehab|all-star|all star|futures|alternate (?:training )?site|taxi squad",
+      "note": "Assigned to a minor-league club leaves the major-league active list, including a March affiliate assignment. Winter-league names in the offseason, All-Star and Futures assignments, rehab, and the 2020 alternate site are earlier rules."
+    },
+    {
+      "id": "stop.returned",
+      "effect": "stop",
+      "cite": "§11",
+      "tags": [
+        "returned"
+      ],
+      "type_codes": [
+        "RTN"
+      ],
+      "description": "returned to (?!the active roster)",
+      "note": "A Rule 5 return, or the end of an assignment back to another club, takes him off the club he left. Returned to the active roster would be a start and is not this rule."
+    },
+    {
+      "id": "neutral.loan-offseason",
+      "effect": "neutral",
+      "cite": "§11",
+      "type_codes": [
+        "LON"
+      ],
+      "season": "offseason",
+      "note": "An offseason loan, almost always a winter league, does not move the major-league clock."
+    },
+    {
+      "id": "stop.loan-inseason",
+      "effect": "stop",
+      "cite": "§11",
+      "tags": [
+        "minors"
+      ],
+      "type_codes": [
+        "LON"
+      ],
+      "season": "championship",
+      "mlb": "required",
+      "note": "A championship-season loan away from a major-league club stops service."
+    },
+    {
+      "id": "neutral.transfer-other",
+      "effect": "neutral",
+      "cite": "§3",
+      "type_codes": [
+        "TRN"
+      ],
+      "not_description": "injured list|disabled list",
+      "note": "A transfer that is not between major-league injured lists, including a move to a development list, does not start major-league service."
+    },
+    {
+      "id": "neutral.temp-inactive-minors",
+      "effect": "neutral",
+      "cite": "§6",
+      "description": "temporarily inactive|development list",
+      "mlb": "forbidden",
+      "note": "The minor-league temporarily inactive list and the development list are not major-league lists."
+    },
+    {
+      "id": "neutral.reserve-minors",
+      "effect": "neutral",
+      "cite": "§6",
+      "description": "reserve list",
+      "mlb": "forbidden",
+      "note": "A minor-league reserve-list placement is not major-league service. A major-league reserve-list row is left unknown rather than guessed."
+    },
+    {
+      "id": "neutral.waived",
+      "effect": "neutral",
+      "cite": "§1",
+      "type_codes": [
+        "WA"
+      ],
+      "description": "\\bwaivers\\b",
+      "not_description": "claimed\\b.{0,40}\\boff waivers|designated",
+      "note": "Placing a player on waivers is not, by itself, the outright or the release that ends service."
+    },
+    {
+      "id": "neutral.acquired",
+      "effect": "neutral",
+      "cite": "§11",
+      "type_codes": [
+        "ACQ"
+      ],
+      "note": "Acquired from an independent league is not yet a major-league active-list move."
+    },
+    {
+      "id": "neutral.minor-activation",
+      "effect": "neutral",
+      "cite": "§3",
+      "description": "\\bactivated\\b|\\breinstated\\b",
+      "mlb": "forbidden",
+      "note": "Activated by a minor-league club does not mean he left the majors, and it does not start major-league service."
+    },
+    {
+      "id": "neutral.minor-il",
+      "effect": "neutral",
+      "cite": "§3",
+      "tags": [
+        "minor-il"
+      ],
+      "description": "(?:injured|disabled) list",
+      "mlb": "forbidden",
+      "note": "Hurt while optioned: he goes on the minor-league injured list and stays on optional assignment. Those days are not major-league service. Recalled and then placed on the major-league injured list is a different row and does count."
+    },
+    {
+      "id": "neutral.no-mlb-club",
+      "effect": "neutral",
+      "cite": "§11",
+      "mlb": "forbidden",
+      "note": "No major-league club is a party to the row. It cannot start or stop major-league service. Releases, outrights, and retirements are classified earlier and still stop the clock even when the row names only an affiliate."
+    }
+  ],
+  "accrual": [
+    {
+      "id": "accrual.league-opener",
+      "cite": "§9",
+      "note": "Service runs from the first regularly scheduled championship-season game through the last, uniformly. When an international opener stretches some clubs past the scheduling band, everyone else starts on the first game inside 187 days of the end, which is the first domestic game on this calendar. A club that opens a day later does not cost its players that earlier day."
+    },
+    {
+      "id": "accrual.international-opener",
+      "cite": "§9",
+      "note": "A club that opens outside the United States and Canada, so that its own season runs longer than the ordinary band, starts on that overseas date. Only players on that club earn those days."
+    },
+    {
+      "id": "accrual.tiebreaker-through-2021",
+      "cite": "§9",
+      "open_question": true,
+      "note": "Through 2021, a tiebreaker after the last scheduled game counts for a player who was on a counting list and whose club played it. From 2022 the text ends on the last regularly scheduled game and a tiebreaker does not extend the window. The 2017-21 wording was not re-read from that book; the working rule follows the hand-checked seasons and the earlier text quoted in public reporting."
+    },
+    {
+      "id": "accrual.credited-year",
+      "cite": "§9",
+      "cba": "service_time.days_per_credited_year",
+      "note": "One credited year is the ruleset's day count. A season cannot credit more than that."
+    },
+    {
+      "id": "accrual.season-cap",
+      "cite": "§9",
+      "cba": "service_time.max_days_creditable_per_season",
+      "note": "Days past the cap in one championship season are not a fraction of a further year."
+    },
+    {
+      "id": "accrual.option-under-20",
+      "cite": "§2",
+      "cba": "options.days_to_burn_option_year",
+      "note": "Optional-assignment days in a championship season are a separate tally. Fewer than the threshold are credited as major-league service and do not burn an option year. The option date counts and the recall date does not. Game-time exceptions cannot be applied from dates alone."
+    },
+    {
+      "id": "accrual.shortened-2020",
+      "cite": "§7",
+      "year": 2020,
+      "cba": "service_time.shortened_seasons.2020.scale_to_span_days",
+      "note": "2020 raw days scale by the original schedule length over the revised championship-season length, then the ordinary cap applies, so a full shortened season is one credited year. The official denominator is an open question; this uses the calendar length of the revised season."
+    },
+    {
+      "id": "accrual.lockout-2022",
+      "cite": "§8",
+      "year": 2022,
+      "note": "2022 uses the ordinary window on the restored calendar. No 2020-style proration. The first game is the calendar's opener, not a March date and not the briefly postponed April 14."
+    },
+    {
+      "id": "accrual.lockout-1990",
+      "cite": "§8",
+      "year": 1990,
+      "note": "The 1990 lockout delayed the opener. The calendar's first game is the start. No special proration."
+    },
+    {
+      "id": "accrual.strike-1994",
+      "cite": "§8",
+      "year": 1994,
+      "open_question": true,
+      "note": "1994 is the calendar's shortened championship season only. The later settlement's credited-day formula was not read and is not applied."
+    },
+    {
+      "id": "accrual.strike-1995",
+      "cite": "§8",
+      "year": 1995,
+      "open_question": true,
+      "note": "1995 is the calendar's 144-game championship season only. The settlement formula was not read and is not applied."
+    },
+    {
+      "id": "accrual.dfa-window",
+      "cite": "§1",
+      "note": "Designated-player service runs until the outright, the release, or the era's window, whichever is first. See dfa_windows."
+    },
+    {
+      "id": "accrual.trade-resolves-dfa",
+      "cite": "§1",
+      "note": "A trade or waiver claim out of a designation, or a new major-league deal, restarts service unless the same day also options, outrights, or releases him."
+    },
+    {
+      "id": "accrual.same-day-stop-wins",
+      "cite": "§2",
+      "note": "When a start and a stop share a date, the day ends off the active list. The feed has no clock time. This matches activation-plus-option, claim-plus-option, select-plus-option, and recall-plus-option."
+    },
+    {
+      "id": "accrual.pre-debut-roster",
+      "cite": "§11",
+      "note": "A roster move in the empty gap just before the first major-league game counts. A signing does not. The width of that gap is the measured empty band, not a collective-bargaining number."
+    },
+    {
+      "id": "accrual.presume-from-debut",
+      "cite": "§11",
+      "note": "If nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game. Seasons with no transaction and no saved game are not credited when appearance years are supplied."
+    },
+    {
+      "id": "accrual.roy-full-year",
+      "cite": "§11",
+      "note": "A first- or second-place Rookie of the Year finish on the hand-kept list credits a full year for that season. The transaction log does not show it."
+    },
+    {
+      "id": "accrual.no-game-time",
+      "cite": "§2",
+      "note": "The option date counts and the recall date does not, except two game-time exceptions this feed cannot see. Expect a one-day uncertainty next to the threshold."
+    }
+  ],
+  "dfa_windows": [
+    {
+      "id": "accrual.dfa-window-10",
+      "cite": "§1",
+      "years": [
+        2012,
+        2016
+      ],
+      "days": 10,
+      "note": "The glossary states a 10-day window under the 2012-16 agreement."
+    },
+    {
+      "id": "accrual.dfa-window-7",
+      "cite": "§1",
+      "years": [
+        2017,
+        2026
+      ],
+      "days": 7,
+      "note": "Art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement. The 2022 ruleset's designated-player cap is the same 7."
+    },
+    {
+      "id": "accrual.dfa-window-pre2012",
+      "cite": "§1",
+      "years": [
+        1986,
+        2011
+      ],
+      "days": 10,
+      "open_question": true,
+      "note": "The length before 2012 was not in a primary text read for this rulebook. The 2012-16 length is used as the safety cap so an unresolved designation cannot run all season. This is an open question, not a finding that the older window was 10 days."
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "oq.1994-1995-formula",
+      "section": "8",
+      "text": "The exact credited-day formula for the 1994 strike and the 144-game 1995 season was not read. Working rule: championship-season days on the calendar only, then the ordinary cap. No strike buy-back is applied."
+    },
+    {
+      "id": "oq.2022-side-letter",
+      "section": "8",
+      "text": "No 2022 side letter adding service on top of the restored 162-game season was found. Working rule: ordinary counting on the calendar window, with no proration."
+    },
+    {
+      "id": "oq.2021-pitcher-15",
+      "section": "2",
+      "text": "Whether the 2021 season used a 15-day or a 10-day floor for pitcher injured-list stints and pitcher options is unresolved (2020 announcement and the 2021 rules versus a glossary note that says the 15-day pitcher list returned in 2022). Working rule: any major-league injured list counts, whatever the length printed on the row. The recall date in the feed is used as written; the minimum stay is not re-imposed."
+    },
+    {
+      "id": "oq.spring-dfa-not-optioned",
+      "section": "1",
+      "text": "Attachment 2 denies Opening Day credit for a pre-roster-deadline option, outright, or DFA of a player who was already optioned. A DFA of a player who was on the major-league roster, still open on Opening Day, is not named in that sentence. Working rule, matching the instruction for this job: no preseason DFA earns Opening Day, whether or not he was optioned. Official totals for a few such players would settle the narrower case."
+    },
+    {
+      "id": "oq.jda-mitigation",
+      "section": "6",
+      "text": "The glossary says a drug suspension reduced by 20 or more games under the mitigation provision can still earn service. That sentence was not read in the drug program itself. Working rule: a drug suspension earns service only when the exceptions file says so. Mitigation is not inferred."
+    },
+    {
+      "id": "oq.five-options",
+      "section": "2",
+      "text": "A five-optional-assignment cap per season is in the public 2022 recap and the glossary, and was not found as a numeral in the agreement text during the research pass. It does not change how a given option day counts. Working rule: the cap is not enforced."
+    },
+    {
+      "id": "oq.super-two-older-rows",
+      "section": "10",
+      "text": "The 2026 cutoff 2.133 is the official figure. Cutoffs for 2012-2017, 2019, and 2020 in the reference file rest on later recap lists, not a standalone article re-read for this job. Those rows were already in the file and were not changed."
+    },
+    {
+      "id": "oq.2020-denominator",
+      "section": "7",
+      "text": "The 2020 scale is days times the original schedule length divided by the revised schedule length. The official denominator was not read from the signed March 2020 agreement. Working rule: the denominator is this calendar's championship-season length. A player on the roster or the major-league injured list the whole season reaches the cap either way."
+    },
+    {
+      "id": "oq.military-beyond-cap",
+      "section": "6",
+      "text": "Service is written for up to two years of active duty and up to thirty days of National Guard emergency duty. The feed does not say which kind of duty a military-list row is. Working rule: a major-league military-list placement counts, and spells are not trimmed at those caps."
+    },
+    {
+      "id": "oq.dfa-before-2012",
+      "section": "1",
+      "text": "The designation window before 2012 was not established. Working rule: the 2012-16 length is the safety cap. See accrual.dfa-window-pre2012."
+    },
+    {
+      "id": "oq.tiebreaker-2017-2021",
+      "section": "9",
+      "text": "The 2022-26 text ends service on the last regularly scheduled game and does not mention tiebreakers. An earlier text, quoted in public reporting, credited a tiebreaker day. The 2017-21 book was not re-read. Working rule: through 2021 a tiebreaker counts for the clubs that played it; from 2022 it does not."
+    },
+    {
+      "id": "oq.game-time-option-day",
+      "section": "2",
+      "text": "The option date does not count if the option was after the start of a major-league game he could have played, and the recall date does count if the recall was after the start of a minor-league game. The feed has dates only. Those two exceptions are not applied."
+    }
+  ],
+  "pre_debut_roster_window_days": 45
+}
