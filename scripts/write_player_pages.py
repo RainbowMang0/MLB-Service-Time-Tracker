@@ -48,10 +48,13 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
 import alumni_sections  # noqa: E402
 import cba  # noqa: E402
+import list_links  # noqa: E402
 from mlb_clubs import CLUB_ABBR, CLUB_NAMES, name_for_record  # noqa: E402
 import options as option_years  # noqa: E402
+import page_titles  # noqa: E402
 import player_sections  # noqa: E402
 import salary_estimates  # noqa: E402
+import share_meta  # noqa: E402
 import super_two  # noqa: E402
 import validate_super_two  # noqa: E402
 
@@ -126,12 +129,10 @@ BASE_PATH = _base_path(SITE_URL)
 # sheet_label is None for Clubs, whose sheet entry is the 30-club grid below,
 # not a row in a list.
 #
-# Contract clock (/contract.html) and Duty days (/taxes.html) carry no entry
-# at all, by owner's decision: both tools stay live and linked from their own
-# pages, but neither is promoted from the header, the sheet or the tabs.
-# This reverses the 2026-09-11 decision recorded in reference/CLAUDE-details.md
-# to link both with an "in development" tag; that tag and those two links are
-# gone from the menu entirely now, not just relabeled.
+# Duty days (/taxes.html) carries no entry. Contract clock is in the sheet
+# and the footer, not a tab: the page is in the sitemap, and a phone keeps
+# four tabs. The salary-cap explainer stays off the menu; it is reached
+# from the lockout page.
 # --------------------------------------------------------------------------
 
 NAV = [
@@ -139,10 +140,15 @@ NAV = [
     ("t/", "Clubs", None, {"phone", "desktop"}),
     ("arbitration-eligible.html", "Arbitration", "Arbitration eligible", {"phone", "desktop", "numbers"}),
     ("super-two.html", "Super Two", "Super Two", {"phone", "desktop", "numbers"}),
+    # Desktop tab plus the sheet and footer. Phone keeps four tabs.
+    ("free-agents.html", "Free agents", "Free agents", {"desktop", "numbers"}),
+    # Sheet and footer only. After the November deadline the page stays linked.
+    ("non-tender-watch.html", None, "Non-tender watch", {"numbers"}),
     # Desktop tab plus the More sheet. Phone keeps four tabs; this page is
     # one tap away in the sheet, which is the menu a phone actually uses.
     ("options.html", "Options", "Out of options", {"desktop", "numbers"}),
     ("lockout.html", "Lockout", "Lockout tracker", {"desktop", "tools"}),
+    ("contract.html", None, "Contract clock", {"tools"}),
     ("alumni/", "Previous players", "Previous players A–Z", {"desktop", "numbers"}),
     ("service-time.html", None, "What is service time?", {"small"}),
     ("about.html", None, "About", {"small"}),
@@ -219,7 +225,7 @@ def _site_header(current: str | None = None) -> str:
         'aria-label="Search players">'
         '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
         '<circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg></button>'
-        '<details class="menu"><summary class="icon-btn" aria-label="Menu">'
+        '<details class="menu"><summary class="icon-btn" aria-label="More" aria-expanded="false">'
         '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
         '<path d="M4 7h16M4 12h16M4 17h16" /></svg>'
         '<span class="hide-phone">More</span></summary>'
@@ -656,11 +662,8 @@ def _description(player: dict) -> str:
     name = player.get("name") or "This player"
     service = player.get("service_time") or "0.000"
     where = _club_phrase(player) or "in the major leagues"
-    return (
-        f"{name} has an estimated {service} years of major league service time "
-        f"{where} — {player.get('service_days_total', 0)} days credited. "
-        f"{_status(player)}. Reconstructed from public roster transactions; "
-        "not an official MLB/MLBPA figure."
+    return page_titles.player_meta(
+        name, service, int(player.get("service_days_total") or 0), where, _status(player)
     )
 
 
@@ -753,12 +756,7 @@ def render_club_index(by_club: dict[str, list[dict]], generated_at: str) -> str:
     """
     url = f"{SITE_URL}/{CLUB_DIR_NAME}/"
     total = sum(len(v) for v in by_club.values())
-    desc = (
-        f"Estimated major league service time for all {total} players on a 40-man "
-        f"roster, by club — who reaches free agency, who reaches arbitration, and "
-        "who is on the Super Two track. Reconstructed from public roster "
-        "transactions; not an official MLB/MLBPA figure."
-    )
+    desc = page_titles.club_index_meta(total)
 
     rows = "".join(
         f"<tr><td><a href=\"{slug(club)}.html\">{html.escape(club)}</a></td>"
@@ -784,14 +782,13 @@ def render_club_index(by_club: dict[str, list[dict]], generated_at: str) -> str:
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 {HEAD_TAGS}
-<title>Service time by club — all 30 teams | Big League Service Time Tracker</title>
+<title>{html.escape(page_titles.club_index_title())}</title>
 <meta name="description" content="{html.escape(desc)}" />
 <link rel="canonical" href="{url}" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Service time by club — all 30 teams" />
+<meta property="og:title" content="{html.escape(page_titles.og_title('Service time by club, all 30 teams'))}" />
 <meta property="og:description" content="{html.escape(desc)}" />
 <meta property="og:url" content="{url}" />
-<meta name="twitter:card" content="summary" />
 {_ld_script(graph)}
 <link rel="icon" href="{BASE_PATH}favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="../styles.css" />
@@ -1069,12 +1066,7 @@ def render_club(
     # because players on the 60-day IL stay on it without counting against the
     # limit. The count is real -- it is what MLB's own roster endpoint returns
     # -- but phrased as a total it reads like a contradiction.
-    desc = (
-        f"Estimated major league service time for the {club} 40-man roster — "
-        f"{total} players, {fa} free agency eligible, {arb} arbitration eligible. "
-        "Reconstructed from public roster transactions; not an official "
-        "MLB/MLBPA figure."
-    )
+    desc = page_titles.club_roster_meta(club, total, fa, arb)
 
     rows = "".join(
         f"<tr><td><a href=\"../{page_path(p)}\">{html.escape(p.get('name') or '')}</a></td>"
@@ -1111,14 +1103,13 @@ def render_club(
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 {HEAD_TAGS}
-<title>{name} service time — 40-man roster | Big League Service Time Tracker</title>
+<title>{html.escape(page_titles.club_roster_title(club))}</title>
 <meta name="description" content="{html.escape(desc)}" />
 <link rel="canonical" href="{url}" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="{name} — service time, 40-man roster" />
+<meta property="og:title" content="{html.escape(page_titles.og_title(page_titles.club_roster_core(club)))}" />
 <meta property="og:description" content="{html.escape(desc)}" />
 <meta property="og:url" content="{url}" />
-<meta name="twitter:card" content="summary" />
 {_ld_script(graph)}
 <link rel="icon" href="{BASE_PATH}favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="../styles.css" />
@@ -1139,9 +1130,9 @@ def render_club(
 
   <div class="facts">
     <div><span>Players tracked</span><b class="big">{total}</b></div>
-    <div><span>Free agency eligible</span><b class="big">{fa}</b></div>
-    <div><span>Arbitration eligible</span><b class="big">{arb}</b></div>
-    <div><span>Super Two track</span><b class="big">{s2}</b></div>
+    <div><span>Free agency eligible</span><b class="big"><a href="{html.escape(slug(club))}-free-agents.html">{fa}</a></b></div>
+    <div><span>Arbitration eligible</span><b class="big"><a href="{html.escape(slug(club))}-arbitration.html">{arb}</a></b></div>
+    <div><span>Super Two track</span><b class="big"><a href="{BASE_PATH}{SUPER_TWO_PAGE_PATH}">{s2}</a></b></div>
     <div><span>Out of options</span><b class="big"><a href="{options_href}">{out_of_options}</a></b></div>
   </div>
 
@@ -1182,17 +1173,13 @@ def render_club_arbitration(
     name = html.escape(club)
     url = f"{SITE_URL}/{club_arbitration_path(club)}"
     year_phrase = f" {next_season}" if next_season else ""
-    desc = (
-        f"{len(players)} {club} players are projected arbitration-eligible "
-        f"this winter{year_phrase} -- estimated from this project's own "
-        "service-time data, not an official MLB/MLBPA figure."
-    )
+    desc = page_titles.club_arb_meta(club, len(players), next_season)
     body = (
         _club_arb_table(players)
         + f"<p class=\"actions\"><a href=\"{slug_}.html\">&larr; {name} roster</a></p>"
     )
     graph = [
-        {"@type": "CollectionPage", "name": f"{club} arbitration-eligible players{year_phrase}",
+        {"@type": "CollectionPage", "name": page_titles.club_arb_core(club, next_season),
          "url": url, "description": desc},
         _breadcrumb_ld([
             ("Big League Service Time Tracker", f"{SITE_URL}/"),
@@ -1201,12 +1188,12 @@ def render_club_arbitration(
         ]),
     ]
     return _alumni_shell(
-        f"{name} arbitration-eligible players{year_phrase} | Big League Service Time Tracker",
+        page_titles.club_arb_title(club, next_season),
         desc, url, _site_header(None),
         _crumbs(
             ("Players", BASE_PATH), (club, f"{slug_}.html"), (f"Arbitration eligible{year_phrase}", None)
         ),
-        f"{club} arbitration-eligible players{year_phrase}",
+        page_titles.club_arb_core(club, next_season),
         f"{len(players)} players on the {club} 40-man roster.",
         body, generated_at, graph,
     )
@@ -1219,17 +1206,13 @@ def render_club_non_tender(
     name = html.escape(club)
     url = f"{SITE_URL}/{club_non_tender_path(club)}"
     year_phrase = f" {next_season}" if next_season else ""
-    desc = (
-        f"{len(pairs)} {club} players are on this winter's non-tender watch "
-        f"list{year_phrase} -- estimated from this project's own "
-        "service-time data, not a prediction of the club's decision."
-    )
+    desc = page_titles.club_nt_meta(club, len(pairs), next_season)
     body = (
         _club_non_tender_table(pairs)
         + f"<p class=\"actions\"><a href=\"{slug_}.html\">&larr; {name} roster</a></p>"
     )
     graph = [
-        {"@type": "CollectionPage", "name": f"{club} non-tender watch{year_phrase}",
+        {"@type": "CollectionPage", "name": page_titles.club_nt_core(club, next_season),
          "url": url, "description": desc},
         _breadcrumb_ld([
             ("Big League Service Time Tracker", f"{SITE_URL}/"),
@@ -1238,12 +1221,12 @@ def render_club_non_tender(
         ]),
     ]
     return _alumni_shell(
-        f"{name} non-tender candidates{year_phrase} | Big League Service Time Tracker",
+        page_titles.club_nt_title(club, next_season),
         desc, url, _site_header(None),
         _crumbs(
             ("Players", BASE_PATH), (club, f"{slug_}.html"), (f"Non-tender watch{year_phrase}", None)
         ),
-        f"{club} non-tender watch{year_phrase}",
+        page_titles.club_nt_core(club, next_season),
         f"{len(pairs)} players on the {club} 40-man roster.",
         body, generated_at, graph,
     )
@@ -1256,13 +1239,8 @@ def render_club_free_agents(
     slug_ = slug(club)
     name = html.escape(club)
     url = f"{SITE_URL}/{club_free_agents_path(club)}"
-    fa_heading = f"free agents after {next_season}" if next_season else "free agents"
-    desc = (
-        f"{len(fa_now)} {club} players are free-agent eligible now, and "
-        f"{len(fa_next_season)} more are projected to reach it after "
-        f"{next_season} -- estimated from this project's own service-time "
-        "data, not an official MLB/MLBPA figure."
-    )
+    fa_core = page_titles.club_fa_core(club, len(fa_now), next_season)
+    desc = page_titles.club_fa_meta(club, len(fa_now), len(fa_next_season), next_season)
     body = (
         "<h2>Free agents now</h2>"
         + _club_fa_table(fa_now, None)
@@ -1271,7 +1249,7 @@ def render_club_free_agents(
         + f"<p class=\"actions\"><a href=\"{slug_}.html\">&larr; {name} roster</a></p>"
     )
     graph = [
-        {"@type": "CollectionPage", "name": f"{club} {fa_heading}",
+        {"@type": "CollectionPage", "name": fa_core,
          "url": url, "description": desc},
         _breadcrumb_ld([
             ("Big League Service Time Tracker", f"{SITE_URL}/"),
@@ -1280,12 +1258,12 @@ def render_club_free_agents(
         ]),
     ]
     return _alumni_shell(
-        f"{name} {fa_heading} | Big League Service Time Tracker",
+        page_titles.club_fa_title(club, len(fa_now), next_season),
         desc, url, _site_header(None),
         _crumbs(
             ("Players", BASE_PATH), (club, f"{slug_}.html"), ("Free agents", None)
         ),
-        f"{club} {fa_heading}",
+        fa_core,
         f"{len(fa_now)} free agents now, {len(fa_next_season)} projected after {next_season}.",
         body, generated_at, graph,
     )
@@ -1365,6 +1343,48 @@ def _teammates_block(player: dict, teammates: list[dict]) -> str:
     return f"<h2>Teammates</h2><ul class='teammates'>{items}</ul>"
 
 
+def _roster_or_season_teammates(player: dict, teammates: list[dict] | None, season_index) -> str:
+    """Current roster mates, or — for a former player — people who shared a season.
+
+    A former player's stored club is not a current roster, so those names are
+    not listed as teammates. Shared seasons already on the record are.
+    """
+    if player.get("on_40_man"):
+        return _teammates_block(player, teammates or [])
+    picked = list_links.pick_teammates(player, season_index or {})
+    return list_links.teammates_html([
+        (_player_filename(mate), mate.get("name") or "") for mate in picked
+    ])
+
+
+def _player_links(player: dict, option_count, season_index) -> str:
+    """List links, the contract clock, and — for a former player — the surname list."""
+    base = BASE_PATH
+    if not player.get("on_40_man"):
+        letter = _surname_initial(player.get("name") or "")
+        fname = ("num" if letter == "#" else letter.lower()) + ".html"
+        return (
+            list_links.alumni_lists(base, f"{ALUMNI_DIR_NAME}/{fname}", letter)
+            + list_links.contract_line(base)
+        )
+    club = player.get("team") or ""
+    live = bool(club) and club in {name for name, _abbr in CLUB_ABBR}
+    eligible = select_arbitration_eligible([player])
+    line = list_links.winter_line(
+        base,
+        free_agent=bool(player.get("free_agent_eligible")),
+        arbitration=bool(eligible),
+        super_two=bool(player.get("super_two_candidate")),
+        non_tender=bool(select_non_tender_watch(eligible)),
+        out_of_options=bool(option_count and option_count.out_of_options),
+        club=club if live else "",
+        club_free_agents=f"{base}{club_free_agents_path(club)}" if live else "",
+        club_arbitration=f"{base}{club_arbitration_path(club)}" if live else "",
+        club_non_tender=f"{base}{club_non_tender_path(club)}" if live else "",
+    )
+    return line + list_links.contract_line(base)
+
+
 def render(
     player: dict,
     team_names: dict[int, str],
@@ -1373,16 +1393,24 @@ def render(
     transactions: list[dict] | None = None,
     compact: dict | None = None,
     option_count: option_years.OptionCount | None = None,
+    season_index: dict | None = None,
+    title_hint: str = "",
 ) -> str:
-    name = html.escape(player.get("name") or "Player")
-    service = html.escape(player.get("service_time") or "0.000")
+    raw_name = player.get("name") or "Player"
+    name = html.escape(raw_name)
+    raw_service = player.get("service_time") or "0.000"
+    service = html.escape(raw_service)
     url = f"{SITE_URL}/{page_path(player)}"
     desc = html.escape(_description(player))
-    shown = name_for_record(player.get("team_id"), player.get("team") or "")
-    club = html.escape(shown)
-    # Past tense for a former player -- see _club_phrase().
-    club_label = club if not club else (
-        club if player.get("on_40_man") else f"Last with {club}"
+    raw_club = player.get("team") or ""
+    club = html.escape(raw_club)
+    # Past tense for a former player -- see _club_phrase(). Link the club
+    # page only when that page exists. An old club name stays plain text.
+    live_club = bool(raw_club) and raw_club in {n for n, _abbr in CLUB_ABBR}
+    club_label = list_links.last_club_label(
+        club,
+        f"{BASE_PATH}{club_path(raw_club)}" if live_club else None,
+        on_roster=bool(player.get("on_40_man")),
     )
     position = html.escape(player.get("position") or "")
     debut = html.escape(player.get("mlb_debut") or "—")
@@ -1435,7 +1463,7 @@ def render(
 
     trail: list[tuple[str, str | None]] = [("Players", "../")]
     if club and player.get("on_40_man"):
-        trail.append((club, f"../{club_path(shown)}"))
+        trail.append((club, f"../{club_path(raw_club)}"))
     elif not player.get("on_40_man"):
         # A published alumnus is not on any club page -- his stored club is
         # stale -- so the alumni directory is his one route back up, and the
@@ -1474,14 +1502,13 @@ def render(
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 {HEAD_TAGS}
-<title>{name} — service time | Big League Service Time Tracker</title>
+<title>{html.escape(page_titles.player_title(raw_name, title_hint))}</title>
 <meta name="description" content="{desc}" />
 <link rel="canonical" href="{url}" />
 <meta property="og:type" content="profile" />
-<meta property="og:title" content="{name} — estimated service time {service}" />
+<meta property="og:title" content="{html.escape(page_titles.player_og(raw_name, raw_service, title_hint))}" />
 <meta property="og:description" content="{desc}" />
 <meta property="og:url" content="{url}" />
-<meta name="twitter:card" content="summary" />
 {jsonld}
 <link rel="icon" href="{BASE_PATH}favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="../styles.css" />
@@ -1503,6 +1530,7 @@ def render(
   {crumbs}
   <h1>{name} service time</h1>
   <p class="subtitle">{club_label}{' · ' if club_label and position else ''}{position} · {html.escape(_status(player))}</p>
+  {_player_links(player, option_count, season_index)}
   <p class="lede">{lede}</p>
 
   <div class="facts">
@@ -1519,7 +1547,7 @@ def render(
   <h2>Season by season</h2>
   {_season_rows(player, team_names)}
 {sections_html}
-  {_teammates_block(player, teammates or [])}
+  {_roster_or_season_teammates(player, teammates, season_index)}
 
   <p class="foot">
     {_threshold_sentence()}
@@ -1572,6 +1600,8 @@ LASTMOD_PATH = DOCS / "data" / "page_lastmod.json"
 # pinned by a test.
 _FIGURE_RE = re.compile(r"\b\d+\.\d{3}\b")               # 8.156, 21.075, 1.000
 _DAYS_PHRASE_RE = re.compile(r"[\d,]+ days credited")     # meta, JSON-LD, lede
+# The shortened meta says "(1,532 days)" rather than "1,532 days credited".
+_DAYS_PAREN_RE = re.compile(r"\(\d[\d,]* days\)")
 _DAYS_FACT_RE = re.compile(r"(<span>Days credited</span>)\d+")
 _DAYS_CELL_RE = re.compile(r"(<td class='n'>)\d+(</td>)")  # season + club tables
 _PCT_RE = re.compile(r"--pct:[\d.]+")                      # the meter fill
@@ -1605,6 +1635,7 @@ def _content_key(page_html: str) -> str:
     )
     stable = _FIGURE_RE.sub("<SVC>", stable)
     stable = _DAYS_PHRASE_RE.sub("<DAYS> days credited", stable)
+    stable = _DAYS_PAREN_RE.sub("(<DAYS> days)", stable)
     stable = _DAYS_FACT_RE.sub(r"\1<DAYS>", stable)
     stable = _DAYS_CELL_RE.sub(r"\1<DAYS>\2", stable)
     stable = _PCT_RE.sub("--pct:<PCT>", stable)
@@ -1826,11 +1857,7 @@ def render_options(
     listed.sort(key=lambda pair: ((pair[0].get("team") or ""), (pair[0].get("name") or "")))
     standard = int(_RULES.require("options.standard_option_years"))
     url = f"{SITE_URL}/{OPTIONS_PATH}"
-    desc = (
-        f"{len(out)} MLB players are out of minor league options, and "
-        f"{len(one)} have one option year left, listed by team. "
-        "Counted from public data."
-    )
+    desc = page_titles.options_meta(len(out), len(one))
     teams = sorted({p.get("team") or "" for p, _c in listed if p.get("team")})
     positions = sorted({p.get("position") or "" for p, _c in listed if p.get("position")})
     team_options = "".join(
@@ -1899,14 +1926,13 @@ def render_options(
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 {HEAD_TAGS}
-<title>MLB players out of options | Big League Service Time Tracker</title>
+<title>{html.escape(page_titles.options_title())}</title>
 <meta name="description" content="{html.escape(desc)}" />
 <link rel="canonical" href="{url}" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="MLB players out of options" />
+<meta property="og:title" content="{html.escape(page_titles.og_title('MLB players out of options'))}" />
 <meta property="og:description" content="{html.escape(desc)}" />
 <meta property="og:url" content="{url}" />
-<meta name="twitter:card" content="summary" />
 {_ld_script(graph)}
 <link rel="icon" href="{BASE_PATH}favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="{BASE_PATH}styles.css" />
@@ -1923,6 +1949,7 @@ def render_options(
   {_crumbs(("Players", BASE_PATH), ("Out of options", None))}
   <h1>Players out of options</h1>
   <p class="subtitle">{len(out)} players on a 40-man roster are out of minor league options, and {len(one)} have one option year left.</p>
+  {list_links.related_league_line(OPTIONS_PATH, BASE_PATH)}
   <details class="opt-more">
     <summary>What an option year is</summary>
     <p>{html.escape(more)}</p>
@@ -2014,6 +2041,10 @@ def write_player_pages(
     option_counts: dict = {}
 
     kept_player_pages: set[pathlib.Path] = set()
+    title_hints = page_titles.title_hints(published)
+    season_index = list_links.index_seasons(
+        (p.get("id"), p.get("name") or "", p.get("seasons") or []) for p in published
+    )
     for player in published:
         # Only a currently-rostered player gets real teammates -- see the
         # warning in _group_rostered_by_club() and _teammates_block().
@@ -2032,7 +2063,7 @@ def write_player_pages(
             option_counts[player["id"]] = option_count
         page = render(
             player, team_names, generated_at, teammates, transactions, compact,
-            option_count,
+            option_count, season_index, title_hints.get(player.get("id"), ""),
         )
         rel = page_path(player)
         dest = DOCS / rel
@@ -2309,7 +2340,6 @@ def _alumni_shell(title: str, desc: str, url: str, header: str, crumbs: str,
 <meta property="og:title" content="{html.escape(heading)}" />
 <meta property="og:description" content="{html.escape(desc)}" />
 <meta property="og:url" content="{url}" />
-<meta name="twitter:card" content="summary" />
 {_ld_script(graph)}
 <link rel="icon" href="{BASE_PATH}favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="{depth}styles.css" />
@@ -2367,12 +2397,7 @@ def _write_alumni_pages(
         fname = ("num" if letter == "#" else letter.lower()) + ".html"
         rel = f"{ALUMNI_DIR_NAME}/{fname}"
         url = f"{SITE_URL}/{rel}"
-        desc = (
-            f"Estimated major league service time for {len(players)} players "
-            f"whose surname begins with {letter} and who are no longer on a "
-            "40-man roster. Reconstructed from public roster transactions; not "
-            "an official MLB/MLBPA figure."
-        )
+        desc = page_titles.alumni_letter_meta(len(players), letter)
         rows = "".join(
             f"<tr><td><a href=\"../{page_path(p)}\">{html.escape(p.get('name') or '')}</a></td>"
             f"<td class='n svc-col'>{_svc_cell(p)}</td>"
@@ -2402,7 +2427,7 @@ def _write_alumni_pages(
             ]),
         ]
         page = _alumni_shell(
-            f"Previous players — {letter} | Big League Service Time Tracker",
+            page_titles.alumni_letter_title(letter),
             desc, url, _site_header("alumni/"),
             _crumbs(("Players", "../"), ("Previous players", "./"), (letter, None)),
             f"Previous players — {letter}",
@@ -2417,11 +2442,7 @@ def _write_alumni_pages(
     # The directory itself.
     rel = f"{ALUMNI_DIR_NAME}/index.html"
     url = f"{SITE_URL}/{ALUMNI_DIR_NAME}/"
-    desc = (
-        f"Estimated major league service time for {total:,} players who have "
-        "come off a 40-man roster, A to Z. Reconstructed from public roster "
-        "transactions; not an official MLB/MLBPA figure."
-    )
+    desc = page_titles.alumni_index_meta(f"{total:,}")
     cards = "".join(
         f"<tr><td><a href=\"{('num' if l == '#' else l.lower())}.html\">{l}</a></td>"
         f"<td class='n'>{len(ps)}</td></tr>"
@@ -2440,7 +2461,7 @@ def _write_alumni_pages(
         ]),
     ]
     page = _alumni_shell(
-        "Previous players — service time A to Z | Big League Service Time Tracker",
+        page_titles.alumni_index_title(),
         desc, url, _site_header("alumni/"),
         _crumbs(("Players", "../"), ("Previous players", None)),
         "Previous players",
@@ -2634,6 +2655,7 @@ HEAD_TAGS = (
     f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE_CLIENT_ID}" crossorigin="anonymous"></script>'
     f'<meta name="google-adsense-account" content="{ADSENSE_CLIENT_ID}">'
     "<!-- End Google AdSense -->"
+    + share_meta.tags(SITE_URL)
 )
 
 # The sentence the task's data-source review requires verbatim on every
@@ -2794,6 +2816,10 @@ h1 { letter-spacing: -0.02em; }
 .opt-empty { color: var(--text-muted); margin: 0.4rem 0; }
 .facts b a { color: inherit; text-decoration: none; }
 .facts b a:hover { text-decoration: underline; }
+.list-links { font-size: 0.9rem; color: var(--text-secondary); margin: 0.35rem 0 0.85rem;
+              max-width: 68ch; line-height: 1.5; }
+.list-links a { color: var(--accent); text-decoration: none; }
+.list-links a:hover { text-decoration: underline; }
 @media (max-width: 640px) {
   .opt-controls input, .opt-controls select { flex-basis: 100%; }
 }
@@ -2835,24 +2861,28 @@ HAND_WRITTEN_PAGES = [
 # reproduced by hand on the six pages that cannot read this Python --
 # see test_the_footer_is_the_same_on_every_page().
 #
-# Contract clock and Duty days are absent by the same owner decision as the
-# header's sheet (see NAV's docstring): both stay live at their own URLs but
-# are not promoted from here.
+# Numbers and Tools follow NAV, so a sheet entry and the footer cannot
+# drift. Clubs is the one footer label NAV does not carry (its sheet entry
+# is the abbreviation grid). Duty days stays out. Contract clock is a tool
+# link, not a tab.
 # --------------------------------------------------------------------------
 
 def _site_footer() -> str:
-    numbers = "".join(
-        f'<a href="{BASE_PATH}{href}">{label}</a>'
-        for href, label in (
-            ("", "Players"),
-            ("t/", "Clubs"),
-            (ARBITRATION_ELIGIBLE_PATH, "Arbitration eligible"),
-            (SUPER_TWO_PAGE_PATH, "Super Two"),
-            (OPTIONS_PATH, "Out of options"),
-            (f"{ALUMNI_DIR_NAME}/", "Previous players A–Z"),
-        )
+    number_parts = []
+    for href, _tab, sheet, where in NAV:
+        if href == "t/":
+            label = "Clubs"
+        elif "numbers" in where and sheet:
+            label = sheet
+        else:
+            continue
+        number_parts.append(f'<a href="{BASE_PATH}{href}">{label}</a>')
+    numbers = "".join(number_parts)
+    tools = "".join(
+        f'<a href="{BASE_PATH}{href}">{sheet}</a>'
+        for href, _tab, sheet, where in NAV
+        if "tools" in where and sheet
     )
-    tools = f'<a href="{BASE_PATH}lockout.html">Lockout tracker</a>'
     learn = f'<a href="{BASE_PATH}{EXPLAINER_PATH}">What is service time?</a>'
     site = "".join(
         f'<a href="{BASE_PATH}{href}">{label}</a>'
@@ -2945,12 +2975,12 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
     GOLD_CARD_YEARS = 8
     MAX_PENSION_YEARS = 10
 
-    desc = (
-        "What major league service time is, how a day is earned, and every "
-        f"threshold it unlocks — {FULL_YEAR_DAYS} days to a year, arbitration "
-        f"at {_yrs(ARBITRATION_YEARS)}, free agency at {_yrs(FREE_AGENCY_YEARS)}, "
-        f"the gold card at {_yrs(GOLD_CARD_YEARS)} and a full pension at "
-        f"{_yrs(MAX_PENSION_YEARS)}."
+    desc = page_titles.explainer_meta(
+        FULL_YEAR_DAYS,
+        _yrs(ARBITRATION_YEARS),
+        _yrs(FREE_AGENCY_YEARS),
+        _yrs(GOLD_CARD_YEARS),
+        _yrs(MAX_PENSION_YEARS),
     )
     # One worked example, computed rather than typed, so "6 x 172 + 31 = 1,063"
     # cannot survive a change to what a credited year is worth.
@@ -3060,14 +3090,13 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 {HEAD_TAGS}
-<title>What is MLB service time? Every threshold explained | Big League Service Time Tracker</title>
+<title>{html.escape(page_titles.explainer_title())}</title>
 <meta name="description" content="{html.escape(desc)}" />
 <link rel="canonical" href="{url}" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="What is MLB service time? Every threshold explained" />
+<meta property="og:title" content="{html.escape(page_titles.og_title('What MLB service time is'))}" />
 <meta property="og:description" content="{html.escape(desc)}" />
 <meta property="og:url" content="{url}" />
-<meta name="twitter:card" content="summary" />
 {_ld_script(graph)}
 <link rel="icon" href="{BASE_PATH}favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="{BASE_PATH}styles.css" />
@@ -3361,37 +3390,17 @@ def render_arbitration_eligible(
         if super_two_cutoff and super_two_cutoff.get("season")
         else (gen_year + 1 if gen_year else None)
     )
-    season_phrase = f" heading into {next_season}" if next_season else ""
-
     s2_count = sum(1 for p in eligible if p.get("super_two_candidate"))
-    s2_bubble_count = sum(1 for p in eligible if p.get("super_two_bubble"))
     standard_count = len(eligible) - s2_count
-    club_count = len({p.get("team") for p in eligible if p.get("team")})
-    extension_count = sum(1 for p in eligible if p.get("id") in known_extensions)
-    extension_sentence = (
-        f" {extension_count} of them already have a contract or extension "
-        "on file (marked below), so an actual arbitration hearing is "
-        "unlikely even though their service time qualifies."
-        if extension_count else ""
-    )
-    bubble_phrase = (
-        f" ({s2_bubble_count} of those are on the bubble -- within the "
-        "projected range but short of its high end; see the Super Two page.)"
-        if s2_bubble_count else ""
-    )
 
-    desc = (
-        f"{len(eligible)} players on a 40-man roster are projected "
-        f"arbitration-eligible this winter{season_phrase} -- {standard_count} by "
-        f"standard service time ({_yrs(ARBITRATION_YEARS)}+) and {s2_count} as "
-        "Super Two. Estimated from this project's own service-time data, not "
-        "an official MLB/MLBPA figure."
+    desc = page_titles.arbitration_meta(
+        len(eligible), standard_count, s2_count, _yrs(ARBITRATION_YEARS), next_season
     )
 
     rows = []
     for club, players in sorted(_group_by_club(eligible).items()):
         rows.append(
-            f"<tr class='arb-club-row'><td colspan='3'><a href=\"{BASE_PATH}{club_path(club)}\">"
+            f"<tr class='arb-club-row'><td colspan='3'><a href=\"{BASE_PATH}{club_arbitration_path(club)}\">"
             f"{html.escape(club)}</a> <span class='n'>({len(players)})</span></td></tr>"
         )
         for p in sorted(
@@ -3422,14 +3431,13 @@ def render_arbitration_eligible(
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 {HEAD_TAGS}
-<title>Arbitration-eligible players this winter{title_year} | Big League Service Time Tracker</title>
+<title>{html.escape(page_titles.arbitration_title(next_season))}</title>
 <meta name="description" content="{html.escape(desc)}" />
 <link rel="canonical" href="{url}" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Arbitration-eligible players this winter{title_year}" />
+<meta property="og:title" content="{html.escape(page_titles.og_title(page_titles.arbitration_core(next_season)))}" />
 <meta property="og:description" content="{html.escape(desc)}" />
 <meta property="og:url" content="{url}" />
-<meta name="twitter:card" content="summary" />
 {_ld_script(graph)}
 <link rel="icon" href="{BASE_PATH}favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="{BASE_PATH}styles.css" />
@@ -3447,6 +3455,7 @@ def render_arbitration_eligible(
 
   <h1>Arbitration-eligible players this winter{title_year}</h1>
   <p class="subtitle">{len(eligible)} rostered players are arbitration-eligible this winter.</p>
+  {list_links.related_league_line(ARBITRATION_ELIGIBLE_PATH, BASE_PATH)}
   {_what_is("#arbitration")}
 
   <table class="arb-table"><thead><tr><th>Player</th><th class="n">Service time</th>
@@ -3625,6 +3634,7 @@ def render_super_two(
             "years of service. Estimated from this project's own data, not an "
             "official MLB/MLBPA figure."
         )
+    desc = page_titles.fit_meta(desc)
 
     rows = "".join(
         f"<tr><td><a href=\"{BASE_PATH}{page_path(p)}\">{html.escape(p.get('name') or '')}</a></td>"
@@ -3652,7 +3662,7 @@ def render_super_two(
     )
 
     graph = [
-        {"@type": "CollectionPage", "name": "Super Two cutoff projection", "url": url,
+        {"@type": "CollectionPage", "name": page_titles.super_two_core(super_two_cutoff), "url": url,
          "description": desc},
         _breadcrumb_ld([
             ("Big League Service Time Tracker", f"{SITE_URL}/"),
@@ -3666,14 +3676,13 @@ def render_super_two(
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 {HEAD_TAGS}
-<title>Super Two cutoff projection | Big League Service Time Tracker</title>
+<title>{html.escape(page_titles.super_two_title(super_two_cutoff))}</title>
 <meta name="description" content="{html.escape(desc)}" />
 <link rel="canonical" href="{url}" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Super Two cutoff projection" />
+<meta property="og:title" content="{html.escape(page_titles.og_title(page_titles.super_two_core(super_two_cutoff)))}" />
 <meta property="og:description" content="{html.escape(desc)}" />
 <meta property="og:url" content="{url}" />
-<meta name="twitter:card" content="summary" />
 {_ld_script(graph)}
 <link rel="icon" href="{BASE_PATH}favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="{BASE_PATH}styles.css" />
@@ -3690,6 +3699,7 @@ def render_super_two(
   {_crumbs(("Players", BASE_PATH), ("Super Two", None))}
 
   <h1>{"Super Two: this winter's cutoff" if official_line else "Super Two: this winter's projected cutoff"}</h1>
+  {list_links.related_league_line(SUPER_TWO_PAGE_PATH, BASE_PATH)}
   <p class="subtitle">{
     f"Of {len(class_players)} players in the live 2.000-3.000 year class: "
     f"{projected_count} are Super Two and {below_count} fall below "
@@ -3856,7 +3866,7 @@ def _non_tender_rows(watch: list[tuple[dict, list[str]]], depth: str = BASE_PATH
     rows = []
     for club, pairs in sorted(_group_by_club_pairs(watch).items()):
         rows.append(
-            f"<tr class='arb-club-row'><td colspan='3'><a href=\"{depth}{club_path(club)}\">"
+            f"<tr class='arb-club-row'><td colspan='3'><a href=\"{depth}{club_non_tender_path(club)}\">"
             f"{html.escape(club)}</a> <span class='n'>({len(pairs)})</span></td></tr>"
         )
         for p, reasons in sorted(
@@ -3889,19 +3899,14 @@ def render_non_tender_watch(
     the rule that builds it."""
     url = f"{SITE_URL}/{NON_TENDER_WATCH_PATH}"
     gen_year = int((generated_at or "")[:4]) if generated_at else None
-    deadline = f"November 20, {gen_year}" if gen_year else "this November"
     season_phrase = f" for the {next_season} season" if next_season else ""
 
     final_year_count = sum(1 for _, r in watch if any("final arbitration year" in x for x in r))
     low_games_count = sum(1 for _, r in watch if any("played in just" in x for x in r))
     club_count = len({p.get("team") for p, _ in watch if p.get("team")})
 
-    desc = (
-        f"{len(watch)} arbitration-eligible players on this winter's non-tender "
-        f"watch list ahead of the {deadline} deadline -- "
-        f"{final_year_count} in their final arbitration year and {low_games_count} "
-        "with limited playing time last season. Estimated from this project's "
-        "own service-time data, not a prediction of any club's decision."
+    desc = page_titles.non_tender_meta(
+        len(watch), gen_year, final_year_count, low_games_count
     )
 
     rows = _non_tender_rows(watch)
@@ -3921,14 +3926,13 @@ def render_non_tender_watch(
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 {HEAD_TAGS}
-<title>MLB non-tender candidates{season_phrase} | Big League Service Time Tracker</title>
+<title>{html.escape(page_titles.non_tender_title(gen_year))}</title>
 <meta name="description" content="{html.escape(desc)}" />
 <link rel="canonical" href="{url}" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="MLB non-tender candidates{season_phrase}" />
+<meta property="og:title" content="{html.escape(page_titles.og_title(page_titles.non_tender_core(gen_year)))}" />
 <meta property="og:description" content="{html.escape(desc)}" />
 <meta property="og:url" content="{url}" />
-<meta name="twitter:card" content="summary" />
 {_ld_script(graph)}
 <link rel="icon" href="{BASE_PATH}favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="{BASE_PATH}styles.css" />
@@ -3946,6 +3950,7 @@ def render_non_tender_watch(
 
   <h1>Non-tender watch{season_phrase}</h1>
   <p class="subtitle">{len(watch)} players meet this winter's non-tender watch.</p>
+  {list_links.related_league_line(NON_TENDER_WATCH_PATH, BASE_PATH)}
   {_what_is("#arbitration")}
 
   <table class="arb-table"><thead><tr><th>Player</th><th class="n">Service time</th>
@@ -3985,12 +3990,7 @@ def render_free_agents(
     season_phrase = f" after the {gen_year} season" if gen_year else ""
     club_count = len({p.get("team") for p in fa_now if p.get("team")})
 
-    desc = (
-        f"{len(fa_now)} players reach MLB free agency{season_phrase}, plus "
-        f"every rostered player grouped by the year he is projected to reach "
-        "it. Estimated from this project's own service-time data, not an "
-        "official MLB/MLBPA figure."
-    )
+    desc = page_titles.free_agents_meta(len(fa_now), gen_year)
 
     now_rows = _fa_year_rows(fa_now)
 
@@ -4021,14 +4021,13 @@ def render_free_agents(
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 {HEAD_TAGS}
-<title>MLB free agents{season_phrase} and by year | Big League Service Time Tracker</title>
+<title>{html.escape(page_titles.free_agents_title(gen_year))}</title>
 <meta name="description" content="{html.escape(desc)}" />
 <link rel="canonical" href="{url}" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="MLB free agents{season_phrase} and by year" />
+<meta property="og:title" content="{html.escape(page_titles.og_title(page_titles.free_agents_core(gen_year)))}" />
 <meta property="og:description" content="{html.escape(desc)}" />
 <meta property="og:url" content="{url}" />
-<meta name="twitter:card" content="summary" />
 {_ld_script(graph)}
 <link rel="icon" href="{BASE_PATH}favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="{BASE_PATH}styles.css" />
@@ -4041,11 +4040,12 @@ def render_free_agents(
 </script>
 </head>
 <body>
-<div class="viz-root">{_site_header(None)}<div class="wrap">
+<div class="viz-root">{_site_header(FREE_AGENTS_PATH)}<div class="wrap">
   {_crumbs(("Players", BASE_PATH), ("Free agents", None))}
 
   <h1>MLB free agents{season_phrase}</h1>
   <p class="subtitle">{len(fa_now)} players are free-agent eligible now, and everyone else is grouped by the year they could reach it.</p>
+  {list_links.related_league_line(FREE_AGENTS_PATH, BASE_PATH)}
   {_what_is("#free-agency")}
 
   <h2>Free agents now{season_phrase}</h2>

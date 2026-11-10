@@ -271,4 +271,13 @@
       if (e.target !== input && !list.contains(e.target)) closeList();
     });
   });
+  document.querySelectorAll("details.menu").forEach(function (menu) {
+    var summary = menu.querySelector("summary");
+    if (!summary) return;
+    function sync() {
+      summary.setAttribute("aria-expanded", menu.open ? "true" : "false");
+    }
+    sync();
+    menu.addEventListener("toggle", sync);
+  });
 })(typeof window !== "undefined" ? window : this);

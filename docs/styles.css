@@ -1393,7 +1393,7 @@ summary.icon-btn::-webkit-details-marker { display: none; }
 /* Primary tabs. */
 .tabs { display: flex; gap: 2px; max-width: 84rem; margin: 0 auto; padding: 0 clamp(16px,4vw,40px); overflow-x: auto; }
 .tabs a { flex: 0 0 auto; min-height: 44px; display: inline-flex; align-items: center; gap: 0; padding: 0 12px; color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 550; border-bottom: 2px solid transparent; white-space: nowrap; }
-.tabs a:hover { color: var(--text-primary); }
+.tabs a:hover { color: var(--text-primary); } .tabs a:focus-visible, summary.icon-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .tabs a[aria-current="page"] { color: var(--text-primary); border-bottom-color: var(--accent); }
 .tag { font-size: 0.62rem; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); border: 1px solid var(--glass-border); border-radius: 3px; padding: 1px 4px; margin-left: 5px; vertical-align: 2px; }
 .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--status-warning); margin-left: 6px; vertical-align: 2px; }
