@@ -839,7 +839,6 @@ def render_club_index(by_club: dict[str, list[dict]], generated_at: str) -> str:
     Eligibility counts describe players currently on a 40-man roster.
     <br /><br />
     {ESTIMATE_LINE}
-    Last updated {html.escape(generated_at[:10])}.
   </p>
 </div>{_site_footer()}{_search_script_tag()}</div>
 {ANALYTICS}
@@ -1178,7 +1177,6 @@ def render_club(
     Players near a threshold are estimates.
     <br /><br />
     {ESTIMATE_LINE}
-    Last updated {html.escape(generated_at[:10])}.
   </p>
 </div>{_site_footer()}{_search_script_tag()}</div>
 {ANALYTICS}
@@ -1546,7 +1544,6 @@ def render(
     <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
     <br /><br />
     {ESTIMATE_LINE}
-    Last updated {html.escape(generated_at[:10])}.
   </p>
 </div>{_site_footer()}{_search_script_tag()}</div>
 {ANALYTICS}
@@ -1557,24 +1554,11 @@ def render(
 
 LASTMOD_PATH = DOCS / "data" / "page_lastmod.json"
 
-# The footer stamp moves every day on every page whether or not anything about
-# the player changed, so it has to come out before hashing or every page looks
-# modified daily -- which is precisely the lie this is here to stop telling.
-#
-# Two wordings, not one. The generated pages say "Last updated <date>"; the
-# hand-written explainer (docs/service-time.html) says "Updated <date>", and
-# the original pattern did not match it -- so that one page reported a content
-# change every single day and carried a fresh sitemap lastmod for it. A
-# sitemap that cries wolf on one URL is the same failure as one that cries
-# wolf on all of them, just quieter. Anchoring on the optional "Last " prefix
-# covers both.
-#
-# The replacement string stays exactly "Last updated." -- not something
-# neutral like "updated." -- because the stable text is what gets hashed, so
-# changing it would rehash all 1,396 pages and bump every sitemap lastmod to
-# today for no reason. Keeping it means this fix moves the one page that was
-# actually broken and leaves the other 1,395 alone.
-_VOLATILE_RE = re.compile(r"(?:Last u|U)pdated \d{4}-\d{2}-\d{2}\.")
+# Pages do not print a generated date. A footer date used to change every
+# file every day, which made the sitemap claim the whole site was new. The
+# date is gone. What is still normalised out of the hash is the daily
+# service-time tick, below: a counter moving by one day is not a significant
+# change, and lastmod moves only when the hash does.
 
 
 # --- The daily tick is not a content change ---------------------------------
@@ -1596,9 +1580,8 @@ _VOLATILE_RE = re.compile(r"(?:Last u|U)pdated \d{4}-\d{2}-\d{2}\.")
 # Google to re-fetch 81% of the site daily while 782 pages had never been
 # crawled once.
 #
-# This is the same judgement `_VOLATILE_RE` already makes about the footer date
-# -- that stamp also genuinely changes daily and is also normalised out --
-# extended to the two figures that behave the same way.
+# The same judgement applied to the two figures that behave that way: they
+# genuinely change every accruing day, and they are normalised out of the hash.
 #
 # WHAT STILL MOVES A DATE, deliberately: a status change (the badge text
 # differs), a trade (the club name differs), a new season row (the YEAR is not
@@ -1633,8 +1616,7 @@ _OPEN_STINT_RE = re.compile(r'(<td class="num pp-open">).*?(</td>)', re.S)
 
 
 def _content_key(page_html: str) -> str:
-    stable = _VOLATILE_RE.sub("Last updated.", page_html)
-    stable = _OPEN_STINT_RE.sub(r"\1<OPEN>\2", stable)
+    stable = _OPEN_STINT_RE.sub(r"\1<OPEN>\2", page_html)
     stable = _PLAIN_FIGURE_RE.sub("<b><PLAIN></b>", stable)
     stable = _SVC_SPLIT_RE.sub(
         "<span class='svc-years'><SVC></span><span class='svc-days'><SVC></span>", stable
@@ -1657,10 +1639,10 @@ class _LastMod:
     through a five-month offseason is the textbook case of the unreliable
     lastmod that Google responds to by ignoring lastmod for the whole site.
 
-    So: hash each rendered page with the daily footer stamp removed, and only
-    move the date when the hash actually moves. Hashing the rendered HTML
-    rather than the record behind it means a template change counts too, which
-    it should -- the page really did change.
+    So: hash each rendered page with the daily service-time tick normalised
+    out, and only move the date when the hash actually moves. Hashing the
+    rendered HTML rather than the record behind it means a template change
+    counts too, which it should -- the page really did change.
 
     A missing or unreadable manifest degrades to "everything changed today",
     which is exactly the old behaviour and never wrong in a harmful direction.
@@ -1696,28 +1678,12 @@ class _LastMod:
         return sum(1 for v in self.current.values() if v["lastmod"] == self.today)
 
 
-def _stamp_updated(page_html: str, day: str) -> str:
-    """Print `day` in the footer stamp instead of the run date.
-
-    Renderers still fill that stamp with the run date. `_content_key`
-    strips it before hashing, so the sitemap date does not depend on which
-    day is printed. Putting the date `_LastMod.record` returned into the
-    file means a later run with the same content prints the same day.
-    """
-    if not day:
-        return page_html
-    return _VOLATILE_RE.sub(
-        lambda match: re.sub(r"\d{4}-\d{2}-\d{2}", day, match.group(0)),
-        page_html,
-    )
-
-
 def _write_if_changed(path: pathlib.Path, text: str) -> bool:
     """Write `text` only when the file's bytes would actually change.
 
-    A daily run used to rewrite every generated page to bump "Last updated"
-    to the run date. Skipping an identical write leaves the file, and its
-    sitemap date, where they were.
+    A daily run used to rewrite every generated page to change one line.
+    Skipping an identical write leaves the file, and its sitemap date,
+    where they were.
     """
     path.parent.mkdir(parents=True, exist_ok=True)
     try:
@@ -1731,9 +1697,9 @@ def _write_if_changed(path: pathlib.Path, text: str) -> bool:
 
 
 def _publish_page(path: pathlib.Path, html: str, lastmod: "_LastMod", rel: str) -> bool:
-    """Record lastmod from the rendered HTML, stamp that date, write if new."""
-    day = lastmod.record(rel, html)
-    return _write_if_changed(path, _stamp_updated(html, day))
+    """Record lastmod from the rendered HTML and write the file if it changed."""
+    lastmod.record(rel, html)
+    return _write_if_changed(path, html)
 
 
 def _prune_html(directory: pathlib.Path, keep: set[pathlib.Path]) -> None:
@@ -2007,7 +1973,6 @@ def render_options(
     Options figures are our own counts from public data and can differ from the official record.
     <br /><br />
     {ESTIMATE_LINE}
-    Last updated {html.escape(generated_at[:10])}.
   </p>
 </div>{_site_footer()}{_search_script_tag()}</div>
 {_OPTIONS_JS}
@@ -2386,7 +2351,6 @@ def _alumni_shell(title: str, desc: str, url: str, header: str, crumbs: str,
     <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
     <br /><br />
     {ESTIMATE_LINE}
-    Last updated {html.escape(generated_at[:10])}.
   </p>
 </div>{_site_footer()}{_search_script_tag()}</div>
 {ANALYTICS}
@@ -3281,10 +3245,6 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
   <p>{ESTIMATE_LINE}</p>
 
   <p class="actions"><a href="{BASE_PATH}">Look up a player &rarr;</a></p>
-
-  <p class="foot">
-    Updated {generated_at[:10]}.
-  </p>
 </div>{_site_footer()}{_search_script_tag()}</div>
 {ANALYTICS}
 </body>
@@ -3515,7 +3475,6 @@ def render_arbitration_eligible(
     <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
     <br /><br />
     {ESTIMATE_LINE}
-    Last updated {html.escape(generated_at[:10])}.
   </p>
 </div>{_site_footer()}{_search_script_tag()}</div>
 {ANALYTICS}
@@ -3782,7 +3741,6 @@ def render_super_two(
     <a href="{BASE_PATH}service-time.html">what every threshold unlocks</a>.
     <br /><br />
     {ESTIMATE_LINE}
-    Last updated {html.escape(generated_at[:10])}.
   </p>
 </div>{_site_footer()}{_search_script_tag()}</div>
 {ANALYTICS}
@@ -4017,7 +3975,6 @@ def render_non_tender_watch(
     Players near a threshold are estimates.
     <br /><br />
     {ESTIMATE_LINE}
-    Last updated {html.escape((generated_at or "")[:10])}.
   </p>
 </div>{_site_footer()}{_search_script_tag()}</div>
 {ANALYTICS}
@@ -4121,7 +4078,6 @@ def render_free_agents(
     Players near a threshold are estimates.
     <br /><br />
     {ESTIMATE_LINE}
-    Last updated {html.escape((generated_at or "")[:10])}.
   </p>
 </div>{_site_footer()}{_search_script_tag()}</div>
 {ANALYTICS}

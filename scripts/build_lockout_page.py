@@ -855,7 +855,6 @@ def render(data: dict, now: dt.datetime) -> str:
 
       <section class="panel">
         <h2>Latest updates</h2>
-        <p class="panel-note">Last updated {html.escape(updated.isoformat())}.</p>
         {_filter_bar()}
         {_render_entries(entries)}
       </section>
@@ -1051,7 +1050,7 @@ def _cap_faq(faq: list[dict]) -> tuple[str, list[dict]]:
     return "".join(html_parts), ld_items
 
 
-def _cap_sources(data: dict, updated_label: str) -> str:
+def _cap_sources(data: dict) -> str:
     rows = []
     for src in data["sources"]:
         rows.append(
@@ -1065,7 +1064,7 @@ def _cap_sources(data: dict, updated_label: str) -> str:
     return (
         '<section class="panel cap-section">'
         "<h2>Sources</h2>"
-        f'<p class="panel-note cap-section-summary">Last updated {html.escape(updated_label)}. Every figure above is tied to a published proposal or news report.</p>'
+        '<p class="panel-note cap-section-summary">Every figure above is tied to a published proposal or news report.</p>'
         f"{note_html}"
         '<details class="cap-details"><summary>Show sources</summary>'
         f'<ul class="cap-sources">{"".join(rows)}</ul>'
@@ -1078,14 +1077,13 @@ def render_salary_cap(data: dict) -> str:
     as_of = _parse_iso_date(data["as_of"], "salary-cap.as_of")
     updated = _parse_iso_date(data["updated"], "salary-cap.updated")
     as_of_label = format_date_full(as_of)
-    updated_label = format_date_full(updated)
 
     desc = data["meta_description"]
     tiles = "".join(_cap_tile(fig) for fig in data["figures"])
     scale_svg = _cap_scale_svg(data["scale"])
     sections = "".join(_cap_section(sec) for sec in data["sections"])
     faq_html, faq_ld = _cap_faq(data["faq"])
-    sources_html = _cap_sources(data, updated_label)
+    sources_html = _cap_sources(data)
 
     graph = [
         {
