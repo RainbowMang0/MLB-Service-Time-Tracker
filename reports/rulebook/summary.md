@@ -7,7 +7,7 @@ Differences of 25 days or more: 957.
 Unknown transactions: 0 (0 on a current 40-man player).
 Ambiguous restricted-list rows: 292. Current 40-man rows still unknown: 24. Unsourced 2020 opt-outs, not counted: 13.
 Against the live published file: 2906 differ (2511 up, 395 down, net 424617 days). Current 40-man: 323 differ (286 up, 37 down). 0 current 40-man players are 172 or more days below the published total.
-Spring options counted from the league opener, matching the November 2, 2026 report: 6.
+Spring options counted from the league opener: 6.
 Seasons where games exceed credited days: 116 (17 current 40-man players). Keep the published total for those seasons.
 Unsourced clubs left unclassified: Auckland Tuatara, Estrellas de Sur, Estrellas de Norte (47 assignments).
 Sanity failures: 0.

@@ -336,8 +336,7 @@ def _season_attribution(result: dict, year: int, delta: int, season: dict | None
         return "accrual.spring-option-league-opener", (
             f"{year} is {abs(delta)} days lower because a spring option counted from the league's "
             f"first game is exactly {option_threshold} days, so the year is used and those days are not "
-            "credited. MLB Trade Rumors reported Mitchell Parker's 2.167 and his Super Two status on "
-            "November 2, 2026, which is this count. It is no longer an open decision."
+            "credited. The count uses the league opener."
         )
     if season is not None and season.get("credited_days") == 0 and delta < 0:
         if option_days > 0:
@@ -439,7 +438,7 @@ def _long_reason(rule: str, year: int, delta: int) -> str:
         "start.mlb-contract-signing": "a major-league signing after free agency or a release restarts service",
         "accrual.appearance-game": "service restarts at the first major-league game after a stop the file never recalled",
         "accrual.appearance-restart": "a later season he played restarts at that season's opener",
-        "accrual.spring-option-league-opener": "a spring option counted from the league's first game uses the year; a published report agrees",
+        "accrual.spring-option-league-opener": "a spring option counted from the league's first game uses the year",
         "stop.assigned-minors": "an assignment to an affiliate stops service",
         "count.suspension": "an on-field suspension counts",
         "stop.ped-suspension": "a drug-program suspension does not count",
@@ -899,7 +898,7 @@ def main() -> int:
         f"Unknown transactions: {len(unknown_rows)} ({unknown_40} on a current 40-man player).",
         f"Ambiguous restricted-list rows: {len(ambiguous_rows)}. Current 40-man rows still unknown: {len(review_40)}. Unsourced 2020 opt-outs, not counted: {len(opt_outs)}.",
         f"Against the live published file: {len(published_rows)} differ ({published_up} up, {published_down} down, net {published_net} days). Current 40-man: {len(published_40)} differ ({published_40_up} up, {published_40_down} down). {len(published_low)} current 40-man players are 172 or more days below the published total.",
-        f"Spring options counted from the league opener, matching the November 2, 2026 report: {len(decisions)}.",
+        f"Spring options counted from the league opener: {len(decisions)}.",
         f"Seasons where games exceed credited days: {len(appearance_gaps)} ({summary['appearance_gaps']['current_40_man_players']} current 40-man players). Keep the published total for those seasons.",
         f"Unsourced clubs left unclassified: Auckland Tuatara, Estrellas de Sur, Estrellas de Norte ({len(unsourced_club_rows)} assignments).",
         f"Sanity failures: {len(sanity_failures)}.",
