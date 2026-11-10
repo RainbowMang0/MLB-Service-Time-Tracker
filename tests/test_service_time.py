@@ -2863,33 +2863,31 @@ def test_super_two_status_labels_with_a_real_range():
 
 
 def test_an_extended_player_leaves_the_arbitration_and_non_tender_lists():
-    """
-    A reported extension buys out the hearing. Service time can still say
-    he has crossed the arbitration threshold; the winter lists leave him
-    off, and the non-tender watch is built from that same list.
-    """
+    """A confirmed guarantee buys out the hearing. A flag with no contract row does not."""
     import write_player_pages as wpp
 
+    low_games = {"season_stats": {"2026": {"hitting": {"gamesPlayed": 5}}}}
     players = [
-        {"id": 1, "name": "Has An Extension", "team": "A", "on_40_man": True,
+        {"id": 666160, "name": "Mickey Moniak", "team": "A", "on_40_man": True,
          "service_days_total": 4 * wpp.FULL_YEAR_DAYS, "service_time": "4.000",
          "super_two_candidate": False, "arbitration_eligible": True,
-         "contract_extension": True},
-        {"id": 2, "name": "No Extension", "team": "A", "on_40_man": True,
+         **low_games},
+        {"id": 2, "name": "Flag Only", "team": "A", "on_40_man": True,
          "service_days_total": 4 * wpp.FULL_YEAR_DAYS, "service_time": "4.000",
-         "super_two_candidate": False, "arbitration_eligible": True},
+         "super_two_candidate": False, "arbitration_eligible": True,
+         "contract_extension": True, **low_games},
     ]
-    selected = wpp.select_arbitration_eligible(players)
-    check("the extended player is not selected", {p["id"] for p in selected} == {2})
-    html = wpp.render_arbitration_eligible(players, "2026-10-30T00:00:00+00:00", None, {})
-    check("the extended player is absent from the page", "Has An Extension" not in html)
-    check("the player without an extension stays on the page", "No Extension" in html)
-    watch = wpp.select_non_tender_watch(players)
-    check("the extended player is not on non-tender watch",
-          all(p["id"] != 1 for p, _reasons in watch))
-    sentence = wpp._milestone_sentence(players[0])
-    check("his page says the arbitration list leaves him off",
-          "arbitration list leaves him off" in sentence)
+    selected = wpp.select_arbitration_eligible(players, 2027)
+    check("the contracted player is not selected", {p["id"] for p in selected} == {2})
+    html_out = wpp.render_arbitration_eligible(players, "2026-10-30T00:00:00+00:00", None, {})
+    check("the contracted player is absent from the page", "Mickey Moniak" not in html_out)
+    check("a flag with no contract row stays on the page", "Flag Only" in html_out)
+    watch = wpp.select_non_tender_watch(players, 2027)
+    check("the contracted player is not on non-tender watch",
+          all(p["id"] != 666160 for p, _reasons in watch))
+    check("the flag alone does not take anyone off non-tender watch",
+          any(p["id"] == 2 for p, _reasons in watch))
+    sentence = wpp._milestone_sentence(players[0], 2027)
     check("his page does not call him arbitration-eligible",
           "arbitration-eligible" not in sentence)
 
@@ -6812,13 +6810,13 @@ def test_service_sanity_flags_both_failure_modes():
 
 
 def test_moniak_override_is_an_extension():
-    import salary_estimates as se
-    overrides = se.load_contract_overrides()
-    check("Mickey Moniak is in the hand-kept override file", 666160 in overrides)
-    check("the override note says reported extension",
-          overrides[666160].get("note") == "reported extension")
-    check("has_contract_extension honors the file without a transaction",
-          se.has_contract_extension(666160, overrides) is True)
+    import contracts
+    root = pathlib.Path(__file__).resolve().parents[1]
+    row = contracts.get(666160)
+    check("Moniak's override is the one contracts row",
+          row is not None and row.first == 2027 and row.last == 2028
+          and contracts.label_for(666160, 2027) == "Signed through 2028"
+          and not (root / "data" / "contract_overrides.json").exists())
 
 
 if __name__ == "__main__":

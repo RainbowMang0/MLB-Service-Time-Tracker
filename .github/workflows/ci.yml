@@ -87,6 +87,9 @@ jobs:
       - name: Season calendar and service-time exceptions
         run: python tests/test_reference_data.py
 
+      - name: Contract years
+        run: python tests/test_contracts.py
+
       - name: Player page sections
         run: python tests/test_player_sections.py
 

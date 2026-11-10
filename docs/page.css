@@ -151,5 +151,5 @@ h1 { letter-spacing: -0.02em; }
 @media (max-width: 640px) {
   .opt-controls input, .opt-controls select { flex-basis: 100%; }
 }
-.faq h3 { font-size: 1.02rem; margin: 1.15rem 0 0.2rem; line-height: 1.35; }
-.faq p { margin: 0.15rem 0 0; }
+.faq h3 { font-size: 1.02rem; margin: 1.15rem 0 0.2rem; line-height: 1.35; } .faq p { margin: 0.15rem 0 0; }
+.signed-through { font-size: 0.95rem; line-height: 1.45; margin: 0.35rem 0 0; max-width: 40rem; } .roster-signed { display: block; margin-top: 0.12rem; max-width: 12rem; font-size: 0.75rem; line-height: 1.35; color: var(--text-muted); white-space: normal; }
