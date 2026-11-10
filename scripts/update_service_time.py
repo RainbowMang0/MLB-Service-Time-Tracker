@@ -43,6 +43,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
 import accrual_model  # noqa: E402
 import cba  # noqa: E402
+import mlb_clubs  # noqa: E402
 import fetch_mlb_data as mlb  # noqa: E402
 import refresh_complete  # noqa: E402
 import salary_estimates  # noqa: E402
@@ -1598,6 +1599,7 @@ def write_index(
         ),
         "player_count": len(rows),
         "teams": teams,
+        "team_ids": mlb_clubs.ids_for_display_names(teams),
         "positions": positions,
         # Self-documenting, so the row layout is readable without the code.
         "super_two_cutoff": super_two_cutoff,
@@ -1635,11 +1637,7 @@ def write_profiles(db: dict[str, dict]) -> None:
     shard is small and self-contained; the id is kept alongside for linking.
     """
     players = list(db.values())
-    team_names: dict[int, str] = {}
-    for p in players:
-        tid, tname = p.get("team_id"), p.get("team")
-        if tid and tname:
-            team_names.setdefault(int(tid), tname)
+    team_names = dict(mlb_clubs.CLUB_NAMES)
 
     shards: dict[int, dict[str, dict]] = {}
     mismatches: list[tuple] = []
@@ -1665,7 +1663,7 @@ def write_profiles(db: dict[str, dict]) -> None:
         shards.setdefault(int(pid) % PROFILE_SHARDS, {})[str(pid)] = {
             "id": pid,
             "name": p.get("name"),
-            "team": p.get("team"),
+            "team": mlb_clubs.name_for_record(p.get("team_id"), p.get("team")),
             "position": p.get("position"),
             "mlb_debut": p.get("mlb_debut"),
             "last_played": p.get("last_played"),

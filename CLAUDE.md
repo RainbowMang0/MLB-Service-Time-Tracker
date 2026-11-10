@@ -18,28 +18,29 @@ sections now live there). Don't read it end to end.
 - **Owner (Braxton) is not a full-time developer.** Explain the *why*, keep
   summaries short, lead with the result and the decision needed.
 
-## Where things stand (2026-10-30)
+## Code organization rules
 
-| page | what | state |
-|---|---|---|
-| `/` | service-time tracker, 5,600+ players, daily refresh | mature |
-| `/t/`, `/alumni/`, `/p/` | club hubs, alumni directory, player pages | live (~1,350 rostered, ~2,500 alumni pages) |
-| `/taxes.html` | duty-day / jock-tax allocation | live, **not CPA-reviewed** |
-| `/contract.html` | contract clock (short answer + full tool) | live; no salary projections (no salary data) |
-| `/neutrality.html` | neutrality statement | live |
+- **One job per file.** New logic goes in the module that already owns that
+  job, or in a new small module.
+- **About 600 lines is the soft cap** for a code file (`.py`, `.js`, `.css`
+  under `scripts/`, `docs/` except `docs/data/`, and `tests/`). Don't grow a
+  file that is already over it; split it instead. CI rejects a file that
+  crosses the cap or grows while already over it. Files already over the cap
+  are listed, with today's line count, in `scripts/code_size_allowlist.txt`.
+- **Search before adding a helper, table, or constant, and reuse it.**
+  Shared lists (clubs, dates, CBA constants) live in one module only. Club
+  names live in `scripts/mlb_clubs.py` (`CLUB_NAMES`).
+- **Delete dead code.** Don't leave a script around that would overwrite the
+  live database if someone ran it.
+- **A refactor does not change output.** Same pages, same numbers. Golden
+  cases and determinism checks still pass.
 
-- **Rules version 6 engine is merged (PR #13), but the database is NOT
-  recomputed** — non-rostered records stay on v5 until the owner runs the
-  backfill with `--recompute-all`. Rostered players converge via the daily job.
-- **Super Two (PR #17 merged):** validator passes 2021–2022; 2023–2025 still
-  fail (+12/+3/−3 days). Re-check after the recompute; never tune toward the
-  reference.
-- **PR #15** (league-minimum salary estimate) is open, not merged.
-- **CBA expires 2026-12-01** — see "CBA rules" below.
-- Long-form, area-specific notes (dated 2026-10-28) are in `handoff/`
-  (`site-expansion.md`, `contract-and-profiles.md`,
-  `baseball-reference-validation.md`). Read the relevant one only when working
-  in that area — they have the sharpest open-issue lists.
+## Where things stand
+
+This file does not keep a dated status. The old 2026-10-30 table went stale.
+What is live is the site. Measured findings and history are in
+`reference/CLAUDE-details.md` — search by section, don't read it end to end.
+Older area notes are in `handoff/`; open one only when working in that area.
 
 ## Layout
 
@@ -81,7 +82,7 @@ docs/data/profiles/NN.json     per-player season detail, sharded by id % 64
 docs/data/config/              published COPY of config/ (generated)
 docs/p/ docs/t/ docs/alumni/   generated pages; also page.css, 404.html,
                                service-time.html, sitemap*.xml, robots.txt
-.github/workflows/             ci.yml (every push/PR, offline), update-service-time.yml
+.github/workflows/             ci.yml (pull requests, and pushes to main), update-service-time.yml
                                (daily 8am ET), backfill-history.yml (manual),
                                validate.yml (manual), probe-coverage.yml
 ```
@@ -105,11 +106,13 @@ node --test tests/duty_days.test.cjs     # 27
 node --test tests/contract.test.cjs      # 41, includes the advice-vocabulary lint
 python3 scripts/validate_published.py    # files agree + zero dead links
 python3 scripts/validate_super_two.py    # currently exits 1 for 2023-2025 (known)
+python3 scripts/check_code_standards.py  # size cap, and one club-name table
 ```
 
 - Run the Python tests after touching `service_time.py` — they encode real,
   measured findings.
-- CI (`ci.yml`) runs the offline checks on every push and PR.
+- CI (`ci.yml`) runs every suite under `tests/` once per pull request, and
+  again on pushes to `main`.
 - To view the site: `cd docs && python3 -m http.server`.
 - The sandbox usually cannot reach statsapi.mlb.com; live checks run as Actions
   (Validate Service Time → rosters | reference | super-two | player | published | tests).

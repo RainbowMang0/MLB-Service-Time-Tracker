@@ -50,6 +50,7 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
 import fetch_mlb_data as mlb  # noqa: E402
+from mlb_clubs import MLB_CLUB_IDS  # noqa: E402
 
 OUT_ROOT = pathlib.Path(__file__).resolve().parents[1] / "docs" / "data" / "schedules"
 
@@ -57,10 +58,6 @@ OUT_ROOT = pathlib.Path(__file__).resolve().parents[1] / "docs" / "data" / "sche
 # are included because spring training days are duty days -- which is exactly
 # why the Arizona/Florida split matters so much to a player's allocation.
 GAME_TYPES = "S,R,F,D,L,W"
-
-# The 30 major league clubs. Stable ids -- MLB has not reassigned one, and the
-# Athletics' move changed the club's NAME, not its id (133).
-MLB_CLUB_IDS = frozenset(list(range(108, 122)) + list(range(133, 148)) + [158])
 
 # Non-US venues, mapped to the jurisdiction codes in config/tax/2026-states.json.
 # Kept explicit rather than derived: a silent fallback to a US state for a

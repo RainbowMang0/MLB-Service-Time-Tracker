@@ -3735,7 +3735,7 @@ def test_the_daily_service_time_tick_is_not_a_content_change():
     check("(a) one more day does NOT move the date", key(plus(1)) == base)
     check("(b) thirty more days do not either", key(plus(30)) == base)
 
-    traded = copy.deepcopy(player); traded["team"] = "Another Club"
+    traded = copy.deepcopy(player); traded["team_id"] = 147
     check("(c) a trade DOES move it", key(traded) != base)
 
     promoted = copy.deepcopy(player); promoted["free_agent_eligible"] = True
