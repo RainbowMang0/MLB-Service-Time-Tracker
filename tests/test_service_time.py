@@ -2654,10 +2654,10 @@ def test_an_unpublished_cutoff_is_called_a_prediction_not_a_fact():
     cut = ix.get("super_two_cutoff") or {}
     hist = (ix.get("super_two_published") or {}).get("by_season") or {}
     check("a cutoff is published for the table", bool(cut.get("cutoff")))
-    check("the computed season is the one not yet announced",
-          str(cut.get("season")) not in hist)
-    check("every published season precedes it",
-          all(int(y) < int(cut["season"]) for y in hist))
+    season = str(cut.get("season"))  # an announced season must be official and agree
+    check("the computed season is unannounced, or announced and official", season not in hist or (cut.get("official") and hist[season] == cut.get("cutoff")))
+    check("every other published season precedes it",
+          all(int(y) < int(cut["season"]) for y in hist if y != season))
 
 
 def test_the_page_does_not_claim_a_finished_season_is_still_being_played():
