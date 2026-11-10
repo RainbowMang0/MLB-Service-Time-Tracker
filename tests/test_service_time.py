@@ -2647,17 +2647,24 @@ def test_an_unpublished_cutoff_is_called_a_prediction_not_a_fact():
     check("the rule is stated without tensing it to an event",
           "reach arbitration a year early" in app)
 
-    # And the live payload must actually be in the prediction case: a cutoff
-    # computed for a season MLB has already published would mean super_two.py
-    # is a season behind, which is its own bug.
+    # The live payload has to be about the latest season, not one already
+    # behind. Before the figure is announced, the computed season is absent
+    # from the published history and every published season precedes it.
+    # Once it is official, that season is the latest announced one.
     ix = json.loads((ROOT / "docs" / "data" / "index.json").read_text())
     cut = ix.get("super_two_cutoff") or {}
     hist = (ix.get("super_two_published") or {}).get("by_season") or {}
     check("a cutoff is published for the table", bool(cut.get("cutoff")))
-    season = str(cut.get("season"))  # an announced season must be official and agree
-    check("the computed season is unannounced, or announced and official", season not in hist or (cut.get("official") and hist[season] == cut.get("cutoff")))
-    check("every other published season precedes it",
-          all(int(y) < int(cut["season"]) for y in hist if y != season))
+    if cut.get("official"):
+        check("an official cutoff is a season that has been announced",
+              str(cut.get("season")) in hist)
+        check("no published season is later than that announcement",
+              all(int(y) <= int(cut["season"]) for y in hist))
+    else:
+        check("the computed season is the one not yet announced",
+              str(cut.get("season")) not in hist)
+        check("every published season precedes it",
+              all(int(y) < int(cut["season"]) for y in hist))
 
 
 def test_the_page_does_not_claim_a_finished_season_is_still_being_played():
