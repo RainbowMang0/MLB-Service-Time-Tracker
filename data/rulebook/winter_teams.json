@@ -1,0 +1,294 @@
+{
+  "_note": [
+    "Winter-league clubs, matched by the team id on the saved transaction.",
+    "An assignment to one of these clubs does not stop major-league service.",
+    "Leagues: LIDOM (Dominican winter), LVBP (Venezuelan winter), LMP (Mexican Pacific), LBPRC (Puerto Rico), and the Australian Baseball League.",
+    "Ids and names are the ones on the saved feed, including spelling variants such as Aguilas Cibaenas and Estrellas Oriente that do not contain the word de or del.",
+    "National teams are a separate rule. Domestic affiliates are not on this list.",
+    "name_match is false when the same name is also a summer club. Those are matched by id only."
+  ],
+  "teams": [
+    {
+      "id": 672,
+      "name": "Tigres del Licey",
+      "league": "LIDOM",
+      "name_match": true
+    },
+    {
+      "id": 671,
+      "name": "Leones del Escogido",
+      "league": "LIDOM",
+      "name_match": true
+    },
+    {
+      "id": 668,
+      "name": "Toros del Este",
+      "league": "LIDOM",
+      "name_match": true
+    },
+    {
+      "id": 670,
+      "name": "Gigantes del Cibao",
+      "league": "LIDOM",
+      "name_match": true
+    },
+    {
+      "id": 667,
+      "name": "Aguilas Cibaenas",
+      "league": "LIDOM",
+      "name_match": true
+    },
+    {
+      "id": 669,
+      "name": "Estrellas Orientales",
+      "league": "LIDOM",
+      "name_match": true
+    },
+    {
+      "id": 4088,
+      "name": "LIDOM All-Stars",
+      "league": "LIDOM",
+      "name_match": true
+    },
+    {
+      "id": 696,
+      "name": "Navegantes del Magallanes",
+      "league": "LVBP",
+      "name_match": true
+    },
+    {
+      "id": 698,
+      "name": "Tiburones de La Guaira",
+      "league": "LVBP",
+      "name_match": true
+    },
+    {
+      "id": 695,
+      "name": "Leones del Caracas",
+      "league": "LVBP",
+      "name_match": true
+    },
+    {
+      "id": 693,
+      "name": "Cardenales de Lara",
+      "league": "LVBP",
+      "name_match": true
+    },
+    {
+      "id": 699,
+      "name": "Tigres de Aragua",
+      "league": "LVBP",
+      "name_match": true
+    },
+    {
+      "id": 694,
+      "name": "Caribes de Anzoategui",
+      "league": "LVBP",
+      "name_match": true
+    },
+    {
+      "id": 697,
+      "name": "Bravos de Margarita",
+      "league": "LVBP",
+      "name_match": true
+    },
+    {
+      "id": 692,
+      "name": "Aguilas del Zulia",
+      "league": "LVBP",
+      "name_match": true
+    },
+    {
+      "id": 5040,
+      "name": "Estrellas Oriente",
+      "league": "LVBP",
+      "name_match": true
+    },
+    {
+      "id": 4684,
+      "name": "Estrellas Occidente",
+      "league": "LVBP",
+      "name_match": true
+    },
+    {
+      "id": 5061,
+      "name": "Estrellas de Felipe Rojas Alou",
+      "league": "LVBP",
+      "name_match": true
+    },
+    {
+      "id": 5062,
+      "name": "Estrellas de Juan Marichal",
+      "league": "LVBP",
+      "name_match": true
+    },
+    {
+      "id": 5421,
+      "name": "Estrellas LVBP",
+      "league": "LVBP",
+      "name_match": true
+    },
+    {
+      "id": 677,
+      "name": "Naranjeros de Hermosillo",
+      "league": "LMP",
+      "name_match": true
+    },
+    {
+      "id": 680,
+      "name": "Yaquis de Obregon",
+      "league": "LMP",
+      "name_match": true
+    },
+    {
+      "id": 678,
+      "name": "Tomateros de Culiacan",
+      "league": "LMP",
+      "name_match": true
+    },
+    {
+      "id": 673,
+      "name": "Aguilas de Mexicali",
+      "league": "LMP",
+      "name_match": true
+    },
+    {
+      "id": 674,
+      "name": "Charros de Jalisco",
+      "league": "LMP",
+      "name_match": false
+    },
+    {
+      "id": 679,
+      "name": "Venados de Mazatlan",
+      "league": "LMP",
+      "name_match": true
+    },
+    {
+      "id": 675,
+      "name": "Caneros de los Mochis",
+      "league": "LMP",
+      "name_match": true
+    },
+    {
+      "id": 676,
+      "name": "Mayos de Navojoa",
+      "league": "LMP",
+      "name_match": true
+    },
+    {
+      "id": 5482,
+      "name": "Algodoneros de Guasave",
+      "league": "LMP",
+      "name_match": true
+    },
+    {
+      "id": 688,
+      "name": "Indios de Mayaguez",
+      "league": "LBPRC",
+      "name_match": true
+    },
+    {
+      "id": 686,
+      "name": "Criollos de Caguas",
+      "league": "LBPRC",
+      "name_match": true
+    },
+    {
+      "id": 685,
+      "name": "Cangrejeros de Santurce",
+      "league": "LBPRC",
+      "name_match": true
+    },
+    {
+      "id": 687,
+      "name": "Gigantes de Carolina",
+      "league": "LBPRC",
+      "name_match": true
+    },
+    {
+      "id": 689,
+      "name": "Leones de Ponce",
+      "league": "LBPRC",
+      "name_match": true
+    },
+    {
+      "id": 4087,
+      "name": "Senadores de San Juan",
+      "league": "LBPRC",
+      "name_match": true
+    },
+    {
+      "id": 4644,
+      "name": "Atenienses de Manati",
+      "league": "LBPRC",
+      "name_match": true
+    },
+    {
+      "id": 4089,
+      "name": "LBPRC All-Stars",
+      "league": "LBPRC",
+      "name_match": true
+    },
+    {
+      "id": 4067,
+      "name": "Melbourne Aces",
+      "league": "ABL",
+      "name_match": true
+    },
+    {
+      "id": 4065,
+      "name": "Brisbane Bandits",
+      "league": "ABL",
+      "name_match": true
+    },
+    {
+      "id": 4069,
+      "name": "Sydney Blue Sox",
+      "league": "ABL",
+      "name_match": true
+    },
+    {
+      "id": 4064,
+      "name": "Adelaide Giants",
+      "league": "ABL",
+      "name_match": true
+    },
+    {
+      "id": 4068,
+      "name": "Perth Heat",
+      "league": "ABL",
+      "name_match": true
+    },
+    {
+      "id": 4066,
+      "name": "Canberra Cavalry",
+      "league": "ABL",
+      "name_match": true
+    },
+    {
+      "id": 4424,
+      "name": "Team Australia",
+      "league": "ABL",
+      "name_match": true
+    },
+    {
+      "id": 5483,
+      "name": "Sultanes de Monterrey",
+      "league": "LMP",
+      "name_match": false
+    },
+    {
+      "id": 5470,
+      "name": "Aguilas de Mexicali",
+      "league": "LMP",
+      "name_match": true
+    },
+    {
+      "id": 5484,
+      "name": "Mayos de Navojoa",
+      "league": "LMP",
+      "name_match": true
+    }
+  ]
+}

@@ -7,12 +7,10 @@ tests/golden/transactions/ and are what this test hands to the service-time
 walk, so the check does not call the network and does not depend on the
 transaction cache.
 
-The walk is the rules. The published site can sit above the walk for a
-season in which the player appeared in far more games than the walk
-credited, because those game dates get added back when the site is built.
-That step needs the game log, which this test does not fetch. Cole, Burnes,
-and Ohtani are the three where the site and the walk therefore disagree
-with each other as well as with the hand count.
+The check runs the rulebook in scripts/rulebook.py over the saved rows.
+The published site can still sit above that count for a season, because
+the site is built by the current service-time walk plus game dates this
+test does not fetch.
 
 A player whose engine result does not match the hand count is listed with
 an ``xfail`` reason. That mismatch is reported and does not fail the run.
@@ -32,38 +30,18 @@ from __future__ import annotations
 import datetime as dt
 import json
 import sys
-from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import cba  # noqa: E402
-import fetch_mlb_data as mlb  # noqa: E402
-import service_time_exceptions  # noqa: E402
-from il_stints import SeasonWindows  # noqa: E402
-from mlb_clubs import MLB_CLUB_IDS  # noqa: E402
-from options import count_option_years  # noqa: E402
-from service_time import (  # noqa: E402
-    Transaction,
-    compute_service_time,
-    is_active_stop,
-    is_free_agency_election,
-    roster_start_before_debut,
-)
+from rulebook import evaluate  # noqa: E402
 from super_two import format_service, load_reported_cutoff, parse_service  # noqa: E402
-from update_service_time import (  # noqa: E402
-    _involves_mlb_club,
-    _is_mlb_assignment,
-    _is_minor_assignment,
-    _opening_day_clubs,
-    _season_windows_for_player,
-)
 
 GOLDEN = ROOT / "tests" / "golden" / "players.json"
 TRANSACTIONS = ROOT / "tests" / "golden" / "transactions"
 SITE = ROOT / "docs" / "data" / "service_time.json"
-WINDOWS_FILE = ROOT / "data" / "season_windows.json"
 HORIZON = dt.date(2026, 11, 9)
 
 PASS = 0
@@ -81,133 +59,23 @@ def check(label: str, condition: bool) -> None:
         print(f"  FAIL - {label}")
 
 
-def _windows_by_year() -> dict[int, dict]:
-    raw = json.loads(WINDOWS_FILE.read_text())["years"]
-    out = {}
-    for year, row in raw.items():
-        out[int(year)] = {
-            "end": dt.date.fromisoformat(row["end"]),
-            "openers": {int(k): dt.date.fromisoformat(v) for k, v in row["clubs"].items()},
-            "ends": {int(k): dt.date.fromisoformat(v) for k, v in row.get("ends", {}).items()},
-        }
-    return out
-
-
-_CALENDAR = _windows_by_year()
-
-
-def _uniform(year: int) -> dt.date:
-    """The opener the current engine uses: the most common in-window date."""
-    row = _CALENDAR[year]
-    earliest = row["end"] - dt.timedelta(days=186)
-    within = [d for d in row["openers"].values() if d >= earliest]
-    return Counter(within).most_common(1)[0][0]
-
-
-def _install_calendar() -> None:
-    """Point the season-window lookups at the stored calendar. No network."""
-
-    def season_window(year: int):
-        row = _CALENDAR[year]
-        return _uniform(year), row["end"]
-
-    def club_start(year: int, club_id: int | None):
-        row = _CALENDAR[year]
-        if club_id in row["openers"]:
-            return row["openers"][club_id]
-        return _uniform(year)
-
-    def club_end(year: int, club_id: int | None):
-        row = _CALENDAR[year]
-        if club_id in row["ends"]:
-            return max(row["end"], row["ends"][club_id])
-        return row["end"]
-
-    mlb.get_season_window = season_window
-    mlb.get_uniform_season_start = _uniform
-    mlb.get_club_season_start = club_start
-    mlb.get_club_season_end = club_end
-
-
-def _transactions(pid: int) -> tuple[list[dict], list[Transaction]]:
-    rows = json.loads((TRANSACTIONS / f"{pid}.json").read_text())
-    wrapped = []
-    for row in rows:
-        desc = row.get("description") or ""
-        minor = _is_minor_assignment(row, MLB_CLUB_IDS)
-        assignment = _is_mlb_assignment(row, MLB_CLUB_IDS)
-        if not (
-            _involves_mlb_club(row, MLB_CLUB_IDS)
-            or minor
-            or assignment
-            or is_active_stop(desc)
-            or is_free_agency_election(desc)
-        ):
-            continue
-        wrapped.append(
-            Transaction(
-                date=dt.date.fromisoformat(row["date"]),
-                description=desc,
-                team=row.get("team") if isinstance(row.get("team"), str) else None,
-                minor_assignment=minor,
-                mlb_assignment=assignment,
-            )
-        )
-    return rows, wrapped
-
-
-def _team_ids(rows: list[dict]) -> dict[int, list[int]]:
-    out: dict[int, list[int]] = {}
-    for row in rows:
-        if not _involves_mlb_club(row, MLB_CLUB_IDS):
-            continue
-        for key in ("to_team_id", "team_id", "from_team_id"):
-            team_id = row.get(key)
-            if team_id in MLB_CLUB_IDS:
-                year = int(row["date"][:4])
-                bucket = out.setdefault(year, [])
-                if team_id not in bucket:
-                    bucket.append(team_id)
-                break
-    return out
-
-
-def _run_engine(player: dict, debut: dt.date, exceptions, season_teams: dict[int, list[int]]) -> dict:
-    rows, wrapped = _transactions(player["mlbam_id"])
-    floor = roster_start_before_debut(wrapped, debut) or debut
-    first_year = min(season["year"] for season in player["seasons"])
-    first_year = min(first_year, debut.year)
-    # Club by season comes from the published record. Without it a traded
-    # player's window falls back to every club he ever touched, and an
-    # overseas opener gets dropped.
-    seasons = _season_windows_for_player(
-        range(first_year, 2027),
-        season_teams,
-        _team_ids(rows),
-        _opening_day_clubs(rows, MLB_CLUB_IDS),
-    )
-    active, inactive = service_time_exceptions.periods_for_player(
-        exceptions, player["mlbam_id"]
-    )
-    rules = cba.default()
-    result = compute_service_time(
-        wrapped,
-        seasons,
-        presume_active_from_debut=True,
-        horizon_end=HORIZON,
-        accrual_floor=floor,
-        dfa_limbo_days=rules.require("designated_for_assignment.max_service_days"),
-        force_active_periods=active,
-        force_inactive_periods=inactive,
+def _run_engine(player: dict, debut: dt.date) -> dict:
+    rows = json.loads((TRANSACTIONS / f"{player['mlbam_id']}.json").read_text())
+    result = evaluate(
+        rows,
+        player_id=player["mlbam_id"],
+        name=player["name"],
+        debut=debut,
+        horizon=HORIZON,
     )
     return {
-        "formatted": result.formatted,
-        "days": result.total_days,
-        "by_season": {
-            year: detail["credited_days"] for year, detail in result.by_season.items()
-        },
-        "arbitration": result.is_arbitration_eligible,
-        "free_agency": result.is_free_agent_eligible,
+        "formatted": result["service_time"],
+        "days": result["service_days"],
+        "by_season": {season["year"]: season["credited_days"] for season in result["seasons"]},
+        "option_days": {int(year): days for year, days in result["option_days"].items()},
+        "option_years_used": result["option_years_used"],
+        "option_years_saved": result["option_years_saved"],
+        "sanity": result["sanity"],
     }
 
 
@@ -216,18 +84,8 @@ def _site_rows() -> dict[int, dict]:
     return {row["id"]: row for row in data["players"]}
 
 
-def _season_teams(row: dict) -> dict[int, list[int]]:
-    teams = {}
-    for season in row.get("seasons") or []:
-        ids = [team_id for team_id in season.get("t") or [] if team_id in MLB_CLUB_IDS]
-        if ids:
-            teams[season["y"]] = ids
-    return teams
-
-
 def main() -> int:
     global XFAIL
-    _install_calendar()
     fixture = json.loads(GOLDEN.read_text())
     rules = cba.default()
     full_year = rules.require("service_time.days_per_credited_year")
@@ -239,8 +97,6 @@ def main() -> int:
         print(f"\n{PASS} passed, {FAIL} failed, {XFAIL} expected mismatches")
         return 1
 
-    exceptions = service_time_exceptions.load_exceptions()
-    option_windows = SeasonWindows.load()
     site_rows = _site_rows()
     report = []
 
@@ -300,21 +156,12 @@ def main() -> int:
         check(f"{name} has a debut date on the site", bool(debut_text))
         if not debut_text:
             continue
-        engine = _run_engine(
-            player, dt.date.fromisoformat(debut_text), exceptions, _season_teams(site_row)
-        )
-        rows, _wrapped = _transactions(pid)
-        option_days, _inferred = count_option_years(rows, option_windows, HORIZON)
-        used = [year for year, total in sorted(option_days.items()) if total >= rules.require_verified("options.days_to_burn_option_year")]
-        saved = [
-            year
-            for year, total in sorted(option_days.items())
-            if 0 < total < rules.require_verified("options.days_to_burn_option_year")
-        ]
-        check(f"{name} option years used {player['option_years_used']}", used == player["option_years_used"])
-        check(f"{name} option years saved {player['option_years_saved']}", saved == player["option_years_saved"])
+        engine = _run_engine(player, dt.date.fromisoformat(debut_text))
+        check(f"{name} accounting holds", engine["sanity"] == [])
+        check(f"{name} option years used {player['option_years_used']}", engine["option_years_used"] == player["option_years_used"])
+        check(f"{name} option years saved {player['option_years_saved']}", engine["option_years_saved"] == player["option_years_saved"])
         expected_days = {int(year): total for year, total in player["option_days"].items()}
-        got_days = {year: option_days.get(year, 0) for year in expected_days}
+        got_days = {year: engine["option_days"].get(year, 0) for year in expected_days}
         check(f"{name} option day totals", got_days == expected_days)
 
         expected_seasons = {season["year"]: season["credited_days"] for season in player["seasons"]}

@@ -93,6 +93,9 @@ jobs:
       - name: Option years
         run: python tests/test_options.py
 
+      - name: Service-time rulebook
+        run: python tests/test_rulebook.py
+
       - name: Golden service-time cases
         run: python tests/test_golden_players.py
 

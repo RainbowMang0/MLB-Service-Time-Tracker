@@ -1,0 +1,179 @@
+{
+  "rules_version": "rulebook-1",
+  "compared_with": "service-time walk version 10 on the same saved transactions",
+  "counted_through": "2026-11-09",
+  "players_compared": 5609,
+  "match": 2866,
+  "differ": 2743,
+  "up": 2483,
+  "down": 260,
+  "net_days": 188182,
+  "prior_rules_change": {
+    "players_changed": 399,
+    "up": 295,
+    "down": 104
+  },
+  "by_rule": [
+    {
+      "rule_id": "stop.option",
+      "players": 679
+    },
+    {
+      "rule_id": "neutral.all-star",
+      "players": 474
+    },
+    {
+      "rule_id": "count.dfa",
+      "players": 399
+    },
+    {
+      "rule_id": "neutral.winter-league",
+      "players": 324
+    },
+    {
+      "rule_id": "accrual.appearance-restart",
+      "players": 225
+    },
+    {
+      "rule_id": "stop.free-agency",
+      "players": 150
+    },
+    {
+      "rule_id": "accrual.trade-resolves-dfa",
+      "players": 146
+    },
+    {
+      "rule_id": "stop.assigned-minors",
+      "players": 121
+    },
+    {
+      "rule_id": "stop.released",
+      "players": 57
+    },
+    {
+      "rule_id": "accrual.strike-service-1996",
+      "players": 31
+    },
+    {
+      "rule_id": "start.mlb-contract-signing",
+      "players": 26
+    },
+    {
+      "rule_id": "stop.reassigned-minors",
+      "players": 25
+    },
+    {
+      "rule_id": "stop.restricted",
+      "players": 15
+    },
+    {
+      "rule_id": "accrual.shortened-2020",
+      "players": 14
+    },
+    {
+      "rule_id": "stop.outright",
+      "players": 11
+    },
+    {
+      "rule_id": "count.il-10",
+      "players": 9
+    },
+    {
+      "rule_id": "count.dl-15",
+      "players": 8
+    },
+    {
+      "rule_id": "accrual.spring-option-league-opener",
+      "players": 6
+    },
+    {
+      "rule_id": "start.selected",
+      "players": 5
+    },
+    {
+      "rule_id": "accrual.option-under-20",
+      "players": 4
+    },
+    {
+      "rule_id": "count.suspension",
+      "players": 3
+    },
+    {
+      "rule_id": "count.concussion-7",
+      "players": 2
+    },
+    {
+      "rule_id": "start.purchased",
+      "players": 2
+    },
+    {
+      "rule_id": "exception.paid_administrative_leave",
+      "players": 2
+    },
+    {
+      "rule_id": "start.recalled",
+      "players": 2
+    },
+    {
+      "rule_id": "count.il-15",
+      "players": 1
+    },
+    {
+      "rule_id": "exception.covid_opt_out_return",
+      "players": 1
+    },
+    {
+      "rule_id": "count.il-60",
+      "players": 1
+    }
+  ],
+  "on_40_man_differ": 364,
+  "alumni_differ": 2379,
+  "differences_of_25_days_or_more": 957,
+  "threshold_crossers": 210,
+  "unknown_transactions": 0,
+  "unknown_on_40_man": 0,
+  "ambiguous_restricted_list": 292,
+  "sanity_failures": 0,
+  "published_comparison": {
+    "note": "Compared with the live published file as well as the replay. Alumni in that file can still be on an older rules version.",
+    "differ": 2906,
+    "match": 2703,
+    "up": 2511,
+    "down": 395,
+    "net_days": 424617,
+    "on_40_man_differ": 323,
+    "on_40_man_up": 286,
+    "on_40_man_down": 37,
+    "on_40_man_net_days": 7126,
+    "on_40_man_172_or_more_below": [],
+    "threshold_crossers": 268,
+    "spring_option_decisions": 6
+  },
+  "determinism": {
+    "first_hash": "b27af2d0c71ca92619af066aeadc0f4c1e70abc2fa75e62f16f99356cd397298",
+    "second_hash": "b27af2d0c71ca92619af066aeadc0f4c1e70abc2fa75e62f16f99356cd397298",
+    "identical": true
+  },
+  "restricted_list": {
+    "rows": 292,
+    "by_type": {
+      "ped_suspension": 17,
+      "unknown": 214,
+      "2020_opt_out": 13,
+      "canada_vaccine_restricted": 43,
+      "personal_restricted": 1,
+      "paternity_overflow_restricted": 1,
+      "club_covid_protocol_violation": 2,
+      "legal_investigation_restricted": 1
+    },
+    "current_40_man_unknowns": 24,
+    "unsourced_2020_opt_outs": 13
+  },
+  "appearance_gaps": {
+    "note": "A season where major-league games exceed credited days. The lower rulebook total is not the number to publish. Keep the published season total until the transactions feed is refetched. This job did not call that endpoint.",
+    "seasons": 116,
+    "players": 106,
+    "current_40_man_players": 17
+  }
+}

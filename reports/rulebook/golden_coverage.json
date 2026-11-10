@@ -1,0 +1,143 @@
+{
+  "rules_not_exercised_by_a_golden_player": [
+    "count.admin-leave",
+    "count.covid-il",
+    "count.dl-10",
+    "count.family-medical",
+    "count.il-45",
+    "count.il-transfer",
+    "count.military",
+    "count.suspension",
+    "neutral.acquired",
+    "neutral.amateur-signing",
+    "neutral.blank-status",
+    "neutral.claim-minors",
+    "neutral.draft",
+    "neutral.loan-offseason",
+    "neutral.offseason-inactive",
+    "neutral.purchase-other",
+    "neutral.recall-minors",
+    "neutral.rule5-minors",
+    "neutral.series-inactive",
+    "neutral.suspension-minors",
+    "neutral.transfer-other",
+    "neutral.waived",
+    "start.purchased",
+    "start.reinstated-code",
+    "start.rule5",
+    "stop.deceased",
+    "stop.ineligible",
+    "stop.loan-inseason",
+    "stop.ped-suspension",
+    "stop.retired",
+    "stop.returned",
+    "stop.temporarily-inactive",
+    "stop.voluntarily-retired"
+  ],
+  "type_codes_in_the_golden_files": [
+    "ASG",
+    "CLW",
+    "CU",
+    "DES",
+    "DFA",
+    "NUM",
+    "OPT",
+    "OUT",
+    "REL",
+    "SC",
+    "SE",
+    "SFA",
+    "SGN",
+    "TR"
+  ],
+  "section_b": [
+    {
+      "case": "Optional assignment and the 20-day credit",
+      "where": "Alvarado 2022, Cole 2014, Buxton 2015, Beck"
+    },
+    {
+      "case": "Option, then hurt in the minors",
+      "where": "No golden player. Covered by a unit test."
+    },
+    {
+      "case": "Major-league injured list, including the old disabled-list name",
+      "where": "Cole, Ohtani, Rendon, Burnes, Buxton"
+    },
+    {
+      "case": "Rehab assignment",
+      "where": "Cole, Alvarado, Rendon"
+    },
+    {
+      "case": "Restricted list does not count",
+      "where": "Alvarado, Bauer"
+    },
+    {
+      "case": "On-field suspension counts",
+      "where": "No golden player. Covered by a unit test."
+    },
+    {
+      "case": "Bereavement, paternity, family medical",
+      "where": "Alvarado, Ohtani, Rendon, Burnes. Family medical has no golden player; unit test."
+    },
+    {
+      "case": "Military list",
+      "where": "No golden player. Covered by a unit test."
+    },
+    {
+      "case": "2020 high-risk opt-out",
+      "where": "No golden player. Jordan Hicks is in the exceptions file, and a unit test covers a sourced opt-out."
+    },
+    {
+      "case": "2020 proration",
+      "where": "Bauer, Alvarado, Cole, Burnes, Ohtani, Rendon, Buxton"
+    },
+    {
+      "case": "Taxi squad / alternate site",
+      "where": "No golden player. Covered by a unit test."
+    },
+    {
+      "case": "Designation window",
+      "where": "Velázquez 2026"
+    },
+    {
+      "case": "Designation and trade the same day",
+      "where": "Heim. Covered by a unit test."
+    },
+    {
+      "case": "Free agency stops until a new signing",
+      "where": "Ohtani after 2023, Velázquez 2026, Bauer"
+    },
+    {
+      "case": "Preseason designation or outright earns no Opening Day",
+      "where": "Velázquez 2025 outright. Preseason designation is a unit test."
+    },
+    {
+      "case": "Trades and claims do not open a gap",
+      "where": "Bauer 2019, Baker 2025"
+    },
+    {
+      "case": "Selection starts; minor-league signing does not",
+      "where": "Cole, Ohtani, and the unit test"
+    },
+    {
+      "case": "League opener, not a later club opener",
+      "where": "Buxton 2016, Beck 2026, Bauer 2022"
+    },
+    {
+      "case": "International opener",
+      "where": "Ohtani 2024 and 2025"
+    },
+    {
+      "case": "Tiebreaker only for the clubs that played it, through 2021",
+      "where": "Burnes 2018, Cole 2013"
+    },
+    {
+      "case": "All-Star and winter league are not demotions",
+      "where": "Cole, Burnes, Ohtani, Buxton, Velázquez"
+    },
+    {
+      "case": "Same-day order does not matter",
+      "where": "Unit test. The golden files are not shuffled."
+    }
+  ]
+}
