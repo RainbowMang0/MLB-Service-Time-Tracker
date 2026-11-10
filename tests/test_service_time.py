@@ -7,6 +7,7 @@ import datetime as dt
 import json
 import os
 import pathlib
+import re
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "scripts"))
@@ -4019,18 +4020,18 @@ def test_lastmod_moves_only_when_a_page_actually_changes():
     1,390 daily lies -- the textbook unreliable-lastmod pattern that Google
     answers by ignoring lastmod for the whole site.
 
-    The footer stamp moves daily on every page regardless, so it has to be
-    stripped before hashing or nothing would ever compare equal.
+    Pages no longer print a generated date. lastmod still moves only when the
+    hashed content moves.
     """
     import write_player_pages as w
 
-    page = "<h1>X</h1><p>1092 days</p><p>Last updated 2026-08-25.</p>"
-    same_day_later = "<h1>X</h1><p>1092 days</p><p>Last updated 2026-08-26.</p>"
-    real_change = "<h1>X</h1><p>1093 days</p><p>Last updated 2026-08-26.</p>"
+    page = "<h1>X</h1><p>1092 days</p>"
+    same_later = "<h1>X</h1><p>1092 days</p>"
+    real_change = "<h1>X</h1><p>1093 days</p>"
 
     check(
-        "the daily footer stamp is not content",
-        w._content_key(page) == w._content_key(same_day_later),
+        "identical pages hash the same",
+        w._content_key(page) == w._content_key(same_later),
     )
     check(
         "a changed figure is content",
@@ -4044,7 +4045,7 @@ def test_lastmod_moves_only_when_a_page_actually_changes():
 
     tomorrow = w._LastMod("2026-08-26")
     tomorrow.previous = dict(tracker.current)
-    tomorrow.record("p/x.html", same_day_later)
+    tomorrow.record("p/x.html", same_later)
     check(
         "an unchanged page keeps its old date",
         tomorrow.of("p/x.html") == "2026-08-25",
@@ -4056,17 +4057,21 @@ def test_lastmod_moves_only_when_a_page_actually_changes():
     check("a changed page is redated", moved.of("p/x.html") == "2026-08-26")
 
 
+_VISIBLE_DATE = re.compile(
+    r"(?i)(?:last updated\b|data last generated\b|updated \d{4}-\d{2}-\d{2})"
+)
+
+
 def test_regenerating_with_unchanged_data_leaves_player_pages_byte_for_byte():
     """
-    The daily job used to rewrite every player page to change one line, the
-    "Last updated" stamp, to the run date. The sitemap already ignored that
-    stamp. The page now prints the same date the sitemap does -- the day the
-    page's content last changed -- and a file whose bytes did not change is
-    not written at all.
+    The daily job used to rewrite every player page to change one line, a
+    generated date, to the run date. That line is gone. A file whose bytes
+    did not change is not written at all, and the sitemap date stays put.
 
-    A second run with the same record and a later run date must leave the
-    player page and the sitemap byte-for-byte. A real edit (a new club) must
-    still rewrite the page and move its sitemap date.
+    A second run with the same record and a later run date must leave every
+    generated file byte-for-byte, including the sitemap. A real edit (a new
+    club) must still rewrite the page and move its sitemap date. No page
+    prints a generated date.
     """
     import tempfile
     import write_player_pages as w
@@ -4106,20 +4111,24 @@ def test_regenerating_with_unchanged_data_leaves_player_pages_byte_for_byte():
             w.write_player_pages({str(player_id): player}, f"{first_day}T00:00:00+00:00")
             page = w.PAGE_DIR / w._player_filename(player)
             first_bytes = page.read_bytes()
-            first_mtime = page.stat().st_mtime_ns
+            written = [p for p in docs.rglob("*") if p.is_file()]
+            first_mtimes = {p: p.stat().st_mtime_ns for p in written}
             sitemap_before = (docs / "sitemap.xml").read_bytes()
             player_sitemap_before = (docs / "sitemap-players.xml").read_bytes()
-            check("the first run stamps the page with that run's date",
-                  f"Last updated {first_day}." in first_bytes.decode("utf-8"))
+            dated = [
+                str(p.relative_to(docs))
+                for p in written
+                if p.suffix in {".html", ".xml", ".js"}
+                and _VISIBLE_DATE.search(p.read_text(encoding="utf-8"))
+            ]
+            check("the first run prints no generated date", not dated)
 
             w.write_player_pages({str(player_id): dict(player)}, f"{second_day}T12:00:00+00:00")
             second_bytes = page.read_bytes()
+            rewritten = [p for p in written if p.stat().st_mtime_ns != first_mtimes[p]]
             check("a later run with the same data leaves the player page bytes unchanged",
                   second_bytes == first_bytes)
-            check("and does not rewrite the file",
-                  page.stat().st_mtime_ns == first_mtime)
-            check("the page still shows the day its content last changed",
-                  f"Last updated {second_day}." not in second_bytes.decode("utf-8"))
+            check("and rewrites 0 files", not rewritten)
             check("the player sitemap is unchanged",
                   (docs / "sitemap-players.xml").read_bytes() == player_sitemap_before)
             check("the sitemap index is unchanged",
@@ -4134,8 +4143,8 @@ def test_regenerating_with_unchanged_data_leaves_player_pages_byte_for_byte():
             w.write_player_pages({str(player_id): moved}, f"{third_day}T00:00:00+00:00")
             changed = page.read_text(encoding="utf-8")
             check("a real edit rewrites the page", changed.encode("utf-8") != first_bytes)
-            check("and the stamp moves to that run's date",
-                  f"Last updated {third_day}." in changed)
+            check("and still prints no generated date",
+                  _VISIBLE_DATE.search(changed) is None)
             check("and the sitemap lastmod moves with it",
                   f"<lastmod>{third_day}</lastmod>" in (docs / "sitemap-players.xml").read_text())
         finally:
@@ -4143,6 +4152,31 @@ def test_regenerating_with_unchanged_data_leaves_player_pages_byte_for_byte():
                 setattr(w, name, value)
     finally:
         tmp.cleanup()
+
+
+def test_no_published_page_prints_a_generated_date():
+    """
+    A generated date on the page is what made every nightly run look like a
+    new version of the site. Player, club, alumni, list, and hand-served
+    pages all stay free of that line. The sitemap still carries lastmod.
+    """
+    docs = pathlib.Path(__file__).resolve().parents[1] / "docs"
+    offenders = []
+    for path in docs.rglob("*"):
+        if not path.is_file():
+            continue
+        if path.suffix not in {".html", ".js", ".css"}:
+            continue
+        if "taxes" in path.name:
+            continue
+        text = path.read_text(encoding="utf-8", errors="replace")
+        if _VISIBLE_DATE.search(text):
+            offenders.append(str(path.relative_to(docs)))
+    check("no published page prints a generated date", not offenders)
+    home = (docs / "index.html").read_text(encoding="utf-8")
+    check("the homepage has no date line left behind",
+          "updated-line" not in home and "generated-at-footer" not in home
+          and "home-updated" not in home)
 
 
 def test_the_homepage_links_to_the_non_tender_watch():
@@ -6868,6 +6902,7 @@ if __name__ == "__main__":
     test_the_club_directory_is_reachable_in_one_hop()
     test_lastmod_moves_only_when_a_page_actually_changes()
     test_regenerating_with_unchanged_data_leaves_player_pages_byte_for_byte()
+    test_no_published_page_prints_a_generated_date()
     test_the_homepage_links_to_the_non_tender_watch()
     test_a_missing_lastmod_manifest_degrades_to_the_old_behaviour()
     test_a_disagreement_is_labelled_by_the_moves_around_it()

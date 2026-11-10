@@ -228,7 +228,6 @@
         // (a record written before the field existed).
         history_complete: missing === 0,
         missing_seasons: missing > 0 ? missing : 0,
-        last_updated: payload.generated_at ? payload.generated_at.slice(0, 10) : null,
       };
     });
   }
@@ -263,19 +262,19 @@
         id: 1, name: "Sample Player A", team: "Sample Team", position: "SP",
         service_time: "3.045", service_days_total: 688,
         free_agent_eligible: false, arbitration_eligible: true, super_two_candidate: false,
-        on_40_man: true, last_updated: "2026-08-15",
+        on_40_man: true,
       },
       {
         id: 2, name: "Sample Player B", team: "Sample Team", position: "OF",
         service_time: "6.010", service_days_total: 1042,
         free_agent_eligible: true, arbitration_eligible: true, super_two_candidate: false,
-        on_40_man: true, last_updated: "2026-08-15",
+        on_40_man: true,
       },
       {
         id: 3, name: "Sample Player C", team: "Another Team", position: "C",
         service_time: "1.020", service_days_total: 192,
         free_agent_eligible: false, arbitration_eligible: false, super_two_candidate: false,
-        on_40_man: false, last_updated: "2026-08-15",
+        on_40_man: false,
       },
     ],
   };
@@ -1525,37 +1524,6 @@
 
   function renderMeta(data) {
     el("disclaimer-text").textContent = data.disclaimer || "";
-    const footer = el("generated-at-footer");
-    if (data.generated_at) {
-      const d = new Date(data.generated_at);
-      footer.textContent = `Data last generated: ${d.toLocaleString()} · Source: ${data.source || "unknown"}`;
-    } else {
-      footer.textContent = `Source: ${data.source || "unknown"}`;
-    }
-    // Fixed to US Central rather than the visitor's own clock: a visitor's
-    // local timezone could roll the calendar day backward or forward
-    // against when the job actually ran (the "dates step in UTC" trap
-    // recorded in CLAUDE.md). Central keeps this one line stable across
-    // readers instead of UTC, which would show tomorrow's date for most of
-    // a US evening after the 8am ET daily job has already run and rolled
-    // past 00:00 UTC.
-    //
-    // Guarded: the homepage rewrite dropped the old page-header that carried
-    // #updated-line (the generated-at-footer line below says the same thing).
-    const updatedLine = el("updated-line");
-    if (updatedLine) {
-      if (data.generated_at) {
-        const d = new Date(data.generated_at);
-        updatedLine.textContent = `Last updated ${d.toLocaleDateString("en-US", {
-          timeZone: "America/Chicago",
-          month: "long",
-          day: "numeric",
-          year: "numeric",
-        })}`;
-      } else {
-        updatedLine.textContent = "";
-      }
-    }
   }
 
   function init(data) {

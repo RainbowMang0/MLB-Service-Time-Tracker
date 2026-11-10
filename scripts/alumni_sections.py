@@ -407,14 +407,13 @@ def rewrite_pages(
         previous = path.read_text()
         new_key = pages._content_key(html)
         old_key = pages._content_key(previous)
-        # The footer date is not a change. Leave the file, and its sitemap
-        # date, alone when the rest of the page matches.
+        # A daily service-time tick is not a change. Leave the file, and its
+        # sitemap date, alone when the hashed content matches.
         if new_key == old_key:
             unchanged += 1
             continue
-        stamped = pages._stamp_updated(html, day)
-        if stamped != previous:
-            path.write_text(stamped)
+        if html != previous:
+            path.write_text(html)
         lastmod[rel] = {"hash": new_key, "lastmod": day}
         changed.append(rel)
         if len(changed) % 200 == 0:
