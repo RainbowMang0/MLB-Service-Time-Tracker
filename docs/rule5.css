@@ -1,0 +1,41 @@
+/* Rule 5 board. Loaded only by those pages. */
+
+.rule5-flag {
+  margin: 0 0 1rem;
+  padding: 0.75rem 0.9rem;
+  background: var(--status-warning-wash);
+  border: 1px solid color-mix(in srgb, var(--status-warning) 45%, transparent);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.rule5-flag strong {
+  display: block;
+  margin-bottom: 0.15rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.rule5-est {
+  display: inline-block;
+  margin-left: 0.4rem;
+  color: var(--status-warning);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.rule5-note {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .rule5-flag { font-size: 0.9rem; }
+}

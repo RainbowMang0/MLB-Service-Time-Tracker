@@ -135,6 +135,20 @@ Flags on `update_service_time.py`:
 - `--ignore-sanity` — publish even if the run looks like an outage. For the
   day the guard is wrong, not for getting past it.
 
+### Rule 5 board
+
+Not part of the daily update. Once a year, pull affiliate rosters and
+signing dates, then build the pages from that file. The pull pauses at
+least one second between requests.
+
+```bash
+python3 scripts/fetch_rule5.py
+python3 scripts/write_rule5_pages.py
+```
+
+The pull writes `data/rule5/rule5_2026.json`. Expect it to take a while:
+every club's affiliate rosters, then bios and signing records in batches.
+
 ### The publish guard
 
 A daily run refuses to write anything if fewer than 900 players come back

@@ -3834,7 +3834,7 @@ def test_a_published_alumnus_is_reachable_and_off_the_club_pages():
     rostered_ids = {str(p["id"]) for p in db if p.get("on_40_man")}
     on_club_pages = set()
     for f in glob.glob(str(docs / "t" / "*.html")):
-        on_club_pages |= set(re.findall(r'href="\.\./p/(\d+)-', pathlib.Path(f).read_text()))
+        on_club_pages |= set() if f.endswith("-rule-5.html") else set(re.findall(r'href="\.\./p/(\d+)-', pathlib.Path(f).read_text()))
     check("no retired player appears on a club page",
           not (on_club_pages - rostered_ids))
 
