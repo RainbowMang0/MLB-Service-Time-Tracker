@@ -127,6 +127,7 @@ jobs:
               ;;
             tests)
               python tests/test_service_time.py
+              python tests/test_reference_data.py
               node --test tests/duty_days.test.cjs
               # contract.test.cjs was missing here, and it is the one suite
               # that guards a commitment rather than a calculation: it greps
