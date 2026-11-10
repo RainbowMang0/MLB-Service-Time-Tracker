@@ -3884,9 +3884,9 @@ def test_a_previously_published_page_is_never_dropped():
     End-to-end version of the rule above: running write_player_pages() a
     second time, with the player now off the roster and shaped exactly like
     the kind of record `_is_alumnus()` rejects, must not delete his file --
-    the generator rebuilds docs/p/ wholesale on every run (see the rmtree in
-    write_player_pages()), so the only thing standing between "has a page"
-    and "page silently vanishes" is whether his id is remembered.
+    the generator drops a player file that this run does not publish, so the
+    only thing standing between "has a page" and "page silently vanishes" is
+    whether his id is remembered.
 
     Runs against a temporary docs/ tree (the module's directory and
     published-ids constants are monkeypatched for the duration) so this does
@@ -4054,6 +4054,110 @@ def test_lastmod_moves_only_when_a_page_actually_changes():
     moved.previous = dict(tracker.current)
     moved.record("p/x.html", real_change)
     check("a changed page is redated", moved.of("p/x.html") == "2026-08-26")
+
+
+def test_regenerating_with_unchanged_data_leaves_player_pages_byte_for_byte():
+    """
+    The daily job used to rewrite every player page to change one line, the
+    "Last updated" stamp, to the run date. The sitemap already ignored that
+    stamp. The page now prints the same date the sitemap does -- the day the
+    page's content last changed -- and a file whose bytes did not change is
+    not written at all.
+
+    A second run with the same record and a later run date must leave the
+    player page and the sitemap byte-for-byte. A real edit (a new club) must
+    still rewrite the page and move its sitemap date.
+    """
+    import tempfile
+    import write_player_pages as w
+
+    tmp = tempfile.TemporaryDirectory()
+    try:
+        tmp_root = pathlib.Path(tmp.name)
+        docs = tmp_root / "docs"
+        docs.mkdir()
+        (docs / "index.html").write_text(
+            "<html><a href=\"/non-tender-watch.html\">Non-tender watch</a></html>\n",
+            encoding="utf-8",
+        )
+        patched = {
+            "DOCS": docs,
+            "PAGE_DIR": docs / "p",
+            "CLUB_DIR": docs / "t",
+            "ALUMNI_DIR": docs / "alumni",
+            "LASTMOD_PATH": docs / "data" / "page_lastmod.json",
+            "PUBLISHED_IDS_PATH": tmp_root / "data" / "published_ids.json",
+        }
+        saved = {name: getattr(w, name) for name in patched}
+        for name, value in patched.items():
+            setattr(w, name, value)
+        try:
+            player_id = 777003
+            player = {
+                "id": player_id, "name": "Test Stable Player", "on_40_man": True,
+                "team": "Test Club", "team_id": 1, "position": "P",
+                "mlb_debut": "2024-04-01", "service_time": "1.020",
+                "service_days_total": 192, "missing_seasons": 0,
+                "seasons": [{"y": 2024, "d": 172, "raw": 172, "pro": 172, "t": [1], "src": "read"},
+                            {"y": 2026, "d": 20, "raw": 20, "pro": 20, "t": [1], "src": "read"}],
+            }
+            first_day = "2026-11-01"
+            second_day = "2026-11-02"
+            w.write_player_pages({str(player_id): player}, f"{first_day}T00:00:00+00:00")
+            page = w.PAGE_DIR / w._player_filename(player)
+            first_bytes = page.read_bytes()
+            first_mtime = page.stat().st_mtime_ns
+            sitemap_before = (docs / "sitemap.xml").read_bytes()
+            player_sitemap_before = (docs / "sitemap-players.xml").read_bytes()
+            check("the first run stamps the page with that run's date",
+                  f"Last updated {first_day}." in first_bytes.decode("utf-8"))
+
+            w.write_player_pages({str(player_id): dict(player)}, f"{second_day}T12:00:00+00:00")
+            second_bytes = page.read_bytes()
+            check("a later run with the same data leaves the player page bytes unchanged",
+                  second_bytes == first_bytes)
+            check("and does not rewrite the file",
+                  page.stat().st_mtime_ns == first_mtime)
+            check("the page still shows the day its content last changed",
+                  f"Last updated {second_day}." not in second_bytes.decode("utf-8"))
+            check("the player sitemap is unchanged",
+                  (docs / "sitemap-players.xml").read_bytes() == player_sitemap_before)
+            check("the sitemap index is unchanged",
+                  (docs / "sitemap.xml").read_bytes() == sitemap_before)
+            check("the player's sitemap lastmod is still the first day",
+                  f"<lastmod>{first_day}</lastmod>" in (docs / "sitemap-players.xml").read_text()
+                  and f"<lastmod>{second_day}</lastmod>" not in (docs / "sitemap-players.xml").read_text())
+
+            moved = dict(player)
+            moved["team"] = "Other Club"
+            third_day = "2026-11-03"
+            w.write_player_pages({str(player_id): moved}, f"{third_day}T00:00:00+00:00")
+            changed = page.read_text(encoding="utf-8")
+            check("a real edit rewrites the page", changed.encode("utf-8") != first_bytes)
+            check("and the stamp moves to that run's date",
+                  f"Last updated {third_day}." in changed)
+            check("and the sitemap lastmod moves with it",
+                  f"<lastmod>{third_day}</lastmod>" in (docs / "sitemap-players.xml").read_text())
+        finally:
+            for name, value in saved.items():
+                setattr(w, name, value)
+    finally:
+        tmp.cleanup()
+
+
+def test_the_homepage_links_to_the_non_tender_watch():
+    """
+    Google had the non-tender list as an unknown URL. The other offseason
+    lists are already linked from the homepage; this one has to be too, as
+    a plain href a crawler can follow without running JavaScript.
+    """
+    text = (pathlib.Path(__file__).resolve().parents[1] / "docs" / "index.html").read_text(
+        encoding="utf-8"
+    )
+    check(
+        "the homepage links to /non-tender-watch.html",
+        'href="/non-tender-watch.html"' in text,
+    )
 
 
 def test_a_missing_lastmod_manifest_degrades_to_the_old_behaviour():
@@ -6763,6 +6867,8 @@ if __name__ == "__main__":
     test_no_crumb_still_says_all_players()
     test_the_club_directory_is_reachable_in_one_hop()
     test_lastmod_moves_only_when_a_page_actually_changes()
+    test_regenerating_with_unchanged_data_leaves_player_pages_byte_for_byte()
+    test_the_homepage_links_to_the_non_tender_watch()
     test_a_missing_lastmod_manifest_degrades_to_the_old_behaviour()
     test_a_disagreement_is_labelled_by_the_moves_around_it()
     test_bereavement_and_paternity_accrue_but_the_restricted_list_does_not()

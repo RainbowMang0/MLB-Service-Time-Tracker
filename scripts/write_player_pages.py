@@ -42,7 +42,6 @@ import pathlib
 import re
 import unicodedata
 import urllib.parse
-import shutil
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
@@ -423,10 +422,10 @@ def load_ever_published() -> set[int]:
 
     This file is the fix: it only ever grows (see save_ever_published()), so
     an id that lands in it stays published for good, independent of whatever
-    `_should_publish()` would say about the player on a given day. The rmtree
-    in write_player_pages() still wipes PAGE_DIR/CLUB_DIR/ALUMNI_DIR, but
-    `published` is recomputed to include every id here, so the directory is
-    rebuilt WITH these pages rather than without them.
+    `_should_publish()` would say about the player on a given day. A run
+    still removes a file whose player is no longer in `published` (a renamed
+    slug, for instance), but `published` is recomputed to include every id
+    here, so those pages are written back rather than dropped.
 
     A missing or unreadable file degrades to "nothing is sticky yet", which
     is always safe -- it just means `_should_publish()`'s fresh criteria
@@ -441,7 +440,7 @@ def load_ever_published() -> set[int]:
 def save_ever_published(ids: set[int]) -> None:
     """Persist the (only ever growing) set of ids that have had a page."""
     PUBLISHED_IDS_PATH.parent.mkdir(parents=True, exist_ok=True)
-    PUBLISHED_IDS_PATH.write_text(json.dumps(sorted(ids)) + "\n")
+    _write_if_changed(PUBLISHED_IDS_PATH, json.dumps(sorted(ids)) + "\n")
 
 
 def _should_publish(player: dict, ever_published: set[int] | None = None) -> bool:
@@ -1689,10 +1688,68 @@ class _LastMod:
         # Only what is still published: a player who drops off a 40-man loses
         # his page, and his entry here would otherwise accumulate forever.
         LASTMOD_PATH.parent.mkdir(parents=True, exist_ok=True)
-        LASTMOD_PATH.write_text(json.dumps(self.current, indent=0, sort_keys=True))
+        _write_if_changed(
+            LASTMOD_PATH, json.dumps(self.current, indent=0, sort_keys=True)
+        )
 
     def changed(self) -> int:
         return sum(1 for v in self.current.values() if v["lastmod"] == self.today)
+
+
+def _stamp_updated(page_html: str, day: str) -> str:
+    """Print `day` in the footer stamp instead of the run date.
+
+    Renderers still fill that stamp with the run date. `_content_key`
+    strips it before hashing, so the sitemap date does not depend on which
+    day is printed. Putting the date `_LastMod.record` returned into the
+    file means a later run with the same content prints the same day.
+    """
+    if not day:
+        return page_html
+    return _VOLATILE_RE.sub(
+        lambda match: re.sub(r"\d{4}-\d{2}-\d{2}", day, match.group(0)),
+        page_html,
+    )
+
+
+def _write_if_changed(path: pathlib.Path, text: str) -> bool:
+    """Write `text` only when the file's bytes would actually change.
+
+    A daily run used to rewrite every generated page to bump "Last updated"
+    to the run date. Skipping an identical write leaves the file, and its
+    sitemap date, where they were.
+    """
+    path.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        current = path.read_text(encoding="utf-8")
+    except OSError:
+        current = None
+    if current == text:
+        return False
+    path.write_text(text, encoding="utf-8")
+    return True
+
+
+def _publish_page(path: pathlib.Path, html: str, lastmod: "_LastMod", rel: str) -> bool:
+    """Record lastmod from the rendered HTML, stamp that date, write if new."""
+    day = lastmod.record(rel, html)
+    return _write_if_changed(path, _stamp_updated(html, day))
+
+
+def _prune_html(directory: pathlib.Path, keep: set[pathlib.Path]) -> None:
+    """Remove generated HTML that this run did not publish.
+
+    Same end state as rebuilding the directory from scratch: a slug that is
+    no longer produced (a renamed player, a club that left the set) does not
+    stay behind as a second URL. Pages this run still publishes are left
+    untouched when their bytes did not change.
+    """
+    if not directory.is_dir():
+        return
+    keep_resolved = {path.resolve() for path in keep}
+    for path in directory.glob("*.html"):
+        if path.resolve() not in keep_resolved:
+            path.unlink()
 
 
 _OPTIONS_JS = """
@@ -1990,14 +2047,12 @@ def write_player_pages(
         key=lambda p: p.get("name") or "",
     )
 
-    # Rebuilt wholesale, but NOT from scratch in the sense of "only today's
-    # criteria": `published` above already folds in every sticky id, so a
-    # player who drops off a 40-man and fails `_is_alumnus()` still comes
-    # back out of this rmtree+rebuild with his page intact.
-    for directory in (PAGE_DIR, CLUB_DIR):
-        if directory.exists():
-            shutil.rmtree(directory)
-        directory.mkdir(parents=True, exist_ok=True)
+    # Not wiped first. A file is rewritten only when its bytes change, and
+    # removed only when this run no longer publishes it. `published` already
+    # folds in every sticky id, so a player who drops off a 40-man and fails
+    # `_is_alumnus()` still keeps his page.
+    PAGE_DIR.mkdir(parents=True, exist_ok=True)
+    CLUB_DIR.mkdir(parents=True, exist_ok=True)
 
     lastmod = _LastMod(generated_at[:10])
     by_club = _group_rostered_by_club(published)
@@ -2011,6 +2066,7 @@ def write_player_pages(
     option_windows = player_sections._windows()
     option_counts: dict = {}
 
+    kept_player_pages: set[pathlib.Path] = set()
     for player in published:
         # Only a currently-rostered player gets real teammates -- see the
         # warning in _group_rostered_by_club() and _teammates_block().
@@ -2032,8 +2088,10 @@ def write_player_pages(
             option_count,
         )
         rel = page_path(player)
-        (DOCS / rel).write_text(page)
-        lastmod.record(rel, page)
+        dest = DOCS / rel
+        _publish_page(dest, page, lastmod, rel)
+        kept_player_pages.add(dest)
+    _prune_html(PAGE_DIR, kept_player_pages)
 
     # Offseason selections: who is arbitration-eligible this winter, who is
     # on the non-tender watch list, and who reaches free agency and when.
@@ -2059,42 +2117,38 @@ def write_player_pages(
 
     _write_page_css()
     explainer = render_explainer(generated_at, super_two_cutoff)
-    (DOCS / EXPLAINER_PATH).write_text(explainer)
-    lastmod.record(EXPLAINER_PATH, explainer)
+    _publish_page(DOCS / EXPLAINER_PATH, explainer, lastmod, EXPLAINER_PATH)
 
     arb_html = render_arbitration_eligible(
         arb_eligible, generated_at, super_two_cutoff, _KNOWN_EXTENSIONS
     )
-    (DOCS / ARBITRATION_ELIGIBLE_PATH).write_text(arb_html, encoding="utf-8")
-    lastmod.record(ARBITRATION_ELIGIBLE_PATH, arb_html)
+    _publish_page(DOCS / ARBITRATION_ELIGIBLE_PATH, arb_html, lastmod, ARBITRATION_ELIGIBLE_PATH)
 
     s2_class = select_super_two_class(published)
     s2_html = render_super_two(s2_class, db, generated_at, super_two_cutoff)
-    (DOCS / SUPER_TWO_PAGE_PATH).write_text(s2_html, encoding="utf-8")
-    lastmod.record(SUPER_TWO_PAGE_PATH, s2_html)
+    _publish_page(DOCS / SUPER_TWO_PAGE_PATH, s2_html, lastmod, SUPER_TWO_PAGE_PATH)
 
     nt_html = render_non_tender_watch(non_tender_watch, generated_at, next_season)
-    (DOCS / NON_TENDER_WATCH_PATH).write_text(nt_html, encoding="utf-8")
-    lastmod.record(NON_TENDER_WATCH_PATH, nt_html)
+    _publish_page(DOCS / NON_TENDER_WATCH_PATH, nt_html, lastmod, NON_TENDER_WATCH_PATH)
 
     fa_html = render_free_agents(fa_now, fa_by_year, generated_at)
-    (DOCS / FREE_AGENTS_PATH).write_text(fa_html, encoding="utf-8")
-    lastmod.record(FREE_AGENTS_PATH, fa_html)
+    _publish_page(DOCS / FREE_AGENTS_PATH, fa_html, lastmod, FREE_AGENTS_PATH)
 
     opt_html = render_options(rostered, option_counts, generated_at)
-    (DOCS / OPTIONS_PATH).write_text(opt_html, encoding="utf-8")
-    lastmod.record(OPTIONS_PATH, opt_html)
+    _publish_page(DOCS / OPTIONS_PATH, opt_html, lastmod, OPTIONS_PATH)
     opt_out, opt_one, opt_unknown = _option_page_rows(rostered, option_counts)
     print(
         f"Options: {len(opt_out)} out of options, {len(opt_one)} with one left, "
         f"{opt_unknown} unknown (rostered)"
     )
 
+    # The homepage's one generated region has to be current before the
+    # sitemap hashes that file, or its lastmod would trail the page by a run.
+    _update_homepage_key_players(_pick_key_players(published))
     _write_sitemap(published, clubs, alumni_pages, generated_at, lastmod)
     lastmod.save()
     _write_robots()
     _write_404()
-    _update_homepage_key_players(_pick_key_players(published))
     save_ever_published(ever_published | {p["id"] for p in published if p.get("id") is not None})
     total_kb = sum((DOCS / page_path(p)).stat().st_size for p in published) / 1024
     print(
@@ -2177,7 +2231,7 @@ def _update_homepage_key_players(key_players: list[dict]) -> None:
         f"      {_KEY_PLAYERS_END}"
     )
     pattern = re.compile(re.escape(_KEY_PLAYERS_START) + r".*?" + re.escape(_KEY_PLAYERS_END), re.S)
-    index_path.write_text(pattern.sub(replacement, text, count=1), encoding="utf-8")
+    _write_if_changed(index_path, pattern.sub(replacement, text, count=1))
 
 
 def _group_rostered_by_club(published: list[dict]) -> dict[str, list[dict]]:
@@ -2226,6 +2280,13 @@ def _write_club_pages(
     fa_now_by_club = _group_by_club(fa_now)
     fa_next_by_club = _group_by_club(fa_by_year.get(next_season, []) if next_season else [])
 
+    kept: set[pathlib.Path] = set()
+
+    def _keep(rel: str, html: str) -> None:
+        dest = DOCS / rel
+        _publish_page(dest, html, lastmod, rel)
+        kept.add(dest)
+
     for club, players in by_club.items():
         club_arb = arb_by_club.get(club, [])
         club_nt = nt_by_club.get(club, [])
@@ -2235,30 +2296,22 @@ def _write_club_pages(
             club, players, generated_at, club_arb, club_nt, club_fa_next, next_season,
             option_counts,
         )
-        rel = club_path(club)
-        (DOCS / rel).write_text(page)
-        lastmod.record(rel, page)
+        _keep(club_path(club), page)
 
         arb_page = render_club_arbitration(club, club_arb, generated_at, next_season)
-        rel = club_arbitration_path(club)
-        (DOCS / rel).write_text(arb_page, encoding="utf-8")
-        lastmod.record(rel, arb_page)
+        _keep(club_arbitration_path(club), arb_page)
 
         nt_page = render_club_non_tender(club, club_nt, generated_at, next_season)
-        rel = club_non_tender_path(club)
-        (DOCS / rel).write_text(nt_page, encoding="utf-8")
-        lastmod.record(rel, nt_page)
+        _keep(club_non_tender_path(club), nt_page)
 
         fa_page = render_club_free_agents(
             club, fa_now_by_club.get(club, []), club_fa_next, generated_at, next_season
         )
-        rel = club_free_agents_path(club)
-        (DOCS / rel).write_text(fa_page, encoding="utf-8")
-        lastmod.record(rel, fa_page)
+        _keep(club_free_agents_path(club), fa_page)
 
     directory = render_club_index(by_club, generated_at)
-    (CLUB_DIR / "index.html").write_text(directory)
-    lastmod.record(f"{CLUB_DIR_NAME}/index.html", directory)
+    _keep(f"{CLUB_DIR_NAME}/index.html", directory)
+    _prune_html(CLUB_DIR, kept)
     return sorted(by_club)
 
 
@@ -2358,11 +2411,10 @@ def _write_alumni_pages(
     pages sit at through the club directory.
     """
     by_letter = _alumni_letters(alumni)
-    if ALUMNI_DIR.exists():
-        shutil.rmtree(ALUMNI_DIR)
     ALUMNI_DIR.mkdir(parents=True, exist_ok=True)
 
     written: list[str] = []
+    kept: set[pathlib.Path] = set()
     total = len(alumni)
 
     for letter, players in by_letter.items():
@@ -2411,8 +2463,9 @@ def _write_alumni_pages(
             f"{len(players)} players no longer on a 40-man roster, by surname.",
             body, generated_at, graph,
         )
-        (DOCS / rel).write_text(page, encoding="utf-8")
-        lastmod.record(rel, page)
+        dest = DOCS / rel
+        _publish_page(dest, page, lastmod, rel)
+        kept.add(dest)
         written.append(rel)
 
     # The directory itself.
@@ -2448,9 +2501,11 @@ def _write_alumni_pages(
         f"{total:,} players who have come off a 40-man roster, by surname.",
         body, generated_at, graph,
     )
-    (ALUMNI_DIR / "index.html").write_text(page, encoding="utf-8")
-    lastmod.record(rel, page)
+    dest = ALUMNI_DIR / "index.html"
+    _publish_page(dest, page, lastmod, rel)
+    kept.add(dest)
     written.append(rel)
+    _prune_html(ALUMNI_DIR, kept)
     return written
 
 
@@ -2458,8 +2513,16 @@ def _write_sitemap(
     published: list[dict], clubs: list[str], alumni_pages: list[str],
     generated_at: str, lastmod: "_LastMod"
 ) -> None:
-    day = generated_at[:10]
-    urls = [f"  <url><loc>{SITE_URL}/</loc><lastmod>{day}</lastmod><priority>1.0</priority></url>"]
+    # The homepage is hand-written. Hash the file on disk so its lastmod
+    # moves only when that file changes, the same rule as every other URL.
+    # A missing file falls back to the run date, which is the old behaviour.
+    home = DOCS / "index.html"
+    if home.exists():
+        lastmod.record("index.html", home.read_text(encoding="utf-8"))
+        home_day = lastmod.of("index.html")
+    else:
+        home_day = generated_at[:10]
+    urls = [f"  <url><loc>{SITE_URL}/</loc><lastmod>{home_day}</lastmod><priority>1.0</priority></url>"]
     # Clubs above players: they are the hubs, and a crawler that samples the
     # sitemap rather than reading all of it should see them first.
     urls.append(
@@ -2551,31 +2614,37 @@ def _write_sitemap(
     if alumni_urls:
         _write_urlset("sitemap-alumni.xml", alumni_urls)
 
-    newest = max([lastmod.today] + [lastmod.of(page_path(p)) for p in published])
+    def _newest(lines: list[str]) -> str:
+        found = re.findall(r"<lastmod>(\d{4}-\d{2}-\d{2})</lastmod>", "\n".join(lines))
+        return max(found) if found else lastmod.today
+
+    children_spec = [
+        ("sitemap-core.xml", _newest(urls)),
+        ("sitemap-clubs.xml", _newest(club_urls)),
+        ("sitemap-players.xml", _newest(player_urls)),
+    ]
+    if alumni_urls:
+        children_spec.append(("sitemap-alumni.xml", _newest(alumni_urls)))
     children = "\n".join(
         f"  <sitemap><loc>{SITE_URL}/{name}</loc><lastmod>{when}</lastmod></sitemap>"
-        for name, when in (
-            ("sitemap-core.xml", lastmod.today),
-            ("sitemap-clubs.xml", lastmod.today),
-            ("sitemap-players.xml", newest),
-        ) + ((("sitemap-alumni.xml", lastmod.today),) if alumni_urls else ())
+        for name, when in children_spec
     )
-    (DOCS / "sitemap.xml").write_text(
+    _write_if_changed(
+        DOCS / "sitemap.xml",
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + children
         + "\n</sitemapindex>\n",
-        encoding="utf-8",
     )
 
 
 def _write_urlset(name: str, urls: list[str]) -> None:
-    (DOCS / name).write_text(
+    _write_if_changed(
+        DOCS / name,
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + "\n".join(urls)
         + "\n</urlset>\n",
-        encoding="utf-8",
     )
 
 
@@ -2786,7 +2855,7 @@ h1 { letter-spacing: -0.02em; }
 
 
 def _write_page_css() -> None:
-    (DOCS / "page.css").write_text(PAGE_CSS)
+    _write_if_changed(DOCS / "page.css", PAGE_CSS)
 
 
 EXPLAINER_PATH = "service-time.html"
@@ -4069,7 +4138,7 @@ def _write_404() -> None:
     hand-maintained absolute path is exactly the thing that silently breaks on
     a domain move. Derived from BASE_PATH, it cannot.
     """
-    (DOCS / "404.html").write_text(f"""<!doctype html>
+    _write_if_changed(DOCS / "404.html", f"""<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
@@ -4114,12 +4183,13 @@ def _write_404() -> None:
 
 
 def _write_robots() -> None:
-    (DOCS / "robots.txt").write_text(
+    _write_if_changed(
+        DOCS / "robots.txt",
         "User-agent: *\n"
         "Allow: /\n"
         "# The data files are for the site's own use; there is nothing to index in them.\n"
         "Disallow: /data/\n"
-        f"Sitemap: {SITE_URL}/sitemap.xml\n"
+        f"Sitemap: {SITE_URL}/sitemap.xml\n",
     )
 
 
