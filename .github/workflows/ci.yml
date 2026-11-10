@@ -73,6 +73,10 @@ jobs:
       - name: Service-time engine and CBA rulesets
         run: python tests/test_service_time.py
 
+      # Reference data for the service-time rewrite. Not read by the calculator.
+      - name: Season calendar and service-time exceptions
+        run: python tests/test_reference_data.py
+
       - name: Player page sections
         run: python tests/test_player_sections.py
 

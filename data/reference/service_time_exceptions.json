@@ -1,0 +1,273 @@
+{
+  "_schema": [
+    "Service-time exceptions for the upcoming rules rewrite.",
+    "",
+    "The transaction feed uses the same sentence, 'placed on the restricted list',",
+    "for spells that earn Major League service and spells that earn none. This",
+    "file records the ones a public source distinguishes. It is reference data.",
+    "The service-time calculator does not read it. The shorter list the",
+    "calculator does read, data/service_time_exceptions.json, is included here",
+    "(Trevor Bauer's paid leave and suspension, and Jordan Hicks's 2020 opt-out).",
+    "",
+    "Each entry needs mlbam_id (the MLB person id, never a name match), name,",
+    "start and end (inclusive ISO dates, end on or after start), counts (true",
+    "when the days are Major League service, false when they are not), kind,",
+    "reason, and source (one https URL, or a list of them). An entry with no",
+    "public source is not entered.",
+    "",
+    "kind is one of:",
+    "  paid_administrative_leave  counts true. Paid leave under the Joint",
+    "    Domestic Violence, Sexual Assault and Child Abuse Policy. The player",
+    "    keeps his salary and his service. The feed usually says restricted list.",
+    "  unpaid_suspension          counts false. An unpaid suspension. The feed",
+    "    often shows only the restricted-list placement, with no suspension row.",
+    "    Some of these spells began as paid leave and were later charged against",
+    "    the suspension; the source says so when that happened.",
+    "  unpaid_restricted_list     counts false. On the restricted list without",
+    "    pay and without service, and not a suspension announced under the",
+    "    drug or domestic-violence policies.",
+    "  covid_high_risk_opt_out    counts true. A 2020 opt-out by a player MLB",
+    "    treated as high-risk. He kept his prorated salary and his service.",
+    "  covid_opt_out              counts false. A 2020 opt-out by a player who",
+    "    was not high-risk. He did not keep his salary or his service.",
+    "",
+    "Not listed: Kohl Stewart (mlbam id 640464) also opted out of 2020 as a",
+    "high-risk player and kept his salary and service, but the feed records a",
+    "60-day injured-list placement on 2020-07-31 rather than a restricted-list",
+    "placement, so the feed already shows a list that earns service.",
+    "https://www.mlbtraderumors.com/2020/07/kohl-stewart-opts-out-of-2020-season.html",
+    "",
+    "This is not a census of every opt-out or every suspension. A spell is",
+    "entered only when a public source says how the days should count and the",
+    "feed does not say it on its own."
+  ],
+  "exceptions": [
+    {
+      "mlbam_id": 628711,
+      "name": "Julio Urías",
+      "start": "2019-05-14",
+      "end": "2019-05-20",
+      "counts": false,
+      "kind": "unpaid_suspension",
+      "reason": "Administrative leave from 2019-05-14 that was later included in his unpaid 20-game suspension. MLB announced the suspension on 2019-08-17 and said five of the games were the ones he missed on leave from May 14-21. The feed shows only a restricted-list placement on 2019-05-14 and an activation on 2019-05-21, so this records the leave days as unpaid suspension rather than paid leave. The activation day is not included.",
+      "source": "https://www.mlb.com/news/julio-urias-suspended"
+    },
+    {
+      "mlbam_id": 628711,
+      "name": "Julio Urías",
+      "start": "2019-08-17",
+      "end": "2019-09-01",
+      "counts": false,
+      "kind": "unpaid_suspension",
+      "reason": "The rest of the unpaid 20-game domestic-violence suspension, announced 2019-08-17. He was eligible to return on 2019-09-02. The feed shows a restricted-list placement on 2019-08-17 and an activation on 2019-09-02, with no suspension row.",
+      "source": [
+        "https://www.mlb.com/news/julio-urias-suspended",
+        "https://www.cbssports.com/mlb/news/dodgers-julio-urias-suspended-20-games-under-mlbs-domestic-violence-policy/"
+      ]
+    },
+    {
+      "mlbam_id": 502190,
+      "name": "Mike Leake",
+      "start": "2020-06-29",
+      "end": "2020-10-27",
+      "counts": false,
+      "kind": "covid_opt_out",
+      "reason": "Opted out of the 2020 season and gave up his prorated salary, the consequence of a non-high-risk opt-out. Under the 2020 operations manual a player who is not high-risk and opts out receives neither salary nor service time. The feed shows only a restricted-list placement on 2020-06-29 and an activation on 2020-10-28.",
+      "source": [
+        "https://www.sportingnews.com/us/mlb/news/mlb-players-opting-out-2020-season/1m10laov5in4y11vn0ojmi8srw",
+        "https://apnews.com/summary-of-major-league-baseball-2020-operations-manual-040c2c7a2452548d23bb2230d889f44b"
+      ]
+    },
+    {
+      "mlbam_id": 605452,
+      "name": "Joe Ross",
+      "start": "2020-06-29",
+      "end": "2020-11-01",
+      "counts": false,
+      "kind": "covid_opt_out",
+      "reason": "Opted out of the 2020 season and was not treated as high-risk, so he forfeited his prorated salary and the service time he would have earned. The feed shows only a restricted-list placement on 2020-06-29 and an activation on 2020-11-02.",
+      "source": [
+        "https://www.sportingnews.com/us/mlb/news/mlb-players-opting-out-2020-season/1m10laov5in4y11vn0ojmi8srw",
+        "https://apnews.com/summary-of-major-league-baseball-2020-operations-manual-040c2c7a2452548d23bb2230d889f44b"
+      ]
+    },
+    {
+      "mlbam_id": 435622,
+      "name": "Ian Desmond",
+      "start": "2020-06-30",
+      "end": "2020-10-31",
+      "counts": false,
+      "kind": "covid_opt_out",
+      "reason": "Opted out of the 2020 season. The reported cost was his prorated salary and his service time, which is the non-high-risk opt-out. The feed shows only a restricted-list placement on 2020-06-30 and an activation on 2020-11-01.",
+      "source": [
+        "https://www.sportingnews.com/us/mlb/news/mlb-players-opting-out-2020-season/1m10laov5in4y11vn0ojmi8srw",
+        "https://apnews.com/summary-of-major-league-baseball-2020-operations-manual-040c2c7a2452548d23bb2230d889f44b"
+      ]
+    },
+    {
+      "mlbam_id": 456034,
+      "name": "David Price",
+      "start": "2020-07-04",
+      "end": "2020-11-01",
+      "counts": false,
+      "kind": "covid_opt_out",
+      "reason": "Opted out of the 2020 season and forfeited his prorated salary, the consequence of a non-high-risk opt-out. A non-high-risk opt-out also earns no service time. The feed shows only a restricted-list placement on 2020-07-04 and an activation on 2020-11-02.",
+      "source": [
+        "https://www.sportingnews.com/us/mlb/news/mlb-players-opting-out-2020-season/1m10laov5in4y11vn0ojmi8srw",
+        "https://apnews.com/summary-of-major-league-baseball-2020-operations-manual-040c2c7a2452548d23bb2230d889f44b"
+      ]
+    },
+    {
+      "mlbam_id": 457763,
+      "name": "Buster Posey",
+      "start": "2020-07-10",
+      "end": "2020-11-01",
+      "counts": false,
+      "kind": "covid_opt_out",
+      "reason": "Opted out of the 2020 season and gave up his prorated salary. Players who are not high-risk and elect not to play are not paid and do not receive service time. The feed shows only a restricted-list placement on 2020-07-10 and an activation on 2020-11-02.",
+      "source": [
+        "https://www.nbcsports.com/mlb/news/buster-posey-opts-out-of-the-2020-season",
+        "https://apnews.com/summary-of-major-league-baseball-2020-operations-manual-040c2c7a2452548d23bb2230d889f44b"
+      ]
+    },
+    {
+      "mlbam_id": 663855,
+      "name": "Jordan Hicks",
+      "start": "2020-07-13",
+      "end": "2020-10-30",
+      "counts": true,
+      "kind": "covid_high_risk_opt_out",
+      "reason": "2020 high-risk COVID-19 opt-out. Hicks has Type 1 diabetes, which MLB treated as a high-risk condition. A high-risk player who opted out received his prorated salary and Major League service time. The feed records the opt-out only as a restricted-list placement on 2020-07-13 and an activation on 2020-10-30. Included from data/service_time_exceptions.json.",
+      "source": [
+        "https://www.mlb.com/news/jordan-hicks-elects-not-to-play-in-2020-season",
+        "https://www.mlbtraderumors.com/2020/07/jordan-hicks-opts-out-of-2020-season.html"
+      ]
+    },
+    {
+      "mlbam_id": 456715,
+      "name": "Lorenzo Cain",
+      "start": "2020-08-01",
+      "end": "2020-11-01",
+      "counts": false,
+      "kind": "covid_opt_out",
+      "reason": "Opted out of the rest of the 2020 season. He was not treated as a high-risk player, and the opt-out included forfeiting the rest of his prorated salary. A non-high-risk opt-out also earns no service time. The feed shows only a restricted-list placement on 2020-08-01 and an activation on 2020-11-02.",
+      "source": [
+        "https://www.jsonline.com/story/sports/mlb/brewers/2020/08/01/brewers-centerfielder-lorenzo-cain-opts-out-remainder-season/5562796002/",
+        "https://apnews.com/summary-of-major-league-baseball-2020-operations-manual-040c2c7a2452548d23bb2230d889f44b"
+      ]
+    },
+    {
+      "mlbam_id": 545333,
+      "name": "Trevor Bauer",
+      "start": "2021-07-02",
+      "end": "2022-04-28",
+      "counts": true,
+      "kind": "paid_administrative_leave",
+      "reason": "Paid administrative leave under the Joint Domestic Violence, Sexual Assault and Child Abuse Policy, from 2021-07-02 until the suspension took effect on 2022-04-29. A player on paid administrative leave keeps his salary and his Major League service. The feed records the leave as restricted-list placements. Included from data/service_time_exceptions.json.",
+      "source": [
+        "https://www.mlb.com/news/trevor-bauer-put-on-administrative-leave",
+        "https://www.espn.com/mlb/story/_/id/31751151/los-angeles-dodgers-p-trevor-bauer-placed-7-day-administrative-leave-amid-sexual-assault-allegations"
+      ]
+    },
+    {
+      "mlbam_id": 542303,
+      "name": "Marcell Ozuna",
+      "start": "2021-09-10",
+      "end": "2021-11-02",
+      "counts": false,
+      "kind": "unpaid_suspension",
+      "reason": "Unpaid 20-game domestic-violence suspension announced on 2021-11-29 and applied retroactively to the games he missed on administrative leave from 2021-09-10 through the end of the 2021 season. The leave therefore does not earn service. The feed shows only a restricted-list placement on 2021-09-10 and an activation on 2021-11-03.",
+      "source": "https://www.mlb.com/press-release/press-release-braves-outfielder-ozuna-disciplined"
+    },
+    {
+      "mlbam_id": 545333,
+      "name": "Trevor Bauer",
+      "start": "2022-04-29",
+      "end": "2022-12-31",
+      "counts": false,
+      "kind": "unpaid_suspension",
+      "reason": "Suspension under the Joint Domestic Violence Policy, effective 2022-04-29. The suspension was originally 324 games and was reduced to 194, and it was unpaid. The feed has no separate suspension row for it. Included from data/service_time_exceptions.json.",
+      "source": [
+        "https://www.espn.com/mlb/story/_/id/35307636/trevor-bauer-mlb-suspension-reduction-dodgers",
+        "https://www.mlbtraderumors.com/2022/12/trevor-bauers-suspension-reduced-to-194-games-bauer-reinstated-effective-immediately.html"
+      ]
+    },
+    {
+      "mlbam_id": 677551,
+      "name": "Wander Franco",
+      "start": "2023-08-22",
+      "end": "2024-07-09",
+      "counts": true,
+      "kind": "paid_administrative_leave",
+      "reason": "Paid administrative leave under the Joint Domestic Violence, Sexual Assault and Child Abuse Policy, from the 2023-08-22 placement through 2024-07-09. Leave under that policy is not discipline: the player keeps his salary and his Major League service. The 2023 feed shows a restricted-list placement on 2023-08-14, the week before the leave was announced, and the 2024 feed says administrative leave on 2024-03-28. The no-pay restricted list begins the next day.",
+      "source": [
+        "https://www.mlb.com/news/wander-franco-placed-on-administrative-leave",
+        "https://www.mlb.com/news/wander-franco-administrative-leave",
+        "https://www.mlb.com/news/wander-franco-formally-charged-in-dominican-republic"
+      ]
+    },
+    {
+      "mlbam_id": 628711,
+      "name": "Julio Urías",
+      "start": "2023-09-06",
+      "end": "2023-11-01",
+      "counts": true,
+      "kind": "paid_administrative_leave",
+      "reason": "Paid administrative leave under the Joint Domestic Violence, Sexual Assault and Child Abuse Policy, announced 2023-09-06. MLB said he would receive pay and service time during the leave. The feed shows only a restricted-list placement on 2023-09-06 and an activation on 2023-11-02. The later unpaid suspension, announced in 2025, covers 2025 and does not rewrite this leave.",
+      "source": [
+        "https://www.mlb.com/news/julio-urias-placed-on-administrative-leave",
+        "https://www.espn.com/mlb/story/_/id/38340353/mlb-places-dodgers-julio-urias-administrative-leave-sources-say"
+      ]
+    },
+    {
+      "mlbam_id": 677551,
+      "name": "Wander Franco",
+      "start": "2024-07-10",
+      "end": "2026-09-27",
+      "counts": false,
+      "kind": "unpaid_restricted_list",
+      "reason": "Moved to the restricted list on 2024-07-10 after he was charged in the Dominican Republic, for failing to report. MLB said the move stopped his pay and his Major League service, and that it was not itself discipline under the domestic-violence policy. MLB.com still described him as on that list, unpaid and not accruing service, on 2025-06-27. The transaction feed shows the 2024-07-10 placement and no reinstatement through 2026-11-01, so the spell is recorded through the last day of the 2026 championship season.",
+      "source": [
+        "https://www.mlb.com/news/wander-franco-formally-charged-in-dominican-republic",
+        "https://www.mlb.com/news/wander-franco-found-guilty-of-sexual-abuse-in-dominican-republic",
+        "https://statsapi.mlb.com/api/v1/transactions?playerId=677551&startDate=2024-07-10&endDate=2026-11-01"
+      ]
+    },
+    {
+      "mlbam_id": 628711,
+      "name": "Julio Urías",
+      "start": "2025-03-21",
+      "end": "2025-07-16",
+      "counts": false,
+      "kind": "unpaid_suspension",
+      "reason": "Unpaid suspension under the Joint Domestic Violence, Sexual Assault and Child Abuse Policy, announced 2025-03-21, running through the 2025 All-Star break. MLB said he would be reinstated on 2025-07-17. He was an unsigned free agent during the suspension. The 2023 paid leave above is a separate spell and is not part of this one.",
+      "source": "https://www.mlb.com/news/julio-urias-disciplined"
+    },
+    {
+      "mlbam_id": 595777,
+      "name": "Jurickson Profar",
+      "start": "2025-03-31",
+      "end": "2025-07-01",
+      "counts": false,
+      "kind": "unpaid_suspension",
+      "reason": "80-game unpaid suspension under the Joint Drug Prevention and Treatment Program for a positive test, effective 2025-03-31. He was reinstated on 2025-07-02. The feed shows a restricted-list placement on 2025-03-31 and an activation on 2025-07-02, with no suspension row.",
+      "source": [
+        "https://apnews.com/article/braves-jurickson-profar-drug-suspension-ped-ce2c17bdc13ad7d7ef3fa4d5aa87e172",
+        "https://www.mlb.com/news/jurickson-profar-returns-from-suspension-alex-verdugo-designated"
+      ]
+    },
+    {
+      "mlbam_id": 621237,
+      "name": "José Alvarado",
+      "start": "2025-05-18",
+      "end": "2025-08-18",
+      "counts": false,
+      "kind": "unpaid_suspension",
+      "reason": "80-game unpaid suspension under the Joint Drug Prevention and Treatment Program for a positive test, effective 2025-05-18. He was eligible to return on 2025-08-19, and the feed activates him that day. The feed shows a restricted-list placement on 2025-05-18 and does not call the move a suspension.",
+      "source": [
+        "https://www.mlb.com/news/jose-alvarado-suspended-80-games",
+        "https://www.espn.com/mlb/story/_/id/45208600/phillies-reliever-jose-alvarado-suspended-80-games-mlb"
+      ]
+    }
+  ]
+}
