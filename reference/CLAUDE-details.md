@@ -243,7 +243,6 @@ scripts/validate_published.py      published files agree + every URL/link resolv
 scripts/probe_player.py            everything the model knows about one player
 scripts/make_reference_worksheet.py  which players are worth hand-checking vs B-R
 scripts/probe_coverage.py          live API probe for finding #1 (run via Actions)
-scripts/generate_demo_data.py      bundled sample data generator (no network)
 config/cba/2022.json           the agreement in force; every value carries a source
 config/cba/2027.json           valid placeholder that REFUSES to compute
 config/cba/roy_full_year_awards.json  hand-maintained ROY full-year credits; NOT a ruleset (cba._ruleset_paths skips it)
