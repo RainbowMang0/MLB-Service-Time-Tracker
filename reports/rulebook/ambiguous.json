@@ -1,6 +1,279 @@
 {
-  "note": "Restricted-list rows with no sourced exception. Classified as no service and flagged rather than guessed.",
-  "count": 293,
+  "note": "Restricted-list rows with no sourced exception. Counted as no service, which is the default. Sourced categories are labeled. Unknowns stay at that default.",
+  "count": 292,
+  "by_type": {
+    "ped_suspension": 17,
+    "unknown": 214,
+    "2020_opt_out": 13,
+    "canada_vaccine_restricted": 43,
+    "personal_restricted": 1,
+    "paternity_overflow_restricted": 1,
+    "club_covid_protocol_violation": 2,
+    "legal_investigation_restricted": 1
+  },
+  "current_40_man_unknowns_for_review": [
+    {
+      "player_id": 518692,
+      "name": "Freddie Freeman",
+      "date": "2024-08-03",
+      "likely_type": "unknown",
+      "description": "Los Angeles Dodgers placed 1B Freddie Freeman on the restricted list."
+    },
+    {
+      "player_id": 521692,
+      "name": "Salvador Perez",
+      "date": "2013-06-02",
+      "likely_type": "unknown",
+      "description": "Kansas City Royals placed C Salvador Perez on the restricted list."
+    },
+    {
+      "player_id": 547973,
+      "name": "Aroldis Chapman",
+      "date": "2016-04-03",
+      "likely_type": "unknown",
+      "description": "New York Yankees placed LHP Aroldis Chapman on the restricted list."
+    },
+    {
+      "player_id": 571946,
+      "name": "Shelby Miller",
+      "date": "2020-08-03",
+      "likely_type": "2020_opt_out",
+      "description": "Milwaukee Brewers placed RHP Shelby Miller on the restricted list."
+    },
+    {
+      "player_id": 593871,
+      "name": "Jorge Polanco",
+      "date": "2018-03-18",
+      "likely_type": "unknown",
+      "description": "Minnesota Twins placed SS Jorge Polanco on the restricted list."
+    },
+    {
+      "player_id": 593958,
+      "name": "Eduardo Rodriguez",
+      "date": "2022-06-13",
+      "likely_type": "unknown",
+      "description": "Detroit Tigers placed LHP Eduardo Rodriguez on the restricted list."
+    },
+    {
+      "player_id": 606192,
+      "name": "Teoscar Hernández",
+      "date": "2022-09-10",
+      "likely_type": "unknown",
+      "description": "Toronto Blue Jays placed LF Teoscar Hernandez on the restricted list."
+    },
+    {
+      "player_id": 606466,
+      "name": "Ketel Marte",
+      "date": "2025-07-18",
+      "likely_type": "unknown",
+      "description": "Arizona Diamondbacks placed 2B Ketel Marte on the restricted list."
+    },
+    {
+      "player_id": 606466,
+      "name": "Ketel Marte",
+      "date": "2026-08-17",
+      "likely_type": "unknown",
+      "description": "Arizona Diamondbacks placed 2B Ketel Marte on the restricted list."
+    },
+    {
+      "player_id": 623211,
+      "name": "Huascar Brazobán",
+      "date": "2024-03-26",
+      "likely_type": "unknown",
+      "description": "Miami Marlins placed RHP Huascar Brazoban on the restricted list."
+    },
+    {
+      "player_id": 623474,
+      "name": "Jimmy Herget",
+      "date": "2026-04-26",
+      "likely_type": "unknown",
+      "description": "Colorado Rockies placed RHP Jimmy Herget on the restricted list."
+    },
+    {
+      "player_id": 650490,
+      "name": "Yandy Díaz",
+      "date": "2024-07-20",
+      "likely_type": "unknown",
+      "description": "Tampa Bay Rays placed 3B Yandy Díaz on the restricted list."
+    },
+    {
+      "player_id": 650490,
+      "name": "Yandy Díaz",
+      "date": "2025-05-13",
+      "likely_type": "unknown",
+      "description": "Tampa Bay Rays placed 1B Yandy Díaz on the restricted list."
+    },
+    {
+      "player_id": 656730,
+      "name": "Trevor Megill",
+      "date": "2023-09-29",
+      "likely_type": "unknown",
+      "description": "Milwaukee Brewers placed RHP Trevor Megill on the restricted list."
+    },
+    {
+      "player_id": 657277,
+      "name": "Logan Webb",
+      "date": "2019-05-01",
+      "likely_type": "unknown",
+      "description": "San Francisco Giants placed RHP Logan Webb on the restricted list."
+    },
+    {
+      "player_id": 664854,
+      "name": "Ryan Helsley",
+      "date": "2022-08-22",
+      "likely_type": "unknown",
+      "description": "St. Louis Cardinals placed RHP Ryan Helsley on the restricted list."
+    },
+    {
+      "player_id": 667755,
+      "name": "José Soriano",
+      "date": "2025-08-23",
+      "likely_type": "unknown",
+      "description": "Los Angeles Angels placed RHP José Soriano on the restricted list."
+    },
+    {
+      "player_id": 669387,
+      "name": "Carmen Mlodzinski",
+      "date": "2026-05-31",
+      "likely_type": "unknown",
+      "description": "Pittsburgh Pirates placed RHP Carmen Mlodzinski on the restricted list."
+    },
+    {
+      "player_id": 675916,
+      "name": "James Karinchak",
+      "date": "2022-08-12",
+      "likely_type": "unknown",
+      "description": "Cleveland Guardians placed RHP James Karinchak on the restricted list."
+    },
+    {
+      "player_id": 680755,
+      "name": "Braydon Fisher",
+      "date": "2026-07-27",
+      "likely_type": "unknown",
+      "description": "Toronto Blue Jays placed RHP Braydon Fisher on the restricted list."
+    },
+    {
+      "player_id": 682622,
+      "name": "Noelvi Marte",
+      "date": "2024-03-08",
+      "likely_type": "unknown",
+      "description": "Cincinnati Reds placed SS Noelvi Marte on the restricted list."
+    },
+    {
+      "player_id": 683409,
+      "name": "Angel Chivilli",
+      "date": "2025-08-08",
+      "likely_type": "unknown",
+      "description": "Colorado Rockies placed RHP Angel Chivilli on the restricted list."
+    },
+    {
+      "player_id": 695238,
+      "name": "Will Wagner",
+      "date": "2025-07-26",
+      "likely_type": "unknown",
+      "description": "Toronto Blue Jays placed 3B Will Wagner on the restricted list."
+    },
+    {
+      "player_id": 700842,
+      "name": "Eduardo Rivera",
+      "date": "2026-08-17",
+      "likely_type": "unknown",
+      "description": "Boston Red Sox placed LHP Eduardo Rivera on the restricted list."
+    }
+  ],
+  "unsourced_2020_opt_outs": [
+    {
+      "player_id": 433587,
+      "name": "Félix Hernández",
+      "date": "2020-07-05",
+      "on_40_man": false,
+      "note": "Not added as a high-risk opt-out. The source does not say he was in that class. Counted as no service."
+    },
+    {
+      "player_id": 455976,
+      "name": "Nick Markakis",
+      "date": "2020-07-06",
+      "on_40_man": false,
+      "note": "Not added as a high-risk opt-out. The source does not say he was in that class. Counted as no service."
+    },
+    {
+      "player_id": 456051,
+      "name": "Hector Noesí",
+      "date": "2020-07-09",
+      "on_40_man": false,
+      "note": "Not added as a high-risk opt-out. The source does not say he was in that class. Counted as no service."
+    },
+    {
+      "player_id": 456078,
+      "name": "Welington Castillo",
+      "date": "2020-07-04",
+      "on_40_man": false,
+      "note": "Not added as a high-risk opt-out. The source does not say he was in that class. Counted as no service."
+    },
+    {
+      "player_id": 475582,
+      "name": "Ryan Zimmerman",
+      "date": "2020-06-29",
+      "on_40_man": false,
+      "note": "Not added as a high-risk opt-out. The source does not say he was in that class. Counted as no service."
+    },
+    {
+      "player_id": 493316,
+      "name": "Yoenis Cespedes",
+      "date": "2020-08-02",
+      "on_40_man": false,
+      "note": "Not added as a high-risk opt-out. The source does not say he was in that class. Counted as no service."
+    },
+    {
+      "player_id": 525768,
+      "name": "Tim Collins",
+      "date": "2020-07-25",
+      "on_40_man": false,
+      "note": "Not added as a high-risk opt-out. The source does not say he was in that class. Counted as no service."
+    },
+    {
+      "player_id": 543521,
+      "name": "Collin McHugh",
+      "date": "2020-07-23",
+      "on_40_man": false,
+      "note": "Not added as a high-risk opt-out. The source does not say he was in that class. Counted as no service."
+    },
+    {
+      "player_id": 571946,
+      "name": "Shelby Miller",
+      "date": "2020-08-03",
+      "on_40_man": true,
+      "note": "Not added as a high-risk opt-out. The source does not say he was in that class. Counted as no service."
+    },
+    {
+      "player_id": 573186,
+      "name": "Marcus Stroman",
+      "date": "2020-08-10",
+      "on_40_man": false,
+      "note": "Not added as a high-risk opt-out. The source does not say he was in that class. Counted as no service."
+    },
+    {
+      "player_id": 656371,
+      "name": "Isan Díaz",
+      "date": "2020-07-31",
+      "on_40_man": false,
+      "note": "Not added as a high-risk opt-out. The source does not say he was in that class. Counted as no service."
+    },
+    {
+      "player_id": 656629,
+      "name": "Michael Kopech",
+      "date": "2020-07-10",
+      "on_40_man": false,
+      "note": "Not added as a high-risk opt-out. The source does not say he was in that class. Counted as no service."
+    },
+    {
+      "player_id": 657145,
+      "name": "Mark Zagunis",
+      "date": "2020-07-23",
+      "on_40_man": false,
+      "note": "Not added as a high-risk opt-out. The source does not say he was in that class. Counted as no service."
+    }
+  ],
   "rows": [
     {
       "player_id": 112526,
@@ -11,7 +284,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "ped_suspension",
+      "counts_service": "no",
+      "source_url": "https://www.cbssports.com/mlb/news/biggest-mlb-stars-suspended-for-peds-fernando-tatis-jr-joins-alex-rodriguez-manny-ramirez-more-on-list/"
     },
     {
       "player_id": 116338,
@@ -22,7 +298,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 120903,
@@ -33,7 +312,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "ped_suspension",
+      "counts_service": "no",
+      "source_url": "https://www.mlb.com/news/mlb-statement-regarding-manny-ramirez/c-26089902"
     },
     {
       "player_id": 121347,
@@ -44,7 +326,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "ped_suspension",
+      "counts_service": "no",
+      "source_url": "https://www.mlb.com/news/major-league-baseball-suspends-alex-rodriguez-through-2014-and-12-other-for-50-games/c-55953176"
     },
     {
       "player_id": 123173,
@@ -55,7 +340,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 133225,
@@ -66,7 +354,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 133225,
@@ -77,7 +368,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 150011,
@@ -88,7 +382,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 150118,
@@ -99,7 +396,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 150275,
@@ -110,7 +410,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 150275,
@@ -121,7 +424,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 150275,
@@ -132,7 +438,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 150396,
@@ -143,7 +452,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 150407,
@@ -154,7 +466,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 346847,
@@ -165,7 +480,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 400018,
@@ -176,7 +494,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 400290,
@@ -187,7 +508,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 407296,
@@ -198,7 +522,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 407297,
@@ -209,7 +536,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 407781,
@@ -220,7 +550,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 408045,
@@ -231,7 +564,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 408061,
@@ -242,7 +578,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 408061,
@@ -253,7 +592,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 408314,
@@ -264,7 +606,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 425509,
@@ -275,7 +620,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "ped_suspension",
+      "counts_service": "no",
+      "source_url": "https://www.mlb.com/news/discipline-issued-in-biogenesis-investigation/c-55962130"
     },
     {
       "player_id": 425661,
@@ -286,7 +634,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 425661,
@@ -297,7 +648,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 425877,
@@ -308,7 +662,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 429664,
@@ -319,7 +676,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "ped_suspension",
+      "counts_service": "no",
+      "source_url": "https://www.cbssports.com/mlb/news/biggest-mlb-stars-suspended-for-peds-fernando-tatis-jr-joins-alex-rodriguez-manny-ramirez-more-on-list/"
     },
     {
       "player_id": 429664,
@@ -330,7 +690,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "ped_suspension",
+      "counts_service": "no",
+      "source_url": "https://www.cbssports.com/mlb/news/biggest-mlb-stars-suspended-for-peds-fernando-tatis-jr-joins-alex-rodriguez-manny-ramirez-more-on-list/"
     },
     {
       "player_id": 429711,
@@ -341,7 +704,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 429722,
@@ -352,7 +718,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 430321,
@@ -363,7 +732,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 430580,
@@ -374,7 +746,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 430580,
@@ -385,7 +760,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 430613,
@@ -396,7 +774,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 430613,
@@ -407,7 +788,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 430613,
@@ -418,7 +802,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 430613,
@@ -429,7 +816,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 431148,
@@ -440,7 +830,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 433584,
@@ -451,7 +844,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 433587,
@@ -462,7 +858,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "2020_opt_out",
+      "counts_service": "unknown",
+      "source_url": "https://www.mlbtraderumors.com/2020/07/players-opting-out-of-2020-season.html"
     },
     {
       "player_id": 433898,
@@ -473,7 +872,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 434563,
@@ -484,7 +886,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 434663,
@@ -495,7 +900,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 435622,
@@ -506,7 +914,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 435622,
@@ -517,7 +928,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 435622,
@@ -528,7 +942,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 443558,
@@ -539,7 +956,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "ped_suspension",
+      "counts_service": "no",
+      "source_url": "https://www.mlb.com/news/discipline-issued-in-biogenesis-investigation/c-55962130"
     },
     {
       "player_id": 446003,
@@ -550,7 +970,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 446099,
@@ -561,7 +984,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 446192,
@@ -572,7 +998,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 448242,
@@ -583,7 +1012,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 448801,
@@ -594,7 +1026,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 449107,
@@ -605,7 +1040,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 450314,
@@ -616,7 +1054,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 453214,
@@ -627,7 +1068,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 453214,
@@ -638,7 +1082,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 455104,
@@ -649,7 +1096,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 455119,
@@ -660,7 +1110,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 455374,
@@ -671,7 +1124,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "ped_suspension",
+      "counts_service": "no",
+      "source_url": "https://www.mlb.com/news/discipline-issued-in-biogenesis-investigation/c-55962130"
     },
     {
       "player_id": 455374,
@@ -682,7 +1138,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 455976,
@@ -693,7 +1152,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "2020_opt_out",
+      "counts_service": "unknown",
+      "source_url": "https://www.mlbtraderumors.com/2020/07/players-opting-out-of-2020-season.html"
     },
     {
       "player_id": 456051,
@@ -704,7 +1166,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "2020_opt_out",
+      "counts_service": "unknown",
+      "source_url": "https://www.mlbtraderumors.com/2020/07/players-opting-out-of-2020-season.html"
     },
     {
       "player_id": 456078,
@@ -715,7 +1180,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 456078,
@@ -726,7 +1194,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "2020_opt_out",
+      "counts_service": "unknown",
+      "source_url": "https://www.mlbtraderumors.com/2020/07/players-opting-out-of-2020-season.html"
     },
     {
       "player_id": 456713,
@@ -737,7 +1208,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 456781,
@@ -748,7 +1222,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 457727,
@@ -759,7 +1236,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 458006,
@@ -770,7 +1250,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 458675,
@@ -781,7 +1264,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 458675,
@@ -792,7 +1278,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 460075,
@@ -803,7 +1292,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "ped_suspension",
+      "counts_service": "no",
+      "source_url": "https://www.cbssports.com/mlb/news/biggest-mlb-stars-suspended-for-peds-fernando-tatis-jr-joins-alex-rodriguez-manny-ramirez-more-on-list/"
     },
     {
       "player_id": 461856,
@@ -814,7 +1306,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 461856,
@@ -825,7 +1320,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 461856,
@@ -836,7 +1334,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 462102,
@@ -847,7 +1348,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 465041,
@@ -858,7 +1362,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "ped_suspension",
+      "counts_service": "no",
+      "source_url": "https://www.mlb.com/news/discipline-issued-in-biogenesis-investigation/c-55962130"
     },
     {
       "player_id": 465784,
@@ -869,7 +1376,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "ped_suspension",
+      "counts_service": "no",
+      "source_url": "https://www.mlb.com/news/discipline-issued-in-biogenesis-investigation/c-55962130"
     },
     {
       "player_id": 466320,
@@ -880,7 +1390,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "ped_suspension",
+      "counts_service": "no",
+      "source_url": "https://www.cbssports.com/mlb/news/biggest-mlb-stars-suspended-for-peds-fernando-tatis-jr-joins-alex-rodriguez-manny-ramirez-more-on-list/"
     },
     {
       "player_id": 467055,
@@ -891,7 +1404,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 467726,
@@ -902,7 +1418,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 467726,
@@ -913,7 +1432,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 467793,
@@ -924,7 +1446,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 475174,
@@ -935,7 +1460,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 475582,
@@ -946,7 +1474,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "2020_opt_out",
+      "counts_service": "unknown",
+      "source_url": "https://www.mlbtraderumors.com/2020/07/players-opting-out-of-2020-season.html"
     },
     {
       "player_id": 493316,
@@ -957,18 +1488,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
-    },
-    {
-      "player_id": 493329,
-      "name": "Yuli Gurriel",
-      "date": "2018-03-29",
-      "type_code": "SC",
-      "description": "Houston Astros placed 1B Yuli Gurriel on the restricted list.",
-      "rule_id": "stop.restricted",
-      "on_40_man": false,
-      "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "2020_opt_out",
+      "counts_service": "unknown",
+      "source_url": "https://www.mlbtraderumors.com/2020/07/players-opting-out-of-2020-season.html"
     },
     {
       "player_id": 493343,
@@ -979,7 +1502,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 499624,
@@ -990,7 +1516,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 500871,
@@ -1001,7 +1530,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 501303,
@@ -1012,7 +1544,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 501381,
@@ -1023,7 +1558,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 501659,
@@ -1034,7 +1572,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 501817,
@@ -1045,7 +1586,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 501925,
@@ -1056,7 +1600,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 502026,
@@ -1067,7 +1614,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 502043,
@@ -1078,7 +1628,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlb.com/news/j-t-realmuto-alec-bohm-among-phillies-not-playing-in-toronto"
     },
     {
       "player_id": 502327,
@@ -1089,7 +1642,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 502671,
@@ -1100,7 +1656,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/03/report-unvaccinated-players-wont-be-compensated-for-games-missed-in-toronto.html"
     },
     {
       "player_id": 504379,
@@ -1111,7 +1670,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 504379,
@@ -1122,7 +1684,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 506433,
@@ -1133,7 +1698,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 506433,
@@ -1144,7 +1712,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 516769,
@@ -1155,7 +1726,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 516769,
@@ -1166,7 +1740,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 516770,
@@ -1177,7 +1754,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 516770,
@@ -1188,7 +1768,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 516782,
@@ -1199,7 +1782,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "ped_suspension",
+      "counts_service": "no",
+      "source_url": "https://www.cbssports.com/mlb/news/biggest-mlb-stars-suspended-for-peds-fernando-tatis-jr-joins-alex-rodriguez-manny-ramirez-more-on-list/"
     },
     {
       "player_id": 517008,
@@ -1210,7 +1796,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 517059,
@@ -1221,7 +1810,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 518170,
@@ -1232,7 +1824,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "ped_suspension",
+      "counts_service": "no",
+      "source_url": "https://www.mlb.com/news/discipline-issued-in-biogenesis-investigation/c-55962130"
     },
     {
       "player_id": 518692,
@@ -1243,7 +1838,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 518735,
@@ -1254,7 +1852,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 519096,
@@ -1265,7 +1866,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 519222,
@@ -1276,7 +1880,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/03/report-unvaccinated-players-wont-be-compensated-for-games-missed-in-toronto.html"
     },
     {
       "player_id": 520471,
@@ -1287,7 +1894,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 521692,
@@ -1298,7 +1908,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 524968,
@@ -1309,7 +1922,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "ped_suspension",
+      "counts_service": "no",
+      "source_url": "https://www.mlb.com/news/discipline-issued-in-biogenesis-investigation/c-55962130"
     },
     {
       "player_id": 524968,
@@ -1320,7 +1936,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 525768,
@@ -1331,7 +1950,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "2020_opt_out",
+      "counts_service": "unknown",
+      "source_url": "https://www.mlbtraderumors.com/2020/07/players-opting-out-of-2020-season.html"
     },
     {
       "player_id": 527049,
@@ -1342,7 +1964,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "ped_suspension",
+      "counts_service": "no",
+      "source_url": "https://www.mlb.com/news/discipline-issued-in-biogenesis-investigation/c-55962130"
     },
     {
       "player_id": 527055,
@@ -1353,7 +1978,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 532077,
@@ -1364,7 +1992,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 534910,
@@ -1375,7 +2006,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 542921,
@@ -1386,7 +2020,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 543475,
@@ -1397,7 +2034,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "personal_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.cbssports.com/fantasy/baseball/news/royals-jordan-lyles-placed-on-inactive-list/"
     },
     {
       "player_id": 543521,
@@ -1408,7 +2048,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "2020_opt_out",
+      "counts_service": "unknown",
+      "source_url": "https://www.mlbtraderumors.com/2020/07/players-opting-out-of-2020-season.html"
     },
     {
       "player_id": 543716,
@@ -1419,7 +2062,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 543829,
@@ -1430,7 +2076,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 543867,
@@ -1441,7 +2090,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 544369,
@@ -1452,7 +2104,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 544727,
@@ -1463,7 +2118,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 545358,
@@ -1474,7 +2132,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 545361,
@@ -1485,7 +2146,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "paternity_overflow_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlb.com/news/mike-trout-on-restricted-list-to-travel"
     },
     {
       "player_id": 546318,
@@ -1496,7 +2160,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 546991,
@@ -1507,7 +2174,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.cincinnati.com/story/sports/mlb/reds/2022/05/20/joey-votto-returns-reds-lose-players-restricted-list-covid-19-toronto-blue-jays/9831947002/"
     },
     {
       "player_id": 547007,
@@ -1518,7 +2188,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 547007,
@@ -1529,7 +2202,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 547973,
@@ -1540,7 +2216,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 548384,
@@ -1551,7 +2230,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/03/report-unvaccinated-players-wont-be-compensated-for-games-missed-in-toronto.html"
     },
     {
       "player_id": 548384,
@@ -1562,7 +2244,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 553869,
@@ -1573,7 +2258,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 553878,
@@ -1584,7 +2272,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 553878,
@@ -1595,7 +2286,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 553878,
@@ -1606,7 +2300,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 553878,
@@ -1617,7 +2314,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 571448,
@@ -1628,7 +2328,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/03/report-unvaccinated-players-wont-be-compensated-for-games-missed-in-toronto.html"
     },
     {
       "player_id": 571572,
@@ -1639,7 +2342,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 571901,
@@ -1650,7 +2356,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/03/report-unvaccinated-players-wont-be-compensated-for-games-missed-in-toronto.html"
     },
     {
       "player_id": 571946,
@@ -1661,7 +2370,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "2020_opt_out",
+      "counts_service": "unknown",
+      "source_url": "https://www.mlbtraderumors.com/2020/07/players-opting-out-of-2020-season.html"
     },
     {
       "player_id": 572180,
@@ -1672,7 +2384,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 572191,
@@ -1683,7 +2398,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/07/royals-to-place-andrew-benintendi-nine-others-on-restricted-list.html"
     },
     {
       "player_id": 572193,
@@ -1694,7 +2412,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/03/report-unvaccinated-players-wont-be-compensated-for-games-missed-in-toronto.html"
     },
     {
       "player_id": 573186,
@@ -1705,7 +2426,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "2020_opt_out",
+      "counts_service": "unknown",
+      "source_url": "https://www.mlbtraderumors.com/2020/07/players-opting-out-of-2020-season.html"
     },
     {
       "player_id": 573204,
@@ -1716,7 +2440,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlb.com/news/twins-make-restricted-list-moves-for-toronto-trip"
     },
     {
       "player_id": 591971,
@@ -1727,7 +2454,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 592273,
@@ -1738,7 +2468,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.cincinnati.com/story/sports/mlb/reds/2022/05/20/joey-votto-returns-reds-lose-players-restricted-list-covid-19-toronto-blue-jays/9831947002/"
     },
     {
       "player_id": 592288,
@@ -1749,7 +2482,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 592663,
@@ -1760,7 +2496,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlb.com/news/j-t-realmuto-alec-bohm-among-phillies-not-playing-in-toronto"
     },
     {
       "player_id": 592716,
@@ -1771,7 +2510,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/03/report-unvaccinated-players-wont-be-compensated-for-games-missed-in-toronto.html"
     },
     {
       "player_id": 592743,
@@ -1782,7 +2524,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 592743,
@@ -1793,7 +2538,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 592774,
@@ -1804,7 +2552,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 592808,
@@ -1815,7 +2566,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 592808,
@@ -1826,7 +2580,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 593160,
@@ -1837,7 +2594,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/07/royals-to-place-andrew-benintendi-nine-others-on-restricted-list.html"
     },
     {
       "player_id": 593334,
@@ -1848,7 +2608,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 593334,
@@ -1859,7 +2622,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 593423,
@@ -1870,7 +2636,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 593423,
@@ -1881,7 +2650,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 593528,
@@ -1892,7 +2664,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 593871,
@@ -1903,7 +2678,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 593958,
@@ -1914,7 +2692,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 594056,
@@ -1925,7 +2706,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 594742,
@@ -1936,7 +2720,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 594987,
@@ -1947,7 +2734,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 595411,
@@ -1958,7 +2748,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 595956,
@@ -1969,7 +2762,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/07/royals-to-place-andrew-benintendi-nine-others-on-restricted-list.html"
     },
     {
       "player_id": 596146,
@@ -1980,7 +2776,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlb.com/news/twins-make-restricted-list-moves-for-toronto-trip"
     },
     {
       "player_id": 596847,
@@ -1991,7 +2790,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 596847,
@@ -2002,7 +2804,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 600466,
@@ -2013,7 +2818,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 600474,
@@ -2024,7 +2832,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 600526,
@@ -2035,7 +2846,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 600944,
@@ -2046,7 +2860,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 605177,
@@ -2057,7 +2874,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 605182,
@@ -2068,7 +2888,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "club_covid_protocol_violation",
+      "counts_service": "unknown",
+      "source_url": "https://www.mlb.com/news/mike-clevinger-zach-plesac-on-restricted-list"
     },
     {
       "player_id": 605309,
@@ -2079,7 +2902,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 605347,
@@ -2090,7 +2916,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 605374,
@@ -2101,7 +2930,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 605400,
@@ -2112,7 +2944,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlb.com/news/j-t-realmuto-alec-bohm-among-phillies-not-playing-in-toronto"
     },
     {
       "player_id": 606167,
@@ -2123,7 +2958,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 606192,
@@ -2134,7 +2972,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 606466,
@@ -2145,7 +2986,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 606466,
@@ -2156,7 +3000,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 606965,
@@ -2167,7 +3014,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 607215,
@@ -2178,7 +3028,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 607680,
@@ -2189,7 +3042,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 608566,
@@ -2200,7 +3056,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 608665,
@@ -2211,7 +3070,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/03/report-unvaccinated-players-wont-be-compensated-for-games-missed-in-toronto.html"
     },
     {
       "player_id": 608716,
@@ -2222,7 +3084,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 609275,
@@ -2233,7 +3098,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 612434,
@@ -2244,7 +3112,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 621237,
@@ -2255,7 +3126,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 621237,
@@ -2266,7 +3140,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 621471,
@@ -2277,7 +3154,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 621493,
@@ -2288,7 +3168,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/03/report-unvaccinated-players-wont-be-compensated-for-games-missed-in-toronto.html"
     },
     {
       "player_id": 622168,
@@ -2299,7 +3182,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 622194,
@@ -2310,7 +3196,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 622772,
@@ -2321,7 +3210,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 622864,
@@ -2332,7 +3224,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 623149,
@@ -2343,7 +3238,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 623211,
@@ -2354,7 +3252,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 623474,
@@ -2365,7 +3266,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 623993,
@@ -2376,7 +3280,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/03/report-unvaccinated-players-wont-be-compensated-for-games-missed-in-toronto.html"
     },
     {
       "player_id": 625329,
@@ -2387,7 +3294,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 627894,
@@ -2398,7 +3308,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 628356,
@@ -2409,7 +3322,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 640461,
@@ -2420,7 +3336,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 640462,
@@ -2431,7 +3350,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/03/report-unvaccinated-players-wont-be-compensated-for-games-missed-in-toronto.html"
     },
     {
       "player_id": 641505,
@@ -2442,7 +3364,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 641531,
@@ -2453,7 +3378,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/07/royals-to-place-andrew-benintendi-nine-others-on-restricted-list.html"
     },
     {
       "player_id": 641745,
@@ -2464,7 +3392,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/07/royals-to-place-andrew-benintendi-nine-others-on-restricted-list.html"
     },
     {
       "player_id": 641816,
@@ -2475,7 +3406,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.cincinnati.com/story/sports/mlb/reds/2022/05/20/joey-votto-returns-reds-lose-players-restricted-list-covid-19-toronto-blue-jays/9831947002/"
     },
     {
       "player_id": 641941,
@@ -2486,7 +3420,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlb.com/news/twins-make-restricted-list-moves-for-toronto-trip"
     },
     {
       "player_id": 642397,
@@ -2497,7 +3434,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 642564,
@@ -2508,7 +3448,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 642736,
@@ -2519,7 +3462,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 643217,
@@ -2530,7 +3476,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/07/royals-to-place-andrew-benintendi-nine-others-on-restricted-list.html"
     },
     {
       "player_id": 650490,
@@ -2541,7 +3490,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 650490,
@@ -2552,7 +3504,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 650496,
@@ -2563,7 +3518,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 650496,
@@ -2574,7 +3532,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 650556,
@@ -2585,7 +3546,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 650828,
@@ -2596,7 +3560,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 656302,
@@ -2607,7 +3574,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/03/report-unvaccinated-players-wont-be-compensated-for-games-missed-in-toronto.html"
     },
     {
       "player_id": 656371,
@@ -2618,7 +3588,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "2020_opt_out",
+      "counts_service": "unknown",
+      "source_url": "https://www.mlbtraderumors.com/2020/07/players-opting-out-of-2020-season.html"
     },
     {
       "player_id": 656514,
@@ -2629,7 +3602,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 656557,
@@ -2640,7 +3616,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/03/report-unvaccinated-players-wont-be-compensated-for-games-missed-in-toronto.html"
     },
     {
       "player_id": 656557,
@@ -2651,7 +3630,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/03/report-unvaccinated-players-wont-be-compensated-for-games-missed-in-toronto.html"
     },
     {
       "player_id": 656629,
@@ -2662,7 +3644,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "2020_opt_out",
+      "counts_service": "unknown",
+      "source_url": "https://www.mlbtraderumors.com/2020/07/players-opting-out-of-2020-season.html"
     },
     {
       "player_id": 656730,
@@ -2673,7 +3658,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlb.com/news/twins-make-restricted-list-moves-for-toronto-trip"
     },
     {
       "player_id": 656730,
@@ -2684,7 +3672,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 657006,
@@ -2695,7 +3686,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/03/report-unvaccinated-players-wont-be-compensated-for-games-missed-in-toronto.html"
     },
     {
       "player_id": 657044,
@@ -2706,7 +3700,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/03/report-unvaccinated-players-wont-be-compensated-for-games-missed-in-toronto.html"
     },
     {
       "player_id": 657077,
@@ -2717,7 +3714,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 657145,
@@ -2728,7 +3728,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "2020_opt_out",
+      "counts_service": "unknown",
+      "source_url": "https://www.mlbtraderumors.com/2020/07/players-opting-out-of-2020-season.html"
     },
     {
       "player_id": 657209,
@@ -2739,7 +3742,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 657277,
@@ -2750,7 +3756,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 657656,
@@ -2761,7 +3770,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "ped_suspension",
+      "counts_service": "no",
+      "source_url": "https://www.mlb.com/press-release/press-release-athletics-outfielder-laureano-disciplined"
     },
     {
       "player_id": 658668,
@@ -2772,7 +3784,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 660162,
@@ -2783,7 +3798,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 660620,
@@ -2794,7 +3812,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 660620,
@@ -2805,7 +3826,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 661403,
@@ -2816,7 +3840,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 661403,
@@ -2827,7 +3854,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 663903,
@@ -2838,7 +3868,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/07/royals-to-place-andrew-benintendi-nine-others-on-restricted-list.html"
     },
     {
       "player_id": 664119,
@@ -2849,7 +3882,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/03/report-unvaccinated-players-wont-be-compensated-for-games-missed-in-toronto.html"
     },
     {
       "player_id": 664728,
@@ -2860,7 +3896,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/07/royals-to-place-andrew-benintendi-nine-others-on-restricted-list.html"
     },
     {
       "player_id": 664761,
@@ -2871,7 +3910,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlb.com/news/j-t-realmuto-alec-bohm-among-phillies-not-playing-in-toronto"
     },
     {
       "player_id": 664854,
@@ -2882,7 +3924,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 664875,
@@ -2893,7 +3938,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 665650,
@@ -2904,7 +3952,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 665922,
@@ -2915,7 +3966,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 666213,
@@ -2926,7 +3980,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 666619,
@@ -2937,7 +3994,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 667755,
@@ -2948,7 +4008,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 668663,
@@ -2959,7 +4022,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 668676,
@@ -2970,7 +4036,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "club_covid_protocol_violation",
+      "counts_service": "unknown",
+      "source_url": "https://www.mlb.com/news/mike-clevinger-zach-plesac-on-restricted-list"
     },
     {
       "player_id": 669004,
@@ -2981,7 +4050,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/07/royals-to-place-andrew-benintendi-nine-others-on-restricted-list.html"
     },
     {
       "player_id": 669211,
@@ -2992,7 +4064,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/03/report-unvaccinated-players-wont-be-compensated-for-games-missed-in-toronto.html"
     },
     {
       "player_id": 669270,
@@ -3003,7 +4078,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.cincinnati.com/story/sports/mlb/reds/2022/05/20/joey-votto-returns-reds-lose-players-restricted-list-covid-19-toronto-blue-jays/9831947002/"
     },
     {
       "player_id": 669387,
@@ -3014,7 +4092,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 669395,
@@ -3025,7 +4106,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/07/royals-to-place-andrew-benintendi-nine-others-on-restricted-list.html"
     },
     {
       "player_id": 669432,
@@ -3036,7 +4120,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 669912,
@@ -3047,7 +4134,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/03/report-unvaccinated-players-wont-be-compensated-for-games-missed-in-toronto.html"
     },
     {
       "player_id": 670770,
@@ -3058,7 +4148,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 672391,
@@ -3069,7 +4162,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 673548,
@@ -3080,7 +4176,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 674444,
@@ -3091,7 +4190,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 675916,
@@ -3102,7 +4204,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 676710,
@@ -3113,7 +4218,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/03/report-unvaccinated-players-wont-be-compensated-for-games-missed-in-toronto.html"
     },
     {
       "player_id": 677551,
@@ -3124,7 +4232,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "legal_investigation_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlb.com/news/wander-franco-placed-on-administrative-leave"
     },
     {
       "player_id": 678226,
@@ -3135,7 +4246,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 680755,
@@ -3146,7 +4260,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 680776,
@@ -3157,7 +4274,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "canada_vaccine_restricted",
+      "counts_service": "no",
+      "source_url": "https://www.mlbtraderumors.com/2022/03/report-unvaccinated-players-wont-be-compensated-for-games-missed-in-toronto.html"
     },
     {
       "player_id": 682619,
@@ -3168,7 +4288,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 682622,
@@ -3179,7 +4302,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 682847,
@@ -3190,7 +4316,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": false,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 683409,
@@ -3201,7 +4330,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 695238,
@@ -3212,7 +4344,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     },
     {
       "player_id": 700842,
@@ -3223,7 +4358,10 @@
       "rule_id": "stop.restricted",
       "on_40_man": true,
       "severity": "warning",
-      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count."
+      "reason": "Restricted-list wording is shared. No sourced exception covers this date, so the day does not count.",
+      "likely_type": "unknown",
+      "counts_service": "unknown",
+      "source_url": ""
     }
   ]
 }

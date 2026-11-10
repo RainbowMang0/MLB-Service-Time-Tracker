@@ -9,12 +9,16 @@
     "count.military",
     "count.suspension",
     "neutral.acquired",
+    "neutral.amateur-signing",
+    "neutral.blank-status",
     "neutral.claim-minors",
     "neutral.draft",
     "neutral.loan-offseason",
+    "neutral.offseason-inactive",
     "neutral.purchase-other",
     "neutral.recall-minors",
     "neutral.rule5-minors",
+    "neutral.series-inactive",
     "neutral.suspension-minors",
     "neutral.transfer-other",
     "neutral.waived",
@@ -24,8 +28,10 @@
     "stop.deceased",
     "stop.ineligible",
     "stop.loan-inseason",
+    "stop.ped-suspension",
     "stop.retired",
     "stop.returned",
+    "stop.temporarily-inactive",
     "stop.voluntarily-retired"
   ],
   "type_codes_in_the_golden_files": [
@@ -75,11 +81,11 @@
     },
     {
       "case": "Military list",
-      "where": "No golden player, and almost no such row in the saved feed."
+      "where": "No golden player. Covered by a unit test."
     },
     {
       "case": "2020 high-risk opt-out",
-      "where": "No golden player. Jordan Hicks is in the exceptions file."
+      "where": "No golden player. Jordan Hicks is in the exceptions file, and a unit test covers a sourced opt-out."
     },
     {
       "case": "2020 proration",
@@ -87,7 +93,7 @@
     },
     {
       "case": "Taxi squad / alternate site",
-      "where": "No golden player. The rule is in the rulebook."
+      "where": "No golden player. Covered by a unit test."
     },
     {
       "case": "Designation window",
@@ -95,7 +101,7 @@
     },
     {
       "case": "Designation and trade the same day",
-      "where": "No golden player. Covered by a unit test (the Heim case)."
+      "where": "Heim. Covered by a unit test."
     },
     {
       "case": "Free agency stops until a new signing",

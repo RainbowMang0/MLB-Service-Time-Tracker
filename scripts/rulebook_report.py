@@ -9,10 +9,12 @@ data/rulebook/explanations/. Nothing here is published to the site.
 
 from __future__ import annotations
 
+import csv
 import datetime as dt
 import hashlib
 import json
 import sys
+import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -55,6 +57,7 @@ WINDOWS = ROOT / "data" / "season_windows.json"
 GOLDEN = ROOT / "tests" / "golden" / "players.json"
 GOLDEN_TX = ROOT / "tests" / "golden" / "transactions"
 REPORTS = ROOT / "reports" / "rulebook"
+RESTRICTED = ROOT / "data" / "reference" / "restricted_list_classification.csv"
 EXPLANATIONS = ROOT / "data" / "rulebook" / "explanations"
 HORIZON = dt.date(2026, 11, 9)
 # The last rules change the review named, so this report can be read next to it.
@@ -69,12 +72,12 @@ SECTION_B = [
     ("Restricted list does not count", "Alvarado, Bauer"),
     ("On-field suspension counts", "No golden player. Covered by a unit test."),
     ("Bereavement, paternity, family medical", "Alvarado, Ohtani, Rendon, Burnes. Family medical has no golden player; unit test."),
-    ("Military list", "No golden player, and almost no such row in the saved feed."),
-    ("2020 high-risk opt-out", "No golden player. Jordan Hicks is in the exceptions file."),
+    ("Military list", "No golden player. Covered by a unit test."),
+    ("2020 high-risk opt-out", "No golden player. Jordan Hicks is in the exceptions file, and a unit test covers a sourced opt-out."),
     ("2020 proration", "Bauer, Alvarado, Cole, Burnes, Ohtani, Rendon, Buxton"),
-    ("Taxi squad / alternate site", "No golden player. The rule is in the rulebook."),
+    ("Taxi squad / alternate site", "No golden player. Covered by a unit test."),
     ("Designation window", "Velázquez 2026"),
-    ("Designation and trade the same day", "No golden player. Covered by a unit test (the Heim case)."),
+    ("Designation and trade the same day", "Heim. Covered by a unit test."),
     ("Free agency stops until a new signing", "Ohtani after 2023, Velázquez 2026, Bauer"),
     ("Preseason designation or outright earns no Opening Day", "Velázquez 2025 outright. Preseason designation is a unit test."),
     ("Trades and claims do not open a gap", "Bauer 2019, Baker 2025"),
@@ -260,22 +263,55 @@ def _lines(old_days: int, new_days: int, full_year: int) -> list[str]:
     return crossed
 
 
-def _primary_rule(result: dict, old_seasons: dict, new_seasons: dict) -> tuple[str, str]:
-    """The rule that accounts for the largest season gap, and a one-line reason."""
-    gaps = []
-    for year in sorted(set(old_seasons) | set(new_seasons)):
-        delta = new_seasons.get(year, 0) - old_seasons.get(year, 0)
-        if delta:
-            gaps.append((abs(delta), delta, year))
-    if not gaps:
-        return "unchanged", "The two counts match."
-    gaps.sort(reverse=True)
-    _abs, delta, year = gaps[0]
-    season = next((row for row in result["seasons"] if row["year"] == year), None)
+_OPENER_RULES = {
+    "accrual.league-opener",
+    "accrual.international-opener",
+    "accrual.tiebreaker-through-2021",
+    "accrual.presume-from-debut",
+    "accrual.pre-debut-roster",
+    "accrual.lockout-2022",
+}
+_PREFERRED = [
+    "accrual.appearance-restart",
+    "accrual.strike-service-1996",
+    "accrual.trade-resolves-dfa",
+    "count.dfa",
+    "stop.free-agency",
+    "stop.released",
+    "stop.restricted",
+    "stop.ped-suspension",
+    "count.suspension",
+    "stop.assigned-minors",
+    "stop.reassigned-minors",
+    "stop.option",
+    "start.mlb-contract-signing",
+    "accrual.shortened-2020",
+    "accrual.option-under-20",
+    "stop.taxi-squad",
+    "neutral.series-inactive",
+]
+
+
+def _season_attribution(result: dict, year: int, delta: int, season: dict | None, option_threshold: int) -> tuple[str, str]:
+    """One season's rule. A small gap is not labeled a league-opener unless nothing else applies."""
     rules = list(season["rules"]) if season else []
     notable = set(result.get("notable_rules") or [])
+    option_days = season.get("option_days", 0) if season else 0
+    direction = "higher" if delta > 0 else "lower"
+    if (
+        season is not None
+        and option_days == option_threshold
+        and -option_threshold <= delta < 0
+        and season.get("credited_days", 0) > 0
+    ):
+        return "decision.spring-option-league-opener", (
+            f"{year} is {abs(delta)} days lower because a spring option counted from the league's "
+            f"first game is exactly {option_threshold} days, so the year is used and those days are not "
+            "credited. Counted from the club's own opener it would be one day shorter and the days would "
+            "count. This is an open decision. The rulebook keeps the league opener."
+        )
     if season is not None and season.get("credited_days") == 0 and delta < 0:
-        if season.get("option_days", 0) > 0:
+        if option_days > 0:
             return "stop.option", (
                 f"{year} is {abs(delta)} days lower because he was on optional assignment "
                 "and the old walk still credited the year."
@@ -289,49 +325,68 @@ def _primary_rule(result: dict, old_seasons: dict, new_seasons: dict) -> tuple[s
         prior.sort(key=lambda item: item["end"])
         stops = [rule for rule in (prior[-1]["rules"] if prior else []) if rule.startswith("stop.")]
         chosen = stops[-1] if stops else "stop.reassigned-minors"
-        reason = (
+        return chosen, (
             f"{year} is {abs(delta)} days lower because {chosen} had already stopped the clock, "
             "and the old walk kept that year."
         )
-        return chosen, reason
-    direction = "more" if delta > 0 else "fewer"
-    exception = next((rule for rule in rules if rule.startswith("exception.")), None)
-    if exception is not None and abs(delta) > 5:
-        chosen = exception
-    elif abs(delta) <= 5 and "accrual.international-opener" in rules:
-        chosen = "accrual.international-opener"
-    elif abs(delta) <= 5 and "accrual.tiebreaker-through-2021" in rules:
-        chosen = "accrual.tiebreaker-through-2021"
-    elif abs(delta) <= 5:
-        chosen = "accrual.league-opener"
-    elif delta > 0 and "neutral.all-star" in notable and abs(delta) >= 15:
-        chosen = "neutral.all-star"
-    elif delta > 0 and "neutral.winter-league" in notable and abs(delta) >= 15:
-        chosen = "neutral.winter-league"
+    specific = [rule for rule in rules if rule not in _OPENER_RULES]
+    if "accrual.appearance-restart" in rules and delta > 0:
+        chosen = "accrual.appearance-restart"
+    elif "accrual.strike-service-1996" in rules and delta > 0:
+        chosen = "accrual.strike-service-1996"
     else:
-        preferred = [
-            "accrual.trade-resolves-dfa",
-            "count.dfa",
-            "stop.free-agency",
-            "stop.restricted",
-            "count.suspension",
-            "stop.assigned-minors",
-            "accrual.shortened-2020",
-            "accrual.option-under-20",
-            "stop.taxi-squad",
-        ]
-        chosen = next((rule for rule in preferred if rule in rules), None)
-        if chosen is None:
-            skip = {"accrual.presume-from-debut", "accrual.league-opener", "accrual.international-opener", "accrual.pre-debut-roster"}
-            chosen = next((rule for rule in rules if rule not in skip), None) or "unattributed"
+        exception = next((rule for rule in rules if rule.startswith("exception.")), None)
+        if exception is not None and abs(delta) > 5:
+            chosen = exception
+        elif abs(delta) <= 5 and specific:
+            chosen = next((rule for rule in _PREFERRED if rule in specific), specific[0])
+        elif abs(delta) <= 5 and "accrual.international-opener" in rules:
+            chosen = "accrual.international-opener"
+        elif abs(delta) <= 5 and "accrual.tiebreaker-through-2021" in rules:
+            chosen = "accrual.tiebreaker-through-2021"
+        elif abs(delta) <= 5 and "accrual.league-opener" in rules and not specific:
+            chosen = "accrual.league-opener"
+        elif delta > 0 and "neutral.all-star" in notable and abs(delta) >= 15:
+            chosen = "neutral.all-star"
+        elif delta > 0 and "neutral.winter-league" in notable and abs(delta) >= 15:
+            chosen = "neutral.winter-league"
+        else:
+            chosen = next((rule for rule in _PREFERRED if rule in rules), None)
+            if chosen is None:
+                chosen = next((rule for rule in rules if rule not in _OPENER_RULES), None) or "unattributed"
     if abs(delta) >= 25:
-        reason = _long_reason(chosen, year, delta, result)
+        reason = _long_reason(chosen, year, delta)
     else:
         reason = f"{year} is {abs(delta)} days {direction} under {chosen}."
     return chosen, reason
 
 
-def _long_reason(rule: str, year: int, delta: int, result: dict) -> str:
+def _primary_rule(result: dict, old_seasons: dict, new_seasons: dict, option_threshold: int) -> tuple[str, str, list[dict]]:
+    """Every season that moved, not only the largest gap."""
+    rows = []
+    for year in sorted(set(old_seasons) | set(new_seasons)):
+        old_days = old_seasons.get(year, 0)
+        new_days = new_seasons.get(year, 0)
+        delta = new_days - old_days
+        if not delta:
+            continue
+        season = next((row for row in result["seasons"] if row["year"] == year), None)
+        rule, reason = _season_attribution(result, year, delta, season, option_threshold)
+        rows.append({
+            "year": year,
+            "old": old_days,
+            "new": new_days,
+            "delta": delta,
+            "rule_id": rule,
+            "reason": reason,
+        })
+    if not rows:
+        return "unchanged", "The two counts match.", []
+    top = max(rows, key=lambda row: abs(row["delta"]))
+    return top["rule_id"], " ".join(row["reason"] for row in rows), rows
+
+
+def _long_reason(rule: str, year: int, delta: int) -> str:
     direction = "higher" if delta > 0 else "lower"
     gloss = {
         "neutral.all-star": "an All-Star assignment no longer stops the clock",
@@ -340,13 +395,18 @@ def _long_reason(rule: str, year: int, delta: int, result: dict) -> str:
         "accrual.international-opener": "an overseas opener is included for that club",
         "accrual.tiebreaker-through-2021": "a tiebreaker day is included only for the clubs that played it",
         "accrual.trade-resolves-dfa": "a trade or claim ends a designation and keeps service going",
+        "accrual.appearance-restart": "a later season he played is restarted after an option or assignment that never had a recall",
+        "accrual.strike-service-1996": "the 1996 settlement restores strike days, then the ordinary cap applies",
         "count.dfa": "designation days count until the outright, release, or the end of the window",
         "stop.free-agency": "electing free agency stops service until the next major-league deal",
+        "start.mlb-contract-signing": "a major-league signing after free agency or a release restarts service",
         "stop.assigned-minors": "an assignment to an affiliate stops service",
         "count.suspension": "an on-field suspension counts",
+        "stop.ped-suspension": "a drug-program suspension does not count",
         "stop.restricted": "the restricted list does not count unless an exception says it does",
         "accrual.shortened-2020": "2020 is scaled to a full year for a player who was rostered the whole season",
         "accrual.option-under-20": "fewer than 20 option days are credited as service",
+        "neutral.series-inactive": "days held off the roster for an overseas series do not count",
     }
     if rule.startswith("exception."):
         plain = "a sourced exception overrides the restricted-list wording (" + rule.removeprefix("exception.").replace("_", " ") + ")"
@@ -378,6 +438,27 @@ def _golden_coverage(book_rules: list[str]) -> dict:
     }
 
 
+def _fold_name(text: str) -> str:
+    text = unicodedata.normalize("NFKD", text or "")
+    text = text.encode("ascii", "ignore").decode("ascii")
+    return " ".join(text.lower().split())
+
+
+def _load_restricted() -> dict[tuple[str, str], dict]:
+    found = {}
+    if not RESTRICTED.exists():
+        return found
+    with RESTRICTED.open(encoding="utf-8", newline="") as handle:
+        for row in csv.DictReader(handle):
+            dates = (row.get("dates") or "").strip()
+            for day in dates.split(";"):
+                day = day.strip()
+                if not day:
+                    continue
+                found[(_fold_name(row.get("player") or ""), day[:10])] = row
+    return found
+
+
 def _write(path: Path, payload) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
@@ -394,12 +475,14 @@ def main() -> int:
     exceptions = service_time_exceptions.load_exceptions()
     ruleset = cba.default()
     full_year = int(ruleset.require("service_time.days_per_credited_year"))
+    option_threshold = int(ruleset.require_verified("options.days_to_burn_option_year"))
     book = rulebook.load_rulebook()
     rule_ids = [rule.id for rule in book["rules"]]
 
     paths = sorted(p for p in RAW.glob("*.json") if not p.name.startswith("_"))
     explanations = []
     differences = []
+    published_rows = []
     unknown_rows = []
     ambiguous_rows = []
     sanity_failures = []
@@ -453,8 +536,30 @@ def main() -> int:
                     "ranges": result["ranges"],
                 })
                 new_seasons = {row["year"]: row["credited_days"] for row in result["seasons"]}
+                published_days = int(player.get("service_days_total") or 0)
+                published_time = player.get("service_time")
+                if result["service_days"] != published_days or result["service_time"] != published_time:
+                    published_seasons = {int(row["y"]): int(row["d"]) for row in (player.get("seasons") or []) if "y" in row}
+                    season_gaps = []
+                    for year in sorted(set(published_seasons) | set(new_seasons)):
+                        gap = new_seasons.get(year, 0) - published_seasons.get(year, 0)
+                        if gap:
+                            season_gaps.append({"year": year, "published": published_seasons.get(year, 0), "rulebook": new_seasons.get(year, 0), "delta": gap})
+                    published_rows.append({
+                        "player_id": player_id,
+                        "name": player.get("name"),
+                        "on_40_man": bool(player.get("on_40_man")),
+                        "published_service_time": published_time,
+                        "rulebook_service_time": result["service_time"],
+                        "published_days": published_days,
+                        "rulebook_days": result["service_days"],
+                        "delta_days": result["service_days"] - published_days,
+                        "crossed": _lines(published_days, result["service_days"], full_year),
+                        "rules_version_on_the_site": player.get("rules_version"),
+                        "seasons": season_gaps,
+                    })
                 if result["service_days"] != old["service_days"] or result["service_time"] != old["service_time"]:
-                    rule, reason = _primary_rule(result, old["by_season"], new_seasons)
+                    rule, reason, season_rows = _primary_rule(result, old["by_season"], new_seasons, option_threshold)
                     differences.append({
                         "player_id": player_id,
                         "name": player.get("name"),
@@ -472,6 +577,7 @@ def main() -> int:
                             for rule_id in row["rules"]
                         }),
                         "reason": reason,
+                        "seasons": season_rows,
                     })
                 unknown_rows.extend(result["unknowns"])
                 ambiguous_rows.extend(result["ambiguous"])
@@ -515,6 +621,20 @@ def main() -> int:
         {"rule_id": rule, "players": count}
         for rule, count in by_rule.most_common()
     ]
+    published_rows.sort(key=lambda row: (
+        _threshold_rank(row["crossed"], row["on_40_man"])[0],
+        _threshold_rank(row["crossed"], row["on_40_man"])[1],
+        -abs(row["delta_days"]),
+        row["player_id"],
+    ))
+    published_up = sum(1 for row in published_rows if row["delta_days"] > 0)
+    published_down = sum(1 for row in published_rows if row["delta_days"] < 0)
+    published_net = sum(row["delta_days"] for row in published_rows)
+    published_40 = [row for row in published_rows if row["on_40_man"]]
+    published_40_up = sum(1 for row in published_40 if row["delta_days"] > 0)
+    published_40_down = sum(1 for row in published_40 if row["delta_days"] < 0)
+    published_low = [row for row in published_40 if row["delta_days"] <= -172]
+    decisions = [row for row in differences if row["rule_id"] == "decision.spring-option-league-opener"]
 
     summary = {
         "rules_version": RULEBOOK_VERSION,
@@ -536,6 +656,24 @@ def main() -> int:
         "unknown_on_40_man": unknown_40,
         "ambiguous_restricted_list": len(ambiguous_rows),
         "sanity_failures": len(sanity_failures),
+        "published_comparison": {
+            "note": "Compared with the live published file as well as the replay. Alumni in that file can still be on an older rules version.",
+            "differ": len(published_rows),
+            "match": len(explanations) - len(published_rows),
+            "up": published_up,
+            "down": published_down,
+            "net_days": published_net,
+            "on_40_man_differ": len(published_40),
+            "on_40_man_up": published_40_up,
+            "on_40_man_down": published_40_down,
+            "on_40_man_net_days": sum(row["delta_days"] for row in published_40),
+            "on_40_man_172_or_more_below": [
+                {"player_id": row["player_id"], "name": row["name"], "published": row["published_service_time"], "rulebook": row["rulebook_service_time"], "delta_days": row["delta_days"]}
+                for row in published_low
+            ],
+            "threshold_crossers": sum(1 for row in published_rows if row["crossed"]),
+            "spring_option_decisions": len(decisions),
+        },
         "determinism": {
             "first_hash": first_hash,
             "second_hash": second_hash,
@@ -553,8 +691,13 @@ def main() -> int:
         for row in sorted(explanations, key=lambda item: item["player_id"]):
             handle.write(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n")
 
-    _write(REPORTS / "summary.json", summary)
     _write(REPORTS / "differences.json", differences)
+    _write(REPORTS / "published_comparison.json", {
+        "note": "Rulebook against the live published file. Current 40-man players and threshold crossers are first. Alumni can still be on an older rules version, so a gap there is not the same as a gap for a current player.",
+        "differ": len(published_rows),
+        "on_40_man_172_or_more_below": summary["published_comparison"]["on_40_man_172_or_more_below"],
+        "rows": published_rows,
+    })
     _write(REPORTS / "unknowns.json", {
         "transactions": len(unknown_rows),
         "on_40_man": unknown_40,
@@ -565,9 +708,50 @@ def main() -> int:
         ],
         "rows": unknown_rows,
     })
+    classified = _load_restricted()
+    review_40 = []
+    opt_outs = []
+    by_type = Counter()
+    for row in ambiguous_rows:
+        match = classified.get((_fold_name(row.get("name") or ""), (row.get("date") or "")[:10]))
+        if match:
+            row["likely_type"] = match.get("likely_type") or "unknown"
+            row["counts_service"] = match.get("counts_service") or "unknown"
+            row["source_url"] = match.get("source_url") or ""
+        else:
+            row["likely_type"] = "unknown"
+            row["counts_service"] = "unknown"
+            row["source_url"] = ""
+        by_type[row["likely_type"]] += 1
+        if row.get("on_40_man") and row["counts_service"] != "no" and row["counts_service"] != "yes":
+            review_40.append({
+                "player_id": row.get("player_id"),
+                "name": row.get("name"),
+                "date": row.get("date"),
+                "likely_type": row["likely_type"],
+                "description": row.get("description"),
+            })
+        if row["likely_type"] == "2020_opt_out":
+            opt_outs.append({
+                "player_id": row.get("player_id"),
+                "name": row.get("name"),
+                "date": row.get("date"),
+                "on_40_man": row.get("on_40_man"),
+                "note": "Not added as a high-risk opt-out. The source does not say he was in that class. Counted as no service.",
+            })
+    summary["restricted_list"] = {
+        "rows": len(ambiguous_rows),
+        "by_type": dict(by_type),
+        "current_40_man_unknowns": len(review_40),
+        "unsourced_2020_opt_outs": len(opt_outs),
+    }
+    _write(REPORTS / "summary.json", summary)
     _write(REPORTS / "ambiguous.json", {
-        "note": "Restricted-list rows with no sourced exception. Classified as no service and flagged rather than guessed.",
+        "note": "Restricted-list rows with no sourced exception. Counted as no service, which is the default. Sourced categories are labeled. Unknowns stay at that default.",
         "count": len(ambiguous_rows),
+        "by_type": dict(by_type),
+        "current_40_man_unknowns_for_review": review_40,
+        "unsourced_2020_opt_outs": opt_outs,
         "rows": ambiguous_rows,
     })
     _write(REPORTS / "open_questions.json", open_questions())
@@ -584,7 +768,9 @@ def main() -> int:
         f"Crossed 3 years, 6 years, Super Two, or an eligibility line: {summary['threshold_crossers']}.",
         f"Differences of 25 days or more: {len(large)}.",
         f"Unknown transactions: {len(unknown_rows)} ({unknown_40} on a current 40-man player).",
-        f"Ambiguous restricted-list rows: {len(ambiguous_rows)}.",
+        f"Ambiguous restricted-list rows: {len(ambiguous_rows)}. Current 40-man rows still unknown: {len(review_40)}. Unsourced 2020 opt-outs, not counted: {len(opt_outs)}.",
+        f"Against the live published file: {len(published_rows)} differ ({published_up} up, {published_down} down, net {published_net} days). Current 40-man: {len(published_40)} differ ({published_40_up} up, {published_40_down} down). {len(published_low)} current 40-man players are 172 or more days below the published total.",
+        f"Spring-option league-opener decisions: {len(decisions)}.",
         f"Sanity failures: {len(sanity_failures)}.",
         f"Two full replays {'matched' if identical else 'DID NOT MATCH'} ({first_hash[:12]}).",
         "",

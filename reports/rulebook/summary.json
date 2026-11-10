@@ -3,11 +3,11 @@
   "compared_with": "service-time walk version 10 on the same saved transactions",
   "counted_through": "2026-11-09",
   "players_compared": 5609,
-  "match": 3078,
-  "differ": 2531,
-  "up": 2236,
-  "down": 295,
-  "net_days": 137490,
+  "match": 2939,
+  "differ": 2670,
+  "up": 2380,
+  "down": 290,
+  "net_days": 179904,
   "prior_rules_change": {
     "players_changed": 399,
     "up": 295,
@@ -15,95 +15,95 @@
   },
   "by_rule": [
     {
-      "rule_id": "accrual.league-opener",
-      "players": 1475
+      "rule_id": "stop.option",
+      "players": 701
     },
     {
       "rule_id": "neutral.all-star",
-      "players": 461
-    },
-    {
-      "rule_id": "neutral.winter-league",
-      "players": 256
-    },
-    {
-      "rule_id": "accrual.option-under-20",
-      "players": 95
+      "players": 480
     },
     {
       "rule_id": "count.dfa",
-      "players": 49
+      "players": 390
+    },
+    {
+      "rule_id": "neutral.winter-league",
+      "players": 325
     },
     {
       "rule_id": "stop.free-agency",
-      "players": 29
+      "players": 162
     },
     {
       "rule_id": "accrual.trade-resolves-dfa",
-      "players": 27
+      "players": 155
     },
     {
       "rule_id": "stop.assigned-minors",
-      "players": 24
+      "players": 140
     },
     {
-      "rule_id": "start.recalled",
-      "players": 20
+      "rule_id": "accrual.appearance-restart",
+      "players": 114
     },
     {
-      "rule_id": "accrual.tiebreaker-through-2021",
-      "players": 14
+      "rule_id": "stop.released",
+      "players": 58
     },
     {
-      "rule_id": "accrual.shortened-2020",
-      "players": 13
-    },
-    {
-      "rule_id": "count.dl-15",
-      "players": 12
-    },
-    {
-      "rule_id": "stop.option",
-      "players": 8
-    },
-    {
-      "rule_id": "count.il-10",
-      "players": 7
-    },
-    {
-      "rule_id": "accrual.international-opener",
-      "players": 7
-    },
-    {
-      "rule_id": "stop.restricted",
-      "players": 6
-    },
-    {
-      "rule_id": "count.il-15",
-      "players": 4
-    },
-    {
-      "rule_id": "count.concussion-7",
-      "players": 4
-    },
-    {
-      "rule_id": "start.selected",
-      "players": 4
+      "rule_id": "accrual.strike-service-1996",
+      "players": 31
     },
     {
       "rule_id": "stop.reassigned-minors",
-      "players": 3
+      "players": 26
     },
     {
-      "rule_id": "start.purchased",
-      "players": 3
+      "rule_id": "stop.restricted",
+      "players": 15
+    },
+    {
+      "rule_id": "accrual.shortened-2020",
+      "players": 14
     },
     {
       "rule_id": "stop.outright",
-      "players": 2
+      "players": 11
+    },
+    {
+      "rule_id": "count.il-10",
+      "players": 9
+    },
+    {
+      "rule_id": "count.dl-15",
+      "players": 8
+    },
+    {
+      "rule_id": "decision.spring-option-league-opener",
+      "players": 6
+    },
+    {
+      "rule_id": "accrual.option-under-20",
+      "players": 6
+    },
+    {
+      "rule_id": "start.selected",
+      "players": 5
     },
     {
       "rule_id": "count.suspension",
+      "players": 3
+    },
+    {
+      "rule_id": "count.il-15",
+      "players": 2
+    },
+    {
+      "rule_id": "count.concussion-7",
+      "players": 2
+    },
+    {
+      "rule_id": "start.purchased",
       "players": 2
     },
     {
@@ -111,33 +111,63 @@
       "players": 2
     },
     {
-      "rule_id": "stop.taxi-squad",
-      "players": 1
-    },
-    {
-      "rule_id": "count.paternity",
-      "players": 1
+      "rule_id": "start.recalled",
+      "players": 2
     },
     {
       "rule_id": "count.il-60",
       "players": 1
-    },
-    {
-      "rule_id": "start.activated",
-      "players": 1
     }
   ],
-  "on_40_man_differ": 319,
-  "alumni_differ": 2212,
-  "differences_of_25_days_or_more": 701,
-  "threshold_crossers": 159,
-  "unknown_transactions": 13,
+  "on_40_man_differ": 351,
+  "alumni_differ": 2319,
+  "differences_of_25_days_or_more": 905,
+  "threshold_crossers": 205,
+  "unknown_transactions": 0,
   "unknown_on_40_man": 0,
-  "ambiguous_restricted_list": 293,
+  "ambiguous_restricted_list": 292,
   "sanity_failures": 0,
+  "published_comparison": {
+    "note": "Compared with the live published file as well as the replay. Alumni in that file can still be on an older rules version.",
+    "differ": 2838,
+    "match": 2771,
+    "up": 2405,
+    "down": 433,
+    "net_days": 416339,
+    "on_40_man_differ": 312,
+    "on_40_man_up": 269,
+    "on_40_man_down": 43,
+    "on_40_man_net_days": 6118,
+    "on_40_man_172_or_more_below": [
+      {
+        "player_id": 621053,
+        "name": "Tyler Ferguson",
+        "published": "1.141",
+        "rulebook": "0.127",
+        "delta_days": -186
+      }
+    ],
+    "threshold_crossers": 269,
+    "spring_option_decisions": 6
+  },
   "determinism": {
-    "first_hash": "18159f6e800b774178462316104fd56197bcdb15245c10c7a43a6e4c0fae2079",
-    "second_hash": "18159f6e800b774178462316104fd56197bcdb15245c10c7a43a6e4c0fae2079",
+    "first_hash": "3d75780c9ce2c2abd1d9e1b6daa3831901e579faabceee45edf3d657b88e074e",
+    "second_hash": "3d75780c9ce2c2abd1d9e1b6daa3831901e579faabceee45edf3d657b88e074e",
     "identical": true
+  },
+  "restricted_list": {
+    "rows": 292,
+    "by_type": {
+      "ped_suspension": 17,
+      "unknown": 214,
+      "2020_opt_out": 13,
+      "canada_vaccine_restricted": 43,
+      "personal_restricted": 1,
+      "paternity_overflow_restricted": 1,
+      "club_covid_protocol_violation": 2,
+      "legal_investigation_restricted": 1
+    },
+    "current_40_man_unknowns": 24,
+    "unsourced_2020_opt_outs": 13
   }
 }

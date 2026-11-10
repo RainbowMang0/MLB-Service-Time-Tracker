@@ -487,6 +487,267 @@ def test_every_rule_effect_is_stable_for_a_representative_row():
         check(f"{rule_id} classifies to itself", hit is not None and hit.id == rule_id)
 
 
+def test_fix_round_cases():
+    """Winter clubs by id, a postseason demotion, a major-league re-signing,
+    the strike settlement, and the rows the cross-check classified."""
+    cap = cba.default().require("service_time.max_days_creditable_per_season")
+    calendar = cal(
+        season(2024, "2024-03-28", "2024-09-29"),
+        season(2025, "2025-03-27", "2025-09-28"),
+    )
+    winter = run(
+        [
+            txn("2024-03-28", "SE", "Diamondbacks selected the contract of X.", to=109),
+            txn("2024-12-07", "ASG", "X assigned to Aguilas Cibaenas.", to=667, name="Aguilas Cibaenas"),
+            txn("2025-01-10", "ASG", "X assigned to Estrellas Orientales.", to=669, name="Estrellas Orientales"),
+        ],
+        calendar, "2024-03-28", "2025-10-05",
+    )
+    check("Aguilas Cibaenas does not stop the next season", days_of(winter, 2025) == cap)
+    check("Estrellas Orientales is a winter club", any(
+        hit is not None and hit.id == "neutral.winter-league"
+        for hit in [rb.classify_row(txn("2025-01-10", "ASG", "X assigned to Estrellas Orientales.", to=669, name="Estrellas Orientales"))]
+    ))
+    spelled = rb.classify_row(txn("2024-12-01", "ASG", "X assigned to Aguilas Cibaenas.", name="Aguilas Cibaenas"))
+    check("the winter rule does not need the letters de or del", spelled is not None and spelled.id == "neutral.winter-league")
+
+    reassigned = run(
+        [
+            txn("2024-03-28", "SE", "Astros selected the contract of X.", to=117),
+            txn("2024-09-29", "OPT", "Astros optioned X to Sugar Land.", frm=117, to=5434),
+            txn("2024-10-10", "CU", "Astros recalled X from Sugar Land.", to=117),
+            txn("2024-10-11", "SC", "Astros reassigned X to the minor leagues.", to=117),
+        ],
+        calendar, "2024-03-28", "2025-10-05",
+    )
+    check("a postseason reassignment does not stop the next season", days_of(reassigned, 2025) == cap)
+
+    missing_recall = run(
+        [
+            txn("2024-03-28", "SE", "Athletics selected the contract of X.", to=133),
+            txn("2024-05-14", "OPT", "Athletics optioned X to Las Vegas.", frm=133, to=400),
+        ],
+        calendar, "2024-03-28", "2025-10-05",
+        appearance_years={2024, 2025},
+    )
+    check("an option with no recall does not wipe a later season he played", days_of(missing_recall, 2025) == cap)
+    check("the option still stops the season it happened in", days_of(missing_recall, 2024) < cap)
+    check("the restarted season names the appearance rule", "accrual.appearance-restart" in (missing_recall["seasons"][-1]["rules"]))
+
+    signed = run(
+        [
+            txn("2024-03-28", "SE", "Reds selected the contract of X.", to=113),
+            txn("2024-11-01", "DFA", "X elected free agency."),
+            txn("2024-11-19", "SGN", "Cincinnati Reds signed RHP X.", to=113),
+            txn("2025-11-02", "DFA", "X elected free agency."),
+        ],
+        calendar, "2024-03-28", "2025-11-05",
+    )
+    check("a major-league signing after free agency restarts service", days_of(signed, 2025) == cap)
+    check("the free-agency gap has no sanity error", signed["sanity"] == [])
+    amateur = run(
+        [
+            txn("2024-03-28", "SE", "Yankees selected the contract of X.", to=NYY),
+            txn("2024-06-01", "REL", "Yankees released X.", frm=NYY),
+            txn("2024-06-15", "SGN", "Yankees signed X to a minor league contract.", to=NYY),
+        ],
+        calendar, "2024-03-28", "2025-10-05",
+    )
+    check("a minor-league signing does not restart service", days_of(amateur, 2025) == 0)
+    check("a release leaves no credited day after it", amateur["sanity"] == [])
+
+    drug = run(
+        [
+            txn("2024-03-28", "SE", "Yankees selected the contract of X.", to=NYY),
+            txn("2024-06-01", "SU", "X suspended 80 games under the Joint Drug Agreement for a performance-enhancing drug.", to=NYY),
+            txn("2024-08-20", "SC", "Yankees activated X.", to=NYY),
+        ],
+        calendar, "2024-03-28", "2024-10-05",
+    )
+    check("a drug suspension is not service", days_of(drug, 2024) < cap)
+    check("the drug row is the drug rule", rb.classify_row(txn(
+        "2024-06-01", "SU", "X suspended 80 games under the Joint Drug Agreement for a performance-enhancing drug.", to=NYY
+    )).id == "stop.ped-suspension")
+
+    real = rb.load_calendar()
+    struck = evaluate(
+        [txn("1994-04-03", "SE", "Yankees selected the contract of X.", to=NYY)],
+        player_id=2, debut=dt.date(1994, 4, 3), horizon=dt.date(1995, 10, 5),
+        calendar=real, exceptions=[], roy_years=set(),
+    )
+    check("1994 plus the 52-day assumption is capped at one year", days_of(struck, 1994) == cap)
+    check("1995 plus the 23-day assumption is capped at one year", days_of(struck, 1995) == cap)
+    check("the strike credit is one labeled rule", all(
+        "accrual.strike-service-1996" in row["rules"] for row in struck["seasons"] if row["year"] in (1994, 1995)
+    ))
+    partial_strike = evaluate(
+        [
+            txn("1994-06-01", "SE", "Yankees selected the contract of X.", to=NYY),
+            txn("1994-06-15", "REL", "Yankees released X.", frm=NYY),
+        ],
+        player_id=3, debut=dt.date(1994, 6, 1), horizon=dt.date(1994, 10, 5),
+        calendar=real, exceptions=[], roy_years=set(),
+    )
+    check("a player who was gone before the strike does not get the 52 days", days_of(partial_strike, 1994) == 14)
+    check("the strike assumption has no sanity error", struck["sanity"] == [] and partial_strike["sanity"] == [])
+
+    tokyo = evaluate(
+        [
+            txn("2019-03-01", "SE", "Mariners selected the contract of X.", to=136),
+            txn("2019-03-19", "SC", "Mariners placed X on the temporarily inactive list.", to=136),
+            txn("2019-04-02", "REL", "Mariners released X.", frm=136),
+        ],
+        player_id=4, debut=dt.date(2019, 3, 20), horizon=dt.date(2019, 5, 1),
+        calendar=real, exceptions=[], roy_years=set(),
+    )
+    # Domestic opener is March 28. March 28 through April 1 count. April 2 is the release.
+    check("Tokyo days do not count and service resumes at the domestic opener", days_of(tokyo, 2019) == 5)
+    check("the Tokyo row is not an unknown", tokyo["unknowns"] == [])
+
+    lyles = evaluate(
+        [
+            txn("2024-03-28", "SE", "Royals selected the contract of X.", to=118),
+            txn("2024-04-19", "SC", "Royals placed X on the temporarily inactive list.", to=118),
+            txn("2024-04-20", "SC", "Royals placed X on the restricted list.", to=118),
+        ],
+        player_id=5, debut=dt.date(2024, 3, 28), horizon=dt.date(2024, 10, 5),
+        calendar=real, exceptions=[], roy_years=set(),
+    )
+    # March 28 through April 18.
+    check("an in-season temporarily inactive day does not count", days_of(lyles, 2024) == 22)
+
+    quiet = evaluate(
+        [
+            txn("2010-04-04", "SE", "Mets selected the contract of X.", to=121),
+            txn("2010-11-01", "SC", "Mets placed X on the temporarily inactive list.", to=121),
+        ],
+        player_id=6, debut=dt.date(2010, 4, 4), horizon=dt.date(2010, 11, 5),
+        calendar=real, exceptions=[], roy_years=set(),
+    )
+    check("a postseason temporarily inactive row does not change the year", days_of(quiet, 2010) == cap)
+    foley = evaluate(
+        [
+            txn("2020-07-23", "SE", "Blue Jays selected the contract of X.", to=141),
+            txn("2020-09-29", "SC", "Blue Jays placed X on the reserve list.", to=141),
+        ],
+        player_id=7, debut=dt.date(2020, 7, 23), horizon=dt.date(2020, 10, 5),
+        calendar=real, exceptions=[], roy_years=set(),
+    )
+    check("a reserve-list row after 2020 ended does not change the year", days_of(foley, 2020) == cap)
+
+    blank = evaluate(
+        [
+            txn("2023-07-20", "DES", "Pirates designated X for assignment.", frm=PIT),
+            txn("2023-07-24", "SC", "", to=PIT),
+            txn("2023-07-25", "TR", "Pirates traded X to the Yankees.", frm=PIT, to=NYY),
+        ],
+        player_id=8, debut=dt.date(2023, 3, 30), horizon=dt.date(2023, 10, 5),
+        calendar=real, exceptions=[], roy_years=set(),
+    )
+    check("a blank status row is not an unknown", blank["unknowns"] == [])
+    check("a blank status row does not stop a designation", days_of(blank, 2023) == cap)
+
+    heim = evaluate(
+        [
+            txn("2024-08-01", "DES", "Rays designated X for assignment.", frm=139),
+            txn("2024-08-01", "TR", "Rays traded X to the Yankees.", frm=139, to=NYY),
+        ],
+        player_id=641680, debut=dt.date(2024, 3, 28), horizon=dt.date(2024, 10, 5),
+        calendar=real, exceptions=[], roy_years=set(),
+    )
+    check("Heim's same-day designation and trade keeps the season", days_of(heim, 2024) == cap)
+
+    military = run(
+        [
+            txn("2024-03-28", "SE", "Yankees selected the contract of X.", to=NYY),
+            txn("2024-06-01", "SC", "Yankees placed X on the military list.", to=NYY),
+        ],
+        calendar, "2024-03-28", "2024-10-05",
+    )
+    check("military-list time counts", days_of(military, 2024) == cap)
+
+    taxi = run(
+        [
+            txn("2020-07-23", "SE", "Yankees selected the contract of X.", to=NYY),
+            txn("2020-08-01", "ASG", "X assigned to the alternate training site.", to=3266),
+        ],
+        cal(season(2020, "2020-07-23", "2020-09-27")), "2020-07-23", "2020-10-05",
+    )
+    check("a taxi-squad assignment stops service", days_of(taxi, 2020) < cap)
+
+    opt_calendar = cal(season(2020, "2020-07-23", "2020-09-27"))
+    opt_rows = [
+        txn("2020-07-23", "SE", "Cardinals selected the contract of X.", to=138),
+        txn("2020-07-23", "SC", "Cardinals placed X on the restricted list.", to=138),
+    ]
+    opted = run(opt_rows, opt_calendar, "2020-07-23", "2020-10-05", exceptions=[{
+        "start": dt.date(2020, 7, 23), "end": dt.date(2020, 9, 27),
+        "counts": True, "kind": "covid_high_risk_opt_out",
+    }])
+    not_opted = run(opt_rows, opt_calendar, "2020-07-23", "2020-10-05")
+    check("a sourced 2020 high-risk opt-out counts as a full year", days_of(opted, 2020) == cap)
+    check("an unsourced 2020 opt-out does not", days_of(not_opted, 2020) < cap)
+
+    tatis_rows = [
+        txn("2022-04-07", "SE", "Padres selected the contract of X.", to=135),
+        txn("2022-08-12", "SC", "Padres roster status changed for X.", to=135),
+        txn("2022-08-20", "REL", "Padres released X.", frm=135),
+    ]
+    without = [row for row in tatis_rows if "roster status" not in row["description"]]
+    with_row = evaluate(tatis_rows, player_id=665487, debut=dt.date(2022, 4, 7), horizon=dt.date(2022, 10, 5), calendar=real, exceptions=[], roy_years=set())
+    no_row = evaluate(without, player_id=665487, debut=dt.date(2022, 4, 7), horizon=dt.date(2022, 10, 5), calendar=real, exceptions=[], roy_years=set())
+    check("a roster-status row does not move the clock", days_of(with_row, 2022) == days_of(no_row, 2022))
+    check("the roster-status row is neutral", rb.classify_row(tatis_rows[1], real).id == "neutral.roster-status")
+
+    # Optioned with no recall, plays the next year, then a later year has its own call-up.
+    carried = cal(
+        season(2023, "2023-03-30", "2023-10-01"),
+        season(2024, "2024-03-28", "2024-09-29"),
+        season(2025, "2025-03-27", "2025-09-28"),
+    )
+    sears = run(
+        [
+            txn("2023-03-30", "SE", "Athletics selected the contract of X.", to=133),
+            txn("2023-08-02", "OPT", "Athletics optioned X to Las Vegas.", frm=133, to=400),
+            txn("2025-08-01", "SC", "Padres activated X.", to=135),
+            txn("2025-08-05", "OPT", "Padres optioned X to El Paso.", frm=135, to=4904),
+            txn("2025-08-20", "CU", "Padres recalled X from El Paso.", to=135),
+            txn("2025-08-26", "REL", "Padres released X.", frm=135),
+        ],
+        carried, "2023-03-30", "2025-10-05",
+        appearance_years={2023, 2024, 2025},
+    )
+    check("a year with games and no recall is restored", days_of(sears, 2024) == cap)
+    check("a later call-up does not inherit that restored season", days_of(sears, 2025) < 30)
+
+    parker = evaluate(
+        [
+            txn("2026-03-14", "OPT", "Nationals optioned X to Rochester.", frm=120, to=534),
+            txn("2026-04-14", "CU", "Nationals recalled X from Rochester.", to=120),
+        ],
+        player_id=680730, debut=dt.date(2025, 3, 27), horizon=dt.date(2026, 10, 5),
+        calendar=real, exceptions=[], roy_years=set(), appearance_years={2025, 2026},
+    )
+    check("Parker's spring option is 20 days from the league opener", parker["option_days"].get("2026") == 20)
+    check("those 20 days are not credited", days_of(parker, 2026) == 167)
+
+    broken = {
+        "service_days": 10,
+        "seasons": [{
+            "year": 2024,
+            "credited_days": 10,
+            "raw_days": 10,
+            "prorated_days": 10,
+            "start": "2024-03-28",
+            "end": "2024-09-29",
+            "rules": [],
+            "ranges": [{"start": "2024-06-02", "end": "2024-06-11", "days": 10, "rules": []}],
+        }],
+        "boundaries": [{"date": "2024-06-01", "kind": "block", "rule": "stop.free-agency"}],
+    }
+    check("sanity catches service after free agency", any("free agency" in item for item in rb.sanity_errors(broken)))
+
+
 def main():
     print("Rule file")
     test_rule_file()
@@ -511,6 +772,8 @@ def main():
     test_unknowns_and_determinism()
     print("Samples")
     test_every_rule_effect_is_stable_for_a_representative_row()
+    print("Fix round")
+    test_fix_round_cases()
     print(f"\n{PASS} passed, {FAIL} failed")
     return 1 if FAIL else 0
 

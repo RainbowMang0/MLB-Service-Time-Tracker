@@ -27,10 +27,24 @@ from mlb_clubs import MLB_CLUB_IDS
 
 ROOT = Path(__file__).resolve().parents[1]
 RULES_PATH = ROOT / "data" / "rulebook" / "rules.json"
+WINTER_PATH = ROOT / "data" / "rulebook" / "winter_teams.json"
 CALENDAR_PATH = ROOT / "data" / "reference" / "season_calendar.json"
 EXCEPTIONS_PATH = ROOT / "data" / "reference" / "service_time_exceptions.json"
 
 RULEBOOK_VERSION = "rulebook-1"
+
+# 1996 settlement: 75 regular-season days the strike wiped out.
+# The 52/23 split is an assumption (cancelled 1994 remainder, delayed 1995 start).
+STRIKE_1994_LAST = dt.date(1994, 8, 11)
+STRIKE_1994_DAYS = 52
+STRIKE_1995_DAYS = 23
+RESTARTABLE_STOPS = {
+    "stop.option",
+    "stop.assigned-minors",
+    "stop.reassigned-minors",
+    "stop.taxi-squad",
+}
+BLOCKING_STOPS = ("stop.free-agency", "stop.released")
 
 _EFFECTS = frozenset({"start", "stop", "count_away", "neutral"})
 _MONTHS = {
@@ -77,6 +91,10 @@ _SKIP_LOOKAHEAD = frozenset({
     "neutral.rule5-minors",
     "neutral.purchase-other",
     "neutral.claim-minors",
+    "neutral.postseason-reassignment",
+    "neutral.offseason-inactive",
+    "neutral.blank-status",
+    "neutral.series-inactive",
 })
 
 
@@ -157,6 +175,64 @@ def _blob(row: dict, ids: dict) -> str:
 
 def _mlb_present(ids: dict) -> bool:
     return any(i in MLB_CLUB_IDS for i in (ids["team"], ids["from"], ids["to"]) if i is not None)
+
+
+def _fold(text: str) -> str:
+    import unicodedata
+    text = unicodedata.normalize("NFKD", text or "")
+    text = text.encode("ascii", "ignore").decode("ascii")
+    return re.sub(r"[^a-z0-9]+", " ", text.lower()).strip()
+
+
+@lru_cache(maxsize=1)
+def load_winter_teams(path: str | None = None) -> tuple[frozenset, frozenset]:
+    """(team ids, names safe to match when the id is missing).
+
+    Names shared with a summer club, such as Charros de Jalisco, are matched
+    by id only so a summer assignment still stops service.
+    """
+    file = Path(path) if path else WINTER_PATH
+    doc = json.loads(file.read_text(encoding="utf-8"))
+    ids = []
+    names = []
+    for row in doc.get("teams") or []:
+        ids.append(int(row["id"]))
+        if row.get("name_match", True) and row.get("name"):
+            names.append(_fold(row["name"]))
+    return frozenset(ids), frozenset(names)
+
+
+def _is_winter(row: dict, ids: dict) -> bool:
+    code = row.get("typeCode") if isinstance(row.get("typeCode"), str) else ""
+    desc = row.get("description") or ""
+    if code != "ASG" and not re.search(r"\bassigned to\b", desc, re.I):
+        return False
+    winter_ids, names = load_winter_teams()
+    if ids["to"] in winter_ids:
+        return True
+    folded = _fold(" ".join(part for part in (ids["to_name"], ids["team_name"]) if part))
+    if not folded:
+        folded = _fold(desc)
+    return folded in names or any(f" {name} " in f" {folded} " for name in names)
+
+
+def _is_series_inactive(row: dict, ids: dict, calendar: Calendar) -> bool:
+    """Held off the active list for an overseas opener. Section 9."""
+    desc = (row.get("description") or "").lower()
+    if "temporarily inactive" not in desc and "reserve list" not in desc:
+        return False
+    day = _date(row.get("date"))
+    if day is None:
+        return False
+    club = next((ids[key] for key in ("to", "from", "team") if ids.get(key) in MLB_CLUB_IDS), None)
+    if club is None:
+        return False
+    season = calendar.seasons.get(day.year)
+    if season is None or season.championship_start >= season.first_domestic:
+        return False
+    if club not in season.international_clubs:
+        return False
+    return season.championship_start - dt.timedelta(days=3) <= day < season.first_domestic
 
 
 def _any_team(ids: dict) -> bool:
@@ -394,13 +470,31 @@ def _match(rule: _Rule, row: dict, ids: dict, blob: str, calendar: Calendar) -> 
     return True
 
 
+_ENGINE_RULES = frozenset({
+    "neutral.winter-league",
+    "neutral.blank-status",
+    "neutral.series-inactive",
+})
+
+
 def classify_row(row: dict, calendar: Calendar | None = None, book: dict | None = None) -> Hit | None:
     """The one classification. None means unknown."""
     calendar = calendar or load_calendar()
     book = book or load_rulebook()
     ids = row_ids(row)
     blob = _blob(row, ids)
+    by_id = {rule.id: rule for rule in book["rules"]}
+    code = row.get("typeCode") if isinstance(row.get("typeCode"), str) else ""
+    desc = row.get("description") or ""
+    if code == "SC" and not desc.strip() and "neutral.blank-status" in by_id:
+        return Hit(by_id["neutral.blank-status"])
+    if _is_winter(row, ids) and "neutral.winter-league" in by_id:
+        return Hit(by_id["neutral.winter-league"])
+    if _is_series_inactive(row, ids, calendar) and "neutral.series-inactive" in by_id:
+        return Hit(by_id["neutral.series-inactive"])
     for rule in book["rules"]:
+        if rule.id in _ENGINE_RULES:
+            continue
         if _match(rule, row, ids, blob, calendar):
             return Hit(rule)
     return None
@@ -538,6 +632,11 @@ def _opens(hit: Hit) -> bool:
     return False
 
 
+def _returns_to_roster(hit: Hit) -> bool:
+    """A recall, selection, activation, or signing. An injured-list row is not one."""
+    return hit.effect == "start"
+
+
 def evaluate(
     transactions: list[dict] | None,
     *,
@@ -604,9 +703,9 @@ def evaluate(
     # Same-day minor-league contract suppresses a bare major-league signing.
     for day, items in grouped.items():
         ids = {hit.id for _row, hit in items if hit is not None}
-        if "start.mlb-signing" in ids and "neutral.minor-signing" in ids:
+        if "neutral.minor-signing" in ids and (ids & {"start.mlb-signing", "start.mlb-contract-signing"}):
             grouped[day] = [
-                (row, None if hit is not None and hit.id == "start.mlb-signing" else hit)
+                (row, None if hit is not None and hit.id in {"start.mlb-signing", "start.mlb-contract-signing"} else hit)
                 for row, hit in items
             ]
 
@@ -653,7 +752,13 @@ def evaluate(
     dfa_until: dt.date | None = None
     dfa_rule = "count.dfa"
     last_stop = None  # "dfa" or "other"
+    last_stop_id = None
     presumed = False
+    boundaries = []
+    # An appearance restart covers that season only. The unanswered option is
+    # put back at the end of the season so a later year with its own call-up
+    # starts from the minors instead of inheriting a full season.
+    pending_reclose: dt.date | None = None
 
     def close_service(end: dt.date, rule: str | None) -> None:
         nonlocal active_since, span_rules
@@ -666,11 +771,13 @@ def evaluate(
         span_rules = set()
 
     def open_service(day: dt.date, rule: str) -> None:
-        nonlocal active_since, span_rules, last_stop
+        nonlocal active_since, span_rules, last_stop, last_stop_id
         if active_since is None:
             active_since = day
             span_rules = {rule}
             last_stop = None
+            last_stop_id = None
+            boundaries.append({"date": day.isoformat(), "kind": "start", "rule": rule})
 
     def end_option(end: dt.date) -> None:
         nonlocal on_option, option_start
@@ -692,8 +799,22 @@ def evaluate(
         il_open = None
 
     dates = sorted(grouped)
+    restart_days = set()
+    reclose_days = set()
+    if appearance_years:
+        for year in appearance_years:
+            if year not in calendar.seasons:
+                continue
+            opener, season_end = calendar.window(
+                year, club_on(calendar.seasons[year].championship_start), club_on
+            )
+            if floor is None or opener >= floor:
+                restart_days.add(opener)
+                reclose_days.add(season_end + dt.timedelta(days=1))
     if floor is not None and (not dates or floor not in grouped):
-        dates = sorted(set(dates) | {floor})
+        dates = sorted(set(dates) | {floor} | restart_days | reclose_days)
+    else:
+        dates = sorted(set(dates) | restart_days | reclose_days)
 
     for index, day in enumerate(dates):
         if (
@@ -705,6 +826,32 @@ def evaluate(
             close_service(dfa_until, "accrual.dfa-window")
             dfa_until = None
             last_stop = "dfa"
+            last_stop_id = "accrual.dfa-window"
+
+        if pending_reclose is not None and day > pending_reclose and active_since is not None:
+            close_service(pending_reclose, None)
+            if not on_option:
+                begin_option(pending_reclose + dt.timedelta(days=1))
+            last_stop = "other"
+            last_stop_id = "stop.option"
+            pending_reclose = None
+
+        if day in restart_days and (floor is None or day >= floor) and active_since is None:
+            season_end = calendar.window(day.year, club_on(day), club_on)[1]
+            later_return = False
+            for later, _later_row, later_hit in rows:
+                if later <= day:
+                    continue
+                if later > season_end:
+                    break
+                if later_hit is not None and _returns_to_roster(later_hit):
+                    later_return = True
+                    break
+            if (on_option or last_stop_id in RESTARTABLE_STOPS) and not later_return:
+                if on_option:
+                    end_option(day - dt.timedelta(days=1))
+                open_service(day, "accrual.appearance-restart")
+                pending_reclose = season_end
 
         if (
             not presumed
@@ -739,7 +886,8 @@ def evaluate(
         has_claim = any("claim" in hit.tags for hit in hits)
         has_option = any("option" in hit.tags for hit in hits)
         has_restart = has_trade or has_claim or bool(ids & {
-            "start.mlb-signing", "start.selected", "start.purchased", "start.rule5",
+            "start.mlb-signing", "start.mlb-contract-signing", "start.selected",
+            "start.purchased", "start.rule5",
         })
         terminal = _terminal(hits)
         service_day = floor is None or day >= floor
@@ -774,13 +922,36 @@ def evaluate(
             if on_option:
                 end_option(day - dt.timedelta(days=1))
         elif service_day and terminal:
+            stop_id = next(
+                (hit.id for hit in hits if hit.effect == "stop" or "free-agency" in hit.tags),
+                "stop",
+            )
             if active_since is not None:
-                close_service(day - dt.timedelta(days=1), next(
-                    (hit.id for hit in hits if hit.effect == "stop" or "free-agency" in hit.tags),
-                    "stop",
-                ))
+                close_service(day - dt.timedelta(days=1), stop_id)
             dfa_until = None
             last_stop = "other"
+            last_stop_id = stop_id
+            pending_reclose = None
+            def _hit_from_mlb(wanted: str) -> bool:
+                for raw, hit in items:
+                    if hit is not None and hit.id == wanted and _mlb_present(row_ids(raw)):
+                        return True
+                return False
+
+            if any(hit.id in BLOCKING_STOPS and _hit_from_mlb(hit.id) for hit in hits):
+                boundaries.append({"date": day.isoformat(), "kind": "block", "rule": stop_id})
+            # A new major-league contract, including one that options him the
+            # same day, ends the prior free-agency block. An option by one of
+            # the 30 does too: the club could not option him unless he was
+            # under contract. The day itself stays off the active list.
+            deal = next((hit.id for hit in hits if hit.id in {
+                "start.mlb-signing", "start.mlb-contract-signing", "start.selected",
+                "start.purchased", "start.rule5",
+            }), None)
+            if deal is None and has_option and _hit_from_mlb("stop.option"):
+                deal = "stop.option"
+            if deal is not None:
+                boundaries.append({"date": day.isoformat(), "kind": "start", "rule": deal})
         elif service_day and has_dfa and active_since is not None and not terminal:
             window, window_id = _dfa_days(day.year, book, ruleset)
             limit = day + dt.timedelta(days=window - 1)
@@ -793,6 +964,7 @@ def evaluate(
             span_rules.add(window_id)
         elif has_dfa and active_since is None and not terminal and not dfa_restart:
             last_stop = "dfa"
+            last_stop_id = dfa_rule
         elif service_day and active_since is None and last_stop == "dfa" and has_restart and not terminal:
             open_service(day, "accrual.trade-resolves-dfa")
         elif service_day and active_since is None:
@@ -824,7 +996,8 @@ def evaluate(
         elif on_option and terminal and "minors" not in tags:
             # A move from one affiliate to another does not end the optional
             # assignment. He is still optioned. Section 3.
-            inclusive = bool(ids & {"stop.outright", "stop.released", "stop.free-agency"}) or has_dfa
+            # Outright and designation days count. A release or free-agency day does not.
+            inclusive = "stop.outright" in ids or has_dfa
             end_option(day if inclusive else day - dt.timedelta(days=1))
         elif on_option and any(_opens(hit) and "dfa" not in hit.tags for hit in hits):
             end_option(day - dt.timedelta(days=1))
@@ -886,6 +1059,23 @@ def evaluate(
         else:
             intervals = _subtract(intervals, lo, hi)
     intervals = _merge(intervals)
+
+    # Overseas-opener extras (Tokyo 2019 and 2012) earn nothing until the
+    # domestic opener. The row itself is neutral, so the clock resumes.
+    seen_holes = set()
+    for day, _row, hit in rows:
+        if hit is None or "series-inactive" not in hit.tags:
+            continue
+        season = calendar.seasons.get(day.year)
+        if season is None or season.championship_start >= season.first_domestic:
+            continue
+        key = (season.championship_start, season.first_domestic - dt.timedelta(days=1))
+        if key in seen_holes:
+            continue
+        seen_holes.add(key)
+        intervals = _subtract(intervals, key[0], key[1])
+    if seen_holes:
+        intervals = _merge(intervals)
 
     # Seasons.
     if career_end is not None and not on_40_man:
@@ -965,11 +1155,28 @@ def evaluate(
             pieces = []
             credit = 0
             credit_pieces = []
+        # 1996 settlement: 75 wiped days. The 52/23 split is an assumption.
+        # Only a player still accruing on the key date gets that year's share,
+        # and the ordinary cap still applies.
+        if year == 1994 and any(lo <= STRIKE_1994_LAST <= hi for lo, hi, _rules in pieces):
+            extra_start = STRIKE_1994_LAST + dt.timedelta(days=1)
+            extra_end = extra_start + dt.timedelta(days=STRIKE_1994_DAYS - 1)
+            raw += STRIKE_1994_DAYS
+            credit_pieces.append((extra_start, extra_end, frozenset({"accrual.strike-service-1996"})))
+        elif year == 1995:
+            opener_1995 = calendar.seasons[1995].championship_start
+            if any(lo <= opener_1995 <= hi for lo, hi, _rules in pieces):
+                extra_end = opener_1995 - dt.timedelta(days=1)
+                extra_start = opener_1995 - dt.timedelta(days=STRIKE_1995_DAYS)
+                raw += STRIKE_1995_DAYS
+                credit_pieces.append((extra_start, extra_end, frozenset({"accrual.strike-service-1996"})))
         prorated = _prorate(year, raw, start, end, ruleset)
         credited = min(prorated, cap)
         season_rules = sorted({rule for _lo, _hi, rules in pieces for rule in rules})
         if credit:
             season_rules = sorted(set(season_rules) | {"accrual.option-under-20"})
+        if any("accrual.strike-service-1996" in rules for _lo, _hi, rules in credit_pieces):
+            season_rules = sorted(set(season_rules) | {"accrual.strike-service-1996"})
         if year in roy_years:
             credited = max(credited, full_year)
             credited = min(credited, cap)
@@ -986,8 +1193,6 @@ def evaluate(
             season_rules.append("accrual.shortened-2020")
         if year == 2022 and "accrual.lockout-2022" not in season_rules:
             season_rules.append("accrual.lockout-2022")
-        if year in (1994, 1995):
-            season_rules.append(f"accrual.strike-{year}")
         total += credited
         ranged = []
         for lo, hi, rules in pieces + credit_pieces:
@@ -1054,6 +1259,7 @@ def evaluate(
         "notable_rules": notable_rules,
         "unknowns": unknowns,
         "ambiguous": ambiguous,
+        "boundaries": boundaries,
     }
     result["sanity"] = sanity_errors(result, cap=cap, full_year=full_year, ruleset=ruleset)
     return result
@@ -1092,15 +1298,37 @@ def sanity_errors(result: dict, cap: int | None = None, full_year: int | None = 
             expected = min(cap, max(expected, int(ruleset.require("service_time.days_per_credited_year"))))
         if season["credited_days"] != expected:
             errors.append(f"{season['year']} credited days do not follow the cap and the 2020 scale")
-    # No service after a free-agency election or a release until a later start.
-    blocked = None
-    events = []
+    # No credited day on or after a free-agency election or a release, until a
+    # later start. The stop day itself is already excluded by the walk.
+    blocked_from = None
+    spans = []
+    events = sorted(
+        result.get("boundaries") or [],
+        key=lambda event: (event["date"], 0 if event["kind"] == "block" else 1),
+    )
+    for event in events:
+        if event.get("kind") == "block":
+            if blocked_from is None:
+                blocked_from = dt.date.fromisoformat(event["date"])
+        elif event.get("kind") == "start" and blocked_from is not None:
+            started = dt.date.fromisoformat(event["date"])
+            if started > blocked_from:
+                spans.append((blocked_from, started - dt.timedelta(days=1)))
+                blocked_from = None
+    if blocked_from is not None:
+        spans.append((blocked_from, dt.date.max))
     for season in seasons:
         for item in season["ranges"]:
-            if "stop.free-agency" in item["rules"] or "stop.released" in item["rules"]:
-                pass
-    # The closing rule is not always copied onto the range. Check unknowns
-    # only. A dedicated walk is in the unit tests for the free-agency gap.
+            if any(str(rule).startswith("exception.") for rule in item.get("rules") or []):
+                continue
+            start = dt.date.fromisoformat(item["start"])
+            end = dt.date.fromisoformat(item["end"])
+            for lo, hi in spans:
+                if start <= hi and end >= lo:
+                    errors.append(
+                        f"{season['year']} credits service after a release or free agency ({item['start']})"
+                    )
+                    break
     return errors
 
 

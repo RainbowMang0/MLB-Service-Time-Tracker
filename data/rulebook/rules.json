@@ -43,7 +43,7 @@
       "tags": [
         "exhibition"
       ],
-      "team_name": "^(Dominican Republic|Puerto Rico|Venezuela|Mexico|Cuba|Japan|Korea|Republic of Korea|Netherlands|Italy|Israel|Colombia|Panama|Nicaragua|Australia|Canada|United States|Chinese Taipei|Great Britain|Czech Republic|Brazil|USA)$|national team",
+      "team_name": "^(Dominican Republic|Puerto Rico|Venezuela|Mexico|Cuba|Japan|Korea|Republic of Korea|Netherlands|Italy|Israel|Colombia|Panama|Nicaragua|Australia|Team Australia|Canada|United States|Chinese Taipei|Great Britain|Czech Republic|Brazil|USA)$|national team",
       "note": "A national-team assignment is an exhibition, including winter and spring events."
     },
     {
@@ -93,6 +93,20 @@
       "note": "A minor-league contract does not start major-league service."
     },
     {
+      "id": "start.mlb-contract-signing",
+      "effect": "start",
+      "cite": "§11",
+      "tags": [
+        "signing"
+      ],
+      "type_codes": [
+        "SGN"
+      ],
+      "not_description": "minor league",
+      "mlb": "required",
+      "note": "Signed by one of the 30, including a re-signing coded SGN after free agency or a release, starts service. A minor-league contract is an earlier rule. A signing before the first major-league game does not open a season by itself."
+    },
+    {
       "id": "neutral.amateur-signing",
       "effect": "neutral",
       "cite": "§11",
@@ -100,7 +114,8 @@
         "SGN"
       ],
       "not_description": "free agent|minor league",
-      "note": "A first signing by the club, before any major-league roster move, does not start service."
+      "note": "A signing by a club that is not one of the 30, before or after a major-league career, does not start major-league service. A signing by one of the 30 is start.mlb-contract-signing.",
+      "mlb": "forbidden"
     },
     {
       "id": "start.mlb-signing",
@@ -355,9 +370,9 @@
         "SU"
       ],
       "description": "\\bsuspended\\b|suspended list",
-      "not_description": "restricted list",
+      "not_description": "restricted list|joint drug|performance-enhancing|\\bPEDs?\\b|banned substance|steroid",
       "mlb": "required",
-      "note": "An on-field or club disciplinary suspension counts while away. A drug suspension is generally the restricted list instead, and does not count unless an exception says so. The type code SU is this disciplinary suspension."
+      "note": "An on-field or club disciplinary suspension counts while away. A drug-program suspension does not, unless a sourced exception says a mitigation of 20 or more games restored the service. The type code SU is this disciplinary suspension."
     },
     {
       "id": "neutral.suspension-minors",
@@ -667,7 +682,8 @@
         "minors"
       ],
       "description": "reassigned\\b.{0,80}\\bminor",
-      "note": "Reassigned to the minor leagues leaves the major-league roster."
+      "note": "Reassigned to the minor leagues during the championship season leaves the major-league roster. After the season ends, the same sentence is roster cleanup and does not stop the next season.",
+      "season": "championship"
     },
     {
       "id": "neutral.winter-league",
@@ -677,14 +693,12 @@
         "winter"
       ],
       "type_codes": [
-        "ASG"
+        "__ENGINE__"
       ],
-      "description": "\\bassigned to\\b",
       "destination": "not_mlb",
       "season": "offseason",
       "not_description": "rehab",
-      "note": "An offseason assignment to a winter-league club does not end an open major-league roster. The name pattern is the winter leagues (Dominican, Venezuelan, Puerto Rican, Mexican Pacific). An offseason assignment to a domestic affiliate still stops the clock. A championship-season assignment to a Mexican League club is a departure and is the minors rule, not this one.",
-      "team_name": "\\b(?:del|de la|de los|de las|de)\\b|\\b(?:LIDOM|LVBP|LMP|LBPRC|CPBL)\\b"
+      "note": "An assignment to a winter-league club (LIDOM, LVBP, LMP, LBPRC, Australian Baseball League) does not stop major-league service. Matched by team id from data/rulebook/winter_teams.json, not by the letters de or del in the name. The engine matches this rule; the token above never appears on a transaction."
     },
     {
       "id": "stop.assigned-minors",
@@ -804,6 +818,68 @@
       "note": "Hurt while optioned: he goes on the minor-league injured list and stays on optional assignment. Those days are not major-league service. Recalled and then placed on the major-league injured list is a different row and does count."
     },
     {
+      "id": "neutral.postseason-reassignment",
+      "effect": "neutral",
+      "cite": "§11",
+      "tags": [
+        "minors"
+      ],
+      "description": "reassigned\\b.{0,80}\\bminor",
+      "season": "offseason",
+      "note": "After the championship season, reassigned to the minor leagues does not end the next season's service. The player is still on the roster until an option, outright, or release."
+    },
+    {
+      "id": "stop.ped-suspension",
+      "effect": "stop",
+      "cite": "§6",
+      "tags": [
+        "suspension",
+        "ped"
+      ],
+      "description": "joint drug|performance-enhancing|\\bPEDs?\\b|banned substance|steroid",
+      "mlb": "required",
+      "note": "A suspension under the Joint Drug Agreement does not earn service. A suspension reduced by 20 or more games can earn service only when a sourced exception says so. That reduction is not inferred from the sentence."
+    },
+    {
+      "id": "neutral.offseason-inactive",
+      "effect": "neutral",
+      "cite": "§9",
+      "description": "temporarily inactive|reserve list",
+      "season": "offseason",
+      "mlb": "required",
+      "note": "A temporarily inactive or reserve-list row after the championship season has no service effect. Francisco Rodriguez on 2010-11-01 and Sean Reid-Foley on 2020-09-29 are this rule."
+    },
+    {
+      "id": "stop.temporarily-inactive",
+      "effect": "stop",
+      "cite": "§6",
+      "description": "temporarily inactive",
+      "season": "championship",
+      "mlb": "required",
+      "note": "An in-season temporarily inactive row does not earn service. Jordan Lyles on 2024-04-19 is the day before a restricted-list placement and does not count."
+    },
+    {
+      "id": "neutral.blank-status",
+      "effect": "neutral",
+      "cite": "§1",
+      "type_codes": [
+        "__ENGINE__"
+      ],
+      "note": "A status-change row with no description is a no-op. Jose Castillo on 2023-07-24 sits inside a designation and must not stop those days. The engine matches this rule; the token above never appears on a transaction."
+    },
+    {
+      "id": "neutral.series-inactive",
+      "effect": "neutral",
+      "cite": "§9",
+      "tags": [
+        "series-inactive"
+      ],
+      "note": "Players held off the active list for an overseas opener (2019 temporarily inactive in Seattle and Oakland, 2012 reserve list in Oakland) do not earn those championship days. Service resumes at the domestic opener. Matched in the engine from the date and the club, not from a guessed list name. The engine matches this rule; the token above never appears on a transaction.",
+      "type_codes": [
+        "__ENGINE__"
+      ]
+    },
+    {
       "id": "neutral.no-mlb-club",
       "effect": "neutral",
       "cite": "§11",
@@ -866,18 +942,10 @@
       "note": "The 1990 lockout delayed the opener. The calendar's first game is the start. No special proration."
     },
     {
-      "id": "accrual.strike-1994",
+      "id": "accrual.strike-service-1996",
       "cite": "§8",
-      "year": 1994,
       "open_question": true,
-      "note": "1994 is the calendar's shortened championship season only. The later settlement's credited-day formula was not read and is not applied."
-    },
-    {
-      "id": "accrual.strike-1995",
-      "cite": "§8",
-      "year": 1995,
-      "open_question": true,
-      "note": "1995 is the calendar's 144-game championship season only. The settlement formula was not read and is not applied."
+      "note": "The 1996 settlement credited the 75 regular-season days the strike wiped out. This rule adds them back, then the ordinary season cap applies. The split is an assumption, not a sentence in the settlement we read: 52 days on 1994 for a player still accruing on the last day games were played (August 11), and 23 days on 1995 for a player accruing on that season's opener. 52 plus 23 is 75."
     },
     {
       "id": "accrual.dfa-window",
@@ -903,6 +971,11 @@
       "id": "accrual.presume-from-debut",
       "cite": "§11",
       "note": "If nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game. Seasons with no transaction and no saved game are not credited when appearance years are supplied."
+    },
+    {
+      "id": "accrual.appearance-restart",
+      "cite": "§9",
+      "note": "An option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played. Service opens on that season's first day. A recall already in the file is used instead, so a spring option that is recalled is not erased. Free agency, a release, an outright, and the restricted list do not restart this way."
     },
     {
       "id": "accrual.roy-full-year",
@@ -952,7 +1025,7 @@
     {
       "id": "oq.1994-1995-formula",
       "section": "8",
-      "text": "The exact credited-day formula for the 1994 strike and the 144-game 1995 season was not read. Working rule: championship-season days on the calendar only, then the ordinary cap. No strike buy-back is applied."
+      "text": "The 1996 settlement credited the 75 regular-season days wiped out by the strike (Los Angeles Times, Dec. 6, 1996). The rulebook adds those days. The split of 52 days to 1994 and 23 days to 1995 is an assumption: it is the cancelled remainder of 1994 plus the delayed start of 1995, and it adds to 75. Which roster statuses qualified, and the signed per-year allocation, are still not confirmed. Optioned players who bought back 1994 by returning minor-league pay are not guessed."
     },
     {
       "id": "oq.2022-side-letter",
@@ -972,7 +1045,7 @@
     {
       "id": "oq.jda-mitigation",
       "section": "6",
-      "text": "The glossary says a drug suspension reduced by 20 or more games under the mitigation provision can still earn service. That sentence was not read in the drug program itself. Working rule: a drug suspension earns service only when the exceptions file says so. Mitigation is not inferred."
+      "text": "The Joint Drug Agreement says a player does not earn service while suspended for a program violation, except when the suspension is reduced by 20 or more games under the mitigation provision. Those mitigated spells count. The feed does not say that a suspension was reduced, so the rulebook does not infer it. A sourced exception can add one. Every other drug suspension does not count."
     },
     {
       "id": "oq.five-options",
@@ -1008,6 +1081,11 @@
       "id": "oq.game-time-option-day",
       "section": "2",
       "text": "The option date does not count if the option was after the start of a major-league game he could have played, and the recall date does count if the recall was after the start of a minor-league game. The feed has dates only. Those two exceptions are not applied."
+    },
+    {
+      "id": "oq.parker-spring-option",
+      "section": "2",
+      "text": "Mitchell Parker was optioned on 2026-03-14 and recalled on 2026-04-14. Counted from the league's first game, March 25, that is 20 days, so 2026 uses an option year and he finishes at 2.167 instead of 3.000. Counted from the Nationals' own opener, March 26, it is 19 days, the days are credited, and he stays at 3.000. The rulebook uses the league opener. This edge is a decision, not a settled correction."
     }
   ],
   "pre_debut_roster_window_days": 45
