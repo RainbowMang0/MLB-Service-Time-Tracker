@@ -133,6 +133,11 @@ jobs:
           python scripts/build_lockout_page.py --check
           python tests/test_lockout.py
 
+      - name: Roster-rules guide
+        run: |
+          python scripts/build_roster_rules_page.py --check
+          python tests/test_roster_rules_page.py
+
       - name: Duty-day allocation engine
         run: node --test tests/duty_days.test.cjs
 

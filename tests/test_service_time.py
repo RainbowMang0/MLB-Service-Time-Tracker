@@ -3457,7 +3457,7 @@ def test_the_sheet_lists_every_required_row_and_never_the_shelved_tools():
         "Players", "Arbitration eligible", "Super Two", "Free agents",
         "Non-tender watch", "Out of options",
         "Previous players A", "Lockout tracker", "Contract clock",
-        "What is service time?", "About", "Neutrality", "Privacy",
+        "What is service time?", "Can a team send a player down?", "About", "Neutrality", "Privacy",
     ):
         check(f"sheet lists {label!r}", label in sheet_text)
     check("sheet lists the contact address",
@@ -3610,7 +3610,7 @@ def test_the_footer_is_the_same_on_every_page():
         "", "t/", "arbitration-eligible.html", "super-two.html", "options.html",
         "free-agents.html", "non-tender-watch.html", "contract.html",
         f"{wpp.ALUMNI_DIR_NAME}/",
-        "lockout.html", "service-time.html", "about.html", "neutrality.html", "privacy.html",
+        "lockout.html", "service-time.html", "send-a-player-down.html", "about.html", "neutrality.html", "privacy.html",
     }
 
     def check_block(label, html_text):

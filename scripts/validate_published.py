@@ -200,7 +200,9 @@ def check_links() -> list[str]:
                   docs / "neutrality.html", docs / "lockout.html",
                   docs / "lockout-salary-cap.html",
                   docs / "arbitration-eligible.html", docs / "super-two.html",
-                  docs / "non-tender-watch.html", docs / "free-agents.html"]
+                  docs / "non-tender-watch.html", docs / "free-agents.html",
+                  docs / "send-a-player-down.html",
+                  docs / "options.html", docs / "service-time.html"]
                  + sorted(docs.glob("p/*.html")) + sorted(docs.glob("t/*.html")))
     generated = [p for p in generated if p.exists()]
     missing_targets: set[str] = set()
@@ -213,6 +215,12 @@ def check_links() -> list[str]:
             if page.name in ("lockout.html", "lockout-salary-cap.html") and url.startswith("https://"):
                 continue  # news source citations -- deliberately off-site,
                           # validated for https-only by scripts/build_lockout_page.py
+            if page.name == "service-time.html" and url.startswith("https://"):
+                continue  # rule citations already on the explainer
+            if page.name == "send-a-player-down.html" and url.startswith(
+                "https://www.mlb.com/glossary/"
+            ):
+                continue  # official glossary references, not copied text
             if not url.startswith(site_root):
                 foreign += 1
                 if foreign <= 5:

@@ -135,6 +135,9 @@ BASE_PATH = _base_path(SITE_URL)
 # from the lockout page.
 # --------------------------------------------------------------------------
 
+SEND_DOWN_PATH = "send-a-player-down.html"
+MENU_SEND_DOWN = "Can a team send a player down?"
+
 NAV = [
     ("", "Players", "Players", {"phone", "desktop", "numbers"}),
     ("t/", "Clubs", None, {"phone", "desktop"}),
@@ -151,6 +154,7 @@ NAV = [
     ("contract.html", None, "Contract clock", {"tools"}),
     ("alumni/", "Previous players", "Previous players A–Z", {"desktop", "numbers"}),
     ("service-time.html", None, "What is service time?", {"small"}),
+    (SEND_DOWN_PATH, None, MENU_SEND_DOWN, {"small"}),
     ("about.html", None, "About", {"small"}),
     ("neutrality.html", None, "Neutrality", {"small"}),
     ("privacy.html", None, "Privacy", {"small"}),
@@ -310,6 +314,11 @@ def _what_is(anchor: str = "") -> str:
         f'<p class="what-is"><a href="{BASE_PATH}service-time.html{anchor}">'
         "What is service time?</a></p>"
     )
+
+
+def _send_down_link() -> str:
+    return (f'<p class="what-is"><a href="{BASE_PATH}{SEND_DOWN_PATH}">'
+            f"{MENU_SEND_DOWN}</a></p>")
 
 SOURCE_LABEL = {
     "read": "From transactions",
@@ -1208,7 +1217,7 @@ def render_club_non_tender(
     year_phrase = f" {next_season}" if next_season else ""
     desc = page_titles.club_nt_meta(club, len(pairs), next_season)
     body = (
-        _club_non_tender_table(pairs)
+        _send_down_link() + "\n  " + _club_non_tender_table(pairs)
         + f"<p class=\"actions\"><a href=\"{slug_}.html\">&larr; {name} roster</a></p>"
     )
     graph = [
@@ -1950,6 +1959,7 @@ def render_options(
   <h1>Players out of options</h1>
   <p class="subtitle">{len(out)} players on a 40-man roster are out of minor league options, and {len(one)} have one option year left.</p>
   {list_links.related_league_line(OPTIONS_PATH, BASE_PATH)}
+  {_send_down_link()}
   <details class="opt-more">
     <summary>What an option year is</summary>
     <p>{html.escape(more)}</p>
@@ -2823,6 +2833,8 @@ h1 { letter-spacing: -0.02em; }
 @media (max-width: 640px) {
   .opt-controls input, .opt-controls select { flex-basis: 100%; }
 }
+.faq h3 { font-size: 1.02rem; margin: 1.15rem 0 0.2rem; line-height: 1.35; }
+.faq p { margin: 0.15rem 0 0; }
 """
 
 
@@ -2853,6 +2865,7 @@ HAND_WRITTEN_PAGES = [
     ("neutrality.html", "0.5"),
     ("about.html", "0.5"),
     ("privacy.html", "0.3"),
+    (SEND_DOWN_PATH, "0.9"),
 ]
 
 # --------------------------------------------------------------------------
@@ -2883,7 +2896,8 @@ def _site_footer() -> str:
         for href, _tab, sheet, where in NAV
         if "tools" in where and sheet
     )
-    learn = f'<a href="{BASE_PATH}{EXPLAINER_PATH}">What is service time?</a>'
+    learn = (f'<a href="{BASE_PATH}{EXPLAINER_PATH}">What is service time?</a>'
+             f'<a href="{BASE_PATH}{SEND_DOWN_PATH}">{MENU_SEND_DOWN}</a>')
     site = "".join(
         f'<a href="{BASE_PATH}{href}">{label}</a>'
         for href, label in (
@@ -3118,6 +3132,7 @@ def render_explainer(generated_at: str, super_two_cutoff: dict | None = None) ->
   href="{BASE_PATH}{ARBITRATION_ELIGIBLE_PATH}">arbitration</a>, <a
   href="{BASE_PATH}{SUPER_TWO_PAGE_PATH}">Super Two</a> and free
   agency.</p>
+  {_send_down_link()}
 
   <h2 id="what-is-service-time">It is roster time, not playing time</h2>
   <p>A player earns a day of service for each day he spends on a major
@@ -3952,6 +3967,7 @@ def render_non_tender_watch(
   <p class="subtitle">{len(watch)} players meet this winter's non-tender watch.</p>
   {list_links.related_league_line(NON_TENDER_WATCH_PATH, BASE_PATH)}
   {_what_is("#arbitration")}
+  {_send_down_link()}
 
   <table class="arb-table"><thead><tr><th>Player</th><th class="n">Service time</th>
   <th>Why he's listed</th></tr></thead><tbody>{rows}</tbody></table>
