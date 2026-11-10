@@ -1,0 +1,1628 @@
+# Replay for the owner
+
+2641 players change: 2641 up, 0 down.
+644 seasons stay at the published number until someone clears them.
+8 current roster players cross 3 years, 6 years, the 2026 Super Two line (2.133), or an eligibility line.
+
+A higher season is published. A lower season is kept and listed under Holds.
+The live Super Two line used here is 2.133.
+2020 is included. 194 of the holds are 2020 seasons.
+
+## Named checks
+
+- Lawrence Butler 2024 stays at 152 (the rulebook says 47) until someone clears it.
+- Ryan McMahon 2018 stays at 124 (the rulebook says 106) until someone clears it.
+- JP Sears 2025 stays at 12. The rulebook matches the published figure, so there is nothing to hold. He played 27 games that season, more than those days, so the missing roster row stays a review item.
+
+## Threshold crossers
+
+- Bryce Elder (roster): 2.170 to 3.068. 3 years, Super Two. accrual.option-under-20.
+- Dane Myers (roster): 2.162 to 3.022. 3 years, Super Two. accrual.league-opener.
+- Garrett Crochet (roster): 5.117 to 6.028. 6 years. accrual.presume-from-debut.
+- Iván Herrera (roster): 2.115 to 3.029. 3 years. accrual.league-opener.
+- Johan Rojas (roster): 2.127 to 3.035. 3 years. accrual.league-opener.
+- Jordan Beck (roster): 2.132 to 2.133. Super Two. accrual.league-opener.
+- Riley O'Brien (roster): 2.125 to 2.139. Super Two. accrual.appearance-restart.
+- Tony Gonsolin (roster): 5.165 to 6.026. 6 years. accrual.dfa-window-7.
+- Aaron Boone (alumni): 4.160 to 11.090. 6 years. accrual.presume-from-debut.
+- Adam Eaton (alumni): 4.059 to 9.028. 6 years. accrual.presume-from-debut.
+- Adam Everett (alumni): 5.161 to 9.130. 6 years. accrual.presume-from-debut.
+- Alan Embree (alumni): 5.000 to 15.020. 6 years. accrual.presume-from-debut.
+- Alex Cintron (alumni): 4.051 to 7.143. 6 years. accrual.dfa-window.
+- Alexi Ogando (alumni): 5.151 to 6.048. 6 years. accrual.pre-debut-roster.
+- Alfredo Amezaga (alumni): 5.109 to 8.066. 6 years. accrual.presume-from-debut.
+- Anderson Hernandez (alumni): 2.119 to 4.123. 3 years. accrual.dfa-window-pre2012.
+- Andres Torres (alumni): 5.167 to 9.000. 6 years. accrual.presume-from-debut.
+- Andy Dirks (alumni): 2.090 to 2.139. Super Two. accrual.league-opener.
+- Andy Green (alumni): 2.022 to 2.137. Super Two. accrual.presume-from-debut.
+- Andy Tracy (alumni): 2.000 to 4.160. 3 years. accrual.presume-from-debut.
+- Angel Berroa (alumni): 4.115 to 7.152. 6 years. accrual.dfa-window-pre2012.
+- Augie Ojeda (alumni): 4.000 to 8.120. 6 years. accrual.presume-from-debut.
+- B.J. Ryan (alumni): 4.093 to 9.162. 6 years. accrual.presume-from-debut.
+- Ben Sheets (alumni): 5.171 to 9.171. 6 years. accrual.presume-from-debut.
+- Billy Wagner (alumni): 5.155 to 15.003. 6 years. accrual.presume-from-debut.
+- Bob Howry (alumni): 5.112 to 12.040. 6 years. accrual.presume-from-debut.
+- Bobby Crosby (alumni): 5.141 to 6.169. 6 years. accrual.presume-from-debut.
+- Bobby Seay (alumni): 5.000 to 7.055. 6 years. accrual.presume-from-debut.
+- Brad Ausmus (alumni): 5.169 to 17.066. 6 years. accrual.presume-from-debut.
+- Brad Thomas (alumni): 2.131 to 5.135. 3 years. accrual.presume-from-debut.
+- Braden Looper (alumni): 5.000 to 12.000. 6 years. accrual.presume-from-debut.
+- Brandon Backe (alumni): 4.063 to 6.140. 6 years. accrual.presume-from-debut.
+- Brandon Webb (alumni): 5.000 to 6.160. 6 years. accrual.presume-from-debut.
+- Brendan Donnelly (alumni): 5.115 to 8.116. 6 years. accrual.presume-from-debut.
+- Brett Tomko (alumni): 5.105 to 13.060. 6 years. accrual.dfa-window-pre2012.
+- Brian Burres (alumni): 2.170 to 3.006. 3 years, Super Two. accrual.option-under-20.
+- Brian Giles (alumni): 5.000 to 14.016. 6 years. accrual.presume-from-debut.
+- Brian Shouse (alumni): 5.000 to 9.065. 6 years. accrual.presume-from-debut.
+- Brian Sweeney (alumni): 2.000 to 3.044. 3 years. accrual.dfa-window-pre2012.
+- Bryan Abreu (alumni): 5.155 to 6.022. 6 years. accrual.league-opener.
+- Buddy Carlyle (alumni): 5.114 to 6.150. 6 years. accrual.presume-from-debut.
+- Carlos Delgado (alumni): 5.000 to 16.003. 6 years. accrual.presume-from-debut.
+- Carlos Silva (alumni): 5.063 to 9.000. 6 years. accrual.presume-from-debut.
+- Carter Kieboom (alumni): 2.072 to 3.008. 3 years. accrual.option-under-20.
+- Casey Daigle (alumni): 2.040 to 3.040. 3 years. accrual.presume-from-debut.
+- Casey Fossum (alumni): 4.028 to 7.100. 6 years. accrual.presume-from-debut.
+- Casper Wells (alumni): 2.136 to 3.021. 3 years, Super Two. accrual.appearance-restart.
+- Chad Bradford (alumni): 4.148 to 11.035. 6 years. accrual.presume-from-debut.
+- Chad Cordero (alumni): 5.010 to 6.041. 6 years. accrual.presume-from-debut.
+- Chad Fox (alumni): 2.155 to 9.062. 3 years, 6 years, Super Two. accrual.presume-from-debut.
+- Chad Moeller (alumni): 5.019 to 9.123. 6 years. accrual.dfa-window-pre2012.
+- Chad Paronto (alumni): 3.137 to 6.137. 6 years. accrual.dfa-window-pre2012.
+- Chadwick Tromp (alumni): 2.127 to 2.133. Super Two. accrual.option-under-20.
+- Chase De Jong (alumni): 2.121 to 2.138. Super Two. accrual.option-under-20.
+- Chris Richard (alumni): 1.000 to 6.077. 3 years, 6 years. accrual.presume-from-debut.
+- Chris Woodward (alumni): 4.099 to 10.047. 6 years. accrual.dfa-window-pre2012.
+- Christian Colón (alumni): 2.040 to 3.001. 3 years. accrual.league-opener.
+- Cla Meredith (alumni): 2.052 to 4.055. 3 years. accrual.appearance-restart.
+- Claudio Vargas (alumni): 5.011 to 7.000. 6 years. accrual.presume-from-debut.
+- Cliff Floyd (alumni): 5.000 to 16.016. 6 years. accrual.presume-from-debut.
+- Cody Ransom (alumni): 5.017 to 8.053. 6 years. accrual.dfa-window-pre2012.
+- Corky Miller (alumni): 2.087 to 7.122. 3 years, 6 years. accrual.presume-from-debut.
+- Cory Wade (alumni): 2.170 to 3.001. 3 years, Super Two. accrual.presume-from-debut.
+- Craig Hansen (alumni): 2.106 to 2.171. Super Two. accrual.presume-from-debut.
+- Craig Monroe (alumni): 4.082 to 7.158. 6 years. accrual.dfa-window.
+- Cristian Guzman (alumni): 5.000 to 11.000. 6 years. accrual.presume-from-debut.
+- D.J. Carrasco (alumni): 4.169 to 7.000. 6 years. accrual.presume-from-debut.
+- Dan Otero (alumni): 5.171 to 6.059. 6 years. accrual.league-opener.
+- Dane Sardinha (alumni): 2.159 to 3.011. 3 years, Super Two. accrual.dfa-window-pre2012.
+- Dany Jiménez (alumni): 2.113 to 2.153. Super Two. accrual.league-opener.
+- Danys Baez (alumni): 5.119 to 9.099. 6 years. accrual.presume-from-debut.
+- Darin Erstad (alumni): 5.000 to 13.108. 6 years. accrual.presume-from-debut.
+- David Dellucci (alumni): 4.073 to 12.023. 6 years. accrual.presume-from-debut.
+- David Herndon (alumni): 2.122 to 2.156. Super Two. accrual.dfa-window-10.
+- David Peterson (alumni): 5.116 to 6.085. 6 years. accrual.league-opener.
+- David Riske (alumni): 5.140 to 10.020. 6 years. accrual.presume-from-debut.
+- David Weathers (alumni): 5.000 to 18.066. 6 years. accrual.presume-from-debut.
+- Dennis Santana (alumni): 5.131 to 6.132. 6 years. accrual.option-under-20.
+- Denny Bautista (alumni): 5.096 to 6.056. 6 years. accrual.presume-from-debut.
+- Denny Stark (alumni): 0.065 to 4.085. 3 years. accrual.dfa-window-pre2012.
+- Derek Fisher (alumni): 2.128 to 2.148. Super Two. accrual.dfa-window-7.
+- Doug Brocail (alumni): 5.000 to 14.027. 6 years. accrual.presume-from-debut.
+- Doug Mientkiewicz (alumni): 5.000 to 11.010. 6 years. accrual.presume-from-debut.
+- Duane Underwood Jr. (alumni): 2.099 to 3.108. 3 years. accrual.dfa-window-7.
+- Eddie Guardado (alumni): 5.000 to 16.113. 6 years. accrual.presume-from-debut.
+- Eliezer Alfonzo (alumni): 1.146 to 4.049. 3 years. accrual.presume-from-debut.
+- Elmer Dessens (alumni): 5.135 to 13.062. 6 years. accrual.dfa-window-pre2012.
+- Emil Brown (alumni): 4.065 to 9.066. 6 years. accrual.dfa-window-pre2012.
+- Enny Romero (alumni): 2.171 to 3.018. 3 years, Super Two. accrual.dfa-window.
+- Enrique Gonzalez (alumni): 1.087 to 3.123. 3 years. accrual.presume-from-debut.
+- Enyel De Los Santos (alumni): 5.154 to 6.033. 6 years. accrual.option-under-20.
+- Eric Bruntlett (alumni): 5.000 to 6.094. 6 years. accrual.presume-from-debut.
+- Eric Byrnes (alumni): 5.028 to 9.070. 6 years. accrual.dfa-window-pre2012.
+- Eric Milton (alumni): 4.000 to 11.000. 6 years. accrual.presume-from-debut.
+- Eric Munson (alumni): 4.000 to 8.076. 6 years. accrual.presume-from-debut.
+- Eric Young Jr. (alumni): 5.151 to 6.045. 6 years. accrual.league-opener.
+- Esteban German (alumni): 5.056 to 8.016. 6 years. accrual.presume-from-debut.
+- Eugenio Velez (alumni): 2.108 to 2.142. Super Two. accrual.league-opener.
+- Felipe Paulino (alumni): 5.058 to 6.004. 6 years. accrual.dfa-window-pre2012.
+- Fernando Tatis (alumni): 4.000 to 10.065. 6 years. accrual.presume-from-debut.
+- Frank Catalanotto (alumni): 5.036 to 12.062. 6 years. accrual.presume-from-debut.
+- Freddy Guzman (alumni): 2.160 to 3.038. 3 years, Super Two. accrual.presume-from-debut.
+- Gabe Kapler (alumni): 5.000 to 11.008. 6 years. accrual.presume-from-debut.
+- Garret Anderson (alumni): 5.124 to 16.020. 6 years. accrual.presume-from-debut.
+- Garrett Atkins (alumni): 5.090 to 6.150. 6 years. accrual.presume-from-debut.
+- Gary Matthews Jr. (alumni): 5.067 to 11.021. 6 years. accrual.dfa-window.
+- Gary Sheffield (alumni): 5.000 to 21.030. 6 years. accrual.presume-from-debut.
+- Gil Meche (alumni): 5.171 to 9.090. 6 years. accrual.presume-from-debut.
+- Glendon Rusch (alumni): 3.043 to 11.044. 6 years. accrual.dfa-window-pre2012.
+- Grayson Greiner (alumni): 2.157 to 3.050. 3 years, Super Two. accrual.option-under-20.
+- Greg Norton (alumni): 4.000 to 12.043. 6 years. accrual.presume-from-debut.
+- Guillermo Quiroz (alumni): 4.069 to 6.111. 6 years. accrual.presume-from-debut.
+- Hank Blalock (alumni): 5.056 to 8.056. 6 years. accrual.presume-from-debut.
+- Hector Luna (alumni): 1.054 to 4.010. 3 years. accrual.presume-from-debut.
+- Horacio Ramirez (alumni): 4.139 to 6.143. 6 years. accrual.dfa-window.
+- Jack Cust (alumni): 5.095 to 8.111. 6 years. accrual.presume-from-debut.
+- Jake Fox (alumni): 2.111 to 3.010. 3 years. accrual.dfa-window-pre2012.
+- Jamie Burke (alumni): 3.063 to 6.044. 6 years. accrual.presume-from-debut.
+- Jamie Walker (alumni): 4.060 to 9.061. 6 years. accrual.presume-from-debut.
+- Jarrod Washburn (alumni): 5.000 to 11.118. 6 years. accrual.presume-from-debut.
+- Jason Jennings (alumni): 4.150 to 8.028. 6 years. accrual.dfa-window.
+- Jason Lane (alumni): 4.119 to 7.090. 6 years. accrual.presume-from-debut.
+- Jason Schmidt (alumni): 3.147 to 13.133. 6 years. accrual.presume-from-debut.
+- Jason Smith (alumni): 4.049 to 7.163. 6 years. accrual.dfa-window-pre2012.
+- Jay Gibbons (alumni): 4.127 to 9.070. 6 years. accrual.dfa-window-pre2012.
+- Jay Jackson (alumni): 2.147 to 3.026. 3 years, Super Two. accrual.dfa-window-7.
+- Jay Payton (alumni): 4.030 to 10.058. 6 years. accrual.presume-from-debut.
+- Jayson Nix (alumni): 5.155 to 6.007. 6 years. accrual.dfa-window-pre2012.
+- Jean Machi (alumni): 2.095 to 2.164. Super Two. accrual.dfa-window-10.
+- Jeff Weaver (alumni): 5.000 to 11.000. 6 years. accrual.presume-from-debut.
+- Jefry Marte (alumni): 2.105 to 2.142. Super Two. accrual.dfa-window-10.
+- Jeremy Hermida (alumni): 5.169 to 6.000. 6 years. accrual.dfa-window-pre2012.
+- Jermaine Dye (alumni): 5.000 to 13.136. 6 years. accrual.presume-from-debut.
+- Jesus Colome (alumni): 4.126 to 8.067. 6 years. accrual.dfa-window.
+- Jim Edmonds (alumni): 5.000 to 16.025. 6 years. accrual.presume-from-debut.
+- Joaquin Arias (alumni): 5.146 to 6.002. 6 years. accrual.dfa-window-pre2012.
+- Joe Crede (alumni): 5.000 to 9.020. 6 years. accrual.presume-from-debut.
+- Joe Nelson (alumni): 2.148 to 4.097. 3 years, Super Two. accrual.presume-from-debut.
+- John Bale (alumni): 3.000 to 6.004. 6 years. accrual.presume-from-debut.
+- John Maine (alumni): 5.126 to 6.029. 6 years. accrual.presume-from-debut.
+- John Parrish (alumni): 3.062 to 6.133. 6 years. accrual.presume-from-debut.
+- John Smoltz (alumni): 4.142 to 20.046. 6 years. accrual.presume-from-debut.
+- Jonathan Davis (alumni): 2.130 to 2.133. Super Two. accrual.league-opener.
+- Jorge Julio (alumni): 4.057 to 8.051. 6 years. accrual.presume-from-debut.
+- Jorge Sosa (alumni): 2.112 to 8.057. 3 years, 6 years. accrual.presume-from-debut.
+- Jose Herrera (alumni): 2.073 to 2.153. Super Two. accrual.league-opener.
+- Josh Fogg (alumni): 5.000 to 8.036. 6 years. accrual.presume-from-debut.
+- Josh Towers (alumni): 3.158 to 7.146. 6 years. accrual.dfa-window-pre2012.
+- Juan Carlos Oviedo (alumni): 5.114 to 8.013. 6 years. accrual.appearance-restart.
+- Juan Castro (alumni): 5.144 to 15.003. 6 years. accrual.presume-from-debut.
+- Juan Minaya (alumni): 2.129 to 2.153. Super Two. accrual.league-opener.
+- Juan Rincon (alumni): 5.021 to 8.144. 6 years. accrual.dfa-window.
+- Julian Tavarez (alumni): 4.112 to 16.002. 6 years. accrual.dfa-window.
+- Justin Duchscherer (alumni): 5.115 to 8.019. 6 years. accrual.presume-from-debut.
+- Justin Miller (alumni): 4.114 to 6.113. 6 years. accrual.presume-from-debut.
+- Justin Speier (alumni): 4.127 to 11.080. 6 years. accrual.presume-from-debut.
+- Justin Thomas (alumni): 1.137 to 2.138. Super Two. accrual.league-opener.
+- Kaleb Ort (alumni): 2.108 to 2.169. Super Two. accrual.appearance-restart.
+- Kazuo Matsui (alumni): 5.051 to 6.052. 6 years. accrual.presume-from-debut.
+- Kelvim Escobar (alumni): 3.167 to 11.088. 6 years. accrual.presume-from-debut.
+- Ken Griffey Jr. (alumni): 5.058 to 21.059. 6 years. accrual.presume-from-debut.
+- Kevin Barker (alumni): 2.000 to 4.046. 3 years. accrual.presume-from-debut.
+- Kevin Cash (alumni): 2.021 to 6.046. 3 years, 6 years. accrual.presume-from-debut.
+- Kevin Mench (alumni): 5.000 to 8.000. 6 years. accrual.presume-from-debut.
+- Kevin Millar (alumni): 5.000 to 11.170. 6 years. accrual.presume-from-debut.
+- Khalil Greene (alumni): 5.000 to 6.026. 6 years. accrual.presume-from-debut.
+- Kiko Calero (alumni): 5.000 to 7.000. 6 years. accrual.presume-from-debut.
+- Kip Wells (alumni): 5.022 to 10.089. 6 years. accrual.dfa-window.
+- Kris Benson (alumni): 3.064 to 8.065. 6 years. accrual.presume-from-debut.
+- Kyle Davies (alumni): 2.076 to 5.152. 3 years. accrual.appearance-restart.
+- Lenyn Sosa (alumni): 2.159 to 3.007. 3 years, Super Two. accrual.league-opener.
+- Luis Vizcaino (alumni): 4.071 to 9.162. 6 years. accrual.dfa-window.
+- Luke Farrell (alumni): 2.132 to 2.135. Super Two. accrual.dfa-window-7.
+- Magneuris Sierra (alumni): 2.127 to 3.038. 3 years. accrual.league-opener.
+- Manny Ramirez (alumni): 5.132 to 16.166. 6 years. accrual.presume-from-debut.
+- Mark Grudzielanek (alumni): 5.004 to 14.166. 6 years. accrual.presume-from-debut.
+- Mark Loretta (alumni): 5.000 to 14.028. 6 years. accrual.presume-from-debut.
+- Marlon Anderson (alumni): 4.012 to 10.036. 6 years. accrual.dfa-window.
+- Matt Dominguez (alumni): 2.069 to 2.165. Super Two. accrual.appearance-restart.
+- Matt Herges (alumni): 4.140 to 10.034. 6 years. accrual.dfa-window.
+- Matt Kata (alumni): 2.068 to 4.003. 3 years. accrual.presume-from-debut.
+- Max Stassi (alumni): 5.157 to 6.020. 6 years. accrual.league-opener.
+- Michael Barrett (alumni): 4.070 to 10.080. 6 years. accrual.presume-from-debut.
+- Michael Bowden (alumni): 1.171 to 2.170. Super Two. accrual.appearance-restart.
+- Michael Ryan (alumni): 1.085 to 3.099. 3 years. accrual.presume-from-debut.
+- Miguel Díaz (alumni): 2.170 to 3.027. 3 years, Super Two. accrual.league-opener.
+- Mike Baxter (alumni): 2.117 to 2.140. Super Two. accrual.option-under-20.
+- Mike Freeman (alumni): 2.171 to 3.009. 3 years, Super Two. accrual.option-under-20.
+- Mike Hampton (alumni): 3.169 to 15.167. 6 years. accrual.presume-from-debut.
+- Mike Lamb (alumni): 5.083 to 10.074. 6 years. accrual.presume-from-debut.
+- Mike Lincoln (alumni): 3.000 to 9.000. 6 years. accrual.presume-from-debut.
+- Mike Redmond (alumni): 5.102 to 12.051. 6 years. accrual.presume-from-debut.
+- Mike Rivera (alumni): 2.008 to 6.029. 3 years, 6 years. accrual.presume-from-debut.
+- Nate Robertson (alumni): 5.117 to 7.141. 6 years. accrual.dfa-window-pre2012.
+- Nelson Figueroa (alumni): 2.066 to 7.067. 3 years, 6 years. accrual.dfa-window-pre2012.
+- Nomar Garciaparra (alumni): 5.000 to 13.030. 6 years. accrual.presume-from-debut.
+- Oscar Salazar (alumni): 2.120 to 5.000. 3 years. accrual.dfa-window-pre2012.
+- Oswaldo Arcia (alumni): 2.132 to 3.019. 3 years. accrual.league-opener.
+- Pablo Reyes (alumni): 2.075 to 2.151. Super Two. accrual.dfa-window-7.
+- Paul Bako (alumni): 5.000 to 11.151. 6 years. accrual.presume-from-debut.
+- Paul Byrd (alumni): 4.162 to 13.057. 6 years. accrual.presume-from-debut.
+- Paul Janish (alumni): 5.146 to 6.081. 6 years. accrual.appearance-restart.
+- Paulo Orlando (alumni): 2.125 to 2.144. Super Two. accrual.league-opener.
+- Pedro Ciriaco (alumni): 2.131 to 3.039. 3 years. accrual.dfa-window-10.
+- Pedro Martínez (alumni): 4.166 to 17.005. 6 years. accrual.presume-from-debut.
+- Rafael Dolis (alumni): 2.170 to 3.052. 3 years, Super Two. accrual.pre-debut-roster.
+- Ramon Martinez (alumni): 5.000 to 11.100. 6 years. accrual.presume-from-debut.
+- Ramón Ortiz (alumni): 5.076 to 10.127. 6 years. accrual.presume-from-debut.
+- Ramón Urías (alumni): 5.157 to 6.021. 6 years. accrual.dfa-window-7.
+- Ramón Vázquez (alumni): 5.000 to 8.031. 6 years. accrual.dfa-window.
+- Randy Flores (alumni): 5.126 to 7.115. 6 years. accrual.presume-from-debut.
+- Randy Johnson (alumni): 5.000 to 21.018. 6 years. accrual.presume-from-debut.
+- Randy Williams (alumni): 2.108 to 2.145. Super Two. accrual.presume-from-debut.
+- Ray Olmedo (alumni): 3.067 to 7.022. 6 years. accrual.presume-from-debut.
+- Raúl Chávez (alumni): 4.000 to 10.031. 6 years. accrual.presume-from-debut.
+- Rich Aurilia (alumni): 5.000 to 14.026. 6 years. accrual.presume-from-debut.
+- Rick Ankiel (alumni): 5.093 to 9.000. 6 years. accrual.presume-from-debut.
+- Robb Quinlan (alumni): 5.041 to 6.105. 6 years. accrual.presume-from-debut.
+- Robinson Tejeda (alumni): 5.094 to 6.036. 6 years. accrual.dfa-window-pre2012.
+- Rocco Baldelli (alumni): 4.138 to 6.138. 6 years. accrual.presume-from-debut.
+- Rodrigo Lopez (alumni): 5.099 to 9.083. 6 years. accrual.presume-from-debut.
+- Ron Villone (alumni): 5.000 to 14.157. 6 years. accrual.presume-from-debut.
+- Ronnie Belliard (alumni): 3.157 to 12.002. 6 years. accrual.presume-from-debut.
+- Roy Corcoran (alumni): 2.116 to 5.009. 3 years. accrual.dfa-window.
+- Royce Ring (alumni): 0.024 to 2.166. Super Two. accrual.appearance-restart.
+- Russ Ortiz (alumni): 3.135 to 10.139. 6 years. accrual.presume-from-debut.
+- Russ Springer (alumni): 5.166 to 17.165. 6 years. accrual.presume-from-debut.
+- Ryan Freel (alumni): 4.128 to 7.132. 6 years. accrual.dfa-window.
+- Scott Eyre (alumni): 5.000 to 12.059. 6 years. accrual.presume-from-debut.
+- Scott Proctor (alumni): 5.167 to 6.162. 6 years. accrual.presume-from-debut.
+- Scott Schoeneweis (alumni): 5.050 to 11.055. 6 years. accrual.presume-from-debut.
+- Scott Strickland (alumni): 1.070 to 5.122. 3 years. accrual.presume-from-debut.
+- Sean Burroughs (alumni): 3.027 to 7.029. 6 years. accrual.presume-from-debut.
+- Sean Gallagher (alumni): 2.155 to 3.003. 3 years, Super Two. accrual.dfa-window-pre2012.
+- Sergio Mitre (alumni): 4.142 to 6.121. 6 years. accrual.presume-from-debut.
+- Seth McClung (alumni): 1.150 to 4.151. 3 years. accrual.presume-from-debut.
+- Shane Loux (alumni): 2.119 to 3.140. 3 years. accrual.dfa-window-pre2012.
+- Shota Imanaga (alumni): 2.080 to 3.000. 3 years. accrual.presume-from-debut.
+- Sidney Ponson (alumni): 4.125 to 11.119. 6 years. accrual.dfa-window.
+- So Taguchi (alumni): 5.000 to 7.112. 6 years. accrual.presume-from-debut.
+- Tarik Skubal (alumni): 5.118 to 6.116. 6 years. accrual.presume-from-debut.
+- Tim Dillard (alumni): 2.111 to 2.161. Super Two. accrual.league-opener.
+- Tim Redding (alumni): 4.000 to 7.106. 6 years. accrual.presume-from-debut.
+- Todd Wellemeyer (alumni): 5.111 to 7.078. 6 years. accrual.presume-from-debut.
+- Tom Gordon (alumni): 4.098 to 19.124. 6 years. accrual.presume-from-debut.
+- Tomo Ohka (alumni): 4.000 to 9.077. 6 years. accrual.presume-from-debut.
+- Tony Clark (alumni): 4.098 to 13.128. 6 years. accrual.presume-from-debut.
+- Tony Graffanino (alumni): 3.031 to 12.024. 6 years. accrual.dfa-window-pre2012.
+- Troy Glaus (alumni): 5.139 to 12.027. 6 years. accrual.presume-from-debut.
+- Troy Percival (alumni): 4.000 to 13.159. 6 years. accrual.presume-from-debut.
+- Tuffy Gosewisch (alumni): 2.123 to 2.171. Super Two. accrual.league-opener.
+- Tyler Walker (alumni): 5.167 to 7.086. 6 years. accrual.dfa-window-pre2012.
+- Vladimir Gutierrez (alumni): 2.132 to 2.144. Super Two. accrual.option-under-20.
+- Vladimir Nunez (alumni): 2.000 to 8.017. 3 years, 6 years. accrual.presume-from-debut.
+- Wilfredo Ledezma (alumni): 4.122 to 6.125. 6 years. accrual.dfa-window-pre2012.
+- Willians Astudillo (alumni): 2.044 to 2.142. Super Two. accrual.league-opener.
+- Wily Mo Peña (alumni): 4.155 to 7.006. 6 years. accrual.presume-from-debut.
+- Xavier Cedeño (alumni): 5.144 to 6.001. 6 years. accrual.dfa-window-10.
+- Yhency Brazoban (alumni): 5.023 to 6.043. 6 years. accrual.presume-from-debut.
+- Zach Jackson (alumni): 1.137 to 2.138. Super Two. accrual.presume-from-debut.
+- Édgar González (alumni): 5.154 to 7.107. 6 years. accrual.presume-from-debut.
+
+## By rule
+
+### accrual.presume-from-debut (854)
+
+- Jamie Moyer: 6.057 to 23.170. 19 seasons move, and the largest is 1987 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Gary Sheffield: 5.000 to 21.030. 17 seasons move, and the largest is 1989 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Randy Johnson: 5.000 to 21.018. 17 seasons move, and the largest is 1989 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ken Griffey Jr.: 5.058 to 21.059. 17 seasons move, and the largest is 1989 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Omar Vizquel: 8.000 to 24.000. 16 seasons move, and the largest is 1989 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- John Smoltz: 4.142 to 20.046. 17 seasons move, and the largest is 1989 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Tom Gordon: 4.098 to 19.124. 17 seasons move, and the largest is 1989 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ivan Rodriguez: 7.000 to 20.109. 14 seasons move, and the largest is 1992 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- David Weathers: 5.000 to 18.066. 14 seasons move, and the largest is 1992 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Arthur Rhodes: 6.000 to 19.047. 14 seasons move, and the largest is 1992 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jim Thome: 8.000 to 21.033. 14 seasons move, and the largest is 1992 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Pedro Martínez: 4.166 to 17.005. 13 seasons move, and the largest is 1993 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- 842 more in changes.json.
+
+### accrual.league-opener (665)
+
+- José Berríos: 8.038 to 10.044. 3 seasons move, and the largest is 2020 by 172 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Shane Bieber: 6.126 to 8.097. 3 seasons move, and the largest is 2020 by 172 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Sonny Gray: 11.131 to 13.061. 4 seasons move, and the largest is 2020 by 130 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Framber Valdez: 6.064 to 7.163. 4 seasons move, and the largest is 2020 by 172 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Tyler Anderson: 8.028 to 9.114. 3 seasons move, and the largest is 2025 by 140 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Zack Wheeler: 12.052 to 13.098. 4 seasons move, and the largest is 2021 by 70 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Sandy Alcantara: 7.055 to 8.100. 2 seasons move, and the largest is 2023 by 146 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Héctor Santiago: 6.127 to 7.162. 4 seasons move, and the largest is 2016 by 112 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Freddy Peralta: 7.072 to 8.090. 2 seasons move, and the largest is 2020 by 166 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Kevin Gausman: 11.131 to 12.148. 3 seasons move, and the largest is 2026 by 118 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Miles Mikolas: 8.155 to 9.171. 3 seasons move, and the largest is 2023 by 117 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Héctor Sánchez: 4.000 to 5.014. 4 seasons move, and the largest is 2012 by 94 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- 653 more in changes.json.
+
+### accrual.option-under-20 (241)
+
+- Dennis Santana: 5.131 to 6.132. 2 seasons move, and the largest is 2020 by 172 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Kyle Wright: 4.050 to 4.166. 2020 is 116 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Carter Kieboom: 2.072 to 3.008. 2020 is 108 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Taylor Ward: 6.067 to 6.169. 2020 is 102 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Francisco Mejía: 4.112 to 5.039. 4 seasons move, and the largest is 2019 by 67 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Darin Ruf: 6.059 to 6.134. 4 seasons move, and the largest is 2015 by 69 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Bryce Elder: 2.170 to 3.068. 2023 is 70 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Luis Urías: 6.036 to 6.105. 2024 is 69 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Fernando Salas: 7.074 to 7.141. 2 seasons move, and the largest is 2014 by 66 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Grayson Greiner: 2.157 to 3.050. 2019 is 65 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Edward Olivares: 3.094 to 3.153. 2 seasons move, and the largest is 2023 by 58 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Jesús Sucre: 4.109 to 4.168. 2 seasons move, and the largest is 2015 by 58 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- 229 more in changes.json.
+
+### accrual.dfa-window-7 (225)
+
+- Miguel Montero: 9.041 to 11.041. 2 seasons move, and the largest is 2007 by 172 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Duane Underwood Jr.: 2.099 to 3.108. 2 seasons move, and the largest is 2020 by 172 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- José Suarez: 4.104 to 5.067. 5 seasons move, and the largest is 2024 by 88 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Wily Peralta: 6.114 to 7.062. 3 seasons move, and the largest is 2017 by 80 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Matt Strahm: 9.085 to 10.028. 2 seasons move, and the largest is 2024 by 63 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Camilo Doval: 4.128 to 5.069. 2025 is 113 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Deven Marrero: 1.152 to 2.076. 2018 is 96 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Hector Velázquez: 1.093 to 2.016. 2 seasons move, and the largest is 2019 by 63 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Tomás Nido: 5.076 to 5.162. 2 seasons move, and the largest is 2020 by 76 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Orlando Arcia: 8.085 to 8.167. 3 seasons move, and the largest is 2025 by 48 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Patrick Wisdom: 4.114 to 5.024. 2 seasons move, and the largest is 2020 by 53 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- César Valdez: 1.131 to 2.040. 2021 is 81 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- 213 more in changes.json.
+
+### accrual.appearance-restart (189)
+
+- Kyle Davies: 2.076 to 5.152. 4 seasons move, and the largest is 2006 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Jason Frasor: 8.056 to 11.057. 5 seasons move, and the largest is 2007 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Royce Ring: 0.024 to 2.166. 3 seasons move, and the largest is 2007 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Brendan Harris: 3.053 to 5.150. 5 seasons move, and the largest is 2007 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Juan Carlos Oviedo: 5.114 to 8.013. 4 seasons move, and the largest is 2007 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Jim Johnson: 9.052 to 11.079. 3 seasons move, and the largest is 2007 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Nelson Cruz: 14.094 to 16.107. 4 seasons move, and the largest is 2007 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Cla Meredith: 2.052 to 4.055. 4 seasons move, and the largest is 2007 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Darnell McDonald: 3.041 to 5.032. 4 seasons move, and the largest is 2007 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Mike Adams: 7.032 to 9.000. 3 seasons move, and the largest is 2008 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Wilson Valdez: 4.056 to 5.084. 3 seasons move, and the largest is 2007 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Jordan Norberto: 1.065 to 2.078. 2 seasons move, and the largest is 2011 by 135 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- 177 more in changes.json.
+
+### accrual.dfa-window-10 (169)
+
+- Derek Lowe: 8.053 to 16.037. 8 seasons move, and the largest is 1998 by 172 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Vernon Wells: 9.000 to 14.035. 6 seasons move, and the largest is 2000 by 172 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Alfonso Soriano: 9.104 to 14.126. 7 seasons move, and the largest is 2000 by 172 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Edward Mujica: 7.057 to 9.081. 3 seasons move, and the largest is 2007 by 172 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Humberto Quintero: 7.125 to 9.074. 5 seasons move, and the largest is 2004 by 172 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Garrett Jones: 7.102 to 8.104. 2 seasons move, and the largest is 2008 by 172 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Corey Hart: 11.000 to 11.132. 2004 is 132 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Juan Gutierrez: 4.111 to 5.043. 2013 is 104 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Neftalí Feliz: 6.161 to 7.080. 4 seasons move, and the largest is 2015 by 76 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Ehire Adrianza: 9.105 to 10.013. 2 seasons move, and the largest is 2014 by 74 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Pedro Ciriaco: 2.131 to 3.039. 2 seasons move, and the largest is 2013 by 69 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Juan Nicasio: 8.005 to 8.083. 2014 is 78 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- 157 more in changes.json.
+
+### accrual.dfa-window-pre2012 (109)
+
+- Miguel Cairo: 7.087 to 16.081. 9 seasons move, and the largest is 1997 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Tony Graffanino: 3.031 to 12.024. 10 seasons move, and the largest is 1997 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Ron Mahay: 6.000 to 14.134. 9 seasons move, and the largest is 1997 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Glendon Rusch: 3.043 to 11.044. 9 seasons move, and the largest is 1997 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Jose Guillen: 6.000 to 14.000. 8 seasons move, and the largest is 1997 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Brett Tomko: 5.105 to 13.060. 9 seasons move, and the largest is 1998 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Elmer Dessens: 5.135 to 13.062. 9 seasons move, and the largest is 1997 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Mark Kotsay: 9.000 to 16.080. 8 seasons move, and the largest is 1998 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Chris Woodward: 4.099 to 10.047. 7 seasons move, and the largest is 2000 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Vicente Padilla: 7.169 to 13.097. 7 seasons move, and the largest is 2000 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Trever Miller: 6.159 to 12.013. 6 seasons move, and the largest is 1998 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Emil Brown: 4.065 to 9.066. 6 seasons move, and the largest is 1997 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- 97 more in changes.json.
+
+### accrual.pre-debut-roster (100)
+
+- Chris Sale: 15.103 to 16.061. 2 seasons move, and the largest is 2014 by 67 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Henderson Alvarez: 4.090 to 5.044. 3 seasons move, and the largest is 2014 by 113 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Alex Liddi: 0.075 to 0.152. 2012 is 77 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Donovan Solano: 9.168 to 10.068. 2 seasons move, and the largest is 2013 by 71 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Alexi Ogando: 5.151 to 6.048. 3 seasons move, and the largest is 2014 by 55 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Oliver Ortega: 1.124 to 2.018. 2022 is 66 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Steven Kwan: 4.111 to 5.000. 2024 is 61 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Fernando Cruz: 3.148 to 4.035. 2 seasons move, and the largest is 2025 by 42 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Rafael Dolis: 2.170 to 3.052. 2012 is 54 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Alex Avila: 12.011 to 12.063. 2012 is 52 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Roberto Osuna: 5.046 to 5.097. 2 seasons move, and the largest is 2018 by 40 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Jarrod Dyson: 10.037 to 10.086. 2011 is 49 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- 88 more in changes.json.
+
+### accrual.dfa-window (71)
+
+- Julian Tavarez: 4.112 to 16.002. 13 seasons move, and the largest is 1994 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Sidney Ponson: 4.125 to 11.119. 8 seasons move, and the largest is 1999 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Marlon Anderson: 4.012 to 10.036. 8 seasons move, and the largest is 1999 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Gary Matthews Jr.: 5.067 to 11.021. 7 seasons move, and the largest is 2000 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Luis Vizcaino: 4.071 to 9.162. 7 seasons move, and the largest is 2000 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Kip Wells: 5.022 to 10.089. 7 seasons move, and the largest is 2000 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Matt Herges: 4.140 to 10.034. 7 seasons move, and the largest is 2000 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Juan Rincon: 5.021 to 8.144. 4 seasons move, and the largest is 2002 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Jesus Colome: 4.126 to 8.067. 5 seasons move, and the largest is 2002 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Alex Cintron: 4.051 to 7.143. 5 seasons move, and the largest is 2002 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Craig Monroe: 4.082 to 7.158. 5 seasons move, and the largest is 2002 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Jason Jennings: 4.150 to 8.028. 5 seasons move, and the largest is 2002 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- 59 more in changes.json.
+
+### accrual.trade-resolves-dfa (9)
+
+- Bernardo Flores Jr.: 0.038 to 0.067. 2021 is 29 days higher because a trade or waiver claim out of a designation, or a new major-league deal, restarts service unless the same day also options, outrights, or releases him (accrual.trade-resolves-dfa).
+- Pedro Figueroa: 1.090 to 1.103. 2014 is 13 days higher.
+- Bruce Zimmermann: 1.129 to 1.135. 2022 is 1 days higher.
+- Kent Emanuel: 1.151 to 1.155. 2022 is 1 days higher.
+- Odrisamer Despaigne: 3.030 to 3.034. 2017 is 4 days higher.
+- Enerio Del Rosario: 1.069 to 1.070. 2011 is 1 days higher.
+- JB Shuck: 4.031 to 4.032. 2016 is 1 days higher.
+- Josh Ravin: 2.001 to 2.002. 2017 is 1 days higher.
+- Nick Maronde: 0.110 to 0.111. 2014 is 1 days higher.
+
+### accrual.international-opener (9)
+
+- Hector Noesí: 3.038 to 3.139. 2 seasons move, and the largest is 2012 by 99 days higher because a club that opens outside the United States and Canada, so that its own season runs longer than the ordinary band, starts on that overseas date (accrual.international-opener).
+- Mitch Haniger: 7.163 to 8.048. 2019 is 57 days higher because a club that opens outside the United States and Canada, so that its own season runs longer than the ordinary band, starts on that overseas date (accrual.international-opener).
+- Robert Suarez: 4.117 to 5.000. 2024 is 55 days higher because a club that opens outside the United States and Canada, so that its own season runs longer than the ordinary band, starts on that overseas date (accrual.international-opener).
+- Ian Happ: 9.003 to 9.036. 2025 is 33 days higher because a club that opens outside the United States and Canada, so that its own season runs longer than the ordinary band, starts on that overseas date (accrual.international-opener).
+- Fautino De Los Santos: 0.097 to 0.125. 2012 is 28 days higher because a club that opens outside the United States and Canada, so that its own season runs longer than the ordinary band, starts on that overseas date (accrual.international-opener).
+- Graham Godfrey: 0.046 to 0.070. 2012 is 24 days higher.
+- Shohei Ohtani: 8.162 to 9.000. 2025 is 10 days higher.
+- Franklin Barreto: 3.018 to 3.026. 2019 is 8 days higher.
+- Eguy Rosario: 1.055 to 1.056. 2024 is 1 days higher.
+
+## Changes of 25 days or more
+
+- Jamie Moyer: 19 seasons move, and the largest is 1987 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Gary Sheffield: 17 seasons move, and the largest is 1989 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Randy Johnson: 17 seasons move, and the largest is 1989 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ken Griffey Jr.: 17 seasons move, and the largest is 1989 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Omar Vizquel: 16 seasons move, and the largest is 1989 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- John Smoltz: 17 seasons move, and the largest is 1989 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Tom Gordon: 17 seasons move, and the largest is 1989 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ivan Rodriguez: 14 seasons move, and the largest is 1992 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- David Weathers: 14 seasons move, and the largest is 1992 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Arthur Rhodes: 14 seasons move, and the largest is 1992 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jim Thome: 14 seasons move, and the largest is 1992 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Pedro Martínez: 13 seasons move, and the largest is 1993 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Trevor Hoffman: 12 seasons move, and the largest is 1993 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Russ Springer: 12 seasons move, and the largest is 1993 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Mike Hampton: 12 seasons move, and the largest is 1994 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Matt Stairs: 13 seasons move, and the largest is 1993 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Eddie Guardado: 12 seasons move, and the largest is 1994 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Brad Ausmus: 13 seasons move, and the largest is 1994 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Tim Wakefield: 12 seasons move, and the largest is 1993 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Julian Tavarez: 13 seasons move, and the largest is 1994 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Manny Ramirez: 14 seasons move, and the largest is 1994 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Darren Oliver: 12 seasons move, and the largest is 1994 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jim Edmonds: 12 seasons move, and the largest is 1994 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Cliff Floyd: 12 seasons move, and the largest is 1994 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Carlos Delgado: 12 seasons move, and the largest is 1994 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Chan Ho Park: 11 seasons move, and the largest is 1994 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Alex Rodriguez: 12 seasons move, and the largest is 1995 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Garret Anderson: 11 seasons move, and the largest is 1995 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Chipper Jones: 11 seasons move, and the largest is 1995 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Alan Embree: 11 seasons move, and the largest is 1995 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Miguel Batista: 11 seasons move, and the largest is 1992 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Mark Grudzielanek: 12 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Troy Percival: 10 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jason Schmidt: 11 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- LaTroy Hawkins: 11 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ron Villone: 10 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Andy Pettitte: 10 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jason Giambi: 11 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Mariano Rivera: 10 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Derek Jeter: 10 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Gregg Zaun: 10 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jeff Suppan: 10 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Johnny Damon: 10 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Mike Cameron: 11 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Juan Castro: 11 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Tony Clark: 11 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jorge Posada: 10 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Mark Loretta: 10 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Mike Sweeney: 10 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Doug Brocail: 10 seasons move, and the largest is 1993 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Rich Aurilia: 10 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Billy Wagner: 11 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Brian Giles: 10 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jason Kendall: 9 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Miguel Cairo: 9 seasons move, and the largest is 1997 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Tony Graffanino: 10 seasons move, and the largest is 1997 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Edgar Renteria: 9 seasons move, and the largest is 1997 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jermaine Dye: 9 seasons move, and the largest is 1997 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ron Mahay: 9 seasons move, and the largest is 1997 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Darin Erstad: 9 seasons move, and the largest is 1997 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jamey Wright: 10 seasons move, and the largest is 1997 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jason Isringhausen: 9 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Bartolo Colon: 11 seasons move, and the largest is 1997 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Paul Byrd: 10 seasons move, and the largest is 1996 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Bobby Abreu: 11 seasons move, and the largest is 1997 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Raul Ibanez: 9 seasons move, and the largest is 1997 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Scott Rolen: 9 seasons move, and the largest is 1997 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Luis Castillo: 9 seasons move, and the largest is 1997 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Andruw Jones: 9 seasons move, and the largest is 1997 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Greg Norton: 9 seasons move, and the largest is 1997 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Nomar Garciaparra: 9 seasons move, and the largest is 1997 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ronnie Belliard: 10 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Craig Counsell: 9 seasons move, and the largest is 1997 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Vladimir Guerrero: 9 seasons move, and the largest is 1997 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Livan Hernandez: 9 seasons move, and the largest is 1997 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Glendon Rusch: 9 seasons move, and the largest is 1997 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Jose Guillen: 8 seasons move, and the largest is 1997 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Derek Lowe: 8 seasons move, and the largest is 1998 by 172 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Derrek Lee: 8 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Magglio Ordonez: 9 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Brett Tomko: 9 seasons move, and the largest is 1998 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- David Dellucci: 9 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Elmer Dessens: 9 seasons move, and the largest is 1997 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Kelvim Escobar: 9 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Mark Kotsay: 8 seasons move, and the largest is 1998 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Dennys Reyes: 9 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Kevin Millwood: 8 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Scott Eyre: 8 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Todd Helton: 8 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Torii Hunter: 9 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Miguel Tejada: 10 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- David Ortiz: 8 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Frank Catalanotto: 8 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Orlando Cabrera: 8 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Paul Konerko: 8 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Aramis Ramirez: 8 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Brian Moehler: 8 seasons move, and the largest is 1997 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jason Varitek: 8 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Russ Ortiz: 9 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Braden Looper: 7 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Eric Milton: 7 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Javier Vazquez: 7 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Kevin Millar: 7 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Sidney Ponson: 8 seasons move, and the largest is 1999 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Paul Bako: 7 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Chris Carpenter: 7 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Randy Winn: 7 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Carl Pavano: 8 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ryan Dempster: 7 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Justin Speier: 8 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Mike Redmond: 8 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jarrod Washburn: 7 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Alex Cora: 8 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Aaron Boone: 8 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Bob Howry: 8 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ramon Martinez: 7 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Adrian Beltré: 7 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Placido Polanco: 7 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Chad Fox: 8 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Henry Blanco: 7 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Fernando Tatis: 7 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Troy Glaus: 8 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Chad Bradford: 8 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Álex González: 9 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Raúl Chávez: 7 seasons move, and the largest is 1997 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jay Payton: 8 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Mark DeRosa: 8 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Marlon Anderson: 8 seasons move, and the largest is 1999 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Bruce Chen: 8 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Carlos Guillén: 7 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- J.D. Drew: 8 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Eric Chavez: 7 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- A.J. Pierzynski: 7 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jerry Hairston Jr.: 7 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Vladimir Nunez: 7 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Mike Lowell: 7 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Carlos Beltrán: 7 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Tim Hudson: 8 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ramon Hernandez: 8 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Doug Mientkiewicz: 7 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Michael Barrett: 8 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Gabe Kapler: 7 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Roy Halladay: 7 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Bengie Molina: 7 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Scott Schoeneweis: 8 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Freddy Garcia: 8 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Russell Branyan: 7 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Cristian Guzman: 6 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jeff Weaver: 6 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Mike Lincoln: 6 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Kerry Wood: 7 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Kyle Farnsworth: 6 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Guillermo Mota: 7 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Carlos Lee: 6 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ted Lilly: 7 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ramon Castro: 7 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Melvin Mora: 7 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Gary Matthews Jr.: 7 seasons move, and the largest is 2000 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Chris Woodward: 7 seasons move, and the largest is 2000 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Jorge Sosa: 6 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Randy Wolf: 6 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Octavio Dotel: 7 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jason LaRue: 6 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Vicente Padilla: 7 seasons move, and the largest is 2000 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- John McDonald: 6 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Luis Vizcaino: 7 seasons move, and the largest is 2000 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Lance Berkman: 6 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Chris Richard: 6 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Tomo Ohka: 6 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- B.J. Ryan: 7 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Kip Wells: 7 seasons move, and the largest is 2000 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Matt Herges: 7 seasons move, and the largest is 2000 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Francisco Cordero: 7 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Geoff Blum: 8 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Doug Davis: 7 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Casey Blake: 6 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ramón Ortiz: 8 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- A.J. Burnett: 6 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Adam Kennedy: 6 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Corky Miller: 7 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Vernon Wells: 6 seasons move, and the largest is 2000 by 172 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Trever Miller: 6 seasons move, and the largest is 1998 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Wes Helms: 7 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Alfonso Soriano: 7 seasons move, and the largest is 2000 by 172 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- J.C. Romero: 8 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Chad Durbin: 7 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Rod Barajas: 6 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Emil Brown: 6 seasons move, and the largest is 1997 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Jamie Walker: 6 seasons move, and the largest is 1997 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Johan Santana: 6 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Kris Benson: 6 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Nelson Figueroa: 8 seasons move, and the largest is 2001 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Brad Penny: 5 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Rafael Furcal: 5 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Julio Lugo: 5 seasons move, and the largest is 2001 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Scott Linebrink: 5 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Joe Nathan: 5 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Mike Lamb: 6 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ryan Franklin: 5 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Adam Eaton: 6 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Pat Burrell: 6 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Brian Schneider: 5 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jason Marquis: 8 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Augie Ojeda: 5 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jay Gibbons: 5 seasons move, and the largest is 2001 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Bronson Arroyo: 5 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jake Westbrook: 6 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Chad Moeller: 5 seasons move, and the largest is 2001 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Damaso Marte: 5 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Randy Choate: 5 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jon Garland: 6 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Mark Buehrle: 5 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Milton Bradley: 7 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Eric Munson: 5 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Barry Zito: 5 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Albert Pujols: 5 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Brian Shouse: 5 seasons move, and the largest is 1998 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Aubrey Huff: 6 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Juan Pierre: 5 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Joel Pineiro: 5 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- David Riske: 6 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Scott Strickland: 6 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Carlos Zambrano: 7 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Eric Byrnes: 6 seasons move, and the largest is 2001 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Dan Wheeler: 6 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- José Molina: 5 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Pedro Feliz: 5 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Kevin Cash: 6 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Mike Rivera: 6 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Denny Stark: 6 seasons move, and the largest is 2001 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Joe Crede: 5 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jimmy Rollins: 6 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Corey Patterson: 6 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Michael Young: 5 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Sean Burroughs: 6 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Brandon Inge: 5 seasons move, and the largest is 2001 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Jack Wilson: 5 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Juan Uribe: 5 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ben Sheets: 4 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- CC Sabathia: 4 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- David Eckstein: 4 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ichiro Suzuki: 4 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jason Michaels: 4 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Joe Beimel: 4 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- José Bautista: 4 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jorge Julio: 5 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Josh Towers: 5 seasons move, and the largest is 2002 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Rodrigo Lopez: 4 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Roy Oswalt: 4 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Danys Baez: 5 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Yorvit Torrealba: 6 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Adam Everett: 6 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Endy Chavez: 5 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Scot Shields: 4 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Brian Fuentes: 5 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ray Olmedo: 4 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Juan Rincon: 4 seasons move, and the largest is 2002 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Brian Roberts: 7 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Aaron Rowand: 5 seasons move, and the largest is 2002 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Jason Smith: 5 seasons move, and the largest is 2002 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Jesus Colome: 5 seasons move, and the largest is 2002 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Joaquín Benoit: 5 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Carlos Silva: 4 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Kyle Lohse: 5 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- César Izturis: 4 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Tim Redding: 4 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Scott Podsednik: 4 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Alex Cintron: 5 seasons move, and the largest is 2002 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Gil Meche: 5 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Adam Dunn: 4 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Rick Ankiel: 7 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Craig Monroe: 5 seasons move, and the largest is 2002 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Kyle Davies: 4 seasons move, and the largest is 2006 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Casey Fossum: 4 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- John Parrish: 5 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Juan Cruz: 6 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Felipe López: 4 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jason Jennings: 5 seasons move, and the largest is 2002 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Nick Johnson: 4 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Angel Berroa: 5 seasons move, and the largest is 2002 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Willie Harris: 5 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Cody Ransom: 6 seasons move, and the largest is 2002 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Josh Fogg: 4 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Carlos Pena: 5 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Josh Beckett: 4 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Juan Rivera: 4 seasons move, and the largest is 2002 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Ramón Vázquez: 4 seasons move, and the largest is 2002 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Ryan Vogelsong: 5 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Nick Punto: 4 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Mike MacDougal: 7 seasons move, and the largest is 2002 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Lyle Overbay: 5 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jack Cust: 6 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Michael Cuddyer: 4 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Andres Torres: 4 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Brad Thomas: 4 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- John Bale: 4 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ryan Freel: 4 seasons move, and the largest is 2001 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Dewayne Wise: 5 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Eric Hinske: 4 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Brendan Donnelly: 4 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jason Frasor: 5 seasons move, and the largest is 2007 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Seth McClung: 4 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Chad Paronto: 3 seasons move, and the largest is 2001 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Colby Lewis: 3 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Hank Blalock: 3 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jeremy Affeldt: 3 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Kevin Mench: 3 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Scott Downs: 3 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- R.A. Dickey: 4 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Austin Kearns: 5 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Andy Tracy: 3 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Brad Lidge: 6 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jamie Burke: 4 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jason Grilli: 4 seasons move, and the largest is 2001 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Jason Lane: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Rafael Soriano: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Royce Ring: 3 seasons move, and the largest is 2007 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Ty Wigginton: 4 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ramon Santiago: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Aaron Harang: 4 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Esteban German: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Alfredo Amezaga: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Hector Luna: 4 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Sean Burnett: 3 seasons move, and the largest is 2006 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Ryan Ludwick: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Marcus Thames: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- So Taguchi: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Fernando Rodney: 4 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Dioner Navarro: 4 seasons move, and the largest is 2007 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Duaner Sanchez: 4 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Oliver Pérez: 4 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jake Peavy: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- John Lackey: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Brendan Harris: 5 seasons move, and the largest is 2007 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- David Ross: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Grant Balfour: 4 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Brandon Backe: 4 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Justin Duchscherer: 4 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Carl Crawford: 5 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Eliezer Alfonzo: 3 seasons move, and the largest is 2007 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Juan Carlos Oviedo: 4 seasons move, and the largest is 2007 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Marco Scutaro: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Brett Myers: 4 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Orlando Hudson: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Brandon Lyon: 4 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Roy Corcoran: 4 seasons move, and the largest is 2004 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Maicer Izturis: 4 seasons move, and the largest is 2007 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Bill Hall: 4 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Bobby Seay: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Mark Hendrickson: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Travis Hafner: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Aaron Cook: 4 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Oscar Salazar: 3 seasons move, and the largest is 2002 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Tim Byrdak: 3 seasons move, and the largest is 1999 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Coco Crisp: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Kevin Barker: 3 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Guillermo Quiroz: 5 seasons move, and the largest is 2007 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Miguel Olivo: 6 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Josh Bard: 4 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Mike Hessman: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Chone Figgins: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Enrique Gonzalez: 4 seasons move, and the largest is 2007 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ross Gload: 3 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Willie Bloomquist: 4 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jayson Werth: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Francisco Rodríguez: 6 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Joe Thurston: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jim Johnson: 3 seasons move, and the largest is 2007 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Pedro Feliciano: 4 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Edward Mujica: 3 seasons move, and the largest is 2007 by 172 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Marlon Byrd: 5 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Nate Robertson: 4 seasons move, and the largest is 2003 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Omar Infante: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Wily Mo Peña: 5 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Freddy Sanchez: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Victor Martinez: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jamey Carroll: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Brandon Phillips: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Carlos Ruiz: 3 seasons move, and the largest is 2007 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Cliff Lee: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Michael Ryan: 5 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Nelson Cruz: 4 seasons move, and the largest is 2007 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Alberto Callaspo: 4 seasons move, and the largest is 2007 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Luis Ayala: 3 seasons move, and the largest is 2003 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- José Berríos: 3 seasons move, and the largest is 2020 by 172 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Anderson Hernandez: 3 seasons move, and the largest is 2007 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Horacio Ramirez: 3 seasons move, and the largest is 2003 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Xavier Nady: 4 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Cla Meredith: 4 seasons move, and the largest is 2007 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- D.J. Carrasco: 4 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Wilfredo Ledezma: 3 seasons move, and the largest is 2003 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Chase Utley: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Javier López: 3 seasons move, and the largest is 2003 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Jon Rauch: 3 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jose Contreras: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Mark Ellis: 3 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Melky Cabrera: 3 seasons move, and the largest is 2007 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Hideki Matsui: 2 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jeremy Bonderman: 2 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Kiko Calero: 2 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Mark Teixeira: 2 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Miguel Montero: 2 seasons move, and the largest is 2007 by 172 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Rocco Baldelli: 2 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Justin Miller: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Robby Hammock: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Erik Bedard: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Reed Johnson: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Darnell McDonald: 4 seasons move, and the largest is 2007 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Claudio Vargas: 4 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Randy Flores: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Brandon Webb: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Gerald Laird: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jerome Williams: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jody Gerut: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ryan Langerhans: 4 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Chris Capuano: 5 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Sergio Mitre: 4 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Dontrelle Willis: 4 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Shane Bieber: 3 seasons move, and the largest is 2020 by 172 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Miguel Cabrera: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Mike Adams: 3 seasons move, and the largest is 2008 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Todd Wellemeyer: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Zack Greinke: 3 seasons move, and the largest is 2004 by 135 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jason Bay: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Rafael Betancourt: 4 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Édgar González: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Lew Ford: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Humberto Quintero: 5 seasons move, and the largest is 2004 by 172 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Joe Nelson: 4 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jose Valverde: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- José Reyes: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Justin Morneau: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jhonny Peralta: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Matt Kata: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Sonny Gray: 4 seasons move, and the largest is 2020 by 130 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Framber Valdez: 4 seasons move, and the largest is 2020 by 172 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Aaron Heilman: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Eric Bruntlett: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Dan Haren: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Tyler Walker: 3 seasons move, and the largest is 2004 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- René Rivera: 4 seasons move, and the largest is 2008 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Andrés Blanco: 2 seasons move, and the largest is 2004 by 170 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Tyler Anderson: 3 seasons move, and the largest is 2025 by 140 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Oswaldo Navarro: 2 seasons move, and the largest is 2007 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Laynce Nix: 3 seasons move, and the largest is 2004 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Kevin Correia: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Matt Diaz: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Chin-hui Tsao: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Rich Harden: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- B.J. Upton: 3 seasons move, and the largest is 2005 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Robb Quinlan: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Rich Thompson: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jimmy Gobble: 3 seasons move, and the largest is 2004 by 172 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Garrett Atkins: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Chad Gaudin: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Kevin Gregg: 5 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Michael Gonzalez: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- J.J. Putz: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Neal Cotts: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Zack Wheeler: 4 seasons move, and the largest is 2021 by 70 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Jeff Keppinger: 2 seasons move, and the largest is 2005 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Sandy Alcantara: 2 seasons move, and the largest is 2023 by 146 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Brian Sweeney: 2 seasons move, and the largest is 2004 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Yadier Molina: 3 seasons move, and the largest is 2004 by 123 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Buddy Carlyle: 2 seasons move, and the largest is 2000 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Héctor Santiago: 4 seasons move, and the largest is 2016 by 112 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Erick Almonte: 2 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Geoff Geary: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Clay Condrey: 2 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Doug Waechter: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Chad Cordero: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Paul Hoover: 2 seasons move, and the largest is 2002 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Bobby Crosby: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Wil Nieves: 3 seasons move, and the largest is 2010 by 128 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Wilson Valdez: 3 seasons move, and the largest is 2007 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- David DeJesus: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Khalil Greene: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Clint Barmes: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Koyie Hill: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Vinnie Chulk: 3 seasons move, and the largest is 2004 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Wilson Betemit: 3 seasons move, and the largest is 2004 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Edwin Jackson: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Shane Loux: 3 seasons move, and the largest is 2003 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Yhency Brazoban: 2 seasons move, and the largest is 2010 by 132 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Aaron Miles: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Adrián González: 2 seasons move, and the largest is 2004 by 169 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Freddy Peralta: 2 seasons move, and the largest is 2020 by 166 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Jonny Gomes: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Kevin Gausman: 3 seasons move, and the largest is 2026 by 118 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Miles Mikolas: 3 seasons move, and the largest is 2023 by 117 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- John Grabow: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Will Ohman: 4 seasons move, and the largest is 2001 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Brian Tallet: 2 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Héctor Sánchez: 4 seasons move, and the largest is 2012 by 94 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Mitch Keller: 2 seasons move, and the largest is 2026 by 116 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Jordan Norberto: 2 seasons move, and the largest is 2011 by 135 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Joe Ryan: 2 seasons move, and the largest is 2026 by 120 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Duane Underwood Jr.: 2 seasons move, and the largest is 2020 by 172 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Robinson Chirinos: 3 seasons move, and the largest is 2015 by 107 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Carlos Estévez: 3 seasons move, and the largest is 2024 by 108 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Clayton Kershaw: 4 seasons move, and the largest is 2016 by 78 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ryan Madson: 4 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- David Aardsma: 3 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Garrett Jones: 2 seasons move, and the largest is 2008 by 172 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Billy Traber: 2 seasons move, and the largest is 2003 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Chris Resop: 2 seasons move, and the largest is 2009 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Chris Shelton: 2 seasons move, and the largest is 2004 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Dennis Santana: 2 seasons move, and the largest is 2020 by 172 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Garrett Olson: 2 seasons move, and the largest is 2008 by 172 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Jim Hoey: 2 seasons move, and the largest is 2009 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Justin Thomas: 2 seasons move, and the largest is 2011 by 172 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Kazuo Matsui: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Scott Moore: 2 seasons move, and the largest is 2009 by 172 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Shawn Camp: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Zach Jackson: 2 seasons move, and the largest is 2007 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Adam LaRoche: 2004 is 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Casey Daigle: 2004 is 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jeff Bennett: 2004 is 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Joe Mauer: 2004 is 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Michael Wuertz: 2004 is 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Shane Victorino: 2003 is 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Tyler Yates: 2004 is 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Matt Holliday: 2004 is 171 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Michael Bowden: 4 seasons move, and the largest is 2010 by 110 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Tarik Skubal: 2 seasons move, and the largest is 2025 by 107 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Taijuan Walker: 5 seasons move, and the largest is 2016 by 83 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Chad Tracy: 2 seasons move, and the largest is 2004 by 166 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Scott Proctor: 2004 is 167 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jose Quintana: 2 seasons move, and the largest is 2017 by 92 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Lenny DiNardo: 2004 is 164 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Brian Bruney: 3 seasons move, and the largest is 2004 by 149 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Valentino Pascucci: 2 seasons move, and the largest is 2004 by 161 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Brad Hawpe: 2 seasons move, and the largest is 2004 by 156 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Scott Hairston: 2004 is 150 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Casey Kotchman: 2 seasons move, and the largest is 2004 by 148 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Chris Coghlan: 4 seasons move, and the largest is 2017 by 63 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Carlos Rodón: 3 seasons move, and the largest is 2022 by 69 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Daniel Cabrera: 2 seasons move, and the largest is 2004 by 144 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Frank Francisco: 3 seasons move, and the largest is 2004 by 143 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Alek Manoah: 3 seasons move, and the largest is 2022 by 71 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Félix Doubront: 3 seasons move, and the largest is 2012 by 125 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Frankie Montas: 3 seasons move, and the largest is 2020 by 141 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Jose Morales: 3 seasons move, and the largest is 2011 by 103 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Nick Green: 2 seasons move, and the largest is 2004 by 142 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Kevin Youkilis: 2004 is 142 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- David Peterson: 2 seasons move, and the largest is 2026 by 78 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Brandon Laird: 2012 is 139 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Brett Jackson: 2014 is 138 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Justin Germano: 3 seasons move, and the largest is 2004 by 135 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- José Suarez: 5 seasons move, and the largest is 2024 by 88 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Rhys Hoskins: 2020 is 135 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jose Lopez: 3 seasons move, and the largest is 2011 by 68 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Christian Colón: 2 seasons move, and the largest is 2015 by 89 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Corey Hart: 2004 is 132 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Denny Bautista: 2004 is 132 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Nathan Eovaldi: 3 seasons move, and the largest is 2021 by 70 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Tyler Naquin: 2 seasons move, and the largest is 2023 by 131 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Joey Wiemer: 2025 is 131 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Alex Rios: 2004 is 130 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Chris Sale: 2 seasons move, and the largest is 2014 by 67 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Christian Vázquez: 4 seasons move, and the largest is 2025 by 120 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Chris Archer: 2 seasons move, and the largest is 2017 by 73 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Arodys Vizcaíno: 2012 is 126 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Henderson Alvarez: 3 seasons move, and the largest is 2014 by 113 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Dixon Machado: 2 seasons move, and the largest is 2022 by 124 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Mike Zunino: 3 seasons move, and the largest is 2021 by 70 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Matt Treanor: 2004 is 124 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ben Rowen: 2016 is 123 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Kolby Allard: 2 seasons move, and the largest is 2019 by 120 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Brandon Snyder: 2012 is 120 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Korey Lee: 2023 is 120 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Wily Peralta: 3 seasons move, and the largest is 2017 by 80 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Brooks Pounders: 3 seasons move, and the largest is 2019 by 96 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- John McMillon: 2024 is 119 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Zac Gallen: 2 seasons move, and the largest is 2023 by 70 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Felipe Paulino: 3 seasons move, and the largest is 2010 by 70 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Heath Hembree: 2014 is 118 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Adam Duvall: 2015 is 117 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- John Ryan Murphy: 2 seasons move, and the largest is 2017 by 116 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Sandy León: 2 seasons move, and the largest is 2015 by 116 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Deivy Grullón: 2020 is 116 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Huascar Brazobán: 2026 is 116 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Kirby Yates: 5 seasons move, and the largest is 2024 by 63 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Kyle Wright: 2020 is 116 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Andy Green: 2 seasons move, and the largest is 2004 by 114 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jesus Guzman: 2014 is 115 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Matt Strahm: 2 seasons move, and the largest is 2024 by 63 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Tim Stauffer: 4 seasons move, and the largest is 2009 by 87 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ubaldo Jiménez: 2011 is 115 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Brett Carroll: 4 seasons move, and the largest is 2011 by 109 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Robinson Tejeda: 2 seasons move, and the largest is 2009 by 108 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Brandon Woodruff: 2 seasons move, and the largest is 2021 by 70 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Camilo Doval: 2025 is 113 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Ian Kennedy: 2013 is 113 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Barry Enright: 2 seasons move, and the largest is 2012 by 111 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Phillip Diehl: 2020 is 111 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Julio Teheran: 2016 is 110 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Leury García: 2 seasons move, and the largest is 2017 by 67 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Matt Guerrier: 2004 is 109 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Michael McKenry: 2013 is 109 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Carter Kieboom: 2020 is 108 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Joe Saunders: 2 seasons move, and the largest is 2006 by 107 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Francisco Liriano: 2 seasons move, and the largest is 2012 by 106 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Lance Cormier: 2004 is 107 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Paul Janish: 2 seasons move, and the largest is 2012 by 106 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Rafael Marchán: 2 seasons move, and the largest is 2026 by 106 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Justin Lehr: 2004 is 106 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Trey Wingenter: 2024 is 106 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Wilmer Flores: 2 seasons move, and the largest is 2024 by 77 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Juan Gutierrez: 2013 is 104 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- John Buck: 2 seasons move, and the largest is 2004 by 101 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Tanner Houck: 3 seasons move, and the largest is 2024 by 63 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Eduardo Escobar: 5 seasons move, and the largest is 2023 by 73 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Joey Gathright: 2 seasons move, and the largest is 2004 by 101 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Taylor Ward: 2020 is 102 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Hector Noesí: 2 seasons move, and the largest is 2012 by 99 days higher because a club that opens outside the United States and Canada, so that its own season runs longer than the ordinary band, starts on that overseas date (accrual.international-opener).
+- Cole Ragans: 2 seasons move, and the largest is 2024 by 63 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Craig Gentry: 4 seasons move, and the largest is 2013 by 72 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Matt Thornton: 2 seasons move, and the largest is 2004 by 99 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Seth Lugo: 2 seasons move, and the largest is 2024 by 63 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Tommy Milone: 4 seasons move, and the largest is 2014 by 97 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Francisco Mejía: 4 seasons move, and the largest is 2019 by 67 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Santiago Casilla: 2 seasons move, and the largest is 2004 by 56 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Luis Ortiz: 2025 is 98 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Shawn Hill: 2 seasons move, and the largest is 2004 by 97 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Willians Astudillo: 3 seasons move, and the largest is 2021 by 79 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Deven Marrero: 2018 is 96 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Jalen Beeks: 2019 is 96 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Matt Dominguez: 2012 is 96 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Carlos Vargas: 2025 is 95 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Chris Carpenter: 2012 is 95 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Dave Bush: 2 seasons move, and the largest is 2004 by 94 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Edwin Escobar: 2 seasons move, and the largest is 2015 by 69 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Greg Aquino: 2 seasons move, and the largest is 2004 by 94 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Hector Velázquez: 2 seasons move, and the largest is 2019 by 63 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Travis Blackley: 2004 is 95 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Corey Kluber: 2 seasons move, and the largest is 2016 by 74 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Justin Verlander: 2 seasons move, and the largest is 2026 by 61 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Chris Burke: 2 seasons move, and the largest is 2004 by 92 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Johnny Cueto: 2017 is 93 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Logan Webb: 2 seasons move, and the largest is 2024 by 63 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Kyle Freeland: 2023 is 92 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Shota Imanaga: 2 seasons move, and the largest is 2024 by 67 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Eddie Butler: 2 seasons move, and the largest is 2015 by 65 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Neftalí Feliz: 4 seasons move, and the largest is 2015 by 76 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Josh Willingham: 2004 is 90 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Luis Durango: 2011 is 90 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Roberto Hernandez: 3 seasons move, and the largest is 2011 by 84 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Arismendy Alcántara: 4 seasons move, and the largest is 2016 by 67 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Cody Ross: 2003 is 87 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Dario Alvarez: 2 seasons move, and the largest is 2016 by 52 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Jeff Kobernus: 2014 is 87 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Francisco Cervelli: 3 seasons move, and the largest is 2016 by 58 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Iván Herrera: 2024 is 86 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Jake Smolinski: 2 seasons move, and the largest is 2018 by 48 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Tomás Nido: 2 seasons move, and the largest is 2020 by 76 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Clay Holmes: 2 seasons move, and the largest is 2024 by 63 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Casey Mize: 2 seasons move, and the largest is 2025 by 63 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Dustin Garneau: 2 seasons move, and the largest is 2018 by 56 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Garrett Crochet: 2 seasons move, and the largest is 2024 by 63 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Magneuris Sierra: 2 seasons move, and the largest is 2020 by 79 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Victor Robles: 2 seasons move, and the largest is 2021 by 52 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Andy Parrino: 2 seasons move, and the largest is 2012 by 60 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Orlando Arcia: 3 seasons move, and the largest is 2025 by 48 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Patrick Wisdom: 2 seasons move, and the largest is 2020 by 53 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Bradgley Rodriguez: 2026 is 81 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- César Valdez: 2021 is 81 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Jose Tabata: 3 seasons move, and the largest is 2011 by 79 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ehire Adrianza: 2 seasons move, and the largest is 2014 by 74 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- George Sherrill: 2004 is 80 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Johan Rojas: 2 seasons move, and the largest is 2026 by 77 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Jose Herrera: 2 seasons move, and the largest is 2023 by 74 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Pedro Ciriaco: 2 seasons move, and the largest is 2013 by 69 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Gerrit Cole: 2 seasons move, and the largest is 2022 by 71 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Jorge Cantu: 2004 is 79 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Logan Gilbert: 2 seasons move, and the largest is 2024 by 63 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Max Scherzer: 2 seasons move, and the largest is 2016 by 74 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Ryan Thompson: 2 seasons move, and the largest is 2021 by 76 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Elias Díaz: 2024 is 78 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Grady Sizemore: 4 seasons move, and the largest is 2004 by 75 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jorge Mateo: 2 seasons move, and the largest is 2024 by 52 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Juan Nicasio: 2014 is 78 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Alex Liddi: 2012 is 77 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Alika Williams: 2026 is 77 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Jonathan Villar: 3 seasons move, and the largest is 2017 by 58 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Manuel Margot: 3 seasons move, and the largest is 2017 by 44 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Nestor Cortes: 2 seasons move, and the largest is 2020 by 48 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Hernán Pérez: 3 seasons move, and the largest is 2015 by 47 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Pablo Reyes: 2 seasons move, and the largest is 2024 by 39 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Andrew Cashner: 2 seasons move, and the largest is 2012 by 74 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Chad Qualls: 2 seasons move, and the largest is 2004 by 74 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Cory Spangenberg: 2015 is 75 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Darin Ruf: 4 seasons move, and the largest is 2015 by 69 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- David Wright: 2004 is 75 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Gleyber Torres: 2020 is 75 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- John Maine: 3 seasons move, and the largest is 2004 by 73 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- José Leclerc: 2 seasons move, and the largest is 2023 by 72 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Maikel Garcia: 2026 is 75 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Luis Castillo: 2 seasons move, and the largest is 2023 by 70 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Michael Pérez: 2019 is 74 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Steven Zobac: 2022 is 74 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Edgmer Escalona: 2 seasons move, and the largest is 2013 by 72 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Jairo Asencio: 2 seasons move, and the largest is 2012 by 58 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Jeimer Candelario: 3 seasons move, and the largest is 2025 by 40 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Kodai Senga: 2023 is 73 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Michael Morse: 2 seasons move, and the largest is 2013 by 72 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Robinson Canó: 2 seasons move, and the largest is 2019 by 42 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Adley Rutschman: 2025 is 72 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Donovan Solano: 2 seasons move, and the largest is 2013 by 71 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- J.C. Escarra: 2026 is 72 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Jordan Romano: 2 seasons move, and the largest is 2022 by 71 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Luis Matos: 2 seasons move, and the largest is 2025 by 67 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Travis d'Arnaud: 2 seasons move, and the largest is 2022 by 70 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Germán Márquez: 2 seasons move, and the largest is 2021 by 70 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Gregory Soto: 2022 is 71 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Jake Fox: 2 seasons move, and the largest is 2010 by 68 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Kyle Tucker: 2024 is 71 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Logan Verrett: 2 seasons move, and the largest is 2016 by 70 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Martín Pérez: 2022 is 71 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Pablo López: 2 seasons move, and the largest is 2023 by 70 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Bryce Elder: 2023 is 70 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Corbin Burnes: 2021 is 70 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Craig Kimbrel: 2023 is 70 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Devin Williams: 2022 is 70 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Felipe Vázquez: 2019 is 70 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- George Kirby: 2023 is 70 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Joe Musgrove: 2022 is 70 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Josiah Gray: 2023 is 70 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Justin Steele: 2023 is 70 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Spencer Strider: 2023 is 70 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Walker Buehler: 2021 is 70 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Yusei Kikuchi: 2021 is 70 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Alexi Ogando: 3 seasons move, and the largest is 2014 by 55 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Ian Stewart: 4 seasons move, and the largest is 2012 by 60 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Jean Machi: 2015 is 69 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Luis Urías: 2024 is 69 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Masahiro Tanaka: 2019 is 69 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ronald Acuña Jr.: 2 seasons move, and the largest is 2024 by 45 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Adonis García: 2 seasons move, and the largest is 2016 by 34 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Angel Martínez: 2026 is 68 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Ezequiel Duran: 3 seasons move, and the largest is 2023 by 44 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Fernando Salas: 2 seasons move, and the largest is 2014 by 66 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Jordan Pacheco: 5 seasons move, and the largest is 2014 by 63 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Drew Rasmussen: 2 seasons move, and the largest is 2025 by 63 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Eric Young Jr.: 3 seasons move, and the largest is 2017 by 34 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Freddy Fermin: 2026 is 66 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Merkin Valdez: 3 seasons move, and the largest is 2004 by 64 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Oliver Ortega: 2022 is 66 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Scott Atchison: 2 seasons move, and the largest is 2004 by 65 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Craig Hansen: 2006 is 65 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Grayson Greiner: 2019 is 65 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Chris Leroux: 2 seasons move, and the largest is 2012 by 63 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Christian Bergman: 2 seasons move, and the largest is 2015 by 63 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Cristopher Sánchez: 2 seasons move, and the largest is 2024 by 63 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Emmanuel Clase: 2 seasons move, and the largest is 2024 by 63 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Jason Bartlett: 3 seasons move, and the largest is 2004 by 62 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Josh Roenicke: 2 seasons move, and the largest is 2011 by 63 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Starling Marte: 4 seasons move, and the largest is 2022 by 44 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Adrian Morejon: 2025 is 63 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Andrew Abbott: 2025 is 63 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Andrés Muñoz: 2024 is 63 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- David Fry: 2024 is 63 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jake Buchanan: 2017 is 63 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Jeff Hoffman: 2024 is 63 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Juan Lagares: 2016 is 63 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Yan Gomes: 2018 is 63 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Chris Marrero: 2012 is 62 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Daniel Bard: 2012 is 62 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Hanley Ramirez: 2 seasons move, and the largest is 2011 by 57 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Joan Adon: 2022 is 62 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Antonio Bastardo: 5 seasons move, and the largest is 2015 by 29 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Edinson Volquez: 2 seasons move, and the largest is 2011 by 53 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Jesse Crain: 2 seasons move, and the largest is 2004 by 60 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Kaleb Ort: 2024 is 61 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Pablo Sandoval: 3 seasons move, and the largest is 2011 by 30 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Steven Kwan: 2024 is 61 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Dan Otero: 4 seasons move, and the largest is 2019 by 52 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Javier Báez: 2024 is 60 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Matt Downs: 2012 is 60 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Alexi Casilla: 2 seasons move, and the largest is 2010 by 58 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Andrew Susac: 3 seasons move, and the largest is 2016 by 47 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Edward Olivares: 2 seasons move, and the largest is 2023 by 58 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Fernando Cruz: 2 seasons move, and the largest is 2025 by 42 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Jesús Sucre: 2 seasons move, and the largest is 2015 by 58 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- John Baker: 2 seasons move, and the largest is 2013 by 58 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Jon Switzer: 2 seasons move, and the largest is 2003 by 58 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Oswaldo Arcia: 2015 is 59 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Ramon Troncoso: 2 seasons move, and the largest is 2013 by 56 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Victor Caratini: 2 seasons move, and the largest is 2018 by 58 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Alex Cobb: 2023 is 58 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Erik Kratz: 4 seasons move, and the largest is 2018 by 43 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Gabe Gross: 2004 is 58 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jovani Morán: 2026 is 58 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Aaron Laffey: 2 seasons move, and the largest is 2010 by 56 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Casper Wells: 2012 is 57 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Christian Arroyo: 2020 is 57 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- DL Hall: 2026 is 57 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Esmil Rogers: 3 seasons move, and the largest is 2014 by 55 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Mitch Haniger: 2019 is 57 days higher because a club that opens outside the United States and Canada, so that its own season runs longer than the ordinary band, starts on that overseas date (accrual.international-opener).
+- Andrew Kittredge: 2021 is 56 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Brandon Kintzler: 2 seasons move, and the largest is 2012 by 43 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Edwin Rios: 2 seasons move, and the largest is 2020 by 55 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Omar Quintanilla: 2 seasons move, and the largest is 2011 by 55 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Ryan Noda: 2025 is 56 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Grégor Blanco: 2015 is 55 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Guillermo Heredia: 2020 is 55 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Pedro Báez: 2018 is 55 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Robert Suarez: 2024 is 55 days higher because a club that opens outside the United States and Canada, so that its own season runs longer than the ordinary band, starts on that overseas date (accrual.international-opener).
+- Ryan Flaherty: 2013 is 55 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Juan Francisco: 2 seasons move, and the largest is 2011 by 47 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Michael Siani: 2026 is 54 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Neftali Soto: 2014 is 54 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Rafael Dolis: 2012 is 54 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Tommy Pham: 2020 is 54 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Fernando Abad: 2 seasons move, and the largest is 2011 by 48 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Ian Snell: 3 seasons move, and the largest is 2004 by 45 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Miguel Andujar: 2025 is 53 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Oscar Gonzalez: 2 seasons move, and the largest is 2023 by 37 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Renyel Pinto: 2010 is 53 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Zach Dezenzo: 2 seasons move, and the largest is 2025 by 52 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Alex Avila: 2012 is 52 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Gabriel Arias: 2 seasons move, and the largest is 2026 by 50 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Jeff Baker: 3 seasons move, and the largest is 2011 by 50 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Jorge De La Rosa: 2 seasons move, and the largest is 2004 by 51 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Kendrys Morales: 2 seasons move, and the largest is 2010 by 45 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Michael Brantley: 2 seasons move, and the largest is 2021 by 51 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Tony Abreu: 2 seasons move, and the largest is 2010 by 51 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Carlos Hernández: 2020 is 51 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Christian Encarnacion-Strand: 2 seasons move, and the largest is 2024 by 32 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Dominic Leone: 2 seasons move, and the largest is 2019 by 50 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Eduardo Sanchez: 2013 is 51 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Enyel De Los Santos: 3 seasons move, and the largest is 2020 by 42 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Jay Jackson: 2 seasons move, and the largest is 2021 by 33 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Josh Naylor: 2020 is 51 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Kenley Jansen: 2023 is 51 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Ramon E Ramirez: 2012 is 51 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Rich Thompson: 3 seasons move, and the largest is 2010 by 34 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Roberto Osuna: 2 seasons move, and the largest is 2018 by 40 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Alejandro De Aza: 3 seasons move, and the largest is 2015 by 48 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Corey Julks: 2024 is 50 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Freddy Guzman: 3 seasons move, and the largest is 2004 by 48 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Rio Ruiz: 2021 is 50 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Ryan Meisinger: 2 seasons move, and the largest is 2020 by 47 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Tim Anderson: 2 seasons move, and the largest is 2021 by 37 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Tim Dillard: 3 seasons move, and the largest is 2011 by 44 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Andy Dirks: 2012 is 49 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Jake Marisnick: 2 seasons move, and the largest is 2018 by 48 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Jarrod Dyson: 2011 is 49 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Johan Camargo: 2 seasons move, and the largest is 2020 by 48 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Ramon Pena: 2011 is 49 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ryan Buchter: 2020 is 49 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Yoshi Tsutsugo: 2021 is 49 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Erasmo Ramírez: 2 seasons move, and the largest is 2014 by 25 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Ildemaro Vargas: 2020 is 48 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Jesús Sánchez: 2 seasons move, and the largest is 2023 by 47 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Jimmy Cordero: 2019 is 48 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Luis Avilán: 2 seasons move, and the largest is 2017 by 42 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Michael Helman: 2025 is 48 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Miguel Sanó: 2016 is 48 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ross Detwiler: 4 seasons move, and the largest is 2013 by 45 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Tuffy Gosewisch: 2 seasons move, and the largest is 2015 by 43 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Alex Freeland: 2026 is 47 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Cedric Mullins: 2023 is 47 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Emilio Bonifácio: 4 seasons move, and the largest is 2012 by 35 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Jhoulys Chacín: 4 seasons move, and the largest is 2012 by 33 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Jose Trevino: 2022 is 47 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Marcos Mateo: 2011 is 47 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Raul Valdes: 2013 is 47 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Steward Berroa: 2 seasons move, and the largest is 2025 by 46 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Eddie Rosario: 2016 is 46 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Eddy Alvarez: 2020 is 46 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Elliot Johnson: 2 seasons move, and the largest is 2011 by 45 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Erick Aybar: 2 seasons move, and the largest is 2016 by 44 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jerar Encarnacion: 2026 is 46 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Jimmy Nelson: 2014 is 46 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Jorge Soler: 3 seasons move, and the largest is 2023 by 44 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Omar Narváez: 2022 is 46 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Preston Guilmet: 2 seasons move, and the largest is 2015 by 38 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Cody Hall: 2016 is 45 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Fernando Cabrera: 2004 is 45 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Randy Ruiz: 2010 is 45 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Roman Colon: 2 seasons move, and the largest is 2004 by 44 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Steven Register: 2009 is 45 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Abraham Almonte: 2017 is 44 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Chris Snyder: 2004 is 44 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Ian Kinsler: 2017 is 44 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Lonnie Chisenhall: 2 seasons move, and the largest is 2013 by 43 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Louis Coleman: 2 seasons move, and the largest is 2013 by 43 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Luis Hernandez: 2009 is 44 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Ronel Blanco: 2024 is 44 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Ryan Church: 2004 is 44 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Shae Simmons: 2 seasons move, and the largest is 2014 by 43 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jeff Francis: 3 seasons move, and the largest is 2004 by 40 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Kennys Vargas: 2015 is 43 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Luis Mendoza: 3 seasons move, and the largest is 2010 by 24 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Luis Sardinas: 2 seasons move, and the largest is 2016 by 42 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Miguel Rojas: 2 seasons move, and the largest is 2017 by 26 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Pat Misch: 2009 is 43 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Scott Kazmir: 2 seasons move, and the largest is 2004 by 42 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Willi Castro: 2 seasons move, and the largest is 2020 by 37 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Chris Young: 2 seasons move, and the largest is 2004 by 41 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Heath Bell: 2 seasons move, and the largest is 2004 by 41 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Joey Estes: 2 seasons move, and the largest is 2024 by 31 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Rob Refsnyder: 4 seasons move, and the largest is 2017 by 36 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Victor Reyes: 2 seasons move, and the largest is 2021 by 37 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Asdrúbal Cabrera: 2 seasons move, and the largest is 2017 by 33 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Collin McHugh: 2 seasons move, and the largest is 2019 by 40 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- David Carpenter: 2012 is 41 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Franklin Morales: 3 seasons move, and the largest is 2010 by 38 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Heliot Ramos: 2 seasons move, and the largest is 2026 by 37 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Jimmy Herget: 2 seasons move, and the largest is 2024 by 35 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Joey Votto: 2014 is 41 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Aaron Sanchez: 2016 is 40 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Dany Jiménez: 2024 is 40 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Dom Nuñez: 2022 is 40 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Eduardo Núñez: 3 seasons move, and the largest is 2013 by 31 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Josh Smoker: 2017 is 40 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Josh VanMeter: 2020 is 40 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Liam Hendriks: 3 seasons move, and the largest is 2016 by 26 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Mike Aviles: 3 seasons move, and the largest is 2015 by 32 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Shane Robinson: 2 seasons move, and the largest is 2012 by 39 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Taylor Jordan: 2 seasons move, and the largest is 2013 by 39 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Willson Contreras: 2022 is 40 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Bryan Abreu: 2020 is 39 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Gary Majewski: 2004 is 39 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Gio Gonzalez: 2 seasons move, and the largest is 2014 by 38 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Jesus Cruz: 2020 is 39 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Jose Altuve: 2026 is 39 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Keith Butler: 2 seasons move, and the largest is 2013 by 21 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Max Muncy: 2019 is 39 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Rougned Odor: 3 seasons move, and the largest is 2015 by 36 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Yadiel Rivera: 2016 is 39 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Andrew Moore: 2019 is 38 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Ketel Marte: 2016 is 38 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Matt Thaiss: 2020 is 38 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Nick Yorke: 2026 is 38 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Robinson Cancel: 3 seasons move, and the largest is 1999 by 31 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Will Vest: 2026 is 38 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Jefry Marte: 2 seasons move, and the largest is 2015 by 36 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Jeremy Guthrie: 2004 is 37 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jorge López: 2 seasons move, and the largest is 2020 by 31 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- José Azócar: 2 seasons move, and the largest is 2023 by 36 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Luis Campusano: 3 seasons move, and the largest is 2026 by 28 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Preston Tucker: 2 seasons move, and the largest is 2018 by 36 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Randy Williams: 3 seasons move, and the largest is 2004 by 23 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Yasmani Grandal: 2015 is 37 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Corey Seager: 2024 is 36 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Dave Sappelt: 2013 is 36 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Kenta Maeda: 2019 is 36 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Lance Lynn: 2021 is 36 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Lance McCullers Jr.: 2 seasons move, and the largest is 2015 by 35 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Luis García Jr.: 2025 is 36 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Manny Machado: 2023 is 36 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Ramón Urías: 2026 is 36 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- René Pinto: 2024 is 36 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Thomas Eshelman: 2021 is 36 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- C.J. Cron: 3 seasons move, and the largest is 2023 by 33 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Carlos Martinez: 3 seasons move, and the largest is 2021 by 26 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Enmanuel Valdez: 2024 is 35 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Ian Krol: 3 seasons move, and the largest is 2021 by 33 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Jason Kubel: 2 seasons move, and the largest is 2004 by 34 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Max Stassi: 2016 is 35 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Shane McClanahan: 2022 is 35 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Terrance Gore: 3 seasons move, and the largest is 2016 by 32 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Wander Franco: 2023 is 35 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Asher Wojciechowski: 2 seasons move, and the largest is 2021 by 33 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Daniel Robert: 2025 is 34 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- David Herndon: 2011 is 34 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Edwar Ramirez: 2 seasons move, and the largest is 2010 by 33 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Elvis Andrus: 2016 is 34 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Eugenio Velez: 2 seasons move, and the largest is 2010 by 33 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Gerardo Parra: 2010 is 34 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- José De León: 2021 is 34 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Matt Davidson: 2021 is 34 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Zack Littell: 3 seasons move, and the largest is 2020 by 32 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Aaron Hicks: 2014 is 33 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Alex Wood: 2017 is 33 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Andrés Machado: 2022 is 33 days higher because designated-player service runs until the outright, the release, or the era's window, whichever is first (accrual.dfa-window).
+- Cory Aldridge: 2001 is 33 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Cristhian Adames: 2017 is 33 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Diego Castillo: 2023 is 33 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Domonic Brown: 2 seasons move, and the largest is 2011 by 32 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Drew Anderson: 2021 is 33 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Eric Wagaman: 2026 is 33 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Félix Bautista: 2023 is 33 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Harold Ramírez: 2021 is 33 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Ian Happ: 2025 is 33 days higher because a club that opens outside the United States and Canada, so that its own season runs longer than the ordinary band, starts on that overseas date (accrual.international-opener).
+- Iván De Jesús Jr.: 2012 is 33 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Jazz Chisholm Jr.: 2023 is 33 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jeremy Jeffress: 3 seasons move, and the largest is 2013 by 16 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Josh Osich: 2021 is 33 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Oswaldo Cabrera: 2025 is 33 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Ronan Kopp: 2021 is 33 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Ryan Howard: 2004 is 33 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Tony Gonsolin: 2022 is 33 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Brandon Brennan: 2021 is 32 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Brandon Lowe: 2019 is 32 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Byron Buxton: 3 seasons move, and the largest is 2022 by 27 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Dane Myers: 2025 is 32 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Jose Siri: 3 seasons move, and the largest is 2024 by 22 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Matt Reynolds: 2021 is 32 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Rhiner Cruz: 2013 is 32 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Russ Adams: 2 seasons move, and the largest is 2004 by 31 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Willy Taveras: 2 seasons move, and the largest is 2004 by 28 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Avisaíl García: 2013 is 31 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Charlie Morton: 2 seasons move, and the largest is 2018 by 30 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Gavin Floyd: 2004 is 31 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Gregory Polanco: 2021 is 31 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Kevin Jepsen: 2 seasons move, and the largest is 2012 by 30 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Nick Swisher: 2004 is 31 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Sean Gilmartin: 2 seasons move, and the largest is 2020 by 27 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Wes Parsons: 2019 is 31 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Adam Morgan: 2 seasons move, and the largest is 2021 by 29 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- George Springer: 2 seasons move, and the largest is 2015 by 20 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Luke Williams: 2 seasons move, and the largest is 2023 by 29 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Marc Rzepczynski: 2 seasons move, and the largest is 2013 by 29 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Matt Tuiasosopo: 2 seasons move, and the largest is 2010 by 29 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Mike Nickeas: 2 seasons move, and the largest is 2011 by 29 days higher because a roster move in the empty gap just before the first major-league game counts (accrual.pre-debut-roster).
+- Rafael Montero: 2 seasons move, and the largest is 2017 by 18 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Ryan Braun: 2 seasons move, and the largest is 2017 by 29 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Taj Bradley: 2026 is 30 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Trevor Megill: 2025 is 30 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Andrés Giménez: 2025 is 29 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Ben Kudrna: 2021 is 29 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Bernardo Flores Jr.: 2021 is 29 days higher because a trade or waiver claim out of a designation, or a new major-league deal, restarts service unless the same day also options, outrights, or releases him (accrual.trade-resolves-dfa).
+- Dominic Smith: 2 seasons move, and the largest is 2019 by 28 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Eli White: 2023 is 29 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Greg Dobbs: 3 seasons move, and the largest is 2004 by 26 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Jason Bourgeois: 2 seasons move, and the largest is 2011 by 28 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Kelvin Gutiérrez: 2022 is 29 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Miguel Díaz: 2021 is 29 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Nick Ahmed: 2024 is 29 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Ryan Helsley: 2022 is 29 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Stolmy Pimentel: 2 seasons move, and the largest is 2014 by 23 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Xavier Cedeño: 2 seasons move, and the largest is 2013 by 23 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Carlos Rosa: 2010 is 28 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Daniel Herrera: 2 seasons move, and the largest is 2011 by 27 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Fautino De Los Santos: 2012 is 28 days higher because a club that opens outside the United States and Canada, so that its own season runs longer than the ordinary band, starts on that overseas date (accrual.international-opener).
+- Fernando Tatis Jr.: 2024 is 28 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jean Segura: 2015 is 28 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Joaquin Arias: 3 seasons move, and the largest is 2010 by 15 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Luis Arraez: 2 seasons move, and the largest is 2019 by 17 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Luis Jimenez: 2015 is 28 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Mike Clevinger: 2020 is 28 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Roman Anthony: 2026 is 28 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Waldis Joaquin: 2010 is 28 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Andy Marte: 2010 is 27 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Blas Castaño: 2026 is 27 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Carlos González: 2010 is 27 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jake Cave: 2019 is 27 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Justin Sellers: 2 seasons move, and the largest is 2012 by 26 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+- Mark Melancon: 2 seasons move, and the largest is 2017 by 26 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Michael Toglia: 2024 is 27 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Wilin Rosario: 3 seasons move, and the largest is 2014 by 24 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Yordan Alvarez: 2 seasons move, and the largest is 2025 by 25 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Danny Santana: 2 seasons move, and the largest is 2017 by 25 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
+- Duane Below: 2 seasons move, and the largest is 2013 by 25 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Jarrod Saltalamacchia: 3 seasons move, and the largest is 2010 by 23 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Jeremy Reed: 2004 is 26 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Jonathan Sánchez: 2 seasons move, and the largest is 2012 by 24 days higher because the glossary states a 10-day window under the 2012-16 agreement (accrual.dfa-window-10).
+- Josh Donaldson: 2012 is 26 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Kevin Frandsen: 2 seasons move, and the largest is 2010 by 25 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Logan Kensing: 3 seasons move, and the largest is 2004 by 24 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Martín Maldonado: 2018 is 26 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Mike Gosling: 2 seasons move, and the largest is 2004 by 25 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Paul Phillips: 2 seasons move, and the largest is 2004 by 25 days higher because the length before 2012 is unknown (accrual.dfa-window-pre2012).
+- Yainer Diaz: 2026 is 26 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Dallas McPherson: 2 seasons move, and the largest is 2004 by 24 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- David Peralta: 2016 is 25 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Eduardo Rodriguez: 3 seasons move, and the largest is 2015 by 18 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Phillips Valdez: 2022 is 25 days higher because service runs from the first regularly scheduled championship-season game through the last, uniformly (accrual.league-opener).
+- Reiver Sanmartin: 2022 is 25 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- Roenis Elías: 2018 is 25 days higher because an option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played (accrual.appearance-restart).
+- Ryan Castellani: 2020 is 25 days higher because optional-assignment days in a championship season are a separate tally (accrual.option-under-20).
+
+## Holds
+
+644 seasons. Cleared stays false until a person sets it.
+
+- AJ Ramos 2016: rulebook 58, kept 172. 2016 is 114 days below the published season (58 from the rulebook, 172 published). He played 67 major-league games, more than the rulebook credited, so a roster row may be missing. The published days stay until that is cleared.
+- Aaron Fletcher 2020: rulebook 105, kept 107. 2020 is 2 days below the published season (105 from the rulebook, 107 published).
+- Aaron Harang 2014: rulebook 0, kept 172. 2014 is 172 days below the published season (0 from the rulebook, 172 published). He played 33 major-league games, more than the rulebook credited, so a roster row may be missing. The published days stay until that is cleared.
+- Aaron Slegers 2020: rulebook 130, kept 132. 2020 is 2 days below the published season (130 from the rulebook, 132 published).
+- Abraham Almonte 2014: rulebook 36, kept 86. 2014 is 50 days below the published season (36 from the rulebook, 86 published). He played 59 major-league games, more than the rulebook credited, so a roster row may be missing. The published days stay until that is cleared.
+- Abraham Almonte 2020: rulebook 36, kept 37. 2020 is 1 days below the published season (36 from the rulebook, 37 published).
+- Adam Ottavino 2025: rulebook 8, kept 14. 2025 is 6 days below the published season (8 from the rulebook, 14 published).
+- Adam Russell 2008: rulebook 105, kept 106. 2008 is 1 days below the published season (105 from the rulebook, 106 published).
+- Adolis García 2020: rulebook 36, kept 37. 2020 is 1 days below the published season (36 from the rulebook, 37 published).
+- Adonis Medina 2020: rulebook 3, kept 23. 2020 is 20 days below the published season (3 from the rulebook, 23 published).
+- Adrian Morejon 2020: rulebook 114, kept 116. 2020 is 2 days below the published season (114 from the rulebook, 116 published).
+- Albert Suárez 2026: rulebook 137, kept 140. 2026 is 3 days below the published season (137 from the rulebook, 140 published).
+- Alberto Arias 2007: rulebook 153, kept 154. 2007 is 1 days below the published season (153 from the rulebook, 154 published).
+- Alcides Escobar 2021: rulebook 0, kept 93. 2021 is 93 days below the published season (0 from the rulebook, 93 published). He played 75 major-league games, more than the rulebook credited, so a roster row may be missing. The published days stay until that is cleared.
+- Alec Bohm 2020: rulebook 128, kept 130. 2020 is 2 days below the published season (128 from the rulebook, 130 published).
+- Alejandro Kirk 2020: rulebook 44, kept 45. 2020 is 1 days below the published season (44 from the rulebook, 45 published).
+- Alex Call 2022: rulebook 79, kept 87. 2022 is 8 days below the published season (79 from the rulebook, 87 published).
+- Alex Claudio 2022: rulebook 24, kept 29. 2022 is 5 days below the published season (24 from the rulebook, 29 published).
+- Alex Dickerson 2019: rulebook 146, kept 150. 2019 is 4 days below the published season (146 from the rulebook, 150 published).
+- Alex Jackson 2025: rulebook 0, kept 80. 2025 is 80 days below the published season (0 from the rulebook, 80 published). He played 37 major-league games, more than the rulebook credited, so a roster row may be missing. The published days stay until that is cleared.
+- Alex McRae 2020: rulebook 64, kept 65. 2020 is 1 days below the published season (64 from the rulebook, 65 published).
+- Alex Presley 2013: rulebook 38, kept 67. 2013 is 29 days below the published season (38 from the rulebook, 67 published). He played 57 major-league games, more than the rulebook credited, so a roster row may be missing. The published days stay until that is cleared.
+- Alex Presley 2014: rulebook 83, kept 172. 2014 is 89 days below the published season (83 from the rulebook, 172 published). He played 89 major-league games, more than the rulebook credited, so a roster row may be missing. The published days stay until that is cleared.
+- Alex Reyes 2020: rulebook 150, kept 152. 2020 is 2 days below the published season (150 from the rulebook, 152 published).
+- Alex Rios 2014: rulebook 0, kept 158. 2014 is 158 days below the published season (0 from the rulebook, 158 published). He played 131 major-league games, more than the rulebook credited, so a roster row may be missing. The published days stay until that is cleared.
+- Alfredo Amezaga 2010: rulebook 0, kept 42. 2010 is 42 days below the published season (0 from the rulebook, 42 published).
+- Alfredo Simon 2012: rulebook 0, kept 172. 2012 is 172 days below the published season (0 from the rulebook, 172 published). He played 36 major-league games, more than the rulebook credited, so a roster row may be missing. The published days stay until that is cleared.
+- Alfredo Simon 2013: rulebook 0, kept 172. 2013 is 172 days below the published season (0 from the rulebook, 172 published). He played 63 major-league games, more than the rulebook credited, so a roster row may be missing. The published days stay until that is cleared.
+- Alfredo Simon 2014: rulebook 0, kept 172. 2014 is 172 days below the published season (0 from the rulebook, 172 published). He played 32 major-league games, more than the rulebook credited, so a roster row may be missing. The published days stay until that is cleared.
+- Anderson Tejeda 2020: rulebook 100, kept 101. 2020 is 1 days below the published season (100 from the rulebook, 101 published).
+- Andrew Bailey 2014: rulebook 0, kept 3. 2014 is 3 days below the published season (0 from the rulebook, 3 published).
+- Andrew Knapp 2022: rulebook 65, kept 73. 2022 is 8 days below the published season (65 from the rulebook, 73 published).
+- Andrew McCutchen 2025: rulebook 0, kept 172. 2025 is 172 days below the published season (0 from the rulebook, 172 published). He played 135 major-league games, more than the rulebook credited, so a roster row may be missing. The published days stay until that is cleared.
+- Andrew McKirahan 2015: rulebook 85, kept 91. 2015 is 6 days below the published season (85 from the rulebook, 91 published). An unclassified restricted-list row falls in this season, so those days are not credited yet.
+- Andrew Young 2020: rulebook 69, kept 70. 2020 is 1 days below the published season (69 from the rulebook, 70 published).
+- Andy González 2008: rulebook 0, kept 158. 2008 is 158 days below the published season (0 from the rulebook, 158 published). He played 10 major-league games, more than the rulebook credited, so a roster row may be missing. The published days stay until that is cleared.
+- Andy Pettitte 2012: rulebook 144, kept 148. 2012 is 4 days below the published season (144 from the rulebook, 148 published).
+- Angel Sanchez 2010: rulebook 4, kept 97. 2010 is 93 days below the published season (4 from the rulebook, 97 published). He played 66 major-league games, more than the rulebook credited, so a roster row may be missing. The published days stay until that is cleared.
+- Anthony Banda 2020: rulebook 128, kept 130. 2020 is 2 days below the published season (128 from the rulebook, 130 published).
+- Anthony Bemboom 2019: rulebook 107, kept 116. 2019 is 9 days below the published season (107 from the rulebook, 116 published).
+- 604 more in data/rulebook/holds.json.
+
+## Restricted list still unclassified
+
+24 rows for 22 current roster players. They earn no service until someone classifies them. If that makes a season lower than the published figure, the season is in Holds.
+
+- Angel Chivilli 2025-08-08: Colorado Rockies placed RHP Angel Chivilli on the restricted list.
+- Aroldis Chapman 2016-04-03: New York Yankees placed LHP Aroldis Chapman on the restricted list.
+- Braydon Fisher 2026-07-27: Toronto Blue Jays placed RHP Braydon Fisher on the restricted list.
+- Carmen Mlodzinski 2026-05-31: Pittsburgh Pirates placed RHP Carmen Mlodzinski on the restricted list.
+- Eduardo Rivera 2026-08-17: Boston Red Sox placed LHP Eduardo Rivera on the restricted list.
+- Eduardo Rodriguez 2022-06-13: Detroit Tigers placed LHP Eduardo Rodriguez on the restricted list.
+- Freddie Freeman 2024-08-03: Los Angeles Dodgers placed 1B Freddie Freeman on the restricted list.
+- Huascar Brazobán 2024-03-26: Miami Marlins placed RHP Huascar Brazoban on the restricted list.
+- James Karinchak 2022-08-12: Cleveland Guardians placed RHP James Karinchak on the restricted list.
+- Jimmy Herget 2026-04-26: Colorado Rockies placed RHP Jimmy Herget on the restricted list.
+- Jorge Polanco 2018-03-18: Minnesota Twins placed SS Jorge Polanco on the restricted list.
+- José Soriano 2025-08-23: Los Angeles Angels placed RHP José Soriano on the restricted list.
+- Ketel Marte 2025-07-18: Arizona Diamondbacks placed 2B Ketel Marte on the restricted list.
+- Ketel Marte 2026-08-17: Arizona Diamondbacks placed 2B Ketel Marte on the restricted list.
+- Logan Webb 2019-05-01: San Francisco Giants placed RHP Logan Webb on the restricted list.
+- Noelvi Marte 2024-03-08: Cincinnati Reds placed SS Noelvi Marte on the restricted list.
+- Ryan Helsley 2022-08-22: St. Louis Cardinals placed RHP Ryan Helsley on the restricted list.
+- Salvador Perez 2013-06-02: Kansas City Royals placed C Salvador Perez on the restricted list.
+- Shelby Miller 2020-08-03: Milwaukee Brewers placed RHP Shelby Miller on the restricted list.
+- Teoscar Hernández 2022-09-10: Toronto Blue Jays placed LF Teoscar Hernandez on the restricted list.
+- Trevor Megill 2023-09-29: Milwaukee Brewers placed RHP Trevor Megill on the restricted list.
+- Will Wagner 2025-07-26: Toronto Blue Jays placed 3B Will Wagner on the restricted list.
+- Yandy Díaz 2024-07-20: Tampa Bay Rays placed 3B Yandy Díaz on the restricted list.
+- Yandy Díaz 2025-05-13: Tampa Bay Rays placed 1B Yandy Díaz on the restricted list.
+
+## Pre-2012 designation window
+
+1106 seasons use that window. The length is unknown, so each one is listed.
+
+- Aaron Laffey 2011.
+- Aaron Rowand 2001.
+- Aaron Rowand 2002.
+- Aaron Rowand 2003.
+- Aaron Rowand 2004.
+- Aaron Rowand 2005.
+- Aaron Rowand 2006.
+- Aaron Rowand 2007.
+- Aaron Rowand 2008.
+- Aaron Rowand 2009.
+- Aaron Rowand 2010.
+- Aaron Rowand 2011.
+- Adam Everett 2010.
+- Adam Everett 2011.
+- Adam Russell 2010.
+- Adam Russell 2011.
+- Adam Stern 2010.
+- Akinori Iwamura 2007.
+- Akinori Iwamura 2008.
+- Akinori Iwamura 2009.
+- 1086 more.
+

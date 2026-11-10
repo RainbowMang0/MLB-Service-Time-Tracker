@@ -634,6 +634,30 @@ def _opens(hit: Hit) -> bool:
     return False
 
 
+def _spring_dfa_kept(rows, dfa_day: dt.date, opener: dt.date) -> bool:
+    """True when a non-optioned spring designation is back on an active
+    roster or a major-league injured list by Opening Day.
+
+    A claim, a trade, an activation, or an injured-list placement by that
+    morning counts. An option, outright, or release does not.
+    """
+    status = None
+    for day, _raw, hit in rows:
+        if hit is None or day <= dfa_day or day > opener:
+            continue
+        if hit.id in {"stop.option", "stop.outright", "stop.released", "stop.free-agency"}:
+            status = "out"
+        elif (
+            hit.id in {"neutral.trade", "neutral.claim"}
+            or "trade" in hit.tags
+            or "claim" in hit.tags
+            or hit.effect == "start"
+            or ("il" in hit.tags and hit.effect == "count_away")
+        ):
+            status = "kept"
+    return status == "kept"
+
+
 def _returns_to_roster(hit: Hit) -> bool:
     """A recall, selection, activation, or signing. An injured-list row is not one."""
     return hit.effect == "start"
@@ -1063,9 +1087,14 @@ def evaluate(
             window, window_id = _dfa_days(day.year, book, ruleset)
             limit = day + dt.timedelta(days=window - 1)
             opener = calendar.next_opener_after(day, club_on(day))
-            # A designation before this club's opener does not earn Opening Day.
-            if opener is not None and day < opener:
+            # A spring designation earns Opening Day only when he was not
+            # already optioned and a claim, trade, or injured-list placement
+            # has him on a major-league roster by that morning.
+            if opener is not None and day < opener and (on_option or not _spring_dfa_kept(rows, day, opener)):
                 limit = min(limit, opener - dt.timedelta(days=1))
+            elif opener is not None and day < opener and limit < opener:
+                limit = opener
+                span_rules.add("accrual.spring-dfa-rostered")
             dfa_until = limit
             span_rules.add(dfa_rule)
             span_rules.add(window_id)
@@ -1207,6 +1236,7 @@ def evaluate(
     txn_years = {day.year for day, _row, _hit in rows}
 
     seasons = []
+    review_flags = []
     total = 0
     all_ranges = []
     option_days: dict[int, int] = {}
@@ -1306,6 +1336,12 @@ def evaluate(
             season_rules.append("accrual.shortened-2020")
         if year == 2022 and "accrual.lockout-2022" not in season_rules:
             season_rules.append("accrual.lockout-2022")
+        if "accrual.dfa-window-pre2012" in season_rules:
+            review_flags.append({
+                "year": year,
+                "rule": "accrual.dfa-window-pre2012",
+                "reason": "This season uses the pre-2012 designation window, and that length is unknown.",
+            })
         total += credited
         ranged = []
         for lo, hi, rules in pieces + credit_pieces:
@@ -1374,6 +1410,7 @@ def evaluate(
         "ambiguous": ambiguous,
         "boundaries": boundaries,
         "appearance_review": appearance_review,
+        "review_flags": review_flags,
     }
     result["sanity"] = sanity_errors(result, cap=cap, full_year=full_year, ruleset=ruleset)
     return result

@@ -848,6 +848,49 @@ def test_fix_round_cases():
     check("sanity catches service after free agency", any("free agency" in item for item in rb.sanity_errors(broken)))
 
 
+def test_owner_dfa_decisions():
+    calendar = cal(season(2024, "2024-03-28", "2024-04-10"))
+    kept = run(
+        [
+            txn("2023-06-01", "SE", "Yankees selected the contract of X.", to=NYY),
+            txn("2024-03-20", "DES", "Yankees designated X for assignment.", frm=NYY),
+            txn("2024-03-25", "SC", "Yankees placed X on the 10-day injured list.", to=NYY),
+        ],
+        calendar, "2023-06-01", "2024-04-12",
+    )
+    check("a non-optioned spring designation on the injured list earns Opening Day", days_of(kept, 2024) > 0)
+    claimed = run(
+        [
+            txn("2023-06-01", "SE", "Yankees selected the contract of X.", to=NYY),
+            txn("2024-03-20", "DES", "Yankees designated X for assignment.", frm=NYY),
+            txn("2024-03-22", "CLW", "Dodgers claimed X off waivers from the Yankees.", frm=NYY, to=LAD),
+        ],
+        calendar, "2023-06-01", "2024-04-12",
+    )
+    check("a spring designation that is claimed earns Opening Day", days_of(claimed, 2024) > 0)
+    optioned = run(
+        [
+            txn("2024-03-01", "OPT", "Yankees optioned X to Scranton.", frm=NYY, to=531),
+            txn("2024-03-20", "DES", "Yankees designated X for assignment.", frm=NYY),
+        ],
+        calendar, "2023-06-01", "2024-04-12",
+    )
+    check("a spring designation of an optioned player does not earn Opening Day", days_of(optioned, 2024) == 0)
+    old = run(
+        [
+            txn("2010-04-05", "SE", "Yankees selected the contract of X.", to=NYY),
+            txn("2010-06-01", "DES", "Yankees designated X for assignment.", frm=NYY),
+        ],
+        cal(season(2010, "2010-04-05", "2010-10-03")),
+        "2010-04-05",
+        "2010-10-05",
+    )
+    check(
+        "a pre-2012 designation is flagged because the window length is unknown",
+        any(flag["year"] == 2010 for flag in old["review_flags"]),
+    )
+
+
 def main():
     print("Rule file")
     test_rule_file()
@@ -874,6 +917,8 @@ def main():
     test_every_rule_effect_is_stable_for_a_representative_row()
     print("Fix round")
     test_fix_round_cases()
+    print("Owner decisions")
+    test_owner_dfa_decisions()
     print(f"\n{PASS} passed, {FAIL} failed")
     return 1 if FAIL else 0
 
