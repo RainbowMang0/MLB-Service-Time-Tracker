@@ -74,56 +74,41 @@
     SUPER_TWO_MIN_DAYS = r.super_two_min_days;
   }
 
-  // --- club identity -------------------------------------------------------
-  // Keyed by MLB team id, which never changes; the NAMES do. The profile
-  // shards carry the club as it was called at the time ("Cleveland Indians",
-  // "Oakland Athletics") while the table's index carries the current name
-  // ("Cleveland Guardians", "Athletics"), so both spellings are listed and a
-  // renamed club keeps its color in a 2015 season row.
-  //
-  // Color is identity, never the only signal for anything: the club is named
-  // in text beside the stripe, several clubs share a navy, and nothing here
-  // encodes a quantity.
-  const CLUBS = {
-    108: { c: "#B8001E", n: ["Los Angeles Angels", "Los Angeles Angels of Anaheim"] },
-    109: { c: "#CB0033", n: ["Arizona Diamondbacks"] },
-    110: { c: "#D43400", n: ["Baltimore Orioles"] },
-    111: { c: "#F00032", n: ["Boston Red Sox"] },
-    112: { c: "#2264F9", n: ["Chicago Cubs"] },
-    113: { c: "#CC001D", n: ["Cincinnati Reds"] },
-    114: { c: "#325C91", n: ["Cleveland Guardians", "Cleveland Indians"] },
-    115: { c: "#772CE9", n: ["Colorado Rockies"] },
-    116: { c: "#EA5400", n: ["Detroit Tigers"] },
-    117: { c: "#FF942D", n: ["Houston Astros"] },
-    118: { c: "#068BFF", n: ["Kansas City Royals"] },
-    119: { c: "#0088F1", n: ["Los Angeles Dodgers"] },
-    120: { c: "#A00000", n: ["Washington Nationals"] },
-    121: { c: "#055FDB", n: ["New York Mets"] },
-    133: { c: "#006E61", n: ["Athletics", "Oakland Athletics"] },
-    134: { c: "#EEA900", n: ["Pittsburgh Pirates"] },
-    135: { c: "#8B5420", n: ["San Diego Padres"] },
-    136: { c: "#009393", n: ["Seattle Mariners"] },
-    137: { c: "#FF5C1F", n: ["San Francisco Giants"] },
-    138: { c: "#E0003A", n: ["St. Louis Cardinals"] },
-    139: { c: "#8ECAFF", n: ["Tampa Bay Rays"] },
-    140: { c: "#5196FF", n: ["Texas Rangers"] },
-    141: { c: "#62A6FF", n: ["Toronto Blue Jays"] },
-    142: { c: "#3680DC", n: ["Minnesota Twins"] },
-    143: { c: "#FF102A", n: ["Philadelphia Phillies"] },
-    144: { c: "#EE0048", n: ["Atlanta Braves"] },
-    145: { c: "#6B6862", n: ["Chicago White Sox"] },
-    146: { c: "#00B2F7", n: ["Miami Marlins"] },
-    147: { c: "#0037C4", n: ["New York Yankees"] },
-    158: { c: "#FFC900", n: ["Milwaukee Brewers"] },
+  // Colors keyed by club id. Names live in one Python module and arrive on
+  // the index as teams / team_ids. Color is never the only signal: the club
+  // is named in text beside the stripe, and nothing here encodes a quantity.
+  const CLUB_COLORS = {
+    108: "#B8001E",
+    109: "#CB0033",
+    110: "#D43400",
+    111: "#F00032",
+    112: "#2264F9",
+    113: "#CC001D",
+    114: "#325C91",
+    115: "#772CE9",
+    116: "#EA5400",
+    117: "#FF942D",
+    118: "#068BFF",
+    119: "#0088F1",
+    120: "#A00000",
+    121: "#055FDB",
+    133: "#006E61",
+    134: "#EEA900",
+    135: "#8B5420",
+    136: "#009393",
+    137: "#FF5C1F",
+    138: "#E0003A",
+    139: "#8ECAFF",
+    140: "#5196FF",
+    141: "#62A6FF",
+    142: "#3680DC",
+    143: "#FF102A",
+    144: "#EE0048",
+    145: "#6B6862",
+    146: "#00B2F7",
+    147: "#0037C4",
+    158: "#FFC900",
   };
-
-  const CLUB_BY_NAME = (() => {
-    const map = new Map();
-    Object.keys(CLUBS).forEach((id) => {
-      CLUBS[id].n.forEach((name) => map.set(name, CLUBS[id].c));
-    });
-    return map;
-  })();
 
   // The dark-theme twin. Small now: the palette below already sits in a
   // mid-lightness band, where it used to be full of near-black navies that
@@ -197,6 +182,7 @@
    */
   function hydrate(payload) {
     const teams = payload.teams || [];
+    const teamIds = payload.team_ids || [];
     const positions = payload.positions || [];
     return (payload.players || []).map((row) => {
       const [id, name, teamIx, posIx, days, on40, missing, superTwoFlag, hasPage] = row;
@@ -216,6 +202,7 @@
         id,
         name,
         team: teams[teamIx] || null,
+        team_id: teamIds[teamIx] == null ? null : teamIds[teamIx],
         position: positions[posIx] || null,
         service_time: `${years}.${String(rem).padStart(3, "0")}`,
         service_days_total: days,
@@ -703,7 +690,7 @@
         // A club is only published for a rostered player (a retired man's
         // stored club is stale by construction), so the stripe appears on
         // exactly the rows that assert one.
-        const club = p.on_40_man ? CLUB_BY_NAME.get(p.team) : null;
+        const club = p.on_40_man ? CLUB_COLORS[p.team_id] : null;
         const href = playerHref(p);
         return `
         <tr>
@@ -994,10 +981,7 @@
       }
 
       const clubIds = season.t || [];
-      const club = clubIds.length
-        ? CLUB_BY_NAME.get(teams[String(clubIds[clubIds.length - 1])]) ||
-          (CLUBS[clubIds[clubIds.length - 1]] || {}).c
-        : null;
+      const club = clubIds.length ? CLUB_COLORS[clubIds[clubIds.length - 1]] : null;
       const clubNames = clubIds
         .map((id) => teams[String(id)] || `Club ${id}`)
         .join(", ");

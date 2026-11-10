@@ -1,7 +1,9 @@
 """The 30 major league clubs, for display.
 
-Ids are stable. The Athletics' move changed the club's name, not its id.
-Names are the ones the site already uses. Nothing here is a service-time rule.
+Ids are stable. A rename or a move changes the club's name, not its id.
+CLUB_NAMES is the one name the site shows for that id, including seasons
+played under an older name. This module does not keep a historical name.
+Nothing here is a service-time rule.
 """
 
 from __future__ import annotations
@@ -104,18 +106,94 @@ def involves_mlb_club(row: dict, mlb_ids: frozenset[int] | set[int] = MLB_CLUB_I
     return any(i in mlb_ids for i in ids)
 
 
+def _club_id(team_id) -> int | None:
+    if isinstance(team_id, bool) or team_id is None:
+        return None
+    if isinstance(team_id, int):
+        return team_id
+    try:
+        return int(team_id)
+    except (TypeError, ValueError):
+        return None
+
+
 def club_name(team_id: int | None, team_names: dict | None = None, *, short: bool = False) -> str:
-    """Our name for a club. `team_names` wins when the page already resolved it."""
-    if team_id is None:
+    """The site's name for a club id.
+
+    A known id always uses CLUB_NAMES (CLUB_SHORT when asked). `team_names`
+    cannot rename it; that argument is only a fallback for an id this module
+    does not know. One name per id, including seasons from before a rename.
+    """
+    tid = _club_id(team_id)
+    if tid is None:
         return "a major league club"
-    if team_names:
-        found = team_names.get(team_id) or team_names.get(str(team_id))
-        if found and not short:
+    if tid in CLUB_NAMES:
+        if short:
+            return CLUB_SHORT.get(tid, CLUB_NAMES[tid])
+        return CLUB_NAMES[tid]
+    if team_names and not short:
+        found = team_names.get(tid) or team_names.get(str(tid))
+        if found:
             return str(found)
-    if short:
-        return CLUB_SHORT.get(team_id, CLUB_NAMES.get(team_id, "Club"))
-    return CLUB_NAMES.get(team_id, "a major league club")
+    return "Club" if short else "a major league club"
+
+
+def name_for_record(team_id, stored: str | None = None) -> str:
+    """Display name for one stored player row.
+
+    A known club id uses CLUB_NAMES even when `stored` is an older name from
+    the feed. An unknown id keeps `stored`.
+    """
+    tid = _club_id(team_id)
+    if tid in CLUB_NAMES:
+        return CLUB_NAMES[tid]
+    return stored or ""
+
+
+def ids_for_display_names(names: list[str]) -> list[int | None]:
+    """Club ids parallel to display names. An empty or unknown name is None."""
+    by_name = {name: tid for tid, name in CLUB_NAMES.items()}
+    return [by_name.get(name) if name else None for name in names]
 
 
 def the_club(team_id: int | None, team_names: dict | None = None) -> str:
     return f"the {club_name(team_id, team_names)}"
+
+
+# Sheet order is the alphabetical order of the current names. Abbreviations
+# are navigation labels, not a second name list. Fixed, not read off today's
+# roster: the menu must not depend on build-time roster data to list a club.
+_SHEET_ABBR = (
+    (109, "ARI"),
+    (144, "ATL"),
+    (133, "ATH"),
+    (110, "BAL"),
+    (111, "BOS"),
+    (112, "CHC"),
+    (145, "CWS"),
+    (113, "CIN"),
+    (114, "CLE"),
+    (115, "COL"),
+    (116, "DET"),
+    (117, "HOU"),
+    (118, "KC"),
+    (108, "LAA"),
+    (119, "LAD"),
+    (146, "MIA"),
+    (158, "MIL"),
+    (142, "MIN"),
+    (121, "NYM"),
+    (147, "NYY"),
+    (143, "PHI"),
+    (134, "PIT"),
+    (135, "SD"),
+    (137, "SF"),
+    (136, "SEA"),
+    (138, "STL"),
+    (139, "TB"),
+    (140, "TEX"),
+    (141, "TOR"),
+    (120, "WSH"),
+)
+
+CLUB_ABBR = tuple((CLUB_NAMES[team_id], abbr) for team_id, abbr in _SHEET_ABBR)

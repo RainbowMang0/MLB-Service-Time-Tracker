@@ -36,7 +36,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from career_moves import build_moves  # noqa: E402
 import injury_labels  # noqa: E402
 from il_stints import SeasonWindows, build_stints  # noqa: E402
-from mlb_clubs import MLB_CLUB_IDS  # noqa: E402
+from mlb_clubs import CLUB_NAMES, MLB_CLUB_IDS  # noqa: E402
 import player_sections  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -279,11 +279,14 @@ def store_bytes(root: pathlib.Path | None = None) -> int:
 
 
 def team_names_from_db(db: dict) -> dict[int, str]:
-    names: dict[int, str] = {}
-    for record in db.values():
-        if record.get("team_id") and record.get("team"):
-            names[int(record["team_id"])] = record["team"]
-    return names
+    """Canonical club names. Stored `team` strings are not a second table.
+
+    `db` stays in the signature so callers do not change. The database mixes
+    the current name and a former name for one id, and the last row used to win.
+    """
+    if not isinstance(db, dict):
+        raise TypeError(db)
+    return dict(CLUB_NAMES)
 
 
 def fetch_compact(

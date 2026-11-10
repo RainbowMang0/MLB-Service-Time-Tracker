@@ -48,6 +48,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
 import alumni_sections  # noqa: E402
 import cba  # noqa: E402
+from mlb_clubs import CLUB_ABBR, CLUB_NAMES, name_for_record  # noqa: E402
 import options as option_years  # noqa: E402
 import player_sections  # noqa: E402
 import salary_estimates  # noqa: E402
@@ -147,31 +148,6 @@ NAV = [
     ("about.html", None, "About", {"small"}),
     ("neutrality.html", None, "Neutrality", {"small"}),
     ("privacy.html", None, "Privacy", {"small"}),
-]
-
-# All 30 clubs, by abbreviation, for the sheet's club grid. A fixed list
-# rather than something derived from today's roster: every club keeps a
-# 40-man roster year-round, so the two agree in practice, but the menu is
-# core navigation and must not depend on build-time roster data to list a
-# league that has not changed size since 2024-25. club_path() (below) turns
-# the full name into the same slug the club's own page is written to, so a
-# club rename is still a one-place fix.
-CLUB_ABBR = [
-    ("Arizona Diamondbacks", "ARI"), ("Atlanta Braves", "ATL"),
-    ("Athletics", "ATH"), ("Baltimore Orioles", "BAL"),
-    ("Boston Red Sox", "BOS"), ("Chicago Cubs", "CHC"),
-    ("Chicago White Sox", "CWS"), ("Cincinnati Reds", "CIN"),
-    ("Cleveland Guardians", "CLE"), ("Colorado Rockies", "COL"),
-    ("Detroit Tigers", "DET"), ("Houston Astros", "HOU"),
-    ("Kansas City Royals", "KC"), ("Los Angeles Angels", "LAA"),
-    ("Los Angeles Dodgers", "LAD"), ("Miami Marlins", "MIA"),
-    ("Milwaukee Brewers", "MIL"), ("Minnesota Twins", "MIN"),
-    ("New York Mets", "NYM"), ("New York Yankees", "NYY"),
-    ("Philadelphia Phillies", "PHI"), ("Pittsburgh Pirates", "PIT"),
-    ("San Diego Padres", "SD"), ("San Francisco Giants", "SF"),
-    ("Seattle Mariners", "SEA"), ("St. Louis Cardinals", "STL"),
-    ("Tampa Bay Rays", "TB"), ("Texas Rangers", "TEX"),
-    ("Toronto Blue Jays", "TOR"), ("Washington Nationals", "WSH"),
 ]
 
 _BRAND_SVG = (
@@ -615,7 +591,7 @@ def _club_phrase(player: dict) -> str:
     Atlanta Braves" on every one of them, asserting a roster spot none of them
     holds.
     """
-    club = player.get("team")
+    club = name_for_record(player.get("team_id"), player.get("team") or "")
     if not club:
         return ""
     return f"with {club}" if player.get("on_40_man") else f"last with {club}"
@@ -697,7 +673,12 @@ def _season_rows(player: dict, team_names: dict[int, str]) -> str:
         if days == 0 and not season.get("t"):
             continue  # evidence-free padding; see trimLeadingEmpty in app.js
         clubs = ", ".join(
-            html.escape(team_names.get(int(t), f"Club {t}")) for t in (season.get("t") or [])
+            html.escape(
+                CLUB_NAMES.get(int(t))
+                or team_names.get(int(t))
+                or f"Club {t}"
+            )
+            for t in (season.get("t") or [])
         )
         rows.append(
             f"<tr><td>{season['y']}</td><td>{clubs or '—'}</td>"
@@ -1338,7 +1319,7 @@ def _jsonld(player: dict, name: str, url: str, service: str) -> str:
         "additionalProperty": props,
     }
     trail = [("Big League Service Time Tracker", f"{SITE_URL}/")]
-    club = player.get("team")
+    club = name_for_record(player.get("team_id"), player.get("team") or "")
     if club and player.get("on_40_man"):
         person["affiliation"] = {
             "@type": "SportsTeam",
@@ -1397,7 +1378,8 @@ def render(
     service = html.escape(player.get("service_time") or "0.000")
     url = f"{SITE_URL}/{page_path(player)}"
     desc = html.escape(_description(player))
-    club = html.escape(player.get("team") or "")
+    shown = name_for_record(player.get("team_id"), player.get("team") or "")
+    club = html.escape(shown)
     # Past tense for a former player -- see _club_phrase().
     club_label = club if not club else (
         club if player.get("on_40_man") else f"Last with {club}"
@@ -1453,7 +1435,7 @@ def render(
 
     trail: list[tuple[str, str | None]] = [("Players", "../")]
     if club and player.get("on_40_man"):
-        trail.append((club, f"../{club_path(player['team'])}"))
+        trail.append((club, f"../{club_path(shown)}"))
     elif not player.get("on_40_man"):
         # A published alumnus is not on any club page -- his stored club is
         # stale -- so the alumni directory is his one route back up, and the
@@ -2002,10 +1984,10 @@ def write_player_pages(
     if ever_published is None:
         ever_published = load_ever_published()
 
-    team_names: dict[int, str] = {}
-    for player in db.values():
-        if player.get("team_id") and player.get("team"):
-            team_names[int(player["team_id"])] = player["team"]
+    # One name per club id. Building this from stored `team` strings let the
+    # last row win, so a former name ("Cleveland Indians") labeled every
+    # season of that club, including the current one.
+    team_names = dict(CLUB_NAMES)
 
     published = sorted(
         (p for p in db.values() if _should_publish(p, ever_published)),
