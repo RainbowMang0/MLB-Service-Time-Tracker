@@ -1,7 +1,7 @@
 {
   "player_id": 682769,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:437e1be8eeb087160c89c439e51266783be5574ad6dd3c3285da08d4a7a97c46",
+  "fetched_at": "2026-11-10T19:25:05Z",
+  "checksum": "sha256:ae73137c05cbb3efe0ea946b03e0a150bee22c1c017d6aaaed5e1ad989261014",
   "transactions": [
     {
       "id": 366147,
@@ -902,6 +902,26 @@
       "typeCode": "OUT",
       "typeDesc": "Outrighted",
       "description": "Colorado Rockies sent RHP Eiberson Castellano outright to Albuquerque Isotopes."
+    },
+    {
+      "id": 949961,
+      "person": {
+        "id": 682769,
+        "fullName": "Eiberson Castellano",
+        "link": "/api/v1/people/682769",
+        "nameSlug": "eiberson-castellano-682769"
+      },
+      "toTeam": {
+        "id": 692,
+        "name": "Aguilas del Zulia",
+        "link": "/api/v1/teams/692"
+      },
+      "date": "2026-11-10",
+      "effectiveDate": "2026-11-10",
+      "resolutionDate": "2026-11-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Eiberson Castellano assigned to Aguilas del Zulia."
     }
   ]
 }

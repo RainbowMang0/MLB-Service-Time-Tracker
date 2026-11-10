@@ -1,7 +1,7 @@
 {
   "player_id": 691373,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:d0aca5d41aa242db8d0ff091da28cd38d527b1cf5e7af55f2a574dd74a0f8108",
+  "fetched_at": "2026-11-10T19:25:05Z",
+  "checksum": "sha256:808102d94b3692f6aad3c1ed186da1a5c506a07c5c222d649c4f94674e890309",
   "transactions": [
     {
       "id": 415866,
@@ -949,6 +949,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Pittsburgh Pirates recalled RF Jhostynxon Garcia from Indianapolis Indians."
+    },
+    {
+      "id": 949941,
+      "person": {
+        "id": 691373,
+        "fullName": "Jhostynxon Garcia",
+        "link": "/api/v1/people/691373",
+        "nameSlug": "jhostynxon-garcia-691373"
+      },
+      "toTeam": {
+        "id": 696,
+        "name": "Navegantes del Magallanes",
+        "link": "/api/v1/teams/696"
+      },
+      "date": "2026-11-10",
+      "effectiveDate": "2026-11-10",
+      "resolutionDate": "2026-11-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Jhostynxon Garcia assigned to Navegantes del Magallanes."
     }
   ]
 }

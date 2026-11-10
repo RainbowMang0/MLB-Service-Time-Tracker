@@ -1,6 +1,6 @@
 {
   "player_id": 605548,
-  "fetched_at": "2026-11-09T23:12:59Z",
+  "fetched_at": "2026-11-10T19:25:05Z",
   "checksum": "sha256:901282be654da7c67bd88703836fc0a6e09bcfbf957a35363c19befa6e499bf7",
   "transactions": [
     {
@@ -527,31 +527,6 @@
       "description": "Cleveland Indians sent CF Bradley Zimmer on a rehab assignment to AZL Indians Blue."
     },
     {
-      "id": 423598,
-      "person": {
-        "id": 605548,
-        "fullName": "Bradley Zimmer",
-        "link": "/api/v1/people/605548",
-        "nameSlug": "bradley-zimmer-605548"
-      },
-      "fromTeam": {
-        "id": 114,
-        "name": "Cleveland Guardians",
-        "link": "/api/v1/teams/114"
-      },
-      "toTeam": {
-        "id": 2770,
-        "name": "AZL Indians Red",
-        "link": "/api/v1/teams/2770"
-      },
-      "date": "2019-08-13",
-      "effectiveDate": "2019-08-13",
-      "resolutionDate": "2019-08-13",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "Cleveland Indians sent CF Bradley Zimmer on a rehab assignment to AZL Indians Red."
-    },
-    {
       "id": 423592,
       "person": {
         "id": 605548,
@@ -575,6 +550,31 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "Cleveland Indians sent CF Bradley Zimmer on a rehab assignment to AZL Indians Blue."
+    },
+    {
+      "id": 423598,
+      "person": {
+        "id": 605548,
+        "fullName": "Bradley Zimmer",
+        "link": "/api/v1/people/605548",
+        "nameSlug": "bradley-zimmer-605548"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 2770,
+        "name": "AZL Indians Red",
+        "link": "/api/v1/teams/2770"
+      },
+      "date": "2019-08-13",
+      "effectiveDate": "2019-08-13",
+      "resolutionDate": "2019-08-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Cleveland Indians sent CF Bradley Zimmer on a rehab assignment to AZL Indians Red."
     },
     {
       "id": 423936,
@@ -918,26 +918,6 @@
       "description": "Cleveland Indians recalled CF Bradley Zimmer from Columbus Clippers."
     },
     {
-      "id": 614845,
-      "person": {
-        "id": 605548,
-        "fullName": "Bradley Zimmer",
-        "link": "/api/v1/people/605548",
-        "nameSlug": "bradley-zimmer-605548"
-      },
-      "toTeam": {
-        "id": 141,
-        "name": "Toronto Blue Jays",
-        "link": "/api/v1/teams/141"
-      },
-      "date": "2022-04-08",
-      "effectiveDate": "2022-04-08",
-      "resolutionDate": "2022-04-08",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "Toronto Blue Jays activated CF Bradley Zimmer."
-    },
-    {
       "id": 614190,
       "person": {
         "id": 605548,
@@ -959,6 +939,26 @@
     },
     {
       "id": 615384,
+      "person": {
+        "id": 605548,
+        "fullName": "Bradley Zimmer",
+        "link": "/api/v1/people/605548",
+        "nameSlug": "bradley-zimmer-605548"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2022-04-08",
+      "effectiveDate": "2022-04-08",
+      "resolutionDate": "2022-04-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays activated CF Bradley Zimmer."
+    },
+    {
+      "id": 614845,
       "person": {
         "id": 605548,
         "fullName": "Bradley Zimmer",
@@ -1189,26 +1189,6 @@
       "description": "CF Bradley Zimmer elected free agency."
     },
     {
-      "id": 671733,
-      "person": {
-        "id": 605548,
-        "fullName": "Bradley Zimmer",
-        "link": "/api/v1/people/605548",
-        "nameSlug": "bradley-zimmer-605548"
-      },
-      "toTeam": {
-        "id": 119,
-        "name": "Los Angeles Dodgers",
-        "link": "/api/v1/teams/119"
-      },
-      "date": "2022-12-17",
-      "effectiveDate": "2022-12-17",
-      "resolutionDate": "2022-12-17",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "CF Bradley Zimmer roster status changed by Los Angeles Dodgers."
-    },
-    {
       "id": 663907,
       "person": {
         "id": 605548,
@@ -1250,6 +1230,26 @@
     },
     {
       "id": 667994,
+      "person": {
+        "id": 605548,
+        "fullName": "Bradley Zimmer",
+        "link": "/api/v1/people/605548",
+        "nameSlug": "bradley-zimmer-605548"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2022-12-17",
+      "effectiveDate": "2022-12-17",
+      "resolutionDate": "2022-12-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "CF Bradley Zimmer roster status changed by Los Angeles Dodgers."
+    },
+    {
+      "id": 671733,
       "person": {
         "id": 605548,
         "fullName": "Bradley Zimmer",
@@ -1453,26 +1453,6 @@
       "description": "CF Bradley Zimmer elected free agency."
     },
     {
-      "id": 741386,
-      "person": {
-        "id": 605548,
-        "fullName": "Bradley Zimmer",
-        "link": "/api/v1/people/605548",
-        "nameSlug": "bradley-zimmer-605548"
-      },
-      "toTeam": {
-        "id": 342,
-        "name": "Albuquerque Isotopes",
-        "link": "/api/v1/teams/342"
-      },
-      "date": "2024-02-05",
-      "effectiveDate": "2024-02-05",
-      "resolutionDate": "2024-02-05",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "CF Bradley Zimmer assigned to Albuquerque Isotopes."
-    },
-    {
       "id": 741557,
       "person": {
         "id": 605548,
@@ -1511,6 +1491,26 @@
       "typeCode": "SFA",
       "typeDesc": "Signed as Free Agent",
       "description": "Colorado Rockies signed free agent CF Bradley Zimmer to a minor league contract."
+    },
+    {
+      "id": 741386,
+      "person": {
+        "id": 605548,
+        "fullName": "Bradley Zimmer",
+        "link": "/api/v1/people/605548",
+        "nameSlug": "bradley-zimmer-605548"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2024-02-05",
+      "effectiveDate": "2024-02-05",
+      "resolutionDate": "2024-02-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Bradley Zimmer assigned to Albuquerque Isotopes."
     },
     {
       "id": 756973,

@@ -1,7 +1,7 @@
 {
   "player_id": 699912,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:5ea2088848e431c7a1d230c13635f08686a47505f3ca169d2dc35873b438af35",
+  "fetched_at": "2026-11-10T19:25:05Z",
+  "checksum": "sha256:90aa146571cc1f965022613b6f34d6e9188ba60d4c66a958727341952c7ef138",
   "transactions": [
     {
       "id": 470349,
@@ -784,6 +784,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Arizona Diamondbacks recalled DH Jose Fernandez from Reno Aces."
+    },
+    {
+      "id": 949957,
+      "person": {
+        "id": 699912,
+        "fullName": "Jose Fernandez",
+        "link": "/api/v1/people/699912",
+        "nameSlug": "jose-fernandez-699912"
+      },
+      "toTeam": {
+        "id": 694,
+        "name": "Caribes de Anzoategui",
+        "link": "/api/v1/teams/694"
+      },
+      "date": "2026-11-10",
+      "effectiveDate": "2026-11-10",
+      "resolutionDate": "2026-11-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "DH Jose Fernandez assigned to Caribes de Anzoategui."
     }
   ]
 }

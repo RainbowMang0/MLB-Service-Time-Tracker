@@ -1,7 +1,7 @@
 {
   "player_id": 657675,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:0cb603fd4e4d1e3af74ecbb4b4ffab575894bec060d98e924e3d46a2717ccdb4",
+  "fetched_at": "2026-11-10T19:25:05Z",
+  "checksum": "sha256:79ef8e7c628643eaff6e000ad3feb9f320d4db98d8797376982de83b8b40b587",
   "transactions": [
     {
       "id": 203599,
@@ -1625,6 +1625,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RF Rudy Martin Jr. elected free agency."
+    },
+    {
+      "id": 949952,
+      "person": {
+        "id": 657675,
+        "fullName": "Rudy Martin Jr.",
+        "link": "/api/v1/people/657675",
+        "nameSlug": "rudy-martin-jr-657675"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2026-11-10",
+      "effectiveDate": "2026-11-10",
+      "resolutionDate": "2026-11-10",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Toronto Blue Jays signed free agent RF Rudy Martin Jr. to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 949953,
+      "person": {
+        "id": 657675,
+        "fullName": "Rudy Martin Jr.",
+        "link": "/api/v1/people/657675",
+        "nameSlug": "rudy-martin-jr-657675"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2026-11-10",
+      "effectiveDate": "2026-11-10",
+      "resolutionDate": "2026-11-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Rudy Martin Jr. assigned to Buffalo Bisons."
     }
   ]
 }

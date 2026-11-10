@@ -1,7 +1,7 @@
 {
   "player_id": 681751,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:3421978bf09f55ea52606fda694df7b3415d54643733c0dcf67b0181d78c4eb1",
+  "fetched_at": "2026-11-10T19:25:05Z",
+  "checksum": "sha256:f0effc5bf867002d0b1e6458de9cf65380582d81fd40fe4b248c498ea9428ed4",
   "transactions": [
     {
       "id": 357533,
@@ -1384,6 +1384,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Buffalo Bisons activated RHP Lazaro Estrada."
+    },
+    {
+      "id": 949951,
+      "person": {
+        "id": 681751,
+        "fullName": "Lazaro Estrada",
+        "link": "/api/v1/people/681751",
+        "nameSlug": "lazaro-estrada-681751"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2026-11-10",
+      "effectiveDate": "2026-11-10",
+      "resolutionDate": "2026-11-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Toronto Blue Jays invited non-roster RHP Lazaro Estrada to spring training."
     }
   ]
 }

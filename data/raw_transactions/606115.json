@@ -1,7 +1,7 @@
 {
   "player_id": 606115,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:32f9be623de0a906b49c334c7705e372638bf856c6533312fda83d92136b3947",
+  "fetched_at": "2026-11-10T19:25:05Z",
+  "checksum": "sha256:2b5ab504f73654496c372f8eaa130a1cc2b2377e566dfcf8ece141df4b2e10ea",
   "transactions": [
     {
       "id": 370842,
@@ -1474,6 +1474,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "SS Orlando Arcia elected free agency."
+    },
+    {
+      "id": 949963,
+      "person": {
+        "id": 606115,
+        "fullName": "Orlando Arcia",
+        "link": "/api/v1/people/606115",
+        "nameSlug": "orlando-arcia-606115"
+      },
+      "toTeam": {
+        "id": 694,
+        "name": "Caribes de Anzoategui",
+        "link": "/api/v1/teams/694"
+      },
+      "date": "2026-11-10",
+      "effectiveDate": "2026-11-10",
+      "resolutionDate": "2026-11-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Caribes de Anzoategui activated SS Orlando Arcia."
+    },
+    {
+      "id": 949956,
+      "person": {
+        "id": 606115,
+        "fullName": "Orlando Arcia",
+        "link": "/api/v1/people/606115",
+        "nameSlug": "orlando-arcia-606115"
+      },
+      "toTeam": {
+        "id": 694,
+        "name": "Caribes de Anzoategui",
+        "link": "/api/v1/teams/694"
+      },
+      "date": "2026-11-10",
+      "effectiveDate": "2026-11-10",
+      "resolutionDate": "2026-11-10",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Caribes de Anzoategui signed free agent SS Orlando Arcia."
     }
   ]
 }

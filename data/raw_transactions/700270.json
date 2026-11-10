@@ -1,7 +1,7 @@
 {
   "player_id": 700270,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:f9b73dbdb883721aabbf59ddf1534b72de8af0a9461d810e63b87535e00b884d",
+  "fetched_at": "2026-11-10T19:25:05Z",
+  "checksum": "sha256:d329e9711b993dae88517993de4650a760f216689853339724bc34b7ab65e3a0",
   "transactions": [
     {
       "id": 476632,
@@ -869,6 +869,26 @@
       "typeCode": "OUT",
       "typeDesc": "Outrighted",
       "description": "Detroit Tigers sent RHP Yilber Díaz outright to Toledo Mud Hens."
+    },
+    {
+      "id": 949955,
+      "person": {
+        "id": 700270,
+        "fullName": "Yilber Díaz",
+        "link": "/api/v1/people/700270",
+        "nameSlug": "yilber-diaz-700270"
+      },
+      "toTeam": {
+        "id": 694,
+        "name": "Caribes de Anzoategui",
+        "link": "/api/v1/teams/694"
+      },
+      "date": "2026-11-10",
+      "effectiveDate": "2026-11-10",
+      "resolutionDate": "2026-11-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yilber Díaz assigned to Caribes de Anzoategui."
     }
   ]
 }

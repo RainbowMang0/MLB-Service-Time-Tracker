@@ -1,7 +1,7 @@
 {
   "player_id": 546276,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:b55481c564bf98cf554556a5ad7c44e6bcabc2ba3efb212e13fd7734bd443f14",
+  "fetched_at": "2026-11-10T19:25:05Z",
+  "checksum": "sha256:0f2bd1bed00b50c7b4fb1ad149a4e7eb109925c3ca13bf767d2aef4ceecdd451",
   "transactions": [
     {
       "id": 11854,
@@ -1371,6 +1371,26 @@
       "date": "2026-10-13",
       "effectiveDate": "2026-10-13",
       "resolutionDate": "2026-10-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Edwin Escobar assigned to Cardenales de Lara."
+    },
+    {
+      "id": 949943,
+      "person": {
+        "id": 546276,
+        "fullName": "Edwin Escobar",
+        "link": "/api/v1/people/546276",
+        "nameSlug": "edwin-escobar-546276"
+      },
+      "toTeam": {
+        "id": 693,
+        "name": "Cardenales de Lara",
+        "link": "/api/v1/teams/693"
+      },
+      "date": "2026-11-10",
+      "effectiveDate": "2026-11-10",
+      "resolutionDate": "2026-11-10",
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "LHP Edwin Escobar assigned to Cardenales de Lara."
