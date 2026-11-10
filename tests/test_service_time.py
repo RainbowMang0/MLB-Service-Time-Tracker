@@ -1933,12 +1933,12 @@ def test_an_estimated_season_window_stops_the_run_from_publishing():
 
 def test_both_published_files_carry_the_cba_rules_block():
     """
-    docs/app.js falls back from index.json to service_time.json when a
-    deployment has not regenerated the index yet, and that fallback used to
-    leave every threshold null: applyRules() ran only on the array-shaped index
-    path. The meter then read 100% for every player, formatDays() returned
-    "Infinity.NaN", and the profile footer said "null days credit a full year".
-    A fallback that renders nonsense is worse than no fallback at all.
+    The table reads its thresholds from the rules block on the compact index.
+    applyRules() used to run only for that array-shaped file, so another
+    payload left every threshold null: the meter read 100% for every player
+    and formatDays() returned "Infinity.NaN". The homepage loads the index
+    only. A failed load shows an error instead of a sample roster or the
+    full database.
     """
     import update_service_time as u
 
@@ -1962,8 +1962,8 @@ def test_both_published_files_carry_the_cba_rules_block():
         "applyRules(data);" in app,
     )
     check(
-        "the embedded sample carries its own thresholds",
-        "rules: {" in app,
+        "the homepage does not embed a sample or fetch the full database",
+        "Sample Player A" not in app and "service_time.json" not in app,
     )
 
 

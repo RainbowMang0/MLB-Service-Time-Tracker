@@ -56,7 +56,7 @@ html, body {
   --border:          rgba(255,255,255,0.10);
   --accent:          #3987e5;
   --accent-wash:     #16283d;
-  --status-good:     #0ca30c;
+  --status-good:     #22b422;
   --status-good-wash:#123512;
   --status-warning:  #fab219;
   --status-warning-wash: #3a2c0c;
@@ -122,11 +122,11 @@ html, body {
   --border:          rgba(11,11,11,0.10);
   --accent:          #2a78d6;
   --accent-wash:     #eaf2fc;
-  --status-good:     #0ca30c;
+  --status-good:     #0a7a0a;
   --status-good-wash:#e6f6e6;
-  --status-warning:  #b3790f;
+  --status-warning:  #8a5c0b;
   --status-warning-wash: #fdf1da;
-  --status-serious:  #c85a35;
+  --status-serious:  #9e4629;
   --status-serious-wash: #fbe6dc;
   --status-critical: #d03b3b;
   --glass-surface:   rgba(255,255,255,0.45);
@@ -261,19 +261,17 @@ html, body {
   -webkit-backdrop-filter: blur(14px) saturate(180%);
   color: var(--text-primary);
   border-radius: 999px;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   font-size: 1rem;
   cursor: pointer;
   flex: none;
-  box-shadow: 0 2px 10px var(--glass-shadow);
-}
-.theme-toggle:hover { border-color: var(--accent); }
-.theme-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 2px 10px var(--glass-shadow);
 }
+.theme-toggle:hover { border-color: var(--accent); }
 .theme-toggle .icon { width: 17px; height: 17px; }
 .icon-moon { fill: currentColor; stroke: none; }
 .icon-sun  { fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; }
@@ -505,7 +503,7 @@ html, body {
   background: var(--surface-1);
   color: var(--text-primary);
   cursor: pointer;
-  min-height: 40px; /* comfortable tap target on a tablet */
+  min-height: 44px;
 }
 
 .page-btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
@@ -801,7 +799,9 @@ tbody td.player-name { border-left-color: var(--club-d, var(--club, transparent)
 
 @media (max-width: 640px) {
   .page-header { flex-direction: row; align-items: center; }
-  .subtitle { display: none; }
+  .brand, .lockout-banner a, .sheet .site-links a, .profile-tab, .pp-section summary { min-height: 44px; min-width: 44px; }
+  .player-link, .home-lede a, .crumbs a, .page-footer a, .teammates a, .foot a, .list-links a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; max-width: 100%; }
+  #players-table thead th { padding-top: 16px; padding-bottom: 16px; }
   .page-header-inner h1 { font-size: 1.25rem; }
   .brand-mark { width: 24px; height: 24px; }
   .svc-col { min-width: 96px; }
@@ -841,8 +841,8 @@ tbody td.player-name { border-left-color: var(--club-d, var(--club, transparent)
   /* Five stacked full-width controls was 218px of filters above the data.
      Search stays full width; the four selects pair up. */
   .controls { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-  #search-input { grid-column: 1 / -1; min-width: 0; }
-  .controls select { min-width: 0; width: 100%; font-size: 0.85rem; padding: 7px 8px; }
+  #search-input { grid-column: 1 / -1; min-width: 0; min-height: 44px; }
+  .controls select { min-width: 0; width: 100%; font-size: 0.85rem; padding: 7px 8px; min-height: 44px; }
 }
 
 /* --- player profile ----------------------------------------------------- */
@@ -929,7 +929,7 @@ body.profile-open { overflow: hidden; }
   font-size: 1.6rem;
   line-height: 1;
   color: var(--text-muted);
-  cursor: pointer;
+  cursor: pointer; display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px;
 }
 .profile-close:hover { color: var(--text-primary); }
 
@@ -1433,7 +1433,7 @@ summary.icon-btn::-webkit-details-marker { display: none; }
   .tabs a { padding: 0 8px; font-size: 0.88rem; }
   .menu[open] .sheet { position: fixed; left: 0; right: 0; top: 57px; bottom: 0; width: auto; border-radius: 0; border: 0; border-top: 1px solid var(--border); overflow: auto; padding: 14px 14px 90px; }
   .sheet ul { grid-template-columns: 1fr; }
-  .sheet li a { padding: 13px 8px; font-size: 1rem; }
+  .sheet li a { padding: 13px 8px; font-size: 1rem; min-height: 44px; }
 }
 @media (min-width: 1024px) {
   .brand .brand-long { display: inline; }
@@ -1476,7 +1476,7 @@ summary.icon-btn::-webkit-details-marker { display: none; }
 }
 @media (max-width: 640px) {
   .site-foot-inner { grid-template-columns: 1fr 1fr; }
-  .site-foot a { min-height: 44px; display: flex; align-items: center; padding: 0; }
+  .site-foot a { min-height: 44px; min-width: 44px; display: flex; align-items: center; padding: 0; }
 }
 
 .stats-table th { white-space: nowrap; }
