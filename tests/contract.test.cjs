@@ -402,8 +402,8 @@ test("the published index still contains the duplicate names this guards against
 // Reachability
 // -------------------------------------------------------------------------
 
-test("the site header does not promote either unfinished tool", () => {
-  // History, because this line has moved three times and the reasons matter.
+test("the menu links the contract clock and still leaves duty days parked", () => {
+  // History, because this line has moved and the reasons matter.
   //
   // 2026-09-08: a site-wide link to these two was added, then reverted at the
   // owner's direction -- neither tool was finished, and pointing the site's
@@ -411,26 +411,24 @@ test("the site header does not promote either unfinished tool", () => {
   //
   // 2026-09-11: the owner asked for a navigation menu and chose "all five
   // sections, but mark the two". So the links came back BY DECISION, and the
-  // in-development tag was the condition attached to that decision. The test
-  // below then checked both halves together: the link may exist only while
-  // the marker does.
+  // in-development tag was the condition attached to that decision.
   //
-  // 2026-11-04: the owner shelved the contract clock and parked the duty-day
-  // page, and the new shared menu left both out entirely rather than relabel
-  // them. So the condition flips rather than disappears: the header must not
-  // link either one. Both pages stay live at their own URLs and keep their
-  // own old nav strip; what this pins is that the menu does not promote them
-  // from every page on the site.
+  // 2026-11-04: the shared menu left both out. Duty days stayed parked.
+  //
+  // 2026-11-10: the contract clock is in the sitemap and nothing else linked
+  // it, so the More sheet and the footer carry it. It is not a tab. Duty
+  // days stays off the menu; taxes.html keeps its old nav.
   const home = fs.readFileSync(path.join(ROOT, "docs/index.html"), "utf8");
   const header = /<header class="site-top"[\s\S]*?<\/header>/.exec(home);
   assert.ok(header, "homepage carries no site header");
-
-  for (const href of ["contract.html", "taxes.html"]) {
-    assert.ok(
-      !header[0].includes(href),
-      `the site header still promotes ${href}, which is shelved or parked`
-    );
-  }
+  assert.ok(
+    header[0].includes("contract.html"),
+    "the More sheet should link the contract clock"
+  );
+  assert.ok(
+    !header[0].includes("taxes.html"),
+    "the site header still promotes taxes.html, which is parked"
+  );
 });
 
 // -------------------------------------------------------------------------

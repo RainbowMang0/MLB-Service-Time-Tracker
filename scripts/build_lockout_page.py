@@ -72,6 +72,7 @@ from zoneinfo import ZoneInfo
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
+import page_titles  # noqa: E402
 import write_player_pages as wpp  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -729,9 +730,9 @@ def render(data: dict, now: dt.datetime) -> str:
     cba_expires_label = status["cba_expires_label"]
 
     desc = (
-        "Live tracker for the 2026 MLB CBA talks and expected lockout: "
-        f"countdown to the {cba_expires_label} expiry, sourced updates, and "
-        "what a lockout means for service time."
+        "2026 MLB CBA talks and the expected lockout. "
+        f"Countdown to {cba_expires_label}, sourced updates, and what a lockout "
+        "means for service time."
     )
 
     tiles = [_stat_tile(tile_value(status), "Status")]
@@ -743,7 +744,7 @@ def render(data: dict, now: dt.datetime) -> str:
     graph = [
         {
             "@type": "Article",
-            "headline": "MLB CBA Talks & 2026 Lockout Tracker",
+            "headline": page_titles.lockout_og(),
             "description": desc,
             "datePublished": "2026-10-31",
             "dateModified": updated.isoformat(),
@@ -780,16 +781,15 @@ def render(data: dict, now: dt.datetime) -> str:
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 {wpp.HEAD_TAGS}
-<title>MLB CBA Talks &amp; 2026 Lockout Tracker | Big League Service Time</title>
+<title>{html.escape(page_titles.lockout_title())}</title>
 
 <meta name="description" content="{html.escape(desc)}" />
 <meta name="theme-color" content="#0a0c10" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="MLB CBA Talks &amp; 2026 Lockout Tracker" />
+<meta property="og:title" content="{html.escape(page_titles.lockout_og())}" />
 <meta property="og:description" content="{html.escape(desc)}" />
 <link rel="canonical" href="{PAGE_URL}" />
 <meta property="og:url" content="{PAGE_URL}" />
-<meta name="twitter:card" content="summary" />
 {wpp._ld_script(graph)}
 
 <script>
@@ -1111,16 +1111,15 @@ def render_salary_cap(data: dict) -> str:
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 {wpp.HEAD_TAGS}
-<title>MLB Salary Cap &amp; Floor Proposal Explained (2027 CBA) | Big League Service Time Tracker</title>
+<title>{html.escape(page_titles.salary_cap_title())}</title>
 
 <meta name="description" content="{html.escape(desc)}" />
 <meta name="theme-color" content="#0a0c10" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="MLB Salary Cap &amp; Floor Proposal Explained (2027 CBA)" />
+<meta property="og:title" content="{html.escape(page_titles.salary_cap_og())}" />
 <meta property="og:description" content="{html.escape(desc)}" />
 <link rel="canonical" href="{SALARY_CAP_PAGE_URL}" />
 <meta property="og:url" content="{SALARY_CAP_PAGE_URL}" />
-<meta name="twitter:card" content="summary" />
 {wpp._ld_script(graph)}
 
 <script>

@@ -3398,7 +3398,7 @@ def test_the_site_header_is_the_same_on_every_page():
         check(f"{label}: logo link is present exactly once", block.count('class="brand"') == 1)
         check(f"{label}: search form is present exactly once",
               block.count('<form class="top-search') == 1)
-        check(f"{label}: More button is present exactly once", block.count('aria-label="Menu"') == 1)
+        check(f"{label}: More button is present exactly once", block.count('aria-label="More"') == 1)
         check(f"{label}: header reaches every menu destination, and nothing else",
               _header_destinations(block) - club_hrefs == nav_hrefs)
 
@@ -3432,19 +3432,18 @@ def test_the_tab_row_matches_the_approved_phone_and_desktop_sets():
 
     check("phone tabs are exactly Players, Clubs, Arbitration, Super Two, in order",
           phone_labels == ["Players", "Clubs", "Arbitration", "Super Two"])
-    check("desktop tabs add Options, Lockout and Previous players, in order",
-          all_labels == ["Players", "Clubs", "Arbitration", "Super Two", "Options", "Lockout", "Previous players"])
+    check("desktop tabs add Free agents, Options, Lockout and Previous players, in order",
+          all_labels == ["Players", "Clubs", "Arbitration", "Super Two", "Free agents", "Options", "Lockout", "Previous players"])
 
 
 def test_the_sheet_lists_every_required_row_and_never_the_shelved_tools():
     """
     The More sheet is the one place every page links to Arbitration
-    eligible, Super Two, Previous players A-Z and the Lockout tracker by
-    their full names, plus the small site-info links and the contact
-    address. Contract clock and Duty days are deliberately absent: both
-    tools stay live at their own URLs, but neither is promoted from the
-    menu -- the owner's call for this job, reversing the "in development"
-    tag this sheet's predecessor nav used to carry for both.
+    eligible, Super Two, Free agents, Non-tender watch, Previous players
+    A-Z, the Lockout tracker and the Contract clock by their full names,
+    plus the small site-info links and the contact address. Duty days
+    stays off the menu. Contract clock is in the sheet and the footer,
+    not a tab, so a phone still shows four tabs.
     """
     import re
     import write_player_pages as wpp
@@ -3455,15 +3454,16 @@ def test_the_sheet_lists_every_required_row_and_never_the_shelved_tools():
     sheet_text = sheet.group(0)
 
     for label in (
-        "Players", "Arbitration eligible", "Super Two", "Out of options",
-        "Previous players A", "Lockout tracker",
+        "Players", "Arbitration eligible", "Super Two", "Free agents",
+        "Non-tender watch", "Out of options",
+        "Previous players A", "Lockout tracker", "Contract clock",
         "What is service time?", "About", "Neutrality", "Privacy",
     ):
         check(f"sheet lists {label!r}", label in sheet_text)
     check("sheet lists the contact address",
           "contact@bigleagueservicetime.com" in sheet_text)
 
-    check("header does not link contract.html anywhere", "contract.html" not in block)
+    check("header links the contract clock", "contract.html" in block)
     check("header does not link taxes.html anywhere", "taxes.html" not in block)
 
 
@@ -3522,6 +3522,7 @@ def test_the_header_marks_the_right_tab_current_and_only_one():
          wpp.render_arbitration_eligible([], "2026-01-01", None, {}), "Arbitration"),
         ("render_super_two", wpp.render_super_two([], {}, "2026-01-01", None), "Super Two"),
         ("render_options", wpp.render_options([], {}, "2026-01-01"), "Options"),
+        ("render_free_agents", wpp.render_free_agents([], {}, "2026-01-01"), "Free agents"),
     ]
     for label, html_text, tab in generated_cases:
         check(f"{label} marks exactly one tab current", len(current_labels(html_text)) == 1)
@@ -3534,7 +3535,6 @@ def test_the_header_marks_the_right_tab_current_and_only_one():
     no_tab_generated = {
         "render_explainer": wpp.render_explainer("2026-01-01"),
         "render_non_tender_watch": wpp.render_non_tender_watch([], "2026-01-01", 2027),
-        "render_free_agents": wpp.render_free_agents([], {}, "2026-01-01"),
         "render_club_arbitration": wpp.render_club_arbitration("Atlanta Braves", [], "2026-01-01", 2027),
         "render (player)": wpp.render(
             {"id": 1, "name": "Test Player", "team": "Atlanta Braves", "on_40_man": True,
@@ -3553,14 +3553,13 @@ def test_no_banned_string_appears_in_the_header_or_sheet():
     anywhere a reader can see it (CLAUDE.md, "Hard rules"), and this menu
     reaches every page on the site, so it is the highest-leverage place to
     pin that. "public MLB data" is banned too -- the site's copy says
-    "public data" -- and so are direct links to the two shelved tools,
-    which must not be promoted from here under any string.
+    "public data" -- and so is a link to the parked duty-day page.
     """
     import write_player_pages as wpp
 
     banned = (
         "scripts/", ".py", "Stats API", "github.com",
-        "public MLB data", "taxes.html", "contract.html",
+        "public MLB data", "taxes.html",
     )
     block = _header_block(wpp._site_header(None))
     for needle in banned:
@@ -3609,6 +3608,7 @@ def test_the_footer_is_the_same_on_every_page():
     contact_link = "mailto:contact@bigleagueservicetime.com"
     required_hrefs = {
         "", "t/", "arbitration-eligible.html", "super-two.html", "options.html",
+        "free-agents.html", "non-tender-watch.html", "contract.html",
         f"{wpp.ALUMNI_DIR_NAME}/",
         "lockout.html", "service-time.html", "about.html", "neutrality.html", "privacy.html",
     }
@@ -3620,8 +3620,8 @@ def test_the_footer_is_the_same_on_every_page():
         check(f"{label}: footer reaches exactly the required destinations",
               _header_destinations(block) == required_hrefs)
         check(f"{label}: footer shows the contact address", contact_link in block)
-        check(f"{label}: footer does not link to the contract clock",
-              "contract.html" not in block)
+        check(f"{label}: footer links the contract clock",
+              "contract.html" in block)
         check(f"{label}: footer does not link to duty days",
               "taxes.html" not in block)
 
@@ -3641,7 +3641,7 @@ def test_no_banned_string_appears_in_the_footer():
     """
     banned = (
         "scripts/", ".py", "Stats API", "github.com", "RainbowMang0", "README",
-        "source code", "public MLB data", "contract.html", "taxes.html",
+        "source code", "public MLB data", "taxes.html",
     )
 
     def check_banned(label, block):
@@ -3687,7 +3687,7 @@ def test_the_404_template_carries_the_site_header():
     check("404 template has a site-top header", html_text.count('<header class="site-top"') == 1)
     block = _header_block(html_text)
     check("404 header has a logo link", 'class="brand"' in block)
-    check("404 header has a More button", 'aria-label="Menu"' in block)
+    check("404 header has a More button", 'aria-label="More"' in block and 'aria-expanded="false"' in block)
 
 
 def test_the_daily_service_time_tick_is_not_a_content_change():
