@@ -44,7 +44,7 @@
         "exhibition"
       ],
       "team_name": "^(Dominican Republic|Puerto Rico|Venezuela|Mexico|Cuba|Japan|Korea|Republic of Korea|Netherlands|Italy|Israel|Colombia|Panama|Nicaragua|Australia|Team Australia|Canada|United States|Chinese Taipei|Great Britain|Czech Republic|Brazil|USA)$|national team",
-      "note": "A national-team assignment is an exhibition, including winter and spring events."
+      "note": "A national-team assignment is an exhibition, including winter and spring events. Split squads of those teams (Mexico Rojo, Mexico Verde, Samurai Jpn., and the same kind of alias) are the same rule. Diablos Rojos del Mexico is a summer club and is not one of them."
     },
     {
       "id": "neutral.spring-invite",
@@ -920,7 +920,7 @@
       "id": "accrual.option-under-20",
       "cite": "§2",
       "cba": "options.days_to_burn_option_year",
-      "note": "Optional-assignment days in a championship season are a separate tally. Fewer than the threshold are credited as major-league service and do not burn an option year. The option date counts and the recall date does not. Game-time exceptions cannot be applied from dates alone."
+      "note": "Optional-assignment days in a championship season are a separate tally. Fewer than the threshold are credited as major-league service and do not burn an option year. The option date counts and the recall date does not. A spring option is counted from the league's first game. Mitchell Parker's 2026 option is 20 days on that count, so the year is used and he finishes at 2.167. MLB Trade Rumors reported that figure, and Super Two status, on November 2, 2026 (https://www.mlbtraderumors.com/2026/11/braves-claim-mitchell-parker.html). Game-time exceptions cannot be applied from dates alone."
     },
     {
       "id": "accrual.shortened-2020",
@@ -971,6 +971,11 @@
       "id": "accrual.presume-from-debut",
       "cite": "§11",
       "note": "If nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game. Seasons with no transaction and no saved game are not credited when appearance years are supplied."
+    },
+    {
+      "id": "accrual.appearance-game",
+      "cite": "§9",
+      "note": "When the file has his major-league game dates, a stop with no later recall does not erase games he played after it. Service restarts at the first of those games and runs through the last game before the next recorded stop. The season stays on the review list because the recall row itself is missing."
     },
     {
       "id": "accrual.appearance-restart",
@@ -1081,11 +1086,6 @@
       "id": "oq.game-time-option-day",
       "section": "2",
       "text": "The option date does not count if the option was after the start of a major-league game he could have played, and the recall date does count if the recall was after the start of a minor-league game. The feed has dates only. Those two exceptions are not applied."
-    },
-    {
-      "id": "oq.parker-spring-option",
-      "section": "2",
-      "text": "Mitchell Parker was optioned on 2026-03-14 and recalled on 2026-04-14. Counted from the league's first game, March 25, that is 20 days, so 2026 uses an option year and he finishes at 2.167 instead of 3.000. Counted from the Nationals' own opener, March 26, it is 19 days, the days are credited, and he stays at 3.000. The rulebook uses the league opener. This edge is a decision, not a settled correction."
     }
   ],
   "pre_debut_roster_window_days": 45

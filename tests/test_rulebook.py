@@ -487,6 +487,91 @@ def test_every_rule_effect_is_stable_for_a_representative_row():
         check(f"{rule_id} classifies to itself", hit is not None and hit.id == rule_id)
 
 
+def _karinchak_2021() -> int:
+    """Recall on the 2020 opener must not plant an option that erases 2021."""
+    real = rb.load_calendar()
+    result = evaluate(
+        [
+            txn("2020-03-26", "OPT", "Indians optioned X to Columbus.", frm=114, to=445),
+            txn("2020-07-23", "CU", "Indians recalled X from Columbus.", to=114),
+            txn("2021-08-28", "OPT", "Indians optioned X to Columbus.", frm=114, to=445),
+            txn("2021-10-01", "CU", "Indians recalled X from Columbus.", to=114),
+        ],
+        player_id=675916,
+        debut=dt.date(2020, 7, 23),
+        horizon=dt.date(2021, 10, 5),
+        calendar=real,
+        exceptions=[],
+        roy_years=set(),
+        appearance_years={2020, 2021},
+    )
+    return days_of(result, 2021)
+
+
+def _roster_status_does_not_hide() -> bool:
+    calendar = cal(season(2024, "2024-03-28", "2024-09-29"))
+    result = run(
+        [
+            txn("2024-03-28", "SE", "Padres selected the contract of X.", to=135),
+            txn("2024-06-01", "SC", "Padres roster status changed for X.", to=135),
+            txn("2024-06-15", "OPT", "Padres optioned X to El Paso.", frm=135, to=4904),
+        ],
+        calendar, "2024-03-28", "2024-10-05",
+    )
+    return days_of(result, 2024) < cba.default().require("service_time.max_days_creditable_per_season")
+
+
+def _june_option_keeps_opening_day() -> bool:
+    """A June option means he was already up. The August recall does not erase Opening Day."""
+    calendar = cal(season(2025, "2025-03-27", "2025-09-28"))
+    result = run(
+        [
+            txn("2024-05-31", "OPT", "Athletics optioned X to Las Vegas.", frm=133, to=400),
+            txn("2025-06-30", "OPT", "Athletics optioned X to Las Vegas.", frm=133, to=400),
+            txn("2025-08-06", "CU", "Athletics recalled X from Las Vegas.", to=133),
+        ],
+        calendar, "2025-03-27", "2025-10-05",
+        appearance_years={2025},
+    )
+    # March 27 through June 29, plus August 6 through September 28.
+    before = (dt.date(2025, 6, 29) - dt.date(2025, 3, 27)).days + 1
+    after = (dt.date(2025, 9, 28) - dt.date(2025, 8, 6)).days + 1
+    return days_of(result, 2025) == before + after
+
+
+def _first_game_after_option() -> int:
+    calendar = cal(season(2024, "2024-03-28", "2024-09-30"))
+    games = [dt.date(2024, 6, 18), dt.date(2024, 9, 30)]
+    result = run(
+        [
+            txn("2024-03-28", "SE", "Athletics selected the contract of X.", to=133),
+            txn("2024-05-14", "OPT", "Athletics optioned X to Las Vegas.", frm=133, to=400),
+        ],
+        calendar, "2024-03-28", "2024-10-05",
+        appearance_dates=games,
+    )
+    return days_of(result, 2024)
+
+
+def _markakis_raw() -> int:
+    real = rb.load_calendar()
+    result = evaluate(
+        [
+            txn("2020-07-06", "SC", "Braves placed X on the restricted list.", to=144),
+            txn("2020-08-05", "SC", "Braves activated X from the restricted list.", to=144),
+        ],
+        player_id=455976,
+        debut=dt.date(2006, 4, 3),
+        horizon=dt.date(2020, 10, 5),
+        calendar=real,
+        roy_years=set(),
+    )
+    for season in result["seasons"]:
+        if season["year"] == 2020:
+            return season["raw_days"]
+    return 0
+
+
 def test_fix_round_cases():
     """Winter clubs by id, a postseason demotion, a major-league re-signing,
     the strike settlement, and the rows the cross-check classified."""
@@ -728,6 +813,21 @@ def test_fix_round_cases():
         player_id=680730, debut=dt.date(2025, 3, 27), horizon=dt.date(2026, 10, 5),
         calendar=real, exceptions=[], roy_years=set(), appearance_years={2025, 2026},
     )
+    check("Karinchak's Opening Day recall is not replaced by a fake option", _karinchak_2021() > 100)
+    check("a roster-status row does not hide the next list change", _roster_status_does_not_hide())
+    check("Mexico Rojo is a national-team squad", rb.classify_row(
+        txn("2024-02-01", "ASG", "X assigned to Mexico.", to=1192, name="Mexico Rojo")
+    ).id == "neutral.national-team")
+    check("Diablos Rojos del Mexico is not that squad", rb.classify_row(
+        txn("2024-05-01", "ASG", "X assigned to Diablos Rojos del Mexico.", to=532, name="Diablos Rojos del Mexico")
+    ).id != "neutral.national-team")
+    check("an unsourced winter-looking club is not guessed", rb.classify_row(
+        txn("2024-11-01", "ASG", "X assigned to Auckland Tuatara.", to=5405, name="Auckland Tuatara")
+    ).id != "neutral.winter-league")
+    check("a June option proves he was up, so Opening Day is not blocked by the August recall", _june_option_keeps_opening_day())
+    check("games after a missing recall restart at the first game", _first_game_after_option() >= 105)
+    check("Markakis counts from the day he opted back in", _markakis_raw() > 54)
+
     check("Parker's spring option is 20 days from the league opener", parker["option_days"].get("2026") == 20)
     check("those 20 days are not credited", days_of(parker, 2026) == 167)
 

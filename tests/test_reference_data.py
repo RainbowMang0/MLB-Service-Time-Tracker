@@ -27,7 +27,7 @@ PLAYERS_PATH = ROOT / "docs" / "data" / "service_time.json"
 ORDINARY_MIN_DAYS = 181
 ORDINARY_MAX_DAYS = 187
 
-COUNTS_TRUE = {"paid_administrative_leave", "covid_high_risk_opt_out", "commissioner_suspension"}
+COUNTS_TRUE = {"paid_administrative_leave", "covid_high_risk_opt_out", "commissioner_suspension", "covid_opt_out_return"}
 COUNTS_FALSE = {"unpaid_suspension", "unpaid_restricted_list", "covid_opt_out"}
 KINDS = COUNTS_TRUE | COUNTS_FALSE
 

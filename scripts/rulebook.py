@@ -488,6 +488,8 @@ def classify_row(row: dict, calendar: Calendar | None = None, book: dict | None 
     desc = row.get("description") or ""
     if code == "SC" and not desc.strip() and "neutral.blank-status" in by_id:
         return Hit(by_id["neutral.blank-status"])
+    if _is_national_split(ids) and "neutral.national-team" in by_id:
+        return Hit(by_id["neutral.national-team"])
     if _is_winter(row, ids) and "neutral.winter-league" in by_id:
         return Hit(by_id["neutral.winter-league"])
     if _is_series_inactive(row, ids, calendar) and "neutral.series-inactive" in by_id:
@@ -637,6 +639,95 @@ def _returns_to_roster(hit: Hit) -> bool:
     return hit.effect == "start"
 
 
+# National-team split squads and aliases. The exact-name rule misses
+# "Mexico Rojo" and "Mexico Verde" and would treat them as minor-league
+# assignments. "Diablos Rojos del Mexico" is not in this set.
+_NATIONAL_SPLIT_IDS = frozenset({
+    1192,  # Mexico Rojo
+    6487,  # Mexico Verde
+    1331,  # Samurai Jpn.
+    878,   # Kingdom of the Netherlands
+    800,   # Czechia
+    4564,  # USAB Stars Team
+    4565,  # USAB Stripes Team
+    2492,  # USA Blue Team
+})
+_NATIONAL_SPLIT_NAMES = frozenset({
+    "mexico rojo",
+    "mexico verde",
+    "samurai jpn",
+    "samurai japan",
+    "kingdom of the netherlands",
+    "czechia",
+    "usab stars team",
+    "usab stripes team",
+    "usa blue team",
+})
+
+
+def _is_national_split(ids: dict) -> bool:
+    if ids["to"] in _NATIONAL_SPLIT_IDS:
+        return True
+    for name in (ids["to_name"], ids["team_name"]):
+        if _fold(name) in _NATIONAL_SPLIT_NAMES:
+            return True
+    return False
+
+
+def _apply_appearance_dates(intervals, rows, dates, floor, horizon):
+    """Restart at the first major-league game after a stop the feed never recalled.
+
+    Consecutive game dates are one stint. A recorded stop strictly between
+    two games splits them, so an option the feed did record is not filled in.
+    The stint is still a feed hole: the caller lists it for review.
+    """
+    usable = sorted({
+        day for day in dates
+        if (floor is None or day >= floor) and day <= horizon
+    })
+    if not usable:
+        return intervals, []
+    stop_dates = {
+        day for day, _row, hit in rows
+        if hit is not None and hit.effect == "stop"
+    }
+    spans = []
+    start = prev = usable[0]
+    for day in usable[1:]:
+        if any(prev < stop < day for stop in stop_dates):
+            spans.append((start, prev))
+            start = day
+        prev = day
+    spans.append((start, prev))
+    review = []
+    merged = _merge(intervals)
+    for start, end in spans:
+        covered = 0
+        for lo, hi, _rules in merged:
+            overlap_lo = max(lo, start)
+            overlap_hi = min(hi, end)
+            if overlap_hi >= overlap_lo:
+                covered += _span_days(overlap_lo, overlap_hi)
+        added = _span_days(start, end) - covered
+        if added <= 0:
+            continue
+        intervals.append((start, end, frozenset({"accrual.appearance-game"})))
+        review.append({
+            "year": start.year,
+            "start": start.isoformat(),
+            "end": end.isoformat(),
+            "days_added": added,
+            "reason": (
+                "Major-league games fall after a stop that has no recall in the file. "
+                "Service restarts at the first of those games. The transactions feed "
+                "can be refetched for the missing row; this stint stays on the review list."
+            ),
+        })
+    if review:
+        intervals = _merge(intervals)
+    return intervals, review
+
+
 def evaluate(
     transactions: list[dict] | None,
     *,
@@ -647,6 +738,7 @@ def evaluate(
     horizon: dt.date | None = None,
     career_end: dt.date | None = None,
     appearance_years: set[int] | None = None,
+    appearance_dates: list[dt.date] | None = None,
     exceptions: list[dict] | None = None,
     roy_years: set[int] | None = None,
     calendar: Calendar | None = None,
@@ -829,25 +921,40 @@ def evaluate(
             last_stop_id = "accrual.dfa-window"
 
         if pending_reclose is not None and day > pending_reclose and active_since is not None:
+            # Close the filled season. Do not invent an option the file does not have.
             close_service(pending_reclose, None)
-            if not on_option:
-                begin_option(pending_reclose + dt.timedelta(days=1))
             last_stop = "other"
             last_stop_id = "stop.option"
             pending_reclose = None
 
         if day in restart_days and (floor is None or day >= floor) and active_since is None:
             season_end = calendar.window(day.year, club_on(day), club_on)[1]
+            same_day_return = any(
+                hit is not None and _returns_to_roster(hit)
+                for _raw, hit in grouped.get(day, [])
+            )
             later_return = False
-            for later, _later_row, later_hit in rows:
-                if later <= day:
-                    continue
-                if later > season_end:
-                    break
-                if later_hit is not None and _returns_to_roster(later_hit):
-                    later_return = True
-                    break
-            if (on_option or last_stop_id in RESTARTABLE_STOPS) and not later_return:
+            # An option by one of the 30 before the next recall means he was
+            # already back. That later recall must not block Opening Day.
+            proven_up = False
+            if not same_day_return:
+                for later, raw, later_hit in rows:
+                    if later <= day:
+                        continue
+                    if later > season_end:
+                        break
+                    if later_hit is None:
+                        continue
+                    if later_hit.id == "stop.option" and _mlb_present(row_ids(raw)) and not later_return:
+                        proven_up = True
+                    if _returns_to_roster(later_hit):
+                        later_return = True
+                        break
+            if (
+                not same_day_return
+                and (on_option or last_stop_id in RESTARTABLE_STOPS)
+                and (not later_return or proven_up)
+            ):
                 if on_option:
                     end_option(day - dt.timedelta(days=1))
                 open_service(day, "accrual.appearance-restart")
@@ -1077,6 +1184,12 @@ def evaluate(
     if seen_holes:
         intervals = _merge(intervals)
 
+    appearance_review: list[dict] = []
+    if appearance_dates:
+        intervals, appearance_review = _apply_appearance_dates(
+            intervals, rows, appearance_dates, floor, horizon
+        )
+
     # Seasons.
     if career_end is not None and not on_40_man:
         last_year = career_end.year
@@ -1260,6 +1373,7 @@ def evaluate(
         "unknowns": unknowns,
         "ambiguous": ambiguous,
         "boundaries": boundaries,
+        "appearance_review": appearance_review,
     }
     result["sanity"] = sanity_errors(result, cap=cap, full_year=full_year, ruleset=ruleset)
     return result

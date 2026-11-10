@@ -132,6 +132,35 @@ def _install_v10_calendar() -> None:
     mlb.get_club_season_end = club_end
 
 
+def _games_by_year(player: dict) -> dict[int, int]:
+    """Most games played in either batting or pitching, by season."""
+    out: dict[int, int] = {}
+    for year, stats in (player.get("season_stats") or {}).items():
+        if not isinstance(stats, dict):
+            continue
+        games = 0
+        for group in stats.values():
+            if not isinstance(group, dict):
+                continue
+            try:
+                played = int(group.get("gamesPlayed") or 0)
+            except (TypeError, ValueError):
+                played = 0
+            games = max(games, played)
+        if games:
+            out[int(year)] = games
+    return out
+
+
+# Winter-looking clubs with no source for which league they are. They are
+# not treated as winter clubs. The report only flags them.
+UNSOURCED_CLUBS = {
+    5405: "Auckland Tuatara",
+    5307: "Estrellas de Sur",
+    5306: "Estrellas de Norte",
+}
+
+
 def _appearance_years(player: dict) -> set[int]:
     years = set()
     for year, stats in (player.get("season_stats") or {}).items():
@@ -304,11 +333,11 @@ def _season_attribution(result: dict, year: int, delta: int, season: dict | None
         and -option_threshold <= delta < 0
         and season.get("credited_days", 0) > 0
     ):
-        return "decision.spring-option-league-opener", (
+        return "accrual.spring-option-league-opener", (
             f"{year} is {abs(delta)} days lower because a spring option counted from the league's "
             f"first game is exactly {option_threshold} days, so the year is used and those days are not "
-            "credited. Counted from the club's own opener it would be one day shorter and the days would "
-            "count. This is an open decision. The rulebook keeps the league opener."
+            "credited. MLB Trade Rumors reported Mitchell Parker's 2.167 and his Super Two status on "
+            "November 2, 2026, which is this count. It is no longer an open decision."
         )
     if season is not None and season.get("credited_days") == 0 and delta < 0:
         if option_days > 0:
@@ -330,8 +359,16 @@ def _season_attribution(result: dict, year: int, delta: int, season: dict | None
             "and the old walk kept that year."
         )
     specific = [rule for rule in rules if rule not in _OPENER_RULES]
-    if "accrual.appearance-restart" in rules and delta > 0:
-        chosen = "accrual.appearance-restart"
+    season_start = next((rule for rule in (
+        "start.mlb-contract-signing",
+        "accrual.appearance-game",
+        "accrual.appearance-restart",
+        "accrual.strike-service-1996",
+    ) if rule in rules and delta > 0), None)
+    if season_start == "start.mlb-contract-signing" or (
+        season_start is not None and season_start != "accrual.strike-service-1996"
+    ):
+        chosen = season_start
     elif "accrual.strike-service-1996" in rules and delta > 0:
         chosen = "accrual.strike-service-1996"
     else:
@@ -400,6 +437,9 @@ def _long_reason(rule: str, year: int, delta: int) -> str:
         "count.dfa": "designation days count until the outright, release, or the end of the window",
         "stop.free-agency": "electing free agency stops service until the next major-league deal",
         "start.mlb-contract-signing": "a major-league signing after free agency or a release restarts service",
+        "accrual.appearance-game": "service restarts at the first major-league game after a stop the file never recalled",
+        "accrual.appearance-restart": "a later season he played restarts at that season's opener",
+        "accrual.spring-option-league-opener": "a spring option counted from the league's first game uses the year; a published report agrees",
         "stop.assigned-minors": "an assignment to an affiliate stops service",
         "count.suspension": "an on-field suspension counts",
         "stop.ped-suspension": "a drug-program suspension does not count",
@@ -485,6 +525,8 @@ def main() -> int:
     published_rows = []
     unknown_rows = []
     ambiguous_rows = []
+    appearance_gaps = []
+    unsourced_club_rows = []
     sanity_failures = []
     compared = 0
     missing_published = 0
@@ -581,6 +623,52 @@ def main() -> int:
                     })
                 unknown_rows.extend(result["unknowns"])
                 ambiguous_rows.extend(result["ambiguous"])
+                played = _games_by_year(player)
+                published_season_days = {
+                    int(row["y"]): int(row["d"])
+                    for row in (player.get("seasons") or [])
+                    if isinstance(row, dict) and "y" in row and "d" in row
+                }
+                for season in result["seasons"]:
+                    year = season["year"]
+                    # 2020 is prorated, so games and credited days are not the same unit.
+                    if year == 2020:
+                        continue
+                    games = played.get(year, 0)
+                    credited = season["credited_days"]
+                    if games > credited:
+                        published_days = published_season_days.get(year)
+                        keep = published_days if published_days is not None and published_days > credited else credited
+                        appearance_gaps.append({
+                            "player_id": player_id,
+                            "name": player.get("name"),
+                            "on_40_man": bool(player.get("on_40_man")),
+                            "year": year,
+                            "games": games,
+                            "rulebook_days": credited,
+                            "published_days": published_days,
+                            "keep_days": keep,
+                            "reason": (
+                                "Games played exceed credited days, so a recall or roster move is missing "
+                                "from the saved feed. Keep the published season total instead of publishing "
+                                "this drop. Refetching the transactions feed for this player can recover the "
+                                "row. This job did not call that endpoint."
+                            ),
+                        })
+                for row in doc.get("transactions") or []:
+                    to_team = row.get("toTeam") if isinstance(row.get("toTeam"), dict) else {}
+                    team_id = to_team.get("id")
+                    if team_id not in UNSOURCED_CLUBS:
+                        continue
+                    unsourced_club_rows.append({
+                        "player_id": player_id,
+                        "name": player.get("name"),
+                        "on_40_man": bool(player.get("on_40_man")),
+                        "date": row.get("date"),
+                        "team_id": team_id,
+                        "team": UNSOURCED_CLUBS[team_id],
+                        "description": (row.get("description") or "")[:180],
+                    })
                 if result["sanity"]:
                     sanity_failures.append({
                         "player_id": player_id,
@@ -634,7 +722,7 @@ def main() -> int:
     published_40_up = sum(1 for row in published_40 if row["delta_days"] > 0)
     published_40_down = sum(1 for row in published_40 if row["delta_days"] < 0)
     published_low = [row for row in published_40 if row["delta_days"] <= -172]
-    decisions = [row for row in differences if row["rule_id"] == "decision.spring-option-league-opener"]
+    decisions = [row for row in differences if row["rule_id"] == "accrual.spring-option-league-opener"]
 
     summary = {
         "rules_version": RULEBOOK_VERSION,
@@ -732,12 +820,19 @@ def main() -> int:
                 "description": row.get("description"),
             })
         if row["likely_type"] == "2020_opt_out":
+            if row.get("player_id") == 455976:
+                opt_note = (
+                    "Not a high-risk opt-out, so the days before his return do not count. "
+                    "He opted back in on 2020-07-29. Service counts from that date."
+                )
+            else:
+                opt_note = "Not added as a high-risk opt-out. The source does not say he was in that class. Counted as no service."
             opt_outs.append({
                 "player_id": row.get("player_id"),
                 "name": row.get("name"),
                 "date": row.get("date"),
                 "on_40_man": row.get("on_40_man"),
-                "note": "Not added as a high-risk opt-out. The source does not say he was in that class. Counted as no service.",
+                "note": opt_note,
             })
     summary["restricted_list"] = {
         "rows": len(ambiguous_rows),
@@ -754,6 +849,40 @@ def main() -> int:
         "unsourced_2020_opt_outs": opt_outs,
         "rows": ambiguous_rows,
     })
+    appearance_gaps.sort(key=lambda row: (
+        0 if row["on_40_man"] else 1,
+        -((row["published_days"] or 0) - row["rulebook_days"]),
+        row["player_id"],
+        row["year"],
+    ))
+    summary["appearance_gaps"] = {
+        "note": (
+            "A season where major-league games exceed credited days. The lower rulebook total "
+            "is not the number to publish. Keep the published season total until the transactions "
+            "feed is refetched. This job did not call that endpoint."
+        ),
+        "seasons": len(appearance_gaps),
+        "players": len({row["player_id"] for row in appearance_gaps}),
+        "current_40_man_players": len({row["player_id"] for row in appearance_gaps if row["on_40_man"]}),
+    }
+    _write(REPORTS / "appearance_gaps.json", {
+        "note": summary["appearance_gaps"]["note"],
+        "seasons": appearance_gaps,
+    })
+    _write(REPORTS / "unsourced_clubs.json", {
+        "note": (
+            "These clubs look like winter-league or national-team squads, but no source "
+            "identified the league. They are not classified as winter clubs and they are "
+            "not classified as national teams. Assignments to them still follow the "
+            "ordinary affiliate rule until someone sources them."
+        ),
+        "clubs": [
+            {"id": team_id, "name": name, "assignments": sum(1 for row in unsourced_club_rows if row["team_id"] == team_id)}
+            for team_id, name in sorted(UNSOURCED_CLUBS.items())
+        ],
+        "rows": unsourced_club_rows,
+    })
+    _write(REPORTS / "summary.json", summary)
     _write(REPORTS / "open_questions.json", open_questions())
     _write(REPORTS / "golden_coverage.json", _golden_coverage(rule_ids))
     _write(REPORTS / "determinism.json", summary["determinism"])
@@ -770,7 +899,9 @@ def main() -> int:
         f"Unknown transactions: {len(unknown_rows)} ({unknown_40} on a current 40-man player).",
         f"Ambiguous restricted-list rows: {len(ambiguous_rows)}. Current 40-man rows still unknown: {len(review_40)}. Unsourced 2020 opt-outs, not counted: {len(opt_outs)}.",
         f"Against the live published file: {len(published_rows)} differ ({published_up} up, {published_down} down, net {published_net} days). Current 40-man: {len(published_40)} differ ({published_40_up} up, {published_40_down} down). {len(published_low)} current 40-man players are 172 or more days below the published total.",
-        f"Spring-option league-opener decisions: {len(decisions)}.",
+        f"Spring options counted from the league opener, matching the November 2, 2026 report: {len(decisions)}.",
+        f"Seasons where games exceed credited days: {len(appearance_gaps)} ({summary['appearance_gaps']['current_40_man_players']} current 40-man players). Keep the published total for those seasons.",
+        f"Unsourced clubs left unclassified: Auckland Tuatara, Estrellas de Sur, Estrellas de Norte ({len(unsourced_club_rows)} assignments).",
         f"Sanity failures: {len(sanity_failures)}.",
         f"Two full replays {'matched' if identical else 'DID NOT MATCH'} ({first_hash[:12]}).",
         "",
