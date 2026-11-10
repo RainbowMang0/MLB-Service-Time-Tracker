@@ -1,0 +1,1222 @@
+{
+  "player_id": 656638,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:cb662d641e5b8d0278a04ac52f9132ff1f721065a6da02da6745719023a920e7",
+  "transactions": [
+    {
+      "id": 275848,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 2491,
+        "name": "USA Collegiate National Team Stripes",
+        "link": "/api/v1/teams/2491"
+      },
+      "date": "2016-06-28",
+      "effectiveDate": "2016-06-28",
+      "resolutionDate": "2016-06-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alex Lange assigned to Collegiate National Team."
+    },
+    {
+      "id": 299133,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 5323,
+        "name": "Louisiana State Tigers",
+        "link": "/api/v1/teams/5323"
+      },
+      "date": "2017-02-28",
+      "effectiveDate": "2017-02-28",
+      "resolutionDate": "2017-02-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alex Lange assigned to Louisiana State Tigers."
+    },
+    {
+      "id": 323023,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2017-07-07",
+      "effectiveDate": "2017-07-07",
+      "resolutionDate": "2017-07-07",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Chicago Cubs signed RHP Alex Lange."
+    },
+    {
+      "id": 327467,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 461,
+        "name": "Eugene Emeralds",
+        "link": "/api/v1/teams/461"
+      },
+      "date": "2017-08-03",
+      "effectiveDate": "2017-08-03",
+      "resolutionDate": "2017-08-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alex Lange assigned to Eugene Emeralds."
+    },
+    {
+      "id": 330047,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 461,
+        "name": "Eugene Emeralds",
+        "link": "/api/v1/teams/461"
+      },
+      "toTeam": {
+        "id": 407,
+        "name": "ACL Cubs",
+        "link": "/api/v1/teams/407"
+      },
+      "date": "2017-08-21",
+      "effectiveDate": "2017-08-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alex Lange assigned to AZL Cubs from Eugene Emeralds."
+    },
+    {
+      "id": 347110,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 407,
+        "name": "ACL Cubs",
+        "link": "/api/v1/teams/407"
+      },
+      "toTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "date": "2018-04-03",
+      "effectiveDate": "2018-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alex Lange assigned to Myrtle Beach Pelicans from AZL Cubs 1."
+    },
+    {
+      "id": 411293,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2019-06-20",
+      "effectiveDate": "2019-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alex Lange assigned to Tennessee Smokies from Myrtle Beach Pelicans."
+    },
+    {
+      "id": 421002,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2019-07-31",
+      "effectiveDate": "2019-07-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Detroit Tigers traded RF Nicholas Castellanos to Chicago Cubs for RHP Alex Lange and RHP Paul Richan."
+    },
+    {
+      "id": 421204,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "date": "2019-08-01",
+      "effectiveDate": "2019-08-01",
+      "resolutionDate": "2019-08-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alex Lange assigned to Erie SeaWolves."
+    },
+    {
+      "id": 426087,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 555,
+        "name": "Mesa Solar Sox",
+        "link": "/api/v1/teams/555"
+      },
+      "date": "2019-08-28",
+      "effectiveDate": "2019-08-28",
+      "resolutionDate": "2019-08-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alex Lange assigned to Mesa Solar Sox."
+    },
+    {
+      "id": 438646,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2020-02-21",
+      "effectiveDate": "2020-02-21",
+      "resolutionDate": "2020-02-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alex Lange assigned to Detroit Tigers."
+    },
+    {
+      "id": 446781,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "toTeam": {
+        "id": 3302,
+        "name": "Tigers Alternate Training Site",
+        "link": "/api/v1/teams/3302"
+      },
+      "date": "2020-07-15",
+      "effectiveDate": "2020-07-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alex Lange assigned to Tigers Alternate Training Site from Erie SeaWolves."
+    },
+    {
+      "id": 446892,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2020-07-16",
+      "effectiveDate": "2020-07-16",
+      "resolutionDate": "2020-07-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers invited non-roster RHP Alex Lange to spring training."
+    },
+    {
+      "id": 450680,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2020-09-03",
+      "effectiveDate": "2020-09-03",
+      "resolutionDate": "2020-09-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers invited non-roster RHP Alex Lange to spring training."
+    },
+    {
+      "id": 453334,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 3302,
+        "name": "Tigers Alternate Training Site",
+        "link": "/api/v1/teams/3302"
+      },
+      "toTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "date": "2020-10-10",
+      "effectiveDate": "2020-10-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alex Lange assigned to Erie SeaWolves from Tigers Alternate Training Site."
+    },
+    {
+      "id": 456417,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2020-11-20",
+      "effectiveDate": "2020-11-20",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Detroit Tigers selected the contract of RHP Alex Lange from Erie SeaWolves."
+    },
+    {
+      "id": 473723,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2021-03-16",
+      "effectiveDate": "2021-03-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Detroit Tigers optioned P Alex Lange to Toledo Mud Hens."
+    },
+    {
+      "id": 478124,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2021-04-10",
+      "effectiveDate": "2021-04-10",
+      "resolutionDate": "2021-04-10",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled P Alex Lange."
+    },
+    {
+      "id": 476699,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 3302,
+        "name": "Tigers Alternate Training Site",
+        "link": "/api/v1/teams/3302"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2021-04-10",
+      "effectiveDate": "2021-04-10",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled P Alex Lange from Tigers Alternate Training Site."
+    },
+    {
+      "id": 477390,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2021-04-10",
+      "effectiveDate": "2021-04-10",
+      "resolutionDate": "2021-04-10",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled P Alex Lange."
+    },
+    {
+      "id": 486932,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2021-05-17",
+      "effectiveDate": "2021-05-17",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Detroit Tigers optioned RHP Alex Lange to Toledo Mud Hens."
+    },
+    {
+      "id": 493783,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2021-06-10",
+      "effectiveDate": "2021-06-10",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled RHP Alex Lange from Toledo Mud Hens."
+    },
+    {
+      "id": 494616,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2021-06-15",
+      "effectiveDate": "2021-06-15",
+      "resolutionDate": "2021-06-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers placed RHP Alex Lange on the 10-day injured list. Right shoulder strain."
+    },
+    {
+      "id": 501532,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2021-07-06",
+      "effectiveDate": "2021-07-06",
+      "resolutionDate": "2021-07-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers sent RHP Alex Lange on a rehab assignment to Toledo Mud Hens."
+    },
+    {
+      "id": 501674,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2021-07-07",
+      "effectiveDate": "2021-07-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Detroit Tigers optioned RHP Alex Lange to Toledo Mud Hens."
+    },
+    {
+      "id": 505448,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2021-07-17",
+      "effectiveDate": "2021-07-17",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled RHP Alex Lange from Toledo Mud Hens."
+    },
+    {
+      "id": 506181,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2021-07-21",
+      "effectiveDate": "2021-07-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Detroit Tigers optioned RHP Alex Lange to Toledo Mud Hens."
+    },
+    {
+      "id": 513531,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2021-08-22",
+      "effectiveDate": "2021-08-22",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled RHP Alex Lange from Toledo Mud Hens."
+    },
+    {
+      "id": 684758,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2022-03-15",
+      "effectiveDate": "2022-03-15",
+      "resolutionDate": "2022-03-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers activated RHP Alex Lange."
+    },
+    {
+      "id": 685026,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2022-03-15",
+      "effectiveDate": "2022-03-15",
+      "resolutionDate": "2022-03-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers activated RHP Alex Lange."
+    },
+    {
+      "id": 606311,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2022-03-15",
+      "effectiveDate": "2022-03-15",
+      "resolutionDate": "2022-03-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers activated RHP Alex Lange."
+    },
+    {
+      "id": 773555,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2024-05-23",
+      "effectiveDate": "2024-05-23",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Detroit Tigers optioned RHP Alex Lange to Toledo Mud Hens."
+    },
+    {
+      "id": 783329,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2024-06-27",
+      "effectiveDate": "2024-06-27",
+      "resolutionDate": "2024-06-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens placed RHP Alex Lange on the 7-day injured list."
+    },
+    {
+      "id": 783479,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2024-06-28",
+      "effectiveDate": "2024-06-28",
+      "resolutionDate": "2024-06-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens placed RHP Alex Lange on the full-season injured list."
+    },
+    {
+      "id": 800828,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2024-09-30",
+      "effectiveDate": "2024-10-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled RHP Alex Lange from Toledo Mud Hens."
+    },
+    {
+      "id": 802179,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2024-10-13",
+      "effectiveDate": "2024-10-13",
+      "resolutionDate": "2024-10-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers activated RHP Alex Lange."
+    },
+    {
+      "id": 815327,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-02-12",
+      "effectiveDate": "2025-02-12",
+      "resolutionDate": "2025-02-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers placed RHP Alex Lange on the 60-day injured list."
+    },
+    {
+      "id": 850450,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 582,
+        "name": "West Michigan Whitecaps",
+        "link": "/api/v1/teams/582"
+      },
+      "date": "2025-06-17",
+      "effectiveDate": "2025-06-17",
+      "resolutionDate": "2025-06-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers sent RHP Alex Lange on a rehab assignment to West Michigan Whitecaps."
+    },
+    {
+      "id": 848767,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 582,
+        "name": "West Michigan Whitecaps",
+        "link": "/api/v1/teams/582"
+      },
+      "date": "2025-06-17",
+      "effectiveDate": "2025-06-17",
+      "resolutionDate": "2025-06-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers sent RHP Alex Lange on a rehab assignment to West Michigan Whitecaps."
+    },
+    {
+      "id": 854062,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2025-06-24",
+      "effectiveDate": "2025-06-24",
+      "resolutionDate": "2025-06-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers sent RHP Alex Lange on a rehab assignment to Toledo Mud Hens."
+    },
+    {
+      "id": 850449,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2025-06-24",
+      "effectiveDate": "2025-06-24",
+      "resolutionDate": "2025-06-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers sent RHP Alex Lange on a rehab assignment to Toledo Mud Hens."
+    },
+    {
+      "id": 856797,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2025-07-20",
+      "effectiveDate": "2025-07-20",
+      "resolutionDate": "2025-07-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers sent RHP Alex Lange on a rehab assignment to Toledo Mud Hens."
+    },
+    {
+      "id": 865047,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2025-07-20",
+      "effectiveDate": "2025-07-20",
+      "resolutionDate": "2025-07-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers sent RHP Alex Lange on a rehab assignment to Toledo Mud Hens."
+    },
+    {
+      "id": 865048,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-08-18",
+      "effectiveDate": "2025-08-18",
+      "resolutionDate": "2025-08-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers activated RHP Alex Lange from the 60-day injured list."
+    },
+    {
+      "id": 865767,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2025-08-21",
+      "effectiveDate": "2025-08-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Detroit Tigers optioned RHP Alex Lange to Toledo Mud Hens."
+    },
+    {
+      "id": 870614,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-09-29",
+      "effectiveDate": "2025-09-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled RHP Alex Lange from Toledo Mud Hens."
+    },
+    {
+      "id": 870958,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-09-30",
+      "effectiveDate": "2025-09-30",
+      "resolutionDate": "2025-09-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Alex Lange roster status changed by Detroit Tigers."
+    },
+    {
+      "id": 872062,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-10-11",
+      "effectiveDate": "2025-10-11",
+      "resolutionDate": "2025-10-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers activated RHP Alex Lange."
+    },
+    {
+      "id": 876858,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-11-12",
+      "effectiveDate": "2025-11-12",
+      "resolutionDate": "2025-11-12",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Detroit Tigers designated RHP Alex Lange for assignment."
+    },
+    {
+      "id": 877283,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-11-18",
+      "effectiveDate": "2025-11-18",
+      "resolutionDate": "2025-11-18",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Detroit Tigers released RHP Alex Lange."
+    },
+    {
+      "id": 877456,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2025-11-20",
+      "effectiveDate": "2025-11-20",
+      "resolutionDate": "2025-11-20",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Kansas City Royals signed free agent RHP Alex Lange."
+    },
+    {
+      "id": 899415,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Alex Lange changed number to 42."
+    },
+    {
+      "id": 900326,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Alex Lange changed number to 56."
+    },
+    {
+      "id": 946841,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2026-10-22",
+      "effectiveDate": "2026-10-22",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Kansas City Royals sent RHP Alex Lange outright to Omaha Storm Chasers."
+    },
+    {
+      "id": 949106,
+      "person": {
+        "id": 656638,
+        "fullName": "Alex Lange",
+        "link": "/api/v1/people/656638",
+        "nameSlug": "alex-lange-656638"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Alex Lange elected free agency."
+    }
+  ]
+}

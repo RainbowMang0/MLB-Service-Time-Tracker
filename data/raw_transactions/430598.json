@@ -1,0 +1,552 @@
+{
+  "player_id": 430598,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:f9cf4a9e54a1e861f671b2859a09c110b560f748a05b0b19c25d8fa3282040ce",
+  "transactions": [
+    {
+      "id": 30669,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2009-12-12",
+      "effectiveDate": "2009-12-12",
+      "resolutionDate": "2009-12-12",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LF Jeremy Reed elected free agency."
+    },
+    {
+      "id": 31472,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2010-01-19",
+      "effectiveDate": "2010-01-19",
+      "resolutionDate": "2010-01-19",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Toronto Blue Jays signed free agent LF Jeremy Reed to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 36618,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2010-04-05",
+      "effectiveDate": "2010-04-05",
+      "resolutionDate": "2010-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Jeremy Reed assigned to Las Vegas 51s from Toronto Blue Jays."
+    },
+    {
+      "id": 38555,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2010-04-12",
+      "effectiveDate": "2010-04-12",
+      "resolutionDate": "2010-04-13",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Toronto Blue Jays selected the contract of Jeremy Reed from Las Vegas 51s."
+    },
+    {
+      "id": 38427,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2010-04-12",
+      "effectiveDate": "2010-04-12",
+      "resolutionDate": "2010-04-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Jeremy Reed assigned to Toronto Blue Jays."
+    },
+    {
+      "id": 39097,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2010-04-16",
+      "effectiveDate": "2010-05-19",
+      "resolutionDate": "2010-04-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Toronto Blue Jays optioned Jeremy Reed to Las Vegas 51s."
+    },
+    {
+      "id": 45041,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2010-05-19",
+      "effectiveDate": "2010-05-19",
+      "resolutionDate": "2010-05-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Toronto Blue Jays recalled Jeremy Reed from Las Vegas 51s."
+    },
+    {
+      "id": 53225,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2010-06-17",
+      "effectiveDate": "2010-06-18",
+      "resolutionDate": "2010-06-17",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Toronto Blue Jays optioned OF Jeremy Reed to Las Vegas 51s."
+    },
+    {
+      "id": 60038,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2010-07-02",
+      "effectiveDate": "2010-07-02",
+      "resolutionDate": "2010-07-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "OF Jeremy Reed elected free agency."
+    },
+    {
+      "id": 60072,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2010-07-03",
+      "effectiveDate": "2010-07-03",
+      "resolutionDate": "2010-07-03",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LF Jeremy Reed elected free agency."
+    },
+    {
+      "id": 62377,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2010-07-13",
+      "effectiveDate": "2010-07-13",
+      "resolutionDate": "2010-07-13",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago White Sox signed free agent OF Jeremy Reed to a minor league contract."
+    },
+    {
+      "id": 62378,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2010-07-14",
+      "effectiveDate": "2010-07-14",
+      "resolutionDate": "2010-07-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Jeremy Reed assigned to Charlotte Knights from Chicago White Sox."
+    },
+    {
+      "id": 73666,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2010-11-06",
+      "effectiveDate": "2010-11-06",
+      "resolutionDate": "2010-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "OF Jeremy Reed elected free agency."
+    },
+    {
+      "id": 76473,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2011-01-21",
+      "effectiveDate": "2011-01-21",
+      "resolutionDate": "2011-01-21",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Milwaukee Brewers signed free agent LF Jeremy Reed to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 80351,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2011-01-26",
+      "effectiveDate": "2011-01-26",
+      "resolutionDate": "2011-01-26",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Nashville Sounds signed free agent Jeremy Reed."
+    },
+    {
+      "id": 80352,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2011-03-30",
+      "effectiveDate": "2011-03-30",
+      "resolutionDate": "2011-03-30",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Milwaukee Brewers selected the contract of LF Jeremy Reed from Nashville Sounds."
+    },
+    {
+      "id": 82940,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2011-04-11",
+      "effectiveDate": "2011-04-11",
+      "resolutionDate": "2011-04-11",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Milwaukee Brewers designated Jeremy Reed for assignment."
+    },
+    {
+      "id": 83131,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2011-04-13",
+      "effectiveDate": "2011-04-13",
+      "resolutionDate": "2011-04-13",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Milwaukee Brewers sent Jeremy Reed outright to Nashville Sounds."
+    },
+    {
+      "id": 88600,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2011-06-02",
+      "effectiveDate": "2011-06-02",
+      "resolutionDate": "2011-06-02",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Nashville Sounds traded LF Jeremy Reed to Rochester Red Wings."
+    },
+    {
+      "id": 89931,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2011-06-12",
+      "effectiveDate": "2011-06-12",
+      "resolutionDate": "2011-06-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rochester Red Wings placed LF Jeremy Reed on the 7-day disabled list. sore back"
+    },
+    {
+      "id": 103698,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2011-09-20",
+      "effectiveDate": "2011-09-20",
+      "resolutionDate": "2011-09-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rochester Red Wings activated LF Jeremy Reed from the 7-day disabled list."
+    },
+    {
+      "id": 104607,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2011-10-11",
+      "effectiveDate": "2011-10-11",
+      "resolutionDate": "2011-10-11",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LF Jeremy Reed elected free agency."
+    },
+    {
+      "id": 138690,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2012-10-24",
+      "effectiveDate": "2012-10-24",
+      "resolutionDate": "2012-10-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Arizona Diamondbacks signed free agent LF Jeremy Reed to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 167342,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2013-04-04",
+      "effectiveDate": "2013-04-04",
+      "resolutionDate": "2013-04-04",
+      "typeCode": "RET",
+      "typeDesc": "Retired",
+      "description": "LF Jeremy Reed retired."
+    },
+    {
+      "id": 177262,
+      "person": {
+        "id": 430598,
+        "fullName": "Jeremy Reed",
+        "link": "/api/v1/people/430598",
+        "nameSlug": "jeremy-reed-430598"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2013-12-19",
+      "effectiveDate": "2013-12-19",
+      "resolutionDate": "2013-12-19",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Reno Aces released LF Jeremy Reed."
+    }
+  ]
+}

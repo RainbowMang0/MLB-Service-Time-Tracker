@@ -1,0 +1,860 @@
+{
+  "player_id": 445163,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:d89ea507cb07546b43fd27f03b767ad39a8d5cd33d2caa0e12a781b194825b72",
+  "transactions": [
+    {
+      "id": 1219,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2009-04-06",
+      "effectiveDate": "2009-03-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays placed RHP Casey Janssen on the 15-day disabled list retroactive to March 27, 2009."
+    },
+    {
+      "id": 3180,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "date": "2009-04-27",
+      "effectiveDate": "2009-04-27",
+      "resolutionDate": "2009-04-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Casey Janssen assigned to Dunedin Blue Jays from Toronto Blue Jays."
+    },
+    {
+      "id": 3515,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "date": "2009-04-30",
+      "effectiveDate": "2009-04-30",
+      "resolutionDate": "2009-05-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Toronto Blue Jays optioned Casey Janssen to Dunedin Blue Jays."
+    },
+    {
+      "id": 3514,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2009-04-30",
+      "effectiveDate": "2009-04-30",
+      "resolutionDate": "2009-04-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays reassigned RHP Casey Janssen to the minor leagues."
+    },
+    {
+      "id": 4581,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "fromTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2009-05-12",
+      "effectiveDate": "2009-05-12",
+      "resolutionDate": "2009-05-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Casey Janssen assigned to New Hampshire Fisher Cats from Dunedin Blue Jays."
+    },
+    {
+      "id": 5770,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "fromTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2009-05-21",
+      "effectiveDate": "2009-05-21",
+      "resolutionDate": "2009-05-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Casey Janssen assigned to Las Vegas 51s from New Hampshire Fisher Cats."
+    },
+    {
+      "id": 5939,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2009-05-22",
+      "effectiveDate": "2009-05-22",
+      "resolutionDate": "2009-05-22",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Toronto Blue Jays recalled RHP Casey Janssen from Las Vegas 51s."
+    },
+    {
+      "id": 9943,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2009-06-17",
+      "effectiveDate": "2009-06-14",
+      "resolutionDate": "2009-06-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Casey Janssen roster status changed by Toronto Blue Jays."
+    },
+    {
+      "id": 16240,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 1390,
+        "name": "FCL Blue Jays",
+        "link": "/api/v1/teams/1390"
+      },
+      "date": "2009-07-13",
+      "effectiveDate": "2009-07-13",
+      "resolutionDate": "2009-07-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent RHP Casey Janssen on a rehab assignment to GCL Blue Jays."
+    },
+    {
+      "id": 16366,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "date": "2009-07-15",
+      "effectiveDate": "2009-07-15",
+      "resolutionDate": "2009-07-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Casey Janssen assigned to Dunedin Blue Jays."
+    },
+    {
+      "id": 16755,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "fromTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2009-07-17",
+      "effectiveDate": "2009-07-17",
+      "resolutionDate": "2009-07-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Dunedin Blue Jays sent RHP Casey Janssen on a rehab assignment to New Hampshire Fisher Cats."
+    },
+    {
+      "id": 17823,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2009-07-24",
+      "effectiveDate": "2009-07-24",
+      "resolutionDate": "2009-07-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Toronto Blue Jays optioned Casey Janssen to Las Vegas 51s."
+    },
+    {
+      "id": 21250,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2009-08-14",
+      "effectiveDate": "2009-08-14",
+      "resolutionDate": "2009-08-14",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Toronto Blue Jays recalled Casey Janssen from Las Vegas 51s."
+    },
+    {
+      "id": 82717,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2011-04-08",
+      "effectiveDate": "2011-04-09",
+      "resolutionDate": "2011-04-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Toronto Blue Jays optioned RHP Casey Janssen to Las Vegas 51s."
+    },
+    {
+      "id": 82955,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2011-04-11",
+      "effectiveDate": "2011-04-11",
+      "resolutionDate": "2011-04-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Casey Janssen roster status changed by Las Vegas 51s."
+    },
+    {
+      "id": 83035,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2011-04-12",
+      "effectiveDate": "2011-04-12",
+      "resolutionDate": "2011-04-12",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Toronto Blue Jays recalled RHP Casey Janssen from Las Vegas 51s."
+    },
+    {
+      "id": 91335,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2011-06-16",
+      "effectiveDate": "2011-06-15",
+      "resolutionDate": "2011-06-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays placed RHP Casey Janssen on the 15-day disabled list retroactive to June 15, 2011. Sore right forearm."
+    },
+    {
+      "id": 96097,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2011-07-09",
+      "effectiveDate": "2011-07-09",
+      "resolutionDate": "2011-07-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent RHP Casey Janssen on a rehab assignment to New Hampshire Fisher Cats."
+    },
+    {
+      "id": 97345,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2011-07-19",
+      "effectiveDate": "2011-07-19",
+      "resolutionDate": "2011-07-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays activated RHP Casey Janssen from the 15-day disabled list."
+    },
+    {
+      "id": 182925,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2014-03-30",
+      "effectiveDate": "2014-03-29",
+      "resolutionDate": "2014-03-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays placed RHP Casey Janssen on the 15-day disabled list retroactive to March 29, 2014. Left abdominal and lower back strain"
+    },
+    {
+      "id": 185959,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "date": "2014-04-15",
+      "effectiveDate": "2014-04-12",
+      "resolutionDate": "2014-04-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Toronto Blue Jays sent RHP Casey Janssen on a rehab assignment to Dunedin Blue Jays."
+    },
+    {
+      "id": 187862,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2014-05-05",
+      "effectiveDate": "2014-05-05",
+      "resolutionDate": "2014-05-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Toronto Blue Jays sent RHP Casey Janssen on a rehab assignment to New Hampshire Fisher Cats."
+    },
+    {
+      "id": 188525,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2014-05-11",
+      "effectiveDate": "2014-05-11",
+      "resolutionDate": "2014-05-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays activated RHP Casey Janssen from the 15-day disabled list."
+    },
+    {
+      "id": 210887,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2014-10-30",
+      "effectiveDate": "2014-10-30",
+      "resolutionDate": "2014-10-30",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Casey Janssen elected free agency."
+    },
+    {
+      "id": 215050,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2015-02-02",
+      "effectiveDate": "2015-02-02",
+      "resolutionDate": "2015-02-02",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Washington Nationals signed free agent RHP Casey Janssen."
+    },
+    {
+      "id": 220058,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2015-04-05",
+      "effectiveDate": "2015-03-27",
+      "resolutionDate": "2015-03-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals placed RHP Casey Janssen on the 15-day disabled list retroactive to March 27, 2015. Right shoulder inflammation."
+    },
+    {
+      "id": 224488,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "date": "2015-05-07",
+      "effectiveDate": "2015-05-07",
+      "resolutionDate": "2015-05-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals sent RHP Casey Janssen on a rehab assignment to Potomac Nationals."
+    },
+    {
+      "id": 225095,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2015-05-12",
+      "effectiveDate": "2015-05-12",
+      "resolutionDate": "2015-05-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals sent RHP Casey Janssen on a rehab assignment to Harrisburg Senators."
+    },
+    {
+      "id": 226329,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2015-05-22",
+      "effectiveDate": "2015-05-22",
+      "resolutionDate": "2015-05-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals activated RHP Casey Janssen from the 15-day disabled list."
+    },
+    {
+      "id": 248925,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2015-11-03",
+      "effectiveDate": "2015-11-03",
+      "resolutionDate": "2015-11-03",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Casey Janssen elected free agency."
+    },
+    {
+      "id": 255240,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2016-02-20",
+      "effectiveDate": "2016-02-20",
+      "resolutionDate": "2016-02-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Casey Janssen assigned to El Paso Chihuahuas."
+    },
+    {
+      "id": 255239,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2016-02-20",
+      "effectiveDate": "2016-02-20",
+      "resolutionDate": "2016-02-20",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Diego Padres signed free agent RHP Casey Janssen to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 257886,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2016-03-24",
+      "effectiveDate": "2016-03-24",
+      "resolutionDate": "2016-03-24",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "San Diego Padres released RHP Casey Janssen."
+    },
+    {
+      "id": 274166,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2016-06-22",
+      "effectiveDate": "2016-06-22",
+      "resolutionDate": "2016-06-22",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Boston Red Sox signed free agent RHP Casey Janssen to a minor league contract."
+    },
+    {
+      "id": 274167,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 558,
+        "name": "Lowell Spinners",
+        "link": "/api/v1/teams/558"
+      },
+      "date": "2016-06-23",
+      "effectiveDate": "2016-06-23",
+      "resolutionDate": "2016-06-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Casey Janssen assigned to Lowell Spinners."
+    },
+    {
+      "id": 278517,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "fromTeam": {
+        "id": 558,
+        "name": "Lowell Spinners",
+        "link": "/api/v1/teams/558"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2016-07-14",
+      "effectiveDate": "2016-07-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Casey Janssen assigned to Pawtucket Red Sox from Lowell Spinners."
+    },
+    {
+      "id": 282977,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2016-08-07",
+      "effectiveDate": "2016-08-07",
+      "resolutionDate": "2016-08-07",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Pawtucket Red Sox released RHP Casey Janssen."
+    },
+    {
+      "id": 298285,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 560,
+        "name": "Acereros del Norte",
+        "link": "/api/v1/teams/560"
+      },
+      "date": "2017-02-20",
+      "effectiveDate": "2017-02-20",
+      "resolutionDate": "2017-02-20",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Acereros del Norte signed free agent RHP Casey Janssen."
+    },
+    {
+      "id": 310828,
+      "person": {
+        "id": 445163,
+        "fullName": "Casey Janssen",
+        "link": "/api/v1/people/445163",
+        "nameSlug": "casey-janssen-445163"
+      },
+      "toTeam": {
+        "id": 560,
+        "name": "Acereros del Norte",
+        "link": "/api/v1/teams/560"
+      },
+      "date": "2017-05-16",
+      "effectiveDate": "2017-05-16",
+      "resolutionDate": "2017-05-16",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Acereros del Norte released RHP Casey Janssen."
+    }
+  ]
+}

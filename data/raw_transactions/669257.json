@@ -1,0 +1,951 @@
+{
+  "player_id": 669257,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:d7e95d6137a5fd1864c08b61d0d90ecc45563285b973cd398c56d37ab37a0f20",
+  "transactions": [
+    {
+      "id": 273855,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2016-06-21",
+      "effectiveDate": "2016-06-21",
+      "resolutionDate": "2016-06-21",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Los Angeles Dodgers signed C Will Smith."
+    },
+    {
+      "id": 273856,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 530,
+        "name": "Ogden Raptors",
+        "link": "/api/v1/teams/530"
+      },
+      "date": "2016-06-22",
+      "effectiveDate": "2016-06-22",
+      "resolutionDate": "2016-06-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Will Smith assigned to Ogden Raptors."
+    },
+    {
+      "id": 276587,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "fromTeam": {
+        "id": 530,
+        "name": "Ogden Raptors",
+        "link": "/api/v1/teams/530"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2016-07-02",
+      "effectiveDate": "2016-07-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Will Smith assigned to Great Lakes Loons from Ogden Raptors."
+    },
+    {
+      "id": 281649,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2016-08-01",
+      "effectiveDate": "2016-08-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Will Smith assigned to Rancho Cucamonga Quakes from Great Lakes Loons."
+    },
+    {
+      "id": 300102,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2017-03-12",
+      "effectiveDate": "2017-03-12",
+      "resolutionDate": "2017-03-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Will Smith assigned to Los Angeles Dodgers."
+    },
+    {
+      "id": 315699,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 5318,
+        "name": "CAL South Division All-Stars",
+        "link": "/api/v1/teams/5318"
+      },
+      "date": "2017-06-19",
+      "effectiveDate": "2017-06-19",
+      "resolutionDate": "2017-06-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Will Smith assigned to CAL South Division All-Stars."
+    },
+    {
+      "id": 323327,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "fromTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2017-07-09",
+      "effectiveDate": "2017-07-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Will Smith assigned to Tulsa Drillers from Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 323949,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2017-07-13",
+      "effectiveDate": "2017-07-13",
+      "resolutionDate": "2017-07-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers activated C Will Smith."
+    },
+    {
+      "id": 332041,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2017-07-14",
+      "effectiveDate": "2017-07-14",
+      "resolutionDate": "2017-07-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers placed C Will Smith on the 7-day disabled list."
+    },
+    {
+      "id": 334095,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2017-09-20",
+      "effectiveDate": "2017-09-20",
+      "resolutionDate": "2017-09-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers activated C Will Smith from the 7-day disabled list."
+    },
+    {
+      "id": 340747,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2018-01-30",
+      "effectiveDate": "2018-01-30",
+      "resolutionDate": "2018-01-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers invited non-roster C Will Smith to spring training."
+    },
+    {
+      "id": 352964,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2018-05-08",
+      "effectiveDate": "2018-05-08",
+      "resolutionDate": "2018-05-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers placed C Will Smith on the 7-day disabled list."
+    },
+    {
+      "id": 357738,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2018-06-03",
+      "effectiveDate": "2018-06-03",
+      "resolutionDate": "2018-06-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers activated C Will Smith from the 7-day disabled list."
+    },
+    {
+      "id": 372418,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "fromTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2018-08-01",
+      "effectiveDate": "2018-08-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Will Smith assigned to Oklahoma City Dodgers from Tulsa Drillers."
+    },
+    {
+      "id": 387826,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2019-02-11",
+      "effectiveDate": "2019-02-11",
+      "resolutionDate": "2019-02-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers invited non-roster C Will Smith to spring training."
+    },
+    {
+      "id": 403498,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2019-05-27",
+      "effectiveDate": "2019-06-06",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Dodgers selected the contract of Will Smith from Oklahoma City Dodgers."
+    },
+    {
+      "id": 406279,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2019-06-06",
+      "effectiveDate": "2019-06-06",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned C Will Smith to Oklahoma City Dodgers."
+    },
+    {
+      "id": 412222,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2019-06-23",
+      "effectiveDate": "2019-06-26",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled Will Smith from Oklahoma City Dodgers."
+    },
+    {
+      "id": 413381,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2019-06-26",
+      "effectiveDate": "2019-06-26",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned C Will Smith to Oklahoma City Dodgers."
+    },
+    {
+      "id": 415924,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2019-06-26",
+      "effectiveDate": "2019-06-26",
+      "resolutionDate": "2019-06-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed C Will Smith on the 10-day injured list."
+    },
+    {
+      "id": 415470,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2019-07-04",
+      "effectiveDate": "2019-06-26",
+      "resolutionDate": "2019-06-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers placed C Will Smith on the 7-day injured list retroactive to June 26, 2019."
+    },
+    {
+      "id": 415809,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2019-07-06",
+      "effectiveDate": "2019-07-06",
+      "resolutionDate": "2019-07-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers activated C Will Smith from the 7-day injured list."
+    },
+    {
+      "id": 415847,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2019-07-06",
+      "effectiveDate": "2019-07-06",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned C Will Smith to Oklahoma City Dodgers."
+    },
+    {
+      "id": 419889,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2019-07-26",
+      "effectiveDate": "2019-07-26",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled C Will Smith from Oklahoma City Dodgers."
+    },
+    {
+      "id": 449452,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2020-08-15",
+      "effectiveDate": "2020-08-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed C Will Smith on the 10-day injured list retroactive to August 13, 2020. Neck inflammation."
+    },
+    {
+      "id": 478064,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2020-08-23",
+      "effectiveDate": "2020-08-23",
+      "resolutionDate": "2020-08-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated C Will Smith from the 10-day injured list."
+    },
+    {
+      "id": 477330,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2020-08-23",
+      "effectiveDate": "2020-08-23",
+      "resolutionDate": "2020-08-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated C Will Smith from the 10 day injured list."
+    },
+    {
+      "id": 449888,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2020-08-23",
+      "effectiveDate": "2020-08-23",
+      "resolutionDate": "2020-08-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated C Will Smith from the 10-day injured list."
+    },
+    {
+      "id": 668867,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 940,
+        "name": "United States",
+        "link": "/api/v1/teams/940"
+      },
+      "date": "2023-02-09",
+      "effectiveDate": "2023-02-09",
+      "resolutionDate": "2023-02-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "United States activated C Will Smith."
+    },
+    {
+      "id": 685103,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2023-04-16",
+      "effectiveDate": "2023-04-13",
+      "resolutionDate": "2023-04-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed C Will Smith on the 7-day injured list retroactive to April 13, 2023. Concussion."
+    },
+    {
+      "id": 687869,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2023-04-28",
+      "effectiveDate": "2023-04-28",
+      "resolutionDate": "2023-04-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated C Will Smith from the 7-day injured list."
+    },
+    {
+      "id": 708489,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 160,
+        "name": "National League All-Stars",
+        "link": "/api/v1/teams/160"
+      },
+      "date": "2023-07-10",
+      "effectiveDate": "2023-07-10",
+      "resolutionDate": "2023-07-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Will Smith assigned to National League All-Stars."
+    },
+    {
+      "id": 785741,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 160,
+        "name": "National League All-Stars",
+        "link": "/api/v1/teams/160"
+      },
+      "date": "2024-07-15",
+      "effectiveDate": "2024-07-15",
+      "resolutionDate": "2024-07-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Will Smith assigned to National League All-Stars."
+    },
+    {
+      "id": 828509,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "C Will Smith changed number to 42."
+    },
+    {
+      "id": 829710,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "C Will Smith changed number to 16."
+    },
+    {
+      "id": 852261,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 160,
+        "name": "National League All-Stars",
+        "link": "/api/v1/teams/160"
+      },
+      "date": "2025-07-14",
+      "effectiveDate": "2025-07-14",
+      "resolutionDate": "2025-07-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "National League All-Stars activated C Will Smith."
+    },
+    {
+      "id": 869313,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-09-13",
+      "effectiveDate": "2025-09-10",
+      "resolutionDate": "2025-09-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed C Will Smith on the 10-day injured list retroactive to September 10, 2025. Right hand contusion."
+    },
+    {
+      "id": 870788,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-09-29",
+      "effectiveDate": "2025-09-29",
+      "resolutionDate": "2025-09-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated C Will Smith from the 10-day injured list."
+    },
+    {
+      "id": 884536,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 940,
+        "name": "United States",
+        "link": "/api/v1/teams/940"
+      },
+      "date": "2026-02-05",
+      "effectiveDate": "2026-02-05",
+      "resolutionDate": "2026-02-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "United States activated C Will Smith."
+    },
+    {
+      "id": 899344,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "C Will Smith changed number to 42."
+    },
+    {
+      "id": 900262,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "C Will Smith changed number to 16."
+    },
+    {
+      "id": 917486,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2026-06-11",
+      "effectiveDate": "2026-06-08",
+      "resolutionDate": "2026-06-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed C Will Smith on the 10-day injured list retroactive to June 8, 2026. Neck inflammation."
+    },
+    {
+      "id": 929662,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2026-07-21",
+      "effectiveDate": "2026-07-21",
+      "resolutionDate": "2026-07-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers transferred C Will Smith from the 10-day injured list to the 60-day injured list. Neck inflammation."
+    },
+    {
+      "id": 939402,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2026-08-25",
+      "effectiveDate": "2026-08-25",
+      "resolutionDate": "2026-08-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers sent C Will Smith on a rehab assignment to Oklahoma City Comets."
+    },
+    {
+      "id": 940469,
+      "person": {
+        "id": 669257,
+        "fullName": "Will Smith",
+        "link": "/api/v1/people/669257",
+        "nameSlug": "will-smith-669257"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2026-09-01",
+      "effectiveDate": "2026-09-01",
+      "resolutionDate": "2026-09-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated C Will Smith from the 60-day injured list."
+    }
+  ]
+}

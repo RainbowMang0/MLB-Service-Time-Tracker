@@ -1,0 +1,793 @@
+{
+  "player_id": 572119,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:887180623504e632231ad33885aa521ab9cec48378b4ecd226bd166f0e532e86",
+  "transactions": [
+    {
+      "id": 176247,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2009-08-11",
+      "effectiveDate": "2009-08-11",
+      "resolutionDate": "2009-08-11",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Arizona Diamondbacks signed Patrick Schuster."
+    },
+    {
+      "id": 20995,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "toTeam": {
+        "id": 518,
+        "name": "Missoula PaddleHeads",
+        "link": "/api/v1/teams/518"
+      },
+      "date": "2009-08-12",
+      "effectiveDate": "2009-08-12",
+      "resolutionDate": "2009-08-12",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Missoula Osprey signed free agent Patrick Schuster."
+    },
+    {
+      "id": 80843,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "fromTeam": {
+        "id": 518,
+        "name": "Missoula PaddleHeads",
+        "link": "/api/v1/teams/518"
+      },
+      "toTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "date": "2011-04-02",
+      "effectiveDate": "2011-04-02",
+      "resolutionDate": "2011-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Patrick Schuster assigned to South Bend Silver Hawks from Missoula Osprey."
+    },
+    {
+      "id": 96880,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "toTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "date": "2011-07-15",
+      "effectiveDate": "2011-07-15",
+      "resolutionDate": "2011-07-15",
+      "typeCode": "SU",
+      "typeDesc": "Suspension",
+      "description": "LHP Patrick Schuster suspended."
+    },
+    {
+      "id": 98477,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "toTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "date": "2011-07-22",
+      "effectiveDate": "2011-07-22",
+      "resolutionDate": "2011-07-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Patrick Schuster roster status changed by South Bend Silver Hawks."
+    },
+    {
+      "id": 112294,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "fromTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "toTeam": {
+        "id": 516,
+        "name": "Visalia Rawhide",
+        "link": "/api/v1/teams/516"
+      },
+      "date": "2012-04-01",
+      "effectiveDate": "2012-04-01",
+      "resolutionDate": "2012-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Patrick Schuster assigned to Visalia Rawhide from South Bend Silver Hawks."
+    },
+    {
+      "id": 176255,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2013-12-12",
+      "effectiveDate": "2013-12-12",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Houston Astros traded LHP Patrick Schuster to San Diego Padres."
+    },
+    {
+      "id": 176248,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2013-12-12",
+      "effectiveDate": "2013-12-12",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Houston Astros claimed LHP Patrick Schuster off waivers from Arizona Diamondbacks."
+    },
+    {
+      "id": 181695,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2014-03-25",
+      "effectiveDate": "2014-03-27",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Kansas City Royals claimed Patrick Schuster off waivers from San Diego Padres."
+    },
+    {
+      "id": 181993,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2014-03-27",
+      "effectiveDate": "2014-03-27",
+      "typeCode": "RTN",
+      "typeDesc": "Returned",
+      "description": "LHP Patrick Schuster returned to Arizona Diamondbacks from Kansas City Royals."
+    },
+    {
+      "id": 183091,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "toTeam": {
+        "id": 417,
+        "name": "Mobile BayBears",
+        "link": "/api/v1/teams/417"
+      },
+      "date": "2014-03-31",
+      "effectiveDate": "2014-03-31",
+      "resolutionDate": "2014-03-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Patrick Schuster assigned to Mobile BayBears."
+    },
+    {
+      "id": 199004,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "fromTeam": {
+        "id": 417,
+        "name": "Mobile BayBears",
+        "link": "/api/v1/teams/417"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2014-07-05",
+      "effectiveDate": "2014-07-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Patrick Schuster assigned to Reno Aces from Mobile BayBears."
+    },
+    {
+      "id": 217847,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2015-03-23",
+      "effectiveDate": "2015-03-23",
+      "resolutionDate": "2015-03-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Patrick Schuster assigned to Arizona Diamondbacks."
+    },
+    {
+      "id": 220545,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 417,
+        "name": "Mobile BayBears",
+        "link": "/api/v1/teams/417"
+      },
+      "date": "2015-04-06",
+      "effectiveDate": "2015-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Patrick Schuster assigned to Mobile BayBears from Reno Aces."
+    },
+    {
+      "id": 234177,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "fromTeam": {
+        "id": 417,
+        "name": "Mobile BayBears",
+        "link": "/api/v1/teams/417"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2015-06-24",
+      "effectiveDate": "2015-06-24",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Mobile BayBears traded LHP Patrick Schuster to Pensacola Blue Wahoos."
+    },
+    {
+      "id": 234549,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2015-06-25",
+      "effectiveDate": "2015-06-25",
+      "resolutionDate": "2015-06-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pensacola Blue Wahoos activated LHP Patrick Schuster."
+    },
+    {
+      "id": 249865,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2015-11-06",
+      "effectiveDate": "2015-11-06",
+      "resolutionDate": "2015-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Patrick Schuster elected free agency."
+    },
+    {
+      "id": 251117,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2015-11-23",
+      "effectiveDate": "2015-11-23",
+      "resolutionDate": "2015-11-23",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Oakland Athletics signed free agent LHP Patrick Schuster to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 251118,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2015-12-02",
+      "effectiveDate": "2015-12-02",
+      "resolutionDate": "2015-12-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Patrick Schuster assigned to Nashville Sounds."
+    },
+    {
+      "id": 276829,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2016-07-04",
+      "effectiveDate": "2016-07-21",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Oakland Athletics selected the contract of Patrick Schuster from Nashville Sounds."
+    },
+    {
+      "id": 276112,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "toTeam": {
+        "id": 63,
+        "name": "Pacific Coast League All-Stars",
+        "link": "/api/v1/teams/63"
+      },
+      "date": "2016-07-12",
+      "effectiveDate": "2016-07-12",
+      "resolutionDate": "2016-07-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Patrick Schuster assigned to Pacific Coast League All-Stars."
+    },
+    {
+      "id": 279919,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2016-07-21",
+      "effectiveDate": "2016-07-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Oakland Athletics optioned LHP Patrick Schuster to Nashville Sounds."
+    },
+    {
+      "id": 282738,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2016-08-06",
+      "effectiveDate": "2016-08-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Oakland Athletics recalled LHP Patrick Schuster from Nashville Sounds."
+    },
+    {
+      "id": 283441,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2016-08-10",
+      "effectiveDate": "2016-08-10",
+      "resolutionDate": "2016-08-10",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Oakland Athletics designated LHP Patrick Schuster for assignment."
+    },
+    {
+      "id": 283602,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2016-08-12",
+      "effectiveDate": "2016-08-12",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Philadelphia Phillies claimed LHP Patrick Schuster off waivers from Oakland Athletics."
+    },
+    {
+      "id": 283607,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2016-08-12",
+      "effectiveDate": "2016-08-12",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Philadelphia Phillies optioned LHP Patrick Schuster to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 286313,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2016-09-02",
+      "effectiveDate": "2016-09-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Philadelphia Phillies recalled LHP Patrick Schuster from Lehigh Valley IronPigs."
+    },
+    {
+      "id": 289565,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2016-10-07",
+      "effectiveDate": "2016-10-07",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Philadelphia Phillies sent LHP Patrick Schuster outright to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 289648,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2016-10-10",
+      "effectiveDate": "2016-10-10",
+      "resolutionDate": "2016-10-10",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Patrick Schuster elected free agency."
+    },
+    {
+      "id": 292260,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2016-11-05",
+      "effectiveDate": "2016-11-05",
+      "resolutionDate": "2016-11-05",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Dodgers signed free agent LHP Patrick Schuster to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 293908,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2016-11-06",
+      "effectiveDate": "2016-11-06",
+      "resolutionDate": "2016-11-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Patrick Schuster assigned to Oklahoma City Dodgers."
+    },
+    {
+      "id": 312347,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2017-05-28",
+      "effectiveDate": "2017-05-26",
+      "resolutionDate": "2017-05-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers placed LHP Patrick Schuster on the 7-day disabled list retroactive to May 26, 2017."
+    },
+    {
+      "id": 316111,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2017-06-15",
+      "effectiveDate": "2017-06-15",
+      "resolutionDate": "2017-06-15",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Oklahoma City Dodgers released LHP Patrick Schuster."
+    },
+    {
+      "id": 316458,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2017-06-17",
+      "effectiveDate": "2017-06-17",
+      "resolutionDate": "2017-06-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Oakland Athletics signed free agent LHP Patrick Schuster to a minor league contract."
+    },
+    {
+      "id": 316459,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2017-06-17",
+      "effectiveDate": "2017-06-17",
+      "resolutionDate": "2017-06-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Patrick Schuster assigned to Nashville Sounds."
+    },
+    {
+      "id": 336886,
+      "person": {
+        "id": 572119,
+        "fullName": "Patrick Schuster",
+        "link": "/api/v1/people/572119",
+        "nameSlug": "patrick-schuster-572119"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2017-11-06",
+      "effectiveDate": "2017-11-06",
+      "resolutionDate": "2017-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Patrick Schuster elected free agency."
+    }
+  ]
+}

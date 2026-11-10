@@ -1,0 +1,122 @@
+{
+  "player_id": 548092,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:221556198ac61eea9bc74e4e540d9516992ef7a08f29cdec59ec004ec552de12",
+  "transactions": [
+    {
+      "id": 3116,
+      "person": {
+        "id": 548092,
+        "fullName": "Ken Takahashi",
+        "link": "/api/v1/people/548092",
+        "nameSlug": "ken-takahashi-548092"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2009-04-27",
+      "effectiveDate": "2009-04-27",
+      "resolutionDate": "2009-04-27",
+      "typeCode": "RES",
+      "typeDesc": "Reserved",
+      "description": "Buffalo Bisons placed LHP Ken Takahashi on the reserve list."
+    },
+    {
+      "id": 3119,
+      "person": {
+        "id": 548092,
+        "fullName": "Ken Takahashi",
+        "link": "/api/v1/people/548092",
+        "nameSlug": "ken-takahashi-548092"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2009-04-27",
+      "effectiveDate": "2009-06-22",
+      "resolutionDate": "2009-04-27",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Mets selected the contract of Ken Takahashi from Buffalo Bisons."
+    },
+    {
+      "id": 12221,
+      "person": {
+        "id": 548092,
+        "fullName": "Ken Takahashi",
+        "link": "/api/v1/people/548092",
+        "nameSlug": "ken-takahashi-548092"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2009-06-22",
+      "effectiveDate": "2009-06-22",
+      "resolutionDate": "2009-06-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Mets optioned Ken Takahashi to Buffalo Bisons."
+    },
+    {
+      "id": 22437,
+      "person": {
+        "id": 548092,
+        "fullName": "Ken Takahashi",
+        "link": "/api/v1/people/548092",
+        "nameSlug": "ken-takahashi-548092"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2009-08-24",
+      "effectiveDate": "2009-08-24",
+      "resolutionDate": "2009-08-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Mets recalled LHP Ken Takahashi from Buffalo Bisons."
+    },
+    {
+      "id": 27048,
+      "person": {
+        "id": 548092,
+        "fullName": "Ken Takahashi",
+        "link": "/api/v1/people/548092",
+        "nameSlug": "ken-takahashi-548092"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2009-10-20",
+      "effectiveDate": "2009-10-20",
+      "resolutionDate": "2009-10-20",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "New York Mets released LHP Ken Takahashi."
+    }
+  ]
+}

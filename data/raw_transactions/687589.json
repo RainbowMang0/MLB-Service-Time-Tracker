@@ -1,0 +1,725 @@
+{
+  "player_id": 687589,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:dfd9d7a51c1ecea88b457e9f5f330261143dc5c231cb315efd12faf605ce4f11",
+  "transactions": [
+    {
+      "id": 508840,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2021-07-28",
+      "effectiveDate": "2021-07-28",
+      "resolutionDate": "2021-07-28",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "New York Mets signed RHP Dominic Hamel."
+    },
+    {
+      "id": 512660,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "toTeam": {
+        "id": 3279,
+        "name": "Mets Organization",
+        "link": "/api/v1/teams/3279"
+      },
+      "date": "2021-08-17",
+      "effectiveDate": "2021-08-17",
+      "resolutionDate": "2021-08-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Dominic Hamel assigned to Mets Organization."
+    },
+    {
+      "id": 516739,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "fromTeam": {
+        "id": 3279,
+        "name": "Mets Organization",
+        "link": "/api/v1/teams/3279"
+      },
+      "toTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "date": "2021-09-10",
+      "effectiveDate": "2021-09-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Dominic Hamel assigned to FCL Mets from Mets Organization."
+    },
+    {
+      "id": 613748,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "fromTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2022-04-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Dominic Hamel assigned to St. Lucie Mets from FCL Mets."
+    },
+    {
+      "id": 635026,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "fromTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2022-07-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Dominic Hamel assigned to Brooklyn Cyclones from St. Lucie Mets."
+    },
+    {
+      "id": 668945,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "toTeam": {
+        "id": 897,
+        "name": "Puerto Rico",
+        "link": "/api/v1/teams/897"
+      },
+      "date": "2023-02-09",
+      "effectiveDate": "2023-02-09",
+      "resolutionDate": "2023-02-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Puerto Rico activated RHP Dominic Hamel."
+    },
+    {
+      "id": 677250,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2023-03-26",
+      "effectiveDate": "2023-03-26",
+      "resolutionDate": "2023-03-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Dominic Hamel and  assigned to New York Mets."
+    },
+    {
+      "id": 679220,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "fromTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2023-03-29",
+      "effectiveDate": "2023-03-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Dominic Hamel assigned to Binghamton Rumble Ponies from Brooklyn Cyclones."
+    },
+    {
+      "id": 739034,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-02-01",
+      "effectiveDate": "2024-02-01",
+      "resolutionDate": "2024-02-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Mets invited non-roster RHP Dominic Hamel to spring training."
+    },
+    {
+      "id": 753692,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "toTeam": {
+        "id": 371,
+        "name": "New York Mets Prospects",
+        "link": "/api/v1/teams/371"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets Prospects activated RHP Dominic Hamel."
+    },
+    {
+      "id": 822599,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2024-03-29",
+      "effectiveDate": "2024-03-29",
+      "resolutionDate": "2024-03-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Mets activated RHP Dom Hamel."
+    },
+    {
+      "id": 757959,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2024-03-29",
+      "effectiveDate": "2024-03-29",
+      "resolutionDate": "2024-03-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Dominic Hamel assigned to Syracuse Mets."
+    },
+    {
+      "id": 814355,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2025-02-10",
+      "effectiveDate": "2025-02-10",
+      "resolutionDate": "2025-02-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Mets invited non-roster RHP Dom Hamel to spring training."
+    },
+    {
+      "id": 826948,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2025-04-06",
+      "effectiveDate": "2025-04-06",
+      "resolutionDate": "2025-04-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Mets placed RHP Dom Hamel on the 7-day injured list."
+    },
+    {
+      "id": 830671,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2025-04-17",
+      "effectiveDate": "2025-04-17",
+      "resolutionDate": "2025-04-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Mets activated RHP Dom Hamel from the 7-day injured list."
+    },
+    {
+      "id": 862097,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "fromTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2025-08-04",
+      "effectiveDate": "2025-08-04",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Mets selected the contract of RHP Dom Hamel from Syracuse Mets."
+    },
+    {
+      "id": 862731,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2025-08-06",
+      "effectiveDate": "2025-08-06",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Mets optioned RHP Dom Hamel to Syracuse Mets."
+    },
+    {
+      "id": 869075,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "fromTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2025-09-13",
+      "effectiveDate": "2025-09-13",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Mets recalled RHP Dom Hamel from Syracuse Mets."
+    },
+    {
+      "id": 869935,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2025-09-18",
+      "effectiveDate": "2025-09-18",
+      "resolutionDate": "2025-09-18",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Mets designated RHP Dom Hamel for assignment."
+    },
+    {
+      "id": 870175,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-09-20",
+      "effectiveDate": "2025-09-20",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Baltimore Orioles claimed RHP Dom Hamel off waivers from New York Mets."
+    },
+    {
+      "id": 870176,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2025-09-20",
+      "effectiveDate": "2025-09-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Baltimore Orioles optioned RHP Dom Hamel to Norfolk Tides."
+    },
+    {
+      "id": 870373,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-09-25",
+      "effectiveDate": "2025-09-25",
+      "resolutionDate": "2025-09-25",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Baltimore Orioles designated RHP Dom Hamel for assignment."
+    },
+    {
+      "id": 870519,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2025-09-27",
+      "effectiveDate": "2025-09-27",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Texas Rangers optioned RHP Dom Hamel to Round Rock Express."
+    },
+    {
+      "id": 870506,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-09-27",
+      "effectiveDate": "2025-09-27",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Texas Rangers claimed RHP Dom Hamel off waivers from Baltimore Orioles."
+    },
+    {
+      "id": 870723,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-09-29",
+      "effectiveDate": "2025-09-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Texas Rangers recalled RHP Dom Hamel from Round Rock Express."
+    },
+    {
+      "id": 882205,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-01-20",
+      "effectiveDate": "2026-01-20",
+      "resolutionDate": "2026-01-20",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Texas Rangers designated RHP Dom Hamel for assignment."
+    },
+    {
+      "id": 882976,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2026-01-27",
+      "effectiveDate": "2026-01-27",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "New York Yankees claimed RHP Dom Hamel off waivers from Texas Rangers."
+    },
+    {
+      "id": 884214,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2026-02-04",
+      "effectiveDate": "2026-02-04",
+      "resolutionDate": "2026-02-04",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Yankees designated RHP Dom Hamel for assignment."
+    },
+    {
+      "id": 885624,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2026-02-09",
+      "effectiveDate": "2026-02-09",
+      "resolutionDate": "2026-02-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Yankees invited non-roster RHP Dom Hamel to spring training."
+    },
+    {
+      "id": 885621,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2026-02-09",
+      "effectiveDate": "2026-02-09",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "New York Yankees sent RHP Dom Hamel outright to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 924621,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2026-07-02",
+      "effectiveDate": "2026-07-02",
+      "resolutionDate": "2026-07-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders transferred RHP Dom Hamel to the Development List."
+    },
+    {
+      "id": 926353,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2026-07-09",
+      "effectiveDate": "2026-07-09",
+      "resolutionDate": "2026-07-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders activated RHP Dom Hamel from the Development List."
+    },
+    {
+      "id": 936830,
+      "person": {
+        "id": 687589,
+        "fullName": "Dom Hamel",
+        "link": "/api/v1/people/687589",
+        "nameSlug": "dom-hamel-687589"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 1956,
+        "name": "Somerset Patriots",
+        "link": "/api/v1/teams/1956"
+      },
+      "date": "2026-08-11",
+      "effectiveDate": "2026-08-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Dom Hamel assigned to Somerset Patriots from Scranton/Wilkes-Barre RailRiders."
+    }
+  ]
+}

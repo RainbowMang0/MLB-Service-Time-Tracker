@@ -1,0 +1,1461 @@
+{
+  "player_id": 543935,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:0ac359d3dee2a8f9cb4947d3c35c67f26b795ec1f03e8561ac20470efc04d2c7",
+  "transactions": [
+    {
+      "id": 14415,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2009-06-17",
+      "effectiveDate": "2009-06-17",
+      "resolutionDate": "2009-06-17",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Boston Red Sox signed Alex Wilson."
+    },
+    {
+      "id": 14416,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 558,
+        "name": "Lowell Spinners",
+        "link": "/api/v1/teams/558"
+      },
+      "date": "2009-06-19",
+      "effectiveDate": "2009-06-19",
+      "resolutionDate": "2009-06-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Alex Wilson assigned to Lowell Spinners from Boston Red Sox."
+    },
+    {
+      "id": 14417,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 558,
+        "name": "Lowell Spinners",
+        "link": "/api/v1/teams/558"
+      },
+      "toTeam": {
+        "id": 471,
+        "name": "FCL Red Sox",
+        "link": "/api/v1/teams/471"
+      },
+      "date": "2009-06-22",
+      "effectiveDate": "2009-06-22",
+      "resolutionDate": "2009-06-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Alex Wilson assigned to GCL Red Sox from Lowell Spinners."
+    },
+    {
+      "id": 14418,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 471,
+        "name": "FCL Red Sox",
+        "link": "/api/v1/teams/471"
+      },
+      "toTeam": {
+        "id": 558,
+        "name": "Lowell Spinners",
+        "link": "/api/v1/teams/558"
+      },
+      "date": "2009-06-28",
+      "effectiveDate": "2009-06-28",
+      "resolutionDate": "2009-06-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Alex Wilson assigned to Lowell Spinners from GCL Red Sox."
+    },
+    {
+      "id": 36243,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 558,
+        "name": "Lowell Spinners",
+        "link": "/api/v1/teams/558"
+      },
+      "toTeam": {
+        "id": 414,
+        "name": "Salem RidgeYaks",
+        "link": "/api/v1/teams/414"
+      },
+      "date": "2010-04-05",
+      "effectiveDate": "2010-04-05",
+      "resolutionDate": "2010-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alex Wilson assigned to Salem Red Sox from Lowell Spinners."
+    },
+    {
+      "id": 50062,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 414,
+        "name": "Salem RidgeYaks",
+        "link": "/api/v1/teams/414"
+      },
+      "date": "2010-06-06",
+      "effectiveDate": "2010-06-06",
+      "resolutionDate": "2010-06-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Alex Wilson roster status changed by Salem Red Sox."
+    },
+    {
+      "id": 52256,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 414,
+        "name": "Salem RidgeYaks",
+        "link": "/api/v1/teams/414"
+      },
+      "toTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "date": "2010-06-15",
+      "effectiveDate": "2010-06-15",
+      "resolutionDate": "2010-06-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alex Wilson assigned to Portland Sea Dogs from Salem Red Sox."
+    },
+    {
+      "id": 65393,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "date": "2010-08-02",
+      "effectiveDate": "2010-08-02",
+      "resolutionDate": "2010-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Portland Sea Dogs placed RHP Alex Wilson on the 7-day disabled list."
+    },
+    {
+      "id": 66436,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "date": "2010-08-11",
+      "effectiveDate": "2010-08-11",
+      "resolutionDate": "2010-08-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Alex Wilson roster status changed by Portland Sea Dogs."
+    },
+    {
+      "id": 76806,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2011-02-02",
+      "effectiveDate": "2011-02-02",
+      "resolutionDate": "2011-02-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Boston Red Sox invited non-roster RHP Alex Wilson to spring training."
+    },
+    {
+      "id": 100707,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2011-08-16",
+      "effectiveDate": "2011-08-16",
+      "resolutionDate": "2011-08-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Alex Wilson assigned to Pawtucket Red Sox from Portland Sea Dogs."
+    },
+    {
+      "id": 109326,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2012-02-16",
+      "effectiveDate": "2012-02-16",
+      "resolutionDate": "2012-02-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Boston Red Sox invited non-roster RHP Alex Wilson to spring training."
+    },
+    {
+      "id": 140324,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2012-11-20",
+      "effectiveDate": "2013-03-16",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Boston Red Sox selected the contract of Alex Wilson from Pawtucket Red Sox."
+    },
+    {
+      "id": 145001,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2013-03-16",
+      "effectiveDate": "2013-03-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Boston Red Sox optioned Alex Wilson to Pawtucket Red Sox."
+    },
+    {
+      "id": 149220,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2013-04-10",
+      "effectiveDate": "2013-05-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Boston Red Sox recalled Alex Wilson from Pawtucket Red Sox."
+    },
+    {
+      "id": 154404,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2013-05-29",
+      "effectiveDate": "2013-05-29",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Boston Red Sox optioned Alex Wilson to Pawtucket Red Sox."
+    },
+    {
+      "id": 157384,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2013-06-13",
+      "effectiveDate": "2013-06-14",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Boston Red Sox recalled Alex Wilson from Pawtucket Red Sox."
+    },
+    {
+      "id": 157595,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2013-06-14",
+      "effectiveDate": "2013-06-14",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Boston Red Sox optioned Alex Wilson to Pawtucket Red Sox."
+    },
+    {
+      "id": 158996,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2013-06-18",
+      "effectiveDate": "2013-06-18",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Boston Red Sox recalled RHP Alex Wilson from Pawtucket Red Sox."
+    },
+    {
+      "id": 163600,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2013-06-18",
+      "effectiveDate": "2013-07-09",
+      "resolutionDate": "2013-07-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Alex Wilson roster status changed by Boston Red Sox."
+    },
+    {
+      "id": 163621,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2013-07-09",
+      "effectiveDate": "2013-07-09",
+      "resolutionDate": "2013-07-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Boston Red Sox placed RHP Alex Wilson on the 15-day disabled list. Sprained right thumb."
+    },
+    {
+      "id": 166237,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2013-07-30",
+      "effectiveDate": "2013-07-30",
+      "resolutionDate": "2013-07-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Boston Red Sox sent RHP Alex Wilson on a rehab assignment to Pawtucket Red Sox."
+    },
+    {
+      "id": 170145,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2013-08-31",
+      "effectiveDate": "2013-08-31",
+      "resolutionDate": "2013-08-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Boston Red Sox transferred RHP Alex Wilson from the 15-day disabled list to the 60-day disabled list. Sprained right thumb."
+    },
+    {
+      "id": 174109,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2013-11-04",
+      "effectiveDate": "2013-11-04",
+      "resolutionDate": "2013-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Boston Red Sox activated RHP Alex Wilson from the 60-day disabled list."
+    },
+    {
+      "id": 180249,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2014-03-07",
+      "effectiveDate": "2014-03-13",
+      "resolutionDate": "2014-03-07",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "Alex Wilson changed number to ."
+    },
+    {
+      "id": 180799,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2014-03-13",
+      "effectiveDate": "2014-03-13",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Boston Red Sox optioned RHP Alex Wilson to Pawtucket Red Sox."
+    },
+    {
+      "id": 186663,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2014-04-23",
+      "effectiveDate": "2014-04-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Boston Red Sox recalled Alex Wilson from Pawtucket Red Sox."
+    },
+    {
+      "id": 186731,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2014-04-24",
+      "effectiveDate": "2014-04-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Boston Red Sox optioned RHP Alex Wilson to Pawtucket Red Sox."
+    },
+    {
+      "id": 189843,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2014-05-23",
+      "effectiveDate": "2014-05-26",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Boston Red Sox recalled Alex Wilson from Pawtucket Red Sox."
+    },
+    {
+      "id": 190120,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2014-05-26",
+      "effectiveDate": "2014-05-26",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Boston Red Sox optioned RHP Alex Wilson to Pawtucket Red Sox."
+    },
+    {
+      "id": 190452,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2014-05-28",
+      "effectiveDate": "2014-06-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Boston Red Sox recalled Alex Wilson from Pawtucket Red Sox."
+    },
+    {
+      "id": 191267,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2014-06-01",
+      "effectiveDate": "2014-06-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Boston Red Sox optioned RHP Alex Wilson to Pawtucket Red Sox."
+    },
+    {
+      "id": 203152,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2014-08-01",
+      "effectiveDate": "2014-08-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Boston Red Sox recalled Alex Wilson from Pawtucket Red Sox."
+    },
+    {
+      "id": 203399,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2014-08-03",
+      "effectiveDate": "2014-08-03",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Boston Red Sox optioned RHP Alex Wilson to Pawtucket Red Sox."
+    },
+    {
+      "id": 204884,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2014-08-14",
+      "effectiveDate": "2014-08-14",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Boston Red Sox recalled RHP Alex Wilson from Pawtucket Red Sox."
+    },
+    {
+      "id": 212905,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2014-12-11",
+      "effectiveDate": "2015-03-24",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Detroit Tigers traded RHP Rick Porcello to Boston Red Sox for LF Yoenis Cespedes, RHP Alex Wilson and LHP Gabe Speier."
+    },
+    {
+      "id": 217948,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2015-03-24",
+      "effectiveDate": "2015-03-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Detroit Tigers optioned RHP Alex Wilson to Toledo Mud Hens."
+    },
+    {
+      "id": 222935,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2015-04-23",
+      "effectiveDate": "2015-04-23",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled RHP Alex Wilson from Toledo Mud Hens."
+    },
+    {
+      "id": 259476,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2016-04-02",
+      "effectiveDate": "2016-03-25",
+      "resolutionDate": "2016-03-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers placed RHP Alex Wilson on the 15-day disabled list retroactive to March 25, 2016. Right shoulder soreness"
+    },
+    {
+      "id": 261337,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2016-04-07",
+      "effectiveDate": "2016-04-07",
+      "resolutionDate": "2016-04-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers sent RHP Alex Wilson on a rehab assignment to Lakeland Flying Tigers."
+    },
+    {
+      "id": 261957,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2016-04-12",
+      "effectiveDate": "2016-04-12",
+      "resolutionDate": "2016-04-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers sent RHP Alex Wilson on a rehab assignment to Toledo Mud Hens."
+    },
+    {
+      "id": 262291,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2016-04-16",
+      "effectiveDate": "2016-04-16",
+      "resolutionDate": "2016-04-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers activated RHP Alex Wilson from the 15-day disabled list."
+    },
+    {
+      "id": 331693,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2017-09-02",
+      "effectiveDate": "2017-09-02",
+      "resolutionDate": "2017-09-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Alex Wilson roster status changed by Detroit Tigers."
+    },
+    {
+      "id": 332007,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2017-09-05",
+      "effectiveDate": "2017-09-05",
+      "resolutionDate": "2017-09-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers activated RHP Alex Wilson."
+    },
+    {
+      "id": 352862,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2018-05-08",
+      "effectiveDate": "2018-05-08",
+      "resolutionDate": "2018-05-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers placed RHP Alex Wilson on the 10-day disabled list. Left plantar fascia strain."
+    },
+    {
+      "id": 358120,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2018-06-05",
+      "effectiveDate": "2018-06-05",
+      "resolutionDate": "2018-06-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers sent RHP Alex Wilson on a rehab assignment to Toledo Mud Hens."
+    },
+    {
+      "id": 358461,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2018-06-07",
+      "effectiveDate": "2018-06-07",
+      "resolutionDate": "2018-06-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers activated RHP Alex Wilson from the 10-day disabled list."
+    },
+    {
+      "id": 384280,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2018-11-30",
+      "effectiveDate": "2018-11-30",
+      "resolutionDate": "2018-11-30",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Alex Wilson elected free agency."
+    },
+    {
+      "id": 387773,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2019-02-09",
+      "effectiveDate": "2019-02-09",
+      "resolutionDate": "2019-02-09",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cleveland Indians signed free agent RHP Alex Wilson to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 387774,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2019-02-09",
+      "effectiveDate": "2019-02-09",
+      "resolutionDate": "2019-02-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alex Wilson assigned to Columbus Clippers."
+    },
+    {
+      "id": 391739,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2019-03-22",
+      "effectiveDate": "2019-03-22",
+      "resolutionDate": "2019-03-22",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Cleveland Indians released RHP Alex Wilson."
+    },
+    {
+      "id": 391740,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2019-03-22",
+      "effectiveDate": "2019-03-22",
+      "resolutionDate": "2019-03-22",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Columbus Clippers released RHP Alex Wilson."
+    },
+    {
+      "id": 392003,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2019-03-24",
+      "effectiveDate": "2019-03-24",
+      "resolutionDate": "2019-03-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Milwaukee Brewers signed free agent RHP Alex Wilson."
+    },
+    {
+      "id": 397164,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2019-04-17",
+      "effectiveDate": "2019-04-17",
+      "resolutionDate": "2019-04-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers placed RHP Alex Wilson on the paternity list."
+    },
+    {
+      "id": 397477,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2019-04-19",
+      "effectiveDate": "2019-04-19",
+      "resolutionDate": "2019-04-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated RHP Alex Wilson from the paternity list."
+    },
+    {
+      "id": 399038,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2019-04-29",
+      "effectiveDate": "2019-04-29",
+      "resolutionDate": "2019-04-29",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Milwaukee Brewers designated RHP Alex Wilson for assignment."
+    },
+    {
+      "id": 399366,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2019-05-01",
+      "effectiveDate": "2019-05-01",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Milwaukee Brewers sent RHP Alex Wilson outright to San Antonio Missions."
+    },
+    {
+      "id": 421755,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2019-08-03",
+      "effectiveDate": "2019-08-03",
+      "resolutionDate": "2019-08-03",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "San Antonio Missions released RHP Alex Wilson."
+    },
+    {
+      "id": 422561,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2019-08-07",
+      "effectiveDate": "2019-08-07",
+      "resolutionDate": "2019-08-07",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago Cubs signed free agent RHP Alex Wilson to a minor league contract."
+    },
+    {
+      "id": 422562,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2019-08-07",
+      "effectiveDate": "2019-08-07",
+      "resolutionDate": "2019-08-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alex Wilson assigned to Iowa Cubs."
+    },
+    {
+      "id": 424980,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2019-08-21",
+      "effectiveDate": "2019-08-21",
+      "resolutionDate": "2019-08-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs placed RHP Alex Wilson on the temporarily inactive list."
+    },
+    {
+      "id": 425448,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2019-08-24",
+      "effectiveDate": "2019-08-24",
+      "resolutionDate": "2019-08-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs activated RHP Alex Wilson from the temporarily inactive list."
+    },
+    {
+      "id": 432643,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2019-11-04",
+      "effectiveDate": "2019-11-04",
+      "resolutionDate": "2019-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Alex Wilson elected free agency."
+    },
+    {
+      "id": 435855,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2020-01-04",
+      "effectiveDate": "2020-01-04",
+      "resolutionDate": "2020-01-04",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent RHP Alex Wilson to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 435856,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2020-01-05",
+      "effectiveDate": "2020-01-05",
+      "resolutionDate": "2020-01-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alex Wilson assigned to Toledo Mud Hens."
+    },
+    {
+      "id": 445874,
+      "person": {
+        "id": 543935,
+        "fullName": "Alex Wilson",
+        "link": "/api/v1/people/543935",
+        "nameSlug": "alex-wilson-543935"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2020-06-25",
+      "effectiveDate": "2020-06-25",
+      "resolutionDate": "2020-06-25",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Toledo Mud Hens released RHP Alex Wilson."
+    }
+  ]
+}

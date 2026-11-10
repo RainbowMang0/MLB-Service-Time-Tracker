@@ -1,0 +1,914 @@
+{
+  "player_id": 453228,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:9ce2afe1a7ed0dad4a33761d4108132ac56cda405826bbf70a8510a0846c3b29",
+  "transactions": [
+    {
+      "id": 9370,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2009-06-13",
+      "effectiveDate": "2009-06-12",
+      "resolutionDate": "2009-06-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lehigh Valley IronPigs placed SS Jason Donald on the 7-day disabled list retroactive to June 12, 2009. Left knee inflammation."
+    },
+    {
+      "id": 15232,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 469,
+        "name": "FCL Phillies",
+        "link": "/api/v1/teams/469"
+      },
+      "date": "2009-07-06",
+      "effectiveDate": "2009-07-06",
+      "resolutionDate": "2009-07-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Lehigh Valley IronPigs sent SS Jason Donald on a rehab assignment to GCL Phillies."
+    },
+    {
+      "id": 18639,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2009-07-28",
+      "effectiveDate": "2009-07-28",
+      "resolutionDate": "2009-07-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jason Donald roster status changed by Lehigh Valley IronPigs."
+    },
+    {
+      "id": 18913,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2009-07-30",
+      "effectiveDate": "2009-07-30",
+      "resolutionDate": "2009-07-29",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Lehigh Valley IronPigs traded SS Jason Donald to Columbus Clippers."
+    },
+    {
+      "id": 22056,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2009-08-20",
+      "effectiveDate": "2009-08-18",
+      "resolutionDate": "2009-08-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbus Clippers placed SS Jason Donald on the 7-day disabled list retroactive to August 18, 2009."
+    },
+    {
+      "id": 27318,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2009-09-10",
+      "effectiveDate": "2009-09-10",
+      "resolutionDate": "2009-09-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jason Donald roster status changed by Columbus Clippers."
+    },
+    {
+      "id": 29554,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2009-11-20",
+      "effectiveDate": "2010-03-20",
+      "resolutionDate": "2009-11-20",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Cleveland Indians selected the contract of Jason Donald from Columbus Clippers."
+    },
+    {
+      "id": 34134,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2010-03-20",
+      "effectiveDate": "2010-03-20",
+      "resolutionDate": "2010-03-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cleveland Indians optioned Jason Donald to Columbus Clippers."
+    },
+    {
+      "id": 44698,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2010-05-18",
+      "effectiveDate": "2010-05-18",
+      "resolutionDate": "2010-05-18",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cleveland Indians recalled SS Jason Donald from Columbus Clippers."
+    },
+    {
+      "id": 80380,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2011-03-30",
+      "effectiveDate": "2011-03-22",
+      "resolutionDate": "2011-03-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jason Donald roster status changed by Cleveland Indians."
+    },
+    {
+      "id": 82864,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "date": "2011-04-10",
+      "effectiveDate": "2011-04-10",
+      "resolutionDate": "2011-04-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Jason Donald assigned to Akron Aeros."
+    },
+    {
+      "id": 83196,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "fromTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2011-04-14",
+      "effectiveDate": "2011-04-14",
+      "resolutionDate": "2011-04-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Jason Donald assigned to Columbus Clippers from Akron Aeros."
+    },
+    {
+      "id": 84090,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "date": "2011-04-25",
+      "effectiveDate": "2011-04-25",
+      "resolutionDate": "2011-04-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Columbus Clippers sent SS Jason Donald on a rehab assignment to Akron Aeros."
+    },
+    {
+      "id": 84453,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2011-04-29",
+      "effectiveDate": "2011-04-29",
+      "resolutionDate": "2011-04-29",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cleveland Indians optioned SS Jason Donald to Columbus Clippers."
+    },
+    {
+      "id": 85563,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2011-05-11",
+      "effectiveDate": "2011-05-11",
+      "resolutionDate": "2011-05-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jason Donald roster status changed by Columbus Clippers."
+    },
+    {
+      "id": 90439,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "date": "2011-06-14",
+      "effectiveDate": "2011-06-14",
+      "resolutionDate": "2011-06-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Jason Donald assigned to Akron Aeros from Columbus Clippers."
+    },
+    {
+      "id": 92564,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "fromTeam": {
+        "id": 402,
+        "name": "Akron RubberDucks",
+        "link": "/api/v1/teams/402"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2011-06-20",
+      "effectiveDate": "2011-06-20",
+      "resolutionDate": "2011-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Jason Donald assigned to Columbus Clippers from Akron Aeros."
+    },
+    {
+      "id": 98701,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2011-07-31",
+      "effectiveDate": "2011-07-31",
+      "resolutionDate": "2011-07-31",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cleveland Indians recalled Jason Donald from Columbus Clippers."
+    },
+    {
+      "id": 117905,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2012-05-12",
+      "effectiveDate": "2012-05-13",
+      "resolutionDate": "2012-05-12",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cleveland Indians optioned SS Jason Donald to Columbus Clippers."
+    },
+    {
+      "id": 118139,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2012-05-15",
+      "effectiveDate": "2012-06-29",
+      "resolutionDate": "2012-05-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jason Donald roster status changed by Columbus Clippers."
+    },
+    {
+      "id": 127522,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2012-06-30",
+      "effectiveDate": "2012-06-30",
+      "resolutionDate": "2012-06-30",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cleveland Indians recalled Jason Donald from Columbus Clippers."
+    },
+    {
+      "id": 128452,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2012-07-06",
+      "effectiveDate": "2012-08-08",
+      "resolutionDate": "2012-07-06",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cleveland Indians optioned Jason Donald to Columbus Clippers."
+    },
+    {
+      "id": 132533,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2012-08-09",
+      "effectiveDate": "2012-08-09",
+      "resolutionDate": "2012-08-09",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cleveland Indians recalled Jason Donald from Columbus Clippers."
+    },
+    {
+      "id": 141208,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2012-12-11",
+      "effectiveDate": "2012-12-11",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Cleveland Indians traded CF Shin-Soo Choo and 3B Jason Donald to Cincinnati Reds for Didi Gregorius and RF Drew Stubbs."
+    },
+    {
+      "id": 147104,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2013-03-31",
+      "effectiveDate": "2013-03-31",
+      "resolutionDate": "2013-03-31",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Cincinnati Reds designated Jason Donald for assignment."
+    },
+    {
+      "id": 148756,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2013-04-04",
+      "effectiveDate": "2013-04-04",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Cincinnati Reds sent 3B Jason Donald outright to Louisville Bats."
+    },
+    {
+      "id": 151057,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2013-04-28",
+      "effectiveDate": "2013-04-28",
+      "resolutionDate": "2013-04-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Louisville Bats placed SS Jason Donald on the 7-day disabled list."
+    },
+    {
+      "id": 155833,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2013-06-06",
+      "effectiveDate": "2013-06-06",
+      "resolutionDate": "2013-06-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Louisville Bats activated 2B Jason Donald from the 7-day disabled list."
+    },
+    {
+      "id": 174315,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2013-11-04",
+      "effectiveDate": "2013-11-04",
+      "resolutionDate": "2013-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "2B Jason Donald elected free agency."
+    },
+    {
+      "id": 177443,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2013-12-28",
+      "effectiveDate": "2013-12-28",
+      "resolutionDate": "2013-12-28",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Kansas City Royals signed free agent 2B Jason Donald to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 184950,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2014-04-03",
+      "effectiveDate": "2014-04-03",
+      "resolutionDate": "2014-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Jason Donald assigned to Omaha Storm Chasers."
+    },
+    {
+      "id": 187004,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2014-04-26",
+      "effectiveDate": "2014-04-26",
+      "resolutionDate": "2014-04-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Omaha Storm Chasers placed 2B Jason Donald on the 7-day disabled list. Strained left groin."
+    },
+    {
+      "id": 188129,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2014-05-07",
+      "effectiveDate": "2014-05-07",
+      "resolutionDate": "2014-05-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Omaha Storm Chasers activated 2B Jason Donald from the 7-day disabled list."
+    },
+    {
+      "id": 191369,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2014-05-08",
+      "effectiveDate": "2014-05-08",
+      "resolutionDate": "2014-05-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Jason Donald assigned to Round Rock Express."
+    },
+    {
+      "id": 190482,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "fromTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2014-05-28",
+      "effectiveDate": "2014-05-28",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Omaha Storm Chasers traded 2B Jason Donald to Round Rock Express."
+    },
+    {
+      "id": 194331,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2014-06-15",
+      "effectiveDate": "2014-06-15",
+      "resolutionDate": "2014-06-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express placed 2B Jason Donald on the 7-day disabled list."
+    },
+    {
+      "id": 196752,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2014-06-21",
+      "effectiveDate": "2014-06-21",
+      "resolutionDate": "2014-06-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express activated 2B Jason Donald from the 7-day disabled list."
+    },
+    {
+      "id": 198750,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2014-07-03",
+      "effectiveDate": "2014-07-03",
+      "resolutionDate": "2014-07-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express placed 2B Jason Donald on the 7-day disabled list."
+    },
+    {
+      "id": 201370,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2014-07-10",
+      "effectiveDate": "2014-07-10",
+      "resolutionDate": "2014-07-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express activated 2B Jason Donald from the 7-day disabled list."
+    },
+    {
+      "id": 201805,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2014-07-23",
+      "effectiveDate": "2014-07-23",
+      "resolutionDate": "2014-07-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express placed 2B Jason Donald on the 7-day disabled list."
+    },
+    {
+      "id": 203260,
+      "person": {
+        "id": 453228,
+        "fullName": "Jason Donald",
+        "link": "/api/v1/people/453228",
+        "nameSlug": "jason-donald-453228"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2014-08-02",
+      "effectiveDate": "2014-08-02",
+      "resolutionDate": "2014-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express activated 2B Jason Donald from the 7-day disabled list."
+    }
+  ]
+}

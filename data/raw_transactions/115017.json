@@ -1,0 +1,72 @@
+{
+  "player_id": 115017,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:d9142be32fa1a1652b973604b0172df59b5d57564f024123693e65901bc7c7d1",
+  "transactions": [
+    {
+      "id": 3683,
+      "person": {
+        "id": 115017,
+        "fullName": "Tony Graffanino",
+        "link": "/api/v1/people/115017",
+        "nameSlug": "tony-graffanino-115017"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2009-05-02",
+      "effectiveDate": "2009-05-02",
+      "resolutionDate": "2009-05-02",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Cleveland Indians designated 2B Tony Graffanino for assignment."
+    },
+    {
+      "id": 4134,
+      "person": {
+        "id": 115017,
+        "fullName": "Tony Graffanino",
+        "link": "/api/v1/people/115017",
+        "nameSlug": "tony-graffanino-115017"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2009-05-07",
+      "effectiveDate": "2009-05-07",
+      "resolutionDate": "2009-05-07",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Cleveland Indians sent 2B Tony Graffanino outright to Columbus Clippers."
+    },
+    {
+      "id": 26192,
+      "person": {
+        "id": 115017,
+        "fullName": "Tony Graffanino",
+        "link": "/api/v1/people/115017",
+        "nameSlug": "tony-graffanino-115017"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2009-10-13",
+      "effectiveDate": "2009-10-13",
+      "resolutionDate": "2009-10-13",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "2B Tony Graffanino elected free agency."
+    }
+  ]
+}

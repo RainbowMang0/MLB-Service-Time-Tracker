@@ -1,0 +1,2263 @@
+{
+  "player_id": 663897,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:9d1ac9969206a2904ee3d925b4e29f229b13100b507d69350d053893debbeef3",
+  "transactions": [
+    {
+      "id": 233901,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2015-06-22",
+      "effectiveDate": "2015-06-22",
+      "resolutionDate": "2015-06-22",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Philadelphia Phillies signed SS Lucas Williams."
+    },
+    {
+      "id": 233902,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 469,
+        "name": "FCL Phillies",
+        "link": "/api/v1/teams/469"
+      },
+      "date": "2015-06-23",
+      "effectiveDate": "2015-06-23",
+      "resolutionDate": "2015-06-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Lucas Williams assigned to GCL Phillies."
+    },
+    {
+      "id": 271301,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 469,
+        "name": "FCL Phillies",
+        "link": "/api/v1/teams/469"
+      },
+      "toTeam": {
+        "id": 449,
+        "name": "Williamsport Crosscutters",
+        "link": "/api/v1/teams/449"
+      },
+      "date": "2016-06-15",
+      "effectiveDate": "2016-06-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Lucas Williams assigned to Williamsport Crosscutters from GCL Phillies."
+    },
+    {
+      "id": 302616,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 449,
+        "name": "Williamsport Crosscutters",
+        "link": "/api/v1/teams/449"
+      },
+      "toTeam": {
+        "id": 427,
+        "name": "Jersey Shore BlueClaws",
+        "link": "/api/v1/teams/427"
+      },
+      "date": "2017-04-02",
+      "effectiveDate": "2017-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Luke Williams assigned to Lakewood BlueClaws from Williamsport Crosscutters."
+    },
+    {
+      "id": 343317,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2018-03-03",
+      "effectiveDate": "2018-03-03",
+      "resolutionDate": "2018-03-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "3B Luke Williams roster status changed by Philadelphia Phillies."
+    },
+    {
+      "id": 348035,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 427,
+        "name": "Jersey Shore BlueClaws",
+        "link": "/api/v1/teams/427"
+      },
+      "toTeam": {
+        "id": 566,
+        "name": "Clearwater Threshers",
+        "link": "/api/v1/teams/566"
+      },
+      "date": "2018-04-05",
+      "effectiveDate": "2018-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Luke Williams assigned to Clearwater Threshers from Lakewood BlueClaws."
+    },
+    {
+      "id": 388480,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2019-02-22",
+      "effectiveDate": "2019-02-22",
+      "resolutionDate": "2019-02-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "IF Luke Williams assigned to Philadelphia Phillies."
+    },
+    {
+      "id": 393288,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 566,
+        "name": "Clearwater Threshers",
+        "link": "/api/v1/teams/566"
+      },
+      "toTeam": {
+        "id": 522,
+        "name": "Reading Fightin Phils",
+        "link": "/api/v1/teams/522"
+      },
+      "date": "2019-04-01",
+      "effectiveDate": "2019-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Luke Williams assigned to Reading Fightin Phils from Clearwater Threshers."
+    },
+    {
+      "id": 441332,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 522,
+        "name": "Reading Fightin Phils",
+        "link": "/api/v1/teams/522"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2019-11-19",
+      "effectiveDate": "2019-11-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Luke Williams assigned to Lehigh Valley IronPigs from Reading Fightin Phils."
+    },
+    {
+      "id": 436367,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2020-01-13",
+      "effectiveDate": "2020-01-13",
+      "resolutionDate": "2020-01-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Philadelphia Phillies invited non-roster 3B Luke Williams to spring training."
+    },
+    {
+      "id": 450929,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 3286,
+        "name": "Phillies Alternate Training Site",
+        "link": "/api/v1/teams/3286"
+      },
+      "date": "2020-09-06",
+      "effectiveDate": "2020-09-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Luke Williams assigned to Phillies Alternate Training Site from Lehigh Valley IronPigs."
+    },
+    {
+      "id": 450918,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2020-09-06",
+      "effectiveDate": "2020-09-06",
+      "resolutionDate": "2020-09-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Philadelphia Phillies invited non-roster 3B Luke Williams to spring training."
+    },
+    {
+      "id": 452715,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 3286,
+        "name": "Phillies Alternate Training Site",
+        "link": "/api/v1/teams/3286"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2020-10-01",
+      "effectiveDate": "2020-10-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Luke Williams assigned to Lehigh Valley IronPigs from Phillies Alternate Training Site."
+    },
+    {
+      "id": 469831,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2021-02-16",
+      "effectiveDate": "2021-02-16",
+      "resolutionDate": "2021-02-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Luke Williams assigned to Philadelphia Phillies."
+    },
+    {
+      "id": 474773,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2021-02-16",
+      "effectiveDate": "2021-02-16",
+      "resolutionDate": "2021-02-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Luke Williams assigned to Philadelphia Phillies ."
+    },
+    {
+      "id": 469636,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2021-02-16",
+      "effectiveDate": "2021-02-16",
+      "resolutionDate": "2021-02-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Luke Williams assigned to Philadelphia Phillies."
+    },
+    {
+      "id": 488789,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "resolutionDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Luke Williams assigned to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 482937,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 3286,
+        "name": "Phillies Alternate Training Site",
+        "link": "/api/v1/teams/3286"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Luke Williams assigned to Lehigh Valley IronPigs from Phillies Alternate Training Site."
+    },
+    {
+      "id": 489626,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "resolutionDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Luke Williams assigned to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 490883,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2021-05-26",
+      "effectiveDate": "2021-05-26",
+      "resolutionDate": "2021-05-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lehigh Valley IronPigs placed 3B Luke Williams on the temporarily inactive list."
+    },
+    {
+      "id": 491572,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 940,
+        "name": "United States",
+        "link": "/api/v1/teams/940"
+      },
+      "date": "2021-05-29",
+      "effectiveDate": "2021-05-29",
+      "resolutionDate": "2021-05-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "United States activated 3B Luke Williams from the temporarily inactive list."
+    },
+    {
+      "id": 493499,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2021-06-08",
+      "effectiveDate": "2021-06-08",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Philadelphia Phillies selected the contract of 3B Luke Williams from Lehigh Valley IronPigs."
+    },
+    {
+      "id": 514597,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2021-08-27",
+      "effectiveDate": "2021-08-27",
+      "resolutionDate": "2021-08-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies placed 3B Luke Williams on the 10-day injured list."
+    },
+    {
+      "id": 516412,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2021-09-07",
+      "effectiveDate": "2021-09-07",
+      "resolutionDate": "2021-09-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Philadelphia Phillies sent 3B Luke Williams on a rehab assignment to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 518439,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2021-09-20",
+      "effectiveDate": "2021-09-20",
+      "resolutionDate": "2021-09-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies activated 3B Luke Williams."
+    },
+    {
+      "id": 519178,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2021-09-28",
+      "effectiveDate": "2021-09-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Philadelphia Phillies optioned 3B Luke Williams to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 520476,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2021-10-05",
+      "effectiveDate": "2021-10-05",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Philadelphia Phillies recalled 3B Luke Williams from Lehigh Valley IronPigs."
+    },
+    {
+      "id": 607909,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2022-03-22",
+      "effectiveDate": "2022-03-22",
+      "resolutionDate": "2022-03-22",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Philadelphia Phillies designated 3B Luke Williams for assignment."
+    },
+    {
+      "id": 615414,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2022-03-27",
+      "effectiveDate": "2022-03-27",
+      "resolutionDate": "2022-03-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Francisco Giants activated 3B Luke Williams."
+    },
+    {
+      "id": 614877,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2022-03-27",
+      "effectiveDate": "2022-03-27",
+      "resolutionDate": "2022-03-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Francisco Giants activated 3B Luke Williams."
+    },
+    {
+      "id": 608755,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2022-03-27",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "San Francisco Giants traded 3B Will Toffey and cash to Philadelphia Phillies for 3B Luke Williams."
+    },
+    {
+      "id": 615830,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2022-04-19",
+      "effectiveDate": "2022-04-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned 3B Luke Williams to Sacramento River Cats."
+    },
+    {
+      "id": 616039,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2022-04-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Francisco Giants recalled 3B Luke Williams from Sacramento River Cats."
+    },
+    {
+      "id": 616276,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2022-04-20",
+      "effectiveDate": "2022-04-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned 3B Luke Williams to Sacramento River Cats."
+    },
+    {
+      "id": 617139,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2022-04-25",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Francisco Giants recalled 3B Luke Williams from Sacramento River Cats."
+    },
+    {
+      "id": 619505,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2022-05-04",
+      "effectiveDate": "2022-05-04",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned 3B Luke Williams to Sacramento River Cats."
+    },
+    {
+      "id": 623139,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2022-05-21",
+      "effectiveDate": "2022-05-21",
+      "resolutionDate": "2022-05-21",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "San Francisco Giants designated 3B Luke Williams for assignment."
+    },
+    {
+      "id": 624812,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2022-05-26",
+      "effectiveDate": "2022-05-26",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Miami Marlins optioned 3B Luke Williams to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 632564,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2022-06-01",
+      "effectiveDate": "2022-06-01",
+      "resolutionDate": "2022-06-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins activated 3B Luke Williams."
+    },
+    {
+      "id": 625674,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2022-06-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Miami Marlins recalled 3B Luke Williams from Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 633509,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2022-06-27",
+      "effectiveDate": "2022-06-27",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Miami Marlins optioned 3B Luke Williams to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 633962,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2022-06-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Miami Marlins recalled 3B Luke Williams and  from Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 654345,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2022-09-29",
+      "effectiveDate": "2022-09-29",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Miami Marlins optioned 3B Luke Williams to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 655091,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2022-10-06",
+      "effectiveDate": "2022-10-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Miami Marlins recalled 3B Luke Williams from Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 661156,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2022-10-15",
+      "effectiveDate": "2022-10-15",
+      "resolutionDate": "2022-10-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Estrellas Orientales activated 3B Luke Williams."
+    },
+    {
+      "id": 656289,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2022-10-15",
+      "effectiveDate": "2022-10-15",
+      "resolutionDate": "2022-10-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Luke Williams assigned to Estrellas Orientales."
+    },
+    {
+      "id": 656390,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2022-10-15",
+      "effectiveDate": "2022-10-15",
+      "resolutionDate": "2022-10-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Estrellas Orientales activated 3B Luke Williams."
+    },
+    {
+      "id": 656713,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2022-10-15",
+      "effectiveDate": "2022-10-15",
+      "resolutionDate": "2022-10-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Estrellas Orientales activated 3B Luke Williams."
+    },
+    {
+      "id": 658511,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2022-11-08",
+      "effectiveDate": "2022-11-08",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Los Angeles Dodgers claimed 3B Luke Williams off waivers from Miami Marlins."
+    },
+    {
+      "id": 661155,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2022-11-18",
+      "effectiveDate": "2022-11-18",
+      "resolutionDate": "2022-11-18",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "3B Luke Williams elected free agency."
+    },
+    {
+      "id": 667983,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2023-02-03",
+      "effectiveDate": "2023-02-03",
+      "resolutionDate": "2023-02-03",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Dodgers signed free agent 3B Luke Williams to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 671726,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2023-02-03",
+      "effectiveDate": "2023-02-03",
+      "resolutionDate": "2023-02-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "3B Luke Williams roster status changed by Los Angeles Dodgers."
+    },
+    {
+      "id": 675840,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-03-15",
+      "effectiveDate": "2023-03-15",
+      "resolutionDate": "2023-03-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Luke Williams assigned to Oklahoma City Dodgers."
+    },
+    {
+      "id": 680060,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-03-15",
+      "effectiveDate": "2023-03-15",
+      "resolutionDate": "2023-03-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers activated 3B Luke Williams."
+    },
+    {
+      "id": 687873,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-04-28",
+      "effectiveDate": "2023-04-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned 3B Luke Williams to Oklahoma City Dodgers."
+    },
+    {
+      "id": 701318,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-06-05",
+      "effectiveDate": "2023-06-05",
+      "resolutionDate": "2023-06-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Luke Williams assigned to Gwinnett Stripers."
+    },
+    {
+      "id": 701316,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2023-06-05",
+      "effectiveDate": "2023-06-05",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Atlanta Braves claimed 3B Luke Williams off waivers from Los Angeles Dodgers."
+    },
+    {
+      "id": 719938,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2023-08-15",
+      "effectiveDate": "2023-08-15",
+      "resolutionDate": "2023-08-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves activated 3B Luke Williams."
+    },
+    {
+      "id": 719936,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2023-08-15",
+      "effectiveDate": "2023-08-15",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled 3B Luke Williams from Gwinnett Stripers."
+    },
+    {
+      "id": 728308,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2023-10-07",
+      "effectiveDate": "2023-10-07",
+      "resolutionDate": "2023-10-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "3B Luke Williams roster status changed by Atlanta Braves."
+    },
+    {
+      "id": 728854,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2023-10-13",
+      "effectiveDate": "2023-10-13",
+      "resolutionDate": "2023-10-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves activated 3B Luke Williams."
+    },
+    {
+      "id": 733330,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2023-11-17",
+      "effectiveDate": "2023-11-17",
+      "resolutionDate": "2023-11-17",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "3B Luke Williams elected free agency."
+    },
+    {
+      "id": 734059,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-11-18",
+      "effectiveDate": "2023-11-18",
+      "resolutionDate": "2023-11-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Luke Williams assigned to Gwinnett Stripers."
+    },
+    {
+      "id": 734058,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2023-11-18",
+      "effectiveDate": "2023-11-18",
+      "resolutionDate": "2023-11-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent 3B Luke Williams to a minor league contract."
+    },
+    {
+      "id": 739111,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2024-02-02",
+      "effectiveDate": "2024-02-02",
+      "resolutionDate": "2024-02-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Atlanta Braves invited non-roster 3B Luke Williams to spring training."
+    },
+    {
+      "id": 764203,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2024-04-19",
+      "effectiveDate": "2024-04-19",
+      "resolutionDate": "2024-04-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves activated 3B Luke Williams."
+    },
+    {
+      "id": 764136,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2024-04-19",
+      "effectiveDate": "2024-04-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Atlanta Braves selected the contract of 3B Luke Williams from Gwinnett Stripers."
+    },
+    {
+      "id": 773743,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2024-05-24",
+      "effectiveDate": "2024-05-24",
+      "resolutionDate": "2024-05-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "3B Luke Williams roster status changed by Gwinnett Stripers."
+    },
+    {
+      "id": 773922,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2024-05-24",
+      "effectiveDate": "2024-05-24",
+      "resolutionDate": "2024-05-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers activated 3B Luke Williams."
+    },
+    {
+      "id": 773679,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2024-05-24",
+      "effectiveDate": "2024-05-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned 3B Luke Williams to Gwinnett Stripers."
+    },
+    {
+      "id": 782739,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2024-06-25",
+      "effectiveDate": "2024-06-25",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled 3B Luke Williams from Gwinnett Stripers."
+    },
+    {
+      "id": 785846,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2024-07-08",
+      "effectiveDate": "2024-07-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned 3B Luke Williams to Gwinnett Stripers."
+    },
+    {
+      "id": 788859,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2024-07-23",
+      "effectiveDate": "2024-07-23",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled 3B Luke Williams from Gwinnett Stripers."
+    },
+    {
+      "id": 798707,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2024-09-11",
+      "effectiveDate": "2024-09-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned LF Luke Williams to Gwinnett Stripers."
+    },
+    {
+      "id": 800993,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2024-10-01",
+      "effectiveDate": "2024-10-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled LF Luke Williams from Gwinnett Stripers."
+    },
+    {
+      "id": 801351,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2024-10-03",
+      "effectiveDate": "2024-10-03",
+      "resolutionDate": "2024-10-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves activated LF Luke Williams."
+    },
+    {
+      "id": 830708,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2025-03-21",
+      "effectiveDate": "2025-04-17",
+      "resolutionDate": "2025-04-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers placed LF Luke Williams on the 7-day injured list."
+    },
+    {
+      "id": 821382,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2025-03-21",
+      "effectiveDate": "2025-03-21",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Atlanta Braves sent LF Luke Williams outright to Gwinnett Stripers."
+    },
+    {
+      "id": 833426,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2025-05-01",
+      "effectiveDate": "2025-05-01",
+      "resolutionDate": "2025-05-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers activated LF Luke Williams from the 7-day injured list."
+    },
+    {
+      "id": 835849,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2025-05-09",
+      "effectiveDate": "2025-05-09",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Atlanta Braves selected the contract of LF Luke Williams from Gwinnett Stripers."
+    },
+    {
+      "id": 865623,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2025-08-21",
+      "effectiveDate": "2025-08-19",
+      "resolutionDate": "2025-08-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves placed SS Luke Williams on the 10-day injured list retroactive to August 19, 2025. Left oblique muscle strain."
+    },
+    {
+      "id": 867192,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2025-09-01",
+      "effectiveDate": "2025-09-01",
+      "resolutionDate": "2025-09-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves activated SS Luke Williams from the 10-day injured list."
+    },
+    {
+      "id": 867816,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2025-09-04",
+      "effectiveDate": "2025-09-04",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned SS Luke Williams to Gwinnett Stripers."
+    },
+    {
+      "id": 867911,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2025-09-05",
+      "effectiveDate": "2025-09-05",
+      "resolutionDate": "2025-09-05",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Atlanta Braves designated SS Luke Williams for assignment."
+    },
+    {
+      "id": 868150,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2025-09-06",
+      "effectiveDate": "2025-09-06",
+      "resolutionDate": "2025-09-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers activated SS Luke Williams."
+    },
+    {
+      "id": 868012,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2025-09-06",
+      "effectiveDate": "2025-09-06",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Atlanta Braves sent SS Luke Williams outright to Gwinnett Stripers."
+    },
+    {
+      "id": 869316,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2025-09-14",
+      "effectiveDate": "2025-09-14",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Atlanta Braves selected the contract of SS Luke Williams from Gwinnett Stripers."
+    },
+    {
+      "id": 871338,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2025-10-01",
+      "effectiveDate": "2025-10-01",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Atlanta Braves sent SS Luke Williams outright to Gwinnett Stripers."
+    },
+    {
+      "id": 871561,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2025-10-02",
+      "effectiveDate": "2025-10-02",
+      "resolutionDate": "2025-10-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "SS Luke Williams elected free agency."
+    },
+    {
+      "id": 882336,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2026-01-18",
+      "effectiveDate": "2026-01-18",
+      "resolutionDate": "2026-01-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luke Williams assigned to Gwinnett Stripers."
+    },
+    {
+      "id": 882335,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2026-01-18",
+      "effectiveDate": "2026-01-18",
+      "resolutionDate": "2026-01-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent SS Luke Williams to a minor league contract."
+    },
+    {
+      "id": 884122,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2026-01-18",
+      "effectiveDate": "2026-01-18",
+      "resolutionDate": "2026-01-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "SS Luke Williams roster status changed by Atlanta Braves."
+    },
+    {
+      "id": 898309,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2026-04-11",
+      "effectiveDate": "2026-04-11",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Atlanta Braves selected the contract of SS Luke Williams from Gwinnett Stripers."
+    },
+    {
+      "id": 898584,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2026-04-13",
+      "effectiveDate": "2026-04-13",
+      "resolutionDate": "2026-04-13",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Atlanta Braves designated SS Luke Williams for assignment."
+    },
+    {
+      "id": 899802,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "SS Luke Williams elected free agency."
+    },
+    {
+      "id": 899801,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Atlanta Braves sent SS Luke Williams outright to Gwinnett Stripers."
+    },
+    {
+      "id": 900757,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent SS Luke Williams to a minor league contract."
+    },
+    {
+      "id": 900758,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luke Williams assigned to Gwinnett Stripers."
+    },
+    {
+      "id": 944321,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2026-09-29",
+      "effectiveDate": "2026-09-29",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Atlanta Braves selected the contract of SS Luke Williams from Gwinnett Stripers."
+    },
+    {
+      "id": 944993,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2026-10-03",
+      "effectiveDate": "2026-10-03",
+      "resolutionDate": "2026-10-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "SS Luke Williams roster status changed by Atlanta Braves."
+    },
+    {
+      "id": 945421,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2026-10-08",
+      "effectiveDate": "2026-10-08",
+      "resolutionDate": "2026-10-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves activated SS Luke Williams."
+    },
+    {
+      "id": 945455,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2026-10-09",
+      "effectiveDate": "2026-10-09",
+      "resolutionDate": "2026-10-09",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Atlanta Braves designated SS Luke Williams for assignment."
+    },
+    {
+      "id": 946249,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2026-10-14",
+      "effectiveDate": "2026-10-14",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Atlanta Braves sent SS Luke Williams outright to Gwinnett Stripers."
+    },
+    {
+      "id": 946273,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2026-10-15",
+      "effectiveDate": "2026-10-15",
+      "resolutionDate": "2026-10-15",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "SS Luke Williams elected free agency."
+    }
+  ]
+}

@@ -1,0 +1,652 @@
+{
+  "player_id": 571441,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:4af611ce574aa0fca07e0f64bfcd122c63311120fd708ba802be5cae091ac500",
+  "transactions": [
+    {
+      "id": 10961,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2009-06-19",
+      "effectiveDate": "2009-06-19",
+      "resolutionDate": "2009-06-19",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Los Angeles Dodgers signed RHP Steve Ames."
+    },
+    {
+      "id": 12580,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 530,
+        "name": "Ogden Raptors",
+        "link": "/api/v1/teams/530"
+      },
+      "date": "2009-06-23",
+      "effectiveDate": "2009-06-23",
+      "resolutionDate": "2009-06-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Steve Ames assigned to Ogden Raptors from Los Angeles Dodgers."
+    },
+    {
+      "id": 54178,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "toTeam": {
+        "id": 530,
+        "name": "Ogden Raptors",
+        "link": "/api/v1/teams/530"
+      },
+      "date": "2010-06-15",
+      "effectiveDate": "2010-06-15",
+      "resolutionDate": "2010-06-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Steve Ames roster status changed by Ogden Raptors."
+    },
+    {
+      "id": 55736,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "fromTeam": {
+        "id": 530,
+        "name": "Ogden Raptors",
+        "link": "/api/v1/teams/530"
+      },
+      "toTeam": {
+        "id": 2690,
+        "name": "AZL Dodgers 2",
+        "link": "/api/v1/teams/2690"
+      },
+      "date": "2010-06-21",
+      "effectiveDate": "2010-06-28",
+      "resolutionDate": "2010-06-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Steve Ames assigned to AZL Dodgers from Ogden Raptors."
+    },
+    {
+      "id": 58995,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "fromTeam": {
+        "id": 2690,
+        "name": "AZL Dodgers 2",
+        "link": "/api/v1/teams/2690"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2010-06-29",
+      "effectiveDate": "2010-06-29",
+      "resolutionDate": "2010-06-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Steve Ames assigned to Great Lakes Loons from AZL Dodgers."
+    },
+    {
+      "id": 72920,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "toTeam": {
+        "id": 454,
+        "name": "Glendale Desert Dogs",
+        "link": "/api/v1/teams/454"
+      },
+      "date": "2010-10-28",
+      "effectiveDate": "2010-10-28",
+      "resolutionDate": "2010-10-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Steve Ames assigned to Phoenix Desert Dogs."
+    },
+    {
+      "id": 78328,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2011-03-08",
+      "effectiveDate": "2011-03-08",
+      "resolutionDate": "2011-03-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Steve Ames assigned to Los Angeles Dodgers."
+    },
+    {
+      "id": 81772,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 401,
+        "name": "Inland Empire 66ers",
+        "link": "/api/v1/teams/401"
+      },
+      "date": "2011-04-04",
+      "effectiveDate": "2011-04-04",
+      "resolutionDate": "2011-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Steve Ames assigned to Inland Empire 66ers from Great Lakes Loons."
+    },
+    {
+      "id": 81781,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2011-04-04",
+      "effectiveDate": "2011-04-04",
+      "resolutionDate": "2011-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Steve Ames assigned to Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 85771,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "fromTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2011-05-13",
+      "effectiveDate": "2011-05-13",
+      "resolutionDate": "2011-05-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Steve Ames assigned to Chattanooga Lookouts from Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 94229,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2011-06-27",
+      "effectiveDate": "2011-06-27",
+      "resolutionDate": "2011-06-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chattanooga Lookouts placed RHP Steve Ames on the 7-day disabled list."
+    },
+    {
+      "id": 98124,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2011-07-26",
+      "effectiveDate": "2011-07-26",
+      "resolutionDate": "2011-07-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Steve Ames roster status changed by Chattanooga Lookouts."
+    },
+    {
+      "id": 109965,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2012-03-11",
+      "effectiveDate": "2012-03-11",
+      "resolutionDate": "2012-03-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Steve Ames assigned to Los Angeles Dodgers."
+    },
+    {
+      "id": 140309,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "fromTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2012-11-20",
+      "effectiveDate": "2013-03-11",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Dodgers selected the contract of Steve Ames from Chattanooga Lookouts."
+    },
+    {
+      "id": 144723,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2013-03-11",
+      "effectiveDate": "2013-03-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned RHP Steve Ames to Albuquerque Isotopes."
+    },
+    {
+      "id": 148915,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2013-04-06",
+      "effectiveDate": "2013-04-06",
+      "resolutionDate": "2013-04-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Albuquerque Isotopes placed RHP Steve Ames on the 7-day disabled list. left shoulder inflammation"
+    },
+    {
+      "id": 149485,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2013-04-13",
+      "effectiveDate": "2013-04-13",
+      "resolutionDate": "2013-04-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Steve Ames roster status changed by Albuquerque Isotopes."
+    },
+    {
+      "id": 163217,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2013-07-06",
+      "effectiveDate": "2013-07-06",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Miami Marlins traded RHP Ricky Nolasco to Los Angeles Dodgers for RHP Steve Ames, RHP Josh Wall and RHP Angel Sanchez."
+    },
+    {
+      "id": 163314,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "fromTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2013-07-07",
+      "effectiveDate": "2013-07-07",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Albuquerque Isotopes traded RHP Steve Ames to New Orleans Zephyrs."
+    },
+    {
+      "id": 165985,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "fromTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2013-07-28",
+      "effectiveDate": "2013-08-15",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Miami Marlins recalled Steve Ames from New Orleans Zephyrs."
+    },
+    {
+      "id": 168193,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2013-08-15",
+      "effectiveDate": "2013-08-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Miami Marlins optioned Steve Ames to New Orleans Zephyrs."
+    },
+    {
+      "id": 171494,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "fromTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2013-09-30",
+      "effectiveDate": "2013-09-30",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Miami Marlins recalled Steve Ames from New Orleans Zephyrs."
+    },
+    {
+      "id": 172018,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2013-10-04",
+      "effectiveDate": "2013-10-04",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Miami Marlins sent RHP Steve Ames outright to New Orleans Zephyrs."
+    },
+    {
+      "id": 184482,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "fromTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2014-04-02",
+      "effectiveDate": "2014-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Steve Ames assigned to Jacksonville Suns from New Orleans Zephyrs."
+    },
+    {
+      "id": 185319,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2014-04-07",
+      "effectiveDate": "2014-04-07",
+      "resolutionDate": "2014-04-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jacksonville Suns placed RHP Steve Ames on the 7-day disabled list. Right shoulder strain."
+    },
+    {
+      "id": 198079,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "toTeam": {
+        "id": 467,
+        "name": "FCL Marlins",
+        "link": "/api/v1/teams/467"
+      },
+      "date": "2014-06-30",
+      "effectiveDate": "2014-06-30",
+      "resolutionDate": "2014-06-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent RHP Steve Ames on a rehab assignment to GCL Marlins."
+    },
+    {
+      "id": 200721,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2014-07-16",
+      "effectiveDate": "2014-07-16",
+      "resolutionDate": "2014-07-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jacksonville Suns activated RHP Steve Ames from the 7-day disabled list."
+    },
+    {
+      "id": 203836,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2014-08-07",
+      "effectiveDate": "2014-08-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Steve Ames assigned to New Orleans Zephyrs from Jacksonville Suns."
+    },
+    {
+      "id": 219372,
+      "person": {
+        "id": 571441,
+        "fullName": "Steve Ames",
+        "link": "/api/v1/people/571441",
+        "nameSlug": "steve-ames-571441"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2015-04-02",
+      "effectiveDate": "2015-04-02",
+      "resolutionDate": "2015-04-02",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "New Orleans Zephyrs released RHP Steve Ames."
+    }
+  ]
+}

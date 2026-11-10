@@ -1,0 +1,942 @@
+{
+  "player_id": 458155,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:a88380b6fc04d9e6679e5b4aae505d6d92b8904137a7c8c029caeab76f4de98a",
+  "transactions": [
+    {
+      "id": 1844,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2009-04-10",
+      "effectiveDate": "2009-04-10",
+      "resolutionDate": "2009-04-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Francisco Giants placed RHP Joe Martinez on the 15-day disabled list. Concussion"
+    },
+    {
+      "id": 5865,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2009-05-21",
+      "effectiveDate": "2009-05-21",
+      "resolutionDate": "2009-05-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Francisco Giants transferred RHP Joe Martinez from the 15-day disabled list to the 60-day disabled list."
+    },
+    {
+      "id": 11935,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "toTeam": {
+        "id": 408,
+        "name": "ACL Giants",
+        "link": "/api/v1/teams/408"
+      },
+      "date": "2009-06-21",
+      "effectiveDate": "2009-06-21",
+      "resolutionDate": "2009-06-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent RHP Joe Martinez on a rehab assignment to AZL Giants."
+    },
+    {
+      "id": 13630,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "toTeam": {
+        "id": 476,
+        "name": "San Jose Giants",
+        "link": "/api/v1/teams/476"
+      },
+      "date": "2009-06-25",
+      "effectiveDate": "2009-06-25",
+      "resolutionDate": "2009-06-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Joe Martinez assigned to San Jose Giants."
+    },
+    {
+      "id": 14566,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 476,
+        "name": "San Jose Giants",
+        "link": "/api/v1/teams/476"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2009-07-01",
+      "effectiveDate": "2009-07-01",
+      "resolutionDate": "2009-07-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Jose Giants sent RHP Joe Martinez on a rehab assignment to Fresno Grizzlies."
+    },
+    {
+      "id": 19912,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2009-08-05",
+      "effectiveDate": "2009-08-28",
+      "resolutionDate": "2009-08-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Joe Martinez roster status changed by San Francisco Giants."
+    },
+    {
+      "id": 22975,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2009-08-28",
+      "effectiveDate": "2009-08-28",
+      "resolutionDate": "2009-08-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned Joe Martinez to Fresno Grizzlies."
+    },
+    {
+      "id": 24468,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2009-09-08",
+      "effectiveDate": "2010-03-23",
+      "resolutionDate": "2009-09-08",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Francisco Giants recalled Joe Martinez from Fresno Grizzlies."
+    },
+    {
+      "id": 25220,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "toTeam": {
+        "id": 544,
+        "name": "Scottsdale Scorpions",
+        "link": "/api/v1/teams/544"
+      },
+      "date": "2009-10-06",
+      "effectiveDate": "2009-10-06",
+      "resolutionDate": "2009-10-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joe Martinez assigned to Scottsdale Scorpions."
+    },
+    {
+      "id": 35508,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2010-03-23",
+      "effectiveDate": "2010-03-23",
+      "resolutionDate": "2010-04-03",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned Joe Martinez to Fresno Grizzlies."
+    },
+    {
+      "id": 38392,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "toTeam": {
+        "id": 3270,
+        "name": "Giants Alternate Training Site",
+        "link": "/api/v1/teams/3270"
+      },
+      "date": "2010-04-12",
+      "effectiveDate": "2010-04-12",
+      "resolutionDate": "2010-04-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Joe Martinez assigned to Giants Extended Spring Training from Fresno Grizzlies."
+    },
+    {
+      "id": 39140,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 3270,
+        "name": "Giants Alternate Training Site",
+        "link": "/api/v1/teams/3270"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2010-04-16",
+      "effectiveDate": "2010-06-10",
+      "resolutionDate": "2010-04-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Joe Martinez assigned to Fresno Grizzlies from Giants Extended Spring Training."
+    },
+    {
+      "id": 51319,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2010-06-11",
+      "effectiveDate": "2010-06-11",
+      "resolutionDate": "2010-06-11",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Francisco Giants recalled Joe Martinez from Fresno Grizzlies."
+    },
+    {
+      "id": 58100,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2010-06-26",
+      "effectiveDate": "2010-07-08",
+      "resolutionDate": "2010-06-26",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned Joe Martinez to Fresno Grizzlies."
+    },
+    {
+      "id": 58061,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2010-06-26",
+      "effectiveDate": "2010-06-26",
+      "resolutionDate": "2010-06-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Joe Martinez assigned to Fresno Grizzlies."
+    },
+    {
+      "id": 61823,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2010-07-09",
+      "effectiveDate": "2010-07-09",
+      "resolutionDate": "2010-07-09",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Francisco Giants recalled Joe Martinez from Fresno Grizzlies."
+    },
+    {
+      "id": 63209,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2010-07-19",
+      "effectiveDate": "2010-07-19",
+      "resolutionDate": "2010-07-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned Joe Martinez to Fresno Grizzlies."
+    },
+    {
+      "id": 64014,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2010-07-24",
+      "effectiveDate": "2010-07-24",
+      "resolutionDate": "2010-07-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Francisco Giants recalled Joe Martinez from Fresno Grizzlies."
+    },
+    {
+      "id": 64954,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2010-07-31",
+      "effectiveDate": "2010-07-31",
+      "resolutionDate": "2010-07-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Pittsburgh Pirates traded LHP Javier Lopez to San Francisco Giants for RHP Joe Martinez and LF John Bowker."
+    },
+    {
+      "id": 64955,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2010-07-31",
+      "effectiveDate": "2010-07-31",
+      "resolutionDate": "2010-07-31",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Pittsburgh Pirates optioned RHP Joe Martinez to Indianapolis Indians."
+    },
+    {
+      "id": 69764,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2010-09-05",
+      "effectiveDate": "2010-09-05",
+      "resolutionDate": "2010-09-05",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Pittsburgh Pirates recalled RHP Joe Martinez from Indianapolis Indians."
+    },
+    {
+      "id": 75732,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2010-12-22",
+      "effectiveDate": "2010-12-22",
+      "resolutionDate": "2010-12-22",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Pittsburgh Pirates designated Joe Martinez for assignment."
+    },
+    {
+      "id": 76057,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2011-01-04",
+      "effectiveDate": "2011-01-04",
+      "resolutionDate": "2011-01-04",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Pittsburgh Pirates traded RHP Joe Martinez to Cleveland Indians."
+    },
+    {
+      "id": 77233,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2011-02-18",
+      "effectiveDate": "2011-02-18",
+      "resolutionDate": "2011-02-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Cleveland Indians invited non-roster RHP Joe Martinez to spring training."
+    },
+    {
+      "id": 77232,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2011-02-18",
+      "effectiveDate": "2011-02-18",
+      "resolutionDate": "2011-02-18",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Cleveland Indians sent RHP Joe Martinez outright to Columbus Clippers."
+    },
+    {
+      "id": 105991,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2011-11-02",
+      "effectiveDate": "2011-11-02",
+      "resolutionDate": "2011-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Joe Martinez elected free agency."
+    },
+    {
+      "id": 107431,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2011-12-06",
+      "effectiveDate": "2012-03-14",
+      "resolutionDate": "2011-12-06",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Arizona Diamondbacks signed free agent Joe Martinez."
+    },
+    {
+      "id": 110351,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2012-03-15",
+      "effectiveDate": "2012-03-15",
+      "resolutionDate": "2012-03-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned Joe Martinez to Reno Aces."
+    },
+    {
+      "id": 116096,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2012-04-24",
+      "effectiveDate": "2012-04-30",
+      "resolutionDate": "2012-04-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled Joe Martinez from Reno Aces."
+    },
+    {
+      "id": 116568,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2012-04-30",
+      "effectiveDate": "2012-04-30",
+      "resolutionDate": "2012-04-30",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned Joe Martinez to Reno Aces."
+    },
+    {
+      "id": 136510,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2012-10-04",
+      "effectiveDate": "2012-10-25",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled Joe Martinez from Reno Aces."
+    },
+    {
+      "id": 137904,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2012-10-25",
+      "effectiveDate": "2012-10-25",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Arizona Diamondbacks sent Joe Martinez outright to Reno Aces."
+    },
+    {
+      "id": 141480,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2012-12-14",
+      "effectiveDate": "2012-12-14",
+      "resolutionDate": "2012-12-14",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cleveland Indians signed free agent RHP Joe Martinez to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 162026,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2013-06-29",
+      "effectiveDate": "2013-07-06",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Cleveland Indians selected the contract of Joe Martinez from Columbus Clippers."
+    },
+    {
+      "id": 163098,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2013-07-06",
+      "effectiveDate": "2013-07-06",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cleveland Indians optioned RHP Joe Martinez to Columbus Clippers."
+    },
+    {
+      "id": 166313,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2013-07-30",
+      "effectiveDate": "2013-07-30",
+      "resolutionDate": "2013-07-30",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Cleveland Indians designated Joe Martinez for assignment."
+    },
+    {
+      "id": 166820,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2013-08-03",
+      "effectiveDate": "2013-08-03",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Cleveland Indians sent Joe Martinez outright to Columbus Clippers."
+    },
+    {
+      "id": 171550,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2013-10-01",
+      "effectiveDate": "2013-10-01",
+      "resolutionDate": "2013-10-01",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Joe Martinez elected free agency."
+    },
+    {
+      "id": 180551,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2014-03-04",
+      "effectiveDate": "2014-03-04",
+      "resolutionDate": "2014-03-04",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Angels signed free agent RHP Joe Martinez to a minor league contract."
+    },
+    {
+      "id": 183810,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2014-04-01",
+      "effectiveDate": "2014-04-01",
+      "resolutionDate": "2014-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joe Martinez assigned to Salt Lake Bees."
+    },
+    {
+      "id": 186473,
+      "person": {
+        "id": 458155,
+        "fullName": "Joe Martinez",
+        "link": "/api/v1/people/458155",
+        "nameSlug": "joe-martinez-458155"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2014-04-21",
+      "effectiveDate": "2014-04-21",
+      "resolutionDate": "2014-04-21",
+      "typeCode": "RET",
+      "typeDesc": "Retired",
+      "description": "RHP Joe Martinez retired."
+    }
+  ]
+}

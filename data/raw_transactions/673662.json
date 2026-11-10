@@ -1,0 +1,887 @@
+{
+  "player_id": 673662,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:f9d893c1a561a10da71d94ef357f684463ca79df030b69c0f7fffe46fb2ffd33",
+  "transactions": [
+    {
+      "id": 313988,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 612,
+        "name": "DSL LAD Mega",
+        "link": "/api/v1/teams/612"
+      },
+      "date": "2017-06-02",
+      "effectiveDate": "2017-06-02",
+      "resolutionDate": "2017-06-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Robinson Ortiz assigned to DSL Dodgers2."
+    },
+    {
+      "id": 313987,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2017-06-02",
+      "effectiveDate": "2017-06-02",
+      "resolutionDate": "2017-06-02",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Dodgers signed free agent LHP Robinson Ortiz to a minor league contract."
+    },
+    {
+      "id": 319359,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "fromTeam": {
+        "id": 612,
+        "name": "DSL LAD Mega",
+        "link": "/api/v1/teams/612"
+      },
+      "toTeam": {
+        "id": 611,
+        "name": "DSL LAD Bautista",
+        "link": "/api/v1/teams/611"
+      },
+      "date": "2017-06-24",
+      "effectiveDate": "2017-06-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Robinson Ortiz assigned to DSL Dodgers1 from DSL Dodgers2."
+    },
+    {
+      "id": 362015,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 2690,
+        "name": "AZL Dodgers 2",
+        "link": "/api/v1/teams/2690"
+      },
+      "date": "2018-06-18",
+      "effectiveDate": "2018-06-18",
+      "resolutionDate": "2018-06-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Robinson Ortiz assigned to AZL Dodgers."
+    },
+    {
+      "id": 402785,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "fromTeam": {
+        "id": 2690,
+        "name": "AZL Dodgers 2",
+        "link": "/api/v1/teams/2690"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2019-05-23",
+      "effectiveDate": "2019-05-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Robinson Ortiz assigned to Great Lakes Loons from AZL Dodgers Mota."
+    },
+    {
+      "id": 427683,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2019-09-07",
+      "effectiveDate": "2019-09-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Robinson Ortiz assigned to AZL Dodgers Lasorda from Great Lakes Loons."
+    },
+    {
+      "id": 463489,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2019-11-20",
+      "effectiveDate": "2019-11-20",
+      "resolutionDate": "2019-11-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Robinson Ortiz assigned to Great Lakes Loons."
+    },
+    {
+      "id": 442872,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "fromTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2019-11-20",
+      "effectiveDate": "2019-11-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Robinson Ortiz assigned to Great Lakes Loons from AZL Dodgers Lasorda."
+    },
+    {
+      "id": 465837,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Robinson Ortiz assigned to Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 468096,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Robinson Ortiz assigned to Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 469661,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-02-16",
+      "effectiveDate": "2021-02-16",
+      "resolutionDate": "2021-02-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers invited non-roster LHP Robinson Ortiz to spring training."
+    },
+    {
+      "id": 469932,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-02-16",
+      "effectiveDate": "2021-02-16",
+      "resolutionDate": "2021-02-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers invited non-roster LHP Robinson Ortiz to spring training."
+    },
+    {
+      "id": 475004,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-02-16",
+      "effectiveDate": "2021-02-16",
+      "resolutionDate": "2021-02-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "P Robinson Ortiz assigned to Los Angeles Dodgers ."
+    },
+    {
+      "id": 483413,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "fromTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Robinson Ortiz assigned to Great Lakes Loons from Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 490563,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2021-05-24",
+      "effectiveDate": "2021-05-24",
+      "resolutionDate": "2021-05-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons placed LHP Robinson Ortiz on the 7-day injured list."
+    },
+    {
+      "id": 510241,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2021-08-06",
+      "effectiveDate": "2021-08-06",
+      "resolutionDate": "2021-08-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons placed LHP Robinson Ortiz on the 60-day injured list."
+    },
+    {
+      "id": 524199,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2021-11-07",
+      "effectiveDate": "2021-11-07",
+      "resolutionDate": "2021-11-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated LHP Robinson Ortiz from the 60-day injured list."
+    },
+    {
+      "id": 628039,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2022-06-05",
+      "effectiveDate": "2022-06-05",
+      "resolutionDate": "2022-06-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Robinson Ortiz assigned to ACL Dodgers."
+    },
+    {
+      "id": 629467,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2022-06-07",
+      "effectiveDate": "2022-06-07",
+      "resolutionDate": "2022-06-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "ACL Dodgers placed LHP Robinson Ortiz on the 7-day injured list."
+    },
+    {
+      "id": 644075,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2022-08-06",
+      "effectiveDate": "2022-08-06",
+      "resolutionDate": "2022-08-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "ACL Dodgers transferred LHP Robinson Ortiz from the 7-day injured list to the 60-day injured list."
+    },
+    {
+      "id": 658981,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2022-11-10",
+      "effectiveDate": "2022-11-10",
+      "resolutionDate": "2022-11-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "ACL Dodgers activated LHP Robinson Ortiz from the 60-day injured list."
+    },
+    {
+      "id": 680558,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "fromTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-03-31",
+      "effectiveDate": "2023-03-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Robinson Ortiz assigned to Oklahoma City Dodgers from ACL Dodgers."
+    },
+    {
+      "id": 731190,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-11-06",
+      "effectiveDate": "2023-11-06",
+      "resolutionDate": "2023-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers activated LHP Robinson Ortiz."
+    },
+    {
+      "id": 767728,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2024-05-04",
+      "effectiveDate": "2024-05-04",
+      "resolutionDate": "2024-05-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Robinson Ortiz assigned to ACL Dodgers."
+    },
+    {
+      "id": 768368,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "fromTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2024-05-05",
+      "effectiveDate": "2024-05-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Robinson Ortiz assigned to Rancho Cucamonga Quakes from ACL Dodgers."
+    },
+    {
+      "id": 777423,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2024-06-01",
+      "effectiveDate": "2024-06-01",
+      "resolutionDate": "2024-06-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rancho Cucamonga Quakes transferred LHP Robinson Ortiz to the Development List."
+    },
+    {
+      "id": 781860,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2024-06-01",
+      "effectiveDate": "2024-06-01",
+      "resolutionDate": "2024-06-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rancho Cucamonga Quakes transferred LHP Robinson Ortiz to the Development List."
+    },
+    {
+      "id": 800391,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2024-09-25",
+      "effectiveDate": "2024-09-25",
+      "resolutionDate": "2024-09-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rancho Cucamonga Quakes activated LHP Robinson Ortiz."
+    },
+    {
+      "id": 816702,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-02-22",
+      "effectiveDate": "2025-02-22",
+      "resolutionDate": "2025-02-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Robinson Ortiz assigned to Los Angeles Dodgers."
+    },
+    {
+      "id": 825538,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2025-04-03",
+      "effectiveDate": "2025-04-03",
+      "resolutionDate": "2025-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Robinson Ortiz assigned to Great Lakes Loons."
+    },
+    {
+      "id": 848616,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2025-06-17",
+      "effectiveDate": "2025-06-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Robinson Ortiz assigned to Tulsa Drillers from Great Lakes Loons."
+    },
+    {
+      "id": 863934,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "fromTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2025-08-12",
+      "effectiveDate": "2025-08-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Robinson Ortiz assigned to Oklahoma City Comets from Tulsa Drillers."
+    },
+    {
+      "id": 875156,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Dodgers selected the contract of LHP Robinson Ortiz from Oklahoma City Comets."
+    },
+    {
+      "id": 877083,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2025-11-16",
+      "effectiveDate": "2025-11-16",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Los Angeles Dodgers traded LHP Robinson Ortiz to Seattle Mariners for RHP Tyler Gough."
+    },
+    {
+      "id": 889638,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 375,
+        "name": "Seattle Mariners Prospects",
+        "link": "/api/v1/teams/375"
+      },
+      "date": "2026-03-05",
+      "effectiveDate": "2026-03-05",
+      "resolutionDate": "2026-03-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Robinson Ortiz assigned to Seattle Mariners Prospects."
+    },
+    {
+      "id": 891671,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2026-03-14",
+      "effectiveDate": "2026-03-14",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned LHP Robinson Ortiz to Tacoma Rainiers."
+    },
+    {
+      "id": 910010,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2026-05-18",
+      "effectiveDate": "2026-05-18",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled LHP Robinson Ortiz from Tacoma Rainiers."
+    },
+    {
+      "id": 910596,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2026-05-20",
+      "effectiveDate": "2026-05-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned LHP Robinson Ortiz to Tacoma Rainiers."
+    },
+    {
+      "id": 933451,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2026-07-30",
+      "effectiveDate": "2026-07-30",
+      "resolutionDate": "2026-07-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tacoma Rainiers placed LHP Robinson Ortiz on the 7-day injured list."
+    },
+    {
+      "id": 939005,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2026-08-22",
+      "effectiveDate": "2026-08-22",
+      "resolutionDate": "2026-08-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tacoma Rainiers activated LHP Robinson Ortiz from the 7-day injured list."
+    },
+    {
+      "id": 944578,
+      "person": {
+        "id": 673662,
+        "fullName": "Robinson Ortiz",
+        "link": "/api/v1/people/673662",
+        "nameSlug": "robinson-ortiz-673662"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2026-09-28",
+      "effectiveDate": "2026-09-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled LHP Robinson Ortiz from Tacoma Rainiers."
+    }
+  ]
+}

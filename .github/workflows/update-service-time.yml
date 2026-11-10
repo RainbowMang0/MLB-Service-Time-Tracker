@@ -11,11 +11,20 @@ name: Daily Service Time Update
 # the "gate" step below check the *actual* Eastern wall-clock hour and
 # no-op unless it's really 8am there. Net effect: the update runs once a
 # day, at 8am Eastern, correct through DST changes, with no manual upkeep.
+#
+# The same file also keeps data/raw_transactions fresh. That folder is the
+# raw feed, one file per published player. The site's figures are still
+# calculated from data/cache/transactions, and this folder is not part of
+# the published site. Each morning the raw-store job asks for the last few
+# days of transactions and updates the players who moved. Sunday afternoon
+# it fetches every player again and replaces each file, so a correction to
+# an older day is not missed. See the raw-transactions job below.
 
 on:
   schedule:
     - cron: "0 12 * * *"
     - cron: "0 13 * * *"
+    - cron: "0 18 * * 0" # Sunday afternoon UTC: full re-pull of the raw store
   workflow_dispatch: # lets you trigger a manual run from the Actions tab
     inputs:
       force:
@@ -30,6 +39,15 @@ on:
         description: "Rewrite the published files from the stored database, no API calls (use after a template or derived-data change)"
         type: boolean
         default: false
+      raw_store:
+        description: "Raw transaction files. window = recent days, refresh = full re-pull, fill = resume players still missing, skip = leave the store alone"
+        type: choice
+        default: window
+        options:
+          - window
+          - refresh
+          - fill
+          - skip
 
 permissions:
   contents: write
@@ -228,3 +246,105 @@ jobs:
             docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-clubs.xml \
             docs/sitemap-players.xml docs/sitemap-alumni.xml docs/robots.txt data/cache \
             data/published_ids.json data/refresh_complete.json
+
+  # Raw feed, kept beside the roster cache. This job does not calculate
+  # service time, options, or injured-list time, and it does not write
+  # anything under docs/. data/cache/transactions stays the input those
+  # figures are built from until a later change points them at this store.
+  raw-transactions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Decide whether the raw store should run
+        id: rawgate
+        run: |
+          MODE="window"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            MODE="${{ github.event.inputs.raw_store }}"
+          elif [ "${{ github.event.schedule }}" = "0 18 * * 0" ]; then
+            MODE="refresh"
+          fi
+          if [ "$MODE" = "skip" ] || [ -z "$MODE" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "Raw transaction store left as it is."
+            exit 0
+          fi
+          if [ "${{ github.event_name }}" != "workflow_dispatch" ] && [ "$MODE" = "window" ]; then
+            HOUR="$(TZ=America/New_York date +%H)"
+            if [ "$((10#$HOUR))" -lt 8 ]; then
+              echo "run=false" >> "$GITHUB_OUTPUT"
+              echo "Before 8am Eastern. The later fire will update the raw store."
+              exit 0
+            fi
+            LAST="$(python3 -c "import json; print(json.load(open('data/raw_transactions/_state.json')).get('last_window_utc_date',''))" 2>/dev/null || true)"
+            TODAY="$(date -u +%F)"
+            if [ "$LAST" = "$TODAY" ]; then
+              echo "run=false" >> "$GITHUB_OUTPUT"
+              echo "Recent-days window already applied today."
+              exit 0
+            fi
+          fi
+          echo "mode=$MODE" >> "$GITHUB_OUTPUT"
+          echo "run=true" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Python
+        if: steps.rawgate.outputs.run == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        if: steps.rawgate.outputs.run == 'true'
+        run: pip install -r requirements.txt
+
+      - name: Update the raw transaction store
+        if: steps.rawgate.outputs.run == 'true'
+        run: |
+          set -uo pipefail
+          MODE="${{ steps.rawgate.outputs.mode }}"
+          if [ "$MODE" = "window" ]; then
+            python scripts/raw_transactions.py --window
+            code=$?
+            scripts/commit_data.sh \
+              "chore: raw transaction window ($(date -u +%F))" \
+              data/raw_transactions
+            if [ $? -ne 0 ]; then
+              exit 1
+            fi
+            exit "$code"
+          fi
+
+          # fill resumes players who have no good file yet. refresh replaces
+          # every file, continuing a pass that started in the last two days.
+          FLAG="--refresh"
+          REMAINING_LABEL="refresh_remaining"
+          if [ "$MODE" = "fill" ]; then
+            FLAG="--full"
+            REMAINING_LABEL="remaining"
+          fi
+          prev=""
+          for _batch in $(seq 1 20); do
+            python scripts/raw_transactions.py "$FLAG" --limit 400
+            code=$?
+            scripts/commit_data.sh \
+              "chore: raw transaction store ($(date -u +%F))" \
+              data/raw_transactions
+            if [ $? -ne 0 ]; then
+              exit 1
+            fi
+            rem="$(python scripts/raw_transactions.py --status | sed -n "s/^${REMAINING_LABEL}: //p")"
+            echo "$REMAINING_LABEL=$rem (exit $code)"
+            if [ "$rem" = "0" ]; then
+              exit 0
+            fi
+            if [ "$code" != "0" ] || [ "$rem" = "$prev" ]; then
+              echo "Stopping. This batch did not move the remaining count."
+              exit 1
+            fi
+            prev="$rem"
+          done
+          echo "Batch cap reached with players still remaining."
+          exit 1

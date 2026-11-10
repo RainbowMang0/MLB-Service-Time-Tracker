@@ -1,0 +1,1418 @@
+{
+  "player_id": 621345,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:486a91005ecce6d9acbb0177dec3d938529ea666e9f3e259fcac763da0d5a7b0",
+  "transactions": [
+    {
+      "id": 233296,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2015-06-14",
+      "effectiveDate": "2015-06-14",
+      "resolutionDate": "2015-06-14",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Atlanta Braves signed LHP Alex Minter."
+    },
+    {
+      "id": 233298,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 464,
+        "name": "FCL Braves",
+        "link": "/api/v1/teams/464"
+      },
+      "date": "2015-06-22",
+      "effectiveDate": "2015-06-22",
+      "resolutionDate": "2015-06-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Alex Minter assigned to GCL Braves."
+    },
+    {
+      "id": 246594,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 464,
+        "name": "FCL Braves",
+        "link": "/api/v1/teams/464"
+      },
+      "date": "2015-09-30",
+      "effectiveDate": "2015-09-30",
+      "resolutionDate": "2015-09-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "GCL Braves activated LHP Alex Minter from the 60-day disabled list."
+    },
+    {
+      "id": 261764,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 464,
+        "name": "FCL Braves",
+        "link": "/api/v1/teams/464"
+      },
+      "toTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "date": "2016-04-07",
+      "effectiveDate": "2016-04-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Alex Minter assigned to Rome Braves from GCL Braves."
+    },
+    {
+      "id": 264404,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "date": "2016-05-04",
+      "effectiveDate": "2016-05-04",
+      "resolutionDate": "2016-05-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rome Braves activated LHP Alex Minter from the 7-day disabled list."
+    },
+    {
+      "id": 266099,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "toTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "date": "2016-05-19",
+      "effectiveDate": "2016-05-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP A.J. Minter assigned to Carolina Mudcats from Rome Braves."
+    },
+    {
+      "id": 267841,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "toTeam": {
+        "id": 429,
+        "name": "Danville Otterbots",
+        "link": "/api/v1/teams/429"
+      },
+      "date": "2016-06-01",
+      "effectiveDate": "2016-06-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP A.J. Minter assigned to Danville Braves from Carolina Mudcats."
+    },
+    {
+      "id": 270166,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 429,
+        "name": "Danville Otterbots",
+        "link": "/api/v1/teams/429"
+      },
+      "toTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "date": "2016-06-09",
+      "effectiveDate": "2016-06-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP A.J. Minter assigned to Carolina Mudcats from Danville Braves."
+    },
+    {
+      "id": 276567,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "toTeam": {
+        "id": 430,
+        "name": "Mississippi Mud Monsters",
+        "link": "/api/v1/teams/430"
+      },
+      "date": "2016-07-02",
+      "effectiveDate": "2016-07-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP A.J. Minter assigned to Mississippi Braves from Carolina Mudcats."
+    },
+    {
+      "id": 297082,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2017-01-25",
+      "effectiveDate": "2017-01-25",
+      "resolutionDate": "2017-01-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Atlanta Braves invited non-roster LHP A.J. Minter to spring training."
+    },
+    {
+      "id": 305424,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 503,
+        "name": "Florida Fire Frogs",
+        "link": "/api/v1/teams/503"
+      },
+      "date": "2017-04-11",
+      "effectiveDate": "2017-04-11",
+      "resolutionDate": "2017-04-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP A.J. Minter assigned to Florida Fire Frogs."
+    },
+    {
+      "id": 305748,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 503,
+        "name": "Florida Fire Frogs",
+        "link": "/api/v1/teams/503"
+      },
+      "date": "2017-04-13",
+      "effectiveDate": "2017-04-13",
+      "resolutionDate": "2017-04-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Florida Fire Frogs placed LHP A.J. Minter on the 7-day disabled list."
+    },
+    {
+      "id": 315512,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 503,
+        "name": "Florida Fire Frogs",
+        "link": "/api/v1/teams/503"
+      },
+      "date": "2017-06-12",
+      "effectiveDate": "2017-06-12",
+      "resolutionDate": "2017-06-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Florida Fire Frogs activated LHP A.J. Minter from the 7-day disabled list."
+    },
+    {
+      "id": 316259,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 503,
+        "name": "Florida Fire Frogs",
+        "link": "/api/v1/teams/503"
+      },
+      "toTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "date": "2017-06-16",
+      "effectiveDate": "2017-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP A.J. Minter assigned to Rome Braves from Florida Fire Frogs."
+    },
+    {
+      "id": 316473,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "toTeam": {
+        "id": 503,
+        "name": "Florida Fire Frogs",
+        "link": "/api/v1/teams/503"
+      },
+      "date": "2017-06-17",
+      "effectiveDate": "2017-06-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP A.J. Minter assigned to Florida Fire Frogs from Rome Braves."
+    },
+    {
+      "id": 320711,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 503,
+        "name": "Florida Fire Frogs",
+        "link": "/api/v1/teams/503"
+      },
+      "toTeam": {
+        "id": 430,
+        "name": "Mississippi Mud Monsters",
+        "link": "/api/v1/teams/430"
+      },
+      "date": "2017-06-27",
+      "effectiveDate": "2017-06-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP A.J. Minter assigned to Mississippi Braves from Florida Fire Frogs."
+    },
+    {
+      "id": 322252,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 430,
+        "name": "Mississippi Mud Monsters",
+        "link": "/api/v1/teams/430"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2017-07-04",
+      "effectiveDate": "2017-07-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP A.J. Minter assigned to Gwinnett Braves from Mississippi Braves."
+    },
+    {
+      "id": 330345,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2017-08-23",
+      "effectiveDate": "2017-08-23",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Atlanta Braves selected the contract of LHP A.J. Minter from Gwinnett Braves."
+    },
+    {
+      "id": 341935,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2018-02-16",
+      "effectiveDate": "2018-02-16",
+      "resolutionDate": "2018-02-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "A.J. Minter changed number to 33."
+    },
+    {
+      "id": 392485,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2019-03-28",
+      "effectiveDate": "2019-03-25",
+      "resolutionDate": "2019-03-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves placed LHP A.J. Minter on the 10-day injured list retroactive to March 25, 2019. Left shoulder inflammation."
+    },
+    {
+      "id": 395196,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2019-04-04",
+      "effectiveDate": "2019-05-10",
+      "resolutionDate": "2019-04-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "A.J. Minter roster status changed by Atlanta Braves."
+    },
+    {
+      "id": 400786,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2019-05-10",
+      "effectiveDate": "2019-05-10",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned LHP A.J. Minter to Gwinnett Stripers."
+    },
+    {
+      "id": 407421,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2019-06-11",
+      "effectiveDate": "2019-08-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled A.J. Minter from Gwinnett Stripers."
+    },
+    {
+      "id": 421350,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2019-08-01",
+      "effectiveDate": "2019-08-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned LHP A.J. Minter to Gwinnett Stripers."
+    },
+    {
+      "id": 427161,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2019-09-03",
+      "effectiveDate": "2019-09-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled LHP A.J. Minter from Gwinnett Stripers."
+    },
+    {
+      "id": 427936,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2019-09-12",
+      "effectiveDate": "2019-09-12",
+      "resolutionDate": "2019-09-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves placed LHP A.J. Minter on the 60-day injured list. Left shoulder inflammation."
+    },
+    {
+      "id": 432322,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2019-11-04",
+      "effectiveDate": "2020-03-09",
+      "resolutionDate": "2019-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "A.J. Minter roster status changed by Atlanta Braves."
+    },
+    {
+      "id": 440692,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2020-03-09",
+      "effectiveDate": "2020-03-09",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned LHP A.J. Minter to Gwinnett Stripers."
+    },
+    {
+      "id": 477545,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2020-07-23",
+      "effectiveDate": "2020-07-23",
+      "resolutionDate": "2020-07-23",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled P A.J. Minter."
+    },
+    {
+      "id": 448116,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 3258,
+        "name": "Braves Alternate Training Site",
+        "link": "/api/v1/teams/3258"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2020-07-23",
+      "effectiveDate": "2020-07-23",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled LHP A.J. Minter from Braves Alternate Training Site."
+    },
+    {
+      "id": 478703,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2020-07-23",
+      "effectiveDate": "2020-07-23",
+      "resolutionDate": "2020-07-23",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled LHP A.J. Minter."
+    },
+    {
+      "id": 505711,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2021-07-19",
+      "effectiveDate": "2021-07-18",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned LHP A.J. Minter to Gwinnett Stripers."
+    },
+    {
+      "id": 510771,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2021-08-10",
+      "effectiveDate": "2021-08-10",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled LHP A.J. Minter, , ,  and  from Gwinnett Stripers."
+    },
+    {
+      "id": 711432,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2023-07-15",
+      "effectiveDate": "2023-07-12",
+      "resolutionDate": "2023-07-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves placed LHP A.J. Minter on the 15-day injured list retroactive to July 12, 2023. Left shoulder inflammation."
+    },
+    {
+      "id": 716009,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-07-25",
+      "effectiveDate": "2023-07-25",
+      "resolutionDate": "2023-07-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Atlanta Braves sent LHP A.J. Minter on a rehab assignment to Gwinnett Stripers."
+    },
+    {
+      "id": 714270,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-07-25",
+      "effectiveDate": "2023-07-25",
+      "resolutionDate": "2023-07-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Atlanta Braves sent LHP A.J. Minter on a rehab assignment to Gwinnett Stripers."
+    },
+    {
+      "id": 716010,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2023-07-31",
+      "effectiveDate": "2023-07-31",
+      "resolutionDate": "2023-07-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves activated LHP A.J. Minter from the 15-day injured list."
+    },
+    {
+      "id": 774867,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2024-05-30",
+      "effectiveDate": "2024-05-30",
+      "resolutionDate": "2024-05-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves placed LHP A.J. Minter on the 15-day injured list. Left hip inflammation."
+    },
+    {
+      "id": 782220,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "date": "2024-06-22",
+      "effectiveDate": "2024-06-22",
+      "resolutionDate": "2024-06-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Atlanta Braves sent LHP A.J. Minter on a rehab assignment to Rome Emperors."
+    },
+    {
+      "id": 782178,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "date": "2024-06-22",
+      "effectiveDate": "2024-06-22",
+      "resolutionDate": "2024-06-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Atlanta Braves sent LHP A.J. Minter on a rehab assignment to Rome Emperors."
+    },
+    {
+      "id": 782773,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2024-06-25",
+      "effectiveDate": "2024-06-25",
+      "resolutionDate": "2024-06-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Atlanta Braves sent LHP A.J. Minter on a rehab assignment to Gwinnett Stripers."
+    },
+    {
+      "id": 782741,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2024-06-25",
+      "effectiveDate": "2024-06-25",
+      "resolutionDate": "2024-06-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Atlanta Braves sent LHP A.J. Minter on a rehab assignment to Gwinnett Stripers."
+    },
+    {
+      "id": 784386,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2024-07-01",
+      "effectiveDate": "2024-07-01",
+      "resolutionDate": "2024-07-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves activated LHP A.J. Minter from the 15-day injured list."
+    },
+    {
+      "id": 794121,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2024-08-12",
+      "effectiveDate": "2024-08-12",
+      "resolutionDate": "2024-08-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves placed LHP A.J. Minter on the 15-day injured list. Left hip inflammation."
+    },
+    {
+      "id": 795345,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2024-08-20",
+      "effectiveDate": "2024-08-20",
+      "resolutionDate": "2024-08-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves transferred LHP A.J. Minter from the 15-day injured list to the 60-day injured list. Left hip inflammation."
+    },
+    {
+      "id": 803501,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2024-10-31",
+      "effectiveDate": "2024-10-31",
+      "resolutionDate": "2024-10-31",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP A.J. Minter elected free agency."
+    },
+    {
+      "id": 811756,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2025-01-23",
+      "effectiveDate": "2025-01-23",
+      "resolutionDate": "2025-01-23",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Mets signed free agent LHP A.J. Minter."
+    },
+    {
+      "id": 828435,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "LHP A.J. Minter changed number to 42."
+    },
+    {
+      "id": 829637,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "LHP A.J. Minter changed number to 33."
+    },
+    {
+      "id": 832458,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2025-04-27",
+      "effectiveDate": "2025-04-27",
+      "resolutionDate": "2025-04-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets placed LHP A.J. Minter on the 15-day injured list. Left lat strain."
+    },
+    {
+      "id": 833299,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2025-05-01",
+      "effectiveDate": "2025-05-01",
+      "resolutionDate": "2025-05-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets transferred LHP A.J. Minter from the 15-day injured list to the 60-day injured list. Left lat strain."
+    },
+    {
+      "id": 875329,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated LHP A.J. Minter from the 60-day injured list."
+    },
+    {
+      "id": 893474,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-03-25",
+      "effectiveDate": "2026-03-22",
+      "resolutionDate": "2026-03-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets placed LHP A.J. Minter on the 15-day injured list retroactive to March 22, 2026. Left lat surgery."
+    },
+    {
+      "id": 900751,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2026-04-09",
+      "effectiveDate": "2026-04-09",
+      "resolutionDate": "2026-04-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Mets sent LHP A.J. Minter on a rehab assignment to St. Lucie Mets."
+    },
+    {
+      "id": 898039,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2026-04-09",
+      "effectiveDate": "2026-04-09",
+      "resolutionDate": "2026-04-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Mets sent LHP A.J. Minter on a rehab assignment to St. Lucie Mets."
+    },
+    {
+      "id": 900752,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Mets sent LHP A.J. Minter on a rehab assignment to Brooklyn Cyclones."
+    },
+    {
+      "id": 902178,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Mets sent LHP A.J. Minter on a rehab assignment to Brooklyn Cyclones."
+    },
+    {
+      "id": 902179,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2026-04-22",
+      "effectiveDate": "2026-04-22",
+      "resolutionDate": "2026-04-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Mets sent LHP A.J. Minter on a rehab assignment to Syracuse Mets."
+    },
+    {
+      "id": 909971,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-05-18",
+      "effectiveDate": "2026-05-18",
+      "resolutionDate": "2026-05-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets placed LHP A.J. Minter on the 60-day injured list. Left lat surgery."
+    },
+    {
+      "id": 911624,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-05-26",
+      "effectiveDate": "2026-05-26",
+      "resolutionDate": "2026-05-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated LHP A.J. Minter from the 60-day injured list."
+    },
+    {
+      "id": 933585,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-07-31",
+      "effectiveDate": "2026-07-31",
+      "resolutionDate": "2026-07-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LHP A.J. Minter roster status changed by Minnesota Twins."
+    },
+    {
+      "id": 933470,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-07-31",
+      "effectiveDate": "2026-07-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "New York Mets traded LHP A.J. Minter to Minnesota Twins for SS Bruin Agbayani and 3B Billy Amick."
+    },
+    {
+      "id": 933848,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-08-01",
+      "effectiveDate": "2026-08-01",
+      "resolutionDate": "2026-08-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Minnesota Twins activated LHP A.J. Minter."
+    },
+    {
+      "id": 947370,
+      "person": {
+        "id": 621345,
+        "fullName": "A.J. Minter",
+        "link": "/api/v1/people/621345",
+        "nameSlug": "a-j-minter-621345"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-10-29",
+      "effectiveDate": "2026-10-29",
+      "resolutionDate": "2026-10-29",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP A.J. Minter elected free agency."
+    }
+  ]
+}

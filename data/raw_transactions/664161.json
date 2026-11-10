@@ -1,0 +1,986 @@
+{
+  "player_id": 664161,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:c076694b9e5c5d36d6794c42729cc2a6bbb21b3dcec2c1ce3c9fcb46281ab31b",
+  "transactions": [
+    {
+      "id": 278896,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2016-07-15",
+      "effectiveDate": "2016-07-15",
+      "resolutionDate": "2016-07-15",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Chicago Cubs signed RHP Matt Swarmer."
+    },
+    {
+      "id": 279218,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 407,
+        "name": "ACL Cubs",
+        "link": "/api/v1/teams/407"
+      },
+      "date": "2016-07-16",
+      "effectiveDate": "2016-07-16",
+      "resolutionDate": "2016-07-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Swarmer assigned to AZL Cubs."
+    },
+    {
+      "id": 304012,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "fromTeam": {
+        "id": 407,
+        "name": "ACL Cubs",
+        "link": "/api/v1/teams/407"
+      },
+      "toTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "date": "2017-04-05",
+      "effectiveDate": "2017-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Swarmer assigned to South Bend Cubs from AZL Cubs."
+    },
+    {
+      "id": 307247,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "date": "2017-04-23",
+      "effectiveDate": "2017-04-23",
+      "resolutionDate": "2017-04-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "South Bend Cubs placed RHP Matt Swarmer on the 7-day disabled list."
+    },
+    {
+      "id": 308064,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "date": "2017-04-28",
+      "effectiveDate": "2017-04-28",
+      "resolutionDate": "2017-04-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "South Bend Cubs activated RHP Matt Swarmer from the 7-day disabled list."
+    },
+    {
+      "id": 314928,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "fromTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "toTeam": {
+        "id": 461,
+        "name": "Eugene Emeralds",
+        "link": "/api/v1/teams/461"
+      },
+      "date": "2017-06-09",
+      "effectiveDate": "2017-06-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Swarmer assigned to Eugene Emeralds from South Bend Cubs."
+    },
+    {
+      "id": 327151,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "fromTeam": {
+        "id": 461,
+        "name": "Eugene Emeralds",
+        "link": "/api/v1/teams/461"
+      },
+      "toTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "date": "2017-08-01",
+      "effectiveDate": "2017-08-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Swarmer assigned to South Bend Cubs from Eugene Emeralds."
+    },
+    {
+      "id": 329803,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "fromTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2017-08-19",
+      "effectiveDate": "2017-08-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Swarmer assigned to Iowa Cubs from South Bend Cubs."
+    },
+    {
+      "id": 329998,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "date": "2017-08-21",
+      "effectiveDate": "2017-08-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Swarmer assigned to South Bend Cubs from Iowa Cubs."
+    },
+    {
+      "id": 330463,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "fromTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2017-08-24",
+      "effectiveDate": "2017-08-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Swarmer assigned to Tennessee Smokies from South Bend Cubs."
+    },
+    {
+      "id": 347116,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "fromTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "toTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "date": "2018-04-03",
+      "effectiveDate": "2018-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Swarmer assigned to Myrtle Beach Pelicans from Tennessee Smokies."
+    },
+    {
+      "id": 358011,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "fromTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2018-06-05",
+      "effectiveDate": "2018-06-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Swarmer assigned to Tennessee Smokies from Myrtle Beach Pelicans."
+    },
+    {
+      "id": 393619,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "fromTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "toTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "date": "2019-04-01",
+      "effectiveDate": "2019-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Swarmer assigned to Myrtle Beach Pelicans from Tennessee Smokies."
+    },
+    {
+      "id": 394749,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 3264,
+        "name": "Cubs Alternate Training Site",
+        "link": "/api/v1/teams/3264"
+      },
+      "date": "2019-04-01",
+      "effectiveDate": "2019-04-01",
+      "resolutionDate": "2019-04-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cubs Extended Spring Training activated RHP Matt Swarmer."
+    },
+    {
+      "id": 395402,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "fromTeam": {
+        "id": 3264,
+        "name": "Cubs Alternate Training Site",
+        "link": "/api/v1/teams/3264"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2019-04-04",
+      "effectiveDate": "2019-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Swarmer assigned to Iowa Cubs from Cubs Extended Spring Training."
+    },
+    {
+      "id": 439254,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2020-02-24",
+      "effectiveDate": "2020-02-24",
+      "resolutionDate": "2020-02-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Swarmer assigned to Chicago Cubs."
+    },
+    {
+      "id": 481129,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2021-04-30",
+      "effectiveDate": "2021-04-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Swarmer assigned to Tennessee Smokies from Iowa Cubs."
+    },
+    {
+      "id": 491972,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "fromTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2021-06-01",
+      "effectiveDate": "2021-06-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Swarmer assigned to Iowa Cubs from Tennessee Smokies."
+    },
+    {
+      "id": 612522,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2022-03-20",
+      "effectiveDate": "2022-03-20",
+      "resolutionDate": "2022-03-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Matt Swarmer roster status changed by Chicago Cubs."
+    },
+    {
+      "id": 607532,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2022-03-20",
+      "effectiveDate": "2022-03-20",
+      "resolutionDate": "2022-03-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Swarmer assigned to Chicago Cubs."
+    },
+    {
+      "id": 625159,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2022-05-30",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Chicago Cubs selected the contract of RHP Matt Swarmer from Iowa Cubs."
+    },
+    {
+      "id": 637160,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2022-07-13",
+      "effectiveDate": "2022-07-13",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned RHP Matt Swarmer to Iowa Cubs."
+    },
+    {
+      "id": 637861,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2022-07-16",
+      "effectiveDate": "2022-07-16",
+      "resolutionDate": "2022-07-16",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Chicago Cubs designated RHP Matt Swarmer for assignment."
+    },
+    {
+      "id": 638881,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2022-07-21",
+      "effectiveDate": "2022-07-21",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Chicago Cubs sent RHP Matt Swarmer outright to Iowa Cubs."
+    },
+    {
+      "id": 659307,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2022-11-10",
+      "effectiveDate": "2022-11-10",
+      "resolutionDate": "2022-11-10",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Matt Swarmer elected free agency."
+    },
+    {
+      "id": 678539,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2023-02-25",
+      "effectiveDate": "2023-02-25",
+      "resolutionDate": "2023-02-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Matt Swarmer roster status changed by Atlanta Braves."
+    },
+    {
+      "id": 673361,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2023-02-25",
+      "effectiveDate": "2023-02-25",
+      "resolutionDate": "2023-02-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent RHP Matt Swarmer to a minor league contract."
+    },
+    {
+      "id": 673362,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2023-02-25",
+      "effectiveDate": "2023-02-25",
+      "resolutionDate": "2023-02-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Matt Swarmer roster status changed by Atlanta Braves."
+    },
+    {
+      "id": 673363,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-02-26",
+      "effectiveDate": "2023-02-26",
+      "resolutionDate": "2023-02-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Swarmer assigned to Gwinnett Stripers."
+    },
+    {
+      "id": 687990,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-04-29",
+      "effectiveDate": "2023-04-29",
+      "resolutionDate": "2023-04-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers transferred RHP Matt Swarmer to the Development List."
+    },
+    {
+      "id": 689637,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-05-06",
+      "effectiveDate": "2023-05-06",
+      "resolutionDate": "2023-05-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers activated RHP Matt Swarmer."
+    },
+    {
+      "id": 692267,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-05-06",
+      "effectiveDate": "2023-05-15",
+      "resolutionDate": "2023-05-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers placed RHP Matt Swarmer on the 7-day injured list."
+    },
+    {
+      "id": 696118,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-05-25",
+      "effectiveDate": "2023-05-25",
+      "resolutionDate": "2023-05-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers activated RHP Matt Swarmer from the 7-day injured list."
+    },
+    {
+      "id": 702113,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-06-07",
+      "effectiveDate": "2023-06-07",
+      "resolutionDate": "2023-06-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers transferred RHP Matt Swarmer to the Development List."
+    },
+    {
+      "id": 703958,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-06-14",
+      "effectiveDate": "2023-06-14",
+      "resolutionDate": "2023-06-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers activated RHP Matt Swarmer."
+    },
+    {
+      "id": 704732,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-06-16",
+      "effectiveDate": "2023-06-16",
+      "resolutionDate": "2023-06-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers transferred RHP Matt Swarmer to the Development List."
+    },
+    {
+      "id": 705557,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-06-20",
+      "effectiveDate": "2023-06-20",
+      "resolutionDate": "2023-06-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers activated RHP Matt Swarmer."
+    },
+    {
+      "id": 707095,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-06-25",
+      "effectiveDate": "2023-06-25",
+      "resolutionDate": "2023-06-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers transferred RHP Matt Swarmer to the Development List."
+    },
+    {
+      "id": 708241,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-07-01",
+      "effectiveDate": "2023-07-01",
+      "resolutionDate": "2023-07-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers activated RHP Matt Swarmer."
+    },
+    {
+      "id": 715030,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-07-27",
+      "effectiveDate": "2023-07-27",
+      "resolutionDate": "2023-07-27",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Gwinnett Stripers released RHP Matt Swarmer."
+    },
+    {
+      "id": 719060,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 1889,
+        "name": "Lancaster Stormers",
+        "link": "/api/v1/teams/1889"
+      },
+      "date": "2023-08-10",
+      "effectiveDate": "2023-08-10",
+      "resolutionDate": "2023-08-10",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Lancaster Barnstormers signed RHP Matt Swarmer."
+    },
+    {
+      "id": 722708,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 1889,
+        "name": "Lancaster Stormers",
+        "link": "/api/v1/teams/1889"
+      },
+      "date": "2023-08-30",
+      "effectiveDate": "2023-08-30",
+      "resolutionDate": "2023-08-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lancaster Barnstormers placed RHP Matt Swarmer on the temporarily inactive list."
+    },
+    {
+      "id": 723383,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 1889,
+        "name": "Lancaster Stormers",
+        "link": "/api/v1/teams/1889"
+      },
+      "date": "2023-09-03",
+      "effectiveDate": "2023-09-03",
+      "resolutionDate": "2023-09-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lancaster Barnstormers activated RHP Matt Swarmer from the temporarily inactive list."
+    },
+    {
+      "id": 769672,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 447,
+        "name": "Algodoneros Union Laguna",
+        "link": "/api/v1/teams/447"
+      },
+      "date": "2024-05-09",
+      "effectiveDate": "2024-05-09",
+      "resolutionDate": "2024-05-09",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Algodoneros Union Laguna signed free agent RHP Matt Swarmer."
+    },
+    {
+      "id": 772433,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 447,
+        "name": "Algodoneros Union Laguna",
+        "link": "/api/v1/teams/447"
+      },
+      "date": "2024-05-17",
+      "effectiveDate": "2024-05-17",
+      "resolutionDate": "2024-05-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Algodoneros Union Laguna activated RHP Matt Swarmer from the reserve list."
+    },
+    {
+      "id": 773426,
+      "person": {
+        "id": 664161,
+        "fullName": "Matt Swarmer",
+        "link": "/api/v1/people/664161",
+        "nameSlug": "matt-swarmer-664161"
+      },
+      "toTeam": {
+        "id": 447,
+        "name": "Algodoneros Union Laguna",
+        "link": "/api/v1/teams/447"
+      },
+      "date": "2024-05-22",
+      "effectiveDate": "2024-05-22",
+      "resolutionDate": "2024-05-22",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Algodoneros Union Laguna released RHP Matt Swarmer."
+    }
+  ]
+}

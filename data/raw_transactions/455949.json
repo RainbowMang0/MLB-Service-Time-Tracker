@@ -1,0 +1,641 @@
+{
+  "player_id": 455949,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:0f61d0289ba0cf61ce5176bc130a9740a854e423f2c4f8ca446b198d90c60f4e",
+  "transactions": [
+    {
+      "id": 1222,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2009-03-31",
+      "effectiveDate": "2009-03-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lehigh Valley IronPigs placed RHP Scott Mathieson on the 7-day disabled list."
+    },
+    {
+      "id": 13641,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 469,
+        "name": "FCL Phillies",
+        "link": "/api/v1/teams/469"
+      },
+      "date": "2009-06-25",
+      "effectiveDate": "2009-06-25",
+      "resolutionDate": "2009-06-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Scott Mathieson assigned to GCL Phillies from Lehigh Valley IronPigs."
+    },
+    {
+      "id": 16498,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "fromTeam": {
+        "id": 469,
+        "name": "FCL Phillies",
+        "link": "/api/v1/teams/469"
+      },
+      "toTeam": {
+        "id": 566,
+        "name": "Clearwater Threshers",
+        "link": "/api/v1/teams/566"
+      },
+      "date": "2009-07-16",
+      "effectiveDate": "2009-07-16",
+      "resolutionDate": "2009-07-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Scott Mathieson assigned to Clearwater Threshers from GCL Phillies."
+    },
+    {
+      "id": 18754,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "fromTeam": {
+        "id": 566,
+        "name": "Clearwater Threshers",
+        "link": "/api/v1/teams/566"
+      },
+      "toTeam": {
+        "id": 522,
+        "name": "Reading Fightin Phils",
+        "link": "/api/v1/teams/522"
+      },
+      "date": "2009-07-29",
+      "effectiveDate": "2009-07-29",
+      "resolutionDate": "2009-07-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Scott Mathieson assigned to Reading Phillies from Clearwater Threshers."
+    },
+    {
+      "id": 27797,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "fromTeam": {
+        "id": 522,
+        "name": "Reading Fightin Phils",
+        "link": "/api/v1/teams/522"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2009-11-05",
+      "effectiveDate": "2010-03-15",
+      "resolutionDate": "2009-11-06",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Philadelphia Phillies selected the contract of RHP Scott Mathieson from Reading Phillies."
+    },
+    {
+      "id": 33302,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2010-03-15",
+      "effectiveDate": "2010-03-15",
+      "resolutionDate": "2010-03-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Philadelphia Phillies optioned Scott Mathieson to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 53399,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2010-06-17",
+      "effectiveDate": "2010-06-17",
+      "resolutionDate": "2010-06-17",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Philadelphia Phillies recalled RHP Scott Mathieson from Lehigh Valley IronPigs."
+    },
+    {
+      "id": 54365,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2010-06-19",
+      "effectiveDate": "2010-06-22",
+      "resolutionDate": "2010-06-19",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Philadelphia Phillies designated Scott Mathieson for assignment."
+    },
+    {
+      "id": 56618,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2010-06-22",
+      "effectiveDate": "2010-06-22",
+      "resolutionDate": "2010-06-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Philadelphia Phillies optioned RHP Scott Mathieson to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 69747,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2010-09-05",
+      "effectiveDate": "2010-09-05",
+      "resolutionDate": "2010-09-05",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Philadelphia Phillies recalled RHP Scott Mathieson from Lehigh Valley IronPigs."
+    },
+    {
+      "id": 70067,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2010-09-09",
+      "effectiveDate": "2010-09-06",
+      "resolutionDate": "2010-09-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies placed RHP Scott Mathieson on the 15-day disabled list retroactive to September 6, 2010. Latissimus dorsi strain."
+    },
+    {
+      "id": 72895,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2010-10-26",
+      "effectiveDate": "2010-10-26",
+      "resolutionDate": "2010-10-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scott Mathieson roster status changed by Philadelphia Phillies."
+    },
+    {
+      "id": 79872,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2011-03-26",
+      "effectiveDate": "2011-03-26",
+      "resolutionDate": "2011-03-26",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Philadelphia Phillies optioned Scott Mathieson to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 85167,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2011-05-07",
+      "effectiveDate": "2011-05-07",
+      "resolutionDate": "2011-05-07",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Philadelphia Phillies recalled Scott Mathieson from Lehigh Valley IronPigs."
+    },
+    {
+      "id": 86525,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2011-05-20",
+      "effectiveDate": "2011-05-20",
+      "resolutionDate": "2011-05-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Philadelphia Phillies optioned Scott Mathieson to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 93819,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2011-06-24",
+      "effectiveDate": "2011-06-24",
+      "resolutionDate": "2011-06-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Philadelphia Phillies recalled Scott Mathieson from Lehigh Valley IronPigs."
+    },
+    {
+      "id": 96694,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2011-07-14",
+      "effectiveDate": "2011-07-14",
+      "resolutionDate": "2011-07-14",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Philadelphia Phillies optioned Scott Mathieson to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 99403,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2011-08-04",
+      "effectiveDate": "2011-08-04",
+      "resolutionDate": "2011-08-04",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Philadelphia Phillies recalled Scott Mathieson from Lehigh Valley IronPigs."
+    },
+    {
+      "id": 99605,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2011-08-06",
+      "effectiveDate": "2011-08-06",
+      "resolutionDate": "2011-08-06",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Philadelphia Phillies designated Scott Mathieson for assignment."
+    },
+    {
+      "id": 99764,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2011-08-08",
+      "effectiveDate": "2011-08-08",
+      "resolutionDate": "2011-08-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Philadelphia Phillies optioned RHP Scott Mathieson to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 104183,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2011-10-10",
+      "effectiveDate": "2011-10-10",
+      "resolutionDate": "2011-10-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies activated RHP Scott Mathieson."
+    },
+    {
+      "id": 104663,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2011-10-12",
+      "effectiveDate": "2011-10-12",
+      "resolutionDate": "2011-10-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Scott Mathieson assigned to Tiburones de La Guaira."
+    },
+    {
+      "id": 107102,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2011-11-29",
+      "effectiveDate": "2011-11-29",
+      "resolutionDate": "2011-11-29",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Philadelphia Phillies released RHP Scott Mathieson."
+    },
+    {
+      "id": 110899,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "toTeam": {
+        "id": 241,
+        "name": "Tokyo Yomiuri Giants",
+        "link": "/api/v1/teams/241"
+      },
+      "date": "2012-03-22",
+      "effectiveDate": "2012-03-22",
+      "resolutionDate": "2012-03-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Scott Mathieson assigned to Yomiuri Giants."
+    },
+    {
+      "id": 390958,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "toTeam": {
+        "id": 241,
+        "name": "Tokyo Yomiuri Giants",
+        "link": "/api/v1/teams/241"
+      },
+      "date": "2019-03-16",
+      "effectiveDate": "2019-03-16",
+      "resolutionDate": "2019-03-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Scott Mathieson assigned to Yomiuri Giants."
+    },
+    {
+      "id": 491441,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "toTeam": {
+        "id": 784,
+        "name": "Canada",
+        "link": "/api/v1/teams/784"
+      },
+      "date": "2021-05-29",
+      "effectiveDate": "2021-05-29",
+      "resolutionDate": "2021-05-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Canada activated RHP Scott Mathieson."
+    },
+    {
+      "id": 669927,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "toTeam": {
+        "id": 784,
+        "name": "Canada",
+        "link": "/api/v1/teams/784"
+      },
+      "date": "2023-02-09",
+      "effectiveDate": "2023-02-09",
+      "resolutionDate": "2023-02-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Canada activated RHP Scott Mathieson."
+    },
+    {
+      "id": 669440,
+      "person": {
+        "id": 455949,
+        "fullName": "Scott Mathieson",
+        "link": "/api/v1/people/455949",
+        "nameSlug": "scott-mathieson-455949"
+      },
+      "toTeam": {
+        "id": 784,
+        "name": "Canada",
+        "link": "/api/v1/teams/784"
+      },
+      "date": "2023-02-09",
+      "effectiveDate": "2023-02-09",
+      "resolutionDate": "2023-02-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Canada activated RHP Scott Mathieson."
+    }
+  ]
+}

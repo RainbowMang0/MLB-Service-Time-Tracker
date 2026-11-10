@@ -1,0 +1,1358 @@
+{
+  "player_id": 542992,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:eeebaa72a57d8fa408eb9d2f2cb7a0e940b3654fbea5e67dfec2dc930a7a7f8a",
+  "transactions": [
+    {
+      "id": 98224,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2011-07-27",
+      "effectiveDate": "2011-07-27",
+      "resolutionDate": "2011-07-27",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Toronto Blue Jays signed SS Andy Burns."
+    },
+    {
+      "id": 99009,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 1390,
+        "name": "FCL Blue Jays",
+        "link": "/api/v1/teams/1390"
+      },
+      "date": "2011-08-02",
+      "effectiveDate": "2011-08-02",
+      "resolutionDate": "2011-08-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Andy Burns assigned to GCL Blue Jays from Toronto Blue Jays."
+    },
+    {
+      "id": 99724,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "fromTeam": {
+        "id": 1390,
+        "name": "FCL Blue Jays",
+        "link": "/api/v1/teams/1390"
+      },
+      "toTeam": {
+        "id": 435,
+        "name": "Vancouver Canadians",
+        "link": "/api/v1/teams/435"
+      },
+      "date": "2011-08-08",
+      "effectiveDate": "2011-08-08",
+      "resolutionDate": "2011-08-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Andy Burns assigned to Vancouver Canadians from GCL Blue Jays."
+    },
+    {
+      "id": 109856,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2012-03-09",
+      "effectiveDate": "2012-03-09",
+      "resolutionDate": "2012-03-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Andy Burns assigned to Toronto Blue Jays."
+    },
+    {
+      "id": 112168,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "fromTeam": {
+        "id": 435,
+        "name": "Vancouver Canadians",
+        "link": "/api/v1/teams/435"
+      },
+      "toTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "date": "2012-03-31",
+      "effectiveDate": "2012-03-31",
+      "resolutionDate": "2012-03-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Andy Burns assigned to Lansing Lugnuts from Vancouver Canadians."
+    },
+    {
+      "id": 129082,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "date": "2012-07-12",
+      "effectiveDate": "2012-07-12",
+      "resolutionDate": "2012-07-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lansing Lugnuts placed SS Andy Burns on the 7-day disabled list."
+    },
+    {
+      "id": 136290,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "date": "2012-09-27",
+      "effectiveDate": "2012-09-27",
+      "resolutionDate": "2012-09-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Andy Burns roster status changed by Lansing Lugnuts."
+    },
+    {
+      "id": 144433,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2013-03-06",
+      "effectiveDate": "2013-03-06",
+      "resolutionDate": "2013-03-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Andy Burns assigned to Toronto Blue Jays."
+    },
+    {
+      "id": 148665,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "fromTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "toTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "date": "2013-04-04",
+      "effectiveDate": "2013-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Andy Burns assigned to Dunedin Blue Jays from Lansing Lugnuts."
+    },
+    {
+      "id": 155578,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 76,
+        "name": "FSL North Division All-Stars",
+        "link": "/api/v1/teams/76"
+      },
+      "date": "2013-06-14",
+      "effectiveDate": "2013-06-14",
+      "resolutionDate": "2013-06-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Andy Burns assigned to FSL North Division All-Stars."
+    },
+    {
+      "id": 160888,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "fromTeam": {
+        "id": 424,
+        "name": "Dunedin Blue Jays",
+        "link": "/api/v1/teams/424"
+      },
+      "toTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "date": "2013-06-21",
+      "effectiveDate": "2013-06-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Andy Burns assigned to New Hampshire Fisher Cats from Dunedin Blue Jays."
+    },
+    {
+      "id": 179308,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2014-02-01",
+      "effectiveDate": "2014-02-01",
+      "resolutionDate": "2014-02-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Toronto Blue Jays invited non-roster 3B Andy Burns to spring training."
+    },
+    {
+      "id": 208880,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 697,
+        "name": "Bravos de Margarita",
+        "link": "/api/v1/teams/697"
+      },
+      "date": "2014-10-07",
+      "effectiveDate": "2014-10-07",
+      "resolutionDate": "2014-10-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Andy Burns assigned to Bravos de Margarita."
+    },
+    {
+      "id": 218046,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2015-03-25",
+      "effectiveDate": "2015-03-25",
+      "resolutionDate": "2015-03-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "IF Andy Burns assigned to Toronto Blue Jays."
+    },
+    {
+      "id": 222361,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "fromTeam": {
+        "id": 463,
+        "name": "New Hampshire Fisher Cats",
+        "link": "/api/v1/teams/463"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2015-04-16",
+      "effectiveDate": "2015-04-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Andy Burns assigned to Buffalo Bisons from New Hampshire Fisher Cats."
+    },
+    {
+      "id": 253246,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2016-01-12",
+      "effectiveDate": "2016-01-12",
+      "resolutionDate": "2016-01-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Toronto Blue Jays invited non-roster 3B Andy Burns to spring training."
+    },
+    {
+      "id": 264607,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2016-05-06",
+      "effectiveDate": "2016-05-17",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Toronto Blue Jays selected the contract of Andy Burns from Buffalo Bisons."
+    },
+    {
+      "id": 265888,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2016-05-17",
+      "effectiveDate": "2016-05-17",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Toronto Blue Jays optioned 3B Andy Burns to Buffalo Bisons."
+    },
+    {
+      "id": 271271,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2016-06-15",
+      "effectiveDate": "2016-06-18",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Toronto Blue Jays recalled Andy Burns from Buffalo Bisons."
+    },
+    {
+      "id": 272542,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2016-06-18",
+      "effectiveDate": "2016-06-18",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Toronto Blue Jays optioned 3B Andy Burns to Buffalo Bisons."
+    },
+    {
+      "id": 277718,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2016-07-08",
+      "effectiveDate": "2016-07-22",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Toronto Blue Jays recalled Andy Burns from Buffalo Bisons."
+    },
+    {
+      "id": 280070,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2016-07-22",
+      "effectiveDate": "2016-07-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Toronto Blue Jays optioned 2B Andy Burns to Buffalo Bisons."
+    },
+    {
+      "id": 288010,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2016-09-27",
+      "effectiveDate": "2016-09-27",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Toronto Blue Jays recalled 2B Andy Burns from Buffalo Bisons."
+    },
+    {
+      "id": 288870,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2016-10-04",
+      "effectiveDate": "2016-10-04",
+      "resolutionDate": "2016-10-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays reassigned 2B Andy Burns to the minor leagues."
+    },
+    {
+      "id": 291245,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2016-10-23",
+      "effectiveDate": "2016-10-23",
+      "resolutionDate": "2016-10-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays activated 2B Andy Burns."
+    },
+    {
+      "id": 294364,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2016-12-02",
+      "effectiveDate": "2016-12-02",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Toronto Blue Jays sent 2B Andy Burns outright to Buffalo Bisons."
+    },
+    {
+      "id": 296289,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2017-01-05",
+      "effectiveDate": "2017-01-05",
+      "resolutionDate": "2017-01-05",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Buffalo Bisons released 2B Andy Burns."
+    },
+    {
+      "id": 389162,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2019-02-28",
+      "effectiveDate": "2019-02-28",
+      "resolutionDate": "2019-02-28",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Toronto Blue Jays signed free agent 2B Andy Burns to a minor league contract."
+    },
+    {
+      "id": 393351,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2019-04-01",
+      "effectiveDate": "2019-04-01",
+      "resolutionDate": "2019-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Andy Burns assigned to Buffalo Bisons."
+    },
+    {
+      "id": 396582,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2019-04-14",
+      "effectiveDate": "2019-04-12",
+      "resolutionDate": "2019-04-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Buffalo Bisons placed 2B Andy Burns on the 7-day injured list retroactive to April 12, 2019."
+    },
+    {
+      "id": 397580,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2019-04-20",
+      "effectiveDate": "2019-04-20",
+      "resolutionDate": "2019-04-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Buffalo Bisons activated 2B Andy Burns from the 7-day injured list."
+    },
+    {
+      "id": 433864,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 4069,
+        "name": "Sydney Blue Sox",
+        "link": "/api/v1/teams/4069"
+      },
+      "date": "2019-11-20",
+      "effectiveDate": "2019-11-20",
+      "resolutionDate": "2019-11-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Andy Burns assigned to Sydney Blue Sox."
+    },
+    {
+      "id": 434471,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2019-12-02",
+      "effectiveDate": "2019-12-02",
+      "resolutionDate": "2019-12-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Toronto Blue Jays invited non-roster 2B Andy Burns to spring training."
+    },
+    {
+      "id": 437091,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 4069,
+        "name": "Sydney Blue Sox",
+        "link": "/api/v1/teams/4069"
+      },
+      "date": "2020-01-24",
+      "effectiveDate": "2020-01-24",
+      "resolutionDate": "2020-01-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sydney Blue Sox placed 2B Andy Burns on the reserve list."
+    },
+    {
+      "id": 447394,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 3256,
+        "name": "Blue Jays Alternate Training Site",
+        "link": "/api/v1/teams/3256"
+      },
+      "date": "2020-07-19",
+      "effectiveDate": "2020-07-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Andy Burns assigned to Blue Jays Alternate Training Site from Buffalo Bisons."
+    },
+    {
+      "id": 452884,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "fromTeam": {
+        "id": 3256,
+        "name": "Blue Jays Alternate Training Site",
+        "link": "/api/v1/teams/3256"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2020-09-29",
+      "effectiveDate": "2020-09-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Andy Burns assigned to Buffalo Bisons from Blue Jays Alternate Training Site."
+    },
+    {
+      "id": 455114,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2020-11-02",
+      "effectiveDate": "2020-11-02",
+      "resolutionDate": "2020-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "2B Andy Burns elected free agency."
+    },
+    {
+      "id": 469669,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2020-12-16",
+      "effectiveDate": "2020-12-16",
+      "resolutionDate": "2020-12-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Dodgers signed free agent 2B Andy Burns to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 474992,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2020-12-16",
+      "effectiveDate": "2020-12-16",
+      "resolutionDate": "2020-12-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Dodgers signed free agent 3B Andy Burns."
+    },
+    {
+      "id": 469917,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2020-12-16",
+      "effectiveDate": "2020-12-16",
+      "resolutionDate": "2020-12-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Dodgers signed free agent 2B Andy Burns to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 469670,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2021-02-16",
+      "effectiveDate": "2021-02-16",
+      "resolutionDate": "2021-02-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Andy Burns assigned to Oklahoma City Dodgers."
+    },
+    {
+      "id": 485121,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2021-05-05",
+      "effectiveDate": "2021-05-05",
+      "resolutionDate": "2021-05-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Andy Burns assigned to Oklahoma City Dodgers."
+    },
+    {
+      "id": 489908,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2021-05-05",
+      "effectiveDate": "2021-05-05",
+      "resolutionDate": "2021-05-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Andy Burns assigned to Oklahoma City Dodgers."
+    },
+    {
+      "id": 489066,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2021-05-05",
+      "effectiveDate": "2021-05-05",
+      "resolutionDate": "2021-05-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Andy Burns assigned to Oklahoma City Dodgers."
+    },
+    {
+      "id": 485081,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "fromTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2021-05-05",
+      "effectiveDate": "2021-05-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Andy Burns assigned to Oklahoma City Dodgers from Dodgers Alternate Training Site."
+    },
+    {
+      "id": 494125,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-06-12",
+      "effectiveDate": "2021-06-12",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Dodgers selected the contract of 3B Andy Burns from Oklahoma City Dodgers."
+    },
+    {
+      "id": 495890,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2021-06-23",
+      "effectiveDate": "2021-06-23",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned 3B Andy Burns to Oklahoma City Dodgers."
+    },
+    {
+      "id": 503686,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2021-07-11",
+      "effectiveDate": "2021-07-11",
+      "resolutionDate": "2021-07-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers placed 3B Andy Burns on the 7-day injured list."
+    },
+    {
+      "id": 506164,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-07-20",
+      "effectiveDate": "2021-07-20",
+      "resolutionDate": "2021-07-20",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Los Angeles Dodgers released 3B Andy Burns."
+    },
+    {
+      "id": 506140,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-07-20",
+      "effectiveDate": "2021-07-20",
+      "resolutionDate": "2021-07-20",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Los Angeles Dodgers designated 3B Andy Burns for assignment."
+    },
+    {
+      "id": 516856,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-09-10",
+      "effectiveDate": "2021-09-10",
+      "resolutionDate": "2021-09-10",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Dodgers signed free agent 3B Andy Burns to a minor league contract."
+    },
+    {
+      "id": 516857,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2021-09-10",
+      "effectiveDate": "2021-09-10",
+      "resolutionDate": "2021-09-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Andy Burns assigned to ACL Dodgers."
+    },
+    {
+      "id": 517906,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "fromTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2021-09-16",
+      "effectiveDate": "2021-09-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Andy Burns assigned to Oklahoma City Dodgers from ACL Dodgers."
+    },
+    {
+      "id": 522114,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-10-21",
+      "effectiveDate": "2021-10-21",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Dodgers selected the contract of 3B Andy Burns from Oklahoma City Dodgers."
+    },
+    {
+      "id": 612185,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-11-05",
+      "effectiveDate": "2021-11-05",
+      "resolutionDate": "2021-11-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "3B Andy Burns roster status changed by Los Angeles Dodgers."
+    },
+    {
+      "id": 523641,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2021-11-05",
+      "effectiveDate": "2021-11-05",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Los Angeles Dodgers sent 3B Andy Burns outright to Oklahoma City Dodgers."
+    },
+    {
+      "id": 633848,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2022-06-28",
+      "effectiveDate": "2022-06-28",
+      "resolutionDate": "2022-06-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers placed 3B Andy Burns on the temporarily inactive list."
+    },
+    {
+      "id": 635118,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2022-07-04",
+      "effectiveDate": "2022-07-04",
+      "resolutionDate": "2022-07-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers activated 3B Andy Burns from the temporarily inactive list."
+    },
+    {
+      "id": 635816,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2022-07-07",
+      "effectiveDate": "2022-07-07",
+      "resolutionDate": "2022-07-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers placed 3B Andy Burns on the temporarily inactive list."
+    },
+    {
+      "id": 653790,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2022-07-12",
+      "effectiveDate": "2022-09-25",
+      "resolutionDate": "2022-09-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers placed 3B Andy Burns on the 7-day injured list."
+    },
+    {
+      "id": 636939,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2022-07-12",
+      "effectiveDate": "2022-07-12",
+      "resolutionDate": "2022-07-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers activated 3B Andy Burns from the temporarily inactive list."
+    },
+    {
+      "id": 656986,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2022-10-11",
+      "effectiveDate": "2022-10-11",
+      "resolutionDate": "2022-10-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers activated 3B Andy Burns from the 7-day injured list."
+    },
+    {
+      "id": 659535,
+      "person": {
+        "id": 542992,
+        "fullName": "Andy Burns",
+        "link": "/api/v1/people/542992",
+        "nameSlug": "andy-burns-542992"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2022-11-10",
+      "effectiveDate": "2022-11-10",
+      "resolutionDate": "2022-11-10",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "3B Andy Burns elected free agency."
+    }
+  ]
+}

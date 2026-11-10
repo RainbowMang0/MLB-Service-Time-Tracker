@@ -1,0 +1,895 @@
+{
+  "player_id": 695257,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:1246ec42551bb7df67d64bca3c8a50dbcacf32443f0d92c468e62d5e00a3ee30",
+  "transactions": [
+    {
+      "id": 500380,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 5580,
+        "name": "College Workout",
+        "link": "/api/v1/teams/5580"
+      },
+      "date": "2021-07-01",
+      "effectiveDate": "2021-07-01",
+      "resolutionDate": "2021-07-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Billy Cook and  assigned to College Workout."
+    },
+    {
+      "id": 506693,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2021-07-23",
+      "effectiveDate": "2021-07-23",
+      "resolutionDate": "2021-07-23",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Baltimore Orioles signed OF Billy Cook."
+    },
+    {
+      "id": 508449,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 5578,
+        "name": "FCL Orioles Orange",
+        "link": "/api/v1/teams/5578"
+      },
+      "date": "2021-07-31",
+      "effectiveDate": "2021-07-31",
+      "resolutionDate": "2021-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Billy Cook assigned to FCL Orioles Orange."
+    },
+    {
+      "id": 512367,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "fromTeam": {
+        "id": 5578,
+        "name": "FCL Orioles Orange",
+        "link": "/api/v1/teams/5578"
+      },
+      "toTeam": {
+        "id": 548,
+        "name": "Delmarva Shorebirds",
+        "link": "/api/v1/teams/548"
+      },
+      "date": "2021-08-17",
+      "effectiveDate": "2021-08-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Billy Cook assigned to Delmarva Shorebirds from FCL Orioles Orange."
+    },
+    {
+      "id": 613194,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "date": "2022-04-07",
+      "effectiveDate": "2022-04-07",
+      "resolutionDate": "2022-04-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Billy Cook assigned to Aberdeen IronBirds."
+    },
+    {
+      "id": 677888,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2023-03-19",
+      "effectiveDate": "2023-03-19",
+      "resolutionDate": "2023-03-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "OF Billy Cook roster status changed by Baltimore Orioles."
+    },
+    {
+      "id": 751484,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2023-03-19",
+      "effectiveDate": "2023-03-19",
+      "resolutionDate": "2023-03-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "OF Billy Cook roster status changed by Baltimore Orioles."
+    },
+    {
+      "id": 676345,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2023-03-19",
+      "effectiveDate": "2023-03-19",
+      "resolutionDate": "2023-03-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Billy Cook assigned to Baltimore Orioles."
+    },
+    {
+      "id": 682666,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "fromTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2023-04-06",
+      "effectiveDate": "2023-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Billy Cook assigned to Bowie Baysox from Aberdeen IronBirds."
+    },
+    {
+      "id": 726062,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 555,
+        "name": "Mesa Solar Sox",
+        "link": "/api/v1/teams/555"
+      },
+      "date": "2023-09-22",
+      "effectiveDate": "2023-09-22",
+      "resolutionDate": "2023-09-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mesa Solar Sox activated OF Billy Cook."
+    },
+    {
+      "id": 754059,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 361,
+        "name": "Baltimore Orioles Prospects",
+        "link": "/api/v1/teams/361"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles Prospects activated OF Billy Cook."
+    },
+    {
+      "id": 754048,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 361,
+        "name": "Baltimore Orioles Prospects",
+        "link": "/api/v1/teams/361"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles Prospects activated OF Billy Cook."
+    },
+    {
+      "id": 758010,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "fromTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2024-03-29",
+      "effectiveDate": "2024-03-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Billy Cook assigned to Norfolk Tides from Bowie Baysox."
+    },
+    {
+      "id": 759790,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2024-04-02",
+      "effectiveDate": "2024-04-02",
+      "resolutionDate": "2024-04-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Bowie Baysox activated OF Billy Cook."
+    },
+    {
+      "id": 759406,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2024-04-02",
+      "effectiveDate": "2024-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Billy Cook assigned to Bowie Baysox from Norfolk Tides."
+    },
+    {
+      "id": 765431,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "fromTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2024-04-25",
+      "effectiveDate": "2024-04-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Billy Cook assigned to Norfolk Tides from Bowie Baysox."
+    },
+    {
+      "id": 785013,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2024-07-04",
+      "effectiveDate": "2024-07-04",
+      "resolutionDate": "2024-07-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Norfolk Tides placed OF Billy Cook on the 7-day injured list."
+    },
+    {
+      "id": 786542,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2024-07-12",
+      "effectiveDate": "2024-07-12",
+      "resolutionDate": "2024-07-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Norfolk Tides activated OF Billy Cook from the 7-day injured list."
+    },
+    {
+      "id": 791304,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2024-07-30",
+      "effectiveDate": "2024-07-30",
+      "resolutionDate": "2024-07-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Billy Cook assigned to Indianapolis Indians."
+    },
+    {
+      "id": 791295,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2024-07-30",
+      "effectiveDate": "2024-07-30",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Baltimore Orioles traded OF Billy Cook to Pittsburgh Pirates for RHP Patrick Reilly."
+    },
+    {
+      "id": 792271,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2024-08-02",
+      "effectiveDate": "2024-08-02",
+      "resolutionDate": "2024-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians activated OF Billy Cook."
+    },
+    {
+      "id": 798297,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2024-09-08",
+      "effectiveDate": "2024-09-08",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Pittsburgh Pirates selected the contract of 3B Billy Cook from Indianapolis Indians."
+    },
+    {
+      "id": 823109,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2025-03-22",
+      "effectiveDate": "2025-03-22",
+      "resolutionDate": "2025-03-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians activated 1B Billy Cook."
+    },
+    {
+      "id": 821519,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2025-03-22",
+      "effectiveDate": "2025-03-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Pittsburgh Pirates optioned 1B Billy Cook to Indianapolis Indians."
+    },
+    {
+      "id": 849010,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2025-06-18",
+      "effectiveDate": "2025-06-18",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Pittsburgh Pirates recalled OF Billy Cook from Indianapolis Indians."
+    },
+    {
+      "id": 849574,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2025-06-21",
+      "effectiveDate": "2025-06-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Pittsburgh Pirates optioned OF Billy Cook to Indianapolis Indians."
+    },
+    {
+      "id": 863512,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2025-08-10",
+      "effectiveDate": "2025-08-08",
+      "resolutionDate": "2025-08-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians placed CF Billy Cook on the 7-day injured list retroactive to August 8, 2025."
+    },
+    {
+      "id": 870845,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2025-09-29",
+      "effectiveDate": "2025-09-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Pittsburgh Pirates recalled OF Billy Cook from Indianapolis Indians."
+    },
+    {
+      "id": 896734,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2026-04-02",
+      "effectiveDate": "2026-04-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Pittsburgh Pirates optioned OF Billy Cook to Indianapolis Indians."
+    },
+    {
+      "id": 897218,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2026-04-05",
+      "effectiveDate": "2026-04-05",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Pittsburgh Pirates recalled OF Billy Cook from Indianapolis Indians."
+    },
+    {
+      "id": 899149,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "OF Billy Cook changed number to 42."
+    },
+    {
+      "id": 900087,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "OF Billy Cook changed number to 25."
+    },
+    {
+      "id": 911237,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2026-05-22",
+      "effectiveDate": "2026-05-22",
+      "resolutionDate": "2026-05-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians activated RF Billy Cook."
+    },
+    {
+      "id": 911466,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2026-05-22",
+      "effectiveDate": "2026-05-22",
+      "resolutionDate": "2026-05-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians activated RF Billy Cook."
+    },
+    {
+      "id": 910963,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2026-05-22",
+      "effectiveDate": "2026-05-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Pittsburgh Pirates optioned RF Billy Cook to Indianapolis Indians."
+    },
+    {
+      "id": 917339,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2026-06-10",
+      "effectiveDate": "2026-06-10",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Pittsburgh Pirates recalled RF Billy Cook from Indianapolis Indians."
+    },
+    {
+      "id": 934053,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2026-08-02",
+      "effectiveDate": "2026-08-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Pittsburgh Pirates optioned CF Billy Cook to Indianapolis Indians."
+    },
+    {
+      "id": 935119,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2026-08-04",
+      "effectiveDate": "2026-08-04",
+      "resolutionDate": "2026-08-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians activated CF Billy Cook."
+    },
+    {
+      "id": 937529,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2026-08-14",
+      "effectiveDate": "2026-08-14",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Pittsburgh Pirates recalled CF Billy Cook from Indianapolis Indians."
+    },
+    {
+      "id": 942675,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2026-09-15",
+      "effectiveDate": "2026-09-15",
+      "resolutionDate": "2026-09-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "CF Billy Cook changed number to 21."
+    },
+    {
+      "id": 942892,
+      "person": {
+        "id": 695257,
+        "fullName": "Billy Cook",
+        "link": "/api/v1/people/695257",
+        "nameSlug": "billy-cook-695257"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2026-09-16",
+      "effectiveDate": "2026-09-16",
+      "resolutionDate": "2026-09-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "CF Billy Cook changed number to 25."
+    }
+  ]
+}

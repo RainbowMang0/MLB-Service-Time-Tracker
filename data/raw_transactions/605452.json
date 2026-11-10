@@ -1,0 +1,2405 @@
+{
+  "player_id": 605452,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:07bd6f75273bca2261e3a17dead62e8ca59d2d652f97c6d5f5334683815b45c4",
+  "transactions": [
+    {
+      "id": 228999,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 4050,
+        "name": "Southwest",
+        "link": "/api/v1/teams/4050"
+      },
+      "date": "2010-06-15",
+      "effectiveDate": "2010-06-15",
+      "resolutionDate": "2010-06-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joe Ross assigned to Orange."
+    },
+    {
+      "id": 100570,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2011-08-15",
+      "effectiveDate": "2011-08-15",
+      "resolutionDate": "2011-08-15",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "San Diego Padres signed RHP Joe Ross."
+    },
+    {
+      "id": 101923,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "date": "2011-08-28",
+      "effectiveDate": "2011-08-28",
+      "resolutionDate": "2011-08-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Joseph Ross assigned to AZL Padres from San Diego Padres."
+    },
+    {
+      "id": 112071,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "toTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "date": "2012-03-31",
+      "effectiveDate": "2012-03-31",
+      "resolutionDate": "2012-03-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joseph Ross assigned to Fort Wayne TinCaps from AZL Padres."
+    },
+    {
+      "id": 117714,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "date": "2012-05-09",
+      "effectiveDate": "2012-05-09",
+      "resolutionDate": "2012-05-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Joseph Ross roster status changed by Fort Wayne TinCaps."
+    },
+    {
+      "id": 127268,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "date": "2012-06-28",
+      "effectiveDate": "2012-06-28",
+      "resolutionDate": "2012-06-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Joseph Ross assigned to AZL Padres."
+    },
+    {
+      "id": 127623,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "toTeam": {
+        "id": 461,
+        "name": "Eugene Emeralds",
+        "link": "/api/v1/teams/461"
+      },
+      "date": "2012-06-30",
+      "effectiveDate": "2012-06-30",
+      "resolutionDate": "2012-06-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "AZL Padres sent RHP Joseph Ross on a rehab assignment to Eugene Emeralds."
+    },
+    {
+      "id": 134024,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "toTeam": {
+        "id": 461,
+        "name": "Eugene Emeralds",
+        "link": "/api/v1/teams/461"
+      },
+      "date": "2012-08-24",
+      "effectiveDate": "2012-08-24",
+      "resolutionDate": "2012-08-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Joseph Ross assigned to Eugene Emeralds from Fort Wayne TinCaps."
+    },
+    {
+      "id": 135591,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 461,
+        "name": "Eugene Emeralds",
+        "link": "/api/v1/teams/461"
+      },
+      "toTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "date": "2012-09-12",
+      "effectiveDate": "2012-09-12",
+      "resolutionDate": "2012-09-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joe Ross assigned to Fort Wayne TinCaps from Eugene Emeralds."
+    },
+    {
+      "id": 155647,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 70,
+        "name": "MWL East Division All-Stars",
+        "link": "/api/v1/teams/70"
+      },
+      "date": "2013-06-17",
+      "effectiveDate": "2013-06-17",
+      "resolutionDate": "2013-06-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joseph Ross assigned to MID East Division All-Stars."
+    },
+    {
+      "id": 178274,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2014-01-23",
+      "effectiveDate": "2014-01-23",
+      "resolutionDate": "2014-01-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres invited non-roster RHP Joe Ross to spring training."
+    },
+    {
+      "id": 184868,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "toTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "date": "2014-04-03",
+      "effectiveDate": "2014-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joe Ross assigned to Lake Elsinore Storm from Fort Wayne TinCaps."
+    },
+    {
+      "id": 191799,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 72,
+        "name": "CAL North Division All-Stars",
+        "link": "/api/v1/teams/72"
+      },
+      "date": "2014-06-16",
+      "effectiveDate": "2014-06-16",
+      "resolutionDate": "2014-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joe Ross assigned to California League All-Stars."
+    },
+    {
+      "id": 200774,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2014-07-16",
+      "effectiveDate": "2014-07-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joe Ross assigned to San Antonio Missions from Lake Elsinore Storm."
+    },
+    {
+      "id": 204616,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2014-08-12",
+      "effectiveDate": "2014-08-12",
+      "resolutionDate": "2014-08-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Antonio Missions placed RHP Joe Ross on the 7-day disabled list."
+    },
+    {
+      "id": 209292,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2014-09-26",
+      "effectiveDate": "2014-09-26",
+      "resolutionDate": "2014-09-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Antonio Missions activated RHP Joe Ross from the 7-day disabled list."
+    },
+    {
+      "id": 213286,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2014-12-19",
+      "effectiveDate": "2014-12-19",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "San Diego Padres traded RHP Joe Ross and Player To Be Named Later to Washington Nationals."
+    },
+    {
+      "id": 213292,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2014-12-19",
+      "effectiveDate": "2014-12-19",
+      "resolutionDate": "2014-12-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joe Ross assigned to Harrisburg Senators."
+    },
+    {
+      "id": 228996,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2015-06-06",
+      "effectiveDate": "2015-06-23",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Washington Nationals selected the contract of Joe Ross from Harrisburg Senators."
+    },
+    {
+      "id": 233966,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2015-06-23",
+      "effectiveDate": "2015-06-23",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Washington Nationals optioned RHP Joe Ross to Syracuse Chiefs."
+    },
+    {
+      "id": 238762,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2015-07-21",
+      "effectiveDate": "2015-07-21",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Washington Nationals recalled RHP Joe Ross from Syracuse Chiefs."
+    },
+    {
+      "id": 276708,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2016-07-03",
+      "effectiveDate": "2016-07-03",
+      "resolutionDate": "2016-07-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals placed RHP Joe Ross on the 15-day disabled list. Right shoulder inflammation."
+    },
+    {
+      "id": 280277,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 563,
+        "name": "Hagerstown Suns",
+        "link": "/api/v1/teams/563"
+      },
+      "date": "2016-07-24",
+      "effectiveDate": "2016-07-24",
+      "resolutionDate": "2016-07-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent RHP Joe Ross on a rehab assignment to Hagerstown Suns."
+    },
+    {
+      "id": 281341,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2016-07-30",
+      "effectiveDate": "2016-07-30",
+      "resolutionDate": "2016-07-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals sent RHP Joe Ross on a rehab assignment to Syracuse Chiefs."
+    },
+    {
+      "id": 285467,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2016-08-27",
+      "effectiveDate": "2016-08-27",
+      "resolutionDate": "2016-08-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals sent RHP Joe Ross on a rehab assignment to Syracuse Chiefs."
+    },
+    {
+      "id": 286274,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2016-09-02",
+      "effectiveDate": "2016-09-02",
+      "resolutionDate": "2016-09-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals transferred RHP Joe Ross from the 15-day disabled list to the 60-day disabled list. Right shoulder inflammation."
+    },
+    {
+      "id": 287445,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2016-09-18",
+      "effectiveDate": "2017-04-02",
+      "resolutionDate": "2016-09-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Joe Ross roster status changed by Washington Nationals."
+    },
+    {
+      "id": 302473,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2017-04-02",
+      "effectiveDate": "2017-04-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Washington Nationals optioned RHP Joe Ross to Syracuse Chiefs."
+    },
+    {
+      "id": 306698,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2017-04-19",
+      "effectiveDate": "2017-05-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Washington Nationals recalled Joe Ross from Syracuse Chiefs."
+    },
+    {
+      "id": 308592,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2017-05-01",
+      "effectiveDate": "2017-05-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Washington Nationals optioned RHP Joe Ross to Syracuse Chiefs."
+    },
+    {
+      "id": 311687,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2017-05-23",
+      "effectiveDate": "2017-05-23",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Washington Nationals recalled RHP Joe Ross from Syracuse Chiefs."
+    },
+    {
+      "id": 324123,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2017-07-14",
+      "effectiveDate": "2017-07-11",
+      "resolutionDate": "2017-07-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals placed RHP Joe Ross on the 10-day disabled list retroactive to July 11, 2017. Right elbow sprain."
+    },
+    {
+      "id": 324440,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2017-07-16",
+      "effectiveDate": "2017-07-16",
+      "resolutionDate": "2017-07-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals transferred RHP Joe Ross from the 10-day disabled list to the 60-day disabled list."
+    },
+    {
+      "id": 336147,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2017-11-03",
+      "effectiveDate": "2017-11-03",
+      "resolutionDate": "2017-11-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals activated RHP Joe Ross from the 60-day disabled list."
+    },
+    {
+      "id": 342198,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2018-02-21",
+      "effectiveDate": "2018-02-21",
+      "resolutionDate": "2018-02-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals placed RHP Joe Ross on the 60-day disabled list. Recovering from Tommy John surgery"
+    },
+    {
+      "id": 373254,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 466,
+        "name": "FCL Nationals",
+        "link": "/api/v1/teams/466"
+      },
+      "date": "2018-08-06",
+      "effectiveDate": "2018-08-06",
+      "resolutionDate": "2018-08-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals sent RHP Joe Ross on a rehab assignment to GCL Nationals."
+    },
+    {
+      "id": 375002,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "date": "2018-08-16",
+      "effectiveDate": "2018-08-16",
+      "resolutionDate": "2018-08-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals sent RHP Joe Ross on a rehab assignment to Potomac Nationals."
+    },
+    {
+      "id": 375841,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2018-08-22",
+      "effectiveDate": "2018-08-22",
+      "resolutionDate": "2018-08-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals sent RHP Joe Ross on a rehab assignment to Harrisburg Senators."
+    },
+    {
+      "id": 376534,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2018-08-27",
+      "effectiveDate": "2018-08-27",
+      "resolutionDate": "2018-08-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals sent RHP Joe Ross on a rehab assignment to Syracuse Chiefs."
+    },
+    {
+      "id": 377808,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2018-09-04",
+      "effectiveDate": "2019-03-23",
+      "resolutionDate": "2018-09-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Joe Ross roster status changed by Washington Nationals."
+    },
+    {
+      "id": 391875,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2019-03-23",
+      "effectiveDate": "2019-03-23",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Washington Nationals optioned RHP Joe Ross to Fresno Grizzlies."
+    },
+    {
+      "id": 395674,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2019-04-07",
+      "effectiveDate": "2019-05-25",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Washington Nationals recalled Joe Ross from Fresno Grizzlies."
+    },
+    {
+      "id": 403042,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2019-05-25",
+      "effectiveDate": "2019-05-25",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Washington Nationals optioned RHP Joe Ross to Fresno Grizzlies."
+    },
+    {
+      "id": 411760,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2019-06-21",
+      "effectiveDate": "2019-06-23",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Washington Nationals recalled Joe Ross from Fresno Grizzlies."
+    },
+    {
+      "id": 413093,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2019-06-23",
+      "effectiveDate": "2019-06-23",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Washington Nationals optioned RHP Joe Ross to Fresno Grizzlies."
+    },
+    {
+      "id": 418967,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2019-07-21",
+      "effectiveDate": "2019-07-21",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Washington Nationals recalled RHP Joe Ross from Fresno Grizzlies."
+    },
+    {
+      "id": 429001,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2019-10-01",
+      "effectiveDate": "2019-10-01",
+      "resolutionDate": "2019-10-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals reassigned RHP Joe Ross to the minor leagues."
+    },
+    {
+      "id": 430991,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2019-10-22",
+      "effectiveDate": "2019-10-22",
+      "resolutionDate": "2019-10-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals activated RHP Joe Ross."
+    },
+    {
+      "id": 446204,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2020-06-29",
+      "effectiveDate": "2020-06-29",
+      "resolutionDate": "2020-06-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals placed RHP Joe Ross on the restricted list."
+    },
+    {
+      "id": 477940,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2020-11-02",
+      "effectiveDate": "2020-11-02",
+      "resolutionDate": "2020-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals activated P Joe Ross from the restricted list."
+    },
+    {
+      "id": 454757,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2020-11-02",
+      "effectiveDate": "2020-11-02",
+      "resolutionDate": "2020-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals activated RHP Joe Ross from the restricted list."
+    },
+    {
+      "id": 479127,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2020-11-02",
+      "effectiveDate": "2020-11-02",
+      "resolutionDate": "2020-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals activated RHP Joe Ross from the restricted list."
+    },
+    {
+      "id": 477035,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2020-11-02",
+      "effectiveDate": "2020-11-02",
+      "resolutionDate": "2020-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals activated P Joe Ross from the restricted list."
+    },
+    {
+      "id": 479251,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2020-11-02",
+      "effectiveDate": "2020-11-02",
+      "resolutionDate": "2020-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals activated RHP Joe Ross from the restricted list."
+    },
+    {
+      "id": 501864,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2021-07-08",
+      "effectiveDate": "2021-07-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals placed RHP Joe Ross on the 10-day injured list. Right elbow inflammation."
+    },
+    {
+      "id": 507263,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2021-07-26",
+      "effectiveDate": "2021-07-26",
+      "resolutionDate": "2021-07-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals activated RHP Joe Ross from the 10-day injured list."
+    },
+    {
+      "id": 511944,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2021-08-15",
+      "effectiveDate": "2021-08-12",
+      "resolutionDate": "2021-08-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals placed RHP Joe Ross on the 10-day injured list. Partial tear of right UCL."
+    },
+    {
+      "id": 513719,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2021-08-23",
+      "effectiveDate": "2021-08-23",
+      "resolutionDate": "2021-08-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals placed RHP Joe Ross on the 60-day injured list. Partial tear of right UCL."
+    },
+    {
+      "id": 524932,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2021-11-07",
+      "effectiveDate": "2021-11-07",
+      "resolutionDate": "2021-11-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals activated RHP Joe Ross from the 60-day injured list."
+    },
+    {
+      "id": 606347,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2022-03-16",
+      "effectiveDate": "2022-03-16",
+      "resolutionDate": "2022-03-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals placed RHP Joe Ross on the 60-day injured list. Right elbow bone spur removal."
+    },
+    {
+      "id": 624233,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2022-05-24",
+      "effectiveDate": "2022-05-24",
+      "resolutionDate": "2022-05-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Washington Nationals sent RHP Joe Ross on a rehab assignment to Harrisburg Senators."
+    },
+    {
+      "id": 658191,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2022-11-06",
+      "effectiveDate": "2022-11-06",
+      "resolutionDate": "2022-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Joe Ross elected free agency."
+    },
+    {
+      "id": 678874,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2023-01-30",
+      "effectiveDate": "2023-01-30",
+      "resolutionDate": "2023-01-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Joe Ross roster status changed by San Francisco Giants."
+    },
+    {
+      "id": 667373,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2023-01-30",
+      "effectiveDate": "2023-01-30",
+      "resolutionDate": "2023-01-30",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Francisco Giants signed free agent RHP Joe Ross to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 668381,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2023-02-06",
+      "effectiveDate": "2023-02-06",
+      "resolutionDate": "2023-02-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joe Ross assigned to Sacramento River Cats."
+    },
+    {
+      "id": 680147,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2023-03-31",
+      "effectiveDate": "2023-03-31",
+      "resolutionDate": "2023-03-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sacramento River Cats placed RHP Joe Ross on the 60-day injured list."
+    },
+    {
+      "id": 721196,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 5370,
+        "link": "/api/v1/teams/5370"
+      },
+      "date": "2023-08-22",
+      "effectiveDate": "2023-08-22",
+      "resolutionDate": "2023-08-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Sacramento River Cats sent RHP Joe Ross on a rehab assignment to ACL Giants Orange."
+    },
+    {
+      "id": 722150,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 476,
+        "name": "San Jose Giants",
+        "link": "/api/v1/teams/476"
+      },
+      "date": "2023-08-26",
+      "effectiveDate": "2023-08-26",
+      "resolutionDate": "2023-08-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Sacramento River Cats sent RHP Joe Ross on a rehab assignment to San Jose Giants."
+    },
+    {
+      "id": 724931,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2023-09-13",
+      "effectiveDate": "2023-09-13",
+      "resolutionDate": "2023-09-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sacramento River Cats activated RHP Joe Ross from the 60-day injured list."
+    },
+    {
+      "id": 732312,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2023-11-06",
+      "effectiveDate": "2023-11-06",
+      "resolutionDate": "2023-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Joe Ross elected free agency."
+    },
+    {
+      "id": 734915,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2023-12-12",
+      "effectiveDate": "2023-12-12",
+      "resolutionDate": "2023-12-12",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Milwaukee Brewers signed free agent RHP Joe Ross."
+    },
+    {
+      "id": 735660,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2023-12-12",
+      "effectiveDate": "2023-12-12",
+      "resolutionDate": "2023-12-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated RHP Joe Ross."
+    },
+    {
+      "id": 773181,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2024-05-21",
+      "effectiveDate": "2024-05-21",
+      "resolutionDate": "2024-05-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers placed RHP Joe Ross on the 15-day injured list. Low back strain."
+    },
+    {
+      "id": 783086,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2024-06-26",
+      "effectiveDate": "2024-06-26",
+      "resolutionDate": "2024-06-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers transferred RHP Joe Ross from the 15-day injured list to the 60-day injured list. Low back strain."
+    },
+    {
+      "id": 785441,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "date": "2024-07-06",
+      "effectiveDate": "2024-07-06",
+      "resolutionDate": "2024-07-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Milwaukee Brewers sent RHP Joe Ross on a rehab assignment to Wisconsin Timber Rattlers."
+    },
+    {
+      "id": 786195,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2024-07-10",
+      "effectiveDate": "2024-07-10",
+      "resolutionDate": "2024-07-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Milwaukee Brewers sent RHP Joe Ross on a rehab assignment to Nashville Sounds."
+    },
+    {
+      "id": 786256,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2024-07-10",
+      "effectiveDate": "2024-07-10",
+      "resolutionDate": "2024-07-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Milwaukee Brewers sent RHP Joe Ross on a rehab assignment to Nashville Sounds."
+    },
+    {
+      "id": 791160,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2024-07-30",
+      "effectiveDate": "2024-07-30",
+      "resolutionDate": "2024-07-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated RHP Joe Ross from the 60-day injured list."
+    },
+    {
+      "id": 803448,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2024-10-31",
+      "effectiveDate": "2024-10-31",
+      "resolutionDate": "2024-10-31",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Joe Ross elected free agency."
+    },
+    {
+      "id": 809581,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2024-12-23",
+      "effectiveDate": "2024-12-23",
+      "resolutionDate": "2024-12-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies activated RHP Joe Ross."
+    },
+    {
+      "id": 809014,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2024-12-23",
+      "effectiveDate": "2024-12-23",
+      "resolutionDate": "2024-12-23",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent RHP Joe Ross."
+    },
+    {
+      "id": 828152,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Joe Ross changed number to 42."
+    },
+    {
+      "id": 829358,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Joe Ross changed number to 41."
+    },
+    {
+      "id": 857463,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2025-07-22",
+      "effectiveDate": "2025-07-21",
+      "resolutionDate": "2025-07-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies placed RHP Joe Ross on the 15-day injured list retroactive to July 21, 2025. Back spasms."
+    },
+    {
+      "id": 860732,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2025-08-01",
+      "effectiveDate": "2025-08-01",
+      "resolutionDate": "2025-08-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Philadelphia Phillies sent RHP Joe Ross on a rehab assignment to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 862403,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2025-08-01",
+      "effectiveDate": "2025-08-01",
+      "resolutionDate": "2025-08-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Philadelphia Phillies sent RHP Joe Ross on a rehab assignment to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 862404,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2025-08-05",
+      "effectiveDate": "2025-08-05",
+      "resolutionDate": "2025-08-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Philadelphia Phillies activated RHP Joe Ross from the 15-day injured list."
+    },
+    {
+      "id": 866312,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2025-08-26",
+      "effectiveDate": "2025-08-26",
+      "resolutionDate": "2025-08-26",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Philadelphia Phillies released RHP Joe Ross."
+    },
+    {
+      "id": 867298,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-09-01",
+      "effectiveDate": "2025-09-01",
+      "resolutionDate": "2025-09-01",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago Cubs signed free agent RHP Joe Ross to a minor league contract."
+    },
+    {
+      "id": 867500,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2025-09-02",
+      "effectiveDate": "2025-09-02",
+      "resolutionDate": "2025-09-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joe Ross assigned to Iowa Cubs."
+    },
+    {
+      "id": 875393,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Joe Ross elected free agency."
+    },
+    {
+      "id": 886791,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-02-15",
+      "effectiveDate": "2026-02-15",
+      "resolutionDate": "2026-02-15",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Arizona Diamondbacks signed free agent RHP Joe Ross to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 886793,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-02-15",
+      "effectiveDate": "2026-02-15",
+      "resolutionDate": "2026-02-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Joe Ross roster status changed by Arizona Diamondbacks."
+    },
+    {
+      "id": 886792,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2026-02-15",
+      "effectiveDate": "2026-02-15",
+      "resolutionDate": "2026-02-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joe Ross assigned to Reno Aces."
+    },
+    {
+      "id": 893484,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-03-25",
+      "effectiveDate": "2026-03-25",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Arizona Diamondbacks selected the contract of RHP Joe Ross from Reno Aces."
+    },
+    {
+      "id": 897041,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-04-03",
+      "effectiveDate": "2026-04-03",
+      "resolutionDate": "2026-04-03",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Arizona Diamondbacks designated RHP Joe Ross for assignment."
+    },
+    {
+      "id": 897410,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2026-04-05",
+      "effectiveDate": "2026-04-05",
+      "resolutionDate": "2026-04-05",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Joe Ross elected free agency."
+    },
+    {
+      "id": 897254,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2026-04-05",
+      "effectiveDate": "2026-04-05",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Arizona Diamondbacks sent RHP Joe Ross outright to Reno Aces."
+    },
+    {
+      "id": 897548,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-04-07",
+      "effectiveDate": "2026-04-07",
+      "resolutionDate": "2026-04-07",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Arizona Diamondbacks signed free agent RHP Joe Ross to a minor league contract."
+    },
+    {
+      "id": 897549,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2026-04-07",
+      "effectiveDate": "2026-04-07",
+      "resolutionDate": "2026-04-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joe Ross assigned to Reno Aces."
+    },
+    {
+      "id": 897550,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2026-04-07",
+      "effectiveDate": "2026-04-07",
+      "resolutionDate": "2026-04-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces activated RHP Joe Ross."
+    },
+    {
+      "id": 910116,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2026-05-18",
+      "effectiveDate": "2026-05-18",
+      "resolutionDate": "2026-05-18",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Reno Aces released RHP Joe Ross."
+    },
+    {
+      "id": 911016,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2026-05-22",
+      "effectiveDate": "2026-05-22",
+      "resolutionDate": "2026-05-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joe Ross assigned to Round Rock Express."
+    },
+    {
+      "id": 911015,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-05-22",
+      "effectiveDate": "2026-05-22",
+      "resolutionDate": "2026-05-22",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent RHP Joe Ross to a minor league contract."
+    },
+    {
+      "id": 917934,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-06-13",
+      "effectiveDate": "2026-06-13",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Texas Rangers selected the contract of RHP Joe Ross from Round Rock Express."
+    },
+    {
+      "id": 923445,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-06-29",
+      "effectiveDate": "2026-06-29",
+      "resolutionDate": "2026-06-29",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Texas Rangers designated RHP Joe Ross for assignment."
+    },
+    {
+      "id": 924265,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2026-07-01",
+      "effectiveDate": "2026-07-01",
+      "resolutionDate": "2026-07-01",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Joe Ross elected free agency."
+    },
+    {
+      "id": 924264,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2026-07-01",
+      "effectiveDate": "2026-07-01",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Texas Rangers sent RHP Joe Ross outright to Round Rock Express."
+    },
+    {
+      "id": 924869,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-07-03",
+      "effectiveDate": "2026-07-03",
+      "resolutionDate": "2026-07-03",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent RHP Joe Ross to a minor league contract."
+    },
+    {
+      "id": 924870,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2026-07-03",
+      "effectiveDate": "2026-07-03",
+      "resolutionDate": "2026-07-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joe Ross assigned to Round Rock Express."
+    },
+    {
+      "id": 949158,
+      "person": {
+        "id": 605452,
+        "fullName": "Joe Ross",
+        "link": "/api/v1/people/605452",
+        "nameSlug": "joe-ross-605452"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Joe Ross elected free agency."
+    }
+  ]
+}

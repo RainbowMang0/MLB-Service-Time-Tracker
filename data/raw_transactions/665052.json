@@ -1,0 +1,829 @@
+{
+  "player_id": 665052,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:6b5831c3c25e8dc85ab77040ba33658c3296e56c74719266cd52153e59eecf10",
+  "transactions": [
+    {
+      "id": 363154,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2018-06-20",
+      "effectiveDate": "2018-06-20",
+      "resolutionDate": "2018-06-20",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Toronto Blue Jays signed OF Griffin Conine."
+    },
+    {
+      "id": 363155,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 1390,
+        "name": "FCL Blue Jays",
+        "link": "/api/v1/teams/1390"
+      },
+      "date": "2018-06-20",
+      "effectiveDate": "2018-06-20",
+      "resolutionDate": "2018-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Griffin Conine assigned to GCL Blue Jays."
+    },
+    {
+      "id": 363892,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "fromTeam": {
+        "id": 1390,
+        "name": "FCL Blue Jays",
+        "link": "/api/v1/teams/1390"
+      },
+      "toTeam": {
+        "id": 435,
+        "name": "Vancouver Canadians",
+        "link": "/api/v1/teams/435"
+      },
+      "date": "2018-06-23",
+      "effectiveDate": "2018-06-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Griffin Conine assigned to Vancouver Canadians from GCL Blue Jays."
+    },
+    {
+      "id": 372043,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 5026,
+        "name": "Northwest League All-Stars",
+        "link": "/api/v1/teams/5026"
+      },
+      "date": "2018-08-06",
+      "effectiveDate": "2018-08-06",
+      "resolutionDate": "2018-08-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Griffin Conine assigned to Northwest League All-Stars."
+    },
+    {
+      "id": 383472,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "fromTeam": {
+        "id": 435,
+        "name": "Vancouver Canadians",
+        "link": "/api/v1/teams/435"
+      },
+      "toTeam": {
+        "id": 435,
+        "name": "Vancouver Canadians",
+        "link": "/api/v1/teams/435"
+      },
+      "date": "2018-11-19",
+      "effectiveDate": "2018-11-19",
+      "resolutionDate": "2018-11-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Vancouver Canadians placed RF Griffin Conine on the restricted list."
+    },
+    {
+      "id": 403842,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "date": "2019-05-29",
+      "effectiveDate": "2019-05-29",
+      "resolutionDate": "2019-05-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Griffin Conine assigned to Lansing Lugnuts."
+    },
+    {
+      "id": 439351,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2020-02-25",
+      "effectiveDate": "2020-02-25",
+      "resolutionDate": "2020-02-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Griffin Conine assigned to Toronto Blue Jays."
+    },
+    {
+      "id": 451624,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2020-09-18",
+      "effectiveDate": "2020-09-18",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Toronto Blue Jays traded OF Griffin Conine to Miami Marlins."
+    },
+    {
+      "id": 451672,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 3276,
+        "name": "Marlins Alternate Training Site",
+        "link": "/api/v1/teams/3276"
+      },
+      "date": "2020-09-18",
+      "effectiveDate": "2020-09-18",
+      "resolutionDate": "2020-09-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Griffin Conine assigned to Marlins Alternate Training Site."
+    },
+    {
+      "id": 452870,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "fromTeam": {
+        "id": 3276,
+        "name": "Marlins Alternate Training Site",
+        "link": "/api/v1/teams/3276"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2020-10-02",
+      "effectiveDate": "2020-10-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Griffin Conine assigned to Jacksonville Jumbo Shrimp from Marlins Alternate Training Site."
+    },
+    {
+      "id": 464067,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2020-10-02",
+      "effectiveDate": "2020-10-02",
+      "resolutionDate": "2020-10-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Griffin Conine assigned to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 468681,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Griffin Conine assigned to Pensacola Blue Wahoos."
+    },
+    {
+      "id": 466422,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Griffin Conine assigned to Pensacola Blue Wahoos."
+    },
+    {
+      "id": 479850,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 3277,
+        "name": "Marlins Organization",
+        "link": "/api/v1/teams/3277"
+      },
+      "date": "2021-04-25",
+      "effectiveDate": "2021-04-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "OF Griffin Conine roster status changed by Marlins Organization."
+    },
+    {
+      "id": 489593,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 554,
+        "name": "Beloit Sky Carp",
+        "link": "/api/v1/teams/554"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "resolutionDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Griffin Conine assigned to Beloit Snappers."
+    },
+    {
+      "id": 483001,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "fromTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "toTeam": {
+        "id": 554,
+        "name": "Beloit Sky Carp",
+        "link": "/api/v1/teams/554"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Griffin Conine assigned to Beloit Snappers from Pensacola Blue Wahoos."
+    },
+    {
+      "id": 488756,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 554,
+        "name": "Beloit Sky Carp",
+        "link": "/api/v1/teams/554"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "resolutionDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Griffin Conine assigned to Beloit Snappers."
+    },
+    {
+      "id": 506043,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "fromTeam": {
+        "id": 554,
+        "name": "Beloit Sky Carp",
+        "link": "/api/v1/teams/554"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2021-07-20",
+      "effectiveDate": "2021-07-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Griffin Conine assigned to Pensacola Blue Wahoos from Beloit Snappers."
+    },
+    {
+      "id": 682737,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2021-07-20",
+      "effectiveDate": "2021-07-20",
+      "resolutionDate": "2021-07-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pensacola Blue Wahoos activated OF Griffin Conine."
+    },
+    {
+      "id": 607219,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2022-03-19",
+      "effectiveDate": "2022-03-19",
+      "resolutionDate": "2022-03-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Griffin Conine assigned to Miami Marlins."
+    },
+    {
+      "id": 612156,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2022-03-19",
+      "effectiveDate": "2022-03-19",
+      "resolutionDate": "2022-03-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "OF Griffin Conine roster status changed by Miami Marlins."
+    },
+    {
+      "id": 678262,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2023-03-02",
+      "effectiveDate": "2023-03-02",
+      "resolutionDate": "2023-03-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "OF Griffin Conine roster status changed by Miami Marlins."
+    },
+    {
+      "id": 674173,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2023-03-02",
+      "effectiveDate": "2023-03-02",
+      "resolutionDate": "2023-03-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Griffin Conine assigned to Miami Marlins."
+    },
+    {
+      "id": 718619,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "fromTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2023-08-08",
+      "effectiveDate": "2023-08-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Griffin Conine assigned to Jacksonville Jumbo Shrimp from Pensacola Blue Wahoos."
+    },
+    {
+      "id": 739328,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2024-02-05",
+      "effectiveDate": "2024-02-05",
+      "resolutionDate": "2024-02-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins invited non-roster OF Griffin Conine to spring training."
+    },
+    {
+      "id": 753749,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 385,
+        "name": "Miami Marlins Prospects",
+        "link": "/api/v1/teams/385"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins Prospects activated OF Griffin Conine."
+    },
+    {
+      "id": 796352,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2024-08-26",
+      "effectiveDate": "2024-08-26",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Miami Marlins selected the contract of OF Griffin Conine from Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 812773,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2025-01-30",
+      "effectiveDate": "2025-01-30",
+      "resolutionDate": "2025-01-30",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RF Griffin Conine changed number to 18."
+    },
+    {
+      "id": 828078,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RF Griffin Conine changed number to 42."
+    },
+    {
+      "id": 829279,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RF Griffin Conine changed number to 18."
+    },
+    {
+      "id": 831358,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2025-04-20",
+      "effectiveDate": "2025-04-20",
+      "resolutionDate": "2025-04-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins placed LF Griffin Conine on the 60-day injured list. Left shoulder dislocation."
+    },
+    {
+      "id": 868143,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2025-09-07",
+      "effectiveDate": "2025-09-07",
+      "resolutionDate": "2025-09-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins sent LF Griffin Conine on a rehab assignment to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 870250,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2025-09-22",
+      "effectiveDate": "2025-09-22",
+      "resolutionDate": "2025-09-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins activated LF Griffin Conine."
+    },
+    {
+      "id": 873217,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2025-10-15",
+      "effectiveDate": "2025-10-15",
+      "resolutionDate": "2025-10-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Griffin Conine assigned to Tigres del Licey."
+    },
+    {
+      "id": 898223,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2026-04-10",
+      "effectiveDate": "2026-04-10",
+      "resolutionDate": "2026-04-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins placed LF Griffin Conine on the 10-day injured list. Left hamstring strain."
+    },
+    {
+      "id": 914874,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2026-06-01",
+      "effectiveDate": "2026-06-01",
+      "resolutionDate": "2026-06-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins transferred LF Griffin Conine from the 10-day injured list to the 60-day injured list. Left hamstring strain."
+    },
+    {
+      "id": 918998,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2026-06-16",
+      "effectiveDate": "2026-06-16",
+      "resolutionDate": "2026-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins sent LF Griffin Conine on a rehab assignment to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 920884,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2026-06-21",
+      "effectiveDate": "2026-06-21",
+      "resolutionDate": "2026-06-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins activated LF Griffin Conine from the 60-day injured list."
+    },
+    {
+      "id": 931490,
+      "person": {
+        "id": 665052,
+        "fullName": "Griffin Conine",
+        "link": "/api/v1/people/665052",
+        "nameSlug": "griffin-conine-665052"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2026-06-21",
+      "effectiveDate": "2026-06-21",
+      "resolutionDate": "2026-06-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins activated RF Griffin Conine from the 60-day injured list."
+    }
+  ]
+}

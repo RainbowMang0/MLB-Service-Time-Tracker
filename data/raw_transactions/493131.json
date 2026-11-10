@@ -1,0 +1,52 @@
+{
+  "player_id": 493131,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:3a26763244a0335ebbfe247569dc01ca659c50af1172d7200d148788b0be7766",
+  "transactions": [
+    {
+      "id": 5264,
+      "person": {
+        "id": 493131,
+        "fullName": "Masa Kobayashi",
+        "link": "/api/v1/people/493131",
+        "nameSlug": "masa-kobayashi-493131"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2009-05-17",
+      "effectiveDate": "2009-05-17",
+      "resolutionDate": "2009-05-17",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Cleveland Indians sent RHP Masa Kobayashi outright to Columbus Clippers."
+    },
+    {
+      "id": 16897,
+      "person": {
+        "id": 493131,
+        "fullName": "Masa Kobayashi",
+        "link": "/api/v1/people/493131",
+        "nameSlug": "masa-kobayashi-493131"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2009-07-18",
+      "effectiveDate": "2009-07-18",
+      "resolutionDate": "2009-07-18",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Columbus Clippers released RHP Masa Kobayashi."
+    }
+  ]
+}

@@ -1,0 +1,1591 @@
+{
+  "player_id": 669137,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:d6cc60cde5fbb4458fc2af48a6dd5a0888bdb79853730e6424128cac2b6525ae",
+  "transactions": [
+    {
+      "id": 272242,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2016-06-17",
+      "effectiveDate": "2016-06-17",
+      "resolutionDate": "2016-06-17",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "New York Yankees signed 3B Mandy Alvarez."
+    },
+    {
+      "id": 272437,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2016-06-17",
+      "effectiveDate": "2016-06-17",
+      "resolutionDate": "2016-06-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Mandy Alvarez assigned to Staten Island Yankees."
+    },
+    {
+      "id": 277090,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2016-07-05",
+      "effectiveDate": "2016-07-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Mandy Alvarez assigned to Charleston RiverDogs from Staten Island Yankees."
+    },
+    {
+      "id": 303596,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "toTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "date": "2017-04-01",
+      "effectiveDate": "2017-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Mandy Alvarez assigned to Yankees Ext. Spring Training from Charleston RiverDogs."
+    },
+    {
+      "id": 304586,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2017-04-06",
+      "effectiveDate": "2017-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Mandy Alvarez assigned to Tampa Yankees from Yankees Ext. Spring Training."
+    },
+    {
+      "id": 314280,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2017-06-04",
+      "effectiveDate": "2017-06-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Mandy Alvarez assigned to Charleston RiverDogs from Tampa Yankees."
+    },
+    {
+      "id": 329055,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2017-07-24",
+      "effectiveDate": "2017-07-24",
+      "resolutionDate": "2017-07-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charleston RiverDogs placed 3B Mandy Alvarez on the 7-day disabled list."
+    },
+    {
+      "id": 334440,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2017-09-18",
+      "effectiveDate": "2017-09-18",
+      "resolutionDate": "2017-09-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charleston RiverDogs activated 3B Mandy Alvarez from the 7-day disabled list."
+    },
+    {
+      "id": 346463,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "toTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "date": "2018-04-01",
+      "effectiveDate": "2018-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Mandy Alvarez assigned to Yankees Ext. Spring Training from Charleston RiverDogs."
+    },
+    {
+      "id": 347324,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2018-04-03",
+      "effectiveDate": "2018-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Mandy Alvarez assigned to Trenton Thunder from Yankees Extended Spring Training."
+    },
+    {
+      "id": 355448,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2018-05-28",
+      "effectiveDate": "2018-05-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Mandy Alvarez assigned to Tampa Tarpons from Trenton Thunder."
+    },
+    {
+      "id": 358435,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2018-06-07",
+      "effectiveDate": "2018-06-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Mandy Alvarez assigned to Trenton Thunder from Tampa Tarpons."
+    },
+    {
+      "id": 367001,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 66,
+        "name": "EAS Eastern Division All-Stars",
+        "link": "/api/v1/teams/66"
+      },
+      "date": "2018-07-10",
+      "effectiveDate": "2018-07-10",
+      "resolutionDate": "2018-07-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Mandy Alvarez assigned to EAS Eastern Division All-Stars."
+    },
+    {
+      "id": 375265,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2018-08-17",
+      "effectiveDate": "2018-08-16",
+      "resolutionDate": "2018-08-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Trenton Thunder placed 3B Mandy Alvarez on the 7-day disabled list retroactive to August 16, 2018."
+    },
+    {
+      "id": 382381,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2018-09-24",
+      "effectiveDate": "2018-09-24",
+      "resolutionDate": "2018-09-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Trenton Thunder activated 3B Mandy Alvarez from the 7-day injured list."
+    },
+    {
+      "id": 391625,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2019-03-22",
+      "effectiveDate": "2019-03-22",
+      "resolutionDate": "2019-03-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Mandy Alvarez assigned to New York Yankees."
+    },
+    {
+      "id": 395176,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2019-04-04",
+      "effectiveDate": "2019-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Mandy Alvarez assigned to Scranton/Wilkes-Barre RailRiders from Trenton Thunder."
+    },
+    {
+      "id": 401355,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2019-05-14",
+      "effectiveDate": "2019-05-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Mandy Alvarez assigned to Trenton Thunder from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 413598,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2019-06-27",
+      "effectiveDate": "2019-06-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Mandy Alvarez assigned to Scranton/Wilkes-Barre RailRiders from Trenton Thunder."
+    },
+    {
+      "id": 414962,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2019-07-03",
+      "effectiveDate": "2019-07-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Mandy Alvarez assigned to Trenton Thunder from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 420975,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2019-07-31",
+      "effectiveDate": "2019-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Armando Alvarez assigned to Scranton/Wilkes-Barre RailRiders from Trenton Thunder."
+    },
+    {
+      "id": 438729,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2020-02-22",
+      "effectiveDate": "2020-02-22",
+      "resolutionDate": "2020-02-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Armando Alvarez assigned to New York Yankees."
+    },
+    {
+      "id": 469727,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2021-02-17",
+      "effectiveDate": "2021-02-17",
+      "resolutionDate": "2021-02-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Yankees invited non-roster 3B Armando Alvarez to spring training."
+    },
+    {
+      "id": 474827,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2021-02-17",
+      "effectiveDate": "2021-02-17",
+      "resolutionDate": "2021-02-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Armando Alvarez assigned to New York Yankees ."
+    },
+    {
+      "id": 482414,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2021-05-02",
+      "effectiveDate": "2021-05-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Armando Alvarez assigned to Scranton/Wilkes-Barre RailRiders from Yankees Alternate Training Site."
+    },
+    {
+      "id": 519320,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2021-09-29",
+      "effectiveDate": "2021-09-29",
+      "resolutionDate": "2021-09-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders placed 3B Armando Alvarez on the 7-day injured list."
+    },
+    {
+      "id": 521240,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2021-10-06",
+      "effectiveDate": "2021-10-06",
+      "resolutionDate": "2021-10-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders activated 3B Armando Alvarez from the 7-day injured list."
+    },
+    {
+      "id": 610925,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2021-10-06",
+      "effectiveDate": "2021-10-06",
+      "resolutionDate": "2021-10-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders placed 3B Armando Alvarez on the 7-day injured list."
+    },
+    {
+      "id": 611984,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2022-03-20",
+      "effectiveDate": "2022-03-20",
+      "resolutionDate": "2022-03-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "3B Armando Alvarez roster status changed by New York Yankees."
+    },
+    {
+      "id": 607450,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2022-03-20",
+      "effectiveDate": "2022-03-20",
+      "resolutionDate": "2022-03-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Armando Alvarez assigned to New York Yankees."
+    },
+    {
+      "id": 616055,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2022-04-19",
+      "effectiveDate": "2022-04-19",
+      "resolutionDate": "2022-04-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders activated 3B Armando Alvarez."
+    },
+    {
+      "id": 624413,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2022-05-25",
+      "effectiveDate": "2022-05-25",
+      "resolutionDate": "2022-05-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders placed 3B Armando Alvarez on the restricted list."
+    },
+    {
+      "id": 624940,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2022-05-28",
+      "effectiveDate": "2022-05-28",
+      "resolutionDate": "2022-05-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders activated 3B Armando Alvarez from the restricted list."
+    },
+    {
+      "id": 659665,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2022-11-10",
+      "effectiveDate": "2022-11-10",
+      "resolutionDate": "2022-11-10",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "3B Armando Alvarez elected free agency."
+    },
+    {
+      "id": 679110,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2022-12-10",
+      "effectiveDate": "2022-12-10",
+      "resolutionDate": "2022-12-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "3B Armando Alvarez roster status changed by San Francisco Giants."
+    },
+    {
+      "id": 663377,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2022-12-10",
+      "effectiveDate": "2022-12-10",
+      "resolutionDate": "2022-12-10",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Francisco Giants signed free agent 3B Armando Alvarez to a minor league contract."
+    },
+    {
+      "id": 668394,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2022-12-10",
+      "effectiveDate": "2022-12-10",
+      "resolutionDate": "2022-12-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "3B Armando Alvarez roster status changed by San Francisco Giants."
+    },
+    {
+      "id": 663378,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2022-12-15",
+      "effectiveDate": "2022-12-15",
+      "resolutionDate": "2022-12-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Armando Alvarez assigned to Sacramento River Cats."
+    },
+    {
+      "id": 684664,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2023-04-14",
+      "effectiveDate": "2023-04-14",
+      "resolutionDate": "2023-04-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sacramento River Cats placed 3B Armando Alvarez on the 7-day injured list."
+    },
+    {
+      "id": 700950,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 5370,
+        "link": "/api/v1/teams/5370"
+      },
+      "date": "2023-06-05",
+      "effectiveDate": "2023-06-05",
+      "resolutionDate": "2023-06-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Sacramento River Cats sent 3B Armando Alvarez on a rehab assignment to ACL Giants Orange."
+    },
+    {
+      "id": 705785,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 5370,
+        "link": "/api/v1/teams/5370"
+      },
+      "date": "2023-06-05",
+      "effectiveDate": "2023-06-05",
+      "resolutionDate": "2023-06-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent 3B Armando Alvarez on a rehab assignment to ACL Giants Orange."
+    },
+    {
+      "id": 705635,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2023-06-20",
+      "effectiveDate": "2023-06-20",
+      "resolutionDate": "2023-06-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sacramento River Cats activated 3B Armando Alvarez from the 7-day injured list."
+    },
+    {
+      "id": 732298,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2023-11-06",
+      "effectiveDate": "2023-11-06",
+      "resolutionDate": "2023-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "3B Armando Alvarez elected free agency."
+    },
+    {
+      "id": 734006,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2023-11-16",
+      "effectiveDate": "2023-11-16",
+      "resolutionDate": "2023-11-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Armando Alvarez assigned to Las Vegas Aviators."
+    },
+    {
+      "id": 734004,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2023-11-16",
+      "effectiveDate": "2023-11-16",
+      "resolutionDate": "2023-11-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Oakland Athletics signed free agent 3B Armando Alvarez to a minor league contract."
+    },
+    {
+      "id": 734029,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2023-11-16",
+      "effectiveDate": "2023-11-16",
+      "resolutionDate": "2023-11-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "3B Armando Alvarez roster status changed by Oakland Athletics."
+    },
+    {
+      "id": 733889,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 680,
+        "name": "Yaquis de Obregon",
+        "link": "/api/v1/teams/680"
+      },
+      "date": "2023-11-28",
+      "effectiveDate": "2023-11-28",
+      "resolutionDate": "2023-11-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Armando Alvarez assigned to Yaquis de Obregon."
+    },
+    {
+      "id": 734005,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 680,
+        "name": "Yaquis de Obregon",
+        "link": "/api/v1/teams/680"
+      },
+      "date": "2023-11-28",
+      "effectiveDate": "2023-11-28",
+      "resolutionDate": "2023-11-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Yaquis de Obregon activated 3B Armando Alvarez."
+    },
+    {
+      "id": 734402,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 680,
+        "name": "Yaquis de Obregon",
+        "link": "/api/v1/teams/680"
+      },
+      "date": "2023-12-01",
+      "effectiveDate": "2023-12-01",
+      "resolutionDate": "2023-12-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Yaquis de Obregon placed 3B Armando Alvarez on the reserve list."
+    },
+    {
+      "id": 782212,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2024-06-22",
+      "effectiveDate": "2024-06-22",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Oakland Athletics selected the contract of 3B Armando Alvarez from Las Vegas Aviators."
+    },
+    {
+      "id": 787408,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2024-07-17",
+      "effectiveDate": "2024-07-17",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Oakland Athletics optioned 3B Armando Alvarez to Las Vegas Aviators."
+    },
+    {
+      "id": 793345,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2024-08-07",
+      "effectiveDate": "2024-08-07",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Oakland Athletics recalled 3B Armando Alvarez from Las Vegas Aviators."
+    },
+    {
+      "id": 793869,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2024-08-10",
+      "effectiveDate": "2024-08-10",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Oakland Athletics optioned 3B Armando Alvarez to Las Vegas Aviators."
+    },
+    {
+      "id": 794557,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2024-08-14",
+      "effectiveDate": "2024-08-14",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Oakland Athletics recalled 3B Armando Alvarez from Las Vegas Aviators."
+    },
+    {
+      "id": 795027,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2024-08-17",
+      "effectiveDate": "2024-08-17",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Oakland Athletics optioned 3B Armando Alvarez to Las Vegas Aviators."
+    },
+    {
+      "id": 796458,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2024-08-27",
+      "effectiveDate": "2024-08-27",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Oakland Athletics recalled 3B Armando Alvarez from Las Vegas Aviators."
+    },
+    {
+      "id": 798948,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2024-09-14",
+      "effectiveDate": "2024-09-14",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Oakland Athletics optioned 3B Armando Alvarez to Las Vegas Aviators."
+    },
+    {
+      "id": 800891,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2024-10-01",
+      "effectiveDate": "2024-10-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Oakland Athletics recalled 3B Armando Alvarez from Las Vegas Aviators."
+    },
+    {
+      "id": 803531,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2024-10-31",
+      "effectiveDate": "2024-10-31",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Oakland Athletics sent 3B Armando Alvarez outright to Las Vegas Aviators."
+    },
+    {
+      "id": 809775,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "resolutionDate": "2024-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "3B Armando Alvarez elected free agency."
+    },
+    {
+      "id": 809777,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2025-01-02",
+      "effectiveDate": "2025-01-02",
+      "resolutionDate": "2025-01-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Armando Alvarez assigned to St. Paul Saints."
+    },
+    {
+      "id": 809776,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2025-01-02",
+      "effectiveDate": "2025-01-02",
+      "resolutionDate": "2025-01-02",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent 3B Armando Alvarez to a minor league contract."
+    },
+    {
+      "id": 814328,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2025-01-02",
+      "effectiveDate": "2025-01-02",
+      "resolutionDate": "2025-01-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "3B Armando Alvarez roster status changed by Minnesota Twins."
+    },
+    {
+      "id": 822506,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2025-01-02",
+      "effectiveDate": "2025-01-02",
+      "resolutionDate": "2025-01-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Paul Saints activated 3B Armando Alvarez."
+    },
+    {
+      "id": 834335,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2025-05-02",
+      "effectiveDate": "2025-05-02",
+      "resolutionDate": "2025-05-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Paul Saints placed 3B Armando Alvarez on the 7-day injured list. Left ankle sprain."
+    },
+    {
+      "id": 837769,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2025-05-15",
+      "effectiveDate": "2025-05-15",
+      "resolutionDate": "2025-05-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Paul Saints activated 3B Armando Alvarez from the 7-day injured list."
+    },
+    {
+      "id": 844789,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2025-06-04",
+      "effectiveDate": "2025-06-04",
+      "resolutionDate": "2025-06-04",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "St. Paul Saints released 3B Armando Alvarez."
+    },
+    {
+      "id": 851215,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 4444,
+        "name": "Caliente de Durango",
+        "link": "/api/v1/teams/4444"
+      },
+      "date": "2025-06-29",
+      "effectiveDate": "2025-06-29",
+      "resolutionDate": "2025-06-29",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Caliente de Durango signed free agent 3B Armando Alvarez."
+    },
+    {
+      "id": 852077,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 4444,
+        "name": "Caliente de Durango",
+        "link": "/api/v1/teams/4444"
+      },
+      "date": "2025-07-01",
+      "effectiveDate": "2025-07-01",
+      "resolutionDate": "2025-07-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Caliente de Durango activated 3B Armando Alvarez from the reserve list."
+    },
+    {
+      "id": 873204,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2025-10-15",
+      "effectiveDate": "2025-10-15",
+      "resolutionDate": "2025-10-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Armando Alvarez assigned to Tigres del Licey."
+    },
+    {
+      "id": 906071,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 502,
+        "name": "Saraperos de Saltillo",
+        "link": "/api/v1/teams/502"
+      },
+      "date": "2026-05-05",
+      "effectiveDate": "2026-05-05",
+      "resolutionDate": "2026-05-05",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Saraperos de Saltillo signed free agent 3B Armando Alvarez."
+    },
+    {
+      "id": 906314,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 502,
+        "name": "Saraperos de Saltillo",
+        "link": "/api/v1/teams/502"
+      },
+      "date": "2026-05-06",
+      "effectiveDate": "2026-05-06",
+      "resolutionDate": "2026-05-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Saraperos de Saltillo activated 3B Armando Alvarez from the reserve list."
+    },
+    {
+      "id": 911096,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 502,
+        "name": "Saraperos de Saltillo",
+        "link": "/api/v1/teams/502"
+      },
+      "date": "2026-05-22",
+      "effectiveDate": "2026-05-22",
+      "resolutionDate": "2026-05-22",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Saraperos de Saltillo released 3B Armando Alvarez."
+    },
+    {
+      "id": 915326,
+      "person": {
+        "id": 669137,
+        "fullName": "Armando Alvarez",
+        "link": "/api/v1/people/669137",
+        "nameSlug": "armando-alvarez-669137"
+      },
+      "toTeam": {
+        "id": 523,
+        "name": "Piratas de Campeche",
+        "link": "/api/v1/teams/523"
+      },
+      "date": "2026-06-02",
+      "effectiveDate": "2026-06-02",
+      "resolutionDate": "2026-06-02",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Piratas de Campeche signed free agent 3B Armando Alvarez."
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "player_id": 121556,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:84c8e86942da60929c08d73621ed189b9dd9458a20c59feab547c7945070a38d",
+  "transactions": [
+    {
+      "id": 5095,
+      "person": {
+        "id": 121556,
+        "fullName": "Glendon Rusch",
+        "link": "/api/v1/people/121556",
+        "nameSlug": "glendon-rusch-121556"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2009-05-15",
+      "effectiveDate": "2009-05-15",
+      "resolutionDate": "2009-05-15",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Colorado Rockies designated LHP Glendon Rusch for assignment."
+    },
+    {
+      "id": 5668,
+      "person": {
+        "id": 121556,
+        "fullName": "Glendon Rusch",
+        "link": "/api/v1/people/121556",
+        "nameSlug": "glendon-rusch-121556"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 551,
+        "name": "Rocky Mountain Vibes",
+        "link": "/api/v1/teams/551"
+      },
+      "date": "2009-05-19",
+      "effectiveDate": "2009-05-19",
+      "resolutionDate": "2009-05-20",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Colorado Rockies sent LHP Glendon Rusch outright to Colorado Springs Sky Sox."
+    },
+    {
+      "id": 25527,
+      "person": {
+        "id": 121556,
+        "fullName": "Glendon Rusch",
+        "link": "/api/v1/people/121556",
+        "nameSlug": "glendon-rusch-121556"
+      },
+      "toTeam": {
+        "id": 551,
+        "name": "Rocky Mountain Vibes",
+        "link": "/api/v1/teams/551"
+      },
+      "date": "2009-10-05",
+      "effectiveDate": "2009-10-05",
+      "resolutionDate": "2009-10-05",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Glendon Rusch elected free agency."
+    }
+  ]
+}

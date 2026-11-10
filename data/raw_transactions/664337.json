@@ -1,0 +1,1447 @@
+{
+  "player_id": 664337,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:e2b448cc96de6ce0c6ff46ab2558880bede94ae2c81840be0aec49643356c6b6",
+  "transactions": [
+    {
+      "id": 369307,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2015-03-05",
+      "effectiveDate": "2015-03-05",
+      "resolutionDate": "2015-03-05",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Yankees signed free agent RHP Miguel Yajure to a minor league contract."
+    },
+    {
+      "id": 227833,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 635,
+        "name": "DSL NYY Yankees",
+        "link": "/api/v1/teams/635"
+      },
+      "date": "2015-05-29",
+      "effectiveDate": "2015-05-29",
+      "resolutionDate": "2015-05-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Miguel Yajure assigned to DSL Yankees2."
+    },
+    {
+      "id": 268281,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 635,
+        "name": "DSL NYY Yankees",
+        "link": "/api/v1/teams/635"
+      },
+      "toTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "date": "2016-06-03",
+      "effectiveDate": "2016-06-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Miguel Yajure assigned to GCL Yankees East from DSL Yankees2."
+    },
+    {
+      "id": 313671,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "toTeam": {
+        "id": 634,
+        "name": "DSL NYY Bombers",
+        "link": "/api/v1/teams/634"
+      },
+      "date": "2017-06-02",
+      "effectiveDate": "2017-06-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Miguel Yajure assigned to DSL Yankees from GCL Yankees East."
+    },
+    {
+      "id": 334657,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 634,
+        "name": "DSL NYY Bombers",
+        "link": "/api/v1/teams/634"
+      },
+      "date": "2017-09-18",
+      "effectiveDate": "2017-09-18",
+      "resolutionDate": "2017-09-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "DSL Yankees activated RHP Miguel Yajure from the 60-day disabled list."
+    },
+    {
+      "id": 348130,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 634,
+        "name": "DSL NYY Bombers",
+        "link": "/api/v1/teams/634"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2018-04-05",
+      "effectiveDate": "2018-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Miguel Yajure assigned to Charleston RiverDogs from DSL Yankees."
+    },
+    {
+      "id": 358593,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2018-06-08",
+      "effectiveDate": "2018-06-08",
+      "resolutionDate": "2018-06-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charleston RiverDogs activated RHP Miguel Yajure from the 7-day injured list."
+    },
+    {
+      "id": 394350,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-04-02",
+      "effectiveDate": "2019-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Miguel Yajure assigned to Tampa Tarpons from Charleston RiverDogs."
+    },
+    {
+      "id": 425490,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2019-08-25",
+      "effectiveDate": "2019-08-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Miguel Yajure assigned to Trenton Thunder from Tampa Tarpons."
+    },
+    {
+      "id": 434006,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2019-11-20",
+      "effectiveDate": "2020-03-07",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Yankees selected the contract of Miguel Yajure from Trenton Thunder."
+    },
+    {
+      "id": 440302,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2020-03-07",
+      "effectiveDate": "2020-03-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned RHP Miguel Yajure to Trenton Thunder."
+    },
+    {
+      "id": 449721,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2020-08-20",
+      "effectiveDate": "2020-09-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled Miguel Yajure from Yankees Alternate Training Site."
+    },
+    {
+      "id": 450502,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "date": "2020-09-01",
+      "effectiveDate": "2020-09-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned RHP Miguel Yajure to Yankees Alternate Training Site."
+    },
+    {
+      "id": 450747,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2020-09-04",
+      "effectiveDate": "2020-09-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled Miguel Yajure from Yankees Alternate Training Site."
+    },
+    {
+      "id": 450879,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "date": "2020-09-06",
+      "effectiveDate": "2020-09-06",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned RHP Miguel Yajure to Yankees Alternate Training Site."
+    },
+    {
+      "id": 451932,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2020-09-25",
+      "effectiveDate": "2020-09-27",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled Miguel Yajure from Yankees Alternate Training Site."
+    },
+    {
+      "id": 451997,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "date": "2020-09-27",
+      "effectiveDate": "2020-09-27",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned RHP Miguel Yajure to Yankees Alternate Training Site."
+    },
+    {
+      "id": 453321,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2020-10-10",
+      "effectiveDate": "2020-10-10",
+      "resolutionDate": "2020-10-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Yankees activated RHP Miguel Yajure."
+    },
+    {
+      "id": 457339,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 692,
+        "name": "Aguilas del Zulia",
+        "link": "/api/v1/teams/692"
+      },
+      "date": "2020-12-01",
+      "effectiveDate": "2020-12-01",
+      "resolutionDate": "2020-12-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Miguel Yajure assigned to Aguilas del Zulia."
+    },
+    {
+      "id": 472585,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 692,
+        "name": "Aguilas del Zulia",
+        "link": "/api/v1/teams/692"
+      },
+      "date": "2020-12-01",
+      "effectiveDate": "2020-12-01",
+      "resolutionDate": "2020-12-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Miguel Yajure assigned to Aguilas del Zulia."
+    },
+    {
+      "id": 460405,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2021-01-24",
+      "effectiveDate": "2021-01-24",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Pittsburgh Pirates traded RHP Jameson Taillon to New York Yankees for RHP Roansy Contreras, SS Maikol Escotto, LF Canaan Smith and RHP Miguel Yajure."
+    },
+    {
+      "id": 473960,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 3288,
+        "name": "Pirates Alternate Training Site",
+        "link": "/api/v1/teams/3288"
+      },
+      "date": "2021-03-24",
+      "effectiveDate": "2021-03-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Pittsburgh Pirates optioned P Miguel Yajure to Pirates Alternate Training Site."
+    },
+    {
+      "id": 479027,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 3288,
+        "name": "Pirates Alternate Training Site",
+        "link": "/api/v1/teams/3288"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2021-04-21",
+      "effectiveDate": "2021-04-21",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Pittsburgh Pirates recalled RHP Miguel Yajure from Pirates Alternate Training Site."
+    },
+    {
+      "id": 479040,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 3288,
+        "name": "Pirates Alternate Training Site",
+        "link": "/api/v1/teams/3288"
+      },
+      "date": "2021-04-22",
+      "effectiveDate": "2021-04-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Pittsburgh Pirates optioned RHP Miguel Yajure to Pirates Alternate Training Site."
+    },
+    {
+      "id": 482148,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 3288,
+        "name": "Pirates Alternate Training Site",
+        "link": "/api/v1/teams/3288"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2021-05-01",
+      "effectiveDate": "2021-05-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Miguel Yajure assigned to Indianapolis Indians from Pirates Alternate Training Site."
+    },
+    {
+      "id": 486629,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2021-05-14",
+      "effectiveDate": "2021-05-14",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Pittsburgh Pirates recalled RHP Miguel Yajure from Indianapolis Indians."
+    },
+    {
+      "id": 517454,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2021-05-15",
+      "effectiveDate": "2021-05-15",
+      "resolutionDate": "2021-05-15",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Pittsburgh Pirates recalled RHP Miguel Yajure."
+    },
+    {
+      "id": 517739,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2021-05-15",
+      "effectiveDate": "2021-05-15",
+      "resolutionDate": "2021-05-15",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Pittsburgh Pirates recalled RHP Miguel Yajure."
+    },
+    {
+      "id": 486821,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2021-05-15",
+      "effectiveDate": "2021-05-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Pittsburgh Pirates optioned RHP Miguel Yajure to Indianapolis Indians."
+    },
+    {
+      "id": 492121,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2021-06-02",
+      "effectiveDate": "2021-06-01",
+      "resolutionDate": "2021-06-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians placed RHP Miguel Yajure on the 7-day injured list."
+    },
+    {
+      "id": 495998,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2021-06-24",
+      "effectiveDate": "2021-06-24",
+      "resolutionDate": "2021-06-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians placed RHP Miguel Yajure on the 60-day injured list."
+    },
+    {
+      "id": 510096,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 3390,
+        "name": "Bradenton Marauders",
+        "link": "/api/v1/teams/3390"
+      },
+      "date": "2021-08-06",
+      "effectiveDate": "2021-08-06",
+      "resolutionDate": "2021-08-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Indianapolis Indians sent RHP Miguel Yajure on a rehab assignment to Bradenton Marauders."
+    },
+    {
+      "id": 513080,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 3390,
+        "name": "Bradenton Marauders",
+        "link": "/api/v1/teams/3390"
+      },
+      "date": "2021-08-06",
+      "effectiveDate": "2021-08-06",
+      "resolutionDate": "2021-08-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Indianapolis Indians sent RHP Miguel Yajure on a rehab assignment to Bradenton Marauders."
+    },
+    {
+      "id": 513081,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2021-08-19",
+      "effectiveDate": "2021-08-19",
+      "resolutionDate": "2021-08-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians activated RHP Miguel Yajure."
+    },
+    {
+      "id": 518923,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2021-09-24",
+      "effectiveDate": "2021-09-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Pittsburgh Pirates recalled RHP Miguel Yajure from Indianapolis Indians."
+    },
+    {
+      "id": 519827,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2021-10-01",
+      "effectiveDate": "2021-10-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Indianapolis Indians optioned RHP Shea Spitzbarth to Pittsburgh Pirates."
+    },
+    {
+      "id": 520777,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 490,
+        "name": "Peoria Javelinas",
+        "link": "/api/v1/teams/490"
+      },
+      "date": "2021-10-04",
+      "effectiveDate": "2021-10-04",
+      "resolutionDate": "2021-10-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Peoria Javelinas activated RHP Miguel Yajure."
+    },
+    {
+      "id": 520484,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2021-10-05",
+      "effectiveDate": "2021-10-05",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Pittsburgh Pirates recalled RHP Miguel Yajure,  and  from Indianapolis Indians."
+    },
+    {
+      "id": 618984,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2022-05-02",
+      "effectiveDate": "2022-05-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Pittsburgh Pirates optioned RHP Miguel Yajure to Indianapolis Indians."
+    },
+    {
+      "id": 621740,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2022-05-17",
+      "effectiveDate": "2022-05-17",
+      "resolutionDate": "2022-05-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians placed RHP Miguel Yajure on the 7-day injured list."
+    },
+    {
+      "id": 629636,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2022-06-08",
+      "effectiveDate": "2022-06-08",
+      "resolutionDate": "2022-06-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians activated RHP Miguel Yajure from the 7-day injured list."
+    },
+    {
+      "id": 633485,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2022-06-27",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Pittsburgh Pirates recalled RHP Miguel Yajure from Indianapolis Indians."
+    },
+    {
+      "id": 633988,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2022-06-28",
+      "effectiveDate": "2022-06-28",
+      "resolutionDate": "2022-06-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians activated RHP Miguel Yajure."
+    },
+    {
+      "id": 633725,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2022-06-28",
+      "effectiveDate": "2022-06-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Pittsburgh Pirates optioned RHP Miguel Yajure to Indianapolis Indians."
+    },
+    {
+      "id": 649844,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2022-08-31",
+      "effectiveDate": "2022-08-31",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Pittsburgh Pirates recalled RHP Miguel Yajure,  and  from Indianapolis Indians."
+    },
+    {
+      "id": 670653,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 692,
+        "name": "Aguilas del Zulia",
+        "link": "/api/v1/teams/692"
+      },
+      "date": "2022-11-08",
+      "effectiveDate": "2022-11-08",
+      "resolutionDate": "2022-11-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aguilas del Zulia activated RHP Miguel Yajure."
+    },
+    {
+      "id": 658467,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 692,
+        "name": "Aguilas del Zulia",
+        "link": "/api/v1/teams/692"
+      },
+      "date": "2022-11-08",
+      "effectiveDate": "2022-11-08",
+      "resolutionDate": "2022-11-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Miguel Yajure assigned to Aguilas del Zulia."
+    },
+    {
+      "id": 662389,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2022-12-02",
+      "effectiveDate": "2022-12-02",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "San Francisco Giants claimed RHP Miguel Yajure off waivers from Pittsburgh Pirates."
+    },
+    {
+      "id": 663085,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2022-12-13",
+      "effectiveDate": "2022-12-13",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "San Francisco Giants sent RHP Miguel Yajure outright to Sacramento River Cats."
+    },
+    {
+      "id": 678754,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2023-02-06",
+      "effectiveDate": "2023-02-06",
+      "resolutionDate": "2023-02-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Miguel Yajure roster status changed by San Francisco Giants."
+    },
+    {
+      "id": 668384,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2023-02-06",
+      "effectiveDate": "2023-02-06",
+      "resolutionDate": "2023-02-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Francisco Giants invited non-roster RHP Miguel Yajure to spring training."
+    },
+    {
+      "id": 680146,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2023-03-31",
+      "effectiveDate": "2023-03-31",
+      "resolutionDate": "2023-03-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sacramento River Cats placed RHP Miguel Yajure on the 7-day injured list."
+    },
+    {
+      "id": 692992,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 476,
+        "name": "San Jose Giants",
+        "link": "/api/v1/teams/476"
+      },
+      "date": "2023-05-18",
+      "effectiveDate": "2023-05-18",
+      "resolutionDate": "2023-05-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Sacramento River Cats sent RHP Miguel Yajure on a rehab assignment to San Jose Giants."
+    },
+    {
+      "id": 705632,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 461,
+        "name": "Eugene Emeralds",
+        "link": "/api/v1/teams/461"
+      },
+      "date": "2023-06-05",
+      "effectiveDate": "2023-06-05",
+      "resolutionDate": "2023-06-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Sacramento River Cats sent RHP Miguel Yajure on a rehab assignment to Eugene Emeralds."
+    },
+    {
+      "id": 701221,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 461,
+        "name": "Eugene Emeralds",
+        "link": "/api/v1/teams/461"
+      },
+      "date": "2023-06-05",
+      "effectiveDate": "2023-06-05",
+      "resolutionDate": "2023-06-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Sacramento River Cats sent RHP Miguel Yajure on a rehab assignment to Eugene Emeralds."
+    },
+    {
+      "id": 705633,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2023-06-20",
+      "effectiveDate": "2023-06-20",
+      "resolutionDate": "2023-06-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sacramento River Cats activated RHP Miguel Yajure from the 7-day injured list."
+    },
+    {
+      "id": 705634,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2023-06-20",
+      "effectiveDate": "2023-06-20",
+      "resolutionDate": "2023-06-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sacramento River Cats activated RHP Miguel Yajure from the 7-day injured list."
+    },
+    {
+      "id": 725147,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2023-09-14",
+      "effectiveDate": "2023-09-14",
+      "resolutionDate": "2023-09-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sacramento River Cats transferred RHP Miguel Yajure to the Development List."
+    },
+    {
+      "id": 726006,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2023-09-21",
+      "effectiveDate": "2023-09-21",
+      "resolutionDate": "2023-09-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sacramento River Cats activated RHP Miguel Yajure."
+    },
+    {
+      "id": 732319,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2023-11-06",
+      "effectiveDate": "2023-11-06",
+      "resolutionDate": "2023-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Miguel Yajure elected free agency."
+    },
+    {
+      "id": 901521,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2026-04-17",
+      "effectiveDate": "2026-04-17",
+      "resolutionDate": "2026-04-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Miguel Yajure assigned to Sugar Land Space Cowboys."
+    },
+    {
+      "id": 901520,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2026-04-17",
+      "effectiveDate": "2026-04-17",
+      "resolutionDate": "2026-04-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Houston Astros signed free agent RHP Miguel Yajure to a minor league contract."
+    },
+    {
+      "id": 903142,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2026-04-25",
+      "effectiveDate": "2026-04-23",
+      "resolutionDate": "2026-04-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sugar Land Space Cowboys placed RHP Miguel Yajure on the 7-day injured list retroactive to April 23, 2026."
+    },
+    {
+      "id": 910137,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2026-05-16",
+      "effectiveDate": "2026-05-16",
+      "resolutionDate": "2026-05-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sugar Land Space Cowboys placed RHP Miguel Yajure on the full-season injured list."
+    },
+    {
+      "id": 916125,
+      "person": {
+        "id": 664337,
+        "fullName": "Miguel Yajure",
+        "link": "/api/v1/people/664337",
+        "nameSlug": "miguel-yajure-664337"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2026-06-05",
+      "effectiveDate": "2026-06-05",
+      "resolutionDate": "2026-06-05",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Sugar Land Space Cowboys released RHP Miguel Yajure."
+    }
+  ]
+}

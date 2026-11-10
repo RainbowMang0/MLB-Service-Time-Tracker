@@ -67,7 +67,8 @@ config/cba/2027.json           placeholder that REFUSES to compute
 config/cba/roy_full_year_awards.json  hand-kept ROY credits (not a ruleset)
 config/tax/                    duty-day rules + 2026 state rates (tiered)
 data/reference_*.json          hand-entered B-R figures, published Super Two cutoffs
-data/cache/transactions/       per-player transaction cache (rostered only)
+data/cache/transactions/       per-player transaction cache (rostered only); still what the math reads
+data/raw_transactions/         raw feed, one file per published player, not used by the math yet
 data/backfill_state.json       resumable backfill progress
 data/published_ids.json        ids ever given a page; only grows -- a page never comes down
 docs/index.html, app.js, styles.css      main table (hand-edited)

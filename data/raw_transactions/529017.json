@@ -1,0 +1,789 @@
+{
+  "player_id": 529017,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:7fdc257488822f523c098231f8f5ef9c2688c29665d1d7630d2c1405b15609cb",
+  "transactions": [
+    {
+      "id": 421445,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2019-06-15",
+      "effectiveDate": "2019-06-15",
+      "resolutionDate": "2019-06-15",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Milwaukee Brewers signed free agent RHP Alexande Cornielle to a minor league contract."
+    },
+    {
+      "id": 421446,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 607,
+        "name": "DSL Brewers Blue",
+        "link": "/api/v1/teams/607"
+      },
+      "date": "2019-08-02",
+      "effectiveDate": "2019-08-02",
+      "resolutionDate": "2019-08-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alexande Cornielle assigned to DSL Brewers."
+    },
+    {
+      "id": 501191,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "fromTeam": {
+        "id": 607,
+        "name": "DSL Brewers Blue",
+        "link": "/api/v1/teams/607"
+      },
+      "toTeam": {
+        "id": 5430,
+        "name": "ACL Brewers Blue",
+        "link": "/api/v1/teams/5430"
+      },
+      "date": "2021-07-05",
+      "effectiveDate": "2021-07-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alexander Cornielle assigned to ACL Brewers Blue from DSL Brewers."
+    },
+    {
+      "id": 612844,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "date": "2021-09-01",
+      "effectiveDate": "2021-09-01",
+      "resolutionDate": "2021-09-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Carolina Mudcats activated RHP Alexander Cornielle."
+    },
+    {
+      "id": 515388,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "fromTeam": {
+        "id": 5430,
+        "name": "ACL Brewers Blue",
+        "link": "/api/v1/teams/5430"
+      },
+      "toTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "date": "2021-09-01",
+      "effectiveDate": "2021-09-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alexander Cornielle assigned to Carolina Mudcats from ACL Brewers Blue."
+    },
+    {
+      "id": 648344,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "date": "2022-08-23",
+      "effectiveDate": "2022-08-23",
+      "resolutionDate": "2022-08-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Wisconsin Timber Rattlers activated RHP Alexander Cornielle."
+    },
+    {
+      "id": 648343,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "date": "2022-08-23",
+      "effectiveDate": "2022-08-23",
+      "resolutionDate": "2022-08-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alexander Cornielle assigned to Wisconsin Timber Rattlers."
+    },
+    {
+      "id": 648204,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "fromTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "toTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "date": "2022-08-23",
+      "effectiveDate": "2022-08-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alexander Cornielle assigned to Aberdeen IronBirds from Carolina Mudcats."
+    },
+    {
+      "id": 675921,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2023-03-15",
+      "effectiveDate": "2023-03-15",
+      "resolutionDate": "2023-03-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alexander Cornielle and  assigned to Milwaukee Brewers."
+    },
+    {
+      "id": 686837,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "date": "2023-04-23",
+      "effectiveDate": "2023-04-23",
+      "resolutionDate": "2023-04-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Wisconsin Timber Rattlers activated RHP Alexander Cornielle from the 7-day injured list."
+    },
+    {
+      "id": 751355,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2024-02-24",
+      "effectiveDate": "2024-02-24",
+      "resolutionDate": "2024-02-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alexander Cornielle assigned to Milwaukee Brewers."
+    },
+    {
+      "id": 778361,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "date": "2024-06-05",
+      "effectiveDate": "2024-06-05",
+      "resolutionDate": "2024-06-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Wisconsin Timber Rattlers placed RHP Alexander Cornielle on the 7-day injured list."
+    },
+    {
+      "id": 780424,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "date": "2024-06-16",
+      "effectiveDate": "2024-06-16",
+      "resolutionDate": "2024-06-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Wisconsin Timber Rattlers activated RHP Alexander Cornielle from the 7-day injured list."
+    },
+    {
+      "id": 780425,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "date": "2024-06-16",
+      "effectiveDate": "2024-06-16",
+      "resolutionDate": "2024-06-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Carolina Mudcats activated RHP Alexander Cornielle from the 7-day injured list."
+    },
+    {
+      "id": 816659,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2025-02-22",
+      "effectiveDate": "2025-02-22",
+      "resolutionDate": "2025-02-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alexander Cornielle assigned to Milwaukee Brewers."
+    },
+    {
+      "id": 823956,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 5015,
+        "name": "Biloxi Shuckers",
+        "link": "/api/v1/teams/5015"
+      },
+      "date": "2025-03-31",
+      "effectiveDate": "2025-03-31",
+      "resolutionDate": "2025-03-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alexander Cornielle assigned to Biloxi Shuckers."
+    },
+    {
+      "id": 868413,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "fromTeam": {
+        "id": 5015,
+        "name": "Biloxi Shuckers",
+        "link": "/api/v1/teams/5015"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2025-09-09",
+      "effectiveDate": "2025-09-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alexander Cornielle assigned to Nashville Sounds from Biloxi Shuckers."
+    },
+    {
+      "id": 876229,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Alexander Cornielle elected free agency."
+    },
+    {
+      "id": 880099,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2025-12-17",
+      "effectiveDate": "2025-12-17",
+      "resolutionDate": "2025-12-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alexander Cornielle assigned to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 880098,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2025-12-17",
+      "effectiveDate": "2025-12-17",
+      "resolutionDate": "2025-12-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Yankees signed free agent RHP Alexander Cornielle to a minor league contract."
+    },
+    {
+      "id": 886668,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2026-02-17",
+      "effectiveDate": "2026-02-17",
+      "resolutionDate": "2026-02-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Alexander Cornielle roster status changed by New York Yankees."
+    },
+    {
+      "id": 892540,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2026-03-17",
+      "effectiveDate": "2026-03-17",
+      "resolutionDate": "2026-03-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders placed RHP Alexander Cornielle on the 60-day injured list."
+    },
+    {
+      "id": 910794,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "date": "2026-05-21",
+      "effectiveDate": "2026-05-21",
+      "resolutionDate": "2026-05-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Scranton/Wilkes-Barre RailRiders sent RHP Alexander Cornielle on a rehab assignment to FCL Yankees."
+    },
+    {
+      "id": 915735,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2026-06-04",
+      "effectiveDate": "2026-06-04",
+      "resolutionDate": "2026-06-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Scranton/Wilkes-Barre RailRiders sent RHP Alexander Cornielle on a rehab assignment to Tampa Tarpons."
+    },
+    {
+      "id": 917425,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 1956,
+        "name": "Somerset Patriots",
+        "link": "/api/v1/teams/1956"
+      },
+      "date": "2026-06-11",
+      "effectiveDate": "2026-06-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alexander Cornielle assigned to Somerset Patriots from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 918396,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "fromTeam": {
+        "id": 1956,
+        "name": "Somerset Patriots",
+        "link": "/api/v1/teams/1956"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2026-06-14",
+      "effectiveDate": "2026-06-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alexander Cornielle assigned to Scranton/Wilkes-Barre RailRiders from Somerset Patriots."
+    },
+    {
+      "id": 926352,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2026-07-09",
+      "effectiveDate": "2026-07-09",
+      "resolutionDate": "2026-07-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders transferred RHP Alexander Cornielle to the Development List."
+    },
+    {
+      "id": 928619,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2026-07-18",
+      "effectiveDate": "2026-07-18",
+      "resolutionDate": "2026-07-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders activated RHP Alexander Cornielle from the Development List."
+    },
+    {
+      "id": 928891,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2026-07-18",
+      "effectiveDate": "2026-07-18",
+      "resolutionDate": "2026-07-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders activated RHP Alexander Cornielle from the Development List."
+    },
+    {
+      "id": 933774,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2026-07-31",
+      "effectiveDate": "2026-07-31",
+      "resolutionDate": "2026-07-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders placed RHP Alexander Cornielle on the reserve list."
+    },
+    {
+      "id": 934484,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2026-08-03",
+      "effectiveDate": "2026-08-03",
+      "resolutionDate": "2026-08-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders activated RHP Alexander Cornielle from the reserve list."
+    },
+    {
+      "id": 943995,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2026-09-25",
+      "effectiveDate": "2026-09-25",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Yankees selected the contract of RHP Alexander Cornielle from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 944375,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2026-09-29",
+      "effectiveDate": "2026-09-29",
+      "resolutionDate": "2026-09-29",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Yankees designated RHP Alexander Cornielle for assignment."
+    },
+    {
+      "id": 944899,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "date": "2026-10-01",
+      "effectiveDate": "2026-10-01",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "New York Yankees sent RHP Alexander Cornielle outright to FCL Yankees."
+    },
+    {
+      "id": 946813,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2026-10-21",
+      "effectiveDate": "2026-10-21",
+      "resolutionDate": "2026-10-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alexander Cornielle assigned to Tigres del Licey."
+    },
+    {
+      "id": 949446,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2026-10-21",
+      "effectiveDate": "2026-10-21",
+      "resolutionDate": "2026-10-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tigres del Licey activated RHP Alexander Cornielle."
+    },
+    {
+      "id": 949175,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Alexander Cornielle elected free agency."
+    }
+  ]
+}

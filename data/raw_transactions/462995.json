@@ -1,0 +1,696 @@
+{
+  "player_id": 462995,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:044c96f11a47b0af724af1bcce284865d023df3cfae72aaffe519858c15afff1",
+  "transactions": [
+    {
+      "id": 1178,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2009-04-04",
+      "effectiveDate": "2009-03-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Florida Marlins placed RHP Rick van den Hurk on the 15-day disabled list retroactive to March 29, 2009."
+    },
+    {
+      "id": 5277,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2009-05-17",
+      "effectiveDate": "2009-05-17",
+      "resolutionDate": "2009-05-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rick van den Hurk roster status changed by Florida Marlins."
+    },
+    {
+      "id": 6197,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2009-05-24",
+      "effectiveDate": "2009-05-24",
+      "resolutionDate": "2009-05-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Florida Marlins sent RHP Rick van den Hurk on a rehab assignment to Jupiter Hammerheads."
+    },
+    {
+      "id": 7582,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "fromTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2009-05-30",
+      "effectiveDate": "2009-05-30",
+      "resolutionDate": "2009-05-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Jupiter Hammerheads sent RHP Rick van den Hurk on a rehab assignment to New Orleans Zephyrs."
+    },
+    {
+      "id": 8252,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2009-06-04",
+      "effectiveDate": "2009-06-04",
+      "resolutionDate": "2009-06-04",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Florida Marlins optioned RHP Rick van den Hurk to New Orleans Zephyrs."
+    },
+    {
+      "id": 15899,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2009-07-10",
+      "effectiveDate": "2009-07-10",
+      "resolutionDate": "2009-07-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New Orleans Zephyrs placed RHP Rick van den Hurk on the bereavement list."
+    },
+    {
+      "id": 16532,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2009-07-16",
+      "effectiveDate": "2009-07-16",
+      "resolutionDate": "2009-07-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rick van den Hurk roster status changed by New Orleans Zephyrs."
+    },
+    {
+      "id": 17101,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "fromTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2009-07-20",
+      "effectiveDate": "2009-07-20",
+      "resolutionDate": "2009-07-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Florida Marlins recalled Rick van den Hurk from New Orleans Zephyrs."
+    },
+    {
+      "id": 21727,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2009-08-18",
+      "effectiveDate": "2009-08-31",
+      "resolutionDate": "2009-08-18",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Florida Marlins optioned Rick van den Hurk to New Orleans Zephyrs."
+    },
+    {
+      "id": 23680,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "fromTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2009-09-01",
+      "effectiveDate": "2009-09-01",
+      "resolutionDate": "2009-09-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Florida Marlins recalled Rick van den Hurk from New Orleans Zephyrs."
+    },
+    {
+      "id": 28059,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "toTeam": {
+        "id": 687,
+        "name": "Gigantes de Carolina",
+        "link": "/api/v1/teams/687"
+      },
+      "date": "2009-11-11",
+      "effectiveDate": "2009-11-11",
+      "resolutionDate": "2009-11-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Rick van den Hurk assigned to Gigantes de Carolina."
+    },
+    {
+      "id": 34960,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2010-03-31",
+      "effectiveDate": "2010-03-31",
+      "resolutionDate": "2010-03-30",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Florida Marlins optioned Rick van den Hurk to New Orleans Zephyrs."
+    },
+    {
+      "id": 50180,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "fromTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2010-06-07",
+      "effectiveDate": "2010-06-08",
+      "resolutionDate": "2010-06-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Florida Marlins recalled Rick van den Hurk from New Orleans Zephyrs."
+    },
+    {
+      "id": 52158,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2010-06-14",
+      "effectiveDate": "2010-06-14",
+      "resolutionDate": "2010-06-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Florida Marlins optioned RHP Rick van den Hurk to New Orleans Zephyrs."
+    },
+    {
+      "id": 64968,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2010-07-31",
+      "effectiveDate": "2010-07-31",
+      "resolutionDate": "2010-07-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Baltimore Orioles traded LHP Will Ohman to Florida Marlins for RHP Rick van den Hurk."
+    },
+    {
+      "id": 64969,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2010-07-31",
+      "effectiveDate": "2010-07-31",
+      "resolutionDate": "2010-07-31",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Baltimore Orioles optioned Rick van den Hurk to Norfolk Tides."
+    },
+    {
+      "id": 67086,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2010-08-16",
+      "effectiveDate": "2010-08-16",
+      "resolutionDate": "2010-08-16",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Baltimore Orioles recalled Rick van den Hurk from Norfolk Tides."
+    },
+    {
+      "id": 80358,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2011-03-30",
+      "effectiveDate": "2011-03-30",
+      "resolutionDate": "2011-03-30",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Baltimore Orioles sent Rick van den Hurk outright to Norfolk Tides."
+    },
+    {
+      "id": 102189,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2011-09-01",
+      "effectiveDate": "2011-09-01",
+      "resolutionDate": "2011-08-31",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Baltimore Orioles selected the contract of Rick van den Hurk from Norfolk Tides."
+    },
+    {
+      "id": 108785,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2012-01-24",
+      "effectiveDate": "2012-01-24",
+      "resolutionDate": "2012-01-24",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Baltimore Orioles designated RHP Rick van den Hurk for assignment."
+    },
+    {
+      "id": 109110,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2012-02-01",
+      "effectiveDate": "2012-02-01",
+      "resolutionDate": "2012-02-01",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Baltimore Orioles released RHP Rick van den Hurk."
+    },
+    {
+      "id": 109379,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2012-02-22",
+      "effectiveDate": "2012-02-22",
+      "resolutionDate": "2012-02-22",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Toronto Blue Jays signed free agent Rick van den Hurk."
+    },
+    {
+      "id": 110877,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2012-03-21",
+      "effectiveDate": "2012-03-21",
+      "resolutionDate": "2012-03-21",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Cleveland Indians claimed RHP Rick van den Hurk off waivers from Toronto Blue Jays."
+    },
+    {
+      "id": 111496,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2012-03-29",
+      "effectiveDate": "2012-03-29",
+      "resolutionDate": "2012-03-29",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Cleveland Indians designated Rick van den Hurk for assignment."
+    },
+    {
+      "id": 113916,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2012-04-04",
+      "effectiveDate": "2012-04-04",
+      "resolutionDate": "2012-04-04",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Cleveland Indians sent Rick van den Hurk outright to Columbus Clippers."
+    },
+    {
+      "id": 114986,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2012-04-09",
+      "effectiveDate": "2012-04-09",
+      "resolutionDate": "2012-04-09",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Pittsburgh Pirates signed free agent RHP Rick van den Hurk to a minor league contract."
+    },
+    {
+      "id": 117329,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "toTeam": {
+        "id": 3390,
+        "name": "Bradenton Marauders",
+        "link": "/api/v1/teams/3390"
+      },
+      "date": "2012-05-07",
+      "effectiveDate": "2012-05-07",
+      "resolutionDate": "2012-05-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Rick van den Hurk assigned to Bradenton Marauders."
+    },
+    {
+      "id": 118031,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "fromTeam": {
+        "id": 3390,
+        "name": "Bradenton Marauders",
+        "link": "/api/v1/teams/3390"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2012-05-14",
+      "effectiveDate": "2012-05-14",
+      "resolutionDate": "2012-05-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Rick van den Hurk assigned to Indianapolis Indians from Bradenton Marauders."
+    },
+    {
+      "id": 135551,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2012-09-10",
+      "effectiveDate": "2012-09-10",
+      "resolutionDate": "2012-09-10",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Pittsburgh Pirates selected the contract of RHP Rick van den Hurk from Indianapolis Indians."
+    },
+    {
+      "id": 142095,
+      "person": {
+        "id": 462995,
+        "fullName": "Rick Van Den Hurk",
+        "link": "/api/v1/people/462995",
+        "nameSlug": "rick-van-den-hurk-462995"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2013-01-04",
+      "effectiveDate": "2013-01-04",
+      "resolutionDate": "2013-01-04",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Pittsburgh Pirates released RHP Rick van den Hurk."
+    }
+  ]
+}

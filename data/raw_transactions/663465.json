@@ -1,0 +1,2187 @@
+{
+  "player_id": 663465,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:b295880ea1abe7e31351e794b6e03d41f553aeea086791168e6d2c0fd332eea8",
+  "transactions": [
+    {
+      "id": 239554,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2015-07-13",
+      "effectiveDate": "2015-07-13",
+      "resolutionDate": "2015-07-13",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Atlanta Braves signed LHP Kolby Allard."
+    },
+    {
+      "id": 239722,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 464,
+        "name": "FCL Braves",
+        "link": "/api/v1/teams/464"
+      },
+      "date": "2015-07-28",
+      "effectiveDate": "2015-07-28",
+      "resolutionDate": "2015-07-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Kolby Allard assigned to GCL Braves."
+    },
+    {
+      "id": 269577,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 464,
+        "name": "FCL Braves",
+        "link": "/api/v1/teams/464"
+      },
+      "toTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "date": "2016-06-06",
+      "effectiveDate": "2016-06-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Kolby Allard assigned to Rome Braves from GCL Braves."
+    },
+    {
+      "id": 274435,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "toTeam": {
+        "id": 429,
+        "name": "Danville Otterbots",
+        "link": "/api/v1/teams/429"
+      },
+      "date": "2016-06-23",
+      "effectiveDate": "2016-06-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Kolby Allard assigned to Danville Braves from Rome Braves."
+    },
+    {
+      "id": 282252,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "date": "2016-07-18",
+      "effectiveDate": "2016-07-18",
+      "resolutionDate": "2016-07-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Kolby Allard assigned to Rome Braves."
+    },
+    {
+      "id": 282253,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "date": "2016-07-18",
+      "effectiveDate": "2016-07-18",
+      "resolutionDate": "2016-07-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rome Braves activated LHP Kolby Allard."
+    },
+    {
+      "id": 279672,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 429,
+        "name": "Danville Otterbots",
+        "link": "/api/v1/teams/429"
+      },
+      "toTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "date": "2016-07-20",
+      "effectiveDate": "2016-07-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Kolby Allard assigned to Rome Braves from Danville Braves."
+    },
+    {
+      "id": 303222,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "toTeam": {
+        "id": 430,
+        "name": "Mississippi Mud Monsters",
+        "link": "/api/v1/teams/430"
+      },
+      "date": "2017-04-04",
+      "effectiveDate": "2017-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Kolby Allard assigned to Mississippi Braves from Rome Braves."
+    },
+    {
+      "id": 340526,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2018-01-26",
+      "effectiveDate": "2018-01-26",
+      "resolutionDate": "2018-01-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Atlanta Braves invited non-roster LHP Kolby Allard to spring training."
+    },
+    {
+      "id": 345510,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 383,
+        "name": "Atlanta Braves Prospects",
+        "link": "/api/v1/teams/383"
+      },
+      "date": "2018-03-27",
+      "effectiveDate": "2018-03-27",
+      "resolutionDate": "2018-03-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Kolby Allard assigned to Atlanta Braves Futures."
+    },
+    {
+      "id": 348259,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2018-04-05",
+      "effectiveDate": "2018-04-05",
+      "resolutionDate": "2018-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Kolby Allard assigned to Gwinnett Stripers."
+    },
+    {
+      "id": 372220,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2018-07-31",
+      "effectiveDate": "2018-08-01",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Atlanta Braves selected the contract of Kolby Allard from Gwinnett Stripers."
+    },
+    {
+      "id": 372448,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2018-08-01",
+      "effectiveDate": "2018-08-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned LHP Kolby Allard to Gwinnett Stripers."
+    },
+    {
+      "id": 373394,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2018-08-07",
+      "effectiveDate": "2018-08-08",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled Kolby Allard from Gwinnett Stripers."
+    },
+    {
+      "id": 373662,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2018-08-08",
+      "effectiveDate": "2018-08-08",
+      "typeCode": "RTN",
+      "typeDesc": "Returned",
+      "description": "Kolby Allard returned to Gwinnett Stripers from Atlanta Braves."
+    },
+    {
+      "id": 374250,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2018-08-11",
+      "effectiveDate": "2018-08-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled Kolby Allard from Gwinnett Stripers."
+    },
+    {
+      "id": 375485,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2018-08-19",
+      "effectiveDate": "2018-08-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned LHP Kolby Allard to Gwinnett Stripers."
+    },
+    {
+      "id": 376858,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2018-08-29",
+      "effectiveDate": "2018-08-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled LHP Kolby Allard from Gwinnett Stripers."
+    },
+    {
+      "id": 390540,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2019-03-12",
+      "effectiveDate": "2019-03-12",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned LHP Kolby Allard to Gwinnett Stripers."
+    },
+    {
+      "id": 420828,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2019-07-30",
+      "effectiveDate": "2019-07-30",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Texas Rangers optioned LHP Kolby Allard to Nashville Sounds."
+    },
+    {
+      "id": 420827,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2019-07-30",
+      "effectiveDate": "2019-07-30",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Texas Rangers traded RHP Chris Martin to Atlanta Braves for LHP Kolby Allard."
+    },
+    {
+      "id": 421853,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2019-08-03",
+      "effectiveDate": "2019-08-03",
+      "resolutionDate": "2019-08-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Nashville Sounds activated LHP Kolby Allard."
+    },
+    {
+      "id": 422805,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2019-08-08",
+      "effectiveDate": "2019-08-08",
+      "resolutionDate": "2019-08-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Nashville Sounds placed LHP Kolby Allard on the reserve list."
+    },
+    {
+      "id": 422886,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2019-08-09",
+      "effectiveDate": "2020-03-11",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Texas Rangers recalled Kolby Allard from Nashville Sounds."
+    },
+    {
+      "id": 440826,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2020-03-11",
+      "effectiveDate": "2020-03-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Texas Rangers optioned LHP Kolby Allard to Nashville Sounds."
+    },
+    {
+      "id": 447443,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 3290,
+        "name": "Rangers Alternate Training Site",
+        "link": "/api/v1/teams/3290"
+      },
+      "date": "2020-07-19",
+      "effectiveDate": "2020-07-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Kolby Allard assigned to Rangers Alternate Training Site from Nashville Sounds."
+    },
+    {
+      "id": 447990,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 3290,
+        "name": "Rangers Alternate Training Site",
+        "link": "/api/v1/teams/3290"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2020-07-23",
+      "effectiveDate": "2020-07-23",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Texas Rangers recalled LHP Kolby Allard from Rangers Alternate Training Site."
+    },
+    {
+      "id": 473976,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 3290,
+        "name": "Rangers Alternate Training Site",
+        "link": "/api/v1/teams/3290"
+      },
+      "date": "2021-03-25",
+      "effectiveDate": "2021-03-25",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Texas Rangers optioned P Kolby Allard to Rangers Alternate Training Site."
+    },
+    {
+      "id": 477085,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2021-04-01",
+      "effectiveDate": "2021-04-01",
+      "resolutionDate": "2021-04-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Texas Rangers recalled P Kolby Allard."
+    },
+    {
+      "id": 477998,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2021-04-01",
+      "effectiveDate": "2021-04-01",
+      "resolutionDate": "2021-04-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Texas Rangers recalled LHP Kolby Allard,  and."
+    },
+    {
+      "id": 475987,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 3290,
+        "name": "Rangers Alternate Training Site",
+        "link": "/api/v1/teams/3290"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2021-04-01",
+      "effectiveDate": "2021-04-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Texas Rangers recalled P Kolby Allard from Rangers Alternate Training Site."
+    },
+    {
+      "id": 618690,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2022-05-01",
+      "effectiveDate": "2022-05-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Texas Rangers optioned LHP Kolby Allard to Round Rock Express."
+    },
+    {
+      "id": 620746,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-05-11",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Texas Rangers recalled LHP Kolby Allard from Round Rock Express."
+    },
+    {
+      "id": 620892,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2022-05-12",
+      "effectiveDate": "2022-05-12",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Texas Rangers optioned LHP Kolby Allard to Round Rock Express."
+    },
+    {
+      "id": 626253,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-06-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Texas Rangers recalled LHP Kolby Allard from Round Rock Express."
+    },
+    {
+      "id": 631452,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2022-06-16",
+      "effectiveDate": "2022-06-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Texas Rangers optioned LHP Kolby Allard to Round Rock Express."
+    },
+    {
+      "id": 635664,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-07-06",
+      "effectiveDate": "2022-07-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Texas Rangers recalled LHP Kolby Allard from Round Rock Express."
+    },
+    {
+      "id": 636456,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2022-07-10",
+      "effectiveDate": "2022-07-10",
+      "resolutionDate": "2022-07-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express activated LHP Kolby Allard."
+    },
+    {
+      "id": 636396,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2022-07-10",
+      "effectiveDate": "2022-07-10",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Texas Rangers optioned LHP Kolby Allard to Round Rock Express."
+    },
+    {
+      "id": 636641,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-07-11",
+      "effectiveDate": "2022-07-11",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Texas Rangers recalled LHP Kolby Allard from Round Rock Express."
+    },
+    {
+      "id": 637167,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2022-07-13",
+      "effectiveDate": "2022-07-13",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Texas Rangers optioned LHP Kolby Allard to Round Rock Express."
+    },
+    {
+      "id": 654533,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-10-04",
+      "effectiveDate": "2022-10-04",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Texas Rangers recalled LHP Kolby Allard from Round Rock Express."
+    },
+    {
+      "id": 654603,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2022-10-05",
+      "effectiveDate": "2022-10-05",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Texas Rangers optioned LHP Kolby Allard to Round Rock Express."
+    },
+    {
+      "id": 655007,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-10-06",
+      "effectiveDate": "2022-10-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Texas Rangers recalled LHP Kolby Allard from Round Rock Express."
+    },
+    {
+      "id": 660151,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2022-11-09",
+      "effectiveDate": "2022-11-09",
+      "resolutionDate": "2022-11-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves activated LHP Kolby Allard."
+    },
+    {
+      "id": 658742,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2022-11-09",
+      "effectiveDate": "2022-11-09",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Texas Rangers traded LHP Kolby Allard to Atlanta Braves for RHP Jake Odorizzi and cash."
+    },
+    {
+      "id": 679378,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2023-03-30",
+      "effectiveDate": "2023-03-30",
+      "resolutionDate": "2023-03-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves placed LHP Kolby Allard on the 60-day injured list. Strained right oblique muscle."
+    },
+    {
+      "id": 705051,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-06-18",
+      "effectiveDate": "2023-06-18",
+      "resolutionDate": "2023-06-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Atlanta Braves sent LHP Kolby Allard on a rehab assignment to Gwinnett Stripers."
+    },
+    {
+      "id": 704971,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-06-18",
+      "effectiveDate": "2023-06-18",
+      "resolutionDate": "2023-06-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Atlanta Braves sent LHP Kolby Allard on a rehab assignment to Gwinnett Stripers."
+    },
+    {
+      "id": 707362,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2023-06-28",
+      "effectiveDate": "2023-06-28",
+      "resolutionDate": "2023-06-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves activated LHP Kolby Allard from the 60-day injured list."
+    },
+    {
+      "id": 712010,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2023-07-18",
+      "effectiveDate": "2023-07-17",
+      "resolutionDate": "2023-07-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves placed LHP Kolby Allard on the 60-day injured list retroactive to July 17, 2023. Left shoulder nerve inflammation."
+    },
+    {
+      "id": 731389,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2023-11-06",
+      "effectiveDate": "2023-11-06",
+      "resolutionDate": "2023-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves activated LHP Kolby Allard from the 60-day injured list."
+    },
+    {
+      "id": 733329,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2023-11-17",
+      "effectiveDate": "2023-11-17",
+      "resolutionDate": "2023-11-17",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Kolby Allard elected free agency."
+    },
+    {
+      "id": 737759,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2024-01-23",
+      "effectiveDate": "2024-01-23",
+      "resolutionDate": "2024-01-23",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent LHP Kolby Allard."
+    },
+    {
+      "id": 756008,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2024-03-19",
+      "effectiveDate": "2024-03-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Philadelphia Phillies optioned LHP Kolby Allard to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 769662,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 469,
+        "name": "FCL Phillies",
+        "link": "/api/v1/teams/469"
+      },
+      "date": "2024-05-09",
+      "effectiveDate": "2024-05-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Kolby Allard assigned to FCL Phillies from Lehigh Valley IronPigs."
+    },
+    {
+      "id": 773368,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 469,
+        "name": "FCL Phillies",
+        "link": "/api/v1/teams/469"
+      },
+      "toTeam": {
+        "id": 522,
+        "name": "Reading Fightin Phils",
+        "link": "/api/v1/teams/522"
+      },
+      "date": "2024-05-22",
+      "effectiveDate": "2024-05-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Kolby Allard assigned to Reading Fightin Phils from FCL Phillies."
+    },
+    {
+      "id": 777992,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 522,
+        "name": "Reading Fightin Phils",
+        "link": "/api/v1/teams/522"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2024-06-04",
+      "effectiveDate": "2024-06-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Kolby Allard assigned to Lehigh Valley IronPigs from Reading Fightin Phils."
+    },
+    {
+      "id": 790232,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2024-07-27",
+      "effectiveDate": "2024-07-27",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Philadelphia Phillies recalled LHP Kolby Allard from Lehigh Valley IronPigs."
+    },
+    {
+      "id": 793760,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2024-08-09",
+      "effectiveDate": "2024-08-09",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Philadelphia Phillies optioned LHP Kolby Allard to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 796134,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2024-08-25",
+      "effectiveDate": "2024-08-25",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Philadelphia Phillies recalled LHP Kolby Allard from Lehigh Valley IronPigs."
+    },
+    {
+      "id": 796318,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2024-08-26",
+      "effectiveDate": "2024-08-26",
+      "resolutionDate": "2024-08-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lehigh Valley IronPigs activated LHP Kolby Allard."
+    },
+    {
+      "id": 796314,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2024-08-26",
+      "effectiveDate": "2024-08-26",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Philadelphia Phillies optioned LHP Kolby Allard to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 798932,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2024-09-14",
+      "effectiveDate": "2024-09-14",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Philadelphia Phillies recalled LHP Kolby Allard from Lehigh Valley IronPigs."
+    },
+    {
+      "id": 804097,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "resolutionDate": "2024-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Kolby Allard elected free agency."
+    },
+    {
+      "id": 804094,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Philadelphia Phillies sent LHP Kolby Allard outright to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 813147,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2025-02-03",
+      "effectiveDate": "2025-02-03",
+      "resolutionDate": "2025-02-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Kolby Allard assigned to Columbus Clippers."
+    },
+    {
+      "id": 814491,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2025-02-03",
+      "effectiveDate": "2025-02-03",
+      "resolutionDate": "2025-02-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LHP Kolby Allard roster status changed by Cleveland Guardians."
+    },
+    {
+      "id": 813146,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2025-02-03",
+      "effectiveDate": "2025-02-03",
+      "resolutionDate": "2025-02-03",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cleveland Guardians signed free agent LHP Kolby Allard to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 824167,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2025-04-01",
+      "effectiveDate": "2025-04-01",
+      "resolutionDate": "2025-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Kolby Allard assigned to Columbus Clippers."
+    },
+    {
+      "id": 832193,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2025-04-26",
+      "effectiveDate": "2025-04-26",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Cleveland Guardians selected the contract of LHP Kolby Allard from Columbus Clippers."
+    },
+    {
+      "id": 852449,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2025-07-03",
+      "effectiveDate": "2025-07-03",
+      "resolutionDate": "2025-07-03",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Cleveland Guardians designated LHP Kolby Allard for assignment."
+    },
+    {
+      "id": 854061,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2025-07-08",
+      "effectiveDate": "2025-07-08",
+      "resolutionDate": "2025-07-08",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Kolby Allard elected free agency."
+    },
+    {
+      "id": 854199,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2025-07-09",
+      "effectiveDate": "2025-07-09",
+      "resolutionDate": "2025-07-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Kolby Allard assigned to Columbus Clippers."
+    },
+    {
+      "id": 854198,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2025-07-09",
+      "effectiveDate": "2025-07-09",
+      "resolutionDate": "2025-07-09",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cleveland Guardians signed free agent LHP Kolby Allard to a minor league contract."
+    },
+    {
+      "id": 854201,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2025-07-09",
+      "effectiveDate": "2025-07-09",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Cleveland Guardians selected the contract of LHP Kolby Allard from Columbus Clippers."
+    },
+    {
+      "id": 875207,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Cleveland Guardians sent LHP Kolby Allard outright to Columbus Clippers."
+    },
+    {
+      "id": 883708,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2026-02-02",
+      "effectiveDate": "2026-02-02",
+      "resolutionDate": "2026-02-02",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cleveland Guardians signed free agent LHP Kolby Allard to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 883709,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2026-02-02",
+      "effectiveDate": "2026-02-02",
+      "resolutionDate": "2026-02-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Kolby Allard assigned to Columbus Clippers."
+    },
+    {
+      "id": 895126,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2026-02-02",
+      "effectiveDate": "2026-02-02",
+      "resolutionDate": "2026-02-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbus Clippers activated LHP Kolby Allard."
+    },
+    {
+      "id": 895122,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2026-03-30",
+      "effectiveDate": "2026-03-30",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Cleveland Guardians selected the contract of LHP Kolby Allard from Columbus Clippers."
+    },
+    {
+      "id": 898620,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2026-04-13",
+      "effectiveDate": "2026-04-13",
+      "resolutionDate": "2026-04-13",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Cleveland Guardians designated LHP Kolby Allard for assignment."
+    },
+    {
+      "id": 900828,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Kolby Allard elected free agency."
+    },
+    {
+      "id": 900827,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Cleveland Guardians sent LHP Kolby Allard outright to Columbus Clippers."
+    },
+    {
+      "id": 901566,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2026-04-17",
+      "effectiveDate": "2026-04-17",
+      "resolutionDate": "2026-04-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cleveland Guardians signed free agent LHP Kolby Allard to a minor league contract."
+    },
+    {
+      "id": 901574,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2026-04-18",
+      "effectiveDate": "2026-04-18",
+      "resolutionDate": "2026-04-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbus Clippers activated LHP Kolby Allard."
+    },
+    {
+      "id": 901567,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2026-04-18",
+      "effectiveDate": "2026-04-18",
+      "resolutionDate": "2026-04-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Kolby Allard assigned to Columbus Clippers."
+    },
+    {
+      "id": 902379,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2026-04-22",
+      "effectiveDate": "2026-04-22",
+      "resolutionDate": "2026-04-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbus Clippers placed LHP Kolby Allard on the 7-day injured list."
+    },
+    {
+      "id": 907009,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2026-05-08",
+      "effectiveDate": "2026-05-08",
+      "resolutionDate": "2026-05-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbus Clippers activated LHP Kolby Allard from the 7-day injured list."
+    },
+    {
+      "id": 909924,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2026-05-17",
+      "effectiveDate": "2026-05-17",
+      "resolutionDate": "2026-05-17",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Columbus Clippers released LHP Kolby Allard."
+    },
+    {
+      "id": 910600,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2026-05-19",
+      "effectiveDate": "2026-05-19",
+      "resolutionDate": "2026-05-19",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cleveland Guardians signed free agent LHP Kolby Allard to a minor league contract."
+    },
+    {
+      "id": 910601,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2026-05-20",
+      "effectiveDate": "2026-05-20",
+      "resolutionDate": "2026-05-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Kolby Allard assigned to Columbus Clippers."
+    },
+    {
+      "id": 918860,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2026-06-15",
+      "effectiveDate": "2026-06-15",
+      "resolutionDate": "2026-06-15",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Columbus Clippers released LHP Kolby Allard."
+    },
+    {
+      "id": 919974,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2026-06-18",
+      "effectiveDate": "2026-06-18",
+      "resolutionDate": "2026-06-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent LHP Kolby Allard to a minor league contract."
+    },
+    {
+      "id": 919975,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2026-06-18",
+      "effectiveDate": "2026-06-18",
+      "resolutionDate": "2026-06-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Kolby Allard assigned to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 936183,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2026-08-07",
+      "effectiveDate": "2026-08-06",
+      "resolutionDate": "2026-08-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lehigh Valley IronPigs placed LHP Kolby Allard on the 7-day injured list retroactive to August 6, 2026."
+    },
+    {
+      "id": 936525,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2026-08-09",
+      "effectiveDate": "2026-08-09",
+      "resolutionDate": "2026-08-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lehigh Valley IronPigs transferred LHP Kolby Allard from the 7-day injured list to the 60-day injured list."
+    },
+    {
+      "id": 942185,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2026-08-09",
+      "effectiveDate": "2026-08-09",
+      "resolutionDate": "2026-08-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lehigh Valley IronPigs transferred LHP Kolby Allard from the 7-day injured list to the 60-day injured list."
+    },
+    {
+      "id": 947989,
+      "person": {
+        "id": 663465,
+        "fullName": "Kolby Allard",
+        "link": "/api/v1/people/663465",
+        "nameSlug": "kolby-allard-663465"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Kolby Allard elected free agency."
+    }
+  ]
+}

@@ -1,0 +1,2020 @@
+{
+  "player_id": 621529,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:d40898572c27c7570c55b2e38b931351891d3f1c3895c629e2e84a7c0fb17470",
+  "transactions": [
+    {
+      "id": 123877,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2012-06-11",
+      "effectiveDate": "2012-06-11",
+      "resolutionDate": "2012-06-11",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Cincinnati Reds signed C Joe Hudson."
+    },
+    {
+      "id": 123878,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 513,
+        "name": "Billings Mustangs",
+        "link": "/api/v1/teams/513"
+      },
+      "date": "2012-06-16",
+      "effectiveDate": "2012-06-16",
+      "resolutionDate": "2012-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Joe Hudson assigned to Billings Mustangs from Cincinnati Reds."
+    },
+    {
+      "id": 147498,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 513,
+        "name": "Billings Mustangs",
+        "link": "/api/v1/teams/513"
+      },
+      "toTeam": {
+        "id": 459,
+        "name": "Dayton Dragons",
+        "link": "/api/v1/teams/459"
+      },
+      "date": "2013-04-01",
+      "effectiveDate": "2013-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Dayton Dragons from Billings Mustangs."
+    },
+    {
+      "id": 181315,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2014-03-19",
+      "effectiveDate": "2014-03-19",
+      "resolutionDate": "2014-03-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Cincinnati Reds."
+    },
+    {
+      "id": 182427,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 459,
+        "name": "Dayton Dragons",
+        "link": "/api/v1/teams/459"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2014-03-29",
+      "effectiveDate": "2014-03-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Louisville Bats from Dayton Dragons."
+    },
+    {
+      "id": 183829,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 459,
+        "name": "Dayton Dragons",
+        "link": "/api/v1/teams/459"
+      },
+      "date": "2014-04-01",
+      "effectiveDate": "2014-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Dayton Dragons from Louisville Bats."
+    },
+    {
+      "id": 204543,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 459,
+        "name": "Dayton Dragons",
+        "link": "/api/v1/teams/459"
+      },
+      "toTeam": {
+        "id": 423,
+        "name": "Bakersfield Blaze",
+        "link": "/api/v1/teams/423"
+      },
+      "date": "2014-08-12",
+      "effectiveDate": "2014-09-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Joe Hudson assigned to Bakersfield Blaze from Dayton Dragons."
+    },
+    {
+      "id": 217349,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2015-03-17",
+      "effectiveDate": "2015-03-17",
+      "resolutionDate": "2015-03-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Cincinnati Reds."
+    },
+    {
+      "id": 229188,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 76,
+        "name": "FSL North Division All-Stars",
+        "link": "/api/v1/teams/76"
+      },
+      "date": "2015-06-19",
+      "effectiveDate": "2015-06-19",
+      "resolutionDate": "2015-06-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to FSL North Division All-Stars."
+    },
+    {
+      "id": 252174,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2015-12-18",
+      "effectiveDate": "2015-12-18",
+      "resolutionDate": "2015-12-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Cincinnati Reds invited non-roster C Joe Hudson to spring training."
+    },
+    {
+      "id": 260894,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2016-04-06",
+      "effectiveDate": "2016-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Pensacola Blue Wahoos from Daytona Tortugas."
+    },
+    {
+      "id": 298467,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2017-02-24",
+      "effectiveDate": "2017-02-24",
+      "resolutionDate": "2017-02-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Cincinnati Reds."
+    },
+    {
+      "id": 317420,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 69,
+        "name": "SOU South Division All-Stars",
+        "link": "/api/v1/teams/69"
+      },
+      "date": "2017-06-19",
+      "effectiveDate": "2017-06-19",
+      "resolutionDate": "2017-06-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to SOU South Division All-Stars."
+    },
+    {
+      "id": 340212,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2018-01-22",
+      "effectiveDate": "2018-01-22",
+      "resolutionDate": "2018-01-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Cincinnati Reds invited non-roster C Joe Hudson to spring training."
+    },
+    {
+      "id": 347718,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2018-04-04",
+      "effectiveDate": "2018-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Louisville Bats from Pensacola Blue Wahoos."
+    },
+    {
+      "id": 365306,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2018-06-30",
+      "effectiveDate": "2018-06-30",
+      "resolutionDate": "2018-06-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Salt Lake Bees."
+    },
+    {
+      "id": 365305,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2018-06-30",
+      "effectiveDate": "2018-06-30",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Cincinnati Reds traded C Joe Hudson to Los Angeles Angels for cash."
+    },
+    {
+      "id": 375226,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 417,
+        "name": "Mobile BayBears",
+        "link": "/api/v1/teams/417"
+      },
+      "date": "2018-08-17",
+      "effectiveDate": "2018-08-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Mobile BayBears from Salt Lake Bees."
+    },
+    {
+      "id": 376870,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 417,
+        "name": "Mobile BayBears",
+        "link": "/api/v1/teams/417"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2018-08-29",
+      "effectiveDate": "2018-08-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Salt Lake Bees from Mobile BayBears."
+    },
+    {
+      "id": 377875,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2018-09-04",
+      "effectiveDate": "2018-09-04",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Angels selected the contract of C Joe Hudson from Salt Lake Bees."
+    },
+    {
+      "id": 381396,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2018-10-26",
+      "effectiveDate": "2018-10-26",
+      "resolutionDate": "2018-10-26",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Los Angeles Angels designated C Joe Hudson for assignment."
+    },
+    {
+      "id": 381796,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2018-10-31",
+      "effectiveDate": "2018-10-31",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Los Angeles Angels sent C Joe Hudson outright to Salt Lake Bees."
+    },
+    {
+      "id": 387804,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2018-11-02",
+      "effectiveDate": "2018-11-02",
+      "resolutionDate": "2018-11-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Memphis Redbirds."
+    },
+    {
+      "id": 382284,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2018-11-02",
+      "effectiveDate": "2018-11-02",
+      "resolutionDate": "2018-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Joe Hudson elected free agency."
+    },
+    {
+      "id": 383541,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2018-11-19",
+      "effectiveDate": "2018-11-19",
+      "resolutionDate": "2018-11-19",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "St. Louis Cardinals signed free agent C Joe Hudson to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 426795,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2019-09-01",
+      "effectiveDate": "2019-09-01",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "St. Louis Cardinals selected the contract of C Joe Hudson from Memphis Redbirds."
+    },
+    {
+      "id": 429066,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2019-10-03",
+      "effectiveDate": "2019-10-03",
+      "resolutionDate": "2019-10-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals reassigned C Joe Hudson to the minor leagues."
+    },
+    {
+      "id": 431999,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2019-11-01",
+      "effectiveDate": "2019-11-01",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "St. Louis Cardinals sent C Joe Hudson outright to Memphis Redbirds."
+    },
+    {
+      "id": 432345,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2019-11-04",
+      "effectiveDate": "2019-11-04",
+      "resolutionDate": "2019-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Joe Hudson elected free agency."
+    },
+    {
+      "id": 437263,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2020-01-22",
+      "effectiveDate": "2020-01-22",
+      "resolutionDate": "2020-01-22",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Seattle Mariners signed free agent C Joe Hudson to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 437264,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2020-01-27",
+      "effectiveDate": "2020-01-27",
+      "resolutionDate": "2020-01-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Tacoma Rainiers."
+    },
+    {
+      "id": 447333,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 3274,
+        "name": "Mariners Alternate Training Site",
+        "link": "/api/v1/teams/3274"
+      },
+      "date": "2020-07-18",
+      "effectiveDate": "2020-07-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Mariners Alternate Training Site from Tacoma Rainiers."
+    },
+    {
+      "id": 448105,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 3274,
+        "name": "Mariners Alternate Training Site",
+        "link": "/api/v1/teams/3274"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2020-07-23",
+      "effectiveDate": "2020-08-14",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Seattle Mariners selected the contract of Joe Hudson from Mariners Alternate Training Site."
+    },
+    {
+      "id": 449392,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 3274,
+        "name": "Mariners Alternate Training Site",
+        "link": "/api/v1/teams/3274"
+      },
+      "date": "2020-08-14",
+      "effectiveDate": "2020-08-14",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned C Joe Hudson to Mariners Alternate Training Site."
+    },
+    {
+      "id": 450333,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 3274,
+        "name": "Mariners Alternate Training Site",
+        "link": "/api/v1/teams/3274"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2020-08-30",
+      "effectiveDate": "2020-09-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled Joe Hudson from Mariners Alternate Training Site."
+    },
+    {
+      "id": 450537,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 3274,
+        "name": "Mariners Alternate Training Site",
+        "link": "/api/v1/teams/3274"
+      },
+      "date": "2020-09-01",
+      "effectiveDate": "2020-09-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned C Joe Hudson to Mariners Alternate Training Site."
+    },
+    {
+      "id": 452023,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 3274,
+        "name": "Mariners Alternate Training Site",
+        "link": "/api/v1/teams/3274"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2020-09-27",
+      "effectiveDate": "2020-09-27",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled C Joe Hudson from Mariners Alternate Training Site."
+    },
+    {
+      "id": 453865,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2020-10-19",
+      "effectiveDate": "2020-10-19",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Seattle Mariners sent C Joe Hudson outright to Tacoma Rainiers."
+    },
+    {
+      "id": 460464,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2021-01-25",
+      "effectiveDate": "2021-01-25",
+      "resolutionDate": "2021-01-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Indianapolis Indians."
+    },
+    {
+      "id": 460463,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2021-01-25",
+      "effectiveDate": "2021-01-25",
+      "resolutionDate": "2021-01-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Pittsburgh Pirates signed free agent C Joe Hudson to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 474748,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2021-01-25",
+      "effectiveDate": "2021-01-25",
+      "resolutionDate": "2021-01-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Pittsburgh Pirates signed free agent C Joe Hudson."
+    },
+    {
+      "id": 482162,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 3288,
+        "name": "Pirates Alternate Training Site",
+        "link": "/api/v1/teams/3288"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2021-05-01",
+      "effectiveDate": "2021-05-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Indianapolis Indians from Pirates Alternate Training Site."
+    },
+    {
+      "id": 512550,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2021-08-17",
+      "effectiveDate": "2021-08-16",
+      "resolutionDate": "2021-08-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians placed C Joe Hudson on the 7-day injured list."
+    },
+    {
+      "id": 515756,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2021-09-03",
+      "effectiveDate": "2021-09-03",
+      "resolutionDate": "2021-09-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians activated C Joe Hudson from the 7-day injured list."
+    },
+    {
+      "id": 519840,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2021-10-01",
+      "effectiveDate": "2021-10-01",
+      "resolutionDate": "2021-10-01",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Indianapolis Indians released C Joe Hudson."
+    },
+    {
+      "id": 605683,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2022-03-10",
+      "effectiveDate": "2022-03-10",
+      "resolutionDate": "2022-03-10",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Tampa Bay Rays signed free agent C Joe Hudson to a minor league contract."
+    },
+    {
+      "id": 605684,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2022-03-11",
+      "effectiveDate": "2022-03-11",
+      "resolutionDate": "2022-03-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Durham Bulls."
+    },
+    {
+      "id": 608477,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2022-03-13",
+      "effectiveDate": "2022-03-13",
+      "resolutionDate": "2022-03-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "C Joe Hudson roster status changed by Tampa Bay Rays."
+    },
+    {
+      "id": 608268,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2022-03-13",
+      "effectiveDate": "2022-03-13",
+      "resolutionDate": "2022-03-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "C Joe Hudson roster status changed by Tampa Bay Rays."
+    },
+    {
+      "id": 605861,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2022-03-13",
+      "effectiveDate": "2022-03-13",
+      "resolutionDate": "2022-03-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Tampa Bay Rays invited non-roster C Joe Hudson to spring training."
+    },
+    {
+      "id": 657144,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2022-10-27",
+      "effectiveDate": "2022-10-27",
+      "resolutionDate": "2022-10-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 658118,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2022-10-27",
+      "effectiveDate": "2022-10-27",
+      "resolutionDate": "2022-10-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aguilas Cibaenas activated C Joe Hudson."
+    },
+    {
+      "id": 670888,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2022-10-27",
+      "effectiveDate": "2022-10-27",
+      "resolutionDate": "2022-10-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aguilas Cibaenas activated C Joe Hudson."
+    },
+    {
+      "id": 659870,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2022-11-10",
+      "effectiveDate": "2022-11-10",
+      "resolutionDate": "2022-11-10",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Joe Hudson elected free agency."
+    },
+    {
+      "id": 662526,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2022-12-05",
+      "effectiveDate": "2022-12-05",
+      "resolutionDate": "2022-12-05",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent C Joe Hudson to a minor league contract."
+    },
+    {
+      "id": 679132,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2022-12-05",
+      "effectiveDate": "2022-12-05",
+      "resolutionDate": "2022-12-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "C Joe Hudson roster status changed by Atlanta Braves."
+    },
+    {
+      "id": 667627,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2022-12-05",
+      "effectiveDate": "2022-12-05",
+      "resolutionDate": "2022-12-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "C Joe Hudson roster status changed by Atlanta Braves."
+    },
+    {
+      "id": 662527,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2022-12-06",
+      "effectiveDate": "2022-12-06",
+      "resolutionDate": "2022-12-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Gwinnett Stripers."
+    },
+    {
+      "id": 693627,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-05-19",
+      "effectiveDate": "2023-05-19",
+      "resolutionDate": "2023-05-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers placed C Joe Hudson on the 7-day injured list."
+    },
+    {
+      "id": 696664,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-05-27",
+      "effectiveDate": "2023-05-27",
+      "resolutionDate": "2023-05-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers activated C Joe Hudson from the 7-day injured list."
+    },
+    {
+      "id": 706010,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-06-21",
+      "effectiveDate": "2023-06-21",
+      "resolutionDate": "2023-06-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers placed C Joe Hudson on the 7-day injured list."
+    },
+    {
+      "id": 708559,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-07-03",
+      "effectiveDate": "2023-07-03",
+      "resolutionDate": "2023-07-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers activated C Joe Hudson from the 7-day injured list."
+    },
+    {
+      "id": 726345,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-09-22",
+      "effectiveDate": "2023-09-22",
+      "resolutionDate": "2023-09-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers placed C Joe Hudson on the 7-day injured list."
+    },
+    {
+      "id": 727083,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-09-29",
+      "effectiveDate": "2023-09-29",
+      "resolutionDate": "2023-09-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers activated C Joe Hudson from the 7-day injured list."
+    },
+    {
+      "id": 731609,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-11-06",
+      "effectiveDate": "2023-11-06",
+      "resolutionDate": "2023-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Joe Hudson elected free agency."
+    },
+    {
+      "id": 735631,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2023-12-14",
+      "effectiveDate": "2023-12-14",
+      "resolutionDate": "2023-12-14",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago Cubs signed free agent C Joe Hudson to a minor league contract."
+    },
+    {
+      "id": 740051,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2023-12-14",
+      "effectiveDate": "2023-12-14",
+      "resolutionDate": "2023-12-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "C Joe Hudson roster status changed by Chicago Cubs."
+    },
+    {
+      "id": 735630,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2023-12-19",
+      "effectiveDate": "2023-12-19",
+      "resolutionDate": "2023-12-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gigantes del Cibao activated C Joe Hudson."
+    },
+    {
+      "id": 735425,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2023-12-19",
+      "effectiveDate": "2023-12-19",
+      "resolutionDate": "2023-12-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 735438,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2023-12-19",
+      "effectiveDate": "2023-12-19",
+      "resolutionDate": "2023-12-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gigantes del Cibao activated C Joe Hudson."
+    },
+    {
+      "id": 757991,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2023-12-21",
+      "effectiveDate": "2023-12-21",
+      "resolutionDate": "2023-12-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs activated C Joe Hudson."
+    },
+    {
+      "id": 735632,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2023-12-21",
+      "effectiveDate": "2023-12-21",
+      "resolutionDate": "2023-12-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Iowa Cubs."
+    },
+    {
+      "id": 761228,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2024-04-05",
+      "effectiveDate": "2024-04-05",
+      "resolutionDate": "2024-04-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs transferred C Joe Hudson to the Development List."
+    },
+    {
+      "id": 762938,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2024-04-11",
+      "effectiveDate": "2024-04-11",
+      "resolutionDate": "2024-04-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Binghamton Rumble Ponies."
+    },
+    {
+      "id": 762937,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-04-11",
+      "effectiveDate": "2024-04-11",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Chicago Cubs traded C Joe Hudson to New York Mets."
+    },
+    {
+      "id": 765567,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2024-04-13",
+      "effectiveDate": "2024-04-13",
+      "resolutionDate": "2024-04-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Mets activated C Joe Hudson."
+    },
+    {
+      "id": 765566,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2024-04-13",
+      "effectiveDate": "2024-04-13",
+      "resolutionDate": "2024-04-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Mets activated C Joe Hudson."
+    },
+    {
+      "id": 766811,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2024-04-13",
+      "effectiveDate": "2024-04-13",
+      "resolutionDate": "2024-04-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Mets activated C Joe Hudson."
+    },
+    {
+      "id": 763323,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2024-04-13",
+      "effectiveDate": "2024-04-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Syracuse Mets from Binghamton Rumble Ponies."
+    },
+    {
+      "id": 778217,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-06-05",
+      "effectiveDate": "2024-06-05",
+      "resolutionDate": "2024-06-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets reassigned C Joe Hudson to the minor leagues."
+    },
+    {
+      "id": 778213,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-06-05",
+      "effectiveDate": "2024-06-05",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Mets selected the contract of C Joe Hudson from Syracuse Mets."
+    },
+    {
+      "id": 778214,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2024-06-05",
+      "effectiveDate": "2024-06-05",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Mets optioned C Joe Hudson to Syracuse Mets."
+    },
+    {
+      "id": 781951,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-06-21",
+      "effectiveDate": "2024-06-21",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Mets recalled C Joe Hudson from Syracuse Mets."
+    },
+    {
+      "id": 782468,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-06-24",
+      "effectiveDate": "2024-06-24",
+      "resolutionDate": "2024-06-24",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Mets designated C Joe Hudson for assignment."
+    },
+    {
+      "id": 783170,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2024-06-26",
+      "effectiveDate": "2024-06-26",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "New York Mets sent C Joe Hudson outright to Syracuse Mets."
+    },
+    {
+      "id": 787200,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2024-07-14",
+      "effectiveDate": "2024-07-14",
+      "resolutionDate": "2024-07-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Mets placed C Joe Hudson on the 7-day injured list."
+    },
+    {
+      "id": 797343,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2024-09-01",
+      "effectiveDate": "2024-09-01",
+      "resolutionDate": "2024-09-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Mets activated C Joe Hudson from the 7-day injured list."
+    },
+    {
+      "id": 802886,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2024-10-21",
+      "effectiveDate": "2024-10-21",
+      "resolutionDate": "2024-10-21",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Joe Hudson elected free agency."
+    },
+    {
+      "id": 807018,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2024-11-25",
+      "effectiveDate": "2024-11-25",
+      "resolutionDate": "2024-11-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 810854,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2024-12-09",
+      "effectiveDate": "2024-12-09",
+      "resolutionDate": "2024-12-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "C Joe Hudson roster status changed by Houston Astros."
+    },
+    {
+      "id": 808012,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2024-12-09",
+      "effectiveDate": "2024-12-09",
+      "resolutionDate": "2024-12-09",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Houston Astros signed free agent C Joe Hudson to a minor league contract."
+    },
+    {
+      "id": 808013,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2024-12-09",
+      "effectiveDate": "2024-12-09",
+      "resolutionDate": "2024-12-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Joe Hudson assigned to Sugar Land Space Cowboys."
+    },
+    {
+      "id": 846912,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-06-11",
+      "effectiveDate": "2025-06-11",
+      "resolutionDate": "2025-06-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sugar Land Space Cowboys placed C Joe Hudson on the 7-day injured list."
+    },
+    {
+      "id": 872114,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-09-26",
+      "effectiveDate": "2025-09-26",
+      "resolutionDate": "2025-09-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sugar Land Space Cowboys activated C Joe Hudson from the 7-day injured list."
+    },
+    {
+      "id": 876083,
+      "person": {
+        "id": 621529,
+        "fullName": "Joe Hudson",
+        "link": "/api/v1/people/621529",
+        "nameSlug": "joe-hudson-621529"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Joe Hudson elected free agency."
+    }
+  ]
+}

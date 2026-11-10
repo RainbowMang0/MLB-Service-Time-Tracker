@@ -1,0 +1,807 @@
+{
+  "player_id": 425904,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:46bcdb93680cebb2e3a09136989b98f4d83093394637e4abc340750b72bbbff4",
+  "transactions": [
+    {
+      "id": 5133,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2009-05-15",
+      "effectiveDate": "2009-05-14",
+      "resolutionDate": "2009-05-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres placed SS Luis Rodriguez on the 15-day disabled list retroactive to May 14, 2009. Sprained left ankle"
+    },
+    {
+      "id": 8518,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "date": "2009-06-06",
+      "effectiveDate": "2009-06-06",
+      "resolutionDate": "2009-06-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres sent SS Luis Rodriguez on a rehab assignment to Lake Elsinore Storm."
+    },
+    {
+      "id": 9253,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2009-06-12",
+      "effectiveDate": "2009-10-12",
+      "resolutionDate": "2009-06-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Luis Rodriguez roster status changed by San Diego Padres."
+    },
+    {
+      "id": 25756,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 699,
+        "name": "Tigres de Aragua",
+        "link": "/api/v1/teams/699"
+      },
+      "date": "2009-10-08",
+      "effectiveDate": "2009-10-08",
+      "resolutionDate": "2009-10-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Luis Rodriguez assigned to Tigres de Aragua."
+    },
+    {
+      "id": 26151,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 248,
+        "name": "Portland Beavers",
+        "link": "/api/v1/teams/248"
+      },
+      "date": "2009-10-12",
+      "effectiveDate": "2009-10-13",
+      "resolutionDate": "2009-10-13",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "San Diego Padres sent Luis Rodriguez outright to Portland Beavers."
+    },
+    {
+      "id": 30226,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2009-12-02",
+      "effectiveDate": "2009-12-02",
+      "resolutionDate": "2009-12-02",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cleveland Indians signed free agent SS Luis Rodriguez to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 31278,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "fromTeam": {
+        "id": 699,
+        "name": "Tigres de Aragua",
+        "link": "/api/v1/teams/699"
+      },
+      "toTeam": {
+        "id": 696,
+        "name": "Navegantes del Magallanes",
+        "link": "/api/v1/teams/696"
+      },
+      "date": "2010-01-11",
+      "effectiveDate": "2010-01-11",
+      "resolutionDate": "2010-01-11",
+      "typeCode": "TRN",
+      "typeDesc": "Transferred",
+      "description": "SS Luis Rodriguez transferred to Navegantes del Magallanes from Tigres de Aragua."
+    },
+    {
+      "id": 37610,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2010-04-08",
+      "effectiveDate": "2010-04-08",
+      "resolutionDate": "2010-04-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Rodriguez assigned to Columbus Clippers from Cleveland Indians."
+    },
+    {
+      "id": 41127,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 545,
+        "name": "Mahoning Valley Scrappers",
+        "link": "/api/v1/teams/545"
+      },
+      "date": "2010-04-27",
+      "effectiveDate": "2010-04-27",
+      "resolutionDate": "2010-04-27",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Mahoning Valley Scrappers released SS Luis Rodriguez."
+    },
+    {
+      "id": 41128,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2010-04-28",
+      "effectiveDate": "2010-04-28",
+      "resolutionDate": "2010-04-28",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago White Sox signed free agent SS Luis Rodriguez to a minor league contract."
+    },
+    {
+      "id": 41129,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2010-04-29",
+      "effectiveDate": "2010-04-29",
+      "resolutionDate": "2010-04-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Luis Rodriguez assigned to Charlotte Knights from Chicago White Sox."
+    },
+    {
+      "id": 67291,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2010-08-17",
+      "effectiveDate": "2010-08-17",
+      "resolutionDate": "2010-08-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights placed 2B Luis Rodriguez on the 7-day disabled list."
+    },
+    {
+      "id": 68930,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2010-08-31",
+      "effectiveDate": "2010-08-31",
+      "resolutionDate": "2010-08-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights activated 2B Luis Rodriguez from the 7-day disabled list."
+    },
+    {
+      "id": 71690,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2010-10-08",
+      "effectiveDate": "2010-10-08",
+      "resolutionDate": "2010-10-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Luis Rodriguez assigned to Tiburones de La Guaira."
+    },
+    {
+      "id": 73668,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2010-11-06",
+      "effectiveDate": "2010-11-06",
+      "resolutionDate": "2010-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "2B Luis Rodriguez elected free agency."
+    },
+    {
+      "id": 74884,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2010-11-24",
+      "effectiveDate": "2010-11-24",
+      "resolutionDate": "2010-11-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Seattle Mariners signed free agent 2B Luis Rodriguez to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 74885,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2010-11-24",
+      "effectiveDate": "2010-11-24",
+      "resolutionDate": "2010-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Luis Rodriguez assigned to Tacoma Rainiers."
+    },
+    {
+      "id": 80512,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2011-03-30",
+      "effectiveDate": "2011-03-30",
+      "resolutionDate": "2011-03-31",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Seattle Mariners selected the contract of Luis Rodriguez from Tacoma Rainiers."
+    },
+    {
+      "id": 90974,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2011-06-16",
+      "effectiveDate": "2011-06-16",
+      "resolutionDate": "2011-06-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned 2B Luis Rodriguez to Tacoma Rainiers."
+    },
+    {
+      "id": 93643,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2011-06-23",
+      "effectiveDate": "2011-06-23",
+      "resolutionDate": "2011-06-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tacoma Rainiers placed 2B Luis Rodriguez on the 7-day disabled list."
+    },
+    {
+      "id": 98455,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 403,
+        "name": "Everett AquaSox",
+        "link": "/api/v1/teams/403"
+      },
+      "date": "2011-07-28",
+      "effectiveDate": "2011-07-28",
+      "resolutionDate": "2011-07-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent IF Luis Rodriguez on a rehab assignment to Everett AquaSox."
+    },
+    {
+      "id": 98746,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2011-07-31",
+      "effectiveDate": "2011-07-31",
+      "resolutionDate": "2011-07-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Luis Rodriguez roster status changed by Tacoma Rainiers."
+    },
+    {
+      "id": 99796,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2011-08-08",
+      "effectiveDate": "2011-08-09",
+      "resolutionDate": "2011-08-08",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled Luis Rodriguez from Tacoma Rainiers."
+    },
+    {
+      "id": 105501,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2011-11-02",
+      "effectiveDate": "2011-11-02",
+      "resolutionDate": "2011-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "2B Luis Rodriguez elected free agency."
+    },
+    {
+      "id": 107189,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2011-11-17",
+      "effectiveDate": "2011-11-17",
+      "resolutionDate": "2011-11-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Seattle Mariners signed free agent SS Luis Rodriguez to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 113795,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2012-04-04",
+      "effectiveDate": "2012-04-04",
+      "resolutionDate": "2012-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Rodriguez assigned to Tacoma Rainiers."
+    },
+    {
+      "id": 135862,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 695,
+        "name": "Leones del Caracas",
+        "link": "/api/v1/teams/695"
+      },
+      "date": "2012-09-26",
+      "effectiveDate": "2012-09-26",
+      "resolutionDate": "2012-09-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Luis Rodriguez assigned to Leones del Caracas."
+    },
+    {
+      "id": 139444,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2012-11-02",
+      "effectiveDate": "2012-11-02",
+      "resolutionDate": "2012-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "SS Luis Rodriguez elected free agency."
+    },
+    {
+      "id": 141004,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 4684,
+        "name": "Estrellas Occidente",
+        "link": "/api/v1/teams/4684"
+      },
+      "date": "2012-12-10",
+      "effectiveDate": "2012-12-10",
+      "resolutionDate": "2012-12-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luis Rodriguez assigned to LVBP All-Stars."
+    },
+    {
+      "id": 141471,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2012-12-17",
+      "effectiveDate": "2012-12-17",
+      "resolutionDate": "2012-12-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Angels signed free agent 2B Luis Rodriguez to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 166551,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2013-08-01",
+      "effectiveDate": "2013-08-01",
+      "resolutionDate": "2013-08-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt Lake Bees placed 2B Luis Rodriguez on the 7-day disabled list. Strained left thumb."
+    },
+    {
+      "id": 167657,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2013-08-10",
+      "effectiveDate": "2013-08-10",
+      "resolutionDate": "2013-08-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt Lake Bees activated 2B Luis Rodriguez from the 7-day disabled list."
+    },
+    {
+      "id": 172479,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 695,
+        "name": "Leones del Caracas",
+        "link": "/api/v1/teams/695"
+      },
+      "date": "2013-10-09",
+      "effectiveDate": "2013-10-09",
+      "resolutionDate": "2013-10-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Luis Antonio Rodriguez assigned to Leones del Caracas."
+    },
+    {
+      "id": 174580,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2013-11-04",
+      "effectiveDate": "2013-11-04",
+      "resolutionDate": "2013-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "2B Luis Rodriguez elected free agency."
+    },
+    {
+      "id": 187442,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 447,
+        "name": "Algodoneros Union Laguna",
+        "link": "/api/v1/teams/447"
+      },
+      "date": "2014-05-01",
+      "effectiveDate": "2014-05-01",
+      "resolutionDate": "2014-05-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Luis Antonio Rodriguez assigned to Vaqueros de la Laguna."
+    },
+    {
+      "id": 189077,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 447,
+        "name": "Algodoneros Union Laguna",
+        "link": "/api/v1/teams/447"
+      },
+      "date": "2014-05-15",
+      "effectiveDate": "2014-05-15",
+      "resolutionDate": "2014-05-15",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Vaqueros de la Laguna released 2B Luis Antonio Rodriguez."
+    },
+    {
+      "id": 236429,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 579,
+        "name": "Guerreros de Oaxaca",
+        "link": "/api/v1/teams/579"
+      },
+      "date": "2015-07-05",
+      "effectiveDate": "2015-07-05",
+      "resolutionDate": "2015-07-05",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Guerreros de Oaxaca signed free agent 2B Luis Antonio Rodriguez."
+    },
+    {
+      "id": 245529,
+      "person": {
+        "id": 425904,
+        "fullName": "Luis Antonio Rodriguez",
+        "link": "/api/v1/people/425904",
+        "nameSlug": "luis-antonio-rodriguez-425904"
+      },
+      "toTeam": {
+        "id": 696,
+        "name": "Navegantes del Magallanes",
+        "link": "/api/v1/teams/696"
+      },
+      "date": "2015-09-18",
+      "effectiveDate": "2015-09-18",
+      "resolutionDate": "2015-09-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Luis Antonio Rodriguez assigned to Navegantes del Magallanes."
+    }
+  ]
+}

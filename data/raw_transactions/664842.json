@@ -1,0 +1,587 @@
+{
+  "player_id": 664842,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:9f4dbba4c4ec28703013e10b6b279427fd7241025cdce80fa5577d703663fa1a",
+  "transactions": [
+    {
+      "id": 233004,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2015-06-20",
+      "effectiveDate": "2015-06-20",
+      "resolutionDate": "2015-06-20",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "New York Mets signed OF Kevin Kaczmarski."
+    },
+    {
+      "id": 233005,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "toTeam": {
+        "id": 506,
+        "name": "Kingsport Axmen",
+        "link": "/api/v1/teams/506"
+      },
+      "date": "2015-06-21",
+      "effectiveDate": "2015-06-21",
+      "resolutionDate": "2015-06-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Kevin Kaczmarski assigned to Kingsport Mets."
+    },
+    {
+      "id": 257974,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2016-03-25",
+      "effectiveDate": "2016-03-25",
+      "resolutionDate": "2016-03-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Kevin Kaczmarski assigned to New York Mets."
+    },
+    {
+      "id": 260208,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "fromTeam": {
+        "id": 506,
+        "name": "Kingsport Axmen",
+        "link": "/api/v1/teams/506"
+      },
+      "toTeam": {
+        "id": 3705,
+        "name": "Columbia Fireflies",
+        "link": "/api/v1/teams/3705"
+      },
+      "date": "2016-04-05",
+      "effectiveDate": "2016-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Kevin Kaczmarski assigned to Columbia Fireflies from Kingsport Mets."
+    },
+    {
+      "id": 263106,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "toTeam": {
+        "id": 3705,
+        "name": "Columbia Fireflies",
+        "link": "/api/v1/teams/3705"
+      },
+      "date": "2016-04-22",
+      "effectiveDate": "2016-04-22",
+      "resolutionDate": "2016-04-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbia Fireflies placed OF Kevin Kaczmarski on the 7-day disabled list."
+    },
+    {
+      "id": 264827,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "toTeam": {
+        "id": 3705,
+        "name": "Columbia Fireflies",
+        "link": "/api/v1/teams/3705"
+      },
+      "date": "2016-05-08",
+      "effectiveDate": "2016-05-08",
+      "resolutionDate": "2016-05-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Columbia Fireflies activated OF Kevin Kaczmarski from the 7-day disabled list."
+    },
+    {
+      "id": 285673,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2016-06-30",
+      "effectiveDate": "2016-06-30",
+      "resolutionDate": "2016-06-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Kevin Kaczmarski assigned to St. Lucie Mets."
+    },
+    {
+      "id": 278335,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "fromTeam": {
+        "id": 3705,
+        "name": "Columbia Fireflies",
+        "link": "/api/v1/teams/3705"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2016-07-13",
+      "effectiveDate": "2016-07-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Kevin Kaczmarski assigned to St. Lucie Mets from Columbia Fireflies."
+    },
+    {
+      "id": 286908,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2016-09-07",
+      "effectiveDate": "2016-09-07",
+      "resolutionDate": "2016-09-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Lucie Mets placed LF Kevin Kaczmarski on the reserve list."
+    },
+    {
+      "id": 287346,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2016-09-14",
+      "effectiveDate": "2016-09-14",
+      "resolutionDate": "2016-09-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Lucie Mets activated LF Kevin Kaczmarski."
+    },
+    {
+      "id": 299679,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2017-03-08",
+      "effectiveDate": "2017-03-08",
+      "resolutionDate": "2017-03-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Kevin Kaczmarski assigned to New York Mets."
+    },
+    {
+      "id": 304221,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "fromTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2017-04-05",
+      "effectiveDate": "2017-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Kevin Kaczmarski assigned to Binghamton Rumble Ponies from St. Lucie Mets."
+    },
+    {
+      "id": 304398,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2017-04-06",
+      "effectiveDate": "2017-04-06",
+      "resolutionDate": "2017-04-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Binghamton Rumble Ponies placed LF Kevin Kaczmarski on the temporarily inactive list."
+    },
+    {
+      "id": 304965,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2017-04-09",
+      "effectiveDate": "2017-04-09",
+      "resolutionDate": "2017-04-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Binghamton Rumble Ponies activated RF Kevin Kaczmarski from the temporarily inactive list."
+    },
+    {
+      "id": 340134,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2018-01-19",
+      "effectiveDate": "2018-01-19",
+      "resolutionDate": "2018-01-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Mets invited non-roster OF Kevin Kaczmarski to spring training."
+    },
+    {
+      "id": 349016,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "fromTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2018-04-05",
+      "effectiveDate": "2018-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Kevin Kaczmarski assigned to Las Vegas 51s from Binghamton Rumble Ponies."
+    },
+    {
+      "id": 353489,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2018-05-12",
+      "effectiveDate": "2018-05-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Kevin Kaczmarski assigned to St. Lucie Mets from Las Vegas 51s."
+    },
+    {
+      "id": 355183,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "fromTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2018-05-25",
+      "effectiveDate": "2018-05-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Kevin Kaczmarski assigned to Las Vegas 51s from St. Lucie Mets."
+    },
+    {
+      "id": 363744,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2018-06-22",
+      "effectiveDate": "2018-07-11",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Mets selected the contract of Kevin Kaczmarski from Las Vegas 51s."
+    },
+    {
+      "id": 367849,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2018-07-11",
+      "effectiveDate": "2018-07-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Mets optioned RF Kevin Kaczmarski to Las Vegas 51s."
+    },
+    {
+      "id": 372731,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2018-08-02",
+      "effectiveDate": "2018-08-02",
+      "resolutionDate": "2018-08-02",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Mets designated RF Kevin Kaczmarski for assignment."
+    },
+    {
+      "id": 373315,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2018-08-06",
+      "effectiveDate": "2018-09-28",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "New York Mets sent Kevin Kaczmarski outright to Las Vegas 51s."
+    },
+    {
+      "id": 388895,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2019-02-25",
+      "effectiveDate": "2019-02-25",
+      "resolutionDate": "2019-02-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Kevin Kaczmarski assigned to New York Mets."
+    },
+    {
+      "id": 395245,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "fromTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2019-04-04",
+      "effectiveDate": "2019-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Kevin Kaczmarski assigned to Binghamton Rumble Ponies from Syracuse Mets."
+    },
+    {
+      "id": 406581,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2019-06-08",
+      "effectiveDate": "2019-06-06",
+      "resolutionDate": "2019-06-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Binghamton Rumble Ponies placed CF Kevin Kaczmarski on the 7-day injured list retroactive to June 6, 2019."
+    },
+    {
+      "id": 429345,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2019-09-12",
+      "effectiveDate": "2019-09-12",
+      "resolutionDate": "2019-09-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Binghamton Rumble Ponies activated CF Kevin Kaczmarski from the 7-day injured list."
+    },
+    {
+      "id": 429346,
+      "person": {
+        "id": 664842,
+        "fullName": "Kevin Kaczmarski",
+        "link": "/api/v1/people/664842",
+        "nameSlug": "kevin-kaczmarski-664842"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2019-09-20",
+      "effectiveDate": "2019-09-20",
+      "resolutionDate": "2019-09-20",
+      "typeCode": "RET",
+      "typeDesc": "Retired",
+      "description": "CF Kevin Kaczmarski retired."
+    }
+  ]
+}

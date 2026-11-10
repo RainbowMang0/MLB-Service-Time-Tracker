@@ -1,0 +1,2126 @@
+{
+  "player_id": 643493,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:b2ab9f030a408235347336daa356412ed397c5536f3e5b481a7439e3f479a740",
+  "transactions": [
+    {
+      "id": 158141,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2013-06-15",
+      "effectiveDate": "2013-06-15",
+      "resolutionDate": "2013-06-15",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Tampa Bay Rays signed RHP Austin Pruitt."
+    },
+    {
+      "id": 158142,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 537,
+        "name": "Hudson Valley Renegades",
+        "link": "/api/v1/teams/537"
+      },
+      "date": "2013-06-16",
+      "effectiveDate": "2013-06-16",
+      "resolutionDate": "2013-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Austin Pruitt assigned to Hudson Valley Renegades."
+    },
+    {
+      "id": 164112,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 537,
+        "name": "Hudson Valley Renegades",
+        "link": "/api/v1/teams/537"
+      },
+      "toTeam": {
+        "id": 2498,
+        "name": "Bowling Green Hot Rods",
+        "link": "/api/v1/teams/2498"
+      },
+      "date": "2013-07-13",
+      "effectiveDate": "2013-07-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Austin Pruitt assigned to Bowling Green Hot Rods from Hudson Valley Renegades."
+    },
+    {
+      "id": 183873,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 2498,
+        "name": "Bowling Green Hot Rods",
+        "link": "/api/v1/teams/2498"
+      },
+      "toTeam": {
+        "id": 2730,
+        "name": "Charlotte Stone Crabs",
+        "link": "/api/v1/teams/2730"
+      },
+      "date": "2014-04-01",
+      "effectiveDate": "2014-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Austin Pruitt assigned to Charlotte Stone Crabs from Bowling Green Hot Rods."
+    },
+    {
+      "id": 220187,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 2730,
+        "name": "Charlotte Stone Crabs",
+        "link": "/api/v1/teams/2730"
+      },
+      "toTeam": {
+        "id": 421,
+        "name": "Montgomery Biscuits",
+        "link": "/api/v1/teams/421"
+      },
+      "date": "2015-04-06",
+      "effectiveDate": "2015-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Austin Pruitt assigned to Montgomery Biscuits from Charlotte Stone Crabs."
+    },
+    {
+      "id": 239869,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 421,
+        "name": "Montgomery Biscuits",
+        "link": "/api/v1/teams/421"
+      },
+      "date": "2015-07-28",
+      "effectiveDate": "2015-07-26",
+      "resolutionDate": "2015-07-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Montgomery Biscuits placed RHP Austin Pruitt on the 7-day disabled list retroactive to July 26, 2015."
+    },
+    {
+      "id": 240656,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 421,
+        "name": "Montgomery Biscuits",
+        "link": "/api/v1/teams/421"
+      },
+      "date": "2015-08-02",
+      "effectiveDate": "2015-08-02",
+      "resolutionDate": "2015-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Montgomery Biscuits activated RHP Austin Pruitt from the 7-day disabled list."
+    },
+    {
+      "id": 260320,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 421,
+        "name": "Montgomery Biscuits",
+        "link": "/api/v1/teams/421"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2016-04-05",
+      "effectiveDate": "2016-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Austin Pruitt assigned to Durham Bulls from Montgomery Biscuits."
+    },
+    {
+      "id": 293477,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2016-11-18",
+      "effectiveDate": "2017-05-09",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Tampa Bay Rays selected the contract of Austin Pruitt from Durham Bulls."
+    },
+    {
+      "id": 309778,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2017-05-09",
+      "effectiveDate": "2017-05-09",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned RHP Austin Pruitt to Durham Bulls."
+    },
+    {
+      "id": 312775,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2017-05-31",
+      "effectiveDate": "2017-06-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled Austin Pruitt from Durham Bulls."
+    },
+    {
+      "id": 320877,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2017-06-28",
+      "effectiveDate": "2017-06-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned RHP Austin Pruitt to Durham Bulls."
+    },
+    {
+      "id": 326501,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2017-07-28",
+      "effectiveDate": "2018-03-25",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled Austin Pruitt from Durham Bulls."
+    },
+    {
+      "id": 345315,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2018-03-25",
+      "effectiveDate": "2018-03-25",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned RHP Austin Pruitt to Durham Bulls."
+    },
+    {
+      "id": 345583,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2018-03-28",
+      "effectiveDate": "2018-04-27",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled Austin Pruitt from Durham Bulls."
+    },
+    {
+      "id": 351283,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2018-04-27",
+      "effectiveDate": "2018-04-27",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned RHP Austin Pruitt to Durham Bulls."
+    },
+    {
+      "id": 353642,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2018-05-13",
+      "effectiveDate": "2018-06-22",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled Austin Pruitt from Durham Bulls."
+    },
+    {
+      "id": 363740,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2018-06-22",
+      "effectiveDate": "2018-06-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned RHP Austin Pruitt to Durham Bulls."
+    },
+    {
+      "id": 364433,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2018-06-25",
+      "effectiveDate": "2018-07-04",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled Austin Pruitt from Durham Bulls."
+    },
+    {
+      "id": 366220,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2018-07-04",
+      "effectiveDate": "2018-07-04",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned RHP Austin Pruitt to Durham Bulls."
+    },
+    {
+      "id": 370896,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2018-07-25",
+      "effectiveDate": "2018-08-04",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled Austin Pruitt from Durham Bulls."
+    },
+    {
+      "id": 373080,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2018-08-04",
+      "effectiveDate": "2018-08-04",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned RHP Austin Pruitt to Durham Bulls."
+    },
+    {
+      "id": 378600,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2018-09-20",
+      "effectiveDate": "2018-09-20",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled RHP Austin Pruitt from Durham Bulls."
+    },
+    {
+      "id": 387786,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2019-02-11",
+      "effectiveDate": "2019-03-16",
+      "resolutionDate": "2019-02-11",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "Austin Pruitt changed number to ."
+    },
+    {
+      "id": 390946,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2019-03-16",
+      "effectiveDate": "2019-03-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned RHP Austin Pruitt to Durham Bulls."
+    },
+    {
+      "id": 397975,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2019-04-23",
+      "effectiveDate": "2019-04-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled Austin Pruitt from Durham Bulls."
+    },
+    {
+      "id": 398116,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2019-04-24",
+      "effectiveDate": "2019-04-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned RHP Austin Pruitt to Durham Bulls."
+    },
+    {
+      "id": 398428,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2019-04-25",
+      "effectiveDate": "2019-04-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled Austin Pruitt from Durham Bulls."
+    },
+    {
+      "id": 398868,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2019-04-28",
+      "effectiveDate": "2019-04-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned RHP Austin Pruitt to Durham Bulls."
+    },
+    {
+      "id": 399319,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2019-05-01",
+      "effectiveDate": "2019-05-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled Austin Pruitt from Durham Bulls."
+    },
+    {
+      "id": 399438,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2019-05-02",
+      "effectiveDate": "2019-05-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned RHP Austin Pruitt to Durham Bulls."
+    },
+    {
+      "id": 400426,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2019-05-08",
+      "effectiveDate": "2019-05-18",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled Austin Pruitt from Durham Bulls."
+    },
+    {
+      "id": 401913,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2019-05-18",
+      "effectiveDate": "2019-05-18",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned RHP Austin Pruitt to Durham Bulls."
+    },
+    {
+      "id": 406566,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2019-06-08",
+      "effectiveDate": "2019-06-09",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled Austin Pruitt from Durham Bulls."
+    },
+    {
+      "id": 406791,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2019-06-09",
+      "effectiveDate": "2019-06-09",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned RHP Austin Pruitt to Durham Bulls."
+    },
+    {
+      "id": 411457,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2019-06-20",
+      "effectiveDate": "2019-06-22",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled Austin Pruitt from Durham Bulls."
+    },
+    {
+      "id": 411962,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2019-06-22",
+      "effectiveDate": "2019-06-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned RHP Austin Pruitt to Durham Bulls."
+    },
+    {
+      "id": 414680,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2019-07-02",
+      "effectiveDate": "2019-07-04",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled Austin Pruitt from Durham Bulls."
+    },
+    {
+      "id": 415241,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2019-07-04",
+      "effectiveDate": "2019-07-04",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned RHP Austin Pruitt to Durham Bulls."
+    },
+    {
+      "id": 418182,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2019-07-17",
+      "effectiveDate": "2019-07-15",
+      "resolutionDate": "2019-07-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls placed RHP Austin Pruitt on the 7-day injured list retroactive to July 15, 2019."
+    },
+    {
+      "id": 419539,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2019-07-24",
+      "effectiveDate": "2019-07-24",
+      "resolutionDate": "2019-07-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls activated RHP Austin Pruitt from the 7-day injured list."
+    },
+    {
+      "id": 422157,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2019-08-05",
+      "effectiveDate": "2019-08-13",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled Austin Pruitt from Durham Bulls."
+    },
+    {
+      "id": 423549,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2019-08-13",
+      "effectiveDate": "2019-08-13",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned RHP Austin Pruitt to Durham Bulls."
+    },
+    {
+      "id": 425390,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2019-08-24",
+      "effectiveDate": "2019-08-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled RHP Austin Pruitt from Durham Bulls."
+    },
+    {
+      "id": 429052,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2019-10-02",
+      "effectiveDate": "2019-10-02",
+      "resolutionDate": "2019-10-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays reassigned RHP Austin Pruitt to the minor leagues."
+    },
+    {
+      "id": 433389,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2019-10-11",
+      "effectiveDate": "2019-10-11",
+      "resolutionDate": "2019-10-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays activated RHP Austin Pruitt."
+    },
+    {
+      "id": 436215,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2020-01-09",
+      "effectiveDate": "2020-01-09",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Tampa Bay Rays traded RHP Austin Pruitt to Houston Astros for RHP Peyton Battenfield and OF Cal Stevenson."
+    },
+    {
+      "id": 448001,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2020-07-23",
+      "effectiveDate": "2020-07-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros placed RHP Austin Pruitt on the 10-day injured list. Hairline fracture in his right elbow."
+    },
+    {
+      "id": 448960,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2020-08-06",
+      "effectiveDate": "2020-08-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros transferred RHP Austin Pruitt from the 10-day injured list to the 60-day injured list. Hairline fracture in his right elbow."
+    },
+    {
+      "id": 455154,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2020-11-02",
+      "effectiveDate": "2020-11-02",
+      "resolutionDate": "2020-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros activated RHP Austin Pruitt from the 60-day injured list."
+    },
+    {
+      "id": 476020,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2021-04-01",
+      "effectiveDate": "2021-03-29",
+      "resolutionDate": "2021-03-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros placed P Austin Pruitt on the 10 day disabled list."
+    },
+    {
+      "id": 476751,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2021-04-10",
+      "effectiveDate": "2021-04-10",
+      "resolutionDate": "2021-04-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros placed P Austin Pruitt on the 60 day injured list. Recovery from right elbow surgery."
+    },
+    {
+      "id": 494493,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 3712,
+        "name": "Fayetteville Woodpeckers",
+        "link": "/api/v1/teams/3712"
+      },
+      "date": "2021-06-15",
+      "effectiveDate": "2021-06-15",
+      "resolutionDate": "2021-06-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Houston Astros sent RHP Austin Pruitt on a rehab assignment to Fayetteville Woodpeckers."
+    },
+    {
+      "id": 496010,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2021-06-24",
+      "effectiveDate": "2021-06-24",
+      "resolutionDate": "2021-06-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Houston Astros sent RHP Austin Pruitt on a rehab assignment to Sugar Land Skeeters."
+    },
+    {
+      "id": 505211,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2021-07-16",
+      "effectiveDate": "2021-07-16",
+      "resolutionDate": "2021-07-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros activated RHP Austin Pruitt."
+    },
+    {
+      "id": 507627,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2021-07-28",
+      "effectiveDate": "2021-07-28",
+      "resolutionDate": "2021-07-28",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Houston Astros designated RHP Austin Pruitt for assignment."
+    },
+    {
+      "id": 507716,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2021-07-28",
+      "effectiveDate": "2021-07-28",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Houston Astros traded RF Bryan De La Cruz and RHP Austin Pruitt to Miami Marlins for RHP Yimi Garcia."
+    },
+    {
+      "id": 508318,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2021-07-30",
+      "effectiveDate": "2021-07-30",
+      "resolutionDate": "2021-07-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins activated RHP Austin Pruitt."
+    },
+    {
+      "id": 509770,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2021-08-05",
+      "effectiveDate": "2021-08-05",
+      "resolutionDate": "2021-08-05",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Miami Marlins designated RHP Austin Pruitt for assignment."
+    },
+    {
+      "id": 510471,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2021-08-07",
+      "effectiveDate": "2021-08-07",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Miami Marlins sent RHP Austin Pruitt outright to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 513247,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2021-08-20",
+      "effectiveDate": "2021-08-20",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Miami Marlins selected the contract of RHP Austin Pruitt from Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 515599,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2021-09-02",
+      "effectiveDate": "2021-09-02",
+      "resolutionDate": "2021-09-02",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Miami Marlins designated RHP Austin Pruitt for assignment."
+    },
+    {
+      "id": 516015,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2021-09-05",
+      "effectiveDate": "2021-09-05",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Miami Marlins sent RHP Austin Pruitt outright to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 520331,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2021-10-05",
+      "effectiveDate": "2021-10-05",
+      "resolutionDate": "2021-10-05",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Austin Pruitt elected free agency."
+    },
+    {
+      "id": 606304,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2022-03-14",
+      "effectiveDate": "2022-03-14",
+      "resolutionDate": "2022-03-14",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Oakland Athletics signed free agent RHP Austin Pruitt to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 611883,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2022-03-14",
+      "effectiveDate": "2022-03-14",
+      "resolutionDate": "2022-03-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Austin Pruitt roster status changed by Oakland Athletics."
+    },
+    {
+      "id": 606305,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2022-03-15",
+      "effectiveDate": "2022-03-15",
+      "resolutionDate": "2022-03-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Austin Pruitt assigned to Las Vegas Aviators."
+    },
+    {
+      "id": 624928,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2022-05-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Oakland Athletics recalled RHP Austin Pruitt from Las Vegas Aviators."
+    },
+    {
+      "id": 647836,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2022-08-22",
+      "effectiveDate": "2022-08-22",
+      "resolutionDate": "2022-08-22",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Oakland Athletics designated RHP Austin Pruitt for assignment."
+    },
+    {
+      "id": 648608,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2022-08-24",
+      "effectiveDate": "2022-08-24",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Oakland Athletics sent RHP Austin Pruitt outright to Las Vegas Aviators."
+    },
+    {
+      "id": 649232,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2022-08-27",
+      "effectiveDate": "2022-08-27",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Oakland Athletics selected the contract of RHP Austin Pruitt from Las Vegas Aviators."
+    },
+    {
+      "id": 657721,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2022-11-03",
+      "effectiveDate": "2022-11-03",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Oakland Athletics sent RHP Austin Pruitt outright to Las Vegas Aviators."
+    },
+    {
+      "id": 658442,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2022-11-07",
+      "effectiveDate": "2022-11-07",
+      "resolutionDate": "2022-11-07",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Austin Pruitt elected free agency."
+    },
+    {
+      "id": 671876,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2023-01-10",
+      "effectiveDate": "2023-01-10",
+      "resolutionDate": "2023-01-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Austin Pruitt roster status changed by Oakland Athletics."
+    },
+    {
+      "id": 665346,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2023-01-10",
+      "effectiveDate": "2023-01-10",
+      "resolutionDate": "2023-01-10",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Oakland Athletics signed free agent RHP Austin Pruitt to a minor league contract."
+    },
+    {
+      "id": 665347,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2023-01-15",
+      "effectiveDate": "2023-01-15",
+      "resolutionDate": "2023-01-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Austin Pruitt assigned to Las Vegas Aviators."
+    },
+    {
+      "id": 689124,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2023-05-04",
+      "effectiveDate": "2023-05-04",
+      "resolutionDate": "2023-05-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics activated RHP Austin Pruitt."
+    },
+    {
+      "id": 689115,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2023-05-04",
+      "effectiveDate": "2023-05-04",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Oakland Athletics selected the contract of RHP Austin Pruitt from Las Vegas Aviators."
+    },
+    {
+      "id": 720863,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2023-08-20",
+      "effectiveDate": "2023-08-17",
+      "resolutionDate": "2023-08-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics placed RHP Austin Pruitt on the 15-day injured list retroactive to August 17, 2023. Right forearm strain."
+    },
+    {
+      "id": 725742,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2023-09-19",
+      "effectiveDate": "2023-09-19",
+      "resolutionDate": "2023-09-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Oakland Athletics sent RHP Austin Pruitt on a rehab assignment to Las Vegas Aviators."
+    },
+    {
+      "id": 727264,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2023-09-19",
+      "effectiveDate": "2023-09-19",
+      "resolutionDate": "2023-09-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Oakland Athletics sent RHP Austin Pruitt on a rehab assignment to Las Vegas Aviators."
+    },
+    {
+      "id": 727438,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2023-10-02",
+      "effectiveDate": "2023-10-02",
+      "resolutionDate": "2023-10-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics activated RHP Austin Pruitt from the 15-day injured list."
+    },
+    {
+      "id": 728337,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2023-10-09",
+      "effectiveDate": "2023-10-09",
+      "resolutionDate": "2023-10-09",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Austin Pruitt elected free agency."
+    },
+    {
+      "id": 739343,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-01-30",
+      "effectiveDate": "2024-01-30",
+      "resolutionDate": "2024-01-30",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent RHP Austin Pruitt to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 739344,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2024-01-30",
+      "effectiveDate": "2024-01-30",
+      "resolutionDate": "2024-01-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Austin Pruitt assigned to Round Rock Express."
+    },
+    {
+      "id": 740099,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-01-30",
+      "effectiveDate": "2024-01-30",
+      "resolutionDate": "2024-01-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Austin Pruitt roster status changed by Texas Rangers."
+    },
+    {
+      "id": 763217,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-04-13",
+      "effectiveDate": "2024-04-13",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Texas Rangers selected the contract of RHP Austin Pruitt from Round Rock Express."
+    },
+    {
+      "id": 807938,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-04-21",
+      "effectiveDate": "2024-04-21",
+      "resolutionDate": "2024-04-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated RHP Austin Pruitt."
+    },
+    {
+      "id": 807940,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-04-22",
+      "effectiveDate": "2024-04-22",
+      "resolutionDate": "2024-04-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed RHP Austin Pruitt on the 15-day injured list."
+    },
+    {
+      "id": 773175,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-05-21",
+      "effectiveDate": "2024-05-21",
+      "resolutionDate": "2024-05-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers transferred RHP Austin Pruitt from the 15-day injured list to the 60-day injured list. Right knee medial meniscus injury."
+    },
+    {
+      "id": 783576,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 411,
+        "name": "ACL Rangers",
+        "link": "/api/v1/teams/411"
+      },
+      "date": "2024-06-28",
+      "effectiveDate": "2024-06-28",
+      "resolutionDate": "2024-06-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Austin Pruitt on a rehab assignment to ACL Rangers."
+    },
+    {
+      "id": 785927,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2024-07-09",
+      "effectiveDate": "2024-07-09",
+      "resolutionDate": "2024-07-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Austin Pruitt on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 790608,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-07-28",
+      "effectiveDate": "2024-07-28",
+      "resolutionDate": "2024-07-28",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Texas Rangers released RHP Austin Pruitt."
+    },
+    {
+      "id": 795612,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2024-08-20",
+      "effectiveDate": "2024-08-20",
+      "resolutionDate": "2024-08-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Austin Pruitt assigned to Las Vegas Aviators."
+    },
+    {
+      "id": 795611,
+      "person": {
+        "id": 643493,
+        "fullName": "Austin Pruitt",
+        "link": "/api/v1/people/643493",
+        "nameSlug": "austin-pruitt-643493"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2024-08-20",
+      "effectiveDate": "2024-08-20",
+      "resolutionDate": "2024-08-20",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Oakland Athletics signed free agent RHP Austin Pruitt to a minor league contract."
+    }
+  ]
+}

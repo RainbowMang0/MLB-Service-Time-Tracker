@@ -1,0 +1,943 @@
+{
+  "player_id": 678577,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:19fc9266d07b9a1948cb0f624d58016c1bde87655871066333d90b55437b23eb",
+  "transactions": [
+    {
+      "id": 337799,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2017-07-04",
+      "effectiveDate": "2017-07-04",
+      "resolutionDate": "2017-07-04",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Diego Padres signed free agent OF Junior Perez to a minor league contract."
+    },
+    {
+      "id": 356647,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 622,
+        "name": "DSL Padres Brown",
+        "link": "/api/v1/teams/622"
+      },
+      "date": "2018-06-01",
+      "effectiveDate": "2018-06-01",
+      "resolutionDate": "2018-06-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Junior Perez assigned to DSL Padres."
+    },
+    {
+      "id": 400305,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "fromTeam": {
+        "id": 622,
+        "name": "DSL Padres Brown",
+        "link": "/api/v1/teams/622"
+      },
+      "toTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "date": "2019-05-07",
+      "effectiveDate": "2019-05-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Junior Perez assigned to AZL Padres 1 from DSL Padres."
+    },
+    {
+      "id": 410391,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "fromTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "toTeam": {
+        "id": 5316,
+        "name": "AZL Padres 2",
+        "link": "/api/v1/teams/5316"
+      },
+      "date": "2019-06-18",
+      "effectiveDate": "2019-06-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Junior Perez assigned to AZL Padres 2 from AZL Padres 1."
+    },
+    {
+      "id": 428718,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 374,
+        "name": "San Diego Padres Prospects",
+        "link": "/api/v1/teams/374"
+      },
+      "date": "2019-09-30",
+      "effectiveDate": "2019-09-30",
+      "resolutionDate": "2019-09-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Junior Perez assigned to San Diego Padres Futures."
+    },
+    {
+      "id": 463142,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 462,
+        "name": "Vermont Lake Monsters",
+        "link": "/api/v1/teams/462"
+      },
+      "date": "2020-11-05",
+      "effectiveDate": "2020-11-05",
+      "resolutionDate": "2020-11-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Junior Perez assigned to Vermont Lake Monsters."
+    },
+    {
+      "id": 455376,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 462,
+        "name": "Vermont Lake Monsters",
+        "link": "/api/v1/teams/462"
+      },
+      "date": "2020-11-05",
+      "effectiveDate": "2020-11-05",
+      "resolutionDate": "2020-11-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Junior Perez assigned to Vermont Lake Monsters."
+    },
+    {
+      "id": 455332,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2020-11-05",
+      "effectiveDate": "2020-11-05",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "San Diego Padres traded CF Junior Perez to Oakland Athletics. PTBNL in Jorge Mateo trade, 6/29/20"
+    },
+    {
+      "id": 465486,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 3255,
+        "name": "Athletics Organization",
+        "link": "/api/v1/teams/3255"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Junior Perez assigned to Athletics Organization."
+    },
+    {
+      "id": 467750,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 3255,
+        "name": "Athletics Organization",
+        "link": "/api/v1/teams/3255"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Junior Perez assigned to Athletics Organization."
+    },
+    {
+      "id": 482319,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "fromTeam": {
+        "id": 3255,
+        "name": "Athletics Organization",
+        "link": "/api/v1/teams/3255"
+      },
+      "toTeam": {
+        "id": 524,
+        "name": "Stockton Ports",
+        "link": "/api/v1/teams/524"
+      },
+      "date": "2021-05-01",
+      "effectiveDate": "2021-05-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Junior Perez assigned to Stockton Ports from Athletics Organization."
+    },
+    {
+      "id": 488473,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 524,
+        "name": "Stockton Ports",
+        "link": "/api/v1/teams/524"
+      },
+      "date": "2021-05-01",
+      "effectiveDate": "2021-05-01",
+      "resolutionDate": "2021-05-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Junior Perez assigned to Stockton Ports."
+    },
+    {
+      "id": 489314,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 524,
+        "name": "Stockton Ports",
+        "link": "/api/v1/teams/524"
+      },
+      "date": "2021-05-01",
+      "effectiveDate": "2021-05-01",
+      "resolutionDate": "2021-05-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Junior Perez assigned to Stockton Ports."
+    },
+    {
+      "id": 515694,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 524,
+        "name": "Stockton Ports",
+        "link": "/api/v1/teams/524"
+      },
+      "date": "2021-09-01",
+      "effectiveDate": "2021-09-01",
+      "resolutionDate": "2021-09-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Stockton Ports placed OF Junior Perez on the 7-day injured list."
+    },
+    {
+      "id": 516428,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 524,
+        "name": "Stockton Ports",
+        "link": "/api/v1/teams/524"
+      },
+      "date": "2021-09-07",
+      "effectiveDate": "2021-09-07",
+      "resolutionDate": "2021-09-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Stockton Ports activated OF Junior Perez from the 7-day injured list."
+    },
+    {
+      "id": 676318,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2023-03-18",
+      "effectiveDate": "2023-03-18",
+      "resolutionDate": "2023-03-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Junior Perez and  assigned to Oakland Athletics."
+    },
+    {
+      "id": 681537,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "fromTeam": {
+        "id": 524,
+        "name": "Stockton Ports",
+        "link": "/api/v1/teams/524"
+      },
+      "toTeam": {
+        "id": 499,
+        "name": "Lansing Lugnuts",
+        "link": "/api/v1/teams/499"
+      },
+      "date": "2023-04-03",
+      "effectiveDate": "2023-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Junior Perez assigned to Lansing Lugnuts from Stockton Ports."
+    },
+    {
+      "id": 729241,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 668,
+        "name": "Toros del Este",
+        "link": "/api/v1/teams/668"
+      },
+      "date": "2023-10-19",
+      "effectiveDate": "2023-10-19",
+      "resolutionDate": "2023-10-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Junior Perez assigned to Toros del Este."
+    },
+    {
+      "id": 755138,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2024-03-13",
+      "effectiveDate": "2024-03-13",
+      "resolutionDate": "2024-03-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Junior Perez assigned to Oakland Athletics."
+    },
+    {
+      "id": 755323,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 372,
+        "name": "Athletics Prospects",
+        "link": "/api/v1/teams/372"
+      },
+      "date": "2024-03-14",
+      "effectiveDate": "2024-03-14",
+      "resolutionDate": "2024-03-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Junior Perez assigned to Oakland Athletics Prospects."
+    },
+    {
+      "id": 760803,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2024-04-05",
+      "effectiveDate": "2024-04-05",
+      "resolutionDate": "2024-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Junior Perez assigned to Midland RockHounds."
+    },
+    {
+      "id": 802623,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2024-10-16",
+      "effectiveDate": "2024-10-16",
+      "resolutionDate": "2024-10-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Junior Perez assigned to Estrellas Orientales."
+    },
+    {
+      "id": 817485,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2025-02-27",
+      "effectiveDate": "2025-02-27",
+      "resolutionDate": "2025-02-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Junior Perez assigned to Athletics."
+    },
+    {
+      "id": 820101,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2025-02-27",
+      "effectiveDate": "2025-02-27",
+      "resolutionDate": "2025-02-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "CF Junior Perez roster status changed by Athletics."
+    },
+    {
+      "id": 819698,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 372,
+        "name": "Athletics Prospects",
+        "link": "/api/v1/teams/372"
+      },
+      "date": "2025-03-11",
+      "effectiveDate": "2025-03-11",
+      "resolutionDate": "2025-03-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Junior Perez assigned to Athletics Prospects."
+    },
+    {
+      "id": 860856,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "fromTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2025-08-01",
+      "effectiveDate": "2025-08-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Junior Perez assigned to Las Vegas Aviators from Midland RockHounds."
+    },
+    {
+      "id": 873207,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2025-10-15",
+      "effectiveDate": "2025-10-15",
+      "resolutionDate": "2025-10-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Junior Perez assigned to Estrellas Orientales."
+    },
+    {
+      "id": 878048,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2025-10-15",
+      "effectiveDate": "2025-10-15",
+      "resolutionDate": "2025-10-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Estrellas Orientales activated CF Junior Perez."
+    },
+    {
+      "id": 877245,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2025-11-18",
+      "effectiveDate": "2025-11-18",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Athletics selected the contract of CF Junior Perez from Las Vegas Aviators."
+    },
+    {
+      "id": 890530,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 372,
+        "name": "Athletics Prospects",
+        "link": "/api/v1/teams/372"
+      },
+      "date": "2026-03-05",
+      "effectiveDate": "2026-03-05",
+      "resolutionDate": "2026-03-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Junior Perez assigned to Athletics Prospects."
+    },
+    {
+      "id": 891168,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2026-03-08",
+      "effectiveDate": "2026-03-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Athletics optioned CF Junior Perez to Las Vegas Aviators."
+    },
+    {
+      "id": 908924,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2026-05-14",
+      "effectiveDate": "2026-05-14",
+      "resolutionDate": "2026-05-14",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Athletics designated CF Junior Perez for assignment."
+    },
+    {
+      "id": 909511,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2026-05-16",
+      "effectiveDate": "2026-05-16",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Athletics traded CF Junior Perez to Chicago White Sox for LHP Jackson Nove."
+    },
+    {
+      "id": 909512,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2026-05-16",
+      "effectiveDate": "2026-05-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago White Sox optioned CF Junior Perez to Charlotte Knights."
+    },
+    {
+      "id": 910418,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2026-05-19",
+      "effectiveDate": "2026-05-19",
+      "resolutionDate": "2026-05-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights activated CF Junior Perez."
+    },
+    {
+      "id": 919912,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "fromTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2026-06-18",
+      "effectiveDate": "2026-06-18",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago White Sox recalled CF Junior Perez from Charlotte Knights."
+    },
+    {
+      "id": 931458,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2026-07-27",
+      "effectiveDate": "2026-07-27",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago White Sox optioned CF Junior Perez to Charlotte Knights."
+    },
+    {
+      "id": 944367,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "fromTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2026-09-28",
+      "effectiveDate": "2026-09-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago White Sox recalled CF Junior Perez from Charlotte Knights."
+    },
+    {
+      "id": 944527,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2026-09-29",
+      "effectiveDate": "2026-09-29",
+      "resolutionDate": "2026-09-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "CF Junior Perez roster status changed by Chicago White Sox."
+    },
+    {
+      "id": 947132,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2026-10-11",
+      "effectiveDate": "2026-10-11",
+      "resolutionDate": "2026-10-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago White Sox activated CF Junior Perez."
+    },
+    {
+      "id": 949500,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2026-10-21",
+      "effectiveDate": "2026-10-21",
+      "resolutionDate": "2026-10-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Estrellas Orientales activated CF Junior Perez."
+    },
+    {
+      "id": 946779,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2026-10-21",
+      "effectiveDate": "2026-10-21",
+      "resolutionDate": "2026-10-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Junior Perez assigned to Estrellas Orientales."
+    },
+    {
+      "id": 949529,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "CF Junior Perez elected free agency."
+    },
+    {
+      "id": 947641,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Chicago White Sox sent CF Junior Perez outright to Charlotte Knights."
+    }
+  ]
+}

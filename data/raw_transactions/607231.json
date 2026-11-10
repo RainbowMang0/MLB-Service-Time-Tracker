@@ -1,0 +1,1322 @@
+{
+  "player_id": 607231,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:b3512e7bd3920e10914b7962e5a3c453f1f6ea66a753781a74ce54420a5e8d54",
+  "transactions": [
+    {
+      "id": 99552,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2011-08-05",
+      "effectiveDate": "2011-08-05",
+      "resolutionDate": "2011-08-05",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "New York Mets signed RHP John Gant."
+    },
+    {
+      "id": 99553,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "date": "2011-08-06",
+      "effectiveDate": "2011-08-06",
+      "resolutionDate": "2011-08-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP John Gant assigned to GCL Mets from New York Mets."
+    },
+    {
+      "id": 125255,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 506,
+        "name": "Kingsport Axmen",
+        "link": "/api/v1/teams/506"
+      },
+      "date": "2012-06-01",
+      "effectiveDate": "2012-06-01",
+      "resolutionDate": "2012-06-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "John Gant assigned to Kingsport Mets."
+    },
+    {
+      "id": 134633,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 506,
+        "name": "Kingsport Axmen",
+        "link": "/api/v1/teams/506"
+      },
+      "toTeam": {
+        "id": 543,
+        "name": "Savannah Sand Gnats",
+        "link": "/api/v1/teams/543"
+      },
+      "date": "2012-08-31",
+      "effectiveDate": "2012-08-31",
+      "resolutionDate": "2012-08-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "John Gant assigned to Savannah Sand Gnats from Kingsport Mets."
+    },
+    {
+      "id": 158189,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 543,
+        "name": "Savannah Sand Gnats",
+        "link": "/api/v1/teams/543"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2013-04-03",
+      "effectiveDate": "2013-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP John Gant assigned to Brooklyn Cyclones from Savannah Sand Gnats."
+    },
+    {
+      "id": 166905,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 79,
+        "name": "NYP Blue All-Stars",
+        "link": "/api/v1/teams/79"
+      },
+      "date": "2013-08-12",
+      "effectiveDate": "2013-08-12",
+      "resolutionDate": "2013-08-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP John Gant assigned to NYP National League All-Stars."
+    },
+    {
+      "id": 182872,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "toTeam": {
+        "id": 543,
+        "name": "Savannah Sand Gnats",
+        "link": "/api/v1/teams/543"
+      },
+      "date": "2014-03-30",
+      "effectiveDate": "2014-03-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP John Gant assigned to Savannah Sand Gnats from Brooklyn Cyclones."
+    },
+    {
+      "id": 194865,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 75,
+        "name": "SAL South Division All-Stars",
+        "link": "/api/v1/teams/75"
+      },
+      "date": "2014-06-16",
+      "effectiveDate": "2014-06-16",
+      "resolutionDate": "2014-06-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "SAL South Division All-Stars activated RHP John Gant."
+    },
+    {
+      "id": 220345,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 543,
+        "name": "Savannah Sand Gnats",
+        "link": "/api/v1/teams/543"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2015-04-02",
+      "effectiveDate": "2015-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP John Gant assigned to Binghamton Mets from Savannah Sand Gnats."
+    },
+    {
+      "id": 226984,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2015-05-28",
+      "effectiveDate": "2015-05-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP John Gant assigned to St. Lucie Mets from Binghamton Mets."
+    },
+    {
+      "id": 236390,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2015-07-05",
+      "effectiveDate": "2015-07-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP John Gant assigned to Binghamton Mets from St. Lucie Mets."
+    },
+    {
+      "id": 239278,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2015-07-24",
+      "effectiveDate": "2015-07-24",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "New York Mets traded RHP John Gant and RHP Rob Whalen to Atlanta Braves for 3B Juan Uribe, LF Kelly Johnson and cash."
+    },
+    {
+      "id": 239422,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 430,
+        "name": "Mississippi Mud Monsters",
+        "link": "/api/v1/teams/430"
+      },
+      "date": "2015-07-25",
+      "effectiveDate": "2015-07-25",
+      "resolutionDate": "2015-07-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP John Gant assigned to Mississippi Braves."
+    },
+    {
+      "id": 250344,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 430,
+        "name": "Mississippi Mud Monsters",
+        "link": "/api/v1/teams/430"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2015-11-19",
+      "effectiveDate": "2016-04-10",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Atlanta Braves selected the contract of John Gant from Mississippi Braves."
+    },
+    {
+      "id": 261607,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2016-04-10",
+      "effectiveDate": "2016-04-10",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned RHP John Gant to Gwinnett Braves."
+    },
+    {
+      "id": 263680,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2016-04-27",
+      "effectiveDate": "2016-05-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled John Gant from Gwinnett Braves."
+    },
+    {
+      "id": 264221,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2016-05-02",
+      "effectiveDate": "2016-05-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned RHP John Gant to Gwinnett Braves."
+    },
+    {
+      "id": 266019,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2016-05-18",
+      "effectiveDate": "2016-05-20",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled John Gant from Gwinnett Braves."
+    },
+    {
+      "id": 266248,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2016-05-20",
+      "effectiveDate": "2016-05-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned RHP John Gant to Gwinnett Braves."
+    },
+    {
+      "id": 269407,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2016-06-04",
+      "effectiveDate": "2016-06-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled John Gant from Gwinnett Braves."
+    },
+    {
+      "id": 269607,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2016-06-06",
+      "effectiveDate": "2016-06-06",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned RHP John Gant to Gwinnett Braves."
+    },
+    {
+      "id": 270020,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2016-06-08",
+      "effectiveDate": "2016-06-08",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled RHP John Gant from Gwinnett Braves."
+    },
+    {
+      "id": 275783,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2016-06-28",
+      "effectiveDate": "2016-06-28",
+      "resolutionDate": "2016-06-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves placed RHP John Gant on the 15-day disabled list. Left oblique strain."
+    },
+    {
+      "id": 281619,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "date": "2016-08-01",
+      "effectiveDate": "2016-08-01",
+      "resolutionDate": "2016-08-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Atlanta Braves sent RHP John Gant on a rehab assignment to Rome Braves."
+    },
+    {
+      "id": 282806,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2016-08-06",
+      "effectiveDate": "2016-08-06",
+      "resolutionDate": "2016-08-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Atlanta Braves sent RHP John Gant on a rehab assignment to Gwinnett Braves."
+    },
+    {
+      "id": 284785,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2016-08-21",
+      "effectiveDate": "2016-08-28",
+      "resolutionDate": "2016-08-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "John Gant roster status changed by Atlanta Braves."
+    },
+    {
+      "id": 285531,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2016-08-28",
+      "effectiveDate": "2016-08-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned RHP John Gant to Gwinnett Braves."
+    },
+    {
+      "id": 285748,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2016-08-30",
+      "effectiveDate": "2016-08-30",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled RHP John Gant from Gwinnett Braves."
+    },
+    {
+      "id": 294308,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2016-12-01",
+      "effectiveDate": "2016-12-01",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "St. Louis Cardinals traded LHP Jaime Garcia to Atlanta Braves for RHP Chris Ellis, RHP John Gant and 2B Luke Dykstra."
+    },
+    {
+      "id": 301856,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2017-03-30",
+      "effectiveDate": "2017-03-30",
+      "resolutionDate": "2017-03-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals placed RHP John Gant on the 10-day disabled list."
+    },
+    {
+      "id": 310809,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2017-05-16",
+      "effectiveDate": "2017-05-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "St. Louis Cardinals optioned RHP John Gant to Memphis Redbirds."
+    },
+    {
+      "id": 312819,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2017-05-31",
+      "effectiveDate": "2017-06-07",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "St. Louis Cardinals recalled John Gant from Memphis Redbirds."
+    },
+    {
+      "id": 314677,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2017-06-07",
+      "effectiveDate": "2017-06-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "St. Louis Cardinals optioned RHP John Gant to Memphis Redbirds."
+    },
+    {
+      "id": 331172,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2017-08-31",
+      "effectiveDate": "2018-03-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "St. Louis Cardinals recalled John Gant from Memphis Redbirds."
+    },
+    {
+      "id": 344457,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2018-03-19",
+      "effectiveDate": "2018-03-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "St. Louis Cardinals optioned RHP John Gant to Memphis Redbirds."
+    },
+    {
+      "id": 351099,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2018-04-26",
+      "effectiveDate": "2018-04-27",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "St. Louis Cardinals recalled John Gant from Memphis Redbirds."
+    },
+    {
+      "id": 351257,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2018-04-27",
+      "effectiveDate": "2018-04-27",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "St. Louis Cardinals optioned RHP John Gant to Memphis Redbirds."
+    },
+    {
+      "id": 352813,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2018-05-07",
+      "effectiveDate": "2018-05-31",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "St. Louis Cardinals recalled John Gant from Memphis Redbirds."
+    },
+    {
+      "id": 355913,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2018-05-31",
+      "effectiveDate": "2018-05-31",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "St. Louis Cardinals optioned RHP John Gant to Memphis Redbirds."
+    },
+    {
+      "id": 363471,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2018-06-21",
+      "effectiveDate": "2018-06-21",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "St. Louis Cardinals recalled RHP John Gant from Memphis Redbirds."
+    },
+    {
+      "id": 392202,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2019-03-25",
+      "effectiveDate": "2019-03-25",
+      "resolutionDate": "2019-03-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP John Gant assigned to Memphis Redbirds."
+    },
+    {
+      "id": 429038,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2019-10-03",
+      "effectiveDate": "2019-10-03",
+      "resolutionDate": "2019-10-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals reassigned RHP John Gant to the minor leagues."
+    },
+    {
+      "id": 433313,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2019-10-16",
+      "effectiveDate": "2019-10-16",
+      "resolutionDate": "2019-10-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals activated RHP John Gant."
+    },
+    {
+      "id": 451965,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2020-09-25",
+      "effectiveDate": "2020-09-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals placed RHP John Gant on the 10-day injured list. Right groin tightness."
+    },
+    {
+      "id": 452940,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2020-09-28",
+      "effectiveDate": "2020-09-28",
+      "resolutionDate": "2020-09-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals activated RHP John Gant from the 10-day injured list."
+    },
+    {
+      "id": 478354,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2020-09-28",
+      "effectiveDate": "2020-09-28",
+      "resolutionDate": "2020-09-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals activated RHP John Gant from the 10-day injured list."
+    },
+    {
+      "id": 477743,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2020-09-28",
+      "effectiveDate": "2020-09-28",
+      "resolutionDate": "2020-09-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals activated P John Gant from the 10 day injured list."
+    },
+    {
+      "id": 508322,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2021-07-30",
+      "effectiveDate": "2021-07-30",
+      "resolutionDate": "2021-07-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Minnesota Twins activated RHP John Gant."
+    },
+    {
+      "id": 508153,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2021-07-30",
+      "effectiveDate": "2021-07-30",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Minnesota Twins traded LHP J.A. Happ and cash to St. Louis Cardinals for RHP John Gant and LHP Evan Sisk."
+    },
+    {
+      "id": 517275,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2021-09-14",
+      "effectiveDate": "2021-09-14",
+      "resolutionDate": "2021-09-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Minnesota Twins placed RHP John Gant on the 10-day injured list. Left abdominal strain."
+    },
+    {
+      "id": 519040,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2021-09-25",
+      "effectiveDate": "2021-09-25",
+      "resolutionDate": "2021-09-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Minnesota Twins activated RHP John Gant from the 10-day injured list."
+    },
+    {
+      "id": 519903,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2021-10-02",
+      "effectiveDate": "2021-10-02",
+      "resolutionDate": "2021-10-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Minnesota Twins placed RHP John Gant on the 10-day injured list. Right mild groin strain."
+    },
+    {
+      "id": 520101,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2021-10-05",
+      "effectiveDate": "2021-10-05",
+      "resolutionDate": "2021-10-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Minnesota Twins activated RHP John Gant from the 10-day injured list."
+    },
+    {
+      "id": 524878,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2021-11-05",
+      "effectiveDate": "2021-11-05",
+      "resolutionDate": "2021-11-05",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP John Gant elected free agency."
+    },
+    {
+      "id": 839271,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2025-05-20",
+      "effectiveDate": "2025-05-20",
+      "resolutionDate": "2025-05-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP John Gant assigned to Omaha Storm Chasers."
+    },
+    {
+      "id": 839270,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2025-05-20",
+      "effectiveDate": "2025-05-20",
+      "resolutionDate": "2025-05-20",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Kansas City Royals signed free agent RHP John Gant to a minor league contract."
+    },
+    {
+      "id": 869962,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2025-09-18",
+      "effectiveDate": "2025-09-18",
+      "resolutionDate": "2025-09-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Omaha Storm Chasers transferred RHP John Gant to the Development List."
+    },
+    {
+      "id": 871708,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2025-09-22",
+      "effectiveDate": "2025-09-22",
+      "resolutionDate": "2025-09-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Omaha Storm Chasers activated RHP John Gant."
+    },
+    {
+      "id": 876403,
+      "person": {
+        "id": 607231,
+        "fullName": "John Gant",
+        "link": "/api/v1/people/607231",
+        "nameSlug": "john-gant-607231"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP John Gant elected free agency."
+    }
+  ]
+}

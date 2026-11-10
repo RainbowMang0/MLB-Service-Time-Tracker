@@ -1,0 +1,27 @@
+{
+  "player_id": 123828,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:922c3a83e94890efe527c490bf0375aa95681113f139e5d77810a67b8745b842",
+  "transactions": [
+    {
+      "id": 8373,
+      "person": {
+        "id": 123828,
+        "fullName": "Jamie Walker",
+        "link": "/api/v1/people/123828",
+        "nameSlug": "jamie-walker-123828"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2009-06-05",
+      "effectiveDate": "2009-06-05",
+      "resolutionDate": "2009-06-05",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Baltimore Orioles released LHP Jamie Walker."
+    }
+  ]
+}

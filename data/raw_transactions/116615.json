@@ -1,0 +1,67 @@
+{
+  "player_id": 116615,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:99d027a4918abbb981edb5e9839eba3f2f59d99dd9ebc83e4c9baed74cc4b631",
+  "transactions": [
+    {
+      "id": 18714,
+      "person": {
+        "id": 116615,
+        "fullName": "Randy Johnson",
+        "link": "/api/v1/people/116615",
+        "nameSlug": "randy-johnson-116615"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2009-07-28",
+      "effectiveDate": "2009-07-28",
+      "resolutionDate": "2009-07-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Francisco Giants transferred LHP Randy Johnson from the 15-day disabled list to the 60-day disabled list."
+    },
+    {
+      "id": 24733,
+      "person": {
+        "id": 116615,
+        "fullName": "Randy Johnson",
+        "link": "/api/v1/people/116615",
+        "nameSlug": "randy-johnson-116615"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2009-09-16",
+      "effectiveDate": "2009-09-16",
+      "resolutionDate": "2009-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Francisco Giants activated LHP Randy Johnson from the 60-day disabled list."
+    },
+    {
+      "id": 29502,
+      "person": {
+        "id": 116615,
+        "fullName": "Randy Johnson",
+        "link": "/api/v1/people/116615",
+        "nameSlug": "randy-johnson-116615"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2009-11-16",
+      "effectiveDate": "2009-11-16",
+      "resolutionDate": "2009-11-16",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Randy Johnson elected free agency."
+    }
+  ]
+}

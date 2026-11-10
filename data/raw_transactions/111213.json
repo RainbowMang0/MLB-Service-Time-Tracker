@@ -1,0 +1,112 @@
+{
+  "player_id": 111213,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:ed35f0f8d24ccd48cc44c4eb67295d9530af46e431b545feaa2bb7f4068e9d73",
+  "transactions": [
+    {
+      "id": 1833,
+      "person": {
+        "id": 111213,
+        "fullName": "Aaron Boone",
+        "link": "/api/v1/people/111213",
+        "nameSlug": "aaron-boone-111213"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2009-04-10",
+      "effectiveDate": "2009-04-10",
+      "resolutionDate": "2009-04-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros transferred 3B Aaron Boone from the 15-day disabled list to the 60-day disabled list. Heart surgery"
+    },
+    {
+      "id": 20579,
+      "person": {
+        "id": 111213,
+        "fullName": "Aaron Boone",
+        "link": "/api/v1/people/111213",
+        "nameSlug": "aaron-boone-111213"
+      },
+      "toTeam": {
+        "id": 482,
+        "name": "Corpus Christi Hooks",
+        "link": "/api/v1/teams/482"
+      },
+      "date": "2009-08-10",
+      "effectiveDate": "2009-08-10",
+      "resolutionDate": "2009-08-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Aaron Boone assigned to Corpus Christi Hooks."
+    },
+    {
+      "id": 22282,
+      "person": {
+        "id": 111213,
+        "fullName": "Aaron Boone",
+        "link": "/api/v1/people/111213",
+        "nameSlug": "aaron-boone-111213"
+      },
+      "fromTeam": {
+        "id": 482,
+        "name": "Corpus Christi Hooks",
+        "link": "/api/v1/teams/482"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2009-08-22",
+      "effectiveDate": "2009-08-22",
+      "resolutionDate": "2009-08-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Corpus Christi Hooks sent 3B Aaron Boone on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 23493,
+      "person": {
+        "id": 111213,
+        "fullName": "Aaron Boone",
+        "link": "/api/v1/people/111213",
+        "nameSlug": "aaron-boone-111213"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2009-09-01",
+      "effectiveDate": "2009-09-01",
+      "resolutionDate": "2009-09-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros activated 3B Aaron Boone from the 60-day disabled list."
+    },
+    {
+      "id": 29423,
+      "person": {
+        "id": 111213,
+        "fullName": "Aaron Boone",
+        "link": "/api/v1/people/111213",
+        "nameSlug": "aaron-boone-111213"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2009-11-06",
+      "effectiveDate": "2009-11-06",
+      "resolutionDate": "2009-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "3B Aaron Boone roster status changed by Houston Astros."
+    }
+  ]
+}

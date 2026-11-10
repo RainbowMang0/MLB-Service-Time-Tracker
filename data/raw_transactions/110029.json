@@ -1,0 +1,525 @@
+{
+  "player_id": 110029,
+  "fetched_at": "2026-11-09T23:12:23Z",
+  "checksum": "sha256:dfe1879522d3f31abdab3ee85258e65acffdf6ef959b99af902be01aa9b2a8ef",
+  "transactions": [
+    {
+      "id": 25601,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "toTeam": {
+        "id": 695,
+        "name": "Leones del Caracas",
+        "link": "/api/v1/teams/695"
+      },
+      "date": "2009-10-07",
+      "effectiveDate": "2009-10-07",
+      "resolutionDate": "2009-10-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Bobby Abreu assigned to Leones del Caracas."
+    },
+    {
+      "id": 116397,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2012-04-28",
+      "effectiveDate": "2012-04-28",
+      "resolutionDate": "2012-04-28",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Los Angeles Angels released RF Bobby Abreu."
+    },
+    {
+      "id": 116951,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2012-05-04",
+      "effectiveDate": "2012-05-04",
+      "resolutionDate": "2012-05-04",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Dodgers signed free agent RF Bobby Abreu."
+    },
+    {
+      "id": 131585,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2012-08-01",
+      "effectiveDate": "2012-08-01",
+      "resolutionDate": "2012-08-01",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Los Angeles Dodgers designated Bobby Abreu for assignment."
+    },
+    {
+      "id": 132558,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2012-08-09",
+      "effectiveDate": "2012-08-09",
+      "resolutionDate": "2012-08-09",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Los Angeles Dodgers sent RF Bobby Abreu outright to Albuquerque Isotopes."
+    },
+    {
+      "id": 132819,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2012-08-12",
+      "effectiveDate": "2012-08-12",
+      "resolutionDate": "2012-08-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Albuquerque Isotopes placed RF Bobby Abreu on the 7-day disabled list. Sprained right ankle."
+    },
+    {
+      "id": 134309,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2012-08-27",
+      "effectiveDate": "2012-08-27",
+      "resolutionDate": "2012-08-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Bobby Abreu roster status changed by Albuquerque Isotopes."
+    },
+    {
+      "id": 135054,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "fromTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2012-09-02",
+      "effectiveDate": "2012-09-02",
+      "resolutionDate": "2012-09-02",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Dodgers selected the contract of RF Bobby Abreu from Albuquerque Isotopes."
+    },
+    {
+      "id": 135863,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "toTeam": {
+        "id": 695,
+        "name": "Leones del Caracas",
+        "link": "/api/v1/teams/695"
+      },
+      "date": "2012-10-11",
+      "effectiveDate": "2012-10-11",
+      "resolutionDate": "2012-10-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Bobby Abreu assigned to Leones del Caracas."
+    },
+    {
+      "id": 138436,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2012-11-03",
+      "effectiveDate": "2012-11-03",
+      "resolutionDate": "2012-11-03",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RF Bobby Abreu elected free agency."
+    },
+    {
+      "id": 178051,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2014-01-21",
+      "effectiveDate": "2014-01-21",
+      "resolutionDate": "2014-01-21",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent RF Bobby Abreu to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 181860,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2014-03-27",
+      "effectiveDate": "2014-03-27",
+      "resolutionDate": "2014-03-27",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Philadelphia Phillies released RF Bobby Abreu."
+    },
+    {
+      "id": 184878,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2014-03-31",
+      "effectiveDate": "2014-03-31",
+      "resolutionDate": "2014-03-31",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Mets signed free agent RF Bobby Abreu to a minor league contract."
+    },
+    {
+      "id": 184879,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2014-04-03",
+      "effectiveDate": "2014-04-03",
+      "resolutionDate": "2014-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Bobby Abreu assigned to Las Vegas 51s."
+    },
+    {
+      "id": 186489,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2014-04-21",
+      "effectiveDate": "2014-04-21",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Mets selected the contract of RF Bobby Abreu from Las Vegas 51s."
+    },
+    {
+      "id": 203691,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2014-04-21",
+      "effectiveDate": "2014-04-21",
+      "resolutionDate": "2014-04-21",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Mets designated Bobby Abreu for assignment."
+    },
+    {
+      "id": 203692,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2014-04-21",
+      "effectiveDate": "2014-04-21",
+      "resolutionDate": "2014-04-21",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Mets designated RF Bobby Abreu for assignment."
+    },
+    {
+      "id": 203693,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2014-04-21",
+      "effectiveDate": "2014-04-21",
+      "resolutionDate": "2014-04-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated RF Bobby Abreu."
+    },
+    {
+      "id": 203694,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2014-08-05",
+      "effectiveDate": "2014-08-05",
+      "resolutionDate": "2014-08-05",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Mets designated RF Bobby Abreu for assignment."
+    },
+    {
+      "id": 204321,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2014-08-10",
+      "effectiveDate": "2014-08-10",
+      "resolutionDate": "2014-08-10",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "New York Mets released RF Bobby Abreu."
+    },
+    {
+      "id": 205225,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2014-08-16",
+      "effectiveDate": "2014-08-16",
+      "resolutionDate": "2014-08-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Bobby Abreu assigned to Las Vegas 51s."
+    },
+    {
+      "id": 205224,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2014-08-16",
+      "effectiveDate": "2014-08-16",
+      "resolutionDate": "2014-08-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Mets signed free agent RF Bobby Abreu to a minor league contract."
+    },
+    {
+      "id": 207310,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "fromTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2014-09-09",
+      "effectiveDate": "2014-09-09",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Mets selected the contract of RF Bobby Abreu from Las Vegas 51s."
+    },
+    {
+      "id": 210839,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2014-10-30",
+      "effectiveDate": "2014-10-30",
+      "resolutionDate": "2014-10-30",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RF Bobby Abreu elected free agency."
+    },
+    {
+      "id": 212529,
+      "person": {
+        "id": 110029,
+        "fullName": "Bobby Abreu",
+        "link": "/api/v1/people/110029",
+        "nameSlug": "bobby-abreu-110029"
+      },
+      "toTeam": {
+        "id": 695,
+        "name": "Leones del Caracas",
+        "link": "/api/v1/teams/695"
+      },
+      "date": "2014-12-03",
+      "effectiveDate": "2014-12-03",
+      "resolutionDate": "2014-12-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Bobby Abreu assigned to Leones del Caracas."
+    }
+  ]
+}

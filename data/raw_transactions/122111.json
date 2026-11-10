@@ -1,0 +1,87 @@
+{
+  "player_id": 122111,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:5ffc2ecf94b180a96c3a6fdee609f1bf10e5b02544c019102809879d2657ebde",
+  "transactions": [
+    {
+      "id": 18182,
+      "person": {
+        "id": 122111,
+        "fullName": "Gary Sheffield",
+        "link": "/api/v1/people/122111",
+        "nameSlug": "gary-sheffield-122111"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2009-07-21",
+      "effectiveDate": "2009-07-21",
+      "resolutionDate": "2009-07-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gary Sheffield roster status changed by New York Mets."
+    },
+    {
+      "id": 18189,
+      "person": {
+        "id": 122111,
+        "fullName": "Gary Sheffield",
+        "link": "/api/v1/people/122111",
+        "nameSlug": "gary-sheffield-122111"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2009-07-25",
+      "effectiveDate": "2009-07-18",
+      "resolutionDate": "2009-07-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets placed LF Gary Sheffield on the 15-day disabled list retroactive to July 18, 2009. Strained right hamstring."
+    },
+    {
+      "id": 19516,
+      "person": {
+        "id": 122111,
+        "fullName": "Gary Sheffield",
+        "link": "/api/v1/people/122111",
+        "nameSlug": "gary-sheffield-122111"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2009-08-02",
+      "effectiveDate": "2009-08-02",
+      "resolutionDate": "2009-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated LF Gary Sheffield from the 15-day disabled list."
+    },
+    {
+      "id": 29469,
+      "person": {
+        "id": 122111,
+        "fullName": "Gary Sheffield",
+        "link": "/api/v1/people/122111",
+        "nameSlug": "gary-sheffield-122111"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2009-11-09",
+      "effectiveDate": "2009-11-09",
+      "resolutionDate": "2009-11-09",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LF Gary Sheffield elected free agency."
+    }
+  ]
+}

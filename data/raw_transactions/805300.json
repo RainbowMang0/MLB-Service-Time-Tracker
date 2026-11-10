@@ -1,0 +1,551 @@
+{
+  "player_id": 805300,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:708e65594cc6dd4109e477a76daf52cb24d2bcd0f13145ca5b96a4390facbbed",
+  "transactions": [
+    {
+      "id": 636575,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "toTeam": {
+        "id": 5580,
+        "name": "College Workout",
+        "link": "/api/v1/teams/5580"
+      },
+      "date": "2022-07-11",
+      "effectiveDate": "2022-07-11",
+      "resolutionDate": "2022-07-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Jakob Marsee assigned to College Workout."
+    },
+    {
+      "id": 641785,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "toTeam": {
+        "id": 5580,
+        "name": "College Workout",
+        "link": "/api/v1/teams/5580"
+      },
+      "date": "2022-07-11",
+      "effectiveDate": "2022-07-11",
+      "resolutionDate": "2022-07-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "College Workout activated OF Jakob Marsee."
+    },
+    {
+      "id": 641329,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2022-07-30",
+      "effectiveDate": "2022-07-30",
+      "resolutionDate": "2022-07-30",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "San Diego Padres signed OF Jakob Marsee."
+    },
+    {
+      "id": 641330,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "toTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "date": "2022-07-30",
+      "effectiveDate": "2022-07-30",
+      "resolutionDate": "2022-07-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Jakob Marsee assigned to ACL Padres."
+    },
+    {
+      "id": 648329,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "toTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "date": "2022-08-22",
+      "effectiveDate": "2022-08-22",
+      "resolutionDate": "2022-08-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lake Elsinore Storm activated OF Jakob Marsee."
+    },
+    {
+      "id": 647861,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "fromTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "toTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "date": "2022-08-22",
+      "effectiveDate": "2022-08-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Jakob Marsee assigned to Lake Elsinore Storm from ACL Padres."
+    },
+    {
+      "id": 678245,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2023-03-03",
+      "effectiveDate": "2023-03-03",
+      "resolutionDate": "2023-03-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "OF Jakob Marsee roster status changed by San Diego Padres."
+    },
+    {
+      "id": 674376,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2023-03-03",
+      "effectiveDate": "2023-03-03",
+      "resolutionDate": "2023-03-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Jakob Marsee assigned to San Diego Padres."
+    },
+    {
+      "id": 677666,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "fromTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "toTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "date": "2023-03-28",
+      "effectiveDate": "2023-03-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Jakob Marsee assigned to Fort Wayne TinCaps from Lake Elsinore Storm."
+    },
+    {
+      "id": 721233,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2023-08-22",
+      "effectiveDate": "2023-08-22",
+      "resolutionDate": "2023-08-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Antonio Missions activated OF Jakob Marsee."
+    },
+    {
+      "id": 768025,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2023-08-22",
+      "effectiveDate": "2023-08-22",
+      "resolutionDate": "2023-08-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Antonio Missions activated OF Jakob Marsee."
+    },
+    {
+      "id": 721139,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "fromTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2023-08-22",
+      "effectiveDate": "2023-08-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Jakob Marsee assigned to San Antonio Missions from Fort Wayne TinCaps."
+    },
+    {
+      "id": 726014,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "toTeam": {
+        "id": 490,
+        "name": "Peoria Javelinas",
+        "link": "/api/v1/teams/490"
+      },
+      "date": "2023-09-22",
+      "effectiveDate": "2023-09-22",
+      "resolutionDate": "2023-09-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Peoria Javelinas activated OF Jakob Marsee."
+    },
+    {
+      "id": 730781,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "toTeam": {
+        "id": 1311,
+        "name": "National League Fall Stars",
+        "link": "/api/v1/teams/1311"
+      },
+      "date": "2023-11-03",
+      "effectiveDate": "2023-11-03",
+      "resolutionDate": "2023-11-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Jakob Marsee assigned to National League Fall Stars."
+    },
+    {
+      "id": 738152,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2024-01-26",
+      "effectiveDate": "2024-01-26",
+      "resolutionDate": "2024-01-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres invited non-roster OF Jakob Marsee to spring training."
+    },
+    {
+      "id": 753550,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "toTeam": {
+        "id": 374,
+        "name": "San Diego Padres Prospects",
+        "link": "/api/v1/teams/374"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres Prospects activated OF Jakob Marsee."
+    },
+    {
+      "id": 768026,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2024-05-04",
+      "effectiveDate": "2024-05-04",
+      "resolutionDate": "2024-05-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "OF Jakob Marsee roster status changed by Miami Marlins."
+    },
+    {
+      "id": 768027,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2024-05-04",
+      "effectiveDate": "2024-05-04",
+      "resolutionDate": "2024-05-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Jakob Marsee assigned to Pensacola Blue Wahoos."
+    },
+    {
+      "id": 768021,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2024-05-04",
+      "effectiveDate": "2024-05-04",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Miami Marlins traded 2B Luis Arraez to San Diego Padres for OF Dillon Head, OF Jakob Marsee, RHP Woo-Suk Go and 1B Nathan Martorella."
+    },
+    {
+      "id": 768659,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2024-05-07",
+      "effectiveDate": "2024-05-07",
+      "resolutionDate": "2024-05-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pensacola Blue Wahoos activated OF Jakob Marsee."
+    },
+    {
+      "id": 796831,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "fromTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2024-08-29",
+      "effectiveDate": "2024-08-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Jakob Marsee assigned to Jacksonville Jumbo Shrimp from Pensacola Blue Wahoos."
+    },
+    {
+      "id": 814437,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2025-02-10",
+      "effectiveDate": "2025-02-10",
+      "resolutionDate": "2025-02-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins invited non-roster CF Jakob Marsee to spring training."
+    },
+    {
+      "id": 860705,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2025-08-01",
+      "effectiveDate": "2025-08-01",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Miami Marlins selected the contract of CF Jakob Marsee from Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 884957,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "toTeam": {
+        "id": 841,
+        "name": "Italy",
+        "link": "/api/v1/teams/841"
+      },
+      "date": "2026-02-05",
+      "effectiveDate": "2026-02-05",
+      "resolutionDate": "2026-02-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Italy activated CF Jakob Marsee."
+    },
+    {
+      "id": 899326,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "CF Jakob Marsee changed number to 42."
+    },
+    {
+      "id": 900239,
+      "person": {
+        "id": 805300,
+        "fullName": "Jakob Marsee",
+        "link": "/api/v1/people/805300",
+        "nameSlug": "jakob-marsee-805300"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "CF Jakob Marsee changed number to 87."
+    }
+  ]
+}

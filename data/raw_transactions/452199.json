@@ -1,0 +1,587 @@
+{
+  "player_id": 452199,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:5577ceca66b7dd41ed90d6c9e0d31552df4e3d55c7ab3644775c98d656a16bd8",
+  "transactions": [
+    {
+      "id": 32208,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2010-02-08",
+      "effectiveDate": "2010-02-08",
+      "resolutionDate": "2010-02-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers invited non-roster 1B Russell Mitchell to spring training."
+    },
+    {
+      "id": 36686,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "fromTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2010-04-05",
+      "effectiveDate": "2010-04-05",
+      "resolutionDate": "2010-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Russell Mitchell assigned to Albuquerque Isotopes from Chattanooga Lookouts."
+    },
+    {
+      "id": 46181,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2010-05-25",
+      "effectiveDate": "2010-05-25",
+      "resolutionDate": "2010-05-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Albuquerque Isotopes placed 1B Russell Mitchell on the 7-day disabled list. Strained left hamstring."
+    },
+    {
+      "id": 50041,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2010-06-06",
+      "effectiveDate": "2010-06-06",
+      "resolutionDate": "2010-06-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Russell Mitchell roster status changed by Albuquerque Isotopes."
+    },
+    {
+      "id": 69813,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "fromTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2010-09-06",
+      "effectiveDate": "2010-09-07",
+      "resolutionDate": "2010-09-06",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Dodgers selected the contract of Russell Mitchell from Albuquerque Isotopes."
+    },
+    {
+      "id": 79008,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2011-03-15",
+      "effectiveDate": "2011-04-28",
+      "resolutionDate": "2011-03-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned Russell Mitchell to Albuquerque Isotopes."
+    },
+    {
+      "id": 84517,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "fromTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2011-04-29",
+      "effectiveDate": "2011-04-29",
+      "resolutionDate": "2011-04-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled Russell Mitchell from Albuquerque Isotopes."
+    },
+    {
+      "id": 87516,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2011-05-27",
+      "effectiveDate": "2011-05-27",
+      "resolutionDate": "2011-05-27",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned 3B Russell Mitchell to Albuquerque Isotopes."
+    },
+    {
+      "id": 92123,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2011-06-18",
+      "effectiveDate": "2011-06-18",
+      "resolutionDate": "2011-06-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Albuquerque Isotopes placed 3B Russell Mitchell on the 7-day disabled list. Left wrist inflammation."
+    },
+    {
+      "id": 94056,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2011-06-26",
+      "effectiveDate": "2011-08-31",
+      "resolutionDate": "2011-06-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Russell Mitchell roster status changed by Albuquerque Isotopes."
+    },
+    {
+      "id": 102308,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "fromTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2011-09-01",
+      "effectiveDate": "2011-09-01",
+      "resolutionDate": "2011-09-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled 3B Russell Mitchell from Albuquerque Isotopes."
+    },
+    {
+      "id": 104664,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2011-10-12",
+      "effectiveDate": "2011-10-12",
+      "resolutionDate": "2011-10-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Russell Mitchell assigned to Tiburones de La Guaira."
+    },
+    {
+      "id": 109217,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2012-02-09",
+      "effectiveDate": "2012-02-10",
+      "resolutionDate": "2012-02-09",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Los Angeles Dodgers designated Russell Mitchell for assignment."
+    },
+    {
+      "id": 109236,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2012-02-10",
+      "effectiveDate": "2012-02-10",
+      "resolutionDate": "2012-02-11",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Los Angeles Dodgers sent 3B Russell Mitchell outright to Albuquerque Isotopes."
+    },
+    {
+      "id": 111756,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2012-03-29",
+      "effectiveDate": "2012-03-29",
+      "resolutionDate": "2012-03-29",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Los Angeles Dodgers released 3B Russell Mitchell."
+    },
+    {
+      "id": 116142,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2012-04-01",
+      "effectiveDate": "2012-04-01",
+      "resolutionDate": "2012-04-01",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Albuquerque Isotopes released 3B Russell Mitchell."
+    },
+    {
+      "id": 116143,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2012-04-18",
+      "effectiveDate": "2012-04-18",
+      "resolutionDate": "2012-04-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Miami Marlins signed free agent 3B Russell Mitchell to a minor league contract."
+    },
+    {
+      "id": 116144,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "toTeam": {
+        "id": 489,
+        "name": "Jamestown Jammers",
+        "link": "/api/v1/teams/489"
+      },
+      "date": "2012-04-19",
+      "effectiveDate": "2012-04-19",
+      "resolutionDate": "2012-04-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Russell Mitchell assigned to Jamestown Jammers."
+    },
+    {
+      "id": 116145,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "fromTeam": {
+        "id": 489,
+        "name": "Jamestown Jammers",
+        "link": "/api/v1/teams/489"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2012-04-25",
+      "effectiveDate": "2012-04-25",
+      "resolutionDate": "2012-04-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Russell Mitchell assigned to Jacksonville Suns from Jamestown Jammers."
+    },
+    {
+      "id": 119575,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2012-05-28",
+      "effectiveDate": "2012-05-28",
+      "resolutionDate": "2012-05-28",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Jacksonville Suns released 3B Russell Mitchell."
+    },
+    {
+      "id": 121860,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2012-06-06",
+      "effectiveDate": "2012-06-06",
+      "resolutionDate": "2012-06-06",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Francisco Giants signed free agent 3B Russell Mitchell to a minor league contract."
+    },
+    {
+      "id": 121862,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "toTeam": {
+        "id": 3410,
+        "name": "Richmond Flying Squirrels",
+        "link": "/api/v1/teams/3410"
+      },
+      "date": "2012-06-07",
+      "effectiveDate": "2012-06-07",
+      "resolutionDate": "2012-06-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Russell Mitchell assigned to Richmond Flying Squirrels."
+    },
+    {
+      "id": 130064,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "toTeam": {
+        "id": 3410,
+        "name": "Richmond Flying Squirrels",
+        "link": "/api/v1/teams/3410"
+      },
+      "date": "2012-07-20",
+      "effectiveDate": "2012-07-20",
+      "resolutionDate": "2012-07-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Richmond Flying Squirrels placed 3B Russell Mitchell on the 7-day disabled list. Ankle Sprain"
+    },
+    {
+      "id": 131907,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "toTeam": {
+        "id": 3410,
+        "name": "Richmond Flying Squirrels",
+        "link": "/api/v1/teams/3410"
+      },
+      "date": "2012-08-03",
+      "effectiveDate": "2012-08-03",
+      "resolutionDate": "2012-08-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Richmond Flying Squirrels activated 3B Russell Mitchell from the 7-day disabled list."
+    },
+    {
+      "id": 133295,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "toTeam": {
+        "id": 3410,
+        "name": "Richmond Flying Squirrels",
+        "link": "/api/v1/teams/3410"
+      },
+      "date": "2012-08-16",
+      "effectiveDate": "2012-08-16",
+      "resolutionDate": "2012-08-16",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Richmond Flying Squirrels released 3B Russell Mitchell."
+    },
+    {
+      "id": 141696,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2012-12-15",
+      "effectiveDate": "2012-12-15",
+      "resolutionDate": "2012-12-15",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Colorado Rockies signed free agent 3B Russell Mitchell to a minor league contract."
+    },
+    {
+      "id": 142972,
+      "person": {
+        "id": 452199,
+        "fullName": "Russell Mitchell",
+        "link": "/api/v1/people/452199",
+        "nameSlug": "russell-mitchell-452199"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2013-01-10",
+      "effectiveDate": "2013-01-10",
+      "resolutionDate": "2013-01-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Russell Mitchell assigned to Tulsa Drillers."
+    }
+  ]
+}

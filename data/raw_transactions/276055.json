@@ -1,0 +1,111 @@
+{
+  "player_id": 276055,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:b86a3591b0226d8f0cf5a6f50c8b23939981d51d180facffe41029a2e64508d3",
+  "transactions": [
+    {
+      "id": 73443,
+      "person": {
+        "id": 276055,
+        "fullName": "Adam Dunn",
+        "link": "/api/v1/people/276055",
+        "nameSlug": "adam-dunn-276055"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2010-11-07",
+      "effectiveDate": "2010-11-07",
+      "resolutionDate": "2010-11-07",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "1B Adam Dunn elected free agency."
+    },
+    {
+      "id": 75121,
+      "person": {
+        "id": 276055,
+        "fullName": "Adam Dunn",
+        "link": "/api/v1/people/276055",
+        "nameSlug": "adam-dunn-276055"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2010-12-03",
+      "effectiveDate": "2010-12-03",
+      "resolutionDate": "2010-12-03",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago White Sox signed free agent 1B Adam Dunn."
+    },
+    {
+      "id": 206585,
+      "person": {
+        "id": 276055,
+        "fullName": "Adam Dunn",
+        "link": "/api/v1/people/276055",
+        "nameSlug": "adam-dunn-276055"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2014-08-31",
+      "effectiveDate": "2014-08-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Chicago White Sox traded 1B Adam Dunn and cash to Oakland Athletics for RHP Nolan Sanburn."
+    },
+    {
+      "id": 206855,
+      "person": {
+        "id": 276055,
+        "fullName": "Adam Dunn",
+        "link": "/api/v1/people/276055",
+        "nameSlug": "adam-dunn-276055"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2014-08-31",
+      "effectiveDate": "2014-08-31",
+      "resolutionDate": "2014-08-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics activated 1B Adam Dunn."
+    },
+    {
+      "id": 209123,
+      "person": {
+        "id": 276055,
+        "fullName": "Adam Dunn",
+        "link": "/api/v1/people/276055",
+        "nameSlug": "adam-dunn-276055"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2014-10-09",
+      "effectiveDate": "2014-10-09",
+      "resolutionDate": "2014-10-09",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Oakland Athletics released 1B Adam Dunn."
+    }
+  ]
+}

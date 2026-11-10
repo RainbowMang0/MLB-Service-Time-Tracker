@@ -1,0 +1,953 @@
+{
+  "player_id": 518911,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:062f996ff1efe89940b06c1169394cdd3331df9f8bab4b39abc781582b60af82",
+  "transactions": [
+    {
+      "id": 32935,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2010-03-10",
+      "effectiveDate": "2010-03-10",
+      "resolutionDate": "2010-03-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Andrew Lambo assigned to Los Angeles Dodgers."
+    },
+    {
+      "id": 41430,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2010-05-01",
+      "effectiveDate": "2010-05-01",
+      "resolutionDate": "2010-05-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Andrew Lambo roster status changed by Chattanooga Lookouts."
+    },
+    {
+      "id": 64953,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "fromTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "toTeam": {
+        "id": 452,
+        "name": "Altoona Curve",
+        "link": "/api/v1/teams/452"
+      },
+      "date": "2010-07-31",
+      "effectiveDate": "2010-07-31",
+      "resolutionDate": "2010-07-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Pittsburgh Pirates Traded RHP Octavio Dotel to Los Angeles Dodgers; Los Angeles Dodgers Traded RHP James McDonald to Pittsburgh Pirates and Chattanooga Lookouts Traded LF Andrew Lambo to Altoona Curve."
+    },
+    {
+      "id": 65327,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 452,
+        "name": "Altoona Curve",
+        "link": "/api/v1/teams/452"
+      },
+      "date": "2010-08-03",
+      "effectiveDate": "2010-08-03",
+      "resolutionDate": "2010-08-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Andrew Lambo roster status changed by Altoona Curve."
+    },
+    {
+      "id": 68876,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 555,
+        "name": "Mesa Solar Sox",
+        "link": "/api/v1/teams/555"
+      },
+      "date": "2010-08-31",
+      "effectiveDate": "2010-08-31",
+      "resolutionDate": "2010-08-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Andrew Lambo assigned to Mesa Solar Sox."
+    },
+    {
+      "id": 76389,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2011-01-18",
+      "effectiveDate": "2011-01-18",
+      "resolutionDate": "2011-01-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Pittsburgh Pirates invited non-roster LF Andrew Lambo to spring training."
+    },
+    {
+      "id": 82377,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "fromTeam": {
+        "id": 452,
+        "name": "Altoona Curve",
+        "link": "/api/v1/teams/452"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2011-04-06",
+      "effectiveDate": "2011-04-06",
+      "resolutionDate": "2011-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Andrew Lambo assigned to Indianapolis Indians from Altoona Curve."
+    },
+    {
+      "id": 93489,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 452,
+        "name": "Altoona Curve",
+        "link": "/api/v1/teams/452"
+      },
+      "date": "2011-06-22",
+      "effectiveDate": "2011-06-22",
+      "resolutionDate": "2011-06-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Andrew Lambo assigned to Altoona Curve from Indianapolis Indians."
+    },
+    {
+      "id": 112336,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2012-04-01",
+      "effectiveDate": "2012-04-01",
+      "resolutionDate": "2012-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Andrew Lambo assigned to Pittsburgh Pirates."
+    },
+    {
+      "id": 115427,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 452,
+        "name": "Altoona Curve",
+        "link": "/api/v1/teams/452"
+      },
+      "date": "2012-04-17",
+      "effectiveDate": "2012-04-17",
+      "resolutionDate": "2012-04-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Altoona Curve placed RF Andrew Lambo on the 7-day disabled list. right wrist"
+    },
+    {
+      "id": 131709,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 470,
+        "name": "FCL Pirates",
+        "link": "/api/v1/teams/470"
+      },
+      "date": "2012-08-02",
+      "effectiveDate": "2012-08-02",
+      "resolutionDate": "2012-08-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent OF Andrew Lambo on a rehab assignment to GCL Pirates."
+    },
+    {
+      "id": 133429,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 452,
+        "name": "Altoona Curve",
+        "link": "/api/v1/teams/452"
+      },
+      "date": "2012-08-18",
+      "effectiveDate": "2012-08-18",
+      "resolutionDate": "2012-08-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Andrew Lambo roster status changed by Altoona Curve."
+    },
+    {
+      "id": 144260,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2013-03-01",
+      "effectiveDate": "2013-03-01",
+      "resolutionDate": "2013-03-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Andrew Lambo assigned to Pittsburgh Pirates."
+    },
+    {
+      "id": 156120,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "fromTeam": {
+        "id": 452,
+        "name": "Altoona Curve",
+        "link": "/api/v1/teams/452"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2013-06-08",
+      "effectiveDate": "2013-06-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Andrew Lambo assigned to Indianapolis Indians from Altoona Curve."
+    },
+    {
+      "id": 167984,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2013-08-13",
+      "effectiveDate": "2013-08-18",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Pittsburgh Pirates selected the contract of Andrew Lambo from Indianapolis Indians."
+    },
+    {
+      "id": 168559,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2013-08-18",
+      "effectiveDate": "2013-08-23",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Pittsburgh Pirates optioned Andrew Lambo to Indianapolis Indians."
+    },
+    {
+      "id": 169235,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2013-08-24",
+      "effectiveDate": "2013-08-31",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Pittsburgh Pirates recalled Andrew Lambo from Indianapolis Indians."
+    },
+    {
+      "id": 170122,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 452,
+        "name": "Altoona Curve",
+        "link": "/api/v1/teams/452"
+      },
+      "date": "2013-08-31",
+      "effectiveDate": "2013-08-31",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Pittsburgh Pirates optioned Andrew Lambo to Altoona Curve."
+    },
+    {
+      "id": 170521,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "fromTeam": {
+        "id": 452,
+        "name": "Altoona Curve",
+        "link": "/api/v1/teams/452"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2013-09-03",
+      "effectiveDate": "2013-09-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Pittsburgh Pirates recalled RF Andrew Lambo from Altoona Curve."
+    },
+    {
+      "id": 171434,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2013-10-01",
+      "effectiveDate": "2013-10-01",
+      "resolutionDate": "2013-10-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pittsburgh Pirates reassigned RF Andrew Lambo to the minor leagues."
+    },
+    {
+      "id": 172781,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2013-10-12",
+      "effectiveDate": "2014-03-25",
+      "resolutionDate": "2013-10-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Andrew Lambo roster status changed by Pittsburgh Pirates."
+    },
+    {
+      "id": 174982,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 693,
+        "name": "Cardenales de Lara",
+        "link": "/api/v1/teams/693"
+      },
+      "date": "2013-11-17",
+      "effectiveDate": "2013-11-17",
+      "resolutionDate": "2013-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Andrew Lambo assigned to Cardenales de Lara."
+    },
+    {
+      "id": 181662,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2014-03-25",
+      "effectiveDate": "2014-03-25",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Pittsburgh Pirates optioned LF Andrew Lambo to Indianapolis Indians."
+    },
+    {
+      "id": 188058,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2014-05-07",
+      "effectiveDate": "2014-05-05",
+      "resolutionDate": "2014-05-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians placed LF Andrew Lambo on the 7-day disabled list retroactive to May 5, 2014."
+    },
+    {
+      "id": 198655,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 470,
+        "name": "FCL Pirates",
+        "link": "/api/v1/teams/470"
+      },
+      "date": "2014-07-03",
+      "effectiveDate": "2014-07-03",
+      "resolutionDate": "2014-07-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Indianapolis Indians sent LF Andrew Lambo on a rehab assignment to GCL Pirates."
+    },
+    {
+      "id": 199690,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 489,
+        "name": "Jamestown Jammers",
+        "link": "/api/v1/teams/489"
+      },
+      "date": "2014-07-09",
+      "effectiveDate": "2014-07-09",
+      "resolutionDate": "2014-07-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Indianapolis Indians sent LF Andrew Lambo on a rehab assignment to Jamestown Jammers."
+    },
+    {
+      "id": 200953,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2014-07-17",
+      "effectiveDate": "2014-07-17",
+      "resolutionDate": "2014-07-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians activated LF Andrew Lambo from the 7-day disabled list."
+    },
+    {
+      "id": 206450,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2014-08-29",
+      "effectiveDate": "2014-08-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Pittsburgh Pirates recalled LF Andrew Lambo from Indianapolis Indians."
+    },
+    {
+      "id": 213067,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2014-12-15",
+      "effectiveDate": "2014-12-15",
+      "resolutionDate": "2014-12-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "Andrew Lambo changed number to 15."
+    },
+    {
+      "id": 224365,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2015-05-06",
+      "effectiveDate": "2015-05-04",
+      "resolutionDate": "2015-05-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pittsburgh Pirates placed RF Andrew Lambo on the 15-day disabled list retroactive to May 4, 2015. Plantar fasciitis in his left foot"
+    },
+    {
+      "id": 234691,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2015-06-26",
+      "effectiveDate": "2015-06-26",
+      "resolutionDate": "2015-06-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pittsburgh Pirates transferred RF Andrew Lambo from the 15-day disabled list to the 60-day disabled list. Plantar fasciitis in his left foot"
+    },
+    {
+      "id": 238714,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 470,
+        "name": "FCL Pirates",
+        "link": "/api/v1/teams/470"
+      },
+      "date": "2015-07-21",
+      "effectiveDate": "2015-07-21",
+      "resolutionDate": "2015-07-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Pittsburgh Pirates sent RF Andrew Lambo on a rehab assignment to GCL Pirates."
+    },
+    {
+      "id": 247820,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2015-10-19",
+      "effectiveDate": "2015-10-19",
+      "resolutionDate": "2015-10-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Andrew Lambo assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 249541,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2015-11-06",
+      "effectiveDate": "2016-04-02",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Oakland Athletics claimed Andrew Lambo off waivers from Pittsburgh Pirates."
+    },
+    {
+      "id": 259419,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2016-04-02",
+      "effectiveDate": "2016-04-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Oakland Athletics optioned RF Andrew Lambo to Nashville Sounds."
+    },
+    {
+      "id": 260052,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2016-04-04",
+      "effectiveDate": "2016-04-08",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Oakland Athletics recalled Andrew Lambo from Nashville Sounds."
+    },
+    {
+      "id": 261417,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2016-04-08",
+      "effectiveDate": "2016-04-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Oakland Athletics optioned RF Andrew Lambo to Nashville Sounds."
+    },
+    {
+      "id": 272742,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2016-06-19",
+      "effectiveDate": "2016-06-19",
+      "resolutionDate": "2016-06-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Nashville Sounds placed RF Andrew Lambo on the 7-day disabled list."
+    },
+    {
+      "id": 276831,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2016-07-04",
+      "effectiveDate": "2016-07-04",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Oakland Athletics recalled RF Andrew Lambo from Nashville Sounds."
+    },
+    {
+      "id": 276832,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2016-07-04",
+      "effectiveDate": "2016-10-06",
+      "resolutionDate": "2016-07-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Andrew Lambo roster status changed by Oakland Athletics."
+    },
+    {
+      "id": 289335,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2016-10-06",
+      "effectiveDate": "2016-10-06",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Oakland Athletics sent RF Andrew Lambo outright to Nashville Sounds."
+    },
+    {
+      "id": 307457,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2017-04-24",
+      "effectiveDate": "2017-04-23",
+      "resolutionDate": "2017-04-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Nashville Sounds placed RF Andrew Lambo on the 7-day disabled list retroactive to April 23, 2017."
+    },
+    {
+      "id": 310612,
+      "person": {
+        "id": 518911,
+        "fullName": "Andrew Lambo",
+        "link": "/api/v1/people/518911",
+        "nameSlug": "andrew-lambo-518911"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2017-05-15",
+      "effectiveDate": "2017-05-15",
+      "resolutionDate": "2017-05-15",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Nashville Sounds released RF Andrew Lambo."
+    }
+  ]
+}

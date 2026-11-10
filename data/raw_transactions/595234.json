@@ -1,0 +1,963 @@
+{
+  "player_id": 595234,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:aa6803b5ed54f7dcda8d7841c78eeae979320a31628c281c33872894123866b7",
+  "transactions": [
+    {
+      "id": 122485,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2012-06-10",
+      "effectiveDate": "2012-06-10",
+      "resolutionDate": "2012-06-10",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Boston Red Sox signed RHP Justin Haley."
+    },
+    {
+      "id": 122486,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 558,
+        "name": "Lowell Spinners",
+        "link": "/api/v1/teams/558"
+      },
+      "date": "2012-06-11",
+      "effectiveDate": "2012-06-11",
+      "resolutionDate": "2012-06-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Justin Haley assigned to Lowell Spinners."
+    },
+    {
+      "id": 147889,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "fromTeam": {
+        "id": 558,
+        "name": "Lowell Spinners",
+        "link": "/api/v1/teams/558"
+      },
+      "toTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "date": "2013-04-02",
+      "effectiveDate": "2013-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Justin Haley assigned to Greenville Drive from Lowell Spinners."
+    },
+    {
+      "id": 169096,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "date": "2013-08-23",
+      "effectiveDate": "2013-08-23",
+      "resolutionDate": "2013-08-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Greenville Drive placed RHP Justin Haley on the temporarily inactive list."
+    },
+    {
+      "id": 169351,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "date": "2013-08-26",
+      "effectiveDate": "2013-08-26",
+      "resolutionDate": "2013-08-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Greenville Drive activated RHP Justin Haley from the temporarily inactive list."
+    },
+    {
+      "id": 183749,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "fromTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "toTeam": {
+        "id": 414,
+        "name": "Salem RidgeYaks",
+        "link": "/api/v1/teams/414"
+      },
+      "date": "2014-04-01",
+      "effectiveDate": "2014-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Justin Haley assigned to Salem Red Sox from Greenville Drive."
+    },
+    {
+      "id": 191770,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 73,
+        "name": "CAR North Division All-Stars",
+        "link": "/api/v1/teams/73"
+      },
+      "date": "2014-06-16",
+      "effectiveDate": "2014-06-16",
+      "resolutionDate": "2014-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Justin Haley assigned to Carolina League All-Stars."
+    },
+    {
+      "id": 202587,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "fromTeam": {
+        "id": 414,
+        "name": "Salem RidgeYaks",
+        "link": "/api/v1/teams/414"
+      },
+      "toTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "date": "2014-07-29",
+      "effectiveDate": "2014-07-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Justin Haley assigned to Portland Sea Dogs from Salem Red Sox."
+    },
+    {
+      "id": 224134,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "date": "2015-05-04",
+      "effectiveDate": "2015-05-04",
+      "resolutionDate": "2015-05-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Portland Sea Dogs placed RHP Justin Haley on the 7-day disabled list."
+    },
+    {
+      "id": 225100,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "date": "2015-05-12",
+      "effectiveDate": "2015-05-12",
+      "resolutionDate": "2015-05-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Portland Sea Dogs activated RHP Justin Haley from the 7-day disabled list."
+    },
+    {
+      "id": 248212,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 544,
+        "name": "Scottsdale Scorpions",
+        "link": "/api/v1/teams/544"
+      },
+      "date": "2015-10-29",
+      "effectiveDate": "2015-10-29",
+      "resolutionDate": "2015-10-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Justin Haley assigned to Scottsdale Scorpions."
+    },
+    {
+      "id": 255546,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2016-02-29",
+      "effectiveDate": "2016-02-29",
+      "resolutionDate": "2016-02-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Justin Haley assigned to Boston Red Sox."
+    },
+    {
+      "id": 272415,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "fromTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2016-06-17",
+      "effectiveDate": "2016-06-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Justin Haley assigned to Pawtucket Red Sox from Portland Sea Dogs."
+    },
+    {
+      "id": 283849,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2016-08-14",
+      "effectiveDate": "2016-08-14",
+      "resolutionDate": "2016-08-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pawtucket Red Sox placed RHP Justin Haley on the temporarily inactive list."
+    },
+    {
+      "id": 284261,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2016-08-17",
+      "effectiveDate": "2016-08-17",
+      "resolutionDate": "2016-08-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pawtucket Red Sox activated RHP Justin Haley from the temporarily inactive list."
+    },
+    {
+      "id": 286069,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2016-09-01",
+      "effectiveDate": "2016-09-01",
+      "resolutionDate": "2016-09-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pawtucket Red Sox placed RHP Justin Haley on the temporarily inactive list."
+    },
+    {
+      "id": 286564,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2016-09-04",
+      "effectiveDate": "2016-09-04",
+      "resolutionDate": "2016-09-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pawtucket Red Sox activated RHP Justin Haley from the temporarily inactive list."
+    },
+    {
+      "id": 290785,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2016-10-20",
+      "effectiveDate": "2016-10-20",
+      "resolutionDate": "2016-10-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Justin Haley assigned to Leones del Escogido."
+    },
+    {
+      "id": 294670,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2016-12-08",
+      "effectiveDate": "2016-12-08",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "San Diego Padres traded RHP Justin Haley to Minnesota Twins for RHP Miguel Diaz."
+    },
+    {
+      "id": 294669,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2016-12-08",
+      "effectiveDate": "2016-12-08",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Los Angeles Angels traded RHP Justin Haley to San Diego Padres."
+    },
+    {
+      "id": 294601,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2016-12-08",
+      "effectiveDate": "2016-12-08",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Los Angeles Angels claimed RHP Justin Haley off waivers from Boston Red Sox."
+    },
+    {
+      "id": 307196,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2017-04-23",
+      "effectiveDate": "2017-04-23",
+      "resolutionDate": "2017-04-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Minnesota Twins placed RHP Justin Haley on the 10-day disabled list. Right bicep tendinitis."
+    },
+    {
+      "id": 309211,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2017-05-05",
+      "effectiveDate": "2017-05-05",
+      "resolutionDate": "2017-05-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Minnesota Twins sent RHP Justin Haley on a rehab assignment to Rochester Red Wings."
+    },
+    {
+      "id": 309412,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2017-05-07",
+      "effectiveDate": "2017-05-07",
+      "resolutionDate": "2017-05-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Minnesota Twins activated RHP Justin Haley from the 10-day disabled list."
+    },
+    {
+      "id": 312360,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2017-05-29",
+      "effectiveDate": "2017-05-29",
+      "resolutionDate": "2017-05-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Minnesota Twins placed RHP Justin Haley on the 10-day disabled list. Right shoulder soreness."
+    },
+    {
+      "id": 320138,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 474,
+        "name": "FCL Twins",
+        "link": "/api/v1/teams/474"
+      },
+      "date": "2017-06-26",
+      "effectiveDate": "2017-06-26",
+      "resolutionDate": "2017-06-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Minnesota Twins sent RHP Justin Haley on a rehab assignment to GCL Twins."
+    },
+    {
+      "id": 321413,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 509,
+        "name": "Fort Myers Mighty Mussels",
+        "link": "/api/v1/teams/509"
+      },
+      "date": "2017-06-30",
+      "effectiveDate": "2017-06-30",
+      "resolutionDate": "2017-06-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Minnesota Twins sent RHP Justin Haley on a rehab assignment to Fort Myers Miracle."
+    },
+    {
+      "id": 322263,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2017-07-04",
+      "effectiveDate": "2017-07-04",
+      "resolutionDate": "2017-07-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Minnesota Twins sent RHP Justin Haley on a rehab assignment to Rochester Red Wings."
+    },
+    {
+      "id": 325768,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2017-07-24",
+      "effectiveDate": "2017-07-24",
+      "typeCode": "RTN",
+      "typeDesc": "Returned",
+      "description": "RHP Justin Haley returned to Boston Red Sox from Minnesota Twins."
+    },
+    {
+      "id": 326136,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2017-07-26",
+      "effectiveDate": "2017-07-26",
+      "resolutionDate": "2017-07-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Justin Haley assigned to Pawtucket Red Sox."
+    },
+    {
+      "id": 335227,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2017-10-14",
+      "effectiveDate": "2017-10-14",
+      "resolutionDate": "2017-10-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Justin Haley assigned to Leones del Escogido."
+    },
+    {
+      "id": 339958,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2018-01-16",
+      "effectiveDate": "2018-01-16",
+      "resolutionDate": "2018-01-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Boston Red Sox invited non-roster RHP Justin Haley to spring training."
+    },
+    {
+      "id": 358517,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2018-06-08",
+      "effectiveDate": "2018-06-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Boston Red Sox selected the contract of Justin Haley from Pawtucket Red Sox."
+    },
+    {
+      "id": 362872,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2018-06-19",
+      "effectiveDate": "2018-06-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Boston Red Sox optioned RHP Justin Haley to Pawtucket Red Sox."
+    },
+    {
+      "id": 364552,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2018-06-26",
+      "effectiveDate": "2018-07-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Boston Red Sox recalled Justin Haley from Pawtucket Red Sox."
+    },
+    {
+      "id": 365612,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2018-07-02",
+      "effectiveDate": "2018-07-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Boston Red Sox optioned RHP Justin Haley to Pawtucket Red Sox."
+    },
+    {
+      "id": 378978,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2018-10-01",
+      "effectiveDate": "2018-10-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Boston Red Sox recalled RHP Justin Haley from Pawtucket Red Sox."
+    },
+    {
+      "id": 381836,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2018-11-01",
+      "effectiveDate": "2018-11-01",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Boston Red Sox sent RHP Justin Haley outright to Pawtucket Red Sox."
+    },
+    {
+      "id": 382103,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2018-11-02",
+      "effectiveDate": "2018-11-02",
+      "resolutionDate": "2018-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Justin Haley elected free agency."
+    },
+    {
+      "id": 422760,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2019-08-01",
+      "effectiveDate": "2019-08-01",
+      "resolutionDate": "2019-08-01",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Francisco Giants signed free agent RHP Justin Haley to a minor league contract."
+    },
+    {
+      "id": 422761,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2019-08-08",
+      "effectiveDate": "2019-08-08",
+      "resolutionDate": "2019-08-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Justin Haley assigned to Sacramento River Cats."
+    },
+    {
+      "id": 423500,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2019-08-13",
+      "effectiveDate": "2019-08-11",
+      "resolutionDate": "2019-08-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sacramento River Cats placed RHP Justin Haley on the 7-day injured list retroactive to August 11, 2019."
+    },
+    {
+      "id": 424411,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2019-08-18",
+      "effectiveDate": "2019-08-18",
+      "resolutionDate": "2019-08-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sacramento River Cats activated RHP Justin Haley from the 7-day injured list."
+    },
+    {
+      "id": 426705,
+      "person": {
+        "id": 595234,
+        "fullName": "Justin Haley",
+        "link": "/api/v1/people/595234",
+        "nameSlug": "justin-haley-595234"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2019-08-31",
+      "effectiveDate": "2019-08-31",
+      "resolutionDate": "2019-08-31",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Sacramento River Cats released RHP Justin Haley."
+    }
+  ]
+}

@@ -1,0 +1,411 @@
+{
+  "player_id": 150061,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:eb8450463b4fa00d7271d103af5e18873810d42d70ca9057b8de60e7fc868255",
+  "transactions": [
+    {
+      "id": 1167,
+      "person": {
+        "id": 150061,
+        "fullName": "Julio Lugo",
+        "link": "/api/v1/people/150061",
+        "nameSlug": "julio-lugo-150061"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2009-03-27",
+      "effectiveDate": "2009-03-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Boston Red Sox placed SS Julio Lugo on the 15-day disabled list."
+    },
+    {
+      "id": 2704,
+      "person": {
+        "id": 150061,
+        "fullName": "Julio Lugo",
+        "link": "/api/v1/people/150061",
+        "nameSlug": "julio-lugo-150061"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2009-04-22",
+      "effectiveDate": "2009-04-22",
+      "resolutionDate": "2009-04-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Boston Red Sox sent SS Julio Lugo on a rehab assignment to Pawtucket Red Sox."
+    },
+    {
+      "id": 3153,
+      "person": {
+        "id": 150061,
+        "fullName": "Julio Lugo",
+        "link": "/api/v1/people/150061",
+        "nameSlug": "julio-lugo-150061"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2009-04-27",
+      "effectiveDate": "2009-04-27",
+      "resolutionDate": "2009-04-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Boston Red Sox activated SS Julio Lugo from the 15-day disabled list."
+    },
+    {
+      "id": 16783,
+      "person": {
+        "id": 150061,
+        "fullName": "Julio Lugo",
+        "link": "/api/v1/people/150061",
+        "nameSlug": "julio-lugo-150061"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2009-07-17",
+      "effectiveDate": "2009-07-17",
+      "resolutionDate": "2009-07-17",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Boston Red Sox designated SS Julio Lugo for assignment."
+    },
+    {
+      "id": 17562,
+      "person": {
+        "id": 150061,
+        "fullName": "Julio Lugo",
+        "link": "/api/v1/people/150061",
+        "nameSlug": "julio-lugo-150061"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2009-07-22",
+      "effectiveDate": "2009-07-22",
+      "resolutionDate": "2009-07-22",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Boston Red Sox traded SS Julio Lugo to St. Louis Cardinals."
+    },
+    {
+      "id": 17758,
+      "person": {
+        "id": 150061,
+        "fullName": "Julio Lugo",
+        "link": "/api/v1/people/150061",
+        "nameSlug": "julio-lugo-150061"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2009-07-23",
+      "effectiveDate": "2009-07-23",
+      "resolutionDate": "2009-07-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Julio Lugo roster status changed by St. Louis Cardinals."
+    },
+    {
+      "id": 26563,
+      "person": {
+        "id": 150061,
+        "fullName": "Julio Lugo",
+        "link": "/api/v1/people/150061",
+        "nameSlug": "julio-lugo-150061"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2009-10-16",
+      "effectiveDate": "2009-10-16",
+      "resolutionDate": "2009-10-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Julio Lugo assigned to Estrellas de Oriente."
+    },
+    {
+      "id": 35160,
+      "person": {
+        "id": 150061,
+        "fullName": "Julio Lugo",
+        "link": "/api/v1/people/150061",
+        "nameSlug": "julio-lugo-150061"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2010-04-01",
+      "effectiveDate": "2010-04-01",
+      "resolutionDate": "2010-04-01",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "St. Louis Cardinals traded 2B Julio Lugo to Baltimore Orioles."
+    },
+    {
+      "id": 73296,
+      "person": {
+        "id": 150061,
+        "fullName": "Julio Lugo",
+        "link": "/api/v1/people/150061",
+        "nameSlug": "julio-lugo-150061"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2010-11-07",
+      "effectiveDate": "2010-11-07",
+      "resolutionDate": "2010-11-07",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "2B Julio Lugo elected free agency."
+    },
+    {
+      "id": 87189,
+      "person": {
+        "id": 150061,
+        "fullName": "Julio Lugo",
+        "link": "/api/v1/people/150061",
+        "nameSlug": "julio-lugo-150061"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2011-05-26",
+      "effectiveDate": "2011-05-26",
+      "resolutionDate": "2011-05-26",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent 2B Julio Lugo to a minor league contract."
+    },
+    {
+      "id": 87190,
+      "person": {
+        "id": 150061,
+        "fullName": "Julio Lugo",
+        "link": "/api/v1/people/150061",
+        "nameSlug": "julio-lugo-150061"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2011-05-26",
+      "effectiveDate": "2011-05-26",
+      "resolutionDate": "2011-05-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Julio Lugo assigned to Gwinnett Braves from Atlanta Braves."
+    },
+    {
+      "id": 88801,
+      "person": {
+        "id": 150061,
+        "fullName": "Julio Lugo",
+        "link": "/api/v1/people/150061",
+        "nameSlug": "julio-lugo-150061"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2011-06-04",
+      "effectiveDate": "2011-06-04",
+      "resolutionDate": "2011-06-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Julio Lugo roster status changed by Gwinnett Braves."
+    },
+    {
+      "id": 93279,
+      "person": {
+        "id": 150061,
+        "fullName": "Julio Lugo",
+        "link": "/api/v1/people/150061",
+        "nameSlug": "julio-lugo-150061"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2011-06-21",
+      "effectiveDate": "2011-06-21",
+      "resolutionDate": "2011-06-21",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Atlanta Braves selected the contract of 2B Julio Lugo from Gwinnett Braves."
+    },
+    {
+      "id": 102573,
+      "person": {
+        "id": 150061,
+        "fullName": "Julio Lugo",
+        "link": "/api/v1/people/150061",
+        "nameSlug": "julio-lugo-150061"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2011-09-02",
+      "effectiveDate": "2011-09-02",
+      "resolutionDate": "2011-09-02",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Atlanta Braves released 2B Julio Lugo."
+    },
+    {
+      "id": 105525,
+      "person": {
+        "id": 150061,
+        "fullName": "Julio Lugo",
+        "link": "/api/v1/people/150061",
+        "nameSlug": "julio-lugo-150061"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2011-11-02",
+      "effectiveDate": "2011-11-02",
+      "resolutionDate": "2011-11-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Julio Lugo assigned to Leones del Escogido."
+    },
+    {
+      "id": 109081,
+      "person": {
+        "id": 150061,
+        "fullName": "Julio Lugo",
+        "link": "/api/v1/people/150061",
+        "nameSlug": "julio-lugo-150061"
+      },
+      "toTeam": {
+        "id": 1191,
+        "name": "Dominican Republic",
+        "link": "/api/v1/teams/1191"
+      },
+      "date": "2012-02-02",
+      "effectiveDate": "2012-02-02",
+      "resolutionDate": "2012-02-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Julio Lugo assigned to Dominican Republic."
+    },
+    {
+      "id": 141014,
+      "person": {
+        "id": 150061,
+        "fullName": "Julio Lugo",
+        "link": "/api/v1/people/150061",
+        "nameSlug": "julio-lugo-150061"
+      },
+      "toTeam": {
+        "id": 4088,
+        "name": "LIDOM All-Stars",
+        "link": "/api/v1/teams/4088"
+      },
+      "date": "2012-12-10",
+      "effectiveDate": "2012-12-10",
+      "resolutionDate": "2012-12-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Julio Lugo assigned to LIDOM All-Stars."
+    },
+    {
+      "id": 143274,
+      "person": {
+        "id": 150061,
+        "fullName": "Julio Lugo",
+        "link": "/api/v1/people/150061",
+        "nameSlug": "julio-lugo-150061"
+      },
+      "toTeam": {
+        "id": 1191,
+        "name": "Dominican Republic",
+        "link": "/api/v1/teams/1191"
+      },
+      "date": "2013-02-01",
+      "effectiveDate": "2013-02-01",
+      "resolutionDate": "2013-02-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Julio Lugo assigned to Dominican Republic."
+    },
+    {
+      "id": 178515,
+      "person": {
+        "id": 150061,
+        "fullName": "Julio Lugo",
+        "link": "/api/v1/people/150061",
+        "nameSlug": "julio-lugo-150061"
+      },
+      "toTeam": {
+        "id": 1191,
+        "name": "Dominican Republic",
+        "link": "/api/v1/teams/1191"
+      },
+      "date": "2014-01-30",
+      "effectiveDate": "2014-01-30",
+      "resolutionDate": "2014-01-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Julio Lugo assigned to Dominican Republic."
+    }
+  ]
+}

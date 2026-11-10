@@ -1,0 +1,72 @@
+{
+  "player_id": 124000,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:f7589ed0c60740159a48bcf2f93f94e2296e0d36d2a157acb0d9e5fe01969468",
+  "transactions": [
+    {
+      "id": 20546,
+      "person": {
+        "id": 124000,
+        "fullName": "David Weathers",
+        "link": "/api/v1/people/124000",
+        "nameSlug": "david-weathers-124000"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2009-08-09",
+      "effectiveDate": "2009-08-09",
+      "resolutionDate": "2009-08-09",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Cincinnati Reds traded RHP David Weathers to Milwaukee Brewers."
+    },
+    {
+      "id": 20715,
+      "person": {
+        "id": 124000,
+        "fullName": "David Weathers",
+        "link": "/api/v1/people/124000",
+        "nameSlug": "david-weathers-124000"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2009-08-11",
+      "effectiveDate": "2009-08-11",
+      "resolutionDate": "2009-08-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated RHP David Weathers."
+    },
+    {
+      "id": 27812,
+      "person": {
+        "id": 124000,
+        "fullName": "David Weathers",
+        "link": "/api/v1/people/124000",
+        "nameSlug": "david-weathers-124000"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2009-11-06",
+      "effectiveDate": "2009-11-06",
+      "resolutionDate": "2009-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP David Weathers elected free agency."
+    }
+  ]
+}

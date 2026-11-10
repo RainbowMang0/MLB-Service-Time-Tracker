@@ -1,0 +1,804 @@
+{
+  "player_id": 621281,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:1dc52502dc324a6cc815349d1717881baa3627774f60317d62da2acd1953d50a",
+  "transactions": [
+    {
+      "id": 123720,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2012-06-15",
+      "effectiveDate": "2012-06-15",
+      "resolutionDate": "2012-06-15",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Milwaukee Brewers signed RHP Tyler Wagner."
+    },
+    {
+      "id": 123747,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 433,
+        "name": "Helena Brewers",
+        "link": "/api/v1/teams/433"
+      },
+      "date": "2012-06-16",
+      "effectiveDate": "2012-06-16",
+      "resolutionDate": "2012-06-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Tyler Wagner assigned to Helena Brewers from Milwaukee Brewers."
+    },
+    {
+      "id": 146900,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "fromTeam": {
+        "id": 433,
+        "name": "Helena Brewers",
+        "link": "/api/v1/teams/433"
+      },
+      "toTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "date": "2013-03-30",
+      "effectiveDate": "2013-03-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Tyler Wagner assigned to Wisconsin Timber Rattlers from Helena Brewers."
+    },
+    {
+      "id": 182999,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "fromTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "toTeam": {
+        "id": 503,
+        "name": "Florida Fire Frogs",
+        "link": "/api/v1/teams/503"
+      },
+      "date": "2014-03-30",
+      "effectiveDate": "2014-03-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Tyler Wagner assigned to Brevard County Manatees from Wisconsin Timber Rattlers."
+    },
+    {
+      "id": 207181,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "fromTeam": {
+        "id": 503,
+        "name": "Florida Fire Frogs",
+        "link": "/api/v1/teams/503"
+      },
+      "toTeam": {
+        "id": 559,
+        "name": "Rocket City Trash Pandas",
+        "link": "/api/v1/teams/559"
+      },
+      "date": "2014-09-04",
+      "effectiveDate": "2014-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Tyler Wagner assigned to Huntsville Stars from Brevard County Manatees."
+    },
+    {
+      "id": 228240,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "fromTeam": {
+        "id": 5015,
+        "name": "Biloxi Shuckers",
+        "link": "/api/v1/teams/5015"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2015-05-31",
+      "effectiveDate": "2015-06-01",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Milwaukee Brewers selected the contract of Tyler Wagner from Biloxi Shuckers."
+    },
+    {
+      "id": 228259,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 5015,
+        "name": "Biloxi Shuckers",
+        "link": "/api/v1/teams/5015"
+      },
+      "date": "2015-06-01",
+      "effectiveDate": "2015-06-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned RHP Tyler Wagner to Biloxi Shuckers."
+    },
+    {
+      "id": 229601,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "toTeam": {
+        "id": 69,
+        "name": "SOU South Division All-Stars",
+        "link": "/api/v1/teams/69"
+      },
+      "date": "2015-06-22",
+      "effectiveDate": "2015-06-22",
+      "resolutionDate": "2015-06-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Tyler Wagner assigned to SOU South Division All-Stars."
+    },
+    {
+      "id": 245687,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "fromTeam": {
+        "id": 5015,
+        "name": "Biloxi Shuckers",
+        "link": "/api/v1/teams/5015"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2015-09-22",
+      "effectiveDate": "2015-09-22",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Milwaukee Brewers recalled RHP Tyler Wagner from Biloxi Shuckers."
+    },
+    {
+      "id": 254334,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2016-01-30",
+      "effectiveDate": "2016-03-21",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Milwaukee Brewers traded 2B Jean Segura and RHP Tyler Wagner to Arizona Diamondbacks for RHP Chase Anderson, 3B Aaron Hill, SS Isan Diaz and cash."
+    },
+    {
+      "id": 257582,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2016-03-21",
+      "effectiveDate": "2016-03-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Tyler Wagner to Reno Aces."
+    },
+    {
+      "id": 262541,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2016-04-18",
+      "effectiveDate": "2016-04-25",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled Tyler Wagner from Reno Aces."
+    },
+    {
+      "id": 263412,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2016-04-25",
+      "effectiveDate": "2016-04-25",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Tyler Wagner to Reno Aces."
+    },
+    {
+      "id": 265641,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2016-05-15",
+      "effectiveDate": "2016-05-14",
+      "resolutionDate": "2016-05-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces placed RHP Tyler Wagner on the 7-day disabled list retroactive to May 14, 2016."
+    },
+    {
+      "id": 287814,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2016-09-20",
+      "effectiveDate": "2016-09-20",
+      "resolutionDate": "2016-09-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces activated RHP Tyler Wagner from the 7-day disabled list."
+    },
+    {
+      "id": 288509,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2016-10-03",
+      "effectiveDate": "2016-10-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled RHP Tyler Wagner from Reno Aces."
+    },
+    {
+      "id": 293355,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2016-11-18",
+      "effectiveDate": "2017-03-21",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Texas Rangers claimed Tyler Wagner off waivers from Arizona Diamondbacks."
+    },
+    {
+      "id": 301043,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2017-03-21",
+      "effectiveDate": "2017-03-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Texas Rangers optioned RHP Tyler Wagner to Round Rock Express."
+    },
+    {
+      "id": 306705,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2017-04-19",
+      "effectiveDate": "2017-04-19",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Texas Rangers sent Tyler Wagner outright to Round Rock Express."
+    },
+    {
+      "id": 309435,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2017-05-07",
+      "effectiveDate": "2017-05-07",
+      "resolutionDate": "2017-05-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express placed RHP Tyler Wagner on the temporarily inactive list."
+    },
+    {
+      "id": 310322,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2017-05-12",
+      "effectiveDate": "2017-05-12",
+      "resolutionDate": "2017-05-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express activated RHP Tyler Wagner from the temporarily inactive list."
+    },
+    {
+      "id": 316174,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2017-06-15",
+      "effectiveDate": "2017-06-15",
+      "resolutionDate": "2017-06-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express placed RHP Tyler Wagner on the temporarily inactive list."
+    },
+    {
+      "id": 317276,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2017-06-19",
+      "effectiveDate": "2017-06-19",
+      "resolutionDate": "2017-06-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express activated RHP Tyler Wagner from the temporarily inactive list."
+    },
+    {
+      "id": 322698,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2017-07-06",
+      "effectiveDate": "2017-07-06",
+      "resolutionDate": "2017-07-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express placed RHP Tyler Wagner on the 7-day disabled list."
+    },
+    {
+      "id": 323944,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2017-07-13",
+      "effectiveDate": "2017-07-13",
+      "resolutionDate": "2017-07-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express activated RHP Tyler Wagner from the 7-day disabled list."
+    },
+    {
+      "id": 324210,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2017-07-14",
+      "effectiveDate": "2017-07-14",
+      "resolutionDate": "2017-07-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express placed RHP Tyler Wagner on the temporarily inactive list."
+    },
+    {
+      "id": 324775,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2017-07-18",
+      "effectiveDate": "2017-07-18",
+      "resolutionDate": "2017-07-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express activated RHP Tyler Wagner from the temporarily inactive list."
+    },
+    {
+      "id": 342911,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2018-02-26",
+      "effectiveDate": "2018-02-26",
+      "resolutionDate": "2018-02-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Tyler Wagner assigned to Texas Rangers."
+    },
+    {
+      "id": 349662,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 3290,
+        "name": "Rangers Alternate Training Site",
+        "link": "/api/v1/teams/3290"
+      },
+      "date": "2018-04-16",
+      "effectiveDate": "2018-04-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Tyler Wagner assigned to Rangers Extended Spring Training from Round Rock Express."
+    },
+    {
+      "id": 350805,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "fromTeam": {
+        "id": 3290,
+        "name": "Rangers Alternate Training Site",
+        "link": "/api/v1/teams/3290"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2018-04-23",
+      "effectiveDate": "2018-04-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Tyler Wagner assigned to Round Rock Express from Rangers Extended Spring Training."
+    },
+    {
+      "id": 358817,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2018-06-09",
+      "effectiveDate": "2018-06-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Tyler Wagner assigned to Frisco RoughRiders from Round Rock Express."
+    },
+    {
+      "id": 364418,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "fromTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2018-06-25",
+      "effectiveDate": "2018-09-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Tyler Wagner assigned to Round Rock Express from Frisco RoughRiders."
+    },
+    {
+      "id": 382517,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2018-11-02",
+      "effectiveDate": "2018-11-02",
+      "resolutionDate": "2018-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Tyler Wagner elected free agency."
+    },
+    {
+      "id": 383010,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "toTeam": {
+        "id": 695,
+        "name": "Leones del Caracas",
+        "link": "/api/v1/teams/695"
+      },
+      "date": "2018-11-13",
+      "effectiveDate": "2018-11-13",
+      "resolutionDate": "2018-11-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Tyler Wagner assigned to Leones del Caracas."
+    },
+    {
+      "id": 391254,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2019-03-19",
+      "effectiveDate": "2019-03-19",
+      "resolutionDate": "2019-03-19",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Sugar Land Skeeters signed free agent RHP Tyler Wagner."
+    },
+    {
+      "id": 399500,
+      "person": {
+        "id": 621281,
+        "fullName": "Tyler Wagner",
+        "link": "/api/v1/people/621281",
+        "nameSlug": "tyler-wagner-621281"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2019-05-02",
+      "effectiveDate": "2019-05-02",
+      "resolutionDate": "2019-05-02",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Sugar Land Skeeters released RHP Tyler Wagner."
+    }
+  ]
+}

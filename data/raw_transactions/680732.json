@@ -1,0 +1,742 @@
+{
+  "player_id": 680732,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:6f9091209b3e67e43a5533506f3d9b894a9ceeae55a59c44b6187655f01416d8",
+  "transactions": [
+    {
+      "id": 507315,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2021-07-24",
+      "effectiveDate": "2021-07-24",
+      "resolutionDate": "2021-07-24",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Chicago White Sox signed RHP Sean Burke."
+    },
+    {
+      "id": 508570,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 3307,
+        "name": "White Sox Organization",
+        "link": "/api/v1/teams/3307"
+      },
+      "date": "2021-07-31",
+      "effectiveDate": "2021-07-31",
+      "resolutionDate": "2021-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Sean Burke assigned to White Sox Organization."
+    },
+    {
+      "id": 511905,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "fromTeam": {
+        "id": 3307,
+        "name": "White Sox Organization",
+        "link": "/api/v1/teams/3307"
+      },
+      "toTeam": {
+        "id": 1997,
+        "name": "ACL White Sox",
+        "link": "/api/v1/teams/1997"
+      },
+      "date": "2021-08-14",
+      "effectiveDate": "2021-08-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Sean Burke assigned to ACL White Sox from White Sox Organization."
+    },
+    {
+      "id": 513705,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "fromTeam": {
+        "id": 1997,
+        "name": "ACL White Sox",
+        "link": "/api/v1/teams/1997"
+      },
+      "toTeam": {
+        "id": 487,
+        "name": "Kannapolis Cannon Ballers",
+        "link": "/api/v1/teams/487"
+      },
+      "date": "2021-08-23",
+      "effectiveDate": "2021-08-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Sean Burke assigned to Kannapolis Cannon Ballers from ACL White Sox."
+    },
+    {
+      "id": 613437,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "fromTeam": {
+        "id": 487,
+        "name": "Kannapolis Cannon Ballers",
+        "link": "/api/v1/teams/487"
+      },
+      "toTeam": {
+        "id": 580,
+        "name": "Winston-Salem Dash",
+        "link": "/api/v1/teams/580"
+      },
+      "date": "2022-04-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Sean Burke assigned to Winston-Salem Dash from Kannapolis Cannon Ballers."
+    },
+    {
+      "id": 620311,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "fromTeam": {
+        "id": 580,
+        "name": "Winston-Salem Dash",
+        "link": "/api/v1/teams/580"
+      },
+      "toTeam": {
+        "id": 247,
+        "name": "Birmingham Barons",
+        "link": "/api/v1/teams/247"
+      },
+      "date": "2022-05-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Sean Burke assigned to Birmingham Barons from Winston-Salem Dash."
+    },
+    {
+      "id": 648485,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 247,
+        "name": "Birmingham Barons",
+        "link": "/api/v1/teams/247"
+      },
+      "date": "2022-08-24",
+      "effectiveDate": "2022-08-24",
+      "resolutionDate": "2022-08-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Birmingham Barons transferred RHP Sean Burke to the Development List."
+    },
+    {
+      "id": 649980,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 247,
+        "name": "Birmingham Barons",
+        "link": "/api/v1/teams/247"
+      },
+      "date": "2022-08-31",
+      "effectiveDate": "2022-08-31",
+      "resolutionDate": "2022-08-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Birmingham Barons activated RHP Sean Burke."
+    },
+    {
+      "id": 650265,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 247,
+        "name": "Birmingham Barons",
+        "link": "/api/v1/teams/247"
+      },
+      "date": "2022-09-01",
+      "effectiveDate": "2022-09-01",
+      "resolutionDate": "2022-09-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Birmingham Barons transferred RHP Sean Burke to the Development List."
+    },
+    {
+      "id": 651249,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 247,
+        "name": "Birmingham Barons",
+        "link": "/api/v1/teams/247"
+      },
+      "date": "2022-09-08",
+      "effectiveDate": "2022-09-08",
+      "resolutionDate": "2022-09-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Sean Burke assigned to Birmingham Barons."
+    },
+    {
+      "id": 653367,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "fromTeam": {
+        "id": 247,
+        "name": "Birmingham Barons",
+        "link": "/api/v1/teams/247"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2022-09-22",
+      "effectiveDate": "2022-09-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Sean Burke assigned to Charlotte Knights from Birmingham Barons."
+    },
+    {
+      "id": 666766,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2023-01-26",
+      "effectiveDate": "2023-01-26",
+      "resolutionDate": "2023-01-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago White Sox invited non-roster RHP Sean Burke and  to spring training."
+    },
+    {
+      "id": 680203,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2023-03-31",
+      "effectiveDate": "2023-03-31",
+      "resolutionDate": "2023-03-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights placed RHP Sean Burke on the 10-day injured list."
+    },
+    {
+      "id": 685297,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2023-04-18",
+      "effectiveDate": "2023-04-18",
+      "resolutionDate": "2023-04-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights activated RHP Sean Burke from the 7-day injured list."
+    },
+    {
+      "id": 685293,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2023-04-18",
+      "effectiveDate": "2023-04-18",
+      "resolutionDate": "2023-04-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights activated RHP Sean Burke from the 7-day injured list."
+    },
+    {
+      "id": 685957,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2023-04-19",
+      "effectiveDate": "2023-04-19",
+      "resolutionDate": "2023-04-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights transferred RHP Sean Burke to the Development List."
+    },
+    {
+      "id": 688084,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2023-04-30",
+      "effectiveDate": "2023-04-30",
+      "resolutionDate": "2023-04-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights activated RHP Sean Burke."
+    },
+    {
+      "id": 706040,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2023-06-22",
+      "effectiveDate": "2023-06-15",
+      "resolutionDate": "2023-06-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights placed RHP Sean Burke on the 7-day injured list retroactive to June 15, 2023."
+    },
+    {
+      "id": 715155,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2023-07-27",
+      "effectiveDate": "2023-07-27",
+      "resolutionDate": "2023-07-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights transferred RHP Sean Burke from the 7-day injured list to the 60-day injured list."
+    },
+    {
+      "id": 731137,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2023-11-06",
+      "effectiveDate": "2023-11-06",
+      "resolutionDate": "2023-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights activated RHP Sean Burke from the 60-day injured list."
+    },
+    {
+      "id": 758396,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2024-03-26",
+      "effectiveDate": "2024-03-26",
+      "resolutionDate": "2024-03-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights placed RHP Sean Burke on the 60-day injured list."
+    },
+    {
+      "id": 757248,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2024-03-26",
+      "effectiveDate": "2024-03-26",
+      "resolutionDate": "2024-03-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights placed RHP Sean Burke on the 60-day injured list."
+    },
+    {
+      "id": 761676,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2024-03-26",
+      "effectiveDate": "2024-03-26",
+      "resolutionDate": "2024-03-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights placed RHP Sean Burke on the 60-day injured list."
+    },
+    {
+      "id": 767426,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "fromTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "toTeam": {
+        "id": 1997,
+        "name": "ACL White Sox",
+        "link": "/api/v1/teams/1997"
+      },
+      "date": "2024-05-03",
+      "effectiveDate": "2024-05-03",
+      "resolutionDate": "2024-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Charlotte Knights sent RHP Sean Burke on a rehab assignment to ACL White Sox."
+    },
+    {
+      "id": 775323,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2024-05-31",
+      "effectiveDate": "2024-05-31",
+      "resolutionDate": "2024-05-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights activated RHP Sean Burke from the 60-day injured list."
+    },
+    {
+      "id": 786859,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2024-07-12",
+      "effectiveDate": "2024-07-12",
+      "resolutionDate": "2024-07-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights transferred RHP Sean Burke to the Development List."
+    },
+    {
+      "id": 789452,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2024-07-24",
+      "effectiveDate": "2024-07-24",
+      "resolutionDate": "2024-07-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights activated RHP Sean Burke."
+    },
+    {
+      "id": 798601,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "fromTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2024-09-10",
+      "effectiveDate": "2024-09-10",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Chicago White Sox selected the contract of RHP Sean Burke from Charlotte Knights."
+    },
+    {
+      "id": 828109,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Sean Burke changed number to 42."
+    },
+    {
+      "id": 829313,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Sean Burke changed number to 59."
+    },
+    {
+      "id": 865702,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2025-08-18",
+      "effectiveDate": "2025-08-18",
+      "resolutionDate": "2025-08-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights activated RHP Sean Burke."
+    },
+    {
+      "id": 865031,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2025-08-18",
+      "effectiveDate": "2025-08-18",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago White Sox optioned RHP Sean Burke to Charlotte Knights."
+    },
+    {
+      "id": 868557,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "fromTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2025-09-10",
+      "effectiveDate": "2025-09-10",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago White Sox recalled RHP Sean Burke from Charlotte Knights."
+    },
+    {
+      "id": 899559,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Sean Burke changed number to 42."
+    },
+    {
+      "id": 900491,
+      "person": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732",
+        "nameSlug": "sean-burke-680732"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Sean Burke changed number to 59."
+    }
+  ]
+}

@@ -1,0 +1,901 @@
+{
+  "player_id": 435400,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:c06f61559a01f5e579df2620998585984308843c1046f18754cf9125db3b92b1",
+  "transactions": [
+    {
+      "id": 65517,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2010-08-04",
+      "effectiveDate": "2010-08-03",
+      "resolutionDate": "2010-08-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals placed RHP Jason Motte on the 15-day disabled list retroactive to August 3, 2010. AC sprain of right shoulder"
+    },
+    {
+      "id": 68278,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2010-08-25",
+      "effectiveDate": "2010-08-25",
+      "resolutionDate": "2010-08-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent RHP Jason Motte on a rehab assignment to Memphis Redbirds."
+    },
+    {
+      "id": 68736,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2010-08-30",
+      "effectiveDate": "2010-08-30",
+      "resolutionDate": "2010-08-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals activated RHP Jason Motte from the 15-day disabled list."
+    },
+    {
+      "id": 146577,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2013-03-29",
+      "effectiveDate": "2013-03-22",
+      "resolutionDate": "2013-03-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals placed RHP Jason Motte on the 15-day disabled list retroactive to March 22, 2013. Strained right elbow."
+    },
+    {
+      "id": 152780,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2013-05-14",
+      "effectiveDate": "2013-05-14",
+      "resolutionDate": "2013-05-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals transferred RHP Jason Motte from the 15-day disabled list to the 60-day disabled list. May 2013 Tommy John surgery."
+    },
+    {
+      "id": 174092,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2013-11-04",
+      "effectiveDate": "2013-11-04",
+      "resolutionDate": "2013-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals activated RHP Jason Motte from the 60-day disabled list."
+    },
+    {
+      "id": 182716,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2014-03-29",
+      "effectiveDate": "2014-03-21",
+      "resolutionDate": "2014-03-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals placed RHP Jason Motte on the 15-day disabled list retroactive to March 21, 2014. Recovering from May 2013 Tommy John surgery"
+    },
+    {
+      "id": 187751,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 440,
+        "name": "Ozarks Springbirds",
+        "link": "/api/v1/teams/440"
+      },
+      "date": "2014-05-04",
+      "effectiveDate": "2014-05-04",
+      "resolutionDate": "2014-05-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "St. Louis Cardinals sent RHP Jason Motte on a rehab assignment to Springfield Cardinals."
+    },
+    {
+      "id": 188575,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2014-05-12",
+      "effectiveDate": "2014-05-12",
+      "resolutionDate": "2014-05-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "St. Louis Cardinals sent RHP Jason Motte on a rehab assignment to Memphis Redbirds."
+    },
+    {
+      "id": 189548,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2014-05-20",
+      "effectiveDate": "2014-05-20",
+      "resolutionDate": "2014-05-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals activated RHP Jason Motte from the 15-day disabled list."
+    },
+    {
+      "id": 203982,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2014-08-08",
+      "effectiveDate": "2014-08-01",
+      "resolutionDate": "2014-08-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals placed RHP Jason Motte on the 15-day disabled list retroactive to August 1, 2014. Lower back sprain"
+    },
+    {
+      "id": 206678,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 440,
+        "name": "Ozarks Springbirds",
+        "link": "/api/v1/teams/440"
+      },
+      "date": "2014-08-31",
+      "effectiveDate": "2014-08-31",
+      "resolutionDate": "2014-08-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "St. Louis Cardinals sent RHP Jason Motte on a rehab assignment to Springfield Cardinals."
+    },
+    {
+      "id": 207019,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2014-09-02",
+      "effectiveDate": "2014-09-02",
+      "resolutionDate": "2014-09-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals activated RHP Jason Motte from the 15-day disabled list."
+    },
+    {
+      "id": 208702,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2014-10-02",
+      "effectiveDate": "2014-10-02",
+      "resolutionDate": "2014-10-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals reassigned RHP Jason Motte to the minor leagues."
+    },
+    {
+      "id": 209654,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2014-10-17",
+      "effectiveDate": "2014-10-17",
+      "resolutionDate": "2014-10-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Louis Cardinals activated RHP Jason Motte."
+    },
+    {
+      "id": 210880,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2014-10-30",
+      "effectiveDate": "2014-10-30",
+      "resolutionDate": "2014-10-30",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Jason Motte elected free agency."
+    },
+    {
+      "id": 213274,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2014-12-19",
+      "effectiveDate": "2014-12-19",
+      "resolutionDate": "2014-12-19",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago Cubs signed free agent RHP Jason Motte."
+    },
+    {
+      "id": 243313,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2015-08-24",
+      "effectiveDate": "2015-08-24",
+      "resolutionDate": "2015-08-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs placed RHP Jason Motte on the 15-day disabled list. Right Shoulder Strain"
+    },
+    {
+      "id": 246738,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2015-10-05",
+      "effectiveDate": "2015-10-05",
+      "resolutionDate": "2015-10-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated RHP Jason Motte from the 15-day disabled list."
+    },
+    {
+      "id": 246830,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2015-10-07",
+      "effectiveDate": "2015-10-07",
+      "resolutionDate": "2015-10-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs reassigned RHP Jason Motte to the minor leagues."
+    },
+    {
+      "id": 247966,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2015-10-22",
+      "effectiveDate": "2015-10-22",
+      "resolutionDate": "2015-10-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated RHP Jason Motte."
+    },
+    {
+      "id": 248574,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2015-11-02",
+      "effectiveDate": "2015-11-02",
+      "resolutionDate": "2015-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Jason Motte elected free agency."
+    },
+    {
+      "id": 251400,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2015-12-08",
+      "effectiveDate": "2015-12-08",
+      "resolutionDate": "2015-12-08",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Colorado Rockies signed free agent RHP Jason Motte."
+    },
+    {
+      "id": 259550,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2016-04-03",
+      "effectiveDate": "2016-03-25",
+      "resolutionDate": "2016-03-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Colorado Rockies placed RHP Jason Motte on the 15-day disabled list retroactive to March 25, 2016. Right shoulder strain"
+    },
+    {
+      "id": 265137,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2016-05-11",
+      "effectiveDate": "2016-05-11",
+      "resolutionDate": "2016-05-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Colorado Rockies sent RHP Jason Motte on a rehab assignment to Albuquerque Isotopes."
+    },
+    {
+      "id": 266980,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2016-05-25",
+      "effectiveDate": "2016-05-25",
+      "resolutionDate": "2016-05-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Colorado Rockies activated RHP Jason Motte from the 15-day disabled list."
+    },
+    {
+      "id": 280842,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2016-07-27",
+      "effectiveDate": "2016-07-26",
+      "resolutionDate": "2016-07-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Colorado Rockies placed RHP Jason Motte on the 15-day disabled list retroactive to July 26, 2016. Right rotator cuff strain."
+    },
+    {
+      "id": 286976,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2016-09-08",
+      "effectiveDate": "2016-09-08",
+      "resolutionDate": "2016-09-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Colorado Rockies activated RHP Jason Motte from the 15-day disabled list."
+    },
+    {
+      "id": 302576,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2017-03-31",
+      "effectiveDate": "2017-03-31",
+      "resolutionDate": "2017-03-31",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Colorado Rockies designated RHP Jason Motte for assignment."
+    },
+    {
+      "id": 304195,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2017-04-05",
+      "effectiveDate": "2017-04-05",
+      "resolutionDate": "2017-04-05",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Colorado Rockies released RHP Jason Motte."
+    },
+    {
+      "id": 305402,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2017-04-11",
+      "effectiveDate": "2017-04-11",
+      "resolutionDate": "2017-04-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jason Motte assigned to Gwinnett Braves."
+    },
+    {
+      "id": 305401,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2017-04-11",
+      "effectiveDate": "2017-04-11",
+      "resolutionDate": "2017-04-11",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent RHP Jason Motte to a minor league contract."
+    },
+    {
+      "id": 307849,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2017-04-27",
+      "effectiveDate": "2017-04-27",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled RHP Jason Motte from Gwinnett Braves."
+    },
+    {
+      "id": 324196,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2017-07-14",
+      "effectiveDate": "2017-07-11",
+      "resolutionDate": "2017-07-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves placed RHP Jason Motte on the 10-day disabled list retroactive to July 11, 2017. Back strain."
+    },
+    {
+      "id": 326420,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "date": "2017-07-28",
+      "effectiveDate": "2017-07-28",
+      "resolutionDate": "2017-07-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Atlanta Braves sent RHP Jason Motte on a rehab assignment to Rome Braves."
+    },
+    {
+      "id": 326922,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2017-07-31",
+      "effectiveDate": "2017-07-31",
+      "resolutionDate": "2017-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Atlanta Braves sent RHP Jason Motte on a rehab assignment to Gwinnett Braves."
+    },
+    {
+      "id": 327759,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2017-08-04",
+      "effectiveDate": "2017-08-04",
+      "resolutionDate": "2017-08-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves activated RHP Jason Motte from the 10-day disabled list."
+    },
+    {
+      "id": 331345,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2017-09-01",
+      "effectiveDate": "2017-09-01",
+      "resolutionDate": "2017-09-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves placed RHP Jason Motte on the 10-day disabled list. Right oblique strain."
+    },
+    {
+      "id": 332716,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2017-09-15",
+      "effectiveDate": "2017-09-15",
+      "resolutionDate": "2017-09-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves activated RHP Jason Motte from the 10-day disabled list."
+    },
+    {
+      "id": 335906,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2017-11-02",
+      "effectiveDate": "2017-11-02",
+      "resolutionDate": "2017-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Jason Motte elected free agency."
+    },
+    {
+      "id": 342055,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2018-02-15",
+      "effectiveDate": "2018-02-15",
+      "resolutionDate": "2018-02-15",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "St. Louis Cardinals signed free agent RHP Jason Motte to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 342056,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 235,
+        "name": "Memphis Redbirds",
+        "link": "/api/v1/teams/235"
+      },
+      "date": "2018-02-19",
+      "effectiveDate": "2018-02-19",
+      "resolutionDate": "2018-02-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jason Motte assigned to Memphis Redbirds."
+    },
+    {
+      "id": 345003,
+      "person": {
+        "id": 435400,
+        "fullName": "Jason Motte",
+        "link": "/api/v1/people/435400",
+        "nameSlug": "jason-motte-435400"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2018-03-22",
+      "effectiveDate": "2018-03-22",
+      "resolutionDate": "2018-03-22",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "St. Louis Cardinals released RHP Jason Motte."
+    }
+  ]
+}

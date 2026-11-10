@@ -1,0 +1,27 @@
+{
+  "player_id": 115135,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:2842fd1fd17f9b10a95b1235d56d1436a049ddc46d801508a367114a21edae0d",
+  "transactions": [
+    {
+      "id": 49341,
+      "person": {
+        "id": 115135,
+        "fullName": "Ken Griffey Jr.",
+        "link": "/api/v1/people/115135",
+        "nameSlug": "ken-griffey-jr-115135"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2010-06-02",
+      "effectiveDate": "2010-06-02",
+      "resolutionDate": "2010-06-02",
+      "typeCode": "RET",
+      "typeDesc": "Retired",
+      "description": "DH Ken Griffey Jr. retired."
+    }
+  ]
+}

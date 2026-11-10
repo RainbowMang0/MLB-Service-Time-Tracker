@@ -1,0 +1,755 @@
+{
+  "player_id": 452249,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:e3f93b7998dc8ae0e4fc8680913eb8af314c19efbaf6efc87c98f41542b782db",
+  "transactions": [
+    {
+      "id": 18424,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2009-07-27",
+      "effectiveDate": "2009-07-27",
+      "resolutionDate": "2009-07-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds placed RHP Micah Owings on the 15-day disabled list. Tight right shoulder."
+    },
+    {
+      "id": 20089,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2009-08-06",
+      "effectiveDate": "2009-08-06",
+      "resolutionDate": "2009-08-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent RHP Micah Owings on a rehab assignment to Louisville Bats."
+    },
+    {
+      "id": 22028,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2009-08-20",
+      "effectiveDate": "2009-08-20",
+      "resolutionDate": "2009-08-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Micah Owings roster status changed by Cincinnati Reds."
+    },
+    {
+      "id": 63467,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2010-07-21",
+      "effectiveDate": "2010-07-21",
+      "resolutionDate": "2010-07-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cincinnati Reds optioned RHP Micah Owings to Louisville Bats."
+    },
+    {
+      "id": 67316,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2010-08-17",
+      "effectiveDate": "2010-08-17",
+      "resolutionDate": "2010-08-17",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Cincinnati Reds designated Micah Owings for assignment."
+    },
+    {
+      "id": 67317,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2010-08-17",
+      "effectiveDate": "2010-08-17",
+      "resolutionDate": "2010-08-17",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Louisville Bats designated Micah Owings for assignment."
+    },
+    {
+      "id": 68294,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2010-08-25",
+      "effectiveDate": "2010-08-25",
+      "resolutionDate": "2010-08-26",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Cincinnati Reds sent RHP Micah Owings outright to Louisville Bats."
+    },
+    {
+      "id": 71487,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2010-10-06",
+      "effectiveDate": "2010-10-06",
+      "resolutionDate": "2010-10-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Micah Owings elected free agency."
+    },
+    {
+      "id": 76501,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2011-01-24",
+      "effectiveDate": "2011-01-24",
+      "resolutionDate": "2011-01-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Arizona Diamondbacks signed free agent RHP Micah Owings to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 82743,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2011-04-07",
+      "effectiveDate": "2011-04-07",
+      "resolutionDate": "2011-04-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Micah Owings assigned to Reno Aces from Arizona Diamondbacks."
+    },
+    {
+      "id": 86625,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2011-05-21",
+      "effectiveDate": "2011-05-21",
+      "resolutionDate": "2011-05-21",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Arizona Diamondbacks selected the contract of RHP Micah Owings from Reno Aces."
+    },
+    {
+      "id": 107529,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2011-12-12",
+      "effectiveDate": "2011-12-12",
+      "resolutionDate": "2011-12-12",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Micah Owings elected free agency."
+    },
+    {
+      "id": 109104,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2012-02-02",
+      "effectiveDate": "2012-02-02",
+      "resolutionDate": "2012-02-02",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Diego Padres signed free agent RHP Micah Owings."
+    },
+    {
+      "id": 116293,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2012-04-26",
+      "effectiveDate": "2012-04-26",
+      "resolutionDate": "2012-04-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres placed RHP Micah Owings on the 15-day disabled list."
+    },
+    {
+      "id": 117428,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2012-05-08",
+      "effectiveDate": "2012-05-08",
+      "resolutionDate": "2012-05-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres transferred RHP Micah Owings from the 15-day disabled list to the 60-day disabled list."
+    },
+    {
+      "id": 121514,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 549,
+        "name": "Tucson Padres",
+        "link": "/api/v1/teams/549"
+      },
+      "date": "2012-06-04",
+      "effectiveDate": "2012-06-04",
+      "resolutionDate": "2012-06-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent RHP Micah Owings on a rehab assignment to Tucson Padres."
+    },
+    {
+      "id": 137857,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2012-10-23",
+      "effectiveDate": "2012-10-23",
+      "resolutionDate": "2012-10-23",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "San Diego Padres released RHP Micah Owings."
+    },
+    {
+      "id": 138618,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 687,
+        "name": "Gigantes de Carolina",
+        "link": "/api/v1/teams/687"
+      },
+      "date": "2012-11-05",
+      "effectiveDate": "2012-11-05",
+      "resolutionDate": "2012-11-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Micah Owings assigned to Gigantes de Carolina."
+    },
+    {
+      "id": 143448,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 3280,
+        "name": "Nationals Alternate Training Site",
+        "link": "/api/v1/teams/3280"
+      },
+      "date": "2013-02-06",
+      "effectiveDate": "2013-02-06",
+      "resolutionDate": "2013-02-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Micah Owings assigned to Nationals Extended Spring Training."
+    },
+    {
+      "id": 143447,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2013-02-06",
+      "effectiveDate": "2013-02-06",
+      "resolutionDate": "2013-02-06",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Washington Nationals signed free agent 1B Micah Owings to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 146602,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "fromTeam": {
+        "id": 3280,
+        "name": "Nationals Alternate Training Site",
+        "link": "/api/v1/teams/3280"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2013-03-29",
+      "effectiveDate": "2013-03-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Micah Owings assigned to Syracuse Chiefs from Nationals Extended Spring Training."
+    },
+    {
+      "id": 158627,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2013-06-14",
+      "effectiveDate": "2013-06-14",
+      "resolutionDate": "2013-06-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Chiefs placed OF Micah Owings on the 7-day disabled list."
+    },
+    {
+      "id": 161081,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2013-06-22",
+      "effectiveDate": "2013-06-22",
+      "resolutionDate": "2013-06-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Chiefs activated OF Micah Owings from the 7-day disabled list."
+    },
+    {
+      "id": 162446,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2013-06-30",
+      "effectiveDate": "2013-06-30",
+      "resolutionDate": "2013-06-30",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Syracuse Chiefs released OF Micah Owings."
+    },
+    {
+      "id": 165247,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2013-07-13",
+      "effectiveDate": "2013-07-13",
+      "resolutionDate": "2013-07-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Micah Owings assigned to Milwaukee Brewers."
+    },
+    {
+      "id": 165683,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 503,
+        "name": "Florida Fire Frogs",
+        "link": "/api/v1/teams/503"
+      },
+      "date": "2013-07-13",
+      "effectiveDate": "2013-07-13",
+      "resolutionDate": "2013-07-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Micah Owings assigned to Brevard County Manatees."
+    },
+    {
+      "id": 165248,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 406,
+        "name": "ACL Brewers",
+        "link": "/api/v1/teams/406"
+      },
+      "date": "2013-07-22",
+      "effectiveDate": "2013-07-22",
+      "resolutionDate": "2013-07-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent OF Micah Owings on a rehab assignment to AZL Brewers."
+    },
+    {
+      "id": 167158,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "fromTeam": {
+        "id": 503,
+        "name": "Florida Fire Frogs",
+        "link": "/api/v1/teams/503"
+      },
+      "toTeam": {
+        "id": 559,
+        "name": "Rocket City Trash Pandas",
+        "link": "/api/v1/teams/559"
+      },
+      "date": "2013-08-06",
+      "effectiveDate": "2013-08-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Micah Owings assigned to Huntsville Stars from Brevard County Manatees."
+    },
+    {
+      "id": 174600,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 559,
+        "name": "Rocket City Trash Pandas",
+        "link": "/api/v1/teams/559"
+      },
+      "date": "2013-11-04",
+      "effectiveDate": "2013-11-04",
+      "resolutionDate": "2013-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LF Micah Owings elected free agency."
+    },
+    {
+      "id": 185177,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2014-04-05",
+      "effectiveDate": "2014-04-05",
+      "resolutionDate": "2014-04-05",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Miami Marlins signed free agent LF Micah Owings to a minor league contract."
+    },
+    {
+      "id": 190234,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2014-05-27",
+      "effectiveDate": "2014-05-27",
+      "resolutionDate": "2014-05-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Micah Owings assigned to Jacksonville Suns."
+    },
+    {
+      "id": 192085,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2014-06-06",
+      "effectiveDate": "2014-06-06",
+      "resolutionDate": "2014-06-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jacksonville Suns placed RHP Micah Owings on the temporarily inactive list."
+    },
+    {
+      "id": 192955,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2014-06-11",
+      "effectiveDate": "2014-06-11",
+      "resolutionDate": "2014-06-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jacksonville Suns placed RHP Micah Owings on the 7-day disabled list. right triceps strain"
+    },
+    {
+      "id": 207856,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2014-09-18",
+      "effectiveDate": "2014-09-18",
+      "resolutionDate": "2014-09-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jacksonville Suns activated RHP Micah Owings from the 7-day disabled list."
+    },
+    {
+      "id": 291512,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2016-10-24",
+      "effectiveDate": "2016-10-24",
+      "resolutionDate": "2016-10-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Seattle Mariners signed free agent RHP Micah Owings to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 293885,
+      "person": {
+        "id": 452249,
+        "fullName": "Micah Owings",
+        "link": "/api/v1/people/452249",
+        "nameSlug": "micah-owings-452249"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2016-10-25",
+      "effectiveDate": "2016-10-25",
+      "resolutionDate": "2016-10-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Micah Owings assigned to Tacoma Rainiers."
+    }
+  ]
+}

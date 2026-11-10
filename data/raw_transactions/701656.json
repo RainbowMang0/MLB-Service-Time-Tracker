@@ -1,0 +1,973 @@
+{
+  "player_id": 701656,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:ce20f9a1c050a3e6dce4e6997af61a1966d14d16c3bc79e0cc04db2450b9d83d",
+  "transactions": [
+    {
+      "id": 512656,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2021-07-25",
+      "effectiveDate": "2021-07-25",
+      "resolutionDate": "2021-07-25",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Milwaukee Brewers signed RHP Logan Henderson."
+    },
+    {
+      "id": 512657,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "toTeam": {
+        "id": 3261,
+        "name": "Brewers Organization",
+        "link": "/api/v1/teams/3261"
+      },
+      "date": "2021-08-17",
+      "effectiveDate": "2021-08-17",
+      "resolutionDate": "2021-08-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Logan Henderson assigned to Brewers Organization."
+    },
+    {
+      "id": 629253,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "toTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "date": "2022-06-01",
+      "effectiveDate": "2022-06-01",
+      "resolutionDate": "2022-06-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Wisconsin Timber Rattlers placed RHP Logan Henderson on the 60-day injured list."
+    },
+    {
+      "id": 629252,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 3261,
+        "name": "Brewers Organization",
+        "link": "/api/v1/teams/3261"
+      },
+      "toTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "date": "2022-06-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Logan Henderson assigned to Wisconsin Timber Rattlers from Brewers Organization."
+    },
+    {
+      "id": 643864,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "toTeam": {
+        "id": 5430,
+        "name": "ACL Brewers Blue",
+        "link": "/api/v1/teams/5430"
+      },
+      "date": "2022-08-06",
+      "effectiveDate": "2022-08-06",
+      "resolutionDate": "2022-08-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Wisconsin Timber Rattlers sent RHP Logan Henderson on a rehab assignment to ACL Brewers Blue."
+    },
+    {
+      "id": 643869,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "toTeam": {
+        "id": 5430,
+        "name": "ACL Brewers Blue",
+        "link": "/api/v1/teams/5430"
+      },
+      "date": "2022-08-06",
+      "effectiveDate": "2022-08-06",
+      "resolutionDate": "2022-08-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Wisconsin Timber Rattlers sent RHP Logan Henderson on a rehab assignment to ACL Brewers Blue."
+    },
+    {
+      "id": 690230,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "toTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "date": "2022-08-16",
+      "effectiveDate": "2022-08-16",
+      "resolutionDate": "2022-08-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Carolina Mudcats activated RHP Logan Henderson."
+    },
+    {
+      "id": 646715,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "toTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "date": "2022-08-16",
+      "effectiveDate": "2022-08-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Logan Henderson assigned to Carolina Mudcats from Wisconsin Timber Rattlers."
+    },
+    {
+      "id": 670337,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "toTeam": {
+        "id": 454,
+        "name": "Glendale Desert Dogs",
+        "link": "/api/v1/teams/454"
+      },
+      "date": "2022-09-16",
+      "effectiveDate": "2022-09-16",
+      "resolutionDate": "2022-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Glendale Desert Dogs activated RHP Logan Henderson."
+    },
+    {
+      "id": 652688,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "toTeam": {
+        "id": 454,
+        "name": "Glendale Desert Dogs",
+        "link": "/api/v1/teams/454"
+      },
+      "date": "2022-09-16",
+      "effectiveDate": "2022-09-16",
+      "resolutionDate": "2022-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Glendale Desert Dogs activated RHP Logan Henderson."
+    },
+    {
+      "id": 690231,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "toTeam": {
+        "id": 5430,
+        "name": "ACL Brewers Blue",
+        "link": "/api/v1/teams/5430"
+      },
+      "date": "2023-04-02",
+      "effectiveDate": "2023-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Logan Henderson assigned to ACL Brewers Blue from Carolina Mudcats."
+    },
+    {
+      "id": 761428,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "toTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "date": "2023-05-08",
+      "effectiveDate": "2023-05-08",
+      "resolutionDate": "2023-05-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Carolina Mudcats activated RHP Logan Henderson."
+    },
+    {
+      "id": 690232,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 5430,
+        "name": "ACL Brewers Blue",
+        "link": "/api/v1/teams/5430"
+      },
+      "toTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "date": "2023-05-08",
+      "effectiveDate": "2023-05-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Logan Henderson assigned to Carolina Mudcats from ACL Brewers Blue."
+    },
+    {
+      "id": 751944,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2024-02-26",
+      "effectiveDate": "2024-02-26",
+      "resolutionDate": "2024-02-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Logan Henderson assigned to Milwaukee Brewers."
+    },
+    {
+      "id": 753752,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "toTeam": {
+        "id": 387,
+        "name": "Milwaukee Brewers Prospects",
+        "link": "/api/v1/teams/387"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers Prospects activated RHP Logan Henderson."
+    },
+    {
+      "id": 761429,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 249,
+        "name": "Wilson Warbirds",
+        "link": "/api/v1/teams/249"
+      },
+      "toTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "date": "2024-04-05",
+      "effectiveDate": "2024-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Logan Henderson assigned to Wisconsin Timber Rattlers from Carolina Mudcats."
+    },
+    {
+      "id": 769538,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "toTeam": {
+        "id": 406,
+        "name": "ACL Brewers",
+        "link": "/api/v1/teams/406"
+      },
+      "date": "2024-05-09",
+      "effectiveDate": "2024-05-09",
+      "resolutionDate": "2024-05-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Wisconsin Timber Rattlers sent RHP Logan Henderson on a rehab assignment to ACL Brewers."
+    },
+    {
+      "id": 773666,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "toTeam": {
+        "id": 406,
+        "name": "ACL Brewers",
+        "link": "/api/v1/teams/406"
+      },
+      "date": "2024-05-09",
+      "effectiveDate": "2024-05-09",
+      "resolutionDate": "2024-05-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Wisconsin Timber Rattlers sent RHP Logan Henderson on a rehab assignment to ACL Brewers."
+    },
+    {
+      "id": 773667,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "toTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "date": "2024-05-24",
+      "effectiveDate": "2024-05-24",
+      "resolutionDate": "2024-05-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Wisconsin Timber Rattlers activated RHP Logan Henderson from the 7-day injured list."
+    },
+    {
+      "id": 776006,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 572,
+        "name": "Wisconsin Timber Rattlers",
+        "link": "/api/v1/teams/572"
+      },
+      "toTeam": {
+        "id": 5015,
+        "name": "Biloxi Shuckers",
+        "link": "/api/v1/teams/5015"
+      },
+      "date": "2024-06-01",
+      "effectiveDate": "2024-06-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Logan Henderson assigned to Biloxi Shuckers from Wisconsin Timber Rattlers."
+    },
+    {
+      "id": 793557,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 5015,
+        "name": "Biloxi Shuckers",
+        "link": "/api/v1/teams/5015"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2024-08-08",
+      "effectiveDate": "2024-08-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Logan Henderson assigned to Nashville Sounds from Biloxi Shuckers."
+    },
+    {
+      "id": 799504,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2024-09-19",
+      "effectiveDate": "2024-09-19",
+      "resolutionDate": "2024-09-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Nashville Sounds transferred RHP Logan Henderson to the Development List."
+    },
+    {
+      "id": 800511,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2024-09-26",
+      "effectiveDate": "2024-09-26",
+      "resolutionDate": "2024-09-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Nashville Sounds activated RHP Logan Henderson."
+    },
+    {
+      "id": 806467,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2024-11-19",
+      "effectiveDate": "2024-11-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Milwaukee Brewers selected the contract of RHP Logan Henderson from Nashville Sounds."
+    },
+    {
+      "id": 819680,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2025-03-10",
+      "effectiveDate": "2025-03-10",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned RHP Logan Henderson to Nashville Sounds."
+    },
+    {
+      "id": 828899,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Milwaukee Brewers recalled RHP Logan Henderson from Nashville Sounds."
+    },
+    {
+      "id": 829218,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Logan Henderson changed number to 43."
+    },
+    {
+      "id": 831476,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2025-04-21",
+      "effectiveDate": "2025-04-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned RHP Logan Henderson to Nashville Sounds."
+    },
+    {
+      "id": 837565,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2025-05-14",
+      "effectiveDate": "2025-05-14",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Milwaukee Brewers recalled RHP Logan Henderson from Nashville Sounds."
+    },
+    {
+      "id": 840686,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2025-05-26",
+      "effectiveDate": "2025-05-26",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned RHP Logan Henderson to Nashville Sounds."
+    },
+    {
+      "id": 861297,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2025-08-03",
+      "effectiveDate": "2025-08-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Milwaukee Brewers recalled RHP Logan Henderson from Nashville Sounds."
+    },
+    {
+      "id": 863195,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2025-08-08",
+      "effectiveDate": "2025-08-04",
+      "resolutionDate": "2025-08-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers placed RHP Logan Henderson on the 15-day injured list retroactive to August 4, 2025. Right elbow inflammation."
+    },
+    {
+      "id": 866581,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2025-08-27",
+      "effectiveDate": "2025-08-27",
+      "resolutionDate": "2025-08-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers transferred RHP Logan Henderson from the 15-day injured list to the 60-day injured list. Right elbow inflammation."
+    },
+    {
+      "id": 875178,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated RHP Logan Henderson from the 60-day injured list."
+    },
+    {
+      "id": 892410,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2026-03-19",
+      "effectiveDate": "2026-03-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned RHP Logan Henderson to Nashville Sounds."
+    },
+    {
+      "id": 897196,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-04-04",
+      "effectiveDate": "2026-04-04",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Milwaukee Brewers recalled RHP Logan Henderson from Nashville Sounds."
+    },
+    {
+      "id": 897238,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2026-04-05",
+      "effectiveDate": "2026-04-05",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned RHP Logan Henderson to Nashville Sounds."
+    },
+    {
+      "id": 905514,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-05-03",
+      "effectiveDate": "2026-05-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Milwaukee Brewers recalled RHP Logan Henderson from Nashville Sounds."
+    },
+    {
+      "id": 911667,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-05-26",
+      "effectiveDate": "2026-05-23",
+      "resolutionDate": "2026-05-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers placed RHP Logan Henderson on the 15-day injured list retroactive to May 23, 2026. Low back strain."
+    },
+    {
+      "id": 923296,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2026-06-28",
+      "effectiveDate": "2026-06-28",
+      "resolutionDate": "2026-06-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Milwaukee Brewers sent RHP Logan Henderson on a rehab assignment to Nashville Sounds."
+    },
+    {
+      "id": 926482,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2026-06-28",
+      "effectiveDate": "2026-06-28",
+      "resolutionDate": "2026-06-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Milwaukee Brewers sent RHP Logan Henderson on a rehab assignment to Nashville Sounds."
+    },
+    {
+      "id": 923290,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2026-06-28",
+      "effectiveDate": "2026-06-28",
+      "resolutionDate": "2026-06-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Milwaukee Brewers sent RHP Logan Henderson on a rehab assignment to Nashville Sounds."
+    },
+    {
+      "id": 926483,
+      "person": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656",
+        "nameSlug": "logan-henderson-701656"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-07-09",
+      "effectiveDate": "2026-07-09",
+      "resolutionDate": "2026-07-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated RHP Logan Henderson from the 15-day injured list."
+    }
+  ]
+}

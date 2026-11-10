@@ -1,0 +1,648 @@
+{
+  "player_id": 801725,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:f4f9222038ffd13a13387511643f30e4bb75343229d7dcc4f60635f4ec2ee09e",
+  "transactions": [
+    {
+      "id": 607747,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2021-12-15",
+      "effectiveDate": "2021-12-15",
+      "resolutionDate": "2021-12-15",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Baltimore Orioles signed free agent LHP Luis De Leon to a minor league contract."
+    },
+    {
+      "id": 626313,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "toTeam": {
+        "id": 621,
+        "name": "DSL Orioles Black",
+        "link": "/api/v1/teams/621"
+      },
+      "date": "2022-06-03",
+      "effectiveDate": "2022-06-03",
+      "resolutionDate": "2022-06-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Luis De Leon assigned to DSL BAL Black."
+    },
+    {
+      "id": 631740,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "toTeam": {
+        "id": 621,
+        "name": "DSL Orioles Black",
+        "link": "/api/v1/teams/621"
+      },
+      "date": "2022-06-03",
+      "effectiveDate": "2022-06-18",
+      "resolutionDate": "2022-06-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "DSL BAL Black placed LHP Luis De Leon on the 7-day injured list."
+    },
+    {
+      "id": 634279,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "toTeam": {
+        "id": 621,
+        "name": "DSL Orioles Black",
+        "link": "/api/v1/teams/621"
+      },
+      "date": "2022-07-01",
+      "effectiveDate": "2022-07-01",
+      "resolutionDate": "2022-07-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "DSL BAL Black activated LHP Luis De Leon from the 7-day injured list."
+    },
+    {
+      "id": 641018,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "fromTeam": {
+        "id": 621,
+        "name": "DSL Orioles Black",
+        "link": "/api/v1/teams/621"
+      },
+      "toTeam": {
+        "id": 3130,
+        "name": "DSL Orioles Orange",
+        "link": "/api/v1/teams/3130"
+      },
+      "date": "2022-07-29",
+      "effectiveDate": "2022-07-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Luis De Leon assigned to DSL BAL Orange from DSL BAL Black."
+    },
+    {
+      "id": 699499,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "toTeam": {
+        "id": 621,
+        "name": "DSL Orioles Black",
+        "link": "/api/v1/teams/621"
+      },
+      "date": "2022-08-05",
+      "effectiveDate": "2022-08-05",
+      "resolutionDate": "2022-08-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "DSL BAL Black activated LHP Luis De Leon."
+    },
+    {
+      "id": 643400,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "fromTeam": {
+        "id": 3130,
+        "name": "DSL Orioles Orange",
+        "link": "/api/v1/teams/3130"
+      },
+      "toTeam": {
+        "id": 621,
+        "name": "DSL Orioles Black",
+        "link": "/api/v1/teams/621"
+      },
+      "date": "2022-08-05",
+      "effectiveDate": "2022-08-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Luis De Leon assigned to DSL BAL Black from DSL BAL Orange."
+    },
+    {
+      "id": 687512,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "toTeam": {
+        "id": 3283,
+        "name": "Orioles Organization",
+        "link": "/api/v1/teams/3283"
+      },
+      "date": "2023-04-27",
+      "effectiveDate": "2023-04-27",
+      "resolutionDate": "2023-04-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Orioles Organization activated LHP Luis De Leon. Ext Spring Game."
+    },
+    {
+      "id": 699500,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "toTeam": {
+        "id": 599,
+        "name": "FCL Orioles",
+        "link": "/api/v1/teams/599"
+      },
+      "date": "2023-06-04",
+      "effectiveDate": "2023-06-04",
+      "resolutionDate": "2023-06-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Luis De Leon assigned to FCL Orioles."
+    },
+    {
+      "id": 710964,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "toTeam": {
+        "id": 548,
+        "name": "Delmarva Shorebirds",
+        "link": "/api/v1/teams/548"
+      },
+      "date": "2023-07-14",
+      "effectiveDate": "2023-07-14",
+      "resolutionDate": "2023-07-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Delmarva Shorebirds activated LHP Luis De León."
+    },
+    {
+      "id": 710874,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "fromTeam": {
+        "id": 599,
+        "name": "FCL Orioles",
+        "link": "/api/v1/teams/599"
+      },
+      "toTeam": {
+        "id": 548,
+        "name": "Delmarva Shorebirds",
+        "link": "/api/v1/teams/548"
+      },
+      "date": "2023-07-14",
+      "effectiveDate": "2023-07-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Luis De León assigned to Delmarva Shorebirds from FCL Orioles."
+    },
+    {
+      "id": 825890,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "toTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "date": "2024-05-21",
+      "effectiveDate": "2024-05-21",
+      "resolutionDate": "2024-05-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aberdeen IronBirds activated LHP Luis De León."
+    },
+    {
+      "id": 773840,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "toTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "date": "2024-05-21",
+      "effectiveDate": "2024-05-21",
+      "resolutionDate": "2024-05-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aberdeen IronBirds activated LHP Luis De León."
+    },
+    {
+      "id": 773064,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "fromTeam": {
+        "id": 548,
+        "name": "Delmarva Shorebirds",
+        "link": "/api/v1/teams/548"
+      },
+      "toTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "date": "2024-05-21",
+      "effectiveDate": "2024-05-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Luis De León assigned to Aberdeen IronBirds from Delmarva Shorebirds."
+    },
+    {
+      "id": 818817,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "toTeam": {
+        "id": 361,
+        "name": "Baltimore Orioles Prospects",
+        "link": "/api/v1/teams/361"
+      },
+      "date": "2025-03-06",
+      "effectiveDate": "2025-03-06",
+      "resolutionDate": "2025-03-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "activated LHP Luis De León."
+    },
+    {
+      "id": 819696,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-03-10",
+      "effectiveDate": "2025-03-10",
+      "resolutionDate": "2025-03-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Luis De León assigned to Baltimore Orioles."
+    },
+    {
+      "id": 825891,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "toTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "date": "2025-04-04",
+      "effectiveDate": "2025-04-04",
+      "resolutionDate": "2025-04-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aberdeen IronBirds placed LHP Luis De León on the 7-day injured list."
+    },
+    {
+      "id": 835594,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "fromTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "toTeam": {
+        "id": 548,
+        "name": "Delmarva Shorebirds",
+        "link": "/api/v1/teams/548"
+      },
+      "date": "2025-05-07",
+      "effectiveDate": "2025-05-07",
+      "resolutionDate": "2025-05-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Aberdeen IronBirds sent LHP Luis De León on a rehab assignment to Delmarva Shorebirds."
+    },
+    {
+      "id": 840946,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "toTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "date": "2025-05-27",
+      "effectiveDate": "2025-05-27",
+      "resolutionDate": "2025-05-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aberdeen IronBirds activated LHP Luis De León from the 7-day injured list."
+    },
+    {
+      "id": 866407,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "fromTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2025-08-26",
+      "effectiveDate": "2025-08-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Luis De León assigned to Chesapeake Baysox from Aberdeen IronBirds."
+    },
+    {
+      "id": 868712,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "toTeam": {
+        "id": 490,
+        "name": "Peoria Javelinas",
+        "link": "/api/v1/teams/490"
+      },
+      "date": "2025-09-10",
+      "effectiveDate": "2025-09-10",
+      "resolutionDate": "2025-09-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Luis De León assigned to Peoria Javelinas."
+    },
+    {
+      "id": 874778,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "toTeam": {
+        "id": 1310,
+        "name": "American League Fall Stars",
+        "link": "/api/v1/teams/1310"
+      },
+      "date": "2025-11-08",
+      "effectiveDate": "2025-11-08",
+      "resolutionDate": "2025-11-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "American League Fall Stars activated LHP Luis De León."
+    },
+    {
+      "id": 884165,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-02-04",
+      "effectiveDate": "2026-02-04",
+      "resolutionDate": "2026-02-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Baltimore Orioles invited non-roster LHP Luis De León to spring training."
+    },
+    {
+      "id": 890463,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "toTeam": {
+        "id": 361,
+        "name": "Baltimore Orioles Prospects",
+        "link": "/api/v1/teams/361"
+      },
+      "date": "2026-03-05",
+      "effectiveDate": "2026-03-05",
+      "resolutionDate": "2026-03-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Luis De León assigned to Baltimore Orioles Prospects."
+    },
+    {
+      "id": 932165,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2026-07-28",
+      "effectiveDate": "2026-07-28",
+      "resolutionDate": "2026-07-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Norfolk Tides activated LHP Luis De León."
+    },
+    {
+      "id": 932088,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "fromTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2026-07-28",
+      "effectiveDate": "2026-07-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Luis De León assigned to Norfolk Tides from Chesapeake Baysox."
+    },
+    {
+      "id": 940507,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-09-01",
+      "effectiveDate": "2026-09-01",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Baltimore Orioles selected the contract of LHP Luis De León from Norfolk Tides."
+    },
+    {
+      "id": 943761,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 599,
+        "name": "FCL Orioles",
+        "link": "/api/v1/teams/599"
+      },
+      "date": "2026-09-23",
+      "effectiveDate": "2026-09-23",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Baltimore Orioles optioned LHP Luis De León to FCL Orioles."
+    },
+    {
+      "id": 944296,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "toTeam": {
+        "id": 599,
+        "name": "FCL Orioles",
+        "link": "/api/v1/teams/599"
+      },
+      "date": "2026-09-24",
+      "effectiveDate": "2026-09-24",
+      "resolutionDate": "2026-09-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "FCL Orioles activated LHP Luis De León."
+    },
+    {
+      "id": 944353,
+      "person": {
+        "id": 801725,
+        "fullName": "Luis De León",
+        "link": "/api/v1/people/801725",
+        "nameSlug": "luis-de-leon-801725"
+      },
+      "fromTeam": {
+        "id": 599,
+        "name": "FCL Orioles",
+        "link": "/api/v1/teams/599"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-09-28",
+      "effectiveDate": "2026-09-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Baltimore Orioles recalled LHP Luis De León from FCL Orioles."
+    }
+  ]
+}

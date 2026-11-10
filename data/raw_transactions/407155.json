@@ -1,0 +1,47 @@
+{
+  "player_id": 407155,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:a33c6a8502dbe494fd166ed424e4c4d43e6893560897626a253654b420c21ded",
+  "transactions": [
+    {
+      "id": 11362,
+      "person": {
+        "id": 407155,
+        "fullName": "Craig Monroe",
+        "link": "/api/v1/people/407155",
+        "nameSlug": "craig-monroe-407155"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2009-06-20",
+      "effectiveDate": "2009-06-20",
+      "resolutionDate": "2009-06-20",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Pittsburgh Pirates designated Craig Monroe for assignment."
+    },
+    {
+      "id": 30381,
+      "person": {
+        "id": 407155,
+        "fullName": "Craig Monroe",
+        "link": "/api/v1/people/407155",
+        "nameSlug": "craig-monroe-407155"
+      },
+      "toTeam": {
+        "id": 688,
+        "name": "Indios de Mayaguez",
+        "link": "/api/v1/teams/688"
+      },
+      "date": "2009-12-08",
+      "effectiveDate": "2009-12-08",
+      "resolutionDate": "2009-12-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Craig Monroe assigned to Indios de Mayaguez."
+    }
+  ]
+}

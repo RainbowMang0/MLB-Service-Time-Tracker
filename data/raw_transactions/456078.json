@@ -1,0 +1,1782 @@
+{
+  "player_id": 456078,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:fc826e77f508a81e454c8565a62d5ea8c944e851444e263025746db285b96c97",
+  "transactions": [
+    {
+      "id": 27919,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 555,
+        "name": "Mesa Solar Sox",
+        "link": "/api/v1/teams/555"
+      },
+      "date": "2009-10-31",
+      "effectiveDate": "2009-10-31",
+      "resolutionDate": "2009-10-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mesa Solar Sox reassigned C Welington Castillo to the minor leagues."
+    },
+    {
+      "id": 29686,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2009-11-20",
+      "effectiveDate": "2009-11-20",
+      "resolutionDate": "2009-11-20",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Chicago Cubs selected the contract of Welington Castillo from Tennessee Smokies."
+    },
+    {
+      "id": 33106,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2010-03-13",
+      "effectiveDate": "2010-03-13",
+      "resolutionDate": "2010-03-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Welington Castillo assigned to Chicago Cubs."
+    },
+    {
+      "id": 34032,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2010-03-19",
+      "effectiveDate": "2010-03-19",
+      "resolutionDate": "2010-03-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned C Welington Castillo to Iowa Cubs."
+    },
+    {
+      "id": 45770,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2010-05-22",
+      "effectiveDate": "2010-05-22",
+      "resolutionDate": "2010-05-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs placed C Welington Castillo on the 7-day disabled list."
+    },
+    {
+      "id": 48702,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2010-05-31",
+      "effectiveDate": "2010-05-31",
+      "resolutionDate": "2010-05-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Welington Castillo roster status changed by Iowa Cubs."
+    },
+    {
+      "id": 66323,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2010-08-10",
+      "effectiveDate": "2010-08-10",
+      "resolutionDate": "2010-08-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Welington Castillo roster status changed by Chicago Cubs."
+    },
+    {
+      "id": 66322,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2010-08-10",
+      "effectiveDate": "2010-08-11",
+      "resolutionDate": "2010-08-10",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled Welington Castillo from Iowa Cubs."
+    },
+    {
+      "id": 68069,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2010-08-23",
+      "effectiveDate": "2010-08-24",
+      "resolutionDate": "2010-08-23",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned Welington Castillo to Iowa Cubs."
+    },
+    {
+      "id": 69425,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2010-09-02",
+      "effectiveDate": "2010-09-03",
+      "resolutionDate": "2010-09-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled Welington Castillo from Iowa Cubs."
+    },
+    {
+      "id": 72514,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2010-10-22",
+      "effectiveDate": "2010-10-22",
+      "resolutionDate": "2010-10-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Welington Castillo assigned to Tigres del Licey."
+    },
+    {
+      "id": 76641,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 1191,
+        "name": "Dominican Republic",
+        "link": "/api/v1/teams/1191"
+      },
+      "date": "2011-01-31",
+      "effectiveDate": "2011-01-31",
+      "resolutionDate": "2011-01-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Welington Castillo assigned to Dominican Republic."
+    },
+    {
+      "id": 80038,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2011-03-28",
+      "effectiveDate": "2011-03-28",
+      "resolutionDate": "2011-03-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned C Welington Castillo to Iowa Cubs."
+    },
+    {
+      "id": 82168,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "date": "2011-04-05",
+      "effectiveDate": "2011-04-05",
+      "resolutionDate": "2011-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Welington Castillo assigned to Daytona Cubs."
+    },
+    {
+      "id": 83791,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2011-04-21",
+      "effectiveDate": "2011-04-21",
+      "resolutionDate": "2011-04-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Welington Castillo assigned to Iowa Cubs from Daytona Cubs."
+    },
+    {
+      "id": 85552,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2011-05-11",
+      "effectiveDate": "2011-05-11",
+      "resolutionDate": "2011-05-11",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled Welington Castillo from Iowa Cubs."
+    },
+    {
+      "id": 87929,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2011-05-29",
+      "effectiveDate": "2011-05-29",
+      "resolutionDate": "2011-05-29",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned C Welington Castillo to Iowa Cubs."
+    },
+    {
+      "id": 98402,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2011-07-28",
+      "effectiveDate": "2011-07-28",
+      "resolutionDate": "2011-07-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs placed C Welington Castillo on the 7-day disabled list."
+    },
+    {
+      "id": 99952,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 407,
+        "name": "ACL Cubs",
+        "link": "/api/v1/teams/407"
+      },
+      "date": "2011-08-10",
+      "effectiveDate": "2011-08-10",
+      "resolutionDate": "2011-08-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent C Welington Castillo on a rehab assignment to AZL Cubs."
+    },
+    {
+      "id": 100060,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2011-08-11",
+      "effectiveDate": "2011-08-11",
+      "resolutionDate": "2011-08-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs activated C Welington Castillo from the 7-day disabled list."
+    },
+    {
+      "id": 102048,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2011-08-30",
+      "effectiveDate": "2011-08-30",
+      "resolutionDate": "2011-08-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs placed C Welington Castillo on the 7-day disabled list."
+    },
+    {
+      "id": 103495,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2011-09-29",
+      "effectiveDate": "2011-09-29",
+      "resolutionDate": "2011-09-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Welington Castillo roster status changed by Chicago Cubs."
+    },
+    {
+      "id": 111470,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2012-03-29",
+      "effectiveDate": "2012-04-27",
+      "resolutionDate": "2012-03-29",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned Welington Castillo to Iowa Cubs."
+    },
+    {
+      "id": 116483,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2012-04-28",
+      "effectiveDate": "2012-04-28",
+      "resolutionDate": "2012-04-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled Welington Castillo from Iowa Cubs."
+    },
+    {
+      "id": 118886,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2012-05-22",
+      "effectiveDate": "2012-05-19",
+      "resolutionDate": "2012-05-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs placed C Welington Castillo on the 15-day disabled list retroactive to May 19, 2012. MCL sprain in right knee."
+    },
+    {
+      "id": 121981,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2012-06-08",
+      "effectiveDate": "2012-06-08",
+      "resolutionDate": "2012-06-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent C Welington Castillo on a rehab assignment to Tennessee Smokies."
+    },
+    {
+      "id": 123254,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2012-06-14",
+      "effectiveDate": "2012-06-18",
+      "resolutionDate": "2012-06-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Welington Castillo roster status changed by Chicago Cubs."
+    },
+    {
+      "id": 125070,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2012-06-18",
+      "effectiveDate": "2012-07-30",
+      "resolutionDate": "2012-06-18",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned Welington Castillo to Iowa Cubs."
+    },
+    {
+      "id": 131468,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2012-07-31",
+      "effectiveDate": "2012-07-31",
+      "resolutionDate": "2012-07-31",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled C Welington Castillo from Iowa Cubs."
+    },
+    {
+      "id": 171042,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2013-09-25",
+      "effectiveDate": "2013-09-20",
+      "resolutionDate": "2013-09-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs placed C Welington Castillo on the 15-day disabled list retroactive to September 20, 2013. Recovering from September 2013 right knee surgery."
+    },
+    {
+      "id": 171518,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2013-10-01",
+      "effectiveDate": "2013-10-01",
+      "resolutionDate": "2013-10-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated C Welington Castillo from the 15-day disabled list."
+    },
+    {
+      "id": 191578,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2014-06-03",
+      "effectiveDate": "2014-06-02",
+      "resolutionDate": "2014-06-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs placed C Welington Castillo on the 15-day disabled list retroactive to June 2, 2014. Left rib cage inflammation."
+    },
+    {
+      "id": 195686,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2014-06-19",
+      "effectiveDate": "2014-06-19",
+      "resolutionDate": "2014-06-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago Cubs sent C Welington Castillo on a rehab assignment to Iowa Cubs."
+    },
+    {
+      "id": 196828,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2014-06-22",
+      "effectiveDate": "2014-06-22",
+      "resolutionDate": "2014-06-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated C Welington Castillo from the 15-day disabled list."
+    },
+    {
+      "id": 225948,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2015-05-19",
+      "effectiveDate": "2015-05-19",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Chicago Cubs traded C Welington Castillo to Seattle Mariners for RHP Yoervis Medina."
+    },
+    {
+      "id": 226051,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2015-05-20",
+      "effectiveDate": "2015-05-20",
+      "resolutionDate": "2015-05-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners activated C Welington Castillo."
+    },
+    {
+      "id": 228679,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2015-06-03",
+      "effectiveDate": "2015-06-03",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Arizona Diamondbacks traded RF Mark Trumbo and LHP Vidal Nuno to Seattle Mariners for C Welington Castillo, RHP Dominic Leone, RF Gabriel Guerrero and SS Jack Reinheimer."
+    },
+    {
+      "id": 228882,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2015-06-04",
+      "effectiveDate": "2015-06-04",
+      "resolutionDate": "2015-06-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated C Welington Castillo."
+    },
+    {
+      "id": 283241,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2016-08-09",
+      "effectiveDate": "2016-08-09",
+      "resolutionDate": "2016-08-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks placed C Welington Castillo on the paternity list."
+    },
+    {
+      "id": 283694,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2016-08-12",
+      "effectiveDate": "2016-08-12",
+      "resolutionDate": "2016-08-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "C Welington Castillo roster status changed by Arizona Diamondbacks."
+    },
+    {
+      "id": 284031,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2016-08-15",
+      "effectiveDate": "2016-08-15",
+      "resolutionDate": "2016-08-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated C Welington Castillo."
+    },
+    {
+      "id": 294383,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2016-12-02",
+      "effectiveDate": "2016-12-02",
+      "resolutionDate": "2016-12-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Welington Castillo elected free agency."
+    },
+    {
+      "id": 295155,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2016-12-16",
+      "effectiveDate": "2016-12-16",
+      "resolutionDate": "2016-12-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Baltimore Orioles signed free agent C Welington Castillo."
+    },
+    {
+      "id": 308757,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2017-05-02",
+      "effectiveDate": "2017-05-01",
+      "resolutionDate": "2017-05-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles placed C Welington Castillo on the 10-day disabled list retroactive to May 1, 2017. Right shoulder tendinitis."
+    },
+    {
+      "id": 310397,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2017-05-13",
+      "effectiveDate": "2017-05-13",
+      "resolutionDate": "2017-05-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Baltimore Orioles sent C Welington Castillo on a rehab assignment to Bowie Baysox."
+    },
+    {
+      "id": 310785,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2017-05-16",
+      "effectiveDate": "2017-05-16",
+      "resolutionDate": "2017-05-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles activated C Welington Castillo from the 10-day disabled list."
+    },
+    {
+      "id": 312820,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2017-05-31",
+      "effectiveDate": "2017-05-31",
+      "resolutionDate": "2017-05-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles placed C Welington Castillo on the 10-day disabled list. Groin contusion."
+    },
+    {
+      "id": 315104,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2017-06-09",
+      "effectiveDate": "2017-06-09",
+      "resolutionDate": "2017-06-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Baltimore Orioles sent C Welington Castillo on a rehab assignment to Bowie Baysox."
+    },
+    {
+      "id": 314973,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2017-06-09",
+      "effectiveDate": "2017-06-09",
+      "resolutionDate": "2017-06-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Baltimore Orioles sent C Welington Castillo on a rehab assignment to Bowie Baysox."
+    },
+    {
+      "id": 315105,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2017-06-10",
+      "effectiveDate": "2017-06-10",
+      "resolutionDate": "2017-06-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles activated C Welington Castillo from the 10-day disabled list."
+    },
+    {
+      "id": 336261,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2017-11-06",
+      "effectiveDate": "2017-11-06",
+      "resolutionDate": "2017-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Welington Castillo elected free agency."
+    },
+    {
+      "id": 338023,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2017-12-01",
+      "effectiveDate": "2017-12-01",
+      "resolutionDate": "2017-12-01",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago White Sox signed free agent C Welington Castillo."
+    },
+    {
+      "id": 354953,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2018-05-24",
+      "effectiveDate": "2018-05-24",
+      "resolutionDate": "2018-05-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago White Sox placed C Welington Castillo on the restricted list."
+    },
+    {
+      "id": 375145,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2018-08-17",
+      "effectiveDate": "2018-08-17",
+      "resolutionDate": "2018-08-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent C Welington Castillo on a rehab assignment to Charlotte Knights."
+    },
+    {
+      "id": 375997,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2018-08-23",
+      "effectiveDate": "2018-08-23",
+      "resolutionDate": "2018-08-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago White Sox placed C Welington Castillo on the 10-day disabled list. Right shoulder inflammation."
+    },
+    {
+      "id": 377566,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2018-09-02",
+      "effectiveDate": "2018-09-02",
+      "resolutionDate": "2018-09-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago White Sox activated C Welington Castillo from the 10-day injured list."
+    },
+    {
+      "id": 403006,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2019-05-25",
+      "effectiveDate": "2019-05-25",
+      "resolutionDate": "2019-05-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago White Sox placed C Welington Castillo on the 7-day injured list. Concussion."
+    },
+    {
+      "id": 405243,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2019-06-01",
+      "effectiveDate": "2019-06-01",
+      "resolutionDate": "2019-06-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago White Sox activated C Welington Castillo from the 7-day injured list."
+    },
+    {
+      "id": 410560,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2019-06-18",
+      "effectiveDate": "2019-06-17",
+      "resolutionDate": "2019-06-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago White Sox placed C Welington Castillo on the 10-day injured list retroactive to June 17, 2019. Strained left oblique."
+    },
+    {
+      "id": 416215,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 247,
+        "name": "Birmingham Barons",
+        "link": "/api/v1/teams/247"
+      },
+      "date": "2019-07-08",
+      "effectiveDate": "2019-07-08",
+      "resolutionDate": "2019-07-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago White Sox sent C Welington Castillo on a rehab assignment to Birmingham Barons."
+    },
+    {
+      "id": 416669,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2019-07-11",
+      "effectiveDate": "2019-07-11",
+      "resolutionDate": "2019-07-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago White Sox sent C Welington Castillo on a rehab assignment to Charlotte Knights."
+    },
+    {
+      "id": 417756,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2019-07-16",
+      "effectiveDate": "2019-07-16",
+      "resolutionDate": "2019-07-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago White Sox activated C Welington Castillo from the 10-day injured list."
+    },
+    {
+      "id": 421466,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2019-08-02",
+      "effectiveDate": "2019-08-02",
+      "resolutionDate": "2019-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "C Welington Castillo roster status changed by Chicago White Sox."
+    },
+    {
+      "id": 422228,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2019-08-06",
+      "effectiveDate": "2019-08-06",
+      "resolutionDate": "2019-08-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago White Sox activated C Welington Castillo."
+    },
+    {
+      "id": 431798,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2019-10-31",
+      "effectiveDate": "2019-10-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Chicago White Sox traded C Welington Castillo and Future Considerations to Texas Rangers for OF Jonah McReynolds."
+    },
+    {
+      "id": 431989,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2019-11-01",
+      "effectiveDate": "2019-11-01",
+      "resolutionDate": "2019-11-01",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Welington Castillo elected free agency."
+    },
+    {
+      "id": 471203,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2019-11-04",
+      "effectiveDate": "2019-11-04",
+      "resolutionDate": "2019-11-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Welington Castillo assigned to Tigres del Licey."
+    },
+    {
+      "id": 432196,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2019-11-04",
+      "effectiveDate": "2019-11-04",
+      "resolutionDate": "2019-11-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Welington Castillo assigned to Tigres del Licey."
+    },
+    {
+      "id": 438185,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2020-02-12",
+      "effectiveDate": "2020-02-12",
+      "resolutionDate": "2020-02-12",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Washington Nationals signed free agent C Welington Castillo to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 441559,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2020-03-26",
+      "effectiveDate": "2020-03-26",
+      "resolutionDate": "2020-03-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Welington Castillo assigned to Fresno Grizzlies."
+    },
+    {
+      "id": 446440,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2020-07-04",
+      "effectiveDate": "2020-07-04",
+      "resolutionDate": "2020-07-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Washington Nationals placed C Welington Castillo on the restricted list."
+    },
+    {
+      "id": 453406,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 3280,
+        "name": "Nationals Alternate Training Site",
+        "link": "/api/v1/teams/3280"
+      },
+      "toTeam": {
+        "id": 3280,
+        "name": "Nationals Alternate Training Site",
+        "link": "/api/v1/teams/3280"
+      },
+      "date": "2020-07-05",
+      "effectiveDate": "2020-07-05",
+      "resolutionDate": "2020-07-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Welington Castillo assigned to Nationals Alternate Training Site from Nationals Alternate Training Site."
+    },
+    {
+      "id": 453410,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 3280,
+        "name": "Nationals Alternate Training Site",
+        "link": "/api/v1/teams/3280"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2020-10-13",
+      "effectiveDate": "2020-10-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Welington Castillo assigned to Fresno Grizzlies from Nationals Alternate Training Site."
+    },
+    {
+      "id": 455135,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2020-11-02",
+      "effectiveDate": "2020-11-02",
+      "resolutionDate": "2020-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Welington Castillo elected free agency."
+    },
+    {
+      "id": 460050,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2021-01-18",
+      "effectiveDate": "2021-01-18",
+      "resolutionDate": "2021-01-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Washington Nationals signed free agent C Welington Castillo to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 474475,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2021-01-18",
+      "effectiveDate": "2021-01-18",
+      "resolutionDate": "2021-01-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Washington Nationals signed free agent C Welington Castillo."
+    },
+    {
+      "id": 469283,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2021-01-19",
+      "effectiveDate": "2021-01-19",
+      "resolutionDate": "2021-01-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Fresno Grizzlies activated C Welington Castillo."
+    },
+    {
+      "id": 469282,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rochester Red Wings activated C Welington Castillo."
+    },
+    {
+      "id": 479495,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 3281,
+        "name": "Nationals Organization",
+        "link": "/api/v1/teams/3281"
+      },
+      "date": "2021-04-25",
+      "effectiveDate": "2021-04-25",
+      "resolutionDate": "2021-04-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Nationals Organization activated C Welington Castillo. ABS test."
+    },
+    {
+      "id": 483199,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 3280,
+        "name": "Nationals Alternate Training Site",
+        "link": "/api/v1/teams/3280"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Welington Castillo assigned to Rochester Red Wings from Nationals Alternate Training Site."
+    },
+    {
+      "id": 483229,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "resolutionDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Welington Castillo assigned to Rochester Red Wings."
+    },
+    {
+      "id": 495161,
+      "person": {
+        "id": 456078,
+        "fullName": "Welington Castillo",
+        "link": "/api/v1/people/456078",
+        "nameSlug": "welington-castillo-456078"
+      },
+      "fromTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2021-06-19",
+      "effectiveDate": "2021-06-19",
+      "resolutionDate": "2021-06-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rochester Red Wings placed C Welington Castillo on the restricted list."
+    }
+  ]
+}

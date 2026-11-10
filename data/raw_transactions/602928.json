@@ -1,0 +1,837 @@
+{
+  "player_id": 602928,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:c25ab5012f8f64bfb183e31dad283884296bdb293ca4ccb3ab872c16f3b6936e",
+  "transactions": [
+    {
+      "id": 80863,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2011-02-21",
+      "effectiveDate": "2011-02-21",
+      "resolutionDate": "2011-02-21",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent RHP Felix Jorge to a minor league contract."
+    },
+    {
+      "id": 80864,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "toTeam": {
+        "id": 632,
+        "name": "DSL Twins",
+        "link": "/api/v1/teams/632"
+      },
+      "date": "2011-04-02",
+      "effectiveDate": "2011-04-02",
+      "resolutionDate": "2011-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Felix Jorge assigned to DSL Twins."
+    },
+    {
+      "id": 124614,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "fromTeam": {
+        "id": 632,
+        "name": "DSL Twins",
+        "link": "/api/v1/teams/632"
+      },
+      "toTeam": {
+        "id": 474,
+        "name": "FCL Twins",
+        "link": "/api/v1/teams/474"
+      },
+      "date": "2012-06-01",
+      "effectiveDate": "2012-06-01",
+      "resolutionDate": "2012-06-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Felix Jorge assigned to GCL Twins from DSL Twins."
+    },
+    {
+      "id": 159496,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "fromTeam": {
+        "id": 474,
+        "name": "FCL Twins",
+        "link": "/api/v1/teams/474"
+      },
+      "toTeam": {
+        "id": 576,
+        "name": "Elizabethton River Riders",
+        "link": "/api/v1/teams/576"
+      },
+      "date": "2013-06-19",
+      "effectiveDate": "2013-06-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Felix Jorge assigned to Elizabethton Twins from GCL Twins."
+    },
+    {
+      "id": 182543,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "fromTeam": {
+        "id": 576,
+        "name": "Elizabethton River Riders",
+        "link": "/api/v1/teams/576"
+      },
+      "toTeam": {
+        "id": 492,
+        "name": "Cedar Rapids Kernels",
+        "link": "/api/v1/teams/492"
+      },
+      "date": "2014-03-29",
+      "effectiveDate": "2014-03-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Felix Jorge assigned to Cedar Rapids Kernels from Elizabethton Twins."
+    },
+    {
+      "id": 191620,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "fromTeam": {
+        "id": 492,
+        "name": "Cedar Rapids Kernels",
+        "link": "/api/v1/teams/492"
+      },
+      "toTeam": {
+        "id": 3304,
+        "name": "Twins Alternate Training Site",
+        "link": "/api/v1/teams/3304"
+      },
+      "date": "2014-06-03",
+      "effectiveDate": "2014-06-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Felix Jorge assigned to Twins Extended Spring Training from Cedar Rapids Kernels."
+    },
+    {
+      "id": 195326,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "fromTeam": {
+        "id": 3304,
+        "name": "Twins Alternate Training Site",
+        "link": "/api/v1/teams/3304"
+      },
+      "toTeam": {
+        "id": 576,
+        "name": "Elizabethton River Riders",
+        "link": "/api/v1/teams/576"
+      },
+      "date": "2014-06-19",
+      "effectiveDate": "2014-06-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Felix Jorge assigned to Elizabethton Twins from Twins Extended Spring Training."
+    },
+    {
+      "id": 220597,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "fromTeam": {
+        "id": 576,
+        "name": "Elizabethton River Riders",
+        "link": "/api/v1/teams/576"
+      },
+      "toTeam": {
+        "id": 492,
+        "name": "Cedar Rapids Kernels",
+        "link": "/api/v1/teams/492"
+      },
+      "date": "2015-04-06",
+      "effectiveDate": "2015-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Felix Jorge assigned to Cedar Rapids Kernels from Elizabethton Twins."
+    },
+    {
+      "id": 228760,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "toTeam": {
+        "id": 71,
+        "name": "MWL West Division All-Stars",
+        "link": "/api/v1/teams/71"
+      },
+      "date": "2015-06-22",
+      "effectiveDate": "2015-06-22",
+      "resolutionDate": "2015-06-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Felix Jorge assigned to MID West Division All-Stars."
+    },
+    {
+      "id": 259989,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "fromTeam": {
+        "id": 492,
+        "name": "Cedar Rapids Kernels",
+        "link": "/api/v1/teams/492"
+      },
+      "toTeam": {
+        "id": 509,
+        "name": "Fort Myers Mighty Mussels",
+        "link": "/api/v1/teams/509"
+      },
+      "date": "2016-04-04",
+      "effectiveDate": "2016-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Felix Jorge assigned to Fort Myers Miracle from Cedar Rapids Kernels."
+    },
+    {
+      "id": 269311,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "toTeam": {
+        "id": 77,
+        "name": "FSL South Division All-Stars",
+        "link": "/api/v1/teams/77"
+      },
+      "date": "2016-06-17",
+      "effectiveDate": "2016-06-17",
+      "resolutionDate": "2016-06-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Felix Jorge assigned to FSL South Division All-Stars."
+    },
+    {
+      "id": 277421,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "fromTeam": {
+        "id": 509,
+        "name": "Fort Myers Mighty Mussels",
+        "link": "/api/v1/teams/509"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2016-07-07",
+      "effectiveDate": "2016-07-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Felix Jorge assigned to Chattanooga Lookouts from Fort Myers Miracle."
+    },
+    {
+      "id": 293365,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "fromTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2016-11-18",
+      "effectiveDate": "2017-03-13",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Minnesota Twins selected the contract of Felix Jorge from Chattanooga Lookouts."
+    },
+    {
+      "id": 300193,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2017-03-13",
+      "effectiveDate": "2017-03-13",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Minnesota Twins optioned RHP Felix Jorge to Chattanooga Lookouts."
+    },
+    {
+      "id": 321558,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "fromTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2017-07-01",
+      "effectiveDate": "2017-07-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Minnesota Twins recalled Felix Jorge from Chattanooga Lookouts."
+    },
+    {
+      "id": 321779,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2017-07-02",
+      "effectiveDate": "2017-07-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Minnesota Twins optioned RHP Felix Jorge to Chattanooga Lookouts."
+    },
+    {
+      "id": 322806,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "fromTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2017-07-07",
+      "effectiveDate": "2017-07-08",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Minnesota Twins recalled Felix Jorge from Chattanooga Lookouts."
+    },
+    {
+      "id": 323215,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2017-07-08",
+      "effectiveDate": "2017-07-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Minnesota Twins optioned RHP Felix Jorge to Chattanooga Lookouts."
+    },
+    {
+      "id": 330276,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "fromTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2017-08-23",
+      "effectiveDate": "2017-08-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Felix Jorge assigned to Rochester Red Wings from Chattanooga Lookouts."
+    },
+    {
+      "id": 332096,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "fromTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2017-09-06",
+      "effectiveDate": "2017-09-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Felix Jorge assigned to Chattanooga Lookouts from Rochester Red Wings."
+    },
+    {
+      "id": 333262,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "fromTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2017-10-02",
+      "effectiveDate": "2017-10-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Minnesota Twins recalled RHP Felix Jorge from Chattanooga Lookouts."
+    },
+    {
+      "id": 333439,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2017-10-03",
+      "effectiveDate": "2017-10-03",
+      "resolutionDate": "2017-10-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Minnesota Twins reassigned RHP Felix Jorge to the minor leagues."
+    },
+    {
+      "id": 343481,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2018-03-07",
+      "effectiveDate": "2018-03-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Minnesota Twins optioned RHP Felix Jorge to Rochester Red Wings."
+    },
+    {
+      "id": 346906,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "fromTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2018-04-02",
+      "effectiveDate": "2018-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Felix Jorge assigned to Chattanooga Lookouts from Rochester Red Wings."
+    },
+    {
+      "id": 347726,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2018-04-04",
+      "effectiveDate": "2018-04-04",
+      "resolutionDate": "2018-04-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chattanooga Lookouts placed RHP Felix Jorge on the 7-day disabled list."
+    },
+    {
+      "id": 362813,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "fromTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "toTeam": {
+        "id": 474,
+        "name": "FCL Twins",
+        "link": "/api/v1/teams/474"
+      },
+      "date": "2018-06-19",
+      "effectiveDate": "2018-06-19",
+      "resolutionDate": "2018-06-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chattanooga Lookouts sent RHP Felix Jorge on a rehab assignment to GCL Twins."
+    },
+    {
+      "id": 365083,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2018-06-29",
+      "effectiveDate": "2018-06-29",
+      "resolutionDate": "2018-06-29",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Minnesota Twins designated RHP Felix Jorge for assignment."
+    },
+    {
+      "id": 366403,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2018-07-04",
+      "effectiveDate": "2018-07-04",
+      "resolutionDate": "2018-07-04",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Minnesota Twins released RHP Felix Jorge."
+    },
+    {
+      "id": 374440,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2018-07-11",
+      "effectiveDate": "2018-10-01",
+      "resolutionDate": "2018-07-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Felix Jorge assigned to Chattanooga Lookouts."
+    },
+    {
+      "id": 374439,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2018-07-11",
+      "effectiveDate": "2018-07-11",
+      "resolutionDate": "2018-07-11",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent RHP Felix Jorge to a minor league contract."
+    },
+    {
+      "id": 382340,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2018-11-02",
+      "effectiveDate": "2018-11-02",
+      "resolutionDate": "2018-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Felix Jorge elected free agency."
+    },
+    {
+      "id": 387515,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2019-01-16",
+      "effectiveDate": "2019-01-16",
+      "resolutionDate": "2019-01-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cincinnati Reds signed free agent RHP Felix Jorge to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 387516,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2019-02-06",
+      "effectiveDate": "2019-02-06",
+      "resolutionDate": "2019-02-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Felix Jorge assigned to Louisville Bats."
+    },
+    {
+      "id": 394527,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 513,
+        "name": "Billings Mustangs",
+        "link": "/api/v1/teams/513"
+      },
+      "date": "2019-04-02",
+      "effectiveDate": "2019-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Felix Jorge assigned to Billings Mustangs from Louisville Bats."
+    },
+    {
+      "id": 441021,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "fromTeam": {
+        "id": 513,
+        "name": "Billings Mustangs",
+        "link": "/api/v1/teams/513"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2019-06-13",
+      "effectiveDate": "2019-06-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Felix Jorge assigned to Louisville Bats from Billings Mustangs."
+    },
+    {
+      "id": 441022,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2019-09-14",
+      "effectiveDate": "2019-09-14",
+      "resolutionDate": "2019-09-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Louisville Bats activated RHP Felix Jorge from the 60-day injured list."
+    },
+    {
+      "id": 441023,
+      "person": {
+        "id": 602928,
+        "fullName": "Felix Jorge",
+        "link": "/api/v1/people/602928",
+        "nameSlug": "felix-jorge-602928"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2020-03-10",
+      "effectiveDate": "2020-03-10",
+      "resolutionDate": "2020-03-10",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Louisville Bats released RHP Felix Jorge."
+    }
+  ]
+}

@@ -1,0 +1,884 @@
+{
+  "player_id": 280061,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:05a649ff1a09faf36945039a98c8075aa3e278dbdc9fba1831b9f13e06268d1f",
+  "transactions": [
+    {
+      "id": 657612,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2006-04-26",
+      "effectiveDate": "2006-04-26",
+      "resolutionDate": "2006-04-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Corky Miller assigned to Pawtucket Red Sox."
+    },
+    {
+      "id": 7387,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2009-05-30",
+      "effectiveDate": "2009-05-30",
+      "resolutionDate": "2009-05-30",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Chicago White Sox designated C Corky Miller for assignment."
+    },
+    {
+      "id": 8227,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2009-06-03",
+      "effectiveDate": "2009-06-03",
+      "resolutionDate": "2009-06-04",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Chicago White Sox sent C Corky Miller outright to Charlotte Knights."
+    },
+    {
+      "id": 8573,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2009-06-07",
+      "effectiveDate": "2009-06-07",
+      "resolutionDate": "2009-06-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charlotte Knights placed C Corky Miller on the 7-day disabled list."
+    },
+    {
+      "id": 9923,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2009-06-17",
+      "effectiveDate": "2009-06-17",
+      "resolutionDate": "2009-06-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Corky Miller roster status changed by Charlotte Knights."
+    },
+    {
+      "id": 13779,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "fromTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2009-06-26",
+      "effectiveDate": "2009-06-26",
+      "resolutionDate": "2009-06-26",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Charlotte Knights traded C Corky Miller to Louisville Bats."
+    },
+    {
+      "id": 22539,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2009-08-25",
+      "effectiveDate": "2009-11-04",
+      "resolutionDate": "2009-08-25",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Cincinnati Reds selected the contract of Corky Miller from Louisville Bats."
+    },
+    {
+      "id": 27794,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2009-11-05",
+      "effectiveDate": "2009-11-05",
+      "resolutionDate": "2009-11-06",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Cincinnati Reds sent Corky Miller outright to Louisville Bats."
+    },
+    {
+      "id": 31290,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2009-11-09",
+      "effectiveDate": "2009-11-09",
+      "resolutionDate": "2009-11-09",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cincinnati Reds signed free agent C Corky Miller to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 37745,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2010-04-08",
+      "effectiveDate": "2010-04-08",
+      "resolutionDate": "2010-04-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Corky Miller assigned to Louisville Bats from Cincinnati Reds."
+    },
+    {
+      "id": 47977,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2010-05-29",
+      "effectiveDate": "2010-05-29",
+      "resolutionDate": "2010-05-29",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Cincinnati Reds selected the contract of Corky Miller from Louisville Bats."
+    },
+    {
+      "id": 47965,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2010-05-29",
+      "effectiveDate": "2010-05-29",
+      "resolutionDate": "2010-05-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Corky Miller assigned to Cincinnati Reds."
+    },
+    {
+      "id": 63573,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2010-07-22",
+      "effectiveDate": "2010-07-22",
+      "resolutionDate": "2010-07-22",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Cincinnati Reds sent C Corky Miller outright to Louisville Bats."
+    },
+    {
+      "id": 63953,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2010-07-24",
+      "effectiveDate": "2010-07-24",
+      "resolutionDate": "2010-07-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Corky Miller roster status changed by Louisville Bats."
+    },
+    {
+      "id": 69110,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2010-09-01",
+      "effectiveDate": "2010-09-02",
+      "resolutionDate": "2010-09-01",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Cincinnati Reds selected the contract of C Corky Miller from Louisville Bats."
+    },
+    {
+      "id": 71289,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2010-10-06",
+      "effectiveDate": "2010-10-06",
+      "resolutionDate": "2010-10-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds reassigned C Corky Miller to the minor leagues."
+    },
+    {
+      "id": 71970,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2010-10-13",
+      "effectiveDate": "2010-10-13",
+      "resolutionDate": "2010-10-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds activated C Corky Miller."
+    },
+    {
+      "id": 73831,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2010-11-10",
+      "effectiveDate": "2010-11-10",
+      "resolutionDate": "2010-11-10",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Corky Miller elected free agency."
+    },
+    {
+      "id": 76209,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2010-11-11",
+      "effectiveDate": "2010-11-11",
+      "resolutionDate": "2010-11-11",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cincinnati Reds signed free agent C Corky Miller to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 82292,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2011-04-06",
+      "effectiveDate": "2011-04-06",
+      "resolutionDate": "2011-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Corky Miller assigned to Louisville Bats."
+    },
+    {
+      "id": 101388,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2011-08-22",
+      "effectiveDate": "2011-08-22",
+      "resolutionDate": "2011-08-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Louisville Bats placed C Corky Miller on the 7-day disabled list. Sprained left thumb."
+    },
+    {
+      "id": 103692,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2011-09-15",
+      "effectiveDate": "2011-09-15",
+      "resolutionDate": "2011-09-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Louisville Bats activated C Corky Miller from the 7-day disabled list."
+    },
+    {
+      "id": 105981,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2011-11-02",
+      "effectiveDate": "2011-11-02",
+      "resolutionDate": "2011-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Corky Miller elected free agency."
+    },
+    {
+      "id": 106522,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2011-11-04",
+      "effectiveDate": "2011-11-04",
+      "resolutionDate": "2011-11-04",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Louisville Bats signed free agent C Corky Miller."
+    },
+    {
+      "id": 108256,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2011-11-04",
+      "effectiveDate": "2011-11-04",
+      "resolutionDate": "2011-11-04",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cincinnati Reds signed free agent C Corky Miller to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 139027,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2012-11-02",
+      "effectiveDate": "2012-11-02",
+      "resolutionDate": "2012-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Corky Miller elected free agency."
+    },
+    {
+      "id": 141592,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2012-12-18",
+      "effectiveDate": "2012-12-18",
+      "resolutionDate": "2012-12-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cincinnati Reds signed free agent C Corky Miller to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 150254,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2013-04-21",
+      "effectiveDate": "2013-04-21",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Cincinnati Reds selected the contract of C Corky Miller from Louisville Bats."
+    },
+    {
+      "id": 152358,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2013-05-10",
+      "effectiveDate": "2013-05-10",
+      "resolutionDate": "2013-05-10",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Cincinnati Reds designated Corky Miller for assignment."
+    },
+    {
+      "id": 152640,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2013-05-12",
+      "effectiveDate": "2013-05-12",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Cincinnati Reds sent Corky Miller outright to Louisville Bats."
+    },
+    {
+      "id": 163848,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2013-07-11",
+      "effectiveDate": "2013-07-11",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Cincinnati Reds selected the contract of C Corky Miller from Louisville Bats."
+    },
+    {
+      "id": 167584,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2013-08-09",
+      "effectiveDate": "2013-08-08",
+      "resolutionDate": "2013-08-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds placed C Corky Miller on the 15-day disabled list retroactive to August 8, 2013. right quad contusion"
+    },
+    {
+      "id": 169685,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2013-08-29",
+      "effectiveDate": "2013-08-29",
+      "resolutionDate": "2013-08-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds sent C Corky Miller on a rehab assignment to Louisville Bats."
+    },
+    {
+      "id": 170369,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2013-09-02",
+      "effectiveDate": "2013-09-02",
+      "resolutionDate": "2013-09-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds activated C Corky Miller from the 15-day disabled list."
+    },
+    {
+      "id": 171477,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2013-10-01",
+      "effectiveDate": "2013-10-01",
+      "resolutionDate": "2013-10-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds reassigned C Corky Miller to the minor leagues."
+    },
+    {
+      "id": 171545,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2013-10-02",
+      "effectiveDate": "2013-10-02",
+      "resolutionDate": "2013-10-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds activated C Corky Miller."
+    },
+    {
+      "id": 173696,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2013-10-30",
+      "effectiveDate": "2013-10-30",
+      "resolutionDate": "2013-10-30",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Corky Miller elected free agency."
+    },
+    {
+      "id": 176156,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2013-12-06",
+      "effectiveDate": "2013-12-06",
+      "resolutionDate": "2013-12-06",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cincinnati Reds signed free agent C Corky Miller to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 182428,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2014-03-29",
+      "effectiveDate": "2014-03-29",
+      "resolutionDate": "2014-03-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Corky Miller assigned to Louisville Bats."
+    },
+    {
+      "id": 189717,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2014-05-22",
+      "effectiveDate": "2014-06-13",
+      "resolutionDate": "2014-05-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Louisville Bats placed C Corky Miller on the 7-day disabled list."
+    },
+    {
+      "id": 207748,
+      "person": {
+        "id": 280061,
+        "fullName": "Corky Miller",
+        "link": "/api/v1/people/280061",
+        "nameSlug": "corky-miller-280061"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2014-09-16",
+      "effectiveDate": "2014-09-16",
+      "resolutionDate": "2014-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Louisville Bats activated C Corky Miller from the 7-day disabled list."
+    }
+  ]
+}

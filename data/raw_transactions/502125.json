@@ -1,0 +1,839 @@
+{
+  "player_id": 502125,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:d308d60cd57a2392e1f0bf2aa675ce548fea71dd5ddfa86a7d697b73724263ef",
+  "transactions": [
+    {
+      "id": 1480,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "fromTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "toTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "date": "2009-04-09",
+      "effectiveDate": "2009-04-09",
+      "resolutionDate": "2009-04-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Tyler Colvin assigned to Daytona Cubs from Tennessee Smokies."
+    },
+    {
+      "id": 5419,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "toTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "date": "2009-05-11",
+      "effectiveDate": "2009-05-10",
+      "resolutionDate": "2009-05-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Daytona Cubs placed CF Tyler Colvin on the 7-day disabled list retroactive to May 10, 2009."
+    },
+    {
+      "id": 5591,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "toTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "date": "2009-05-19",
+      "effectiveDate": "2009-05-19",
+      "resolutionDate": "2009-05-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tyler Colvin roster status changed by Daytona Cubs."
+    },
+    {
+      "id": 7796,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "fromTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2009-05-31",
+      "effectiveDate": "2009-05-31",
+      "resolutionDate": "2009-05-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Tyler Colvin assigned to Tennessee Smokies from Daytona Cubs."
+    },
+    {
+      "id": 24948,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "fromTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2009-09-21",
+      "effectiveDate": "2009-09-21",
+      "resolutionDate": "2009-09-21",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Chicago Cubs selected the contract of LF Tyler Colvin from Tennessee Smokies."
+    },
+    {
+      "id": 70298,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2010-09-20",
+      "effectiveDate": "2010-09-20",
+      "resolutionDate": "2010-09-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs placed LF Tyler Colvin on the 15-day disabled list. Punctured chest."
+    },
+    {
+      "id": 71568,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2010-10-07",
+      "effectiveDate": "2010-10-07",
+      "resolutionDate": "2010-10-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated LF Tyler Colvin from the 15-day disabled list."
+    },
+    {
+      "id": 86151,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2011-05-17",
+      "effectiveDate": "2011-05-18",
+      "resolutionDate": "2011-05-17",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned Tyler Colvin to Iowa Cubs."
+    },
+    {
+      "id": 88219,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2011-05-31",
+      "effectiveDate": "2011-06-14",
+      "resolutionDate": "2011-05-31",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled Tyler Colvin from Iowa Cubs."
+    },
+    {
+      "id": 90647,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2011-06-14",
+      "effectiveDate": "2011-06-14",
+      "resolutionDate": "2011-06-14",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned Tyler Colvin to Iowa Cubs."
+    },
+    {
+      "id": 98368,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2011-07-28",
+      "effectiveDate": "2011-07-28",
+      "resolutionDate": "2011-07-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled Tyler Colvin from Iowa Cubs."
+    },
+    {
+      "id": 107427,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2011-12-08",
+      "effectiveDate": "2013-03-29",
+      "resolutionDate": "2011-12-08",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Chicago Cubs traded 2B DJ LeMahieu and RF Tyler Colvin to Colorado Rockies for RHP Casey Weathers and 3B Ian Stewart."
+    },
+    {
+      "id": 146627,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 551,
+        "name": "Rocky Mountain Vibes",
+        "link": "/api/v1/teams/551"
+      },
+      "date": "2013-03-29",
+      "effectiveDate": "2013-03-29",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Colorado Rockies optioned Tyler Colvin to Colorado Springs Sky Sox."
+    },
+    {
+      "id": 156134,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "fromTeam": {
+        "id": 551,
+        "name": "Rocky Mountain Vibes",
+        "link": "/api/v1/teams/551"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2013-06-08",
+      "effectiveDate": "2013-07-11",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Colorado Rockies recalled Tyler Colvin from Colorado Springs Sky Sox."
+    },
+    {
+      "id": 163910,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 551,
+        "name": "Rocky Mountain Vibes",
+        "link": "/api/v1/teams/551"
+      },
+      "date": "2013-07-11",
+      "effectiveDate": "2013-07-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Colorado Rockies optioned RF Tyler Colvin to Colorado Springs Sky Sox."
+    },
+    {
+      "id": 166827,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "toTeam": {
+        "id": 551,
+        "name": "Rocky Mountain Vibes",
+        "link": "/api/v1/teams/551"
+      },
+      "date": "2013-08-03",
+      "effectiveDate": "2013-07-31",
+      "resolutionDate": "2013-07-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Colorado Springs Sky Sox placed RF Tyler Colvin on the 7-day disabled list retroactive to July 31, 2013."
+    },
+    {
+      "id": 170385,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "toTeam": {
+        "id": 551,
+        "name": "Rocky Mountain Vibes",
+        "link": "/api/v1/teams/551"
+      },
+      "date": "2013-09-02",
+      "effectiveDate": "2013-09-02",
+      "resolutionDate": "2013-09-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Colorado Springs Sky Sox activated RF Tyler Colvin from the 7-day disabled list."
+    },
+    {
+      "id": 170677,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 551,
+        "name": "Rocky Mountain Vibes",
+        "link": "/api/v1/teams/551"
+      },
+      "date": "2013-09-04",
+      "effectiveDate": "2013-09-04",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Colorado Rockies sent Tyler Colvin outright to Colorado Springs Sky Sox."
+    },
+    {
+      "id": 171552,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "toTeam": {
+        "id": 551,
+        "name": "Rocky Mountain Vibes",
+        "link": "/api/v1/teams/551"
+      },
+      "date": "2013-10-01",
+      "effectiveDate": "2013-10-01",
+      "resolutionDate": "2013-10-01",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RF Tyler Colvin elected free agency."
+    },
+    {
+      "id": 179926,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2014-02-22",
+      "effectiveDate": "2014-02-22",
+      "resolutionDate": "2014-02-22",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Francisco Giants signed free agent RF Tyler Colvin to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 179434,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2014-02-26",
+      "effectiveDate": "2014-02-26",
+      "resolutionDate": "2014-02-26",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Francisco Giants signed free agent RF Tyler Colvin to a minor league contract."
+    },
+    {
+      "id": 184912,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2014-04-03",
+      "effectiveDate": "2014-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Tyler Colvin assigned to Fresno Grizzlies from San Francisco Giants."
+    },
+    {
+      "id": 188451,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "fromTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2014-05-10",
+      "effectiveDate": "2014-07-31",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "San Francisco Giants selected the contract of Tyler Colvin from Fresno Grizzlies."
+    },
+    {
+      "id": 202790,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2014-07-31",
+      "effectiveDate": "2014-07-31",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned LF Tyler Colvin to Fresno Grizzlies."
+    },
+    {
+      "id": 203159,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2014-08-01",
+      "effectiveDate": "2014-08-01",
+      "resolutionDate": "2014-08-01",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "San Francisco Giants designated LF Tyler Colvin for assignment."
+    },
+    {
+      "id": 203923,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2014-08-07",
+      "effectiveDate": "2014-09-18",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "San Francisco Giants sent Tyler Colvin outright to Fresno Grizzlies."
+    },
+    {
+      "id": 208385,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2014-09-29",
+      "effectiveDate": "2014-09-29",
+      "resolutionDate": "2014-09-29",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LF Tyler Colvin elected free agency."
+    },
+    {
+      "id": 214165,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2015-01-05",
+      "effectiveDate": "2015-01-05",
+      "resolutionDate": "2015-01-05",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Miami Marlins signed free agent LF Tyler Colvin to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 214166,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2015-01-12",
+      "effectiveDate": "2015-01-12",
+      "resolutionDate": "2015-01-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Tyler Colvin assigned to New Orleans Zephyrs."
+    },
+    {
+      "id": 219400,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2015-04-03",
+      "effectiveDate": "2015-04-03",
+      "resolutionDate": "2015-04-03",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Miami Marlins released LF Tyler Colvin."
+    },
+    {
+      "id": 224070,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2015-05-03",
+      "effectiveDate": "2015-05-03",
+      "resolutionDate": "2015-05-03",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago White Sox signed free agent LF Tyler Colvin to a minor league contract."
+    },
+    {
+      "id": 224071,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2015-05-03",
+      "effectiveDate": "2015-05-03",
+      "resolutionDate": "2015-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Tyler Colvin assigned to Charlotte Knights."
+    },
+    {
+      "id": 248306,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "toTeam": {
+        "id": 686,
+        "name": "Criollos de Caguas",
+        "link": "/api/v1/teams/686"
+      },
+      "date": "2015-10-29",
+      "effectiveDate": "2015-10-29",
+      "resolutionDate": "2015-10-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Tyler Colvin assigned to Criollos de Caguas."
+    },
+    {
+      "id": 249412,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2015-11-06",
+      "effectiveDate": "2015-11-06",
+      "resolutionDate": "2015-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LF Tyler Colvin elected free agency."
+    },
+    {
+      "id": 353785,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2018-02-19",
+      "effectiveDate": "2018-02-19",
+      "resolutionDate": "2018-02-19",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Dodgers signed free agent LF Tyler Colvin to a minor league contract."
+    },
+    {
+      "id": 353786,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2018-05-14",
+      "effectiveDate": "2018-05-14",
+      "resolutionDate": "2018-05-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Tyler Colvin assigned to Tulsa Drillers."
+    },
+    {
+      "id": 358038,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2018-06-05",
+      "effectiveDate": "2018-06-05",
+      "resolutionDate": "2018-06-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers placed LF Tyler Colvin on the 7-day disabled list."
+    },
+    {
+      "id": 364105,
+      "person": {
+        "id": 502125,
+        "fullName": "Tyler Colvin",
+        "link": "/api/v1/people/502125",
+        "nameSlug": "tyler-colvin-502125"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2018-06-24",
+      "effectiveDate": "2018-06-24",
+      "resolutionDate": "2018-06-24",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Tulsa Drillers released LF Tyler Colvin."
+    }
+  ]
+}

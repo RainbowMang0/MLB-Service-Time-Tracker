@@ -1,0 +1,785 @@
+{
+  "player_id": 466412,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:59182b4f94e028112fd64ce994968a6b677c5973012ab05ca943a9bb40a970f7",
+  "transactions": [
+    {
+      "id": 1860,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2009-04-10",
+      "effectiveDate": "2009-04-10",
+      "resolutionDate": "2009-04-10",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "San Diego Padres claimed RHP Luis Perdomo off waivers from San Francisco Giants."
+    },
+    {
+      "id": 8668,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2009-06-08",
+      "effectiveDate": "2009-06-08",
+      "resolutionDate": "2009-06-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres placed RHP Luis Perdomo on the 15-day disabled list. strained left knee"
+    },
+    {
+      "id": 11525,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 248,
+        "name": "Portland Beavers",
+        "link": "/api/v1/teams/248"
+      },
+      "date": "2009-06-21",
+      "effectiveDate": "2009-06-21",
+      "resolutionDate": "2009-06-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent RHP Luis Perdomo on a rehab assignment to Portland Beavers."
+    },
+    {
+      "id": 13869,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2009-06-26",
+      "effectiveDate": "2010-03-21",
+      "resolutionDate": "2009-06-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Luis Perdomo roster status changed by San Diego Padres."
+    },
+    {
+      "id": 27658,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2009-11-03",
+      "effectiveDate": "2009-11-03",
+      "resolutionDate": "2009-11-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Luis Perdomo assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 34301,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 248,
+        "name": "Portland Beavers",
+        "link": "/api/v1/teams/248"
+      },
+      "date": "2010-03-21",
+      "effectiveDate": "2010-03-21",
+      "resolutionDate": "2010-03-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned Luis Perdomo to Portland Beavers."
+    },
+    {
+      "id": 45769,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "fromTeam": {
+        "id": 248,
+        "name": "Portland Beavers",
+        "link": "/api/v1/teams/248"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2010-05-22",
+      "effectiveDate": "2010-05-24",
+      "resolutionDate": "2010-05-22",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Diego Padres recalled Luis Perdomo from Portland Beavers."
+    },
+    {
+      "id": 45958,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 248,
+        "name": "Portland Beavers",
+        "link": "/api/v1/teams/248"
+      },
+      "date": "2010-05-24",
+      "effectiveDate": "2010-05-24",
+      "resolutionDate": "2010-05-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned Luis Perdomo to Portland Beavers."
+    },
+    {
+      "id": 68556,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "fromTeam": {
+        "id": 248,
+        "name": "Portland Beavers",
+        "link": "/api/v1/teams/248"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2010-08-28",
+      "effectiveDate": "2010-08-28",
+      "resolutionDate": "2010-08-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Diego Padres recalled Luis Perdomo from Portland Beavers."
+    },
+    {
+      "id": 68729,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 248,
+        "name": "Portland Beavers",
+        "link": "/api/v1/teams/248"
+      },
+      "date": "2010-08-30",
+      "effectiveDate": "2010-08-31",
+      "resolutionDate": "2010-08-30",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned Luis Perdomo to Portland Beavers."
+    },
+    {
+      "id": 72068,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2010-10-13",
+      "effectiveDate": "2010-10-13",
+      "resolutionDate": "2010-10-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres activated RHP Luis Perdomo."
+    },
+    {
+      "id": 72955,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2010-10-29",
+      "effectiveDate": "2010-10-29",
+      "resolutionDate": "2010-10-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Luis Perdomo assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 75088,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2010-12-02",
+      "effectiveDate": "2010-12-02",
+      "resolutionDate": "2010-12-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Luis Perdomo elected free agency."
+    },
+    {
+      "id": 75131,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2010-12-03",
+      "effectiveDate": "2010-12-03",
+      "resolutionDate": "2010-12-03",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "San Diego Padres signed RHP Luis Perdomo."
+    },
+    {
+      "id": 81188,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 549,
+        "name": "Tucson Padres",
+        "link": "/api/v1/teams/549"
+      },
+      "date": "2010-12-03",
+      "effectiveDate": "2010-12-03",
+      "resolutionDate": "2010-12-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Luis Perdomo assigned to Tucson Padres."
+    },
+    {
+      "id": 75801,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2010-12-27",
+      "effectiveDate": "2010-12-27",
+      "resolutionDate": "2010-12-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Luis Perdomo assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 105162,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2011-10-22",
+      "effectiveDate": "2011-10-22",
+      "resolutionDate": "2011-10-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Luis Perdomo assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 106372,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 549,
+        "name": "Tucson Padres",
+        "link": "/api/v1/teams/549"
+      },
+      "date": "2011-11-02",
+      "effectiveDate": "2011-11-02",
+      "resolutionDate": "2011-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Luis Perdomo elected free agency."
+    },
+    {
+      "id": 106730,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2011-11-18",
+      "effectiveDate": "2011-11-18",
+      "resolutionDate": "2011-11-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent RHP Luis Perdomo to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 113389,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "date": "2012-04-03",
+      "effectiveDate": "2012-04-03",
+      "resolutionDate": "2012-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Luis Perdomo assigned to New Britain Rock Cats."
+    },
+    {
+      "id": 126884,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "fromTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2012-06-26",
+      "effectiveDate": "2012-07-26",
+      "resolutionDate": "2012-06-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Luis Perdomo assigned to Rochester Red Wings from New Britain Rock Cats."
+    },
+    {
+      "id": 130859,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "fromTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2012-07-27",
+      "effectiveDate": "2012-07-27",
+      "resolutionDate": "2012-07-26",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Minnesota Twins selected the contract of Luis Perdomo from Rochester Red Wings."
+    },
+    {
+      "id": 133191,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2012-08-16",
+      "effectiveDate": "2012-08-16",
+      "resolutionDate": "2012-08-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Minnesota Twins optioned Luis Perdomo to Rochester Red Wings."
+    },
+    {
+      "id": 135243,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "fromTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2012-09-04",
+      "effectiveDate": "2012-09-05",
+      "resolutionDate": "2012-09-04",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Minnesota Twins recalled Luis Perdomo from Rochester Red Wings."
+    },
+    {
+      "id": 137892,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2012-10-24",
+      "effectiveDate": "2013-08-17",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Minnesota Twins sent RHP Luis Perdomo outright to Rochester Red Wings."
+    },
+    {
+      "id": 140201,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2012-11-20",
+      "effectiveDate": "2012-11-20",
+      "resolutionDate": "2012-11-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Minnesota Twins invited non-roster RHP Luis Perdomo to spring training."
+    },
+    {
+      "id": 141040,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 4088,
+        "name": "LIDOM All-Stars",
+        "link": "/api/v1/teams/4088"
+      },
+      "date": "2012-12-10",
+      "effectiveDate": "2012-12-10",
+      "resolutionDate": "2012-12-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Luis Perdomo assigned to LIDOM All-Stars."
+    },
+    {
+      "id": 169384,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2013-08-26",
+      "effectiveDate": "2013-08-26",
+      "resolutionDate": "2013-08-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rochester Red Wings activated RHP Luis Perdomo from the 7-day disabled list."
+    },
+    {
+      "id": 169473,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2013-08-27",
+      "effectiveDate": "2013-08-27",
+      "resolutionDate": "2013-08-27",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Rochester Red Wings released RHP Luis Perdomo."
+    },
+    {
+      "id": 184120,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 523,
+        "name": "Piratas de Campeche",
+        "link": "/api/v1/teams/523"
+      },
+      "date": "2014-04-01",
+      "effectiveDate": "2014-04-01",
+      "resolutionDate": "2014-04-01",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Piratas de Campeche signed free agent RHP Luis Perdomo."
+    },
+    {
+      "id": 186586,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 523,
+        "name": "Piratas de Campeche",
+        "link": "/api/v1/teams/523"
+      },
+      "date": "2014-04-22",
+      "effectiveDate": "2014-04-22",
+      "resolutionDate": "2014-04-22",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Piratas de Campeche released RHP Luis Perdomo."
+    },
+    {
+      "id": 209587,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2014-10-16",
+      "effectiveDate": "2014-10-16",
+      "resolutionDate": "2014-10-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Luis Perdomo assigned to Estrellas de Oriente."
+    },
+    {
+      "id": 211852,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 697,
+        "name": "Bravos de Margarita",
+        "link": "/api/v1/teams/697"
+      },
+      "date": "2014-11-20",
+      "effectiveDate": "2014-11-20",
+      "resolutionDate": "2014-11-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Luis Perdomo assigned to Bravos de Margarita."
+    },
+    {
+      "id": 213905,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "fromTeam": {
+        "id": 697,
+        "name": "Bravos de Margarita",
+        "link": "/api/v1/teams/697"
+      },
+      "toTeam": {
+        "id": 699,
+        "name": "Tigres de Aragua",
+        "link": "/api/v1/teams/699"
+      },
+      "date": "2015-01-03",
+      "effectiveDate": "2015-01-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Luis Perdomo assigned to Tigres de Aragua from Bravos de Margarita."
+    },
+    {
+      "id": 247597,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2015-10-16",
+      "effectiveDate": "2015-10-16",
+      "resolutionDate": "2015-10-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Luis Perdomo assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 600534,
+      "person": {
+        "id": 466412,
+        "fullName": "Luis Perdomo",
+        "link": "/api/v1/people/466412",
+        "nameSlug": "luis-perdomo-466412"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2021-11-23",
+      "effectiveDate": "2021-11-23",
+      "resolutionDate": "2021-11-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gigantes del Cibao activated RHP Luis Perdomo."
+    }
+  ]
+}

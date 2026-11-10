@@ -1,0 +1,1498 @@
+{
+  "player_id": 664208,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:db2240a73d059f17c7b646ad790d6df36bbee4ea90399f167a8296d49afb7fab",
+  "transactions": [
+    {
+      "id": 231235,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2015-06-16",
+      "effectiveDate": "2015-06-16",
+      "resolutionDate": "2015-06-16",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "San Diego Padres signed RHP Phil Maton."
+    },
+    {
+      "id": 231236,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 460,
+        "name": "Tri-City Dust Devils",
+        "link": "/api/v1/teams/460"
+      },
+      "date": "2015-06-17",
+      "effectiveDate": "2015-06-17",
+      "resolutionDate": "2015-06-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Phil Maton assigned to Tri-City Dust Devils."
+    },
+    {
+      "id": 259284,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 460,
+        "name": "Tri-City Dust Devils",
+        "link": "/api/v1/teams/460"
+      },
+      "toTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "date": "2016-04-02",
+      "effectiveDate": "2016-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Phil Maton assigned to Fort Wayne TinCaps from Tri-City Dust Devils."
+    },
+    {
+      "id": 261508,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "date": "2016-04-09",
+      "effectiveDate": "2016-04-09",
+      "resolutionDate": "2016-04-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Fort Wayne TinCaps placed RHP Phil Maton on the 7-day disabled list."
+    },
+    {
+      "id": 265015,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "date": "2016-05-10",
+      "effectiveDate": "2016-05-10",
+      "resolutionDate": "2016-05-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Fort Wayne TinCaps activated RHP Phil Maton from the 7-day disabled list."
+    },
+    {
+      "id": 269599,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "toTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "date": "2016-06-06",
+      "effectiveDate": "2016-06-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Phil Maton assigned to Lake Elsinore Storm from Fort Wayne TinCaps."
+    },
+    {
+      "id": 279771,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2016-07-20",
+      "effectiveDate": "2016-07-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Phil Maton assigned to El Paso Chihuahuas from Lake Elsinore Storm."
+    },
+    {
+      "id": 279926,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "date": "2016-07-21",
+      "effectiveDate": "2016-07-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Phil Maton assigned to Lake Elsinore Storm from El Paso Chihuahuas."
+    },
+    {
+      "id": 285129,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2016-08-24",
+      "effectiveDate": "2016-08-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Phil Maton assigned to El Paso Chihuahuas from Lake Elsinore Storm."
+    },
+    {
+      "id": 297732,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2017-02-10",
+      "effectiveDate": "2017-02-10",
+      "resolutionDate": "2017-02-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres invited non-roster RHP Phil Maton to spring training."
+    },
+    {
+      "id": 315296,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2017-06-11",
+      "effectiveDate": "2018-03-28",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "San Diego Padres selected the contract of Phil Maton from El Paso Chihuahuas."
+    },
+    {
+      "id": 345651,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2018-03-28",
+      "effectiveDate": "2018-03-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned RHP Phil Maton to El Paso Chihuahuas."
+    },
+    {
+      "id": 347883,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2018-04-04",
+      "effectiveDate": "2018-04-04",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Diego Padres recalled RHP Phil Maton from El Paso Chihuahuas."
+    },
+    {
+      "id": 353670,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2018-05-13",
+      "effectiveDate": "2018-05-13",
+      "resolutionDate": "2018-05-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres placed RHP Phil Maton on the 10-day disabled list. Right latissimus dorsi strain."
+    },
+    {
+      "id": 358165,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "date": "2018-06-05",
+      "effectiveDate": "2018-06-05",
+      "resolutionDate": "2018-06-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres sent RHP Phil Maton on a rehab assignment to Lake Elsinore Storm."
+    },
+    {
+      "id": 358526,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2018-06-08",
+      "effectiveDate": "2018-06-08",
+      "resolutionDate": "2018-06-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres sent RHP Phil Maton on a rehab assignment to San Antonio Missions."
+    },
+    {
+      "id": 363626,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2018-06-21",
+      "effectiveDate": "2018-06-24",
+      "resolutionDate": "2018-06-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Phil Maton roster status changed by San Diego Padres."
+    },
+    {
+      "id": 364128,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2018-06-24",
+      "effectiveDate": "2018-06-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned RHP Phil Maton to El Paso Chihuahuas."
+    },
+    {
+      "id": 367482,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2018-07-09",
+      "effectiveDate": "2019-04-04",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Diego Padres recalled Phil Maton from El Paso Chihuahuas."
+    },
+    {
+      "id": 395429,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2019-04-04",
+      "effectiveDate": "2019-04-04",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned RHP Phil Maton to El Paso Chihuahuas."
+    },
+    {
+      "id": 396616,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2019-04-14",
+      "effectiveDate": "2019-04-21",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Diego Padres recalled Phil Maton from El Paso Chihuahuas."
+    },
+    {
+      "id": 397728,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2019-04-21",
+      "effectiveDate": "2019-04-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned RHP Phil Maton to El Paso Chihuahuas."
+    },
+    {
+      "id": 399115,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2019-04-30",
+      "effectiveDate": "2019-05-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Diego Padres recalled Phil Maton from El Paso Chihuahuas."
+    },
+    {
+      "id": 399333,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2019-05-01",
+      "effectiveDate": "2019-05-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned RHP Phil Maton to El Paso Chihuahuas."
+    },
+    {
+      "id": 399971,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2019-05-05",
+      "effectiveDate": "2019-06-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Diego Padres recalled Phil Maton from El Paso Chihuahuas."
+    },
+    {
+      "id": 405398,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2019-06-01",
+      "effectiveDate": "2019-06-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned RHP Phil Maton to El Paso Chihuahuas."
+    },
+    {
+      "id": 409165,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2019-06-15",
+      "effectiveDate": "2019-07-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Diego Padres recalled Phil Maton from El Paso Chihuahuas."
+    },
+    {
+      "id": 414802,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2019-07-02",
+      "effectiveDate": "2019-07-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned RHP Phil Maton to El Paso Chihuahuas."
+    },
+    {
+      "id": 417059,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2019-07-12",
+      "effectiveDate": "2019-07-12",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "San Diego Padres traded RHP Phil Maton to Cleveland Indians for Future Considerations."
+    },
+    {
+      "id": 417062,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2019-07-12",
+      "effectiveDate": "2019-07-12",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cleveland Indians optioned RHP Phil Maton to Columbus Clippers."
+    },
+    {
+      "id": 421488,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2019-08-02",
+      "effectiveDate": "2019-08-05",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cleveland Indians recalled Phil Maton from Columbus Clippers."
+    },
+    {
+      "id": 422085,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2019-08-05",
+      "effectiveDate": "2019-08-05",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cleveland Indians optioned RHP Phil Maton to Columbus Clippers."
+    },
+    {
+      "id": 422500,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2019-08-07",
+      "effectiveDate": "2019-08-08",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cleveland Indians recalled Phil Maton from Columbus Clippers."
+    },
+    {
+      "id": 422597,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2019-08-08",
+      "effectiveDate": "2019-08-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cleveland Indians optioned RHP Phil Maton to Columbus Clippers."
+    },
+    {
+      "id": 423880,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2019-08-15",
+      "effectiveDate": "2019-08-15",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cleveland Indians recalled RHP Phil Maton from Columbus Clippers."
+    },
+    {
+      "id": 478629,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2019-08-15",
+      "effectiveDate": "2019-08-15",
+      "resolutionDate": "2019-08-15",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cleveland Indians recalled RHP Phil Maton."
+    },
+    {
+      "id": 477444,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2019-08-15",
+      "effectiveDate": "2019-08-15",
+      "resolutionDate": "2019-08-15",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cleveland Indians recalled P Phil Maton."
+    },
+    {
+      "id": 508184,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2021-07-30",
+      "effectiveDate": "2021-07-30",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Cleveland Indians traded RHP Phil Maton and C Yainer Diaz to Houston Astros for RF Myles Straw."
+    },
+    {
+      "id": 508544,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2021-07-31",
+      "effectiveDate": "2021-07-31",
+      "resolutionDate": "2021-07-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros activated RHP Phil Maton."
+    },
+    {
+      "id": 655717,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2022-10-11",
+      "effectiveDate": "2022-10-11",
+      "resolutionDate": "2022-10-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros reassigned RHP Phil Maton to the minor leagues."
+    },
+    {
+      "id": 665436,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2022-11-06",
+      "effectiveDate": "2022-11-06",
+      "resolutionDate": "2022-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros activated RHP Phil Maton."
+    },
+    {
+      "id": 719456,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2023-08-12",
+      "effectiveDate": "2023-08-12",
+      "resolutionDate": "2023-08-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros placed RHP Phil Maton on the 15-day injured list. Right eblow contusion."
+    },
+    {
+      "id": 722001,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2023-08-25",
+      "effectiveDate": "2023-08-25",
+      "resolutionDate": "2023-08-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Houston Astros sent RHP Phil Maton on a rehab assignment to Sugar Land Space Cowboys."
+    },
+    {
+      "id": 722007,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2023-08-25",
+      "effectiveDate": "2023-08-25",
+      "resolutionDate": "2023-08-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Houston Astros sent RHP Phil Maton on a rehab assignment to Sugar Land Space Cowboys."
+    },
+    {
+      "id": 722163,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2023-08-25",
+      "effectiveDate": "2023-08-25",
+      "resolutionDate": "2023-08-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Houston Astros sent RHP Phil Maton on a rehab assignment to Sugar Land Space Cowboys."
+    },
+    {
+      "id": 722164,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2023-08-27",
+      "effectiveDate": "2023-08-27",
+      "resolutionDate": "2023-08-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros activated RHP Phil Maton from the 15-day injured list."
+    },
+    {
+      "id": 730292,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2023-11-02",
+      "effectiveDate": "2023-11-02",
+      "resolutionDate": "2023-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Phil Maton elected free agency."
+    },
+    {
+      "id": 741466,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2024-02-14",
+      "effectiveDate": "2024-02-14",
+      "resolutionDate": "2024-02-14",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Tampa Bay Rays signed free agent RHP Phil Maton."
+    },
+    {
+      "id": 786028,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-07-09",
+      "effectiveDate": "2024-07-09",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Tampa Bay Rays traded RHP Phil Maton to New York Mets for cash."
+    },
+    {
+      "id": 786170,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-07-10",
+      "effectiveDate": "2024-07-10",
+      "resolutionDate": "2024-07-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated RHP Phil Maton."
+    },
+    {
+      "id": 806440,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "resolutionDate": "2024-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Phil Maton elected free agency."
+    },
+    {
+      "id": 819981,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2025-03-13",
+      "effectiveDate": "2025-03-13",
+      "resolutionDate": "2025-03-13",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "St. Louis Cardinals signed free agent RHP Phil Maton."
+    },
+    {
+      "id": 828278,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Phil Maton changed number to 42."
+    },
+    {
+      "id": 829479,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Phil Maton changed number to 88."
+    },
+    {
+      "id": 860375,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-07-31",
+      "effectiveDate": "2025-07-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "St. Louis Cardinals traded RHP Phil Maton to Texas Rangers for LHP Mason Molina, RHP Skylar Hales and Future Considerations. International Bonus Pool Money."
+    },
+    {
+      "id": 860904,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-08-01",
+      "effectiveDate": "2025-08-01",
+      "resolutionDate": "2025-08-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated RHP Phil Maton."
+    },
+    {
+      "id": 874416,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-11-02",
+      "effectiveDate": "2025-11-02",
+      "resolutionDate": "2025-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Phil Maton elected free agency."
+    },
+    {
+      "id": 877706,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-11-25",
+      "effectiveDate": "2025-11-25",
+      "resolutionDate": "2025-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago Cubs signed free agent RHP Phil Maton."
+    },
+    {
+      "id": 898170,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-04-10",
+      "effectiveDate": "2026-04-08",
+      "resolutionDate": "2026-04-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs placed RHP Phil Maton on the 15-day injured list retroactive to April 8, 2026. Right knee tendinitis."
+    },
+    {
+      "id": 902871,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2026-04-24",
+      "effectiveDate": "2026-04-24",
+      "resolutionDate": "2026-04-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago Cubs sent RHP Phil Maton on a rehab assignment to Iowa Cubs."
+    },
+    {
+      "id": 903422,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-04-27",
+      "effectiveDate": "2026-04-27",
+      "resolutionDate": "2026-04-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated RHP Phil Maton from the 15-day injured list."
+    },
+    {
+      "id": 922966,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-06-26",
+      "effectiveDate": "2026-06-26",
+      "resolutionDate": "2026-06-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs placed RHP Phil Maton on the 15-day injured list. Right knee tendinitis."
+    },
+    {
+      "id": 926011,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2026-07-08",
+      "effectiveDate": "2026-07-08",
+      "resolutionDate": "2026-07-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago Cubs sent RHP Phil Maton on a rehab assignment to Iowa Cubs."
+    },
+    {
+      "id": 927001,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-07-11",
+      "effectiveDate": "2026-07-11",
+      "resolutionDate": "2026-07-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated RHP Phil Maton from the 15-day injured list."
+    },
+    {
+      "id": 929271,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-07-20",
+      "effectiveDate": "2026-07-20",
+      "resolutionDate": "2026-07-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs placed RHP Phil Maton on the 15-day injured list. Right knee tendinitis."
+    },
+    {
+      "id": 938492,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-08-19",
+      "effectiveDate": "2026-08-19",
+      "resolutionDate": "2026-08-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs transferred RHP Phil Maton from the 15-day injured list to the 60-day injured list. Right knee tendinitis."
+    },
+    {
+      "id": 947822,
+      "person": {
+        "id": 664208,
+        "fullName": "Phil Maton",
+        "link": "/api/v1/people/664208",
+        "nameSlug": "phil-maton-664208"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated RHP Phil Maton from the 60-day injured list."
+    }
+  ]
+}

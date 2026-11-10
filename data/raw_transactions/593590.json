@@ -1,0 +1,1859 @@
+{
+  "player_id": 593590,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:290b4e7d70d1dea7bd42ad1cd494537b908fa358cc6e48b4e8c27d2c17c4269e",
+  "transactions": [
+    {
+      "id": 47355,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 611,
+        "name": "DSL LAD Bautista",
+        "link": "/api/v1/teams/611"
+      },
+      "date": "2010-05-28",
+      "effectiveDate": "2010-05-28",
+      "resolutionDate": "2010-05-28",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "DSL Dodgers signed C Webster Rivas."
+    },
+    {
+      "id": 126090,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 2690,
+        "name": "AZL Dodgers 2",
+        "link": "/api/v1/teams/2690"
+      },
+      "date": "2012-06-21",
+      "effectiveDate": "2012-06-21",
+      "resolutionDate": "2012-06-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Webster Rivas assigned to AZL Dodgers."
+    },
+    {
+      "id": 144463,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2013-03-06",
+      "effectiveDate": "2013-03-06",
+      "resolutionDate": "2013-03-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Los Angeles Dodgers."
+    },
+    {
+      "id": 146227,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 2690,
+        "name": "AZL Dodgers 2",
+        "link": "/api/v1/teams/2690"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2013-03-28",
+      "effectiveDate": "2013-03-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Webster Rivas assigned to Rancho Cucamonga Quakes from AZL Dodgers."
+    },
+    {
+      "id": 149009,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 2690,
+        "name": "AZL Dodgers 2",
+        "link": "/api/v1/teams/2690"
+      },
+      "toTeam": {
+        "id": 530,
+        "name": "Ogden Raptors",
+        "link": "/api/v1/teams/530"
+      },
+      "date": "2013-04-04",
+      "effectiveDate": "2013-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Webster Rivas assigned to Ogden Raptors from AZL Dodgers."
+    },
+    {
+      "id": 149786,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 530,
+        "name": "Ogden Raptors",
+        "link": "/api/v1/teams/530"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2013-04-16",
+      "effectiveDate": "2013-04-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Rancho Cucamonga Quakes from Ogden Raptors."
+    },
+    {
+      "id": 150803,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2013-04-16",
+      "effectiveDate": "2013-04-26",
+      "resolutionDate": "2013-04-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Webster Rivas roster status changed by Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 153113,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "toTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "date": "2013-05-16",
+      "effectiveDate": "2013-05-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Webster Rivas assigned to Dodgers Extended Spring Training from Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 156210,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2013-06-09",
+      "effectiveDate": "2013-06-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Webster Rivas assigned to Rancho Cucamonga Quakes from Dodgers Extended Spring Training."
+    },
+    {
+      "id": 164157,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2013-07-13",
+      "effectiveDate": "2013-07-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Great Lakes Loons from Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 175020,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2013-11-19",
+      "effectiveDate": "2013-11-19",
+      "resolutionDate": "2013-11-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 180623,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2014-03-11",
+      "effectiveDate": "2014-03-11",
+      "resolutionDate": "2014-03-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Los Angeles Dodgers."
+    },
+    {
+      "id": 217838,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2015-03-23",
+      "effectiveDate": "2015-03-23",
+      "resolutionDate": "2015-03-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Los Angeles Dodgers."
+    },
+    {
+      "id": 221142,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2015-04-08",
+      "effectiveDate": "2015-04-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Tulsa Drillers from Great Lakes Loons."
+    },
+    {
+      "id": 222587,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2015-04-18",
+      "effectiveDate": "2015-04-18",
+      "resolutionDate": "2015-04-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers placed C Webster Rivas on the 7-day disabled list."
+    },
+    {
+      "id": 223614,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2015-04-29",
+      "effectiveDate": "2015-04-29",
+      "resolutionDate": "2015-04-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers activated C Webster Rivas from the 7-day disabled list."
+    },
+    {
+      "id": 223772,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2015-04-30",
+      "effectiveDate": "2015-04-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Rancho Cucamonga Quakes from Tulsa Drillers."
+    },
+    {
+      "id": 239199,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2015-07-24",
+      "effectiveDate": "2015-07-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Great Lakes Loons from Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 240551,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2015-08-01",
+      "effectiveDate": "2015-08-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Oklahoma City Dodgers from Great Lakes Loons."
+    },
+    {
+      "id": 240935,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2015-08-04",
+      "effectiveDate": "2015-08-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Rancho Cucamonga Quakes from Oklahoma City Dodgers."
+    },
+    {
+      "id": 242246,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2015-08-14",
+      "effectiveDate": "2015-08-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Tulsa Drillers from Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 249821,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2015-11-06",
+      "effectiveDate": "2015-11-06",
+      "resolutionDate": "2015-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Webster Rivas elected free agency."
+    },
+    {
+      "id": 251669,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 5062,
+        "name": "Estrellas de Juan Marichal",
+        "link": "/api/v1/teams/5062"
+      },
+      "date": "2015-12-12",
+      "effectiveDate": "2015-12-12",
+      "resolutionDate": "2015-12-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Estrellas de Juan Marichal."
+    },
+    {
+      "id": 255482,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2016-02-15",
+      "effectiveDate": "2016-02-15",
+      "resolutionDate": "2016-02-15",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Angels signed free agent C Webster Rivas to a minor league contract."
+    },
+    {
+      "id": 255483,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 401,
+        "name": "Inland Empire 66ers",
+        "link": "/api/v1/teams/401"
+      },
+      "date": "2016-02-27",
+      "effectiveDate": "2016-02-27",
+      "resolutionDate": "2016-02-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Inland Empire 66ers."
+    },
+    {
+      "id": 257322,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2016-03-18",
+      "effectiveDate": "2016-03-18",
+      "resolutionDate": "2016-03-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Los Angeles Angels."
+    },
+    {
+      "id": 260826,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 401,
+        "name": "Inland Empire 66ers",
+        "link": "/api/v1/teams/401"
+      },
+      "toTeam": {
+        "id": 3250,
+        "name": "Angels Alternate Training Site",
+        "link": "/api/v1/teams/3250"
+      },
+      "date": "2016-04-06",
+      "effectiveDate": "2016-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Angels Ext. Spring Training from Inland Empire 66ers."
+    },
+    {
+      "id": 266893,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 3250,
+        "name": "Angels Alternate Training Site",
+        "link": "/api/v1/teams/3250"
+      },
+      "toTeam": {
+        "id": 420,
+        "name": "Burlington Bees",
+        "link": "/api/v1/teams/420"
+      },
+      "date": "2016-05-26",
+      "effectiveDate": "2016-05-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Burlington Bees from Angels Ext. Spring Training."
+    },
+    {
+      "id": 279587,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 420,
+        "name": "Burlington Bees",
+        "link": "/api/v1/teams/420"
+      },
+      "toTeam": {
+        "id": 401,
+        "name": "Inland Empire 66ers",
+        "link": "/api/v1/teams/401"
+      },
+      "date": "2016-07-19",
+      "effectiveDate": "2016-07-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Inland Empire 66ers from Burlington Bees."
+    },
+    {
+      "id": 280974,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 401,
+        "name": "Inland Empire 66ers",
+        "link": "/api/v1/teams/401"
+      },
+      "date": "2016-07-24",
+      "effectiveDate": "2016-07-24",
+      "resolutionDate": "2016-07-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Inland Empire 66ers placed C Webster Rivas on the 7-day disabled list."
+    },
+    {
+      "id": 282034,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 401,
+        "name": "Inland Empire 66ers",
+        "link": "/api/v1/teams/401"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2016-08-03",
+      "effectiveDate": "2016-08-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Salt Lake Bees from Inland Empire 66ers."
+    },
+    {
+      "id": 282956,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2016-08-07",
+      "effectiveDate": "2016-08-07",
+      "resolutionDate": "2016-08-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt Lake Bees placed C Webster Rivas on the 7-day disabled list."
+    },
+    {
+      "id": 283765,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 420,
+        "name": "Burlington Bees",
+        "link": "/api/v1/teams/420"
+      },
+      "date": "2016-08-13",
+      "effectiveDate": "2016-08-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Burlington Bees from Salt Lake Bees."
+    },
+    {
+      "id": 284277,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 420,
+        "name": "Burlington Bees",
+        "link": "/api/v1/teams/420"
+      },
+      "date": "2016-08-17",
+      "effectiveDate": "2016-08-17",
+      "resolutionDate": "2016-08-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Burlington Bees placed C Webster Rivas on the 7-day disabled list."
+    },
+    {
+      "id": 290836,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2016-10-20",
+      "effectiveDate": "2016-10-20",
+      "resolutionDate": "2016-10-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 292607,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 401,
+        "name": "Inland Empire 66ers",
+        "link": "/api/v1/teams/401"
+      },
+      "date": "2016-11-07",
+      "effectiveDate": "2016-11-07",
+      "resolutionDate": "2016-11-07",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Webster Rivas elected free agency."
+    },
+    {
+      "id": 296209,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2016-12-21",
+      "effectiveDate": "2016-12-21",
+      "resolutionDate": "2016-12-21",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Diego Padres signed free agent C Webster Rivas to a minor league contract."
+    },
+    {
+      "id": 296210,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2017-01-06",
+      "effectiveDate": "2017-01-06",
+      "resolutionDate": "2017-01-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to San Antonio Missions."
+    },
+    {
+      "id": 297374,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 1191,
+        "name": "Dominican Republic",
+        "link": "/api/v1/teams/1191"
+      },
+      "date": "2017-01-30",
+      "effectiveDate": "2017-01-30",
+      "resolutionDate": "2017-01-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Dominican Republic."
+    },
+    {
+      "id": 299225,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2017-03-01",
+      "effectiveDate": "2017-03-01",
+      "resolutionDate": "2017-03-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to San Diego Padres."
+    },
+    {
+      "id": 302729,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "date": "2017-04-02",
+      "effectiveDate": "2017-04-02",
+      "resolutionDate": "2017-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Fort Wayne TinCaps."
+    },
+    {
+      "id": 314479,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2017-06-06",
+      "effectiveDate": "2017-06-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to San Antonio Missions from Fort Wayne TinCaps."
+    },
+    {
+      "id": 342337,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2018-02-22",
+      "effectiveDate": "2018-02-22",
+      "resolutionDate": "2018-02-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres invited non-roster C Webster Rivas to spring training."
+    },
+    {
+      "id": 345295,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2018-03-25",
+      "effectiveDate": "2018-03-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to El Paso Chihuahuas from San Antonio Missions."
+    },
+    {
+      "id": 346417,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2018-04-01",
+      "effectiveDate": "2018-10-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Webster Rivas assigned to San Antonio Missions from El Paso Chihuahuas."
+    },
+    {
+      "id": 386767,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2019-01-24",
+      "effectiveDate": "2019-01-24",
+      "resolutionDate": "2019-01-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres invited non-roster C Webster Rivas to spring training."
+    },
+    {
+      "id": 405980,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 5368,
+        "name": "Amarillo Sod Poodles",
+        "link": "/api/v1/teams/5368"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2019-06-04",
+      "effectiveDate": "2019-06-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to El Paso Chihuahuas from Amarillo Sod Poodles."
+    },
+    {
+      "id": 436536,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2020-01-16",
+      "effectiveDate": "2020-01-16",
+      "resolutionDate": "2020-01-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres invited non-roster C Webster Rivas to spring training."
+    },
+    {
+      "id": 447561,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 3284,
+        "name": "Padres Alternate Training Site",
+        "link": "/api/v1/teams/3284"
+      },
+      "date": "2020-07-19",
+      "effectiveDate": "2020-07-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Padres Alternate Training Site from El Paso Chihuahuas."
+    },
+    {
+      "id": 489874,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2020-09-30",
+      "effectiveDate": "2020-09-30",
+      "resolutionDate": "2020-09-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to El Paso Chihuahuas."
+    },
+    {
+      "id": 452640,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 3284,
+        "name": "Padres Alternate Training Site",
+        "link": "/api/v1/teams/3284"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2020-09-30",
+      "effectiveDate": "2020-09-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to El Paso Chihuahuas from Padres Alternate Training Site."
+    },
+    {
+      "id": 489035,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2020-09-30",
+      "effectiveDate": "2020-09-30",
+      "resolutionDate": "2020-09-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to El Paso Chihuahuas."
+    },
+    {
+      "id": 659779,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2020-11-15",
+      "effectiveDate": "2020-11-15",
+      "resolutionDate": "2020-11-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gigantes del Cibao activated C Webster Rivas."
+    },
+    {
+      "id": 471276,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2020-11-15",
+      "effectiveDate": "2020-11-15",
+      "resolutionDate": "2020-11-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas and  assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 656128,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2020-11-15",
+      "effectiveDate": "2020-11-15",
+      "resolutionDate": "2020-11-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gigantes del Cibao activated C Webster Rivas."
+    },
+    {
+      "id": 455516,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2020-11-15",
+      "effectiveDate": "2020-11-15",
+      "resolutionDate": "2020-11-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 469796,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres invited non-roster C Webster Rivas to spring training."
+    },
+    {
+      "id": 474703,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to San Diego Padres ."
+    },
+    {
+      "id": 491248,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2021-05-28",
+      "effectiveDate": "2021-05-28",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "San Diego Padres selected the contract of C Webster Rivas from El Paso Chihuahuas."
+    },
+    {
+      "id": 506512,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2021-07-22",
+      "effectiveDate": "2021-07-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned C Webster Rivas to El Paso Chihuahuas."
+    },
+    {
+      "id": 518907,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2021-09-24",
+      "effectiveDate": "2021-09-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Diego Padres recalled C Webster Rivas from El Paso Chihuahuas."
+    },
+    {
+      "id": 522864,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2021-10-29",
+      "effectiveDate": "2021-10-29",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "San Diego Padres sent C Webster Rivas outright to El Paso Chihuahuas."
+    },
+    {
+      "id": 602822,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 1191,
+        "name": "Dominican Republic",
+        "link": "/api/v1/teams/1191"
+      },
+      "date": "2022-01-26",
+      "effectiveDate": "2022-01-26",
+      "resolutionDate": "2022-01-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Dominican Republic."
+    },
+    {
+      "id": 605962,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2022-03-13",
+      "effectiveDate": "2022-03-13",
+      "resolutionDate": "2022-03-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres invited non-roster C Webster Rivas to spring training."
+    },
+    {
+      "id": 611778,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2022-03-13",
+      "effectiveDate": "2022-03-13",
+      "resolutionDate": "2022-03-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "C Webster Rivas roster status changed by San Diego Padres."
+    },
+    {
+      "id": 651032,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2022-07-07",
+      "effectiveDate": "2022-07-07",
+      "resolutionDate": "2022-07-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Antonio Missions activated C Webster Rivas."
+    },
+    {
+      "id": 635982,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2022-07-07",
+      "effectiveDate": "2022-07-07",
+      "resolutionDate": "2022-07-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Antonio Missions activated C Webster Rivas."
+    },
+    {
+      "id": 635791,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2022-07-07",
+      "effectiveDate": "2022-07-07",
+      "resolutionDate": "2022-07-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Antonio Missions activated C Webster Rivas."
+    },
+    {
+      "id": 635714,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2022-07-07",
+      "effectiveDate": "2022-07-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to San Antonio Missions from El Paso Chihuahuas."
+    },
+    {
+      "id": 659778,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2022-11-10",
+      "effectiveDate": "2022-11-10",
+      "resolutionDate": "2022-11-10",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Webster Rivas elected free agency."
+    },
+    {
+      "id": 673756,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 1191,
+        "name": "Dominican Republic",
+        "link": "/api/v1/teams/1191"
+      },
+      "date": "2023-01-30",
+      "effectiveDate": "2023-01-30",
+      "resolutionDate": "2023-01-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Dominican Republic activated C Webster Rivas."
+    },
+    {
+      "id": 667258,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 1191,
+        "name": "Dominican Republic",
+        "link": "/api/v1/teams/1191"
+      },
+      "date": "2023-01-30",
+      "effectiveDate": "2023-01-30",
+      "resolutionDate": "2023-01-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Dominican Republic."
+    },
+    {
+      "id": 729228,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 668,
+        "name": "Toros del Este",
+        "link": "/api/v1/teams/668"
+      },
+      "date": "2023-10-19",
+      "effectiveDate": "2023-10-19",
+      "resolutionDate": "2023-10-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Toros del Este."
+    },
+    {
+      "id": 734311,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 4088,
+        "name": "LIDOM All-Stars",
+        "link": "/api/v1/teams/4088"
+      },
+      "date": "2023-12-02",
+      "effectiveDate": "2023-12-02",
+      "resolutionDate": "2023-12-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to LIDOM All-Stars."
+    },
+    {
+      "id": 735946,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2023-12-27",
+      "effectiveDate": "2023-12-27",
+      "resolutionDate": "2023-12-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Estrellas Orientales."
+    },
+    {
+      "id": 738527,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 1191,
+        "name": "Dominican Republic",
+        "link": "/api/v1/teams/1191"
+      },
+      "date": "2024-02-01",
+      "effectiveDate": "2024-02-01",
+      "resolutionDate": "2024-02-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Dominican Republic."
+    },
+    {
+      "id": 762832,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 496,
+        "name": "Leones de Yucatan",
+        "link": "/api/v1/teams/496"
+      },
+      "date": "2024-04-11",
+      "effectiveDate": "2024-04-11",
+      "resolutionDate": "2024-04-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Webster Rivas assigned to Leones de Yucatan."
+    },
+    {
+      "id": 901153,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 496,
+        "name": "Leones de Yucatan",
+        "link": "/api/v1/teams/496"
+      },
+      "date": "2024-04-11",
+      "effectiveDate": "2024-04-11",
+      "resolutionDate": "2024-04-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Leones de Yucatan activated 1B Webster Rivas."
+    },
+    {
+      "id": 802633,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 668,
+        "name": "Toros del Este",
+        "link": "/api/v1/teams/668"
+      },
+      "date": "2024-10-16",
+      "effectiveDate": "2024-10-16",
+      "resolutionDate": "2024-10-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Webster Rivas assigned to Toros del Este."
+    },
+    {
+      "id": 873079,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2025-10-15",
+      "effectiveDate": "2025-10-15",
+      "resolutionDate": "2025-10-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Webster Rivas assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 876847,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 4088,
+        "name": "LIDOM All-Stars",
+        "link": "/api/v1/teams/4088"
+      },
+      "date": "2025-11-14",
+      "effectiveDate": "2025-11-14",
+      "resolutionDate": "2025-11-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Webster Rivas assigned to LIDOM All-Stars."
+    },
+    {
+      "id": 889164,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 805,
+        "name": "Dominican Republic",
+        "link": "/api/v1/teams/805"
+      },
+      "date": "2026-03-03",
+      "effectiveDate": "2026-03-03",
+      "resolutionDate": "2026-03-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Webster Rivas assigned to Dominican Republic."
+    },
+    {
+      "id": 901273,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 4444,
+        "name": "Caliente de Durango",
+        "link": "/api/v1/teams/4444"
+      },
+      "date": "2026-04-17",
+      "effectiveDate": "2026-04-17",
+      "resolutionDate": "2026-04-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Webster Rivas assigned to Caliente de Durango."
+    },
+    {
+      "id": 920565,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 732,
+        "name": "LMB All-Stars",
+        "link": "/api/v1/teams/732"
+      },
+      "date": "2026-06-27",
+      "effectiveDate": "2026-06-27",
+      "resolutionDate": "2026-06-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Webster Rivas assigned to LMB All-Stars."
+    },
+    {
+      "id": 935944,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 4444,
+        "name": "Caliente de Durango",
+        "link": "/api/v1/teams/4444"
+      },
+      "date": "2026-08-06",
+      "effectiveDate": "2026-08-06",
+      "resolutionDate": "2026-08-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Caliente de Durango placed 1B Webster Rivas on the reserve list."
+    },
+    {
+      "id": 936267,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 4444,
+        "name": "Caliente de Durango",
+        "link": "/api/v1/teams/4444"
+      },
+      "date": "2026-08-07",
+      "effectiveDate": "2026-08-07",
+      "resolutionDate": "2026-08-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Caliente de Durango activated 1B Webster Rivas from the reserve list."
+    },
+    {
+      "id": 946398,
+      "person": {
+        "id": 593590,
+        "fullName": "Webster Rivas",
+        "link": "/api/v1/people/593590",
+        "nameSlug": "webster-rivas-593590"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2026-10-16",
+      "effectiveDate": "2026-10-16",
+      "resolutionDate": "2026-10-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Webster Rivas assigned to Aguilas Cibaenas."
+    }
+  ]
+}

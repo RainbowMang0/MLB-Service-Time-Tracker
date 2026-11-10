@@ -1,0 +1,132 @@
+{
+  "player_id": 150324,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:2b557fb31e021a8c4cdce1f27e9cf6931340e664634193ca01fdbaa42a0d0dfb",
+  "transactions": [
+    {
+      "id": 121399,
+      "person": {
+        "id": 150324,
+        "fullName": "Carlos Lee",
+        "link": "/api/v1/people/150324",
+        "nameSlug": "carlos-lee-150324"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2012-06-03",
+      "effectiveDate": "2012-06-02",
+      "resolutionDate": "2012-06-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros placed 1B Carlos Lee on the 15-day disabled list retroactive to June 2, 2012. Strained left hamstring."
+    },
+    {
+      "id": 123376,
+      "person": {
+        "id": 150324,
+        "fullName": "Carlos Lee",
+        "link": "/api/v1/people/150324",
+        "nameSlug": "carlos-lee-150324"
+      },
+      "toTeam": {
+        "id": 482,
+        "name": "Corpus Christi Hooks",
+        "link": "/api/v1/teams/482"
+      },
+      "date": "2012-06-14",
+      "effectiveDate": "2012-06-14",
+      "resolutionDate": "2012-06-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent 1B Carlos Lee on a rehab assignment to Corpus Christi Hooks."
+    },
+    {
+      "id": 124203,
+      "person": {
+        "id": 150324,
+        "fullName": "Carlos Lee",
+        "link": "/api/v1/people/150324",
+        "nameSlug": "carlos-lee-150324"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2012-06-17",
+      "effectiveDate": "2012-06-17",
+      "resolutionDate": "2012-06-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Carlos Lee roster status changed by Houston Astros."
+    },
+    {
+      "id": 131360,
+      "person": {
+        "id": 150324,
+        "fullName": "Carlos Lee",
+        "link": "/api/v1/people/150324",
+        "nameSlug": "carlos-lee-150324"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2012-07-05",
+      "effectiveDate": "2012-07-05",
+      "resolutionDate": "2012-07-30",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Houston Astros traded cash and 1B Carlos Lee to Miami Marlins for Matt Dominguez and LHP Rob Rasmussen."
+    },
+    {
+      "id": 138444,
+      "person": {
+        "id": 150324,
+        "fullName": "Carlos Lee",
+        "link": "/api/v1/people/150324",
+        "nameSlug": "carlos-lee-150324"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2012-11-03",
+      "effectiveDate": "2012-11-03",
+      "resolutionDate": "2012-11-03",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "1B Carlos Lee elected free agency."
+    },
+    {
+      "id": 139877,
+      "person": {
+        "id": 150324,
+        "fullName": "Carlos Lee",
+        "link": "/api/v1/people/150324",
+        "nameSlug": "carlos-lee-150324"
+      },
+      "toTeam": {
+        "id": 890,
+        "name": "Panama",
+        "link": "/api/v1/teams/890"
+      },
+      "date": "2012-11-14",
+      "effectiveDate": "2012-11-14",
+      "resolutionDate": "2012-11-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Carlos Lee assigned to Panama."
+    }
+  ]
+}

@@ -1,0 +1,827 @@
+{
+  "player_id": 666661,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:5dfdc65ef29d341b0ca117923a8832cc8515ce64e5c8344b0834a1b4353363ce",
+  "transactions": [
+    {
+      "id": 248300,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2015-09-13",
+      "effectiveDate": "2015-09-13",
+      "resolutionDate": "2015-09-13",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Dodgers signed free agent RHP Juan Morillo to a minor league contract."
+    },
+    {
+      "id": 268821,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 611,
+        "name": "DSL LAD Bautista",
+        "link": "/api/v1/teams/611"
+      },
+      "date": "2016-06-03",
+      "effectiveDate": "2016-06-03",
+      "resolutionDate": "2016-06-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Morillo assigned to DSL Dodgers1."
+    },
+    {
+      "id": 281254,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "fromTeam": {
+        "id": 611,
+        "name": "DSL LAD Bautista",
+        "link": "/api/v1/teams/611"
+      },
+      "toTeam": {
+        "id": 612,
+        "name": "DSL LAD Mega",
+        "link": "/api/v1/teams/612"
+      },
+      "date": "2016-07-30",
+      "effectiveDate": "2016-07-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Morillo assigned to DSL Dodgers2 from DSL Dodgers1."
+    },
+    {
+      "id": 313347,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "fromTeam": {
+        "id": 612,
+        "name": "DSL LAD Mega",
+        "link": "/api/v1/teams/612"
+      },
+      "toTeam": {
+        "id": 611,
+        "name": "DSL LAD Bautista",
+        "link": "/api/v1/teams/611"
+      },
+      "date": "2017-06-02",
+      "effectiveDate": "2017-06-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Morillo assigned to DSL Dodgers1 from DSL Dodgers2."
+    },
+    {
+      "id": 324087,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 2191,
+        "name": "DSL NL All-Stars",
+        "link": "/api/v1/teams/2191"
+      },
+      "date": "2017-07-15",
+      "effectiveDate": "2017-07-15",
+      "resolutionDate": "2017-07-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Morillo assigned to DSL NL All-Stars."
+    },
+    {
+      "id": 362011,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 2690,
+        "name": "AZL Dodgers 2",
+        "link": "/api/v1/teams/2690"
+      },
+      "date": "2018-06-18",
+      "effectiveDate": "2018-06-18",
+      "resolutionDate": "2018-06-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Morillo assigned to AZL Dodgers."
+    },
+    {
+      "id": 410059,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "fromTeam": {
+        "id": 2690,
+        "name": "AZL Dodgers 2",
+        "link": "/api/v1/teams/2690"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2019-06-17",
+      "effectiveDate": "2019-06-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Morillo assigned to AZL Dodgers Lasorda from AZL Dodgers Mota."
+    },
+    {
+      "id": 424694,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "fromTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "toTeam": {
+        "id": 530,
+        "name": "Ogden Raptors",
+        "link": "/api/v1/teams/530"
+      },
+      "date": "2019-08-20",
+      "effectiveDate": "2019-08-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Morillo assigned to Ogden Raptors from AZL Dodgers Lasorda."
+    },
+    {
+      "id": 456513,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "fromTeam": {
+        "id": 530,
+        "name": "Ogden Raptors",
+        "link": "/api/v1/teams/530"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2020-11-20",
+      "effectiveDate": "2020-11-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Morillo assigned to Oklahoma City Dodgers from Ogden Raptors."
+    },
+    {
+      "id": 483412,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Morillo assigned to Great Lakes Loons from Oklahoma City Dodgers."
+    },
+    {
+      "id": 485524,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2021-05-07",
+      "effectiveDate": "2021-05-07",
+      "resolutionDate": "2021-05-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons placed RHP Juan Morillo on the 7-day injured list."
+    },
+    {
+      "id": 510240,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2021-08-06",
+      "effectiveDate": "2021-08-06",
+      "resolutionDate": "2021-08-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons placed RHP Juan Morillo on the 60-day injured list."
+    },
+    {
+      "id": 524196,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2021-11-07",
+      "effectiveDate": "2021-11-07",
+      "resolutionDate": "2021-11-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated RHP Juan Morillo from the 60-day injured list."
+    },
+    {
+      "id": 618093,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2022-04-08",
+      "effectiveDate": "2022-04-08",
+      "resolutionDate": "2022-04-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons placed RHP Juan Morillo on the 60-day injured list."
+    },
+    {
+      "id": 658980,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2022-11-10",
+      "effectiveDate": "2022-11-10",
+      "resolutionDate": "2022-11-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated RHP Juan Morillo from the 60-day injured list."
+    },
+    {
+      "id": 676490,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2023-03-20",
+      "effectiveDate": "2023-03-20",
+      "resolutionDate": "2023-03-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Morillo and  assigned to Los Angeles Dodgers."
+    },
+    {
+      "id": 681717,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2023-04-04",
+      "effectiveDate": "2023-04-04",
+      "resolutionDate": "2023-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Morillo assigned to Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 689128,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2023-05-02",
+      "effectiveDate": "2023-05-02",
+      "resolutionDate": "2023-05-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated RHP Juan Morillo."
+    },
+    {
+      "id": 688243,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "fromTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2023-05-02",
+      "effectiveDate": "2023-05-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Morillo assigned to Great Lakes Loons from Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 742720,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2024-02-22",
+      "effectiveDate": "2024-02-22",
+      "resolutionDate": "2024-02-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Morillo assigned to Los Angeles Dodgers."
+    },
+    {
+      "id": 753799,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 369,
+        "name": "Los Angeles Dodgers Prospects",
+        "link": "/api/v1/teams/369"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers Prospects activated RHP Juan Morillo."
+    },
+    {
+      "id": 759749,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2024-04-02",
+      "effectiveDate": "2024-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Morillo assigned to Tulsa Drillers from Great Lakes Loons."
+    },
+    {
+      "id": 806604,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 692,
+        "name": "Aguilas del Zulia",
+        "link": "/api/v1/teams/692"
+      },
+      "date": "2024-10-10",
+      "effectiveDate": "2024-10-10",
+      "resolutionDate": "2024-10-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aguilas del Zulia activated RHP Juan Morillo."
+    },
+    {
+      "id": 801529,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 692,
+        "name": "Aguilas del Zulia",
+        "link": "/api/v1/teams/692"
+      },
+      "date": "2024-10-10",
+      "effectiveDate": "2024-10-10",
+      "resolutionDate": "2024-10-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Morillo assigned to Aguilas del Zulia."
+    },
+    {
+      "id": 805035,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "resolutionDate": "2024-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Juan Morillo elected free agency."
+    },
+    {
+      "id": 813011,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2024-11-14",
+      "effectiveDate": "2024-11-14",
+      "resolutionDate": "2024-11-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Juan Morillo roster status changed by Arizona Diamondbacks."
+    },
+    {
+      "id": 806603,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2024-11-14",
+      "effectiveDate": "2024-11-14",
+      "resolutionDate": "2024-11-14",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Arizona Diamondbacks signed free agent RHP Juan Morillo to a minor league contract."
+    },
+    {
+      "id": 806605,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2024-11-20",
+      "effectiveDate": "2024-11-20",
+      "resolutionDate": "2024-11-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Juan Morillo assigned to Reno Aces."
+    },
+    {
+      "id": 831219,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-04-19",
+      "effectiveDate": "2025-04-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Arizona Diamondbacks selected the contract of RHP Juan Morillo from Reno Aces."
+    },
+    {
+      "id": 852370,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2025-07-02",
+      "effectiveDate": "2025-07-02",
+      "resolutionDate": "2025-07-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces activated RHP Juan Morillo."
+    },
+    {
+      "id": 852237,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2025-07-02",
+      "effectiveDate": "2025-07-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Juan Morillo to Reno Aces."
+    },
+    {
+      "id": 853732,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-07-07",
+      "effectiveDate": "2025-07-07",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled RHP Juan Morillo from Reno Aces."
+    },
+    {
+      "id": 855225,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2025-07-14",
+      "effectiveDate": "2025-07-14",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Juan Morillo to Reno Aces."
+    },
+    {
+      "id": 863776,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-08-11",
+      "effectiveDate": "2025-08-11",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled RHP Juan Morillo from Reno Aces."
+    },
+    {
+      "id": 866699,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2025-08-27",
+      "effectiveDate": "2025-08-27",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Arizona Diamondbacks optioned RHP Juan Morillo to Reno Aces."
+    },
+    {
+      "id": 869405,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "fromTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-09-15",
+      "effectiveDate": "2025-09-15",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Arizona Diamondbacks recalled RHP Juan Morillo from Reno Aces."
+    },
+    {
+      "id": 899705,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Juan Morillo changed number to 42."
+    },
+    {
+      "id": 900625,
+      "person": {
+        "id": 666661,
+        "fullName": "Juan Morillo",
+        "link": "/api/v1/people/666661",
+        "nameSlug": "juan-morillo-666661"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Juan Morillo changed number to 62."
+    }
+  ]
+}

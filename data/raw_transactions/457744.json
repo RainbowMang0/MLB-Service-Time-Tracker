@@ -1,0 +1,965 @@
+{
+  "player_id": 457744,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:8f4dae3b3d26927c95686228d6c5842040b0c424410e24f7a65f34a8e582772f",
+  "transactions": [
+    {
+      "id": 14410,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2009-06-30",
+      "effectiveDate": "2009-06-30",
+      "resolutionDate": "2009-06-30",
+      "typeCode": "SU",
+      "typeDesc": "Suspension",
+      "description": "LHP Aaron Thompson suspended."
+    },
+    {
+      "id": 14897,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2009-07-03",
+      "effectiveDate": "2009-07-03",
+      "resolutionDate": "2009-07-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aaron Thompson roster status changed by Jacksonville Suns."
+    },
+    {
+      "id": 19248,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 3281,
+        "name": "Nationals Organization",
+        "link": "/api/v1/teams/3281"
+      },
+      "date": "2009-07-31",
+      "effectiveDate": "2009-07-31",
+      "resolutionDate": "2009-07-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Washington Nationals Traded 1B Nick Johnson to Florida Marlins and Jacksonville Suns Traded LHP Aaron Thompson to Nationals Organization."
+    },
+    {
+      "id": 19756,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "fromTeam": {
+        "id": 3281,
+        "name": "Nationals Organization",
+        "link": "/api/v1/teams/3281"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2009-08-04",
+      "effectiveDate": "2009-08-04",
+      "resolutionDate": "2009-08-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Aaron Thompson assigned to Harrisburg Senators from Nationals Organization."
+    },
+    {
+      "id": 29279,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "fromTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2009-11-19",
+      "effectiveDate": "2009-11-19",
+      "resolutionDate": "2009-11-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Washington Nationals selected the contract of Aaron Thompson from Harrisburg Senators."
+    },
+    {
+      "id": 33238,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2010-03-15",
+      "effectiveDate": "2010-03-15",
+      "resolutionDate": "2010-03-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Washington Nationals optioned Aaron Thompson to Harrisburg Senators."
+    },
+    {
+      "id": 40258,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "fromTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2010-04-24",
+      "effectiveDate": "2010-04-24",
+      "resolutionDate": "2010-04-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Aaron Thompson assigned to Syracuse Chiefs from Harrisburg Senators."
+    },
+    {
+      "id": 40448,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "fromTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2010-04-25",
+      "effectiveDate": "2010-04-25",
+      "resolutionDate": "2010-04-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Aaron Thompson assigned to Harrisburg Senators from Syracuse Chiefs."
+    },
+    {
+      "id": 72104,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2010-10-13",
+      "effectiveDate": "2010-10-13",
+      "resolutionDate": "2010-10-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aaron Thompson roster status changed by Washington Nationals."
+    },
+    {
+      "id": 75742,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2010-12-23",
+      "effectiveDate": "2010-12-23",
+      "resolutionDate": "2010-12-23",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Pittsburgh Pirates claimed Aaron Thompson off waivers from Washington Nationals."
+    },
+    {
+      "id": 78896,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 452,
+        "name": "Altoona Curve",
+        "link": "/api/v1/teams/452"
+      },
+      "date": "2011-03-14",
+      "effectiveDate": "2011-03-14",
+      "resolutionDate": "2011-03-14",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Pittsburgh Pirates optioned Aaron Thompson to Altoona Curve."
+    },
+    {
+      "id": 93834,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2011-06-24",
+      "effectiveDate": "2011-06-24",
+      "resolutionDate": "2011-06-24",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Pittsburgh Pirates designated Aaron Thompson for assignment."
+    },
+    {
+      "id": 94901,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 452,
+        "name": "Altoona Curve",
+        "link": "/api/v1/teams/452"
+      },
+      "date": "2011-06-30",
+      "effectiveDate": "2011-07-01",
+      "resolutionDate": "2011-07-01",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Pittsburgh Pirates sent Aaron Thompson outright to Altoona Curve."
+    },
+    {
+      "id": 99959,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "fromTeam": {
+        "id": 452,
+        "name": "Altoona Curve",
+        "link": "/api/v1/teams/452"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2011-08-10",
+      "effectiveDate": "2011-08-23",
+      "resolutionDate": "2011-08-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Aaron Thompson assigned to Indianapolis Indians from Altoona Curve."
+    },
+    {
+      "id": 101461,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2011-08-24",
+      "effectiveDate": "2011-08-24",
+      "resolutionDate": "2011-08-23",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Pittsburgh Pirates selected the contract of Aaron Thompson from Indianapolis Indians."
+    },
+    {
+      "id": 101598,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2011-08-25",
+      "effectiveDate": "2011-08-26",
+      "resolutionDate": "2011-08-25",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Pittsburgh Pirates optioned Aaron Thompson to Indianapolis Indians."
+    },
+    {
+      "id": 102929,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2011-09-06",
+      "effectiveDate": "2011-09-07",
+      "resolutionDate": "2011-09-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Pittsburgh Pirates recalled Aaron Thompson from Indianapolis Indians."
+    },
+    {
+      "id": 105288,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2011-10-26",
+      "effectiveDate": "2011-10-26",
+      "resolutionDate": "2011-10-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Aaron Thompson assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 105289,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "toTeam": {
+        "id": 668,
+        "name": "Toros del Este",
+        "link": "/api/v1/teams/668"
+      },
+      "date": "2011-10-26",
+      "effectiveDate": "2011-10-18",
+      "resolutionDate": "2011-10-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Aaron Thompson assigned to Toros del Este."
+    },
+    {
+      "id": 105470,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2011-11-01",
+      "effectiveDate": "2011-11-02",
+      "resolutionDate": "2011-11-02",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Pittsburgh Pirates sent LHP Aaron Thompson outright to Indianapolis Indians."
+    },
+    {
+      "id": 106291,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2011-11-02",
+      "effectiveDate": "2011-11-02",
+      "resolutionDate": "2011-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Aaron Thompson elected free agency."
+    },
+    {
+      "id": 107678,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2011-12-11",
+      "effectiveDate": "2011-12-11",
+      "resolutionDate": "2011-12-11",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent LHP Aaron Thompson to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 121411,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "toTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "date": "2012-06-03",
+      "effectiveDate": "2012-06-03",
+      "resolutionDate": "2012-06-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Aaron Thompson assigned to New Britain Rock Cats."
+    },
+    {
+      "id": 148255,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "toTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "date": "2013-04-03",
+      "effectiveDate": "2013-04-03",
+      "resolutionDate": "2013-04-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New Britain Rock Cats placed LHP Aaron Thompson on the 7-day disabled list."
+    },
+    {
+      "id": 149871,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "toTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "date": "2013-04-17",
+      "effectiveDate": "2013-04-17",
+      "resolutionDate": "2013-04-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aaron Thompson roster status changed by New Britain Rock Cats."
+    },
+    {
+      "id": 153260,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "fromTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2013-05-18",
+      "effectiveDate": "2013-05-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Aaron Thompson assigned to Rochester Red Wings from New Britain Rock Cats."
+    },
+    {
+      "id": 172680,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "toTeam": {
+        "id": 699,
+        "name": "Tigres de Aragua",
+        "link": "/api/v1/teams/699"
+      },
+      "date": "2013-10-10",
+      "effectiveDate": "2013-10-10",
+      "resolutionDate": "2013-10-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Aaron Thompson assigned to Tigres de Aragua."
+    },
+    {
+      "id": 175087,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2013-11-20",
+      "effectiveDate": "2013-11-20",
+      "resolutionDate": "2013-11-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Minnesota Twins invited non-roster LHP Aaron Thompson to spring training."
+    },
+    {
+      "id": 206577,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "fromTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2014-08-31",
+      "effectiveDate": "2015-03-31",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Minnesota Twins selected the contract of Aaron Thompson from Rochester Red Wings."
+    },
+    {
+      "id": 218527,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2015-03-31",
+      "effectiveDate": "2015-03-31",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Minnesota Twins optioned LHP Aaron Thompson to Rochester Red Wings."
+    },
+    {
+      "id": 219562,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "fromTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2015-04-03",
+      "effectiveDate": "2015-04-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Minnesota Twins recalled LHP Aaron Thompson from Rochester Red Wings."
+    },
+    {
+      "id": 236670,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2015-07-07",
+      "effectiveDate": "2015-07-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Minnesota Twins optioned LHP Aaron Thompson to Rochester Red Wings."
+    },
+    {
+      "id": 246665,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "fromTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2015-10-05",
+      "effectiveDate": "2015-10-05",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Minnesota Twins recalled LHP Aaron Thompson from Rochester Red Wings."
+    },
+    {
+      "id": 247728,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "toTeam": {
+        "id": 4066,
+        "name": "Canberra Cavalry",
+        "link": "/api/v1/teams/4066"
+      },
+      "date": "2015-10-19",
+      "effectiveDate": "2015-10-19",
+      "resolutionDate": "2015-10-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Aaron Thompson assigned to Canberra Cavalry."
+    },
+    {
+      "id": 247886,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2015-10-21",
+      "effectiveDate": "2015-10-21",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Minnesota Twins sent LHP Aaron Thompson outright to Rochester Red Wings."
+    },
+    {
+      "id": 247974,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2015-10-23",
+      "effectiveDate": "2015-10-23",
+      "resolutionDate": "2015-10-23",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Aaron Thompson elected free agency."
+    },
+    {
+      "id": 250779,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "toTeam": {
+        "id": 4066,
+        "name": "Canberra Cavalry",
+        "link": "/api/v1/teams/4066"
+      },
+      "date": "2015-11-25",
+      "effectiveDate": "2015-11-25",
+      "resolutionDate": "2015-11-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Canberra Cavalry activated LHP Aaron Thompson."
+    },
+    {
+      "id": 251940,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2015-11-30",
+      "effectiveDate": "2015-11-30",
+      "resolutionDate": "2015-11-30",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent LHP Aaron Thompson to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 259587,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2015-11-30",
+      "effectiveDate": "2015-11-30",
+      "resolutionDate": "2015-11-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LHP Aaron Thompson roster status changed by Minnesota Twins."
+    },
+    {
+      "id": 251941,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2015-12-15",
+      "effectiveDate": "2015-12-15",
+      "resolutionDate": "2015-12-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Aaron Thompson assigned to Rochester Red Wings."
+    },
+    {
+      "id": 259588,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2016-04-01",
+      "effectiveDate": "2016-04-01",
+      "resolutionDate": "2016-04-01",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Minnesota Twins released LHP Aaron Thompson."
+    },
+    {
+      "id": 290499,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "toTeam": {
+        "id": 678,
+        "name": "Tomateros de Culiacan",
+        "link": "/api/v1/teams/678"
+      },
+      "date": "2016-10-15",
+      "effectiveDate": "2016-10-15",
+      "resolutionDate": "2016-10-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Aaron Thompson assigned to Tomateros de Culiacan."
+    },
+    {
+      "id": 294405,
+      "person": {
+        "id": 457744,
+        "fullName": "Aaron Thompson",
+        "link": "/api/v1/people/457744",
+        "nameSlug": "aaron-thompson-457744"
+      },
+      "toTeam": {
+        "id": 678,
+        "name": "Tomateros de Culiacan",
+        "link": "/api/v1/teams/678"
+      },
+      "date": "2016-12-03",
+      "effectiveDate": "2016-12-03",
+      "resolutionDate": "2016-12-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tomateros de Culiacan placed LHP Aaron Thompson on the reserve list."
+    }
+  ]
+}

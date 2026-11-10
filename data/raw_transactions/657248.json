@@ -1,0 +1,1433 @@
+{
+  "player_id": 657248,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:ef61fe618f2df58fff172eebf69e8258ee7be59a330b272e1bf9858502642286",
+  "transactions": [
+    {
+      "id": 255119,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 2352,
+        "name": "Rice Owls",
+        "link": "/api/v1/teams/2352"
+      },
+      "date": "2016-02-18",
+      "effectiveDate": "2016-02-18",
+      "resolutionDate": "2016-02-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Glenn Otto assigned to Rice Owls."
+    },
+    {
+      "id": 275849,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 2491,
+        "name": "USA Collegiate National Team Stripes",
+        "link": "/api/v1/teams/2491"
+      },
+      "date": "2016-06-28",
+      "effectiveDate": "2016-06-28",
+      "resolutionDate": "2016-06-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Glenn Otto assigned to Collegiate National Team."
+    },
+    {
+      "id": 321507,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-07-01",
+      "effectiveDate": "2017-07-01",
+      "resolutionDate": "2017-07-01",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "New York Yankees signed RHP Glenn Otto."
+    },
+    {
+      "id": 321506,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "date": "2017-07-01",
+      "effectiveDate": "2017-07-01",
+      "resolutionDate": "2017-07-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Glenn Otto assigned to GCL Yankees East."
+    },
+    {
+      "id": 323816,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "toTeam": {
+        "id": 4725,
+        "name": "GCL Yankees West",
+        "link": "/api/v1/teams/4725"
+      },
+      "date": "2017-07-13",
+      "effectiveDate": "2017-07-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Glenn Otto assigned to GCL Yankees West from GCL Yankees East."
+    },
+    {
+      "id": 325067,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 4725,
+        "name": "GCL Yankees West",
+        "link": "/api/v1/teams/4725"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2017-07-20",
+      "effectiveDate": "2017-07-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Glenn Otto assigned to Staten Island Yankees from GCL Yankees West."
+    },
+    {
+      "id": 346436,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2018-04-01",
+      "effectiveDate": "2018-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Glenn Otto assigned to Charleston RiverDogs from Staten Island Yankees."
+    },
+    {
+      "id": 350021,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2018-04-18",
+      "effectiveDate": "2018-04-16",
+      "resolutionDate": "2018-04-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charleston RiverDogs placed RHP Glenn Otto on the 7-day disabled list retroactive to April 16, 2018."
+    },
+    {
+      "id": 379907,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2018-09-24",
+      "effectiveDate": "2018-09-24",
+      "resolutionDate": "2018-09-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charleston RiverDogs activated RHP Glenn Otto from the 7-day injured list."
+    },
+    {
+      "id": 394347,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-04-02",
+      "effectiveDate": "2019-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Glenn Otto assigned to Tampa Tarpons from Charleston RiverDogs."
+    },
+    {
+      "id": 398605,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-04-26",
+      "effectiveDate": "2019-04-26",
+      "resolutionDate": "2019-04-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Tarpons placed RHP Glenn Otto on the 7-day injured list."
+    },
+    {
+      "id": 400859,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-05-11",
+      "effectiveDate": "2019-05-11",
+      "resolutionDate": "2019-05-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Tarpons activated RHP Glenn Otto from the 7-day injured list."
+    },
+    {
+      "id": 403775,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-05-29",
+      "effectiveDate": "2019-05-27",
+      "resolutionDate": "2019-05-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Tarpons placed RHP Glenn Otto on the 7-day injured list retroactive to May 27, 2019."
+    },
+    {
+      "id": 417720,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "date": "2019-07-16",
+      "effectiveDate": "2019-07-16",
+      "resolutionDate": "2019-07-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Tampa Tarpons sent RHP Glenn Otto on a rehab assignment to GCL Yankees East."
+    },
+    {
+      "id": 418450,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 4725,
+        "name": "GCL Yankees West",
+        "link": "/api/v1/teams/4725"
+      },
+      "date": "2019-07-19",
+      "effectiveDate": "2019-07-19",
+      "resolutionDate": "2019-07-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Tampa Tarpons sent RHP Glenn Otto on a rehab assignment to GCL Yankees West."
+    },
+    {
+      "id": 464353,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-07-27",
+      "effectiveDate": "2019-07-27",
+      "resolutionDate": "2019-07-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Tarpons activated RHP Glenn Otto from the 7-day injured list."
+    },
+    {
+      "id": 420140,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-07-27",
+      "effectiveDate": "2019-07-27",
+      "resolutionDate": "2019-07-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Tarpons activated RHP Glenn Otto from the 7-day injured list."
+    },
+    {
+      "id": 426202,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 542,
+        "name": "Surprise Saguaros",
+        "link": "/api/v1/teams/542"
+      },
+      "date": "2019-08-28",
+      "effectiveDate": "2019-08-28",
+      "resolutionDate": "2019-08-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Glenn Otto assigned to Surprise Saguaros."
+    },
+    {
+      "id": 439304,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2020-02-24",
+      "effectiveDate": "2020-02-24",
+      "resolutionDate": "2020-02-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Glenn Otto assigned to New York Yankees."
+    },
+    {
+      "id": 466702,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 537,
+        "name": "Hudson Valley Renegades",
+        "link": "/api/v1/teams/537"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Hudson Valley Renegades activated RHP Glenn Otto."
+    },
+    {
+      "id": 468919,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 537,
+        "name": "Hudson Valley Renegades",
+        "link": "/api/v1/teams/537"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Hudson Valley Renegades activated RHP Glenn Otto."
+    },
+    {
+      "id": 474839,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2021-02-17",
+      "effectiveDate": "2021-02-17",
+      "resolutionDate": "2021-02-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "P Glenn Otto assigned to New York Yankees ."
+    },
+    {
+      "id": 469755,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2021-02-17",
+      "effectiveDate": "2021-02-17",
+      "resolutionDate": "2021-02-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Yankees invited non-roster RHP Glenn Otto to spring training."
+    },
+    {
+      "id": 482450,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "toTeam": {
+        "id": 1956,
+        "name": "Somerset Patriots",
+        "link": "/api/v1/teams/1956"
+      },
+      "date": "2021-05-02",
+      "effectiveDate": "2021-05-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Glenn Otto assigned to Somerset Patriots from Yankees Alternate Training Site."
+    },
+    {
+      "id": 504251,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 1956,
+        "name": "Somerset Patriots",
+        "link": "/api/v1/teams/1956"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2021-07-13",
+      "effectiveDate": "2021-07-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Glenn Otto assigned to Scranton/Wilkes-Barre RailRiders from Somerset Patriots."
+    },
+    {
+      "id": 507902,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2021-07-29",
+      "effectiveDate": "2021-07-29",
+      "resolutionDate": "2021-07-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Glenn Otto assigned to Round Rock Express."
+    },
+    {
+      "id": 507897,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2021-07-29",
+      "effectiveDate": "2021-07-29",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "New York Yankees traded RHP Glenn Otto, 2B Josh H. Smith, SS Ezequiel Duran and 2B Trevor Hauver to Texas Rangers for LHP Joely Rodriguez, LF Joey Gallo and cash."
+    },
+    {
+      "id": 508706,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2021-07-31",
+      "effectiveDate": "2021-07-31",
+      "resolutionDate": "2021-07-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express activated RHP Glenn Otto."
+    },
+    {
+      "id": 514555,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2021-08-27",
+      "effectiveDate": "2021-08-27",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Texas Rangers selected the contract of RHP Glenn Otto from Round Rock Express."
+    },
+    {
+      "id": 519970,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2021-10-03",
+      "effectiveDate": "2021-10-03",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Texas Rangers optioned RHP Glenn Otto to Round Rock Express."
+    },
+    {
+      "id": 520145,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2021-10-05",
+      "effectiveDate": "2021-10-05",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Texas Rangers recalled RHP Glenn Otto from Round Rock Express."
+    },
+    {
+      "id": 611068,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2022-04-05",
+      "effectiveDate": "2022-04-05",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Texas Rangers optioned RHP Glenn Otto to Round Rock Express."
+    },
+    {
+      "id": 616825,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-04-22",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Texas Rangers recalled RHP Glenn Otto from Round Rock Express."
+    },
+    {
+      "id": 630075,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-06-10",
+      "effectiveDate": "2022-06-10",
+      "resolutionDate": "2022-06-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed RHP Glenn Otto on the 10-day injured list."
+    },
+    {
+      "id": 632357,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2022-06-21",
+      "effectiveDate": "2022-06-21",
+      "resolutionDate": "2022-06-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Glenn Otto on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 633369,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-06-26",
+      "effectiveDate": "2022-06-26",
+      "resolutionDate": "2022-06-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated RHP Glenn Otto."
+    },
+    {
+      "id": 679492,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-03-30",
+      "effectiveDate": "2023-03-30",
+      "resolutionDate": "2023-03-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed RHP Glenn Otto on the 60-day injured list. Right shoulder strain."
+    },
+    {
+      "id": 703648,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2023-06-13",
+      "effectiveDate": "2023-06-13",
+      "resolutionDate": "2023-06-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Glenn Otto on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 708065,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-06-30",
+      "effectiveDate": "2023-06-30",
+      "resolutionDate": "2023-06-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated RHP Glenn Otto from the 60-day injured list."
+    },
+    {
+      "id": 715075,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2023-07-23",
+      "effectiveDate": "2023-07-23",
+      "resolutionDate": "2023-07-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express activated RHP Glenn Otto."
+    },
+    {
+      "id": 713784,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2023-07-23",
+      "effectiveDate": "2023-07-23",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Texas Rangers optioned RHP Glenn Otto to Round Rock Express."
+    },
+    {
+      "id": 722309,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-08-28",
+      "effectiveDate": "2023-08-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Texas Rangers recalled RHP Glenn Otto from Round Rock Express."
+    },
+    {
+      "id": 723636,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-09-05",
+      "effectiveDate": "2023-09-05",
+      "resolutionDate": "2023-09-05",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Texas Rangers designated RHP Glenn Otto for assignment."
+    },
+    {
+      "id": 724135,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2023-09-07",
+      "effectiveDate": "2023-09-07",
+      "resolutionDate": "2023-09-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "El Paso Chihuahuas activated RHP Glenn Otto."
+    },
+    {
+      "id": 723943,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2023-09-07",
+      "effectiveDate": "2023-09-07",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "San Diego Padres claimed RHP Glenn Otto off waivers from Texas Rangers."
+    },
+    {
+      "id": 724031,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2023-09-07",
+      "effectiveDate": "2023-09-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned RHP Glenn Otto to El Paso Chihuahuas."
+    },
+    {
+      "id": 727683,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2023-10-02",
+      "effectiveDate": "2023-10-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Diego Padres recalled RHP Glenn Otto from El Paso Chihuahuas."
+    },
+    {
+      "id": 756023,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2024-03-19",
+      "effectiveDate": "2024-03-19",
+      "resolutionDate": "2024-03-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres placed RHP Glenn Otto on the 15-day injured list. Right teres major strain."
+    },
+    {
+      "id": 778101,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "date": "2024-06-04",
+      "effectiveDate": "2024-06-04",
+      "resolutionDate": "2024-06-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres sent RHP Glenn Otto on a rehab assignment to ACL Padres."
+    },
+    {
+      "id": 781369,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "date": "2024-06-04",
+      "effectiveDate": "2024-06-04",
+      "resolutionDate": "2024-06-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres sent RHP Glenn Otto on a rehab assignment to ACL Padres."
+    },
+    {
+      "id": 781371,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2024-06-18",
+      "effectiveDate": "2024-06-18",
+      "resolutionDate": "2024-06-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres sent RHP Glenn Otto on a rehab assignment to El Paso Chihuahuas."
+    },
+    {
+      "id": 782960,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2024-06-25",
+      "effectiveDate": "2024-06-25",
+      "resolutionDate": "2024-06-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres activated RHP Glenn Otto from the 15-day injured list."
+    },
+    {
+      "id": 782961,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2024-06-25",
+      "effectiveDate": "2024-06-25",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned RHP Glenn Otto to El Paso Chihuahuas."
+    },
+    {
+      "id": 788554,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2024-07-21",
+      "effectiveDate": "2024-07-21",
+      "resolutionDate": "2024-07-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "El Paso Chihuahuas placed RHP Glenn Otto on the 7-day injured list."
+    },
+    {
+      "id": 790471,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2024-07-21",
+      "effectiveDate": "2024-07-21",
+      "resolutionDate": "2024-07-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "El Paso Chihuahuas placed RHP Glenn Otto on the 7-day injured list."
+    },
+    {
+      "id": 790470,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2024-07-28",
+      "effectiveDate": "2024-07-28",
+      "resolutionDate": "2024-07-28",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "San Diego Padres designated RHP Glenn Otto for assignment."
+    },
+    {
+      "id": 790611,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2024-07-28",
+      "effectiveDate": "2024-07-28",
+      "resolutionDate": "2024-07-28",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "San Diego Padres released RHP Glenn Otto."
+    },
+    {
+      "id": 794200,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2024-08-08",
+      "effectiveDate": "2024-08-08",
+      "resolutionDate": "2024-08-08",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Houston Astros signed free agent RHP Glenn Otto to a minor league contract."
+    },
+    {
+      "id": 794201,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2024-08-08",
+      "effectiveDate": "2024-08-08",
+      "resolutionDate": "2024-08-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Glenn Otto assigned to Sugar Land Space Cowboys."
+    },
+    {
+      "id": 797577,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2024-09-03",
+      "effectiveDate": "2024-09-03",
+      "resolutionDate": "2024-09-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sugar Land Space Cowboys activated RHP Glenn Otto."
+    },
+    {
+      "id": 798401,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2024-09-08",
+      "effectiveDate": "2024-09-08",
+      "resolutionDate": "2024-09-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sugar Land Space Cowboys placed RHP Glenn Otto on the 7-day injured list."
+    },
+    {
+      "id": 801192,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2024-09-30",
+      "effectiveDate": "2024-09-30",
+      "resolutionDate": "2024-09-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sugar Land Space Cowboys activated RHP Glenn Otto from the 7-day injured list."
+    },
+    {
+      "id": 823202,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2024-09-30",
+      "effectiveDate": "2024-09-30",
+      "resolutionDate": "2024-09-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sugar Land Space Cowboys activated RHP Glenn Otto from the 7-day injured list."
+    },
+    {
+      "id": 810848,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2025-01-17",
+      "effectiveDate": "2025-01-17",
+      "resolutionDate": "2025-01-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Houston Astros invited non-roster RHP Glenn Otto to spring training."
+    },
+    {
+      "id": 823203,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-03-28",
+      "effectiveDate": "2025-03-28",
+      "resolutionDate": "2025-03-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sugar Land Space Cowboys placed RHP Glenn Otto on the 7-day injured list."
+    },
+    {
+      "id": 872115,
+      "person": {
+        "id": 657248,
+        "fullName": "Glenn Otto Jr.",
+        "link": "/api/v1/people/657248",
+        "nameSlug": "glenn-otto-jr-657248"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-09-26",
+      "effectiveDate": "2025-09-26",
+      "resolutionDate": "2025-09-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sugar Land Space Cowboys activated RHP Glenn Otto from the 7-day injured list."
+    }
+  ]
+}

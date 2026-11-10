@@ -1,0 +1,1588 @@
+{
+  "player_id": 641816,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:e2aef2544731138b6fd7163ceee158bcd7b2f1a686a0f9ca746475385f5eb009",
+  "transactions": [
+    {
+      "id": 160241,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2013-06-19",
+      "effectiveDate": "2013-06-19",
+      "resolutionDate": "2013-06-19",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Cincinnati Reds signed RHP Tyler Mahle."
+    },
+    {
+      "id": 160242,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 3430,
+        "name": "ACL Reds",
+        "link": "/api/v1/teams/3430"
+      },
+      "date": "2013-06-20",
+      "effectiveDate": "2013-06-20",
+      "resolutionDate": "2013-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Tyler Mahle assigned to AZL Reds."
+    },
+    {
+      "id": 194055,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 3430,
+        "name": "ACL Reds",
+        "link": "/api/v1/teams/3430"
+      },
+      "toTeam": {
+        "id": 513,
+        "name": "Billings Mustangs",
+        "link": "/api/v1/teams/513"
+      },
+      "date": "2014-06-14",
+      "effectiveDate": "2014-06-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Tyler Mahle assigned to Billings Mustangs from AZL Reds."
+    },
+    {
+      "id": 221363,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 513,
+        "name": "Billings Mustangs",
+        "link": "/api/v1/teams/513"
+      },
+      "toTeam": {
+        "id": 459,
+        "name": "Dayton Dragons",
+        "link": "/api/v1/teams/459"
+      },
+      "date": "2015-04-08",
+      "effectiveDate": "2015-04-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Tyler Mahle assigned to Dayton Dragons from Billings Mustangs."
+    },
+    {
+      "id": 228799,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 70,
+        "name": "MWL East Division All-Stars",
+        "link": "/api/v1/teams/70"
+      },
+      "date": "2015-06-22",
+      "effectiveDate": "2015-06-22",
+      "resolutionDate": "2015-06-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Tyler Mahle assigned to MID East Division All-Stars."
+    },
+    {
+      "id": 234297,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 459,
+        "name": "Dayton Dragons",
+        "link": "/api/v1/teams/459"
+      },
+      "date": "2015-06-25",
+      "effectiveDate": "2015-06-25",
+      "resolutionDate": "2015-06-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Dayton Dragons placed RHP Tyler Mahle on the temporarily inactive list."
+    },
+    {
+      "id": 235188,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 459,
+        "name": "Dayton Dragons",
+        "link": "/api/v1/teams/459"
+      },
+      "date": "2015-06-29",
+      "effectiveDate": "2015-06-29",
+      "resolutionDate": "2015-06-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Dayton Dragons activated RHP Tyler Mahle from the temporarily inactive list."
+    },
+    {
+      "id": 259918,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 459,
+        "name": "Dayton Dragons",
+        "link": "/api/v1/teams/459"
+      },
+      "toTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "date": "2016-04-04",
+      "effectiveDate": "2016-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Tyler Mahle assigned to Daytona Tortugas from Dayton Dragons."
+    },
+    {
+      "id": 273863,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2016-06-22",
+      "effectiveDate": "2016-06-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Tyler Mahle assigned to Pensacola Blue Wahoos from Daytona Tortugas."
+    },
+    {
+      "id": 294729,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2016-12-09",
+      "effectiveDate": "2016-12-09",
+      "resolutionDate": "2016-12-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Cincinnati Reds invited non-roster RHP Tyler Mahle to spring training."
+    },
+    {
+      "id": 301690,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2017-03-29",
+      "effectiveDate": "2017-03-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Tyler Mahle assigned to Louisville Bats from Pensacola Blue Wahoos."
+    },
+    {
+      "id": 301689,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 363,
+        "name": "Cincinnati Reds Prospects",
+        "link": "/api/v1/teams/363"
+      },
+      "date": "2017-03-30",
+      "effectiveDate": "2017-03-30",
+      "resolutionDate": "2017-03-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Tyler Mahle assigned to Cincinnati Reds Futures."
+    },
+    {
+      "id": 470912,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 363,
+        "name": "Cincinnati Reds Prospects",
+        "link": "/api/v1/teams/363"
+      },
+      "date": "2017-03-30",
+      "effectiveDate": "2017-03-30",
+      "resolutionDate": "2017-03-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Tyler Mahle assigned to Cincinnati Reds Futures."
+    },
+    {
+      "id": 304322,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2017-04-06",
+      "effectiveDate": "2017-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Tyler Mahle assigned to Pensacola Blue Wahoos from Louisville Bats."
+    },
+    {
+      "id": 318383,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2017-06-22",
+      "effectiveDate": "2017-06-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Tyler Mahle assigned to Louisville Bats from Pensacola Blue Wahoos."
+    },
+    {
+      "id": 330730,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2017-08-27",
+      "effectiveDate": "2018-08-03",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Cincinnati Reds selected the contract of Tyler Mahle from Louisville Bats."
+    },
+    {
+      "id": 372818,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2018-08-03",
+      "effectiveDate": "2018-08-03",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cincinnati Reds optioned RHP Tyler Mahle to Louisville Bats."
+    },
+    {
+      "id": 377777,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2018-09-04",
+      "effectiveDate": "2018-09-04",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cincinnati Reds recalled RHP Tyler Mahle from Louisville Bats."
+    },
+    {
+      "id": 419131,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2019-07-22",
+      "effectiveDate": "2019-07-20",
+      "resolutionDate": "2019-07-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds placed RHP Tyler Mahle on the 10-day injured list retroactive to July 20, 2019. Left hamstring strain."
+    },
+    {
+      "id": 424036,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2019-08-16",
+      "effectiveDate": "2019-08-16",
+      "resolutionDate": "2019-08-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Cincinnati Reds sent RHP Tyler Mahle on a rehab assignment to Louisville Bats."
+    },
+    {
+      "id": 425133,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2019-08-22",
+      "effectiveDate": "2019-08-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cincinnati Reds optioned RHP Tyler Mahle to Louisville Bats."
+    },
+    {
+      "id": 477888,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2019-09-01",
+      "effectiveDate": "2019-09-01",
+      "resolutionDate": "2019-09-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cincinnati Reds recalled P Tyler Mahle."
+    },
+    {
+      "id": 478653,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2019-09-01",
+      "effectiveDate": "2019-09-01",
+      "resolutionDate": "2019-09-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cincinnati Reds recalled RHP Tyler Mahle,  and."
+    },
+    {
+      "id": 426749,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2019-09-01",
+      "effectiveDate": "2019-09-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cincinnati Reds recalled RHP Tyler Mahle from Louisville Bats."
+    },
+    {
+      "id": 622899,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2022-05-20",
+      "effectiveDate": "2022-05-20",
+      "resolutionDate": "2022-05-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds placed RHP Tyler Mahle on the restricted list."
+    },
+    {
+      "id": 623781,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2022-05-23",
+      "effectiveDate": "2022-05-23",
+      "resolutionDate": "2022-05-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds activated RHP Tyler Mahle from the restricted list."
+    },
+    {
+      "id": 635528,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2022-07-06",
+      "effectiveDate": "2022-07-03",
+      "resolutionDate": "2022-07-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds placed RHP Tyler Mahle on the 15-day injured list retroactive to July 3, 2022. Strained right shoulder."
+    },
+    {
+      "id": 639760,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2022-07-24",
+      "effectiveDate": "2022-07-24",
+      "resolutionDate": "2022-07-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds activated RHP Tyler Mahle from the 15-day injured list."
+    },
+    {
+      "id": 642353,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2022-08-02",
+      "effectiveDate": "2022-08-02",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Cincinnati Reds traded RHP Tyler Mahle to Minnesota Twins for SS Spencer Steer, 3B Christian Encarnacion-Strand and LHP Steve Hajjar."
+    },
+    {
+      "id": 643106,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2022-08-04",
+      "effectiveDate": "2022-08-04",
+      "resolutionDate": "2022-08-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Minnesota Twins activated RHP Tyler Mahle."
+    },
+    {
+      "id": 650468,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2022-09-03",
+      "effectiveDate": "2022-09-03",
+      "resolutionDate": "2022-09-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Minnesota Twins activated RHP Tyler Mahle from the 15-day injured list."
+    },
+    {
+      "id": 650542,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2022-09-04",
+      "effectiveDate": "2022-09-04",
+      "resolutionDate": "2022-09-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Minnesota Twins placed RHP Tyler Mahle on the 15-day injured list. Right shoulder inflammation."
+    },
+    {
+      "id": 654960,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2022-10-06",
+      "effectiveDate": "2022-10-06",
+      "resolutionDate": "2022-10-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Minnesota Twins activated RHP Tyler Mahle from the 15-day injured list."
+    },
+    {
+      "id": 688655,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2023-05-03",
+      "effectiveDate": "2023-04-30",
+      "resolutionDate": "2023-04-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Minnesota Twins placed RHP Tyler Mahle on the 15-day injured list retroactive to April 30, 2023. Right arm posterior impingement and flexor pronator strain."
+    },
+    {
+      "id": 689547,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2023-05-05",
+      "effectiveDate": "2023-05-05",
+      "resolutionDate": "2023-05-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Minnesota Twins transferred RHP Tyler Mahle from the 15-day injured list to the 60-day injured list. Right arm posterior impingement and flexor pronator strain."
+    },
+    {
+      "id": 730305,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2023-11-02",
+      "effectiveDate": "2023-11-02",
+      "resolutionDate": "2023-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Tyler Mahle elected free agency."
+    },
+    {
+      "id": 730304,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2023-11-02",
+      "effectiveDate": "2023-11-02",
+      "resolutionDate": "2023-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Minnesota Twins activated RHP Tyler Mahle from the 60-day injured list."
+    },
+    {
+      "id": 735025,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-12-14",
+      "effectiveDate": "2023-12-14",
+      "resolutionDate": "2023-12-14",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent RHP Tyler Mahle."
+    },
+    {
+      "id": 757659,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-03-28",
+      "effectiveDate": "2024-03-28",
+      "resolutionDate": "2024-03-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed RHP Tyler Mahle on the 60-day injured list. Rehab from right elbow surgery."
+    },
+    {
+      "id": 784629,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2024-07-02",
+      "effectiveDate": "2024-07-02",
+      "resolutionDate": "2024-07-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Tyler Mahle on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 787117,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2024-07-09",
+      "effectiveDate": "2024-07-09",
+      "resolutionDate": "2024-07-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Tyler Mahle on a rehab assignment to Frisco RoughRiders."
+    },
+    {
+      "id": 785924,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2024-07-09",
+      "effectiveDate": "2024-07-09",
+      "resolutionDate": "2024-07-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Tyler Mahle on a rehab assignment to Frisco RoughRiders."
+    },
+    {
+      "id": 787118,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 411,
+        "name": "ACL Rangers",
+        "link": "/api/v1/teams/411"
+      },
+      "date": "2024-07-15",
+      "effectiveDate": "2024-07-15",
+      "resolutionDate": "2024-07-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Tyler Mahle on a rehab assignment to ACL Rangers."
+    },
+    {
+      "id": 788212,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2024-07-20",
+      "effectiveDate": "2024-07-20",
+      "resolutionDate": "2024-07-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Tyler Mahle on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 789692,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2024-07-20",
+      "effectiveDate": "2024-07-20",
+      "resolutionDate": "2024-07-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Tyler Mahle on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 789693,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2024-07-25",
+      "effectiveDate": "2024-07-25",
+      "resolutionDate": "2024-07-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Tyler Mahle on a rehab assignment to Frisco RoughRiders."
+    },
+    {
+      "id": 791597,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2024-07-25",
+      "effectiveDate": "2024-07-25",
+      "resolutionDate": "2024-07-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Tyler Mahle on a rehab assignment to Frisco RoughRiders."
+    },
+    {
+      "id": 791611,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2024-07-31",
+      "effectiveDate": "2024-07-31",
+      "resolutionDate": "2024-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Tyler Mahle on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 792215,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2024-07-31",
+      "effectiveDate": "2024-07-31",
+      "resolutionDate": "2024-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Tyler Mahle on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 793171,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2024-07-31",
+      "effectiveDate": "2024-07-31",
+      "resolutionDate": "2024-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Tyler Mahle on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 793172,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-08-06",
+      "effectiveDate": "2024-08-06",
+      "resolutionDate": "2024-08-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated RHP Tyler Mahle from the 60-day injured list."
+    },
+    {
+      "id": 795607,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-08-20",
+      "effectiveDate": "2024-08-20",
+      "resolutionDate": "2024-08-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed RHP Tyler Mahle on the 15-day injured list. Right shoulder tightness."
+    },
+    {
+      "id": 800038,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-09-24",
+      "effectiveDate": "2024-09-24",
+      "resolutionDate": "2024-09-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers transferred RHP Tyler Mahle from the 15-day injured list to the 60-day injured list."
+    },
+    {
+      "id": 804589,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "resolutionDate": "2024-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated RHP Tyler Mahle from the 60-day injured list."
+    },
+    {
+      "id": 828241,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Tyler Mahle changed number to 42."
+    },
+    {
+      "id": 829440,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Tyler Mahle changed number to 51."
+    },
+    {
+      "id": 848202,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-06-15",
+      "effectiveDate": "2025-06-12",
+      "resolutionDate": "2025-06-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed RHP Tyler Mahle on the 15-day injured list retroactive to June 12, 2025. Right shoulder fatigue."
+    },
+    {
+      "id": 851949,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-07-01",
+      "effectiveDate": "2025-07-01",
+      "resolutionDate": "2025-07-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers transferred RHP Tyler Mahle from the 15-day injured list to the 60-day injured list. Right shoulder fatigue."
+    },
+    {
+      "id": 867496,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2025-09-02",
+      "effectiveDate": "2025-09-02",
+      "resolutionDate": "2025-09-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Tyler Mahle on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 870107,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2025-09-02",
+      "effectiveDate": "2025-09-02",
+      "resolutionDate": "2025-09-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Tyler Mahle on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 870108,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-09-19",
+      "effectiveDate": "2025-09-19",
+      "resolutionDate": "2025-09-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated RHP Tyler Mahle from the 60-day injured list."
+    },
+    {
+      "id": 874414,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-11-02",
+      "effectiveDate": "2025-11-02",
+      "resolutionDate": "2025-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Tyler Mahle elected free agency."
+    },
+    {
+      "id": 880132,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2026-01-05",
+      "effectiveDate": "2026-01-05",
+      "resolutionDate": "2026-01-05",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Francisco Giants signed free agent RHP Tyler Mahle."
+    },
+    {
+      "id": 899097,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Tyler Mahle changed number to 42."
+    },
+    {
+      "id": 900024,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Tyler Mahle changed number to 54."
+    },
+    {
+      "id": 913340,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2026-05-29",
+      "effectiveDate": "2026-05-27",
+      "resolutionDate": "2026-05-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Francisco Giants placed RHP Tyler Mahle on the 15-day injured list retroactive to May 27, 2026. Left hamstring strain."
+    },
+    {
+      "id": 918478,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2026-06-14",
+      "effectiveDate": "2026-06-14",
+      "resolutionDate": "2026-06-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Francisco Giants sent RHP Tyler Mahle on a rehab assignment to Sacramento River Cats."
+    },
+    {
+      "id": 921985,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2026-06-14",
+      "effectiveDate": "2026-06-14",
+      "resolutionDate": "2026-06-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Francisco Giants sent RHP Tyler Mahle on a rehab assignment to Sacramento River Cats."
+    },
+    {
+      "id": 921986,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2026-06-24",
+      "effectiveDate": "2026-06-24",
+      "resolutionDate": "2026-06-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Francisco Giants activated RHP Tyler Mahle from the 15-day injured list."
+    },
+    {
+      "id": 934547,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2026-08-02",
+      "effectiveDate": "2026-08-02",
+      "resolutionDate": "2026-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves activated RHP Tyler Mahle."
+    },
+    {
+      "id": 934200,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2026-08-02",
+      "effectiveDate": "2026-08-02",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "San Francisco Giants traded RHP Tyler Mahle to Atlanta Braves for RHP Anthony Molina."
+    },
+    {
+      "id": 947375,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2026-10-29",
+      "effectiveDate": "2026-10-29",
+      "resolutionDate": "2026-10-29",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Tyler Mahle elected free agency."
+    }
+  ]
+}

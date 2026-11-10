@@ -1,0 +1,763 @@
+{
+  "player_id": 607555,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:7146a68dcb4b1becdcc7ae176bf865947a5eb31330b661f5bc918fd4d4fe9da4",
+  "transactions": [
+    {
+      "id": 234586,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2015-06-25",
+      "effectiveDate": "2015-06-25",
+      "resolutionDate": "2015-06-25",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Washington Nationals signed LHP Taylor Guilbeau."
+    },
+    {
+      "id": 234588,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "toTeam": {
+        "id": 466,
+        "name": "FCL Nationals",
+        "link": "/api/v1/teams/466"
+      },
+      "date": "2015-06-26",
+      "effectiveDate": "2015-06-26",
+      "resolutionDate": "2015-06-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Taylor Guilbeau assigned to GCL Nationals."
+    },
+    {
+      "id": 236868,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "fromTeam": {
+        "id": 466,
+        "name": "FCL Nationals",
+        "link": "/api/v1/teams/466"
+      },
+      "toTeam": {
+        "id": 458,
+        "name": "Auburn Doubledays",
+        "link": "/api/v1/teams/458"
+      },
+      "date": "2015-07-08",
+      "effectiveDate": "2015-07-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Taylor Guilbeau assigned to Auburn Doubledays from GCL Nationals."
+    },
+    {
+      "id": 256770,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2016-03-12",
+      "effectiveDate": "2016-03-12",
+      "resolutionDate": "2016-03-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Taylor Guilbeau assigned to Washington Nationals."
+    },
+    {
+      "id": 260819,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "fromTeam": {
+        "id": 458,
+        "name": "Auburn Doubledays",
+        "link": "/api/v1/teams/458"
+      },
+      "toTeam": {
+        "id": 563,
+        "name": "Hagerstown Suns",
+        "link": "/api/v1/teams/563"
+      },
+      "date": "2016-04-06",
+      "effectiveDate": "2016-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Taylor Guilbeau assigned to Hagerstown Suns from Auburn Doubledays."
+    },
+    {
+      "id": 303424,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "fromTeam": {
+        "id": 563,
+        "name": "Hagerstown Suns",
+        "link": "/api/v1/teams/563"
+      },
+      "toTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "date": "2017-04-04",
+      "effectiveDate": "2017-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Taylor Guilbeau assigned to Potomac Nationals from Hagerstown Suns."
+    },
+    {
+      "id": 306819,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "fromTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "toTeam": {
+        "id": 3280,
+        "name": "Nationals Alternate Training Site",
+        "link": "/api/v1/teams/3280"
+      },
+      "date": "2017-04-20",
+      "effectiveDate": "2017-04-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Taylor Guilbeau assigned to Nationals Ext. Spring Training from Potomac Nationals."
+    },
+    {
+      "id": 310866,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "fromTeam": {
+        "id": 3280,
+        "name": "Nationals Alternate Training Site",
+        "link": "/api/v1/teams/3280"
+      },
+      "toTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "date": "2017-05-16",
+      "effectiveDate": "2017-05-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Taylor Guilbeau assigned to Potomac Nationals from Nationals Ext. Spring Training."
+    },
+    {
+      "id": 330523,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "toTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "date": "2017-08-25",
+      "effectiveDate": "2017-08-25",
+      "resolutionDate": "2017-08-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Potomac Nationals placed LHP Taylor Guilbeau on the 7-day disabled list."
+    },
+    {
+      "id": 331385,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "toTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "date": "2017-09-01",
+      "effectiveDate": "2017-09-01",
+      "resolutionDate": "2017-09-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Potomac Nationals activated LHP Taylor Guilbeau from the 7-day disabled list."
+    },
+    {
+      "id": 351690,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "fromTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "toTeam": {
+        "id": 3280,
+        "name": "Nationals Alternate Training Site",
+        "link": "/api/v1/teams/3280"
+      },
+      "date": "2018-04-01",
+      "effectiveDate": "2018-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Taylor Guilbeau assigned to Nationals Extended Spring Training from Potomac Nationals."
+    },
+    {
+      "id": 351689,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "fromTeam": {
+        "id": 3280,
+        "name": "Nationals Alternate Training Site",
+        "link": "/api/v1/teams/3280"
+      },
+      "toTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "date": "2018-05-01",
+      "effectiveDate": "2018-05-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Taylor Guilbeau assigned to Potomac Nationals from Nationals Extended Spring Training."
+    },
+    {
+      "id": 372411,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "toTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "date": "2018-08-01",
+      "effectiveDate": "2018-08-01",
+      "resolutionDate": "2018-08-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Potomac Nationals placed LHP Taylor Guilbeau on the 7-day disabled list."
+    },
+    {
+      "id": 373440,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "toTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "date": "2018-08-07",
+      "effectiveDate": "2018-08-07",
+      "resolutionDate": "2018-08-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Potomac Nationals activated LHP Taylor Guilbeau from the 7-day injured list."
+    },
+    {
+      "id": 390799,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2019-03-15",
+      "effectiveDate": "2019-03-15",
+      "resolutionDate": "2019-03-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Taylor Guilbeau assigned to Washington Nationals."
+    },
+    {
+      "id": 394299,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "fromTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2019-04-02",
+      "effectiveDate": "2019-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Taylor Guilbeau assigned to Harrisburg Senators from Potomac Nationals."
+    },
+    {
+      "id": 416680,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "fromTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2019-07-11",
+      "effectiveDate": "2019-07-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Taylor Guilbeau assigned to Fresno Grizzlies from Harrisburg Senators."
+    },
+    {
+      "id": 420970,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2019-07-31",
+      "effectiveDate": "2019-07-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Washington Nationals traded LHP Aaron Fletcher, RHP Elvis Alvarado and LHP Taylor Guilbeau to Seattle Mariners for RHP Hunter Strickland and LHP Roenis Elias."
+    },
+    {
+      "id": 421663,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2019-08-02",
+      "effectiveDate": "2019-08-02",
+      "resolutionDate": "2019-08-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Taylor Guilbeau assigned to Tacoma Rainiers."
+    },
+    {
+      "id": 423789,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2019-08-15",
+      "effectiveDate": "2020-07-22",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Seattle Mariners selected the contract of Taylor Guilbeau from Tacoma Rainiers."
+    },
+    {
+      "id": 447888,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 3274,
+        "name": "Mariners Alternate Training Site",
+        "link": "/api/v1/teams/3274"
+      },
+      "date": "2020-07-22",
+      "effectiveDate": "2020-07-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned LHP Taylor Guilbeau to Mariners Alternate Training Site."
+    },
+    {
+      "id": 448298,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "fromTeam": {
+        "id": 3274,
+        "name": "Mariners Alternate Training Site",
+        "link": "/api/v1/teams/3274"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2020-07-27",
+      "effectiveDate": "2020-07-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled Taylor Guilbeau from Mariners Alternate Training Site."
+    },
+    {
+      "id": 448346,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 3274,
+        "name": "Mariners Alternate Training Site",
+        "link": "/api/v1/teams/3274"
+      },
+      "date": "2020-07-28",
+      "effectiveDate": "2020-07-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned LHP Taylor Guilbeau to Mariners Alternate Training Site."
+    },
+    {
+      "id": 448808,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "fromTeam": {
+        "id": 3274,
+        "name": "Mariners Alternate Training Site",
+        "link": "/api/v1/teams/3274"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2020-08-04",
+      "effectiveDate": "2020-08-14",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled Taylor Guilbeau from Mariners Alternate Training Site."
+    },
+    {
+      "id": 449395,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 3274,
+        "name": "Mariners Alternate Training Site",
+        "link": "/api/v1/teams/3274"
+      },
+      "date": "2020-08-14",
+      "effectiveDate": "2020-08-14",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned LHP Taylor Guilbeau to Mariners Alternate Training Site."
+    },
+    {
+      "id": 449439,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "fromTeam": {
+        "id": 3274,
+        "name": "Mariners Alternate Training Site",
+        "link": "/api/v1/teams/3274"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2020-08-15",
+      "effectiveDate": "2020-08-15",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled LHP Taylor Guilbeau from Mariners Alternate Training Site."
+    },
+    {
+      "id": 449802,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2020-08-21",
+      "effectiveDate": "2020-08-21",
+      "resolutionDate": "2020-08-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners placed LHP Taylor Guilbeau on the 10-day injured list. Left shoulder strain."
+    },
+    {
+      "id": 450060,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2020-08-26",
+      "effectiveDate": "2020-08-26",
+      "resolutionDate": "2020-08-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners transferred LHP Taylor Guilbeau from the 10-day injured list to the 60-day injured list. Left shoulder strain."
+    },
+    {
+      "id": 454028,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2020-10-23",
+      "effectiveDate": "2020-10-23",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Arizona Diamondbacks claimed LHP Taylor Guilbeau off waivers from Seattle Mariners."
+    },
+    {
+      "id": 461803,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2021-02-06",
+      "effectiveDate": "2021-02-06",
+      "resolutionDate": "2021-02-06",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Arizona Diamondbacks designated LHP Taylor Guilbeau for assignment."
+    },
+    {
+      "id": 469485,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Arizona Diamondbacks sent LHP Taylor Guilbeau outright to Reno Aces."
+    },
+    {
+      "id": 471062,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2021-02-19",
+      "effectiveDate": "2021-02-19",
+      "resolutionDate": "2021-02-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Arizona Diamondbacks invited non-roster LHP Taylor Guilbeau to spring training."
+    },
+    {
+      "id": 475390,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2021-02-19",
+      "effectiveDate": "2021-02-19",
+      "resolutionDate": "2021-02-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "P Taylor Guilbeau assigned to Arizona Diamondbacks ."
+    },
+    {
+      "id": 479036,
+      "person": {
+        "id": 607555,
+        "fullName": "Taylor Guilbeau",
+        "link": "/api/v1/people/607555",
+        "nameSlug": "taylor-guilbeau-607555"
+      },
+      "toTeam": {
+        "id": 5368,
+        "name": "Amarillo Sod Poodles",
+        "link": "/api/v1/teams/5368"
+      },
+      "date": "2021-04-20",
+      "effectiveDate": "2021-04-20",
+      "resolutionDate": "2021-04-20",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Amarillo Sod Poodles released LHP Taylor Guilbeau."
+    }
+  ]
+}

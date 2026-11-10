@@ -1,0 +1,2577 @@
+{
+  "player_id": 622250,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:f01097064b4eda0e365bacb69f047015186559080ba2becb2028c0eb70fae45e",
+  "transactions": [
+    {
+      "id": 239129,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2015-07-17",
+      "effectiveDate": "2015-07-17",
+      "resolutionDate": "2015-07-17",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Los Angeles Dodgers signed RHP Joshua Sborz."
+    },
+    {
+      "id": 239128,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 530,
+        "name": "Ogden Raptors",
+        "link": "/api/v1/teams/530"
+      },
+      "date": "2015-07-23",
+      "effectiveDate": "2015-07-23",
+      "resolutionDate": "2015-07-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joshua Sborz assigned to Ogden Raptors."
+    },
+    {
+      "id": 240103,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 530,
+        "name": "Ogden Raptors",
+        "link": "/api/v1/teams/530"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2015-07-30",
+      "effectiveDate": "2015-07-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joshua Sborz assigned to Great Lakes Loons from Ogden Raptors."
+    },
+    {
+      "id": 242138,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2015-08-14",
+      "effectiveDate": "2015-08-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joshua Sborz assigned to Rancho Cucamonga Quakes from Great Lakes Loons."
+    },
+    {
+      "id": 257108,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2016-03-16",
+      "effectiveDate": "2016-03-16",
+      "resolutionDate": "2016-03-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joshua Sborz assigned to Los Angeles Dodgers."
+    },
+    {
+      "id": 266350,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2016-05-21",
+      "effectiveDate": "2016-05-19",
+      "resolutionDate": "2016-05-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rancho Cucamonga Quakes placed RHP Joshua Sborz on the 7-day disabled list retroactive to May 19, 2016."
+    },
+    {
+      "id": 267131,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2016-05-27",
+      "effectiveDate": "2016-05-27",
+      "resolutionDate": "2016-05-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rancho Cucamonga Quakes activated RHP Joshua Sborz from the 7-day disabled list."
+    },
+    {
+      "id": 269959,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 72,
+        "name": "CAL North Division All-Stars",
+        "link": "/api/v1/teams/72"
+      },
+      "date": "2016-06-20",
+      "effectiveDate": "2016-06-20",
+      "resolutionDate": "2016-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joshua Sborz assigned to California League All-Stars."
+    },
+    {
+      "id": 281608,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2016-08-01",
+      "effectiveDate": "2016-08-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joshua Sborz assigned to Tulsa Drillers from Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 297945,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2017-02-14",
+      "effectiveDate": "2017-02-14",
+      "resolutionDate": "2017-02-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers invited non-roster RHP Joshua Sborz to spring training."
+    },
+    {
+      "id": 306039,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "toTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "date": "2017-04-05",
+      "effectiveDate": "2017-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joshua Sborz assigned to Dodgers Ext. Spring Training from Tulsa Drillers."
+    },
+    {
+      "id": 306040,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2017-04-15",
+      "effectiveDate": "2017-04-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joshua Sborz assigned to Tulsa Drillers from Dodgers Ext. Spring Training."
+    },
+    {
+      "id": 309293,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "toTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "date": "2017-05-06",
+      "effectiveDate": "2017-05-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joshua Sborz assigned to Dodgers Ext. Spring Training from Tulsa Drillers."
+    },
+    {
+      "id": 309485,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2017-05-08",
+      "effectiveDate": "2017-05-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Josh Sborz assigned to Tulsa Drillers from Dodgers Ext. Spring Training."
+    },
+    {
+      "id": 316133,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2017-06-15",
+      "effectiveDate": "2017-06-14",
+      "resolutionDate": "2017-06-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers placed RHP Josh Sborz on the 7-day disabled list retroactive to June 14, 2017."
+    },
+    {
+      "id": 319006,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2017-06-23",
+      "effectiveDate": "2017-06-23",
+      "resolutionDate": "2017-06-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers activated RHP Josh Sborz from the 7-day disabled list."
+    },
+    {
+      "id": 327533,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2017-08-03",
+      "effectiveDate": "2017-08-01",
+      "resolutionDate": "2017-08-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers placed RHP Josh Sborz on the 7-day disabled list retroactive to August 1, 2017."
+    },
+    {
+      "id": 328344,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2017-08-08",
+      "effectiveDate": "2017-08-08",
+      "resolutionDate": "2017-08-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers activated RHP Josh Sborz from the 7-day disabled list."
+    },
+    {
+      "id": 342525,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2018-02-23",
+      "effectiveDate": "2018-02-23",
+      "resolutionDate": "2018-02-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Josh Sborz assigned to Los Angeles Dodgers."
+    },
+    {
+      "id": 353167,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2018-05-10",
+      "effectiveDate": "2018-05-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Josh Sborz assigned to Oklahoma City Dodgers from Tulsa Drillers."
+    },
+    {
+      "id": 373134,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2018-08-04",
+      "effectiveDate": "2018-08-03",
+      "resolutionDate": "2018-08-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers placed RHP Josh Sborz on the 7-day disabled list retroactive to August 3, 2018."
+    },
+    {
+      "id": 376193,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2018-08-24",
+      "effectiveDate": "2018-08-24",
+      "resolutionDate": "2018-08-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers activated RHP Josh Sborz from the 7-day disabled list."
+    },
+    {
+      "id": 383737,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2018-11-20",
+      "effectiveDate": "2019-03-10",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Dodgers selected the contract of Josh Sborz from Oklahoma City Dodgers."
+    },
+    {
+      "id": 390415,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2019-03-10",
+      "effectiveDate": "2019-03-10",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned RHP Josh Sborz to Oklahoma City Dodgers."
+    },
+    {
+      "id": 396623,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2019-04-14",
+      "effectiveDate": "2019-04-20",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled Josh Sborz from Oklahoma City Dodgers."
+    },
+    {
+      "id": 397621,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2019-04-20",
+      "effectiveDate": "2019-04-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned RHP Josh Sborz to Oklahoma City Dodgers."
+    },
+    {
+      "id": 411459,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2019-06-20",
+      "effectiveDate": "2019-06-20",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled RHP Josh Sborz from Oklahoma City Dodgers."
+    },
+    {
+      "id": 411778,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2019-06-21",
+      "effectiveDate": "2019-07-01",
+      "resolutionDate": "2019-06-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Josh Sborz roster status changed by Los Angeles Dodgers."
+    },
+    {
+      "id": 414545,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2019-07-01",
+      "effectiveDate": "2019-07-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned RHP Josh Sborz to Oklahoma City Dodgers."
+    },
+    {
+      "id": 420530,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2019-07-29",
+      "effectiveDate": "2019-07-30",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled Josh Sborz from Oklahoma City Dodgers."
+    },
+    {
+      "id": 420729,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2019-07-30",
+      "effectiveDate": "2019-07-30",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned RHP Josh Sborz to Oklahoma City Dodgers."
+    },
+    {
+      "id": 424060,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2019-08-16",
+      "effectiveDate": "2019-08-18",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled Josh Sborz from Oklahoma City Dodgers."
+    },
+    {
+      "id": 424353,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2019-08-18",
+      "effectiveDate": "2019-08-18",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned RHP Josh Sborz to Oklahoma City Dodgers."
+    },
+    {
+      "id": 427087,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2019-09-02",
+      "effectiveDate": "2019-09-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled RHP Josh Sborz from Oklahoma City Dodgers."
+    },
+    {
+      "id": 429097,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2019-10-03",
+      "effectiveDate": "2019-10-03",
+      "resolutionDate": "2019-10-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers reassigned RHP Josh Sborz to the minor leagues."
+    },
+    {
+      "id": 433307,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2019-10-10",
+      "effectiveDate": "2020-03-08",
+      "resolutionDate": "2019-10-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Josh Sborz roster status changed by Los Angeles Dodgers."
+    },
+    {
+      "id": 440544,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2020-03-08",
+      "effectiveDate": "2020-03-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned RHP Josh Sborz to Oklahoma City Dodgers."
+    },
+    {
+      "id": 448310,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2020-07-28",
+      "effectiveDate": "2020-07-31",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled Josh Sborz from Dodgers Alternate Training Site."
+    },
+    {
+      "id": 448561,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "date": "2020-07-31",
+      "effectiveDate": "2020-07-31",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned RHP Josh Sborz to Dodgers Alternate Training Site."
+    },
+    {
+      "id": 449754,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2020-08-20",
+      "effectiveDate": "2020-08-30",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled Josh Sborz from Dodgers Alternate Training Site."
+    },
+    {
+      "id": 450306,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "date": "2020-08-30",
+      "effectiveDate": "2020-08-30",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned RHP Josh Sborz to Dodgers Alternate Training Site."
+    },
+    {
+      "id": 451042,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2020-09-08",
+      "effectiveDate": "2020-09-15",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled Josh Sborz from Dodgers Alternate Training Site."
+    },
+    {
+      "id": 451435,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "date": "2020-09-15",
+      "effectiveDate": "2020-09-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned RHP Josh Sborz to Dodgers Alternate Training Site."
+    },
+    {
+      "id": 470943,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "date": "2020-09-16",
+      "effectiveDate": "2020-09-16",
+      "resolutionDate": "2020-09-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "optioned RHP Josh Sborz to Dodgers Alternate Training Site."
+    },
+    {
+      "id": 451517,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2020-09-16",
+      "effectiveDate": "2020-09-18",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled Josh Sborz from Dodgers Alternate Training Site."
+    },
+    {
+      "id": 451634,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "date": "2020-09-18",
+      "effectiveDate": "2020-09-18",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned RHP Josh Sborz to Dodgers Alternate Training Site."
+    },
+    {
+      "id": 452341,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2020-09-28",
+      "effectiveDate": "2020-09-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled RHP Josh Sborz from Dodgers Alternate Training Site."
+    },
+    {
+      "id": 452645,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2020-09-30",
+      "effectiveDate": "2020-09-30",
+      "resolutionDate": "2020-09-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers reassigned RHP Josh Sborz to the minor leagues."
+    },
+    {
+      "id": 455250,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2020-10-28",
+      "effectiveDate": "2020-10-28",
+      "resolutionDate": "2020-10-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated RHP Josh Sborz."
+    },
+    {
+      "id": 462242,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-02-11",
+      "effectiveDate": "2021-02-11",
+      "resolutionDate": "2021-02-11",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Los Angeles Dodgers designated RHP Josh Sborz for assignment."
+    },
+    {
+      "id": 469716,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2021-02-16",
+      "effectiveDate": "2021-02-16",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Los Angeles Dodgers traded RHP Josh Sborz to Texas Rangers for RHP Jhan Zambrano."
+    },
+    {
+      "id": 478305,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 3290,
+        "name": "Rangers Alternate Training Site",
+        "link": "/api/v1/teams/3290"
+      },
+      "date": "2021-04-16",
+      "effectiveDate": "2021-04-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Texas Rangers optioned RHP Josh Sborz to Rangers Alternate Training Site."
+    },
+    {
+      "id": 479376,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 3290,
+        "name": "Rangers Alternate Training Site",
+        "link": "/api/v1/teams/3290"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2021-04-25",
+      "effectiveDate": "2021-04-25",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Texas Rangers recalled RHP Josh Sborz from Rangers Alternate Training Site."
+    },
+    {
+      "id": 507462,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2021-07-27",
+      "effectiveDate": "2021-07-27",
+      "resolutionDate": "2021-07-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed RHP Josh Sborz on the paternity list."
+    },
+    {
+      "id": 508288,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2021-07-30",
+      "effectiveDate": "2021-07-30",
+      "resolutionDate": "2021-07-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated RHP Josh Sborz from the paternity list."
+    },
+    {
+      "id": 615625,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-04-16",
+      "effectiveDate": "2022-04-16",
+      "resolutionDate": "2022-04-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed RHP Josh Sborz on the 10-day injured list. Right elbow soreness."
+    },
+    {
+      "id": 618024,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2022-04-28",
+      "effectiveDate": "2022-04-28",
+      "resolutionDate": "2022-04-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Josh Sborz on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 619024,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2022-05-02",
+      "effectiveDate": "2022-05-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Texas Rangers optioned RHP Josh Sborz to Round Rock Express."
+    },
+    {
+      "id": 619968,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-05-08",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Texas Rangers recalled RHP Josh Sborz from Round Rock Express."
+    },
+    {
+      "id": 620064,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2022-05-09",
+      "effectiveDate": "2022-05-09",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Texas Rangers optioned RHP Josh Sborz to Round Rock Express."
+    },
+    {
+      "id": 620893,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-05-12",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Texas Rangers recalled RHP Josh Sborz from Round Rock Express."
+    },
+    {
+      "id": 622941,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2022-05-20",
+      "effectiveDate": "2022-05-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Texas Rangers optioned RHP Josh Sborz to Round Rock Express."
+    },
+    {
+      "id": 629224,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-06-07",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Texas Rangers recalled RHP Josh Sborz from Round Rock Express."
+    },
+    {
+      "id": 629653,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2022-06-08",
+      "effectiveDate": "2022-06-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Texas Rangers optioned RHP Josh Sborz to Round Rock Express."
+    },
+    {
+      "id": 633367,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-06-26",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Texas Rangers recalled RHP Josh Sborz from Round Rock Express."
+    },
+    {
+      "id": 635321,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2022-07-05",
+      "effectiveDate": "2022-07-05",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Texas Rangers optioned RHP Josh Sborz to Round Rock Express."
+    },
+    {
+      "id": 637166,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-07-13",
+      "effectiveDate": "2022-07-13",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Texas Rangers recalled RHP Josh Sborz from Round Rock Express."
+    },
+    {
+      "id": 637777,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2022-07-15",
+      "effectiveDate": "2022-07-15",
+      "resolutionDate": "2022-07-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express activated RHP Josh Sborz."
+    },
+    {
+      "id": 637702,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2022-07-15",
+      "effectiveDate": "2022-07-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Texas Rangers optioned RHP Josh Sborz to Round Rock Express."
+    },
+    {
+      "id": 642599,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-08-02",
+      "effectiveDate": "2022-08-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Texas Rangers recalled RHP Josh Sborz from Round Rock Express."
+    },
+    {
+      "id": 649686,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-08-30",
+      "effectiveDate": "2022-08-30",
+      "resolutionDate": "2022-08-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed RHP Josh Sborz on the 15-day injured list. Right elbow sprain."
+    },
+    {
+      "id": 650163,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-09-01",
+      "effectiveDate": "2022-09-01",
+      "resolutionDate": "2022-09-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers transferred RHP Josh Sborz from the 15-day injured list to the 60-day injured list."
+    },
+    {
+      "id": 659189,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2022-11-10",
+      "effectiveDate": "2022-11-10",
+      "resolutionDate": "2022-11-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated RHP Josh Sborz from the 60-day injured list."
+    },
+    {
+      "id": 679488,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-03-30",
+      "effectiveDate": "2023-03-27",
+      "resolutionDate": "2023-03-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed RHP Josh Sborz on the 15-day injured list retroactive to March 27, 2023. Left ankle sprain."
+    },
+    {
+      "id": 683838,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2023-04-09",
+      "effectiveDate": "2023-04-09",
+      "resolutionDate": "2023-04-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Josh Sborz on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 684556,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-04-14",
+      "effectiveDate": "2023-04-14",
+      "resolutionDate": "2023-04-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated RHP Josh Sborz from the 15-day injured list."
+    },
+    {
+      "id": 711471,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-07-15",
+      "effectiveDate": "2023-07-12",
+      "resolutionDate": "2023-07-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed RHP Josh Sborz on the 15-day injured list retroactive to July 12, 2023. Right biceps tendinitis."
+    },
+    {
+      "id": 714767,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2023-07-26",
+      "effectiveDate": "2023-07-26",
+      "resolutionDate": "2023-07-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Josh Sborz on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 715454,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-07-28",
+      "effectiveDate": "2023-07-28",
+      "resolutionDate": "2023-07-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated RHP Josh Sborz from the 15-day injured list."
+    },
+    {
+      "id": 723637,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-09-05",
+      "effectiveDate": "2023-09-05",
+      "resolutionDate": "2023-09-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed RHP Josh Sborz on the 15-day injured list. Left hamstring strain."
+    },
+    {
+      "id": 725348,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2023-09-16",
+      "effectiveDate": "2023-09-16",
+      "resolutionDate": "2023-09-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Josh Sborz assigned to Round Rock Express."
+    },
+    {
+      "id": 726942,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-09-27",
+      "effectiveDate": "2023-09-27",
+      "resolutionDate": "2023-09-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated RHP Josh Sborz from the 15-day injured list."
+    },
+    {
+      "id": 761758,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-04-07",
+      "effectiveDate": "2024-04-07",
+      "resolutionDate": "2024-04-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed RHP Josh Sborz on the 15-day injured list. Right rotator cuff strain."
+    },
+    {
+      "id": 765043,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2024-04-23",
+      "effectiveDate": "2024-04-23",
+      "resolutionDate": "2024-04-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Josh Sborz on a rehab assignment to Frisco RoughRiders."
+    },
+    {
+      "id": 765443,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-04-25",
+      "effectiveDate": "2024-04-25",
+      "resolutionDate": "2024-04-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated RHP Josh Sborz from the 15-day injured list."
+    },
+    {
+      "id": 769610,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-05-09",
+      "effectiveDate": "2024-05-09",
+      "resolutionDate": "2024-05-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed RHP Josh Sborz on the 15-day injured list. Right rotator cuff strain."
+    },
+    {
+      "id": 785262,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2024-06-16",
+      "effectiveDate": "2024-06-16",
+      "resolutionDate": "2024-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Josh Sborz on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 780501,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2024-06-16",
+      "effectiveDate": "2024-06-16",
+      "resolutionDate": "2024-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Josh Sborz on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 785263,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-07-05",
+      "effectiveDate": "2024-07-05",
+      "resolutionDate": "2024-07-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated RHP Josh Sborz from the 15-day injured list."
+    },
+    {
+      "id": 794000,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-08-11",
+      "effectiveDate": "2024-08-08",
+      "resolutionDate": "2024-08-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed RHP Josh Sborz on the 15-day injured list retroactive to August 8, 2024. Right shoulder fatigue."
+    },
+    {
+      "id": 796125,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2024-08-24",
+      "effectiveDate": "2024-08-24",
+      "resolutionDate": "2024-08-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Josh Sborz on a rehab assignment to Frisco RoughRiders."
+    },
+    {
+      "id": 799337,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2024-08-27",
+      "effectiveDate": "2024-08-27",
+      "resolutionDate": "2024-08-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Josh Sborz on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 796534,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2024-08-27",
+      "effectiveDate": "2024-08-27",
+      "resolutionDate": "2024-08-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Josh Sborz on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 799338,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2024-09-17",
+      "effectiveDate": "2024-09-17",
+      "resolutionDate": "2024-09-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Josh Sborz on a rehab assignment to Frisco RoughRiders."
+    },
+    {
+      "id": 800036,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-09-24",
+      "effectiveDate": "2024-09-24",
+      "resolutionDate": "2024-09-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated RHP Josh Sborz from the 15-day injured list."
+    },
+    {
+      "id": 800623,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-09-28",
+      "effectiveDate": "2024-09-28",
+      "resolutionDate": "2024-09-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed RHP Josh Sborz on the 15-day injured list. Right shoulder fatigue."
+    },
+    {
+      "id": 800938,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2024-10-01",
+      "effectiveDate": "2024-10-01",
+      "resolutionDate": "2024-10-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated RHP Josh Sborz from the 15-day injured list."
+    },
+    {
+      "id": 815792,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-02-17",
+      "effectiveDate": "2025-02-17",
+      "resolutionDate": "2025-02-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed RHP Josh Sborz on the 60-day injured list. Recovery from right shoulder surgery."
+    },
+    {
+      "id": 854911,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2025-07-12",
+      "effectiveDate": "2025-07-12",
+      "resolutionDate": "2025-07-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Josh Sborz on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 857423,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2025-07-18",
+      "effectiveDate": "2025-07-18",
+      "resolutionDate": "2025-07-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Josh Sborz on a rehab assignment to Frisco RoughRiders."
+    },
+    {
+      "id": 856280,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2025-07-18",
+      "effectiveDate": "2025-07-18",
+      "resolutionDate": "2025-07-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Josh Sborz on a rehab assignment to Frisco RoughRiders."
+    },
+    {
+      "id": 858639,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2025-07-25",
+      "effectiveDate": "2025-07-25",
+      "resolutionDate": "2025-07-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Texas Rangers sent RHP Josh Sborz on a rehab assignment to Round Rock Express."
+    },
+    {
+      "id": 875267,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated RHP Josh Sborz from the 60-day injured list."
+    },
+    {
+      "id": 877497,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2025-11-21",
+      "effectiveDate": "2025-11-21",
+      "resolutionDate": "2025-11-21",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Josh Sborz elected free agency."
+    },
+    {
+      "id": 882206,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-01-20",
+      "effectiveDate": "2026-01-20",
+      "resolutionDate": "2026-01-20",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent RHP Josh Sborz to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 882207,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2026-01-20",
+      "effectiveDate": "2026-01-20",
+      "resolutionDate": "2026-01-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Josh Sborz assigned to Round Rock Express."
+    },
+    {
+      "id": 903891,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2026-04-28",
+      "effectiveDate": "2026-04-28",
+      "resolutionDate": "2026-04-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express transferred RHP Josh Sborz to the Development List."
+    },
+    {
+      "id": 910680,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2026-05-20",
+      "effectiveDate": "2026-05-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Josh Sborz assigned to Frisco RoughRiders from Round Rock Express."
+    },
+    {
+      "id": 911770,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2026-05-26",
+      "effectiveDate": "2026-05-26",
+      "resolutionDate": "2026-05-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express activated RHP Josh Sborz."
+    },
+    {
+      "id": 911734,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "fromTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2026-05-26",
+      "effectiveDate": "2026-05-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Josh Sborz assigned to Round Rock Express from Frisco RoughRiders."
+    },
+    {
+      "id": 915029,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2026-06-01",
+      "effectiveDate": "2026-06-01",
+      "resolutionDate": "2026-06-01",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Round Rock Express released RHP Josh Sborz."
+    },
+    {
+      "id": 915834,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2026-06-04",
+      "effectiveDate": "2026-06-04",
+      "resolutionDate": "2026-06-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Josh Sborz assigned to Round Rock Express."
+    },
+    {
+      "id": 915833,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-06-04",
+      "effectiveDate": "2026-06-04",
+      "resolutionDate": "2026-06-04",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent RHP Josh Sborz to a minor league contract."
+    },
+    {
+      "id": 933733,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2026-07-31",
+      "effectiveDate": "2026-07-31",
+      "resolutionDate": "2026-07-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express transferred RHP Josh Sborz to the Development List."
+    },
+    {
+      "id": 938318,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2026-08-18",
+      "effectiveDate": "2026-08-18",
+      "resolutionDate": "2026-08-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express activated RHP Josh Sborz from the Development List."
+    },
+    {
+      "id": 949152,
+      "person": {
+        "id": 622250,
+        "fullName": "Josh Sborz",
+        "link": "/api/v1/people/622250",
+        "nameSlug": "josh-sborz-622250"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Josh Sborz elected free agency."
+    }
+  ]
+}

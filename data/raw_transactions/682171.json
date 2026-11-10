@@ -1,0 +1,962 @@
+{
+  "player_id": 682171,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:9e7615344f26f6ef407d4d7bb12aac62dac7dc1758956a37fd4d40746a29c081",
+  "transactions": [
+    {
+      "id": 359588,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2018-06-12",
+      "effectiveDate": "2018-06-12",
+      "resolutionDate": "2018-06-12",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Seattle Mariners signed RHP Penn Murfee."
+    },
+    {
+      "id": 360078,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 403,
+        "name": "Everett AquaSox",
+        "link": "/api/v1/teams/403"
+      },
+      "date": "2018-06-14",
+      "effectiveDate": "2018-06-14",
+      "resolutionDate": "2018-06-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Penn Murfee assigned to Everett AquaSox."
+    },
+    {
+      "id": 396014,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "fromTeam": {
+        "id": 403,
+        "name": "Everett AquaSox",
+        "link": "/api/v1/teams/403"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2019-04-09",
+      "effectiveDate": "2019-04-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Penn Murfee assigned to Tacoma Rainiers from Everett AquaSox."
+    },
+    {
+      "id": 398560,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 403,
+        "name": "Everett AquaSox",
+        "link": "/api/v1/teams/403"
+      },
+      "date": "2019-04-22",
+      "effectiveDate": "2019-04-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Penn Murfee assigned to Everett AquaSox from Tacoma Rainiers."
+    },
+    {
+      "id": 398675,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "fromTeam": {
+        "id": 403,
+        "name": "Everett AquaSox",
+        "link": "/api/v1/teams/403"
+      },
+      "toTeam": {
+        "id": 515,
+        "name": "Modesto Roadsters",
+        "link": "/api/v1/teams/515"
+      },
+      "date": "2019-04-26",
+      "effectiveDate": "2019-04-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Penn Murfee assigned to Modesto Nuts from Everett AquaSox."
+    },
+    {
+      "id": 401972,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "fromTeam": {
+        "id": 515,
+        "name": "Modesto Roadsters",
+        "link": "/api/v1/teams/515"
+      },
+      "toTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "date": "2019-05-18",
+      "effectiveDate": "2019-05-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Penn Murfee assigned to Arkansas Travelers from Modesto Nuts."
+    },
+    {
+      "id": 402346,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "fromTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "toTeam": {
+        "id": 515,
+        "name": "Modesto Roadsters",
+        "link": "/api/v1/teams/515"
+      },
+      "date": "2019-05-20",
+      "effectiveDate": "2019-05-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Penn Murfee assigned to Modesto Nuts from Arkansas Travelers."
+    },
+    {
+      "id": 426125,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 490,
+        "name": "Peoria Javelinas",
+        "link": "/api/v1/teams/490"
+      },
+      "date": "2019-08-28",
+      "effectiveDate": "2019-08-28",
+      "resolutionDate": "2019-08-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Penn Murfee assigned to Peoria Javelinas."
+    },
+    {
+      "id": 442454,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "fromTeam": {
+        "id": 515,
+        "name": "Modesto Roadsters",
+        "link": "/api/v1/teams/515"
+      },
+      "toTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "date": "2019-11-20",
+      "effectiveDate": "2019-11-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Penn Murfee assigned to Arkansas Travelers from Modesto Nuts."
+    },
+    {
+      "id": 437261,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2020-01-22",
+      "effectiveDate": "2020-01-22",
+      "resolutionDate": "2020-01-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Seattle Mariners invited non-roster RHP Penn Murfee to spring training."
+    },
+    {
+      "id": 450828,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2020-09-02",
+      "effectiveDate": "2020-09-02",
+      "resolutionDate": "2020-09-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Seattle Mariners invited non-roster RHP Penn Murfee to spring training."
+    },
+    {
+      "id": 452610,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "fromTeam": {
+        "id": 3274,
+        "name": "Mariners Alternate Training Site",
+        "link": "/api/v1/teams/3274"
+      },
+      "toTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "date": "2020-09-30",
+      "effectiveDate": "2020-09-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Penn Murfee assigned to Arkansas Travelers from Mariners Alternate Training Site."
+    },
+    {
+      "id": 504809,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "fromTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2021-07-14",
+      "effectiveDate": "2021-07-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Penn Murfee assigned to Tacoma Rainiers from Arkansas Travelers."
+    },
+    {
+      "id": 516128,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2021-09-06",
+      "effectiveDate": "2021-09-06",
+      "resolutionDate": "2021-09-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tacoma Rainiers placed RHP Penn Murfee on the 7-day injured list."
+    },
+    {
+      "id": 517955,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2021-09-16",
+      "effectiveDate": "2021-09-16",
+      "resolutionDate": "2021-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tacoma Rainiers activated RHP Penn Murfee from the 7-day injured list."
+    },
+    {
+      "id": 524967,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2021-11-09",
+      "effectiveDate": "2021-11-09",
+      "resolutionDate": "2021-11-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Penn Murfee and  assigned to Leones del Escogido."
+    },
+    {
+      "id": 611703,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2022-03-18",
+      "effectiveDate": "2022-03-18",
+      "resolutionDate": "2022-03-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Penn Murfee roster status changed by Seattle Mariners."
+    },
+    {
+      "id": 606902,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2022-03-18",
+      "effectiveDate": "2022-03-18",
+      "resolutionDate": "2022-03-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Penn Murfee assigned to Seattle Mariners."
+    },
+    {
+      "id": 616266,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2022-04-20",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Seattle Mariners selected the contract of RHP Penn Murfee from Tacoma Rainiers."
+    },
+    {
+      "id": 617623,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2022-04-27",
+      "typeCode": "RTN",
+      "typeDesc": "Returned",
+      "description": "RHP Penn Murfee returned to Tacoma Rainiers from Seattle Mariners."
+    },
+    {
+      "id": 684959,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2022-04-28",
+      "effectiveDate": "2022-04-28",
+      "resolutionDate": "2022-04-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners activated RHP Penn Murfee."
+    },
+    {
+      "id": 684684,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2022-04-28",
+      "effectiveDate": "2022-04-28",
+      "resolutionDate": "2022-04-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners activated RHP Penn Murfee."
+    },
+    {
+      "id": 617779,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2022-04-28",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Seattle Mariners selected the contract of RHP Penn Murfee from Tacoma Rainiers."
+    },
+    {
+      "id": 689777,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2023-05-06",
+      "effectiveDate": "2023-05-04",
+      "resolutionDate": "2023-05-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners placed RHP Penn Murfee on the 15-day injured list retroactive to May 4, 2023. Right elbow inflammation."
+    },
+    {
+      "id": 699222,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2023-06-04",
+      "effectiveDate": "2023-06-04",
+      "resolutionDate": "2023-06-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Seattle Mariners sent RHP Penn Murfee on a rehab assignment to Tacoma Rainiers."
+    },
+    {
+      "id": 702818,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2023-06-09",
+      "effectiveDate": "2023-06-09",
+      "resolutionDate": "2023-06-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners activated RHP Penn Murfee from the 15-day injured list."
+    },
+    {
+      "id": 703421,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2023-06-12",
+      "effectiveDate": "2023-06-12",
+      "resolutionDate": "2023-06-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners placed RHP Penn Murfee on the 15-day injured list. Right elbow inflammation."
+    },
+    {
+      "id": 709216,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2023-07-05",
+      "effectiveDate": "2023-07-05",
+      "resolutionDate": "2023-07-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners transferred RHP Penn Murfee from the 15-day injured list to the 60-day injured list. Right elbow inflammation."
+    },
+    {
+      "id": 730087,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2023-10-31",
+      "effectiveDate": "2023-10-31",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "New York Mets claimed RHP Penn Murfee off waivers from Seattle Mariners."
+    },
+    {
+      "id": 732994,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2023-11-14",
+      "effectiveDate": "2023-11-14",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Atlanta Braves claimed RHP Penn Murfee off waivers from New York Mets."
+    },
+    {
+      "id": 733326,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2023-11-17",
+      "effectiveDate": "2023-11-17",
+      "resolutionDate": "2023-11-17",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Penn Murfee elected free agency."
+    },
+    {
+      "id": 734297,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2023-11-30",
+      "effectiveDate": "2023-11-30",
+      "resolutionDate": "2023-11-30",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent RHP Penn Murfee."
+    },
+    {
+      "id": 757114,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2024-03-25",
+      "effectiveDate": "2024-03-25",
+      "resolutionDate": "2024-03-25",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Atlanta Braves released RHP Penn Murfee."
+    },
+    {
+      "id": 757378,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2024-03-27",
+      "effectiveDate": "2024-03-27",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Houston Astros claimed RHP Penn Murfee off waivers from Atlanta Braves."
+    },
+    {
+      "id": 757558,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2024-03-28",
+      "effectiveDate": "2024-03-28",
+      "resolutionDate": "2024-03-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros placed RHP Penn Murfee on the 15-day injured list. Right elbow surgery."
+    },
+    {
+      "id": 760523,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2024-04-04",
+      "effectiveDate": "2024-04-04",
+      "resolutionDate": "2024-04-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros transferred RHP Penn Murfee from the 15-day injured list to the 60-day injured list. Right elbow surgery."
+    },
+    {
+      "id": 794705,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 3712,
+        "name": "Fayetteville Woodpeckers",
+        "link": "/api/v1/teams/3712"
+      },
+      "date": "2024-08-15",
+      "effectiveDate": "2024-08-15",
+      "resolutionDate": "2024-08-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Houston Astros sent RHP Penn Murfee on a rehab assignment to Fayetteville Woodpeckers."
+    },
+    {
+      "id": 815069,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "resolutionDate": "2024-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago White Sox activated RHP Penn Murfee."
+    },
+    {
+      "id": 803927,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Chicago White Sox claimed RHP Penn Murfee off waivers from Houston Astros."
+    },
+    {
+      "id": 828108,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Penn Murfee changed number to 42."
+    },
+    {
+      "id": 829316,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Penn Murfee changed number to 63."
+    },
+    {
+      "id": 834898,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2025-05-04",
+      "effectiveDate": "2025-05-04",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago White Sox optioned RHP Penn Murfee to Charlotte Knights."
+    },
+    {
+      "id": 835470,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2025-05-06",
+      "effectiveDate": "2025-05-06",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Chicago White Sox sent RHP Penn Murfee outright to Charlotte Knights."
+    },
+    {
+      "id": 860880,
+      "person": {
+        "id": 682171,
+        "fullName": "Penn Murfee",
+        "link": "/api/v1/people/682171",
+        "nameSlug": "penn-murfee-682171"
+      },
+      "toTeam": {
+        "id": 494,
+        "name": "Charlotte Knights",
+        "link": "/api/v1/teams/494"
+      },
+      "date": "2025-08-01",
+      "effectiveDate": "2025-08-01",
+      "resolutionDate": "2025-08-01",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Charlotte Knights released RHP Penn Murfee."
+    }
+  ]
+}

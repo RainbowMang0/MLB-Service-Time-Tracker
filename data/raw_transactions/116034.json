@@ -1,0 +1,72 @@
+{
+  "player_id": 116034,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:5561f93540ffcce61bcb1b28db4be9de840eec205cc49fa4c88246da6a958874",
+  "transactions": [
+    {
+      "id": 2634,
+      "person": {
+        "id": 116034,
+        "fullName": "Trevor Hoffman",
+        "link": "/api/v1/people/116034",
+        "nameSlug": "trevor-hoffman-116034"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2009-04-21",
+      "effectiveDate": "2009-04-21",
+      "resolutionDate": "2009-04-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Milwaukee Brewers sent RHP Trevor Hoffman on a rehab assignment to Nashville Sounds."
+    },
+    {
+      "id": 3049,
+      "person": {
+        "id": 116034,
+        "fullName": "Trevor Hoffman",
+        "link": "/api/v1/people/116034",
+        "nameSlug": "trevor-hoffman-116034"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2009-04-26",
+      "effectiveDate": "2009-04-26",
+      "resolutionDate": "2009-04-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated RHP Trevor Hoffman from the 15-day disabled list."
+    },
+    {
+      "id": 73354,
+      "person": {
+        "id": 116034,
+        "fullName": "Trevor Hoffman",
+        "link": "/api/v1/people/116034",
+        "nameSlug": "trevor-hoffman-116034"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2010-11-07",
+      "effectiveDate": "2010-11-07",
+      "resolutionDate": "2010-11-07",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Trevor Hoffman elected free agency."
+    }
+  ]
+}

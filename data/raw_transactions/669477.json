@@ -1,0 +1,858 @@
+{
+  "player_id": 669477,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:d3d6c9ced3e48bc728da302ea4489e667e1936f33de0cc0d2aecd2d9da422643",
+  "transactions": [
+    {
+      "id": 279035,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "toTeam": {
+        "id": 5222,
+        "name": "White Team",
+        "link": "/api/v1/teams/5222"
+      },
+      "date": "2016-07-15",
+      "effectiveDate": "2016-07-15",
+      "resolutionDate": "2016-07-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Casey Schmitt assigned to Show California Baseball."
+    },
+    {
+      "id": 446500,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "toTeam": {
+        "id": 5370,
+        "link": "/api/v1/teams/5370"
+      },
+      "date": "2020-07-02",
+      "effectiveDate": "2020-07-02",
+      "resolutionDate": "2020-07-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Casey Schmitt assigned to AZL Giants Orange."
+    },
+    {
+      "id": 446496,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2020-07-02",
+      "effectiveDate": "2020-07-02",
+      "resolutionDate": "2020-07-02",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "San Francisco Giants signed 3B Casey Schmitt."
+    },
+    {
+      "id": 482051,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "fromTeam": {
+        "id": 5370,
+        "link": "/api/v1/teams/5370"
+      },
+      "toTeam": {
+        "id": 476,
+        "name": "San Jose Giants",
+        "link": "/api/v1/teams/476"
+      },
+      "date": "2021-05-01",
+      "effectiveDate": "2021-05-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Casey Schmitt assigned to San Jose Giants from AZL Giants Orange."
+    },
+    {
+      "id": 512404,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "toTeam": {
+        "id": 476,
+        "name": "San Jose Giants",
+        "link": "/api/v1/teams/476"
+      },
+      "date": "2021-08-17",
+      "effectiveDate": "2021-08-15",
+      "resolutionDate": "2021-08-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Jose Giants placed 3B Casey Schmitt on the 7-day injured list."
+    },
+    {
+      "id": 517129,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "toTeam": {
+        "id": 476,
+        "name": "San Jose Giants",
+        "link": "/api/v1/teams/476"
+      },
+      "date": "2021-09-10",
+      "effectiveDate": "2021-09-10",
+      "resolutionDate": "2021-09-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Jose Giants placed 3B Casey Schmitt on the 60-day injured list."
+    },
+    {
+      "id": 524696,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "toTeam": {
+        "id": 476,
+        "name": "San Jose Giants",
+        "link": "/api/v1/teams/476"
+      },
+      "date": "2021-11-07",
+      "effectiveDate": "2021-11-07",
+      "resolutionDate": "2021-11-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Jose Giants activated 3B Casey Schmitt from the 60-day injured list."
+    },
+    {
+      "id": 613361,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "toTeam": {
+        "id": 461,
+        "name": "Eugene Emeralds",
+        "link": "/api/v1/teams/461"
+      },
+      "date": "2022-04-07",
+      "effectiveDate": "2022-04-07",
+      "resolutionDate": "2022-04-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Casey Schmitt assigned to Eugene Emeralds."
+    },
+    {
+      "id": 645103,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "fromTeam": {
+        "id": 461,
+        "name": "Eugene Emeralds",
+        "link": "/api/v1/teams/461"
+      },
+      "toTeam": {
+        "id": 3410,
+        "name": "Richmond Flying Squirrels",
+        "link": "/api/v1/teams/3410"
+      },
+      "date": "2022-08-09",
+      "effectiveDate": "2022-08-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Casey Schmitt assigned to Richmond Flying Squirrels from Eugene Emeralds."
+    },
+    {
+      "id": 653775,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "fromTeam": {
+        "id": 3410,
+        "name": "Richmond Flying Squirrels",
+        "link": "/api/v1/teams/3410"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2022-09-24",
+      "effectiveDate": "2022-09-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Casey Schmitt assigned to Sacramento River Cats from Richmond Flying Squirrels."
+    },
+    {
+      "id": 678747,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2023-02-06",
+      "effectiveDate": "2023-02-06",
+      "resolutionDate": "2023-02-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "3B Casey Schmitt roster status changed by San Francisco Giants."
+    },
+    {
+      "id": 668397,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2023-02-06",
+      "effectiveDate": "2023-02-06",
+      "resolutionDate": "2023-02-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Francisco Giants invited non-roster 3B Casey Schmitt to spring training."
+    },
+    {
+      "id": 690491,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2023-05-09",
+      "effectiveDate": "2023-05-09",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "San Francisco Giants selected the contract of 3B Casey Schmitt from Sacramento River Cats."
+    },
+    {
+      "id": 718061,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2023-08-06",
+      "effectiveDate": "2023-08-06",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned 3B Casey Schmitt to Sacramento River Cats."
+    },
+    {
+      "id": 720782,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2023-08-19",
+      "effectiveDate": "2023-08-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Francisco Giants recalled 3B Casey Schmitt from Sacramento River Cats."
+    },
+    {
+      "id": 725173,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2023-09-15",
+      "effectiveDate": "2023-09-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned 3B Casey Schmitt to Sacramento River Cats."
+    },
+    {
+      "id": 727076,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2023-09-29",
+      "effectiveDate": "2023-09-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Francisco Giants recalled 3B Casey Schmitt from Sacramento River Cats."
+    },
+    {
+      "id": 742171,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2024-02-20",
+      "effectiveDate": "2024-02-20",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "3B Casey Schmitt changed number to 10."
+    },
+    {
+      "id": 756187,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2024-03-20",
+      "effectiveDate": "2024-03-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned 3B Casey Schmitt to Sacramento River Cats."
+    },
+    {
+      "id": 770159,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2024-05-10",
+      "effectiveDate": "2024-05-10",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Francisco Giants recalled 3B Casey Schmitt from Sacramento River Cats."
+    },
+    {
+      "id": 772403,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2024-05-17",
+      "effectiveDate": "2024-05-17",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned 3B Casey Schmitt to Sacramento River Cats."
+    },
+    {
+      "id": 775354,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2024-05-31",
+      "effectiveDate": "2024-05-31",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Francisco Giants recalled 3B Casey Schmitt from Sacramento River Cats."
+    },
+    {
+      "id": 780022,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2024-06-13",
+      "effectiveDate": "2024-06-14",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned 3B Casey Schmitt to Sacramento River Cats."
+    },
+    {
+      "id": 790079,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2024-07-26",
+      "effectiveDate": "2024-07-26",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Francisco Giants recalled 3B Casey Schmitt from Sacramento River Cats."
+    },
+    {
+      "id": 797558,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2024-09-03",
+      "effectiveDate": "2024-09-03",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Francisco Giants optioned 3B Casey Schmitt to Sacramento River Cats."
+    },
+    {
+      "id": 799431,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "fromTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2024-09-18",
+      "effectiveDate": "2024-09-18",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "San Francisco Giants recalled SS Casey Schmitt from Sacramento River Cats."
+    },
+    {
+      "id": 828319,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "2B Casey Schmitt changed number to 42."
+    },
+    {
+      "id": 829520,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "2B Casey Schmitt changed number to 10."
+    },
+    {
+      "id": 831269,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2025-04-19",
+      "effectiveDate": "2025-04-18",
+      "resolutionDate": "2025-04-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Francisco Giants placed 1B Casey Schmitt on the 10-day injured list retroactive to April 18, 2025. Left oblique strain."
+    },
+    {
+      "id": 836765,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2025-05-13",
+      "effectiveDate": "2025-05-13",
+      "resolutionDate": "2025-05-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Francisco Giants sent 1B Casey Schmitt on a rehab assignment to Sacramento River Cats."
+    },
+    {
+      "id": 839135,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2025-05-19",
+      "effectiveDate": "2025-05-19",
+      "resolutionDate": "2025-05-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Francisco Giants activated 1B Casey Schmitt from the 10-day injured list."
+    },
+    {
+      "id": 851594,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2025-06-30",
+      "effectiveDate": "2025-06-27",
+      "resolutionDate": "2025-06-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Francisco Giants placed 3B Casey Schmitt on the 10-day injured list retroactive to June 27, 2025. Left hand inflammation."
+    },
+    {
+      "id": 853058,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2025-07-05",
+      "effectiveDate": "2025-07-05",
+      "resolutionDate": "2025-07-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Francisco Giants sent 3B Casey Schmitt on a rehab assignment to Sacramento River Cats."
+    },
+    {
+      "id": 853700,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2025-07-07",
+      "effectiveDate": "2025-07-07",
+      "resolutionDate": "2025-07-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Francisco Giants activated 3B Casey Schmitt from the 10-day injured list."
+    },
+    {
+      "id": 899117,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "3B Casey Schmitt changed number to 42."
+    },
+    {
+      "id": 900022,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "3B Casey Schmitt changed number to 10."
+    },
+    {
+      "id": 932257,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2026-07-28",
+      "effectiveDate": "2026-07-28",
+      "resolutionDate": "2026-07-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Francisco Giants placed LF Casey Schmitt on the 10-day injured list. Left knee meniscus tear."
+    },
+    {
+      "id": 940059,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2026-08-29",
+      "effectiveDate": "2026-08-29",
+      "resolutionDate": "2026-08-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Francisco Giants transferred LF Casey Schmitt from the 10-day injured list to the 60-day injured list. Left knee meniscus tear."
+    },
+    {
+      "id": 947864,
+      "person": {
+        "id": 669477,
+        "fullName": "Casey Schmitt",
+        "link": "/api/v1/people/669477",
+        "nameSlug": "casey-schmitt-669477"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Francisco Giants activated LF Casey Schmitt from the 60-day injured list."
+    }
+  ]
+}

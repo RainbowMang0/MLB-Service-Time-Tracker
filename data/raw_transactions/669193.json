@@ -1,0 +1,879 @@
+{
+  "player_id": 669193,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:9c12686d13406f82a1fb7856dd56d678a821245c4bf3bf1a7f3e3bcec672a9bd",
+  "transactions": [
+    {
+      "id": 413468,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2019-06-19",
+      "effectiveDate": "2019-06-19",
+      "resolutionDate": "2019-06-19",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Los Angeles Dodgers signed RHP Jack Little."
+    },
+    {
+      "id": 413469,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2019-06-26",
+      "effectiveDate": "2019-06-26",
+      "resolutionDate": "2019-06-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jack Little assigned to AZL Dodgers Lasorda."
+    },
+    {
+      "id": 414134,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "fromTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "toTeam": {
+        "id": 2690,
+        "name": "AZL Dodgers 2",
+        "link": "/api/v1/teams/2690"
+      },
+      "date": "2019-06-29",
+      "effectiveDate": "2019-06-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jack Little assigned to AZL Dodgers Mota from AZL Dodgers Lasorda."
+    },
+    {
+      "id": 415427,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "fromTeam": {
+        "id": 2690,
+        "name": "AZL Dodgers 2",
+        "link": "/api/v1/teams/2690"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2019-07-05",
+      "effectiveDate": "2019-07-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jack Little assigned to Great Lakes Loons from AZL Dodgers Mota."
+    },
+    {
+      "id": 424711,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2019-08-20",
+      "effectiveDate": "2019-08-20",
+      "resolutionDate": "2019-08-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons placed RHP Jack Little on the 7-day injured list."
+    },
+    {
+      "id": 429899,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2019-09-09",
+      "effectiveDate": "2019-09-09",
+      "resolutionDate": "2019-09-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated RHP Jack Little from the 7-day injured list."
+    },
+    {
+      "id": 463789,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2019-09-09",
+      "effectiveDate": "2019-09-09",
+      "resolutionDate": "2019-09-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated RHP Jack Little from the 7-day injured list."
+    },
+    {
+      "id": 466134,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rancho Cucamonga Quakes activated RHP Jack Little."
+    },
+    {
+      "id": 468397,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rancho Cucamonga Quakes activated RHP Jack Little."
+    },
+    {
+      "id": 483397,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "fromTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jack Little assigned to Great Lakes Loons from Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 512088,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2021-08-16",
+      "effectiveDate": "2021-08-16",
+      "resolutionDate": "2021-08-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons placed RHP Jack Little on the 7-day injured list."
+    },
+    {
+      "id": 516897,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2021-09-09",
+      "effectiveDate": "2021-09-09",
+      "resolutionDate": "2021-09-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons placed RHP Jack Little on the 60-day injured list."
+    },
+    {
+      "id": 524189,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2021-11-07",
+      "effectiveDate": "2021-11-07",
+      "resolutionDate": "2021-11-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated RHP Jack Little from the 60-day injured list."
+    },
+    {
+      "id": 618092,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2022-04-08",
+      "effectiveDate": "2022-04-08",
+      "resolutionDate": "2022-04-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons placed RHP Jack Little on the 60-day injured list."
+    },
+    {
+      "id": 681632,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2022-11-08",
+      "effectiveDate": "2022-11-08",
+      "resolutionDate": "2022-11-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated RHP Jack Little from the 60-day injured list."
+    },
+    {
+      "id": 660614,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2022-11-08",
+      "effectiveDate": "2022-11-08",
+      "resolutionDate": "2022-11-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated RHP Jack Little from the 60-day injured list."
+    },
+    {
+      "id": 681635,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2023-04-03",
+      "effectiveDate": "2023-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jack Little assigned to Tulsa Drillers from Great Lakes Loons."
+    },
+    {
+      "id": 685463,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2023-04-18",
+      "effectiveDate": "2023-04-18",
+      "resolutionDate": "2023-04-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers placed RHP Jack Little on the 7-day injured list."
+    },
+    {
+      "id": 689894,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2023-05-07",
+      "effectiveDate": "2023-05-07",
+      "resolutionDate": "2023-05-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers activated RHP Jack Little from the 7-day injured list."
+    },
+    {
+      "id": 692280,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2023-05-16",
+      "effectiveDate": "2023-05-16",
+      "resolutionDate": "2023-05-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers placed RHP Jack Little on the 7-day injured list."
+    },
+    {
+      "id": 711276,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2023-07-14",
+      "effectiveDate": "2023-07-14",
+      "resolutionDate": "2023-07-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers activated RHP Jack Little from the 7-day injured list."
+    },
+    {
+      "id": 779328,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "fromTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2024-10-26",
+      "effectiveDate": "2024-06-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jack Little and  assigned to Oklahoma City Baseball Club from Tulsa Drillers."
+    },
+    {
+      "id": 812161,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-01-24",
+      "effectiveDate": "2025-01-24",
+      "resolutionDate": "2025-01-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers invited non-roster RHP Jack Little to spring training."
+    },
+    {
+      "id": 849249,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-06-19",
+      "effectiveDate": "2025-06-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Dodgers selected the contract of RHP Jack Little from Oklahoma City Comets."
+    },
+    {
+      "id": 850306,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2025-06-20",
+      "effectiveDate": "2025-06-20",
+      "resolutionDate": "2025-06-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Comets activated RHP Jack Little."
+    },
+    {
+      "id": 849408,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2025-06-20",
+      "effectiveDate": "2025-06-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned RHP Jack Little to Oklahoma City Comets."
+    },
+    {
+      "id": 852973,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-07-05",
+      "effectiveDate": "2025-07-05",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled RHP Jack Little from Oklahoma City Comets."
+    },
+    {
+      "id": 853491,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2025-07-06",
+      "effectiveDate": "2025-07-06",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned RHP Jack Little to Oklahoma City Comets."
+    },
+    {
+      "id": 862152,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2025-08-04",
+      "effectiveDate": "2025-08-04",
+      "resolutionDate": "2025-08-04",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Los Angeles Dodgers designated RHP Jack Little for assignment."
+    },
+    {
+      "id": 862779,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2025-08-06",
+      "effectiveDate": "2025-08-06",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Pittsburgh Pirates optioned RHP Jack Little to Indianapolis Indians."
+    },
+    {
+      "id": 862778,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2025-08-06",
+      "effectiveDate": "2025-08-06",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Pittsburgh Pirates claimed RHP Jack Little off waivers from Los Angeles Dodgers."
+    },
+    {
+      "id": 863071,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2025-08-07",
+      "effectiveDate": "2025-08-07",
+      "resolutionDate": "2025-08-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Indianapolis Indians activated RHP Jack Little."
+    },
+    {
+      "id": 870851,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "fromTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2025-09-29",
+      "effectiveDate": "2025-09-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Pittsburgh Pirates recalled RHP Jack Little from Indianapolis Indians."
+    },
+    {
+      "id": 875187,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Detroit Tigers claimed RHP Jack Little off waivers from Pittsburgh Pirates."
+    },
+    {
+      "id": 877286,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-11-18",
+      "effectiveDate": "2025-11-18",
+      "resolutionDate": "2025-11-18",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Detroit Tigers designated RHP Jack Little for assignment."
+    },
+    {
+      "id": 877534,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-11-21",
+      "effectiveDate": "2025-11-21",
+      "resolutionDate": "2025-11-21",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Jack Little elected free agency."
+    },
+    {
+      "id": 886341,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-12-16",
+      "effectiveDate": "2025-12-16",
+      "resolutionDate": "2025-12-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Jack Little roster status changed by Detroit Tigers."
+    },
+    {
+      "id": 879003,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-12-16",
+      "effectiveDate": "2025-12-16",
+      "resolutionDate": "2025-12-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent RHP Jack Little to a minor league contract."
+    },
+    {
+      "id": 894373,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2025-12-17",
+      "effectiveDate": "2025-12-17",
+      "resolutionDate": "2025-12-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens activated RHP Jack Little."
+    },
+    {
+      "id": 879004,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2025-12-17",
+      "effectiveDate": "2025-12-17",
+      "resolutionDate": "2025-12-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jack Little assigned to Toledo Mud Hens."
+    },
+    {
+      "id": 949051,
+      "person": {
+        "id": 669193,
+        "fullName": "Jack Little",
+        "link": "/api/v1/people/669193",
+        "nameSlug": "jack-little-669193"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Jack Little elected free agency."
+    }
+  ]
+}

@@ -1,0 +1,576 @@
+{
+  "player_id": 807726,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:e01d7cc1fb1dbed806e8e48ce10e20a1331ab4be75fbcf5c018ea1a587044e77",
+  "transactions": [
+    {
+      "id": 703295,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "toTeam": {
+        "id": 5580,
+        "name": "College Workout",
+        "link": "/api/v1/teams/5580"
+      },
+      "date": "2023-06-12",
+      "effectiveDate": "2023-06-12",
+      "resolutionDate": "2023-06-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS John Peck assigned to College Workout."
+    },
+    {
+      "id": 712928,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2023-07-17",
+      "effectiveDate": "2023-07-17",
+      "resolutionDate": "2023-07-17",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Detroit Tigers signed SS John Peck."
+    },
+    {
+      "id": 716257,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "toTeam": {
+        "id": 473,
+        "name": "FCL Tigers",
+        "link": "/api/v1/teams/473"
+      },
+      "date": "2023-08-01",
+      "effectiveDate": "2023-08-01",
+      "resolutionDate": "2023-08-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS John Peck assigned to FCL Tigers."
+    },
+    {
+      "id": 758324,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2023-08-24",
+      "effectiveDate": "2023-08-24",
+      "resolutionDate": "2023-08-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lakeland Flying Tigers activated SS John Peck."
+    },
+    {
+      "id": 721754,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "fromTeam": {
+        "id": 473,
+        "name": "FCL Tigers",
+        "link": "/api/v1/teams/473"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2023-08-24",
+      "effectiveDate": "2023-08-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS John Peck assigned to Lakeland Flying Tigers from FCL Tigers."
+    },
+    {
+      "id": 756037,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2024-03-20",
+      "effectiveDate": "2024-03-20",
+      "resolutionDate": "2024-03-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS John Peck assigned to Detroit Tigers."
+    },
+    {
+      "id": 766715,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2024-05-01",
+      "effectiveDate": "2024-05-01",
+      "resolutionDate": "2024-05-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lakeland Flying Tigers placed SS John Peck on the 7-day injured list."
+    },
+    {
+      "id": 779611,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2024-05-01",
+      "effectiveDate": "2024-05-01",
+      "resolutionDate": "2024-05-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lakeland Flying Tigers placed SS John Peck on the 7-day injured list."
+    },
+    {
+      "id": 781082,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "fromTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "toTeam": {
+        "id": 473,
+        "name": "FCL Tigers",
+        "link": "/api/v1/teams/473"
+      },
+      "date": "2024-06-18",
+      "effectiveDate": "2024-06-18",
+      "resolutionDate": "2024-06-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Lakeland Flying Tigers sent SS John Peck on a rehab assignment to FCL Tigers."
+    },
+    {
+      "id": 784231,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "fromTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "toTeam": {
+        "id": 473,
+        "name": "FCL Tigers",
+        "link": "/api/v1/teams/473"
+      },
+      "date": "2024-06-18",
+      "effectiveDate": "2024-06-18",
+      "resolutionDate": "2024-06-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Lakeland Flying Tigers sent SS John Peck on a rehab assignment to FCL Tigers."
+    },
+    {
+      "id": 784232,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2024-07-01",
+      "effectiveDate": "2024-07-01",
+      "resolutionDate": "2024-07-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lakeland Flying Tigers activated SS John Peck from the 7-day injured list."
+    },
+    {
+      "id": 784281,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2024-07-01",
+      "effectiveDate": "2024-07-01",
+      "resolutionDate": "2024-07-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lakeland Flying Tigers activated SS John Peck from the 7-day injured list."
+    },
+    {
+      "id": 794955,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "fromTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "toTeam": {
+        "id": 582,
+        "name": "West Michigan Whitecaps",
+        "link": "/api/v1/teams/582"
+      },
+      "date": "2024-08-16",
+      "effectiveDate": "2024-08-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS John Peck assigned to West Michigan Whitecaps from Lakeland Flying Tigers."
+    },
+    {
+      "id": 818613,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "toTeam": {
+        "id": 366,
+        "name": "Detroit Tigers Prospects",
+        "link": "/api/v1/teams/366"
+      },
+      "date": "2025-03-06",
+      "effectiveDate": "2025-03-06",
+      "resolutionDate": "2025-03-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "activated SS John Peck."
+    },
+    {
+      "id": 820590,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "toTeam": {
+        "id": 366,
+        "name": "Detroit Tigers Prospects",
+        "link": "/api/v1/teams/366"
+      },
+      "date": "2025-03-16",
+      "effectiveDate": "2025-03-16",
+      "resolutionDate": "2025-03-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS John Peck assigned to Detroit Tigers Prospects."
+    },
+    {
+      "id": 863788,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "fromTeam": {
+        "id": 582,
+        "name": "West Michigan Whitecaps",
+        "link": "/api/v1/teams/582"
+      },
+      "toTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "date": "2025-08-11",
+      "effectiveDate": "2025-08-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS John Peck assigned to Erie SeaWolves from West Michigan Whitecaps."
+    },
+    {
+      "id": 886346,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-02-12",
+      "effectiveDate": "2026-02-12",
+      "resolutionDate": "2026-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers invited non-roster SS John Peck to spring training."
+    },
+    {
+      "id": 890179,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "toTeam": {
+        "id": 366,
+        "name": "Detroit Tigers Prospects",
+        "link": "/api/v1/teams/366"
+      },
+      "date": "2026-03-05",
+      "effectiveDate": "2026-03-05",
+      "resolutionDate": "2026-03-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS John Peck assigned to Detroit Tigers Prospects."
+    },
+    {
+      "id": 921346,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "fromTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2026-06-23",
+      "effectiveDate": "2026-06-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS John Peck assigned to Toledo Mud Hens from Erie SeaWolves."
+    },
+    {
+      "id": 922422,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2026-06-25",
+      "effectiveDate": "2026-06-25",
+      "resolutionDate": "2026-06-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens placed SS John Peck on the 7-day injured list."
+    },
+    {
+      "id": 936863,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2026-08-11",
+      "effectiveDate": "2026-08-11",
+      "resolutionDate": "2026-08-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Toledo Mud Hens sent SS John Peck on a rehab assignment to Lakeland Flying Tigers."
+    },
+    {
+      "id": 938193,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2026-08-11",
+      "effectiveDate": "2026-08-11",
+      "resolutionDate": "2026-08-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Toledo Mud Hens sent SS John Peck on a rehab assignment to Lakeland Flying Tigers."
+    },
+    {
+      "id": 938194,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 582,
+        "name": "West Michigan Whitecaps",
+        "link": "/api/v1/teams/582"
+      },
+      "date": "2026-08-18",
+      "effectiveDate": "2026-08-18",
+      "resolutionDate": "2026-08-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Toledo Mud Hens sent SS John Peck on a rehab assignment to West Michigan Whitecaps."
+    },
+    {
+      "id": 939243,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "fromTeam": {
+        "id": 582,
+        "name": "West Michigan Whitecaps",
+        "link": "/api/v1/teams/582"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2026-08-25",
+      "effectiveDate": "2026-08-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS John Peck assigned to Toledo Mud Hens from West Michigan Whitecaps."
+    },
+    {
+      "id": 940271,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-08-31",
+      "effectiveDate": "2026-08-31",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Detroit Tigers selected the contract of SS John Peck from Toledo Mud Hens."
+    },
+    {
+      "id": 944958,
+      "person": {
+        "id": 807726,
+        "fullName": "John Peck",
+        "link": "/api/v1/people/807726",
+        "nameSlug": "john-peck-807726"
+      },
+      "toTeam": {
+        "id": 544,
+        "name": "Scottsdale Scorpions",
+        "link": "/api/v1/teams/544"
+      },
+      "date": "2026-10-03",
+      "effectiveDate": "2026-10-03",
+      "resolutionDate": "2026-10-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS John Peck assigned to Scottsdale Scorpions."
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "player_id": 123801,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:7abbac7cd8c5958e7cc646bbf5c348d2fe7fdeb5d1a9702c0b13a443beed1023",
+  "transactions": [
+    {
+      "id": 17417,
+      "person": {
+        "id": 123801,
+        "fullName": "Tim Wakefield",
+        "link": "/api/v1/people/123801",
+        "nameSlug": "tim-wakefield-123801"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2009-07-21",
+      "effectiveDate": "2009-07-18",
+      "resolutionDate": "2009-07-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Boston Red Sox placed RHP Tim Wakefield on the 15-day disabled list retroactive to July 18, 2009. lower back strain"
+    },
+    {
+      "id": 21401,
+      "person": {
+        "id": 123801,
+        "fullName": "Tim Wakefield",
+        "link": "/api/v1/people/123801",
+        "nameSlug": "tim-wakefield-123801"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2009-08-15",
+      "effectiveDate": "2009-08-15",
+      "resolutionDate": "2009-08-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent RHP Tim Wakefield on a rehab assignment to Pawtucket Red Sox."
+    },
+    {
+      "id": 22716,
+      "person": {
+        "id": 123801,
+        "fullName": "Tim Wakefield",
+        "link": "/api/v1/people/123801",
+        "nameSlug": "tim-wakefield-123801"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2009-08-26",
+      "effectiveDate": "2009-08-26",
+      "resolutionDate": "2009-08-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tim Wakefield roster status changed by Boston Red Sox."
+    },
+    {
+      "id": 26869,
+      "person": {
+        "id": 123801,
+        "fullName": "Tim Wakefield",
+        "link": "/api/v1/people/123801",
+        "nameSlug": "tim-wakefield-123801"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2009-10-19",
+      "effectiveDate": "2009-10-19",
+      "resolutionDate": "2009-10-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Boston Red Sox activated RHP Tim Wakefield."
+    },
+    {
+      "id": 105582,
+      "person": {
+        "id": 123801,
+        "fullName": "Tim Wakefield",
+        "link": "/api/v1/people/123801",
+        "nameSlug": "tim-wakefield-123801"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2011-10-30",
+      "effectiveDate": "2011-10-30",
+      "resolutionDate": "2011-10-30",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Tim Wakefield elected free agency."
+    }
+  ]
+}

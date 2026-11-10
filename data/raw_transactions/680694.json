@@ -1,0 +1,1025 @@
+{
+  "player_id": 680694,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:bba49cb3b42d9737d26dafc057f76ff50ce27f384db81fb0c188676e9ec61200",
+  "transactions": [
+    {
+      "id": 360944,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2018-06-15",
+      "effectiveDate": "2018-06-15",
+      "resolutionDate": "2018-06-15",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Los Angeles Angels signed RHP Kyle Bradish."
+    },
+    {
+      "id": 362209,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 404,
+        "name": "ACL Angels",
+        "link": "/api/v1/teams/404"
+      },
+      "date": "2018-06-18",
+      "effectiveDate": "2018-06-18",
+      "resolutionDate": "2018-06-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Kyle Bradish assigned to AZL Angels."
+    },
+    {
+      "id": 374774,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 404,
+        "name": "ACL Angels",
+        "link": "/api/v1/teams/404"
+      },
+      "date": "2018-06-28",
+      "effectiveDate": "2018-06-28",
+      "resolutionDate": "2018-06-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "AZL Angels placed RHP Kyle Bradish on the 60-day disabled list."
+    },
+    {
+      "id": 380006,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 404,
+        "name": "ACL Angels",
+        "link": "/api/v1/teams/404"
+      },
+      "date": "2018-09-09",
+      "effectiveDate": "2018-09-09",
+      "resolutionDate": "2018-09-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "AZL Angels activated RHP Kyle Bradish from the 60-day injured list."
+    },
+    {
+      "id": 394469,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "fromTeam": {
+        "id": 404,
+        "name": "ACL Angels",
+        "link": "/api/v1/teams/404"
+      },
+      "toTeam": {
+        "id": 401,
+        "name": "Inland Empire 66ers",
+        "link": "/api/v1/teams/401"
+      },
+      "date": "2019-04-02",
+      "effectiveDate": "2019-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Kyle Bradish assigned to Inland Empire 66ers from AZL Angels."
+    },
+    {
+      "id": 403444,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 401,
+        "name": "Inland Empire 66ers",
+        "link": "/api/v1/teams/401"
+      },
+      "date": "2019-05-27",
+      "effectiveDate": "2019-05-22",
+      "resolutionDate": "2019-05-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Inland Empire 66ers placed RHP Kyle Bradish on the 7-day injured list retroactive to May 22, 2019."
+    },
+    {
+      "id": 406619,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 401,
+        "name": "Inland Empire 66ers",
+        "link": "/api/v1/teams/401"
+      },
+      "date": "2019-06-08",
+      "effectiveDate": "2019-06-08",
+      "resolutionDate": "2019-06-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Inland Empire 66ers activated RHP Kyle Bradish from the 7-day injured list."
+    },
+    {
+      "id": 434736,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2019-12-04",
+      "effectiveDate": "2019-12-04",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Baltimore Orioles traded RHP Dylan Bundy to Los Angeles Angels for RHP Isaac Mattson, RHP Kyle Bradish, RHP Kyle Brnovich and RHP Zach Peek."
+    },
+    {
+      "id": 434738,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 493,
+        "name": "Frederick Keys",
+        "link": "/api/v1/teams/493"
+      },
+      "date": "2019-12-05",
+      "effectiveDate": "2019-12-05",
+      "resolutionDate": "2019-12-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Kyle Bradish assigned to Frederick Keys."
+    },
+    {
+      "id": 448726,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "fromTeam": {
+        "id": 493,
+        "name": "Frederick Keys",
+        "link": "/api/v1/teams/493"
+      },
+      "toTeam": {
+        "id": 3282,
+        "name": "Orioles Extended Spring Training",
+        "link": "/api/v1/teams/3282"
+      },
+      "date": "2020-08-03",
+      "effectiveDate": "2020-08-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Kyle Bradish assigned to Orioles Alternate Training Site from Frederick Keys."
+    },
+    {
+      "id": 448725,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2020-08-03",
+      "effectiveDate": "2020-08-03",
+      "resolutionDate": "2020-08-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Baltimore Orioles invited non-roster RHP Kyle Bradish to spring training."
+    },
+    {
+      "id": 463028,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 493,
+        "name": "Frederick Keys",
+        "link": "/api/v1/teams/493"
+      },
+      "date": "2020-10-05",
+      "effectiveDate": "2020-10-05",
+      "resolutionDate": "2020-10-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Kyle Bradish assigned to Frederick Keys."
+    },
+    {
+      "id": 453027,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "fromTeam": {
+        "id": 3282,
+        "name": "Orioles Extended Spring Training",
+        "link": "/api/v1/teams/3282"
+      },
+      "toTeam": {
+        "id": 493,
+        "name": "Frederick Keys",
+        "link": "/api/v1/teams/493"
+      },
+      "date": "2020-10-05",
+      "effectiveDate": "2020-10-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Kyle Bradish assigned to Frederick Keys from Orioles Alternate Training Site."
+    },
+    {
+      "id": 467634,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Kyle Bradish assigned to Aberdeen IronBirds."
+    },
+    {
+      "id": 465419,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Kyle Bradish assigned to Aberdeen IronBirds."
+    },
+    {
+      "id": 481292,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "fromTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2021-04-30",
+      "effectiveDate": "2021-04-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Kyle Bradish assigned to Bowie Baysox from Aberdeen IronBirds."
+    },
+    {
+      "id": 490703,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "fromTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2021-05-25",
+      "effectiveDate": "2021-05-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Kyle Bradish assigned to Norfolk Tides from Bowie Baysox."
+    },
+    {
+      "id": 600345,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2021-11-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Baltimore Orioles selected the contract of RHP Kyle Bradish from Norfolk Tides."
+    },
+    {
+      "id": 608884,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2022-03-28",
+      "effectiveDate": "2022-03-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Baltimore Orioles optioned RHP Kyle Bradish to Norfolk Tides."
+    },
+    {
+      "id": 618241,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2022-04-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Baltimore Orioles recalled RHP Kyle Bradish from Norfolk Tides."
+    },
+    {
+      "id": 632989,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2022-06-24",
+      "effectiveDate": "2022-06-21",
+      "resolutionDate": "2022-06-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles placed RHP Kyle Bradish on the 15-day injured list retroactive to June 21, 2022. Right shoulder inflammation."
+    },
+    {
+      "id": 636275,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2022-07-09",
+      "effectiveDate": "2022-07-09",
+      "resolutionDate": "2022-07-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Baltimore Orioles sent RHP Kyle Bradish on a rehab assignment to Bowie Baysox."
+    },
+    {
+      "id": 639808,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2022-07-24",
+      "effectiveDate": "2022-07-24",
+      "resolutionDate": "2022-07-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Baltimore Orioles sent RHP Kyle Bradish on a rehab assignment to Norfolk Tides."
+    },
+    {
+      "id": 641066,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2022-07-29",
+      "effectiveDate": "2022-07-29",
+      "resolutionDate": "2022-07-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles activated RHP Kyle Bradish from the 15-day injured list."
+    },
+    {
+      "id": 667674,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2023-02-02",
+      "effectiveDate": "2023-02-02",
+      "resolutionDate": "2023-02-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles activated RHP Kyle Bradish."
+    },
+    {
+      "id": 681808,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2023-04-05",
+      "effectiveDate": "2023-04-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles placed RHP Kyle Bradish on the 15-day injured list retroactive to April 4, 2023. Right foot contusion."
+    },
+    {
+      "id": 684591,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2023-04-14",
+      "effectiveDate": "2023-04-14",
+      "resolutionDate": "2023-04-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Baltimore Orioles sent RHP Kyle Bradish on a rehab assignment to Bowie Baysox."
+    },
+    {
+      "id": 685802,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2023-04-19",
+      "effectiveDate": "2023-04-19",
+      "resolutionDate": "2023-04-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles activated RHP Kyle Bradish from the 15-day injured list."
+    },
+    {
+      "id": 757653,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2024-03-28",
+      "effectiveDate": "2024-03-25",
+      "resolutionDate": "2024-03-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles placed RHP Kyle Bradish on the 15-day injured list retroactive to March 25, 2024. Right UCL sprain."
+    },
+    {
+      "id": 763691,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2024-04-16",
+      "effectiveDate": "2024-04-16",
+      "resolutionDate": "2024-04-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Baltimore Orioles sent RHP Kyle Bradish on a rehab assignment to Bowie Baysox."
+    },
+    {
+      "id": 764750,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2024-04-21",
+      "effectiveDate": "2024-04-21",
+      "resolutionDate": "2024-04-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Baltimore Orioles sent RHP Kyle Bradish on a rehab assignment to Norfolk Tides."
+    },
+    {
+      "id": 766847,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2024-05-02",
+      "effectiveDate": "2024-05-02",
+      "resolutionDate": "2024-05-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles activated RHP Kyle Bradish from the 15-day injured list."
+    },
+    {
+      "id": 780328,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2024-06-15",
+      "effectiveDate": "2024-06-15",
+      "resolutionDate": "2024-06-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles placed RHP Kyle Bradish on the 15-day injured list. Right UCL sprain."
+    },
+    {
+      "id": 786345,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2024-07-11",
+      "effectiveDate": "2024-07-11",
+      "resolutionDate": "2024-07-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles transferred RHP Kyle Bradish from the 15-day injured list to the 60-day injured list."
+    },
+    {
+      "id": 821452,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2025-03-21",
+      "resolutionDate": "2025-03-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles placed RHP Kyle Bradish on the 60-day injured list. Right elbow UCL surgery."
+    },
+    {
+      "id": 803766,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "resolutionDate": "2024-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles activated RHP Kyle Bradish from the 60-day injured list."
+    },
+    {
+      "id": 850591,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-03-21",
+      "effectiveDate": "2025-03-21",
+      "resolutionDate": "2025-03-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles placed RHP Kyle Bradish on the 60-day injured list."
+    },
+    {
+      "id": 858210,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "date": "2025-07-24",
+      "effectiveDate": "2025-07-24",
+      "resolutionDate": "2025-07-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Baltimore Orioles sent RHP Kyle Bradish on a rehab assignment to Aberdeen IronBirds."
+    },
+    {
+      "id": 859665,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "date": "2025-07-24",
+      "effectiveDate": "2025-07-24",
+      "resolutionDate": "2025-07-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Baltimore Orioles sent RHP Kyle Bradish on a rehab assignment to Aberdeen IronBirds."
+    },
+    {
+      "id": 859666,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2025-07-29",
+      "effectiveDate": "2025-07-29",
+      "resolutionDate": "2025-07-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Baltimore Orioles sent RHP Kyle Bradish on a rehab assignment to Chesapeake Baysox."
+    },
+    {
+      "id": 861344,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2025-08-03",
+      "effectiveDate": "2025-08-03",
+      "resolutionDate": "2025-08-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Baltimore Orioles sent RHP Kyle Bradish on a rehab assignment to Norfolk Tides."
+    },
+    {
+      "id": 866251,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-08-26",
+      "effectiveDate": "2025-08-26",
+      "resolutionDate": "2025-08-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles activated RHP Kyle Bradish from the 60-day injured list."
+    },
+    {
+      "id": 899629,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Kyle Bradish changed number to 42."
+    },
+    {
+      "id": 900563,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Kyle Bradish changed number to 38."
+    },
+    {
+      "id": 942236,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-09-13",
+      "effectiveDate": "2026-09-13",
+      "resolutionDate": "2026-09-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles placed RHP Kyle Bradish on the 15-day injured list. Lower abdominal discomfort."
+    },
+    {
+      "id": 943896,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-09-24",
+      "effectiveDate": "2026-09-24",
+      "resolutionDate": "2026-09-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles transferred RHP Kyle Bradish from the 15-day injured list to the 60-day injured list. Lower abdominal discomfort."
+    },
+    {
+      "id": 947701,
+      "person": {
+        "id": 680694,
+        "fullName": "Kyle Bradish",
+        "link": "/api/v1/people/680694",
+        "nameSlug": "kyle-bradish-680694"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles activated RHP Kyle Bradish from the 60-day injured list."
+    }
+  ]
+}

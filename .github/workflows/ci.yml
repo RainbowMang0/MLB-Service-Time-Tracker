@@ -95,6 +95,12 @@ jobs:
       - name: Data query helper (fixtures only, no real data read)
         run: python tests/test_query_data.py
 
+      - name: Raw transaction store
+        run: python tests/test_raw_transactions.py
+
+      - name: Daily fetch shape
+        run: python tests/test_daily_fetch.py
+
       # The daily workflow skips a run only when a completion marker says a
       # full roster refresh already finished today. A partial run must not
       # count, and a rules-version mismatch in the published data warns

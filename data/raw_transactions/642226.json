@@ -1,0 +1,979 @@
+{
+  "player_id": 642226,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:9d857b29ecbbb6cf4efc70ec6973c50e95b4a2afbd14c7f04c6e50311af699aa",
+  "transactions": [
+    {
+      "id": 193235,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2014-06-12",
+      "effectiveDate": "2014-06-12",
+      "resolutionDate": "2014-06-12",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "New York Yankees signed RHP Matt Wotherspoon."
+    },
+    {
+      "id": 193464,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2014-06-12",
+      "effectiveDate": "2014-06-12",
+      "resolutionDate": "2014-06-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Staten Island Yankees."
+    },
+    {
+      "id": 222123,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2015-04-13",
+      "effectiveDate": "2015-04-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Tampa Yankees from Staten Island Yankees."
+    },
+    {
+      "id": 470898,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "toTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "date": "2015-04-14",
+      "effectiveDate": "2015-04-14",
+      "resolutionDate": "2015-04-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Yankees Extended Spring Training."
+    },
+    {
+      "id": 222162,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "date": "2015-04-14",
+      "effectiveDate": "2015-05-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Matt Wotherspoon assigned to Yankees Extended Spring Training from Tampa Yankees."
+    },
+    {
+      "id": 224530,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2015-05-07",
+      "effectiveDate": "2015-05-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Tampa Yankees from Yankees Extended Spring Training."
+    },
+    {
+      "id": 225627,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2015-05-16",
+      "effectiveDate": "2015-05-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Trenton Thunder from Tampa Yankees."
+    },
+    {
+      "id": 226365,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2015-05-22",
+      "effectiveDate": "2015-05-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Staten Island Yankees from Trenton Thunder."
+    },
+    {
+      "id": 226526,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2015-05-24",
+      "effectiveDate": "2015-05-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Tampa Yankees from Staten Island Yankees."
+    },
+    {
+      "id": 228326,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2015-06-01",
+      "effectiveDate": "2015-06-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Charleston RiverDogs from Tampa Yankees."
+    },
+    {
+      "id": 243541,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2015-08-26",
+      "effectiveDate": "2015-08-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Trenton Thunder from Charleston RiverDogs."
+    },
+    {
+      "id": 243804,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2015-08-28",
+      "effectiveDate": "2015-08-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Charleston RiverDogs from Trenton Thunder."
+    },
+    {
+      "id": 258209,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2016-03-27",
+      "effectiveDate": "2016-03-27",
+      "resolutionDate": "2016-03-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to New York Yankees."
+    },
+    {
+      "id": 260020,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2016-04-04",
+      "effectiveDate": "2016-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Trenton Thunder from Charleston RiverDogs."
+    },
+    {
+      "id": 264412,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2016-05-04",
+      "effectiveDate": "2016-05-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Scranton/Wilkes-Barre RailRiders from Trenton Thunder."
+    },
+    {
+      "id": 265371,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2016-05-13",
+      "effectiveDate": "2016-05-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Trenton Thunder from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 270531,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2016-06-12",
+      "effectiveDate": "2016-06-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Scranton/Wilkes-Barre RailRiders from Trenton Thunder."
+    },
+    {
+      "id": 276400,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2016-07-01",
+      "effectiveDate": "2016-07-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Trenton Thunder from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 277746,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2016-07-08",
+      "effectiveDate": "2016-07-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Scranton/Wilkes-Barre RailRiders from Trenton Thunder."
+    },
+    {
+      "id": 279260,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2016-07-17",
+      "effectiveDate": "2016-07-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Trenton Thunder from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 286247,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2016-09-02",
+      "effectiveDate": "2016-09-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Scranton/Wilkes-Barre RailRiders from Trenton Thunder."
+    },
+    {
+      "id": 298963,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-02-27",
+      "effectiveDate": "2017-02-27",
+      "resolutionDate": "2017-02-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to New York Yankees."
+    },
+    {
+      "id": 303129,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2017-04-03",
+      "effectiveDate": "2017-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Trenton Thunder from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 314534,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2017-06-06",
+      "effectiveDate": "2017-06-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Scranton/Wilkes-Barre RailRiders from Trenton Thunder."
+    },
+    {
+      "id": 321840,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2017-07-02",
+      "effectiveDate": "2017-07-02",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "New York Yankees traded RHP Matt Wotherspoon to Baltimore Orioles for Future Considerations."
+    },
+    {
+      "id": 322303,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2017-07-04",
+      "effectiveDate": "2017-07-04",
+      "resolutionDate": "2017-07-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Norfolk Tides."
+    },
+    {
+      "id": 342347,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2018-02-23",
+      "effectiveDate": "2018-02-23",
+      "resolutionDate": "2018-02-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Baltimore Orioles."
+    },
+    {
+      "id": 359174,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2018-06-11",
+      "effectiveDate": "2018-06-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Bowie Baysox from Norfolk Tides."
+    },
+    {
+      "id": 359539,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2018-06-12",
+      "effectiveDate": "2018-06-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Norfolk Tides from Bowie Baysox."
+    },
+    {
+      "id": 388808,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2019-02-24",
+      "effectiveDate": "2019-02-24",
+      "resolutionDate": "2019-02-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Baltimore Orioles."
+    },
+    {
+      "id": 394688,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2019-04-03",
+      "effectiveDate": "2019-04-04",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Baltimore Orioles selected the contract of Matt Wotherspoon from Norfolk Tides."
+    },
+    {
+      "id": 394945,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2019-04-04",
+      "effectiveDate": "2019-04-04",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Baltimore Orioles optioned RHP Matt Wotherspoon to Norfolk Tides."
+    },
+    {
+      "id": 395576,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2019-04-06",
+      "effectiveDate": "2019-04-06",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Baltimore Orioles sent RHP Matt Wotherspoon outright to Norfolk Tides."
+    },
+    {
+      "id": 411888,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2019-06-22",
+      "effectiveDate": "2019-06-27",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Baltimore Orioles selected the contract of Matt Wotherspoon from Norfolk Tides."
+    },
+    {
+      "id": 413463,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2019-06-27",
+      "effectiveDate": "2019-06-27",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Baltimore Orioles optioned RHP Matt Wotherspoon to Norfolk Tides."
+    },
+    {
+      "id": 414643,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2019-07-02",
+      "effectiveDate": "2019-07-06",
+      "resolutionDate": "2019-07-02",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Baltimore Orioles designated Matt Wotherspoon for assignment."
+    },
+    {
+      "id": 415841,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2019-07-06",
+      "effectiveDate": "2019-07-06",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Baltimore Orioles sent RHP Matt Wotherspoon outright to Norfolk Tides."
+    },
+    {
+      "id": 423051,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2019-08-10",
+      "effectiveDate": "2019-08-10",
+      "resolutionDate": "2019-08-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Norfolk Tides placed RHP Matt Wotherspoon on the 7-day injured list."
+    },
+    {
+      "id": 424205,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2019-08-17",
+      "effectiveDate": "2019-08-17",
+      "resolutionDate": "2019-08-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Norfolk Tides activated RHP Matt Wotherspoon from the 7-day injured list."
+    },
+    {
+      "id": 424529,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2019-08-19",
+      "effectiveDate": "2019-08-19",
+      "resolutionDate": "2019-08-19",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Norfolk Tides released RHP Matt Wotherspoon."
+    },
+    {
+      "id": 425309,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2019-08-24",
+      "effectiveDate": "2019-08-24",
+      "resolutionDate": "2019-08-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent RHP Matt Wotherspoon to a minor league contract."
+    },
+    {
+      "id": 425310,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2019-08-24",
+      "effectiveDate": "2019-08-24",
+      "resolutionDate": "2019-08-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Wotherspoon assigned to Toledo Mud Hens."
+    },
+    {
+      "id": 432756,
+      "person": {
+        "id": 642226,
+        "fullName": "Matt Wotherspoon",
+        "link": "/api/v1/people/642226",
+        "nameSlug": "matt-wotherspoon-642226"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2019-11-04",
+      "effectiveDate": "2019-11-04",
+      "resolutionDate": "2019-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Matt Wotherspoon elected free agency."
+    }
+  ]
+}

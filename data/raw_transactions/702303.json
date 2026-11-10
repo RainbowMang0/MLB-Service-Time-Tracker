@@ -1,0 +1,972 @@
+{
+  "player_id": 702303,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:9656afa0406b1ee0090f5cb0c1059fe8bc0571593ea32498ceda09bae159ce32",
+  "transactions": [
+    {
+      "id": 505083,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2021-07-15",
+      "effectiveDate": "2021-07-15",
+      "resolutionDate": "2021-07-15",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Chicago Cubs signed LHP Riley Martin."
+    },
+    {
+      "id": 512584,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "fromTeam": {
+        "id": 407,
+        "name": "ACL Cubs",
+        "link": "/api/v1/teams/407"
+      },
+      "toTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "date": "2021-08-17",
+      "effectiveDate": "2021-08-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Riley Martin assigned to Myrtle Beach Pelicans from ACL Cubs."
+    },
+    {
+      "id": 617943,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "fromTeam": {
+        "id": 521,
+        "name": "Myrtle Beach Pelicans",
+        "link": "/api/v1/teams/521"
+      },
+      "toTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "date": "2022-04-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Riley Martin assigned to South Bend Cubs from Myrtle Beach Pelicans."
+    },
+    {
+      "id": 633000,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "date": "2022-06-24",
+      "effectiveDate": "2022-06-24",
+      "resolutionDate": "2022-06-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "South Bend Cubs transferred LHP Riley Martin to the Development List."
+    },
+    {
+      "id": 636384,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "date": "2022-07-10",
+      "effectiveDate": "2022-07-10",
+      "resolutionDate": "2022-07-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "South Bend Cubs activated LHP Riley Martin."
+    },
+    {
+      "id": 655476,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 490,
+        "name": "Peoria Javelinas",
+        "link": "/api/v1/teams/490"
+      },
+      "date": "2022-09-16",
+      "effectiveDate": "2022-09-16",
+      "resolutionDate": "2022-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Peoria Javelinas activated LHP Riley Martin."
+    },
+    {
+      "id": 655478,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 555,
+        "name": "Mesa Solar Sox",
+        "link": "/api/v1/teams/555"
+      },
+      "date": "2022-09-16",
+      "effectiveDate": "2022-09-16",
+      "resolutionDate": "2022-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mesa Solar Sox activated LHP Riley Martin."
+    },
+    {
+      "id": 655475,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 490,
+        "name": "Peoria Javelinas",
+        "link": "/api/v1/teams/490"
+      },
+      "date": "2022-09-16",
+      "effectiveDate": "2022-09-16",
+      "resolutionDate": "2022-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Peoria Javelinas activated LHP Riley Martin."
+    },
+    {
+      "id": 655479,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 555,
+        "name": "Mesa Solar Sox",
+        "link": "/api/v1/teams/555"
+      },
+      "date": "2022-09-16",
+      "effectiveDate": "2022-09-16",
+      "resolutionDate": "2022-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mesa Solar Sox activated LHP Riley Martin."
+    },
+    {
+      "id": 655474,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 490,
+        "name": "Peoria Javelinas",
+        "link": "/api/v1/teams/490"
+      },
+      "date": "2022-09-16",
+      "effectiveDate": "2022-09-16",
+      "resolutionDate": "2022-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Peoria Javelinas activated LHP Riley Martin."
+    },
+    {
+      "id": 655424,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 555,
+        "name": "Mesa Solar Sox",
+        "link": "/api/v1/teams/555"
+      },
+      "date": "2022-09-16",
+      "effectiveDate": "2022-09-16",
+      "resolutionDate": "2022-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mesa Solar Sox activated LHP Riley Martin."
+    },
+    {
+      "id": 652502,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 555,
+        "name": "Mesa Solar Sox",
+        "link": "/api/v1/teams/555"
+      },
+      "date": "2022-09-16",
+      "effectiveDate": "2022-09-16",
+      "resolutionDate": "2022-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mesa Solar Sox activated LHP Riley Martin."
+    },
+    {
+      "id": 653466,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2022-09-22",
+      "effectiveDate": "2022-09-22",
+      "resolutionDate": "2022-09-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tennessee Smokies activated LHP Riley Martin."
+    },
+    {
+      "id": 653358,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "fromTeam": {
+        "id": 550,
+        "name": "South Bend Cubs",
+        "link": "/api/v1/teams/550"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2022-09-22",
+      "effectiveDate": "2022-09-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Riley Martin assigned to Tennessee Smokies from South Bend Cubs."
+    },
+    {
+      "id": 655472,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 490,
+        "name": "Peoria Javelinas",
+        "link": "/api/v1/teams/490"
+      },
+      "date": "2022-10-10",
+      "effectiveDate": "2022-10-10",
+      "resolutionDate": "2022-10-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Riley Martin assigned to Peoria Javelinas."
+    },
+    {
+      "id": 655473,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 490,
+        "name": "Peoria Javelinas",
+        "link": "/api/v1/teams/490"
+      },
+      "date": "2022-10-10",
+      "effectiveDate": "2022-10-10",
+      "resolutionDate": "2022-10-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Riley Martin assigned to Peoria Javelinas."
+    },
+    {
+      "id": 676788,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2023-03-23",
+      "effectiveDate": "2023-03-23",
+      "resolutionDate": "2023-03-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Riley Martin and  assigned to Chicago Cubs."
+    },
+    {
+      "id": 703707,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "fromTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2023-06-13",
+      "effectiveDate": "2023-06-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Riley Martin assigned to Iowa Cubs from Tennessee Smokies."
+    },
+    {
+      "id": 714396,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2023-07-25",
+      "effectiveDate": "2023-07-25",
+      "resolutionDate": "2023-07-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs transferred LHP Riley Martin to the Development List."
+    },
+    {
+      "id": 714474,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2023-07-25",
+      "effectiveDate": "2023-07-25",
+      "resolutionDate": "2023-07-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs activated LHP Riley Martin."
+    },
+    {
+      "id": 714775,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2023-07-26",
+      "effectiveDate": "2023-07-26",
+      "resolutionDate": "2023-07-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs transferred LHP Riley Martin to the Development List."
+    },
+    {
+      "id": 716948,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2023-08-02",
+      "effectiveDate": "2023-08-02",
+      "resolutionDate": "2023-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs activated LHP Riley Martin."
+    },
+    {
+      "id": 720114,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2023-08-08",
+      "effectiveDate": "2023-08-08",
+      "resolutionDate": "2023-08-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tennessee Smokies activated LHP Riley Martin."
+    },
+    {
+      "id": 718727,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2023-08-08",
+      "effectiveDate": "2023-08-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Riley Martin assigned to Tennessee Smokies from Iowa Cubs."
+    },
+    {
+      "id": 751703,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2024-02-25",
+      "effectiveDate": "2024-02-25",
+      "resolutionDate": "2024-02-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Riley Martin assigned to Chicago Cubs."
+    },
+    {
+      "id": 754018,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 107,
+        "name": "Chicago Cubs Prospects",
+        "link": "/api/v1/teams/107"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs Prospects activated LHP Riley Martin."
+    },
+    {
+      "id": 757987,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "fromTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2024-03-29",
+      "effectiveDate": "2024-03-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Riley Martin assigned to Iowa Cubs from Tennessee Smokies."
+    },
+    {
+      "id": 793414,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2024-08-07",
+      "effectiveDate": "2024-08-07",
+      "resolutionDate": "2024-08-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs transferred LHP Riley Martin to the Development List."
+    },
+    {
+      "id": 795550,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2024-08-20",
+      "effectiveDate": "2024-08-20",
+      "resolutionDate": "2024-08-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs activated LHP Riley Martin."
+    },
+    {
+      "id": 797387,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2024-09-02",
+      "effectiveDate": "2024-09-02",
+      "resolutionDate": "2024-09-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs transferred LHP Riley Martin to the Development List."
+    },
+    {
+      "id": 822929,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2024-09-04",
+      "effectiveDate": "2024-09-04",
+      "resolutionDate": "2024-09-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs activated LHP Riley Martin."
+    },
+    {
+      "id": 797842,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2024-09-04",
+      "effectiveDate": "2024-09-04",
+      "resolutionDate": "2024-09-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs activated LHP Riley Martin."
+    },
+    {
+      "id": 816180,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-02-07",
+      "effectiveDate": "2025-02-07",
+      "resolutionDate": "2025-02-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LHP Riley Martin roster status changed by Chicago Cubs."
+    },
+    {
+      "id": 814121,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-02-07",
+      "effectiveDate": "2025-02-07",
+      "resolutionDate": "2025-02-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago Cubs invited non-roster LHP Riley Martin to spring training."
+    },
+    {
+      "id": 818653,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 107,
+        "name": "Chicago Cubs Prospects",
+        "link": "/api/v1/teams/107"
+      },
+      "date": "2025-03-06",
+      "effectiveDate": "2025-03-06",
+      "resolutionDate": "2025-03-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "activated LHP Riley Martin."
+    },
+    {
+      "id": 877273,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-11-18",
+      "effectiveDate": "2025-11-18",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Chicago Cubs selected the contract of LHP Riley Martin from Iowa Cubs."
+    },
+    {
+      "id": 890365,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 107,
+        "name": "Chicago Cubs Prospects",
+        "link": "/api/v1/teams/107"
+      },
+      "date": "2026-03-05",
+      "effectiveDate": "2026-03-05",
+      "resolutionDate": "2026-03-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Riley Martin assigned to Chicago Cubs Prospects."
+    },
+    {
+      "id": 891040,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2026-03-08",
+      "effectiveDate": "2026-03-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Chicago Cubs optioned LHP Riley Martin to Iowa Cubs."
+    },
+    {
+      "id": 897212,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-04-05",
+      "effectiveDate": "2026-04-05",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Chicago Cubs recalled LHP Riley Martin from Iowa Cubs."
+    },
+    {
+      "id": 899587,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "LHP Riley Martin changed number to 42."
+    },
+    {
+      "id": 900504,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "LHP Riley Martin changed number to 51."
+    },
+    {
+      "id": 903175,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-04-26",
+      "effectiveDate": "2026-04-24",
+      "resolutionDate": "2026-04-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs placed LHP Riley Martin on the 15-day injured list retroactive to April 24, 2026. Left elbow inflammation."
+    },
+    {
+      "id": 921811,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-05-17",
+      "effectiveDate": "2026-05-17",
+      "resolutionDate": "2026-05-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs transferred LHP Riley Martin from the 15-day injured list to the 60-day injured list. Left elbow inflammation."
+    },
+    {
+      "id": 943374,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2026-09-20",
+      "effectiveDate": "2026-09-20",
+      "resolutionDate": "2026-09-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago Cubs sent LHP Riley Martin on a rehab assignment to Iowa Cubs."
+    },
+    {
+      "id": 943890,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2026-09-20",
+      "effectiveDate": "2026-09-20",
+      "resolutionDate": "2026-09-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chicago Cubs sent LHP Riley Martin on a rehab assignment to Iowa Cubs."
+    },
+    {
+      "id": 947823,
+      "person": {
+        "id": 702303,
+        "fullName": "Riley Martin",
+        "link": "/api/v1/people/702303",
+        "nameSlug": "riley-martin-702303"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chicago Cubs activated LHP Riley Martin from the 60-day injured list."
+    }
+  ]
+}

@@ -1,0 +1,899 @@
+{
+  "player_id": 668754,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:fdf7ade467d7a263c629652bf423e5060edb8d2f9312840da65296c77461899f",
+  "transactions": [
+    {
+      "id": 274041,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2016-06-21",
+      "effectiveDate": "2016-06-21",
+      "resolutionDate": "2016-06-21",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "New York Yankees signed RHP Braden Bristo."
+    },
+    {
+      "id": 274042,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 425,
+        "name": "Pulaski River Turtles",
+        "link": "/api/v1/teams/425"
+      },
+      "date": "2016-06-22",
+      "effectiveDate": "2016-06-22",
+      "resolutionDate": "2016-06-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Bristo assigned to Pulaski Yankees."
+    },
+    {
+      "id": 317014,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "fromTeam": {
+        "id": 425,
+        "name": "Pulaski River Turtles",
+        "link": "/api/v1/teams/425"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2017-06-19",
+      "effectiveDate": "2017-06-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Bristo assigned to Staten Island Yankees from Pulaski Yankees."
+    },
+    {
+      "id": 328045,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "fromTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2017-08-06",
+      "effectiveDate": "2017-08-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Bristo assigned to Charleston RiverDogs from Staten Island Yankees."
+    },
+    {
+      "id": 372111,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "fromTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2018-07-31",
+      "effectiveDate": "2018-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Bristo assigned to Tampa Tarpons from Charleston RiverDogs."
+    },
+    {
+      "id": 390337,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2019-03-10",
+      "effectiveDate": "2019-03-10",
+      "resolutionDate": "2019-03-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Bristo assigned to New York Yankees."
+    },
+    {
+      "id": 399755,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-05-03",
+      "effectiveDate": "2019-05-03",
+      "resolutionDate": "2019-05-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Tarpons placed RHP Braden Bristo on the temporarily inactive list."
+    },
+    {
+      "id": 400079,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-05-06",
+      "effectiveDate": "2019-05-06",
+      "resolutionDate": "2019-05-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Tarpons activated RHP Braden Bristo from the temporarily inactive list."
+    },
+    {
+      "id": 402981,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 76,
+        "name": "FSL North Division All-Stars",
+        "link": "/api/v1/teams/76"
+      },
+      "date": "2019-06-14",
+      "effectiveDate": "2019-06-14",
+      "resolutionDate": "2019-06-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Bristo assigned to FSL North Division All-Stars."
+    },
+    {
+      "id": 413827,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2019-06-28",
+      "effectiveDate": "2019-06-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Bristo assigned to Trenton Thunder from Tampa Tarpons."
+    },
+    {
+      "id": 416662,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-07-11",
+      "effectiveDate": "2019-07-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Bristo assigned to Tampa Tarpons from Trenton Thunder."
+    },
+    {
+      "id": 418771,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2019-07-20",
+      "effectiveDate": "2019-07-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Bristo assigned to Trenton Thunder from Tampa Tarpons."
+    },
+    {
+      "id": 425493,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-08-25",
+      "effectiveDate": "2019-08-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Bristo assigned to Tampa Tarpons from Trenton Thunder."
+    },
+    {
+      "id": 426888,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2019-09-01",
+      "effectiveDate": "2019-09-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Bristo assigned to Trenton Thunder from Tampa Tarpons."
+    },
+    {
+      "id": 463859,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2019-09-01",
+      "effectiveDate": "2019-09-01",
+      "resolutionDate": "2019-09-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Bristo assigned to Trenton Thunder."
+    },
+    {
+      "id": 439308,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2020-02-24",
+      "effectiveDate": "2020-02-24",
+      "resolutionDate": "2020-02-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Bristo assigned to New York Yankees."
+    },
+    {
+      "id": 468471,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 1956,
+        "name": "Somerset Patriots",
+        "link": "/api/v1/teams/1956"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Bristo assigned to Somerset Patriots."
+    },
+    {
+      "id": 466208,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 1956,
+        "name": "Somerset Patriots",
+        "link": "/api/v1/teams/1956"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Bristo assigned to Somerset Patriots."
+    },
+    {
+      "id": 482387,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "fromTeam": {
+        "id": 3308,
+        "name": "Yankees Alternate Training Site",
+        "link": "/api/v1/teams/3308"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2021-05-02",
+      "effectiveDate": "2021-05-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Bristo assigned to Scranton/Wilkes-Barre RailRiders from Yankees Alternate Training Site."
+    },
+    {
+      "id": 611979,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2022-03-18",
+      "effectiveDate": "2022-03-18",
+      "resolutionDate": "2022-03-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Braden Bristo roster status changed by New York Yankees."
+    },
+    {
+      "id": 606816,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2022-03-18",
+      "effectiveDate": "2022-03-18",
+      "resolutionDate": "2022-03-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Bristo assigned to New York Yankees."
+    },
+    {
+      "id": 659671,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2022-11-10",
+      "effectiveDate": "2022-11-10",
+      "resolutionDate": "2022-11-10",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Braden Bristo elected free agency."
+    },
+    {
+      "id": 664803,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2022-12-21",
+      "effectiveDate": "2022-12-21",
+      "resolutionDate": "2022-12-21",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Tampa Bay Rays signed free agent RHP Braden Bristo to a minor league contract."
+    },
+    {
+      "id": 664804,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2023-01-07",
+      "effectiveDate": "2023-01-07",
+      "resolutionDate": "2023-01-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braden Bristo assigned to Durham Bulls."
+    },
+    {
+      "id": 666208,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2023-01-19",
+      "effectiveDate": "2023-01-19",
+      "resolutionDate": "2023-01-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Tampa Bay Rays invited non-roster RHP Braden Bristo to spring training."
+    },
+    {
+      "id": 671563,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2023-01-19",
+      "effectiveDate": "2023-01-19",
+      "resolutionDate": "2023-01-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Braden Bristo roster status changed by Tampa Bay Rays."
+    },
+    {
+      "id": 684331,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2023-04-13",
+      "effectiveDate": "2023-04-13",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Tampa Bay Rays selected the contract of RHP Braden Bristo from Durham Bulls."
+    },
+    {
+      "id": 687973,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2023-04-14",
+      "effectiveDate": "2023-04-14",
+      "resolutionDate": "2023-04-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls activated RHP Braden Bristo."
+    },
+    {
+      "id": 684520,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2023-04-14",
+      "effectiveDate": "2023-04-14",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned RHP Braden Bristo to Durham Bulls."
+    },
+    {
+      "id": 687954,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2023-04-29",
+      "effectiveDate": "2023-04-29",
+      "resolutionDate": "2023-04-29",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Tampa Bay Rays designated RHP Braden Bristo for assignment."
+    },
+    {
+      "id": 688415,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2023-05-01",
+      "effectiveDate": "2023-05-01",
+      "resolutionDate": "2023-05-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens activated RHP Braden Bristo."
+    },
+    {
+      "id": 688203,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2023-05-01",
+      "effectiveDate": "2023-05-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Detroit Tigers optioned RHP Braden Bristo to Toledo Mud Hens."
+    },
+    {
+      "id": 688201,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2023-05-01",
+      "effectiveDate": "2023-05-01",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Detroit Tigers claimed RHP Braden Bristo off waivers from Tampa Bay Rays."
+    },
+    {
+      "id": 696992,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2023-05-30",
+      "effectiveDate": "2023-05-30",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled RHP Braden Bristo from Toledo Mud Hens."
+    },
+    {
+      "id": 697635,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2023-06-01",
+      "effectiveDate": "2023-06-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Detroit Tigers optioned RHP Braden Bristo to Toledo Mud Hens."
+    },
+    {
+      "id": 703826,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2023-06-14",
+      "effectiveDate": "2023-06-14",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled RHP Braden Bristo from Toledo Mud Hens."
+    },
+    {
+      "id": 704407,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2023-06-15",
+      "effectiveDate": "2023-06-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Detroit Tigers optioned RHP Braden Bristo to Toledo Mud Hens."
+    },
+    {
+      "id": 705084,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2023-06-18",
+      "effectiveDate": "2023-06-18",
+      "resolutionDate": "2023-06-18",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Detroit Tigers designated RHP Braden Bristo for assignment."
+    },
+    {
+      "id": 708276,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2023-06-25",
+      "effectiveDate": "2023-06-25",
+      "resolutionDate": "2023-06-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens activated RHP Braden Bristo."
+    },
+    {
+      "id": 706696,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2023-06-25",
+      "effectiveDate": "2023-06-25",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Detroit Tigers sent RHP Braden Bristo outright to Toledo Mud Hens."
+    },
+    {
+      "id": 731802,
+      "person": {
+        "id": 668754,
+        "fullName": "Braden Bristo",
+        "link": "/api/v1/people/668754",
+        "nameSlug": "braden-bristo-668754"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2023-11-06",
+      "effectiveDate": "2023-11-06",
+      "resolutionDate": "2023-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Braden Bristo elected free agency."
+    }
+  ]
+}

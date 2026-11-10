@@ -1,0 +1,705 @@
+{
+  "player_id": 605477,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:b97b96b1771fcd836f4ad88d1a4aad88349a0b003a438074c7de30ba0b568f01",
+  "transactions": [
+    {
+      "id": 100646,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2011-08-05",
+      "effectiveDate": "2011-08-05",
+      "resolutionDate": "2011-08-05",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Detroit Tigers signed RHP Chad Smith."
+    },
+    {
+      "id": 124450,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "toTeam": {
+        "id": 473,
+        "name": "FCL Tigers",
+        "link": "/api/v1/teams/473"
+      },
+      "date": "2012-06-17",
+      "effectiveDate": "2012-06-17",
+      "resolutionDate": "2012-06-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chad Smith assigned to GCL Tigers."
+    },
+    {
+      "id": 128783,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "fromTeam": {
+        "id": 473,
+        "name": "FCL Tigers",
+        "link": "/api/v1/teams/473"
+      },
+      "toTeam": {
+        "id": 571,
+        "name": "Norwich Sea Unicorns",
+        "link": "/api/v1/teams/571"
+      },
+      "date": "2012-07-10",
+      "effectiveDate": "2012-07-10",
+      "resolutionDate": "2012-07-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Chad Smith assigned to Connecticut Tigers from GCL Tigers."
+    },
+    {
+      "id": 130185,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "fromTeam": {
+        "id": 571,
+        "name": "Norwich Sea Unicorns",
+        "link": "/api/v1/teams/571"
+      },
+      "toTeam": {
+        "id": 582,
+        "name": "West Michigan Whitecaps",
+        "link": "/api/v1/teams/582"
+      },
+      "date": "2012-07-21",
+      "effectiveDate": "2012-07-21",
+      "resolutionDate": "2012-07-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Chad Smith assigned to West Michigan Whitecaps from Connecticut Tigers."
+    },
+    {
+      "id": 182470,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "fromTeam": {
+        "id": 582,
+        "name": "West Michigan Whitecaps",
+        "link": "/api/v1/teams/582"
+      },
+      "toTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "date": "2014-03-29",
+      "effectiveDate": "2014-03-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Chad Smith assigned to Erie SeaWolves from West Michigan Whitecaps."
+    },
+    {
+      "id": 187140,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "fromTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2014-04-28",
+      "effectiveDate": "2014-04-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Chad Smith assigned to Toledo Mud Hens from Erie SeaWolves."
+    },
+    {
+      "id": 194940,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2014-06-18",
+      "effectiveDate": "2014-07-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Detroit Tigers selected the contract of Chad Smith from Toledo Mud Hens."
+    },
+    {
+      "id": 201178,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2014-07-19",
+      "effectiveDate": "2014-07-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Detroit Tigers optioned RHP Chad Smith to Toledo Mud Hens."
+    },
+    {
+      "id": 205131,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "date": "2014-08-16",
+      "effectiveDate": "2014-08-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Chad Smith assigned to Erie SeaWolves from Toledo Mud Hens."
+    },
+    {
+      "id": 208396,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "fromTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2014-09-29",
+      "effectiveDate": "2014-09-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Detroit Tigers recalled Chad Smith from Erie SeaWolves."
+    },
+    {
+      "id": 210486,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2014-10-13",
+      "effectiveDate": "2014-10-13",
+      "resolutionDate": "2014-10-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers activated RHP Chad Smith."
+    },
+    {
+      "id": 216122,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2015-02-19",
+      "effectiveDate": "2015-02-19",
+      "resolutionDate": "2015-02-19",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "Chad Smith changed number to 57."
+    },
+    {
+      "id": 216305,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2015-02-24",
+      "effectiveDate": "2015-02-24",
+      "resolutionDate": "2015-02-24",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Detroit Tigers designated RHP Chad Smith for assignment."
+    },
+    {
+      "id": 216377,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2015-02-26",
+      "effectiveDate": "2015-03-15",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Oakland Athletics claimed Chad Smith off waivers from Detroit Tigers."
+    },
+    {
+      "id": 217224,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2015-03-15",
+      "effectiveDate": "2015-03-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Oakland Athletics optioned RHP Chad Smith to Nashville Sounds."
+    },
+    {
+      "id": 224045,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2015-05-03",
+      "effectiveDate": "2015-05-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Oakland Athletics recalled RHP Chad Smith from Nashville Sounds."
+    },
+    {
+      "id": 224469,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2015-05-07",
+      "effectiveDate": "2015-05-07",
+      "resolutionDate": "2015-05-07",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Oakland Athletics designated RHP Chad Smith for assignment."
+    },
+    {
+      "id": 224737,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2015-05-08",
+      "effectiveDate": "2015-05-08",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Oakland Athletics traded RHP Chad Smith to Los Angeles Angels for cash."
+    },
+    {
+      "id": 224799,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2015-05-09",
+      "effectiveDate": "2015-05-09",
+      "resolutionDate": "2015-05-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Chad Smith assigned to Salt Lake Bees."
+    },
+    {
+      "id": 229173,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2015-06-06",
+      "effectiveDate": "2015-06-06",
+      "resolutionDate": "2015-06-06",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Los Angeles Angels released RHP Chad Smith."
+    },
+    {
+      "id": 242931,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2015-08-19",
+      "effectiveDate": "2015-08-19",
+      "resolutionDate": "2015-08-19",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent RHP Chad Smith to a minor league contract."
+    },
+    {
+      "id": 242932,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2015-08-20",
+      "effectiveDate": "2015-08-20",
+      "resolutionDate": "2015-08-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Chad Smith assigned to Round Rock Express."
+    },
+    {
+      "id": 243062,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2015-08-21",
+      "effectiveDate": "2015-08-21",
+      "resolutionDate": "2015-08-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express placed RHP Chad Smith on the 7-day disabled list."
+    },
+    {
+      "id": 243789,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "fromTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "toTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "date": "2015-08-28",
+      "effectiveDate": "2015-08-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Chad Smith assigned to Frisco RoughRiders from Round Rock Express."
+    },
+    {
+      "id": 245367,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "fromTeam": {
+        "id": 540,
+        "name": "Frisco RoughRiders",
+        "link": "/api/v1/teams/540"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2015-09-15",
+      "effectiveDate": "2015-09-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Chad Smith assigned to Round Rock Express from Frisco RoughRiders."
+    },
+    {
+      "id": 249878,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2015-11-06",
+      "effectiveDate": "2015-11-06",
+      "resolutionDate": "2015-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Chad Smith elected free agency."
+    },
+    {
+      "id": 251306,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "toTeam": {
+        "id": 686,
+        "name": "Criollos de Caguas",
+        "link": "/api/v1/teams/686"
+      },
+      "date": "2015-12-04",
+      "effectiveDate": "2015-12-04",
+      "resolutionDate": "2015-12-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Chad Smith assigned to Criollos de Caguas."
+    },
+    {
+      "id": 251910,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2015-12-15",
+      "effectiveDate": "2015-12-15",
+      "resolutionDate": "2015-12-15",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent RHP Chad Smith to a minor league contract."
+    },
+    {
+      "id": 258510,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2016-03-29",
+      "effectiveDate": "2016-03-29",
+      "resolutionDate": "2016-03-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Chad Smith assigned to Round Rock Express."
+    },
+    {
+      "id": 263394,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2016-04-25",
+      "effectiveDate": "2016-04-25",
+      "resolutionDate": "2016-04-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express placed RHP Chad Smith on the 7-day disabled list."
+    },
+    {
+      "id": 267729,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2016-06-01",
+      "effectiveDate": "2016-06-01",
+      "resolutionDate": "2016-06-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Round Rock Express activated RHP Chad Smith from the 7-day disabled list."
+    },
+    {
+      "id": 269587,
+      "person": {
+        "id": 605477,
+        "fullName": "Chad Smith",
+        "link": "/api/v1/people/605477",
+        "nameSlug": "chad-smith-605477"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2016-06-06",
+      "effectiveDate": "2016-06-06",
+      "resolutionDate": "2016-06-06",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Round Rock Express released RHP Chad Smith."
+    }
+  ]
+}

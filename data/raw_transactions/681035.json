@@ -1,0 +1,883 @@
+{
+  "player_id": 681035,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:d2c82fafd6c157e7f1ecbc11ef452763a1685daa7ae836e0076b798f76dc1ad4",
+  "transactions": [
+    {
+      "id": 505648,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2021-07-17",
+      "effectiveDate": "2021-07-17",
+      "resolutionDate": "2021-07-17",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "New York Mets signed RHP Christian Scott."
+    },
+    {
+      "id": 512662,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 3279,
+        "name": "Mets Organization",
+        "link": "/api/v1/teams/3279"
+      },
+      "date": "2021-08-17",
+      "effectiveDate": "2021-08-17",
+      "resolutionDate": "2021-08-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Christian Scott assigned to Mets Organization."
+    },
+    {
+      "id": 516189,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "date": "2021-09-07",
+      "effectiveDate": "2021-09-07",
+      "resolutionDate": "2021-09-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Christian Scott assigned to FCL Mets."
+    },
+    {
+      "id": 620403,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "fromTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2022-05-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Christian Scott assigned to St. Lucie Mets from FCL Mets."
+    },
+    {
+      "id": 634903,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2022-07-03",
+      "effectiveDate": "2022-07-03",
+      "resolutionDate": "2022-07-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Lucie Mets placed RHP Christian Scott on the 7-day injured list."
+    },
+    {
+      "id": 640702,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2022-07-27",
+      "effectiveDate": "2022-07-27",
+      "resolutionDate": "2022-07-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Lucie Mets activated RHP Christian Scott from the 7-day injured list."
+    },
+    {
+      "id": 683253,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2022-08-08",
+      "effectiveDate": "2022-08-08",
+      "resolutionDate": "2022-08-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Brooklyn Cyclones activated RHP Christian Scott."
+    },
+    {
+      "id": 644417,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "fromTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2022-08-08",
+      "effectiveDate": "2022-08-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Christian Scott assigned to Brooklyn Cyclones from St. Lucie Mets."
+    },
+    {
+      "id": 652648,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 490,
+        "name": "Peoria Javelinas",
+        "link": "/api/v1/teams/490"
+      },
+      "date": "2022-09-16",
+      "effectiveDate": "2022-09-16",
+      "resolutionDate": "2022-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Peoria Javelinas activated RHP Christian Scott."
+    },
+    {
+      "id": 670299,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 490,
+        "name": "Peoria Javelinas",
+        "link": "/api/v1/teams/490"
+      },
+      "date": "2022-09-16",
+      "effectiveDate": "2022-09-16",
+      "resolutionDate": "2022-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Peoria Javelinas activated RHP Christian Scott."
+    },
+    {
+      "id": 690805,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2023-04-06",
+      "effectiveDate": "2023-04-06",
+      "resolutionDate": "2023-04-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Brooklyn Cyclones placed RHP Christian Scott on the 7-day injured list."
+    },
+    {
+      "id": 683254,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2023-04-06",
+      "effectiveDate": "2023-04-06",
+      "resolutionDate": "2023-04-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Brooklyn Cyclones placed RHP Christian Scott on the 7-day injured list."
+    },
+    {
+      "id": 688664,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "fromTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2023-05-03",
+      "effectiveDate": "2023-05-03",
+      "resolutionDate": "2023-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Brooklyn Cyclones sent RHP Christian Scott on a rehab assignment to St. Lucie Mets."
+    },
+    {
+      "id": 690806,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2023-05-05",
+      "effectiveDate": "2023-05-05",
+      "resolutionDate": "2023-05-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Brooklyn Cyclones activated RHP Christian Scott from the 7-day injured list."
+    },
+    {
+      "id": 690796,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2023-05-05",
+      "effectiveDate": "2023-05-05",
+      "resolutionDate": "2023-05-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Brooklyn Cyclones activated RHP Christian Scott."
+    },
+    {
+      "id": 690799,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2023-05-05",
+      "effectiveDate": "2023-05-05",
+      "resolutionDate": "2023-05-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Brooklyn Cyclones activated RHP Christian Scott."
+    },
+    {
+      "id": 689430,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "fromTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2023-05-05",
+      "effectiveDate": "2023-05-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Christian Scott assigned to Brooklyn Cyclones from St. Lucie Mets."
+    },
+    {
+      "id": 703336,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "fromTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2023-06-12",
+      "effectiveDate": "2023-06-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Christian Scott assigned to Binghamton Rumble Ponies from Brooklyn Cyclones."
+    },
+    {
+      "id": 720697,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2023-08-17",
+      "effectiveDate": "2023-08-17",
+      "resolutionDate": "2023-08-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Binghamton Rumble Ponies placed RHP Christian Scott on the 7-day injured list."
+    },
+    {
+      "id": 723830,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2023-09-06",
+      "effectiveDate": "2023-09-06",
+      "resolutionDate": "2023-09-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Binghamton Rumble Ponies activated RHP Christian Scott from the 7-day injured list."
+    },
+    {
+      "id": 757960,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2023-09-06",
+      "effectiveDate": "2023-09-06",
+      "resolutionDate": "2023-09-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Binghamton Rumble Ponies activated RHP Christian Scott from the 7-day injured list."
+    },
+    {
+      "id": 739039,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-02-01",
+      "effectiveDate": "2024-02-01",
+      "resolutionDate": "2024-02-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "New York Mets invited non-roster RHP Christian Scott to spring training."
+    },
+    {
+      "id": 757961,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2024-03-29",
+      "effectiveDate": "2024-03-29",
+      "resolutionDate": "2024-03-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Christian Scott assigned to Syracuse Mets."
+    },
+    {
+      "id": 768246,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "fromTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-05-04",
+      "effectiveDate": "2024-05-04",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Mets selected the contract of RHP Christian Scott from Syracuse Mets."
+    },
+    {
+      "id": 775271,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2024-05-31",
+      "effectiveDate": "2024-05-31",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Mets optioned RHP Christian Scott to Syracuse Mets."
+    },
+    {
+      "id": 784708,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "fromTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-07-03",
+      "effectiveDate": "2024-07-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Mets recalled RHP Christian Scott from Syracuse Mets."
+    },
+    {
+      "id": 789009,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-07-23",
+      "effectiveDate": "2024-07-22",
+      "resolutionDate": "2024-07-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets placed RHP Christian Scott on the 15-day injured list retroactive to July 22, 2024. Right ucl sprain."
+    },
+    {
+      "id": 800686,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-09-30",
+      "effectiveDate": "2024-09-30",
+      "resolutionDate": "2024-09-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets transferred RHP Christian Scott from the 15-day injured list to the 60-day injured list. Right ucl sprain."
+    },
+    {
+      "id": 815262,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "resolutionDate": "2024-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated RHP Christian Scott from the 60-day injured list."
+    },
+    {
+      "id": 803978,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "resolutionDate": "2024-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated RHP Christian Scott from the 60-day injured list."
+    },
+    {
+      "id": 850871,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2025-02-12",
+      "effectiveDate": "2025-02-12",
+      "resolutionDate": "2025-02-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets placed RHP Christian Scott on the 60-day injured list."
+    },
+    {
+      "id": 875331,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated RHP Christian Scott from the 60-day injured list."
+    },
+    {
+      "id": 891865,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2026-03-17",
+      "effectiveDate": "2026-03-17",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Mets optioned RHP Christian Scott to Syracuse Mets."
+    },
+    {
+      "id": 893897,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "fromTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "toTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "date": "2026-03-26",
+      "effectiveDate": "2026-03-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Christian Scott assigned to FCL Mets from Syracuse Mets."
+    },
+    {
+      "id": 896967,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "fromTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2026-04-03",
+      "effectiveDate": "2026-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Christian Scott assigned to Syracuse Mets from FCL Mets."
+    },
+    {
+      "id": 902502,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "fromTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-04-23",
+      "effectiveDate": "2026-04-23",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Mets recalled RHP Christian Scott from Syracuse Mets."
+    },
+    {
+      "id": 902740,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2026-04-24",
+      "effectiveDate": "2026-04-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Mets optioned RHP Christian Scott to Syracuse Mets."
+    },
+    {
+      "id": 903641,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "fromTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-04-28",
+      "effectiveDate": "2026-04-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Mets recalled RHP Christian Scott from Syracuse Mets."
+    },
+    {
+      "id": 918608,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-06-15",
+      "effectiveDate": "2026-06-12",
+      "resolutionDate": "2026-06-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets placed RHP Christian Scott on the 15-day injured list retroactive to June 12, 2026. Right hip impingement."
+    },
+    {
+      "id": 943655,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-09-22",
+      "effectiveDate": "2026-09-22",
+      "resolutionDate": "2026-09-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets placed RHP Christian Scott on the 15-day injured list. Left knee inflammation."
+    },
+    {
+      "id": 944556,
+      "person": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035",
+        "nameSlug": "christian-scott-681035"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-09-28",
+      "effectiveDate": "2026-09-28",
+      "resolutionDate": "2026-09-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated RHP Christian Scott from the 15-day injured list."
+    }
+  ]
+}

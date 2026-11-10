@@ -1,0 +1,531 @@
+{
+  "player_id": 692013,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:9ef5a2392008e6f6afb126b0fa8c8ad2d7532272e9b4e90fbe2b4060a394163c",
+  "transactions": [
+    {
+      "id": 424588,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2019-07-02",
+      "effectiveDate": "2019-07-02",
+      "resolutionDate": "2019-07-02",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Diego Padres signed free agent RHP Henry Baez to a minor league contract."
+    },
+    {
+      "id": 503122,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "toTeam": {
+        "id": 622,
+        "name": "DSL Padres Brown",
+        "link": "/api/v1/teams/622"
+      },
+      "date": "2021-07-10",
+      "effectiveDate": "2021-07-10",
+      "resolutionDate": "2021-07-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Henry Baez assigned to DSL Padres."
+    },
+    {
+      "id": 628366,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "toTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "date": "2022-06-06",
+      "effectiveDate": "2022-06-06",
+      "resolutionDate": "2022-06-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Henry Baez assigned to ACL Padres."
+    },
+    {
+      "id": 681241,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "fromTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "toTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "date": "2023-04-03",
+      "effectiveDate": "2023-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Henry Baez assigned to Lake Elsinore Storm from ACL Padres."
+    },
+    {
+      "id": 719996,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "fromTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "toTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "date": "2023-08-15",
+      "effectiveDate": "2023-08-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Henry Baez assigned to Fort Wayne TinCaps from Lake Elsinore Storm."
+    },
+    {
+      "id": 789042,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "fromTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2024-07-23",
+      "effectiveDate": "2024-07-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Henry Baez assigned to San Antonio Missions from Fort Wayne TinCaps."
+    },
+    {
+      "id": 806574,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "fromTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2024-11-19",
+      "effectiveDate": "2024-11-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "San Diego Padres selected the contract of RHP Henry Baez from San Antonio Missions."
+    },
+    {
+      "id": 819331,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2025-03-07",
+      "effectiveDate": "2025-03-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "San Diego Padres optioned RHP Henry Baez to El Paso Chihuahuas."
+    },
+    {
+      "id": 823345,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2025-03-28",
+      "effectiveDate": "2025-03-28",
+      "resolutionDate": "2025-03-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Antonio Missions activated RHP Henry Baez."
+    },
+    {
+      "id": 822899,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2025-03-28",
+      "effectiveDate": "2025-03-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Henry Baez assigned to San Antonio Missions from El Paso Chihuahuas."
+    },
+    {
+      "id": 861247,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2025-07-31",
+      "effectiveDate": "2025-07-31",
+      "resolutionDate": "2025-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Henry Baez assigned to Midland RockHounds."
+    },
+    {
+      "id": 860234,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2025-07-31",
+      "effectiveDate": "2025-07-31",
+      "resolutionDate": "2025-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Henry Baez assigned to Las Vegas Aviators."
+    },
+    {
+      "id": 860233,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2025-07-31",
+      "effectiveDate": "2025-07-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Athletics traded RHP Mason Miller and LHP JP Sears to San Diego Padres for RHP Henry Baez, RHP Eduarniel Núñez, SS Leo De Vries and RHP Braden Nett."
+    },
+    {
+      "id": 869722,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2025-08-14",
+      "effectiveDate": "2025-08-14",
+      "resolutionDate": "2025-08-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Midland RockHounds placed RHP Henry Baez on the 7-day injured list."
+    },
+    {
+      "id": 870555,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "fromTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2025-09-29",
+      "effectiveDate": "2025-09-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Athletics recalled RHP Henry Baez from Midland RockHounds."
+    },
+    {
+      "id": 888607,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2026-02-28",
+      "effectiveDate": "2026-02-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Athletics optioned RHP Henry Baez to Midland RockHounds."
+    },
+    {
+      "id": 890541,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "toTeam": {
+        "id": 372,
+        "name": "Athletics Prospects",
+        "link": "/api/v1/teams/372"
+      },
+      "date": "2026-03-05",
+      "effectiveDate": "2026-03-05",
+      "resolutionDate": "2026-03-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Henry Baez assigned to Athletics Prospects."
+    },
+    {
+      "id": 897368,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2026-04-02",
+      "effectiveDate": "2026-04-02",
+      "resolutionDate": "2026-04-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Midland RockHounds placed RHP Henry Baez on the 7-day injured list."
+    },
+    {
+      "id": 907664,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2026-05-12",
+      "effectiveDate": "2026-05-12",
+      "resolutionDate": "2026-05-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Midland RockHounds activated RHP Henry Baez from the 7-day injured list."
+    },
+    {
+      "id": 935726,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2026-08-05",
+      "effectiveDate": "2026-08-05",
+      "resolutionDate": "2026-08-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Midland RockHounds placed RHP Henry Baez on the 7-day injured list."
+    },
+    {
+      "id": 944054,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "toTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "date": "2026-09-17",
+      "effectiveDate": "2026-09-17",
+      "resolutionDate": "2026-09-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Midland RockHounds activated RHP Henry Baez from the 7-day injured list."
+    },
+    {
+      "id": 944340,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "fromTeam": {
+        "id": 237,
+        "name": "Midland RockHounds",
+        "link": "/api/v1/teams/237"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2026-09-28",
+      "effectiveDate": "2026-09-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Athletics recalled RHP Henry Baez from Midland RockHounds."
+    },
+    {
+      "id": 947266,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2026-10-29",
+      "effectiveDate": "2026-10-29",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Athletics sent RHP Henry Baez outright to Las Vegas Aviators."
+    },
+    {
+      "id": 948824,
+      "person": {
+        "id": 692013,
+        "fullName": "Henry Baez",
+        "link": "/api/v1/people/692013",
+        "nameSlug": "henry-baez-692013"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Henry Baez elected free agency."
+    }
+  ]
+}

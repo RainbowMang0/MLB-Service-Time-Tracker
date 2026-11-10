@@ -1,0 +1,112 @@
+{
+  "player_id": 408039,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:6d12f47e7cea749a254dc5506f574ee313764d6bc03259f9c399672aa8e6696f",
+  "transactions": [
+    {
+      "id": 1026,
+      "person": {
+        "id": 408039,
+        "fullName": "So Taguchi",
+        "link": "/api/v1/people/408039",
+        "nameSlug": "so-taguchi-408039"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2009-01-14",
+      "effectiveDate": "2009-01-14",
+      "resolutionDate": "2009-04-08",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Iowa Cubs signed free agent OF So Taguchi."
+    },
+    {
+      "id": 3920,
+      "person": {
+        "id": 408039,
+        "fullName": "So Taguchi",
+        "link": "/api/v1/people/408039",
+        "nameSlug": "so-taguchi-408039"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2009-05-05",
+      "effectiveDate": "2009-05-02",
+      "resolutionDate": "2009-05-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs placed LF So Taguchi on the 7-day disabled list retroactive to May 2, 2009."
+    },
+    {
+      "id": 8098,
+      "person": {
+        "id": 408039,
+        "fullName": "So Taguchi",
+        "link": "/api/v1/people/408039",
+        "nameSlug": "so-taguchi-408039"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2009-06-02",
+      "effectiveDate": "2009-06-02",
+      "resolutionDate": "2009-06-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "So Taguchi roster status changed by Iowa Cubs."
+    },
+    {
+      "id": 24753,
+      "person": {
+        "id": 408039,
+        "fullName": "So Taguchi",
+        "link": "/api/v1/people/408039",
+        "nameSlug": "so-taguchi-408039"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2009-09-16",
+      "effectiveDate": "2009-09-16",
+      "resolutionDate": "2009-09-16",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Chicago Cubs selected the contract of RF So Taguchi from Iowa Cubs."
+    },
+    {
+      "id": 26654,
+      "person": {
+        "id": 408039,
+        "fullName": "So Taguchi",
+        "link": "/api/v1/people/408039",
+        "nameSlug": "so-taguchi-408039"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2009-10-16",
+      "effectiveDate": "2009-10-16",
+      "resolutionDate": "2009-10-16",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Chicago Cubs released RF So Taguchi."
+    }
+  ]
+}

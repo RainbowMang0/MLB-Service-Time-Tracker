@@ -1,0 +1,1661 @@
+{
+  "player_id": 676083,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:7613fcf4f2b9e4087087b85563a8067b94f53544de99c6d6a299b6fc64629a87",
+  "transactions": [
+    {
+      "id": 321217,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-06-29",
+      "effectiveDate": "2017-06-29",
+      "resolutionDate": "2017-06-29",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "New York Yankees signed RHP Janson Junk."
+    },
+    {
+      "id": 321218,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 4725,
+        "name": "GCL Yankees West",
+        "link": "/api/v1/teams/4725"
+      },
+      "date": "2017-06-30",
+      "effectiveDate": "2017-06-30",
+      "resolutionDate": "2017-06-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Janson Junk assigned to GCL Yankees West."
+    },
+    {
+      "id": 323654,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 4725,
+        "name": "GCL Yankees West",
+        "link": "/api/v1/teams/4725"
+      },
+      "toTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "date": "2017-07-12",
+      "effectiveDate": "2017-07-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Janson Junk assigned to GCL Yankees East from GCL Yankees West."
+    },
+    {
+      "id": 353806,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2018-05-14",
+      "effectiveDate": "2018-05-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Janson Junk assigned to Charleston RiverDogs from GCL Yankees East."
+    },
+    {
+      "id": 394346,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-04-02",
+      "effectiveDate": "2019-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Janson Junk assigned to Tampa Tarpons from Charleston RiverDogs."
+    },
+    {
+      "id": 419741,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2019-07-25",
+      "effectiveDate": "2019-07-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Janson Junk assigned to Trenton Thunder from Tampa Tarpons."
+    },
+    {
+      "id": 420639,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-07-30",
+      "effectiveDate": "2019-07-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Janson Junk assigned to Tampa Tarpons from Trenton Thunder."
+    },
+    {
+      "id": 421522,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2019-08-02",
+      "effectiveDate": "2019-08-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Janson Junk assigned to Scranton/Wilkes-Barre RailRiders from Tampa Tarpons."
+    },
+    {
+      "id": 421754,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-08-03",
+      "effectiveDate": "2019-08-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Janson Junk assigned to Tampa Tarpons from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 425067,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-08-22",
+      "effectiveDate": "2019-08-20",
+      "resolutionDate": "2019-08-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Tarpons placed RHP Janson Junk on the 7-day injured list retroactive to August 20, 2019."
+    },
+    {
+      "id": 429744,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-09-13",
+      "effectiveDate": "2019-09-13",
+      "resolutionDate": "2019-09-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Tarpons activated RHP Janson Junk from the 7-day injured list."
+    },
+    {
+      "id": 463386,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2019-09-13",
+      "effectiveDate": "2019-09-13",
+      "resolutionDate": "2019-09-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Tarpons activated RHP Janson Junk from the 7-day injured list."
+    },
+    {
+      "id": 465704,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 537,
+        "name": "Hudson Valley Renegades",
+        "link": "/api/v1/teams/537"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Hudson Valley Renegades activated RHP Janson Junk."
+    },
+    {
+      "id": 467993,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 537,
+        "name": "Hudson Valley Renegades",
+        "link": "/api/v1/teams/537"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Hudson Valley Renegades activated RHP Janson Junk."
+    },
+    {
+      "id": 482446,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 537,
+        "name": "Hudson Valley Renegades",
+        "link": "/api/v1/teams/537"
+      },
+      "toTeam": {
+        "id": 1956,
+        "name": "Somerset Patriots",
+        "link": "/api/v1/teams/1956"
+      },
+      "date": "2021-05-02",
+      "effectiveDate": "2021-05-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Janson Junk assigned to Somerset Patriots from Hudson Valley Renegades."
+    },
+    {
+      "id": 508302,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2021-07-30",
+      "effectiveDate": "2021-07-30",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Los Angeles Angels traded LHP Andrew Heaney and cash to New York Yankees for RHP Janson Junk and RHP Elvis Peguero."
+    },
+    {
+      "id": 508310,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 559,
+        "name": "Rocket City Trash Pandas",
+        "link": "/api/v1/teams/559"
+      },
+      "date": "2021-07-30",
+      "effectiveDate": "2021-07-30",
+      "resolutionDate": "2021-07-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Janson Junk assigned to Rocket City Trash Pandas."
+    },
+    {
+      "id": 508548,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 559,
+        "name": "Rocket City Trash Pandas",
+        "link": "/api/v1/teams/559"
+      },
+      "date": "2021-07-31",
+      "effectiveDate": "2021-07-31",
+      "resolutionDate": "2021-07-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rocket City Trash Pandas activated RHP Janson Junk."
+    },
+    {
+      "id": 515790,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 559,
+        "name": "Rocket City Trash Pandas",
+        "link": "/api/v1/teams/559"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2021-09-03",
+      "effectiveDate": "2021-09-03",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Angels selected the contract of RHP Janson Junk from Rocket City Trash Pandas."
+    },
+    {
+      "id": 519424,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2021-09-30",
+      "effectiveDate": "2021-09-30",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned RHP Janson Junk to Salt Lake Bees."
+    },
+    {
+      "id": 520086,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2021-10-05",
+      "effectiveDate": "2021-10-05",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled RHP Janson Junk from Salt Lake Bees."
+    },
+    {
+      "id": 609118,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2022-03-30",
+      "effectiveDate": "2022-03-30",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned RHP Janson Junk to Salt Lake Bees."
+    },
+    {
+      "id": 619770,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2022-05-06",
+      "effectiveDate": "2022-05-06",
+      "resolutionDate": "2022-05-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt Lake Bees activated RHP Janson Junk."
+    },
+    {
+      "id": 625019,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2022-05-28",
+      "effectiveDate": "2022-05-28",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled RHP Janson Junk from Salt Lake Bees."
+    },
+    {
+      "id": 625119,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2022-05-29",
+      "effectiveDate": "2022-05-29",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned RHP Janson Junk to Salt Lake Bees."
+    },
+    {
+      "id": 632188,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2022-06-20",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled RHP Janson Junk from Salt Lake Bees."
+    },
+    {
+      "id": 633397,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2022-06-26",
+      "effectiveDate": "2022-06-26",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned RHP Janson Junk to Salt Lake Bees."
+    },
+    {
+      "id": 640552,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2022-07-27",
+      "effectiveDate": "2022-07-27",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled RHP Janson Junk from Salt Lake Bees."
+    },
+    {
+      "id": 643880,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2022-08-06",
+      "effectiveDate": "2022-08-06",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned RHP Janson Junk to Salt Lake Bees."
+    },
+    {
+      "id": 654942,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2022-10-06",
+      "effectiveDate": "2022-10-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled RHP Janson Junk from Salt Lake Bees."
+    },
+    {
+      "id": 661501,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2022-11-23",
+      "effectiveDate": "2022-11-23",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Milwaukee Brewers traded RF Hunter Renfroe to Los Angeles Angels for RHP Janson Junk, RHP Elvis Peguero and LHP Adam Seminaris."
+    },
+    {
+      "id": 675795,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2023-03-15",
+      "effectiveDate": "2023-03-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned RHP Janson Junk to Nashville Sounds."
+    },
+    {
+      "id": 684213,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2023-04-11",
+      "effectiveDate": "2023-04-11",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Milwaukee Brewers recalled RHP Janson Junk from Nashville Sounds."
+    },
+    {
+      "id": 684483,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2023-04-13",
+      "effectiveDate": "2023-04-13",
+      "resolutionDate": "2023-04-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Nashville Sounds activated RHP Janson Junk."
+    },
+    {
+      "id": 684471,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2023-04-13",
+      "effectiveDate": "2023-04-13",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned RHP Janson Junk to Nashville Sounds."
+    },
+    {
+      "id": 727192,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2023-10-01",
+      "effectiveDate": "2023-10-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Milwaukee Brewers recalled RHP Janson Junk from Nashville Sounds."
+    },
+    {
+      "id": 727946,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2023-10-05",
+      "effectiveDate": "2023-10-05",
+      "resolutionDate": "2023-10-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated RHP Janson Junk."
+    },
+    {
+      "id": 757796,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2024-03-19",
+      "effectiveDate": "2024-03-19",
+      "resolutionDate": "2024-03-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Nashville Sounds activated RHP Janson Junk."
+    },
+    {
+      "id": 757829,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2024-03-19",
+      "effectiveDate": "2024-03-19",
+      "resolutionDate": "2024-03-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Nashville Sounds activated RHP Janson Junk."
+    },
+    {
+      "id": 756006,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2024-03-19",
+      "effectiveDate": "2024-03-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned RHP Janson Junk to Nashville Sounds."
+    },
+    {
+      "id": 765829,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2024-04-27",
+      "effectiveDate": "2024-04-27",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Milwaukee Brewers recalled RHP Janson Junk from Nashville Sounds."
+    },
+    {
+      "id": 768486,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2024-05-06",
+      "effectiveDate": "2024-05-06",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned RHP Janson Junk to Nashville Sounds."
+    },
+    {
+      "id": 770082,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2024-05-10",
+      "effectiveDate": "2024-05-10",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Milwaukee Brewers recalled RHP Janson Junk from Nashville Sounds."
+    },
+    {
+      "id": 771618,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2024-05-13",
+      "effectiveDate": "2024-05-13",
+      "resolutionDate": "2024-05-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Nashville Sounds activated RHP Janson Junk."
+    },
+    {
+      "id": 770903,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2024-05-13",
+      "effectiveDate": "2024-05-13",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned RHP Janson Junk to Nashville Sounds."
+    },
+    {
+      "id": 775820,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2024-06-01",
+      "effectiveDate": "2024-06-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Milwaukee Brewers recalled RHP Janson Junk from Nashville Sounds."
+    },
+    {
+      "id": 778445,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2024-06-05",
+      "effectiveDate": "2024-06-05",
+      "resolutionDate": "2024-06-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Nashville Sounds activated RHP Janson Junk."
+    },
+    {
+      "id": 778204,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2024-06-05",
+      "effectiveDate": "2024-06-05",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned RHP Janson Junk to Nashville Sounds."
+    },
+    {
+      "id": 784782,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2024-07-03",
+      "effectiveDate": "2024-07-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Milwaukee Brewers recalled RHP Janson Junk from Nashville Sounds."
+    },
+    {
+      "id": 785268,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2024-07-05",
+      "effectiveDate": "2024-07-05",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned RHP Janson Junk to Nashville Sounds."
+    },
+    {
+      "id": 790031,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2024-07-26",
+      "effectiveDate": "2024-07-26",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Milwaukee Brewers recalled RHP Janson Junk from Nashville Sounds."
+    },
+    {
+      "id": 790462,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2024-07-28",
+      "effectiveDate": "2024-07-28",
+      "resolutionDate": "2024-07-28",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Milwaukee Brewers designated RHP Janson Junk for assignment."
+    },
+    {
+      "id": 792111,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2024-08-02",
+      "effectiveDate": "2024-08-02",
+      "resolutionDate": "2024-08-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Janson Junk assigned to Sugar Land Space Cowboys."
+    },
+    {
+      "id": 792110,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2024-08-02",
+      "effectiveDate": "2024-08-02",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Houston Astros claimed RHP Janson Junk off waivers from Milwaukee Brewers."
+    },
+    {
+      "id": 792146,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2024-08-02",
+      "effectiveDate": "2024-08-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned RHP Janson Junk to Sugar Land Space Cowboys."
+    },
+    {
+      "id": 796842,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2024-08-29",
+      "effectiveDate": "2024-08-29",
+      "resolutionDate": "2024-08-29",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Houston Astros designated RHP Janson Junk for assignment."
+    },
+    {
+      "id": 797051,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2024-08-31",
+      "effectiveDate": "2024-08-31",
+      "resolutionDate": "2024-08-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Janson Junk assigned to Las Vegas Aviators."
+    },
+    {
+      "id": 797050,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2024-08-31",
+      "effectiveDate": "2024-08-31",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Oakland Athletics claimed RHP Janson Junk off waivers from Houston Astros."
+    },
+    {
+      "id": 797216,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2024-09-01",
+      "effectiveDate": "2024-09-01",
+      "resolutionDate": "2024-09-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oakland Athletics activated RHP Janson Junk."
+    },
+    {
+      "id": 797905,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2024-09-05",
+      "effectiveDate": "2024-09-05",
+      "resolutionDate": "2024-09-05",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Oakland Athletics designated RHP Janson Junk for assignment."
+    },
+    {
+      "id": 798209,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2024-09-07",
+      "effectiveDate": "2024-09-07",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Oakland Athletics sent RHP Janson Junk outright to Las Vegas Aviators."
+    },
+    {
+      "id": 814410,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "resolutionDate": "2024-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Janson Junk elected free agency."
+    },
+    {
+      "id": 814412,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2025-02-10",
+      "effectiveDate": "2025-02-10",
+      "resolutionDate": "2025-02-10",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Miami Marlins signed free agent RHP Janson Junk to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 814414,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2025-02-10",
+      "effectiveDate": "2025-02-10",
+      "resolutionDate": "2025-02-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Janson Junk assigned to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 840509,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2025-05-24",
+      "effectiveDate": "2025-05-24",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Miami Marlins selected the contract of RHP Janson Junk from Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 866454,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2025-08-27",
+      "effectiveDate": "2025-08-24",
+      "resolutionDate": "2025-08-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins placed RHP Janson Junk on the 15-day injured list retroactive to August 24, 2025. Right ulnar nerve irritation."
+    },
+    {
+      "id": 867315,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2025-09-02",
+      "effectiveDate": "2025-09-02",
+      "resolutionDate": "2025-09-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins sent RHP Janson Junk on a rehab assignment to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 868222,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2025-09-08",
+      "effectiveDate": "2025-09-08",
+      "resolutionDate": "2025-09-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins activated RHP Janson Junk from the 15-day injured list."
+    },
+    {
+      "id": 899324,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Janson Junk changed number to 42."
+    },
+    {
+      "id": 900248,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Janson Junk changed number to 26."
+    },
+    {
+      "id": 914075,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2026-05-28",
+      "effectiveDate": "2026-05-28",
+      "resolutionDate": "2026-05-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins placed RHP Janson Junk on the 15-day injured list. Right shin bone inflammation."
+    },
+    {
+      "id": 923190,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2026-06-28",
+      "effectiveDate": "2026-06-28",
+      "resolutionDate": "2026-06-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins sent RHP Janson Junk on a rehab assignment to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 926447,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2026-06-28",
+      "effectiveDate": "2026-06-28",
+      "resolutionDate": "2026-06-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins sent RHP Janson Junk on a rehab assignment to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 926448,
+      "person": {
+        "id": 676083,
+        "fullName": "Janson Junk",
+        "link": "/api/v1/people/676083",
+        "nameSlug": "janson-junk-676083"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2026-07-09",
+      "effectiveDate": "2026-07-09",
+      "resolutionDate": "2026-07-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Miami Marlins activated RHP Janson Junk from the 15-day injured list."
+    }
+  ]
+}

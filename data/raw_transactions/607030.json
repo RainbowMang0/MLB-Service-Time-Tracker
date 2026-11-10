@@ -1,0 +1,787 @@
+{
+  "player_id": 607030,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:1ab059eb4b5799ca37f3475bc40a42b0fcc6f2883dc754fb90ce7dd4d7f75282",
+  "transactions": [
+    {
+      "id": 196198,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2014-06-19",
+      "effectiveDate": "2014-06-19",
+      "resolutionDate": "2014-06-19",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Los Angeles Angels signed Adam McCreery."
+    },
+    {
+      "id": 196199,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "toTeam": {
+        "id": 404,
+        "name": "ACL Angels",
+        "link": "/api/v1/teams/404"
+      },
+      "date": "2014-06-20",
+      "effectiveDate": "2014-06-20",
+      "resolutionDate": "2014-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Adam McCreery assigned to AZL Angels."
+    },
+    {
+      "id": 265183,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2016-05-11",
+      "effectiveDate": "2016-05-11",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Atlanta Braves traded RHP Jhoulys Chacin to Los Angeles Angels for LHP Adam McCreery."
+    },
+    {
+      "id": 265184,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "toTeam": {
+        "id": 429,
+        "name": "Danville Otterbots",
+        "link": "/api/v1/teams/429"
+      },
+      "date": "2016-05-12",
+      "effectiveDate": "2016-05-12",
+      "resolutionDate": "2016-05-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Adam McCreery assigned to Danville Braves."
+    },
+    {
+      "id": 267110,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 429,
+        "name": "Danville Otterbots",
+        "link": "/api/v1/teams/429"
+      },
+      "toTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "date": "2016-05-27",
+      "effectiveDate": "2016-05-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Adam McCreery assigned to Rome Braves from Danville Braves."
+    },
+    {
+      "id": 269590,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "toTeam": {
+        "id": 429,
+        "name": "Danville Otterbots",
+        "link": "/api/v1/teams/429"
+      },
+      "date": "2016-06-06",
+      "effectiveDate": "2016-06-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Adam McCreery assigned to Danville Braves from Rome Braves."
+    },
+    {
+      "id": 270168,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 429,
+        "name": "Danville Otterbots",
+        "link": "/api/v1/teams/429"
+      },
+      "toTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "date": "2016-06-09",
+      "effectiveDate": "2016-06-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Adam McCreery assigned to Rome Braves from Danville Braves."
+    },
+    {
+      "id": 277919,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "toTeam": {
+        "id": 429,
+        "name": "Danville Otterbots",
+        "link": "/api/v1/teams/429"
+      },
+      "date": "2016-07-09",
+      "effectiveDate": "2016-07-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Adam McCreery assigned to Danville Braves from Rome Braves."
+    },
+    {
+      "id": 282261,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "toTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "date": "2016-07-18",
+      "effectiveDate": "2016-07-18",
+      "resolutionDate": "2016-07-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Adam McCreery assigned to Rome Braves."
+    },
+    {
+      "id": 281930,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 429,
+        "name": "Danville Otterbots",
+        "link": "/api/v1/teams/429"
+      },
+      "toTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "date": "2016-08-03",
+      "effectiveDate": "2016-08-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Adam McCreery assigned to Rome Braves from Danville Braves."
+    },
+    {
+      "id": 282844,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "toTeam": {
+        "id": 429,
+        "name": "Danville Otterbots",
+        "link": "/api/v1/teams/429"
+      },
+      "date": "2016-08-06",
+      "effectiveDate": "2016-08-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Adam McCreery assigned to Danville Braves from Rome Braves."
+    },
+    {
+      "id": 303515,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 429,
+        "name": "Danville Otterbots",
+        "link": "/api/v1/teams/429"
+      },
+      "toTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "date": "2017-04-04",
+      "effectiveDate": "2017-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Adam McCreery assigned to Rome Braves from Danville Braves."
+    },
+    {
+      "id": 311321,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "toTeam": {
+        "id": 429,
+        "name": "Danville Otterbots",
+        "link": "/api/v1/teams/429"
+      },
+      "date": "2017-05-20",
+      "effectiveDate": "2017-05-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Adam McCreery assigned to Danville Braves from Rome Braves."
+    },
+    {
+      "id": 311531,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 429,
+        "name": "Danville Otterbots",
+        "link": "/api/v1/teams/429"
+      },
+      "toTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "date": "2017-05-22",
+      "effectiveDate": "2017-05-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Adam McCreery assigned to Rome Braves from Danville Braves."
+    },
+    {
+      "id": 318799,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 432,
+        "name": "Rome Emperors",
+        "link": "/api/v1/teams/432"
+      },
+      "toTeam": {
+        "id": 503,
+        "name": "Florida Fire Frogs",
+        "link": "/api/v1/teams/503"
+      },
+      "date": "2017-06-23",
+      "effectiveDate": "2017-06-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Adam McCreery assigned to Florida Fire Frogs from Rome Braves."
+    },
+    {
+      "id": 337570,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 503,
+        "name": "Florida Fire Frogs",
+        "link": "/api/v1/teams/503"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2017-11-20",
+      "effectiveDate": "2018-03-09",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Atlanta Braves selected the contract of Adam McCreery from Florida Fire Frogs."
+    },
+    {
+      "id": 343959,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 430,
+        "name": "Mississippi Mud Monsters",
+        "link": "/api/v1/teams/430"
+      },
+      "date": "2018-03-09",
+      "effectiveDate": "2018-03-09",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned LHP Adam McCreery to Mississippi Braves."
+    },
+    {
+      "id": 373187,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 430,
+        "name": "Mississippi Mud Monsters",
+        "link": "/api/v1/teams/430"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2018-08-05",
+      "effectiveDate": "2018-08-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Adam McCreery assigned to Gwinnett Stripers from Mississippi Braves."
+    },
+    {
+      "id": 373521,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2018-08-07",
+      "effectiveDate": "2018-08-10",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled Adam McCreery from Gwinnett Stripers."
+    },
+    {
+      "id": 374098,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2018-08-10",
+      "effectiveDate": "2018-08-10",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Atlanta Braves optioned LHP Adam McCreery to Gwinnett Stripers."
+    },
+    {
+      "id": 378384,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "toTeam": {
+        "id": 490,
+        "name": "Peoria Javelinas",
+        "link": "/api/v1/teams/490"
+      },
+      "date": "2018-09-12",
+      "effectiveDate": "2018-09-12",
+      "resolutionDate": "2018-09-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Adam McCreery assigned to Peoria Javelinas."
+    },
+    {
+      "id": 379009,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2018-10-01",
+      "effectiveDate": "2018-10-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Atlanta Braves recalled LHP Adam McCreery from Gwinnett Stripers."
+    },
+    {
+      "id": 384103,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2018-11-26",
+      "effectiveDate": "2018-11-26",
+      "resolutionDate": "2018-11-26",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Atlanta Braves designated LHP Adam McCreery for assignment."
+    },
+    {
+      "id": 384182,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2018-11-28",
+      "effectiveDate": "2019-03-07",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Atlanta Braves traded LHP Adam McCreery to Los Angeles Dodgers for cash."
+    },
+    {
+      "id": 390063,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2019-03-07",
+      "effectiveDate": "2019-03-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned LHP Adam McCreery to Oklahoma City Dodgers."
+    },
+    {
+      "id": 394323,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2019-04-02",
+      "effectiveDate": "2019-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Adam McCreery assigned to Tulsa Drillers from Oklahoma City Dodgers."
+    },
+    {
+      "id": 401684,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2019-05-16",
+      "effectiveDate": "2019-05-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Adam McCreery assigned to Oklahoma City Dodgers from Tulsa Drillers."
+    },
+    {
+      "id": 416994,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2019-07-12",
+      "effectiveDate": "2019-07-12",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Los Angeles Dodgers traded LHP Adam McCreery and C Josh Thole to Los Angeles Angels for cash."
+    },
+    {
+      "id": 417065,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2019-07-12",
+      "effectiveDate": "2019-07-12",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Angels optioned LHP Adam McCreery to Salt Lake Bees."
+    },
+    {
+      "id": 417659,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2019-07-15",
+      "effectiveDate": "2019-07-15",
+      "resolutionDate": "2019-07-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt Lake Bees activated LHP Adam McCreery."
+    },
+    {
+      "id": 420559,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2019-07-29",
+      "effectiveDate": "2019-07-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Angels recalled LHP Adam McCreery from Salt Lake Bees."
+    },
+    {
+      "id": 420783,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2019-07-30",
+      "effectiveDate": "2019-07-30",
+      "resolutionDate": "2019-07-30",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Los Angeles Angels designated LHP Adam McCreery for assignment."
+    },
+    {
+      "id": 421471,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "fromTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2019-08-02",
+      "effectiveDate": "2019-08-02",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Los Angeles Angels sent LHP Adam McCreery outright to Salt Lake Bees."
+    },
+    {
+      "id": 424556,
+      "person": {
+        "id": 607030,
+        "fullName": "Adam McCreery",
+        "link": "/api/v1/people/607030",
+        "nameSlug": "adam-mccreery-607030"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2019-08-19",
+      "effectiveDate": "2019-08-19",
+      "resolutionDate": "2019-08-19",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Salt Lake Bees released LHP Adam McCreery."
+    }
+  ]
+}

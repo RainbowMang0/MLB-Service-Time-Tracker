@@ -1,0 +1,904 @@
+{
+  "player_id": 550298,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:3b4e24a04f7cc6bf092ed996e049f86bcebc80050fd53db4074116f0cc0879e0",
+  "transactions": [
+    {
+      "id": 12562,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "toTeam": {
+        "id": 472,
+        "name": "GCL Reds",
+        "link": "/api/v1/teams/472"
+      },
+      "date": "2009-06-23",
+      "effectiveDate": "2009-06-23",
+      "resolutionDate": "2009-06-23",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "GCL Reds signed Yorman Rodriguez."
+    },
+    {
+      "id": 18196,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "fromTeam": {
+        "id": 472,
+        "name": "GCL Reds",
+        "link": "/api/v1/teams/472"
+      },
+      "toTeam": {
+        "id": 513,
+        "name": "Billings Mustangs",
+        "link": "/api/v1/teams/513"
+      },
+      "date": "2009-07-25",
+      "effectiveDate": "2009-07-25",
+      "resolutionDate": "2009-07-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Yorman Rodriguez assigned to Billings Mustangs from GCL Reds."
+    },
+    {
+      "id": 81556,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "fromTeam": {
+        "id": 513,
+        "name": "Billings Mustangs",
+        "link": "/api/v1/teams/513"
+      },
+      "toTeam": {
+        "id": 459,
+        "name": "Dayton Dragons",
+        "link": "/api/v1/teams/459"
+      },
+      "date": "2011-04-04",
+      "effectiveDate": "2011-04-04",
+      "resolutionDate": "2011-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Yorman Rodriguez assigned to Dayton Dragons from Billings Mustangs."
+    },
+    {
+      "id": 97958,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "toTeam": {
+        "id": 459,
+        "name": "Dayton Dragons",
+        "link": "/api/v1/teams/459"
+      },
+      "date": "2011-07-24",
+      "effectiveDate": "2011-07-20",
+      "resolutionDate": "2011-07-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Dayton Dragons placed CF Yorman Rodriguez on the 7-day disabled list retroactive to July 20, 2011."
+    },
+    {
+      "id": 98493,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "toTeam": {
+        "id": 459,
+        "name": "Dayton Dragons",
+        "link": "/api/v1/teams/459"
+      },
+      "date": "2011-07-29",
+      "effectiveDate": "2011-07-29",
+      "resolutionDate": "2011-07-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Dayton Dragons activated CF Yorman Rodriguez from the 7-day disabled list."
+    },
+    {
+      "id": 99040,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "toTeam": {
+        "id": 459,
+        "name": "Dayton Dragons",
+        "link": "/api/v1/teams/459"
+      },
+      "date": "2011-08-02",
+      "effectiveDate": "2011-08-02",
+      "resolutionDate": "2011-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Dayton Dragons placed CF Yorman Rodriguez on the 7-day disabled list. bruised left shoulder"
+    },
+    {
+      "id": 104265,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "toTeam": {
+        "id": 459,
+        "name": "Dayton Dragons",
+        "link": "/api/v1/teams/459"
+      },
+      "date": "2011-09-15",
+      "effectiveDate": "2011-09-15",
+      "resolutionDate": "2011-09-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Yorman Rodriguez roster status changed by Dayton Dragons."
+    },
+    {
+      "id": 112356,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "fromTeam": {
+        "id": 459,
+        "name": "Dayton Dragons",
+        "link": "/api/v1/teams/459"
+      },
+      "toTeam": {
+        "id": 423,
+        "name": "Bakersfield Blaze",
+        "link": "/api/v1/teams/423"
+      },
+      "date": "2012-04-01",
+      "effectiveDate": "2012-04-01",
+      "resolutionDate": "2012-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Yorman Rodriguez assigned to Bakersfield Blaze from Dayton Dragons."
+    },
+    {
+      "id": 117432,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "fromTeam": {
+        "id": 423,
+        "name": "Bakersfield Blaze",
+        "link": "/api/v1/teams/423"
+      },
+      "toTeam": {
+        "id": 513,
+        "name": "Billings Mustangs",
+        "link": "/api/v1/teams/513"
+      },
+      "date": "2012-05-08",
+      "effectiveDate": "2012-05-08",
+      "resolutionDate": "2012-05-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Yorman Rodriguez assigned to Billings Mustangs from Bakersfield Blaze."
+    },
+    {
+      "id": 126282,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "fromTeam": {
+        "id": 513,
+        "name": "Billings Mustangs",
+        "link": "/api/v1/teams/513"
+      },
+      "toTeam": {
+        "id": 3296,
+        "name": "Reds Alternate Training Site",
+        "link": "/api/v1/teams/3296"
+      },
+      "date": "2012-06-15",
+      "effectiveDate": "2012-06-15",
+      "resolutionDate": "2012-06-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Yorman Rodriguez assigned to Reds Extended Spring Training from Billings Mustangs."
+    },
+    {
+      "id": 126389,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "fromTeam": {
+        "id": 3296,
+        "name": "Reds Alternate Training Site",
+        "link": "/api/v1/teams/3296"
+      },
+      "toTeam": {
+        "id": 459,
+        "name": "Dayton Dragons",
+        "link": "/api/v1/teams/459"
+      },
+      "date": "2012-06-22",
+      "effectiveDate": "2012-06-22",
+      "resolutionDate": "2012-06-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Yorman Rodriguez assigned to Dayton Dragons from Reds Extended Spring Training."
+    },
+    {
+      "id": 140110,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "fromTeam": {
+        "id": 459,
+        "name": "Dayton Dragons",
+        "link": "/api/v1/teams/459"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2012-11-19",
+      "effectiveDate": "2013-03-12",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Cincinnati Reds selected the contract of Yorman Rodriguez from Dayton Dragons."
+    },
+    {
+      "id": 144777,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 423,
+        "name": "Bakersfield Blaze",
+        "link": "/api/v1/teams/423"
+      },
+      "date": "2013-03-12",
+      "effectiveDate": "2013-03-12",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cincinnati Reds optioned Yorman Rodriguez to Bakersfield Blaze."
+    },
+    {
+      "id": 158902,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "fromTeam": {
+        "id": 423,
+        "name": "Bakersfield Blaze",
+        "link": "/api/v1/teams/423"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2013-06-18",
+      "effectiveDate": "2013-06-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Yorman Rodriguez assigned to Pensacola Blue Wahoos from Bakersfield Blaze."
+    },
+    {
+      "id": 171539,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "fromTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2013-10-02",
+      "effectiveDate": "2014-03-11",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cincinnati Reds recalled Yorman Rodriguez from Pensacola Blue Wahoos."
+    },
+    {
+      "id": 173719,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "toTeam": {
+        "id": 1311,
+        "name": "National League Fall Stars",
+        "link": "/api/v1/teams/1311"
+      },
+      "date": "2013-11-01",
+      "effectiveDate": "2013-11-01",
+      "resolutionDate": "2013-11-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Yorman Rodriguez assigned to AFL West Fall Stars."
+    },
+    {
+      "id": 180663,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2014-03-11",
+      "effectiveDate": "2014-03-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cincinnati Reds optioned CF Yorman Rodriguez to Louisville Bats."
+    },
+    {
+      "id": 182138,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2014-03-28",
+      "effectiveDate": "2014-03-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Yorman Rodriguez assigned to Pensacola Blue Wahoos from Louisville Bats."
+    },
+    {
+      "id": 192486,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "toTeam": {
+        "id": 69,
+        "name": "SOU South Division All-Stars",
+        "link": "/api/v1/teams/69"
+      },
+      "date": "2014-06-16",
+      "effectiveDate": "2014-06-16",
+      "resolutionDate": "2014-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Yorman Rodriguez assigned to SOU South Division All-Stars."
+    },
+    {
+      "id": 206880,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "fromTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2014-09-02",
+      "effectiveDate": "2015-03-10",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cincinnati Reds recalled Yorman Rodriguez from Pensacola Blue Wahoos."
+    },
+    {
+      "id": 216889,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2015-03-10",
+      "effectiveDate": "2015-03-10",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cincinnati Reds optioned CF Yorman Rodriguez to Louisville Bats."
+    },
+    {
+      "id": 236567,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2015-07-06",
+      "effectiveDate": "2015-07-11",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cincinnati Reds recalled Yorman Rodriguez from Louisville Bats."
+    },
+    {
+      "id": 237378,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2015-07-11",
+      "effectiveDate": "2015-07-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cincinnati Reds optioned CF Yorman Rodriguez to Louisville Bats."
+    },
+    {
+      "id": 237542,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2015-07-12",
+      "effectiveDate": "2015-07-12",
+      "resolutionDate": "2015-07-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Louisville Bats placed CF Yorman Rodriguez on the temporarily inactive list."
+    },
+    {
+      "id": 238150,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2015-07-16",
+      "effectiveDate": "2015-07-16",
+      "resolutionDate": "2015-07-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Louisville Bats activated CF Yorman Rodriguez from the temporarily inactive list."
+    },
+    {
+      "id": 239803,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2015-07-28",
+      "effectiveDate": "2015-07-26",
+      "resolutionDate": "2015-07-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Louisville Bats placed CF Yorman Rodriguez on the 7-day disabled list retroactive to July 26, 2015. left calf strain"
+    },
+    {
+      "id": 245968,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2015-09-16",
+      "effectiveDate": "2015-09-16",
+      "resolutionDate": "2015-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Louisville Bats activated CF Yorman Rodriguez from the 7-day disabled list."
+    },
+    {
+      "id": 245836,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "toTeam": {
+        "id": 697,
+        "name": "Bravos de Margarita",
+        "link": "/api/v1/teams/697"
+      },
+      "date": "2015-09-29",
+      "effectiveDate": "2015-09-29",
+      "resolutionDate": "2015-09-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Yorman Rodriguez assigned to Bravos de Margarita."
+    },
+    {
+      "id": 246601,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "fromTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2015-10-05",
+      "effectiveDate": "2015-10-05",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Cincinnati Reds recalled CF Yorman Rodriguez from Louisville Bats."
+    },
+    {
+      "id": 259612,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2016-04-03",
+      "effectiveDate": "2016-03-27",
+      "resolutionDate": "2016-03-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds placed CF Yorman Rodriguez on the 15-day disabled list retroactive to March 27, 2016. Left hamstring strain"
+    },
+    {
+      "id": 266416,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2016-05-22",
+      "effectiveDate": "2016-05-22",
+      "resolutionDate": "2016-05-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds transferred CF Yorman Rodriguez from the 15-day disabled list to the 60-day disabled list. Left hamstring strain"
+    },
+    {
+      "id": 277810,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "date": "2016-07-08",
+      "effectiveDate": "2016-07-08",
+      "resolutionDate": "2016-07-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Cincinnati Reds sent OF Yorman Rodriguez on a rehab assignment to Daytona Tortugas."
+    },
+    {
+      "id": 282582,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 459,
+        "name": "Dayton Dragons",
+        "link": "/api/v1/teams/459"
+      },
+      "date": "2016-08-05",
+      "effectiveDate": "2016-08-05",
+      "resolutionDate": "2016-08-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Cincinnati Reds sent CF Yorman Rodriguez on a rehab assignment to Dayton Dragons."
+    },
+    {
+      "id": 282602,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 450,
+        "name": "Daytona Tortugas",
+        "link": "/api/v1/teams/450"
+      },
+      "date": "2016-08-05",
+      "effectiveDate": "2016-08-05",
+      "resolutionDate": "2016-08-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Cincinnati Reds sent DH Yorman Rodriguez on a rehab assignment to Daytona Tortugas."
+    },
+    {
+      "id": 291339,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2016-10-27",
+      "effectiveDate": "2016-10-27",
+      "resolutionDate": "2016-10-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds activated CF Yorman Rodriguez from the 60-day disabled list."
+    },
+    {
+      "id": 291400,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "fromTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2016-10-28",
+      "effectiveDate": "2016-10-28",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Cincinnati Reds sent CF Yorman Rodriguez outright to Louisville Bats."
+    },
+    {
+      "id": 292457,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2016-11-07",
+      "effectiveDate": "2016-11-07",
+      "resolutionDate": "2016-11-07",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "CF Yorman Rodriguez elected free agency."
+    },
+    {
+      "id": 382798,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "fromTeam": {
+        "id": 697,
+        "name": "Bravos de Margarita",
+        "link": "/api/v1/teams/697"
+      },
+      "toTeam": {
+        "id": 699,
+        "name": "Tigres de Aragua",
+        "link": "/api/v1/teams/699"
+      },
+      "date": "2018-11-07",
+      "effectiveDate": "2018-11-07",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Bravos de Margarita traded OF Yorman Rodriguez to Tigres de Aragua for OF Albert Guaimaro and SS Alberti Chavez."
+    },
+    {
+      "id": 432553,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "toTeam": {
+        "id": 696,
+        "name": "Navegantes del Magallanes",
+        "link": "/api/v1/teams/696"
+      },
+      "date": "2019-11-06",
+      "effectiveDate": "2019-11-06",
+      "resolutionDate": "2019-11-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Yorman Rodriguez assigned to Navegantes del Magallanes."
+    },
+    {
+      "id": 801830,
+      "person": {
+        "id": 550298,
+        "fullName": "Yorman Rodriguez",
+        "link": "/api/v1/people/550298",
+        "nameSlug": "yorman-rodriguez-550298"
+      },
+      "toTeam": {
+        "id": 699,
+        "name": "Tigres de Aragua",
+        "link": "/api/v1/teams/699"
+      },
+      "date": "2024-10-11",
+      "effectiveDate": "2024-10-11",
+      "resolutionDate": "2024-10-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Yorman Rodriguez assigned to Tigres de Aragua."
+    }
+  ]
+}

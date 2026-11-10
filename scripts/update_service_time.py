@@ -102,6 +102,11 @@ CACHE_DIR = ROOT / "data" / "cache" / "transactions"
 MIN_TRANSACTION_YEAR = 2005  # don't bother reaching back further than this
 TODAY = dt.date.today()
 
+# How far back the morning league-wide transaction request looks. One call
+# covers the window. A move posted a day or two late still shows up; anyone
+# outside it keeps the transactions already on disk.
+TXN_LOOKBACK_DAYS = 3
+
 # Stamped on every record. BUMP THIS whenever a change to the service-time
 # rules would give a stored player a different figure -- it is what tells the
 # backfill's --recompute-all which records are computed from stale rules.
@@ -343,7 +348,10 @@ def _cache_transaction(raw: dict) -> dict | None:
 
 
 def _fetch_transactions_incremental(
-    player_id: int, full_refresh: bool, use_cache: bool = True
+    player_id: int,
+    full_refresh: bool,
+    use_cache: bool = True,
+    network: bool = True,
 ) -> list[dict]:
     """
     Fetch a player's transactions, reusing the on-disk cache when allowed.
@@ -351,7 +359,17 @@ def _fetch_transactions_incremental(
     `use_cache=False` is for historical backfill: a retired player's service
     time never changes, so caching ~4,000 of those histories would add tens of
     megabytes to the repo in exchange for nothing.
+
+    `network=False` reads the cache and does not call the feed. The daily job
+    uses that for a rostered player who did not move in the lookback window
+    and already has a usable file.
     """
+    if not network:
+        cached = _load_cached_transactions(player_id) if use_cache else []
+        if cached and _cache_is_legacy(cached):
+            return [t for t in cached if not _row_is_legacy_format(t)]
+        return cached
+
     cached = [] if (full_refresh or not use_cache) else _load_cached_transactions(player_id)
 
     if cached and _cache_is_legacy(cached):
@@ -756,6 +774,204 @@ def _still_on_ml_roster(transactions: list[Transaction]) -> bool:
     return False
 
 
+def _season_date(record: dict, *keys: str) -> dt.date | None:
+    """The first parseable date among those keys on a /seasons row."""
+    if not isinstance(record, dict):
+        return None
+    for key in keys:
+        raw = record.get(key)
+        if not isinstance(raw, str) or len(raw) < 10:
+            continue
+        try:
+            return dt.date.fromisoformat(raw[:10])
+        except ValueError:
+            continue
+    return None
+
+
+def offseason_on(today: dt.date, seasons: dict[int, dict]) -> bool:
+    """True after the last postseason game and before spring training.
+
+    `seasons` is {year: the /seasons row}. A missing date means we cannot
+    tell, and the answer is False so career stats are still pulled.
+    """
+    this = seasons.get(today.year) or {}
+    spring = _season_date(this, "springStartDate")
+    post_end = _season_date(
+        this, "postSeasonEndDate", "seasonEndDate", "regularSeasonEndDate"
+    )
+    if spring is not None and today < spring:
+        prev = seasons.get(today.year - 1) or {}
+        prev_end = _season_date(
+            prev, "postSeasonEndDate", "seasonEndDate", "regularSeasonEndDate"
+        )
+        return prev_end is not None and today > prev_end
+    if post_end is not None and today > post_end:
+        nxt = seasons.get(today.year + 1) or {}
+        next_spring = _season_date(nxt, "springStartDate")
+        return next_spring is None or today < next_spring
+    return False
+
+
+def current_offseason(today: dt.date) -> bool:
+    """Ask the season calendar whether `today` is the offseason.
+
+    One call names this year. A second is made only when today falls
+    outside it, to read last year's ending or next year's spring start.
+    If the calendar cannot be read, this returns False and career stats
+    are pulled rather than skipped on a guess.
+    """
+    try:
+        seasons = {today.year: mlb.get_season_record(today.year)}
+    except Exception as exc:
+        print(f"Could not read the season calendar ({exc}); career stats will be pulled.")
+        return False
+    this = seasons[today.year]
+    spring = _season_date(this, "springStartDate")
+    post_end = _season_date(
+        this, "postSeasonEndDate", "seasonEndDate", "regularSeasonEndDate"
+    )
+    try:
+        if spring is not None and today < spring:
+            seasons[today.year - 1] = mlb.get_season_record(today.year - 1)
+        elif post_end is not None and today > post_end:
+            seasons[today.year + 1] = mlb.get_season_record(today.year + 1)
+    except Exception as exc:
+        print(f"Could not read a neighboring season ({exc}); career stats will be pulled.")
+        return False
+    return offseason_on(today, seasons)
+
+
+def _player_ids_in_transactions(rows: list) -> set[int]:
+    found: set[int] = set()
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        person = row.get("person")
+        if not isinstance(person, dict):
+            continue
+        pid = person.get("id")
+        if isinstance(pid, bool) or not isinstance(pid, int):
+            continue
+        found.add(pid)
+    return found
+
+
+def players_who_moved(today: dt.date, days: int = TXN_LOOKBACK_DAYS) -> set[int] | None:
+    """Player ids in one league-wide transaction request, or None if it failed.
+
+    None means the caller should fetch every rostered player, which is what
+    the job did before this window existed. A failed window must not be
+    treated as "nobody moved".
+    """
+    span = max(1, int(days))
+    start = today - dt.timedelta(days=span - 1)
+    try:
+        rows = mlb.get_league_transactions(start, today)
+    except Exception as exc:
+        print(f"League transaction window failed ({exc}); fetching each rostered player.")
+        return None
+    if not isinstance(rows, list):
+        print("League transaction window was not a list; fetching each rostered player.")
+        return None
+    moved = _player_ids_in_transactions(rows)
+    print(
+        f"League transactions {start.isoformat()}..{today.isoformat()}: "
+        f"{len(rows)} rows, {len(moved)} players."
+    )
+    return moved
+
+
+def _transaction_cache_usable(player_id: int) -> bool:
+    """A file we can compute from without calling the feed.
+
+    Missing, unreadable, or written before team ids were stored: not usable.
+    An empty list is usable -- the feed was asked and returned nothing.
+    """
+    path = _cache_path(player_id)
+    if not path.exists():
+        return False
+    try:
+        cached = json.loads(path.read_text())
+    except (OSError, json.JSONDecodeError):
+        return False
+    if not isinstance(cached, list):
+        return False
+    return not _cache_is_legacy(cached)
+
+
+def needs_player_transaction_fetch(
+    player_id: int, *, full_refresh: bool, moved: set[int] | None
+) -> bool:
+    """Per-player transaction call: a full refresh, a player in the window,
+    or someone with no usable cache (newly added, or a file missing team ids).
+
+    `moved is None` means the league-wide request failed.
+    """
+    if full_refresh or moved is None:
+        return True
+    if int(player_id) in moved:
+        return True
+    return not _transaction_cache_usable(int(player_id))
+
+
+def prior_has_career_stats(prior: dict | None) -> bool:
+    """The stored record already carries the year-by-year stat lines."""
+    return isinstance(prior, dict) and isinstance(prior.get("season_stats"), dict)
+
+
+def _season_stats_from_prior(prior: dict) -> dict[int, dict]:
+    out: dict[int, dict] = {}
+    raw = prior.get("season_stats") or {}
+    if not isinstance(raw, dict):
+        return out
+    for key, value in raw.items():
+        try:
+            year = int(key)
+        except (TypeError, ValueError):
+            continue
+        if isinstance(value, dict):
+            out[year] = value
+    return out
+
+
+def _season_teams_from_prior(prior: dict, season_stats: dict[int, dict]) -> dict[int, list[int]]:
+    """Club ids the last run already resolved, plus any club on a stored stat line.
+
+    A year that has a stat line but no club id is still recorded, with an
+    empty list, so it still counts as a season he appeared in.
+    """
+    out: dict[int, list[int]] = {}
+    for row in prior.get("seasons") or []:
+        if not isinstance(row, dict):
+            continue
+        year = row.get("y")
+        if isinstance(year, bool) or not isinstance(year, int):
+            continue
+        teams = [
+            team for team in (row.get("t") or [])
+            if isinstance(team, int) and not isinstance(team, bool)
+        ]
+        if teams:
+            out[year] = teams
+    for year, groups in season_stats.items():
+        ids = list(out.get(year) or [])
+        if isinstance(groups, dict):
+            for group in groups.values():
+                if not isinstance(group, dict):
+                    continue
+                candidates = [group.get("team_id")]
+                for split in group.get("splits") or []:
+                    if isinstance(split, dict):
+                        candidates.append(split.get("team_id"))
+                for team_id in candidates:
+                    if isinstance(team_id, int) and not isinstance(team_id, bool) and team_id not in ids:
+                        ids.append(team_id)
+        if year not in out:
+            out[year] = ids
+    return out
+
+
 def build_player_record(
     roster_entry: dict,
     full_refresh: bool,
@@ -763,6 +979,9 @@ def build_player_record(
     horizon_end: dt.date | None = None,
     currently_rostered: bool = True,
     presume_active_from_debut: bool | None = None,
+    fetch_transactions: bool = True,
+    refresh_career_stats: bool = True,
+    prior: dict | None = None,
 ) -> dict:
     """
     `horizon_end` defaults to today (the normal daily-update behavior). Pass
@@ -780,7 +999,12 @@ def build_player_record(
     if presume_active_from_debut is None:
         presume_active_from_debut = PRESUME_ACTIVE_FROM_DEBUT
     player_id = roster_entry["id"]
-    raw_txns = _fetch_transactions_incremental(player_id, full_refresh, use_cache=use_cache)
+    raw_txns = _fetch_transactions_incremental(
+        player_id,
+        full_refresh,
+        use_cache=use_cache,
+        network=fetch_transactions,
+    )
 
     mlb_ids = mlb_team_ids()
     transactions = []
@@ -823,25 +1047,46 @@ def build_player_record(
                     txn_team_ids[year].append(tid)
                 break
 
-    bio = mlb.get_player_bio(player_id)
+    # In the offseason the year-by-year stat lines do not change. Reuse the
+    # ones already stored instead of asking /people for them again. A player
+    # with nothing stored yet (just added) is still fetched.
+    use_stored_stats = (not refresh_career_stats) and prior_has_career_stats(prior)
+    if use_stored_stats:
+        bio = {
+            "fullName": prior.get("name"),
+            "mlbDebutDate": prior.get("mlb_debut"),
+            "lastPlayedDate": prior.get("last_played"),
+            "birthDate": prior.get("birth_date"),
+            # Rostered players accrue because they are rostered. The active
+            # flag only matters for someone who is not on a 40-man list.
+            "active": False,
+        }
+        season_stats = _season_stats_from_prior(prior)
+        season_teams_bio = _season_teams_from_prior(prior, season_stats)
+        season_teams_bio = {
+            year: [tid for tid in ids if tid in mlb_ids]
+            for year, ids in season_teams_bio.items()
+        }
+    else:
+        bio = mlb.get_player_bio(player_id)
 
-    # Filtered against the 30 clubs rather than trusted as-is: year-by-year
-    # splits can carry minor league lines, and only /teams knows which ids
-    # are major league ones.
-    season_teams_bio = {
-        year: [tid for tid in ids if tid in mlb_ids]
-        for year, ids in mlb.season_teams_from_bio(bio).items()
-    }
-    season_teams_bio = {y: ids for y, ids in season_teams_bio.items() if ids}
+        # Filtered against the 30 clubs rather than trusted as-is: year-by-year
+        # splits can carry minor league lines, and only /teams knows which ids
+        # are major league ones.
+        season_teams_bio = {
+            year: [tid for tid in ids if tid in mlb_ids]
+            for year, ids in mlb.season_teams_from_bio(bio).items()
+        }
+        season_teams_bio = {y: ids for y, ids in season_teams_bio.items() if ids}
 
-    # The statline the /people hydrate has always returned. Minor-league
-    # club lines are dropped here, where the 30 club ids are known. A
-    # mid-season trade also arrives as a no-team combined row (numTeams >= 2);
-    # that row is the season total and is kept, with one split per club.
-    # See select_major_league_season_stats().
-    season_stats = mlb.select_major_league_season_stats(
-        mlb.season_stats_from_bio(bio), mlb_ids
-    )
+        # The statline the /people hydrate has always returned. Minor-league
+        # club lines are dropped here, where the 30 club ids are known. A
+        # mid-season trade also arrives as a no-team combined row (numTeams >= 2);
+        # that row is the season total and is kept, with one split per club.
+        # See select_major_league_season_stats().
+        season_stats = mlb.select_major_league_season_stats(
+            mlb.season_stats_from_bio(bio), mlb_ids
+        )
 
     debut = bio.get("mlbDebutDate")
     debut_date = dt.date.fromisoformat(debut) if debut else None
@@ -1595,6 +1840,18 @@ def main() -> None:
     if args.limit:
         roster = roster[: args.limit]
 
+    # One league-wide transaction request, then a per-player request only
+    # for someone who moved or who has no usable cache yet. --full-refresh
+    # still asks for every history.
+    offseason = current_offseason(TODAY)
+    moved = None if args.full_refresh else players_who_moved(TODAY)
+    txn_fetches = 0
+    stat_fetches = 0
+    if offseason:
+        print("Offseason: career stat lines already stored will not be re-pulled.")
+    else:
+        print("In season: career stat lines will be re-pulled.")
+
     previous_rostered = sum(1 for p in db.values() if p.get("on_40_man"))
 
     current_ids = set()
@@ -1602,13 +1859,37 @@ def main() -> None:
     for i, entry in enumerate(roster, 1):
         pid = str(entry["id"])
         current_ids.add(pid)
+        fetch_tx = needs_player_transaction_fetch(
+            entry["id"], full_refresh=args.full_refresh, moved=moved
+        )
+        # New players are fetched even in the offseason; everyone else keeps
+        # the stat lines from the last time they were pulled.
+        refresh_stats = (not offseason) or not prior_has_career_stats(db.get(pid))
+        if fetch_tx:
+            txn_fetches += 1
+        if refresh_stats:
+            stat_fetches += 1
         try:
-            record = build_player_record(entry, args.full_refresh)
+            record = build_player_record(
+                entry,
+                args.full_refresh,
+                fetch_transactions=fetch_tx,
+                refresh_career_stats=refresh_stats,
+                prior=db.get(pid),
+            )
             db[pid] = record
             print(f"  [{i}/{len(roster)}] {record['name']}: {record['service_time']}")
         except Exception as exc:  # keep going even if one player fails
             failures += 1
             print(f"  [{i}/{len(roster)}] FAILED for player {pid}: {exc}", file=sys.stderr)
+
+    print(
+        f"API shape this run: {txn_fetches} per-player transaction "
+        f"{'fetch' if txn_fetches == 1 else 'fetches'}, "
+        f"{stat_fetches} career-stat "
+        f"{'fetch' if stat_fetches == 1 else 'fetches'}, "
+        f"{len(roster)} rostered."
+    )
 
     # Checked BEFORE the de-flagging pass below and before anything is
     # written, because both are destructive: the pass rewrites every record

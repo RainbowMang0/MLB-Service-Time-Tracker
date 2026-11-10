@@ -1,0 +1,72 @@
+{
+  "player_id": 132720,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:32ce7472e2334105894be48f64d7421d188ab043ea2d88e56ea0d86f10245f6c",
+  "transactions": [
+    {
+      "id": 6990,
+      "person": {
+        "id": 132720,
+        "fullName": "Paul Bako",
+        "link": "/api/v1/people/132720",
+        "nameSlug": "paul-bako-132720"
+      },
+      "toTeam": {
+        "id": 522,
+        "name": "Reading Fightin Phils",
+        "link": "/api/v1/teams/522"
+      },
+      "date": "2009-05-29",
+      "effectiveDate": "2009-05-29",
+      "resolutionDate": "2009-05-29",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Reading Phillies signed free agent Paul Bako."
+    },
+    {
+      "id": 8779,
+      "person": {
+        "id": 132720,
+        "fullName": "Paul Bako",
+        "link": "/api/v1/people/132720",
+        "nameSlug": "paul-bako-132720"
+      },
+      "fromTeam": {
+        "id": 522,
+        "name": "Reading Fightin Phils",
+        "link": "/api/v1/teams/522"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2009-06-09",
+      "effectiveDate": "2009-06-09",
+      "resolutionDate": "2009-06-09",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Philadelphia Phillies selected the contract of C Paul Bako from Reading Phillies."
+    },
+    {
+      "id": 29482,
+      "person": {
+        "id": 132720,
+        "fullName": "Paul Bako",
+        "link": "/api/v1/people/132720",
+        "nameSlug": "paul-bako-132720"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2009-11-09",
+      "effectiveDate": "2009-11-09",
+      "resolutionDate": "2009-11-09",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Paul Bako elected free agency."
+    }
+  ]
+}

@@ -1,0 +1,2207 @@
+{
+  "player_id": 592325,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:de78d6060f394bc95a01c38776041d3b5b9a474de15a97ec53b16638f2ae1ebd",
+  "transactions": [
+    {
+      "id": 67551,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2010-08-18",
+      "effectiveDate": "2010-08-18",
+      "resolutionDate": "2010-08-18",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "New York Yankees signed OF Ben Gamel."
+    },
+    {
+      "id": 67552,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "date": "2010-08-19",
+      "effectiveDate": "2010-08-19",
+      "resolutionDate": "2010-08-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Ben Gamel assigned to GCL Yankees from New York Yankees."
+    },
+    {
+      "id": 91519,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2011-06-17",
+      "effectiveDate": "2011-06-17",
+      "resolutionDate": "2011-06-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Ben Gamel assigned to Staten Island Yankees from GCL Yankees."
+    },
+    {
+      "id": 94388,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2011-06-28",
+      "effectiveDate": "2011-06-26",
+      "resolutionDate": "2011-06-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Staten Island Yankees placed OF Ben Gamel on the 7-day disabled list retroactive to June 26, 2011."
+    },
+    {
+      "id": 96625,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "date": "2011-07-14",
+      "effectiveDate": "2011-07-14",
+      "resolutionDate": "2011-07-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Ben Gamel roster status changed by Staten Island Yankees."
+    },
+    {
+      "id": 112009,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2012-03-31",
+      "effectiveDate": "2012-03-31",
+      "resolutionDate": "2012-03-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Ben Gamel assigned to New York Yankees."
+    },
+    {
+      "id": 113972,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 586,
+        "name": "Staten Island Ferry Hawks",
+        "link": "/api/v1/teams/586"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2012-04-04",
+      "effectiveDate": "2012-04-04",
+      "resolutionDate": "2012-04-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Ben Gamel assigned to Charleston RiverDogs from Staten Island Yankees."
+    },
+    {
+      "id": 120086,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2012-05-31",
+      "effectiveDate": "2012-05-31",
+      "resolutionDate": "2012-05-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charleston RiverDogs placed OF Ben Gamel on the 7-day disabled list."
+    },
+    {
+      "id": 126482,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2012-06-23",
+      "effectiveDate": "2012-06-23",
+      "resolutionDate": "2012-06-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Ben Gamel roster status changed by Charleston RiverDogs."
+    },
+    {
+      "id": 145067,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2013-03-16",
+      "effectiveDate": "2013-03-16",
+      "resolutionDate": "2013-03-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Ben Gamel assigned to New York Yankees."
+    },
+    {
+      "id": 148506,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2013-04-03",
+      "effectiveDate": "2013-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Ben Gamel assigned to Tampa Yankees from Charleston RiverDogs."
+    },
+    {
+      "id": 165215,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2013-07-22",
+      "effectiveDate": "2013-07-19",
+      "resolutionDate": "2013-07-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Yankees placed CF Ben Gamel on the 7-day disabled list retroactive to July 19, 2013."
+    },
+    {
+      "id": 166874,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2013-08-04",
+      "effectiveDate": "2013-08-04",
+      "resolutionDate": "2013-08-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Ben Gamel roster status changed by Tampa Yankees."
+    },
+    {
+      "id": 168287,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 567,
+        "name": "Trenton Thunder",
+        "link": "/api/v1/teams/567"
+      },
+      "date": "2013-08-15",
+      "effectiveDate": "2013-08-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Ben Gamel assigned to Trenton Thunder from Tampa Yankees."
+    },
+    {
+      "id": 180817,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2014-03-13",
+      "effectiveDate": "2014-03-13",
+      "resolutionDate": "2014-03-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Ben Gamel assigned to New York Yankees."
+    },
+    {
+      "id": 216774,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2015-03-08",
+      "effectiveDate": "2015-03-08",
+      "resolutionDate": "2015-03-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Ben Gamel assigned to New York Yankees."
+    },
+    {
+      "id": 221631,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2015-04-09",
+      "effectiveDate": "2015-04-09",
+      "resolutionDate": "2015-04-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Ben Gamel assigned to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 246874,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 695,
+        "name": "Leones del Caracas",
+        "link": "/api/v1/teams/695"
+      },
+      "date": "2015-10-07",
+      "effectiveDate": "2015-10-07",
+      "resolutionDate": "2015-10-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Ben Gamel assigned to Leones del Caracas."
+    },
+    {
+      "id": 250449,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2015-11-20",
+      "effectiveDate": "2016-03-19",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Yankees selected the contract of Ben Gamel from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 257417,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2016-03-19",
+      "effectiveDate": "2016-03-19",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned LF Ben Gamel to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 264540,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2016-05-05",
+      "effectiveDate": "2016-05-12",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled Ben Gamel from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 265284,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2016-05-12",
+      "effectiveDate": "2016-05-12",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned LF Ben Gamel to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 281612,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2016-08-01",
+      "effectiveDate": "2016-08-03",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Yankees recalled Ben Gamel from Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 281973,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2016-08-03",
+      "effectiveDate": "2016-08-03",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Yankees optioned CF Ben Gamel to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 285937,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2016-08-31",
+      "effectiveDate": "2016-08-31",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "New York Yankees traded RF Ben Gamel to Seattle Mariners for RHP Jio Orozco and RHP Juan De Paula."
+    },
+    {
+      "id": 286303,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2016-09-02",
+      "effectiveDate": "2017-03-31",
+      "resolutionDate": "2016-09-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Ben Gamel roster status changed by Seattle Mariners."
+    },
+    {
+      "id": 302090,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2017-03-31",
+      "effectiveDate": "2017-03-31",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned RF Ben Gamel to Tacoma Rainiers."
+    },
+    {
+      "id": 307779,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2017-04-26",
+      "effectiveDate": "2017-04-26",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled LF Ben Gamel from Tacoma Rainiers."
+    },
+    {
+      "id": 345702,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2018-03-28",
+      "effectiveDate": "2018-03-26",
+      "resolutionDate": "2018-03-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners placed LF Ben Gamel on the 10-day disabled list retroactive to March 26, 2018. Right oblique strain."
+    },
+    {
+      "id": 348323,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 515,
+        "name": "Modesto Roadsters",
+        "link": "/api/v1/teams/515"
+      },
+      "date": "2018-04-05",
+      "effectiveDate": "2018-04-05",
+      "resolutionDate": "2018-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Seattle Mariners sent LF Ben Gamel on a rehab assignment to Modesto Nuts."
+    },
+    {
+      "id": 349030,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2018-04-10",
+      "effectiveDate": "2018-04-10",
+      "resolutionDate": "2018-04-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Seattle Mariners sent OF Ben Gamel on a rehab assignment to Tacoma Rainiers."
+    },
+    {
+      "id": 350073,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2018-04-18",
+      "effectiveDate": "2018-08-01",
+      "resolutionDate": "2018-04-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Ben Gamel roster status changed by Seattle Mariners."
+    },
+    {
+      "id": 372360,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2018-08-01",
+      "effectiveDate": "2018-08-01",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned LF Ben Gamel to Tacoma Rainiers."
+    },
+    {
+      "id": 375612,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2018-08-20",
+      "effectiveDate": "2018-08-20",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled LF Ben Gamel from Tacoma Rainiers."
+    },
+    {
+      "id": 385424,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2018-12-21",
+      "effectiveDate": "2019-08-24",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Milwaukee Brewers traded LF Domingo Santana to Seattle Mariners for LF Ben Gamel and RHP Noah Zavolas."
+    },
+    {
+      "id": 425382,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2019-08-24",
+      "effectiveDate": "2019-08-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Milwaukee Brewers optioned LF Ben Gamel to San Antonio Missions."
+    },
+    {
+      "id": 426561,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2019-08-31",
+      "effectiveDate": "2019-08-31",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Milwaukee Brewers recalled LF Ben Gamel from San Antonio Missions."
+    },
+    {
+      "id": 451731,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2020-09-20",
+      "effectiveDate": "2020-09-19",
+      "resolutionDate": "2020-09-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers placed LF Ben Gamel on the 10-day injured list retroactive to September 19, 2020."
+    },
+    {
+      "id": 452666,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2020-09-30",
+      "effectiveDate": "2020-09-30",
+      "resolutionDate": "2020-09-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated LF Ben Gamel from the 10-day injured list."
+    },
+    {
+      "id": 457512,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2020-12-02",
+      "effectiveDate": "2020-12-02",
+      "resolutionDate": "2020-12-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LF Ben Gamel elected free agency."
+    },
+    {
+      "id": 469484,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cleveland Indians signed free agent LF Ben Gamel to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 470350,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Ben Gamel assigned to Columbus Clippers."
+    },
+    {
+      "id": 478635,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2021-03-27",
+      "effectiveDate": "2021-03-27",
+      "resolutionDate": "2021-03-27",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Cleveland Indians selected the contract of RF Ben Gamel."
+    },
+    {
+      "id": 477424,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2021-03-27",
+      "effectiveDate": "2021-03-27",
+      "resolutionDate": "2021-03-27",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Cleveland Indians selected the contract of RF Ben Gamel."
+    },
+    {
+      "id": 474140,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2021-03-27",
+      "effectiveDate": "2021-03-27",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Cleveland Indians selected the contract of RF Ben Gamel from Columbus Clippers."
+    },
+    {
+      "id": 478746,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 3272,
+        "name": "Indians Alternate Training Site",
+        "link": "/api/v1/teams/3272"
+      },
+      "date": "2021-04-17",
+      "effectiveDate": "2021-04-17",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Cleveland Indians optioned RF Ben Gamel to Indians Alternate Training Site."
+    },
+    {
+      "id": 480681,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2021-04-17",
+      "effectiveDate": "2021-04-17",
+      "resolutionDate": "2021-04-17",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Cleveland Indians selected the contract of RF Ben Gamel."
+    },
+    {
+      "id": 484548,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 3272,
+        "name": "Indians Alternate Training Site",
+        "link": "/api/v1/teams/3272"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2021-05-04",
+      "effectiveDate": "2021-05-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Ben Gamel assigned to Columbus Clippers from Indians Alternate Training Site."
+    },
+    {
+      "id": 485173,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2021-05-05",
+      "effectiveDate": "2021-05-05",
+      "resolutionDate": "2021-05-05",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Cleveland Indians designated RF Ben Gamel for assignment."
+    },
+    {
+      "id": 486002,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2021-05-09",
+      "effectiveDate": "2021-05-09",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Pittsburgh Pirates claimed RF Ben Gamel off waivers from Cleveland Indians."
+    },
+    {
+      "id": 486042,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2021-05-10",
+      "effectiveDate": "2021-05-10",
+      "resolutionDate": "2021-05-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pittsburgh Pirates activated RF Ben Gamel."
+    },
+    {
+      "id": 489043,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2021-05-10",
+      "effectiveDate": "2021-05-10",
+      "resolutionDate": "2021-05-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pittsburgh Pirates activated RF Ben Gamel."
+    },
+    {
+      "id": 489885,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2021-05-10",
+      "effectiveDate": "2021-05-10",
+      "resolutionDate": "2021-05-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pittsburgh Pirates activated RF Ben Gamel."
+    },
+    {
+      "id": 510091,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2021-08-06",
+      "effectiveDate": "2021-08-05",
+      "resolutionDate": "2021-08-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pittsburgh Pirates placed RF Ben Gamel on the 10-day injured list. Right hamstring strain."
+    },
+    {
+      "id": 517440,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2021-08-15",
+      "effectiveDate": "2021-08-15",
+      "resolutionDate": "2021-08-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pittsburgh Pirates activated RF Ben Gamel from the 10-day injured list."
+    },
+    {
+      "id": 511963,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2021-08-15",
+      "effectiveDate": "2021-08-15",
+      "resolutionDate": "2021-08-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pittsburgh Pirates activated RF Ben Gamel from the 10-day injured list."
+    },
+    {
+      "id": 517771,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2021-08-15",
+      "effectiveDate": "2021-08-15",
+      "resolutionDate": "2021-08-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pittsburgh Pirates activated RF Ben Gamel from the 10-day injured list."
+    },
+    {
+      "id": 625126,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2022-05-29",
+      "effectiveDate": "2022-05-29",
+      "resolutionDate": "2022-05-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pittsburgh Pirates placed RF Ben Gamel on the 10-day injured list. Left hamstring strain."
+    },
+    {
+      "id": 632868,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 484,
+        "name": "Indianapolis Indians",
+        "link": "/api/v1/teams/484"
+      },
+      "date": "2022-06-23",
+      "effectiveDate": "2022-06-23",
+      "resolutionDate": "2022-06-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Pittsburgh Pirates sent RF Ben Gamel on a rehab assignment to Indianapolis Indians."
+    },
+    {
+      "id": 635286,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2022-07-05",
+      "effectiveDate": "2022-07-05",
+      "resolutionDate": "2022-07-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pittsburgh Pirates activated RF Ben Gamel from the 10-day injured list."
+    },
+    {
+      "id": 658218,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2022-11-06",
+      "effectiveDate": "2022-11-06",
+      "resolutionDate": "2022-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RF Ben Gamel elected free agency."
+    },
+    {
+      "id": 672708,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2023-02-23",
+      "effectiveDate": "2023-02-23",
+      "resolutionDate": "2023-02-23",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Tampa Bay Rays signed free agent RF Ben Gamel and  to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 672709,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2023-02-23",
+      "effectiveDate": "2023-02-23",
+      "resolutionDate": "2023-02-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Ben Gamel assigned to Durham Bulls."
+    },
+    {
+      "id": 696066,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2023-05-10",
+      "effectiveDate": "2023-05-10",
+      "resolutionDate": "2023-05-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls placed RF Ben Gamel on the 7-day injured list."
+    },
+    {
+      "id": 696067,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2023-05-24",
+      "effectiveDate": "2023-05-24",
+      "resolutionDate": "2023-05-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Durham Bulls activated RF Ben Gamel from the 7-day injured list."
+    },
+    {
+      "id": 710925,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2023-07-13",
+      "effectiveDate": "2023-07-13",
+      "resolutionDate": "2023-07-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Ben Gamel assigned to El Paso Chihuahuas."
+    },
+    {
+      "id": 710924,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2023-07-13",
+      "effectiveDate": "2023-07-13",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Tampa Bay Rays traded RF Ben Gamel to San Diego Padres."
+    },
+    {
+      "id": 711336,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2023-07-14",
+      "effectiveDate": "2023-07-14",
+      "resolutionDate": "2023-07-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "El Paso Chihuahuas activated RF Ben Gamel from the reserve list."
+    },
+    {
+      "id": 719770,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2023-08-14",
+      "effectiveDate": "2023-08-14",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "San Diego Padres selected the contract of RF Ben Gamel from El Paso Chihuahuas."
+    },
+    {
+      "id": 723942,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2023-09-07",
+      "effectiveDate": "2023-09-07",
+      "resolutionDate": "2023-09-07",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "San Diego Padres designated RF Ben Gamel for assignment."
+    },
+    {
+      "id": 724309,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2023-09-09",
+      "effectiveDate": "2023-09-09",
+      "resolutionDate": "2023-09-09",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RF Ben Gamel elected free agency."
+    },
+    {
+      "id": 724308,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2023-09-09",
+      "effectiveDate": "2023-09-09",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "San Diego Padres sent RF Ben Gamel outright to El Paso Chihuahuas."
+    },
+    {
+      "id": 740555,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-02-12",
+      "effectiveDate": "2024-02-12",
+      "resolutionDate": "2024-02-12",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Mets signed free agent RF Ben Gamel to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 740556,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2024-02-12",
+      "effectiveDate": "2024-02-12",
+      "resolutionDate": "2024-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Ben Gamel assigned to Syracuse Mets."
+    },
+    {
+      "id": 773518,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2024-05-20",
+      "effectiveDate": "2024-05-20",
+      "resolutionDate": "2024-05-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Mets placed RF Ben Gamel on the 7-day injured list."
+    },
+    {
+      "id": 779359,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2024-06-11",
+      "effectiveDate": "2024-06-11",
+      "resolutionDate": "2024-06-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Mets activated RF Ben Gamel from the 7-day injured list."
+    },
+    {
+      "id": 782807,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-06-25",
+      "effectiveDate": "2024-06-25",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Mets selected the contract of RF Ben Gamel from Syracuse Mets."
+    },
+    {
+      "id": 795106,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-08-18",
+      "effectiveDate": "2024-08-18",
+      "resolutionDate": "2024-08-18",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Mets designated RF Ben Gamel for assignment."
+    },
+    {
+      "id": 795506,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2024-08-20",
+      "effectiveDate": "2024-08-20",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Houston Astros claimed RF Ben Gamel off waivers from New York Mets."
+    },
+    {
+      "id": 795827,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2024-08-22",
+      "effectiveDate": "2024-08-22",
+      "resolutionDate": "2024-08-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros activated RF Ben Gamel."
+    },
+    {
+      "id": 795825,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2024-08-22",
+      "effectiveDate": "2024-08-22",
+      "resolutionDate": "2024-08-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros activated RF Ben Gamel."
+    },
+    {
+      "id": 800610,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2024-09-15",
+      "effectiveDate": "2024-09-29",
+      "resolutionDate": "2024-09-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros transferred RF Ben Gamel from the 10-day injured list to the 60-day injured list."
+    },
+    {
+      "id": 799405,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2024-09-17",
+      "effectiveDate": "2024-09-15",
+      "resolutionDate": "2024-09-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Houston Astros placed RF Ben Gamel on the 10-day injured list retroactive to September 15, 2024."
+    },
+    {
+      "id": 803513,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2024-10-31",
+      "effectiveDate": "2024-10-31",
+      "resolutionDate": "2024-10-31",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RF Ben Gamel elected free agency."
+    },
+    {
+      "id": 813660,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2025-02-06",
+      "effectiveDate": "2025-02-06",
+      "resolutionDate": "2025-02-06",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Houston Astros signed free agent RF Ben Gamel."
+    },
+    {
+      "id": 821508,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2025-03-22",
+      "effectiveDate": "2025-03-22",
+      "resolutionDate": "2025-03-22",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Houston Astros released RF Ben Gamel."
+    },
+    {
+      "id": 822752,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-03-27",
+      "effectiveDate": "2025-03-27",
+      "resolutionDate": "2025-03-27",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent RF Ben Gamel to a minor league contract."
+    },
+    {
+      "id": 822753,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2025-03-28",
+      "effectiveDate": "2025-03-28",
+      "resolutionDate": "2025-03-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Ben Gamel assigned to Toledo Mud Hens."
+    },
+    {
+      "id": 832174,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2025-04-25",
+      "effectiveDate": "2025-04-25",
+      "resolutionDate": "2025-04-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens placed RF Ben Gamel on the 7-day injured list."
+    },
+    {
+      "id": 840075,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2025-05-21",
+      "effectiveDate": "2025-05-21",
+      "resolutionDate": "2025-05-21",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Toledo Mud Hens released RF Ben Gamel."
+    },
+    {
+      "id": 845629,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2025-06-07",
+      "effectiveDate": "2025-06-07",
+      "resolutionDate": "2025-06-07",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Angels signed free agent RF Ben Gamel to a minor league contract."
+    },
+    {
+      "id": 845630,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2025-06-07",
+      "effectiveDate": "2025-06-07",
+      "resolutionDate": "2025-06-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Ben Gamel assigned to Salt Lake Bees."
+    },
+    {
+      "id": 851981,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2025-07-01",
+      "effectiveDate": "2025-07-01",
+      "resolutionDate": "2025-07-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt Lake Bees placed RF Ben Gamel on the 7-day injured list."
+    },
+    {
+      "id": 930773,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2025-07-06",
+      "effectiveDate": "2026-07-24",
+      "resolutionDate": "2026-07-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gwinnett Stripers placed RF Ben Gamel on the 7-day injured list."
+    },
+    {
+      "id": 863300,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 460,
+        "name": "Tri-City Dust Devils",
+        "link": "/api/v1/teams/460"
+      },
+      "date": "2025-08-08",
+      "effectiveDate": "2025-08-08",
+      "resolutionDate": "2025-08-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Salt Lake Bees sent RF Ben Gamel on a rehab assignment to Tri-City Dust Devils."
+    },
+    {
+      "id": 864499,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 460,
+        "name": "Tri-City Dust Devils",
+        "link": "/api/v1/teams/460"
+      },
+      "date": "2025-08-08",
+      "effectiveDate": "2025-08-08",
+      "resolutionDate": "2025-08-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Salt Lake Bees sent RF Ben Gamel on a rehab assignment to Tri-City Dust Devils."
+    },
+    {
+      "id": 864538,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2025-08-14",
+      "effectiveDate": "2025-08-14",
+      "resolutionDate": "2025-08-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt Lake Bees activated RF Ben Gamel from the 7-day injured list."
+    },
+    {
+      "id": 864545,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2025-08-14",
+      "effectiveDate": "2025-08-14",
+      "resolutionDate": "2025-08-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt Lake Bees activated RF Ben Gamel from the 7-day injured list."
+    },
+    {
+      "id": 876122,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RF Ben Gamel elected free agency."
+    },
+    {
+      "id": 878436,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2025-12-06",
+      "effectiveDate": "2025-12-06",
+      "resolutionDate": "2025-12-06",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent RF Ben Gamel to a minor league contract."
+    },
+    {
+      "id": 878437,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2025-12-06",
+      "effectiveDate": "2025-12-06",
+      "resolutionDate": "2025-12-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Ben Gamel assigned to Gwinnett Stripers."
+    },
+    {
+      "id": 884124,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2025-12-06",
+      "effectiveDate": "2025-12-06",
+      "resolutionDate": "2025-12-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RF Ben Gamel roster status changed by Atlanta Braves."
+    },
+    {
+      "id": 934583,
+      "person": {
+        "id": 592325,
+        "fullName": "Ben Gamel",
+        "link": "/api/v1/people/592325",
+        "nameSlug": "ben-gamel-592325"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2026-08-03",
+      "effectiveDate": "2026-08-03",
+      "resolutionDate": "2026-08-03",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Gwinnett Stripers released RF Ben Gamel."
+    }
+  ]
+}

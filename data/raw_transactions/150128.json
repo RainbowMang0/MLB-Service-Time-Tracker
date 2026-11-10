@@ -1,0 +1,97 @@
+{
+  "player_id": 150128,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:e85cdf5d296d04314466b7eeb904873b74eb83aec0f6f75ecfa1d64df0410bf4",
+  "transactions": [
+    {
+      "id": 3714,
+      "person": {
+        "id": 150128,
+        "fullName": "Denny Stark",
+        "link": "/api/v1/people/150128",
+        "nameSlug": "denny-stark-150128"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2009-05-02",
+      "effectiveDate": "2009-05-02",
+      "resolutionDate": "2009-05-02",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Seattle Mariners selected the contract of RHP Denny Stark from Tacoma Rainiers."
+    },
+    {
+      "id": 8578,
+      "person": {
+        "id": 150128,
+        "fullName": "Denny Stark",
+        "link": "/api/v1/people/150128",
+        "nameSlug": "denny-stark-150128"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2009-06-07",
+      "effectiveDate": "2009-06-07",
+      "resolutionDate": "2009-06-07",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Seattle Mariners designated RHP Denny Stark for assignment."
+    },
+    {
+      "id": 9001,
+      "person": {
+        "id": 150128,
+        "fullName": "Denny Stark",
+        "link": "/api/v1/people/150128",
+        "nameSlug": "denny-stark-150128"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2009-06-10",
+      "effectiveDate": "2009-06-11",
+      "resolutionDate": "2009-06-10",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Seattle Mariners sent RHP Denny Stark outright to Tacoma Rainiers."
+    },
+    {
+      "id": 25538,
+      "person": {
+        "id": 150128,
+        "fullName": "Denny Stark",
+        "link": "/api/v1/people/150128",
+        "nameSlug": "denny-stark-150128"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2009-10-05",
+      "effectiveDate": "2009-10-05",
+      "resolutionDate": "2009-10-05",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Denny Stark elected free agency."
+    }
+  ]
+}

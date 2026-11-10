@@ -1,0 +1,2317 @@
+{
+  "player_id": 624647,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:15e9a49841b5bf5cb851f544634f8a0dec88b243dfb06f7d4fba2f3f3a54921c",
+  "transactions": [
+    {
+      "id": 127913,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2012-07-02",
+      "effectiveDate": "2012-07-02",
+      "resolutionDate": "2012-07-02",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Dodgers signed free agent LHP Victor Gonzalez to a minor league contract."
+    },
+    {
+      "id": 160073,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 2690,
+        "name": "AZL Dodgers 2",
+        "link": "/api/v1/teams/2690"
+      },
+      "date": "2013-06-20",
+      "effectiveDate": "2013-06-20",
+      "resolutionDate": "2013-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Gonzalez assigned to AZL Dodgers."
+    },
+    {
+      "id": 193795,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 2690,
+        "name": "AZL Dodgers 2",
+        "link": "/api/v1/teams/2690"
+      },
+      "toTeam": {
+        "id": 530,
+        "name": "Ogden Raptors",
+        "link": "/api/v1/teams/530"
+      },
+      "date": "2014-06-13",
+      "effectiveDate": "2014-06-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Gonzalez assigned to Ogden Raptors from AZL Dodgers."
+    },
+    {
+      "id": 220625,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 530,
+        "name": "Ogden Raptors",
+        "link": "/api/v1/teams/530"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2015-04-06",
+      "effectiveDate": "2015-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Gonzalez assigned to Great Lakes Loons from Ogden Raptors."
+    },
+    {
+      "id": 226031,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2015-05-19",
+      "effectiveDate": "2015-05-18",
+      "resolutionDate": "2015-05-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons placed LHP Victor Gonzalez on the 7-day disabled list retroactive to May 18, 2015."
+    },
+    {
+      "id": 226866,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2015-05-27",
+      "effectiveDate": "2015-05-27",
+      "resolutionDate": "2015-05-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated LHP Victor Gonzalez from the 7-day disabled list."
+    },
+    {
+      "id": 227019,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 530,
+        "name": "Ogden Raptors",
+        "link": "/api/v1/teams/530"
+      },
+      "date": "2015-05-28",
+      "effectiveDate": "2015-05-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Gonzalez assigned to Ogden Raptors from Great Lakes Loons."
+    },
+    {
+      "id": 228285,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 530,
+        "name": "Ogden Raptors",
+        "link": "/api/v1/teams/530"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2015-06-01",
+      "effectiveDate": "2015-06-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Gonzalez assigned to Great Lakes Loons from Ogden Raptors."
+    },
+    {
+      "id": 229125,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 530,
+        "name": "Ogden Raptors",
+        "link": "/api/v1/teams/530"
+      },
+      "date": "2015-06-07",
+      "effectiveDate": "2015-06-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Gonzalez assigned to Ogden Raptors from Great Lakes Loons."
+    },
+    {
+      "id": 230291,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 530,
+        "name": "Ogden Raptors",
+        "link": "/api/v1/teams/530"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2015-06-14",
+      "effectiveDate": "2015-06-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Gonzalez assigned to Great Lakes Loons from Ogden Raptors."
+    },
+    {
+      "id": 230874,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 530,
+        "name": "Ogden Raptors",
+        "link": "/api/v1/teams/530"
+      },
+      "date": "2015-06-16",
+      "effectiveDate": "2015-06-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Gonzalez assigned to Ogden Raptors from Great Lakes Loons."
+    },
+    {
+      "id": 238646,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 530,
+        "name": "Ogden Raptors",
+        "link": "/api/v1/teams/530"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2015-07-20",
+      "effectiveDate": "2015-07-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Gonzalez assigned to Great Lakes Loons from Ogden Raptors."
+    },
+    {
+      "id": 238779,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2015-07-21",
+      "effectiveDate": "2015-07-21",
+      "resolutionDate": "2015-07-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons placed LHP Victor Gonzalez on the 7-day disabled list."
+    },
+    {
+      "id": 242447,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 2690,
+        "name": "AZL Dodgers 2",
+        "link": "/api/v1/teams/2690"
+      },
+      "date": "2015-08-16",
+      "effectiveDate": "2015-08-16",
+      "resolutionDate": "2015-08-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Great Lakes Loons sent LHP Victor Gonzalez on a rehab assignment to AZL Dodgers."
+    },
+    {
+      "id": 242891,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2015-08-20",
+      "effectiveDate": "2015-08-20",
+      "resolutionDate": "2015-08-20",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "Victor Gonzalez changed number to 35."
+    },
+    {
+      "id": 243083,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2015-08-21",
+      "effectiveDate": "2015-08-21",
+      "resolutionDate": "2015-08-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated LHP Victor Gonzalez from the 7-day disabled list."
+    },
+    {
+      "id": 267943,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2016-06-02",
+      "effectiveDate": "2016-06-02",
+      "resolutionDate": "2016-06-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons placed LHP Victor Gonzalez on the 7-day disabled list."
+    },
+    {
+      "id": 270439,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2016-06-11",
+      "effectiveDate": "2016-06-11",
+      "resolutionDate": "2016-06-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated LHP Victor Gonzalez from the 7-day disabled list."
+    },
+    {
+      "id": 279161,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2016-07-16",
+      "effectiveDate": "2016-07-16",
+      "resolutionDate": "2016-07-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons placed LHP Victor Gonzalez on the 7-day disabled list."
+    },
+    {
+      "id": 280377,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2016-07-25",
+      "effectiveDate": "2016-07-25",
+      "resolutionDate": "2016-07-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated LHP Victor Gonzalez from the 7-day disabled list."
+    },
+    {
+      "id": 281843,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2016-08-02",
+      "effectiveDate": "2016-08-02",
+      "resolutionDate": "2016-08-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons placed LHP Victor Gonzalez on the 7-day disabled list."
+    },
+    {
+      "id": 285204,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2016-08-25",
+      "effectiveDate": "2016-08-25",
+      "resolutionDate": "2016-08-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated LHP Victor Gonzalez from the 7-day disabled list."
+    },
+    {
+      "id": 286178,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2016-09-01",
+      "effectiveDate": "2016-09-01",
+      "resolutionDate": "2016-09-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons placed LHP Victor Gonzalez on the temporarily inactive list."
+    },
+    {
+      "id": 286655,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2016-09-05",
+      "effectiveDate": "2016-09-05",
+      "resolutionDate": "2016-09-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated LHP Victor Gonzalez from the temporarily inactive list."
+    },
+    {
+      "id": 289869,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 674,
+        "name": "Charros de Jalisco",
+        "link": "/api/v1/teams/674"
+      },
+      "date": "2016-10-11",
+      "effectiveDate": "2016-10-11",
+      "resolutionDate": "2016-10-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Gonzalez assigned to Charros de Jalisco."
+    },
+    {
+      "id": 291591,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 674,
+        "name": "Charros de Jalisco",
+        "link": "/api/v1/teams/674"
+      },
+      "date": "2016-11-01",
+      "effectiveDate": "2016-11-01",
+      "resolutionDate": "2016-11-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charros de Jalisco placed LHP Victor Gonzalez on the reserve list."
+    },
+    {
+      "id": 292833,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 674,
+        "name": "Charros de Jalisco",
+        "link": "/api/v1/teams/674"
+      },
+      "date": "2016-11-08",
+      "effectiveDate": "2016-11-08",
+      "resolutionDate": "2016-11-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charros de Jalisco activated LHP Victor Gonzalez."
+    },
+    {
+      "id": 294002,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 674,
+        "name": "Charros de Jalisco",
+        "link": "/api/v1/teams/674"
+      },
+      "date": "2016-11-25",
+      "effectiveDate": "2016-11-25",
+      "resolutionDate": "2016-11-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charros de Jalisco placed LHP Victor Gonzalez on the reserve list."
+    },
+    {
+      "id": 294180,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 674,
+        "name": "Charros de Jalisco",
+        "link": "/api/v1/teams/674"
+      },
+      "date": "2016-11-29",
+      "effectiveDate": "2016-11-29",
+      "resolutionDate": "2016-11-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charros de Jalisco activated LHP Victor Gonzalez."
+    },
+    {
+      "id": 295134,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 674,
+        "name": "Charros de Jalisco",
+        "link": "/api/v1/teams/674"
+      },
+      "date": "2016-12-15",
+      "effectiveDate": "2016-12-15",
+      "resolutionDate": "2016-12-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charros de Jalisco placed LHP Victor Gonzalez on the reserve list."
+    },
+    {
+      "id": 304426,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2017-04-06",
+      "effectiveDate": "2017-04-06",
+      "resolutionDate": "2017-04-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons placed LHP Victor Gonzalez on the 7-day disabled list."
+    },
+    {
+      "id": 311083,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2017-05-18",
+      "effectiveDate": "2017-05-18",
+      "resolutionDate": "2017-05-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons transferred LHP Victor Gonzalez from the 7-day disabled list to the 60-day disabled list."
+    },
+    {
+      "id": 334382,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2017-09-20",
+      "effectiveDate": "2017-09-20",
+      "resolutionDate": "2017-09-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated LHP Victor Gonzalez from the 60-day disabled list."
+    },
+    {
+      "id": 347981,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2018-04-05",
+      "effectiveDate": "2018-04-05",
+      "resolutionDate": "2018-04-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons placed LHP Victor Gonzalez on the 7-day disabled list."
+    },
+    {
+      "id": 359053,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2018-06-11",
+      "effectiveDate": "2018-06-11",
+      "resolutionDate": "2018-06-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated LHP Victor Gonzalez from the 7-day disabled list."
+    },
+    {
+      "id": 368270,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2018-07-12",
+      "effectiveDate": "2018-07-12",
+      "resolutionDate": "2018-07-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons placed LHP Victor Gonzalez on the 7-day disabled list."
+    },
+    {
+      "id": 375183,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 530,
+        "name": "Ogden Raptors",
+        "link": "/api/v1/teams/530"
+      },
+      "date": "2018-08-17",
+      "effectiveDate": "2018-08-17",
+      "resolutionDate": "2018-08-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Great Lakes Loons sent LHP Victor Gonzalez on a rehab assignment to Ogden Raptors."
+    },
+    {
+      "id": 379845,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2018-09-23",
+      "effectiveDate": "2018-09-23",
+      "resolutionDate": "2018-09-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Great Lakes Loons activated LHP Victor Gonzalez from the 7-day injured list."
+    },
+    {
+      "id": 381003,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 674,
+        "name": "Charros de Jalisco",
+        "link": "/api/v1/teams/674"
+      },
+      "date": "2018-10-13",
+      "effectiveDate": "2018-10-13",
+      "resolutionDate": "2018-10-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Gonzalez assigned to Charros de Jalisco."
+    },
+    {
+      "id": 381810,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 674,
+        "name": "Charros de Jalisco",
+        "link": "/api/v1/teams/674"
+      },
+      "date": "2018-10-31",
+      "effectiveDate": "2018-10-31",
+      "resolutionDate": "2018-10-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charros de Jalisco placed LHP Victor Gonzalez on the reserve list."
+    },
+    {
+      "id": 382944,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 674,
+        "name": "Charros de Jalisco",
+        "link": "/api/v1/teams/674"
+      },
+      "date": "2018-11-09",
+      "effectiveDate": "2018-11-09",
+      "resolutionDate": "2018-11-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charros de Jalisco activated LHP Victor Gonzalez."
+    },
+    {
+      "id": 384714,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 674,
+        "name": "Charros de Jalisco",
+        "link": "/api/v1/teams/674"
+      },
+      "date": "2018-12-11",
+      "effectiveDate": "2018-12-11",
+      "resolutionDate": "2018-12-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charros de Jalisco placed LHP Victor Gonzalez on the reserve list."
+    },
+    {
+      "id": 384904,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 674,
+        "name": "Charros de Jalisco",
+        "link": "/api/v1/teams/674"
+      },
+      "date": "2018-12-14",
+      "effectiveDate": "2018-12-14",
+      "resolutionDate": "2018-12-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charros de Jalisco activated LHP Victor Gonzalez."
+    },
+    {
+      "id": 385568,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 674,
+        "name": "Charros de Jalisco",
+        "link": "/api/v1/teams/674"
+      },
+      "date": "2018-12-26",
+      "effectiveDate": "2018-12-26",
+      "resolutionDate": "2018-12-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charros de Jalisco placed LHP Victor Gonzalez on the reserve list."
+    },
+    {
+      "id": 393804,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2019-04-01",
+      "effectiveDate": "2019-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Gonzalez assigned to Rancho Cucamonga Quakes from Great Lakes Loons."
+    },
+    {
+      "id": 401071,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "toTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "date": "2019-05-12",
+      "effectiveDate": "2019-05-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Gonzalez assigned to Dodgers Extended Spring Training from Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 402155,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2019-05-19",
+      "effectiveDate": "2019-05-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Gonzalez assigned to Tulsa Drillers from Dodgers Extended Spring Training."
+    },
+    {
+      "id": 420041,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2019-07-26",
+      "effectiveDate": "2019-07-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor Gonzalez assigned to Oklahoma City Dodgers from Tulsa Drillers."
+    },
+    {
+      "id": 431847,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2019-10-31",
+      "effectiveDate": "2020-03-06",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Dodgers selected the contract of Victor Gonzalez from Oklahoma City Dodgers."
+    },
+    {
+      "id": 440299,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2020-03-06",
+      "effectiveDate": "2020-03-06",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned LHP Victor Gonzalez to Oklahoma City Dodgers."
+    },
+    {
+      "id": 448544,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2020-07-30",
+      "effectiveDate": "2020-08-05",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled Victor Gonzalez from Dodgers Alternate Training Site."
+    },
+    {
+      "id": 448823,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "date": "2020-08-05",
+      "effectiveDate": "2020-08-05",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned LHP Victor Gonzalez to Dodgers Alternate Training Site."
+    },
+    {
+      "id": 478023,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2020-08-19",
+      "effectiveDate": "2020-08-19",
+      "resolutionDate": "2020-08-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled P Victor Gonzalez."
+    },
+    {
+      "id": 449648,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 3268,
+        "name": "Dodgers Alternate Training Site",
+        "link": "/api/v1/teams/3268"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2020-08-19",
+      "effectiveDate": "2020-08-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled LHP Victor Gonzalez from Dodgers Alternate Training Site."
+    },
+    {
+      "id": 477341,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2020-08-19",
+      "effectiveDate": "2020-08-19",
+      "resolutionDate": "2020-08-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled P Victor Gonzalez."
+    },
+    {
+      "id": 480520,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-04-27",
+      "effectiveDate": "2021-04-27",
+      "resolutionDate": "2021-04-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed LHP Victor Gonzalez on the 10-day injured list."
+    },
+    {
+      "id": 480719,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-04-28",
+      "effectiveDate": "2021-04-28",
+      "resolutionDate": "2021-04-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated LHP Victor Gonzalez from the 10-day injured list."
+    },
+    {
+      "id": 501439,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-07-06",
+      "effectiveDate": "2021-07-06",
+      "resolutionDate": "2021-07-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed LHP Victor Gonzalez on the 10-day injured list. Left plantar fascitis."
+    },
+    {
+      "id": 505147,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2021-07-16",
+      "effectiveDate": "2021-07-16",
+      "resolutionDate": "2021-07-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers sent LHP Victor Gonzalez on a rehab assignment to Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 505769,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-07-19",
+      "effectiveDate": "2021-07-19",
+      "resolutionDate": "2021-07-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated LHP Victor Gonzalez."
+    },
+    {
+      "id": 510192,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-08-06",
+      "effectiveDate": "2021-08-06",
+      "resolutionDate": "2021-08-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed LHP Victor Gonzalez on the 10-day injured list."
+    },
+    {
+      "id": 512511,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2021-08-17",
+      "effectiveDate": "2021-08-17",
+      "resolutionDate": "2021-08-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers sent LHP Victor Gonzalez on a rehab assignment to Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 513118,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-08-19",
+      "effectiveDate": "2021-08-19",
+      "resolutionDate": "2021-08-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated LHP Victor Gonzalez."
+    },
+    {
+      "id": 514208,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2021-08-25",
+      "effectiveDate": "2021-08-25",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned LHP Victor Gonzalez to Oklahoma City Dodgers."
+    },
+    {
+      "id": 522486,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-10-04",
+      "effectiveDate": "2021-10-04",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled LHP Victor Gonzalez from Oklahoma City Dodgers."
+    },
+    {
+      "id": 522484,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-10-24",
+      "effectiveDate": "2021-10-25",
+      "resolutionDate": "2021-10-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated LHP Victor Gonzalez."
+    },
+    {
+      "id": 613395,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2022-04-04",
+      "effectiveDate": "2022-04-04",
+      "resolutionDate": "2022-04-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed LHP Victor Gonzalez on the 10-day injured list."
+    },
+    {
+      "id": 621276,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2022-05-15",
+      "effectiveDate": "2022-05-15",
+      "resolutionDate": "2022-05-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers transferred LHP Victor Gonzalez from the 10-day injured list to the 60-day injured list."
+    },
+    {
+      "id": 647002,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2022-08-16",
+      "effectiveDate": "2022-08-16",
+      "resolutionDate": "2022-08-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers sent LHP Victor Gonzalez on a rehab assignment to ACL Dodgers."
+    },
+    {
+      "id": 647342,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2022-08-18",
+      "effectiveDate": "2022-08-18",
+      "resolutionDate": "2022-08-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers sent LHP Victor Gonzalez on a rehab assignment to Oklahoma City Dodgers."
+    },
+    {
+      "id": 655085,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2022-09-20",
+      "effectiveDate": "2022-09-20",
+      "resolutionDate": "2022-09-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers sent LHP Victor Gonzalez on a rehab assignment to Oklahoma City Dodgers."
+    },
+    {
+      "id": 654011,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2022-09-20",
+      "effectiveDate": "2022-09-20",
+      "resolutionDate": "2022-09-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers sent LHP Victor Gonzalez on a rehab assignment to Oklahoma City Dodgers."
+    },
+    {
+      "id": 653185,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2022-09-20",
+      "effectiveDate": "2022-09-20",
+      "resolutionDate": "2022-09-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers sent LHP Victor Gonzalez on a rehab assignment to Oklahoma City Dodgers."
+    },
+    {
+      "id": 658840,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2022-11-09",
+      "effectiveDate": "2022-11-09",
+      "resolutionDate": "2022-11-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated LHP Victor Gonzalez from the 60-day injured list."
+    },
+    {
+      "id": 676953,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-03-24",
+      "effectiveDate": "2023-03-24",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned LHP Victor González to Oklahoma City Dodgers."
+    },
+    {
+      "id": 686678,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2023-04-22",
+      "effectiveDate": "2023-04-22",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled LHP Victor González from Oklahoma City Dodgers."
+    },
+    {
+      "id": 709341,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-07-03",
+      "effectiveDate": "2023-07-03",
+      "resolutionDate": "2023-07-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers activated LHP Victor González."
+    },
+    {
+      "id": 708720,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-07-03",
+      "effectiveDate": "2023-07-03",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned LHP Victor González to Oklahoma City Dodgers."
+    },
+    {
+      "id": 718723,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2023-08-08",
+      "effectiveDate": "2023-08-08",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled LHP Victor González from Oklahoma City Dodgers."
+    },
+    {
+      "id": 719354,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-08-10",
+      "effectiveDate": "2023-08-10",
+      "resolutionDate": "2023-08-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Oklahoma City Dodgers activated LHP Victor González."
+    },
+    {
+      "id": 719150,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-08-10",
+      "effectiveDate": "2023-08-10",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned LHP Victor González to Oklahoma City Dodgers."
+    },
+    {
+      "id": 719473,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2023-08-12",
+      "effectiveDate": "2023-08-12",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled LHP Victor González from Oklahoma City Dodgers."
+    },
+    {
+      "id": 724742,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2023-09-12",
+      "effectiveDate": "2023-09-12",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned LHP Victor González to Oklahoma City Dodgers."
+    },
+    {
+      "id": 727174,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2023-09-30",
+      "effectiveDate": "2023-09-30",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled LHP Victor González from Oklahoma City Dodgers."
+    },
+    {
+      "id": 728325,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2023-10-07",
+      "effectiveDate": "2023-10-07",
+      "resolutionDate": "2023-10-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LHP Victor González roster status changed by Los Angeles Dodgers."
+    },
+    {
+      "id": 728401,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2023-10-12",
+      "effectiveDate": "2023-10-12",
+      "resolutionDate": "2023-10-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated LHP Victor González."
+    },
+    {
+      "id": 734875,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2023-12-11",
+      "effectiveDate": "2023-12-11",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Los Angeles Dodgers traded LHP Victor González and 2B Jorbit Vivas to New York Yankees for SS Trey Sweeney."
+    },
+    {
+      "id": 781988,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2024-06-21",
+      "effectiveDate": "2024-06-21",
+      "resolutionDate": "2024-06-21",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Yankees designated LHP Victor González for assignment."
+    },
+    {
+      "id": 783304,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2024-06-26",
+      "effectiveDate": "2024-06-26",
+      "resolutionDate": "2024-06-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders activated LHP Victor González."
+    },
+    {
+      "id": 783093,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2024-06-26",
+      "effectiveDate": "2024-06-26",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "New York Yankees sent LHP Victor González outright to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 798937,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2024-09-14",
+      "effectiveDate": "2024-09-14",
+      "resolutionDate": "2024-09-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Scranton/Wilkes-Barre RailRiders transferred LHP Victor González to the Development List."
+    },
+    {
+      "id": 799236,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 531,
+        "name": "Scranton/Wilkes-Barre Highlanders",
+        "link": "/api/v1/teams/531"
+      },
+      "date": "2024-09-15",
+      "effectiveDate": "2024-09-15",
+      "resolutionDate": "2024-09-15",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Scranton/Wilkes-Barre RailRiders released LHP Victor González."
+    },
+    {
+      "id": 806372,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 674,
+        "name": "Charros de Jalisco",
+        "link": "/api/v1/teams/674"
+      },
+      "date": "2024-11-16",
+      "effectiveDate": "2024-11-16",
+      "resolutionDate": "2024-11-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor González assigned to Charros de Jalisco."
+    },
+    {
+      "id": 806844,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 674,
+        "name": "Charros de Jalisco",
+        "link": "/api/v1/teams/674"
+      },
+      "toTeam": {
+        "id": 678,
+        "name": "Tomateros de Culiacan",
+        "link": "/api/v1/teams/678"
+      },
+      "date": "2024-11-22",
+      "effectiveDate": "2024-11-22",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Charros de Jalisco traded LHP Victor González to Tomateros de Culiacan for LHP Manny Bañuelos."
+    },
+    {
+      "id": 807928,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 678,
+        "name": "Tomateros de Culiacan",
+        "link": "/api/v1/teams/678"
+      },
+      "date": "2024-12-10",
+      "effectiveDate": "2024-12-10",
+      "resolutionDate": "2024-12-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tomateros de Culiacan placed LHP Victor González on the reserve list."
+    },
+    {
+      "id": 811910,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2025-01-14",
+      "effectiveDate": "2025-01-14",
+      "resolutionDate": "2025-01-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor González assigned to Salt Lake Bees."
+    },
+    {
+      "id": 811909,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2025-01-14",
+      "effectiveDate": "2025-01-14",
+      "resolutionDate": "2025-01-14",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Angels signed free agent LHP Victor González to a minor league contract."
+    },
+    {
+      "id": 813307,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2025-02-04",
+      "effectiveDate": "2025-02-04",
+      "resolutionDate": "2025-02-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Angels invited non-roster LHP Victor González to spring training."
+    },
+    {
+      "id": 836376,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2025-05-11",
+      "effectiveDate": "2025-05-11",
+      "resolutionDate": "2025-05-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt Lake Bees placed LHP Victor González on the 7-day injured list."
+    },
+    {
+      "id": 850202,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "fromTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "toTeam": {
+        "id": 401,
+        "name": "Inland Empire 66ers",
+        "link": "/api/v1/teams/401"
+      },
+      "date": "2025-06-24",
+      "effectiveDate": "2025-06-24",
+      "resolutionDate": "2025-06-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Salt Lake Bees sent LHP Victor González on a rehab assignment to Inland Empire 66ers."
+    },
+    {
+      "id": 851984,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2025-07-01",
+      "effectiveDate": "2025-07-01",
+      "resolutionDate": "2025-07-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt Lake Bees activated LHP Victor González from the 7-day injured list."
+    },
+    {
+      "id": 876216,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Victor González elected free agency."
+    },
+    {
+      "id": 876913,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 678,
+        "name": "Tomateros de Culiacan",
+        "link": "/api/v1/teams/678"
+      },
+      "date": "2025-11-13",
+      "effectiveDate": "2025-11-13",
+      "resolutionDate": "2025-11-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor González assigned to Tomateros de Culiacan."
+    },
+    {
+      "id": 900701,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 532,
+        "name": "Diablos Rojos del Mexico",
+        "link": "/api/v1/teams/532"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Victor González assigned to Diablos Rojos del Mexico."
+    },
+    {
+      "id": 927460,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 532,
+        "name": "Diablos Rojos del Mexico",
+        "link": "/api/v1/teams/532"
+      },
+      "date": "2026-07-14",
+      "effectiveDate": "2026-07-14",
+      "resolutionDate": "2026-07-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Diablos Rojos del Mexico placed LHP Victor González on the reserve list."
+    },
+    {
+      "id": 931422,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 532,
+        "name": "Diablos Rojos del Mexico",
+        "link": "/api/v1/teams/532"
+      },
+      "date": "2026-07-26",
+      "effectiveDate": "2026-07-26",
+      "resolutionDate": "2026-07-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Diablos Rojos del Mexico activated LHP Victor González from the reserve list."
+    },
+    {
+      "id": 936223,
+      "person": {
+        "id": 624647,
+        "fullName": "Victor González",
+        "link": "/api/v1/people/624647",
+        "nameSlug": "victor-gonzalez-624647"
+      },
+      "toTeam": {
+        "id": 532,
+        "name": "Diablos Rojos del Mexico",
+        "link": "/api/v1/teams/532"
+      },
+      "date": "2026-08-07",
+      "effectiveDate": "2026-08-07",
+      "resolutionDate": "2026-08-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Diablos Rojos del Mexico placed LHP Victor González on the reserve list."
+    }
+  ]
+}

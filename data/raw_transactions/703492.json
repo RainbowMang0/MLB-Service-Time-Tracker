@@ -1,0 +1,619 @@
+{
+  "player_id": 703492,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:44b1b1fd26e287c18f601e973b2b0e1d072f536756695e1c069aae0b4060890e",
+  "transactions": [
+    {
+      "id": 517582,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "toTeam": {
+        "id": 5594,
+        "name": "Red Sox (VA '22)",
+        "link": "/api/v1/teams/5594"
+      },
+      "date": "2021-09-15",
+      "effectiveDate": "2021-09-15",
+      "resolutionDate": "2021-09-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Nick Morabito and  assigned to Red Sox (VA '22)."
+    },
+    {
+      "id": 630290,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "toTeam": {
+        "id": 5580,
+        "name": "College Workout",
+        "link": "/api/v1/teams/5580"
+      },
+      "date": "2022-06-11",
+      "effectiveDate": "2022-06-11",
+      "resolutionDate": "2022-06-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Nick Morabito assigned to College Workout."
+    },
+    {
+      "id": 640523,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "toTeam": {
+        "id": 5580,
+        "name": "College Workout",
+        "link": "/api/v1/teams/5580"
+      },
+      "date": "2022-06-11",
+      "effectiveDate": "2022-06-11",
+      "resolutionDate": "2022-06-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "College Workout activated OF Nick Morabito."
+    },
+    {
+      "id": 640524,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2022-07-27",
+      "effectiveDate": "2022-07-27",
+      "resolutionDate": "2022-07-27",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "New York Mets signed OF Nick Morabito."
+    },
+    {
+      "id": 646163,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "toTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "date": "2022-08-12",
+      "effectiveDate": "2022-08-12",
+      "resolutionDate": "2022-08-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "FCL Mets activated OF Nick Morabito."
+    },
+    {
+      "id": 645883,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "toTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "date": "2022-08-12",
+      "effectiveDate": "2022-08-12",
+      "resolutionDate": "2022-08-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "FCL Mets activated OF Nick Morabito."
+    },
+    {
+      "id": 645873,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "toTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "date": "2022-08-12",
+      "effectiveDate": "2022-08-12",
+      "resolutionDate": "2022-08-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Nick Morabito assigned to FCL Mets."
+    },
+    {
+      "id": 716324,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2023-07-31",
+      "effectiveDate": "2023-07-31",
+      "resolutionDate": "2023-07-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Lucie Mets activated OF Nick Morabito."
+    },
+    {
+      "id": 715934,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "fromTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2023-07-31",
+      "effectiveDate": "2023-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Nick Morabito assigned to St. Lucie Mets from FCL Mets."
+    },
+    {
+      "id": 752686,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-03-01",
+      "effectiveDate": "2024-03-01",
+      "resolutionDate": "2024-03-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Nick Morabito assigned to New York Mets."
+    },
+    {
+      "id": 753663,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "toTeam": {
+        "id": 371,
+        "name": "New York Mets Prospects",
+        "link": "/api/v1/teams/371"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets Prospects activated OF Nick Morabito."
+    },
+    {
+      "id": 768427,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "fromTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2024-05-06",
+      "effectiveDate": "2024-05-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Nick Morabito assigned to Brooklyn Cyclones from St. Lucie Mets."
+    },
+    {
+      "id": 816786,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2025-02-23",
+      "effectiveDate": "2025-02-23",
+      "resolutionDate": "2025-02-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Nick Morabito assigned to New York Mets."
+    },
+    {
+      "id": 818229,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "toTeam": {
+        "id": 371,
+        "name": "New York Mets Prospects",
+        "link": "/api/v1/teams/371"
+      },
+      "date": "2025-03-06",
+      "effectiveDate": "2025-03-06",
+      "resolutionDate": "2025-03-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "activated CF Nick Morabito."
+    },
+    {
+      "id": 825702,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2025-04-01",
+      "effectiveDate": "2025-04-01",
+      "resolutionDate": "2025-04-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Binghamton Rumble Ponies activated OF Nick Morabito."
+    },
+    {
+      "id": 824060,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "fromTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2025-04-01",
+      "effectiveDate": "2025-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Nick Morabito assigned to Binghamton Rumble Ponies from Brooklyn Cyclones."
+    },
+    {
+      "id": 857641,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2025-07-23",
+      "effectiveDate": "2025-07-23",
+      "resolutionDate": "2025-07-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Binghamton Rumble Ponies placed OF Nick Morabito on the 7-day injured list."
+    },
+    {
+      "id": 859481,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "toTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "date": "2025-07-29",
+      "effectiveDate": "2025-07-29",
+      "resolutionDate": "2025-07-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Binghamton Rumble Ponies activated OF Nick Morabito from the 7-day injured list."
+    },
+    {
+      "id": 868605,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "toTeam": {
+        "id": 544,
+        "name": "Scottsdale Scorpions",
+        "link": "/api/v1/teams/544"
+      },
+      "date": "2025-09-10",
+      "effectiveDate": "2025-09-10",
+      "resolutionDate": "2025-09-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Nick Morabito assigned to Scottsdale Scorpions."
+    },
+    {
+      "id": 874729,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "toTeam": {
+        "id": 1311,
+        "name": "National League Fall Stars",
+        "link": "/api/v1/teams/1311"
+      },
+      "date": "2025-11-08",
+      "effectiveDate": "2025-11-08",
+      "resolutionDate": "2025-11-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "National League Fall Stars activated OF Nick Morabito."
+    },
+    {
+      "id": 877148,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "fromTeam": {
+        "id": 505,
+        "name": "Binghamton Rumble Ponies",
+        "link": "/api/v1/teams/505"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2025-11-18",
+      "effectiveDate": "2025-11-18",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Mets selected the contract of CF Nick Morabito from Binghamton Rumble Ponies."
+    },
+    {
+      "id": 884960,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "toTeam": {
+        "id": 841,
+        "name": "Italy",
+        "link": "/api/v1/teams/841"
+      },
+      "date": "2026-02-05",
+      "effectiveDate": "2026-02-05",
+      "resolutionDate": "2026-02-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Italy activated CF Nick Morabito."
+    },
+    {
+      "id": 889856,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "toTeam": {
+        "id": 371,
+        "name": "New York Mets Prospects",
+        "link": "/api/v1/teams/371"
+      },
+      "date": "2026-03-05",
+      "effectiveDate": "2026-03-05",
+      "resolutionDate": "2026-03-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Nick Morabito assigned to New York Mets Prospects."
+    },
+    {
+      "id": 894207,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2026-03-09",
+      "effectiveDate": "2026-03-09",
+      "resolutionDate": "2026-03-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Syracuse Mets activated CF Nick Morabito."
+    },
+    {
+      "id": 891222,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2026-03-09",
+      "effectiveDate": "2026-03-09",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Mets optioned CF Nick Morabito to Syracuse Mets."
+    },
+    {
+      "id": 910283,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "fromTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-05-19",
+      "effectiveDate": "2026-05-19",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Mets recalled CF Nick Morabito from Syracuse Mets."
+    },
+    {
+      "id": 910590,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-05-20",
+      "effectiveDate": "2026-05-20",
+      "resolutionDate": "2026-05-20",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "LF Nick Morabito changed number to 55."
+    },
+    {
+      "id": 911627,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2026-05-26",
+      "effectiveDate": "2026-05-26",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "New York Mets optioned LF Nick Morabito to Syracuse Mets."
+    },
+    {
+      "id": 940516,
+      "person": {
+        "id": 703492,
+        "fullName": "Nick Morabito",
+        "link": "/api/v1/people/703492",
+        "nameSlug": "nick-morabito-703492"
+      },
+      "fromTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-09-01",
+      "effectiveDate": "2026-09-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Mets recalled LF Nick Morabito from Syracuse Mets."
+    }
+  ]
+}

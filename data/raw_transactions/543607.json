@@ -1,0 +1,1244 @@
+{
+  "player_id": 543607,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:491f8b3687b63758d80b05e0b83b102e70fecbf83a19c22bcd0ace5dab0fdc71",
+  "transactions": [
+    {
+      "id": 12845,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 467,
+        "name": "FCL Marlins",
+        "link": "/api/v1/teams/467"
+      },
+      "date": "2009-06-23",
+      "effectiveDate": "2009-06-23",
+      "resolutionDate": "2009-06-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Edgar Olmos roster status changed by GCL Marlins."
+    },
+    {
+      "id": 24044,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 467,
+        "name": "FCL Marlins",
+        "link": "/api/v1/teams/467"
+      },
+      "toTeam": {
+        "id": 489,
+        "name": "Jamestown Jammers",
+        "link": "/api/v1/teams/489"
+      },
+      "date": "2009-09-04",
+      "effectiveDate": "2009-09-04",
+      "resolutionDate": "2009-09-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Edgar Olmos assigned to Jamestown Jammers from GCL Marlins."
+    },
+    {
+      "id": 35301,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 489,
+        "name": "Jamestown Jammers",
+        "link": "/api/v1/teams/489"
+      },
+      "toTeam": {
+        "id": 477,
+        "name": "Greensboro Grasshoppers",
+        "link": "/api/v1/teams/477"
+      },
+      "date": "2010-04-02",
+      "effectiveDate": "2010-04-02",
+      "resolutionDate": "2010-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Edgar Olmos assigned to Greensboro Grasshoppers from Jamestown Jammers."
+    },
+    {
+      "id": 49709,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 477,
+        "name": "Greensboro Grasshoppers",
+        "link": "/api/v1/teams/477"
+      },
+      "toTeam": {
+        "id": 3276,
+        "name": "Marlins Alternate Training Site",
+        "link": "/api/v1/teams/3276"
+      },
+      "date": "2010-06-04",
+      "effectiveDate": "2010-06-19",
+      "resolutionDate": "2010-06-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Edgar Olmos assigned to Marlins Extended Spring Training from Greensboro Grasshoppers."
+    },
+    {
+      "id": 54597,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 3276,
+        "name": "Marlins Alternate Training Site",
+        "link": "/api/v1/teams/3276"
+      },
+      "toTeam": {
+        "id": 477,
+        "name": "Greensboro Grasshoppers",
+        "link": "/api/v1/teams/477"
+      },
+      "date": "2010-06-20",
+      "effectiveDate": "2010-06-20",
+      "resolutionDate": "2010-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Edgar Olmos assigned to Greensboro Grasshoppers from Marlins Extended Spring Training."
+    },
+    {
+      "id": 82012,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 477,
+        "name": "Greensboro Grasshoppers",
+        "link": "/api/v1/teams/477"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2011-04-05",
+      "effectiveDate": "2012-04-13",
+      "resolutionDate": "2011-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Edgar Olmos assigned to Jupiter Hammerheads from Greensboro Grasshoppers."
+    },
+    {
+      "id": 115244,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2012-04-14",
+      "effectiveDate": "2012-04-14",
+      "resolutionDate": "2012-04-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Edgar Olmos assigned to Jacksonville Suns from Jupiter Hammerheads."
+    },
+    {
+      "id": 115335,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2012-04-16",
+      "effectiveDate": "2012-04-16",
+      "resolutionDate": "2012-04-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Edgar Olmos assigned to Jupiter Hammerheads from Jacksonville Suns."
+    },
+    {
+      "id": 131747,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2012-08-02",
+      "effectiveDate": "2012-08-02",
+      "resolutionDate": "2012-08-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Edgar Olmos assigned to Jacksonville Suns from Jupiter Hammerheads."
+    },
+    {
+      "id": 134655,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2012-08-31",
+      "effectiveDate": "2012-08-31",
+      "resolutionDate": "2012-08-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Edgar Olmos assigned to New Orleans Zephyrs from Jacksonville Suns."
+    },
+    {
+      "id": 140181,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2012-11-20",
+      "effectiveDate": "2013-03-11",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Miami Marlins selected the contract of Edgar Olmos from New Orleans Zephyrs."
+    },
+    {
+      "id": 144650,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2013-03-11",
+      "effectiveDate": "2013-03-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Miami Marlins optioned Edgar Olmos to Jacksonville Suns."
+    },
+    {
+      "id": 155250,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2013-06-03",
+      "effectiveDate": "2013-06-18",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Miami Marlins recalled Edgar Olmos from Jacksonville Suns."
+    },
+    {
+      "id": 158727,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2013-06-18",
+      "effectiveDate": "2013-06-18",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Miami Marlins optioned Edgar Olmos to Jacksonville Suns."
+    },
+    {
+      "id": 171498,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2013-09-30",
+      "effectiveDate": "2014-03-17",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Miami Marlins recalled Edgar Olmos from Jacksonville Suns."
+    },
+    {
+      "id": 181209,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2014-03-17",
+      "effectiveDate": "2014-03-17",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Miami Marlins optioned LHP Edgar Olmos to Jacksonville Suns."
+    },
+    {
+      "id": 190372,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2014-05-28",
+      "effectiveDate": "2014-05-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Edgar Olmos assigned to New Orleans Zephyrs from Jacksonville Suns."
+    },
+    {
+      "id": 204040,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2014-08-08",
+      "effectiveDate": "2014-08-09",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Miami Marlins recalled Edgar Olmos from New Orleans Zephyrs."
+    },
+    {
+      "id": 204088,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2014-08-09",
+      "effectiveDate": "2014-08-09",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Miami Marlins optioned LHP Edgar Olmos to New Orleans Zephyrs."
+    },
+    {
+      "id": 208298,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2014-09-29",
+      "effectiveDate": "2014-09-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Miami Marlins recalled LHP Edgar Olmos from New Orleans Zephyrs."
+    },
+    {
+      "id": 211794,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2014-11-20",
+      "effectiveDate": "2014-11-20",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Seattle Mariners claimed LHP Edgar Olmos off waivers from Miami Marlins."
+    },
+    {
+      "id": 216018,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2015-02-13",
+      "effectiveDate": "2015-02-13",
+      "resolutionDate": "2015-02-13",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Seattle Mariners designated LHP Edgar Olmos for assignment."
+    },
+    {
+      "id": 216309,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2015-02-24",
+      "effectiveDate": "2015-02-24",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Texas Rangers claimed Edgar Olmos off waivers from Seattle Mariners."
+    },
+    {
+      "id": 216599,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2015-03-05",
+      "effectiveDate": "2015-03-05",
+      "resolutionDate": "2015-03-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Seattle Mariners activated LHP Edgar Olmos."
+    },
+    {
+      "id": 219567,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2015-04-03",
+      "effectiveDate": "2015-05-20",
+      "resolutionDate": "2015-03-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Edgar Olmos roster status changed by Seattle Mariners."
+    },
+    {
+      "id": 226104,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2015-05-20",
+      "effectiveDate": "2015-05-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned LHP Edgar Olmos to Tacoma Rainiers."
+    },
+    {
+      "id": 229170,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2015-05-30",
+      "effectiveDate": "2015-05-30",
+      "resolutionDate": "2015-05-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tacoma Rainiers activated LHP Edgar Olmos."
+    },
+    {
+      "id": 228288,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2015-05-30",
+      "effectiveDate": "2015-05-30",
+      "resolutionDate": "2015-05-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tacoma Rainiers placed LHP Edgar Olmos on the temporarily inactive list."
+    },
+    {
+      "id": 242533,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2015-08-17",
+      "effectiveDate": "2015-09-07",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled Edgar Olmos from Tacoma Rainiers."
+    },
+    {
+      "id": 245038,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2015-09-07",
+      "effectiveDate": "2015-09-07",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Seattle Mariners optioned LHP Edgar Olmos to Tacoma Rainiers."
+    },
+    {
+      "id": 246689,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2015-10-05",
+      "effectiveDate": "2015-10-05",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Seattle Mariners recalled LHP Edgar Olmos from Tacoma Rainiers."
+    },
+    {
+      "id": 251165,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2015-12-02",
+      "effectiveDate": "2015-12-02",
+      "resolutionDate": "2015-12-02",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Seattle Mariners designated LHP Edgar Olmos for assignment."
+    },
+    {
+      "id": 251311,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2015-12-04",
+      "effectiveDate": "2015-12-04",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Chicago Cubs claimed LHP Edgar Olmos off waivers from Seattle Mariners."
+    },
+    {
+      "id": 251630,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2015-12-10",
+      "effectiveDate": "2015-12-10",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Baltimore Orioles claimed LHP Edgar Olmos off waivers from Chicago Cubs."
+    },
+    {
+      "id": 252463,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2015-12-23",
+      "effectiveDate": "2015-12-23",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Chicago Cubs claimed LHP Edgar Olmos off waivers from Baltimore Orioles."
+    },
+    {
+      "id": 254774,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2016-02-12",
+      "effectiveDate": "2016-02-16",
+      "resolutionDate": "2016-02-12",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Chicago Cubs designated Edgar Olmos for assignment."
+    },
+    {
+      "id": 254937,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2016-02-16",
+      "effectiveDate": "2016-02-16",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Chicago Cubs sent LHP Edgar Olmos outright to Iowa Cubs."
+    },
+    {
+      "id": 257934,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2016-03-24",
+      "effectiveDate": "2016-03-24",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Chicago Cubs traded LHP Edgar Olmos to Baltimore Orioles for Player To Be Named Later."
+    },
+    {
+      "id": 258157,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2016-03-26",
+      "effectiveDate": "2016-03-26",
+      "resolutionDate": "2016-03-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Edgar Olmos assigned to Norfolk Tides."
+    },
+    {
+      "id": 259052,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2016-04-01",
+      "effectiveDate": "2016-04-01",
+      "resolutionDate": "2016-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Edgar Olmos assigned to Baltimore Orioles."
+    },
+    {
+      "id": 267324,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2016-05-30",
+      "effectiveDate": "2016-05-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Edgar Olmos assigned to Bowie Baysox from Norfolk Tides."
+    },
+    {
+      "id": 267483,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "fromTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2016-05-31",
+      "effectiveDate": "2016-05-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Edgar Olmos assigned to Norfolk Tides from Bowie Baysox."
+    },
+    {
+      "id": 284109,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2016-08-16",
+      "effectiveDate": "2016-08-16",
+      "resolutionDate": "2016-08-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Norfolk Tides placed LHP Edgar Olmos on the temporarily inactive list."
+    },
+    {
+      "id": 284558,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2016-08-19",
+      "effectiveDate": "2016-08-19",
+      "resolutionDate": "2016-08-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Norfolk Tides activated LHP Edgar Olmos from the temporarily inactive list."
+    },
+    {
+      "id": 285351,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2016-08-26",
+      "effectiveDate": "2016-08-26",
+      "resolutionDate": "2016-08-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Norfolk Tides placed LHP Edgar Olmos on the temporarily inactive list."
+    },
+    {
+      "id": 285930,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2016-08-31",
+      "effectiveDate": "2016-08-31",
+      "resolutionDate": "2016-08-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Norfolk Tides activated LHP Edgar Olmos from the temporarily inactive list."
+    },
+    {
+      "id": 292356,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2016-11-07",
+      "effectiveDate": "2016-11-07",
+      "resolutionDate": "2016-11-07",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Edgar Olmos elected free agency."
+    },
+    {
+      "id": 293883,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2016-11-15",
+      "effectiveDate": "2016-11-15",
+      "resolutionDate": "2016-11-15",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Boston Red Sox signed free agent LHP Edgar Olmos to a minor league contract."
+    },
+    {
+      "id": 293884,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2016-11-16",
+      "effectiveDate": "2016-11-16",
+      "resolutionDate": "2016-11-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Edgar Olmos assigned to Pawtucket Red Sox."
+    },
+    {
+      "id": 295356,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2016-12-20",
+      "effectiveDate": "2016-12-20",
+      "resolutionDate": "2016-12-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Boston Red Sox invited non-roster LHP Edgar Olmos to spring training."
+    },
+    {
+      "id": 319797,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2017-06-25",
+      "effectiveDate": "2017-06-25",
+      "resolutionDate": "2017-06-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pawtucket Red Sox placed LHP Edgar Olmos on the temporarily inactive list."
+    },
+    {
+      "id": 321199,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2017-06-29",
+      "effectiveDate": "2017-06-29",
+      "resolutionDate": "2017-06-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pawtucket Red Sox activated LHP Edgar Olmos from the temporarily inactive list."
+    },
+    {
+      "id": 336524,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2017-11-06",
+      "effectiveDate": "2017-11-06",
+      "resolutionDate": "2017-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Edgar Olmos elected free agency."
+    },
+    {
+      "id": 436624,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 5010,
+        "name": "Toros de Tijuana",
+        "link": "/api/v1/teams/5010"
+      },
+      "date": "2020-01-16",
+      "effectiveDate": "2020-01-16",
+      "resolutionDate": "2020-01-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Toros de Tijuana signed free agent LHP Edgar Olmos."
+    },
+    {
+      "id": 440119,
+      "person": {
+        "id": 543607,
+        "fullName": "Edgar Olmos",
+        "link": "/api/v1/people/543607",
+        "nameSlug": "edgar-olmos-543607"
+      },
+      "toTeam": {
+        "id": 5010,
+        "name": "Toros de Tijuana",
+        "link": "/api/v1/teams/5010"
+      },
+      "date": "2020-03-01",
+      "effectiveDate": "2020-03-01",
+      "resolutionDate": "2020-03-01",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Toros de Tijuana signed free agent LHP Edgar Olmos."
+    }
+  ]
+}

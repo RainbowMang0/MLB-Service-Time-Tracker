@@ -1,0 +1,92 @@
+{
+  "player_id": 136500,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:115489f98164011cd04c3afe48a7ca5b3ef80950594884d0339ba33f0103559c",
+  "transactions": [
+    {
+      "id": 100345,
+      "person": {
+        "id": 136500,
+        "fullName": "Wes Helms",
+        "link": "/api/v1/people/136500",
+        "nameSlug": "wes-helms-136500"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2011-08-14",
+      "effectiveDate": "2011-08-14",
+      "resolutionDate": "2011-08-14",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Florida Marlins released 3B Wes Helms."
+    },
+    {
+      "id": 101170,
+      "person": {
+        "id": 136500,
+        "fullName": "Wes Helms",
+        "link": "/api/v1/people/136500",
+        "nameSlug": "wes-helms-136500"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2011-08-19",
+      "effectiveDate": "2011-08-19",
+      "resolutionDate": "2011-08-19",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent 3B Wes Helms to a minor league contract."
+    },
+    {
+      "id": 101171,
+      "person": {
+        "id": 136500,
+        "fullName": "Wes Helms",
+        "link": "/api/v1/people/136500",
+        "nameSlug": "wes-helms-136500"
+      },
+      "fromTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2011-08-20",
+      "effectiveDate": "2011-08-20",
+      "resolutionDate": "2011-08-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Wes Helms assigned to Gwinnett Braves from Atlanta Braves."
+    },
+    {
+      "id": 102317,
+      "person": {
+        "id": 136500,
+        "fullName": "Wes Helms",
+        "link": "/api/v1/people/136500",
+        "nameSlug": "wes-helms-136500"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2011-08-31",
+      "effectiveDate": "2011-08-31",
+      "resolutionDate": "2011-08-31",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Gwinnett Braves released 3B Wes Helms."
+    }
+  ]
+}

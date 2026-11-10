@@ -1,0 +1,591 @@
+{
+  "player_id": 804619,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:30f0bd3e7e3f27d710fd5d66fc64e09ab495d888993e18b94f113d4cd92c2bc1",
+  "transactions": [
+    {
+      "id": 644296,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "toTeam": {
+        "id": 474,
+        "name": "FCL Twins",
+        "link": "/api/v1/teams/474"
+      },
+      "date": "2022-08-08",
+      "effectiveDate": "2022-08-08",
+      "resolutionDate": "2022-08-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP John Klein assigned to FCL Twins."
+    },
+    {
+      "id": 644295,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2022-08-08",
+      "effectiveDate": "2022-08-08",
+      "resolutionDate": "2022-08-08",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent RHP John Klein to a minor league contract."
+    },
+    {
+      "id": 709935,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "toTeam": {
+        "id": 509,
+        "name": "Fort Myers Mighty Mussels",
+        "link": "/api/v1/teams/509"
+      },
+      "date": "2023-07-07",
+      "effectiveDate": "2023-07-07",
+      "resolutionDate": "2023-07-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Fort Myers Mighty Mussels activated RHP John Klein."
+    },
+    {
+      "id": 709761,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "fromTeam": {
+        "id": 474,
+        "name": "FCL Twins",
+        "link": "/api/v1/teams/474"
+      },
+      "toTeam": {
+        "id": 509,
+        "name": "Fort Myers Mighty Mussels",
+        "link": "/api/v1/teams/509"
+      },
+      "date": "2023-07-07",
+      "effectiveDate": "2023-07-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP John Klein assigned to Fort Myers Mighty Mussels from FCL Twins."
+    },
+    {
+      "id": 710863,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "toTeam": {
+        "id": 474,
+        "name": "FCL Twins",
+        "link": "/api/v1/teams/474"
+      },
+      "date": "2023-07-13",
+      "effectiveDate": "2023-07-13",
+      "resolutionDate": "2023-07-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "FCL Twins activated RHP John Klein."
+    },
+    {
+      "id": 710811,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "fromTeam": {
+        "id": 509,
+        "name": "Fort Myers Mighty Mussels",
+        "link": "/api/v1/teams/509"
+      },
+      "toTeam": {
+        "id": 474,
+        "name": "FCL Twins",
+        "link": "/api/v1/teams/474"
+      },
+      "date": "2023-07-13",
+      "effectiveDate": "2023-07-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP John Klein assigned to FCL Twins from Fort Myers Mighty Mussels."
+    },
+    {
+      "id": 715572,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "fromTeam": {
+        "id": 474,
+        "name": "FCL Twins",
+        "link": "/api/v1/teams/474"
+      },
+      "toTeam": {
+        "id": 509,
+        "name": "Fort Myers Mighty Mussels",
+        "link": "/api/v1/teams/509"
+      },
+      "date": "2023-07-29",
+      "effectiveDate": "2023-07-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP John Klein assigned to Fort Myers Mighty Mussels from FCL Twins."
+    },
+    {
+      "id": 716031,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "fromTeam": {
+        "id": 509,
+        "name": "Fort Myers Mighty Mussels",
+        "link": "/api/v1/teams/509"
+      },
+      "toTeam": {
+        "id": 474,
+        "name": "FCL Twins",
+        "link": "/api/v1/teams/474"
+      },
+      "date": "2023-07-31",
+      "effectiveDate": "2023-07-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP John Klein assigned to FCL Twins from Fort Myers Mighty Mussels."
+    },
+    {
+      "id": 718160,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "fromTeam": {
+        "id": 474,
+        "name": "FCL Twins",
+        "link": "/api/v1/teams/474"
+      },
+      "toTeam": {
+        "id": 509,
+        "name": "Fort Myers Mighty Mussels",
+        "link": "/api/v1/teams/509"
+      },
+      "date": "2023-08-07",
+      "effectiveDate": "2023-08-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP John Klein assigned to Fort Myers Mighty Mussels from FCL Twins."
+    },
+    {
+      "id": 723935,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "fromTeam": {
+        "id": 509,
+        "name": "Fort Myers Mighty Mussels",
+        "link": "/api/v1/teams/509"
+      },
+      "toTeam": {
+        "id": 492,
+        "name": "Cedar Rapids Kernels",
+        "link": "/api/v1/teams/492"
+      },
+      "date": "2023-09-07",
+      "effectiveDate": "2023-09-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP John Klein assigned to Cedar Rapids Kernels from Fort Myers Mighty Mussels."
+    },
+    {
+      "id": 823434,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "fromTeam": {
+        "id": 492,
+        "name": "Cedar Rapids Kernels",
+        "link": "/api/v1/teams/492"
+      },
+      "toTeam": {
+        "id": 3898,
+        "name": "Wichita Wind Surge",
+        "link": "/api/v1/teams/3898"
+      },
+      "date": "2025-03-29",
+      "effectiveDate": "2025-03-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP John Klein assigned to Wichita Wind Surge from Cedar Rapids Kernels."
+    },
+    {
+      "id": 861473,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "fromTeam": {
+        "id": 3898,
+        "name": "Wichita Wind Surge",
+        "link": "/api/v1/teams/3898"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2025-08-04",
+      "effectiveDate": "2025-08-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP John Klein assigned to St. Paul Saints from Wichita Wind Surge."
+    },
+    {
+      "id": 864391,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2025-08-13",
+      "effectiveDate": "2025-08-13",
+      "resolutionDate": "2025-08-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Paul Saints transferred RHP John Klein to the Development List."
+    },
+    {
+      "id": 869960,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2025-09-18",
+      "effectiveDate": "2025-09-18",
+      "resolutionDate": "2025-09-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Paul Saints transferred RHP John Klein to the Development List."
+    },
+    {
+      "id": 871302,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2025-09-30",
+      "effectiveDate": "2025-09-30",
+      "resolutionDate": "2025-09-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Paul Saints activated RHP John Klein."
+    },
+    {
+      "id": 877249,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "fromTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2025-11-18",
+      "effectiveDate": "2025-11-18",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Minnesota Twins selected the contract of RHP John Klein from St. Paul Saints."
+    },
+    {
+      "id": 889888,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "toTeam": {
+        "id": 381,
+        "name": "Minnesota Twins Prospects",
+        "link": "/api/v1/teams/381"
+      },
+      "date": "2026-03-05",
+      "effectiveDate": "2026-03-05",
+      "resolutionDate": "2026-03-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP John Klein assigned to Minnesota Twins Prospects."
+    },
+    {
+      "id": 891263,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2026-03-09",
+      "effectiveDate": "2026-03-09",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Minnesota Twins optioned RHP John Klein to St. Paul Saints."
+    },
+    {
+      "id": 905262,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "fromTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-05-02",
+      "effectiveDate": "2026-05-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Minnesota Twins recalled RHP John Klein from St. Paul Saints."
+    },
+    {
+      "id": 906729,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2026-05-08",
+      "effectiveDate": "2026-05-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Minnesota Twins optioned RHP John Klein to St. Paul Saints."
+    },
+    {
+      "id": 913591,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "fromTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-05-30",
+      "effectiveDate": "2026-05-30",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Minnesota Twins recalled RHP John Klein from St. Paul Saints."
+    },
+    {
+      "id": 914018,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2026-05-31",
+      "effectiveDate": "2026-05-31",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Minnesota Twins optioned RHP John Klein to St. Paul Saints."
+    },
+    {
+      "id": 934366,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2026-08-03",
+      "effectiveDate": "2026-08-03",
+      "resolutionDate": "2026-08-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP John Klein assigned to Buffalo Bisons."
+    },
+    {
+      "id": 934362,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2026-08-03",
+      "effectiveDate": "2026-08-03",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Toronto Blue Jays traded RHP Jeff Hoffman and Other Considerations to Minnesota Twins for LHP Dasan Hill, 2B Dameury Pena, RHP John Klein and Other Considerations."
+    },
+    {
+      "id": 941982,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2026-08-05",
+      "effectiveDate": "2026-08-05",
+      "resolutionDate": "2026-08-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Buffalo Bisons activated RHP John Klein."
+    },
+    {
+      "id": 943920,
+      "person": {
+        "id": 804619,
+        "fullName": "John Klein",
+        "link": "/api/v1/people/804619",
+        "nameSlug": "john-klein-804619"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2026-09-25",
+      "effectiveDate": "2026-09-25",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Toronto Blue Jays recalled RHP John Klein from Buffalo Bisons."
+    }
+  ]
+}

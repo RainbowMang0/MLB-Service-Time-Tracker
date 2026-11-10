@@ -1,0 +1,839 @@
+{
+  "player_id": 656738,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:e378eb7fb00b2ee9104e1f5146bc1c18396d97b0b8f6f9732a01faff7db15e30",
+  "transactions": [
+    {
+      "id": 230271,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2015-06-14",
+      "effectiveDate": "2015-06-14",
+      "resolutionDate": "2015-06-14",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Miami Marlins signed RHP Ben Meyer."
+    },
+    {
+      "id": 233381,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "toTeam": {
+        "id": 467,
+        "name": "FCL Marlins",
+        "link": "/api/v1/teams/467"
+      },
+      "date": "2015-06-22",
+      "effectiveDate": "2015-06-22",
+      "resolutionDate": "2015-06-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Meyer assigned to GCL Marlins."
+    },
+    {
+      "id": 235057,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 467,
+        "name": "FCL Marlins",
+        "link": "/api/v1/teams/467"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2015-06-29",
+      "effectiveDate": "2015-06-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Meyer assigned to Jupiter Hammerheads from GCL Marlins."
+    },
+    {
+      "id": 238938,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "toTeam": {
+        "id": 511,
+        "name": "Batavia Muckdogs",
+        "link": "/api/v1/teams/511"
+      },
+      "date": "2015-07-22",
+      "effectiveDate": "2015-07-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Meyer assigned to Batavia Muckdogs from Jupiter Hammerheads."
+    },
+    {
+      "id": 239367,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 511,
+        "name": "Batavia Muckdogs",
+        "link": "/api/v1/teams/511"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2015-07-25",
+      "effectiveDate": "2015-07-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Meyer assigned to Jupiter Hammerheads from Batavia Muckdogs."
+    },
+    {
+      "id": 241534,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "toTeam": {
+        "id": 467,
+        "name": "FCL Marlins",
+        "link": "/api/v1/teams/467"
+      },
+      "date": "2015-08-09",
+      "effectiveDate": "2015-08-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Meyer assigned to GCL Marlins from Jupiter Hammerheads."
+    },
+    {
+      "id": 241665,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 467,
+        "name": "FCL Marlins",
+        "link": "/api/v1/teams/467"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2015-08-11",
+      "effectiveDate": "2015-08-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Meyer assigned to Jupiter Hammerheads from GCL Marlins."
+    },
+    {
+      "id": 242172,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "toTeam": {
+        "id": 477,
+        "name": "Greensboro Grasshoppers",
+        "link": "/api/v1/teams/477"
+      },
+      "date": "2015-08-14",
+      "effectiveDate": "2015-08-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Meyer assigned to Greensboro Grasshoppers from Jupiter Hammerheads."
+    },
+    {
+      "id": 242414,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 477,
+        "name": "Greensboro Grasshoppers",
+        "link": "/api/v1/teams/477"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2015-08-16",
+      "effectiveDate": "2015-08-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Meyer assigned to Jupiter Hammerheads from Greensboro Grasshoppers."
+    },
+    {
+      "id": 242846,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "toTeam": {
+        "id": 467,
+        "name": "FCL Marlins",
+        "link": "/api/v1/teams/467"
+      },
+      "date": "2015-08-20",
+      "effectiveDate": "2015-08-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Meyer assigned to GCL Marlins from Jupiter Hammerheads."
+    },
+    {
+      "id": 243967,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 467,
+        "name": "FCL Marlins",
+        "link": "/api/v1/teams/467"
+      },
+      "toTeam": {
+        "id": 511,
+        "name": "Batavia Muckdogs",
+        "link": "/api/v1/teams/511"
+      },
+      "date": "2015-08-30",
+      "effectiveDate": "2015-08-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Meyer assigned to Batavia Muckdogs from GCL Marlins."
+    },
+    {
+      "id": 244510,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 511,
+        "name": "Batavia Muckdogs",
+        "link": "/api/v1/teams/511"
+      },
+      "toTeam": {
+        "id": 477,
+        "name": "Greensboro Grasshoppers",
+        "link": "/api/v1/teams/477"
+      },
+      "date": "2015-09-02",
+      "effectiveDate": "2015-09-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Meyer assigned to Greensboro Grasshoppers from Batavia Muckdogs."
+    },
+    {
+      "id": 302132,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2017-03-31",
+      "effectiveDate": "2017-03-31",
+      "resolutionDate": "2017-03-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Meyer assigned to Miami Marlins."
+    },
+    {
+      "id": 311893,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 477,
+        "name": "Greensboro Grasshoppers",
+        "link": "/api/v1/teams/477"
+      },
+      "toTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "date": "2017-05-25",
+      "effectiveDate": "2017-05-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Meyer assigned to Jupiter Hammerheads from Greensboro Grasshoppers."
+    },
+    {
+      "id": 332046,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 479,
+        "name": "Jupiter Hammerheads",
+        "link": "/api/v1/teams/479"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2017-09-06",
+      "effectiveDate": "2017-09-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Meyer assigned to Jacksonville Jumbo Shrimp from Jupiter Hammerheads."
+    },
+    {
+      "id": 341297,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2018-02-08",
+      "effectiveDate": "2018-02-08",
+      "resolutionDate": "2018-02-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins invited non-roster RHP Ben Meyer to spring training."
+    },
+    {
+      "id": 347173,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2018-04-03",
+      "effectiveDate": "2018-04-03",
+      "resolutionDate": "2018-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Meyer assigned to New Orleans Baby Cakes."
+    },
+    {
+      "id": 358312,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2018-06-06",
+      "effectiveDate": "2018-06-15",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Miami Marlins selected the contract of Ben Meyer from New Orleans Baby Cakes."
+    },
+    {
+      "id": 360769,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2018-06-15",
+      "effectiveDate": "2018-06-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Miami Marlins optioned RHP Ben Meyer to New Orleans Baby Cakes."
+    },
+    {
+      "id": 364413,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2018-06-25",
+      "effectiveDate": "2018-06-30",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Miami Marlins recalled Ben Meyer from New Orleans Baby Cakes."
+    },
+    {
+      "id": 365278,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2018-06-30",
+      "effectiveDate": "2018-06-30",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Miami Marlins optioned RHP Ben Meyer to New Orleans Baby Cakes."
+    },
+    {
+      "id": 366532,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2018-07-05",
+      "effectiveDate": "2018-07-31",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Miami Marlins recalled Ben Meyer from New Orleans Baby Cakes."
+    },
+    {
+      "id": 372198,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2018-07-31",
+      "effectiveDate": "2018-07-31",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Miami Marlins optioned RHP Ben Meyer to New Orleans Baby Cakes."
+    },
+    {
+      "id": 376177,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2018-08-24",
+      "effectiveDate": "2018-08-24",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Miami Marlins recalled RHP Ben Meyer from New Orleans Baby Cakes."
+    },
+    {
+      "id": 383658,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2018-11-20",
+      "effectiveDate": "2018-11-20",
+      "resolutionDate": "2018-11-20",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Miami Marlins designated RHP Ben Meyer for assignment."
+    },
+    {
+      "id": 384118,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2018-11-27",
+      "effectiveDate": "2018-11-27",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Miami Marlins sent RHP Ben Meyer outright to New Orleans Baby Cakes."
+    },
+    {
+      "id": 386494,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2019-01-22",
+      "effectiveDate": "2019-01-22",
+      "resolutionDate": "2019-01-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins invited non-roster RHP Ben Meyer to spring training."
+    },
+    {
+      "id": 413134,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "toTeam": {
+        "id": 588,
+        "name": "New Orleans Baby Cakes",
+        "link": "/api/v1/teams/588"
+      },
+      "date": "2019-06-25",
+      "effectiveDate": "2019-06-25",
+      "resolutionDate": "2019-06-25",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "New Orleans Baby Cakes released RHP Ben Meyer."
+    },
+    {
+      "id": 414449,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2019-06-30",
+      "effectiveDate": "2019-06-30",
+      "resolutionDate": "2019-06-30",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Colorado Rockies signed free agent RHP Ben Meyer to a minor league contract."
+    },
+    {
+      "id": 414450,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "toTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "date": "2019-07-01",
+      "effectiveDate": "2019-07-01",
+      "resolutionDate": "2019-07-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Meyer assigned to Hartford Yard Goats."
+    },
+    {
+      "id": 418963,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "toTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "date": "2019-07-21",
+      "effectiveDate": "2019-07-21",
+      "resolutionDate": "2019-07-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Hartford Yard Goats placed RHP Ben Meyer on the 7-day injured list."
+    },
+    {
+      "id": 425127,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2019-08-22",
+      "effectiveDate": "2019-08-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Meyer assigned to Albuquerque Isotopes from Hartford Yard Goats."
+    },
+    {
+      "id": 426246,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2019-08-28",
+      "effectiveDate": "2019-08-28",
+      "resolutionDate": "2019-08-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Albuquerque Isotopes placed RHP Ben Meyer on the temporarily inactive list."
+    },
+    {
+      "id": 427106,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2019-09-02",
+      "effectiveDate": "2019-09-02",
+      "resolutionDate": "2019-09-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Albuquerque Isotopes activated RHP Ben Meyer from the temporarily inactive list."
+    },
+    {
+      "id": 441527,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "toTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "date": "2019-11-15",
+      "effectiveDate": "2019-11-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Meyer assigned to Hartford Yard Goats from Albuquerque Isotopes."
+    },
+    {
+      "id": 481181,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "fromTeam": {
+        "id": 538,
+        "name": "Hartford Yard Goats",
+        "link": "/api/v1/teams/538"
+      },
+      "toTeam": {
+        "id": 3299,
+        "name": "Rockies Organization",
+        "link": "/api/v1/teams/3299"
+      },
+      "date": "2021-04-30",
+      "effectiveDate": "2021-04-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ben Meyer assigned to Rockies Organization from Hartford Yard Goats."
+    },
+    {
+      "id": 492378,
+      "person": {
+        "id": 656738,
+        "fullName": "Ben Meyer",
+        "link": "/api/v1/people/656738",
+        "nameSlug": "ben-meyer-656738"
+      },
+      "toTeam": {
+        "id": 3299,
+        "name": "Rockies Organization",
+        "link": "/api/v1/teams/3299"
+      },
+      "date": "2021-06-02",
+      "effectiveDate": "2021-06-02",
+      "resolutionDate": "2021-06-02",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Rockies Organization released RHP Ben Meyer."
+    }
+  ]
+}

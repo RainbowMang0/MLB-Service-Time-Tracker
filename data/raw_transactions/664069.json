@@ -1,0 +1,995 @@
+{
+  "player_id": 664069,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:54bda4542152ac49071697a4fe6e04a863319c44579490b9e1a310851dc9bc3b",
+  "transactions": [
+    {
+      "id": 272947,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2016-06-20",
+      "effectiveDate": "2016-06-20",
+      "resolutionDate": "2016-06-20",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Washington Nationals signed LHP Ben Braymer."
+    },
+    {
+      "id": 274662,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 466,
+        "name": "FCL Nationals",
+        "link": "/api/v1/teams/466"
+      },
+      "date": "2016-06-24",
+      "effectiveDate": "2016-06-24",
+      "resolutionDate": "2016-06-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Ben Braymer assigned to GCL Nationals."
+    },
+    {
+      "id": 316952,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "fromTeam": {
+        "id": 466,
+        "name": "FCL Nationals",
+        "link": "/api/v1/teams/466"
+      },
+      "toTeam": {
+        "id": 458,
+        "name": "Auburn Doubledays",
+        "link": "/api/v1/teams/458"
+      },
+      "date": "2017-06-19",
+      "effectiveDate": "2017-06-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Ben Braymer assigned to Auburn Doubledays from GCL Nationals."
+    },
+    {
+      "id": 326828,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "fromTeam": {
+        "id": 458,
+        "name": "Auburn Doubledays",
+        "link": "/api/v1/teams/458"
+      },
+      "toTeam": {
+        "id": 563,
+        "name": "Hagerstown Suns",
+        "link": "/api/v1/teams/563"
+      },
+      "date": "2017-07-30",
+      "effectiveDate": "2017-07-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Ben Braymer assigned to Hagerstown Suns from Auburn Doubledays."
+    },
+    {
+      "id": 343877,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2018-03-12",
+      "effectiveDate": "2018-03-12",
+      "resolutionDate": "2018-03-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Ben Braymer assigned to Washington Nationals."
+    },
+    {
+      "id": 353144,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "fromTeam": {
+        "id": 563,
+        "name": "Hagerstown Suns",
+        "link": "/api/v1/teams/563"
+      },
+      "toTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "date": "2018-05-10",
+      "effectiveDate": "2018-05-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Ben Braymer assigned to Potomac Nationals from Hagerstown Suns."
+    },
+    {
+      "id": 394292,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "fromTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2019-04-02",
+      "effectiveDate": "2019-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Ben Braymer assigned to Harrisburg Senators from Potomac Nationals."
+    },
+    {
+      "id": 413376,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "fromTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2019-06-26",
+      "effectiveDate": "2019-06-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Ben Braymer assigned to Fresno Grizzlies from Harrisburg Senators."
+    },
+    {
+      "id": 433868,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "fromTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2019-11-20",
+      "effectiveDate": "2020-03-14",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Washington Nationals selected the contract of Ben Braymer from Fresno Grizzlies."
+    },
+    {
+      "id": 440900,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2020-03-14",
+      "effectiveDate": "2020-03-14",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Washington Nationals optioned LHP Ben Braymer to Fresno Grizzlies."
+    },
+    {
+      "id": 447105,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "fromTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "toTeam": {
+        "id": 3280,
+        "name": "Nationals Alternate Training Site",
+        "link": "/api/v1/teams/3280"
+      },
+      "date": "2020-07-18",
+      "effectiveDate": "2020-07-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Ben Braymer assigned to Nationals Alternate Training Site from Fresno Grizzlies."
+    },
+    {
+      "id": 449942,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "fromTeam": {
+        "id": 3280,
+        "name": "Nationals Alternate Training Site",
+        "link": "/api/v1/teams/3280"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2020-08-24",
+      "effectiveDate": "2020-08-29",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Washington Nationals recalled Ben Braymer from Nationals Alternate Training Site."
+    },
+    {
+      "id": 450266,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 3280,
+        "name": "Nationals Alternate Training Site",
+        "link": "/api/v1/teams/3280"
+      },
+      "date": "2020-08-29",
+      "effectiveDate": "2020-08-29",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Washington Nationals optioned LHP Ben Braymer to Nationals Alternate Training Site."
+    },
+    {
+      "id": 451234,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "fromTeam": {
+        "id": 3280,
+        "name": "Nationals Alternate Training Site",
+        "link": "/api/v1/teams/3280"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2020-09-11",
+      "effectiveDate": "2020-09-11",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Washington Nationals recalled LHP Ben Braymer from Nationals Alternate Training Site."
+    },
+    {
+      "id": 456454,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2020-11-20",
+      "effectiveDate": "2020-11-20",
+      "resolutionDate": "2020-11-20",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "Ben Braymer changed number to 59."
+    },
+    {
+      "id": 473804,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2021-03-20",
+      "effectiveDate": "2021-03-20",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Washington Nationals optioned P Ben Braymer to Rochester Red Wings."
+    },
+    {
+      "id": 474456,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "fromTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "toTeam": {
+        "id": 3280,
+        "name": "Nationals Alternate Training Site",
+        "link": "/api/v1/teams/3280"
+      },
+      "date": "2021-03-30",
+      "effectiveDate": "2021-03-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "P Ben Braymer assigned to Nationals Alternate Training Site from Rochester Red Wings."
+    },
+    {
+      "id": 476517,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "fromTeam": {
+        "id": 3280,
+        "name": "Nationals Alternate Training Site",
+        "link": "/api/v1/teams/3280"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2021-04-07",
+      "effectiveDate": "2021-04-07",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Washington Nationals recalled P Ben Braymer from Nationals Alternate Training Site."
+    },
+    {
+      "id": 476548,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 3280,
+        "name": "Nationals Alternate Training Site",
+        "link": "/api/v1/teams/3280"
+      },
+      "date": "2021-04-08",
+      "effectiveDate": "2021-04-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Washington Nationals optioned P Ben Braymer to Nationals Alternate Training Site."
+    },
+    {
+      "id": 483172,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "fromTeam": {
+        "id": 3280,
+        "name": "Nationals Alternate Training Site",
+        "link": "/api/v1/teams/3280"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Ben Braymer assigned to Rochester Red Wings from Nationals Alternate Training Site."
+    },
+    {
+      "id": 483242,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "resolutionDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Ben Braymer assigned to Rochester Red Wings."
+    },
+    {
+      "id": 495264,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2021-06-20",
+      "effectiveDate": "2021-06-20",
+      "resolutionDate": "2021-06-20",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Washington Nationals designated LHP Ben Braymer for assignment."
+    },
+    {
+      "id": 496057,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2021-06-24",
+      "effectiveDate": "2021-06-24",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Washington Nationals sent LHP Ben Braymer outright to Rochester Red Wings."
+    },
+    {
+      "id": 624751,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2022-05-27",
+      "effectiveDate": "2022-05-27",
+      "resolutionDate": "2022-05-27",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Rochester Red Wings released LHP Ben Braymer."
+    },
+    {
+      "id": 694425,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 5431,
+        "name": "High Point Rockers",
+        "link": "/api/v1/teams/5431"
+      },
+      "date": "2023-04-28",
+      "effectiveDate": "2023-04-28",
+      "resolutionDate": "2023-04-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "High Point Rockers activated LHP Ben Braymer."
+    },
+    {
+      "id": 687707,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 5431,
+        "name": "High Point Rockers",
+        "link": "/api/v1/teams/5431"
+      },
+      "date": "2023-04-28",
+      "effectiveDate": "2023-04-28",
+      "resolutionDate": "2023-04-28",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "High Point Rockers signed LHP Ben Braymer."
+    },
+    {
+      "id": 694424,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2023-05-21",
+      "effectiveDate": "2023-05-21",
+      "resolutionDate": "2023-05-21",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Colorado Rockies signed free agent LHP Ben Braymer to a minor league contract."
+    },
+    {
+      "id": 694423,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2023-05-21",
+      "effectiveDate": "2023-05-21",
+      "resolutionDate": "2023-05-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Ben Braymer assigned to Albuquerque Isotopes."
+    },
+    {
+      "id": 708977,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2023-07-04",
+      "effectiveDate": "2023-07-04",
+      "resolutionDate": "2023-07-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Albuquerque Isotopes transferred LHP Ben Braymer to the Development List."
+    },
+    {
+      "id": 712358,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2023-07-18",
+      "effectiveDate": "2023-07-18",
+      "resolutionDate": "2023-07-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Albuquerque Isotopes activated LHP Ben Braymer."
+    },
+    {
+      "id": 712206,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2023-07-18",
+      "effectiveDate": "2023-07-18",
+      "resolutionDate": "2023-07-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Albuquerque Isotopes activated LHP Ben Braymer."
+    },
+    {
+      "id": 721658,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2023-08-23",
+      "effectiveDate": "2023-08-23",
+      "resolutionDate": "2023-08-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Albuquerque Isotopes transferred LHP Ben Braymer to the Development List."
+    },
+    {
+      "id": 725360,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2023-09-16",
+      "effectiveDate": "2023-09-16",
+      "resolutionDate": "2023-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Albuquerque Isotopes activated LHP Ben Braymer."
+    },
+    {
+      "id": 727902,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2023-10-03",
+      "effectiveDate": "2023-10-03",
+      "resolutionDate": "2023-10-03",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Albuquerque Isotopes released LHP Ben Braymer."
+    },
+    {
+      "id": 729307,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 674,
+        "name": "Charros de Jalisco",
+        "link": "/api/v1/teams/674"
+      },
+      "date": "2023-10-19",
+      "effectiveDate": "2023-10-19",
+      "resolutionDate": "2023-10-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Ben Braymer assigned to Charros de Jalisco."
+    },
+    {
+      "id": 733670,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 674,
+        "name": "Charros de Jalisco",
+        "link": "/api/v1/teams/674"
+      },
+      "date": "2023-10-28",
+      "effectiveDate": "2023-10-28",
+      "resolutionDate": "2023-10-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charros de Jalisco placed LHP Ben Braymer on the reserve list."
+    },
+    {
+      "id": 729901,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 674,
+        "name": "Charros de Jalisco",
+        "link": "/api/v1/teams/674"
+      },
+      "date": "2023-10-28",
+      "effectiveDate": "2023-10-28",
+      "resolutionDate": "2023-10-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charros de Jalisco placed LHP Ben Braymer on the reserve list."
+    },
+    {
+      "id": 733987,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2023-11-24",
+      "effectiveDate": "2023-11-24",
+      "resolutionDate": "2023-11-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aguilas Cibaenas activated LHP Ben Braymer from the reserve list."
+    },
+    {
+      "id": 733669,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2023-11-24",
+      "effectiveDate": "2023-11-24",
+      "resolutionDate": "2023-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Ben Braymer assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 785306,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 5010,
+        "name": "Toros de Tijuana",
+        "link": "/api/v1/teams/5010"
+      },
+      "date": "2024-07-05",
+      "effectiveDate": "2024-07-05",
+      "resolutionDate": "2024-07-05",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Toros de Tijuana signed free agent LHP Ben Braymer."
+    },
+    {
+      "id": 786995,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 5010,
+        "name": "Toros de Tijuana",
+        "link": "/api/v1/teams/5010"
+      },
+      "date": "2024-07-14",
+      "effectiveDate": "2024-07-14",
+      "resolutionDate": "2024-07-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toros de Tijuana activated LHP Ben Braymer from the reserve list."
+    },
+    {
+      "id": 805797,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 695,
+        "name": "Leones del Caracas",
+        "link": "/api/v1/teams/695"
+      },
+      "date": "2024-11-08",
+      "effectiveDate": "2024-11-08",
+      "resolutionDate": "2024-11-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Ben Braymer assigned to Leones del Caracas."
+    },
+    {
+      "id": 809072,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 695,
+        "name": "Leones del Caracas",
+        "link": "/api/v1/teams/695"
+      },
+      "date": "2024-11-08",
+      "effectiveDate": "2024-11-08",
+      "resolutionDate": "2024-11-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Leones del Caracas activated LHP Ben Braymer."
+    },
+    {
+      "id": 809073,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 699,
+        "name": "Tigres de Aragua",
+        "link": "/api/v1/teams/699"
+      },
+      "date": "2024-12-24",
+      "effectiveDate": "2024-12-24",
+      "resolutionDate": "2024-12-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Ben Braymer assigned to Tigres de Aragua."
+    },
+    {
+      "id": 844920,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 5010,
+        "name": "Toros de Tijuana",
+        "link": "/api/v1/teams/5010"
+      },
+      "date": "2025-06-04",
+      "effectiveDate": "2025-06-04",
+      "resolutionDate": "2025-06-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toros de Tijuana placed LHP Ben Braymer on the reserve list."
+    },
+    {
+      "id": 848326,
+      "person": {
+        "id": 664069,
+        "fullName": "Ben Braymer",
+        "link": "/api/v1/people/664069",
+        "nameSlug": "ben-braymer-664069"
+      },
+      "toTeam": {
+        "id": 5010,
+        "name": "Toros de Tijuana",
+        "link": "/api/v1/teams/5010"
+      },
+      "date": "2025-06-15",
+      "effectiveDate": "2025-06-15",
+      "resolutionDate": "2025-06-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toros de Tijuana activated LHP Ben Braymer from the reserve list."
+    }
+  ]
+}

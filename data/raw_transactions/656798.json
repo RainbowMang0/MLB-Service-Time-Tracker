@@ -1,0 +1,969 @@
+{
+  "player_id": 656798,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:db9a4e6d63b8d9fb5495f11f3c24154a6e648f7d7ad0482f5a88e6f4c0d1f857",
+  "transactions": [
+    {
+      "id": 232840,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2015-06-19",
+      "effectiveDate": "2015-06-19",
+      "resolutionDate": "2015-06-19",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "San Diego Padres signed RHP Jacob Nix."
+    },
+    {
+      "id": 232841,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "date": "2015-06-20",
+      "effectiveDate": "2015-06-20",
+      "resolutionDate": "2015-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jacob Nix assigned to AZL Padres."
+    },
+    {
+      "id": 259285,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "fromTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "toTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "date": "2016-04-02",
+      "effectiveDate": "2016-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jacob Nix assigned to Fort Wayne TinCaps from AZL Padres."
+    },
+    {
+      "id": 269840,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 70,
+        "name": "MWL East Division All-Stars",
+        "link": "/api/v1/teams/70"
+      },
+      "date": "2016-06-20",
+      "effectiveDate": "2016-06-20",
+      "resolutionDate": "2016-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jacob Nix assigned to MID East Division All-Stars."
+    },
+    {
+      "id": 302716,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "fromTeam": {
+        "id": 584,
+        "name": "Fort Wayne TinCaps",
+        "link": "/api/v1/teams/584"
+      },
+      "toTeam": {
+        "id": 3284,
+        "name": "Padres Alternate Training Site",
+        "link": "/api/v1/teams/3284"
+      },
+      "date": "2017-04-01",
+      "effectiveDate": "2017-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jacob Nix assigned to Padres Ext. Spring Training from Fort Wayne TinCaps."
+    },
+    {
+      "id": 307484,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "fromTeam": {
+        "id": 3284,
+        "name": "Padres Alternate Training Site",
+        "link": "/api/v1/teams/3284"
+      },
+      "toTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "date": "2017-04-06",
+      "effectiveDate": "2017-04-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jacob Nix assigned to Lake Elsinore Storm from Padres Ext. Spring Training."
+    },
+    {
+      "id": 312054,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "date": "2017-05-26",
+      "effectiveDate": "2017-05-26",
+      "resolutionDate": "2017-05-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lake Elsinore Storm activated RHP Jacob Nix from the 7-day disabled list."
+    },
+    {
+      "id": 327490,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "fromTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2017-08-03",
+      "effectiveDate": "2017-08-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jacob Nix assigned to San Antonio Missions from Lake Elsinore Storm."
+    },
+    {
+      "id": 332733,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "fromTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2017-09-16",
+      "effectiveDate": "2017-09-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jacob Nix assigned to El Paso Chihuahuas from San Antonio Missions."
+    },
+    {
+      "id": 470846,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 374,
+        "name": "San Diego Padres Prospects",
+        "link": "/api/v1/teams/374"
+      },
+      "date": "2017-09-29",
+      "effectiveDate": "2017-09-29",
+      "resolutionDate": "2017-09-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jacob Nix assigned to San Diego Padres Futures."
+    },
+    {
+      "id": 332935,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 374,
+        "name": "San Diego Padres Prospects",
+        "link": "/api/v1/teams/374"
+      },
+      "date": "2017-09-29",
+      "effectiveDate": "2017-09-29",
+      "resolutionDate": "2017-09-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jacob Nix assigned to San Diego Padres Futures."
+    },
+    {
+      "id": 340078,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2018-01-18",
+      "effectiveDate": "2018-01-18",
+      "resolutionDate": "2018-01-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres invited non-roster RHP Jacob Nix to spring training."
+    },
+    {
+      "id": 349772,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2018-04-05",
+      "effectiveDate": "2018-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jacob Nix assigned to San Antonio Missions from El Paso Chihuahuas."
+    },
+    {
+      "id": 355711,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2018-05-30",
+      "effectiveDate": "2018-05-30",
+      "resolutionDate": "2018-05-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Antonio Missions activated RHP Jacob Nix from the 7-day disabled list."
+    },
+    {
+      "id": 365120,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2018-06-29",
+      "effectiveDate": "2018-06-27",
+      "resolutionDate": "2018-06-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Antonio Missions placed RHP Jacob Nix on the 7-day disabled list retroactive to June 27, 2018."
+    },
+    {
+      "id": 367835,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2018-07-11",
+      "effectiveDate": "2018-07-11",
+      "resolutionDate": "2018-07-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Antonio Missions activated RHP Jacob Nix from the 7-day disabled list."
+    },
+    {
+      "id": 372768,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "fromTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2018-08-02",
+      "effectiveDate": "2018-08-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jacob Nix assigned to El Paso Chihuahuas from San Antonio Missions."
+    },
+    {
+      "id": 374132,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2018-08-10",
+      "effectiveDate": "2018-08-10",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "San Diego Padres selected the contract of RHP Jacob Nix from El Paso Chihuahuas."
+    },
+    {
+      "id": 392597,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2019-03-27",
+      "effectiveDate": "2019-03-27",
+      "resolutionDate": "2019-03-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres placed RHP Jacob Nix on the 10-day injured list. Elbow strain."
+    },
+    {
+      "id": 394487,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2019-04-02",
+      "effectiveDate": "2019-04-01",
+      "resolutionDate": "2019-04-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "San Diego Padres transferred RHP Jacob Nix from the 10-day injured list to the 60-day injured list retroactive to April 1, 2019. Elbow strain."
+    },
+    {
+      "id": 420052,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "date": "2019-07-26",
+      "effectiveDate": "2019-07-26",
+      "resolutionDate": "2019-07-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres sent RHP Jacob Nix on a rehab assignment to AZL Padres 1."
+    },
+    {
+      "id": 422578,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 410,
+        "name": "ACL Padres",
+        "link": "/api/v1/teams/410"
+      },
+      "date": "2019-08-06",
+      "effectiveDate": "2019-08-06",
+      "resolutionDate": "2019-08-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres sent RHP Jacob Nix on a rehab assignment to AZL Padres 1."
+    },
+    {
+      "id": 422579,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "date": "2019-08-07",
+      "effectiveDate": "2019-08-07",
+      "resolutionDate": "2019-08-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres sent RHP Jacob Nix on a rehab assignment to Lake Elsinore Storm."
+    },
+    {
+      "id": 424606,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 103,
+        "name": "Lake Elsinore Storm",
+        "link": "/api/v1/teams/103"
+      },
+      "date": "2019-08-07",
+      "effectiveDate": "2019-08-07",
+      "resolutionDate": "2019-08-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres sent RHP Jacob Nix on a rehab assignment to Lake Elsinore Storm."
+    },
+    {
+      "id": 424610,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2019-08-19",
+      "effectiveDate": "2019-08-19",
+      "resolutionDate": "2019-08-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres sent RHP Jacob Nix on a rehab assignment to El Paso Chihuahuas."
+    },
+    {
+      "id": 426534,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2019-08-30",
+      "effectiveDate": "2019-08-30",
+      "resolutionDate": "2019-08-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres sent RHP Jacob Nix on a rehab assignment to El Paso Chihuahuas."
+    },
+    {
+      "id": 427595,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 5368,
+        "name": "Amarillo Sod Poodles",
+        "link": "/api/v1/teams/5368"
+      },
+      "date": "2019-09-05",
+      "effectiveDate": "2019-09-05",
+      "resolutionDate": "2019-09-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres sent RHP Jacob Nix on a rehab assignment to Amarillo Sod Poodles."
+    },
+    {
+      "id": 429121,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 490,
+        "name": "Peoria Javelinas",
+        "link": "/api/v1/teams/490"
+      },
+      "date": "2019-10-04",
+      "effectiveDate": "2019-10-04",
+      "resolutionDate": "2019-10-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jacob Nix assigned to Peoria Javelinas."
+    },
+    {
+      "id": 432340,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2019-11-04",
+      "effectiveDate": "2019-11-04",
+      "resolutionDate": "2019-11-04",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "San Diego Padres designated RHP Jacob Nix for assignment."
+    },
+    {
+      "id": 433394,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2019-11-11",
+      "effectiveDate": "2019-11-11",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "San Diego Padres sent RHP Jacob Nix outright to El Paso Chihuahuas."
+    },
+    {
+      "id": 469365,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "San Diego Padres invited non-roster RHP Jacob Nix to spring training."
+    },
+    {
+      "id": 474711,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "P Jacob Nix roster status changed by San Diego Padres."
+    },
+    {
+      "id": 483665,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jacob Nix assigned to San Antonio Missions from El Paso Chihuahuas."
+    },
+    {
+      "id": 485290,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "fromTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2021-05-06",
+      "effectiveDate": "2021-05-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jacob Nix assigned to El Paso Chihuahuas from San Antonio Missions."
+    },
+    {
+      "id": 524598,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2021-11-07",
+      "effectiveDate": "2021-11-07",
+      "resolutionDate": "2021-11-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "El Paso Chihuahuas activated RHP Jacob Nix."
+    },
+    {
+      "id": 618765,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2022-04-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jacob Nix assigned to San Antonio Missions from El Paso Chihuahuas."
+    },
+    {
+      "id": 659777,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2022-11-10",
+      "effectiveDate": "2022-11-10",
+      "resolutionDate": "2022-11-10",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Jacob Nix elected free agency."
+    },
+    {
+      "id": 852975,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 536,
+        "name": "Tecos de los Dos Laredos",
+        "link": "/api/v1/teams/536"
+      },
+      "date": "2025-07-05",
+      "effectiveDate": "2025-07-05",
+      "resolutionDate": "2025-07-05",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Tecos de los Dos Laredos signed free agent RHP Jacob Nix."
+    },
+    {
+      "id": 860919,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 536,
+        "name": "Tecos de los Dos Laredos",
+        "link": "/api/v1/teams/536"
+      },
+      "date": "2025-08-01",
+      "effectiveDate": "2025-08-01",
+      "resolutionDate": "2025-08-01",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Tecos de los Dos Laredos released RHP Jacob Nix."
+    },
+    {
+      "id": 877721,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 5482,
+        "name": "Algodoneros de Guasave",
+        "link": "/api/v1/teams/5482"
+      },
+      "date": "2025-11-25",
+      "effectiveDate": "2025-11-25",
+      "resolutionDate": "2025-11-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jacob Nix assigned to Algodoneros de Guasave."
+    },
+    {
+      "id": 911397,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 442,
+        "name": "Olmecas de Tabasco",
+        "link": "/api/v1/teams/442"
+      },
+      "date": "2026-05-24",
+      "effectiveDate": "2026-05-24",
+      "resolutionDate": "2026-05-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Olmecas de Tabasco signed free agent RHP Jacob Nix."
+    },
+    {
+      "id": 935797,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 442,
+        "name": "Olmecas de Tabasco",
+        "link": "/api/v1/teams/442"
+      },
+      "date": "2026-07-16",
+      "effectiveDate": "2026-07-16",
+      "resolutionDate": "2026-07-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Olmecas de Tabasco placed RHP Jacob Nix on the reserve list."
+    },
+    {
+      "id": 927909,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 442,
+        "name": "Olmecas de Tabasco",
+        "link": "/api/v1/teams/442"
+      },
+      "date": "2026-07-16",
+      "effectiveDate": "2026-07-16",
+      "resolutionDate": "2026-07-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Olmecas de Tabasco placed RHP Jacob Nix on the reserve list."
+    },
+    {
+      "id": 949843,
+      "person": {
+        "id": 656798,
+        "fullName": "Jacob Nix",
+        "link": "/api/v1/people/656798",
+        "nameSlug": "jacob-nix-656798"
+      },
+      "toTeam": {
+        "id": 679,
+        "name": "Venados de Mazatlan",
+        "link": "/api/v1/teams/679"
+      },
+      "date": "2026-11-07",
+      "effectiveDate": "2026-11-07",
+      "resolutionDate": "2026-11-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jacob Nix assigned to Venados de Mazatlan."
+    }
+  ]
+}

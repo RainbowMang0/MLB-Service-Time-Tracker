@@ -1,0 +1,943 @@
+{
+  "player_id": 572089,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:2b792d87bb167b8be897c6ff18f168471db664cbc0b2004e44d6f3f50fd5a49d",
+  "transactions": [
+    {
+      "id": 128448,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2012-07-05",
+      "effectiveDate": "2012-07-05",
+      "resolutionDate": "2012-07-05",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Los Angeles Dodgers signed LHP Paco Rodriguez."
+    },
+    {
+      "id": 128449,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "date": "2012-07-06",
+      "effectiveDate": "2012-07-06",
+      "resolutionDate": "2012-07-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Paco Rodriguez assigned to Great Lakes Loons."
+    },
+    {
+      "id": 130984,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "fromTeam": {
+        "id": 456,
+        "name": "Great Lakes Loons",
+        "link": "/api/v1/teams/456"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2012-07-27",
+      "effectiveDate": "2012-07-27",
+      "resolutionDate": "2012-07-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Paco Rodriguez assigned to Chattanooga Lookouts from Great Lakes Loons."
+    },
+    {
+      "id": 135429,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "fromTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2012-09-05",
+      "effectiveDate": "2012-09-05",
+      "resolutionDate": "2012-09-05",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Los Angeles Dodgers selected the contract of LHP Paco Rodriguez from Chattanooga Lookouts."
+    },
+    {
+      "id": 172687,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2013-10-11",
+      "effectiveDate": "2013-10-11",
+      "resolutionDate": "2013-10-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers reassigned LHP Paco Rodriguez to the minor leagues."
+    },
+    {
+      "id": 173183,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2013-10-21",
+      "effectiveDate": "2014-04-15",
+      "resolutionDate": "2013-10-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Paco Rodriguez roster status changed by Los Angeles Dodgers."
+    },
+    {
+      "id": 185984,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2014-04-15",
+      "effectiveDate": "2014-04-15",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned LHP Paco Rodriguez to Albuquerque Isotopes."
+    },
+    {
+      "id": 187302,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "fromTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2014-04-29",
+      "effectiveDate": "2014-05-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled Paco Rodriguez from Albuquerque Isotopes."
+    },
+    {
+      "id": 187574,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2014-05-02",
+      "effectiveDate": "2014-05-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned LHP Paco Rodriguez to Albuquerque Isotopes."
+    },
+    {
+      "id": 201055,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "fromTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2014-07-18",
+      "effectiveDate": "2014-07-22",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled Paco Rodriguez from Albuquerque Isotopes."
+    },
+    {
+      "id": 201617,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2014-07-22",
+      "effectiveDate": "2014-07-22",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Los Angeles Dodgers optioned LHP Paco Rodriguez to Albuquerque Isotopes."
+    },
+    {
+      "id": 203284,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "fromTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2014-08-02",
+      "effectiveDate": "2014-08-02",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Los Angeles Dodgers recalled LHP Paco Rodriguez from Albuquerque Isotopes."
+    },
+    {
+      "id": 203697,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2014-08-05",
+      "effectiveDate": "2014-08-04",
+      "resolutionDate": "2014-08-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed LHP Paco Rodriguez on the 15-day disabled list retroactive to August 4, 2014. Teres Major strain."
+    },
+    {
+      "id": 207503,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2014-09-13",
+      "effectiveDate": "2014-09-13",
+      "resolutionDate": "2014-09-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated LHP Paco Rodriguez from the 15-day disabled list."
+    },
+    {
+      "id": 208737,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2014-10-03",
+      "effectiveDate": "2014-10-03",
+      "resolutionDate": "2014-10-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers reassigned LHP Paco Rodriguez to the minor leagues."
+    },
+    {
+      "id": 209447,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2014-10-13",
+      "effectiveDate": "2014-10-13",
+      "resolutionDate": "2014-10-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers activated LHP Paco Rodriguez."
+    },
+    {
+      "id": 228218,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2015-05-31",
+      "effectiveDate": "2015-05-30",
+      "resolutionDate": "2015-05-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers placed LHP Paco Rodriguez on the 15-day disabled list retroactive to May 30, 2015. left elbow strain"
+    },
+    {
+      "id": 230345,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2015-06-15",
+      "effectiveDate": "2015-06-15",
+      "resolutionDate": "2015-06-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers sent LHP Paco Rodriguez on a rehab assignment to Rancho Cucamonga Quakes."
+    },
+    {
+      "id": 232809,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 238,
+        "name": "Oklahoma City Comets",
+        "link": "/api/v1/teams/238"
+      },
+      "date": "2015-06-20",
+      "effectiveDate": "2015-06-20",
+      "resolutionDate": "2015-06-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Dodgers sent LHP Paco Rodriguez on a rehab assignment to Oklahoma City Dodgers."
+    },
+    {
+      "id": 236626,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2015-07-06",
+      "effectiveDate": "2015-07-06",
+      "resolutionDate": "2015-07-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Los Angeles Dodgers transferred LHP Paco Rodriguez from the 15-day disabled list to the 60-day disabled list. left elbow strain"
+    },
+    {
+      "id": 240120,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2015-07-30",
+      "effectiveDate": "2015-07-30",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Atlanta Braves traded LHP Alex Wood, RHP Jim Johnson, LHP Luis Avilan, 2B Jose Peraza, RHP Bronson Arroyo and cash to Los Angeles Dodgers for 2B Hector Olivera, LHP Paco Rodriguez and RHP Zack Bird."
+    },
+    {
+      "id": 249104,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2015-11-04",
+      "effectiveDate": "2015-11-04",
+      "resolutionDate": "2015-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves activated LHP Paco Rodriguez from the 60-day disabled list."
+    },
+    {
+      "id": 255241,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2016-02-20",
+      "effectiveDate": "2016-02-20",
+      "resolutionDate": "2016-02-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves placed LHP Paco Rodriguez on the 60-day disabled list. Recovering from September 2015 Tommy John surgery"
+    },
+    {
+      "id": 291903,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2016-11-04",
+      "effectiveDate": "2016-11-04",
+      "resolutionDate": "2016-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Atlanta Braves activated LHP Paco Rodriguez from the 60-day disabled list."
+    },
+    {
+      "id": 301609,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2017-03-28",
+      "effectiveDate": "2017-03-28",
+      "resolutionDate": "2017-03-28",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Atlanta Braves released LHP Paco Rodriguez."
+    },
+    {
+      "id": 328089,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2017-07-18",
+      "effectiveDate": "2017-07-18",
+      "resolutionDate": "2017-07-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Baltimore Orioles signed free agent LHP Paco Rodriguez to a minor league contract."
+    },
+    {
+      "id": 328090,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 599,
+        "name": "FCL Orioles",
+        "link": "/api/v1/teams/599"
+      },
+      "date": "2017-08-07",
+      "effectiveDate": "2017-08-07",
+      "resolutionDate": "2017-08-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent LHP Paco Rodriguez on a rehab assignment to GCL Orioles."
+    },
+    {
+      "id": 334134,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2017-10-06",
+      "effectiveDate": "2017-10-06",
+      "resolutionDate": "2017-10-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Paco Rodriguez assigned to Norfolk Tides."
+    },
+    {
+      "id": 336507,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2017-11-06",
+      "effectiveDate": "2017-11-06",
+      "resolutionDate": "2017-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Paco Rodriguez elected free agency."
+    },
+    {
+      "id": 339581,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 686,
+        "name": "Criollos de Caguas",
+        "link": "/api/v1/teams/686"
+      },
+      "date": "2018-01-04",
+      "effectiveDate": "2018-01-04",
+      "resolutionDate": "2018-01-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Paco Rodriguez assigned to Criollos de Caguas."
+    },
+    {
+      "id": 353857,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2018-05-04",
+      "effectiveDate": "2018-05-04",
+      "resolutionDate": "2018-05-04",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent LHP Paco Rodriguez to a minor league contract."
+    },
+    {
+      "id": 353858,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 509,
+        "name": "Fort Myers Mighty Mussels",
+        "link": "/api/v1/teams/509"
+      },
+      "date": "2018-05-14",
+      "effectiveDate": "2018-05-14",
+      "resolutionDate": "2018-05-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Paco Rodriguez assigned to Fort Myers Miracle."
+    },
+    {
+      "id": 355076,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "fromTeam": {
+        "id": 509,
+        "name": "Fort Myers Mighty Mussels",
+        "link": "/api/v1/teams/509"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2018-05-25",
+      "effectiveDate": "2018-05-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Paco Rodriguez assigned to Chattanooga Lookouts from Fort Myers Miracle."
+    },
+    {
+      "id": 372625,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 498,
+        "name": "Chattanooga Lookouts",
+        "link": "/api/v1/teams/498"
+      },
+      "date": "2018-08-02",
+      "effectiveDate": "2018-08-02",
+      "resolutionDate": "2018-08-02",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Chattanooga Lookouts released LHP Paco Rodriguez."
+    },
+    {
+      "id": 388966,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2019-02-17",
+      "effectiveDate": "2019-02-17",
+      "resolutionDate": "2019-02-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Diego Padres signed free agent LHP Paco Rodriguez to a minor league contract."
+    },
+    {
+      "id": 388965,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2019-02-25",
+      "effectiveDate": "2019-02-25",
+      "resolutionDate": "2019-02-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Paco Rodriguez assigned to El Paso Chihuahuas."
+    },
+    {
+      "id": 393580,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 3284,
+        "name": "Padres Alternate Training Site",
+        "link": "/api/v1/teams/3284"
+      },
+      "date": "2019-03-30",
+      "effectiveDate": "2019-03-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Paco Rodriguez assigned to Padres Extended Spring Training from El Paso Chihuahuas."
+    },
+    {
+      "id": 396628,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "fromTeam": {
+        "id": 3284,
+        "name": "Padres Alternate Training Site",
+        "link": "/api/v1/teams/3284"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2019-04-14",
+      "effectiveDate": "2019-04-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Paco Rodriguez assigned to El Paso Chihuahuas from Padres Extended Spring Training."
+    },
+    {
+      "id": 397766,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 5368,
+        "name": "Amarillo Sod Poodles",
+        "link": "/api/v1/teams/5368"
+      },
+      "date": "2019-04-22",
+      "effectiveDate": "2019-04-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Paco Rodriguez assigned to Amarillo Sod Poodles from El Paso Chihuahuas."
+    },
+    {
+      "id": 399652,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "fromTeam": {
+        "id": 5368,
+        "name": "Amarillo Sod Poodles",
+        "link": "/api/v1/teams/5368"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2019-05-03",
+      "effectiveDate": "2019-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Paco Rodriguez assigned to El Paso Chihuahuas from Amarillo Sod Poodles."
+    },
+    {
+      "id": 400675,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "fromTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "toTeam": {
+        "id": 5368,
+        "name": "Amarillo Sod Poodles",
+        "link": "/api/v1/teams/5368"
+      },
+      "date": "2019-05-09",
+      "effectiveDate": "2019-05-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Paco Rodriguez assigned to Amarillo Sod Poodles from El Paso Chihuahuas."
+    },
+    {
+      "id": 401685,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "fromTeam": {
+        "id": 5368,
+        "name": "Amarillo Sod Poodles",
+        "link": "/api/v1/teams/5368"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2019-05-16",
+      "effectiveDate": "2019-05-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Paco Rodriguez assigned to El Paso Chihuahuas from Amarillo Sod Poodles."
+    },
+    {
+      "id": 432950,
+      "person": {
+        "id": 572089,
+        "fullName": "Paco Rodríguez",
+        "link": "/api/v1/people/572089",
+        "nameSlug": "paco-rodriguez-572089"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2019-11-04",
+      "effectiveDate": "2019-11-04",
+      "resolutionDate": "2019-11-04",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Paco Rodriguez elected free agency."
+    }
+  ]
+}

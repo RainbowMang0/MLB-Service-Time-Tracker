@@ -1,0 +1,1525 @@
+{
+  "player_id": 656222,
+  "fetched_at": "2026-11-09T23:12:59Z",
+  "checksum": "sha256:1706d7fb7b87843846c0f5794a0924c527bdbdb556f8c5329758100ffca0fc2e",
+  "transactions": [
+    {
+      "id": 196664,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2014-06-20",
+      "effectiveDate": "2014-06-20",
+      "resolutionDate": "2014-06-20",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "Boston Red Sox signed LHP Jalen Beeks."
+    },
+    {
+      "id": 196665,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 558,
+        "name": "Lowell Spinners",
+        "link": "/api/v1/teams/558"
+      },
+      "date": "2014-06-21",
+      "effectiveDate": "2014-06-21",
+      "resolutionDate": "2014-06-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jalen Beeks assigned to Lowell Spinners."
+    },
+    {
+      "id": 197579,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 558,
+        "name": "Lowell Spinners",
+        "link": "/api/v1/teams/558"
+      },
+      "toTeam": {
+        "id": 471,
+        "name": "FCL Red Sox",
+        "link": "/api/v1/teams/471"
+      },
+      "date": "2014-06-26",
+      "effectiveDate": "2014-06-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Jalen Beeks assigned to GCL Red Sox from Lowell Spinners."
+    },
+    {
+      "id": 204797,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 558,
+        "name": "Lowell Spinners",
+        "link": "/api/v1/teams/558"
+      },
+      "toTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "date": "2014-07-05",
+      "effectiveDate": "2014-07-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jalen Beeks assigned to Greenville Drive from Lowell Spinners."
+    },
+    {
+      "id": 206024,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 471,
+        "name": "FCL Red Sox",
+        "link": "/api/v1/teams/471"
+      },
+      "date": "2014-08-14",
+      "effectiveDate": "2014-08-14",
+      "resolutionDate": "2014-08-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "GCL Red Sox activated LHP Jalen Beeks."
+    },
+    {
+      "id": 206023,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 471,
+        "name": "FCL Red Sox",
+        "link": "/api/v1/teams/471"
+      },
+      "date": "2014-08-14",
+      "effectiveDate": "2014-08-14",
+      "resolutionDate": "2014-08-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jalen Beeks assigned to GCL Red Sox."
+    },
+    {
+      "id": 205440,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "toTeam": {
+        "id": 471,
+        "name": "FCL Red Sox",
+        "link": "/api/v1/teams/471"
+      },
+      "date": "2014-08-19",
+      "effectiveDate": "2014-08-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jalen Beeks assigned to GCL Red Sox from Greenville Drive."
+    },
+    {
+      "id": 220798,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 471,
+        "name": "FCL Red Sox",
+        "link": "/api/v1/teams/471"
+      },
+      "toTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "date": "2015-04-07",
+      "effectiveDate": "2015-04-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jalen Beeks assigned to Greenville Drive from GCL Red Sox."
+    },
+    {
+      "id": 226112,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "date": "2015-05-20",
+      "effectiveDate": "2015-05-20",
+      "resolutionDate": "2015-05-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Greenville Drive placed LHP Jalen Beeks on the temporarily inactive list."
+    },
+    {
+      "id": 226696,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "date": "2015-05-25",
+      "effectiveDate": "2015-05-25",
+      "resolutionDate": "2015-05-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Greenville Drive activated LHP Jalen Beeks from the temporarily inactive list."
+    },
+    {
+      "id": 242409,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "date": "2015-08-16",
+      "effectiveDate": "2015-08-13",
+      "resolutionDate": "2015-08-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Greenville Drive placed LHP Jalen Beeks on the 7-day disabled list retroactive to August 13, 2015."
+    },
+    {
+      "id": 243146,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "date": "2015-08-22",
+      "effectiveDate": "2015-08-22",
+      "resolutionDate": "2015-08-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Greenville Drive activated LHP Jalen Beeks from the 7-day disabled list."
+    },
+    {
+      "id": 260265,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "toTeam": {
+        "id": 414,
+        "name": "Salem RidgeYaks",
+        "link": "/api/v1/teams/414"
+      },
+      "date": "2016-04-05",
+      "effectiveDate": "2016-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jalen Beeks assigned to Salem Red Sox from Greenville Drive."
+    },
+    {
+      "id": 274357,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 414,
+        "name": "Salem RidgeYaks",
+        "link": "/api/v1/teams/414"
+      },
+      "toTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "date": "2016-06-23",
+      "effectiveDate": "2016-06-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jalen Beeks assigned to Portland Sea Dogs from Salem Red Sox."
+    },
+    {
+      "id": 299186,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2017-03-01",
+      "effectiveDate": "2017-03-01",
+      "resolutionDate": "2017-03-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jalen Beeks assigned to Boston Red Sox."
+    },
+    {
+      "id": 299783,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 940,
+        "name": "United States",
+        "link": "/api/v1/teams/940"
+      },
+      "date": "2017-03-09",
+      "effectiveDate": "2017-03-09",
+      "resolutionDate": "2017-03-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jalen Beeks assigned to United States."
+    },
+    {
+      "id": 314154,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2017-06-03",
+      "effectiveDate": "2017-06-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jalen Beeks assigned to Pawtucket Red Sox from Portland Sea Dogs."
+    },
+    {
+      "id": 322923,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2017-07-07",
+      "effectiveDate": "2017-07-07",
+      "resolutionDate": "2017-07-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pawtucket Red Sox placed LHP Jalen Beeks on the temporarily inactive list."
+    },
+    {
+      "id": 324146,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2017-07-14",
+      "effectiveDate": "2017-07-14",
+      "resolutionDate": "2017-07-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pawtucket Red Sox activated LHP Jalen Beeks from the temporarily inactive list."
+    },
+    {
+      "id": 337424,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2017-11-20",
+      "effectiveDate": "2018-03-11",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Boston Red Sox selected the contract of Jalen Beeks from Pawtucket Red Sox."
+    },
+    {
+      "id": 343817,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2018-03-11",
+      "effectiveDate": "2018-03-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Boston Red Sox optioned LHP Jalen Beeks to Pawtucket Red Sox."
+    },
+    {
+      "id": 358396,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2018-06-07",
+      "effectiveDate": "2018-06-08",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Boston Red Sox recalled Jalen Beeks from Pawtucket Red Sox."
+    },
+    {
+      "id": 358516,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2018-06-08",
+      "effectiveDate": "2018-06-08",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Boston Red Sox optioned LHP Jalen Beeks to Pawtucket Red Sox."
+    },
+    {
+      "id": 367525,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2018-07-10",
+      "effectiveDate": "2018-07-11",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Boston Red Sox recalled Jalen Beeks from Pawtucket Red Sox."
+    },
+    {
+      "id": 367844,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2018-07-11",
+      "effectiveDate": "2018-07-11",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Boston Red Sox optioned LHP Jalen Beeks to Pawtucket Red Sox."
+    },
+    {
+      "id": 370895,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2018-07-25",
+      "effectiveDate": "2018-07-25",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Tampa Bay Rays traded RHP Nathan Eovaldi to Boston Red Sox for LHP Jalen Beeks."
+    },
+    {
+      "id": 371231,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2018-07-26",
+      "effectiveDate": "2019-06-28",
+      "resolutionDate": "2018-07-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jalen Beeks roster status changed by Tampa Bay Rays."
+    },
+    {
+      "id": 413785,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2019-06-28",
+      "effectiveDate": "2019-06-28",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned LHP Jalen Beeks to Durham Bulls."
+    },
+    {
+      "id": 417825,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2019-07-16",
+      "effectiveDate": "2019-07-16",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled LHP Jalen Beeks from Durham Bulls."
+    },
+    {
+      "id": 429045,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2019-10-02",
+      "effectiveDate": "2019-10-02",
+      "resolutionDate": "2019-10-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays reassigned LHP Jalen Beeks to the minor leagues."
+    },
+    {
+      "id": 433380,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2019-10-11",
+      "effectiveDate": "2019-10-11",
+      "resolutionDate": "2019-10-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays activated LHP Jalen Beeks."
+    },
+    {
+      "id": 450029,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2020-08-26",
+      "effectiveDate": "2020-08-26",
+      "resolutionDate": "2020-08-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays placed LHP Jalen Beeks on the 60-day injured list. Left elbow sprain."
+    },
+    {
+      "id": 455159,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2020-11-02",
+      "effectiveDate": "2020-11-02",
+      "resolutionDate": "2020-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays activated LHP Jalen Beeks from the 60-day injured list."
+    },
+    {
+      "id": 469913,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2021-02-17",
+      "effectiveDate": "2021-02-17",
+      "resolutionDate": "2021-02-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays placed LHP Jalen Beeks on the 60-day injured list. Tommy John surgery."
+    },
+    {
+      "id": 523445,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2021-11-05",
+      "effectiveDate": "2021-11-05",
+      "resolutionDate": "2021-11-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays activated LHP Jalen Beeks from the 60-day injured list."
+    },
+    {
+      "id": 638055,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2022-07-17",
+      "effectiveDate": "2022-07-15",
+      "resolutionDate": "2022-07-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays placed LHP Jalen Beeks on the 15-day injured list retroactive to July 15, 2022. Lower right leg tightness."
+    },
+    {
+      "id": 653291,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2022-09-21",
+      "effectiveDate": "2022-09-18",
+      "resolutionDate": "2022-09-18",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays placed LHP Jalen Beeks on the 15-day injured list retroactive to September 18, 2022. Right lower leg tightness."
+    },
+    {
+      "id": 655003,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2022-10-06",
+      "effectiveDate": "2022-10-06",
+      "resolutionDate": "2022-10-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays activated LHP Jalen Beeks from the 15-day injured list."
+    },
+    {
+      "id": 703883,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2023-06-14",
+      "effectiveDate": "2023-06-14",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned LHP Jalen Beeks to Durham Bulls."
+    },
+    {
+      "id": 708295,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2023-07-01",
+      "effectiveDate": "2023-07-01",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled LHP Jalen Beeks from Durham Bulls."
+    },
+    {
+      "id": 709194,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2023-07-05",
+      "effectiveDate": "2023-07-05",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned LHP Jalen Beeks to Durham Bulls."
+    },
+    {
+      "id": 718025,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2023-08-06",
+      "effectiveDate": "2023-08-06",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled LHP Jalen Beeks from Durham Bulls."
+    },
+    {
+      "id": 719052,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2023-08-10",
+      "effectiveDate": "2023-08-10",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned LHP Jalen Beeks to Durham Bulls."
+    },
+    {
+      "id": 722049,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2023-08-26",
+      "effectiveDate": "2023-08-26",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled LHP Jalen Beeks from Durham Bulls."
+    },
+    {
+      "id": 723262,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2023-09-02",
+      "effectiveDate": "2023-09-02",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned LHP Jalen Beeks to Durham Bulls."
+    },
+    {
+      "id": 725482,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2023-09-18",
+      "effectiveDate": "2023-09-18",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Tampa Bay Rays recalled LHP Jalen Beeks from Durham Bulls."
+    },
+    {
+      "id": 725860,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2023-09-21",
+      "effectiveDate": "2023-09-21",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Tampa Bay Rays optioned LHP Jalen Beeks to Durham Bulls."
+    },
+    {
+      "id": 727952,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2023-10-05",
+      "effectiveDate": "2023-10-05",
+      "resolutionDate": "2023-10-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tampa Bay Rays activated LHP Jalen Beeks."
+    },
+    {
+      "id": 731371,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2023-11-06",
+      "effectiveDate": "2023-11-06",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Colorado Rockies claimed LHP Jalen Beeks off waivers from Tampa Bay Rays."
+    },
+    {
+      "id": 790859,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2024-07-29",
+      "effectiveDate": "2024-07-29",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Colorado Rockies traded LHP Jalen Beeks to Pittsburgh Pirates for LHP Luis Peralta."
+    },
+    {
+      "id": 791335,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2024-07-30",
+      "effectiveDate": "2024-07-30",
+      "resolutionDate": "2024-07-30",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Pittsburgh Pirates activated LHP Jalen Beeks."
+    },
+    {
+      "id": 803421,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2024-10-31",
+      "effectiveDate": "2024-10-31",
+      "resolutionDate": "2024-10-31",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Jalen Beeks elected free agency."
+    },
+    {
+      "id": 820368,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2025-03-10",
+      "effectiveDate": "2025-03-10",
+      "resolutionDate": "2025-03-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jalen Beeks assigned to Sugar Land Space Cowboys."
+    },
+    {
+      "id": 820367,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2025-03-10",
+      "effectiveDate": "2025-03-10",
+      "resolutionDate": "2025-03-10",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Houston Astros signed free agent LHP Jalen Beeks to a minor league contract."
+    },
+    {
+      "id": 821507,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2025-03-22",
+      "effectiveDate": "2025-03-22",
+      "resolutionDate": "2025-03-22",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Houston Astros released LHP Jalen Beeks."
+    },
+    {
+      "id": 822218,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-03-26",
+      "effectiveDate": "2025-03-26",
+      "resolutionDate": "2025-03-26",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Arizona Diamondbacks signed free agent LHP Jalen Beeks."
+    },
+    {
+      "id": 828748,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-04-15",
+      "effectiveDate": "2025-04-15",
+      "resolutionDate": "2025-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "LHP Jalen Beeks changed number to 42."
+    },
+    {
+      "id": 829950,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-04-16",
+      "effectiveDate": "2025-04-16",
+      "resolutionDate": "2025-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "LHP Jalen Beeks changed number to 68."
+    },
+    {
+      "id": 854668,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-07-11",
+      "effectiveDate": "2025-07-08",
+      "resolutionDate": "2025-07-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks placed LHP Jalen Beeks on the 15-day injured list retroactive to July 8, 2025. Lower back inflammation."
+    },
+    {
+      "id": 859752,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2025-07-29",
+      "effectiveDate": "2025-07-29",
+      "resolutionDate": "2025-07-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Arizona Diamondbacks sent LHP Jalen Beeks on a rehab assignment to Reno Aces."
+    },
+    {
+      "id": 859737,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 2310,
+        "name": "Reno Aces",
+        "link": "/api/v1/teams/2310"
+      },
+      "date": "2025-07-29",
+      "effectiveDate": "2025-07-29",
+      "resolutionDate": "2025-07-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Arizona Diamondbacks sent LHP Jalen Beeks on a rehab assignment to Reno Aces."
+    },
+    {
+      "id": 860687,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-08-01",
+      "effectiveDate": "2025-08-01",
+      "resolutionDate": "2025-08-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Arizona Diamondbacks activated LHP Jalen Beeks from the 15-day injured list."
+    },
+    {
+      "id": 874296,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2025-11-02",
+      "effectiveDate": "2025-11-02",
+      "resolutionDate": "2025-11-02",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Jalen Beeks elected free agency."
+    },
+    {
+      "id": 891449,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-03-13",
+      "effectiveDate": "2026-03-13",
+      "resolutionDate": "2026-03-13",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent LHP Jalen Beeks."
+    },
+    {
+      "id": 893419,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-03-25",
+      "effectiveDate": "2026-03-25",
+      "resolutionDate": "2026-03-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers activated LHP Jalen Beeks."
+    },
+    {
+      "id": 899017,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-04-15",
+      "effectiveDate": "2026-04-15",
+      "resolutionDate": "2026-04-15",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "LHP Jalen Beeks changed number to 42."
+    },
+    {
+      "id": 899930,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "LHP Jalen Beeks changed number to 68."
+    },
+    {
+      "id": 917438,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-06-11",
+      "effectiveDate": "2026-06-10",
+      "resolutionDate": "2026-06-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers placed LHP Jalen Beeks on the 10-day injured list retroactive to June 10, 2026. Low back spasms."
+    },
+    {
+      "id": 929734,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-07-10",
+      "effectiveDate": "2026-07-21",
+      "resolutionDate": "2026-07-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Texas Rangers transferred LHP Jalen Beeks from the 10-day injured list to the 60-day injured list."
+    },
+    {
+      "id": 947294,
+      "person": {
+        "id": 656222,
+        "fullName": "Jalen Beeks",
+        "link": "/api/v1/people/656222",
+        "nameSlug": "jalen-beeks-656222"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-10-29",
+      "effectiveDate": "2026-10-29",
+      "resolutionDate": "2026-10-29",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Jalen Beeks elected free agency."
+    }
+  ]
+}
