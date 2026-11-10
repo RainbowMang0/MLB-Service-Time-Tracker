@@ -44,6 +44,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).parent))
 import accrual_model  # noqa: E402
 import cba  # noqa: E402
 import fetch_mlb_data as mlb  # noqa: E402
+import refresh_complete  # noqa: E402
 import salary_estimates  # noqa: E402
 import service_time_exceptions  # noqa: E402
 import super_two  # noqa: E402
@@ -1388,6 +1389,10 @@ def build_player_record(
             txn_team_ids,
             min((t.date.year for t in transactions), default=None),
         ),
+        # The date this one record was rebuilt. It is not the daily job's
+        # "already done today" signal: one record moving to today does not
+        # mean the roster refresh finished. That signal is
+        # data/refresh_complete.json, written only after a full successful run.
         "last_updated": TODAY.isoformat(),
         "rules_version": SERVICE_TIME_RULES_VERSION,
     }
@@ -1915,13 +1920,21 @@ def main() -> None:
             record["on_40_man"] = False
 
     _write_outputs(db)
+    # After publish, and only then. A crash while writing leaves the previous
+    # marker in place, so a later run does not treat a half-finished publish
+    # as done. --recompute-derived and a disabled fetch return above and do
+    # not get here: neither one refreshed the roster from the API.
+    _mark_refresh_complete(args.limit, failures, len(roster))
 
 
 # Sanity bounds for a daily run. Every one of them describes a failure that
 # publishes CONFIDENTLY WRONG data rather than crashing, which is the only
 # kind worth a gate: a crash leaves yesterday's good file in place, a silent
 # success overwrites it.
-MIN_EXPECTED_ROSTER = 900      # 30 clubs x 40 = 1,200 nominal, with slack
+# 30 clubs x 40 = 1,200 nominal, with slack. refresh_complete.MIN_ROSTERED
+# is the same floor: a run that was too short to publish is too short to
+# count as the day's refresh. tests/test_refresh_complete.py keeps them equal.
+MIN_EXPECTED_ROSTER = 900
 MAX_ROSTER_SHRINK = 0.25       # vs. what the stored database already knows
 MAX_FAILURE_RATE = 0.10        # per-player build failures are swallowed
 
@@ -1980,6 +1993,37 @@ def check_run_is_sane(
             f"{MAX_FAILURE_RATE:.0%} tolerance"
         )
     return problems
+
+
+def _mark_refresh_complete(limit: int | None, failures: int, rostered: int) -> None:
+    """Write the completion marker after a full roster refresh has published.
+
+    A limited run, any player who failed to build, or a short roster leaves
+    the previous marker alone. The next scheduled run then still does the work.
+    """
+    if not refresh_complete.should_mark_complete(
+        limit=limit, failures=failures, rostered=rostered
+    ):
+        limited = ", limited run" if limit is not None else ""
+        print(
+            "Not marking the daily refresh complete "
+            f"({failures} failure(s), {rostered} rostered{limited})."
+        )
+        return
+    completed_on = refresh_complete.utc_today()
+    marker = refresh_complete.build_marker(
+        completed_on=completed_on,
+        rostered=rostered,
+        updated=rostered - failures,
+        failures=failures,
+        rules_version=SERVICE_TIME_RULES_VERSION,
+    )
+    path = refresh_complete.marker_path(ROOT)
+    refresh_complete.write_marker(path, marker)
+    print(
+        "Marked the daily refresh complete for "
+        f"{completed_on} ({marker['updated']} of {marker['rostered']} rostered players)."
+    )
 
 
 def publish_config() -> list[pathlib.Path]:

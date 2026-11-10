@@ -79,6 +79,9 @@ jobs:
       - name: Option years
         run: python tests/test_options.py
 
+      - name: Golden service-time cases
+        run: python tests/test_golden_players.py
+
       - name: Alumni page sections
         run: python tests/test_alumni_sections.py
 
@@ -93,6 +96,13 @@ jobs:
 
       - name: Daily fetch shape
         run: python tests/test_daily_fetch.py
+
+      # The daily workflow skips a run only when a completion marker says a
+      # full roster refresh already finished today. A partial run must not
+      # count, and a rules-version mismatch in the published data warns
+      # without failing.
+      - name: Daily refresh completion marker, and rules-version warning
+        run: python tests/test_refresh_complete.py
 
       # Validates data/lockout_updates.json against its own schema (required
       # fields, real ISO dates, https sources) AND builds docs/lockout.html
