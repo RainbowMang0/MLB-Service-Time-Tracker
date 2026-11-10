@@ -11,3 +11,7 @@ data/reference_service_time.json
 # A killed fetch can leave a half-written player file. The finished files
 # are renamed into place; these are not.
 data/raw_transactions/*.tmp
+
+# Resumable cache for the yearly Rule 5 pull. The published file is
+# data/rule5/rule5_2026.json.
+data/rule5/cache/

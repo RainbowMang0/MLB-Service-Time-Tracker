@@ -102,6 +102,9 @@ jobs:
       - name: Snippet length, share image, and list links
         run: python tests/test_share_pages.py
 
+      - name: Rule 5 eligibility
+        run: python tests/test_rule5.py
+
       - name: Golden service-time cases
         run: python tests/test_golden_players.py
 

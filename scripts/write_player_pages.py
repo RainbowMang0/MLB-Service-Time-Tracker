@@ -54,7 +54,7 @@ from mlb_clubs import CLUB_ABBR, CLUB_NAMES, name_for_record  # noqa: E402
 import options as option_years  # noqa: E402
 import page_titles  # noqa: E402
 import player_sections  # noqa: E402
-import salary_estimates  # noqa: E402
+import rule5_site, salary_estimates  # noqa: E402
 import share_meta  # noqa: E402
 import super_two  # noqa: E402
 import validate_super_two  # noqa: E402
@@ -1014,7 +1014,7 @@ def _club_offseason_section(
   {_club_fa_table(fa_next_season, next_season)}
   <p class="foot-note"><a href="{slug_}-free-agents.html">Full {html.escape(club)} free agents</a>
   &middot; <a href="{BASE_PATH}{FREE_AGENTS_PATH}">league-wide</a></p>
-"""
+{rule5_site.offseason_link(club, slug_, BASE_PATH, CLUB_DIR)}"""
 
 
 def _options_left_cell(player: dict, option_counts: dict | None) -> str:
@@ -2299,6 +2299,7 @@ def _write_club_pages(
 
     directory = render_club_index(by_club, generated_at)
     _keep(f"{CLUB_DIR_NAME}/index.html", directory)
+    rule5_site.keep(CLUB_DIR, kept)
     _prune_html(CLUB_DIR, kept)
     return sorted(by_club)
 
@@ -2558,6 +2559,7 @@ def _write_sitemap(
                 f"<lastmod>{lastmod.of(rel)}</lastmod>"
                 f"<priority>0.7</priority></url>"
             )
+    rule5_site.add_sitemap(DOCS, SITE_URL, clubs, slug, lastmod, urls, club_urls)
     def _url(rel, prio=None):
         pr = f"<priority>{prio}</priority>" if prio else ""
         return (f"  <url><loc>{SITE_URL}/{rel}</loc>"
