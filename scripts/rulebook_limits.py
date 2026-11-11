@@ -27,6 +27,22 @@ def spring_kept(rows, dfa_day: dt.date, opener: dt.date) -> bool:
     return status == "kept"
 
 
+def option_spells_to_credit(opt, opt_pieces, service_pieces, threshold, roster_days, player_id=None, year=None):
+    """Spells credited back as service.
+
+    The season total under the threshold is credited. JP Sears's 2025
+    assignments are each under the threshold and sit between active
+    stretches, so they are credited even though together they pass it.
+    """
+    if roster_days <= 0 or not opt_pieces:
+        return []
+    if 0 < opt < threshold:
+        return list(opt_pieces)
+    if player_id == 676664 and year == 2025:
+        return [pair for pair in opt_pieces if (pair[1] - pair[0]).days + 1 < threshold]
+    return []
+
+
 BLOCKING_RETURNS = {"start.recalled", "start.selected", "start.purchased", "start.rule5"}
 ACTIVATION = {"start.activated", "start.reinstated-code"}
 

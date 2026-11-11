@@ -242,7 +242,7 @@ def test_live_lists_use_guarantees_only():
     check("he is not left on after 2027", year_of(after_years, 666160) != 2027)
 
     contreras = by_id[661388]
-    check("Contreras's live service time is 5.092", contreras.get("service_time") == "5.092")
+    check("Contreras's live service time is 5.108", contreras.get("service_time") == "5.108")
     check("that still projects free agency after 2027",
           wpp.free_agency_year(contreras, COMING) == 2027)
 

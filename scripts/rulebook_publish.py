@@ -492,6 +492,17 @@ def rollback(published_path: Path = PUBLISHED, snapshot_path: Path = SNAPSHOT) -
     published_path.write_bytes(snapshot_path.read_bytes())
 
 
+def publish_or_exit(db) -> None:
+    """Apply the rulebook or stop the publish. The morning gate is unchanged."""
+    try:
+        apply_to_database(db)
+    except PublishRefused as refused:
+        print("\n!! REFUSING TO PUBLISH THIS RUN:", file=sys.stderr)
+        for problem in refused.problems:
+            print(f"     - {problem}", file=sys.stderr)
+        sys.exit(1)
+
+
 def main() -> int:
     if "--rollback" in sys.argv:
         rollback()

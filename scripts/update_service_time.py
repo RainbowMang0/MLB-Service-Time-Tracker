@@ -2074,17 +2074,8 @@ def _stamp_contract_extensions(db: dict[str, dict]) -> None:
 
 def _write_outputs(db: dict[str, dict]) -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    # The daily gate still decides whether this function runs. The figures
-    # it writes come from the rulebook, with a lower season kept and marked
-    # until a person clears it.
     import rulebook_publish
-    try:
-        rulebook_publish.apply_to_database(db)
-    except rulebook_publish.PublishRefused as refused:
-        print("\n!! REFUSING TO PUBLISH THIS RUN:", file=sys.stderr)
-        for problem in refused.problems:
-            print(f"     - {problem}", file=sys.stderr)
-        sys.exit(1)
+    rulebook_publish.publish_or_exit(db)
     publish_config()
 
     # Loaded once and threaded through write_index() and _write_pages() below,

@@ -12,7 +12,7 @@ The live Super Two line used here is 2.133.
 
 - Lawrence Butler 2024 stays at 152 (the rulebook says 47) until someone clears it.
 - Ryan McMahon 2018 stays at 124 (the rulebook says 106) until someone clears it.
-- JP Sears 2025 goes from 12 to 139.
+- JP Sears 2025 goes from 12 to 172.
 
 ## Threshold crossers
 
@@ -20,7 +20,7 @@ The live Super Two line used here is 2.133.
 - Dane Myers (roster): 2.162 to 3.022. 3 years, Super Two. accrual.already-rostered.
 - Garrett Crochet (roster): 5.117 to 6.028. 6 years. neutral.all-star.
 - Iván Herrera (roster): 2.115 to 3.029. 3 years. accrual.already-rostered.
-- JP Sears (roster): 2.072 to 3.080. 3 years. accrual.appearance-restart.
+- JP Sears (roster): 2.072 to 3.113. 3 years. accrual.appearance-restart.
 - Jordan Beck (roster): 2.132 to 2.133. Super Two. accrual.already-rostered.
 - Mitchell Parker (roster): 3.000 to 2.167. 3 years, Super Two. start.recalled.
 - Tony Gonsolin (roster): 5.165 to 6.026. 6 years. count.il-15.
@@ -353,9 +353,9 @@ The live Super Two line used here is 2.133.
 - Cla Meredith: 2.052 to 4.055. 4 seasons move, and the largest is 2007 by 172 days higher because an option or assignment with no later recall does not keep the clock stopped through a later season he played as a regular (accrual.appearance-restart).
 - Juan Carlos Oviedo: 5.114 to 7.116. 3 seasons move, and the largest is 2007 by 172 days higher because an option or assignment with no later recall does not keep the clock stopped through a later season he played as a regular (accrual.appearance-restart).
 - Mike Adams: 7.032 to 9.000. 3 seasons move, and the largest is 2008 by 172 days higher because an option or assignment with no later recall does not keep the clock stopped through a later season he played as a regular (accrual.appearance-restart).
+- JP Sears: 2.072 to 3.113. 2 seasons move, and the largest is 2025 by 160 days higher because an option or assignment with no later recall does not keep the clock stopped through a later season he played as a regular (accrual.appearance-restart).
 - Wilson Valdez: 4.056 to 5.084. 3 seasons move, and the largest is 2007 by 172 days higher because an option or assignment with no later recall does not keep the clock stopped through a later season he played as a regular (accrual.appearance-restart).
 - Jim Johnson: 9.052 to 10.079. 2 seasons move, and the largest is 2008 by 172 days higher because an option or assignment with no later recall does not keep the clock stopped through a later season he played as a regular (accrual.appearance-restart).
-- JP Sears: 2.072 to 3.080. 2 seasons move, and the largest is 2025 by 127 days higher because an option or assignment with no later recall does not keep the clock stopped through a later season he played as a regular (accrual.appearance-restart).
 - Garrett Olson: 1.123 to 2.124. 2 seasons move, and the largest is 2008 by 172 days higher because an option or assignment with no later recall does not keep the clock stopped through a later season he played as a regular (accrual.appearance-restart).
 - 123 more in changes.json.
 
@@ -1008,6 +1008,7 @@ The live Super Two line used here is 2.133.
 - Sandy Alcantara: 2 seasons move, and the largest is 2023 by 146 days higher because he was already on a major-league roster, so the season counts from the opener until the first move that actually stops him (accrual.already-rostered).
 - Guillermo Quiroz: 4 seasons move, and the largest is 2008 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
 - Yadier Molina: 3 seasons move, and the largest is 2004 by 123 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
+- JP Sears: 2 seasons move, and the largest is 2025 by 160 days higher because an option or assignment with no later recall does not keep the clock stopped through a later season he played as a regular (accrual.appearance-restart).
 - Josh Bard: 3 seasons move, and the largest is 2003 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
 - Mike Hessman: 2 seasons move, and the largest is 2004 by 172 days higher because if nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game (accrual.presume-from-debut).
 - Héctor Santiago: 4 seasons move, and the largest is 2016 by 112 days higher because a recall from optional assignment, including from a 2020 alternate site, returns him to the major-league active list (start.recalled).
@@ -1042,7 +1043,6 @@ The live Super Two line used here is 2.133.
 - Mitch Keller: 2 seasons move, and the largest is 2026 by 116 days higher because he was already on a major-league roster, so the season counts from the opener until the first move that actually stops him (accrual.already-rostered).
 - Joe Ryan: 2 seasons move, and the largest is 2026 by 120 days higher because the 15-day injured list counts (count.il-15).
 - Duane Underwood Jr.: 2 seasons move, and the largest is 2020 by 172 days higher because art. XIX(G) and the glossary: 7 days in 2017-21 and under the 2022-26 agreement (accrual.dfa-window-7).
-- JP Sears: 2 seasons move, and the largest is 2025 by 127 days higher because an option or assignment with no later recall does not keep the clock stopped through a later season he played as a regular (accrual.appearance-restart).
 - Robinson Chirinos: 3 seasons move, and the largest is 2015 by 107 days higher because he was already on a major-league roster, so the season counts from the opener until the first move that actually stops him (accrual.already-rostered).
 - Carlos Estévez: 3 seasons move, and the largest is 2024 by 108 days higher because a major-league free-agent signing starts the clock (start.mlb-signing).
 - Clayton Kershaw: 4 seasons move, and the largest is 2016 by 78 days higher because he was already on a major-league roster, so the season counts from the opener until the first move that actually stops him (accrual.already-rostered).

@@ -1223,11 +1223,12 @@ def evaluate(
         # with no service before the option who is then outrighted or released).
         credit = 0
         credit_pieces = []
-        if roster_days > 0 and 0 < opt < option_threshold:
+        to_credit = rulebook_limits.option_spells_to_credit(opt, opt_pieces, pieces, option_threshold, roster_days, player_id, year)
+        if to_credit:
             covered = []
             for lo, hi, _rules in pieces:
                 covered.append((lo, hi))
-            for lo, hi in opt_pieces:
+            for lo, hi in to_credit:
                 # Drop days already inside a service range.
                 remaining = [(lo, hi)]
                 for cov_lo, cov_hi in covered:

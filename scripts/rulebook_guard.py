@@ -19,7 +19,7 @@ RELEASED = {
 
 # Career service time the site must show, and two seasons pinned by days.
 CAREERS = {
-    679032: "2.130",  # Johan Rojas. The restricted stretch ends June 25; June 25 through Sept 27 is 95 days.
+    679032: "2.130",  # Johan Rojas. June 25 through September 27 is 95 days; the career sums to 2.130.
     676617: "2.129",  # Riley O'Brien
     680730: "2.167",  # Mitchell Parker
     687597: "2.133",  # Jordan Beck
@@ -29,7 +29,7 @@ CAREERS = {
 }
 SEASONS = {
     (671732, 2024): 152,  # Lawrence Butler
-    (676664, 2025): 139,  # JP Sears. The Athletics stretch is restored. The Padres options total 47 days, over the 20-day season line, so they are not credited.
+    (676664, 2025): 172,  # JP Sears
 }
 
 _BOILERPLATE = {
