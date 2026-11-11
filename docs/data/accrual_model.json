@@ -8,25 +8,25 @@
   "Bands with a small sample are marked enough_data: false and should not be presented as a distribution."
  ],
  "full_year_days": 172,
- "transitions": 22130,
+ "transitions": 21861,
  "min_band_sample": 100,
  "bands": [
   {
    "band": 0,
    "label": "0.000-1.000",
-   "sample": 7948,
+   "sample": 7851,
    "enough_data": true,
-   "p20": 43,
-   "p50": 158,
+   "p20": 41,
+   "p50": 155,
    "p80": 172,
-   "mean": 118.5,
-   "share_full_year": 0.48,
-   "share_zero": 0.062
+   "mean": 117.3,
+   "share_full_year": 0.473,
+   "share_zero": 0.065
   },
   {
    "band": 1,
    "label": "1.000-2.000",
-   "sample": 2935,
+   "sample": 2922,
    "enough_data": true,
    "p20": 80,
    "p50": 172,
@@ -38,62 +38,62 @@
   {
    "band": 2,
    "label": "2.000-3.000",
-   "sample": 2316,
+   "sample": 2308,
    "enough_data": true,
-   "p20": 118,
+   "p20": 119,
    "p50": 172,
    "p80": 172,
    "mean": 144.2,
-   "share_full_year": 0.716,
+   "share_full_year": 0.718,
    "share_zero": 0.045
   },
   {
    "band": 3,
    "label": "3.000-4.000",
-   "sample": 1851,
+   "sample": 1831,
    "enough_data": true,
    "p20": 137,
    "p50": 172,
    "p80": 172,
-   "mean": 148.0,
-   "share_full_year": 0.757,
-   "share_zero": 0.038
+   "mean": 148.2,
+   "share_full_year": 0.76,
+   "share_zero": 0.035
   },
   {
    "band": 4,
    "label": "4.000-5.000",
-   "sample": 1506,
+   "sample": 1502,
    "enough_data": true,
-   "p20": 164,
+   "p20": 163,
    "p50": 172,
    "p80": 172,
-   "mean": 152.6,
-   "share_full_year": 0.795,
-   "share_zero": 0.028
+   "mean": 152.5,
+   "share_full_year": 0.792,
+   "share_zero": 0.03
   },
   {
    "band": 5,
    "label": "5.000-6.000",
-   "sample": 1241,
+   "sample": 1230,
    "enough_data": true,
    "p20": 172,
    "p50": 172,
    "p80": 172,
-   "mean": 155.4,
-   "share_full_year": 0.815,
-   "share_zero": 0.026
+   "mean": 155.3,
+   "share_full_year": 0.813,
+   "share_zero": 0.025
   },
   {
    "band": 6,
    "label": "6.000+",
-   "sample": 4333,
+   "sample": 4217,
    "enough_data": true,
    "p20": 172,
    "p50": 172,
    "p80": 172,
-   "mean": 156.7,
-   "share_full_year": 0.82,
-   "share_zero": 0.021
+   "mean": 156.9,
+   "share_full_year": 0.824,
+   "share_zero": 0.02
   }
  ]
 }

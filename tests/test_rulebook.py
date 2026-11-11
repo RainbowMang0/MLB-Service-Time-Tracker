@@ -889,6 +889,50 @@ def test_owner_dfa_decisions():
         "a pre-2012 designation is flagged because the window length is unknown",
         any(flag["year"] == 2010 for flag in old["review_flags"]),
     )
+    cup = run(
+        [
+            txn("2023-06-01", "SE", "Yankees selected the contract of X.", to=NYY),
+            txn("2023-07-01", "OPT", "Yankees optioned X to Scranton.", frm=NYY, to=531),
+        ],
+        cal(season(2023, "2023-03-30", "2023-10-01"), season(2024, "2024-03-28", "2024-09-29")),
+        "2023-06-01", "2024-10-05",
+        appearance_years={2024},
+        appearance_counts={2024: 1},
+    )
+    check("one game does not open the next season at the league opener", days_of(cup, 2024) == 0)
+    regular = run(
+        [
+            txn("2024-08-02", "OPT", "Athletics optioned X to Las Vegas.", frm=133, to=400),
+            txn("2025-08-01", "SC", "Padres activated X.", to=135),
+            txn("2025-08-05", "OPT", "Padres optioned X to El Paso.", frm=135, to=4904),
+        ],
+        cal(season(2024, "2024-03-28", "2024-09-29"), season(2025, "2025-03-27", "2025-09-28")),
+        "2024-03-28", "2025-10-05",
+        appearance_years={2024, 2025},
+        appearance_counts={2024: 120, 2025: 27},
+    )
+    check("a regular's later activation does not erase the opener", days_of(regular, 2025) > 100)
+    signed = run(
+        [
+            txn("2021-02-12", "SFA", "Padres signed free agent X."),
+            txn("2021-02-12", "SFA", "Padres signed free agent X to a minor league contract and invited him to spring training."),
+            txn("2021-04-30", "SE", "Padres selected the contract of X.", to=135),
+            txn("2021-05-04", "OPT", "Padres optioned X.", frm=135, to=4904),
+        ],
+        cal(season(2021, "2021-04-01", "2021-10-03")),
+        "2021-04-30", "2021-10-05",
+    )
+    check("a spring invite does not count the days before the selection", days_of(signed, 2021) <= 4)
+    suspended = run(
+        [
+            txn("2025-09-29", "CU", "Phillies recalled X.", to=143),
+            txn("2026-06-25", "SC", "Phillies activated X from the restricted list.", to=143),
+            txn("2026-06-25", "SC", "Phillies placed X on the 60-day injured list.", to=143),
+        ],
+        cal(season(2025, "2025-03-27", "2025-09-28"), season(2026, "2026-03-25", "2026-09-27")),
+        "2025-09-29", "2026-10-05",
+    )
+    check("a missing restricted-list placement does not count before the activation", days_of(suspended, 2026) < 120)
 
 
 def main():

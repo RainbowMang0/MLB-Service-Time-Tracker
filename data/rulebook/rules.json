@@ -889,6 +889,11 @@
   ],
   "accrual": [
     {
+      "id": "accrual.already-rostered",
+      "cite": "§9",
+      "note": "He was already on a major-league roster, so the season counts from the opener until the first move that actually stops him. The days before the first injured-list row are roster days, not an opener adjustment."
+    },
+    {
       "id": "accrual.league-opener",
       "cite": "§9",
       "note": "Service runs from the first regularly scheduled championship-season game through the last, uniformly. When an international opener stretches some clubs past the scheduling band, everyone else starts on the first game inside 187 days of the end, which is the first domestic game on this calendar. A club that opens a day later does not cost its players that earlier day."
@@ -980,7 +985,7 @@
     {
       "id": "accrual.appearance-restart",
       "cite": "§9",
-      "note": "An option, affiliate assignment, or postseason reassignment with no later recall does not keep the clock stopped through a later season in which he played. Service opens on that season's first day. A recall already in the file is used instead, so a spring option that is recalled is not erased. Free agency, a release, an outright, and the restricted list do not restart this way."
+      "note": "An option or assignment with no later recall does not keep the clock stopped through a later season he played as a regular. Ten games or fewer do not open the season at the league opener. A documented recall or selection is used instead, and days before that row are not added. When his game dates are known, the opener is used only if the first game falls in the opening week; otherwise the added days run from the first game to the last, plus a documented major-league injured list. Free agency, a release, an outright, and the restricted list do not restart this way."
     },
     {
       "id": "accrual.roy-full-year",

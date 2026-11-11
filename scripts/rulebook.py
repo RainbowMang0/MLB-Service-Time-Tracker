@@ -23,6 +23,7 @@ from functools import lru_cache
 from pathlib import Path
 
 import cba
+import rulebook_limits
 from mlb_clubs import MLB_CLUB_IDS
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -634,30 +635,6 @@ def _opens(hit: Hit) -> bool:
     return False
 
 
-def _spring_dfa_kept(rows, dfa_day: dt.date, opener: dt.date) -> bool:
-    """True when a non-optioned spring designation is back on an active
-    roster or a major-league injured list by Opening Day.
-
-    A claim, a trade, an activation, or an injured-list placement by that
-    morning counts. An option, outright, or release does not.
-    """
-    status = None
-    for day, _raw, hit in rows:
-        if hit is None or day <= dfa_day or day > opener:
-            continue
-        if hit.id in {"stop.option", "stop.outright", "stop.released", "stop.free-agency"}:
-            status = "out"
-        elif (
-            hit.id in {"neutral.trade", "neutral.claim"}
-            or "trade" in hit.tags
-            or "claim" in hit.tags
-            or hit.effect == "start"
-            or ("il" in hit.tags and hit.effect == "count_away")
-        ):
-            status = "kept"
-    return status == "kept"
-
-
 def _returns_to_roster(hit: Hit) -> bool:
     """A recall, selection, activation, or signing. An injured-list row is not one."""
     return hit.effect == "start"
@@ -762,6 +739,7 @@ def evaluate(
     horizon: dt.date | None = None,
     career_end: dt.date | None = None,
     appearance_years: set[int] | None = None,
+    appearance_counts: dict[int, int] | None = None,
     appearance_dates: list[dt.date] | None = None,
     exceptions: list[dict] | None = None,
     roy_years: set[int] | None = None,
@@ -819,7 +797,9 @@ def evaluate(
     # Same-day minor-league contract suppresses a bare major-league signing.
     for day, items in grouped.items():
         ids = {hit.id for _row, hit in items if hit is not None}
-        if "neutral.minor-signing" in ids and (ids & {"start.mlb-signing", "start.mlb-contract-signing"}):
+        if ({"neutral.minor-signing", "neutral.spring-invite"} & ids) and (
+            ids & {"start.mlb-signing", "start.mlb-contract-signing"}
+        ):
             grouped[day] = [
                 (row, None if hit is not None and hit.id in {"start.mlb-signing", "start.mlb-contract-signing"} else hit)
                 for row, hit in items
@@ -953,32 +933,8 @@ def evaluate(
 
         if day in restart_days and (floor is None or day >= floor) and active_since is None:
             season_end = calendar.window(day.year, club_on(day), club_on)[1]
-            same_day_return = any(
-                hit is not None and _returns_to_roster(hit)
-                for _raw, hit in grouped.get(day, [])
-            )
-            later_return = False
-            # An option by one of the 30 before the next recall means he was
-            # already back. That later recall must not block Opening Day.
-            proven_up = False
-            if not same_day_return:
-                for later, raw, later_hit in rows:
-                    if later <= day:
-                        continue
-                    if later > season_end:
-                        break
-                    if later_hit is None:
-                        continue
-                    if later_hit.id == "stop.option" and _mlb_present(row_ids(raw)) and not later_return:
-                        proven_up = True
-                    if _returns_to_roster(later_hit):
-                        later_return = True
-                        break
-            if (
-                not same_day_return
-                and (on_option or last_stop_id in RESTARTABLE_STOPS)
-                and (not later_return or proven_up)
-            ):
+            reopen = rulebook_limits.opening_restart(day, season_end, rows, grouped, appearance_counts, appearance_dates, _returns_to_roster, lambda raw: _mlb_present(row_ids(raw)))
+            if reopen and (on_option or last_stop_id in RESTARTABLE_STOPS):
                 if on_option:
                     end_option(day - dt.timedelta(days=1))
                 open_service(day, "accrual.appearance-restart")
@@ -991,10 +947,6 @@ def evaluate(
             and active_since is None
             and last_stop is None
         ):
-            # An option that opened before the first major-league game does
-            # not cancel that game. The call-up row is often missing. End the
-            # option the day before and start from the floor. An option that
-            # starts on or after the floor still keeps him down.
             if on_option and option_start is not None and option_start < floor:
                 end_option(floor - dt.timedelta(days=1))
             if not on_option:
@@ -1005,6 +957,11 @@ def evaluate(
             presumed = True
 
         items = grouped.get(day, [])
+        season_row = calendar.seasons.get(day.year)
+        cut = rulebook_limits.restricted_cut(items, rows, day, None if season_row is None else season_row.championship_start, active_since)
+        if cut is not None:
+            close_service(cut, "stop.restricted")
+            last_stop, last_stop_id = "other", "stop.restricted"
         hits = [hit for _row, hit in items if hit is not None]
         if not hits and day != floor:
             continue
@@ -1090,7 +1047,7 @@ def evaluate(
             # A spring designation earns Opening Day only when he was not
             # already optioned and a claim, trade, or injured-list placement
             # has him on a major-league roster by that morning.
-            if opener is not None and day < opener and (on_option or not _spring_dfa_kept(rows, day, opener)):
+            if opener is not None and day < opener and (on_option or not rulebook_limits.spring_kept(rows, day, opener)):
                 limit = min(limit, opener - dt.timedelta(days=1))
             elif opener is not None and day < opener and limit < opener:
                 limit = opener
@@ -1355,6 +1312,7 @@ def evaluate(
             all_ranges.append(item)
         if raw == 0 and opt == 0 and credited == 0:
             continue
+        events, carried_in = rulebook_limits.season_events(rows, start, end, pieces)
         seasons.append({
             "year": year,
             "start": start.isoformat(),
@@ -1366,6 +1324,8 @@ def evaluate(
             "prorated_days": prorated,
             "credited_days": credited,
             "rules": season_rules,
+            "events": events,
+            "carried_in": carried_in,
             "ranges": ranged,
         })
 

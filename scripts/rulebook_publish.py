@@ -98,6 +98,18 @@ def _reason(year: int, rulebook_days: int, published_days: int, result: dict, ga
     return " ".join(bits)
 
 
+def _cached_appearances(player_id: int) -> list[dt.date] | None:
+    path = ROOT / "data" / "rulebook" / "appearance_spans.json"
+    if not path.exists():
+        return None
+    raw = (_load_json(path).get(str(player_id)) or {})
+    dates = []
+    for days in raw.values():
+        for day in days:
+            dates.append(dt.date.fromisoformat(day))
+    return dates or None
+
+
 def replay_one(player: dict, horizon: dt.date) -> dict:
     player_id = int(player["id"])
     path = RAW / f"{player_id}.json"
@@ -115,6 +127,8 @@ def replay_one(player: dict, horizon: dt.date) -> dict:
         horizon=horizon,
         career_end=dt.date.fromisoformat(last) if last and not player.get("on_40_man") else None,
         appearance_years=set(_games(player)),
+        appearance_counts=_games(player),
+        appearance_dates=_cached_appearances(player_id),
     )
 
 
@@ -163,7 +177,10 @@ def apply_player(player: dict, result: dict, prior_holds: dict[str, dict], full_
         teams = (previous.get(year) or {}).get("t") or []
         key = _hold_key(int(player["id"]), year)
         old = prior_holds.get(key)
-        if old and old.get("cleared") and rule_days < published_days:
+        import rulebook_guard
+        accepted = bool(old and old.get("cleared")) or rulebook_guard.released(int(player["id"]), year)
+        played = games.get(year, 0)
+        if accepted and rule_days < published_days:
             days, src = rule_days, "read"
         elif rule_days < published_days:
             days, src = published_days, "held"
@@ -177,6 +194,23 @@ def apply_player(player: dict, result: dict, prior_holds: dict[str, dict], full_
                 "cleared": False,
                 "on_40_man": bool(player.get("on_40_man")),
             })
+        elif rulebook_guard.short_increase(rule_days, published_days, played):
+            days, src = published_days, "held"
+            holds.append({
+                "player_id": int(player["id"]),
+                "name": player.get("name"),
+                "season": year,
+                "rulebook_days": rule_days,
+                "published_days": published_days,
+                "reason": (
+                    f"{year} would add {rule_days - published_days} days in a season of "
+                    f"{played} games. The published days stay until that is reviewed."
+                ),
+                "cleared": False,
+                "on_40_man": bool(player.get("on_40_man")),
+            })
+            if published_days <= 0 and year not in published:
+                continue
         else:
             days, src = rule_days, "read"
             raw = int(by_year.get(year, {}).get("raw_days") or days)
@@ -309,118 +343,6 @@ def _rule_sentence(rule_id: str) -> str:
     return _rule_sentence.notes.get(rule_id, "")
 
 
-def write_reports(
-    changes: list[dict],
-    holds: list[dict],
-    restricted: list[dict],
-    flags: list[dict],
-    named: list[dict],
-) -> None:
-    REPORTS.mkdir(parents=True, exist_ok=True)
-    up = sum(1 for row in changes if row["delta_days"] > 0)
-    down = sum(1 for row in changes if row["delta_days"] < 0)
-    crossers = [row for row in changes if row["crossed"]]
-    roster_crossers = [row for row in crossers if row["on_40_man"]]
-    by_rule: dict[str, list[dict]] = {}
-    for row in changes:
-        by_rule.setdefault(row["rule_id"], []).append(row)
-    lines = [
-        "# Replay for the owner",
-        "",
-        f"{len(changes)} players change: {up} up, {down} down.",
-        f"{len(holds)} seasons stay at the published number until someone clears them.",
-        f"{len(roster_crossers)} current roster players cross 3 years, 6 years, the 2026 Super Two line (2.133), or an eligibility line.",
-        "",
-        "A higher season is published. A lower season is kept and listed under Holds.",
-        "The live Super Two line used here is 2.133.",
-        f"2020 is included. {sum(1 for row in holds if row['season'] == 2020)} of the holds are 2020 seasons.",
-        "",
-        "## Named checks",
-        "",
-    ]
-    if not named:
-        lines.append("None.")
-    named = sorted(named, key=lambda row: list(NAMED_SEASONS).index(row["player_id"]))
-    for row in named:
-        if row.get("held"):
-            lines.append(
-                f"- {row['name']} {row['season']} stays at {row['published_days']} "
-                f"(the rulebook says {row['rulebook_days']}) until someone clears it."
-            )
-        else:
-            extra = ""
-            if row.get("games", 0) > row.get("published_days", 0):
-                extra = (
-                    f" He played {row['games']} games that season, more than those days, "
-                    "so the missing roster row stays a review item."
-                )
-            lines.append(
-                f"- {row['name']} {row['season']} stays at {row['published_days']}. "
-                "The rulebook matches the published figure, so there is nothing to hold."
-                + extra
-            )
-    lines += ["", "## Threshold crossers", ""]
-    ordered = sorted(crossers, key=lambda row: (0 if row["on_40_man"] else 1, row["name"] or ""))
-    if not ordered:
-        lines.append("None.")
-    for row in ordered:
-        who = "roster" if row["on_40_man"] else "alumni"
-        lines.append(
-            f"- {row['name']} ({who}): {row['old_service_time']} to {row['new_service_time']}. "
-            f"{', '.join(row['crossed'])}. {row['rule_id']}."
-        )
-    lines += ["", "## By rule", ""]
-    for rule, rows in sorted(by_rule.items(), key=lambda item: -len(item[1])):
-        lines.append(f"### {rule} ({len(rows)})")
-        lines.append("")
-        for row in sorted(rows, key=lambda item: -abs(item["delta_days"]))[:12]:
-            lines.append(f"- {row['name']}: {row['old_service_time']} to {row['new_service_time']}. {row['reason']}")
-        if len(rows) > 12:
-            lines.append(f"- {len(rows) - 12} more in changes.json.")
-        lines.append("")
-    lines += ["## Changes of 25 days or more", ""]
-    large = [row for row in changes if abs(row["delta_days"]) >= 25]
-    if not large:
-        lines.append("None.")
-    for row in sorted(large, key=lambda item: -abs(item["delta_days"])):
-        lines.append(f"- {row['name']}: {row['reason']}")
-    lines += ["", "## Holds", ""]
-    lines.append(f"{len(holds)} seasons. Cleared stays false until a person sets it.")
-    lines.append("")
-    for row in holds[:40]:
-        lines.append(
-            f"- {row['name']} {row['season']}: rulebook {row['rulebook_days']}, "
-            f"kept {row['published_days']}. {row['reason']}"
-        )
-    if len(holds) > 40:
-        lines.append(f"- {len(holds) - 40} more in data/rulebook/holds.json.")
-    players_waiting = len({row.get("player_id") for row in restricted})
-    lines += ["", "## Restricted list still unclassified", ""]
-    lines.append(
-        f"{len(restricted)} rows for {players_waiting} current roster players. "
-        "They earn no service until someone classifies them. "
-        "If that makes a season lower than the published figure, the season is in Holds."
-    )
-    lines.append("")
-    restricted = sorted(restricted, key=lambda row: (row.get("name") or "", row.get("date") or ""))
-    for row in restricted:
-        lines.append(f"- {row.get('name')} {row.get('date')}: {row.get('description')}")
-    lines += ["", "## Pre-2012 designation window", ""]
-    lines.append(f"{len(flags)} seasons use that window. The length is unknown, so each one is listed.")
-    lines.append("")
-    for row in flags[:20]:
-        lines.append(f"- {row['name']} {row['year']}.")
-    if len(flags) > 20:
-        lines.append(f"- {len(flags) - 20} more.")
-    lines.append("")
-    (REPORTS / "summary.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
-    (REPORTS / "changes.json").write_text(json.dumps(changes, indent=2) + "\n", encoding="utf-8")
-    (REPORTS / "restricted_unclassified.json").write_text(
-        json.dumps(restricted, indent=2) + "\n", encoding="utf-8"
-    )
-    (REPORTS / "pre2012.json").write_text(json.dumps(flags, indent=2) + "\n", encoding="utf-8")
-
-
 def apply_to_database(db: dict[str, dict], published_path: Path = PUBLISHED, holds_path: Path = HOLDS_PATH, snapshot_path: Path = SNAPSHOT) -> None:
     """Mutate db to the figures that should be published. Refuse on a broken check."""
     full_year = int(cba.default().require("service_time.days_per_credited_year"))
@@ -461,13 +383,15 @@ def apply_to_database(db: dict[str, dict], published_path: Path = PUBLISHED, hol
         if watched is not None:
             hold = next((row for row in holds if row["season"] == watched), None)
             published_days = int(_published_days(baseline).get(watched, 0))
+            new_season = next((row["d"] for row in fields["seasons"] if row["y"] == watched), 0)
             named.append({
                 "player_id": int(record["id"]),
                 "name": record.get("name"),
                 "season": watched,
                 "held": hold is not None,
                 "published_days": hold["published_days"] if hold else published_days,
-                "rulebook_days": hold["rulebook_days"] if hold else None,
+                "new_days": new_season,
+                "rulebook_days": hold["rulebook_days"] if hold else new_season,
                 "games": _games(baseline).get(watched, 0),
             })
         for flag in result.get("review_flags") or []:
@@ -494,7 +418,8 @@ def apply_to_database(db: dict[str, dict], published_path: Path = PUBLISHED, hol
         merged = dict(record)
         merged.update(updated[int(record["id"])])
         preview.append(merged)
-    problems = sanity_problems(preview, results, full_year) + golden_problems()
+    import rulebook_guard
+    problems = sanity_problems(preview, results, full_year) + golden_problems() + rulebook_guard.verified_problems(preview)
     if problems:
         raise PublishRefused(problems)
     if published_path.exists():
@@ -504,27 +429,12 @@ def apply_to_database(db: dict[str, dict], published_path: Path = PUBLISHED, hol
         record.update(updated[int(record["id"])])
     holds_path.parent.mkdir(parents=True, exist_ok=True)
     holds_path.write_text(json.dumps({"holds": new_holds}, indent=2) + "\n", encoding="utf-8")
-    write_reports(changes, new_holds, restricted, flags, named)
+    import rulebook_guard
+    rulebook_guard.write_reports(REPORTS, changes, new_holds, restricted, flags, named, list(NAMED_SEASONS))
     if skipped_after_last:
         (REPORTS / "after_last_season.json").write_text(
             json.dumps(skipped_after_last, indent=2) + "\n", encoding="utf-8"
         )
-
-
-def _explaining_rule(rules: list, delta: int) -> str:
-    """A higher season is explained by a counting rule, not by a stop."""
-    rules = list(rules or [])
-    if delta > 0:
-        prefixes = ("accrual.", "start.", "count.", "exception.")
-    elif delta < 0:
-        prefixes = ("stop.", "exception.", "accrual.")
-    else:
-        prefixes = ("accrual.", "start.", "count.", "stop.")
-    for prefix in prefixes:
-        for rule in rules:
-            if rule.startswith(prefix):
-                return rule
-    return rules[-1] if rules else "rulebook"
 
 
 def _primary_rule_id(baseline: dict, result: dict, fields: dict) -> str:
@@ -537,7 +447,8 @@ def _primary_rule_id(baseline: dict, result: dict, fields: dict) -> str:
         delta = new.get(year, 0) - old.get(year, 0)
         if abs(delta) <= best_abs:
             continue
-        chosen = _explaining_rule((by_year.get(year) or {}).get("rules"), delta)
+        import rulebook_guard
+        chosen = rulebook_guard.explain_rule(by_year.get(year) or {}, delta)
         best_rule, best_abs = chosen, abs(delta)
     return best_rule
 
