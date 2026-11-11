@@ -41,7 +41,6 @@ STRIKE_1994_DAYS = 52
 STRIKE_1995_DAYS = 23
 RESTARTABLE_STOPS = {
     "stop.option",
-    "stop.assigned-minors",
     "stop.reassigned-minors",
     "stop.taxi-squad",
 }
@@ -675,7 +674,7 @@ def _is_national_split(ids: dict) -> bool:
     return False
 
 
-def _apply_appearance_dates(intervals, rows, dates, floor, horizon):
+def _apply_appearance_dates(intervals, rows, dates, floor, horizon, calendar):
     """Restart at the first major-league game after a stop the feed never recalled.
 
     Consecutive game dates are one stint. A recorded stop strictly between
@@ -700,6 +699,7 @@ def _apply_appearance_dates(intervals, rows, dates, floor, horizon):
             start = day
         prev = day
     spans.append((start, prev))
+    spans = rulebook_limits.extend_open_spans(spans, stop_dates, calendar, horizon)
     review = []
     merged = _merge(intervals)
     for start, end in spans:
@@ -1070,6 +1070,8 @@ def evaluate(
                     if floor is not None:
                         start_day = max(start_day, floor)
                 open_service(start_day, openers[0].id)
+            elif (entry := rulebook_limits.roster_entry(hits, items, lambda raw: _mlb_present(row_ids(raw)), has_option, terminal, rows, day)):
+                open_service(day, entry)
             elif any(hit.id == "neutral.mlb-assignment" for hit in hits):
                 later = dates[index + 1:]
                 if _lookahead_confirms(later, grouped):
@@ -1173,7 +1175,7 @@ def evaluate(
     appearance_review: list[dict] = []
     if appearance_dates:
         intervals, appearance_review = _apply_appearance_dates(
-            intervals, rows, appearance_dates, floor, horizon
+            intervals, rows, appearance_dates, floor, horizon, calendar
         )
 
     # Seasons.
@@ -1223,7 +1225,7 @@ def evaluate(
         # with no service before the option who is then outrighted or released).
         credit = 0
         credit_pieces = []
-        to_credit = rulebook_limits.option_spells_to_credit(opt, opt_pieces, pieces, option_threshold, roster_days, player_id, year)
+        to_credit = rulebook_limits.option_spells_to_credit(opt, opt_pieces, pieces, option_threshold, roster_days)
         if to_credit:
             covered = []
             for lo, hi, _rules in pieces:

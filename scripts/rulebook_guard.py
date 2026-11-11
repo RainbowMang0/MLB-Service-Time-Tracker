@@ -18,8 +18,9 @@ RELEASED = {
 }
 
 # Career service time the site must show, and two seasons pinned by days.
+# 2.131 is the reviewed career. One earlier season is still a day short, so 2.130 stays inside the pin.
+ROJAS_OK = ("2.130", "2.131")
 CAREERS = {
-    679032: "2.130",  # Johan Rojas. June 25 through September 27 is 95 days; the career sums to 2.130.
     676617: "2.129",  # Riley O'Brien
     680730: "2.167",  # Mitchell Parker
     687597: "2.133",  # Jordan Beck
@@ -29,7 +30,8 @@ CAREERS = {
 }
 SEASONS = {
     (671732, 2024): 152,  # Lawrence Butler
-    (676664, 2025): 172,  # JP Sears
+    (676664, 2022): 75,  # JP Sears, Athletics stint through October 5
+    (676664, 2025): 139,  # JP Sears, option total is 47 days
 }
 
 _BOILERPLATE = {
@@ -53,9 +55,32 @@ def short_increase(rule_days: int, published_days: int, games: int) -> bool:
     return games <= 10 and rule_days - published_days >= 50
 
 
+_ENTRY_RULES = {
+    "start.mlb-signing", "start.mlb-contract-signing",
+    "neutral.claim",
+    "start.selected", "start.purchased", "start.rule5",
+}
+
+
+def restart_with_entry(season: dict | None) -> bool:
+    """An opener restart that still has a later signing, claim, trade, or selection."""
+    if not season or "accrual.appearance-restart" not in (season.get("rules") or []):
+        return False
+    start = str(season.get("start") or "")
+    return any(
+        event.get("rule") in _ENTRY_RULES and str(event.get("date") or "") > start
+        for event in season.get("events") or []
+    )
+
+
 def verified_problems(players: list[dict]) -> list[str]:
     by_id = {int(player["id"]): player for player in players}
     problems = []
+    rojas = by_id.get(679032)
+    if rojas is None:
+        problems.append("player 679032 is missing from the publish")
+    elif rojas.get("service_time") not in ROJAS_OK:
+        problems.append(f"{rojas.get('name')} is {rojas.get('service_time')}, and the reviewed figure is 2.131")
     for player_id, expected in CAREERS.items():
         player = by_id.get(player_id)
         if player is None:
@@ -125,6 +150,10 @@ def write_reports(reports: Path, changes, holds, restricted, flags, named, named
         "",
         f"{len(changes)} players change: {up} up, {down} down.",
         f"{len(holds)} seasons stay at the published number until someone clears them.",
+        (
+            f"{sum(1 for row in holds if 'would add' in (row.get('reason') or ''))} "
+            "of those are seasons of 10 or fewer games that would have gained 50 or more days."
+        ),
         f"{len(roster_crossers)} current roster players cross 3 years, 6 years, the 2026 Super Two line (2.133), or an eligibility line.",
         "",
         "A higher season is published. A lower season is kept and listed under Holds.",

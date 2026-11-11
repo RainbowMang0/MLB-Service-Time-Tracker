@@ -194,6 +194,23 @@ def apply_player(player: dict, result: dict, prior_holds: dict[str, dict], full_
                 "cleared": False,
                 "on_40_man": bool(player.get("on_40_man")),
             })
+        elif rule_days > published_days and rulebook_guard.restart_with_entry(by_year.get(year)):
+            days, src = published_days, "held"
+            holds.append({
+                "player_id": int(player["id"]),
+                "name": player.get("name"),
+                "season": year,
+                "rulebook_days": rule_days,
+                "published_days": published_days,
+                "reason": (
+                    f"{year} still opens at the opener and also has a later signing, claim, or selection. "
+                    "The published days stay until that is reviewed."
+                ),
+                "cleared": False,
+                "on_40_man": bool(player.get("on_40_man")),
+            })
+            if published_days <= 0 and year not in published:
+                continue
         elif rulebook_guard.short_increase(rule_days, published_days, played):
             days, src = published_days, "held"
             holds.append({

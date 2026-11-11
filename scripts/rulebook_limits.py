@@ -27,24 +27,25 @@ def spring_kept(rows, dfa_day: dt.date, opener: dt.date) -> bool:
     return status == "kept"
 
 
-def option_spells_to_credit(opt, opt_pieces, service_pieces, threshold, roster_days, player_id=None, year=None):
-    """Spells credited back as service.
-
-    The season total under the threshold is credited. JP Sears's 2025
-    assignments are each under the threshold and sit between active
-    stretches, so they are credited even though together they pass it.
-    """
+def option_spells_to_credit(opt, opt_pieces, service_pieces, threshold, roster_days):
+    """Credit the season's optional assignment only when its total is under the threshold."""
     if roster_days <= 0 or not opt_pieces:
         return []
     if 0 < opt < threshold:
         return list(opt_pieces)
-    if player_id == 676664 and year == 2025:
-        return [pair for pair in opt_pieces if (pair[1] - pair[0]).days + 1 < threshold]
     return []
 
 
 BLOCKING_RETURNS = {"start.recalled", "start.selected", "start.purchased", "start.rule5"}
 ACTIVATION = {"start.activated", "start.reinstated-code"}
+# A later signing, claim, or trade starts the clock on that date. It is not
+# cancelled by an option that proves he was up for a recall.
+HARD_ENTRY = {
+    "start.mlb-signing", "start.mlb-contract-signing",
+    "neutral.claim",
+    "start.selected", "start.purchased", "start.rule5",
+}
+ENTRY_OPEN = ("neutral.trade", "neutral.claim")
 
 
 def opening_restart(day, season_end, rows, grouped, appearance_counts, appearance_dates, returns, mlb_option) -> bool:
@@ -70,12 +71,83 @@ def opening_restart(day, season_end, rows, grouped, appearance_counts, appearanc
             break
         if later_hit is None:
             continue
+        if later_hit.id in HARD_ENTRY:
+            return False
+        if later_hit.id == "neutral.trade" and trade_blocks_restart(rows, day, later, appearance_counts):
+            return False
         if later_hit.id == "stop.option" and mlb_option(raw) and not later_return:
             proven_up = True
         if later_hit.id in blocking:
             later_return = True
             break
     return (not later_return) or bool(proven_up)
+
+
+def trade_blocks_restart(rows, opener, trade_day, appearance_counts) -> bool:
+    """A trade blocks Opening Day only when he was still optioned or in the minors.
+
+    A full season he played after that assignment means the trade moved
+    someone who was already up. It does not erase the opener.
+    """
+    last_option = None
+    for row_day, _raw, hit in rows:
+        if hit is None or row_day >= trade_day:
+            break
+        if hit.id in {"stop.option", "stop.assigned-minors", "stop.reassigned-minors"}:
+            last_option = row_day
+        elif hit.effect == "start" and last_option is not None and row_day > last_option:
+            last_option = None
+    if last_option is None:
+        return False
+    if appearance_counts:
+        for year, games in appearance_counts.items():
+            if last_option.year < int(year) < opener.year and games >= 20:
+                return False
+    return True
+
+
+def _stopped_next_day(rows, day) -> bool:
+    nxt = day + dt.timedelta(days=1)
+    for later, _raw, hit in rows:
+        if later < day or hit is None:
+            continue
+        if later > nxt:
+            break
+        if hit.id in {"stop.option", "stop.outright", "stop.released", "stop.free-agency"}:
+            return True
+    return False
+
+
+def roster_entry(hits, items, mlb_present, has_option, terminal, rows=None, day=None):
+    """A trade or claim onto a major-league club starts service that day.
+
+    An option or outright the same day, or the next day, means he is not
+    on the active roster.
+    """
+    if has_option or terminal:
+        return None
+    if day is not None and rows and _stopped_next_day(rows, day):
+        return None
+    for hit in hits:
+        if hit.id not in ENTRY_OPEN:
+            continue
+        if any(mlb_present(raw) for raw, other in items if other is hit):
+            return hit.id
+    return None
+
+
+def extend_open_spans(spans, stop_dates, calendar, horizon):
+    """A stint with no later stop runs through the championship end."""
+    extended = []
+    for start, end in spans:
+        season = calendar.seasons.get(start.year) if calendar is not None else None
+        cap = None if season is None else season.championship_end
+        if cap is not None and horizon is not None and horizon < cap:
+            cap = horizon
+        if cap is not None and cap > end and not any(end < stop <= cap for stop in stop_dates):
+            end = cap
+        extended.append((start, end))
+    return extended
 
 
 def restricted_cut(items, rows, day, opener, active_since):
