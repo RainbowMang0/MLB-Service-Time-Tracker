@@ -222,6 +222,8 @@ def check_links() -> list[str]:
                 "https://www.mlb.com/glossary/"
             ):
                 continue  # official glossary references, not copied text
+            if url.startswith("https://policies.google.com/"):
+                continue  # how Google uses data from Analytics and AdSense
             if not url.startswith(site_root):
                 foreign += 1
                 if foreign <= 5:

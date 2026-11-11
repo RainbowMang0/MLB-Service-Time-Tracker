@@ -164,7 +164,7 @@ def test_player_and_alumni_links():
         {}, "2026-11-09", [],
     )
     check("an unknown club name is not a dead link", "club-nowhere" not in old)
-    check("the stored club is still named", "Last with Club Nowhere" in old)
+    check("a stored name with no stint is not the last club", "Last with Club Nowhere" not in old)
     same = page_titles.title_hints([
         {"id": 1, "name": "Alex Smith", "position": "P", "mlb_debut": "2018-04-01"},
         {"id": 2, "name": "Alex Smith", "position": "CF", "mlb_debut": "2021-05-01"},

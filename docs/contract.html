@@ -4,16 +4,46 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G04P969TLX"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-G04P969TLX');
+(function () {
+  var started = false;
+  function loadTags() {
+    if (started) return;
+    started = true;
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-G04P969TLX');
+    var ga = document.createElement('script');
+    ga.async = true;
+    ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-G04P969TLX';
+    document.head.appendChild(ga);
+    var ads = document.createElement('script');
+    ads.async = true;
+    ads.crossOrigin = 'anonymous';
+    ads.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748967682918425';
+    ads.onload = function () {
+      var slots = document.querySelectorAll('ins.adsbygoogle');
+      for (var i = 0; i < slots.length; i++) {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      }
+    };
+    document.head.appendChild(ads);
+  }
+  function arm() {
+    var timer = setTimeout(loadTags, 5000);
+    function early() { clearTimeout(timer); loadTags(); }
+    ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (name) {
+      window.addEventListener(name, early, { once: true, passive: true });
+    });
+  }
+  if (document.readyState === 'complete') arm();
+  else window.addEventListener('load', arm, { once: true });
+})();
 </script>
 <!-- End Google Analytics -->
 <!-- Google AdSense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748967682918425" crossorigin="anonymous"></script>
 <meta name="google-adsense-account" content="ca-pub-8748967682918425">
 <!-- End Google AdSense -->
 <title>Contract clock: arbitration and free agency | Big League</title>
@@ -257,10 +287,10 @@
           There is no modelled outcome for declining an offer, no projected arbitration salary, and no comparable-player set. All three need league-wide salary data, and this project has none.
         </p>
         <p class="panel-note">
-          The service-time database has never held salaries. Published arbitration projections are someone else's work, and republishing them is the same line this project already drew over Baseball Reference's figures and over MLB's photographs. No free, permitted, machine-readable salary source has been found.
+          This project has never held salaries. Published arbitration projections are someone else's work, and republishing them is the same line this project already drew over figures this site does not republish, and over MLB's photographs. No free, permitted, machine-readable salary source has been found.
         </p>
         <p class="panel-note">
-          A breakeven figure assembled from invented salaries would be the most confident-looking and least defensible number on this site, so the branch is absent rather than approximated. What is here instead rests on facts you supply or on figures the database already holds.
+          A breakeven figure assembled from invented salaries would be the most confident-looking and least defensible number on this site, so the branch is absent rather than approximated. What is here instead rests on facts you supply or on figures already published here.
         </p>
       </section>
 

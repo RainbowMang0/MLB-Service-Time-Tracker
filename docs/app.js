@@ -822,39 +822,6 @@
 
   // --- player profile -----------------------------------------------------
 
-  // How a season's days are known. After the carry-in rule (a player is
-  // presumed rostered from his debut until the feed says otherwise) the
-  // seasons behind a total differ a lot in confidence, and a profile that
-  // presented them as equally solid would be overstating what this project
-  // can actually see.
-  const SOURCE_LABELS = {
-    read: {
-      label: "From transactions",
-      short: "Read",
-      cls: "src-read",
-      title: "Roster moves recorded in this season drove the calculation directly.",
-    },
-    carry: {
-      label: "Carried forward",
-      short: "Carried",
-      cls: "src-carry",
-      title:
-        "No roster moves were recorded this season, so his status was carried " +
-        "forward from an earlier one. Changing clubs produces a transaction, " +
-        "so a silent season almost always means he stayed put.",
-    },
-    presumed: {
-      label: "Presumed from debut",
-      short: "Presumed",
-      cls: "src-presumed",
-      title:
-        "This season is earlier than the first transaction of any kind on " +
-        "record for him. He is presumed to have been on a roster from his " +
-        "debut. This is the least certain kind of season and the one counted " +
-        "by the missing-seasons flag.",
-    },
-  };
-
   const formatDays = (days) => {
     const years = Math.floor(days / FULL_YEAR_DAYS);
     return `${years}.${String(days % FULL_YEAR_DAYS).padStart(3, "0")}`;
@@ -927,7 +894,6 @@
         .map((id) => teams[String(id)] || `Club ${id}`)
         .join(", ");
 
-      const src = SOURCE_LABELS[season.src] || SOURCE_LABELS.read;
       const cls = [
         "cs-season",
         days === 0 ? "cs-zero" : "",
@@ -935,7 +901,7 @@
       ].filter(Boolean).join(" ");
 
       const title = `${season.y} · ${clubNames || "no club identified"} · ` +
-        `${days} day${days === 1 ? "" : "s"} · ${src.label} · running total ${formatDays(running)}`;
+        `${days} day${days === 1 ? "" : "s"} · running total ${formatDays(running)}`;
 
       return `<span class="${cls}" style="${clubStyle(club)}" title="${esc(title)}">
         ${cross}
@@ -1000,10 +966,9 @@
   // the profiles, `birthDate` became the age column, this is the statline.
   //
   // WHAT IS NOT HERE, AND WHY. No WAR: it is not a field MLB's API publishes.
-  // bWAR and fWAR are Baseball-Reference's and FanGraphs' own computed
-  // metrics, and both sites' terms prohibit automated extraction -- the same
-  // line this project already drew over B-R's service-time figures. No salary
-  // or earnings: no free, permitted, machine-readable source exists.
+  // Outside sites compute their own versions, and their terms prohibit
+  // automated extraction. No salary or earnings: no free, permitted,
+  // machine-readable source exists.
   // -----------------------------------------------------------------------
 
   // Column order is the order a box score uses, so the table reads the way a
@@ -1140,7 +1105,6 @@
     const rows = seasons
       .map((season) => {
         running += Number(season.d) || 0;
-        const src = SOURCE_LABELS[season.src] || SOURCE_LABELS.read;
         const clubs = (season.t || [])
           .map((id) => esc(teams[String(id)] || `Club ${id}`))
           .join(", ");
@@ -1156,7 +1120,6 @@
               note ? ` <abbr class="season-note" title="${esc(note)}">*</abbr>` : ""
             }</td>
             <td class="num-col">${formatDays(running)}</td>
-            <td><span class="src-pill ${src.cls}" title="${esc(src.title)}"><span class="src-full">${src.label}</span><span class="src-short">${src.short}</span></span></td>
           </tr>`;
       })
       .join("");
@@ -1188,7 +1151,7 @@
          ${esc(profile.first_transaction) || "later than his debut"}.
          ${presumedCount} season${presumedCount === 1 ? " is" : "s are"} credited by
          presuming he stayed on a roster from his debut rather than by reading
-         transactions — marked "Presumed from debut" below.`
+         transactions.`
       );
     }
     if (absentCount) {
@@ -1252,7 +1215,6 @@
               <th scope="col">Club</th>
               <th scope="col">Days</th>
               <th scope="col"><span class="src-full">Running total</span><span class="src-short">Total</span></th>
-              <th scope="col"><span class="src-full">How this season is known</span><span class="src-short">Source</span></th>
             </tr>
           </thead>
           <tbody>${rows}</tbody>

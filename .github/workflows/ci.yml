@@ -102,6 +102,9 @@ jobs:
       - name: Snippet length, share image, and list links
         run: python tests/test_share_pages.py
 
+      - name: Club counts, last club, and career closed
+        run: python tests/test_page_facts.py
+
       - name: Rule 5 eligibility
         run: python tests/test_rule5.py
 

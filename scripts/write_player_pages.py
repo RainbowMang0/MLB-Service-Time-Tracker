@@ -48,9 +48,13 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
 import alumni_sections  # noqa: E402
 import cba  # noqa: E402
+import club_groups  # noqa: E402
 import contracts  # noqa: E402
 import list_links  # noqa: E402
-from mlb_clubs import CLUB_ABBR, CLUB_NAMES, name_for_record  # noqa: E402
+import player_facts  # noqa: E402
+import site_tags  # noqa: E402
+import table_html  # noqa: E402
+from mlb_clubs import CLUB_ABBR, CLUB_NAMES  # noqa: E402
 import options as option_years  # noqa: E402
 import page_titles  # noqa: E402
 import player_sections  # noqa: E402
@@ -321,13 +325,6 @@ def _send_down_link() -> str:
     return (f'<p class="what-is"><a href="{BASE_PATH}{SEND_DOWN_PATH}">'
             f"{MENU_SEND_DOWN}</a></p>")
 
-SOURCE_LABEL = {
-    "read": "From transactions",
-    "carry": "Carried forward",
-    "presumed": "Presumed from debut",
-}
-
-
 # Characters NFKD does not decompose into letter + combining mark. Without
 # these, "Jose Berrios" is fine but a slug for a player whose name carries one
 # would drop the letter entirely rather than transliterate it.
@@ -502,7 +499,7 @@ def _min_seasons_to(days_needed: int) -> int:
     return -(-days_needed // FULL_YEAR_DAYS)
 
 
-def _milestone_sentence(player: dict, season: int | None = None) -> str:
+def _milestone_sentence(player: dict, season: int | None = None, transactions: list | None = None) -> str:
     """A plain-English statement of standing relative to the CBA thresholds.
 
     Every number here is read off the ruleset the same way `_threshold_sentence()`
@@ -524,16 +521,15 @@ def _milestone_sentence(player: dict, season: int | None = None) -> str:
     days_total = int(player.get("service_days_total") or 0)
 
     if not player.get("on_40_man"):
-        # Final. There is nothing left to project for a career that is over.
-        if player.get("free_agent_eligible"):
-            return f"His career closed at {service} years of service, enough to reach free agency."
-        if player.get("arbitration_eligible"):
-            return (
-                f"His career closed at {service} years of service, enough to reach "
-                "arbitration eligibility but short of free agency."
-            )
+        closed = player_facts.career_is_closed(player, season, transactions)
+        prefix = "His career closed at " if closed else ""
+        tail = "" if closed else " He is not on a 40-man roster."
+        if player.get("free_agent_eligible") and days_total:
+            return f"{prefix}{service} years of service, enough to reach free agency.{tail}"
+        if player.get("arbitration_eligible") and days_total:
+            return f"{prefix}{service} years of service, enough to reach arbitration eligibility but short of free agency.{tail}"
         if days_total:
-            return f"His career closed at {service} years of service, short of arbitration eligibility."
+            return f"{prefix}{service} years of service, short of arbitration eligibility.{tail}"
         return "He never accrued a day of major league service time."
 
     covered = bool(season) and contracts.covers(player.get("id"), season)
@@ -590,7 +586,7 @@ def _plain_figure(service: str) -> str:
     return dl if not y else yl
 
 
-def _club_phrase(player: dict) -> str:
+def _club_phrase(player: dict, transactions: list | None = None) -> str:
     """"with the Braves" for a current player, "last with" for a former one.
 
     A non-rostered player's stored `team` is the last club we saw him with, and
@@ -601,7 +597,7 @@ def _club_phrase(player: dict) -> str:
     Atlanta Braves" on every one of them, asserting a roster spot none of them
     holds.
     """
-    club = name_for_record(player.get("team_id"), player.get("team") or "")
+    club = player_facts.display_club(player, None, transactions)
     if not club:
         return ""
     return f"with {club}" if player.get("on_40_man") else f"last with {club}"
@@ -662,10 +658,10 @@ def _salary_block(player: dict) -> str:
     )
 
 
-def _description(player: dict, season: int | None = None) -> str:
+def _description(player: dict, season: int | None = None, transactions: list | None = None) -> str:
     name = player.get("name") or "This player"
     service = player.get("service_time") or "0.000"
-    where = _club_phrase(player) or "in the major leagues"
+    where = _club_phrase(player, transactions) or "in the major leagues"
     standing = contracts.label_for(player.get("id"), season) or _status(player)
     return page_titles.player_meta(
         name, service, int(player.get("service_days_total") or 0), where, standing
@@ -690,14 +686,13 @@ def _season_rows(player: dict, team_names: dict[int, str]) -> str:
         )
         rows.append(
             f"<tr><td>{season['y']}</td><td>{clubs or '—'}</td>"
-            f"<td class='n'>{days}</td><td class='n'>{_fmt(running)}</td>"
-            f"<td>{SOURCE_LABEL.get(season.get('src'), 'From transactions')}</td></tr>"
+            f"<td class='n'>{days}</td><td class='n'>{_fmt(running)}</td></tr>"
         )
     if not rows:
         return "<p class='empty'>No credited seasons on record.</p>"
     return (
         "<table><thead><tr><th>Season</th><th>Club</th><th>Days</th>"
-        "<th>Running total</th><th>How this season is known</th></tr></thead>"
+        "<th>Running total</th></tr></thead>"
         f"<tbody>{''.join(rows)}</tbody></table>"
     )
 
@@ -767,7 +762,7 @@ def render_club_index(by_club: dict[str, list[dict]], generated_at: str) -> str:
         f"<tr><td><a href=\"{slug(club)}.html\">{html.escape(club)}</a></td>"
         f"<td class='n'>{len(players)}</td>"
         f"<td class='n'>{sum(1 for p in players if p.get('free_agent_eligible'))}</td>"
-        f"<td class='n'>{sum(1 for p in players if p.get('arbitration_eligible'))}</td>"
+        f"<td class='n'>{len(club_groups.roster_groups(players)['arb'])}</td>"
         f"<td class='n'>{sum(1 for p in players if p.get('super_two_candidate'))}</td></tr>"
         for club, players in sorted(by_club.items())
     )
@@ -1060,9 +1055,9 @@ def render_club(
     name = html.escape(club)
     url = f"{SITE_URL}/{club_path(club)}"
     total = len(players)
-    fa = sum(1 for p in players if p.get("free_agent_eligible"))
-    arb = sum(1 for p in players if p.get("arbitration_eligible"))
-    s2 = sum(1 for p in players if p.get("super_two_candidate"))
+    def _open(p): return not (next_season and contracts.covers(p.get("id"), next_season))
+    groups = club_groups.roster_groups(players, _open)
+    fa, arb, s2 = len(groups["fa"]), len(groups["arb"]), len(groups["s2"])
     out_of_options = _out_of_options_count(players, option_counts)
     options_href = (
         f"{BASE_PATH}{OPTIONS_PATH}?team={urllib.parse.quote(club)}&status=out"
@@ -1144,7 +1139,7 @@ def render_club(
 
   {_key_players_line(players, next_season)}
 
-  <table><thead><tr><th>Player</th><th>Pos</th><th class="n">Service time</th>
+  <table class="roster"><thead><tr><th>Player</th><th>Pos</th><th class="n">Service time</th>
   <th class="n">Days</th><th class="n">Options left</th><th>Status</th></tr></thead><tbody>{rows}</tbody></table>
 
   {offseason_section}
@@ -1276,7 +1271,7 @@ def render_club_free_agents(
     )
 
 
-def _jsonld(player: dict, name: str, url: str, service: str) -> str:
+def _jsonld(player: dict, name: str, url: str, service: str, transactions: list | None = None) -> str:
     """Structured data for the page.
 
     Deliberately conservative. schema.org has no vocabulary for service time,
@@ -1304,7 +1299,7 @@ def _jsonld(player: dict, name: str, url: str, service: str) -> str:
         "additionalProperty": props,
     }
     trail = [("Big League Service Time Tracker", f"{SITE_URL}/")]
-    club = name_for_record(player.get("team_id"), player.get("team") or "")
+    club = player_facts.display_club(player, None, transactions)
     if club and player.get("on_40_man"):
         person["affiliation"] = {
             "@type": "SportsTeam",
@@ -1409,8 +1404,8 @@ def render(
     service = html.escape(raw_service)
     url = f"{SITE_URL}/{page_path(player)}"
     coming = int(year) + 1 if (year := (generated_at or "")[:4]).isdigit() else None
-    desc = html.escape(_description(player, coming))
-    raw_club = player.get("team") or ""
+    desc = html.escape(_description(player, coming, transactions))
+    raw_club = player_facts.display_club(player, team_names, transactions)
     club = html.escape(raw_club)
     # Past tense for a former player -- see _club_phrase(). Link the club
     # page only when that page exists. An old club name stays plain text.
@@ -1424,7 +1419,7 @@ def render(
     debut = html.escape(player.get("mlb_debut") or "—")
     missing = int(player.get("missing_seasons") or 0)
 
-    jsonld = _jsonld(player, name, url, service)
+    jsonld = _jsonld(player, name, url, service, transactions)
 
     # The figure as a sentence, directly under the heading. A crawler's snippet
     # and a first-time reader both take the first paragraph; the facts grid
@@ -1548,7 +1543,7 @@ def render(
   </div>
 
   <p class="option-line">{option_line}</p>
-  <p class="milestone">{html.escape(_milestone_sentence(player, coming))}</p>
+  <p class="milestone">{html.escape(_milestone_sentence(player, coming, transactions))}</p>
 
   {caveat}
   {_salary_block(player)}
@@ -1719,6 +1714,7 @@ def _write_if_changed(path: pathlib.Path, text: str) -> bool:
 
 def _publish_page(path: pathlib.Path, html: str, lastmod: "_LastMod", rel: str) -> bool:
     """Record lastmod from the rendered HTML and write the file if it changed."""
+    html = table_html.wrap_bare_tables(site_tags.place_ads(html, rel))
     lastmod.record(rel, html)
     return _write_if_changed(path, html)
 
@@ -2651,22 +2647,8 @@ GA_MEASUREMENT_ID = "G-G04P969TLX"
 ADSENSE_CLIENT_ID = "ca-pub-8748967682918425"
 CONTACT_EMAIL = "contact@bigleagueservicetime.com"
 
-HEAD_TAGS = (
-    "<!-- Google Analytics -->"
-    f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA_MEASUREMENT_ID}"></script>'
-    "<script>"
-    "window.dataLayer = window.dataLayer || [];"
-    "function gtag(){dataLayer.push(arguments);}"
-    "gtag('js', new Date());"
-    f"gtag('config', '{GA_MEASUREMENT_ID}');"
-    "</script>"
-    "<!-- End Google Analytics -->"
-    "<!-- Google AdSense -->"
-    f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE_CLIENT_ID}" crossorigin="anonymous"></script>'
-    f'<meta name="google-adsense-account" content="{ADSENSE_CLIENT_ID}">'
-    "<!-- End Google AdSense -->"
-    + share_meta.tags(SITE_URL)
-)
+HEAD_TAGS = site_tags.head_tags() + share_meta.tags(SITE_URL)
+HEAD_TAGS_NO_ADS = site_tags.head_tags(adsense=False) + share_meta.tags(SITE_URL)
 
 # The sentence the task's data-source review requires verbatim on every
 # page. It used to be appended, with its own About/Privacy/Contact row, to
@@ -2680,7 +2662,8 @@ FOOTER_REQUIRED_LINE = (
 )
 
 
-PAGE_CSS = """/* Generated stylesheet for the static pages. Edit the generator, not this file.
+PAGE_CSS = """@import "table-scroll.css";
+/* Generated stylesheet for the static pages. Edit the generator, not this file.
 
 Shared by every static page (player, club, 404). It used to be inlined into
 each of the 1,358 player pages, which cost ~1.4 KB apiece and, worse, could
@@ -4099,7 +4082,7 @@ def _write_404() -> None:
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-{HEAD_TAGS}
+{HEAD_TAGS_NO_ADS}
 <title>Page not found | Big League Service Time Tracker</title>
 <meta name="robots" content="noindex" />
 <!-- Generated error page. Edit the generator, not this file.

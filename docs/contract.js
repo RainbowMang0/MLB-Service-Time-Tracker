@@ -9,10 +9,10 @@
  * It does NOT project arbitration salaries, and it does NOT build a comp
  * set. Both need league-wide salary data, and this project has none:
  *
- *   - The service-time database holds no salaries. It never has.
- *   - MLB Trade Rumors' arbitration projections are someone else's work.
+ *   - This project holds no salaries. It never has.
+ *   - Published arbitration projections are someone else's work.
  *     Republishing them is the same line this project already drew over
- *     Baseball Reference's figures and over MLB's photographs.
+ *     figures this site does not republish, and over MLB's photographs.
  *   - No free, permitted, machine-readable salary source has been found.
  *
  * So the "decline the offer" branch of an extension analysis -- the modelled
