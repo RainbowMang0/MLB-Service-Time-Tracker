@@ -2074,6 +2074,8 @@ def _stamp_contract_extensions(db: dict[str, dict]) -> None:
 
 def _write_outputs(db: dict[str, dict]) -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
+    import rulebook_publish
+    rulebook_publish.publish_or_exit(db)
     publish_config()
 
     # Loaded once and threaded through write_index() and _write_pages() below,

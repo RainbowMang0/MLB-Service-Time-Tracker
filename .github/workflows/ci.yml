@@ -99,6 +99,12 @@ jobs:
       - name: Service-time rulebook
         run: python tests/test_rulebook.py
 
+      - name: Rulebook publish holds and rollback
+        run: python tests/test_rulebook_publish.py
+
+      - name: Rulebook limits
+        run: python tests/test_rulebook_limits.py
+
       - name: Snippet length, share image, and list links
         run: python tests/test_share_pages.py
 
