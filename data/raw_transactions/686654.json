@@ -1,6 +1,6 @@
 {
   "player_id": 686654,
-  "fetched_at": "2026-11-10T19:25:05Z",
+  "fetched_at": "2026-11-11T19:19:55Z",
   "checksum": "sha256:bc84092500dd5c2273249566292caf682d56114c706e44c0f4401902595793c8",
   "transactions": [
     {
@@ -128,7 +128,7 @@
       "description": "RHP Ty Adcock assigned to West Virginia Power from AZL Mariners."
     },
     {
-      "id": 467202,
+      "id": 464985,
       "person": {
         "id": 686654,
         "fullName": "Ty Adcock",
@@ -148,7 +148,7 @@
       "description": "RHP Ty Adcock assigned to Modesto Nuts."
     },
     {
-      "id": 464985,
+      "id": 467202,
       "person": {
         "id": 686654,
         "fullName": "Ty Adcock",
@@ -279,26 +279,6 @@
       "description": "RHP Ty Adcock assigned to Everett AquaSox from Modesto Nuts."
     },
     {
-      "id": 648899,
-      "person": {
-        "id": 686654,
-        "fullName": "Ty Adcock",
-        "link": "/api/v1/people/686654",
-        "nameSlug": "ty-adcock-686654"
-      },
-      "toTeam": {
-        "id": 409,
-        "name": "ACL Mariners",
-        "link": "/api/v1/teams/409"
-      },
-      "date": "2022-08-16",
-      "effectiveDate": "2022-08-16",
-      "resolutionDate": "2022-08-16",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "sent RHP Ty Adcock on a rehab assignment to ACL Mariners."
-    },
-    {
       "id": 647013,
       "person": {
         "id": 686654,
@@ -322,6 +302,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "Everett AquaSox sent RHP Ty Adcock on a rehab assignment to ACL Mariners."
+    },
+    {
+      "id": 648899,
+      "person": {
+        "id": 686654,
+        "fullName": "Ty Adcock",
+        "link": "/api/v1/people/686654",
+        "nameSlug": "ty-adcock-686654"
+      },
+      "toTeam": {
+        "id": 409,
+        "name": "ACL Mariners",
+        "link": "/api/v1/teams/409"
+      },
+      "date": "2022-08-16",
+      "effectiveDate": "2022-08-16",
+      "resolutionDate": "2022-08-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent RHP Ty Adcock on a rehab assignment to ACL Mariners."
     },
     {
       "id": 648340,
@@ -524,6 +524,25 @@
       "description": "Seattle Mariners optioned RHP Ty Adcock to Arkansas Travelers."
     },
     {
+      "id": 714200,
+      "person": {
+        "id": 686654,
+        "fullName": "Ty Adcock",
+        "link": "/api/v1/people/686654",
+        "nameSlug": "ty-adcock-686654"
+      },
+      "toTeam": {
+        "id": 574,
+        "name": "Arkansas Travelers",
+        "link": "/api/v1/teams/574"
+      },
+      "date": "2023-07-21",
+      "effectiveDate": "2023-07-21",
+      "resolutionDate": "2023-07-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change"
+    },
+    {
       "id": 713294,
       "person": {
         "id": 686654,
@@ -542,25 +561,6 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Arkansas Travelers activated RHP Ty Adcock from the reserve list."
-    },
-    {
-      "id": 714200,
-      "person": {
-        "id": 686654,
-        "fullName": "Ty Adcock",
-        "link": "/api/v1/people/686654",
-        "nameSlug": "ty-adcock-686654"
-      },
-      "toTeam": {
-        "id": 574,
-        "name": "Arkansas Travelers",
-        "link": "/api/v1/teams/574"
-      },
-      "date": "2023-07-21",
-      "effectiveDate": "2023-07-21",
-      "resolutionDate": "2023-07-21",
-      "typeCode": "SC",
-      "typeDesc": "Status Change"
     },
     {
       "id": 718607,
@@ -651,30 +651,6 @@
       "description": "Seattle Mariners designated RHP Ty Adcock for assignment."
     },
     {
-      "id": 763419,
-      "person": {
-        "id": 686654,
-        "fullName": "Ty Adcock",
-        "link": "/api/v1/people/686654",
-        "nameSlug": "ty-adcock-686654"
-      },
-      "fromTeam": {
-        "id": 136,
-        "name": "Seattle Mariners",
-        "link": "/api/v1/teams/136"
-      },
-      "toTeam": {
-        "id": 116,
-        "name": "Detroit Tigers",
-        "link": "/api/v1/teams/116"
-      },
-      "date": "2024-04-15",
-      "effectiveDate": "2024-04-15",
-      "typeCode": "CLW",
-      "typeDesc": "Claimed Off Waivers",
-      "description": "Detroit Tigers claimed RHP Ty Adcock off waivers from Seattle Mariners."
-    },
-    {
       "id": 763420,
       "person": {
         "id": 686654,
@@ -699,6 +675,30 @@
       "description": "Detroit Tigers optioned RHP Ty Adcock to Toledo Mud Hens."
     },
     {
+      "id": 763419,
+      "person": {
+        "id": 686654,
+        "fullName": "Ty Adcock",
+        "link": "/api/v1/people/686654",
+        "nameSlug": "ty-adcock-686654"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2024-04-15",
+      "effectiveDate": "2024-04-15",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Detroit Tigers claimed RHP Ty Adcock off waivers from Seattle Mariners."
+    },
+    {
       "id": 765117,
       "person": {
         "id": 686654,
@@ -719,7 +719,7 @@
       "description": "Toledo Mud Hens transferred RHP Ty Adcock to the Development List."
     },
     {
-      "id": 765125,
+      "id": 765118,
       "person": {
         "id": 686654,
         "fullName": "Ty Adcock",
@@ -739,7 +739,7 @@
       "description": "Toledo Mud Hens activated RHP Ty Adcock."
     },
     {
-      "id": 765118,
+      "id": 765125,
       "person": {
         "id": 686654,
         "fullName": "Ty Adcock",
@@ -839,30 +839,6 @@
       "description": "Syracuse Mets activated RHP Ty Adcock."
     },
     {
-      "id": 773548,
-      "person": {
-        "id": 686654,
-        "fullName": "Ty Adcock",
-        "link": "/api/v1/people/686654",
-        "nameSlug": "ty-adcock-686654"
-      },
-      "fromTeam": {
-        "id": 116,
-        "name": "Detroit Tigers",
-        "link": "/api/v1/teams/116"
-      },
-      "toTeam": {
-        "id": 121,
-        "name": "New York Mets",
-        "link": "/api/v1/teams/121"
-      },
-      "date": "2024-05-23",
-      "effectiveDate": "2024-05-23",
-      "typeCode": "CLW",
-      "typeDesc": "Claimed Off Waivers",
-      "description": "New York Mets claimed RHP Ty Adcock off waivers from Detroit Tigers."
-    },
-    {
       "id": 773549,
       "person": {
         "id": 686654,
@@ -885,6 +861,30 @@
       "typeCode": "OPT",
       "typeDesc": "Optioned",
       "description": "New York Mets optioned RHP Ty Adcock to Syracuse Mets."
+    },
+    {
+      "id": 773548,
+      "person": {
+        "id": 686654,
+        "fullName": "Ty Adcock",
+        "link": "/api/v1/people/686654",
+        "nameSlug": "ty-adcock-686654"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-05-23",
+      "effectiveDate": "2024-05-23",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "New York Mets claimed RHP Ty Adcock off waivers from Detroit Tigers."
     },
     {
       "id": 783180,
@@ -975,26 +975,6 @@
       "description": "New York Mets released RHP Ty Adcock."
     },
     {
-      "id": 796015,
-      "person": {
-        "id": 686654,
-        "fullName": "Ty Adcock",
-        "link": "/api/v1/people/686654",
-        "nameSlug": "ty-adcock-686654"
-      },
-      "toTeam": {
-        "id": 552,
-        "name": "Syracuse Mets",
-        "link": "/api/v1/teams/552"
-      },
-      "date": "2024-08-20",
-      "effectiveDate": "2024-08-20",
-      "resolutionDate": "2024-08-20",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Ty Adcock assigned to Syracuse Mets."
-    },
-    {
       "id": 796014,
       "person": {
         "id": 686654,
@@ -1013,6 +993,26 @@
       "typeCode": "SFA",
       "typeDesc": "Signed as Free Agent",
       "description": "New York Mets signed free agent RHP Ty Adcock to a minor league contract."
+    },
+    {
+      "id": 796015,
+      "person": {
+        "id": 686654,
+        "fullName": "Ty Adcock",
+        "link": "/api/v1/people/686654",
+        "nameSlug": "ty-adcock-686654"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2024-08-20",
+      "effectiveDate": "2024-08-20",
+      "resolutionDate": "2024-08-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ty Adcock assigned to Syracuse Mets."
     },
     {
       "id": 797447,
@@ -1469,7 +1469,7 @@
       "description": "El Paso Chihuahuas sent RHP Ty Adcock on a rehab assignment to ACL Padres."
     },
     {
-      "id": 910654,
+      "id": 915571,
       "person": {
         "id": 686654,
         "fullName": "Ty Adcock",
@@ -1494,7 +1494,7 @@
       "description": "El Paso Chihuahuas sent RHP Ty Adcock on a rehab assignment to Fort Wayne TinCaps."
     },
     {
-      "id": 915571,
+      "id": 910654,
       "person": {
         "id": 686654,
         "fullName": "Ty Adcock",

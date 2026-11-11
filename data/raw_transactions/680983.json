@@ -1,7 +1,7 @@
 {
   "player_id": 680983,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:c2f134cfd9045010b73d1032a9bc1b892a8e321f433e6ad8037ff39a9e446de8",
+  "fetched_at": "2026-11-11T19:19:55Z",
+  "checksum": "sha256:373fdb90815f3a6f448708ef99c9a9d018f7c6cc387e49f536ad00eba4d6864b",
   "transactions": [
     {
       "id": 354476,
@@ -686,6 +686,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Kelvin Cáceres assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 949969,
+      "person": {
+        "id": 680983,
+        "fullName": "Kelvin Cáceres",
+        "link": "/api/v1/people/680983",
+        "nameSlug": "kelvin-caceres-680983"
+      },
+      "toTeam": {
+        "id": 693,
+        "name": "Cardenales de Lara",
+        "link": "/api/v1/teams/693"
+      },
+      "date": "2026-11-10",
+      "effectiveDate": "2026-11-10",
+      "resolutionDate": "2026-11-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Kelvin Cáceres assigned to Cardenales de Lara."
     }
   ]
 }

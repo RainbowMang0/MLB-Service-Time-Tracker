@@ -1,6 +1,6 @@
 {
   "player_id": 675659,
-  "fetched_at": "2026-11-10T19:25:05Z",
+  "fetched_at": "2026-11-11T19:19:55Z",
   "checksum": "sha256:dac9d2ab1f0198895a0fb877e5587de58352003822d77c1d0a689fcdf9fdb20d",
   "transactions": [
     {
@@ -156,6 +156,26 @@
       "description": "SS Greg Jones assigned to Bowling Green Hot Rods."
     },
     {
+      "id": 474572,
+      "person": {
+        "id": 675659,
+        "fullName": "Greg Jones",
+        "link": "/api/v1/people/675659",
+        "nameSlug": "greg-jones-675659"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Greg Jones assigned to Tampa Bay Rays ."
+    },
+    {
       "id": 465759,
       "person": {
         "id": 675659,
@@ -194,26 +214,6 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "SS Greg Jones assigned to Charleston RiverDogs."
-    },
-    {
-      "id": 474572,
-      "person": {
-        "id": 675659,
-        "fullName": "Greg Jones",
-        "link": "/api/v1/people/675659",
-        "nameSlug": "greg-jones-675659"
-      },
-      "toTeam": {
-        "id": 139,
-        "name": "Tampa Bay Rays",
-        "link": "/api/v1/teams/139"
-      },
-      "date": "2021-02-12",
-      "effectiveDate": "2021-02-12",
-      "resolutionDate": "2021-02-12",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "SS Greg Jones assigned to Tampa Bay Rays ."
     },
     {
       "id": 469298,
@@ -344,7 +344,7 @@
       "description": "Montgomery Biscuits activated SS Greg Jones from the 7-day injured list."
     },
     {
-      "id": 608484,
+      "id": 607364,
       "person": {
         "id": 675659,
         "fullName": "Greg Jones",
@@ -359,9 +359,9 @@
       "date": "2022-03-20",
       "effectiveDate": "2022-03-20",
       "resolutionDate": "2022-03-20",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "SS Greg Jones roster status changed by Tampa Bay Rays."
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Greg Jones assigned to Tampa Bay Rays."
     },
     {
       "id": 608273,
@@ -384,7 +384,7 @@
       "description": "SS Greg Jones roster status changed by Tampa Bay Rays."
     },
     {
-      "id": 607364,
+      "id": 608484,
       "person": {
         "id": 675659,
         "fullName": "Greg Jones",
@@ -399,9 +399,9 @@
       "date": "2022-03-20",
       "effectiveDate": "2022-03-20",
       "resolutionDate": "2022-03-20",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "SS Greg Jones assigned to Tampa Bay Rays."
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "SS Greg Jones roster status changed by Tampa Bay Rays."
     },
     {
       "id": 622871,
@@ -981,30 +981,6 @@
       "description": "Colorado Rockies optioned RF Greg Jones to Albuquerque Isotopes."
     },
     {
-      "id": 822161,
-      "person": {
-        "id": 675659,
-        "fullName": "Greg Jones",
-        "link": "/api/v1/people/675659",
-        "nameSlug": "greg-jones-675659"
-      },
-      "fromTeam": {
-        "id": 115,
-        "name": "Colorado Rockies",
-        "link": "/api/v1/teams/115"
-      },
-      "toTeam": {
-        "id": 145,
-        "name": "Chicago White Sox",
-        "link": "/api/v1/teams/145"
-      },
-      "date": "2025-03-26",
-      "effectiveDate": "2025-03-26",
-      "typeCode": "CLW",
-      "typeDesc": "Claimed Off Waivers",
-      "description": "Chicago White Sox claimed RF Greg Jones off waivers from Colorado Rockies."
-    },
-    {
       "id": 822163,
       "person": {
         "id": 675659,
@@ -1027,6 +1003,30 @@
       "typeCode": "OPT",
       "typeDesc": "Optioned",
       "description": "Chicago White Sox optioned RF Greg Jones to Charlotte Knights."
+    },
+    {
+      "id": 822161,
+      "person": {
+        "id": 675659,
+        "fullName": "Greg Jones",
+        "link": "/api/v1/people/675659",
+        "nameSlug": "greg-jones-675659"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2025-03-26",
+      "effectiveDate": "2025-03-26",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Chicago White Sox claimed RF Greg Jones off waivers from Colorado Rockies."
     },
     {
       "id": 827112,
@@ -1245,26 +1245,6 @@
       "description": "Houston Astros signed free agent RF Greg Jones to a minor league contract."
     },
     {
-      "id": 839884,
-      "person": {
-        "id": 675659,
-        "fullName": "Greg Jones",
-        "link": "/api/v1/people/675659",
-        "nameSlug": "greg-jones-675659"
-      },
-      "toTeam": {
-        "id": 1998,
-        "name": "FCL Astros",
-        "link": "/api/v1/teams/1998"
-      },
-      "date": "2025-05-20",
-      "effectiveDate": "2025-05-20",
-      "resolutionDate": "2025-05-20",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RF Greg Jones assigned to FCL Astros."
-    },
-    {
       "id": 840691,
       "person": {
         "id": 675659,
@@ -1283,6 +1263,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "FCL Astros activated RF Greg Jones."
+    },
+    {
+      "id": 839884,
+      "person": {
+        "id": 675659,
+        "fullName": "Greg Jones",
+        "link": "/api/v1/people/675659",
+        "nameSlug": "greg-jones-675659"
+      },
+      "toTeam": {
+        "id": 1998,
+        "name": "FCL Astros",
+        "link": "/api/v1/teams/1998"
+      },
+      "date": "2025-05-20",
+      "effectiveDate": "2025-05-20",
+      "resolutionDate": "2025-05-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Greg Jones assigned to FCL Astros."
     },
     {
       "id": 853779,

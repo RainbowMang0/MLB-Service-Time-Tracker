@@ -1,7 +1,7 @@
 {
   "player_id": 682183,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:f65a1056f182d3a45b631b9e387aa3cf08fee4d4273e2d2849a96dd403befa74",
+  "fetched_at": "2026-11-11T19:19:55Z",
+  "checksum": "sha256:4949b3d6eb4056d0e6d65e3c5af2fa6c5e37c1c466895ac833988e76aa4098f0",
   "transactions": [
     {
       "id": 362032,
@@ -1106,6 +1106,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "LF Drew Avans elected free agency."
+    },
+    {
+      "id": 949979,
+      "person": {
+        "id": 682183,
+        "fullName": "Drew Avans",
+        "link": "/api/v1/people/682183",
+        "nameSlug": "drew-avans-682183"
+      },
+      "toTeam": {
+        "id": 5482,
+        "name": "Algodoneros de Guasave",
+        "link": "/api/v1/teams/5482"
+      },
+      "date": "2026-11-10",
+      "effectiveDate": "2026-11-10",
+      "resolutionDate": "2026-11-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Algodoneros de Guasave placed LF Drew Avans on the reserve list."
     }
   ]
 }

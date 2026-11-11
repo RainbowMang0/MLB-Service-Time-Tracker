@@ -1,7 +1,7 @@
 {
   "player_id": 666179,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:ddb6bb82bda42d51bd714170acf6e886221ba89eb8601787f5119f518470f50e",
+  "fetched_at": "2026-11-11T19:19:55Z",
+  "checksum": "sha256:a90ab1893662b03e861cf928b4d94ca9db9d3abdc28d666645f7d77f6615102b",
   "transactions": [
     {
       "id": 241845,
@@ -1030,6 +1030,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "1B Seth Beer assigned to LMB All-Stars."
+    },
+    {
+      "id": 949993,
+      "person": {
+        "id": 666179,
+        "fullName": "Seth Beer",
+        "link": "/api/v1/people/666179",
+        "nameSlug": "seth-beer-666179"
+      },
+      "toTeam": {
+        "id": 6483,
+        "name": "Jaguares de Nayarit",
+        "link": "/api/v1/teams/6483"
+      },
+      "date": "2026-11-10",
+      "effectiveDate": "2026-11-10",
+      "resolutionDate": "2026-11-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Seth Beer assigned to Jaguares de Nayarit."
     }
   ]
 }

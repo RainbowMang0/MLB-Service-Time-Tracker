@@ -1,7 +1,7 @@
 {
   "player_id": 605309,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:71662b9416b68d19b17b0e7e2c9200a7a564bcf9b1a3d9acd2689c07a38e35b6",
+  "fetched_at": "2026-11-11T19:19:55Z",
+  "checksum": "sha256:5920ef03e2fa6b3c273ee53dff2ab86fb3b5ef1e50a1ab60e945136d26cb3296",
   "transactions": [
     {
       "id": 121884,
@@ -1930,6 +1930,46 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Olmecas de Tabasco activated RHP Keone Kela from the reserve list."
+    },
+    {
+      "id": 949991,
+      "person": {
+        "id": 605309,
+        "fullName": "Keone Kela",
+        "link": "/api/v1/people/605309",
+        "nameSlug": "keone-kela-605309"
+      },
+      "toTeam": {
+        "id": 6483,
+        "name": "Jaguares de Nayarit",
+        "link": "/api/v1/teams/6483"
+      },
+      "date": "2026-11-10",
+      "effectiveDate": "2026-11-10",
+      "resolutionDate": "2026-11-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Keone Kela assigned to Jaguares de Nayarit."
+    },
+    {
+      "id": 949992,
+      "person": {
+        "id": 605309,
+        "fullName": "Keone Kela",
+        "link": "/api/v1/people/605309",
+        "nameSlug": "keone-kela-605309"
+      },
+      "toTeam": {
+        "id": 6483,
+        "name": "Jaguares de Nayarit",
+        "link": "/api/v1/teams/6483"
+      },
+      "date": "2026-11-10",
+      "effectiveDate": "2026-11-10",
+      "resolutionDate": "2026-11-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jaguares de Nayarit activated RHP Keone Kela."
     }
   ]
 }

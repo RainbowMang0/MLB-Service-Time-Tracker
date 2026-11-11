@@ -1,7 +1,7 @@
 {
   "player_id": 666023,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:c39786436e05f3ffaa2b336b7ded50e52cda37e6df3b9357a6a812066944c3f0",
+  "fetched_at": "2026-11-11T19:19:55Z",
+  "checksum": "sha256:a018e614f40e1fbba1ea1bb4b2025bb0f9a58ef24d8cc906c53823801950fb50",
   "transactions": [
     {
       "id": 248420,
@@ -1102,6 +1102,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "San Diego Padres activated C Freddy Fermin from the 10-day injured list."
+    },
+    {
+      "id": 949970,
+      "person": {
+        "id": 666023,
+        "fullName": "Freddy Fermin",
+        "link": "/api/v1/people/666023",
+        "nameSlug": "freddy-fermin-666023"
+      },
+      "toTeam": {
+        "id": 695,
+        "name": "Leones del Caracas",
+        "link": "/api/v1/teams/695"
+      },
+      "date": "2026-11-10",
+      "effectiveDate": "2026-11-10",
+      "resolutionDate": "2026-11-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Freddy Fermin assigned to Leones del Caracas."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 678368,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:3a84ce90fc7a0b3a009943f01541feb7829ed899c964cf9fc577b67418b0f88c",
+  "fetched_at": "2026-11-11T19:19:55Z",
+  "checksum": "sha256:f345d57db29f4ac2a54a73a4af9d016b72e2656c7294df32d1e79722b9cb488e",
   "transactions": [
     {
       "id": 335434,
@@ -1644,6 +1644,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Valente Bellozo elected free agency."
+    },
+    {
+      "id": 949982,
+      "person": {
+        "id": 678368,
+        "fullName": "Valente Bellozo",
+        "link": "/api/v1/people/678368",
+        "nameSlug": "valente-bellozo-678368"
+      },
+      "toTeam": {
+        "id": 673,
+        "name": "Aguilas de Mexicali",
+        "link": "/api/v1/teams/673"
+      },
+      "date": "2026-11-10",
+      "effectiveDate": "2026-11-10",
+      "resolutionDate": "2026-11-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Valente Bellozo assigned to Aguilas de Mexicali."
     }
   ]
 }

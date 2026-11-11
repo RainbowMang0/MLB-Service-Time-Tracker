@@ -1,7 +1,7 @@
 {
   "player_id": 672356,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:074c504f2e3e75b000c324c46b407f3009022631eb1f41cc4481e01731107d95",
+  "fetched_at": "2026-11-11T19:19:55Z",
+  "checksum": "sha256:ac4941c68735f75549fac8f7f542df14a68e9fc6a3d7399412bc361ece39e645",
   "transactions": [
     {
       "id": 296294,
@@ -1654,6 +1654,46 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Chicago Cubs activated 3B Gabriel Arias."
+    },
+    {
+      "id": 949973,
+      "person": {
+        "id": 672356,
+        "fullName": "Gabriel Arias",
+        "link": "/api/v1/people/672356",
+        "nameSlug": "gabriel-arias-672356"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2026-11-10",
+      "effectiveDate": "2026-11-10",
+      "resolutionDate": "2026-11-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tiburones de La Guaira activated 3B Gabriel Arias."
+    },
+    {
+      "id": 949964,
+      "person": {
+        "id": 672356,
+        "fullName": "Gabriel Arias",
+        "link": "/api/v1/people/672356",
+        "nameSlug": "gabriel-arias-672356"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2026-11-10",
+      "effectiveDate": "2026-11-10",
+      "resolutionDate": "2026-11-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Gabriel Arias assigned to Tiburones de La Guaira."
     }
   ]
 }

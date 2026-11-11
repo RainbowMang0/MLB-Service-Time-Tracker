@@ -1,7 +1,7 @@
 {
   "player_id": 680802,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:5bbd98c82beded9f31ee954a075501da351d22a3e934ec81486116fa48d44285",
+  "fetched_at": "2026-11-11T19:19:55Z",
+  "checksum": "sha256:fbf527f2b6750d4656d37d0b67dec4bfc4afe79be0ce95b26ad90f9f6d75b923",
   "transactions": [
     {
       "id": 353261,
@@ -946,6 +946,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Ryan Weiss elected free agency."
+    },
+    {
+      "id": 950007,
+      "person": {
+        "id": 680802,
+        "fullName": "Ryan Weiss",
+        "link": "/api/v1/people/680802",
+        "nameSlug": "ryan-weiss-680802"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2026-11-10",
+      "effectiveDate": "2026-11-11",
+      "resolutionDate": "2026-11-11",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Diego Padres signed free agent RHP Ryan Weiss."
     }
   ]
 }
