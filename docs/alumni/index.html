@@ -3,7 +3,50 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-G04P969TLX"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-G04P969TLX');</script><!-- End Google Analytics --><!-- Google AdSense --><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748967682918425" crossorigin="anonymous"></script><meta name="google-adsense-account" content="ca-pub-8748967682918425"><!-- End Google AdSense --><meta property="og:image" content="https://bigleagueservicetime.com/og.png" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://bigleagueservicetime.com/og.png" />
+<!-- Google Analytics -->
+<script>
+(function () {
+  var started = false;
+  function loadTags() {
+    if (started) return;
+    started = true;
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-G04P969TLX');
+    var ga = document.createElement('script');
+    ga.async = true;
+    ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-G04P969TLX';
+    document.head.appendChild(ga);
+    var ads = document.createElement('script');
+    ads.async = true;
+    ads.crossOrigin = 'anonymous';
+    ads.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748967682918425';
+    ads.onload = function () {
+      var slots = document.querySelectorAll('ins.adsbygoogle');
+      for (var i = 0; i < slots.length; i++) {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      }
+    };
+    document.head.appendChild(ads);
+  }
+  function arm() {
+    var timer = setTimeout(loadTags, 5000);
+    function early() { clearTimeout(timer); loadTags(); }
+    ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (name) {
+      window.addEventListener(name, early, { once: true, passive: true });
+    });
+  }
+  if (document.readyState === 'complete') arm();
+  else window.addEventListener('load', arm, { once: true });
+})();
+</script>
+<!-- End Google Analytics -->
+<!-- Google AdSense -->
+<meta name="google-adsense-account" content="ca-pub-8748967682918425">
+<!-- End Google AdSense -->
+<meta property="og:image" content="https://bigleagueservicetime.com/og.png" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://bigleagueservicetime.com/og.png" />
 <title>Previous players, service time A to Z | Big League</title>
 <meta name="description" content="Service time for 2,778 players who have come off a 40-man roster, A to Z. Estimates from public data, not official figures." />
 <link rel="canonical" href="https://bigleagueservicetime.com/alumni/" />
@@ -28,7 +71,7 @@
   <h1>Previous players</h1>
   <p class="subtitle">2,778 players who have come off a 40-man roster, by surname.</p>
   <p class="what-is"><a href="/service-time.html">What is service time?</a></p>
-  <table><thead><tr><th>Surname</th><th class="n">Players</th></tr></thead><tbody><tr><td><a href="a.html">A</a></td><td class='n'>131</td></tr><tr><td><a href="b.html">B</a></td><td class='n'>224</td></tr><tr><td><a href="c.html">C</a></td><td class='n'>214</td></tr><tr><td><a href="d.html">D</a></td><td class='n'>113</td></tr><tr><td><a href="e.html">E</a></td><td class='n'>45</td></tr><tr><td><a href="f.html">F</a></td><td class='n'>108</td></tr><tr><td><a href="g.html">G</a></td><td class='n'>169</td></tr><tr><td><a href="h.html">H</a></td><td class='n'>171</td></tr><tr><td><a href="i.html">I</a></td><td class='n'>13</td></tr><tr><td><a href="j.html">J</a></td><td class='n'>70</td></tr><tr><td><a href="k.html">K</a></td><td class='n'>85</td></tr><tr><td><a href="l.html">L</a></td><td class='n'>110</td></tr><tr><td><a href="m.html">M</a></td><td class='n'>262</td></tr><tr><td><a href="n.html">N</a></td><td class='n'>62</td></tr><tr><td><a href="o.html">O</a></td><td class='n'>48</td></tr><tr><td><a href="p.html">P</a></td><td class='n'>149</td></tr><tr><td><a href="q.html">Q</a></td><td class='n'>7</td></tr><tr><td><a href="r.html">R</a></td><td class='n'>206</td></tr><tr><td><a href="s.html">S</a></td><td class='n'>258</td></tr><tr><td><a href="t.html">T</a></td><td class='n'>100</td></tr><tr><td><a href="u.html">U</a></td><td class='n'>11</td></tr><tr><td><a href="v.html">V</a></td><td class='n'>61</td></tr><tr><td><a href="w.html">W</a></td><td class='n'>129</td></tr><tr><td><a href="y.html">Y</a></td><td class='n'>16</td></tr><tr><td><a href="z.html">Z</a></td><td class='n'>16</td></tr></tbody></table>
+  <div class="tbl-scroll"><p class="swipe-cue">Swipe sideways for more</p><table><thead><tr><th>Surname</th><th class="n">Players</th></tr></thead><tbody><tr><td><a href="a.html">A</a></td><td class='n'>131</td></tr><tr><td><a href="b.html">B</a></td><td class='n'>224</td></tr><tr><td><a href="c.html">C</a></td><td class='n'>214</td></tr><tr><td><a href="d.html">D</a></td><td class='n'>113</td></tr><tr><td><a href="e.html">E</a></td><td class='n'>45</td></tr><tr><td><a href="f.html">F</a></td><td class='n'>108</td></tr><tr><td><a href="g.html">G</a></td><td class='n'>169</td></tr><tr><td><a href="h.html">H</a></td><td class='n'>171</td></tr><tr><td><a href="i.html">I</a></td><td class='n'>13</td></tr><tr><td><a href="j.html">J</a></td><td class='n'>70</td></tr><tr><td><a href="k.html">K</a></td><td class='n'>85</td></tr><tr><td><a href="l.html">L</a></td><td class='n'>110</td></tr><tr><td><a href="m.html">M</a></td><td class='n'>262</td></tr><tr><td><a href="n.html">N</a></td><td class='n'>62</td></tr><tr><td><a href="o.html">O</a></td><td class='n'>48</td></tr><tr><td><a href="p.html">P</a></td><td class='n'>149</td></tr><tr><td><a href="q.html">Q</a></td><td class='n'>7</td></tr><tr><td><a href="r.html">R</a></td><td class='n'>206</td></tr><tr><td><a href="s.html">S</a></td><td class='n'>258</td></tr><tr><td><a href="t.html">T</a></td><td class='n'>100</td></tr><tr><td><a href="u.html">U</a></td><td class='n'>11</td></tr><tr><td><a href="v.html">V</a></td><td class='n'>61</td></tr><tr><td><a href="w.html">W</a></td><td class='n'>129</td></tr><tr><td><a href="y.html">Y</a></td><td class='n'>16</td></tr><tr><td><a href="z.html">Z</a></td><td class='n'>16</td></tr></tbody></table></div>
   <p class="foot">
     172 days credit a full year, so a season adds at most 1.000 no matter how long a player is on a roster. 3.000 years reaches salary arbitration and 6.000 reaches free agency —
     <a href="/service-time.html">what every threshold unlocks</a>.

@@ -3,7 +3,50 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-G04P969TLX"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-G04P969TLX');</script><!-- End Google Analytics --><!-- Google AdSense --><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748967682918425" crossorigin="anonymous"></script><meta name="google-adsense-account" content="ca-pub-8748967682918425"><!-- End Google AdSense --><meta property="og:image" content="https://bigleagueservicetime.com/og.png" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://bigleagueservicetime.com/og.png" />
+<!-- Google Analytics -->
+<script>
+(function () {
+  var started = false;
+  function loadTags() {
+    if (started) return;
+    started = true;
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-G04P969TLX');
+    var ga = document.createElement('script');
+    ga.async = true;
+    ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-G04P969TLX';
+    document.head.appendChild(ga);
+    var ads = document.createElement('script');
+    ads.async = true;
+    ads.crossOrigin = 'anonymous';
+    ads.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748967682918425';
+    ads.onload = function () {
+      var slots = document.querySelectorAll('ins.adsbygoogle');
+      for (var i = 0; i < slots.length; i++) {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      }
+    };
+    document.head.appendChild(ads);
+  }
+  function arm() {
+    var timer = setTimeout(loadTags, 5000);
+    function early() { clearTimeout(timer); loadTags(); }
+    ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (name) {
+      window.addEventListener(name, early, { once: true, passive: true });
+    });
+  }
+  if (document.readyState === 'complete') arm();
+  else window.addEventListener('load', arm, { once: true });
+})();
+</script>
+<!-- End Google Analytics -->
+<!-- Google AdSense -->
+<meta name="google-adsense-account" content="ca-pub-8748967682918425">
+<!-- End Google AdSense -->
+<meta property="og:image" content="https://bigleagueservicetime.com/og.png" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://bigleagueservicetime.com/og.png" />
 <title>Pittsburgh Pirates free agents this winter | Big League</title>
 <meta name="description" content="2 Pittsburgh Pirates players are free agents now, and 0 more are projected after 2027. From this project&#x27;s service-time data, not an official figure." />
 <link rel="canonical" href="https://bigleagueservicetime.com/t/pittsburgh-pirates-free-agents.html" />
@@ -28,7 +71,7 @@
   <h1>Pittsburgh Pirates free agents this winter</h1>
   <p class="subtitle">2 free agents now, 0 projected after 2027.</p>
   <p class="what-is"><a href="/service-time.html">What is service time?</a></p>
-  <p class="foot-note">projected by service time; players under contract are excluded</p><h2>Free agents now</h2><table><thead><tr><th>Player</th><th class='n'>Service time</th></tr></thead><tbody><tr><td><a href="../p/596133-luke-weaver.html">Luke Weaver</a></td><td class='n'>9.112</td></tr><tr><td><a href="../p/656811-ryan-o-hearn.html">Ryan O&#x27;Hearn</a></td><td class='n'>8.001</td></tr></tbody></table><h2>Free agents after 2027</h2><p>No one on this roster is projected to reach free agency after 2027.</p><p class="actions"><a href="pittsburgh-pirates.html">&larr; Pittsburgh Pirates roster</a></p>
+  <p class="foot-note">projected by service time; players under contract are excluded</p><h2>Free agents now</h2><div class="tbl-scroll"><p class="swipe-cue">Swipe sideways for more</p><table><thead><tr><th>Player</th><th class='n'>Service time</th></tr></thead><tbody><tr><td><a href="../p/596133-luke-weaver.html">Luke Weaver</a></td><td class='n'>9.112</td></tr><tr><td><a href="../p/656811-ryan-o-hearn.html">Ryan O&#x27;Hearn</a></td><td class='n'>8.001</td></tr></tbody></table></div><h2>Free agents after 2027</h2><p>No one on this roster is projected to reach free agency after 2027.</p><p class="actions"><a href="pittsburgh-pirates.html">&larr; Pittsburgh Pirates roster</a></p>
   <p class="foot">
     172 days credit a full year, so a season adds at most 1.000 no matter how long a player is on a roster. 3.000 years reaches salary arbitration and 6.000 reaches free agency —
     <a href="/service-time.html">what every threshold unlocks</a>.

@@ -3,7 +3,50 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-G04P969TLX"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-G04P969TLX');</script><!-- End Google Analytics --><!-- Google AdSense --><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748967682918425" crossorigin="anonymous"></script><meta name="google-adsense-account" content="ca-pub-8748967682918425"><!-- End Google AdSense --><meta property="og:image" content="https://bigleagueservicetime.com/og.png" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://bigleagueservicetime.com/og.png" />
+<!-- Google Analytics -->
+<script>
+(function () {
+  var started = false;
+  function loadTags() {
+    if (started) return;
+    started = true;
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-G04P969TLX');
+    var ga = document.createElement('script');
+    ga.async = true;
+    ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-G04P969TLX';
+    document.head.appendChild(ga);
+    var ads = document.createElement('script');
+    ads.async = true;
+    ads.crossOrigin = 'anonymous';
+    ads.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748967682918425';
+    ads.onload = function () {
+      var slots = document.querySelectorAll('ins.adsbygoogle');
+      for (var i = 0; i < slots.length; i++) {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      }
+    };
+    document.head.appendChild(ads);
+  }
+  function arm() {
+    var timer = setTimeout(loadTags, 5000);
+    function early() { clearTimeout(timer); loadTags(); }
+    ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (name) {
+      window.addEventListener(name, early, { once: true, passive: true });
+    });
+  }
+  if (document.readyState === 'complete') arm();
+  else window.addEventListener('load', arm, { once: true });
+})();
+</script>
+<!-- End Google Analytics -->
+<!-- Google AdSense -->
+<meta name="google-adsense-account" content="ca-pub-8748967682918425">
+<!-- End Google AdSense -->
+<meta property="og:image" content="https://bigleagueservicetime.com/og.png" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://bigleagueservicetime.com/og.png" />
 <title>Baltimore Orioles non-tender watch 2027 | Big League</title>
 <meta name="description" content="1 Baltimore Orioles player is on this winter&#x27;s non-tender watch for 2027. From this project&#x27;s data, not a prediction." />
 <link rel="canonical" href="https://bigleagueservicetime.com/t/baltimore-orioles-non-tender.html" />
@@ -29,7 +72,7 @@
   <p class="subtitle">1 players on the Baltimore Orioles 40-man roster.</p>
   <p class="what-is"><a href="/service-time.html">What is service time?</a></p>
   <p class="what-is"><a href="/send-a-player-down.html">Can a team send a player down?</a></p>
-  <table><thead><tr><th>Player</th><th class='n'>Service time</th><th>Why he's listed</th></tr></thead><tbody><tr><td><a href="../p/642585-felix-bautista.html">Félix Bautista</a></td><td class='n'>5.000</td><td>In his final arbitration year before free agency; Played in just 2 games last season</td></tr></tbody></table><p class="actions"><a href="baltimore-orioles.html">&larr; Baltimore Orioles roster</a></p>
+  <div class="tbl-scroll"><p class="swipe-cue">Swipe sideways for more</p><table><thead><tr><th>Player</th><th class='n'>Service time</th><th>Why he's listed</th></tr></thead><tbody><tr><td><a href="../p/642585-felix-bautista.html">Félix Bautista</a></td><td class='n'>5.000</td><td>In his final arbitration year before free agency; Played in just 2 games last season</td></tr></tbody></table></div><p class="actions"><a href="baltimore-orioles.html">&larr; Baltimore Orioles roster</a></p>
   <p class="foot">
     172 days credit a full year, so a season adds at most 1.000 no matter how long a player is on a roster. 3.000 years reaches salary arbitration and 6.000 reaches free agency —
     <a href="/service-time.html">what every threshold unlocks</a>.
