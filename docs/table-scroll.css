@@ -1,0 +1,81 @@
+/* Wide tables stay inside the page. The first column stays put, a shadow
+   on the right edge shows there is more, and phones get a one-line cue.
+   The covering strips use the surface color so the shadow disappears once
+   the row is scrolled to that edge. */
+.table-wrap,
+.tbl-scroll,
+.tbl-wrap,
+.season-table-wrap,
+.table-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-muted) transparent;
+}
+.tbl-scroll,
+.tbl-wrap,
+.season-table-wrap,
+.table-scroll {
+  background-image:
+    linear-gradient(to right, var(--page-plane), var(--page-plane)),
+    linear-gradient(to left, var(--page-plane), var(--page-plane)),
+    radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.45), transparent),
+    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.45), transparent);
+  background-position: 0 0, 100% 0, 0 0, 100% 0;
+  background-repeat: no-repeat;
+  background-size: 36px 100%, 36px 100%, 14px 100%, 14px 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+.table-wrap {
+  background-image:
+    linear-gradient(to right, var(--surface-1), var(--surface-1)),
+    linear-gradient(to left, var(--surface-1), var(--surface-1)),
+    radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.45), transparent),
+    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.45), transparent);
+  background-position: 0 0, 100% 0, 0 0, 100% 0;
+  background-repeat: no-repeat;
+  background-size: 36px 100%, 36px 100%, 14px 100%, 14px 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+.table-wrap tbody td:first-child,
+.tbl-scroll th:first-child,
+.tbl-scroll td:first-child,
+.tbl-wrap th:first-child,
+.tbl-wrap td:first-child,
+.season-table-wrap th:first-child,
+.season-table-wrap td:first-child,
+.table-scroll th:first-child,
+.table-scroll td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: var(--page-plane);
+}
+.table-wrap tbody td:first-child { background: var(--surface-1); }
+.table-wrap thead th:first-child {
+  left: 0;
+  z-index: 4;
+}
+.swipe-cue { display: none; margin: 0; font-size: 0.75rem; color: var(--text-muted); }
+@media (max-width: 640px) {
+  .swipe-cue { display: block; position: sticky; left: 0; padding: 0 0 0.35rem; }
+  .tbl-wrap::before,
+  .season-table-wrap::before,
+  .table-scroll::before {
+    content: "Swipe sideways for more";
+    display: block;
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    padding: 0 0 0.35rem;
+    background: var(--page-plane);
+  }
+}
+.ad-slot { min-height: 280px; margin: 1.1rem 0; overflow: hidden; }
+.ad-slot .adsbygoogle { display: block; min-height: 280px; }
+@media (max-width: 640px) {
+  table.roster th:nth-child(2),
+  table.roster td:nth-child(2),
+  table.roster th:nth-child(4),
+  table.roster td:nth-child(4) { display: none; }
+}

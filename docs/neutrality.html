@@ -4,16 +4,46 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G04P969TLX"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-G04P969TLX');
+(function () {
+  var started = false;
+  function loadTags() {
+    if (started) return;
+    started = true;
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-G04P969TLX');
+    var ga = document.createElement('script');
+    ga.async = true;
+    ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-G04P969TLX';
+    document.head.appendChild(ga);
+    var ads = document.createElement('script');
+    ads.async = true;
+    ads.crossOrigin = 'anonymous';
+    ads.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748967682918425';
+    ads.onload = function () {
+      var slots = document.querySelectorAll('ins.adsbygoogle');
+      for (var i = 0; i < slots.length; i++) {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      }
+    };
+    document.head.appendChild(ads);
+  }
+  function arm() {
+    var timer = setTimeout(loadTags, 5000);
+    function early() { clearTimeout(timer); loadTags(); }
+    ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (name) {
+      window.addEventListener(name, early, { once: true, passive: true });
+    });
+  }
+  if (document.readyState === 'complete') arm();
+  else window.addEventListener('load', arm, { once: true });
+})();
 </script>
 <!-- End Google Analytics -->
 <!-- Google AdSense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748967682918425" crossorigin="anonymous"></script>
 <meta name="google-adsense-account" content="ca-pub-8748967682918425">
 <!-- End Google AdSense -->
 <title>Neutrality | Big League</title>
@@ -120,7 +150,9 @@
           Nothing entered into the duty-day tool leaves the visitor's device.
           There is no account system, no server-side storage, and no analytics
           that could carry a salary, a domicile, or a contract term off the
-          page. The site's only analytics are cookieless page counts.
+          page. The site uses Google Analytics and Google AdSense, which use
+          cookies.
+          <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a>.
         </p>
       </section>
 

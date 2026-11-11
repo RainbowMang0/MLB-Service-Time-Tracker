@@ -4758,7 +4758,8 @@ def test_the_milestone_sentence_is_a_floor_derived_from_the_ruleset():
     check("the arbitration threshold in the sentence is the ruleset's own",
           w._yrs(w.ARBITRATION_YEARS) in sentence)
 
-    retired_fa = {"on_40_man": False, "service_time": "9.000", "service_days_total": 9 * w.FULL_YEAR_DAYS,
+    retired_fa = {"on_40_man": False, "active": False, "service_time": "9.000",
+                  "service_days_total": 9 * w.FULL_YEAR_DAYS,
                   "free_agent_eligible": True, "arbitration_eligible": True}
     check("a finished career is described as closed, not projected",
           "His career closed" in w._milestone_sentence(retired_fa))
@@ -5443,10 +5444,11 @@ def test_every_page_carries_exactly_one_ga_tag_and_one_adsense_block():
     generated["404"] = page404
 
     for name, html in generated.items():
+        ads_expected = 0 if name == "404" else 1
         check(f"{name}: exactly one GA script tag", html.count(ga_script) == 1)
         check(f"{name}: exactly one GA config call", html.count(ga_config) == 1)
-        check(f"{name}: exactly one AdSense script tag", html.count(adsense_script) == 1)
-        check(f"{name}: exactly one AdSense meta tag", html.count(adsense_meta) == 1)
+        check(f"{name}: AdSense script count", html.count(adsense_script) == ads_expected)
+        check(f"{name}: AdSense meta count", html.count(adsense_meta) == ads_expected)
 
 
 def test_ads_txt_is_exact():

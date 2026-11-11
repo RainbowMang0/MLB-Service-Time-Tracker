@@ -3,7 +3,50 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-G04P969TLX"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-G04P969TLX');</script><!-- End Google Analytics --><!-- Google AdSense --><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748967682918425" crossorigin="anonymous"></script><meta name="google-adsense-account" content="ca-pub-8748967682918425"><!-- End Google AdSense --><meta property="og:image" content="https://bigleagueservicetime.com/og.png" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://bigleagueservicetime.com/og.png" />
+<!-- Google Analytics -->
+<script>
+(function () {
+  var started = false;
+  function loadTags() {
+    if (started) return;
+    started = true;
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-G04P969TLX');
+    var ga = document.createElement('script');
+    ga.async = true;
+    ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-G04P969TLX';
+    document.head.appendChild(ga);
+    var ads = document.createElement('script');
+    ads.async = true;
+    ads.crossOrigin = 'anonymous';
+    ads.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748967682918425';
+    ads.onload = function () {
+      var slots = document.querySelectorAll('ins.adsbygoogle');
+      for (var i = 0; i < slots.length; i++) {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      }
+    };
+    document.head.appendChild(ads);
+  }
+  function arm() {
+    var timer = setTimeout(loadTags, 5000);
+    function early() { clearTimeout(timer); loadTags(); }
+    ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (name) {
+      window.addEventListener(name, early, { once: true, passive: true });
+    });
+  }
+  if (document.readyState === 'complete') arm();
+  else window.addEventListener('load', arm, { once: true });
+})();
+</script>
+<!-- End Google Analytics -->
+<!-- Google AdSense -->
+<meta name="google-adsense-account" content="ca-pub-8748967682918425">
+<!-- End Google AdSense -->
+<meta property="og:image" content="https://bigleagueservicetime.com/og.png" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://bigleagueservicetime.com/og.png" />
 <title>Ben Ross service time | Big League</title>
 <meta name="description" content="Ben Ross: estimated 0.027 years (27 days) with Minnesota Twins. Pre-arbitration. Not an official MLB/MLBPA figure." />
 <link rel="canonical" href="https://bigleagueservicetime.com/p/805346-ben-ross.html" />
@@ -47,7 +90,7 @@
   
   <div class='salary-note salary-note-estimate'><p><strong>Salary (estimate):</strong> Ben Ross is clearly pre-arbitration (below Super Two, arbitration and free-agency eligibility) and no contract extension is on file for him, so his pay is most likely the 2026 MLB minimum of <b>$780,000</b>. This is the league minimum from the Basic Agreement, not a confirmed figure for this player. A handful of pre-arbitration players sign extensions that this page could not detect. If one exists for him, his real pay is higher.</p></div>
   <h2>Season by season</h2>
-  <table><thead><tr><th>Season</th><th>Club</th><th>Days</th><th>Running total</th><th>How this season is known</th></tr></thead><tbody><tr><td>2026</td><td>Minnesota Twins</td><td class='n'>27</td><td class='n'>0.027</td><td>From transactions</td></tr></tbody></table>
+  <div class="tbl-scroll"><p class="swipe-cue">Swipe sideways for more</p><table><thead><tr><th>Season</th><th>Club</th><th>Days</th><th>Running total</th></tr></thead><tbody><tr><td>2026</td><td>Minnesota Twins</td><td class='n'>27</td><td class='n'>0.027</td></tr></tbody></table></div>
 
 <section class="pp-section" id="injuries"><h2>Injured list</h2><p class="pp-note">No major league injured-list time in the public record.</p></section>
 <section class="pp-section" id="stats"><details open><summary><h2>Season stats</h2></summary><h3>Batting</h3><div class="tbl-wrap"><table class="pp-tbl"><thead><tr><th>Year</th><th>Tm</th><th>G</th><th>AB</th><th>H</th><th>HR</th><th>RBI</th><th>SB</th><th>AVG</th><th>OPS</th><th>R</th><th>2B</th><th>3B</th><th>BB</th><th>SO</th><th>OBP</th><th>SLG</th></tr></thead><tbody><tr><td>2026</td><td>Twins</td><td class="num">10</td><td class="num">21</td><td class="num">4</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">.190</td><td class="num">.571</td><td class="num">5</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num">11</td><td class="num">.190</td><td class="num">.381</td></tr></tbody><tfoot><tr><td>Career</td><td></td><td class="num">10</td><td class="num">21</td><td class="num">4</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">.190</td><td class="num">–</td><td class="num">5</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num">11</td><td class="num">–</td><td class="num">–</td></tr></tfoot></table></div><p class="pp-note">Season totals from public data.</p></details></section>

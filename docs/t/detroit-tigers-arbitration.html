@@ -3,7 +3,50 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-G04P969TLX"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-G04P969TLX');</script><!-- End Google Analytics --><!-- Google AdSense --><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748967682918425" crossorigin="anonymous"></script><meta name="google-adsense-account" content="ca-pub-8748967682918425"><!-- End Google AdSense --><meta property="og:image" content="https://bigleagueservicetime.com/og.png" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://bigleagueservicetime.com/og.png" />
+<!-- Google Analytics -->
+<script>
+(function () {
+  var started = false;
+  function loadTags() {
+    if (started) return;
+    started = true;
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-G04P969TLX');
+    var ga = document.createElement('script');
+    ga.async = true;
+    ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-G04P969TLX';
+    document.head.appendChild(ga);
+    var ads = document.createElement('script');
+    ads.async = true;
+    ads.crossOrigin = 'anonymous';
+    ads.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748967682918425';
+    ads.onload = function () {
+      var slots = document.querySelectorAll('ins.adsbygoogle');
+      for (var i = 0; i < slots.length; i++) {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      }
+    };
+    document.head.appendChild(ads);
+  }
+  function arm() {
+    var timer = setTimeout(loadTags, 5000);
+    function early() { clearTimeout(timer); loadTags(); }
+    ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (name) {
+      window.addEventListener(name, early, { once: true, passive: true });
+    });
+  }
+  if (document.readyState === 'complete') arm();
+  else window.addEventListener('load', arm, { once: true });
+})();
+</script>
+<!-- End Google Analytics -->
+<!-- Google AdSense -->
+<meta name="google-adsense-account" content="ca-pub-8748967682918425">
+<!-- End Google AdSense -->
+<meta property="og:image" content="https://bigleagueservicetime.com/og.png" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://bigleagueservicetime.com/og.png" />
 <title>Detroit Tigers arbitration 2027 | Big League</title>
 <meta name="description" content="12 Detroit Tigers players are projected arbitration-eligible this winter for 2027. From this project&#x27;s service-time data." />
 <link rel="canonical" href="https://bigleagueservicetime.com/t/detroit-tigers-arbitration.html" />
@@ -28,7 +71,7 @@
   <h1>Detroit Tigers arbitration 2027</h1>
   <p class="subtitle">12 players on the Detroit Tigers 40-man roster.</p>
   <p class="what-is"><a href="/service-time.html">What is service time?</a></p>
-  <table><thead><tr><th>Player</th><th class='n'>Service time</th><th>Status</th></tr></thead><tbody><tr><td><a href="../p/656716-zach-mckinstry.html">Zach McKinstry</a></td><td class='n'>5.074</td><td><span class='badge badge-warning'>Arbitration eligible</span></td></tr><tr><td><a href="../p/676684-will-vest.html">Will Vest</a></td><td class='n'>5.061</td><td><span class='badge badge-warning'>Arbitration eligible</span></td></tr><tr><td><a href="../p/663837-matt-vierling.html">Matt Vierling</a></td><td class='n'>5.019</td><td><span class='badge badge-warning'>Arbitration eligible</span></td></tr><tr><td><a href="../p/682985-riley-greene.html">Riley Greene</a></td><td class='n'>4.110</td><td><span class='badge badge-warning'>Arbitration eligible</span></td></tr><tr><td><a href="../p/679529-spencer-torkelson.html">Spencer Torkelson</a></td><td class='n'>4.075</td><td><span class='badge badge-warning'>Arbitration eligible</span></td></tr><tr><td><a href="../p/681481-kerry-carpenter.html">Kerry Carpenter</a></td><td class='n'>4.057</td><td><span class='badge badge-warning'>Arbitration eligible</span></td></tr><tr><td><a href="../p/663947-tyler-holton.html">Tyler Holton</a></td><td class='n'>4.034</td><td><span class='badge badge-warning'>Arbitration eligible</span></td></tr><tr><td><a href="../p/689225-beau-brieske.html">Beau Brieske</a></td><td class='n'>4.007</td><td><span class='badge badge-warning'>Arbitration eligible</span></td></tr><tr><td><a href="../p/681857-reese-olson.html">Reese Olson</a></td><td class='n'>3.122</td><td><span class='badge badge-warning'>Arbitration eligible</span></td></tr><tr><td><a href="../p/621097-jacob-waguespack.html">Jacob Waguespack</a></td><td class='n'>3.043</td><td><span class='badge badge-warning'>Arbitration eligible</span></td></tr><tr><td><a href="../p/672761-wenceel-perez.html">Wenceel Pérez</a></td><td class='n'>3.000</td><td><span class='badge badge-warning'>Arbitration eligible</span></td></tr><tr><td><a href="../p/678009-parker-meadows.html">Parker Meadows</a></td><td class='n'>2.170</td><td><span class='badge badge-serious'>Super Two</span></td></tr></tbody></table><p class="actions"><a href="detroit-tigers.html">&larr; Detroit Tigers roster</a></p>
+  <div class="tbl-scroll"><p class="swipe-cue">Swipe sideways for more</p><table><thead><tr><th>Player</th><th class='n'>Service time</th><th>Status</th></tr></thead><tbody><tr><td><a href="../p/656716-zach-mckinstry.html">Zach McKinstry</a></td><td class='n'>5.074</td><td><span class='badge badge-warning'>Arbitration eligible</span></td></tr><tr><td><a href="../p/676684-will-vest.html">Will Vest</a></td><td class='n'>5.061</td><td><span class='badge badge-warning'>Arbitration eligible</span></td></tr><tr><td><a href="../p/663837-matt-vierling.html">Matt Vierling</a></td><td class='n'>5.019</td><td><span class='badge badge-warning'>Arbitration eligible</span></td></tr><tr><td><a href="../p/682985-riley-greene.html">Riley Greene</a></td><td class='n'>4.110</td><td><span class='badge badge-warning'>Arbitration eligible</span></td></tr><tr><td><a href="../p/679529-spencer-torkelson.html">Spencer Torkelson</a></td><td class='n'>4.075</td><td><span class='badge badge-warning'>Arbitration eligible</span></td></tr><tr><td><a href="../p/681481-kerry-carpenter.html">Kerry Carpenter</a></td><td class='n'>4.057</td><td><span class='badge badge-warning'>Arbitration eligible</span></td></tr><tr><td><a href="../p/663947-tyler-holton.html">Tyler Holton</a></td><td class='n'>4.034</td><td><span class='badge badge-warning'>Arbitration eligible</span></td></tr><tr><td><a href="../p/689225-beau-brieske.html">Beau Brieske</a></td><td class='n'>4.007</td><td><span class='badge badge-warning'>Arbitration eligible</span></td></tr><tr><td><a href="../p/681857-reese-olson.html">Reese Olson</a></td><td class='n'>3.122</td><td><span class='badge badge-warning'>Arbitration eligible</span></td></tr><tr><td><a href="../p/621097-jacob-waguespack.html">Jacob Waguespack</a></td><td class='n'>3.043</td><td><span class='badge badge-warning'>Arbitration eligible</span></td></tr><tr><td><a href="../p/672761-wenceel-perez.html">Wenceel Pérez</a></td><td class='n'>3.000</td><td><span class='badge badge-warning'>Arbitration eligible</span></td></tr><tr><td><a href="../p/678009-parker-meadows.html">Parker Meadows</a></td><td class='n'>2.170</td><td><span class='badge badge-serious'>Super Two</span></td></tr></tbody></table></div><p class="actions"><a href="detroit-tigers.html">&larr; Detroit Tigers roster</a></p>
   <p class="foot">
     172 days credit a full year, so a season adds at most 1.000 no matter how long a player is on a roster. 3.000 years reaches salary arbitration and 6.000 reaches free agency —
     <a href="/service-time.html">what every threshold unlocks</a>.

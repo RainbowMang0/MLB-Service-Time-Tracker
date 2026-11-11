@@ -3,7 +3,50 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-G04P969TLX"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-G04P969TLX');</script><!-- End Google Analytics --><!-- Google AdSense --><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748967682918425" crossorigin="anonymous"></script><meta name="google-adsense-account" content="ca-pub-8748967682918425"><!-- End Google AdSense --><meta property="og:image" content="https://bigleagueservicetime.com/og.png" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://bigleagueservicetime.com/og.png" />
+<!-- Google Analytics -->
+<script>
+(function () {
+  var started = false;
+  function loadTags() {
+    if (started) return;
+    started = true;
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-G04P969TLX');
+    var ga = document.createElement('script');
+    ga.async = true;
+    ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-G04P969TLX';
+    document.head.appendChild(ga);
+    var ads = document.createElement('script');
+    ads.async = true;
+    ads.crossOrigin = 'anonymous';
+    ads.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748967682918425';
+    ads.onload = function () {
+      var slots = document.querySelectorAll('ins.adsbygoogle');
+      for (var i = 0; i < slots.length; i++) {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      }
+    };
+    document.head.appendChild(ads);
+  }
+  function arm() {
+    var timer = setTimeout(loadTags, 5000);
+    function early() { clearTimeout(timer); loadTags(); }
+    ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (name) {
+      window.addEventListener(name, early, { once: true, passive: true });
+    });
+  }
+  if (document.readyState === 'complete') arm();
+  else window.addEventListener('load', arm, { once: true });
+})();
+</script>
+<!-- End Google Analytics -->
+<!-- Google AdSense -->
+<meta name="google-adsense-account" content="ca-pub-8748967682918425">
+<!-- End Google AdSense -->
+<meta property="og:image" content="https://bigleagueservicetime.com/og.png" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://bigleagueservicetime.com/og.png" />
 <title>What MLB service time is | Big League</title>
 <meta name="description" content="What MLB service time is: 172 days to a year, arbitration at 3.000, free agency at 6.000, a gold card at 8.000, and a full pension at 10.000." />
 <link rel="canonical" href="https://bigleagueservicetime.com/service-time.html" />
@@ -61,7 +104,7 @@
   <p>Service time is a ratchet: it only goes up, and each of these is
   permanent once reached.</p>
 
-  <table class="thresholds">
+  <div class="tbl-scroll"><p class="swipe-cue">Swipe sideways for more</p><table class="thresholds">
     <thead><tr><th>Service time</th><th>Days</th><th>What it unlocks</th></tr></thead>
     <tbody>
       <tr>
@@ -76,13 +119,13 @@
         draw.</td>
       </tr>
       <tr id="super-two">
-        <td class="n"><b>2.133</b></td><td class="n">477</td>
+        <td class="n"><b>varies</b></td><td class="n">—</td>
         <td><b><a href="/super-two.html">Super Two</a>.</b> A player between two and three years who ranks
         in the top 22% of that class, with
         86+ days in the preceding season,
         reaches salary arbitration <b>a year early</b> — four trips through it
         instead of three. <b>The cutoff is not fixed</b>: it falls wherever
-        the class falls that year. After the 2026 season the official line is <b>2.133</b>.</td>
+        the class falls that year.</td>
       </tr>
       <tr id="arbitration">
         <td class="n"><b>3.000</b></td>
@@ -120,7 +163,7 @@
         restarts.</td>
       </tr>
     </tbody>
-  </table>
+  </table></div>
 
   <p class="foot-note">Pension and benefit amounts are renegotiated between
   the league and the players' association and are reported differently by
