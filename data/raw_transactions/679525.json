@@ -1,7 +1,7 @@
 {
   "player_id": 679525,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:134c3218cccc1434807be5591f6800e3e523ff063d47a84810355f3aa9e2b257",
+  "fetched_at": "2026-11-12T19:38:31Z",
+  "checksum": "sha256:78b9e816775051a476e3f16ff32b4bceaef2f79719ffb7b2ad2810d03d70a98e",
   "transactions": [
     {
       "id": 341751,
@@ -979,6 +979,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Alec Marsh elected free agency."
+    },
+    {
+      "id": 950049,
+      "person": {
+        "id": 679525,
+        "fullName": "Alec Marsh",
+        "link": "/api/v1/people/679525",
+        "nameSlug": "alec-marsh-679525"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2026-11-11",
+      "effectiveDate": "2026-11-11",
+      "resolutionDate": "2026-11-11",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago White Sox signed free agent RHP Alec Marsh to a minor league contract and invited him to spring training."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 690022,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:e220f1dbdbf6e2024d9e51133c4c260851df15c6a04b41690f336a27907f9093",
+  "fetched_at": "2026-11-12T19:38:31Z",
+  "checksum": "sha256:859af28d3f79ccbfa636fb4861d25a3bc41470edd49f039cc292c3cbd4a227d9",
   "transactions": [
     {
       "id": 644341,
@@ -633,6 +633,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Colorado Rockies recalled SS Ryan Ritter from Albuquerque Isotopes."
+    },
+    {
+      "id": 950011,
+      "person": {
+        "id": 690022,
+        "fullName": "Ryan Ritter",
+        "link": "/api/v1/people/690022",
+        "nameSlug": "ryan-ritter-690022"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2026-11-11",
+      "effectiveDate": "2026-11-11",
+      "resolutionDate": "2026-11-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Ryan Ritter assigned to Aguilas Cibaenas."
     }
   ]
 }

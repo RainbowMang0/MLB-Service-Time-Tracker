@@ -1,7 +1,7 @@
 {
   "player_id": 544365,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:3397ae64bb8f07ee4c3e2cffac8c19340541319114c5f66e35b9f6c98f7923ab",
+  "fetched_at": "2026-11-12T19:38:31Z",
+  "checksum": "sha256:4bc2300070c5817f8ec22693c820ef53fe2b2220b0da85130df22fb1c3a7edb5",
   "transactions": [
     {
       "id": 371042,
@@ -2382,6 +2382,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Sultanes de Monterrey activated LHP Manny Banuelos from the reserve list."
+    },
+    {
+      "id": 950018,
+      "person": {
+        "id": 544365,
+        "fullName": "Manny Banuelos",
+        "link": "/api/v1/people/544365",
+        "nameSlug": "manny-banuelos-544365"
+      },
+      "toTeam": {
+        "id": 674,
+        "name": "Charros de Jalisco",
+        "link": "/api/v1/teams/674"
+      },
+      "date": "2026-11-11",
+      "effectiveDate": "2026-11-11",
+      "resolutionDate": "2026-11-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Manny Banuelos assigned to Charros de Jalisco."
     }
   ]
 }

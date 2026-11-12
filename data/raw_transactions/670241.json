@@ -1,7 +1,7 @@
 {
   "player_id": 670241,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:e7f6233d48558bec63d7175d0bd19ab170043892543c40d4298c82218203b272",
+  "fetched_at": "2026-11-12T19:38:31Z",
+  "checksum": "sha256:ab35a8c14fb9d2cb078190af4bde98bf793414f61591d1138445227c1d52bf8f",
   "transactions": [
     {
       "id": 411233,
@@ -1160,6 +1160,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Darius Vines elected free agency."
+    },
+    {
+      "id": 950036,
+      "person": {
+        "id": 670241,
+        "fullName": "Darius Vines",
+        "link": "/api/v1/people/670241",
+        "nameSlug": "darius-vines-670241"
+      },
+      "toTeam": {
+        "id": 678,
+        "name": "Tomateros de Culiacan",
+        "link": "/api/v1/teams/678"
+      },
+      "date": "2026-11-11",
+      "effectiveDate": "2026-11-11",
+      "resolutionDate": "2026-11-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Darius Vines assigned to Tomateros de Culiacan."
     }
   ]
 }

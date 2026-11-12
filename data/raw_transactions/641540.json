@@ -1,7 +1,7 @@
 {
   "player_id": 641540,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:d204a029f26110e8c30f7162a76d4131b17ef09f3490e0c62ca75e459ee21e8a",
+  "fetched_at": "2026-11-12T19:38:31Z",
+  "checksum": "sha256:6f67275f6c89e01bd1fff4293dd05ec8e8780f0d92f021d8946fa18254f2b133",
   "transactions": [
     {
       "id": 276420,
@@ -1602,6 +1602,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Dane Dunning elected free agency."
+    },
+    {
+      "id": 950012,
+      "person": {
+        "id": 641540,
+        "fullName": "Dane Dunning",
+        "link": "/api/v1/people/641540",
+        "nameSlug": "dane-dunning-641540"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2026-11-11",
+      "effectiveDate": "2026-11-11",
+      "resolutionDate": "2026-11-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Dane Dunning assigned to Aguilas Cibaenas."
     }
   ]
 }
