@@ -1,7 +1,7 @@
 {
   "player_id": 660766,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:21039c0ea95fa3ea4004fcad30c17d5a3575bff6009b070dbfa2cd35e8b7f14f",
+  "fetched_at": "2026-11-13T19:19:09Z",
+  "checksum": "sha256:964c0a875fc6863ab057d1fddb51fd12e097b9dd92e285930ebb08c9670e80b3",
   "transactions": [
     {
       "id": 369941,
@@ -1598,6 +1598,26 @@
       "typeCode": "SFA",
       "typeDesc": "Signed as Free Agent",
       "description": "Dorados de Chihuahua signed free agent 1B Juan Yepez."
+    },
+    {
+      "id": 950116,
+      "person": {
+        "id": 660766,
+        "fullName": "Juan Yepez",
+        "link": "/api/v1/people/660766",
+        "nameSlug": "juan-yepez-660766"
+      },
+      "toTeam": {
+        "id": 693,
+        "name": "Cardenales de Lara",
+        "link": "/api/v1/teams/693"
+      },
+      "date": "2026-11-13",
+      "effectiveDate": "2026-11-13",
+      "resolutionDate": "2026-11-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Juan Yepez assigned to Cardenales de Lara."
     }
   ]
 }

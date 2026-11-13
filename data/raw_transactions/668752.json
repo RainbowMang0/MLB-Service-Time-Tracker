@@ -1,7 +1,7 @@
 {
   "player_id": 668752,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:24cc15cc2eb575d43694d6b6ecac33c99be5263bf50cf445a2e3ce6fb2ab3fac",
+  "fetched_at": "2026-11-13T19:19:09Z",
+  "checksum": "sha256:42c31c7d5febbfdf41c5f40e0823cdc8acfc8114248348983cbf697d7970a114",
   "transactions": [
     {
       "id": 439557,
@@ -1149,6 +1149,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "CF Duke Ellis elected free agency."
+    },
+    {
+      "id": 950067,
+      "person": {
+        "id": 668752,
+        "fullName": "Duke Ellis",
+        "link": "/api/v1/people/668752",
+        "nameSlug": "duke-ellis-668752"
+      },
+      "toTeam": {
+        "id": 668,
+        "name": "Toros del Este",
+        "link": "/api/v1/teams/668"
+      },
+      "date": "2026-11-12",
+      "effectiveDate": "2026-11-12",
+      "resolutionDate": "2026-11-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Duke Ellis assigned to Toros del Este."
     }
   ]
 }

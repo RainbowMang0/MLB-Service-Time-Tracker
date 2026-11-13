@@ -1,7 +1,7 @@
 {
   "player_id": 693312,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:ecd16c3fa3416980f871e17d57b31b286f12267322a3e944c7a067cba1750492",
+  "fetched_at": "2026-11-13T19:19:09Z",
+  "checksum": "sha256:af996b921a5079225fa4e67f35b57b1f567729483e33354edd31c46b02b3d425",
   "transactions": [
     {
       "id": 447779,
@@ -1288,6 +1288,26 @@
       "typeCode": "DES",
       "typeDesc": "Designated for Assignment",
       "description": "Washington Nationals designated RHP Kyle Nicolas for assignment."
+    },
+    {
+      "id": 950098,
+      "person": {
+        "id": 693312,
+        "fullName": "Kyle Nicolas",
+        "link": "/api/v1/people/693312",
+        "nameSlug": "kyle-nicolas-693312"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2026-11-12",
+      "effectiveDate": "2026-11-12",
+      "resolutionDate": "2026-11-12",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Washington Nationals released RHP Kyle Nicolas."
     }
   ]
 }

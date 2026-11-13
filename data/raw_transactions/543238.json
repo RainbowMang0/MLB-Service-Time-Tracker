@@ -1,7 +1,7 @@
 {
   "player_id": 543238,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:0786f40df2c1aada255b1bc2c6d892e0614c4b0190d1c5f465cf368ef7072302",
+  "fetched_at": "2026-11-13T19:19:09Z",
+  "checksum": "sha256:32c00ed095c86858a4e4296c6d4b9abe54eba2631c04d964ac81b3f0dfc7c836",
   "transactions": [
     {
       "id": 370548,
@@ -2925,6 +2925,26 @@
       "typeCode": "SE",
       "typeDesc": "Selected",
       "description": "Kansas City Royals selected the contract of LHP Anthony Gose from Omaha Storm Chasers."
+    },
+    {
+      "id": 950094,
+      "person": {
+        "id": 543238,
+        "fullName": "Anthony Gose",
+        "link": "/api/v1/people/543238",
+        "nameSlug": "anthony-gose-543238"
+      },
+      "toTeam": {
+        "id": 678,
+        "name": "Tomateros de Culiacan",
+        "link": "/api/v1/teams/678"
+      },
+      "date": "2026-11-12",
+      "effectiveDate": "2026-11-12",
+      "resolutionDate": "2026-11-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Anthony Gose assigned to Tomateros de Culiacan."
     }
   ]
 }

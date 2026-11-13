@@ -1,7 +1,7 @@
 {
   "player_id": 670768,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:d356c2a460a7867a45e2bd97bae78ed50ddf1791b6c0d8602ecaa13ddae9626d",
+  "fetched_at": "2026-11-13T19:19:09Z",
+  "checksum": "sha256:d0c3d06a03c4f4eb586b37ff3ffecf66a4675873088c4757807963b9754aa5f4",
   "transactions": [
     {
       "id": 275840,
@@ -1672,6 +1672,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Olmecas de Tabasco activated RF Luis González from the reserve list."
+    },
+    {
+      "id": 950086,
+      "person": {
+        "id": 670768,
+        "fullName": "Luis González",
+        "link": "/api/v1/people/670768",
+        "nameSlug": "luis-gonzalez-670768"
+      },
+      "toTeam": {
+        "id": 677,
+        "name": "Naranjeros de Hermosillo",
+        "link": "/api/v1/teams/677"
+      },
+      "date": "2026-11-12",
+      "effectiveDate": "2026-11-12",
+      "resolutionDate": "2026-11-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Luis González assigned to Naranjeros de Hermosillo."
     }
   ]
 }

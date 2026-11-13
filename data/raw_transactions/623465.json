@@ -1,7 +1,7 @@
 {
   "player_id": 623465,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:9be3d2bf5ddfb016accaeba46266d3735d440371b9a01e6af9b4ddff65c1f375",
+  "fetched_at": "2026-11-13T19:19:09Z",
+  "checksum": "sha256:addb1301be6f2087e710a922f4a9b0495bd92e3a396a2ca6060f5c713044f916",
   "transactions": [
     {
       "id": 233808,
@@ -1990,6 +1990,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Evan Phillips elected free agency."
+    },
+    {
+      "id": 950099,
+      "person": {
+        "id": 623465,
+        "fullName": "Evan Phillips",
+        "link": "/api/v1/people/623465",
+        "nameSlug": "evan-phillips-623465"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2026-11-12",
+      "effectiveDate": "2026-11-12",
+      "resolutionDate": "2026-11-12",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent RHP Evan Phillips."
     }
   ]
 }
