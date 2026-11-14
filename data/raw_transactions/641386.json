@@ -1,7 +1,7 @@
 {
   "player_id": 641386,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:59021d11dfa7e197ddde26f745c5bff7baf11d08db49897543be92b5b10be40c",
+  "fetched_at": "2026-11-14T17:44:12Z",
+  "checksum": "sha256:e86aac6098c15ed2232ffb8e6f19daba19c8113119f710f4127d7c259511f6f8",
   "transactions": [
     {
       "id": 271581,
@@ -1485,6 +1485,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "LHP Ben Bowden elected free agency."
+    },
+    {
+      "id": 950190,
+      "person": {
+        "id": 641386,
+        "fullName": "Ben Bowden",
+        "link": "/api/v1/people/641386",
+        "nameSlug": "ben-bowden-641386"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2026-11-13",
+      "effectiveDate": "2026-11-13",
+      "resolutionDate": "2026-11-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Ben Bowden assigned to Las Vegas Aviators."
+    },
+    {
+      "id": 950188,
+      "person": {
+        "id": 641386,
+        "fullName": "Ben Bowden",
+        "link": "/api/v1/people/641386",
+        "nameSlug": "ben-bowden-641386"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2026-11-13",
+      "effectiveDate": "2026-11-13",
+      "resolutionDate": "2026-11-13",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Athletics signed free agent LHP Ben Bowden to a minor league contract."
     }
   ]
 }

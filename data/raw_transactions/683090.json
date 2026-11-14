@@ -1,7 +1,7 @@
 {
   "player_id": 683090,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:da86fa1a00a559abf9adcddd0b231cc46cc03b9d0e253da27867a177796bba25",
+  "fetched_at": "2026-11-14T17:44:12Z",
+  "checksum": "sha256:56dd011bffe200c716bbf3fb2bca45173aa80f83beb69b39802c426b05122b03",
   "transactions": [
     {
       "id": 373795,
@@ -1133,6 +1133,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Kansas City Royals recalled LF Matthew Lugo from Omaha Storm Chasers."
+    },
+    {
+      "id": 950125,
+      "person": {
+        "id": 683090,
+        "fullName": "Matthew Lugo",
+        "link": "/api/v1/people/683090",
+        "nameSlug": "matthew-lugo-683090"
+      },
+      "toTeam": {
+        "id": 688,
+        "name": "Indios de Mayaguez",
+        "link": "/api/v1/teams/688"
+      },
+      "date": "2026-11-13",
+      "effectiveDate": "2026-11-13",
+      "resolutionDate": "2026-11-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Matthew Lugo assigned to Indios de Mayaguez."
     }
   ]
 }

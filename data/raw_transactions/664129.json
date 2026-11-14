@@ -1,7 +1,7 @@
 {
   "player_id": 664129,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:6c480b7d5ee2f4037251f178ba6fa4d412e3c8ba1ea4093e754afe2c51e0f856",
+  "fetched_at": "2026-11-14T17:44:12Z",
+  "checksum": "sha256:ce90fcd77a56c2f44840574943ad29002896fff8e77202412609017db71645bb",
   "transactions": [
     {
       "id": 272502,
@@ -2550,6 +2550,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Geoff Hartlieb elected free agency."
+    },
+    {
+      "id": 950196,
+      "person": {
+        "id": 664129,
+        "fullName": "Geoff Hartlieb",
+        "link": "/api/v1/people/664129",
+        "nameSlug": "geoff-hartlieb-664129"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2026-11-13",
+      "effectiveDate": "2026-11-13",
+      "resolutionDate": "2026-11-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Geoff Hartlieb assigned to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 950195,
+      "person": {
+        "id": 664129,
+        "fullName": "Geoff Hartlieb",
+        "link": "/api/v1/people/664129",
+        "nameSlug": "geoff-hartlieb-664129"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2026-11-13",
+      "effectiveDate": "2026-11-13",
+      "resolutionDate": "2026-11-13",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent RHP Geoff Hartlieb to a minor league contract."
     }
   ]
 }

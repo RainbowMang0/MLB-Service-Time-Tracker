@@ -1,6 +1,6 @@
 {
   "player_id": 656620,
-  "fetched_at": "2026-11-13T19:19:09Z",
+  "fetched_at": "2026-11-14T17:44:12Z",
   "checksum": "sha256:930d22d8d46a32876a27e300ee649a94218ca5417c7518db7e38c7ed13cc6923",
   "transactions": [
     {
@@ -273,26 +273,6 @@
       "description": "RHP Gabe Klobosits assigned to Potomac Nationals from Hagerstown Suns."
     },
     {
-      "id": 464396,
-      "person": {
-        "id": 656620,
-        "fullName": "Gabe Klobosits",
-        "link": "/api/v1/people/656620",
-        "nameSlug": "gabe-klobosits-656620"
-      },
-      "toTeam": {
-        "id": 259,
-        "name": "Fresno Grizzlies",
-        "link": "/api/v1/teams/259"
-      },
-      "date": "2020-11-17",
-      "effectiveDate": "2020-11-17",
-      "resolutionDate": "2020-11-17",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Gabe Klobosits assigned to Fresno Grizzlies."
-    },
-    {
       "id": 455680,
       "person": {
         "id": 656620,
@@ -317,7 +297,27 @@
       "description": "RHP Gabe Klobosits assigned to Fresno Grizzlies from Fredericksburg Nationals."
     },
     {
-      "id": 466744,
+      "id": 464396,
+      "person": {
+        "id": 656620,
+        "fullName": "Gabe Klobosits",
+        "link": "/api/v1/people/656620",
+        "nameSlug": "gabe-klobosits-656620"
+      },
+      "toTeam": {
+        "id": 259,
+        "name": "Fresno Grizzlies",
+        "link": "/api/v1/teams/259"
+      },
+      "date": "2020-11-17",
+      "effectiveDate": "2020-11-17",
+      "resolutionDate": "2020-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Gabe Klobosits assigned to Fresno Grizzlies."
+    },
+    {
+      "id": 469006,
       "person": {
         "id": 656620,
         "fullName": "Gabe Klobosits",
@@ -337,7 +337,7 @@
       "description": "RHP Gabe Klobosits assigned to Rochester Red Wings."
     },
     {
-      "id": 469006,
+      "id": 466744,
       "person": {
         "id": 656620,
         "fullName": "Gabe Klobosits",
@@ -417,26 +417,6 @@
       "description": "Nationals Organization activated RHP Gabe Klobosits. ABS test."
     },
     {
-      "id": 483124,
-      "person": {
-        "id": 656620,
-        "fullName": "Gabe Klobosits",
-        "link": "/api/v1/people/656620",
-        "nameSlug": "gabe-klobosits-656620"
-      },
-      "toTeam": {
-        "id": 547,
-        "name": "Harrisburg Senators",
-        "link": "/api/v1/teams/547"
-      },
-      "date": "2021-05-03",
-      "effectiveDate": "2021-05-03",
-      "resolutionDate": "2021-05-03",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Gabe Klobosits assigned to Harrisburg Senators."
-    },
-    {
       "id": 483091,
       "person": {
         "id": 656620,
@@ -459,6 +439,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Gabe Klobosits assigned to Harrisburg Senators from Rochester Red Wings."
+    },
+    {
+      "id": 483124,
+      "person": {
+        "id": 656620,
+        "fullName": "Gabe Klobosits",
+        "link": "/api/v1/people/656620",
+        "nameSlug": "gabe-klobosits-656620"
+      },
+      "toTeam": {
+        "id": 547,
+        "name": "Harrisburg Senators",
+        "link": "/api/v1/teams/547"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "resolutionDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Gabe Klobosits assigned to Harrisburg Senators."
     },
     {
       "id": 497782,
@@ -621,6 +621,29 @@
       "description": "RHP Gabe Klobosits assigned to Oakland Athletics."
     },
     {
+      "id": 614342,
+      "person": {
+        "id": 656620,
+        "fullName": "Gabe Klobosits",
+        "link": "/api/v1/people/656620",
+        "nameSlug": "gabe-klobosits-656620"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2022-04-11",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Oakland Athletics claimed RHP Gabe Klobosits off waivers from Washington Nationals."
+    },
+    {
       "id": 614405,
       "person": {
         "id": 656620,
@@ -643,29 +666,6 @@
       "typeCode": "OPT",
       "typeDesc": "Optioned",
       "description": "Oakland Athletics optioned RHP Gabe Klobosits to Las Vegas Aviators."
-    },
-    {
-      "id": 614342,
-      "person": {
-        "id": 656620,
-        "fullName": "Gabe Klobosits",
-        "link": "/api/v1/people/656620",
-        "nameSlug": "gabe-klobosits-656620"
-      },
-      "fromTeam": {
-        "id": 120,
-        "name": "Washington Nationals",
-        "link": "/api/v1/teams/120"
-      },
-      "toTeam": {
-        "id": 133,
-        "name": "Athletics",
-        "link": "/api/v1/teams/133"
-      },
-      "date": "2022-04-11",
-      "typeCode": "CLW",
-      "typeDesc": "Claimed Off Waivers",
-      "description": "Oakland Athletics claimed RHP Gabe Klobosits off waivers from Washington Nationals."
     },
     {
       "id": 629760,
@@ -708,25 +708,6 @@
       "description": "Oakland Athletics designated RHP Gabe Klobosits for assignment."
     },
     {
-      "id": 714243,
-      "person": {
-        "id": 656620,
-        "fullName": "Gabe Klobosits",
-        "link": "/api/v1/people/656620",
-        "nameSlug": "gabe-klobosits-656620"
-      },
-      "toTeam": {
-        "id": 5508,
-        "name": "Gastonia Ghost Peppers",
-        "link": "/api/v1/teams/5508"
-      },
-      "date": "2023-07-05",
-      "effectiveDate": "2023-07-05",
-      "resolutionDate": "2023-07-05",
-      "typeCode": "SC",
-      "typeDesc": "Status Change"
-    },
-    {
       "id": 709212,
       "person": {
         "id": 656620,
@@ -745,6 +726,25 @@
       "typeCode": "SFA",
       "typeDesc": "Signed as Free Agent",
       "description": "Gastonia Honey Hunters signed free agent RHP Gabe Klobosits."
+    },
+    {
+      "id": 714243,
+      "person": {
+        "id": 656620,
+        "fullName": "Gabe Klobosits",
+        "link": "/api/v1/people/656620",
+        "nameSlug": "gabe-klobosits-656620"
+      },
+      "toTeam": {
+        "id": 5508,
+        "name": "Gastonia Ghost Peppers",
+        "link": "/api/v1/teams/5508"
+      },
+      "date": "2023-07-05",
+      "effectiveDate": "2023-07-05",
+      "resolutionDate": "2023-07-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change"
     },
     {
       "id": 714444,

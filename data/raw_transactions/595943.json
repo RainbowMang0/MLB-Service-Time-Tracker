@@ -1,7 +1,7 @@
 {
   "player_id": 595943,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:299ad3785757beb007df2082c609b3035c7ea80437e3fff661bcd4fbaebffa82",
+  "fetched_at": "2026-11-14T17:44:12Z",
+  "checksum": "sha256:b0a1037808eeee3e242bf44e31f8207991cd72847e77d6eb933545754c619b12",
   "transactions": [
     {
       "id": 100578,
@@ -2210,6 +2210,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "3B Phillip Evans assigned to Aguilas de Mexicali."
+    },
+    {
+      "id": 950130,
+      "person": {
+        "id": 595943,
+        "fullName": "Phillip Evans",
+        "link": "/api/v1/people/595943",
+        "nameSlug": "phillip-evans-595943"
+      },
+      "toTeam": {
+        "id": 673,
+        "name": "Aguilas de Mexicali",
+        "link": "/api/v1/teams/673"
+      },
+      "date": "2026-11-13",
+      "effectiveDate": "2026-11-13",
+      "resolutionDate": "2026-11-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aguilas de Mexicali placed 3B Phillip Evans on the reserve list."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 671289,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:65592e9ef564b3767007ab50bcc015c11bd4221ec0ea4a585cbf0298a2a2a6ee",
+  "fetched_at": "2026-11-14T17:44:12Z",
+  "checksum": "sha256:fedf7527e2f0c8b926346639d210becd455095f68e95b99a056ba5aa85095c99",
   "transactions": [
     {
       "id": 281064,
@@ -1396,6 +1396,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RF Tyler Freeman elected free agency."
+    },
+    {
+      "id": 950191,
+      "person": {
+        "id": 671289,
+        "fullName": "Tyler Freeman",
+        "link": "/api/v1/people/671289",
+        "nameSlug": "tyler-freeman-671289"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2026-11-13",
+      "effectiveDate": "2026-11-13",
+      "resolutionDate": "2026-11-13",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent RF Tyler Freeman to a minor league contract."
+    },
+    {
+      "id": 950192,
+      "person": {
+        "id": 671289,
+        "fullName": "Tyler Freeman",
+        "link": "/api/v1/people/671289",
+        "nameSlug": "tyler-freeman-671289"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2026-11-13",
+      "effectiveDate": "2026-11-13",
+      "resolutionDate": "2026-11-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Tyler Freeman assigned to Gwinnett Stripers."
     }
   ]
 }

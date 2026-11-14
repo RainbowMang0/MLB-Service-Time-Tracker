@@ -1,7 +1,7 @@
 {
   "player_id": 681584,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:3ee86be36d106df93025e3d101bf3d03480849f7ce0f1e87e922b4f2a42bc6d6",
+  "fetched_at": "2026-11-14T17:44:12Z",
+  "checksum": "sha256:792de159fbd870770c02ffbc8e23c9455d0d3e6567ad902f88707c0a10faf9a6",
   "transactions": [
     {
       "id": 361224,
@@ -1153,6 +1153,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Caliente de Durango placed 1B David Villar on the reserve list."
+    },
+    {
+      "id": 950118,
+      "person": {
+        "id": 681584,
+        "fullName": "David Villar",
+        "link": "/api/v1/people/681584",
+        "nameSlug": "david-villar-681584"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2026-11-13",
+      "effectiveDate": "2026-11-13",
+      "resolutionDate": "2026-11-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B David Villar assigned to Estrellas Orientales."
     }
   ]
 }

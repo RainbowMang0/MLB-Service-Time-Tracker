@@ -1,7 +1,7 @@
 {
   "player_id": 691858,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:01f4d286d323a2dfdf85b5888f81d08032662834c7765ae0578fb18618c20f78",
+  "fetched_at": "2026-11-14T17:44:12Z",
+  "checksum": "sha256:9f927858872279da00b9fb6c32913007e1eb3a1647a135e8e57c728e86256781",
   "transactions": [
     {
       "id": 420840,
@@ -990,6 +990,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Miami Marlins recalled SS Jared Serna from Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 950159,
+      "person": {
+        "id": 691858,
+        "fullName": "Jared Serna",
+        "link": "/api/v1/people/691858",
+        "nameSlug": "jared-serna-691858"
+      },
+      "toTeam": {
+        "id": 674,
+        "name": "Charros de Jalisco",
+        "link": "/api/v1/teams/674"
+      },
+      "date": "2026-11-13",
+      "effectiveDate": "2026-11-13",
+      "resolutionDate": "2026-11-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Jared Serna assigned to Charros de Jalisco."
     }
   ]
 }

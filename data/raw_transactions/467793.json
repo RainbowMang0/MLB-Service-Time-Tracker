@@ -1,7 +1,7 @@
 {
   "player_id": 467793,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:2738c399fb3364bcc451ef6bde4ebfdd9542e91135019c0d001c4e1d3de97554",
+  "fetched_at": "2026-11-14T17:44:12Z",
+  "checksum": "sha256:475874cf4c103f1a21122d711c5c041d93b5fccdc27c1c34df36d0c828b26db9",
   "transactions": [
     {
       "id": 16036,
@@ -1559,6 +1559,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "1B Carlos Santana assigned to Estrellas Orientales."
+    },
+    {
+      "id": 950129,
+      "person": {
+        "id": 467793,
+        "fullName": "Carlos Santana",
+        "link": "/api/v1/people/467793",
+        "nameSlug": "carlos-santana-467793"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2026-11-13",
+      "effectiveDate": "2026-11-13",
+      "resolutionDate": "2026-11-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Carlos Santana assigned to Leones del Escogido."
     }
   ]
 }

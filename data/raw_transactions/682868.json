@@ -1,7 +1,7 @@
 {
   "player_id": 682868,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:0df8b90b05a0d8eccd07daa41e8bb52bc314296a2308fcd9a802fba3d07e8991",
+  "fetched_at": "2026-11-14T17:44:12Z",
+  "checksum": "sha256:348bd048c58b731d4fe4d6ba763992cea85685b31246c44cabdba748b3e8261a",
   "transactions": [
     {
       "id": 367167,
@@ -1035,6 +1035,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "3B Bryan Ramos elected free agency."
+    },
+    {
+      "id": 950198,
+      "person": {
+        "id": 682868,
+        "fullName": "Bryan Ramos",
+        "link": "/api/v1/people/682868",
+        "nameSlug": "bryan-ramos-682868"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2026-11-13",
+      "effectiveDate": "2026-11-13",
+      "resolutionDate": "2026-11-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Bryan Ramos assigned to Lehigh Valley IronPigs."
+    },
+    {
+      "id": 950197,
+      "person": {
+        "id": 682868,
+        "fullName": "Bryan Ramos",
+        "link": "/api/v1/people/682868",
+        "nameSlug": "bryan-ramos-682868"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2026-11-13",
+      "effectiveDate": "2026-11-13",
+      "resolutionDate": "2026-11-13",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent 3B Bryan Ramos to a minor league contract."
     }
   ]
 }

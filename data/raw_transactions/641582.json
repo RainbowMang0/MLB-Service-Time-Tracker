@@ -1,7 +1,7 @@
 {
   "player_id": 641582,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:6ad3d0c9112e8e69578cc6399457ef1990c50dc121abde94edb5c41ec855d815",
+  "fetched_at": "2026-11-14T17:44:12Z",
+  "checksum": "sha256:9125b4ded7b4c64bdad1787063a6645f5360e7f53d65a77846f7436f0728faac",
   "transactions": [
     {
       "id": 272678,
@@ -1675,6 +1675,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Naranjeros de Hermosillo activated RHP Matt Foster from the reserve list."
+    },
+    {
+      "id": 950160,
+      "person": {
+        "id": 641582,
+        "fullName": "Matt Foster",
+        "link": "/api/v1/people/641582",
+        "nameSlug": "matt-foster-641582"
+      },
+      "toTeam": {
+        "id": 677,
+        "name": "Naranjeros de Hermosillo",
+        "link": "/api/v1/teams/677"
+      },
+      "date": "2026-11-13",
+      "effectiveDate": "2026-11-13",
+      "resolutionDate": "2026-11-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Naranjeros de Hermosillo placed RHP Matt Foster on the reserve list."
     }
   ]
 }

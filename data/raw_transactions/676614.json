@@ -1,7 +1,7 @@
 {
   "player_id": 676614,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:3558e274811332656b309c761ebd43b9fa2c8a06425d49f6634377fd65c781c4",
+  "fetched_at": "2026-11-14T17:44:12Z",
+  "checksum": "sha256:ba6ab44af2b0d6e8fca7874e327c56785920f7ed07c5ddd06e05164f89a83939",
   "transactions": [
     {
       "id": 318342,
@@ -1185,6 +1185,26 @@
       "typeCode": "REL",
       "typeDesc": "Released",
       "description": "Toledo Mud Hens released LHP Bryan Sammons."
+    },
+    {
+      "id": 950161,
+      "person": {
+        "id": 676614,
+        "fullName": "Bryan Sammons",
+        "link": "/api/v1/people/676614",
+        "nameSlug": "bryan-sammons-676614"
+      },
+      "toTeam": {
+        "id": 677,
+        "name": "Naranjeros de Hermosillo",
+        "link": "/api/v1/teams/677"
+      },
+      "date": "2026-11-13",
+      "effectiveDate": "2026-11-13",
+      "resolutionDate": "2026-11-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Bryan Sammons assigned to Naranjeros de Hermosillo."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 543611,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:ace597cfced757d524912a38e092ff969fe6da72f492a299b273d089d3a255ed",
+  "fetched_at": "2026-11-14T17:44:12Z",
+  "checksum": "sha256:6d8a901bc6d15a95bac3762044fa47749c90942418496b974ff2968cd64a8bc2",
   "transactions": [
     {
       "id": 370718,
@@ -1997,6 +1997,30 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RF Danny Ortiz assigned to Indios de Mayaguez."
+    },
+    {
+      "id": 950183,
+      "person": {
+        "id": 543611,
+        "fullName": "Danny Ortiz",
+        "link": "/api/v1/people/543611",
+        "nameSlug": "danny-ortiz-543611"
+      },
+      "fromTeam": {
+        "id": 688,
+        "name": "Indios de Mayaguez",
+        "link": "/api/v1/teams/688"
+      },
+      "toTeam": {
+        "id": 686,
+        "name": "Criollos de Caguas",
+        "link": "/api/v1/teams/686"
+      },
+      "date": "2026-11-13",
+      "effectiveDate": "2026-11-13",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Indios de Mayaguez traded RF Danny Ortiz to Criollos de Caguas for SS Edison Mora."
     }
   ]
 }

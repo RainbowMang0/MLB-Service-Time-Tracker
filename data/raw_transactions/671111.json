@@ -1,7 +1,7 @@
 {
   "player_id": 671111,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:1ccb95b512e29e53fe665a2b32e9ea65b6edb99f777990f968525b566975b191",
+  "fetched_at": "2026-11-14T17:44:12Z",
+  "checksum": "sha256:bd6bbf6d861a30bc1f2fddf8e53d2fa23d9d60133b65a40ece8307e01b154dab",
   "transactions": [
     {
       "id": 279000,
@@ -1946,6 +1946,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "LHP Sammy Peralta elected free agency."
+    },
+    {
+      "id": 950119,
+      "person": {
+        "id": 671111,
+        "fullName": "Sammy Peralta",
+        "link": "/api/v1/people/671111",
+        "nameSlug": "sammy-peralta-671111"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2026-11-13",
+      "effectiveDate": "2026-11-13",
+      "resolutionDate": "2026-11-13",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Los Angeles Angels signed free agent LHP Sammy Peralta to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 950120,
+      "person": {
+        "id": 671111,
+        "fullName": "Sammy Peralta",
+        "link": "/api/v1/people/671111",
+        "nameSlug": "sammy-peralta-671111"
+      },
+      "toTeam": {
+        "id": 561,
+        "name": "Salt Lake Bees",
+        "link": "/api/v1/teams/561"
+      },
+      "date": "2026-11-13",
+      "effectiveDate": "2026-11-13",
+      "resolutionDate": "2026-11-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Sammy Peralta assigned to Salt Lake Bees."
     }
   ]
 }
