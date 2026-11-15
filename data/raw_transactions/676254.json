@@ -1,7 +1,7 @@
 {
   "player_id": 676254,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:f7ec310b3144303715e0f067963a20836a9e5961589ca7d76a12fe3a02fb1711",
+  "fetched_at": "2026-11-15T23:39:18Z",
+  "checksum": "sha256:e1b72ddefeba3f7cde08311edd4bfaed20fca1e926c9c9b4b68d43df504d3771",
   "transactions": [
     {
       "id": 361240,
@@ -780,6 +780,30 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "San Francisco Giants recalled RHP Ryan Walker from Sacramento River Cats."
+    },
+    {
+      "id": 950283,
+      "person": {
+        "id": 676254,
+        "fullName": "Ryan Walker",
+        "link": "/api/v1/people/676254",
+        "nameSlug": "ryan-walker-676254"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-11-15",
+      "effectiveDate": "2026-11-15",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "San Francisco Giants traded RHP Ryan Walker to Milwaukee Brewers."
     }
   ]
 }
