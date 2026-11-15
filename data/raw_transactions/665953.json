@@ -1,7 +1,7 @@
 {
   "player_id": 665953,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:40ea95a7016fe5c24257a8d7ba7924dae7130a90db6057ddde438b43bac3634b",
+  "fetched_at": "2026-11-15T18:34:09Z",
+  "checksum": "sha256:128ef9fd5c68ba58bd9d169f7a3da3337fce085c754021150ac7a4a5d86507d5",
   "transactions": [
     {
       "id": 248792,
@@ -1481,6 +1481,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Washington Nationals recalled 1B Andrés Chaparro from Rochester Red Wings."
+    },
+    {
+      "id": 950223,
+      "person": {
+        "id": 665953,
+        "fullName": "Andrés Chaparro",
+        "link": "/api/v1/people/665953",
+        "nameSlug": "andres-chaparro-665953"
+      },
+      "toTeam": {
+        "id": 692,
+        "name": "Aguilas del Zulia",
+        "link": "/api/v1/teams/692"
+      },
+      "date": "2026-11-14",
+      "effectiveDate": "2026-11-14",
+      "resolutionDate": "2026-11-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Andrés Chaparro assigned to Aguilas del Zulia."
     }
   ]
 }

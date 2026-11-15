@@ -1,7 +1,7 @@
 {
   "player_id": 570257,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:a6ffb1c6fcebf57e2427e16e3c4009834a439b8f4d6e6772641a515abd367d85",
+  "fetched_at": "2026-11-15T18:34:09Z",
+  "checksum": "sha256:b124fbe72da317bf71343db9c986ea535a58ad1d362bc9742c1c4265d4e8ad6f",
   "transactions": [
     {
       "id": 6963,
@@ -1977,6 +1977,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Toros del Este activated LHP Joely Rodríguez."
+    },
+    {
+      "id": 950257,
+      "person": {
+        "id": 570257,
+        "fullName": "Joely Rodríguez",
+        "link": "/api/v1/people/570257",
+        "nameSlug": "joely-rodriguez-570257"
+      },
+      "toTeam": {
+        "id": 696,
+        "name": "Navegantes del Magallanes",
+        "link": "/api/v1/teams/696"
+      },
+      "date": "2026-11-14",
+      "effectiveDate": "2026-11-14",
+      "resolutionDate": "2026-11-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Joely Rodríguez assigned to Navegantes del Magallanes."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 624636,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:13126e5335930cd21fe7a0d1ffc775679cbcb16de2a1a31ee938cd03e85ee944",
+  "fetched_at": "2026-11-15T18:34:09Z",
+  "checksum": "sha256:04b247b9b168f914a5a51f36fd3094f2812785444f0c6031dd858242e0fe0320",
   "transactions": [
     {
       "id": 127759,
@@ -1078,6 +1078,26 @@
       "date": "2025-10-15",
       "effectiveDate": "2025-10-15",
       "resolutionDate": "2025-10-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Carlos Tocci assigned to Tiburones de La Guaira."
+    },
+    {
+      "id": 950245,
+      "person": {
+        "id": 624636,
+        "fullName": "Carlos Tocci",
+        "link": "/api/v1/people/624636",
+        "nameSlug": "carlos-tocci-624636"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2026-11-14",
+      "effectiveDate": "2026-11-14",
+      "resolutionDate": "2026-11-14",
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RF Carlos Tocci assigned to Tiburones de La Guaira."

@@ -1,7 +1,7 @@
 {
   "player_id": 665093,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:e3ce30d20f15ddb922e787b9385419d613128e02aec7d6ae30517b2e571d42d6",
+  "fetched_at": "2026-11-15T18:34:09Z",
+  "checksum": "sha256:43be3032746cabba21c3a74fac809b0c673de97ff8835b7f1b47d0320eeb5550",
   "transactions": [
     {
       "id": 231145,
@@ -1262,6 +1262,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Zac Grotz assigned to Naranjeros de Hermosillo."
+    },
+    {
+      "id": 950253,
+      "person": {
+        "id": 665093,
+        "fullName": "Zac Grotz",
+        "link": "/api/v1/people/665093",
+        "nameSlug": "zac-grotz-665093"
+      },
+      "toTeam": {
+        "id": 677,
+        "name": "Naranjeros de Hermosillo",
+        "link": "/api/v1/teams/677"
+      },
+      "date": "2026-11-14",
+      "effectiveDate": "2026-11-14",
+      "resolutionDate": "2026-11-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Naranjeros de Hermosillo placed RHP Zac Grotz on the reserve list."
     }
   ]
 }

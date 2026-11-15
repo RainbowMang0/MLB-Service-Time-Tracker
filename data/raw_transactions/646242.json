@@ -1,7 +1,7 @@
 {
   "player_id": 646242,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:8f3e9fbc0330b2f36d291445af7c78f41af9252e9313f93820ff88f388a3d474",
+  "fetched_at": "2026-11-15T18:34:09Z",
+  "checksum": "sha256:bd2ec7c5e2a5f2e4ac083548ab45b4018958ac37407c8fe2504bfba14963236b",
   "transactions": [
     {
       "id": 167578,
@@ -2186,6 +2186,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "LHP Jhonathan Díaz elected free agency."
+    },
+    {
+      "id": 950264,
+      "person": {
+        "id": 646242,
+        "fullName": "Jhonathan Díaz",
+        "link": "/api/v1/people/646242",
+        "nameSlug": "jhonathan-diaz-646242"
+      },
+      "toTeam": {
+        "id": 696,
+        "name": "Navegantes del Magallanes",
+        "link": "/api/v1/teams/696"
+      },
+      "date": "2026-11-15",
+      "effectiveDate": "2026-11-15",
+      "resolutionDate": "2026-11-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jhonathan Díaz assigned to Navegantes del Magallanes."
     }
   ]
 }

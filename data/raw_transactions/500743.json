@@ -1,7 +1,7 @@
 {
   "player_id": 500743,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:2ba4202406ea25afbf0b87e6a3f7e53539fa71d3e8de62d071184cc9c256d5e0",
+  "fetched_at": "2026-11-15T18:34:09Z",
+  "checksum": "sha256:20077e238089328b6cea827c57914b576ae31654f4bf8bf9f2c8c5ca36f72f69",
   "transactions": [
     {
       "id": 25878,
@@ -1844,6 +1844,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "SS Miguel Rojas elected free agency."
+    },
+    {
+      "id": 950248,
+      "person": {
+        "id": 500743,
+        "fullName": "Miguel Rojas",
+        "link": "/api/v1/people/500743",
+        "nameSlug": "miguel-rojas-500743"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2026-11-14",
+      "effectiveDate": "2026-11-14",
+      "resolutionDate": "2026-11-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Miguel Rojas assigned to Tiburones de La Guaira."
     }
   ]
 }

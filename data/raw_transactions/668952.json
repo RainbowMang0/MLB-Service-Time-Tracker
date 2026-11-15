@@ -1,6 +1,6 @@
 {
   "player_id": 668952,
-  "fetched_at": "2026-11-14T17:44:12Z",
+  "fetched_at": "2026-11-15T18:34:09Z",
   "checksum": "sha256:81da9706feb2e3d200923db37e5f4974cd5c212ae4b65e493fdfae8e379f7f46",
   "transactions": [
     {
@@ -144,7 +144,7 @@
       "description": "IF Ryan Kreidler assigned to Detroit Tigers."
     },
     {
-      "id": 466175,
+      "id": 468434,
       "person": {
         "id": 668952,
         "fullName": "Ryan Kreidler",
@@ -164,7 +164,7 @@
       "description": "3B Ryan Kreidler assigned to Tigers Organization."
     },
     {
-      "id": 468434,
+      "id": 466175,
       "person": {
         "id": 668952,
         "fullName": "Ryan Kreidler",
@@ -224,17 +224,12 @@
       "description": "SS Ryan Kreidler assigned to Detroit Tigers ."
     },
     {
-      "id": 480845,
+      "id": 489518,
       "person": {
         "id": 668952,
         "fullName": "Ryan Kreidler",
         "link": "/api/v1/people/668952",
         "nameSlug": "ryan-kreidler-668952"
-      },
-      "fromTeam": {
-        "id": 3302,
-        "name": "Tigers Alternate Training Site",
-        "link": "/api/v1/teams/3302"
       },
       "toTeam": {
         "id": 106,
@@ -243,9 +238,10 @@
       },
       "date": "2021-04-29",
       "effectiveDate": "2021-04-29",
+      "resolutionDate": "2021-04-29",
       "typeCode": "ASG",
       "typeDesc": "Assigned",
-      "description": "SS Ryan Kreidler assigned to Erie SeaWolves from Tigers Alternate Training Site."
+      "description": "SS Ryan Kreidler assigned to Erie SeaWolves."
     },
     {
       "id": 488679,
@@ -268,12 +264,17 @@
       "description": "SS Ryan Kreidler assigned to Erie SeaWolves."
     },
     {
-      "id": 489518,
+      "id": 480845,
       "person": {
         "id": 668952,
         "fullName": "Ryan Kreidler",
         "link": "/api/v1/people/668952",
         "nameSlug": "ryan-kreidler-668952"
+      },
+      "fromTeam": {
+        "id": 3302,
+        "name": "Tigers Alternate Training Site",
+        "link": "/api/v1/teams/3302"
       },
       "toTeam": {
         "id": 106,
@@ -282,10 +283,9 @@
       },
       "date": "2021-04-29",
       "effectiveDate": "2021-04-29",
-      "resolutionDate": "2021-04-29",
       "typeCode": "ASG",
       "typeDesc": "Assigned",
-      "description": "SS Ryan Kreidler assigned to Erie SeaWolves."
+      "description": "SS Ryan Kreidler assigned to Erie SeaWolves from Tigers Alternate Training Site."
     },
     {
       "id": 512045,
@@ -605,31 +605,6 @@
       "description": "Toledo Mud Hens placed SS Ryan Kreidler on the 7-day injured list."
     },
     {
-      "id": 699587,
-      "person": {
-        "id": 668952,
-        "fullName": "Ryan Kreidler",
-        "link": "/api/v1/people/668952",
-        "nameSlug": "ryan-kreidler-668952"
-      },
-      "fromTeam": {
-        "id": 512,
-        "name": "Toledo Mud Hens",
-        "link": "/api/v1/teams/512"
-      },
-      "toTeam": {
-        "id": 582,
-        "name": "West Michigan Whitecaps",
-        "link": "/api/v1/teams/582"
-      },
-      "date": "2023-05-26",
-      "effectiveDate": "2023-05-26",
-      "resolutionDate": "2023-05-26",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "Toledo Mud Hens sent SS Ryan Kreidler on a rehab assignment to West Michigan Whitecaps."
-    },
-    {
       "id": 696208,
       "person": {
         "id": 668952,
@@ -655,7 +630,7 @@
       "description": "Toledo Mud Hens sent SS Ryan Kreidler on a rehab assignment to West Michigan Whitecaps."
     },
     {
-      "id": 711424,
+      "id": 699587,
       "person": {
         "id": 668952,
         "fullName": "Ryan Kreidler",
@@ -668,16 +643,16 @@
         "link": "/api/v1/teams/512"
       },
       "toTeam": {
-        "id": 473,
-        "name": "FCL Tigers",
-        "link": "/api/v1/teams/473"
+        "id": 582,
+        "name": "West Michigan Whitecaps",
+        "link": "/api/v1/teams/582"
       },
-      "date": "2023-07-15",
-      "effectiveDate": "2023-07-15",
-      "resolutionDate": "2023-07-15",
+      "date": "2023-05-26",
+      "effectiveDate": "2023-05-26",
+      "resolutionDate": "2023-05-26",
       "typeCode": "ASG",
       "typeDesc": "Assigned",
-      "description": "Toledo Mud Hens sent SS Ryan Kreidler on a rehab assignment to FCL Tigers."
+      "description": "Toledo Mud Hens sent SS Ryan Kreidler on a rehab assignment to West Michigan Whitecaps."
     },
     {
       "id": 714190,
@@ -702,6 +677,31 @@
       "resolutionDate": "2023-07-15",
       "typeCode": "ASG",
       "typeDesc": "Assigned"
+    },
+    {
+      "id": 711424,
+      "person": {
+        "id": 668952,
+        "fullName": "Ryan Kreidler",
+        "link": "/api/v1/people/668952",
+        "nameSlug": "ryan-kreidler-668952"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 473,
+        "name": "FCL Tigers",
+        "link": "/api/v1/teams/473"
+      },
+      "date": "2023-07-15",
+      "effectiveDate": "2023-07-15",
+      "resolutionDate": "2023-07-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Toledo Mud Hens sent SS Ryan Kreidler on a rehab assignment to FCL Tigers."
     },
     {
       "id": 714250,

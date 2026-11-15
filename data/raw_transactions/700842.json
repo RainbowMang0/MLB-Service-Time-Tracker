@@ -1,7 +1,7 @@
 {
   "player_id": 700842,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:8f867a74d531c025222a713bc9ad223a9d8211998579d89531455a941556fc4c",
+  "fetched_at": "2026-11-15T18:34:09Z",
+  "checksum": "sha256:ea20bacfdfd337b6a9ecd03136df4975ed52b2cece3bb8c7d9c5d29aea90824d",
   "transactions": [
     {
       "id": 488065,
@@ -1100,6 +1100,26 @@
       "typeCode": "TR",
       "typeDesc": "Trade",
       "description": "Boston Red Sox traded LHP Eduardo Rivera to St. Louis Cardinals."
+    },
+    {
+      "id": 950265,
+      "person": {
+        "id": 700842,
+        "fullName": "Eduardo Rivera",
+        "link": "/api/v1/people/700842",
+        "nameSlug": "eduardo-rivera-700842"
+      },
+      "toTeam": {
+        "id": 685,
+        "name": "Cangrejeros de Santurce",
+        "link": "/api/v1/teams/685"
+      },
+      "date": "2026-11-15",
+      "effectiveDate": "2026-11-15",
+      "resolutionDate": "2026-11-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Eduardo Rivera assigned to Cangrejeros de Santurce."
     }
   ]
 }

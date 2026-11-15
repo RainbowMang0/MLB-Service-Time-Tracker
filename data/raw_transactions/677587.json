@@ -1,7 +1,7 @@
 {
   "player_id": 677587,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:59b096fc58c9c38da5a9d5d7e415320b9b02fb9d55782be284edc1b108c469c1",
+  "fetched_at": "2026-11-15T18:34:09Z",
+  "checksum": "sha256:1626be561fa2f1287778bce7c9140e646453b589623de775e30ad6dd6ce012b4",
   "transactions": [
     {
       "id": 321899,
@@ -1021,6 +1021,26 @@
       "typeCode": "NUM",
       "typeDesc": "Number Change",
       "description": "SS Brayan Rocchio changed number to 4."
+    },
+    {
+      "id": 950263,
+      "person": {
+        "id": 677587,
+        "fullName": "Brayan Rocchio",
+        "link": "/api/v1/people/677587",
+        "nameSlug": "brayan-rocchio-677587"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2026-11-15",
+      "effectiveDate": "2026-11-15",
+      "resolutionDate": "2026-11-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Brayan Rocchio assigned to Tiburones de La Guaira."
     }
   ]
 }

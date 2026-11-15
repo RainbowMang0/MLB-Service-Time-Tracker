@@ -1,7 +1,7 @@
 {
   "player_id": 467055,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:eae0c85f4a61af049da18df545aea4af9289d9dec739e161ecb6ad946bdb4422",
+  "fetched_at": "2026-11-15T18:34:09Z",
+  "checksum": "sha256:33032fac460172ba19e465d5c72a685dbc865dde12ed8512dbdef5024dd0504d",
   "transactions": [
     {
       "id": 25690,
@@ -1620,6 +1620,46 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "3B Pablo Sandoval assigned to Navegantes del Magallanes."
+    },
+    {
+      "id": 950242,
+      "person": {
+        "id": 467055,
+        "fullName": "Pablo Sandoval",
+        "link": "/api/v1/people/467055",
+        "nameSlug": "pablo-sandoval-467055"
+      },
+      "toTeam": {
+        "id": 687,
+        "name": "Gigantes de Carolina",
+        "link": "/api/v1/teams/687"
+      },
+      "date": "2026-11-14",
+      "effectiveDate": "2026-11-14",
+      "resolutionDate": "2026-11-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Pablo Sandoval assigned to Gigantes de Carolina."
+    },
+    {
+      "id": 950243,
+      "person": {
+        "id": 467055,
+        "fullName": "Pablo Sandoval",
+        "link": "/api/v1/people/467055",
+        "nameSlug": "pablo-sandoval-467055"
+      },
+      "toTeam": {
+        "id": 696,
+        "name": "Navegantes del Magallanes",
+        "link": "/api/v1/teams/696"
+      },
+      "date": "2026-11-14",
+      "effectiveDate": "2026-11-14",
+      "resolutionDate": "2026-11-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Navegantes del Magallanes activated 3B Pablo Sandoval."
     }
   ]
 }

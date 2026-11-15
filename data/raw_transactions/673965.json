@@ -1,7 +1,7 @@
 {
   "player_id": 673965,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:76c97f8c0cb214628f834faaf55b3ded6519c8a1459d5bdfd87dbdf99b150228",
+  "fetched_at": "2026-11-15T18:34:09Z",
+  "checksum": "sha256:f2229cc7b1019c9a31de5dbeba1637bb4dff8137ab736b51715d632a3c5c1763",
   "transactions": [
     {
       "id": 298460,
@@ -1128,6 +1128,26 @@
       "typeCode": "REL",
       "typeDesc": "Released",
       "description": "Tiburones de La Guaira released RHP Caleb Freeman."
+    },
+    {
+      "id": 950259,
+      "person": {
+        "id": 673965,
+        "fullName": "Caleb Freeman",
+        "link": "/api/v1/people/673965",
+        "nameSlug": "caleb-freeman-673965"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2026-11-14",
+      "effectiveDate": "2026-11-14",
+      "resolutionDate": "2026-11-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Caleb Freeman assigned to Tiburones de La Guaira."
     }
   ]
 }

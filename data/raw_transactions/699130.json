@@ -1,7 +1,7 @@
 {
   "player_id": 699130,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:1d739755c35537b91a6f8cc78a0316429904330f2857c7e37fb38894ce18c321",
+  "fetched_at": "2026-11-15T18:34:09Z",
+  "checksum": "sha256:0c9e070b95421dab462fe202824df7ed09378951782c72bc9acd2da013e11bb7",
   "transactions": [
     {
       "id": 459994,
@@ -800,6 +800,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Tampa Bay Rays activated 2B Jadher Areinamo."
+    },
+    {
+      "id": 950244,
+      "person": {
+        "id": 699130,
+        "fullName": "Jadher Areinamo",
+        "link": "/api/v1/people/699130",
+        "nameSlug": "jadher-areinamo-699130"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2026-11-14",
+      "effectiveDate": "2026-11-14",
+      "resolutionDate": "2026-11-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Jadher Areinamo assigned to Tiburones de La Guaira."
     }
   ]
 }
