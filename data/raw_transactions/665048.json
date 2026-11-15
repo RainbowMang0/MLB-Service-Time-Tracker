@@ -1,7 +1,7 @@
 {
   "player_id": 665048,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:5fa3860915e6aa188fd65b31a78061c0f2f9df7c5a3946a28e001bc515122683",
+  "fetched_at": "2026-11-15T23:31:40Z",
+  "checksum": "sha256:d76c837ca8035277c3773e9b2e94211c59f14abd17879e69addf96672a12c87e",
   "transactions": [
     {
       "id": 233604,
@@ -602,26 +602,6 @@
       "description": "RHP Hobie Harris assigned to Buffalo Bisons from Dunedin Blue Jays."
     },
     {
-      "id": 472774,
-      "person": {
-        "id": 665048,
-        "fullName": "Hobie Harris",
-        "link": "/api/v1/people/665048",
-        "nameSlug": "hobie-harris-665048"
-      },
-      "toTeam": {
-        "id": 141,
-        "name": "Toronto Blue Jays",
-        "link": "/api/v1/teams/141"
-      },
-      "date": "2021-02-24",
-      "effectiveDate": "2021-02-24",
-      "resolutionDate": "2021-02-24",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "Toronto Blue Jays invited non-roster RHP Hobie Harris to spring training."
-    },
-    {
       "id": 474527,
       "person": {
         "id": 665048,
@@ -640,6 +620,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "P Hobie Harris assigned to Toronto Blue Jays ."
+    },
+    {
+      "id": 472774,
+      "person": {
+        "id": 665048,
+        "fullName": "Hobie Harris",
+        "link": "/api/v1/people/665048",
+        "nameSlug": "hobie-harris-665048"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2021-02-24",
+      "effectiveDate": "2021-02-24",
+      "resolutionDate": "2021-02-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Toronto Blue Jays invited non-roster RHP Hobie Harris to spring training."
     },
     {
       "id": 483254,
@@ -686,7 +686,7 @@
       "description": "RHP Hobie Harris elected free agency."
     },
     {
-      "id": 600241,
+      "id": 612083,
       "person": {
         "id": 665048,
         "fullName": "Hobie Harris",
@@ -694,16 +694,16 @@
         "nameSlug": "hobie-harris-665048"
       },
       "toTeam": {
-        "id": 556,
-        "name": "Nashville Sounds",
-        "link": "/api/v1/teams/556"
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
       },
       "date": "2021-11-12",
       "effectiveDate": "2021-11-12",
       "resolutionDate": "2021-11-12",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Hobie Harris assigned to Nashville Sounds."
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Hobie Harris roster status changed by Milwaukee Brewers."
     },
     {
       "id": 600240,
@@ -726,7 +726,7 @@
       "description": "Milwaukee Brewers signed free agent RHP Hobie Harris to a minor league contract."
     },
     {
-      "id": 612083,
+      "id": 600241,
       "person": {
         "id": 665048,
         "fullName": "Hobie Harris",
@@ -734,16 +734,16 @@
         "nameSlug": "hobie-harris-665048"
       },
       "toTeam": {
-        "id": 158,
-        "name": "Milwaukee Brewers",
-        "link": "/api/v1/teams/158"
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
       },
       "date": "2021-11-12",
       "effectiveDate": "2021-11-12",
       "resolutionDate": "2021-11-12",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "RHP Hobie Harris roster status changed by Milwaukee Brewers."
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Hobie Harris assigned to Nashville Sounds."
     },
     {
       "id": 651726,
@@ -846,26 +846,6 @@
       "description": "RHP Hobie Harris assigned to Rochester Red Wings."
     },
     {
-      "id": 678668,
-      "person": {
-        "id": 665048,
-        "fullName": "Hobie Harris",
-        "link": "/api/v1/people/665048",
-        "nameSlug": "hobie-harris-665048"
-      },
-      "toTeam": {
-        "id": 120,
-        "name": "Washington Nationals",
-        "link": "/api/v1/teams/120"
-      },
-      "date": "2023-02-15",
-      "effectiveDate": "2023-02-15",
-      "resolutionDate": "2023-02-15",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "RHP Hobie Harris roster status changed by Washington Nationals."
-    },
-    {
       "id": 671243,
       "person": {
         "id": 665048,
@@ -884,6 +864,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "Washington Nationals invited non-roster RHP Hobie Harris to spring training."
+    },
+    {
+      "id": 678668,
+      "person": {
+        "id": 665048,
+        "fullName": "Hobie Harris",
+        "link": "/api/v1/people/665048",
+        "nameSlug": "hobie-harris-665048"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2023-02-15",
+      "effectiveDate": "2023-02-15",
+      "resolutionDate": "2023-02-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Hobie Harris roster status changed by Washington Nationals."
     },
     {
       "id": 679339,
@@ -1190,26 +1190,6 @@
       "description": "RHP Hobie Harris elected free agency."
     },
     {
-      "id": 807536,
-      "person": {
-        "id": 665048,
-        "fullName": "Hobie Harris",
-        "link": "/api/v1/people/665048",
-        "nameSlug": "hobie-harris-665048"
-      },
-      "toTeam": {
-        "id": 121,
-        "name": "New York Mets",
-        "link": "/api/v1/teams/121"
-      },
-      "date": "2024-11-25",
-      "effectiveDate": "2024-11-25",
-      "resolutionDate": "2024-11-25",
-      "typeCode": "SFA",
-      "typeDesc": "Signed as Free Agent",
-      "description": "New York Mets signed free agent RHP Hobie Harris to a minor league contract."
-    },
-    {
       "id": 807537,
       "person": {
         "id": 665048,
@@ -1228,6 +1208,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Hobie Harris assigned to Binghamton Rumble Ponies."
+    },
+    {
+      "id": 807536,
+      "person": {
+        "id": 665048,
+        "fullName": "Hobie Harris",
+        "link": "/api/v1/people/665048",
+        "nameSlug": "hobie-harris-665048"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2024-11-25",
+      "effectiveDate": "2024-11-25",
+      "resolutionDate": "2024-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Mets signed free agent RHP Hobie Harris to a minor league contract."
     },
     {
       "id": 808076,
@@ -1442,6 +1442,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Hobie Harris elected free agency."
+    },
+    {
+      "id": 950100,
+      "person": {
+        "id": 665048,
+        "fullName": "Hobie Harris",
+        "link": "/api/v1/people/665048",
+        "nameSlug": "hobie-harris-665048"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2026-11-07",
+      "effectiveDate": "2026-11-07",
+      "resolutionDate": "2026-11-07",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Kansas City Royals signed free agent RHP Hobie Harris to a minor league contract."
+    },
+    {
+      "id": 950101,
+      "person": {
+        "id": 665048,
+        "fullName": "Hobie Harris",
+        "link": "/api/v1/people/665048",
+        "nameSlug": "hobie-harris-665048"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2026-11-07",
+      "effectiveDate": "2026-11-07",
+      "resolutionDate": "2026-11-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Hobie Harris assigned to Omaha Storm Chasers."
     }
   ]
 }

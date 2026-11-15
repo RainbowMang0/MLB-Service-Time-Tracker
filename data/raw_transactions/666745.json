@@ -1,7 +1,7 @@
 {
   "player_id": 666745,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:65780889984294bf51cc5074bd6e6c7f72d76af66f37ae335c0b2f355af301f0",
+  "fetched_at": "2026-11-15T23:31:40Z",
+  "checksum": "sha256:563b3bdc3f11bc442dac9b939a51a6d188560a5cbc2cd474892c78877a37c5bd",
   "transactions": [
     {
       "id": 250243,
@@ -176,26 +176,6 @@
       "description": "DSL Yankees activated RHP Jhony Brito from the 60-day injured list."
     },
     {
-      "id": 463940,
-      "person": {
-        "id": 666745,
-        "fullName": "Jhony Brito",
-        "link": "/api/v1/people/666745",
-        "nameSlug": "jhony-brito-666745"
-      },
-      "toTeam": {
-        "id": 233,
-        "name": "Charleston RiverDogs",
-        "link": "/api/v1/teams/233"
-      },
-      "date": "2019-04-22",
-      "effectiveDate": "2019-04-22",
-      "resolutionDate": "2019-04-22",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Jhony Brito assigned to Charleston RiverDogs."
-    },
-    {
       "id": 397860,
       "person": {
         "id": 666745,
@@ -220,6 +200,26 @@
       "description": "RHP Jhony Brito assigned to Charleston RiverDogs from DSL Yankees."
     },
     {
+      "id": 463940,
+      "person": {
+        "id": 666745,
+        "fullName": "Jhony Brito",
+        "link": "/api/v1/people/666745",
+        "nameSlug": "jhony-brito-666745"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2019-04-22",
+      "effectiveDate": "2019-04-22",
+      "resolutionDate": "2019-04-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jhony Brito assigned to Charleston RiverDogs."
+    },
+    {
       "id": 439736,
       "person": {
         "id": 666745,
@@ -240,7 +240,7 @@
       "description": "RHP Jhony Brito assigned to New York Yankees."
     },
     {
-      "id": 466285,
+      "id": 468551,
       "person": {
         "id": 666745,
         "fullName": "Jhony Brito",
@@ -260,7 +260,7 @@
       "description": "RHP Jhony Brito assigned to Tampa Tarpons."
     },
     {
-      "id": 468551,
+      "id": 466285,
       "person": {
         "id": 666745,
         "fullName": "Jhony Brito",
@@ -451,26 +451,6 @@
       "description": "Scranton/Wilkes-Barre RailRiders activated RHP Jhony Brito from the 7-day injured list."
     },
     {
-      "id": 657490,
-      "person": {
-        "id": 666745,
-        "fullName": "Jhony Brito",
-        "link": "/api/v1/people/666745",
-        "nameSlug": "jhony-brito-666745"
-      },
-      "toTeam": {
-        "id": 668,
-        "name": "Toros del Este",
-        "link": "/api/v1/teams/668"
-      },
-      "date": "2022-10-31",
-      "effectiveDate": "2022-10-31",
-      "resolutionDate": "2022-10-31",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Jhony Brito assigned to Toros del Este."
-    },
-    {
       "id": 670878,
       "person": {
         "id": 666745,
@@ -489,6 +469,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Toros del Este activated RHP Jhony Brito."
+    },
+    {
+      "id": 657490,
+      "person": {
+        "id": 666745,
+        "fullName": "Jhony Brito",
+        "link": "/api/v1/people/666745",
+        "nameSlug": "jhony-brito-666745"
+      },
+      "toTeam": {
+        "id": 668,
+        "name": "Toros del Este",
+        "link": "/api/v1/teams/668"
+      },
+      "date": "2022-10-31",
+      "effectiveDate": "2022-10-31",
+      "resolutionDate": "2022-10-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jhony Brito assigned to Toros del Este."
     },
     {
       "id": 658940,
@@ -1415,6 +1415,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Jhony Brito assigned to Toros del Este."
+    },
+    {
+      "id": 950014,
+      "person": {
+        "id": 666745,
+        "fullName": "Jhony Brito",
+        "link": "/api/v1/people/666745",
+        "nameSlug": "jhony-brito-666745"
+      },
+      "toTeam": {
+        "id": 668,
+        "name": "Toros del Este",
+        "link": "/api/v1/teams/668"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toros del Este activated RHP Jhony Brito."
     }
   ]
 }
