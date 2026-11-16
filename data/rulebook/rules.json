@@ -713,7 +713,7 @@
       "description": "\\bassigned to\\b",
       "destination": "not_mlb",
       "not_description": "rehab|all-star|all star|futures|alternate (?:training )?site|taxi squad",
-      "note": "Assigned to a minor-league club leaves the major-league active list, including a March affiliate assignment. Winter-league names in the offseason, All-Star and Futures assignments, rehab, and the 2020 alternate site are earlier rules."
+      "note": "Assigned to a minor-league club stops service when he is on a minor-league contract or is not on a major-league roster. A spring or offseason assignment does not stop a player who already has a major-league contract. An assignment during the championship season still stops him. Winter-league names in the offseason, All-Star and Futures assignments, rehab, and the 2020 alternate site are earlier rules."
     },
     {
       "id": "stop.returned",
@@ -975,7 +975,7 @@
     {
       "id": "accrual.presume-from-debut",
       "cite": "§11",
-      "note": "If nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game. Seasons with no transaction and no saved game are not credited when appearance years are supplied."
+      "note": "If nothing has stopped the clock by the first major-league game, he is treated as on a roster from that game. When that game falls in the opening week and no roster move is dated before it, the season starts at the opener. A call-up dated on the debut stays on that date. Seasons with no transaction and no saved game are not credited when appearance years are supplied."
     },
     {
       "id": "accrual.appearance-game",
@@ -985,7 +985,12 @@
     {
       "id": "accrual.appearance-restart",
       "cite": "§9",
-      "note": "An option with no later recall does not keep the clock stopped through a later season he played as a regular. A minor-league contract or assignment does not reopen at the opener. A signing, claim, or trade starts the clock on that date instead. Ten games or fewer do not open the season at the league opener. A documented recall or selection is used instead, and days before that row are not added. When his game dates are known, the opener is used only if the first game falls in the opening week; otherwise the added days run from the first game through the championship end when no later stop is recorded, plus a documented major-league injured list. Free agency, a release, an outright, and the restricted list do not restart this way."
+      "note": "An option with no later recall does not keep the clock stopped through a later season he played as a regular. An option dated before that season's opener, with no recall before the opener, does not restart the season. A minor-league contract or assignment does not reopen at the opener. A signing, claim, trade, or in-season assignment onto the club starts the clock on that date instead. A later option does not prove he was up on Opening Day once that entry is on the file. Ten games or fewer do not open the season at the league opener. A documented recall or selection is used instead, and days before that row are not added. When his game dates are known, the opener is used only if the first game falls in the opening week; otherwise the added days run from the first game through the championship end when no later stop is recorded, plus a documented major-league injured list. A season whose game dates were requested and show no major-league game does not restart. Free agency, a release, an outright, and the restricted list do not restart this way."
+    },
+    {
+      "id": "accrual.trade-entry",
+      "cite": "§11",
+      "note": "A trade onto a major-league club starts service on that date when the same day does not option, outright, or release him. A designation later in that span is not what opened it."
     },
     {
       "id": "accrual.roy-full-year",

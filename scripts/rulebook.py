@@ -674,7 +674,7 @@ def _is_national_split(ids: dict) -> bool:
     return False
 
 
-def _apply_appearance_dates(intervals, rows, dates, floor, horizon, calendar):
+def _apply_appearance_dates(intervals, rows, dates, floor, horizon, calendar, boundaries):
     """Restart at the first major-league game after a stop the feed never recalled.
 
     Consecutive game dates are one stint. A recorded stop strictly between
@@ -687,19 +687,10 @@ def _apply_appearance_dates(intervals, rows, dates, floor, horizon, calendar):
     })
     if not usable:
         return intervals, []
-    stop_dates = {
-        day for day, _row, hit in rows
-        if hit is not None and hit.effect == "stop"
-    }
-    spans = []
-    start = prev = usable[0]
-    for day in usable[1:]:
-        if any(prev < stop < day for stop in stop_dates):
-            spans.append((start, prev))
-            start = day
-        prev = day
-    spans.append((start, prev))
+    spans = rulebook_limits.game_spans(usable, rows)
+    stop_dates = {day for day, _row, hit in rows if hit is not None and hit.effect == "stop"}
     spans = rulebook_limits.extend_open_spans(spans, stop_dates, calendar, horizon)
+    spans = rulebook_limits.clip_blocked(spans, boundaries)
     review = []
     merged = _merge(intervals)
     for start, end in spans:
@@ -741,6 +732,7 @@ def evaluate(
     appearance_years: set[int] | None = None,
     appearance_counts: dict[int, int] | None = None,
     appearance_dates: list[dt.date] | None = None,
+    appearance_checked: set[int] | None = None,
     exceptions: list[dict] | None = None,
     roy_years: set[int] | None = None,
     calendar: Calendar | None = None,
@@ -805,16 +797,9 @@ def evaluate(
                 for row, hit in items
             ]
 
-    window_days = book["pre_debut_roster_window_days"]
-    floor = debut
-    if debut is not None:
-        earliest = debut - dt.timedelta(days=window_days)
-        early = [
-            day for day, _row, hit in rows
-            if hit is not None and hit.id in _PRE_DEBUT_RULES and earliest <= day < debut
-        ]
-        if early:
-            floor = min(early)
+    floor = rulebook_limits.service_floor(
+        debut, rows, book["pre_debut_roster_window_days"], _PRE_DEBUT_RULES, calendar,
+    )
 
     club = None
     club_timeline: list[tuple[dt.date, int]] = []
@@ -933,7 +918,10 @@ def evaluate(
 
         if day in restart_days and (floor is None or day >= floor) and active_since is None:
             season_end = calendar.window(day.year, club_on(day), club_on)[1]
-            reopen = rulebook_limits.opening_restart(day, season_end, rows, grouped, appearance_counts, appearance_dates, _returns_to_roster, lambda raw: _mlb_present(row_ids(raw)))
+            reopen = rulebook_limits.opening_restart(
+                day, season_end, rows, grouped, appearance_counts, appearance_dates,
+                _returns_to_roster, lambda raw: _mlb_present(row_ids(raw)), appearance_checked,
+            )
             if reopen and (on_option or last_stop_id in RESTARTABLE_STOPS):
                 if on_option:
                     end_option(day - dt.timedelta(days=1))
@@ -950,7 +938,7 @@ def evaluate(
             if on_option and option_start is not None and option_start < floor:
                 end_option(floor - dt.timedelta(days=1))
             if not on_option:
-                rule = "accrual.pre-debut-roster" if debut is not None and floor < debut else "accrual.presume-from-debut"
+                rule = rulebook_limits.opening_rule(floor, debut, rows, _PRE_DEBUT_RULES)
                 open_service(floor if day > floor else day, rule)
                 presumed = True
         elif floor is not None and day >= floor:
@@ -962,7 +950,9 @@ def evaluate(
         if cut is not None:
             close_service(cut, "stop.restricted")
             last_stop, last_stop_id = "other", "stop.restricted"
-        hits = [hit for _row, hit in items if hit is not None]
+        hits = rulebook_limits.without_paper_assignment(
+            [hit for _row, hit in items if hit is not None], rows, day, calendar,
+        )
         if not hits and day != floor:
             continue
         tags = set()
@@ -1072,10 +1062,10 @@ def evaluate(
                 open_service(start_day, openers[0].id)
             elif (entry := rulebook_limits.roster_entry(hits, items, lambda raw: _mlb_present(row_ids(raw)), has_option, terminal, rows, day)):
                 open_service(day, entry)
-            elif any(hit.id == "neutral.mlb-assignment" for hit in hits):
-                later = dates[index + 1:]
-                if _lookahead_confirms(later, grouped):
-                    open_service(day, "start.assignment-confirmed")
+            elif rulebook_limits.assignment_opens(
+                hits, day, dates[index + 1:], grouped, calendar, _lookahead_confirms, rows,
+            ):
+                open_service(day, "start.assignment-confirmed")
         elif service_day and active_since is not None:
             for hit in hits:
                 if hit.effect == "count_away":
@@ -1175,7 +1165,7 @@ def evaluate(
     appearance_review: list[dict] = []
     if appearance_dates:
         intervals, appearance_review = _apply_appearance_dates(
-            intervals, rows, appearance_dates, floor, horizon, calendar
+            intervals, rows, appearance_dates, floor, horizon, calendar, boundaries
         )
 
     # Seasons.
