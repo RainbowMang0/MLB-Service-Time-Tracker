@@ -187,8 +187,201 @@ def test_midseason_entry_and_option_total():
     t.check("a stint with no later stop runs through the championship end", spans[0][1] == dt.date(2022, 10, 5))
 
 
+def test_spring_option_assignment_and_opening_week():
+    import datetime as dt
+    import rulebook_guard
+    cal_2010 = t.cal(t.season(2010, "2010-04-04", "2010-10-03"))
+    bowden = t.run(
+        [
+            t.txn("2009-09-05", "CU", "Yankees recalled X from Scranton.", to=t.NYY, frm=531),
+            t.txn("2010-03-23", "OPT", "Yankees optioned X to Scranton.", frm=t.NYY, to=531),
+            t.txn("2010-07-18", "ASG", "X assigned to Yankees.", to=t.NYY),
+            t.txn("2010-07-23", "OPT", "Yankees optioned X to Scranton.", frm=t.NYY, to=531),
+            t.txn("2010-08-14", "CU", "Yankees recalled X from Scranton.", to=t.NYY, frm=531),
+            t.txn("2010-08-28", "OPT", "Yankees optioned X to Scranton.", frm=t.NYY, to=531),
+            t.txn("2010-09-07", "CU", "Yankees recalled X from Scranton.", to=t.NYY, frm=531),
+        ],
+        cal_2010, "2008-08-30", "2010-10-05",
+        appearance_years={2010},
+        appearance_counts={2010: 14},
+    )
+    t.check("a spring option does not restart the season at the opener", t.days_of(bowden, 2010) == 46)
+    sears = t.run(
+        [t.txn("2022-04-17", "OPT", "Yankees optioned X to Scranton.", frm=t.NYY, to=531)],
+        t.cal(t.season(2022, "2022-04-07", "2022-10-05")),
+        "2022-04-13", "2022-11-09",
+        appearance_dates=[dt.date(2022, 4, 13)],
+    )
+    t.check("a debut in the opening week starts at the opener", t.days_of(sears, 2022) == 10)
+    called = t.run(
+        [
+            t.txn("2022-04-13", "SE", "Yankees selected the contract of X.", to=t.NYY),
+            t.txn("2022-04-17", "OPT", "Yankees optioned X to Scranton.", frm=t.NYY, to=531),
+        ],
+        t.cal(t.season(2022, "2022-04-07", "2022-10-05")),
+        "2022-04-13", "2022-11-09",
+    )
+    t.check("a selection on the debut stays on that date", t.days_of(called, 2022) == 4)
+    season_2019 = t.season(2019, "2019-03-20", "2019-09-29", domestic="2019-03-28")
+    wain = t.run(
+        [
+            t.txn("2018-10-29", "DFA", "X elected free agency."),
+            t.txn("2018-10-30", "SFA", "Cardinals signed free agent X.", to=138),
+            t.txn("2019-03-25", "ASG", "X assigned to Memphis.", to=235),
+            t.txn("2019-06-10", "SC", "Cardinals placed X on the 10-day injured list.", to=138),
+            t.txn("2019-06-20", "SC", "Cardinals activated X from the 10-day injured list.", to=138),
+        ],
+        t.cal(season_2019), "2005-09-11", "2019-10-05",
+    )
+    t.check("a spring assignment does not stop a major-league contract", t.days_of(wain, 2019) == 172)
+    sent = t.run(
+        [
+            t.txn("2019-04-01", "SE", "Cardinals selected the contract of X.", to=138),
+            t.txn("2019-06-01", "ASG", "X assigned to Memphis.", to=235),
+        ],
+        t.cal(season_2019), "2019-04-01", "2019-10-05",
+    )
+    t.check("an in-season assignment to an affiliate still stops service", t.days_of(sent, 2019) < 80)
+    minor = t.run(
+        [
+            t.txn("2019-01-02", "SFA", "Cardinals signed free agent X to a minor league contract.", to=138),
+            t.txn("2019-03-25", "ASG", "X assigned to Memphis.", to=235),
+            t.txn("2019-06-01", "SE", "Cardinals selected the contract of X.", to=138),
+        ],
+        t.cal(season_2019), "2019-06-01", "2019-10-05",
+    )
+    t.check("a minor-league contract does not earn the days before the selection", t.days_of(minor, 2019) < 130)
+    estes = t.run(
+        [t.txn("2024-03-10", "OPT", "Athletics optioned X to Las Vegas.", frm=133, to=400)],
+        t.cal(t.season(2024, "2024-03-28", "2024-09-30")),
+        "2023-09-20", "2024-10-05",
+        appearance_years={2024},
+        appearance_counts={2024: 25},
+        appearance_dates=[dt.date(2024, 5, 11), dt.date(2024, 9, 28)],
+        appearance_checked={2024},
+    )
+    t.check("game dates after a spring option run from the first game", t.days_of(estes, 2024) == 143)
+    labeled = {
+        "rules": ["accrual.dfa-window-7", "count.dfa", "neutral.trade", "stop.released"],
+        "ranges": [{
+            "start": "2024-03-28",
+            "end": "2024-06-19",
+            "rules": ["accrual.dfa-window-7", "count.dfa", "neutral.trade", "stop.released"],
+        }],
+        "events": [
+            {"date": "2024-06-14", "rule": "count.dfa"},
+            {"date": "2024-06-20", "rule": "stop.released"},
+        ],
+    }
+    t.check(
+        "a season opened by a trade is not labeled as the designation window",
+        rulebook_guard.explain_rule(labeled, 84) == "accrual.trade-entry",
+    )
+    t.check(
+        "a measured season at least as high as the prior site can replace a later over-credit",
+        rulebook_guard.measured_replaces(46, 41) and not rulebook_guard.measured_replaces(0, 172),
+    )
+    bridged = t.run(
+        [t.txn("2022-04-20", "OPT", "Yankees optioned X.", frm=t.NYY, to=531)],
+        t.cal(
+            t.season(2022, "2022-04-07", "2022-10-05"),
+            t.season(2023, "2023-03-30", "2023-10-01"),
+            t.season(2024, "2024-03-28", "2024-09-29"),
+        ),
+        "2022-04-13", "2024-10-05",
+        appearance_years={2022, 2024},
+        appearance_counts={2022: 20, 2024: 20},
+        appearance_dates=[dt.date(2022, 8, 10), dt.date(2022, 9, 1), dt.date(2024, 6, 1), dt.date(2024, 9, 1)],
+        appearance_checked={2022, 2023, 2024},
+    )
+    t.check("game dates do not fill a season that has no games", t.days_of(bridged, 2023) == 0)
+
+
+def test_same_day_option_ends_the_stint():
+    import datetime as dt
+    import rulebook_limits
+    played = t.run(
+        [
+            t.txn("2024-03-28", "SE", "Yankees selected the contract of X.", to=t.NYY),
+            t.txn("2024-05-01", "OPT", "Yankees optioned X to Scranton.", frm=t.NYY, to=531),
+            t.txn("2024-09-30", "CU", "Yankees recalled X from Scranton.", to=t.NYY),
+        ],
+        t.cal(t.season(2024, "2024-03-28", "2024-09-30")),
+        "2024-03-28", "2024-10-05",
+        appearance_dates=[dt.date(2024, 4, 10), dt.date(2024, 5, 1)],
+    )
+    t.check("an option on the last game date does not fill the rest of the season", t.days_of(played, 2024) < 50)
+    released = t.run(
+        [
+            t.txn("2024-04-01", "SE", "Yankees selected the contract of X.", to=t.NYY),
+            t.txn("2024-06-01", "REL", "Yankees released X.", frm=t.NYY),
+        ],
+        t.cal(t.season(2024, "2024-03-28", "2024-09-30")),
+        "2024-04-01", "2024-10-05",
+        appearance_dates=[dt.date(2024, 6, 1), dt.date(2024, 8, 1)],
+    )
+    t.check("a release on a game date does not credit the next game", t.days_of(released, 2024) < 80)
+    t.check(
+        "a 30-day gap with no transactions is not a season to credit",
+        rulebook_limits.untracked_gap([], [dt.date(2007, 6, 3), dt.date(2007, 7, 28)], 2007),
+    )
+    t.check(
+        "a short gap with no transactions can still be credited",
+        not rulebook_limits.untracked_gap([], [dt.date(2007, 6, 3), dt.date(2007, 6, 20)], 2007),
+    )
+    t.check(
+        "a long gap with a transaction that year is not the empty-feed case",
+        not rulebook_limits.untracked_gap(
+            [(dt.date(2007, 6, 1), {}, None)],
+            [dt.date(2007, 6, 3), dt.date(2007, 7, 28)],
+            2007,
+        ),
+    )
+
+
+def test_no_credited_day_carries_past_a_roster_stop():
+    """Every saved player. A game-date stint or a transaction stint that began on or before an option, outright, or release cannot continue past it."""
+    import datetime as dt
+    import json
+    import rulebook
+    import rulebook_limits
+    import rulebook_publish as pub
+    from pathlib import Path
+    root = Path(__file__).resolve().parents[1]
+    db = json.loads((root / "docs" / "data" / "service_time.json").read_text(encoding="utf-8"))
+    horizon = dt.date.fromisoformat((db.get("generated_at") or "2026-11-16")[:10])
+    calendar = rulebook.load_calendar()
+    found = []
+    for player in db.get("players") or []:
+        result = pub.replay_one(player, horizon)
+        path = root / "data" / "raw_transactions" / f"{player['id']}.json"
+        rows = []
+        if path.exists():
+            for raw in json.loads(path.read_text(encoding="utf-8")).get("transactions") or []:
+                day = rulebook._date(raw.get("date"))
+                hit = rulebook.classify_row(raw, calendar) if day else None
+                if day is not None:
+                    rows.append((day, raw, hit))
+        for season in result["seasons"]:
+            ranges = [
+                (dt.date.fromisoformat(item["start"]), dt.date.fromisoformat(item["end"]), item.get("rules") or [])
+                for item in season["ranges"]
+            ]
+            extra = rulebook_limits.days_carried_past_stop(ranges, rows)
+            if extra:
+                found.append(f"{player.get('name')} {season['year']} {extra}")
+                if len(found) >= 8:
+                    break
+        if len(found) >= 8:
+            break
+    t.check("no stint continues past an option, outright, or release " + ("; ".join(found) if found else ""), not found)
+
+
 if __name__ == "__main__":
     test_owner_dfa_decisions()
     test_midseason_entry_and_option_total()
+    test_spring_option_assignment_and_opening_week()
+    test_same_day_option_ends_the_stint()
+    test_no_credited_day_carries_past_a_roster_stop()
     print(f"\n{t.PASS} passed, {t.FAIL} failed")
     raise SystemExit(1 if t.FAIL else 0)

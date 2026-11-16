@@ -27,10 +27,12 @@ CAREERS = {
     693821: "3.068",  # Bryce Elder
     676979: "6.028",  # Garrett Crochet
     664062: "6.026",  # Tony Gonsolin
+    682842: "2.121",  # Abner Uribe
+    671106: "2.117",  # Logan Allen
 }
 SEASONS = {
     (671732, 2024): 152,  # Lawrence Butler
-    (676664, 2022): 75,  # JP Sears, Athletics stint through October 5
+    (676664, 2022): 81,  # JP Sears, opener through the April 17 option, then the Athletics stint
     (676664, 2025): 139,  # JP Sears, option total is 47 days
 }
 
@@ -48,6 +50,13 @@ _BOILERPLATE = {
 
 def released(player_id: int, year: int) -> bool:
     return (int(player_id), int(year)) in RELEASED
+
+
+def measured_replaces(rule_days: int, earlier: int | None) -> bool:
+    """A lower measured season can replace the site when it is not below the
+    figure the site showed before the replay. A drop below that figure stays held.
+    """
+    return earlier is not None and rule_days >= earlier
 
 
 def short_increase(rule_days: int, published_days: int, games: int) -> bool:
@@ -115,8 +124,29 @@ def _from_rules(rules: list, delta: int) -> str:
     return rules[-1] if rules else "rulebook"
 
 
+def _opened_by_trade(season: dict) -> bool:
+    """The credited span starts at a trade, and a designation falls later in it."""
+    ranges = [
+        row for row in (season.get("ranges") or [])
+        if "neutral.trade" in (row.get("rules") or []) or "neutral.claim" in (row.get("rules") or [])
+    ]
+    if not ranges:
+        return False
+    start = min(row["start"] for row in ranges)
+    designations = [
+        event["date"] for event in (season.get("events") or [])
+        if event.get("rule") == "count.dfa"
+    ]
+    if designations and min(designations) <= start:
+        return False
+    rules = season.get("rules") or []
+    return any(str(rule).startswith("accrual.dfa-window") or rule == "count.dfa" for rule in rules)
+
+
 def explain_rule(season: dict, delta: int) -> str:
     """The rule that accounts for the days that moved, not a calendar stamp."""
+    if delta > 0 and _opened_by_trade(season):
+        return "accrual.trade-entry"
     events = list(season.get("events") or [])
     if delta > 0 and any(row.get("rule") == "neutral.all-star" for row in events):
         seen = False

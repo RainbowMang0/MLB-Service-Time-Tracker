@@ -71,6 +71,14 @@ def _hold_key(player_id: int, year: int) -> str:
     return f"{player_id}:{year}"
 
 
+def _earlier_published(path: Path) -> dict[int, dict[int, int]]:
+    """Season days on the site before this replay, from the rollback snapshot."""
+    if not path.exists():
+        return {}
+    doc = _load_json(path)
+    return {int(player["id"]): _published_days(player) for player in doc.get("players") or []}
+
+
 def load_holds(path: Path = HOLDS_PATH) -> dict[str, dict]:
     if not path.exists():
         return {}
@@ -98,16 +106,26 @@ def _reason(year: int, rulebook_days: int, published_days: int, result: dict, ga
     return " ".join(bits)
 
 
-def _cached_appearances(player_id: int) -> list[dt.date] | None:
+def _cached_appearances(player_id: int) -> tuple[list[dt.date] | None, set[int] | None]:
+    """(game dates, seasons that were requested).
+
+    A complete cache file means a missing season is no major-league games.
+    The older single file only lists the dates it has, so a missing season
+    there is unknown.
+    """
+    import appearance_cache
+    loaded = appearance_cache.load_player(player_id)
+    if loaded is not None:
+        return loaded[0], loaded[1]
     path = ROOT / "data" / "rulebook" / "appearance_spans.json"
     if not path.exists():
-        return None
+        return None, None
     raw = (_load_json(path).get(str(player_id)) or {})
     dates = []
     for days in raw.values():
         for day in days:
             dates.append(dt.date.fromisoformat(day))
-    return dates or None
+    return (dates or None), None
 
 
 def replay_one(player: dict, horizon: dt.date) -> dict:
@@ -118,6 +136,7 @@ def replay_one(player: dict, horizon: dt.date) -> dict:
         rows = _load_json(path).get("transactions") or []
     debut = player.get("mlb_debut")
     last = player.get("last_played")
+    dates, checked = _cached_appearances(player_id)
     return evaluate(
         rows,
         player_id=player_id,
@@ -128,7 +147,8 @@ def replay_one(player: dict, horizon: dt.date) -> dict:
         career_end=dt.date.fromisoformat(last) if last and not player.get("on_40_man") else None,
         appearance_years=set(_games(player)),
         appearance_counts=_games(player),
-        appearance_dates=_cached_appearances(player_id),
+        appearance_dates=dates,
+        appearance_checked=checked,
     )
 
 
@@ -143,9 +163,10 @@ def _season_row(year: int, days: int, raw: int, teams: list, src: str, previous:
     return row
 
 
-def apply_player(player: dict, result: dict, prior_holds: dict[str, dict], full_year: int) -> tuple[dict, list[dict], list[dict]]:
+def apply_player(player: dict, result: dict, prior_holds: dict[str, dict], full_year: int, earlier: dict[int, int] | None = None) -> tuple[dict, list[dict], list[dict]]:
     """Return updated fields and the hold rows for this player."""
     published = _published_days(player)
+    earlier = earlier or {}
     by_year = {row["year"]: row for row in result["seasons"]}
     previous = {int(row["y"]): row for row in player.get("seasons") or [] if isinstance(row, dict) and "y" in row}
     games = _games(player)
@@ -182,7 +203,7 @@ def apply_player(player: dict, result: dict, prior_holds: dict[str, dict], full_
         played = games.get(year, 0)
         if accepted and rule_days < published_days:
             days, src = rule_days, "read"
-        elif rule_days < published_days:
+        elif rule_days < published_days and not rulebook_guard.measured_replaces(rule_days, earlier.get(year)):
             days, src = published_days, "held"
             holds.append({
                 "player_id": int(player["id"]),
@@ -211,6 +232,24 @@ def apply_player(player: dict, result: dict, prior_holds: dict[str, dict], full_
             })
             if published_days <= 0 and year not in published:
                 continue
+        elif by_year.get(year, {}).get("untracked_gap") and rule_days > (earlier[year] if year in earlier else 0):
+            keep = earlier[year] if year in earlier else 0
+            holds.append({
+                "player_id": int(player["id"]),
+                "name": player.get("name"),
+                "season": year,
+                "rulebook_days": rule_days,
+                "published_days": keep,
+                "reason": (
+                    f"{year} has a gap of 30 or more days between major-league games "
+                    "and no transactions that year. Those days are not published."
+                ),
+                "cleared": False,
+                "on_40_man": bool(player.get("on_40_man")),
+            })
+            if keep <= 0:
+                continue
+            days, src = keep, "held"
         elif rulebook_guard.short_increase(rule_days, published_days, played):
             days, src = published_days, "held"
             holds.append({
@@ -374,6 +413,7 @@ def apply_to_database(db: dict[str, dict], published_path: Path = PUBLISHED, hol
         except ValueError:
             pass
     prior = load_holds(holds_path)
+    earlier_site = _earlier_published(snapshot_path)
     results: dict[int, dict] = {}
     new_holds: list[dict] = []
     skipped_after_last: list[dict] = []
@@ -387,7 +427,9 @@ def apply_to_database(db: dict[str, dict], published_path: Path = PUBLISHED, hol
         baseline = disk_players.get(int(record["id"]), record)
         result = replay_one(baseline, horizon)
         results[int(record["id"])] = result
-        fields, holds, skipped = apply_player(baseline, result, prior, full_year)
+        fields, holds, skipped = apply_player(
+            baseline, result, prior, full_year, earlier_site.get(int(record["id"])),
+        )
         updated[int(record["id"])] = fields
         new_holds.extend(holds)
         skipped_after_last.extend(skipped)
