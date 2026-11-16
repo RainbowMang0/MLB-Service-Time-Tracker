@@ -340,7 +340,7 @@ def test_same_day_option_ends_the_stint():
 
 
 def test_no_credited_day_carries_past_a_roster_stop():
-    """Every saved player. A stint that began on or before an option, outright, or release cannot continue past it."""
+    """Every saved player. A game-date stint or a transaction stint that began on or before an option, outright, or release cannot continue past it."""
     import datetime as dt
     import json
     import rulebook

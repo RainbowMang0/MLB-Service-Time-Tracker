@@ -234,9 +234,17 @@ def days_carried_past_stop(ranges, rows) -> int:
         for item in ranges:
             lo, hi = item[0], item[1]
             rules = item[2] if len(item) > 2 else ()
-            # The short optional assignment is credited on purpose. It is not a stint that ran through.
-            # Injured-list time is not this check. The failure is a game-date stint that keeps going.
-            if "accrual.option-under-20" in rules or "accrual.appearance-game" not in rules:
+            # A short optional assignment is credited on purpose. Days on the
+            # injured list, the disabled list, or a counted leave are service
+            # while he is away. Everything else, game dates and transaction
+            # stints alike, may not run past the stop.
+            if "accrual.option-under-20" in rules or any(
+                str(rule).startswith((
+                    "count.il", "count.dl", "count.bereavement", "count.paternity",
+                    "count.concussion", "count.family",
+                ))
+                for rule in rules
+            ):
                 continue
             if lo > stop:
                 continue
