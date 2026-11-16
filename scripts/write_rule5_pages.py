@@ -243,6 +243,7 @@ def render_league(data: dict) -> str:
   <p>Minor leaguers on affiliate rosters who are off the 40-man and whose first professional contract makes them selectable in the 2026 Rule 5.</p>
   <p>The reserve list is due November 17, 2026, and the draft is scheduled for December 9, 2026.</p>
   <p>The labor agreement expires December 1, 2026, so the December draft may be delayed or dropped.</p>
+  <p class="foot-note"><a href="{wpp.BASE_PATH}offseason.html">Offseason dates and lists</a></p>
   <p class="rule5-note">A row marked estimated uses the earliest of more than one signing, or is a winter or spring international signing whose June 5 age date is unsettled. Players who are not yet eligible are left off each club list.</p>
   <table class="rule5-clubs"><thead><tr><th>Club</th><th class="n">First time</th>
   <th class="n">Eligible again</th><th class="n">Unknown</th></tr></thead>
