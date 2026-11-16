@@ -1,7 +1,7 @@
 {
   "player_id": 700842,
-  "fetched_at": "2026-11-15T18:34:09Z",
-  "checksum": "sha256:ea20bacfdfd337b6a9ecd03136df4975ed52b2cece3bb8c7d9c5d29aea90824d",
+  "fetched_at": "2026-11-15T23:54:38Z",
+  "checksum": "sha256:ba81de9e6d6950ef70499b23ecbabafcc4cf7e30d862b86396a5f8da08d7ff14",
   "transactions": [
     {
       "id": 488065,
@@ -649,6 +649,26 @@
       "description": "LHP Eduardo Rivera assigned to Portland Sea Dogs from Greenville Drive."
     },
     {
+      "id": 878318,
+      "person": {
+        "id": 700842,
+        "fullName": "Eduardo Rivera",
+        "link": "/api/v1/people/700842",
+        "nameSlug": "eduardo-rivera-700842"
+      },
+      "toTeam": {
+        "id": 685,
+        "name": "Cangrejeros de Santurce",
+        "link": "/api/v1/teams/685"
+      },
+      "date": "2025-12-07",
+      "effectiveDate": "2025-12-07",
+      "resolutionDate": "2025-12-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Eduardo Rivera assigned to Cangrejeros de Santurce."
+    },
+    {
       "id": 879413,
       "person": {
         "id": 700842,
@@ -687,26 +707,6 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Cangrejeros de Santurce activated LHP Eduardo Rivera."
-    },
-    {
-      "id": 878318,
-      "person": {
-        "id": 700842,
-        "fullName": "Eduardo Rivera",
-        "link": "/api/v1/people/700842",
-        "nameSlug": "eduardo-rivera-700842"
-      },
-      "toTeam": {
-        "id": 685,
-        "name": "Cangrejeros de Santurce",
-        "link": "/api/v1/teams/685"
-      },
-      "date": "2025-12-07",
-      "effectiveDate": "2025-12-07",
-      "resolutionDate": "2025-12-07",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "LHP Eduardo Rivera assigned to Cangrejeros de Santurce."
     },
     {
       "id": 879380,
@@ -1099,7 +1099,7 @@
       "effectiveDate": "2026-11-03",
       "typeCode": "TR",
       "typeDesc": "Trade",
-      "description": "Boston Red Sox traded LHP Eduardo Rivera to St. Louis Cardinals."
+      "description": "Boston Red Sox traded LHP Eduardo Rivera to St. Louis Cardinals for RHP Juan García."
     },
     {
       "id": 950265,

@@ -1,7 +1,7 @@
 {
   "player_id": 695491,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:3e80a743b4e868028d7875c7cfed6aa94e5f033a14ff3479dd1716a7e9db218c",
+  "fetched_at": "2026-11-15T23:54:38Z",
+  "checksum": "sha256:0da415ae6680ade7c8a16f80e7bb4dc3f4532e3272c944f4acfed7095c9963cf",
   "transactions": [
     {
       "id": 498203,
@@ -167,7 +167,7 @@
       "description": "Palm Beach Cardinals placed OF Joshua Baez on the 7-day injured list."
     },
     {
-      "id": 641010,
+      "id": 646560,
       "person": {
         "id": 695491,
         "fullName": "Joshua Báez",
@@ -192,7 +192,7 @@
       "description": "Palm Beach Cardinals sent OF Joshua Baez on a rehab assignment to FCL Cardinals."
     },
     {
-      "id": 646560,
+      "id": 641010,
       "person": {
         "id": 695491,
         "fullName": "Joshua Báez",
@@ -297,7 +297,7 @@
       "description": "Palm Beach Cardinals placed OF Joshua Baez on the temporarily inactive list."
     },
     {
-      "id": 760217,
+      "id": 706196,
       "person": {
         "id": 695491,
         "fullName": "Joshua Báez",
@@ -317,7 +317,7 @@
       "description": "Palm Beach Cardinals activated OF Joshua Baez from the temporarily inactive list."
     },
     {
-      "id": 706196,
+      "id": 760217,
       "person": {
         "id": 695491,
         "fullName": "Joshua Báez",
@@ -783,6 +783,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "St. Louis Cardinals activated LF Joshua Báez from the 10-day injured list."
+    },
+    {
+      "id": 950015,
+      "person": {
+        "id": 695491,
+        "fullName": "Joshua Báez",
+        "link": "/api/v1/people/695491",
+        "nameSlug": "joshua-baez-695491"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2026-11-09",
+      "effectiveDate": "2026-11-09",
+      "resolutionDate": "2026-11-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Leones del Escogido activated LF Joshua Báez."
     },
     {
       "id": 949920,
