@@ -1,28 +1,8 @@
 {
   "player_id": 676572,
-  "fetched_at": "2026-11-15T18:34:09Z",
+  "fetched_at": "2026-11-16T21:43:16Z",
   "checksum": "sha256:fcf8cac25e207cc8b4aa543918ad312aa20c63bb8e8135efe3eae27fc76669cc",
   "transactions": [
-    {
-      "id": 318566,
-      "person": {
-        "id": 676572,
-        "fullName": "Eric Wagaman",
-        "link": "/api/v1/people/676572",
-        "nameSlug": "eric-wagaman-676572"
-      },
-      "toTeam": {
-        "id": 147,
-        "name": "New York Yankees",
-        "link": "/api/v1/teams/147"
-      },
-      "date": "2017-06-14",
-      "effectiveDate": "2017-06-14",
-      "resolutionDate": "2017-06-14",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "1B Eric Wagaman assigned to New York Yankees."
-    },
     {
       "id": 369001,
       "person": {
@@ -42,6 +22,26 @@
       "typeCode": "SGN",
       "typeDesc": "Signed",
       "description": "New York Yankees signed 1B Eric Wagaman."
+    },
+    {
+      "id": 318566,
+      "person": {
+        "id": 676572,
+        "fullName": "Eric Wagaman",
+        "link": "/api/v1/people/676572",
+        "nameSlug": "eric-wagaman-676572"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-06-14",
+      "effectiveDate": "2017-06-14",
+      "resolutionDate": "2017-06-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Eric Wagaman assigned to New York Yankees."
     },
     {
       "id": 318567,
@@ -232,26 +232,6 @@
       "description": "Charleston RiverDogs sent 1B Eric Wagaman on a rehab assignment to GCL Yankees West."
     },
     {
-      "id": 415215,
-      "person": {
-        "id": 676572,
-        "fullName": "Eric Wagaman",
-        "link": "/api/v1/people/676572",
-        "nameSlug": "eric-wagaman-676572"
-      },
-      "toTeam": {
-        "id": 233,
-        "name": "Charleston RiverDogs",
-        "link": "/api/v1/teams/233"
-      },
-      "date": "2019-07-04",
-      "effectiveDate": "2019-07-04",
-      "resolutionDate": "2019-07-04",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "Charleston RiverDogs activated 1B Eric Wagaman from the 7-day injured list."
-    },
-    {
       "id": 463325,
       "person": {
         "id": 676572,
@@ -272,7 +252,27 @@
       "description": "Charleston RiverDogs activated 1B Eric Wagaman from the 7-day injured list."
     },
     {
-      "id": 465669,
+      "id": 415215,
+      "person": {
+        "id": 676572,
+        "fullName": "Eric Wagaman",
+        "link": "/api/v1/people/676572",
+        "nameSlug": "eric-wagaman-676572"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2019-07-04",
+      "effectiveDate": "2019-07-04",
+      "resolutionDate": "2019-07-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Charleston RiverDogs activated 1B Eric Wagaman from the 7-day injured list."
+    },
+    {
+      "id": 467932,
       "person": {
         "id": 676572,
         "fullName": "Eric Wagaman",
@@ -292,7 +292,7 @@
       "description": "Tampa Tarpons activated 1B Eric Wagaman."
     },
     {
-      "id": 467932,
+      "id": 465669,
       "person": {
         "id": 676572,
         "fullName": "Eric Wagaman",
@@ -507,7 +507,7 @@
       "description": "1B Eric Wagaman assigned to Somerset Patriots from Hudson Valley Renegades."
     },
     {
-      "id": 614156,
+      "id": 614259,
       "person": {
         "id": 676572,
         "fullName": "Eric Wagaman",
@@ -527,7 +527,7 @@
       "description": "Somerset Patriots transferred 1B Eric Wagaman to the Development List."
     },
     {
-      "id": 614259,
+      "id": 614156,
       "person": {
         "id": 676572,
         "fullName": "Eric Wagaman",
@@ -733,26 +733,6 @@
       "description": "Somerset Patriots activated 1B Eric Wagaman from the 7-day injured list."
     },
     {
-      "id": 752705,
-      "person": {
-        "id": 676572,
-        "fullName": "Eric Wagaman",
-        "link": "/api/v1/people/676572",
-        "nameSlug": "eric-wagaman-676572"
-      },
-      "toTeam": {
-        "id": 108,
-        "name": "Los Angeles Angels",
-        "link": "/api/v1/teams/108"
-      },
-      "date": "2023-12-06",
-      "effectiveDate": "2023-12-06",
-      "resolutionDate": "2023-12-06",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "1B Eric Wagaman roster status changed by Los Angeles Angels."
-    },
-    {
       "id": 751493,
       "person": {
         "id": 676572,
@@ -774,6 +754,26 @@
     },
     {
       "id": 751893,
+      "person": {
+        "id": 676572,
+        "fullName": "Eric Wagaman",
+        "link": "/api/v1/people/676572",
+        "nameSlug": "eric-wagaman-676572"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2023-12-06",
+      "effectiveDate": "2023-12-06",
+      "resolutionDate": "2023-12-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "1B Eric Wagaman roster status changed by Los Angeles Angels."
+    },
+    {
+      "id": 752705,
       "person": {
         "id": 676572,
         "fullName": "Eric Wagaman",
@@ -1157,30 +1157,6 @@
       "description": "Syracuse Mets activated 1B Eric Wagaman."
     },
     {
-      "id": 903396,
-      "person": {
-        "id": 676572,
-        "fullName": "Eric Wagaman",
-        "link": "/api/v1/people/676572",
-        "nameSlug": "eric-wagaman-676572"
-      },
-      "fromTeam": {
-        "id": 142,
-        "name": "Minnesota Twins",
-        "link": "/api/v1/teams/142"
-      },
-      "toTeam": {
-        "id": 121,
-        "name": "New York Mets",
-        "link": "/api/v1/teams/121"
-      },
-      "date": "2026-04-27",
-      "effectiveDate": "2026-04-27",
-      "typeCode": "CLW",
-      "typeDesc": "Claimed Off Waivers",
-      "description": "New York Mets claimed 1B Eric Wagaman off waivers from Minnesota Twins."
-    },
-    {
       "id": 903397,
       "person": {
         "id": 676572,
@@ -1203,6 +1179,30 @@
       "typeCode": "OPT",
       "typeDesc": "Optioned",
       "description": "New York Mets optioned 1B Eric Wagaman to Syracuse Mets."
+    },
+    {
+      "id": 903396,
+      "person": {
+        "id": 676572,
+        "fullName": "Eric Wagaman",
+        "link": "/api/v1/people/676572",
+        "nameSlug": "eric-wagaman-676572"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-04-27",
+      "effectiveDate": "2026-04-27",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "New York Mets claimed 1B Eric Wagaman off waivers from Minnesota Twins."
     },
     {
       "id": 904494,

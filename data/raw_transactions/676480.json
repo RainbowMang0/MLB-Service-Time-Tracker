@@ -1,7 +1,7 @@
 {
   "player_id": 676480,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:15f32d0bb86c0cc022b66a18d6b21db5602d17e1caaaac834c7c3e64cd5e8b0f",
+  "fetched_at": "2026-11-16T21:43:16Z",
+  "checksum": "sha256:36e902ffab3aca4fee3fa4daa03f559435e7f64704f1af6eb621804c3ba87b32",
   "transactions": [
     {
       "id": 315054,
@@ -1187,6 +1187,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "SS José Barrero elected free agency."
+    },
+    {
+      "id": 950299,
+      "person": {
+        "id": 676480,
+        "fullName": "José Barrero",
+        "link": "/api/v1/people/676480",
+        "nameSlug": "jose-barrero-676480"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2026-11-16",
+      "effectiveDate": "2026-11-16",
+      "resolutionDate": "2026-11-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS José Barrero assigned to Norfolk Tides."
+    },
+    {
+      "id": 950298,
+      "person": {
+        "id": 676480,
+        "fullName": "José Barrero",
+        "link": "/api/v1/people/676480",
+        "nameSlug": "jose-barrero-676480"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-11-16",
+      "effectiveDate": "2026-11-16",
+      "resolutionDate": "2026-11-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Baltimore Orioles signed free agent SS José Barrero to a minor league contract."
     }
   ]
 }
