@@ -15,6 +15,7 @@ LEAGUE_LISTS = (
     ("non-tender-watch.html", "Non-tender watch"),
     ("free-agents.html", "Free agents"),
     ("options.html", "Out of options"),
+    ("offseason.html", "Offseason"),
 )
 
 
@@ -23,7 +24,7 @@ def _a(href: str, label: str) -> str:
 
 
 def related_league_line(current: str, base: str) -> str:
-    """One line on a league list, pointing at the other four."""
+    """One line on a league list, pointing at the other lists."""
     parts = [_a(f"{base}{href}", label) for href, label in LEAGUE_LISTS if href != current]
     if len(parts) < 2:
         return ""

@@ -341,3 +341,21 @@ def salary_cap_title() -> str:
 
 def salary_cap_og() -> str:
     return og_title("MLB salary cap and floor proposal")
+
+
+def offseason_title() -> str:
+    return fit_title("2026 MLB offseason dates and lists")
+
+
+def offseason_og() -> str:
+    return og_title("2026 MLB offseason dates and lists")
+
+
+def offseason_meta(agreement: str) -> str:
+    """`agreement` is the ruleset's end date, already spelled out."""
+    when = agreement or "the current agreement's end"
+    return fit_meta(
+        "2026 MLB offseason: Rule 5 on November 17, the non-tender deadline, "
+        f"free agents, contract years, and CBA expiration on {when}. "
+        "From public data."
+    )

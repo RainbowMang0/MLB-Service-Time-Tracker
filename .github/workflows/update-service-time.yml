@@ -223,6 +223,13 @@ jobs:
         continue-on-error: true
         run: python scripts/build_roster_rules_page.py
 
+      # Same reason as the roster guide: the hub has no feed of its own, and
+      # rebuilding it keeps the shared header in step with the rest of the site.
+      - name: Rebuild the offseason hub
+        if: steps.gate.outputs.run == 'true'
+        continue-on-error: true
+        run: python scripts/build_offseason_page.py
+
       - name: Warn if the lockout page could not be rebuilt
         if: steps.gate.outputs.run == 'true' && steps.rebuild_lockout.outcome == 'failure'
         run: echo "::warning::docs/lockout.html was not rebuilt (data/lockout_updates.json failed validation) -- kept the existing page. See the 'Rebuild the CBA & lockout tracker page' step above."
@@ -251,7 +258,7 @@ jobs:
             docs/arbitration-eligible.html docs/super-two.html docs/lockout.html \
             docs/lockout-salary-cap.html \
             docs/non-tender-watch.html docs/free-agents.html docs/options.html \
-            docs/send-a-player-down.html \
+            docs/send-a-player-down.html docs/offseason.html \
             docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-clubs.xml \
             docs/sitemap-players.xml docs/sitemap-alumni.xml docs/robots.txt data/cache \
             data/published_ids.json data/refresh_complete.json

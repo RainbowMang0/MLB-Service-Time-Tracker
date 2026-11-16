@@ -228,6 +228,7 @@ def render() -> str:
     nontender = _href(wpp.NON_TENDER_WATCH_PATH)
     players = wpp.BASE_PATH or "/"
     lockout = _href("lockout.html")
+    offseason = _href("offseason.html")
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -369,8 +370,9 @@ def render() -> str:
   </ul>
   <p class="foot-note">These are the roster rules in the {f["agreement"]},
   which runs through {f["agreement_end"]}. A later agreement can change them.
-  <a href="{lockout}">Labor talks</a> are tracked separately. This is a
-  plain-English guide, not a ruling on any one contract. The examples above
+  <a href="{lockout}">Labor talks</a> are tracked separately.
+  <a href="{offseason}">Offseason dates and lists</a> include this guide.
+  This is a plain-English guide, not a ruling on any one contract. The examples above
   are hypothetical.</p>
 </div>{wpp._site_footer()}{wpp._search_script_tag()}</div>
 {wpp.ANALYTICS}
@@ -411,6 +413,7 @@ def problems(page: str) -> list[str]:
         wpp.ARBITRATION_ELIGIBLE_PATH,
         wpp.NON_TENDER_WATCH_PATH,
         "lockout.html",
+        "offseason.html",
     ):
         need(f"link {path}", f'href="{wpp.BASE_PATH}{path}"' in page)
     faq = _faq(_facts())
