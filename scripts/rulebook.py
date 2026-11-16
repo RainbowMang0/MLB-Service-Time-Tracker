@@ -1320,6 +1320,7 @@ def evaluate(
             "events": events,
             "carried_in": carried_in,
             "ranges": ranged,
+            "untracked_gap": rulebook_limits.untracked_gap(rows, appearance_dates, year),
         })
 
     used = [year for year, days in sorted(option_days.items()) if days >= option_threshold]

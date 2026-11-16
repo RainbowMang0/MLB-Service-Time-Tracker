@@ -27,6 +27,8 @@ CAREERS = {
     693821: "3.068",  # Bryce Elder
     676979: "6.028",  # Garrett Crochet
     664062: "6.026",  # Tony Gonsolin
+    682842: "2.121",  # Abner Uribe
+    671106: "2.117",  # Logan Allen
 }
 SEASONS = {
     (671732, 2024): 152,  # Lawrence Butler

@@ -297,9 +297,91 @@ def test_spring_option_assignment_and_opening_week():
     t.check("game dates do not fill a season that has no games", t.days_of(bridged, 2023) == 0)
 
 
+def test_same_day_option_ends_the_stint():
+    import datetime as dt
+    import rulebook_limits
+    played = t.run(
+        [
+            t.txn("2024-03-28", "SE", "Yankees selected the contract of X.", to=t.NYY),
+            t.txn("2024-05-01", "OPT", "Yankees optioned X to Scranton.", frm=t.NYY, to=531),
+            t.txn("2024-09-30", "CU", "Yankees recalled X from Scranton.", to=t.NYY),
+        ],
+        t.cal(t.season(2024, "2024-03-28", "2024-09-30")),
+        "2024-03-28", "2024-10-05",
+        appearance_dates=[dt.date(2024, 4, 10), dt.date(2024, 5, 1)],
+    )
+    t.check("an option on the last game date does not fill the rest of the season", t.days_of(played, 2024) < 50)
+    released = t.run(
+        [
+            t.txn("2024-04-01", "SE", "Yankees selected the contract of X.", to=t.NYY),
+            t.txn("2024-06-01", "REL", "Yankees released X.", frm=t.NYY),
+        ],
+        t.cal(t.season(2024, "2024-03-28", "2024-09-30")),
+        "2024-04-01", "2024-10-05",
+        appearance_dates=[dt.date(2024, 6, 1), dt.date(2024, 8, 1)],
+    )
+    t.check("a release on a game date does not credit the next game", t.days_of(released, 2024) < 80)
+    t.check(
+        "a 30-day gap with no transactions is not a season to credit",
+        rulebook_limits.untracked_gap([], [dt.date(2007, 6, 3), dt.date(2007, 7, 28)], 2007),
+    )
+    t.check(
+        "a short gap with no transactions can still be credited",
+        not rulebook_limits.untracked_gap([], [dt.date(2007, 6, 3), dt.date(2007, 6, 20)], 2007),
+    )
+    t.check(
+        "a long gap with a transaction that year is not the empty-feed case",
+        not rulebook_limits.untracked_gap(
+            [(dt.date(2007, 6, 1), {}, None)],
+            [dt.date(2007, 6, 3), dt.date(2007, 7, 28)],
+            2007,
+        ),
+    )
+
+
+def test_no_credited_day_carries_past_a_roster_stop():
+    """Every saved player. A stint that began on or before an option, outright, or release cannot continue past it."""
+    import datetime as dt
+    import json
+    import rulebook
+    import rulebook_limits
+    import rulebook_publish as pub
+    from pathlib import Path
+    root = Path(__file__).resolve().parents[1]
+    db = json.loads((root / "docs" / "data" / "service_time.json").read_text(encoding="utf-8"))
+    horizon = dt.date.fromisoformat((db.get("generated_at") or "2026-11-16")[:10])
+    calendar = rulebook.load_calendar()
+    found = []
+    for player in db.get("players") or []:
+        result = pub.replay_one(player, horizon)
+        path = root / "data" / "raw_transactions" / f"{player['id']}.json"
+        rows = []
+        if path.exists():
+            for raw in json.loads(path.read_text(encoding="utf-8")).get("transactions") or []:
+                day = rulebook._date(raw.get("date"))
+                hit = rulebook.classify_row(raw, calendar) if day else None
+                if day is not None:
+                    rows.append((day, raw, hit))
+        for season in result["seasons"]:
+            ranges = [
+                (dt.date.fromisoformat(item["start"]), dt.date.fromisoformat(item["end"]), item.get("rules") or [])
+                for item in season["ranges"]
+            ]
+            extra = rulebook_limits.days_carried_past_stop(ranges, rows)
+            if extra:
+                found.append(f"{player.get('name')} {season['year']} {extra}")
+                if len(found) >= 8:
+                    break
+        if len(found) >= 8:
+            break
+    t.check("no stint continues past an option, outright, or release " + ("; ".join(found) if found else ""), not found)
+
+
 if __name__ == "__main__":
     test_owner_dfa_decisions()
     test_midseason_entry_and_option_total()
     test_spring_option_assignment_and_opening_week()
+    test_same_day_option_ends_the_stint()
+    test_no_credited_day_carries_past_a_roster_stop()
     print(f"\n{t.PASS} passed, {t.FAIL} failed")
     raise SystemExit(1 if t.FAIL else 0)

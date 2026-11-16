@@ -166,23 +166,95 @@ def roster_entry(hits, items, mlb_present, has_option, terminal, rows=None, day=
     return None
 
 
+# An option, outright, or release ends a game-date stint even when it falls
+# on the game date. Clubs usually make that move the day he appeared.
+HARD_STOPS = {"stop.option", "stop.outright", "stop.released"}
+RETURN_ROWS = {
+    "start.recalled", "start.selected", "start.activated", "start.reinstated-code",
+    "start.mlb-signing", "start.mlb-contract-signing", "start.purchased", "start.rule5",
+    "neutral.trade", "neutral.mlb-assignment",
+}
+
+
 def game_spans(dates, rows):
-    """Consecutive games are one stint. A stop, or a new season, splits them."""
+    """Consecutive games are one stint. A stop, or a new season, splits them.
+
+    An option, outright, or release on a game date ends that stint the day
+    before. The next game can start a new stint. The days in between are
+    not filled in.
+    """
     if not dates:
         return []
-    stops = [
-        day for day, _raw, hit in rows
-        if hit is not None and hit.effect == "stop"
-    ]
+    stops = []
+    hard = set()
+    for day, _raw, hit in rows:
+        if hit is None:
+            continue
+        if hit.effect == "stop":
+            stops.append(day)
+        if hit.id in HARD_STOPS:
+            hard.add(day)
+
+    def close(start, end_game):
+        end = end_game - dt.timedelta(days=1) if end_game in hard else end_game
+        if end >= start:
+            return (start, end)
+        return None
+
     spans = []
     start = prev = dates[0]
     for day in dates[1:]:
-        if day.year != prev.year or any(prev < stop < day for stop in stops):
-            spans.append((start, prev))
+        between = any(prev < stop < day for stop in stops)
+        if day.year != prev.year or between or prev in hard:
+            piece = close(start, prev)
+            if piece:
+                spans.append(piece)
             start = day
         prev = day
-    spans.append((start, prev))
+    piece = close(start, prev)
+    if piece:
+        spans.append(piece)
     return spans
+
+
+def days_carried_past_stop(ranges, rows) -> int:
+    """Days inside a stint that began on or before an option, outright, or release and continues past it with no return yet.
+
+    A later game may start its own stint. That stint is not counted here.
+    """
+    stops = sorted(day for day, _raw, hit in rows if hit is not None and hit.id in HARD_STOPS)
+    returns = sorted(
+        day for day, _raw, hit in rows
+        if hit is not None and hit.id in RETURN_ROWS
+    )
+    total = 0
+    for stop in stops:
+        nxt = next((day for day in returns if day > stop), None)
+        limit = (nxt - dt.timedelta(days=1)) if nxt else None
+        for item in ranges:
+            lo, hi = item[0], item[1]
+            rules = item[2] if len(item) > 2 else ()
+            # The short optional assignment is credited on purpose. It is not a stint that ran through.
+            # Injured-list time is not this check. The failure is a game-date stint that keeps going.
+            if "accrual.option-under-20" in rules or "accrual.appearance-game" not in rules:
+                continue
+            if lo > stop:
+                continue
+            start = max(lo, stop + dt.timedelta(days=1))
+            end = hi if limit is None else min(hi, limit)
+            if end >= start:
+                total += (end - start).days + 1
+    return total
+
+
+def untracked_gap(rows, dates, year: int) -> bool:
+    """A season with no transactions and a gap of 30 days or more between games."""
+    if not dates:
+        return False
+    if any(day.year == year for day, _raw, _hit in rows):
+        return False
+    games = sorted(day for day in dates if day.year == year)
+    return any((later - earlier).days >= 30 for earlier, later in zip(games, games[1:]))
 
 
 def blocked_ranges(boundaries) -> list[tuple[dt.date, dt.date]]:

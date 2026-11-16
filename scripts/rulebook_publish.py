@@ -232,6 +232,24 @@ def apply_player(player: dict, result: dict, prior_holds: dict[str, dict], full_
             })
             if published_days <= 0 and year not in published:
                 continue
+        elif by_year.get(year, {}).get("untracked_gap") and rule_days > (earlier[year] if year in earlier else 0):
+            keep = earlier[year] if year in earlier else 0
+            holds.append({
+                "player_id": int(player["id"]),
+                "name": player.get("name"),
+                "season": year,
+                "rulebook_days": rule_days,
+                "published_days": keep,
+                "reason": (
+                    f"{year} has a gap of 30 or more days between major-league games "
+                    "and no transactions that year. Those days are not published."
+                ),
+                "cleared": False,
+                "on_40_man": bool(player.get("on_40_man")),
+            })
+            if keep <= 0:
+                continue
+            days, src = keep, "held"
         elif rulebook_guard.short_increase(rule_days, published_days, played):
             days, src = published_days, "held"
             holds.append({
