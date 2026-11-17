@@ -158,6 +158,11 @@ jobs:
           python scripts/build_offseason_page.py --check
           python tests/test_offseason_page.py
 
+      - name: What changed
+        run: |
+          python scripts/build_changes_page.py --check
+          python tests/test_changes.py
+
       - name: Duty-day allocation engine
         run: node --test tests/duty_days.test.cjs
 
