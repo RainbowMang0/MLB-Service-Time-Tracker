@@ -27,9 +27,9 @@ for the ledger MLB actually keeps.
 **How good, measured two independent ways.** Both checks live in
 `scripts/` and run from the Actions tab.
 
-*Against Baseball Reference* (the only genuinely independent check, since
+*Against a public reference* (the only genuinely independent check, since
 it does not come from MLB's transaction feed). Nineteen players, hand-entered
-from their B-R pages rather than scraped, compared as of a fixed offseason
+from public data rather than scraped, compared as of a fixed offseason
 date:
 
 | | |
@@ -78,7 +78,7 @@ scripts/service_time.py           the service-time math and every domain rule
 scripts/update_service_time.py    daily job: 40-man rosters -> compute -> merge -> JSON
 scripts/backfill_history.py       resumable backfill of players no longer rostered
 scripts/super_two.py              the Super Two cutoff, computed from the population
-scripts/validate_service_time.py  checks figures against Baseball Reference
+scripts/validate_service_time.py  checks figures against a hand-entered public reference
 scripts/validate_against_rosters.py  checks intervals against MLB's historical rosters
 scripts/validate_super_two.py     checks the cutoff against published figures
 scripts/probe_player.py           everything the model knows about one player
@@ -219,9 +219,9 @@ career again. The historical backfill (`scripts/backfill_history.py`) goes
 further and skips any player whose stored record was already computed under
 the current rules version — see `_needs_recompute()`.
 
-The Baseball Reference figures in `data/reference_service_time.json` are
-entered **by hand**, deliberately not scraped, both to respect B-R's terms
-and because a handful of hand-checked numbers is enough to catch a
+The public reference figures in `data/reference_service_time.json` are
+entered **by hand**, deliberately not scraped, both to respect the source's
+terms and because a handful of hand-checked numbers is enough to catch a
 systematic error.
 
 ## Updating the CBA & lockout tracker (`/lockout.html`)

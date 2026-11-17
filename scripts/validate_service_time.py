@@ -11,27 +11,27 @@ Why "as of a past date" and not "right now"
 --------------------------------------------
 A player's live service time is a moving target -- it changes every day he's
 on an active roster, so there's nothing fixed to compare it against. But his
-service time as of a past date is a historical fact. Baseball Reference shows
-one dated snapshot in the bio block on a player's page -- "x.yyy (01/26)" --
-and that figure does not change after the fact, which makes it a usable fixed
-target for regression-testing this project's math against a real,
-independently reported number.
+service time as of a past date is a historical fact. A hand-entered public
+reference shows one dated snapshot -- "x.yyy (01/26)" -- and that figure
+does not change after the fact, which makes it a usable fixed target for
+regression-testing this project's math against a real, independently
+reported number.
 
 The snapshot is taken in the offseason, and service time does not accrue
 between the end of the World Series and Opening Day, so `as_of` only has to
-land somewhere in that window -- it does not have to match B-R's label to the
-day.
+land somewhere in that window -- it does not have to match the snapshot's
+label to the day.
 
-(An earlier version of this file assumed B-R published a per-season `s.YYYY`
-column. It does not; there is a single snapshot with a date on it.)
+(An earlier version of this file assumed the reference published a per-season
+`s.YYYY` column. It does not; there is a single snapshot with a date on it.)
 
 Where the reference numbers come from
 --------------------------------------
-This script does NOT scrape Baseball Reference or any other site -- there's
-no automated fetch of expected values here, by design (scraping is against
-their terms, and hand-checking a handful of well-known players is plenty to
-catch systemic bugs). You look up a player's service-time snapshot on
-their Baseball Reference page yourself and add a row to the reference file.
+This script does NOT scrape any outside site -- there's no automated fetch
+of expected values here, by design (scraping is against the source's terms,
+and hand-checking a handful of well-known players is plenty to catch
+systemic bugs). You look up a player's service-time snapshot from public
+data yourself and add a row to the reference file.
 
 Usage
 -----
@@ -46,7 +46,7 @@ Reference file format (see data/reference_service_time.example.json):
         "name": "REPLACE ME",
         "as_of": "2026-01-26",
         "expected": "x.yyy",
-        "source": "baseball-reference.com player page, snapshot labelled 01/26"
+        "source": "public data, service-time snapshot labelled 01/26"
       }
     ]
 
@@ -98,7 +98,7 @@ def load_reference(path: pathlib.Path) -> list[dict]:
     if not path.exists():
         raise SystemExit(
             f"No reference file at {path}.\n"
-            "The hand-entered Baseball Reference figures are not checked into "
+            "The hand-entered public reference figures are not checked into "
             "the repo. Point ST_REFERENCE_PATH at your private copy (or pass "
             f"--reference), or copy {EXAMPLE_REFERENCE_FILE.name} to that path "
             "and fill in real figures for a handful of players, then re-run."
@@ -187,8 +187,8 @@ def main() -> None:
         print(
             f"No figures entered yet in {args.reference} "
             f"({len(pending)} row(s) awaiting one).\n\n"
-            "Open each player's Baseball Reference page, read the service-time\n"
-            "figure for the row's `as_of` season (shown as s.YYYY), and paste it\n"
+            "Open the public reference for each player, read the service-time\n"
+            "figure for the row's `as_of` season, and paste it\n"
             "into `expected` as e.g. \"7.045\". Rows left null are skipped, so\n"
             "filling in even three or four makes this check meaningful.\n\n"
             "This is the only check that is independent of MLB's own data --\n"

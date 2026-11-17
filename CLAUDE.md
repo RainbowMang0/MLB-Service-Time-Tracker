@@ -139,9 +139,9 @@ python3 scripts/check_code_standards.py  # size cap, and one club-name table
 
 ## Hard rules
 
-1. **No scraping Baseball Reference, FanGraphs, or any salary site**, and never
-   republish someone else's figures or projections. B-R figures are
-   hand-entered by the owner only. No player photos or cartoon likenesses.
+1. **No scraping an outside stat site or any salary site**, and never
+   republish someone else's figures or projections. Public reference figures
+   are hand-entered by the owner only. No player photos or cartoon likenesses.
 2. **Never commit secrets** (tokens, keys, `.env`).
 3. **No live API recompute unless the owner asks.** Use cached data and
    `--recompute-derived`; the owner runs full recomputes/backfills.
