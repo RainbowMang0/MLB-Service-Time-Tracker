@@ -145,8 +145,8 @@ TXN_LOOKBACK_DAYS = 3
 #      from the /schedule feed, so each season starts on the player's own
 #      club's first game -- the Seoul/Tokyo openers a week early, the rest on
 #      their real domestic Opening Day -- instead of the single overseas opener
-#      /seasons reports applied to all 30 clubs (the ~8-days-high error the
-#      Baseball Reference audit found). (b) A season ends on the last game
+#      /seasons reports applied to all 30 clubs (the ~8-days-high error a
+#      hand-checked public reference found). (b) A season ends on the last game
 #      actually played, not /seasons' end, which in 2023 was a makeup game
 #      scheduled 10-02 and later cancelled (real last day 10-01). (c) The
 #      20-day optional-assignment rule: a player optioned for fewer than 20
@@ -442,8 +442,8 @@ def _opening_day_for(
     does not cost its players a day. The one exception is Art. V(A): a club that
     opened OVERSEAS earlier (Seoul/Tokyo/Mexico, outside the 187-day window)
     keeps its own earlier date; otherwise applying the league opener to it would
-    erase the early series it really played (the ~8-days-high regression the
-    Baseball Reference audit caught). Both are captured by taking, for a club,
+    erase the early series it really played (the ~8-days-high regression a
+    hand-checked public reference caught). Both are captured by taking, for a club,
     min(its own opener, the uniform start): a late domestic opener snaps up to
     the uniform date, an early overseas opener stays put.
 
@@ -989,7 +989,7 @@ def build_player_record(
     `horizon_end` defaults to today (the normal daily-update behavior). Pass
     a past date to compute what this player's service time WOULD HAVE READ
     as of that date -- e.g. a prior Opening Day, for validating against a
-    fixed reference figure like Baseball Reference's `s.YYYY` snapshot. See
+    fixed reference figure like a hand-checked public `s.YYYY` snapshot. See
     validate_service_time.py.
 
     `currently_rostered` must be False for a player who is no longer on any
@@ -1492,7 +1492,7 @@ def _published_super_two_history() -> dict | None:
         "high": max(figures.values()),
         "count": len(figures),
         "by_season": {str(k): v for k, v in sorted(figures.items(), reverse=True)},
-        "source": "MLB Trade Rumors / Associated Press offseason reports, entered by hand",
+        "source": "public reporting",
     }
 
 

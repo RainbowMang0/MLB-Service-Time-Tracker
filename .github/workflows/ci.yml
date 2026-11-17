@@ -23,7 +23,7 @@ name: CI
 # (The one external thing it does is install `requests` from PyPI -- see the
 # note on that step. Pip is cached, so the usual run does not reach the
 # network at all.) The checks that need the MLB API -- the roster gate, the
-# Baseball Reference comparison, a single-player probe -- stay in validate.yml,
+# public-reference comparison, a single-player probe -- stay in validate.yml,
 # on demand, because they cost real API calls and their answer moves with the
 # feed.
 
@@ -86,6 +86,9 @@ jobs:
       # Reference data for the service-time rewrite. Not read by the calculator.
       - name: Season calendar and service-time exceptions
         run: python tests/test_reference_data.py
+
+      - name: Outside-site names stay out of pages and data
+        run: python tests/test_outside_site_names.py
 
       - name: Contract years
         run: python tests/test_contracts.py
