@@ -12,9 +12,9 @@
       "where you expected is exactly how those survived. A published figure",
       "is the only thing that can actually settle it.",
       "",
-      "WHERE TO FIND THEM: MLB Trade Rumors reports the cutoff each",
-      "offseason, usually in a post titled something like 'Super Two Cutoff",
-      "Set At X'. Enter it exactly as published, e.g. \"2.132\".",
+      "WHERE TO FIND THEM: public reporting publishes the cutoff each",
+      "offseason. Enter it exactly as published, e.g. \"2.132\". The figure",
+      "is posted for the class that just finished that season.",
       "",
       "`season` is the season the class finished, NOT the offseason label. A",
       "cutoff reported in November 2025 for the 2025-26 arbitration class has",
@@ -25,121 +25,121 @@
       "input -- do not paste computed values into `published`, that would",
       "make the check vacuous.",
       "",
-      "ENTERED 2026-10-26, seasons 2021-2025. Seasons 2009-2020 were added 2026-11-07 from the published offseason figures. The 2026 row (2.133) was added 2026-11-10 from the October 28, 2026 MLB Trade Rumors report. The season/offseason labelling is the one thing to get right and search summaries get it wrong: several described an article dated 2024/11 as being 'for the 2025 season'. The URL date is the evidence -- the figure is posted in November for the class that has just finished that season -- and each report's own 'up from'/'down from' claim corroborates its neighbour, so the five form a chain rather than five independent guesses."
+      "ENTERED 2026-10-26, seasons 2021-2025. Seasons 2009-2020 were added 2026-11-07 from the published offseason figures. The 2026 row (2.133) was added 2026-11-10 from public reporting dated October 28, 2026. The season/offseason labelling is the one thing to get right and search summaries get it wrong: several described a report dated 2024/11 as being 'for the 2025 season'. The report date is the evidence -- the figure is posted in November for the class that has just finished that season -- and each report's own 'up from'/'down from' claim corroborates its neighbour, so the five form a chain rather than five independent guesses."
     ]
   },
   {
     "season": 2026,
     "published": "2.133",
-    "source": "MLB Trade Rumors / Associated Press, offseason report",
-    "note": "Official cutoff for the class that finished 2026. MLB Trade Rumors, Oct 28, 2026, citing Kiley McDaniel of ESPN: https://www.mlbtraderumors.com/2026/10/super-two-status-set-at-2-133-years-of-service.html. The Associated Press the same week named the last two players at 2 years, 133 days.",
+    "source": "public reporting",
+    "note": "Official cutoff for the class that finished 2026. Public reporting on Oct 28, 2026, citing Kiley McDaniel of ESPN. The Associated Press the same week named the last two players at 2 years, 133 days.",
     "entered": "2026-11-10"
   },
   {
     "season": 2025,
     "published": "2.140",
-    "source": "MLB Trade Rumors / Associated Press, offseason report",
-    "note": "Reported November 2025 (ESPN and AP, 34 Super Twos; Matt McLain last above the line). MLBTR had trailed it at 2.140 in mlbtraderumors.com/2025/10/super-two-cutoff-expected-to-be-around-2-140-years-of-service.html; the November figure is the official one.",
+    "source": "public reporting",
+    "note": "Reported November 2025 (ESPN and AP, 34 Super Twos; Matt McLain last above the line). An earlier public report had trailed it at 2.140; the November figure is the official one.",
     "entered": "2026-10-26"
   },
   {
     "season": 2024,
     "published": "2.132",
-    "source": "MLB Trade Rumors / Associated Press, offseason report",
-    "note": "mlbtraderumors.com/2024/11/super-two-status-set-at-2-132-years-of-service.html -- reported as up from 2.118 the previous winter, which corroborates the 2023 row.",
+    "source": "public reporting",
+    "note": "Public reporting. Reported as up from 2.118 the previous winter, which corroborates the 2023 row.",
     "entered": "2026-10-26"
   },
   {
     "season": 2023,
     "published": "2.118",
-    "source": "MLB Trade Rumors / Associated Press, offseason report",
-    "note": "mlbtraderumors.com/2023/11/super-two-status-set-at-2-118-years-of-service.html -- reported as down from 2.128, corroborating 2022.",
+    "source": "public reporting",
+    "note": "Public reporting. Reported as down from 2.128, corroborating 2022.",
     "entered": "2026-10-26"
   },
   {
     "season": 2022,
     "published": "2.128",
-    "source": "MLB Trade Rumors / Associated Press, offseason report",
-    "note": "mlbtraderumors.com/2022/11/super-two-status-set-at-2-128-years-of-service.html -- Ronald Blum, Associated Press; reported as a slight increase on 2.116, corroborating 2021.",
+    "source": "public reporting",
+    "note": "Public reporting. Ronald Blum, Associated Press; reported as a slight increase on 2.116, corroborating 2021.",
     "entered": "2026-10-26"
   },
   {
     "season": 2021,
     "published": "2.116",
-    "source": "MLB Trade Rumors / Associated Press, offseason report",
-    "note": "mlbtraderumors.com/2021/11/super-two-status-set-at-2-116-years-of-service.html",
+    "source": "public reporting",
+    "note": "Public reporting, offseason report.",
     "entered": "2026-10-26"
   },
   {
     "season": 2020,
     "published": "2.125",
-    "source": "MLB Trade Rumors / Associated Press, offseason report",
+    "source": "public reporting",
     "entered": "2026-11-07"
   },
   {
     "season": 2019,
     "published": "2.115",
-    "source": "MLB Trade Rumors / Associated Press, offseason report",
+    "source": "public reporting",
     "entered": "2026-11-07"
   },
   {
     "season": 2018,
     "published": "2.134",
-    "source": "MLB Trade Rumors / Associated Press, offseason report",
+    "source": "public reporting",
     "entered": "2026-11-07"
   },
   {
     "season": 2017,
     "published": "2.123",
-    "source": "MLB Trade Rumors / Associated Press, offseason report",
+    "source": "public reporting",
     "entered": "2026-11-07"
   },
   {
     "season": 2016,
     "published": "2.131",
-    "source": "MLB Trade Rumors / Associated Press, offseason report",
+    "source": "public reporting",
     "entered": "2026-11-07"
   },
   {
     "season": 2015,
     "published": "2.130",
-    "source": "MLB Trade Rumors / Associated Press, offseason report",
+    "source": "public reporting",
     "entered": "2026-11-07"
   },
   {
     "season": 2014,
     "published": "2.133",
-    "source": "MLB Trade Rumors / Associated Press, offseason report",
+    "source": "public reporting",
     "entered": "2026-11-07"
   },
   {
     "season": 2013,
     "published": "2.122",
-    "source": "MLB Trade Rumors / Associated Press, offseason report",
+    "source": "public reporting",
     "entered": "2026-11-07"
   },
   {
     "season": 2012,
     "published": "2.140",
-    "source": "MLB Trade Rumors / Associated Press, offseason report",
+    "source": "public reporting",
     "entered": "2026-11-07"
   },
   {
     "season": 2011,
     "published": "2.146",
-    "source": "MLB Trade Rumors / Associated Press, offseason report",
+    "source": "public reporting",
     "entered": "2026-11-07"
   },
   {
     "season": 2010,
     "published": "2.122",
-    "source": "MLB Trade Rumors / Associated Press, offseason report",
+    "source": "public reporting",
     "entered": "2026-11-07"
   },
   {
     "season": 2009,
     "published": "2.139",
-    "source": "MLB Trade Rumors / Associated Press, offseason report",
+    "source": "public reporting",
     "entered": "2026-11-07"
   }
 ]

@@ -2539,10 +2539,10 @@ def test_a_mid_season_trade_keeps_the_combined_total_and_each_club():
 
 def test_the_stats_tab_states_that_war_and_salary_are_absent():
     """
-    WAR is not a field MLB's API publishes -- bWAR and fWAR are
-    Baseball-Reference's and FanGraphs' own calculations, and neither site
-    permits automated extraction, which is the same line this project already
-    drew over B-R's service-time figures. Salary has no permitted source
+    WAR is not a field MLB's API publishes -- the public WAR figures are
+    other sites' own calculations, and those sites do not permit automated
+    extraction, which is the same line this project already drew over
+    hand-checked service-time figures. Salary has no permitted source
     either. That explanation stays in the comment above the stats tab.
 
     The note a reader sees is one line. The page does not name those sites,

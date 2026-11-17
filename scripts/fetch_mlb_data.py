@@ -535,7 +535,7 @@ class SeasonSchedule:
     03-26 and six opened 03-27. The /seasons endpoint reports a single
     `regularSeasonStartDate` -- the earliest game anywhere, i.e. the overseas
     opener -- and applying it to all 30 clubs credited everyone else a week of
-    phantom days (the ~8-days-high error the Baseball Reference audit found).
+    phantom days (the ~8-days-high error a hand-checked public reference found).
     """
 
     year: int

@@ -2,20 +2,20 @@
 """
 make_reference_worksheet.py
 ---------------------------
-Pick the players worth hand-checking against Baseball Reference, and emit
+Pick the players worth hand-checking against a public reference, and emit
 rows ready to paste into data/reference_service_time.json.
 
 WHY THIS EXISTS
 ===============
 The roster check (validate_against_rosters.py) is broad but not independent:
 it validates the pipeline against the same MLB feed the pipeline is built
-from, so a systematic misreading of MLB's semantics passes it. The Baseball
-Reference check is the only genuinely independent evidence this project has,
+from, so a systematic misreading of MLB's semantics passes it. The public
+reference check is the only genuinely independent evidence this project has,
 and it currently rests on nineteen figures.
 
-Those figures are entered BY HAND, deliberately -- both to respect B-R's
-terms, which prohibit automated extraction, and because a handful of
-hand-checked numbers is enough to catch a systemic error. Scraping five
+Those figures are entered BY HAND, deliberately -- both to respect the
+source's terms, which prohibit automated extraction, and because a handful
+of hand-checked numbers is enough to catch a systemic error. Scraping five
 thousand would add accuracy the project could not legitimately use.
 
 So the constraint is human effort, and the useful thing a script can do is
@@ -186,7 +186,7 @@ def main() -> None:
             "name": c["player"]["name"],
             "as_of": today,
             "expected": None,
-            "source": "baseball-reference.com player page, service-time snapshot",
+            "source": "public data, service-time snapshot",
             "mlb_debut": c["player"].get("mlb_debut"),
             "history_complete": True,
             "ours_at_generation": c["player"].get("service_time"),
@@ -196,7 +196,7 @@ def main() -> None:
         print(json.dumps(rows, indent=2, ensure_ascii=False))
         return
 
-    print(f"{len(picked)} players worth hand-checking against Baseball Reference")
+    print(f"{len(picked)} players worth hand-checking against a public reference")
     print(f"(from {len(candidates)} eligible: on a 40-man, complete history, not "
           f"already in the reference file)\n")
     print(f"{'player':<26} {'ours':>8}  {'moves':>5}  what its figure would exercise")
@@ -207,7 +207,7 @@ def main() -> None:
               f"{', '.join(c['rules']) or '(few rules)'}")
 
     print("\nHow to use this:")
-    print("  1. Open each player's Baseball Reference page.")
+    print("  1. Open each player's public reference for the service-time snapshot.")
     print("  2. In the bio block, read the Service Time snapshot, e.g. 'x.yyy (01/26)'.")
     print("  3. Add a row to data/reference_service_time.json with that figure as")
     print("     `expected` and the snapshot's date as `as_of`. Run with --json to")

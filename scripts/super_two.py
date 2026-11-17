@@ -172,7 +172,7 @@ def load_reported_cutoff(
     This is the only input in the Super Two pipeline that is not derived
     from this project's own data: a number heard from reporting (e.g.
     "expected to land a day above player X's service time") ahead of the
-    actual published figure MLB Trade Rumors / the Associated Press report
+    actual published figure public reporting carries
     each November, which data/reference_super_two.json holds once it exists.
 
     Returns None -- never raises -- if the file is missing, is not valid

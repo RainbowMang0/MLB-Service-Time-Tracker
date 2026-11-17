@@ -1,7 +1,7 @@
 {
   "_README": [
     "A single hand-kept Super Two cutoff for the season named below.",
-    "Before MLB Trade Rumors / the Associated Press publish the figure, this",
+    "Before public reporting publishes the figure, this",
     "is a guess and the site shows a range (computed low, this number high).",
     "Once they publish it, set official to true: the site shows this number",
     "and it decides who is Super Two. Past seasons live in",
@@ -23,8 +23,8 @@
     "              service-time figure on this site is (service_time.days_per_credited_year",
     "              from config/cba/, never a literal 172).",
     "  source   -- a short, honest note on where the number came from.",
-    "  official -- true once MLB Trade Rumors / the Associated Press have",
-    "              published the figure. An official figure is the line the",
+    "  official -- true once public reporting has published the figure.",
+    "              An official figure is the line the",
     "              site shows and the line that decides Super Two eligibility.",
     "              Omit it, or leave it false, while the number is still a",
     "              guess: the site then keeps the computed-to-reported range",
@@ -39,6 +39,6 @@
   "season": 2026,
   "cutoff": "2.133",
   "official": true,
-  "source": "official: MLB Trade Rumors / Associated Press, November 2026",
+  "source": "public reporting",
   "entered": "2026-11-07"
 }
