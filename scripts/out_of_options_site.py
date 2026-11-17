@@ -26,6 +26,11 @@ def clear() -> None:
     out_of_options.clear()
 
 
+def roster_options_left(player: dict):
+    import out_of_options
+    return out_of_options.roster_options_left(player)
+
+
 def count_for(players, option_counts) -> int:
     import out_of_options
     return out_of_options.count_for(players, option_counts)

@@ -94,6 +94,36 @@ def _row(row: Listed, base: str) -> str:
     )
 
 
+def _may_fourth_note(rows: list[Listed], base: str) -> str:
+    """Names are listed only when this page has someone in that spot."""
+    if not rows:
+        return ""
+    links = []
+    for row in rows:
+        player = row.player
+        href = html.escape(f"{base}{wpp.page_path(player)}", quote=True)
+        name = html.escape(player.get("name") or "")
+        team = player.get("team") or ""
+        label = f"{name} ({html.escape(team)})" if team else name
+        links.append(f'<a href="{href}">{label}</a>')
+    return (
+        "<h2>May have a fourth option</h2>"
+        "<p>These players used three option years. A fourth year is allowed "
+        "when a player has fewer than five full professional seasons, and "
+        "the record cannot settle that, so they are not listed as out of options.</p>"
+        "<p>" + ", ".join(links) + ".</p>"
+    )
+
+
+def _one_left_note(rows: list[Listed]) -> str:
+    if not any(len(row.years) >= 3 for row in rows):
+        return ""
+    return (
+        '<p class="foot-note">Three seasons in this list means one option year '
+        "is left. Five full professional seasons were not on the record.</p>"
+    )
+
+
 def _table(rows: list[Listed], base: str) -> str:
     if not rows:
         return "<p>None.</p>"
@@ -172,6 +202,7 @@ def render_league(result: RosterOptions, year: int) -> str:
             f"({len(rows)})</h2>"
         )
         parts.append(_table(rows, base))
+    parts.append(_may_fourth_note(result.may_fourth, base))
     items = []
     for team in out_of_options.club_names():
         items.append(f'<li><a href="{_club_href(team, base)}">{html.escape(team)}</a></li>')
@@ -199,7 +230,13 @@ def render_league(result: RosterOptions, year: int) -> str:
     )
 
 
-def render_club(club: str, out_rows: list[Listed], one_rows: list[Listed], year: int) -> str:
+def render_club(
+    club: str,
+    out_rows: list[Listed],
+    one_rows: list[Listed],
+    year: int,
+    may_rows: list[Listed] | None = None,
+) -> str:
     base = wpp.BASE_PATH
     slug = wpp.slug(club)
     out_rows = sorted(out_rows, key=lambda row: (row.player.get("name") or "").casefold())
@@ -208,7 +245,9 @@ def render_club(club: str, out_rows: list[Listed], one_rows: list[Listed], year:
         "<h2>Out of options</h2>"
         + _table(out_rows, base)
         + "<h2>One option year left</h2>"
+        + _one_left_note(one_rows)
         + _table(one_rows, base)
+        + _may_fourth_note(may_rows or [], base)
         + (
             f'<p class="actions"><a href="{html.escape(slug)}.html">&larr; '
             f"{html.escape(club)} roster</a>"
@@ -256,7 +295,11 @@ def render_all(result: RosterOptions, generated_at: str | None) -> dict[str, str
     for club in names + [name for name in extra if name]:
         rel = f"t/{wpp.slug(club)}-out-of-options.html"
         pages[rel] = render_club(
-            club, _for_club(result.out, club), _for_club(result.one, club), year
+            club,
+            _for_club(result.out, club),
+            _for_club(result.one, club),
+            year,
+            _for_club(result.may_fourth, club),
         )
     return pages
 

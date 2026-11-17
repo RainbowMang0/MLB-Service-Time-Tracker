@@ -85,6 +85,7 @@ def _select(players, *, raw=True, cache=True, years=(2022, 2023, 2024), replay_y
         counter=counter,
         replay=lambda player, today: {"option_years_used": list(player.get("_replay", replay_years))},
         standard=standard,
+        apply_fourth=False,
     )
 
 
@@ -221,6 +222,78 @@ def test_real_players_match_both_counts():
     check("Rolison is not on the page", "Ryan Rolison" not in league)
 
 
+def test_a_fourth_option_moves_three_years_and_keeps_four():
+    from fourth_option import NO, UNKNOWN, YES, decide
+    from il_stints import SeasonWindows
+
+    windows = SeasonWindows.load()
+    recent = [
+        {"date": "2023-07-15", "typeCode": "SGN", "description": "Houston Astros signed RHP Jake Bloss."},
+        {"date": "2024-04-02", "typeCode": "ASG", "description": "RHP Jake Bloss assigned to Asheville Tourists."},
+    ]
+    decision = decide(recent, [2024, 2025, 2026], TODAY, windows)
+    check("a July 2023 signing still has a fourth option", decision.decision == YES and decision.possible < 5)
+
+    veteran = [{"date": "2010-06-01", "typeCode": "SGN", "description": "Club signed RHP Old Player."}]
+    for year in range(2010, 2016):
+        veteran.append({
+            "date": f"{year}-04-10",
+            "typeCode": "ASG",
+            "description": "RHP Old Player assigned to a minor league club.",
+        })
+    decision = decide(veteran, [2022, 2023, 2024], TODAY, windows)
+    check("five full seasons leave him out", decision.decision == NO and decision.full >= 5)
+    check("no signing date is unsettled", decide([], [2024, 2025, 2026], TODAY, windows).decision == UNKNOWN)
+
+    four = _roster("Four Used", id=77)
+    result = out_of_options.select(
+        [four],
+        TODAY,
+        cache_for=lambda player: [],
+        raw_for=lambda player: recent,
+        counter=lambda player, rows, today: _count((2023, 2024, 2025, 2026)),
+        replay=lambda player, today: {"option_years_used": [2023, 2024, 2025, 2026]},
+        apply_fourth=True,
+    )
+    check("four used years stay out", [row.player["name"] for row in result.out] == ["Four Used"])
+    check("four used years are not moved to one left", result.one == [] and result.may_fourth == [])
+
+
+def test_real_fourth_option_cases():
+    wanted = {
+        814005: "one",   # Jake Bloss
+        694462: "one",   # Hurston Waldrep
+        682729: "out",   # Jonatan Clase, four years
+        663893: "one",   # Brendon Little, two years on the record
+        671936: "fourth",  # Adam Macko, no signing date
+        641329: "out",   # Bryan Baker, five full seasons
+    }
+    players = [_player(pid) for pid in wanted]
+    result = out_of_options.select(players, TODAY)
+    by_out = {row.player["id"]: row for row in result.out}
+    by_one = {row.player["id"]: row for row in result.one}
+    by_held = {row.player["id"]: row for row in result.may_fourth}
+    check("Bloss is one left and still shows 2024-2026", by_one[814005].years == (2024, 2025, 2026) and 814005 not in by_out)
+    check("Waldrep is one left and still shows 2024-2026", by_one[694462].years == (2024, 2025, 2026))
+    check("Clase stays out with four seasons", by_out[682729].years == (2023, 2024, 2025, 2026))
+    check("Little stays at the two seasons on the record", by_one[663893].years == (2024, 2026) and 663893 not in by_out)
+    check("Macko is held, not listed as out", 671936 in by_held and 671936 not in by_out)
+    check("Baker stays out", 641329 in by_out and by_out[641329].years == (2021, 2023, 2024))
+    league = pages.render_league(result, 2027)
+    check("the league page names a held player", "May have a fourth option" in league and "Adam Macko" in league)
+    check("a player with a fourth year is not in the held note", "Jake Bloss" not in league)
+    jays_out = [row for row in result.out if row.player.get("team") == "Toronto Blue Jays"]
+    jays_one = [row for row in result.one if row.player.get("team") == "Toronto Blue Jays"]
+    page = pages.render_club("Toronto Blue Jays", jays_out, jays_one, 2027)
+    out_part, one_part = page.split("<h2>One option year left</h2>", 1)
+    check("the Jays page puts Bloss in one left", "Jake Bloss" in one_part and "Jake Bloss" not in out_part)
+    check("the Jays page keeps Clase out", "Jonatan Clase" in out_part)
+    check("three seasons are explained as one year left", "Three seasons in this list means one option year is left" in one_part)
+    check("the one-left section does not call it a fourth option", "fourth" not in one_part.lower())
+    for banned in BANNED:
+        check(f"Jays page does not name {banned}", banned not in page.lower())
+
+
 def test_the_roster_page_links_the_list():
     class Count:
         out_of_options = True
@@ -252,6 +325,17 @@ def test_published_files_and_the_guards():
     league = (docs / "out-of-options.html").read_text(encoding="utf-8")
     check("the league page is on disk", "Players out of options, 2027" in league)
     check("the league page has no last-updated line", "last updated" not in league.lower())
+    check("the league page holds an unsettled fourth option", "May have a fourth option" in league and "Adam Macko" in league)
+    check("Jake Bloss is not listed as out", "Jake Bloss" not in league)
+    jays = (docs / "t" / "toronto-blue-jays-out-of-options.html").read_text(encoding="utf-8")
+    braves = (docs / "t" / "atlanta-braves-out-of-options.html").read_text(encoding="utf-8")
+    out_part, one_part = jays.split("<h2>One option year left</h2>", 1)
+    check("the built Jays page puts Bloss in one left", "Jake Bloss" in one_part and "Jake Bloss" not in out_part)
+    check("the built Jays page keeps Little on 2024 and 2026", "Brendon Little" in one_part and "2024, 2026" in one_part)
+    check("the built Braves page puts Waldrep in one left", "Hurston Waldrep" in braves.split("<h2>One option year left</h2>", 1)[1])
+    check("the built league page still lists Gil", "Luis Gil" in league)
+    for banned in BANNED:
+        check(f"built league page does not name {banned}", banned not in league.lower())
     core = (docs / "sitemap-core.xml").read_text(encoding="utf-8")
     clubs = (docs / "sitemap-clubs.xml").read_text(encoding="utf-8")
     check("sitemap-core lists the league page", "/out-of-options.html</loc>" in core)
@@ -282,6 +366,7 @@ def test_published_files_and_the_guards():
         "scripts/out_of_options.py",
         "scripts/out_of_options_pages.py",
         "scripts/out_of_options_site.py",
+        "scripts/fourth_option.py",
     ):
         text = (ROOT / rel).read_text(encoding="utf-8").lower()
         for banned in BANNED:
@@ -293,6 +378,8 @@ def main():
     test_the_pages_go_straight_to_the_numbers()
     test_titles_match_the_search()
     test_real_players_match_both_counts()
+    test_a_fourth_option_moves_three_years_and_keeps_four()
+    test_real_fourth_option_cases()
     test_the_roster_page_links_the_list()
     test_published_files_and_the_guards()
     print(f"\n{PASS} passed, {FAIL} failed")

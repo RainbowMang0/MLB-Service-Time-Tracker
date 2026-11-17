@@ -1012,7 +1012,12 @@ def _club_offseason_section(
 
 
 def _options_left_cell(player: dict, option_counts: dict | None) -> str:
-    """Options still left under the standard rule, or a dash when unknown."""
+    """Options still left, or a dash when the count is unknown."""
+    shown = out_of_options_site.roster_options_left(player)
+    if shown != "defer":
+        if shown is None:
+            return '<td class="n opt-left">—</td>'
+        return f'<td class="n opt-left">{shown}</td>'
     count = None if not option_counts else option_counts.get(player.get("id"))
     # class is not the bare service-day cell. That one is normalised out of
     # the page hash because it ticks every day. Options left does not, and
