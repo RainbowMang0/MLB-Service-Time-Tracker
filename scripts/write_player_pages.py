@@ -58,7 +58,7 @@ from mlb_clubs import CLUB_ABBR, CLUB_NAMES  # noqa: E402
 import options as option_years  # noqa: E402
 import page_titles  # noqa: E402
 import player_sections  # noqa: E402
-import rule5_site, salary_estimates  # noqa: E402
+import out_of_options_site, rule5_site, salary_estimates  # noqa: E402
 import share_meta  # noqa: E402
 import super_two  # noqa: E402
 import validate_super_two  # noqa: E402
@@ -1008,7 +1008,7 @@ def _club_offseason_section(
   <p class="foot-note">{contracts.PROJECTION_NOTE}</p>
   {_club_fa_table(fa_next_season, next_season)}
   <p class="foot-note"><a href="{slug_}-free-agents.html">Full {html.escape(club)} free agents</a>
-  &middot; <a href="{BASE_PATH}{FREE_AGENTS_PATH}">league-wide</a></p>{rule5_site.offseason_link(club, slug_, BASE_PATH, CLUB_DIR)}"""
+  &middot; <a href="{BASE_PATH}{FREE_AGENTS_PATH}">league-wide</a></p>{rule5_site.offseason_link(club, slug_, BASE_PATH, CLUB_DIR)}{out_of_options_site.roster_link(club, slug_, BASE_PATH, next_season)}"""
 
 
 def _options_left_cell(player: dict, option_counts: dict | None) -> str:
@@ -1020,17 +1020,6 @@ def _options_left_cell(player: dict, option_counts: dict | None) -> str:
     if count is None or count.incomplete or count.remaining is None:
         return '<td class="n opt-left">—</td>'
     return f'<td class="n opt-left">{count.remaining}</td>'
-
-
-def _out_of_options_count(players: list[dict], option_counts: dict | None) -> int:
-    if not option_counts:
-        return 0
-    total = 0
-    for player in players:
-        count = option_counts.get(player.get("id"))
-        if count is not None and count.out_of_options:
-            total += 1
-    return total
 
 
 def render_club(
@@ -1058,10 +1047,8 @@ def render_club(
     def _open(p): return not (next_season and contracts.covers(p.get("id"), next_season))
     groups = club_groups.roster_groups(players, _open)
     fa, arb, s2 = len(groups["fa"]), len(groups["arb"]), len(groups["s2"])
-    out_of_options = _out_of_options_count(players, option_counts)
-    options_href = (
-        f"{BASE_PATH}{OPTIONS_PATH}?team={urllib.parse.quote(club)}&status=out"
-    )
+    out_of_options = out_of_options_site.count_for(players, option_counts)
+    options_href = f"{slug(club)}-out-of-options.html"
 
     # Not "all N players on the 40-man": a club's 40-man can hold more than 40,
     # because players on the 60-day IL stay on it without counting against the
@@ -2089,12 +2076,15 @@ def write_player_pages(
     rostered = [p for p in published if p.get("on_40_man")]
     fa_now = select_free_agents_now(rostered, next_season)
     fa_by_year = select_free_agents_by_year(rostered, next_season) if next_season else {}
-
-    clubs = _write_club_pages(
-        by_club, generated_at, lastmod,
-        arb_eligible, non_tender_watch, fa_now, fa_by_year, next_season,
-        option_counts,
-    )
+    ooo = out_of_options_site.prepare(rostered, option_today)
+    try:
+        clubs = _write_club_pages(
+            by_club, generated_at, lastmod,
+            arb_eligible, non_tender_watch, fa_now, fa_by_year, next_season,
+            option_counts,
+        )
+    finally:
+        out_of_options_site.clear()
     alumni = [p for p in published if not p.get("on_40_man")]
     alumni_pages = _write_alumni_pages(alumni, generated_at, lastmod) if alumni else []
 
@@ -2124,6 +2114,8 @@ def write_player_pages(
         f"Options: {len(opt_out)} out of options, {len(opt_one)} with one left, "
         f"{opt_unknown} unknown (rostered)"
     )
+    import out_of_options_pages
+    out_of_options_pages.write(ooo, generated_at, lastmod, _publish_page, DOCS)
 
     # The homepage's one generated region has to be current before the
     # sitemap hashes that file, or its lastmod would trail the page by a run.
@@ -2293,7 +2285,7 @@ def _write_club_pages(
         _keep(club_free_agents_path(club), fa_page)
 
     directory = render_club_index(by_club, generated_at)
-    _keep(f"{CLUB_DIR_NAME}/index.html", directory); rule5_site.keep(CLUB_DIR, kept)
+    _keep(f"{CLUB_DIR_NAME}/index.html", directory); rule5_site.keep(CLUB_DIR, kept); out_of_options_site.keep(CLUB_DIR, kept)
     _prune_html(CLUB_DIR, kept)
     return sorted(by_club)
 
@@ -2553,7 +2545,7 @@ def _write_sitemap(
                 f"<lastmod>{lastmod.of(rel)}</lastmod>"
                 f"<priority>0.7</priority></url>"
             )
-    rule5_site.add_sitemap(DOCS, SITE_URL, clubs, slug, lastmod, urls, club_urls)
+    rule5_site.add_sitemap(DOCS, SITE_URL, clubs, slug, lastmod, urls, club_urls); out_of_options_site.add_sitemap(DOCS, SITE_URL, lastmod, urls, club_urls)
     def _url(rel, prio=None):
         pr = f"<priority>{prio}</priority>" if prio else ""
         return (f"  <url><loc>{SITE_URL}/{rel}</loc>"
