@@ -258,10 +258,11 @@ jobs:
             docs/arbitration-eligible.html docs/super-two.html docs/lockout.html \
             docs/lockout-salary-cap.html \
             docs/non-tender-watch.html docs/free-agents.html docs/options.html \
-            docs/send-a-player-down.html docs/offseason.html \
+            docs/send-a-player-down.html docs/offseason.html docs/changes.html \
             docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-clubs.xml \
             docs/sitemap-players.xml docs/sitemap-alumni.xml docs/robots.txt data/cache \
-            data/published_ids.json data/refresh_complete.json
+            data/published_ids.json data/changes.json data/changes_snapshot.json \
+            data/refresh_complete.json
 
   # Raw feed, kept beside the roster cache. This job does not calculate
   # service time, options, or injured-list time, and it does not write
