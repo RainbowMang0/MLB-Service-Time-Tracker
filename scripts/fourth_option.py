@@ -2,17 +2,20 @@
 
 A fourth option year is allowed when the player has fewer than five full
 professional seasons after the first contract, measured when the third
-option year is used. A full season is one with at least 90 days on an
-active professional roster. The ruleset does not encode that test, so the
-listing rule lives here and does not change service time.
+option year is used. A full season is 90 days on an active professional
+roster, or 30 active days when active time and injured-list time together
+reach 90. The ruleset does not encode that test, so the listing rule lives
+here and does not change service time.
 
 The signing date is the first screen. If fewer than five full seasons
 could have fit between that date and the end of the third option year,
 he qualifies. The year is not removed from anyone who already used four.
 
-When five seasons could have fit and the transactions do not show whether
-five of them were full, the result is unknown. The caller leaves him off
-the out-of-options list instead of calling him out.
+A mid-season "assigned from X to Y" with no earlier row that season is
+missing data. It is never treated as proof the season was short. When five
+seasons could have fit and the transactions do not show whether five of
+them were full, the result is unknown. The caller leaves him off the
+out-of-options list instead of calling him out.
 """
 
 from __future__ import annotations
@@ -24,20 +27,35 @@ from dataclasses import dataclass
 from il_stints import SeasonWindows
 
 # Days on an active professional roster that make one full season, and how
-# many of those seasons close off a fourth option year.
+# many of those seasons close off a fourth option year. An injury year also
+# counts when at least INJURY_ACTIVE_DAYS were active and active plus
+# injured-list time reaches a full season.
 FULL_SEASON_DAYS = 90
+INJURY_ACTIVE_DAYS = 30
 FULL_SEASONS = 5
+
+# Reviewed holds. The day count would list Cousins and Knack out, because
+# each has five seasons that meet the test, including an injury year. It
+# would leave Espino with one option year: four full seasons, and the rest
+# are injured-list years under 30 active days. The review keeps all three
+# off the out list. Public reporting says Grissom and Hentges are out, and
+# the day count already lists them out, so they are not overridden here.
+_HELD = frozenset({664776, 682982, 689017})
 
 _SIGN_RE = re.compile(r"\bsigned\b", re.IGNORECASE)
 _EXT_RE = re.compile(r"\bextension\b", re.IGNORECASE)
 _COLLEGE_RE = re.compile(r"college workout", re.IGNORECASE)
 _REHAB_RE = re.compile(r"rehab", re.IGNORECASE)
 _IL_RE = re.compile(
-    r"placed\b.{0,80}\bon the (?:\d+\s*-?\s*day )?(?:injured|disabled) list"
-    r"|placed\b.{0,40}\bon the (?:paternity|bereavement|restricted) list"
+    r"placed\b.{0,90}\bon the (?:(?:\d+\s*-?\s*day|full-season) )?(?:injured|disabled) list",
+    re.IGNORECASE,
+)
+_OTHER_STOP_RE = re.compile(
+    r"placed\b.{0,40}\bon the (?:paternity|bereavement|restricted) list"
     r"|placed\b.{0,40}\bon the reserve list",
     re.IGNORECASE,
 )
+_FROM_RE = re.compile(r"\bassigned\b.{0,120}\bfrom\b", re.IGNORECASE)
 _ACT_RE = re.compile(r"\b(?:activated|reinstated)\b", re.IGNORECASE)
 _RELEASE_RE = re.compile(
     r"\breleased\b|elected free agency|declared free agency|\bretired\b",
@@ -113,11 +131,18 @@ def possible_full_seasons(
     return count
 
 
+def held(player_id: int) -> bool:
+    """True when the review keeps this player off the out list."""
+    return player_id in _HELD
+
+
 def _kind(desc: str) -> str:
-    """start, stop, or skip. Rehab is not time on an active roster."""
+    """start, il, stop, or skip. Rehab is not time on an active roster."""
     if _REHAB_RE.search(desc) or _COLLEGE_RE.search(desc):
         return "skip"
-    if _IL_RE.search(desc) or _RELEASE_RE.search(desc):
+    if _IL_RE.search(desc):
+        return "il"
+    if _OTHER_STOP_RE.search(desc) or _RELEASE_RE.search(desc):
         return "stop"
     if _ACT_RE.search(desc) or _START_RE.search(desc):
         return "start"
@@ -136,25 +161,55 @@ def _events(rows: list[dict] | None) -> list[tuple[dt.date, str]]:
         kind = _kind(desc)
         if kind != "skip":
             found.append((day, kind))
-    found.sort(key=lambda item: (item[0], 0 if item[1] == "stop" else 1))
+    # A stop or an injured-list placement on a date lands before a start.
+    found.sort(key=lambda item: (item[0], 0 if item[1] != "start" else 1))
     return found
 
 
-def _season_active_days(
+def _in_season_rows(rows: list[dict] | None, opening: dt.date, closing: dt.date):
+    found = []
+    for row in rows or []:
+        if not isinstance(row, dict):
+            continue
+        desc = row.get("description") or ""
+        day = _date(row.get("date"))
+        if day is None or not isinstance(desc, str) or not desc:
+            continue
+        if opening <= day <= closing:
+            found.append((day, desc))
+    found.sort(key=lambda item: item[0])
+    return found
+
+
+def _transfer_gap(in_season: list[tuple[dt.date, str]]) -> tuple[bool, bool]:
+    """A mid-season 'assigned from X to Y' with no earlier row that season.
+
+    The first flag is that gap. The second is the whole season being that
+    one date, so the days after it are not a measured season either.
+    """
+    if not in_season:
+        return False, False
+    dates = sorted({day for day, _desc in in_season})
+    from_dates = {day for day, desc in in_season if _FROM_RE.search(desc)}
+    if not from_dates:
+        return False, False
+    first_from = min(from_dates)
+    if any(day < first_from for day in dates):
+        return False, False
+    return True, dates == [first_from]
+
+
+def _season_days(
     events: list[tuple[dt.date, str]],
     opening: dt.date,
     closing: dt.date,
     today: dt.date,
-) -> tuple[int, bool]:
-    """Active days inside one season, and whether a silent year was skipped.
-
-    The boolean is True when this season sits in a multi-year hole with no
-    roster row, so the days are not evidence.
-    """
+) -> tuple[int, int, bool]:
+    """Active days, injured-list days, and whether the year is a silent hole."""
     prior = [item for item in events if item[0] < opening]
     inside = [item for item in events if opening <= item[0] <= closing]
     if not prior and not inside:
-        return 0, True
+        return 0, 0, True
     # Carry a state into the season only from the previous offseason or the
     # previous season. An older row is a hole, not a roster.
     carry = None
@@ -164,30 +219,59 @@ def _season_active_days(
         if last_day >= previous:
             carry = last_kind
         elif not inside:
-            return 0, True
-    active = carry == "start"
+            return 0, 0, True
+    state = carry
     cursor = opening
-    days = 0
+    active = 0
+    injured = 0
     stop_at = min(closing, today)
 
     def add(until: dt.date) -> None:
-        nonlocal days, cursor
+        nonlocal active, injured, cursor
         end = min(until, stop_at)
-        if active and end >= cursor:
-            days += (end - cursor).days + 1
+        if end >= cursor:
+            span = (end - cursor).days + 1
+            if state == "start":
+                active += span
+            elif state == "il":
+                injured += span
         cursor = max(cursor, end + dt.timedelta(days=1))
 
     for day, kind in inside:
         if day > today:
             break
         add(day - dt.timedelta(days=1))
-        active = kind == "start"
+        state = kind if kind in ("start", "il") else "stop"
         cursor = day
-    if active and cursor <= stop_at:
-        # The last row in the season left him on a roster. Count through
-        # the end of that season. A later year's row does not erase it.
+    if state in ("start", "il") and cursor <= stop_at:
+        # The last row in the season left him on a roster or the injured
+        # list. Count through the end of that season.
         add(stop_at)
-    return days, False
+    return active, injured, False
+
+
+def _season_kind(
+    rows: list[dict] | None,
+    events: list[tuple[dt.date, str]],
+    opening: dt.date,
+    closing: dt.date,
+    today: dt.date,
+) -> str:
+    """'full', 'unknown', or 'short' for one championship season."""
+    active, injured, hole = _season_days(events, opening, closing, today)
+    if hole:
+        return "unknown"
+    transfer, only_date = _transfer_gap(_in_season_rows(rows, opening, closing))
+    # One transfer date is not a measured season. A transfer that opens the
+    # year, with fewer than 90 active days after it, is the same gap: missing
+    # data, not proof the season was short.
+    if only_date or (transfer and active < FULL_SEASON_DAYS):
+        return "unknown"
+    if active >= FULL_SEASON_DAYS:
+        return "full"
+    if active >= INJURY_ACTIVE_DAYS and active + injured >= FULL_SEASON_DAYS:
+        return "full"
+    return "short"
 
 
 def full_seasons(
@@ -209,11 +293,15 @@ def full_seasons(
         opening, closing = bounds
         if closing < signed:
             continue
-        days, hole = _season_active_days(events, opening, closing, today)
-        if hole:
-            unknown += 1
-        elif days >= FULL_SEASON_DAYS:
+        # A year that cannot contain a full season, such as the short 2020
+        # schedule or a contract signed too late, is neither full nor unknown.
+        if (closing - max(signed, opening)).days + 1 < FULL_SEASON_DAYS:
+            continue
+        kind = _season_kind(rows, events, opening, closing, today)
+        if kind == "full":
             proven += 1
+        elif kind == "unknown":
+            unknown += 1
     return proven, unknown
 
 

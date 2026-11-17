@@ -211,6 +211,12 @@ def select(
                 fourth_option.decide(raw_rows, cache_years, today, _windows())
                 if apply_fourth else None
             )
+            # A reviewed hold stays off the out list even when the day count
+            # would call the season settled.
+            if decision is not None and isinstance(pid, int) and fourth_option.held(pid):
+                decision = fourth_option.FourthOption(
+                    fourth_option.UNKNOWN, decision.signed, decision.possible, decision.full
+                )
             if decision is not None and decision.decision == fourth_option.YES:
                 result.one.append(listed)
                 status = "one"

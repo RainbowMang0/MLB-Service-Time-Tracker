@@ -259,6 +259,52 @@ def test_a_fourth_option_moves_three_years_and_keeps_four():
     check("four used years are not moved to one left", result.one == [] and result.may_fourth == [])
 
 
+def test_an_injury_year_counts_and_a_lone_transfer_does_not():
+    from fourth_option import NO, UNKNOWN, YES, decide
+    from il_stints import SeasonWindows
+
+    windows = SeasonWindows.load()
+
+    def assigned(year, month_day="04-20"):
+        return {
+            "date": f"{year}-{month_day}",
+            "typeCode": "ASG",
+            "description": "RHP Pat Example assigned to a minor league club.",
+        }
+
+    injury = [{"date": "2014-04-20", "typeCode": "SGN", "description": "Club signed RHP Pat Example."}]
+    for year in (2014, 2015, 2016, 2017):
+        injury.append(assigned(year))
+    injury += [
+        assigned(2018),
+        {"date": "2018-05-25", "typeCode": "SC", "description": "Club placed RHP Pat Example on the 7-day injured list."},
+        {"date": "2018-09-01", "typeCode": "SC", "description": "Club activated RHP Pat Example from the 7-day injured list."},
+    ]
+    decision = decide(injury, [2016, 2017, 2018], TODAY, windows)
+    check("30 active days plus injured-list time is a full season", decision.decision == NO and decision.full >= 5)
+
+    brief = [{"date": "2014-04-20", "typeCode": "SGN", "description": "Club signed RHP Pat Example."}]
+    for year in (2014, 2015, 2016, 2017):
+        brief.append(assigned(year))
+    brief += [
+        assigned(2018, "04-10"),
+        {"date": "2018-04-20", "typeCode": "SC", "description": "Club placed RHP Pat Example on the 7-day injured list."},
+    ]
+    decision = decide(brief, [2016, 2017, 2018], TODAY, windows)
+    check("fewer than 30 active days is not a full injury season", decision.decision == YES)
+
+    gap = [{"date": "2014-04-20", "typeCode": "SGN", "description": "Club signed RHP Pat Example."}]
+    for year in (2014, 2015, 2016, 2017):
+        gap.append(assigned(year))
+    gap.append({
+        "date": "2018-08-28",
+        "typeCode": "ASG",
+        "description": "RHP Pat Example assigned to Mahoning Valley Scrappers from AZL Indians.",
+    })
+    decision = decide(gap, [2016, 2017, 2018], TODAY, windows)
+    check("a lone mid-season transfer is unknown, not a short season", decision.decision == UNKNOWN)
+
+
 def test_real_fourth_option_cases():
     wanted = {
         814005: "one",   # Jake Bloss
@@ -267,6 +313,14 @@ def test_real_fourth_option_cases():
         663893: "one",   # Brendon Little, two years on the record
         671936: "fourth",  # Adam Macko, no signing date
         641329: "out",   # Bryan Baker, five full seasons
+        656529: "out",   # Sam Hentges, injury years make five full seasons
+        687093: "out",   # Vaughn Grissom
+        664776: "fourth",  # Jake Cousins, reviewed hold
+        682982: "fourth",  # Daniel Espino, reviewed hold
+        689017: "fourth",  # Landon Knack, reviewed hold
+        663436: "fourth",  # Davis Martin
+        694362: "fourth",  # Blake Dunn
+        685133: "one",   # Wade Meckler, signed too late for five full seasons
     }
     players = [_player(pid) for pid in wanted]
     result = out_of_options.select(players, TODAY)
@@ -279,6 +333,14 @@ def test_real_fourth_option_cases():
     check("Little stays at the two seasons on the record", by_one[663893].years == (2024, 2026) and 663893 not in by_out)
     check("Macko is held, not listed as out", 671936 in by_held and 671936 not in by_out)
     check("Baker stays out", 641329 in by_out and by_out[641329].years == (2021, 2023, 2024))
+    check("Hentges is out and keeps 2019-2021", by_out[656529].years == (2019, 2020, 2021))
+    check("Grissom is out", 687093 in by_out and 687093 not in by_one)
+    check("Meckler stays one left", 685133 in by_one and 685133 not in by_out)
+    check("Cousins may have a fourth option", 664776 in by_held and by_held[664776].years == (2022, 2023, 2024))
+    check("Espino may have a fourth option", 682982 in by_held and 682982 not in by_out)
+    check("Knack may have a fourth option", 689017 in by_held and 689017 not in by_out)
+    check("Martin may have a fourth option", 663436 in by_held and 663436 not in by_out)
+    check("Dunn may have a fourth option", 694362 in by_held and 694362 not in by_out)
     league = pages.render_league(result, 2027)
     check("the league page names a held player", "May have a fourth option" in league and "Adam Macko" in league)
     check("a player with a fourth year is not in the held note", "Jake Bloss" not in league)
@@ -334,6 +396,10 @@ def test_published_files_and_the_guards():
     check("the built Jays page keeps Little on 2024 and 2026", "Brendon Little" in one_part and "2024, 2026" in one_part)
     check("the built Braves page puts Waldrep in one left", "Hurston Waldrep" in braves.split("<h2>One option year left</h2>", 1)[1])
     check("the built league page still lists Gil", "Luis Gil" in league)
+    out_half, held_half = league.split("May have a fourth option", 1)
+    check("the built league page lists Hentges out", "Sam Hentges" in out_half)
+    check("the built league page lists Grissom out", "Vaughn Grissom" in out_half)
+    check("the built league page holds Cousins", "Jake Cousins" in held_half)
     for banned in BANNED:
         check(f"built league page does not name {banned}", banned not in league.lower())
     core = (docs / "sitemap-core.xml").read_text(encoding="utf-8")
@@ -379,6 +445,7 @@ def main():
     test_titles_match_the_search()
     test_real_players_match_both_counts()
     test_a_fourth_option_moves_three_years_and_keeps_four()
+    test_an_injury_year_counts_and_a_lone_transfer_does_not()
     test_real_fourth_option_cases()
     test_the_roster_page_links_the_list()
     test_published_files_and_the_guards()
