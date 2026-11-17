@@ -43,6 +43,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
 import accrual_model  # noqa: E402
 import cba  # noqa: E402
+import change_log  # noqa: E402
 import mlb_clubs  # noqa: E402
 import fetch_mlb_data as mlb  # noqa: E402
 import refresh_complete  # noqa: E402
@@ -2155,11 +2156,10 @@ def _write_outputs(db: dict[str, dict]) -> None:
     # without these no player could be found by searching for him.
     _write_pages(db, output["generated_at"], super_two_cutoff=cutoff, ever_published=ever_published)
     report_debuted_but_empty(db)
-    # A league-minimum salary ESTIMATE for clearly pre-arbitration players,
-    # skipping anyone with a known or detected extension. No API calls --
-    # see scripts/salary_estimates.py.
     salary_path = salary_estimates.write(db)
     print(f"Wrote salary estimates to {salary_path}")
+    # After the database is on disk. A diff failure must not undo the publish.
+    change_log.publish_safely(db)
 
 
 def _write_accrual_model(db: dict[str, dict]) -> None:

@@ -1,7 +1,7 @@
 {
   "player_id": 429664,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:7e4970a758416dabc71fdca9877247d4aed633407460d0a2e0311d4b4d5afd58",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:29b07e3130f683325e396c25b5c877d68959d4993ba6df8dea6ef65c114682fe",
   "transactions": [
     {
       "id": 176256,
@@ -1261,6 +1261,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "2B Robinson Canó assigned to LMB All-Stars."
+    },
+    {
+      "id": 950318,
+      "person": {
+        "id": 429664,
+        "fullName": "Robinson Canó",
+        "link": "/api/v1/people/429664",
+        "nameSlug": "robinson-cano-429664"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2026-11-16",
+      "effectiveDate": "2026-11-16",
+      "resolutionDate": "2026-11-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Robinson Canó assigned to Estrellas Orientales."
     }
   ]
 }

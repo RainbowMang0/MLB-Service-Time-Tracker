@@ -1,7 +1,7 @@
 {
   "player_id": 690544,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:770e056ddfa66968d0873e1fb47d4018a763e1813650eb9969b4dd934a97d4e8",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:10b52d5ba4b9f6a44d92521a767b99ee40cee108b2059e8309f4a16aeb12ce46",
   "transactions": [
     {
       "id": 407525,
@@ -1712,6 +1712,46 @@
       "typeCode": "REL",
       "typeDesc": "Released",
       "description": "Detroit Tigers released LHP Bailey Horn."
+    },
+    {
+      "id": 950335,
+      "person": {
+        "id": 690544,
+        "fullName": "Bailey Horn",
+        "link": "/api/v1/people/690544",
+        "nameSlug": "bailey-horn-690544"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-11-16",
+      "effectiveDate": "2026-11-16",
+      "resolutionDate": "2026-11-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent LHP Bailey Horn to a minor league contract."
+    },
+    {
+      "id": 950336,
+      "person": {
+        "id": 690544,
+        "fullName": "Bailey Horn",
+        "link": "/api/v1/people/690544",
+        "nameSlug": "bailey-horn-690544"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Bailey Horn assigned to Toledo Mud Hens."
     }
   ]
 }

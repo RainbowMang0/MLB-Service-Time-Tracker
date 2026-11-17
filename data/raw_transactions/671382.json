@@ -1,7 +1,7 @@
 {
   "player_id": 671382,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:f9611e76a32b3547f1113c7672113cafe2a54a3bc0b995ec5a4e55b55288c8ab",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:a40a123f760311c7280f136cf0f62c3991d284e491606d63176aa4fe93cb434e",
   "transactions": [
     {
       "id": 282357,
@@ -740,6 +740,30 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Baltimore Orioles recalled RHP Cameron Foster from Norfolk Tides."
+    },
+    {
+      "id": 950365,
+      "person": {
+        "id": 671382,
+        "fullName": "Cameron Foster",
+        "link": "/api/v1/people/671382",
+        "nameSlug": "cameron-foster-671382"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Atlanta Braves claimed RHP Cameron Foster off waivers from Baltimore Orioles."
     }
   ]
 }

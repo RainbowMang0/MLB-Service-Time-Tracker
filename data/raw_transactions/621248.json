@@ -1,7 +1,7 @@
 {
   "player_id": 621248,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:b6549e8f33c4f48d8c6e3cc943f926152e7ff8babbcc26e0120df638d8d9ee04",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:dd27e53feed7ba06e94d6dd9c3edb04e5cb6b0750ced8b1c0d91012557e85c5a",
   "transactions": [
     {
       "id": 231772,
@@ -1824,6 +1824,26 @@
       "typeCode": "TR",
       "typeDesc": "Trade",
       "description": "Leones de Yucatan traded RHP Ralph Garza Jr. to Dorados de Chihuahua."
+    },
+    {
+      "id": 950306,
+      "person": {
+        "id": 621248,
+        "fullName": "Ralph Garza Jr.",
+        "link": "/api/v1/people/621248",
+        "nameSlug": "ralph-garza-jr-621248"
+      },
+      "toTeam": {
+        "id": 4087,
+        "name": "Senadores de San Juan",
+        "link": "/api/v1/teams/4087"
+      },
+      "date": "2026-11-16",
+      "effectiveDate": "2026-11-16",
+      "resolutionDate": "2026-11-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ralph Garza Jr. assigned to Senadores de San Juan."
     }
   ]
 }

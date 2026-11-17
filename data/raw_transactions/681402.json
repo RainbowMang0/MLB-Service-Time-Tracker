@@ -1,7 +1,7 @@
 {
   "player_id": 681402,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:3ea5bb03bec55cac612273d150b1085324795d4926d8480456b41fe26f52ac37",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:0e2ee07ac4091a2b6e6bae7ac744fc777a5dbd7aed00ec8649361760b9cdaa67",
   "transactions": [
     {
       "id": 360592,
@@ -1574,6 +1574,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Washington Nationals recalled RHP Gus Varland from Rochester Red Wings."
+    },
+    {
+      "id": 950352,
+      "person": {
+        "id": 681402,
+        "fullName": "Gus Varland",
+        "link": "/api/v1/people/681402",
+        "nameSlug": "gus-varland-681402"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Washington Nationals designated RHP Gus Varland for assignment."
     }
   ]
 }

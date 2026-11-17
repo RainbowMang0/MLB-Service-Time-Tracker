@@ -1,7 +1,7 @@
 {
   "player_id": 675448,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:35430536e5bb1a54f50f6df60443bf50d9525d2e11169761d8a7dee105759539",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:22768f46dea64e5cc889c30dca2078fcad9678d58069d4e9a4735d5db3735abd",
   "transactions": [
     {
       "id": 308492,
@@ -1492,6 +1492,46 @@
       "typeCode": "REL",
       "typeDesc": "Released",
       "description": "San Diego Padres released C Blake Hunt."
+    },
+    {
+      "id": 950340,
+      "person": {
+        "id": 675448,
+        "fullName": "Blake Hunt",
+        "link": "/api/v1/people/675448",
+        "nameSlug": "blake-hunt-675448"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2026-11-16",
+      "effectiveDate": "2026-11-16",
+      "resolutionDate": "2026-11-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent C Blake Hunt to a minor league contract."
+    },
+    {
+      "id": 950341,
+      "person": {
+        "id": 675448,
+        "fullName": "Blake Hunt",
+        "link": "/api/v1/people/675448",
+        "nameSlug": "blake-hunt-675448"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Blake Hunt assigned to Lehigh Valley IronPigs."
     }
   ]
 }

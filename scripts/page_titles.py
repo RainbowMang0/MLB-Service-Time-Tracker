@@ -359,3 +359,19 @@ def offseason_meta(agreement: str) -> str:
         f"free agents, contract years, and CBA expiration on {when}. "
         "From public data."
     )
+
+
+def changes_title() -> str:
+    return fit_title("MLB service time and roster changes today")
+
+
+def changes_og() -> str:
+    return og_title("MLB service time and roster changes today")
+
+
+def changes_meta() -> str:
+    return fit_meta(
+        "MLB service time and roster changes today: year thresholds, "
+        "Super Two range, call-ups, options, trades, and other roster moves. "
+        "From public data."
+    )
