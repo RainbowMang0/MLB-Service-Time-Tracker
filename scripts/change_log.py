@@ -1,19 +1,16 @@
 #!/usr/bin/env python3
-"""Daily diff of the published service-time and roster state.
+"""Daily diff of published service time and roster moves.
 
-A compact snapshot (id, service days, roster flag, club id, Super Two
-flag) is diffed against the database just written. Roster moves are
-classified from the transaction cache; the sentence is never stored.
-A rules-version change is one up/down count, not a player list. Empty
-days are omitted. The log keeps 60 days. With no snapshot yet, the
-newest day of moves already in the cache is the first entry. Failures
-are reported and do not propagate.
+The snapshot is one short row per player. The next publish reads roster
+moves from the saved transaction feed, including the previous run's date
+and a few days before it, and skips a move it already logged.
 """
 
 from __future__ import annotations
 
 import datetime as dt
 import json
+import os
 import sys
 import traceback
 from pathlib import Path
@@ -25,10 +22,11 @@ from mlb_clubs import MLB_CLUB_IDS, club_name, name_for_record
 
 ROOT = Path(__file__).resolve().parents[1]
 WINDOW_DAYS = 60
+LOOKBACK_DAYS = 3
 YEAR_MARKS = (1, 2, 3, 4, 5, 6)
 
-# career_moves kinds that are roster news on this page. Waiver claims,
-# free-agency elections, and retirements are not in this list.
+# Minor-league signings are left out: they are not 40-man moves.
+# Free-agency elections and retirements are not roster news here.
 _KIND_FROM_CAREER = {
     "recall": "call-up",
     "selected": "call-up",
@@ -38,15 +36,14 @@ _KIND_FROM_CAREER = {
     "outright": "outright",
     "release": "release",
     "signed": "signing",
-    "signed_minor": "signing",
     "trade": "trade",
+    "claim": "claim",
 }
 
 _OFFSEASON_IL_MONTHS = (11, 12, 1)
 
 
 def days_per_year() -> int:
-    """Credited days in a full year, from the agreement, not a literal."""
     return int(cba.default().require("service_time.days_per_credited_year"))
 
 
@@ -79,13 +76,24 @@ def rules_version(db: dict) -> int | None:
     return max(counts, key=counts.get)
 
 
+_NESTED_TEAM = {
+    "from_team_id": "fromTeam",
+    "to_team_id": "toTeam",
+    "team_id": "team",
+}
+
+
 def _club(row: dict, key: str) -> int | None:
+    """A major league club id, from a flat field or a nested team object."""
     value = row.get(key)
+    if isinstance(value, dict):
+        value = value.get("id")
+    if isinstance(value, bool) or not isinstance(value, int):
+        nested = row.get(_NESTED_TEAM.get(key, ""))
+        value = nested.get("id") if isinstance(nested, dict) else None
     if isinstance(value, bool) or not isinstance(value, int):
         return None
-    if value not in MLB_CLUB_IDS:
-        return None
-    return value
+    return value if value in MLB_CLUB_IDS else None
 
 
 def _row_date(row: dict) -> dt.date | None:
@@ -103,11 +111,7 @@ def _names_mlb_club(row: dict) -> bool:
 
 
 def is_il_move(row: dict) -> bool:
-    """An injured-list placement, transfer, or return that names a major league club.
-
-    November through January placements are offseason bookkeeping, same as
-    the injured-list table. A return from the list still counts.
-    """
+    # November through January placements are offseason bookkeeping.
     desc = row.get("description") or ""
     if not isinstance(desc, str) or not desc or not _names_mlb_club(row):
         return False
@@ -122,7 +126,6 @@ def is_il_move(row: dict) -> bool:
 
 
 def classify_move(row: dict) -> str | None:
-    """The change-log kind, or None when the row is not one of the listed moves."""
     if not isinstance(row, dict):
         return None
     if is_il_move(row):
@@ -134,11 +137,10 @@ def classify_move(row: dict) -> str | None:
 
 
 def team_label(kind: str, row: dict) -> str:
-    """Club text for one move. A trade names both clubs when both are known."""
     src = _club(row, "from_team_id")
     dst = _club(row, "to_team_id")
     club = _club(row, "team_id")
-    if kind == "trade" and src and dst and src != dst:
+    if kind in {"trade", "claim"} and src and dst and src != dst:
         return f"{club_name(src)} to {club_name(dst)}"
     if kind in {"option", "dfa", "outright", "release"}:
         chosen = src or club or dst
@@ -150,7 +152,6 @@ def team_label(kind: str, row: dict) -> str:
 
 
 def snapshot_from_db(db: dict, today: dt.date) -> dict:
-    """Compact rows. No names, seasons, or transaction text."""
     rows = []
     for key, record in db.items():
         if not isinstance(record, dict):
@@ -229,11 +230,6 @@ def service_changes(
     names: dict[int, str],
     teams: dict[int, str],
 ) -> dict:
-    """Threshold crossings, Super Two entries, and a rule-change summary.
-
-    No previous snapshot means there is nothing to compare. A rules-version
-    change replaces the player lists with up/down counts.
-    """
     empty = {"thresholds": [], "super_two": [], "corrections": None}
     if not previous or per_year <= 0:
         return empty
@@ -282,24 +278,32 @@ def service_changes(
 
 
 def iter_cache(cache_dir: Path):
-    """(player id, row) from the transaction cache. A bad file is skipped."""
-    if not cache_dir.is_dir():
-        return
-    for path in cache_dir.glob("*.json"):
-        try:
-            pid = int(path.stem)
-        except ValueError:
+    """(player id, row) from the roster cache and, beside it, the raw feed."""
+    stores = [cache_dir]
+    if cache_dir.name == "transactions":
+        raw = cache_dir.parent.parent / "raw_transactions"
+        if raw.is_dir():
+            stores.append(raw)
+    for store in stores:
+        if not store.is_dir():
             continue
-        try:
-            payload = json.loads(path.read_text(encoding="utf-8"))
-        except (OSError, ValueError):
-            continue
-        rows = payload if isinstance(payload, list) else []
-        if isinstance(payload, dict) and isinstance(payload.get("transactions"), list):
-            rows = payload["transactions"]
-        for row in rows:
-            if isinstance(row, dict):
-                yield pid, row
+        for path in store.glob("*.json"):
+            if path.name.startswith("_"):
+                continue
+            try:
+                pid = int(path.stem)
+            except ValueError:
+                continue
+            try:
+                payload = json.loads(path.read_text(encoding="utf-8"))
+            except (OSError, ValueError):
+                continue
+            rows = payload if isinstance(payload, list) else []
+            if isinstance(payload, dict) and isinstance(payload.get("transactions"), list):
+                rows = payload["transactions"]
+            for row in rows:
+                if isinstance(row, dict):
+                    yield pid, row
 
 
 def collect_moves(
@@ -309,11 +313,7 @@ def collect_moves(
     end: dt.date,
     names: dict[int, str],
 ) -> dict[str, list[dict]]:
-    """Moves by ISO date.
-
-    `start` is inclusive. None keeps only the newest day that has a move
-    on or before `end` — the opening entry, when no snapshot exists yet.
-    """
+    """Moves by ISO date. `start` is inclusive. None keeps only the newest day."""
     grouped: dict[str, list[dict]] = {}
     newest = ""
     for pid, row in iter_cache(cache_dir):
@@ -338,12 +338,17 @@ def collect_moves(
             continue
         grouped.setdefault(iso, []).append(item)
     for iso, items in grouped.items():
-        grouped[iso] = _union([], items, _move_key)
+        grouped[iso] = _union([], items, lambda item, iso=iso: _move_key(item, iso))
     return grouped
 
 
-def _move_key(item: dict) -> tuple:
-    return (item.get("id"), item.get("kind"), item.get("team") or "")
+def _move_key(item: dict, day: str | None = None) -> tuple:
+    return (
+        item.get("id"),
+        item.get("date") or day,
+        item.get("kind"),
+        item.get("team") or "",
+    )
 
 
 def _threshold_key(item: dict) -> tuple:
@@ -399,7 +404,11 @@ def combine(old: dict | None, new: dict) -> dict | None:
         "super_two": _union(
             (old or {}).get("super_two"), new.get("super_two"), _super_key
         ),
-        "moves": _union((old or {}).get("moves"), new.get("moves"), _move_key),
+        "moves": _union(
+            (old or {}).get("moves"),
+            new.get("moves"),
+            lambda item, day=new["date"]: _move_key(item, day),
+        ),
     }
     if new.get("corrections"):
         merged["corrections"] = new["corrections"]
@@ -471,13 +480,23 @@ def build_log(
     return trim(list(by_date.values()), today)
 
 
-def _write_json(path: Path, payload: dict, *, compact: bool) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    if compact:
-        text = json.dumps(payload, separators=(",", ":")) + "\n"
-    else:
-        text = json.dumps(payload, indent=2, ensure_ascii=False) + "\n"
-    path.write_text(text, encoding="utf-8")
+def _commit_files(files: list[tuple[Path, str]]) -> None:
+    staged: list[tuple[Path, Path]] = []
+    try:
+        for path, text in files:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            tmp = path.with_name(f".{path.name}.tmp")
+            tmp.write_text(text, encoding="utf-8")
+            staged.append((tmp, path))
+        for tmp, path in staged:
+            os.replace(tmp, path)
+    except Exception:
+        for tmp, _path in staged:
+            try:
+                tmp.unlink()
+            except OSError:
+                pass
+        raise
 
 
 def publish(
@@ -488,10 +507,6 @@ def publish(
     cache_dir: Path | None = None,
     per_year: int | None = None,
 ) -> dict:
-    """Diff, append, write the snapshot, and rebuild the changes page.
-
-    Raises on a real failure. Call publish_safely from the daily job.
-    """
     if not isinstance(db, dict):
         raise TypeError("the published database must be a dict of players")
     today = today or dt.date.today()
@@ -516,12 +531,7 @@ def publish(
             start = today
         if start > today:
             start = today
-        # Same calendar day: reread that day so a second publish can add a
-        # move, without pulling the previous day in again.
-        if start == today:
-            window_start = today
-        else:
-            window_start = start + dt.timedelta(days=1)
+        window_start = start - dt.timedelta(days=LOOKBACK_DAYS)
         moves = collect_moves(cache_dir, start=window_start, end=today, names=names)
 
     stored = load_json(log_path) or {}
@@ -545,18 +555,16 @@ def publish(
     if bad:
         raise RuntimeError("changes page failed checks: " + "; ".join(bad))
 
-    _write_json(log_path, log, compact=False)
-    page.write_text(docs / "changes.html", html)
-    _write_json(snapshot_path, current, compact=True)
-    print(
-        f"Change log: {len(days)} day(s) kept, snapshot {today.isoformat()}, "
-        f"{len(current['players'])} players."
-    )
+    _commit_files([
+        (log_path, json.dumps(log, indent=2, ensure_ascii=False) + "\n"),
+        (docs / "changes.html", html),
+        (snapshot_path, json.dumps(current, separators=(",", ":")) + "\n"),
+    ])
+    print(f"Change log: {len(days)} day(s) kept, snapshot {today.isoformat()}, {len(current['players'])} players.")
     return log
 
 
 def publish_safely(db: dict, **kwargs) -> bool:
-    """Run publish. A failure is printed and does not propagate."""
     try:
         publish(db, **kwargs)
     except Exception as exc:
@@ -567,7 +575,6 @@ def publish_safely(db: dict, **kwargs) -> bool:
 
 
 def main(argv: list[str] | None = None) -> int:
-    """Rebuild the log from the database already on disk. No API calls."""
     import argparse
 
     parser = argparse.ArgumentParser(description=__doc__)

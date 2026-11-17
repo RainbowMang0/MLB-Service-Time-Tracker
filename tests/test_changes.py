@@ -66,24 +66,29 @@ def test_roster_moves_use_the_listed_kinds() -> None:
         (_row("Chicago Cubs outrighted INF Some Player to Iowa Cubs.", from_team_id=112), "outright"),
         (_row("Athletics released RHP Some Pitcher.", from_team_id=133), "release"),
         (_row("Atlanta Braves signed free agent RHP Evan Phillips.", "2026-11-12", to_team_id=144), "signing"),
-        (_row("Atlanta Braves signed Some Player to a minor league contract.", "2026-11-12", to_team_id=144), "signing"),
         (_row("San Francisco Giants traded RHP Ryan Walker to Milwaukee Brewers.", "2026-11-15", from_team_id=137, to_team_id=158), "trade"),
+        (_row("Baltimore Orioles claimed RHP Chase Hampton off waivers from St. Louis Cardinals.", "2026-11-02", from_team_id=138, to_team_id=110), "claim"),
         (_row("New York Yankees placed RHP Gerrit Cole on the 15-day injured list.", "2026-07-04", to_team_id=147), "il"),
         (_row("Toronto Blue Jays activated RHP Cody Ponce from the 60-day injured list.", "2026-11-02", to_team_id=141), "il"),
     ]
     for row, kind in samples:
         check(f"{kind}: {row['description'][:48]}", change_log.classify_move(row) == kind)
-    trade = samples[-3][0]
+    trade = next(row for row, kind in samples if kind == "trade")
+    claim = next(row for row, kind in samples if kind == "claim")
     check(
         "a trade names both clubs",
         change_log.team_label("trade", trade) == "San Francisco Giants to Milwaukee Brewers",
     )
+    check(
+        "a waiver claim names both clubs",
+        change_log.team_label("claim", claim) == "St. Louis Cardinals to Baltimore Orioles",
+    )
     skipped = [
         _row("SS Brayan Rocchio assigned to Tiburones de La Guaira.", "2026-11-15", to_team_id=698),
-        _row("Baltimore Orioles claimed RHP Chase Hampton off waivers from St. Louis Cardinals.", "2026-11-02", from_team_id=138, to_team_id=110),
         _row("RHP Kenley Jansen elected free agency.", "2026-11-02", to_team_id=116),
         _row("Tampa Bay Rays activated RHP Ty Johnson.", "2026-11-02", to_team_id=139),
         _row("New York Yankees placed RHP Gerrit Cole on the 15-day injured list.", "2026-11-02", to_team_id=147),
+        _row("Baltimore Orioles signed free agent SS Jose Barrero to a minor league contract.", "2026-11-16", to_team_id=110),
     ]
     for row in skipped:
         check(f"not a listed move: {row['description'][:48]}", change_log.classify_move(row) is None)
@@ -216,6 +221,38 @@ def test_the_opening_entry_is_only_the_newest_day() -> None:
         check("the trade was not copied onto today", by_date["2026-11-17"]["moves"][0]["kind"] == "call-up")
 
 
+def test_a_move_posted_after_the_morning_run_is_logged_once() -> None:
+    """The job stamps the morning. A move later that day must show up next time, once."""
+    morning = dt.date(2026, 11, 15)
+    nxt = dt.date(2026, 11, 16)
+    with tempfile.TemporaryDirectory() as tmp:
+        root = pathlib.Path(tmp)
+        cache = root / "data" / "cache" / "transactions"
+        cache.mkdir(parents=True)
+        (root / "docs").mkdir()
+        (cache / "1.json").write_text("[]", encoding="utf-8")
+        db = {"1": _player(1, 40)}
+        db["1"]["name"] = "Ryan Walker"
+        first = change_log.publish(db, today=morning, root=root, cache_dir=cache, per_year=100)
+        check("the morning run, before the move, adds no day", first["days"] == [])
+        (cache / "1.json").write_text(json.dumps([
+            _row(
+                "San Francisco Giants traded RHP Ryan Walker to Milwaukee Brewers.",
+                "2026-11-15",
+                from_team_id=137,
+                to_team_id=158,
+            ),
+        ]), encoding="utf-8")
+        second = change_log.publish(db, today=nxt, root=root, cache_dir=cache, per_year=100)
+        nov15 = [day for day in second["days"] if day["date"] == "2026-11-15"]
+        check("the next morning logs the move on the day it was posted", len(nov15) == 1)
+        check("that move is logged once", len(nov15[0]["moves"]) == 1)
+        check("the move names both clubs", nov15[0]["moves"][0]["team"] == "San Francisco Giants to Milwaukee Brewers")
+        third = change_log.publish(db, today=nxt, root=root, cache_dir=cache, per_year=100)
+        again = [day for day in third["days"] if day["date"] == "2026-11-15"]
+        check("running again does not log the same move twice", len(again) == 1 and len(again[0]["moves"]) == 1)
+
+
 def test_a_failed_diff_does_not_raise() -> None:
     ok = change_log.publish_safely(None)  # type: ignore[arg-type]
     check("a bad database returns false", ok is False)
@@ -334,6 +371,7 @@ def main() -> None:
     test_a_rules_change_is_one_count_not_a_player_list()
     test_empty_days_are_omitted_and_the_window_is_60_days()
     test_the_opening_entry_is_only_the_newest_day()
+    test_a_move_posted_after_the_morning_run_is_logged_once()
     test_a_failed_diff_does_not_raise()
     test_the_page_groups_a_day_and_links_players()
     test_the_page_is_wired_into_the_site()

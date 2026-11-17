@@ -44,6 +44,7 @@ MOVE_LABELS = (
     ("release", "Releases"),
     ("signing", "Signings"),
     ("trade", "Trades"),
+    ("claim", "Waiver claims"),
     ("il", "Injured list"),
 )
 
