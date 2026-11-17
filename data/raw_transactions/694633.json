@@ -1,7 +1,7 @@
 {
   "player_id": 694633,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:e16299020fc7b138f97e7b700878d1bde353bf71e5d86c5ce2047007dc7eaa1f",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:0ab471af7bcda79b2909a4a52778152f74e83b67d3b0932249f2821bce881be0",
   "transactions": [
     {
       "id": 500032,
@@ -999,6 +999,30 @@
       "typeCode": "CLW",
       "typeDesc": "Claimed Off Waivers",
       "description": "Baltimore Orioles claimed RHP Chase Hampton off waivers from St. Louis Cardinals."
+    },
+    {
+      "id": 950366,
+      "person": {
+        "id": 694633,
+        "fullName": "Chase Hampton",
+        "link": "/api/v1/people/694633",
+        "nameSlug": "chase-hampton-694633"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "New York Yankees claimed RHP Chase Hampton off waivers from Baltimore Orioles."
     }
   ]
 }

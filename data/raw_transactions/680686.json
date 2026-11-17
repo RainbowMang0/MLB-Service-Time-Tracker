@@ -1,7 +1,7 @@
 {
   "player_id": 680686,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:c446e448ff724a59777d18e19e1fb7000f149e43878de3bb63feae26005980b0",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:05e76be37ea7f15ee389543893ed1a2dbb39891205a4271c9d4ff80d01e190c5",
   "transactions": [
     {
       "id": 359384,
@@ -1085,6 +1085,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Washington Nationals activated RHP Josiah Gray from the 60-day injured list."
+    },
+    {
+      "id": 950350,
+      "person": {
+        "id": 680686,
+        "fullName": "Josiah Gray",
+        "link": "/api/v1/people/680686",
+        "nameSlug": "josiah-gray-680686"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Washington Nationals designated RHP Josiah Gray for assignment."
     }
   ]
 }

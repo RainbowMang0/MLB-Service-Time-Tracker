@@ -184,7 +184,7 @@ def test_titles_match_the_search():
 def test_real_players_match_both_counts():
     wanted = {
         641329: ("out", (2021, 2023, 2024)),  # Bryan Baker
-        663698: ("out", (2021, 2022, 2023)),  # Joey Bart
+        656529: ("out", (2019, 2020, 2021)),  # Sam Hentges
         661563: ("out", (2020, 2021, 2022, 2026)),  # Luis Gil
         671056: ("out", (2021, 2022, 2023, 2024)),  # Iván Herrera
         650911: ("out", (2020, 2021, 2022, 2023)),  # Cristopher Sánchez

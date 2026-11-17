@@ -1,7 +1,7 @@
 {
   "player_id": 663698,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:8e7de5bf8c30c46ce81e34d0587a65eadad954a0cabc2c827d0346667c8838ca",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:0897e6cfe1188f57770afef4905f0cb94d67b58c54af0f3360fcfe27b30b7165",
   "transactions": [
     {
       "id": 265809,
@@ -1756,6 +1756,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Chicago White Sox activated C Joey Bart."
+    },
+    {
+      "id": 950370,
+      "person": {
+        "id": 663698,
+        "fullName": "Joey Bart",
+        "link": "/api/v1/people/663698",
+        "nameSlug": "joey-bart-663698"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Chicago White Sox designated C Joey Bart for assignment."
     }
   ]
 }

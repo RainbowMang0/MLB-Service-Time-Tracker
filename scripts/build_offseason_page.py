@@ -189,6 +189,17 @@ def club_rows(docs: Path) -> list[tuple[str, str, list[tuple[str, str]]]]:
     return rows
 
 
+def _changes_line(docs: Path) -> str:
+    """The daily log, when that page is already on disk."""
+    if not (docs / "changes.html").is_file():
+        return ""
+    return (
+        '  <p class="list-links">'
+        + _a("changes.html", "What changed")
+        + " — service time and roster moves, newest day first.</p>\n"
+    )
+
+
 def _facts_html(docs: Path) -> str:
     when_of = {}
     for group in calendar_groups(docs):
@@ -283,7 +294,7 @@ def render(docs: Path | None = None) -> str:
 
   <h1>MLB offseason</h1>
   <p class="lede">{html.escape(LEDE)}</p>
-{_facts_html(docs)}
+{_changes_line(docs)}{_facts_html(docs)}
 {_calendar_html(docs)}
 {_clubs_html(docs)}
 </div>{wpp._site_footer()}{wpp._search_script_tag()}</div>

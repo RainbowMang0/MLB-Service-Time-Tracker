@@ -1,7 +1,7 @@
 {
   "player_id": 691185,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:448bda3c635efcd1038dfdb762e3665442018cf019861882af11effff0f10776",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:fae510a7f7ead1bcc51edf43b5dba25612ad463d7f765024a28fbda4f3a00e0c",
   "transactions": [
     {
       "id": 414849,
@@ -864,6 +864,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Miami Marlins recalled SS Maximo Acosta from Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 950363,
+      "person": {
+        "id": 691185,
+        "fullName": "Maximo Acosta",
+        "link": "/api/v1/people/691185",
+        "nameSlug": "maximo-acosta-691185"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Maximo Acosta assigned to Tiburones de La Guaira."
     }
   ]
 }

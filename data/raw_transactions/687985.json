@@ -1,7 +1,7 @@
 {
   "player_id": 687985,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:96ac21259b58401abd4fcff3bfca438c58487028825f1f990ca187b97aa43f13",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:c38c3a3760dbfbe357908c0e20ab131e1a1dfd3eae7324926c7f77d7826e6025",
   "transactions": [
     {
       "id": 603738,
@@ -530,6 +530,30 @@
       "typeCode": "CLW",
       "typeDesc": "Claimed Off Waivers",
       "description": "Baltimore Orioles claimed RHP Josh White off waivers from Miami Marlins."
+    },
+    {
+      "id": 950367,
+      "person": {
+        "id": 687985,
+        "fullName": "Josh White",
+        "link": "/api/v1/people/687985",
+        "nameSlug": "josh-white-687985"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Texas Rangers claimed RHP Josh White off waivers from Baltimore Orioles."
     }
   ]
 }

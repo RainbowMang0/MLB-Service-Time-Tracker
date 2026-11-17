@@ -1,7 +1,7 @@
 {
   "player_id": 641343,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:def74f6ef90690852ece069e00ed96dc7a9230bbdee0e63f0f9acb633ceb58c7",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:5308bc5a10d3bb65ed0dfe9c60f86e991bba73ef020f0303de8f0007a753ccc9",
   "transactions": [
     {
       "id": 159369,
@@ -1502,6 +1502,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "1B Jake Bauers elected free agency."
+    },
+    {
+      "id": 950346,
+      "person": {
+        "id": 641343,
+        "fullName": "Jake Bauers",
+        "link": "/api/v1/people/641343",
+        "nameSlug": "jake-bauers-641343"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Boston Red Sox signed free agent 1B Jake Bauers."
     }
   ]
 }
