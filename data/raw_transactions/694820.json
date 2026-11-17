@@ -1,7 +1,7 @@
 {
   "player_id": 694820,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:2166471072e3af1f349777b4e7c62250e9ede51c16f0210c4d1ef4a120fe0f16",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:2d6d4f6d482cddb3c4d354b02a0b40e44c38a38928df50ab8db9aff2ea7202b2",
   "transactions": [
     {
       "id": 445749,
@@ -622,6 +622,26 @@
       "typeCode": "CLW",
       "typeDesc": "Claimed Off Waivers",
       "description": "Washington Nationals claimed RHP Braxton Roxby off waivers from San Francisco Giants."
+    },
+    {
+      "id": 950351,
+      "person": {
+        "id": 694820,
+        "fullName": "Braxton Roxby",
+        "link": "/api/v1/people/694820",
+        "nameSlug": "braxton-roxby-694820"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Washington Nationals designated RHP Braxton Roxby for assignment."
     }
   ]
 }

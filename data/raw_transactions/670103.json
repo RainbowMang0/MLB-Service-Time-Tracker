@@ -1,7 +1,7 @@
 {
   "player_id": 670103,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:601d6c1a48ec27a9867af84eb5bd0e7c96c87d58f833244f05579f751a301347",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:97012f7dd7ae277407da6246fa6bfb12f44c4ac82c8b8ca2b1e14248c37a8322",
   "transactions": [
     {
       "id": 280412,
@@ -1628,6 +1628,30 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Boston Red Sox activated LHP Raymond Burgos."
+    },
+    {
+      "id": 950348,
+      "person": {
+        "id": 670103,
+        "fullName": "Raymond Burgos",
+        "link": "/api/v1/people/670103",
+        "nameSlug": "raymond-burgos-670103"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Boston Red Sox traded LHP Raymond Burgos to Athletics for RHP Kenya Huggins."
     }
   ]
 }

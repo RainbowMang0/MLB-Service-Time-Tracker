@@ -1,7 +1,7 @@
 {
   "player_id": 691769,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:a30c54d38103ba00a88c905a27b821463f1da94705afe309f7f1123e06f2a1b9",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:8413e4c4b912636692ee14f6eb2411fd7726aa44cb33e92a95e74f1430cd9612",
   "transactions": [
     {
       "id": 419379,
@@ -782,6 +782,30 @@
       "typeCode": "CLW",
       "typeDesc": "Claimed Off Waivers",
       "description": "Baltimore Orioles claimed LHP Philip Abner off waivers from New York Mets."
+    },
+    {
+      "id": 950344,
+      "person": {
+        "id": 691769,
+        "fullName": "Philip Abner",
+        "link": "/api/v1/people/691769",
+        "nameSlug": "philip-abner-691769"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Washington Nationals claimed LHP Philip Abner off waivers from Baltimore Orioles."
     }
   ]
 }

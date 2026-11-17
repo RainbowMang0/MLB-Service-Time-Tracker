@@ -1,7 +1,7 @@
 {
   "player_id": 804556,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:fbab2d4285eb70d442cbae9bf2ccb2e7bd7aa79de192664c24b0918112d685ff",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:05aae84bcc9c09e63dfef06fa1a37527e25110e5b0d95de302c2f853f0991b4c",
   "transactions": [
     {
       "id": 624364,
@@ -831,6 +831,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Athletics recalled RHP Braden Nett from Midland RockHounds."
+    },
+    {
+      "id": 950347,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Athletics designated RHP Braden Nett for assignment."
     }
   ]
 }

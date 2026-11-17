@@ -1,7 +1,7 @@
 {
   "player_id": 665856,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:d216e563461602b55e17ca991e341cc031c5e57c776c23684058ad3719c76176",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:8c4102da5addb66f65408210eb916f23c9e6a8ccd88e821b2fb25f27e78afa3f",
   "transactions": [
     {
       "id": 248959,
@@ -1845,6 +1845,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "C Jair Camargo elected free agency."
+    },
+    {
+      "id": 950316,
+      "person": {
+        "id": 665856,
+        "fullName": "Jair Camargo",
+        "link": "/api/v1/people/665856",
+        "nameSlug": "jair-camargo-665856"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2026-11-16",
+      "effectiveDate": "2026-11-16",
+      "resolutionDate": "2026-11-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Jair Camargo assigned to Gigantes del Cibao."
     }
   ]
 }

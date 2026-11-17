@@ -1,7 +1,7 @@
 {
   "player_id": 800325,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:1bcb5e14da9a9f615a9103b0cf9ebb8d20652dd00fc863f02469facab8169925",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:c86c8b3a312d18f1fab20f1795406b9236aec4d4f6d53fca35c7dd9eddd7f677",
   "transactions": [
     {
       "id": 627359,
@@ -506,6 +506,26 @@
       "typeCode": "NUM",
       "typeDesc": "Number Change",
       "description": "RF Luis Lara changed number to 18."
+    },
+    {
+      "id": 950361,
+      "person": {
+        "id": 800325,
+        "fullName": "Luis Lara",
+        "link": "/api/v1/people/800325",
+        "nameSlug": "luis-lara-800325"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Luis Lara assigned to Tiburones de La Guaira."
     }
   ]
 }

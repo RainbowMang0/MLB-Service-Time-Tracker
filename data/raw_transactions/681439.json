@@ -1,7 +1,7 @@
 {
   "player_id": 681439,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:b8a24e1d54d4a95b232f6b0b2e81ae901d6dea59008db0a0b426d39c73cb7087",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:21f7f2dc16c929e66a735da4c02ebce352a6e2f0da3008c38ed15599442aff8d",
   "transactions": [
     {
       "id": 629610,
@@ -572,6 +572,30 @@
       "typeCode": "CLW",
       "typeDesc": "Claimed Off Waivers",
       "description": "Baltimore Orioles claimed C Zach Morgan off waivers from San Francisco Giants."
+    },
+    {
+      "id": 950368,
+      "person": {
+        "id": 681439,
+        "fullName": "Zach Morgan",
+        "link": "/api/v1/people/681439",
+        "nameSlug": "zach-morgan-681439"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Baltimore Orioles sent C Zach Morgan outright to Norfolk Tides."
     }
   ]
 }

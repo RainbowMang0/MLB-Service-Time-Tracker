@@ -1,7 +1,7 @@
 {
   "player_id": 677956,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:ba1c0e19d21f69cf6dde5198e1aed062f508dba4adc0e034a4322f78d9f0f85c",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:5406812aa001c01a3b420dc6314005efde7d37a96f187a833b1e119ca8d5496c",
   "transactions": [
     {
       "id": 326605,
@@ -1589,6 +1589,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Baltimore Orioles recalled RF Rece Hinds from Norfolk Tides."
+    },
+    {
+      "id": 950321,
+      "person": {
+        "id": 677956,
+        "fullName": "Rece Hinds",
+        "link": "/api/v1/people/677956",
+        "nameSlug": "rece-hinds-677956"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Baltimore Orioles released RF Rece Hinds."
     }
   ]
 }

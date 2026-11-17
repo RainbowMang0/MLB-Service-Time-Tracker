@@ -1,7 +1,7 @@
 {
   "player_id": 607219,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:b7c0e245777cd2d6c4bd8d216025004e811a635c59cea1bd36119f11d1a8e80c",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:bbb38fd3a35d9f70c3b5cdedb9abece1fbad9037f51daa2a40c6278278719212",
   "transactions": [
     {
       "id": 123867,
@@ -1694,6 +1694,26 @@
       "typeCode": "REL",
       "typeDesc": "Released",
       "description": "Guerreros de Oaxaca released RHP Sal Romano."
+    },
+    {
+      "id": 950310,
+      "person": {
+        "id": 607219,
+        "fullName": "Sal Romano",
+        "link": "/api/v1/people/607219",
+        "nameSlug": "sal-romano-607219"
+      },
+      "toTeam": {
+        "id": 668,
+        "name": "Toros del Este",
+        "link": "/api/v1/teams/668"
+      },
+      "date": "2026-11-16",
+      "effectiveDate": "2026-11-16",
+      "resolutionDate": "2026-11-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Sal Romano assigned to Toros del Este."
     }
   ]
 }

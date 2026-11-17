@@ -1,7 +1,7 @@
 {
   "player_id": 622786,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:fc5a5015e11984f92d1ffabc1abaec34842fc0de3f59c8993f42783143e5ebfc",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:81419f33d5de06ba252a7c52a69e322ae2d5b6e38bcdea0da3d5678d32bda5f8",
   "transactions": [
     {
       "id": 121183,
@@ -2006,6 +2006,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Jacksonville Jumbo Shrimp activated RHP Jesus Tinoco from the full-season injured list."
+    },
+    {
+      "id": 950364,
+      "person": {
+        "id": 622786,
+        "fullName": "Jesus Tinoco",
+        "link": "/api/v1/people/622786",
+        "nameSlug": "jesus-tinoco-622786"
+      },
+      "toTeam": {
+        "id": 696,
+        "name": "Navegantes del Magallanes",
+        "link": "/api/v1/teams/696"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jesus Tinoco assigned to Navegantes del Magallanes."
     }
   ]
 }

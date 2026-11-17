@@ -1,7 +1,7 @@
 {
   "player_id": 687830,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:fc1e03e9a1b5a51f945bcf85841e625bb3acfa5c1b000c4187edd66501a2c3a8",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:a7550f82699cf3ead109e75447ddf0b59857a18e7096ca0ed878ea0008b7fc2b",
   "transactions": [
     {
       "id": 412558,
@@ -1113,6 +1113,46 @@
       "typeCode": "REL",
       "typeDesc": "Released",
       "description": "Detroit Tigers released RHP Sawyer Gipson-Long."
+    },
+    {
+      "id": 950333,
+      "person": {
+        "id": 687830,
+        "fullName": "Sawyer Gipson-Long",
+        "link": "/api/v1/people/687830",
+        "nameSlug": "sawyer-gipson-long-687830"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-11-16",
+      "effectiveDate": "2026-11-16",
+      "resolutionDate": "2026-11-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent RHP Sawyer Gipson-Long to a minor league contract."
+    },
+    {
+      "id": 950334,
+      "person": {
+        "id": 687830,
+        "fullName": "Sawyer Gipson-Long",
+        "link": "/api/v1/people/687830",
+        "nameSlug": "sawyer-gipson-long-687830"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Sawyer Gipson-Long assigned to Toledo Mud Hens."
     }
   ]
 }

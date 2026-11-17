@@ -1,7 +1,7 @@
 {
   "player_id": 687223,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:b79a6300a3acfb0cbefcf42a111511041ecbe8037ee29c55be15408a4df351e6",
+  "fetched_at": "2026-11-17T20:33:14Z",
+  "checksum": "sha256:32b4e8207c87b4fb99fa42951b26abd0549d09c42ba48f7e67d3404894bdba1b",
   "transactions": [
     {
       "id": 623308,
@@ -990,6 +990,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Washington Nationals recalled LHP Carson Palmquist from Rochester Red Wings."
+    },
+    {
+      "id": 950353,
+      "person": {
+        "id": 687223,
+        "fullName": "Carson Palmquist",
+        "link": "/api/v1/people/687223",
+        "nameSlug": "carson-palmquist-687223"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Washington Nationals designated LHP Carson Palmquist for assignment."
     }
   ]
 }
