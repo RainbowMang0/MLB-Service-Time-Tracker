@@ -53,6 +53,7 @@ _CALENDAR_ORDER = (
     "contract.html",
     "rule-5.html",
     wpp.SEND_DOWN_PATH,
+    "out-of-options.html",
     wpp.ARBITRATION_ELIGIBLE_PATH,
     wpp.NON_TENDER_WATCH_PATH,
     "lockout.html",
@@ -117,6 +118,11 @@ def calendar_groups(docs: Path) -> list[dict]:
                     "Can a team send a player down?",
                     "Options, a designation for assignment, and an outright.",
                 ),
+                (
+                    "out-of-options.html",
+                    "Out of options",
+                    "40-man players who have used every option year.",
+                ),
             ],
         },
         {
@@ -172,6 +178,7 @@ def club_rows(docs: Path) -> list[tuple[str, str, list[tuple[str, str]]]]:
             (wpp.club_free_agents_path(name), "Free agents"),
             (wpp.club_arbitration_path(name), "Arbitration"),
             (wpp.club_non_tender_path(name), "Non-tender"),
+            (f"t/{wpp.slug(name)}-out-of-options.html", "Out of options"),
         ):
             if (docs / rel).is_file():
                 links.append((rel, label))
@@ -371,7 +378,10 @@ def problems(page: str, docs: Path | None = None) -> list[str]:
             need(f"links {rel}", f'href="{wpp.BASE_PATH}{rel}"' in page)
     club_dir = docs / "t"
     if club_dir.is_dir():
-        for pattern in ("*-arbitration.html", "*-free-agents.html", "*-non-tender.html"):
+        for pattern in (
+            "*-arbitration.html", "*-free-agents.html", "*-non-tender.html",
+            "*-out-of-options.html",
+        ):
             for path in club_dir.glob(pattern):
                 rel = f"t/{path.name}"
                 need(f"links {rel}", f'href="{wpp.BASE_PATH}{rel}"' in page)

@@ -223,6 +223,7 @@ def render() -> str:
         for label, url in GLOSSARY
     )
     options = _href(wpp.OPTIONS_PATH)
+    ooo = _href("out-of-options.html")
     service = _href(wpp.EXPLAINER_PATH)
     arb = _href(wpp.ARBITRATION_ELIGIBLE_PATH)
     nontender = _href(wpp.NON_TENDER_WATCH_PATH)
@@ -276,7 +277,7 @@ def render() -> str:
   A stay shorter than {days} days does not use the year, and those days still
   count as major league service. <a href="{service}">How a day of service is
   counted</a> is a separate question.</p>
-  <p>A player who has used those years is <a href="{options}">out of
+  <p>A player who has used those years is <a href="{ooo}">out of
   options</a>. The club cannot send him down and keep the 40-man spot. A
   player with more than five years of major league service has to agree
   before the club can option him. Some players qualify for one more option
@@ -337,8 +338,9 @@ def render() -> str:
   which means a designation and waivers. Another club can claim him. That is
   why an out-of-options player is harder to move down, in spring training
   and again around roster deadlines.</p>
-  <p>The <a href="{options}">out-of-options list</a> is this site's own count
-  from public data. It is not the league's official record.</p>
+  <p>The <a href="{ooo}">out-of-options list</a> is this site's own count
+  from public data. It is not the league's official record.
+  <a href="{options}">The options table</a> is a second view of public data.</p>
 
   <h2 id="rule-5">Rule 5 protection</h2>
   <p><b>{RESERVE_LIST_DATE}</b> is the day clubs set the reserve list. A
@@ -409,6 +411,7 @@ def problems(page: str) -> list[str]:
         need(f"glossary {label}", url in page)
     for path in (
         wpp.OPTIONS_PATH,
+        "out-of-options.html",
         wpp.EXPLAINER_PATH,
         wpp.ARBITRATION_ELIGIBLE_PATH,
         wpp.NON_TENDER_WATCH_PATH,

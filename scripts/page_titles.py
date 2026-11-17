@@ -283,6 +283,49 @@ def options_meta(out: int, one: int) -> str:
     )
 
 
+def out_of_options_core(year: int | None) -> str:
+    if year:
+        return f"MLB players out of options {year}"
+    return "MLB players out of options"
+
+
+def out_of_options_title(year: int | None) -> str:
+    return fit_title(out_of_options_core(year))
+
+
+def out_of_options_meta(count: int, year: int | None) -> str:
+    when = f" {year}" if year else ""
+    return fit_meta(
+        f"MLB out of options{when}: {count} {_players(count)} on a 40-man roster "
+        f"{_be(count)} out of minor-league options, by team. From public data."
+    )
+
+
+def club_out_of_options_core(club: str, year: int | None) -> str:
+    if year:
+        return f"{club} out of options {year}"
+    return f"{club} out of options"
+
+
+def club_out_of_options_title(club: str, year: int | None) -> str:
+    return fit_title(club_out_of_options_core(club, year))
+
+
+def club_out_of_options_meta(club: str, out_count: int, one_count: int, year: int | None) -> str:
+    when = f" {year}" if year else ""
+    extra = ""
+    if one_count:
+        extra = f" {one_count} {_players(one_count)} have one option year left."
+    if out_count == 0:
+        lead = f"no player on the 40-man roster is out of minor-league options."
+    else:
+        lead = (
+            f"{out_count} {_players(out_count)} {_be(out_count)} "
+            "out of minor-league options."
+        )
+    return fit_meta(f"{club} out of options{when}: {lead}{extra} From public data.")
+
+
 def explainer_title() -> str:
     return fit_title("What MLB service time is")
 

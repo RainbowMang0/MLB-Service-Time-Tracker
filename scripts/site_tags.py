@@ -24,6 +24,7 @@ _LIST_RELS = frozenset({
     "arbitration-eligible.html",
     "super-two.html",
     "options.html",
+    "out-of-options.html",
     "non-tender-watch.html",
     "free-agents.html",
 })
