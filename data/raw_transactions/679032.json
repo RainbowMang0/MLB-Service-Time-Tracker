@@ -1,7 +1,7 @@
 {
   "player_id": 679032,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:982fd68c4802367de097e5f9772b594252efffb2bf010942f607a28b04a59044",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:f7158b565d71d13c4f5035de7aedd2cfb19dd07eede59761874baf5ba1967a61",
   "transactions": [
     {
       "id": 340318,
@@ -1058,6 +1058,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Philadelphia Phillies activated CF Johan Rojas from the 60-day injured list."
+    },
+    {
+      "id": 950535,
+      "person": {
+        "id": 679032,
+        "fullName": "Johan Rojas",
+        "link": "/api/v1/people/679032",
+        "nameSlug": "johan-rojas-679032"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Johan Rojas assigned to Gigantes del Cibao."
     }
   ]
 }

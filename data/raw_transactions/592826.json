@@ -1,7 +1,7 @@
 {
   "player_id": 592826,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:1f0d5b2c05293af3bd76d99b3903ba0c5002021d5defa386266848b0b39b9006",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:94ba174b1fead205bed44d73c41d02ac4661c7676b0216592949c68153abe8f7",
   "transactions": [
     {
       "id": 57770,
@@ -2072,6 +2072,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Vince Velasquez elected free agency."
+    },
+    {
+      "id": 950579,
+      "person": {
+        "id": 592826,
+        "fullName": "Vince Velasquez",
+        "link": "/api/v1/people/592826",
+        "nameSlug": "vince-velasquez-592826"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Kansas City Royals signed free agent RHP Vince Velasquez to a minor league contract."
+    },
+    {
+      "id": 950580,
+      "person": {
+        "id": 592826,
+        "fullName": "Vince Velasquez",
+        "link": "/api/v1/people/592826",
+        "nameSlug": "vince-velasquez-592826"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "resolutionDate": "2026-11-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Vince Velasquez assigned to Omaha Storm Chasers."
     }
   ]
 }

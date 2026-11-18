@@ -1,7 +1,7 @@
 {
   "player_id": 678576,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:d515ed1972c083195b16b3cbf757b9701465330b500f448a048ca17e3f6113bd",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:f06556bea75d6d23a1d38e280e1efebbbeda0ac137a1afb9ae2808e097fa68bb",
   "transactions": [
     {
       "id": 337798,
@@ -978,6 +978,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Wilkin Ramos elected free agency."
+    },
+    {
+      "id": 950560,
+      "person": {
+        "id": 678576,
+        "fullName": "Wilkin Ramos",
+        "link": "/api/v1/people/678576",
+        "nameSlug": "wilkin-ramos-678576"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Athletics signed free agent RHP Wilkin Ramos to a minor league contract."
+    },
+    {
+      "id": 950561,
+      "person": {
+        "id": 678576,
+        "fullName": "Wilkin Ramos",
+        "link": "/api/v1/people/678576",
+        "nameSlug": "wilkin-ramos-678576"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "resolutionDate": "2026-11-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Wilkin Ramos assigned to Las Vegas Aviators."
     }
   ]
 }

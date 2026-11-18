@@ -1,7 +1,7 @@
 {
   "player_id": 680777,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:78d377b7c501a33c639072f55c9815d9c703aa5a3879623d76f9c9840fcc10ce",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:3732085b5faf3acaa711090352b283044d9ef597ab4712d62561ff21f532eae5",
   "transactions": [
     {
       "id": 362739,
@@ -664,6 +664,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "C Ryan Jeffers elected free agency."
+    },
+    {
+      "id": 950380,
+      "person": {
+        "id": 680777,
+        "fullName": "Ryan Jeffers",
+        "link": "/api/v1/people/680777",
+        "nameSlug": "ryan-jeffers-680777"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent C Ryan Jeffers."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 645302,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:ef018b4536232b537e2db7cc291f167bcc5ca433d9f986fd9ec57308c24e79cd",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:cc01c7bc9a09a39ed1890d10f914af9d9f9e7a89c4800b0c1998030fcdd9bf64",
   "transactions": [
     {
       "id": 162893,
@@ -1490,6 +1490,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RF Victor Robles elected free agency."
+    },
+    {
+      "id": 950382,
+      "person": {
+        "id": 645302,
+        "fullName": "Victor Robles",
+        "link": "/api/v1/people/645302",
+        "nameSlug": "victor-robles-645302"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Victor Robles assigned to Aguilas Cibaenas."
     }
   ]
 }

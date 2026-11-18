@@ -1,7 +1,7 @@
 {
   "player_id": 668820,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:ce1f62e951ef0f33fb0499eedd49ba8db72372de7ab61cd499a2fd3efabcc09a",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:401fb16f772021781000215275150de1fba955412bff26e9d439c74c197c6cc6",
   "transactions": [
     {
       "id": 275686,
@@ -2030,6 +2030,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Max Kranick elected free agency."
+    },
+    {
+      "id": 950594,
+      "person": {
+        "id": 668820,
+        "fullName": "Max Kranick",
+        "link": "/api/v1/people/668820",
+        "nameSlug": "max-kranick-668820"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent RHP Max Kranick to a minor league contract."
+    },
+    {
+      "id": 950595,
+      "person": {
+        "id": 668820,
+        "fullName": "Max Kranick",
+        "link": "/api/v1/people/668820",
+        "nameSlug": "max-kranick-668820"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "resolutionDate": "2026-11-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Max Kranick assigned to Lehigh Valley IronPigs."
     }
   ]
 }

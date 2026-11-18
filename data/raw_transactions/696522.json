@@ -1,7 +1,7 @@
 {
   "player_id": 696522,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:5cadb10392b7c7b5110aa6dfe2763a0867afcfcb409bb554e6b9fbde6862aade",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:9049b0ed5b5081ad2422dab584bcf9a68913803d9971995c4ab02d7653d0fdb6",
   "transactions": [
     {
       "id": 506294,
@@ -642,6 +642,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Athletics recalled RHP Hayden Juenger from Las Vegas Aviators."
+    },
+    {
+      "id": 950460,
+      "person": {
+        "id": 696522,
+        "fullName": "Hayden Juenger",
+        "link": "/api/v1/people/696522",
+        "nameSlug": "hayden-juenger-696522"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Athletics designated RHP Hayden Juenger for assignment."
     }
   ]
 }

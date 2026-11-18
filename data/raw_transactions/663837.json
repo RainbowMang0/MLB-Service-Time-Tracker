@@ -1,7 +1,7 @@
 {
   "player_id": 663837,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:6c829102bc29ce15de7357fef1fd8e2df80e9c18186d1e263300d5907f5ab5ba",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:4ea080024b26078a999ebf893a115d5f56454066c2ca42a903613f27a277eeec",
   "transactions": [
     {
       "id": 306374,
@@ -1037,6 +1037,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Detroit Tigers activated CF Matt Vierling from the 60-day injured list."
+    },
+    {
+      "id": 950427,
+      "person": {
+        "id": 663837,
+        "fullName": "Matt Vierling",
+        "link": "/api/v1/people/663837",
+        "nameSlug": "matt-vierling-663837"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Detroit Tigers designated CF Matt Vierling for assignment."
     }
   ]
 }

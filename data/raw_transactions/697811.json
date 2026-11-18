@@ -1,7 +1,7 @@
 {
   "player_id": 697811,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:09ff22bee01d0197c59542b00016a067afafbb1ad01aeebf56528d335cbf16a9",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:02d55f2a7c82cd8093439126ef9312817e8f0989c83f6121f44e4172a9ad9f58",
   "transactions": [
     {
       "id": 630329,
@@ -663,6 +663,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "New York Mets recalled RHP Dylan Ross from Syracuse Mets."
+    },
+    {
+      "id": 950400,
+      "person": {
+        "id": 697811,
+        "fullName": "Dylan Ross",
+        "link": "/api/v1/people/697811",
+        "nameSlug": "dylan-ross-697811"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Mets designated RHP Dylan Ross for assignment."
     }
   ]
 }

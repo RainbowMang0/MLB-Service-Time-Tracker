@@ -1,7 +1,7 @@
 {
   "player_id": 600869,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:69e933baa995f7921bdb4035d6b61b895d45e55ebd980597a5d927c298fdb9f8",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:0b49203b0aca4add4ff6ed195e27e638ea224696fab774872b14a0b98c2a66da",
   "transactions": [
     {
       "id": 77565,
@@ -2441,6 +2441,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "3B Jeimer Candelario elected free agency."
+    },
+    {
+      "id": 950451,
+      "person": {
+        "id": 600869,
+        "fullName": "Jeimer Candelario",
+        "link": "/api/v1/people/600869",
+        "nameSlug": "jeimer-candelario-600869"
+      },
+      "toTeam": {
+        "id": 668,
+        "name": "Toros del Este",
+        "link": "/api/v1/teams/668"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Jeimer Candelario assigned to Toros del Este."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 805725,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:052c4a57d886fd105d9c30afafa420d85e00d0241d8c072a5285333120c9fdab",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:2139e357459d68359fa29e1837a28ce5c70a8e31db13b862ef326ec8a84a015e",
   "transactions": [
     {
       "id": 643407,
@@ -1095,6 +1095,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Detroit Tigers recalled LHP Jake Miller from Erie SeaWolves."
+    },
+    {
+      "id": 950425,
+      "person": {
+        "id": 805725,
+        "fullName": "Jake Miller",
+        "link": "/api/v1/people/805725",
+        "nameSlug": "jake-miller-805725"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Detroit Tigers designated LHP Jake Miller for assignment."
     }
   ]
 }

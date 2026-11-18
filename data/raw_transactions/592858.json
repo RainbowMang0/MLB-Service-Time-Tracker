@@ -1,7 +1,7 @@
 {
   "player_id": 592858,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:d38fe80658bcd41f3bbd73c663839a20dd9bad80860b08ada5438d580a949ce5",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:c99f39d40b71295dc33b59e3c28fb7e71ebafc04822d8f58817ad87a35749748",
   "transactions": [
     {
       "id": 122072,
@@ -1369,6 +1369,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "San Francisco Giants activated RHP Rowan Wick from the 60-day injured list."
+    },
+    {
+      "id": 950508,
+      "person": {
+        "id": 592858,
+        "fullName": "Rowan Wick",
+        "link": "/api/v1/people/592858",
+        "nameSlug": "rowan-wick-592858"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "San Francisco Giants designated RHP Rowan Wick for assignment."
     }
   ]
 }

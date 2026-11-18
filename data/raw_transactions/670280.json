@@ -1,7 +1,7 @@
 {
   "player_id": 670280,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:77643ad0874d0523db9515bfea37982e8454fd6937c78230c8af084d59b231f0",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:07d6b9450c78ba6782ececa432e1fd1da84085de4e2737d16c2f0949f2adc3a2",
   "transactions": [
     {
       "id": 271113,
@@ -1169,6 +1169,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP David Bednar elected free agency."
+    },
+    {
+      "id": 950408,
+      "person": {
+        "id": 670280,
+        "fullName": "David Bednar",
+        "link": "/api/v1/people/670280",
+        "nameSlug": "david-bednar-670280"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Yankees signed free agent RHP David Bednar."
     }
   ]
 }

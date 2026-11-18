@@ -1,7 +1,7 @@
 {
   "player_id": 699013,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:a9f972f48cc84eafcf50605fe486de761fcf4254d7944945bee8fd5b952c57c7",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:0a5c7436fb19c5845862f1515dc266c0b6941489b190dc07ce3f91f15891bdba",
   "transactions": [
     {
       "id": 472701,
@@ -658,6 +658,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Pittsburgh Pirates activated RF Esmerlyn Valdez from the 10-day injured list."
+    },
+    {
+      "id": 950404,
+      "person": {
+        "id": 699013,
+        "fullName": "Esmerlyn Valdez",
+        "link": "/api/v1/people/699013",
+        "nameSlug": "esmerlyn-valdez-699013"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Esmerlyn Valdez assigned to Leones del Escogido."
     }
   ]
 }

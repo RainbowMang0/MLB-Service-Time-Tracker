@@ -1,7 +1,7 @@
 {
   "player_id": 672710,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:d48c563e1b77ebb91adc8f2e00363e82c7aa060c804788451a83a0dd52ebae72",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:b87c0c8ca7e6472abf393f326de588886ee8e176706d36d26a2baca47cb3c79f",
   "transactions": [
     {
       "id": 290533,
@@ -1380,6 +1380,26 @@
       "typeCode": "REL",
       "typeDesc": "Released",
       "description": "Colorado Rockies released RHP Roansy Contreras."
+    },
+    {
+      "id": 950544,
+      "person": {
+        "id": 672710,
+        "fullName": "Roansy Contreras",
+        "link": "/api/v1/people/672710",
+        "nameSlug": "roansy-contreras-672710"
+      },
+      "toTeam": {
+        "id": 668,
+        "name": "Toros del Este",
+        "link": "/api/v1/teams/668"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Roansy Contreras assigned to Toros del Este."
     }
   ]
 }

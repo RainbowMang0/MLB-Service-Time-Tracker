@@ -1,7 +1,7 @@
 {
   "player_id": 669289,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:3b9fbfbe6379e3288e3fddc8e4767d8e7f323a4be5a1ebe2d7633ad9bfcd1dc1",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:8933237af8e28bc097d03e7edc3335ae6455768e8ba18ae33040a85f6743b536",
   "transactions": [
     {
       "id": 277459,
@@ -1457,6 +1457,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "3B Santiago Espinal elected free agency."
+    },
+    {
+      "id": 950388,
+      "person": {
+        "id": 669289,
+        "fullName": "Santiago Espinal",
+        "link": "/api/v1/people/669289",
+        "nameSlug": "santiago-espinal-669289"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Santiago Espinal assigned to Aguilas Cibaenas."
     }
   ]
 }

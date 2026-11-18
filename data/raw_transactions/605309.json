@@ -1,7 +1,7 @@
 {
   "player_id": 605309,
-  "fetched_at": "2026-11-11T19:19:55Z",
-  "checksum": "sha256:5920ef03e2fa6b3c273ee53dff2ab86fb3b5ef1e50a1ab60e945136d26cb3296",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:51bd4c3526b8ce749e1b7f7e46b508f3b8dbdb32b5d3e381ad5da9fc33af3355",
   "transactions": [
     {
       "id": 121884,
@@ -1970,6 +1970,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Jaguares de Nayarit activated RHP Keone Kela."
+    },
+    {
+      "id": 950456,
+      "person": {
+        "id": 605309,
+        "fullName": "Keone Kela",
+        "link": "/api/v1/people/605309",
+        "nameSlug": "keone-kela-605309"
+      },
+      "toTeam": {
+        "id": 6483,
+        "name": "Jaguares de Nayarit",
+        "link": "/api/v1/teams/6483"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jaguares de Nayarit placed RHP Keone Kela on the reserve list."
     }
   ]
 }

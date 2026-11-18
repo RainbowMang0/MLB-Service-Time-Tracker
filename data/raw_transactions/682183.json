@@ -1,7 +1,7 @@
 {
   "player_id": 682183,
-  "fetched_at": "2026-11-11T19:19:55Z",
-  "checksum": "sha256:4949b3d6eb4056d0e6d65e3c5af2fa6c5e37c1c466895ac833988e76aa4098f0",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:a807bdf5b3c7c8d803cdbff7463e1e977c5e0a2dda34fbe4ee9da29ca84fea63",
   "transactions": [
     {
       "id": 362032,
@@ -1126,6 +1126,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Algodoneros de Guasave placed LF Drew Avans on the reserve list."
+    },
+    {
+      "id": 950524,
+      "person": {
+        "id": 682183,
+        "fullName": "Drew Avans",
+        "link": "/api/v1/people/682183",
+        "nameSlug": "drew-avans-682183"
+      },
+      "toTeam": {
+        "id": 5482,
+        "name": "Algodoneros de Guasave",
+        "link": "/api/v1/teams/5482"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Algodoneros de Guasave activated LF Drew Avans from the reserve list."
     }
   ]
 }

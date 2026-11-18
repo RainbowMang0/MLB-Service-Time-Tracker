@@ -1,6 +1,6 @@
 {
   "player_id": 675659,
-  "fetched_at": "2026-11-17T20:33:14Z",
+  "fetched_at": "2026-11-18T20:05:22Z",
   "checksum": "sha256:dac9d2ab1f0198895a0fb877e5587de58352003822d77c1d0a689fcdf9fdb20d",
   "transactions": [
     {
@@ -112,6 +112,26 @@
       "description": "SS Greg Jones assigned to Rays Alternate Training Site from GCL Rays."
     },
     {
+      "id": 463411,
+      "person": {
+        "id": 675659,
+        "fullName": "Greg Jones",
+        "link": "/api/v1/people/675659",
+        "nameSlug": "greg-jones-675659"
+      },
+      "toTeam": {
+        "id": 2498,
+        "name": "Bowling Green Hot Rods",
+        "link": "/api/v1/teams/2498"
+      },
+      "date": "2020-10-02",
+      "effectiveDate": "2020-10-02",
+      "resolutionDate": "2020-10-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Greg Jones assigned to Bowling Green Hot Rods."
+    },
+    {
       "id": 453244,
       "person": {
         "id": 675659,
@@ -134,26 +154,6 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "SS Greg Jones assigned to Bowling Green Hot Rods from Rays Alternate Training Site."
-    },
-    {
-      "id": 463411,
-      "person": {
-        "id": 675659,
-        "fullName": "Greg Jones",
-        "link": "/api/v1/people/675659",
-        "nameSlug": "greg-jones-675659"
-      },
-      "toTeam": {
-        "id": 2498,
-        "name": "Bowling Green Hot Rods",
-        "link": "/api/v1/teams/2498"
-      },
-      "date": "2020-10-02",
-      "effectiveDate": "2020-10-02",
-      "resolutionDate": "2020-10-02",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "SS Greg Jones assigned to Bowling Green Hot Rods."
     },
     {
       "id": 474572,
@@ -196,26 +196,6 @@
       "description": "SS Greg Jones assigned to Charleston RiverDogs."
     },
     {
-      "id": 468018,
-      "person": {
-        "id": 675659,
-        "fullName": "Greg Jones",
-        "link": "/api/v1/people/675659",
-        "nameSlug": "greg-jones-675659"
-      },
-      "toTeam": {
-        "id": 233,
-        "name": "Charleston RiverDogs",
-        "link": "/api/v1/teams/233"
-      },
-      "date": "2021-02-12",
-      "effectiveDate": "2021-02-12",
-      "resolutionDate": "2021-02-12",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "SS Greg Jones assigned to Charleston RiverDogs."
-    },
-    {
       "id": 469298,
       "person": {
         "id": 675659,
@@ -234,6 +214,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "Tampa Bay Rays invited non-roster SS Greg Jones to spring training."
+    },
+    {
+      "id": 468018,
+      "person": {
+        "id": 675659,
+        "fullName": "Greg Jones",
+        "link": "/api/v1/people/675659",
+        "nameSlug": "greg-jones-675659"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Greg Jones assigned to Charleston RiverDogs."
     },
     {
       "id": 481721,
@@ -815,7 +815,7 @@
       "description": "Albuquerque Isotopes placed SS Greg Jones on the 7-day injured list retroactive to April 22, 2024."
     },
     {
-      "id": 774155,
+      "id": 775642,
       "person": {
         "id": 675659,
         "fullName": "Greg Jones",
@@ -840,7 +840,7 @@
       "description": "Albuquerque Isotopes sent SS Greg Jones on a rehab assignment to ACL Rockies."
     },
     {
-      "id": 775642,
+      "id": 774155,
       "person": {
         "id": 675659,
         "fullName": "Greg Jones",
@@ -1245,26 +1245,6 @@
       "description": "Houston Astros signed free agent RF Greg Jones to a minor league contract."
     },
     {
-      "id": 840691,
-      "person": {
-        "id": 675659,
-        "fullName": "Greg Jones",
-        "link": "/api/v1/people/675659",
-        "nameSlug": "greg-jones-675659"
-      },
-      "toTeam": {
-        "id": 1998,
-        "name": "FCL Astros",
-        "link": "/api/v1/teams/1998"
-      },
-      "date": "2025-05-20",
-      "effectiveDate": "2025-05-20",
-      "resolutionDate": "2025-05-20",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "FCL Astros activated RF Greg Jones."
-    },
-    {
       "id": 839884,
       "person": {
         "id": 675659,
@@ -1283,6 +1263,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RF Greg Jones assigned to FCL Astros."
+    },
+    {
+      "id": 840691,
+      "person": {
+        "id": 675659,
+        "fullName": "Greg Jones",
+        "link": "/api/v1/people/675659",
+        "nameSlug": "greg-jones-675659"
+      },
+      "toTeam": {
+        "id": 1998,
+        "name": "FCL Astros",
+        "link": "/api/v1/teams/1998"
+      },
+      "date": "2025-05-20",
+      "effectiveDate": "2025-05-20",
+      "resolutionDate": "2025-05-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "FCL Astros activated RF Greg Jones."
     },
     {
       "id": 853779,
@@ -1369,26 +1369,6 @@
       "description": "RF Greg Jones elected free agency."
     },
     {
-      "id": 880639,
-      "person": {
-        "id": 675659,
-        "fullName": "Greg Jones",
-        "link": "/api/v1/people/675659",
-        "nameSlug": "greg-jones-675659"
-      },
-      "toTeam": {
-        "id": 158,
-        "name": "Milwaukee Brewers",
-        "link": "/api/v1/teams/158"
-      },
-      "date": "2025-12-11",
-      "effectiveDate": "2025-12-11",
-      "resolutionDate": "2025-12-11",
-      "typeCode": "SFA",
-      "typeDesc": "Signed as Free Agent",
-      "description": "Milwaukee Brewers signed free agent RF Greg Jones to a minor league contract."
-    },
-    {
       "id": 880640,
       "person": {
         "id": 675659,
@@ -1407,6 +1387,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RF Greg Jones assigned to Nashville Sounds."
+    },
+    {
+      "id": 880639,
+      "person": {
+        "id": 675659,
+        "fullName": "Greg Jones",
+        "link": "/api/v1/people/675659",
+        "nameSlug": "greg-jones-675659"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2025-12-11",
+      "effectiveDate": "2025-12-11",
+      "resolutionDate": "2025-12-11",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Milwaukee Brewers signed free agent RF Greg Jones to a minor league contract."
     },
     {
       "id": 880638,

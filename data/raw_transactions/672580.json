@@ -1,7 +1,7 @@
 {
   "player_id": 672580,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:fe7dd0989c9c5e0928db9eba45ba56a1b4f4eccf695435ea371a9af0cae81c1b",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:ecf3b1e914c64e1319065e00dd62529cc93182bb21cb0fe32a26d67a77c2948d",
   "transactions": [
     {
       "id": 290204,
@@ -985,6 +985,30 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Kansas City Royals activated 3B Maikel Garcia from the 10-day injured list."
+    },
+    {
+      "id": 950608,
+      "person": {
+        "id": 672580,
+        "fullName": "Maikel Garcia",
+        "link": "/api/v1/people/672580",
+        "nameSlug": "maikel-garcia-672580"
+      },
+      "fromTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Seattle Mariners traded RHP Bryce Miller, RHP Logan Evans and LHP José A. Ferrer to Kansas City Royals for 3B Maikel Garcia, RHP L.P. Langevin and RHP James McArthur."
     }
   ]
 }

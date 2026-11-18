@@ -1,7 +1,7 @@
 {
   "player_id": 664744,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:cc052d8ce4e7e1f2de76458133e6b4ce98e5ee98cbba9c9f005491c6bf9f2311",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:4126b412b765ed5aa1a52ce42088acd9a34e5aa44959239b46e6062f9ca462a9",
   "transactions": [
     {
       "id": 230584,
@@ -1701,6 +1701,46 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Jose Espada assigned to Criollos de Caguas."
+    },
+    {
+      "id": 950589,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent RHP Jose Espada to a minor league contract."
+    },
+    {
+      "id": 950590,
+      "person": {
+        "id": 664744,
+        "fullName": "Jose Espada",
+        "link": "/api/v1/people/664744",
+        "nameSlug": "jose-espada-664744"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "resolutionDate": "2026-11-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jose Espada assigned to St. Paul Saints."
     }
   ]
 }

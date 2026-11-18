@@ -1,0 +1,535 @@
+{
+  "player_id": 682785,
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:f9c3234e7c87cd3579372abb2f4a150fff2130e9a56eb2a55ebb9affb13dc900",
+  "transactions": [
+    {
+      "id": 366298,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2018-07-02",
+      "effectiveDate": "2018-07-02",
+      "resolutionDate": "2018-07-02",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Boston Red Sox signed free agent RHP Angel Bastardo to a minor league contract."
+    },
+    {
+      "id": 404669,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "toTeam": {
+        "id": 627,
+        "name": "DSL Red Sox Red",
+        "link": "/api/v1/teams/627"
+      },
+      "date": "2019-05-31",
+      "effectiveDate": "2019-05-31",
+      "resolutionDate": "2019-05-31",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Angel Bastardo assigned to DSL Red Sox2."
+    },
+    {
+      "id": 405815,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "fromTeam": {
+        "id": 627,
+        "name": "DSL Red Sox Red",
+        "link": "/api/v1/teams/627"
+      },
+      "toTeam": {
+        "id": 626,
+        "name": "DSL Red Sox Blue",
+        "link": "/api/v1/teams/626"
+      },
+      "date": "2019-06-04",
+      "effectiveDate": "2019-06-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Angel Bastardo assigned to DSL Red Sox1 from DSL Red Sox2."
+    },
+    {
+      "id": 496911,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "fromTeam": {
+        "id": 626,
+        "name": "DSL Red Sox Blue",
+        "link": "/api/v1/teams/626"
+      },
+      "toTeam": {
+        "id": 471,
+        "name": "FCL Red Sox",
+        "link": "/api/v1/teams/471"
+      },
+      "date": "2021-06-28",
+      "effectiveDate": "2021-06-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Angel Bastardo assigned to FCL Red Sox from DSL Red Sox Blue."
+    },
+    {
+      "id": 614034,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "toTeam": {
+        "id": 414,
+        "name": "Salem RidgeYaks",
+        "link": "/api/v1/teams/414"
+      },
+      "date": "2022-04-08",
+      "effectiveDate": "2022-04-08",
+      "resolutionDate": "2022-04-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Angel Bastardo assigned to Salem Red Sox."
+    },
+    {
+      "id": 621312,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "toTeam": {
+        "id": 414,
+        "name": "Salem RidgeYaks",
+        "link": "/api/v1/teams/414"
+      },
+      "date": "2022-05-14",
+      "effectiveDate": "2022-05-14",
+      "resolutionDate": "2022-05-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salem Red Sox placed RHP Angel Bastardo on the 7-day injured list."
+    },
+    {
+      "id": 625029,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "toTeam": {
+        "id": 414,
+        "name": "Salem RidgeYaks",
+        "link": "/api/v1/teams/414"
+      },
+      "date": "2022-05-28",
+      "effectiveDate": "2022-05-28",
+      "resolutionDate": "2022-05-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salem Red Sox activated RHP Angel Bastardo from the 7-day injured list."
+    },
+    {
+      "id": 682102,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "fromTeam": {
+        "id": 414,
+        "name": "Salem RidgeYaks",
+        "link": "/api/v1/teams/414"
+      },
+      "toTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "date": "2023-04-05",
+      "effectiveDate": "2023-04-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Angel Bastardo assigned to Greenville Drive from Salem Red Sox."
+    },
+    {
+      "id": 720036,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "toTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "date": "2023-08-15",
+      "effectiveDate": "2023-08-15",
+      "resolutionDate": "2023-08-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Greenville Drive transferred RHP Angel Bastardo to the Development List."
+    },
+    {
+      "id": 721799,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "fromTeam": {
+        "id": 428,
+        "name": "Greenville Drive",
+        "link": "/api/v1/teams/428"
+      },
+      "toTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "date": "2023-08-24",
+      "effectiveDate": "2023-08-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Angel Bastardo assigned to Portland Sea Dogs from Greenville Drive."
+    },
+    {
+      "id": 754046,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "toTeam": {
+        "id": 362,
+        "name": "Boston Red Sox Prospects",
+        "link": "/api/v1/teams/362"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Boston Red Sox Prospects activated RHP Angel Bastardo."
+    },
+    {
+      "id": 781213,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "toTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "date": "2024-06-06",
+      "effectiveDate": "2024-06-06",
+      "resolutionDate": "2024-06-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Portland Sea Dogs placed RHP Angel Bastardo on the 7-day injured list."
+    },
+    {
+      "id": 778313,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "toTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "date": "2024-06-06",
+      "effectiveDate": "2024-06-06",
+      "resolutionDate": "2024-06-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Portland Sea Dogs placed RHP Angel Bastardo on the 7-day injured list."
+    },
+    {
+      "id": 783681,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "toTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "date": "2024-06-29",
+      "effectiveDate": "2024-06-29",
+      "resolutionDate": "2024-06-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Portland Sea Dogs placed RHP Angel Bastardo on the full-season injured list."
+    },
+    {
+      "id": 803866,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "toTeam": {
+        "id": 546,
+        "name": "Portland Sea Dogs",
+        "link": "/api/v1/teams/546"
+      },
+      "date": "2024-10-31",
+      "effectiveDate": "2024-10-31",
+      "resolutionDate": "2024-10-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Portland Sea Dogs activated RHP Angel Bastardo from the full-season injured list."
+    },
+    {
+      "id": 808044,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2024-12-11",
+      "effectiveDate": "2024-12-11",
+      "typeCode": "R5",
+      "typeDesc": "Rule 5 Selection",
+      "description": "Toronto Blue Jays purchased contract of RHP Angel Bastardo from Boston Red Sox in the Rule 5 Draft."
+    },
+    {
+      "id": 819938,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2025-03-12",
+      "effectiveDate": "2025-03-12",
+      "resolutionDate": "2025-03-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays placed RHP Angel Bastardo on the 60-day injured list. Tommy John surgery recovery."
+    },
+    {
+      "id": 868560,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "toTeam": {
+        "id": 454,
+        "name": "Glendale Desert Dogs",
+        "link": "/api/v1/teams/454"
+      },
+      "date": "2025-09-10",
+      "effectiveDate": "2025-09-10",
+      "resolutionDate": "2025-09-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Angel Bastardo assigned to Glendale Desert Dogs."
+    },
+    {
+      "id": 874901,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toronto Blue Jays activated RHP Angel Bastardo from the 60-day injured list."
+    },
+    {
+      "id": 893631,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2026-03-25",
+      "effectiveDate": "2026-03-25",
+      "resolutionDate": "2026-03-25",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Toronto Blue Jays designated RHP Angel Bastardo for assignment."
+    },
+    {
+      "id": 895996,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2026-03-31",
+      "effectiveDate": "2026-03-31",
+      "typeCode": "RTN",
+      "typeDesc": "Returned",
+      "description": "RHP Angel Bastardo returned to Boston Red Sox from Toronto Blue Jays."
+    },
+    {
+      "id": 895997,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2026-04-01",
+      "effectiveDate": "2026-04-01",
+      "resolutionDate": "2026-04-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Angel Bastardo assigned to Worcester Red Sox."
+    },
+    {
+      "id": 896180,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2026-04-01",
+      "effectiveDate": "2026-04-01",
+      "resolutionDate": "2026-04-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Worcester Red Sox transferred RHP Angel Bastardo to the Development List."
+    },
+    {
+      "id": 902019,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2026-04-21",
+      "effectiveDate": "2026-04-21",
+      "resolutionDate": "2026-04-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Worcester Red Sox activated RHP Angel Bastardo."
+    },
+    {
+      "id": 950357,
+      "person": {
+        "id": 682785,
+        "fullName": "Angel Bastardo",
+        "link": "/api/v1/people/682785",
+        "nameSlug": "angel-bastardo-682785"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Boston Red Sox traded RHP Angel Bastardo to Kansas City Royals for SS Jack Pineda."
+    }
+  ]
+}

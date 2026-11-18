@@ -1,7 +1,7 @@
 {
   "player_id": 681432,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:46a701756406a7a2c0be97f01d7897cb3285d07cf020502eea3a6571646aaeed",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:3e415c0f828178e29ead52c1e63341334ce763c3ef0d4afa6b38c16cf8ca2c94",
   "transactions": [
     {
       "id": 445877,
@@ -982,6 +982,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "LHP Luke Little elected free agency."
+    },
+    {
+      "id": 950554,
+      "person": {
+        "id": 681432,
+        "fullName": "Luke Little",
+        "link": "/api/v1/people/681432",
+        "nameSlug": "luke-little-681432"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Athletics signed free agent LHP Luke Little to a minor league contract."
+    },
+    {
+      "id": 950555,
+      "person": {
+        "id": 681432,
+        "fullName": "Luke Little",
+        "link": "/api/v1/people/681432",
+        "nameSlug": "luke-little-681432"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "resolutionDate": "2026-11-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Luke Little assigned to Las Vegas Aviators."
     }
   ]
 }

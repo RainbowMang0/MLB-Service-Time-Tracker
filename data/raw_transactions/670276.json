@@ -1,7 +1,7 @@
 {
   "player_id": 670276,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:2a8d5903e247d402d554653b2990fc2dd590e13f3a37a96a30941f1f273add71",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:fc82cfee93eb98e88912201ed8b59eb1630a81be229838dd4cfa6d550d148aec",
   "transactions": [
     {
       "id": 359487,
@@ -1449,6 +1449,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "OF Cal Stevenson elected free agency."
+    },
+    {
+      "id": 950596,
+      "person": {
+        "id": 670276,
+        "fullName": "Cal Stevenson",
+        "link": "/api/v1/people/670276",
+        "nameSlug": "cal-stevenson-670276"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Diego Padres signed free agent OF Cal Stevenson to a minor league contract."
+    },
+    {
+      "id": 950597,
+      "person": {
+        "id": 670276,
+        "fullName": "Cal Stevenson",
+        "link": "/api/v1/people/670276",
+        "nameSlug": "cal-stevenson-670276"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "resolutionDate": "2026-11-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Cal Stevenson assigned to El Paso Chihuahuas."
     }
   ]
 }

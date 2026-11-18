@@ -1,7 +1,7 @@
 {
   "player_id": 690291,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:7bba2c584c3b9092effcd970945d747df345799c6052651ef49b90ddab14ed08",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:cd11b55415e0903e71b1c155fb0f49b7f5e957afacc4bd6a57a899b7c38db277",
   "transactions": [
     {
       "id": 461139,
@@ -787,6 +787,50 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Detroit Tigers recalled 3B Jace Jung from Toledo Mud Hens."
+    },
+    {
+      "id": 950424,
+      "person": {
+        "id": 690291,
+        "fullName": "Jace Jung",
+        "link": "/api/v1/people/690291",
+        "nameSlug": "jace-jung-690291"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Detroit Tigers designated 3B Jace Jung for assignment."
+    },
+    {
+      "id": 950609,
+      "person": {
+        "id": 690291,
+        "fullName": "Jace Jung",
+        "link": "/api/v1/people/690291",
+        "nameSlug": "jace-jung-690291"
+      },
+      "fromTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Detroit Tigers traded 3B Jace Jung to Los Angeles Angels for cash."
     }
   ]
 }

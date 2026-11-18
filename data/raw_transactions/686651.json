@@ -1,7 +1,7 @@
 {
   "player_id": 686651,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:f40cc3a87bacfc6736708b7e7c9c31f1fab597e46b9ab763d2186848e9384499",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:23d285aa1ba6ca9fb337176dee470baf49146f00ede922c10e8f7dbc2f81d607",
   "transactions": [
     {
       "id": 409529,
@@ -1535,6 +1535,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Levi Stoudt elected free agency."
+    },
+    {
+      "id": 950604,
+      "person": {
+        "id": 686651,
+        "fullName": "Levi Stoudt",
+        "link": "/api/v1/people/686651",
+        "nameSlug": "levi-stoudt-686651"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Tampa Bay Rays signed free agent RHP Levi Stoudt to a minor league contract."
+    },
+    {
+      "id": 950605,
+      "person": {
+        "id": 686651,
+        "fullName": "Levi Stoudt",
+        "link": "/api/v1/people/686651",
+        "nameSlug": "levi-stoudt-686651"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "resolutionDate": "2026-11-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Levi Stoudt assigned to Durham Bulls."
     }
   ]
 }

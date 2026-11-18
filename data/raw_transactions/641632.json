@@ -1,7 +1,7 @@
 {
   "player_id": 641632,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:335e4220c9ab7c0f3cb5708b579e789198535926ab89f8e61b12405d8d801939",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:4eac77610fdd6acd5db29ea5cd8f08eba9fb567a6046cdc239e6dc01df866373",
   "transactions": [
     {
       "id": 157424,
@@ -1710,6 +1710,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Conner Greene assigned to Guerreros de Oaxaca."
+    },
+    {
+      "id": 950374,
+      "person": {
+        "id": 641632,
+        "fullName": "Conner Greene",
+        "link": "/api/v1/people/641632",
+        "nameSlug": "conner-greene-641632"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Conner Greene assigned to Leones del Escogido."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 656495,
-  "fetched_at": "2026-11-11T19:19:55Z",
-  "checksum": "sha256:ef6d76c61205dc0de12b1bd4fd211c79d6620ed9f48623b23d14cffb5d0cf63b",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:0fda7c3a56691e5769559f37e90f9b1c019d448381e3461e200fe5bf737a0c82",
   "transactions": [
     {
       "id": 275828,
@@ -1455,6 +1455,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Algodoneros de Guasave activated LF Dalton Guthrie from the reserve list."
+    },
+    {
+      "id": 950521,
+      "person": {
+        "id": 656495,
+        "fullName": "Dalton Guthrie",
+        "link": "/api/v1/people/656495",
+        "nameSlug": "dalton-guthrie-656495"
+      },
+      "toTeam": {
+        "id": 5482,
+        "name": "Algodoneros de Guasave",
+        "link": "/api/v1/teams/5482"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Algodoneros de Guasave placed LF Dalton Guthrie on the reserve list."
     }
   ]
 }

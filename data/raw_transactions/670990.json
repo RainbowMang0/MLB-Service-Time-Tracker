@@ -1,7 +1,7 @@
 {
   "player_id": 670990,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:17c3515019aad8272e7ece762582712b4bf22dbe2e370e6ef67a942258b50718",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:d7eea96b266876c13173982ee0fa70c2c0f33947ca93bea2090c2dbcd219cb36",
   "transactions": [
     {
       "id": 278601,
@@ -2356,6 +2356,46 @@
       "typeCode": "NUM",
       "typeDesc": "Number Change",
       "description": "RHP Yohan Ramírez changed number to 49."
+    },
+    {
+      "id": 950386,
+      "person": {
+        "id": 670990,
+        "fullName": "Yohan Ramírez",
+        "link": "/api/v1/people/670990",
+        "nameSlug": "yohan-ramirez-670990"
+      },
+      "toTeam": {
+        "id": 668,
+        "name": "Toros del Este",
+        "link": "/api/v1/teams/668"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yohan Ramírez assigned to Toros del Este."
+    },
+    {
+      "id": 950385,
+      "person": {
+        "id": 670990,
+        "fullName": "Yohan Ramírez",
+        "link": "/api/v1/people/670990",
+        "nameSlug": "yohan-ramirez-670990"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yohan Ramírez assigned to Aguilas Cibaenas."
     }
   ]
 }

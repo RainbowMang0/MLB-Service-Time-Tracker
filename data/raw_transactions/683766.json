@@ -1,7 +1,7 @@
 {
   "player_id": 683766,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:ff9a55497b27f18740c4dfa3bbe629fe1094aec6add47730737e70d505d9066a",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:fe413e9b7465e382aab63dc668dda939d086ed6b677afa7fd4ff8d765507ac90",
   "transactions": [
     {
       "id": 413545,
@@ -1112,6 +1112,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "San Francisco Giants recalled 2B Christian Koss from Sacramento River Cats."
+    },
+    {
+      "id": 950509,
+      "person": {
+        "id": 683766,
+        "fullName": "Christian Koss",
+        "link": "/api/v1/people/683766",
+        "nameSlug": "christian-koss-683766"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "San Francisco Giants designated SS Christian Koss for assignment."
     }
   ]
 }

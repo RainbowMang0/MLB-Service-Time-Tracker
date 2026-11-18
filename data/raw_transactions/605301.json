@@ -1,7 +1,7 @@
 {
   "player_id": 605301,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:ae005dc0e8439fb1203af8e822939a43841be4d890b9f86087b3db42c5d75789",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:c8ee5efe444eb53dd5cb734b62389faf4c5e15be31725d8aed9c1f891dbaa696",
   "transactions": [
     {
       "id": 96490,
@@ -1587,6 +1587,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "LHP Williams Jerez assigned to Pericos de Puebla."
+    },
+    {
+      "id": 950384,
+      "person": {
+        "id": 605301,
+        "fullName": "Williams Jerez",
+        "link": "/api/v1/people/605301",
+        "nameSlug": "williams-jerez-605301"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Williams Jerez assigned to Gigantes del Cibao."
     }
   ]
 }

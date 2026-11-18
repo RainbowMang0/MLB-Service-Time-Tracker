@@ -1,7 +1,7 @@
 {
   "player_id": 678606,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:8964121616c191f7b69f0c9af645e63e5c982d8047e6de38d5d98ad8a10dbb8e",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:4fe3891658d3703496b6506d9f38a8b1834c9ff0dbe512fd6ab72f27f367a496",
   "transactions": [
     {
       "id": 337861,
@@ -531,6 +531,30 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Seattle Mariners activated LHP José A. Ferrer from the paternity list."
+    },
+    {
+      "id": 950608,
+      "person": {
+        "id": 678606,
+        "fullName": "José A. Ferrer",
+        "link": "/api/v1/people/678606",
+        "nameSlug": "jose-a-ferrer-678606"
+      },
+      "fromTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Seattle Mariners traded RHP Bryce Miller, RHP Logan Evans and LHP José A. Ferrer to Kansas City Royals for 3B Maikel Garcia, RHP L.P. Langevin and RHP James McArthur."
     }
   ]
 }

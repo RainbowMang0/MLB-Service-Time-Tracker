@@ -1,7 +1,7 @@
 {
   "player_id": 693713,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:777babd3175ce351c05de9fe9f193143113a36c1e7265fba8c10ca54f40ce7ce",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:c92888caae666fce06af9511c8d97e97188a6aeb9861da0e8c85db9cfac3949b",
   "transactions": [
     {
       "id": 439391,
@@ -855,6 +855,46 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Emiliano Teodo assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 950536,
+      "person": {
+        "id": 693713,
+        "fullName": "Emiliano Teodo",
+        "link": "/api/v1/people/693713",
+        "nameSlug": "emiliano-teodo-693713"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Emiliano Teodo assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 950537,
+      "person": {
+        "id": 693713,
+        "fullName": "Emiliano Teodo",
+        "link": "/api/v1/people/693713",
+        "nameSlug": "emiliano-teodo-693713"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gigantes del Cibao activated RHP Emiliano Teodo."
     }
   ]
 }

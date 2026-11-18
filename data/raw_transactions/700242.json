@@ -1,7 +1,7 @@
 {
   "player_id": 700242,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:208bfdabae9330bc41010bae4b83f689d5cb5c0346cd92672b2167741c1b2183",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:3f696a816741b758bf94835addf676c01c10f66a223ac45b79b8d039cf056f10",
   "transactions": [
     {
       "id": 507770,
@@ -802,6 +802,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Detroit Tigers activated SS Trey Sweeney from the 60-day injured list."
+    },
+    {
+      "id": 950426,
+      "person": {
+        "id": 700242,
+        "fullName": "Trey Sweeney",
+        "link": "/api/v1/people/700242",
+        "nameSlug": "trey-sweeney-700242"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Detroit Tigers designated SS Trey Sweeney for assignment."
     }
   ]
 }

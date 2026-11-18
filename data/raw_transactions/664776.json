@@ -1,7 +1,7 @@
 {
   "player_id": 664776,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:803a46912e15748914104c73fd5c6ebf1fa201c6fc2db1d886c8c3c9c7a57af2",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:5325a3bfaf313a59706b71a6e3c4a3b40dc8bb1cdb29134593a3b3571f7b2e3c",
   "transactions": [
     {
       "id": 317584,
@@ -1783,6 +1783,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Los Angeles Dodgers activated RHP Jake Cousins from the 60-day injured list."
+    },
+    {
+      "id": 950468,
+      "person": {
+        "id": 664776,
+        "fullName": "Jake Cousins",
+        "link": "/api/v1/people/664776",
+        "nameSlug": "jake-cousins-664776"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Los Angeles Dodgers designated RHP Jake Cousins for assignment."
     }
   ]
 }

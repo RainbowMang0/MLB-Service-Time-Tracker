@@ -1,7 +1,7 @@
 {
   "player_id": 640459,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:ef541d1158f44a8d3c8fe4cb4061bfef13b3f319c61ccfde9b86218bc69bfb92",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:2a0a6f7fbfd1871a28ad86f65c4850ace876850ba7aa68a387da28a1a6202528",
   "transactions": [
     {
       "id": 159255,
@@ -2239,6 +2239,46 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "C Brian Navarreto assigned to Cangrejeros de Santurce."
+    },
+    {
+      "id": 950592,
+      "person": {
+        "id": 640459,
+        "fullName": "Brian Navarreto",
+        "link": "/api/v1/people/640459",
+        "nameSlug": "brian-navarreto-640459"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent C Brian Navarreto to a minor league contract."
+    },
+    {
+      "id": 950593,
+      "person": {
+        "id": 640459,
+        "fullName": "Brian Navarreto",
+        "link": "/api/v1/people/640459",
+        "nameSlug": "brian-navarreto-640459"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "resolutionDate": "2026-11-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Brian Navarreto assigned to Lehigh Valley IronPigs."
     }
   ]
 }

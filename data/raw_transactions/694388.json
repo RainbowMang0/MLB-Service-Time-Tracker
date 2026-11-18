@@ -1,7 +1,7 @@
 {
   "player_id": 694388,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:53ce5faf1ba98d2dccbb74606592f8bf22d69043353d990720c9e5f46b39fa7d",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:cab518cbc6654239b6096b4e2aebc72bcef427ff763d9422c2e7d0ffe9530a60",
   "transactions": [
     {
       "id": 501137,
@@ -1022,6 +1022,30 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Houston Astros recalled LF Joey Loperfido from Sugar Land Space Cowboys."
+    },
+    {
+      "id": 950402,
+      "person": {
+        "id": 694388,
+        "fullName": "Joey Loperfido",
+        "link": "/api/v1/people/694388",
+        "nameSlug": "joey-loperfido-694388"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Houston Astros sent LF Joey Loperfido outright to Sugar Land Space Cowboys."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 691008,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:082ecb0385233ac5e0b7142a37b84f126d3530c2fa0efee7872d0c913c033bdf",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:c77e0583a9902840d38e63b1cd30300b4d3b7d286ad6d476c14b80d6a1e39190",
   "transactions": [
     {
       "id": 418683,
@@ -454,6 +454,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "St. Louis Cardinals activated RHP Max Rajcic from the 60-day injured list."
+    },
+    {
+      "id": 950510,
+      "person": {
+        "id": 691008,
+        "fullName": "Max Rajcic",
+        "link": "/api/v1/people/691008",
+        "nameSlug": "max-rajcic-691008"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "St. Louis Cardinals designated RHP Max Rajcic for assignment."
     }
   ]
 }

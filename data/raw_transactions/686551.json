@@ -1,7 +1,7 @@
 {
   "player_id": 686551,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:9e14daa6703ff107f0b5106709ef23de87188c48712a65038658c8ca01a00066",
+  "fetched_at": "2026-11-18T20:05:22Z",
+  "checksum": "sha256:eb7ccdcb27ea3d55889646c01ce57010139bd36d99c0bd43f57a57a876a844dc",
   "transactions": [
     {
       "id": 408968,
@@ -915,6 +915,26 @@
       "typeCode": "CLW",
       "typeDesc": "Claimed Off Waivers",
       "description": "Los Angeles Dodgers claimed SS Christian Cairo off waivers from New York Mets."
+    },
+    {
+      "id": 950467,
+      "person": {
+        "id": 686551,
+        "fullName": "Christian Cairo",
+        "link": "/api/v1/people/686551",
+        "nameSlug": "christian-cairo-686551"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Los Angeles Dodgers designated SS Christian Cairo for assignment."
     }
   ]
 }
