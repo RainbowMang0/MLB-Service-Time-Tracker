@@ -262,5 +262,31 @@
     "team_id": null,
     "from_team_id": 512,
     "to_team_id": 116
+  },
+  {
+    "date": "2026-11-17",
+    "description": "Detroit Tigers designated 3B Jace Jung for assignment.",
+    "team": "Detroit Tigers",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 116,
+    "typeCode": "DES",
+    "typeDesc": "Designated for Assignment",
+    "effectiveDate": "2026-11-17",
+    "resolutionDate": "2026-11-17",
+    "id": 950424
+  },
+  {
+    "date": "2026-11-18",
+    "description": "Detroit Tigers traded 3B Jace Jung to Los Angeles Angels.",
+    "team": "Los Angeles Angels",
+    "team_id": null,
+    "from_team_id": 116,
+    "to_team_id": 108,
+    "typeCode": "TR",
+    "typeDesc": "Trade",
+    "effectiveDate": "2026-11-18",
+    "resolutionDate": null,
+    "id": 950609
   }
 ]
