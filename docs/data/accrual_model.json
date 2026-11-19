@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18",
+ "generated_at": "2026-11-19",
  "source": "Measured from this project's own database: every player-season transition where the player was in the majors in the first season.",
  "method": "For each player-season in which a player accrued at least one day, record what he accrued the FOLLOWING season. Banded by cumulative credited service at the start of that following season. Excludes prorated seasons, the current unfinished season, and seasons credited by debut presumption rather than transactions.",
  "caveats": [
@@ -8,20 +8,20 @@
   "Bands with a small sample are marked enough_data: false and should not be presented as a distribution."
  ],
  "full_year_days": 172,
- "transitions": 21875,
+ "transitions": 21876,
  "min_band_sample": 100,
  "bands": [
   {
    "band": 0,
    "label": "0.000-1.000",
-   "sample": 7842,
+   "sample": 7844,
    "enough_data": true,
    "p20": 41,
    "p50": 155,
    "p80": 172,
    "mean": 117.4,
    "share_full_year": 0.473,
-   "share_zero": 0.063
+   "share_zero": 0.064
   },
   {
    "band": 1,
@@ -38,12 +38,12 @@
   {
    "band": 2,
    "label": "2.000-3.000",
-   "sample": 2308,
+   "sample": 2307,
    "enough_data": true,
-   "p20": 119,
+   "p20": 120,
    "p50": 172,
    "p80": 172,
-   "mean": 144.2,
+   "mean": 144.3,
    "share_full_year": 0.717,
    "share_zero": 0.042
   },
