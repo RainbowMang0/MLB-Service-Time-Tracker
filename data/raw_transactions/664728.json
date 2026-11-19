@@ -1,7 +1,7 @@
 {
   "player_id": 664728,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:f372fdc77c970a02d1c7c88f9604cbae8b5989c875176169008a0d5f5c8d9d7e",
+  "fetched_at": "2026-11-19T20:04:15Z",
+  "checksum": "sha256:328658fce855d0b68da68b4ba576cff1bf7be92721fcefaf9f43e1966c3636f9",
   "transactions": [
     {
       "id": 358983,
@@ -1001,6 +1001,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Kansas City Royals activated CF Kyle Isbel from the 10-day injured list."
+    },
+    {
+      "id": 950622,
+      "person": {
+        "id": 664728,
+        "fullName": "Kyle Isbel",
+        "link": "/api/v1/people/664728",
+        "nameSlug": "kyle-isbel-664728"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "resolutionDate": "2026-11-18",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Kansas City Royals designated CF Kyle Isbel for assignment."
     }
   ]
 }

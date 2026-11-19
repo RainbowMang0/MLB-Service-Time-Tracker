@@ -1,7 +1,7 @@
 {
   "player_id": 691945,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:4e0990ee0e9ba29a8bef710323d6e867b27182553e0efa27349e7a3190e52b61",
+  "fetched_at": "2026-11-19T20:04:15Z",
+  "checksum": "sha256:381bde10b76fd6ad3e17bec222d61ad6dc7f6e7bcb5e7cbf73c2b12793b1f9fc",
   "transactions": [
     {
       "id": 422698,
@@ -721,6 +721,50 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Texas Rangers activated RHP Carter Baumler from the 60-day injured list."
+    },
+    {
+      "id": 950670,
+      "person": {
+        "id": 691945,
+        "fullName": "Carter Baumler",
+        "link": "/api/v1/people/691945",
+        "nameSlug": "carter-baumler-691945"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2026-11-19",
+      "effectiveDate": "2026-11-19",
+      "resolutionDate": "2026-11-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Carter Baumler assigned to Norfolk Tides."
+    },
+    {
+      "id": 950668,
+      "person": {
+        "id": 691945,
+        "fullName": "Carter Baumler",
+        "link": "/api/v1/people/691945",
+        "nameSlug": "carter-baumler-691945"
+      },
+      "fromTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-11-19",
+      "effectiveDate": "2026-11-19",
+      "typeCode": "RTN",
+      "typeDesc": "Returned",
+      "description": "RHP Carter Baumler returned to Baltimore Orioles from Texas Rangers."
     }
   ]
 }

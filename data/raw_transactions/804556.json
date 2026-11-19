@@ -1,7 +1,7 @@
 {
   "player_id": 804556,
-  "fetched_at": "2026-11-17T20:33:14Z",
-  "checksum": "sha256:05aae84bcc9c09e63dfef06fa1a37527e25110e5b0d95de302c2f853f0991b4c",
+  "fetched_at": "2026-11-19T20:04:15Z",
+  "checksum": "sha256:dcd0cf862a04b8ba09e78b4475665138ea7e2fc68444e2b99191f694fd578ffa",
   "transactions": [
     {
       "id": 624364,
@@ -851,6 +851,30 @@
       "typeCode": "DES",
       "typeDesc": "Designated for Assignment",
       "description": "Athletics designated RHP Braden Nett for assignment."
+    },
+    {
+      "id": 950669,
+      "person": {
+        "id": 804556,
+        "fullName": "Braden Nett",
+        "link": "/api/v1/people/804556",
+        "nameSlug": "braden-nett-804556"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-11-19",
+      "effectiveDate": "2026-11-19",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Baltimore Orioles claimed RHP Braden Nett off waivers from Athletics."
     }
   ]
 }

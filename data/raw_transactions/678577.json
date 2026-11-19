@@ -1,7 +1,7 @@
 {
   "player_id": 678577,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:19fc9266d07b9a1948cb0f624d58016c1bde87655871066333d90b55437b23eb",
+  "fetched_at": "2026-11-19T20:04:15Z",
+  "checksum": "sha256:c7be599f23fedea2ab7f58a891858a43d5834fa38694b18d9eda860c91dc238c",
   "transactions": [
     {
       "id": 337799,
@@ -938,6 +938,46 @@
       "typeCode": "OUT",
       "typeDesc": "Outrighted",
       "description": "Chicago White Sox sent CF Junior Perez outright to Charlotte Knights."
+    },
+    {
+      "id": 950614,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "resolutionDate": "2026-11-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Baltimore Orioles signed free agent OF Junior Perez to a minor league contract."
+    },
+    {
+      "id": 950615,
+      "person": {
+        "id": 678577,
+        "fullName": "Junior Perez",
+        "link": "/api/v1/people/678577",
+        "nameSlug": "junior-perez-678577"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "resolutionDate": "2026-11-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Junior Perez assigned to Norfolk Tides."
     }
   ]
 }

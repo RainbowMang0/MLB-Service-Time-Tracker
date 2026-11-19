@@ -1,7 +1,7 @@
 {
   "player_id": 673929,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:0a480edb74017a8d326592540e156fd3ee6b95affc99a23a95de04fd8ecce452",
+  "fetched_at": "2026-11-19T20:04:15Z",
+  "checksum": "sha256:76e712b34b589384e66cb9c56dee7b43fb623d056f09dd744b7f6443527102d7",
   "transactions": [
     {
       "id": 298329,
@@ -810,6 +810,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Chicago White Sox activated RHP Jordan Leasure from the 60-day injured list."
+    },
+    {
+      "id": 950620,
+      "person": {
+        "id": 673929,
+        "fullName": "Jordan Leasure",
+        "link": "/api/v1/people/673929",
+        "nameSlug": "jordan-leasure-673929"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "resolutionDate": "2026-11-18",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Chicago White Sox designated RHP Jordan Leasure for assignment."
     }
   ]
 }

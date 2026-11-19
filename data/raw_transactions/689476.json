@@ -1,0 +1,810 @@
+{
+  "player_id": 689476,
+  "fetched_at": "2026-11-19T20:04:15Z",
+  "checksum": "sha256:a794b46d98247865b56ab8c30c24e68b0a74d9457f11ea13e964e08871f3d7f1",
+  "transactions": [
+    {
+      "id": 419666,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2019-07-01",
+      "effectiveDate": "2019-07-01",
+      "resolutionDate": "2019-07-01",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "New York Mets signed RHP Jace Beck."
+    },
+    {
+      "id": 419667,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "date": "2019-07-25",
+      "effectiveDate": "2019-07-25",
+      "resolutionDate": "2019-07-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jace Beck assigned to GCL Mets."
+    },
+    {
+      "id": 479748,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 3279,
+        "name": "Mets Organization",
+        "link": "/api/v1/teams/3279"
+      },
+      "date": "2021-04-25",
+      "effectiveDate": "2021-04-25",
+      "resolutionDate": "2021-04-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mets Organization activated RHP Jace Beck. ABS test."
+    },
+    {
+      "id": 494226,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "fromTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2021-06-13",
+      "effectiveDate": "2021-06-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jace Beck assigned to St. Lucie Mets from GCL Mets."
+    },
+    {
+      "id": 494574,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "fromTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "toTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "date": "2021-06-14",
+      "effectiveDate": "2021-06-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jace Beck assigned to GCL Mets from St. Lucie Mets."
+    },
+    {
+      "id": 517976,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "fromTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2021-09-17",
+      "effectiveDate": "2021-09-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jace Beck assigned to St. Lucie Mets from FCL Mets."
+    },
+    {
+      "id": 628260,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "date": "2022-05-19",
+      "effectiveDate": "2022-05-19",
+      "resolutionDate": "2022-05-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "FCL Mets activated RHP Jace Beck."
+    },
+    {
+      "id": 622546,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "date": "2022-05-19",
+      "effectiveDate": "2022-05-19",
+      "resolutionDate": "2022-05-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jace Beck assigned to FCL Mets."
+    },
+    {
+      "id": 631974,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2022-06-09",
+      "effectiveDate": "2022-06-09",
+      "resolutionDate": "2022-06-09",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Lucie Mets activated RHP Jace Beck."
+    },
+    {
+      "id": 629888,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "fromTeam": {
+        "id": 468,
+        "name": "FCL Mets",
+        "link": "/api/v1/teams/468"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2022-06-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jace Beck assigned to St. Lucie Mets from FCL Mets."
+    },
+    {
+      "id": 649056,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2022-08-26",
+      "effectiveDate": "2022-08-26",
+      "resolutionDate": "2022-08-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Lucie Mets placed RHP Jace Beck on the 7-day injured list."
+    },
+    {
+      "id": 651472,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2022-09-10",
+      "effectiveDate": "2022-09-10",
+      "resolutionDate": "2022-09-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Lucie Mets activated RHP Jace Beck from the 7-day injured list."
+    },
+    {
+      "id": 681378,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "date": "2022-09-10",
+      "effectiveDate": "2022-09-10",
+      "resolutionDate": "2022-09-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Lucie Mets activated RHP Jace Beck from the 7-day injured list."
+    },
+    {
+      "id": 681397,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2023-04-03",
+      "effectiveDate": "2023-04-03",
+      "resolutionDate": "2023-04-03",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Brooklyn Cyclones activated RHP Jace Beck."
+    },
+    {
+      "id": 681379,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "fromTeam": {
+        "id": 507,
+        "name": "St. Lucie Mets",
+        "link": "/api/v1/teams/507"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2023-04-03",
+      "effectiveDate": "2023-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jace Beck assigned to Brooklyn Cyclones from St. Lucie Mets."
+    },
+    {
+      "id": 710916,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2023-07-13",
+      "effectiveDate": "2023-07-13",
+      "resolutionDate": "2023-07-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Brooklyn Cyclones placed RHP Jace Beck on the temporarily inactive list."
+    },
+    {
+      "id": 712767,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2023-07-20",
+      "effectiveDate": "2023-07-20",
+      "resolutionDate": "2023-07-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Brooklyn Cyclones activated RHP Jace Beck from the temporarily inactive list."
+    },
+    {
+      "id": 722699,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2023-08-25",
+      "effectiveDate": "2023-08-25",
+      "resolutionDate": "2023-08-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Brooklyn Cyclones placed RHP Jace Beck on the 7-day injured list."
+    },
+    {
+      "id": 721971,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2023-08-25",
+      "effectiveDate": "2023-08-25",
+      "resolutionDate": "2023-08-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Brooklyn Cyclones placed RHP Jace Beck on the 7-day injured list."
+    },
+    {
+      "id": 728140,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2023-09-19",
+      "effectiveDate": "2023-09-19",
+      "resolutionDate": "2023-09-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Brooklyn Cyclones activated RHP Jace Beck from the 7-day injured list."
+    },
+    {
+      "id": 756119,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2024-03-20",
+      "effectiveDate": "2024-03-20",
+      "resolutionDate": "2024-03-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Brooklyn Cyclones placed RHP Jace Beck on the full-season injured list."
+    },
+    {
+      "id": 842369,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "resolutionDate": "2024-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Brooklyn Cyclones activated RHP Jace Beck from the full-season injured list."
+    },
+    {
+      "id": 840409,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "resolutionDate": "2024-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Brooklyn Cyclones activated RHP Jace Beck from the full-season injured list."
+    },
+    {
+      "id": 804204,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2024-11-04",
+      "effectiveDate": "2024-11-04",
+      "resolutionDate": "2024-11-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Brooklyn Cyclones activated RHP Jace Beck from the full-season injured list."
+    },
+    {
+      "id": 876344,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 453,
+        "name": "Brooklyn Cyclones",
+        "link": "/api/v1/teams/453"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Jace Beck elected free agency."
+    },
+    {
+      "id": 878083,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2025-11-18",
+      "effectiveDate": "2025-11-18",
+      "resolutionDate": "2025-11-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago Cubs signed free agent RHP Jace Beck to a minor league contract."
+    },
+    {
+      "id": 878084,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2025-11-18",
+      "effectiveDate": "2025-11-18",
+      "resolutionDate": "2025-11-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jace Beck assigned to Iowa Cubs."
+    },
+    {
+      "id": 894015,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2026-03-26",
+      "effectiveDate": "2026-03-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jace Beck assigned to Knoxville Smokies from Iowa Cubs."
+    },
+    {
+      "id": 902872,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2026-04-24",
+      "effectiveDate": "2026-04-24",
+      "resolutionDate": "2026-04-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Iowa Cubs activated RHP Jace Beck."
+    },
+    {
+      "id": 902630,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "fromTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2026-04-24",
+      "effectiveDate": "2026-04-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jace Beck assigned to Iowa Cubs from Knoxville Smokies."
+    },
+    {
+      "id": 904763,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "fromTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "toTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "date": "2026-04-30",
+      "effectiveDate": "2026-04-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jace Beck assigned to Knoxville Smokies from Iowa Cubs."
+    },
+    {
+      "id": 928447,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "fromTeam": {
+        "id": 553,
+        "name": "Knoxville Smokies",
+        "link": "/api/v1/teams/553"
+      },
+      "toTeam": {
+        "id": 451,
+        "name": "Iowa Cubs",
+        "link": "/api/v1/teams/451"
+      },
+      "date": "2026-07-17",
+      "effectiveDate": "2026-07-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jace Beck assigned to Iowa Cubs from Knoxville Smokies."
+    },
+    {
+      "id": 934340,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2026-08-03",
+      "effectiveDate": "2026-08-03",
+      "resolutionDate": "2026-08-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jace Beck assigned to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 934338,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "fromTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2026-08-03",
+      "effectiveDate": "2026-08-03",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Miami Marlins traded LHP Braxton Garrett to Chicago Cubs for 3B Jonathon Long and RHP Jace Beck."
+    },
+    {
+      "id": 935165,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2026-08-04",
+      "effectiveDate": "2026-08-04",
+      "resolutionDate": "2026-08-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jacksonville Jumbo Shrimp activated RHP Jace Beck."
+    },
+    {
+      "id": 938979,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2026-08-21",
+      "effectiveDate": "2026-08-21",
+      "resolutionDate": "2026-08-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jacksonville Jumbo Shrimp placed RHP Jace Beck on the paternity list."
+    },
+    {
+      "id": 939717,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2026-08-27",
+      "effectiveDate": "2026-08-27",
+      "resolutionDate": "2026-08-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Jacksonville Jumbo Shrimp activated RHP Jace Beck from the paternity list."
+    },
+    {
+      "id": 950494,
+      "person": {
+        "id": 689476,
+        "fullName": "Jace Beck",
+        "link": "/api/v1/people/689476",
+        "nameSlug": "jace-beck-689476"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Miami Marlins selected the contract of RHP Jace Beck from Jacksonville Jumbo Shrimp."
+    }
+  ]
+}

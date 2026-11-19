@@ -1,0 +1,853 @@
+{
+  "player_id": 800522,
+  "fetched_at": "2026-11-19T20:04:15Z",
+  "checksum": "sha256:b16abfc7ff710e873d3de2d85b72149e81743b133179831df676d6d3b5ea2d43",
+  "transactions": [
+    {
+      "id": 626788,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2022-01-17",
+      "effectiveDate": "2022-01-17",
+      "resolutionDate": "2022-01-17",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent C Josue Briceno to a minor league contract."
+    },
+    {
+      "id": 626785,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 631,
+        "name": "DSL Tigers 1",
+        "link": "/api/v1/teams/631"
+      },
+      "date": "2022-06-04",
+      "effectiveDate": "2022-06-04",
+      "resolutionDate": "2022-06-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Josue Briceno assigned to DSL Tigers 1."
+    },
+    {
+      "id": 633893,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "fromTeam": {
+        "id": 631,
+        "name": "DSL Tigers 1",
+        "link": "/api/v1/teams/631"
+      },
+      "toTeam": {
+        "id": 2132,
+        "name": "DSL Tigers 2",
+        "link": "/api/v1/teams/2132"
+      },
+      "date": "2022-06-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Josue Briceno assigned to DSL Tigers 2 from DSL Tigers 1."
+    },
+    {
+      "id": 637108,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 631,
+        "name": "DSL Tigers 1",
+        "link": "/api/v1/teams/631"
+      },
+      "date": "2022-07-08",
+      "effectiveDate": "2022-07-08",
+      "resolutionDate": "2022-07-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "DSL Tigers 1 activated C Josue Briceno."
+    },
+    {
+      "id": 636090,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "fromTeam": {
+        "id": 2132,
+        "name": "DSL Tigers 2",
+        "link": "/api/v1/teams/2132"
+      },
+      "toTeam": {
+        "id": 631,
+        "name": "DSL Tigers 1",
+        "link": "/api/v1/teams/631"
+      },
+      "date": "2022-07-08",
+      "effectiveDate": "2022-07-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Josue Briceno assigned to DSL Tigers 1 from DSL Tigers 2."
+    },
+    {
+      "id": 643024,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "fromTeam": {
+        "id": 631,
+        "name": "DSL Tigers 1",
+        "link": "/api/v1/teams/631"
+      },
+      "toTeam": {
+        "id": 2132,
+        "name": "DSL Tigers 2",
+        "link": "/api/v1/teams/2132"
+      },
+      "date": "2022-08-04",
+      "effectiveDate": "2022-08-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Josue Briceno assigned to DSL Tigers 2 from DSL Tigers 1."
+    },
+    {
+      "id": 700292,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 473,
+        "name": "FCL Tigers",
+        "link": "/api/v1/teams/473"
+      },
+      "date": "2023-06-05",
+      "effectiveDate": "2023-06-05",
+      "resolutionDate": "2023-06-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Josue Briceno assigned to FCL Tigers."
+    },
+    {
+      "id": 758315,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2023-08-24",
+      "effectiveDate": "2023-08-24",
+      "resolutionDate": "2023-08-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lakeland Flying Tigers activated C Josue Briceño."
+    },
+    {
+      "id": 721756,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "fromTeam": {
+        "id": 473,
+        "name": "FCL Tigers",
+        "link": "/api/v1/teams/473"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2023-08-24",
+      "effectiveDate": "2023-08-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Josue Briceno assigned to Lakeland Flying Tigers from FCL Tigers."
+    },
+    {
+      "id": 752088,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2024-02-27",
+      "effectiveDate": "2024-02-27",
+      "resolutionDate": "2024-02-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Josue Briceno assigned to Detroit Tigers."
+    },
+    {
+      "id": 753898,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 366,
+        "name": "Detroit Tigers Prospects",
+        "link": "/api/v1/teams/366"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Detroit Tigers Prospects activated C Josue Briceno."
+    },
+    {
+      "id": 779613,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2024-05-14",
+      "effectiveDate": "2024-05-14",
+      "resolutionDate": "2024-05-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lakeland Flying Tigers placed C Josue Briceño on the 7-day injured list."
+    },
+    {
+      "id": 771587,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2024-05-14",
+      "effectiveDate": "2024-05-14",
+      "resolutionDate": "2024-05-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lakeland Flying Tigers placed C Josue Briceño on the 7-day injured list."
+    },
+    {
+      "id": 787185,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2024-07-13",
+      "effectiveDate": "2024-07-13",
+      "resolutionDate": "2024-07-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lakeland Flying Tigers transferred C Josue Briceño from the 7-day injured list to the 60-day injured list."
+    },
+    {
+      "id": 798385,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2024-08-23",
+      "effectiveDate": "2024-08-23",
+      "resolutionDate": "2024-08-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lakeland Flying Tigers activated C Josue Briceño from the 60-day injured list."
+    },
+    {
+      "id": 795913,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2024-08-23",
+      "effectiveDate": "2024-08-23",
+      "resolutionDate": "2024-08-23",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Lakeland Flying Tigers activated C Josue Briceño from the 60-day injured list."
+    },
+    {
+      "id": 800271,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 544,
+        "name": "Scottsdale Scorpions",
+        "link": "/api/v1/teams/544"
+      },
+      "date": "2024-09-25",
+      "effectiveDate": "2024-09-25",
+      "resolutionDate": "2024-09-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Josue Briceño assigned to Scottsdale Scorpions."
+    },
+    {
+      "id": 805680,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 1310,
+        "name": "American League Fall Stars",
+        "link": "/api/v1/teams/1310"
+      },
+      "date": "2024-11-08",
+      "effectiveDate": "2024-11-08",
+      "resolutionDate": "2024-11-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "American League Fall Stars activated C Josue Briceño."
+    },
+    {
+      "id": 818618,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 366,
+        "name": "Detroit Tigers Prospects",
+        "link": "/api/v1/teams/366"
+      },
+      "date": "2025-03-06",
+      "effectiveDate": "2025-03-06",
+      "resolutionDate": "2025-03-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "activated C Josue Briceño."
+    },
+    {
+      "id": 819322,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2025-03-07",
+      "effectiveDate": "2025-03-07",
+      "resolutionDate": "2025-03-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Josue Briceño assigned to Detroit Tigers."
+    },
+    {
+      "id": 836963,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 582,
+        "name": "West Michigan Whitecaps",
+        "link": "/api/v1/teams/582"
+      },
+      "date": "2025-04-02",
+      "effectiveDate": "2025-05-13",
+      "resolutionDate": "2025-05-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "West Michigan Whitecaps placed C Josue Briceño on the 7-day injured list."
+    },
+    {
+      "id": 824542,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "fromTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "toTeam": {
+        "id": 582,
+        "name": "West Michigan Whitecaps",
+        "link": "/api/v1/teams/582"
+      },
+      "date": "2025-04-02",
+      "effectiveDate": "2025-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Josue Briceño assigned to West Michigan Whitecaps from Lakeland Flying Tigers."
+    },
+    {
+      "id": 839498,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 582,
+        "name": "West Michigan Whitecaps",
+        "link": "/api/v1/teams/582"
+      },
+      "date": "2025-05-21",
+      "effectiveDate": "2025-05-21",
+      "resolutionDate": "2025-05-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "West Michigan Whitecaps activated C Josue Briceño from the 7-day injured list."
+    },
+    {
+      "id": 853687,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "fromTeam": {
+        "id": 582,
+        "name": "West Michigan Whitecaps",
+        "link": "/api/v1/teams/582"
+      },
+      "toTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "date": "2025-07-07",
+      "effectiveDate": "2025-07-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Josue Briceño assigned to Erie SeaWolves from West Michigan Whitecaps."
+    },
+    {
+      "id": 851496,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 320,
+        "name": "American League Futures",
+        "link": "/api/v1/teams/320"
+      },
+      "date": "2025-07-11",
+      "effectiveDate": "2025-07-11",
+      "resolutionDate": "2025-07-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "American League Futures activated C Josue Briceño."
+    },
+    {
+      "id": 854678,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "date": "2025-07-11",
+      "effectiveDate": "2025-07-11",
+      "resolutionDate": "2025-07-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Erie SeaWolves placed C Josue Briceño on the temporarily inactive list."
+    },
+    {
+      "id": 856006,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "date": "2025-07-15",
+      "effectiveDate": "2025-07-15",
+      "resolutionDate": "2025-07-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Erie SeaWolves activated C Josue Briceño from the temporarily inactive list."
+    },
+    {
+      "id": 886328,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-02-12",
+      "effectiveDate": "2026-02-12",
+      "resolutionDate": "2026-02-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Detroit Tigers invited non-roster C Josue Briceño to spring training."
+    },
+    {
+      "id": 890183,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 366,
+        "name": "Detroit Tigers Prospects",
+        "link": "/api/v1/teams/366"
+      },
+      "date": "2026-03-05",
+      "effectiveDate": "2026-03-05",
+      "resolutionDate": "2026-03-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Josue Briceño assigned to Detroit Tigers Prospects."
+    },
+    {
+      "id": 896193,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "date": "2026-03-31",
+      "effectiveDate": "2026-03-31",
+      "resolutionDate": "2026-03-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Erie SeaWolves placed C Josue Briceño on the 60-day injured list."
+    },
+    {
+      "id": 923039,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 473,
+        "name": "FCL Tigers",
+        "link": "/api/v1/teams/473"
+      },
+      "date": "2026-06-27",
+      "effectiveDate": "2026-06-27",
+      "resolutionDate": "2026-06-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Josue Briceño assigned to FCL Tigers."
+    },
+    {
+      "id": 923627,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "fromTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "toTeam": {
+        "id": 570,
+        "name": "Lakeland Flying Tigers",
+        "link": "/api/v1/teams/570"
+      },
+      "date": "2026-06-30",
+      "effectiveDate": "2026-06-30",
+      "resolutionDate": "2026-06-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Erie SeaWolves sent C Josue Briceño on a rehab assignment to Lakeland Flying Tigers."
+    },
+    {
+      "id": 927762,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "fromTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "toTeam": {
+        "id": 473,
+        "name": "FCL Tigers",
+        "link": "/api/v1/teams/473"
+      },
+      "date": "2026-07-13",
+      "effectiveDate": "2026-07-13",
+      "resolutionDate": "2026-07-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Erie SeaWolves sent C Josue Briceño on a rehab assignment to FCL Tigers."
+    },
+    {
+      "id": 927249,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "fromTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "toTeam": {
+        "id": 473,
+        "name": "FCL Tigers",
+        "link": "/api/v1/teams/473"
+      },
+      "date": "2026-07-13",
+      "effectiveDate": "2026-07-13",
+      "resolutionDate": "2026-07-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Erie SeaWolves sent C Josue Briceño on a rehab assignment to FCL Tigers."
+    },
+    {
+      "id": 928101,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "date": "2026-07-17",
+      "effectiveDate": "2026-07-17",
+      "resolutionDate": "2026-07-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Erie SeaWolves activated C Josue Briceño from the 60-day injured list."
+    },
+    {
+      "id": 928100,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "date": "2026-07-17",
+      "effectiveDate": "2026-07-17",
+      "resolutionDate": "2026-07-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Erie SeaWolves activated C Josue Briceño from the 60-day injured list."
+    },
+    {
+      "id": 936894,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "fromTeam": {
+        "id": 106,
+        "name": "Erie SeaWolves",
+        "link": "/api/v1/teams/106"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2026-08-11",
+      "effectiveDate": "2026-08-11",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Josue Briceño assigned to Toledo Mud Hens from Erie SeaWolves."
+    },
+    {
+      "id": 940944,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2026-09-02",
+      "effectiveDate": "2026-09-02",
+      "resolutionDate": "2026-09-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens placed C Josue Briceño on the 7-day injured list."
+    },
+    {
+      "id": 943460,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2026-09-21",
+      "effectiveDate": "2026-09-21",
+      "resolutionDate": "2026-09-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toledo Mud Hens activated C Josue Briceño from the 7-day injured list."
+    },
+    {
+      "id": 950430,
+      "person": {
+        "id": 800522,
+        "fullName": "Josue Briceño",
+        "link": "/api/v1/people/800522",
+        "nameSlug": "josue-briceno-800522"
+      },
+      "fromTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Detroit Tigers selected the contract of C Josue Briceño from Toledo Mud Hens."
+    }
+  ]
+}

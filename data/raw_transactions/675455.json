@@ -1,7 +1,7 @@
 {
   "player_id": 675455,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:a8e077e1655faa01f028cac459f25272313f9d8b14188148271fc835d45325ae",
+  "fetched_at": "2026-11-19T20:04:15Z",
+  "checksum": "sha256:b6e8ef0b697f2faeb2204259a9bc0a285b915208584d0af211793f3159932fd6",
   "transactions": [
     {
       "id": 308499,
@@ -521,6 +521,26 @@
       "typeCode": "SE",
       "typeDesc": "Selected",
       "description": "Cleveland Guardians selected the contract of SS Milan Tolentino from Columbus Clippers."
+    },
+    {
+      "id": 950646,
+      "person": {
+        "id": 675455,
+        "fullName": "Milan Tolentino",
+        "link": "/api/v1/people/675455",
+        "nameSlug": "milan-tolentino-675455"
+      },
+      "toTeam": {
+        "id": 677,
+        "name": "Naranjeros de Hermosillo",
+        "link": "/api/v1/teams/677"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "resolutionDate": "2026-11-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Milan Tolentino assigned to Naranjeros de Hermosillo."
     }
   ]
 }

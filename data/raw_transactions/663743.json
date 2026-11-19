@@ -1,7 +1,7 @@
 {
   "player_id": 663743,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:18b628c00757aa34e72f61d407d3e5efb64b2ac79f4094e1c634684bbedc7254",
+  "fetched_at": "2026-11-19T20:04:15Z",
+  "checksum": "sha256:0fb131bc30cbaba92aaafd58b8817cc48cababb52b6a936e5bd4b60fbd21fc1c",
   "transactions": [
     {
       "id": 299165,
@@ -884,6 +884,30 @@
       "typeCode": "NUM",
       "typeDesc": "Number Change",
       "description": "C Nick Fortes changed number to 40."
+    },
+    {
+      "id": 950612,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "fromTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Tampa Bay Rays traded C Nick Fortes to Boston Red Sox for RHP Angel Roa."
     }
   ]
 }

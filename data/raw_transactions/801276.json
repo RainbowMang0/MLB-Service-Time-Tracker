@@ -1,0 +1,455 @@
+{
+  "player_id": 801276,
+  "fetched_at": "2026-11-19T20:04:15Z",
+  "checksum": "sha256:f9cd174b263c1837370cb2be01cbe04b1bda5c39ce520ec4cc6567100931e55b",
+  "transactions": [
+    {
+      "id": 604943,
+      "person": {
+        "id": 801276,
+        "fullName": "Juan Matheus",
+        "link": "/api/v1/people/801276",
+        "nameSlug": "juan-matheus-801276"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2022-01-27",
+      "effectiveDate": "2022-01-27",
+      "resolutionDate": "2022-01-27",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Yankees signed free agent SS Juan Matheus to a minor league contract."
+    },
+    {
+      "id": 628361,
+      "person": {
+        "id": 801276,
+        "fullName": "Juan Matheus",
+        "link": "/api/v1/people/801276",
+        "nameSlug": "juan-matheus-801276"
+      },
+      "toTeam": {
+        "id": 635,
+        "name": "DSL NYY Yankees",
+        "link": "/api/v1/teams/635"
+      },
+      "date": "2022-06-06",
+      "effectiveDate": "2022-06-06",
+      "resolutionDate": "2022-06-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Matheus assigned to DSL NYY Yankees."
+    },
+    {
+      "id": 699367,
+      "person": {
+        "id": 801276,
+        "fullName": "Juan Matheus",
+        "link": "/api/v1/people/801276",
+        "nameSlug": "juan-matheus-801276"
+      },
+      "toTeam": {
+        "id": 634,
+        "name": "DSL NYY Bombers",
+        "link": "/api/v1/teams/634"
+      },
+      "date": "2023-06-04",
+      "effectiveDate": "2023-06-04",
+      "resolutionDate": "2023-06-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Matheus assigned to DSL NYY Bombers."
+    },
+    {
+      "id": 710920,
+      "person": {
+        "id": 801276,
+        "fullName": "Juan Matheus",
+        "link": "/api/v1/people/801276",
+        "nameSlug": "juan-matheus-801276"
+      },
+      "toTeam": {
+        "id": 634,
+        "name": "DSL NYY Bombers",
+        "link": "/api/v1/teams/634"
+      },
+      "date": "2023-07-12",
+      "effectiveDate": "2023-07-12",
+      "resolutionDate": "2023-07-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "DSL NYY Bombers placed SS Juan Matheus on the 60-day injured list."
+    },
+    {
+      "id": 732631,
+      "person": {
+        "id": 801276,
+        "fullName": "Juan Matheus",
+        "link": "/api/v1/people/801276",
+        "nameSlug": "juan-matheus-801276"
+      },
+      "toTeam": {
+        "id": 634,
+        "name": "DSL NYY Bombers",
+        "link": "/api/v1/teams/634"
+      },
+      "date": "2023-11-07",
+      "effectiveDate": "2023-11-07",
+      "resolutionDate": "2023-11-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "DSL NYY Bombers activated SS Juan Matheus from the 60-day injured list."
+    },
+    {
+      "id": 767131,
+      "person": {
+        "id": 801276,
+        "fullName": "Juan Matheus",
+        "link": "/api/v1/people/801276",
+        "nameSlug": "juan-matheus-801276"
+      },
+      "fromTeam": {
+        "id": 634,
+        "name": "DSL NYY Bombers",
+        "link": "/api/v1/teams/634"
+      },
+      "toTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "date": "2024-05-03",
+      "effectiveDate": "2024-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Matheus assigned to FCL Yankees from DSL NYY Bombers."
+    },
+    {
+      "id": 797684,
+      "person": {
+        "id": 801276,
+        "fullName": "Juan Matheus",
+        "link": "/api/v1/people/801276",
+        "nameSlug": "juan-matheus-801276"
+      },
+      "fromTeam": {
+        "id": 475,
+        "name": "FCL Yankees",
+        "link": "/api/v1/teams/475"
+      },
+      "toTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "date": "2024-09-04",
+      "effectiveDate": "2024-09-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Matheus assigned to Tampa Tarpons from FCL Yankees."
+    },
+    {
+      "id": 816836,
+      "person": {
+        "id": 801276,
+        "fullName": "Juan Matheus",
+        "link": "/api/v1/people/801276",
+        "nameSlug": "juan-matheus-801276"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2025-02-22",
+      "effectiveDate": "2025-02-22",
+      "resolutionDate": "2025-02-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "SS Juan Matheus roster status changed by New York Yankees."
+    },
+    {
+      "id": 817109,
+      "person": {
+        "id": 801276,
+        "fullName": "Juan Matheus",
+        "link": "/api/v1/people/801276",
+        "nameSlug": "juan-matheus-801276"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2025-02-22",
+      "effectiveDate": "2025-02-22",
+      "resolutionDate": "2025-02-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "SS Juan Matheus roster status changed by New York Yankees."
+    },
+    {
+      "id": 816592,
+      "person": {
+        "id": 801276,
+        "fullName": "Juan Matheus",
+        "link": "/api/v1/people/801276",
+        "nameSlug": "juan-matheus-801276"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2025-02-22",
+      "effectiveDate": "2025-02-22",
+      "resolutionDate": "2025-02-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Matheus assigned to New York Yankees."
+    },
+    {
+      "id": 862809,
+      "person": {
+        "id": 801276,
+        "fullName": "Juan Matheus",
+        "link": "/api/v1/people/801276",
+        "nameSlug": "juan-matheus-801276"
+      },
+      "fromTeam": {
+        "id": 587,
+        "name": "Tampa Tarpons",
+        "link": "/api/v1/teams/587"
+      },
+      "toTeam": {
+        "id": 537,
+        "name": "Hudson Valley Renegades",
+        "link": "/api/v1/teams/537"
+      },
+      "date": "2025-08-06",
+      "effectiveDate": "2025-08-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Matheus assigned to Hudson Valley Renegades from Tampa Tarpons."
+    },
+    {
+      "id": 897023,
+      "person": {
+        "id": 801276,
+        "fullName": "Juan Matheus",
+        "link": "/api/v1/people/801276",
+        "nameSlug": "juan-matheus-801276"
+      },
+      "toTeam": {
+        "id": 554,
+        "name": "Beloit Sky Carp",
+        "link": "/api/v1/teams/554"
+      },
+      "date": "2026-01-13",
+      "effectiveDate": "2026-01-13",
+      "resolutionDate": "2026-01-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Beloit Sky Carp activated SS Juan Matheus."
+    },
+    {
+      "id": 880961,
+      "person": {
+        "id": 801276,
+        "fullName": "Juan Matheus",
+        "link": "/api/v1/people/801276",
+        "nameSlug": "juan-matheus-801276"
+      },
+      "toTeam": {
+        "id": 554,
+        "name": "Beloit Sky Carp",
+        "link": "/api/v1/teams/554"
+      },
+      "date": "2026-01-13",
+      "effectiveDate": "2026-01-13",
+      "resolutionDate": "2026-01-13",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Matheus assigned to Beloit Sky Carp."
+    },
+    {
+      "id": 880957,
+      "person": {
+        "id": 801276,
+        "fullName": "Juan Matheus",
+        "link": "/api/v1/people/801276",
+        "nameSlug": "juan-matheus-801276"
+      },
+      "fromTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2026-01-13",
+      "effectiveDate": "2026-01-13",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Miami Marlins traded LHP Ryan Weathers to New York Yankees for CF Brendan Jones, OF Dillon Lewis, 1B Dylan Jasso and SS Juan Matheus."
+    },
+    {
+      "id": 887378,
+      "person": {
+        "id": 801276,
+        "fullName": "Juan Matheus",
+        "link": "/api/v1/people/801276",
+        "nameSlug": "juan-matheus-801276"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2026-02-22",
+      "effectiveDate": "2026-02-22",
+      "resolutionDate": "2026-02-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Matheus assigned to Miami Marlins."
+    },
+    {
+      "id": 890887,
+      "person": {
+        "id": 801276,
+        "fullName": "Juan Matheus",
+        "link": "/api/v1/people/801276",
+        "nameSlug": "juan-matheus-801276"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2026-02-22",
+      "effectiveDate": "2026-02-22",
+      "resolutionDate": "2026-02-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "SS Juan Matheus roster status changed by Miami Marlins."
+    },
+    {
+      "id": 888172,
+      "person": {
+        "id": 801276,
+        "fullName": "Juan Matheus",
+        "link": "/api/v1/people/801276",
+        "nameSlug": "juan-matheus-801276"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2026-02-22",
+      "effectiveDate": "2026-02-22",
+      "resolutionDate": "2026-02-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "SS Juan Matheus roster status changed by Miami Marlins."
+    },
+    {
+      "id": 889951,
+      "person": {
+        "id": 801276,
+        "fullName": "Juan Matheus",
+        "link": "/api/v1/people/801276",
+        "nameSlug": "juan-matheus-801276"
+      },
+      "toTeam": {
+        "id": 385,
+        "name": "Miami Marlins Prospects",
+        "link": "/api/v1/teams/385"
+      },
+      "date": "2026-03-05",
+      "effectiveDate": "2026-03-05",
+      "resolutionDate": "2026-03-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Matheus assigned to Miami Marlins Prospects."
+    },
+    {
+      "id": 911754,
+      "person": {
+        "id": 801276,
+        "fullName": "Juan Matheus",
+        "link": "/api/v1/people/801276",
+        "nameSlug": "juan-matheus-801276"
+      },
+      "fromTeam": {
+        "id": 554,
+        "name": "Beloit Sky Carp",
+        "link": "/api/v1/teams/554"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2026-05-26",
+      "effectiveDate": "2026-05-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Matheus assigned to Pensacola Blue Wahoos from Beloit Sky Carp."
+    },
+    {
+      "id": 940887,
+      "person": {
+        "id": 801276,
+        "fullName": "Juan Matheus",
+        "link": "/api/v1/people/801276",
+        "nameSlug": "juan-matheus-801276"
+      },
+      "fromTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2026-09-02",
+      "effectiveDate": "2026-09-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Matheus assigned to Jacksonville Jumbo Shrimp from Pensacola Blue Wahoos."
+    },
+    {
+      "id": 950493,
+      "person": {
+        "id": 801276,
+        "fullName": "Juan Matheus",
+        "link": "/api/v1/people/801276",
+        "nameSlug": "juan-matheus-801276"
+      },
+      "fromTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "Miami Marlins selected the contract of SS Juan Matheus from Jacksonville Jumbo Shrimp."
+    }
+  ]
+}

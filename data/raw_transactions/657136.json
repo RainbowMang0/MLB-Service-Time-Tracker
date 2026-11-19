@@ -1,7 +1,7 @@
 {
   "player_id": 657136,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:a3b965b456f69b7a83e519cbb081a104933c0f06072b9df900d815acde4023e4",
+  "fetched_at": "2026-11-19T20:04:15Z",
+  "checksum": "sha256:98453bc1468044a9d7d8a6618fdf218a30eccbc242264f2ce080009bd42f876a",
   "transactions": [
     {
       "id": 255075,
@@ -1171,6 +1171,26 @@
       "typeCode": "NUM",
       "typeDesc": "Number Change",
       "description": "C Connor Wong changed number to 12."
+    },
+    {
+      "id": 950611,
+      "person": {
+        "id": 657136,
+        "fullName": "Connor Wong",
+        "link": "/api/v1/people/657136",
+        "nameSlug": "connor-wong-657136"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "resolutionDate": "2026-11-18",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Boston Red Sox designated C Connor Wong for assignment."
     }
   ]
 }

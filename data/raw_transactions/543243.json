@@ -1,7 +1,7 @@
 {
   "player_id": 543243,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:bc784b371d93828af4e01589f0e18b618d0d30a0872c31430f10c24958d68a25",
+  "fetched_at": "2026-11-19T20:04:15Z",
+  "checksum": "sha256:6e5cd408bc8ea6fb60a283995b983f45c8cf4804ace193e0161c95c60850590b",
   "transactions": [
     {
       "id": 98066,
@@ -1259,6 +1259,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Sonny Gray elected free agency."
+    },
+    {
+      "id": 950613,
+      "person": {
+        "id": 543243,
+        "fullName": "Sonny Gray",
+        "link": "/api/v1/people/543243",
+        "nameSlug": "sonny-gray-543243"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "resolutionDate": "2026-11-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent RHP Sonny Gray."
     }
   ]
 }

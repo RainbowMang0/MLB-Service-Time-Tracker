@@ -1,0 +1,601 @@
+{
+  "player_id": 700072,
+  "fetched_at": "2026-11-19T20:04:15Z",
+  "checksum": "sha256:6bf52721786ea56733db0deef0de003c817c91386278792b7e2e7667a7d3b32e",
+  "transactions": [
+    {
+      "id": 473300,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "toTeam": {
+        "id": 619,
+        "name": "DSL Marlins",
+        "link": "/api/v1/teams/619"
+      },
+      "date": "2021-01-28",
+      "effectiveDate": "2021-01-28",
+      "resolutionDate": "2021-01-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "P Yaqui Rivera assigned to DSL Marlins ."
+    },
+    {
+      "id": 473294,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2021-01-28",
+      "effectiveDate": "2021-01-28",
+      "resolutionDate": "2021-01-28",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Miami Marlins signed free agent P Yaqui Rivera."
+    },
+    {
+      "id": 515300,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "fromTeam": {
+        "id": 619,
+        "name": "DSL Marlins",
+        "link": "/api/v1/teams/619"
+      },
+      "toTeam": {
+        "id": 467,
+        "name": "FCL Marlins",
+        "link": "/api/v1/teams/467"
+      },
+      "date": "2021-09-01",
+      "effectiveDate": "2021-09-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yaqui Rivera assigned to FCL Marlins from DSL Marlins."
+    },
+    {
+      "id": 518613,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "fromTeam": {
+        "id": 467,
+        "name": "FCL Marlins",
+        "link": "/api/v1/teams/467"
+      },
+      "toTeam": {
+        "id": 619,
+        "name": "DSL Marlins",
+        "link": "/api/v1/teams/619"
+      },
+      "date": "2021-09-21",
+      "effectiveDate": "2021-09-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yaqui Rivera assigned to DSL Marlins from FCL Marlins."
+    },
+    {
+      "id": 628126,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "toTeam": {
+        "id": 599,
+        "name": "FCL Orioles",
+        "link": "/api/v1/teams/599"
+      },
+      "date": "2022-06-01",
+      "effectiveDate": "2022-06-01",
+      "resolutionDate": "2022-06-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "FCL Orioles activated RHP Yaqui Rivera."
+    },
+    {
+      "id": 628125,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2022-06-01",
+      "effectiveDate": "2022-06-01",
+      "resolutionDate": "2022-06-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yaqui Rivera assigned to Baltimore Orioles."
+    },
+    {
+      "id": 628123,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "fromTeam": {
+        "id": 619,
+        "name": "DSL Marlins",
+        "link": "/api/v1/teams/619"
+      },
+      "toTeam": {
+        "id": 599,
+        "name": "FCL Orioles",
+        "link": "/api/v1/teams/599"
+      },
+      "date": "2022-06-01",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "DSL Marlins traded RHP Yaqui Rivera to FCL Orioles."
+    },
+    {
+      "id": 632299,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "fromTeam": {
+        "id": 599,
+        "name": "FCL Orioles",
+        "link": "/api/v1/teams/599"
+      },
+      "toTeam": {
+        "id": 548,
+        "name": "Delmarva Shorebirds",
+        "link": "/api/v1/teams/548"
+      },
+      "date": "2022-06-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yaqui Rivera assigned to Delmarva Shorebirds from FCL Orioles."
+    },
+    {
+      "id": 707293,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "fromTeam": {
+        "id": 548,
+        "name": "Delmarva Shorebirds",
+        "link": "/api/v1/teams/548"
+      },
+      "toTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "date": "2023-06-27",
+      "effectiveDate": "2023-06-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yaqui Rivera assigned to Aberdeen IronBirds from Delmarva Shorebirds."
+    },
+    {
+      "id": 717296,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "fromTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "toTeam": {
+        "id": 548,
+        "name": "Delmarva Shorebirds",
+        "link": "/api/v1/teams/548"
+      },
+      "date": "2023-08-03",
+      "effectiveDate": "2023-08-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yaqui Rivera assigned to Delmarva Shorebirds from Aberdeen IronBirds."
+    },
+    {
+      "id": 719846,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "fromTeam": {
+        "id": 548,
+        "name": "Delmarva Shorebirds",
+        "link": "/api/v1/teams/548"
+      },
+      "toTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "date": "2023-08-15",
+      "effectiveDate": "2023-08-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yaqui Rivera assigned to Aberdeen IronBirds from Delmarva Shorebirds."
+    },
+    {
+      "id": 733986,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2023-11-29",
+      "effectiveDate": "2023-11-29",
+      "resolutionDate": "2023-11-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yaqui Rivera assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 751904,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2024-02-26",
+      "effectiveDate": "2024-02-26",
+      "resolutionDate": "2024-02-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yaqui Rivera assigned to Baltimore Orioles."
+    },
+    {
+      "id": 754075,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "toTeam": {
+        "id": 361,
+        "name": "Baltimore Orioles Prospects",
+        "link": "/api/v1/teams/361"
+      },
+      "date": "2024-03-07",
+      "effectiveDate": "2024-03-07",
+      "resolutionDate": "2024-03-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Baltimore Orioles Prospects activated RHP Yaqui Rivera."
+    },
+    {
+      "id": 816601,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2025-02-22",
+      "effectiveDate": "2025-02-22",
+      "resolutionDate": "2025-02-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yaqui Rivera assigned to Baltimore Orioles."
+    },
+    {
+      "id": 824604,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "fromTeam": {
+        "id": 488,
+        "name": "Aberdeen IronBirds",
+        "link": "/api/v1/teams/488"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2025-04-02",
+      "effectiveDate": "2025-04-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yaqui Rivera assigned to Chesapeake Baysox from Aberdeen IronBirds."
+    },
+    {
+      "id": 865261,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2025-08-19",
+      "effectiveDate": "2025-08-19",
+      "resolutionDate": "2025-08-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chesapeake Baysox transferred RHP Yaqui Rivera to the Development List."
+    },
+    {
+      "id": 872162,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2025-09-17",
+      "effectiveDate": "2025-09-17",
+      "resolutionDate": "2025-09-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Chesapeake Baysox activated RHP Yaqui Rivera."
+    },
+    {
+      "id": 873283,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2025-10-15",
+      "effectiveDate": "2025-10-15",
+      "resolutionDate": "2025-10-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yaqui Rivera assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 887456,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-02-22",
+      "effectiveDate": "2026-02-22",
+      "resolutionDate": "2026-02-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yaqui Rivera assigned to Baltimore Orioles."
+    },
+    {
+      "id": 905003,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "fromTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2026-05-01",
+      "effectiveDate": "2026-05-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yaqui Rivera assigned to Norfolk Tides from Chesapeake Baysox."
+    },
+    {
+      "id": 906447,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2026-05-07",
+      "effectiveDate": "2026-05-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yaqui Rivera assigned to Chesapeake Baysox from Norfolk Tides."
+    },
+    {
+      "id": 911649,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "fromTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2026-05-26",
+      "effectiveDate": "2026-05-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yaqui Rivera assigned to Norfolk Tides from Chesapeake Baysox."
+    },
+    {
+      "id": 912442,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "fromTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "toTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "date": "2026-05-28",
+      "effectiveDate": "2026-05-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yaqui Rivera assigned to Chesapeake Baysox from Norfolk Tides."
+    },
+    {
+      "id": 915227,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "fromTeam": {
+        "id": 418,
+        "name": "Chesapeake Baysox",
+        "link": "/api/v1/teams/418"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2026-06-02",
+      "effectiveDate": "2026-06-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yaqui Rivera assigned to Norfolk Tides from Chesapeake Baysox."
+    },
+    {
+      "id": 950464,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2026-11-16",
+      "effectiveDate": "2026-11-17",
+      "resolutionDate": "2026-11-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yaqui Rivera assigned to Las Vegas Aviators."
+    },
+    {
+      "id": 950463,
+      "person": {
+        "id": 700072,
+        "fullName": "Yaqui Rivera",
+        "link": "/api/v1/people/700072",
+        "nameSlug": "yaqui-rivera-700072"
+      },
+      "fromTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2026-11-17",
+      "effectiveDate": "2026-11-17",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Baltimore Orioles traded RHP Yaqui Rivera to Athletics."
+    }
+  ]
+}

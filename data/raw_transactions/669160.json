@@ -1,7 +1,7 @@
 {
   "player_id": 669160,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:e7ab5c1c755cb312e576192fcfe76ca014c0f009e4b44af7dfc5332d13f4ffb0",
+  "fetched_at": "2026-11-19T20:04:15Z",
+  "checksum": "sha256:4425e83f0170673bbfa1e505b63a5e4e1da6c72c42c8aa7dbf7f8b9ee63fb97d",
   "transactions": [
     {
       "id": 277108,
@@ -1048,6 +1048,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Dustin May elected free agency."
+    },
+    {
+      "id": 950619,
+      "person": {
+        "id": 669160,
+        "fullName": "Dustin May",
+        "link": "/api/v1/people/669160",
+        "nameSlug": "dustin-may-669160"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "resolutionDate": "2026-11-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago White Sox signed free agent RHP Dustin May."
     }
   ]
 }

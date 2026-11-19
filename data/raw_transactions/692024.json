@@ -1,7 +1,7 @@
 {
   "player_id": 692024,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:800fac8cad393e6cd9b5aa0261bc43e6ca25e5da3dd91457a5e8c574409e0b9e",
+  "fetched_at": "2026-11-19T20:04:15Z",
+  "checksum": "sha256:331ef67ff9445a173f4c3ebf2acc38cb452fd6e4972ba6a4a92daa5095e06383",
   "transactions": [
     {
       "id": 424615,
@@ -862,6 +862,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Alex Carrillo elected free agency."
+    },
+    {
+      "id": 950616,
+      "person": {
+        "id": 692024,
+        "fullName": "Alex Carrillo",
+        "link": "/api/v1/people/692024",
+        "nameSlug": "alex-carrillo-692024"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "resolutionDate": "2026-11-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Baltimore Orioles signed free agent RHP Alex Carrillo to a minor league contract."
+    },
+    {
+      "id": 950617,
+      "person": {
+        "id": 692024,
+        "fullName": "Alex Carrillo",
+        "link": "/api/v1/people/692024",
+        "nameSlug": "alex-carrillo-692024"
+      },
+      "toTeam": {
+        "id": 568,
+        "name": "Norfolk Tides",
+        "link": "/api/v1/teams/568"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "resolutionDate": "2026-11-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alex Carrillo assigned to Norfolk Tides."
     }
   ]
 }
