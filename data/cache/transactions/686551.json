@@ -323,5 +323,31 @@
     "effectiveDate": "2026-11-09",
     "resolutionDate": null,
     "id": 949929
+  },
+  {
+    "date": "2026-11-17",
+    "description": "Los Angeles Dodgers designated SS Christian Cairo for assignment.",
+    "team": "Los Angeles Dodgers",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 119,
+    "typeCode": "DES",
+    "typeDesc": "Designated for Assignment",
+    "effectiveDate": "2026-11-17",
+    "resolutionDate": "2026-11-17",
+    "id": 950467
+  },
+  {
+    "date": "2026-11-19",
+    "description": "Toronto Blue Jays claimed SS Christian Cairo off waivers from Los Angeles Dodgers.",
+    "team": "Toronto Blue Jays",
+    "team_id": null,
+    "from_team_id": 119,
+    "to_team_id": 141,
+    "typeCode": "CLW",
+    "typeDesc": "Claimed Off Waivers",
+    "effectiveDate": "2026-11-19",
+    "resolutionDate": null,
+    "id": 950684
   }
 ]
