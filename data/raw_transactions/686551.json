@@ -1,7 +1,7 @@
 {
   "player_id": 686551,
-  "fetched_at": "2026-11-18T20:05:22Z",
-  "checksum": "sha256:eb7ccdcb27ea3d55889646c01ce57010139bd36d99c0bd43f57a57a876a844dc",
+  "fetched_at": "2026-11-20T19:41:30Z",
+  "checksum": "sha256:db0df31fe1c1972dd1221b824b48ef0a6e013a0ec48eeeadaacf41da390b6e03",
   "transactions": [
     {
       "id": 408968,
@@ -935,6 +935,30 @@
       "typeCode": "DES",
       "typeDesc": "Designated for Assignment",
       "description": "Los Angeles Dodgers designated SS Christian Cairo for assignment."
+    },
+    {
+      "id": 950684,
+      "person": {
+        "id": 686551,
+        "fullName": "Christian Cairo",
+        "link": "/api/v1/people/686551",
+        "nameSlug": "christian-cairo-686551"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2026-11-19",
+      "effectiveDate": "2026-11-19",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Toronto Blue Jays claimed SS Christian Cairo off waivers from Los Angeles Dodgers."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 607229,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:eb20d592b0ed4b434adf6618aeb1271535dbbe7d328b2972bb5fea811e1e4dba",
+  "fetched_at": "2026-11-20T19:41:30Z",
+  "checksum": "sha256:579d7066bc52c15ac16fc053ff5f484748c805106a88d7d20a4fc0dd9ad3de7f",
   "transactions": [
     {
       "id": 97229,
@@ -1392,6 +1392,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Robert Gsellman assigned to Tomateros de Culiacan."
+    },
+    {
+      "id": 950710,
+      "person": {
+        "id": 607229,
+        "fullName": "Robert Gsellman",
+        "link": "/api/v1/people/607229",
+        "nameSlug": "robert-gsellman-607229"
+      },
+      "toTeam": {
+        "id": 678,
+        "name": "Tomateros de Culiacan",
+        "link": "/api/v1/teams/678"
+      },
+      "date": "2026-11-19",
+      "effectiveDate": "2026-11-19",
+      "resolutionDate": "2026-11-19",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tomateros de Culiacan placed RHP Robert Gsellman on the reserve list."
     }
   ]
 }

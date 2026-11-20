@@ -1,7 +1,7 @@
 {
   "player_id": 663436,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:dc6b41820abc82c73655eb8fca0bd68c97c75e12e0a5efb6213d311dbcd59c6a",
+  "fetched_at": "2026-11-20T19:41:30Z",
+  "checksum": "sha256:b29a1a3d5af843e08ce55b0172790e64e6766176e118314e07ebfbfc5c221af4",
   "transactions": [
     {
       "id": 255157,
@@ -1226,6 +1226,30 @@
       "typeCode": "NUM",
       "typeDesc": "Number Change",
       "description": "RHP Davis Martin changed number to 65."
+    },
+    {
+      "id": 950733,
+      "person": {
+        "id": 663436,
+        "fullName": "Davis Martin",
+        "link": "/api/v1/people/663436",
+        "nameSlug": "davis-martin-663436"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2026-11-19",
+      "effectiveDate": "2026-11-19",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Chicago White Sox traded RHP Luis Castillo and RHP Davis Martin to Colorado Rockies for LHP Sean Sullivan and C Douglas Veliz."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 669947,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:735bc61cafd2b1207217d116fa4c7e70657bebe9feac80811a43987cbd38e94f",
+  "fetched_at": "2026-11-20T19:41:30Z",
+  "checksum": "sha256:0a74f37986b7c536e67e2ad38cb404181d01ddfa4d40699a2f0ba33c7caa9d62",
   "transactions": [
     {
       "id": 271133,
@@ -1479,6 +1479,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Tampa Bay Rays activated RHP Jesse Scholtens."
+    },
+    {
+      "id": 950687,
+      "person": {
+        "id": 669947,
+        "fullName": "Jesse Scholtens",
+        "link": "/api/v1/people/669947",
+        "nameSlug": "jesse-scholtens-669947"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2026-11-19",
+      "effectiveDate": "2026-11-19",
+      "resolutionDate": "2026-11-19",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Tampa Bay Rays released RHP Jesse Scholtens."
     }
   ]
 }

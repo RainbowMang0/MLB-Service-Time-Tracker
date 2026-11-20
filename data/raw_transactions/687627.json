@@ -1,7 +1,7 @@
 {
   "player_id": 687627,
-  "fetched_at": "2026-11-19T20:04:15Z",
-  "checksum": "sha256:134ea08ed43607d384edf24f57994adcb96fa1c067bb3027111f98498418469f",
+  "fetched_at": "2026-11-20T19:41:30Z",
+  "checksum": "sha256:80a93a57fb3770ec640366185c1cdafccc19fa8a0517262f655290c1da61fb1c",
   "transactions": [
     {
       "id": 630226,
@@ -378,6 +378,26 @@
       "typeCode": "SE",
       "typeDesc": "Selected",
       "description": "Cleveland Guardians selected the contract of C Kody Huff from Columbus Clippers."
+    },
+    {
+      "id": 950735,
+      "person": {
+        "id": 687627,
+        "fullName": "Kody Huff",
+        "link": "/api/v1/people/687627",
+        "nameSlug": "kody-huff-687627"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Kody Huff assigned to Tigres del Licey."
     }
   ]
 }

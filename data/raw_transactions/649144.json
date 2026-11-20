@@ -1,7 +1,7 @@
 {
   "player_id": 649144,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:c29408c0cc8973280cc918c7ee705ebc94f1aaca87f2b09532a49ae6a6275be6",
+  "fetched_at": "2026-11-20T19:41:30Z",
+  "checksum": "sha256:5ffa5b9bae609bb19c60e935e46bedbd760e21b6aae4945c381f312be517e799",
   "transactions": [
     {
       "id": 173693,
@@ -1084,6 +1084,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "LHP Alex Wells assigned to Adelaide Giants."
+    },
+    {
+      "id": 950736,
+      "person": {
+        "id": 649144,
+        "fullName": "Alex Wells",
+        "link": "/api/v1/people/649144",
+        "nameSlug": "alex-wells-649144"
+      },
+      "toTeam": {
+        "id": 4064,
+        "name": "Adelaide Giants",
+        "link": "/api/v1/teams/4064"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Adelaide Giants placed LHP Alex Wells on the reserve list."
     }
   ]
 }

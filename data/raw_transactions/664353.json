@@ -1,7 +1,7 @@
 {
   "player_id": 664353,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:7567d4cfd8bdaabb0b5a1a0dd38655ec12a69ad20fb6f32c27c0b40d43bf90e3",
+  "fetched_at": "2026-11-20T19:41:30Z",
+  "checksum": "sha256:59f77e7b214aae10776a8239850bea29bbb6bd7ab21875656a4d36ed1aad0e56",
   "transactions": [
     {
       "id": 369004,
@@ -1797,6 +1797,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP José Urquidy elected free agency."
+    },
+    {
+      "id": 950717,
+      "person": {
+        "id": 664353,
+        "fullName": "José Urquidy",
+        "link": "/api/v1/people/664353",
+        "nameSlug": "jose-urquidy-664353"
+      },
+      "toTeam": {
+        "id": 679,
+        "name": "Venados de Mazatlan",
+        "link": "/api/v1/teams/679"
+      },
+      "date": "2026-11-19",
+      "effectiveDate": "2026-11-19",
+      "resolutionDate": "2026-11-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP José Urquidy assigned to Venados de Mazatlan."
     }
   ]
 }

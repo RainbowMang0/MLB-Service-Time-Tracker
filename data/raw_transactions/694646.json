@@ -1,7 +1,7 @@
 {
   "player_id": 694646,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:d309a76f0c39bc70d28cea2beb2ac649596b1bf898775124c88c42899ae654ae",
+  "fetched_at": "2026-11-20T19:41:30Z",
+  "checksum": "sha256:ba5d8f586f9d77daabbe511269381f3466f0c220f3cfa124142f2b77b1c9248c",
   "transactions": [
     {
       "id": 505280,
@@ -1320,6 +1320,30 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "New York Mets recalled RHP Chayce McDermott from Syracuse Mets."
+    },
+    {
+      "id": 950686,
+      "person": {
+        "id": 694646,
+        "fullName": "Chayce McDermott",
+        "link": "/api/v1/people/694646",
+        "nameSlug": "chayce-mcdermott-694646"
+      },
+      "fromTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-11-19",
+      "effectiveDate": "2026-11-19",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "Chicago Cubs claimed RHP Chayce McDermott off waivers from New York Mets."
     }
   ]
 }

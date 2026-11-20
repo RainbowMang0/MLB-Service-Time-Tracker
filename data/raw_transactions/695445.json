@@ -1,7 +1,7 @@
 {
   "player_id": 695445,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:5213424453a67f6d7d1aa7b47f18c6e05e74b92d381b2a4641997bbe51e39531",
+  "fetched_at": "2026-11-20T19:41:30Z",
+  "checksum": "sha256:e4e251bf190724f6770a1bd92a1a433a29095c3184505e200c81c697f177fdf9",
   "transactions": [
     {
       "id": 504947,
@@ -1014,6 +1014,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Toronto Blue Jays recalled RHP Chase Lee from Buffalo Bisons."
+    },
+    {
+      "id": 950685,
+      "person": {
+        "id": 695445,
+        "fullName": "Chase Lee",
+        "link": "/api/v1/people/695445",
+        "nameSlug": "chase-lee-695445"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2026-11-19",
+      "effectiveDate": "2026-11-19",
+      "resolutionDate": "2026-11-19",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Toronto Blue Jays designated RHP Chase Lee for assignment."
     }
   ]
 }

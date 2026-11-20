@@ -1,7 +1,7 @@
 {
   "player_id": 661531,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:64a8a8f3b78afa92a4d4e7bcb7b9a5170517143721c8546afc76d445028ac318",
+  "fetched_at": "2026-11-20T19:41:30Z",
+  "checksum": "sha256:e0550fd683a2637bae4efa89258dd7b13e1da71003d772361eb335598b7bb018",
   "transactions": [
     {
       "id": 216240,
@@ -1662,6 +1662,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "C Brian Serven elected free agency."
+    },
+    {
+      "id": 950737,
+      "person": {
+        "id": 661531,
+        "fullName": "Brian Serven",
+        "link": "/api/v1/people/661531",
+        "nameSlug": "brian-serven-661531"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2026-11-19",
+      "effectiveDate": "2026-11-19",
+      "resolutionDate": "2026-11-19",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Athletics signed free agent C Brian Serven to a minor league contract."
+    },
+    {
+      "id": 950738,
+      "person": {
+        "id": 661531,
+        "fullName": "Brian Serven",
+        "link": "/api/v1/people/661531",
+        "nameSlug": "brian-serven-661531"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Brian Serven assigned to Las Vegas Aviators."
     }
   ]
 }

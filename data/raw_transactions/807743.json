@@ -1,7 +1,7 @@
 {
   "player_id": 807743,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:85be0881b51a719c406ec15794a2866c32ed5c657e066705366bad06528b12d4",
+  "fetched_at": "2026-11-20T19:41:30Z",
+  "checksum": "sha256:2b58a460ff7ff8c8ab0cec476fb09bc4fa0a51db7cf01157a9ed45a07c93f618",
   "transactions": [
     {
       "id": 694066,
@@ -699,6 +699,30 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Colorado Rockies recalled LHP Sean Sullivan from Albuquerque Isotopes."
+    },
+    {
+      "id": 950733,
+      "person": {
+        "id": 807743,
+        "fullName": "Sean Sullivan",
+        "link": "/api/v1/people/807743",
+        "nameSlug": "sean-sullivan-807743"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "date": "2026-11-19",
+      "effectiveDate": "2026-11-19",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Chicago White Sox traded RHP Luis Castillo and RHP Davis Martin to Colorado Rockies for LHP Sean Sullivan and C Douglas Veliz."
     }
   ]
 }

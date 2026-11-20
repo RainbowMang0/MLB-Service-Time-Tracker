@@ -1,7 +1,7 @@
 {
   "player_id": 703197,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:e7bccba1766d7a3e05711d9b65dfa0b76c9151d1e6007e8bbf4157be3cade2c6",
+  "fetched_at": "2026-11-20T19:41:30Z",
+  "checksum": "sha256:38267ccff3e0798f50301f6b2bb32fb5c2a487cf0f445e6dce7ce7ce371d8d32",
   "transactions": [
     {
       "id": 602637,
@@ -482,6 +482,26 @@
       "typeCode": "SE",
       "typeDesc": "Selected",
       "description": "Seattle Mariners selected the contract of SS Michael Arroyo from Tacoma Rainiers."
+    },
+    {
+      "id": 950724,
+      "person": {
+        "id": 703197,
+        "fullName": "Michael Arroyo",
+        "link": "/api/v1/people/703197",
+        "nameSlug": "michael-arroyo-703197"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2026-11-19",
+      "effectiveDate": "2026-11-19",
+      "resolutionDate": "2026-11-19",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "SS Michael Arroyo changed number to 14."
     }
   ]
 }

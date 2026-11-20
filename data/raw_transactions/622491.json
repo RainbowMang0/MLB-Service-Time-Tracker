@@ -1,7 +1,7 @@
 {
   "player_id": 622491,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:b343e47ce0142e80c13d6888e848503be80b293b60675c0d0c0879c9d9ff2d57",
+  "fetched_at": "2026-11-20T19:41:30Z",
+  "checksum": "sha256:237b3bd355ddd988add31d74b76f5b03a3cc1eeab7f25ed8fed715a8ee12f622",
   "transactions": [
     {
       "id": 120258,
@@ -1032,6 +1032,30 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Chicago White Sox activated RHP Luis Castillo."
+    },
+    {
+      "id": 950733,
+      "person": {
+        "id": 622491,
+        "fullName": "Luis Castillo",
+        "link": "/api/v1/people/622491",
+        "nameSlug": "luis-castillo-622491"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2026-11-19",
+      "effectiveDate": "2026-11-19",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Chicago White Sox traded RHP Luis Castillo and RHP Davis Martin to Colorado Rockies for LHP Sean Sullivan and C Douglas Veliz."
     }
   ]
 }
