@@ -1,7 +1,7 @@
 {
   "player_id": 681799,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:034a25acbadbb230ffdec7660a10843c8e7833781912bf396c668c0a1d305d8d",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:65f740d50deed624f1173c082df42f590f5a760f28673c3170bd4f0bd8a0c0b3",
   "transactions": [
     {
       "id": 364759,
@@ -1500,6 +1500,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Chicago Cubs activated RHP Ethan Roberts."
+    },
+    {
+      "id": 950819,
+      "person": {
+        "id": 681799,
+        "fullName": "Ethan Roberts",
+        "link": "/api/v1/people/681799",
+        "nameSlug": "ethan-roberts-681799"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Ethan Roberts elected free agency."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "player_id": 643603,
-  "fetched_at": "2026-11-20T19:41:30Z",
+  "fetched_at": "2026-11-21T18:47:39Z",
   "checksum": "sha256:3516d1ae8162dc08923c88a5472879e898d480fef64af80e0a691964a4cca5fc",
   "transactions": [
     {
@@ -1099,6 +1099,26 @@
       "description": "1B Tyler White elected free agency."
     },
     {
+      "id": 665262,
+      "person": {
+        "id": 643603,
+        "fullName": "Tyler White",
+        "link": "/api/v1/people/643603",
+        "nameSlug": "tyler-white-643603"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2022-12-05",
+      "effectiveDate": "2022-12-05",
+      "resolutionDate": "2022-12-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "1B Tyler White roster status changed by Minnesota Twins."
+    },
+    {
       "id": 662547,
       "person": {
         "id": 643603,
@@ -1120,26 +1140,6 @@
     },
     {
       "id": 679131,
-      "person": {
-        "id": 643603,
-        "fullName": "Tyler White",
-        "link": "/api/v1/people/643603",
-        "nameSlug": "tyler-white-643603"
-      },
-      "toTeam": {
-        "id": 142,
-        "name": "Minnesota Twins",
-        "link": "/api/v1/teams/142"
-      },
-      "date": "2022-12-05",
-      "effectiveDate": "2022-12-05",
-      "resolutionDate": "2022-12-05",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "1B Tyler White roster status changed by Minnesota Twins."
-    },
-    {
-      "id": 665262,
       "person": {
         "id": 643603,
         "fullName": "Tyler White",
@@ -1199,26 +1199,6 @@
       "description": "St. Paul Saints transferred 1B Tyler White to the Development List."
     },
     {
-      "id": 696964,
-      "person": {
-        "id": 643603,
-        "fullName": "Tyler White",
-        "link": "/api/v1/people/643603",
-        "nameSlug": "tyler-white-643603"
-      },
-      "toTeam": {
-        "id": 1960,
-        "name": "St. Paul Saints",
-        "link": "/api/v1/teams/1960"
-      },
-      "date": "2023-05-13",
-      "effectiveDate": "2023-05-13",
-      "resolutionDate": "2023-05-13",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "St. Paul Saints activated 1B Tyler White."
-    },
-    {
       "id": 691625,
       "person": {
         "id": 643603,
@@ -1240,6 +1220,26 @@
     },
     {
       "id": 693054,
+      "person": {
+        "id": 643603,
+        "fullName": "Tyler White",
+        "link": "/api/v1/people/643603",
+        "nameSlug": "tyler-white-643603"
+      },
+      "toTeam": {
+        "id": 1960,
+        "name": "St. Paul Saints",
+        "link": "/api/v1/teams/1960"
+      },
+      "date": "2023-05-13",
+      "effectiveDate": "2023-05-13",
+      "resolutionDate": "2023-05-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "St. Paul Saints activated 1B Tyler White."
+    },
+    {
+      "id": 696964,
       "person": {
         "id": 643603,
         "fullName": "Tyler White",

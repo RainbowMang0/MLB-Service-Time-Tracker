@@ -1,7 +1,7 @@
 {
   "player_id": 675916,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:76eaffa5ec20c568ae46c1c9835ffe3ebcf54028f60fcb0eaf2b23e84f0d4ab4",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:8746b42084121aa15ca95464f6a755b295a557d8da0e7225266bd43582e6e364",
   "transactions": [
     {
       "id": 318710,
@@ -1173,6 +1173,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Atlanta Braves activated RHP James Karinchak."
+    },
+    {
+      "id": 950844,
+      "person": {
+        "id": 675916,
+        "fullName": "James Karinchak",
+        "link": "/api/v1/people/675916",
+        "nameSlug": "james-karinchak-675916"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP James Karinchak elected free agency."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 668716,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:756c50beeff365cb15e5ab62a466b4b5f6f8a263c23c2018e1771fbbc4a97393",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:e89568e50ff52cd2ca0b14cd42f063f3fc00121c1f1417d455ae2895804b7be7",
   "transactions": [
     {
       "id": 388154,
@@ -1181,6 +1181,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Pittsburgh Pirates recalled RHP Noah Murdock from Indianapolis Indians."
+    },
+    {
+      "id": 950848,
+      "person": {
+        "id": 668716,
+        "fullName": "Noah Murdock",
+        "link": "/api/v1/people/668716",
+        "nameSlug": "noah-murdock-668716"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Noah Murdock elected free agency."
     }
   ]
 }

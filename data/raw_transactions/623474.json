@@ -1,7 +1,7 @@
 {
   "player_id": 623474,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:2e306b32dcafb40dda84a4654d717fe6cb909c88cddaca228d1f84f7e9ae68f5",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:041825c13f62549d71b79c6cec050e12f6c381073b0d2397bc08974fefb0537a",
   "transactions": [
     {
       "id": 231377,
@@ -2069,6 +2069,46 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Colorado Rockies activated RHP Jimmy Herget from the 15-day injured list."
+    },
+    {
+      "id": 950769,
+      "person": {
+        "id": 623474,
+        "fullName": "Jimmy Herget",
+        "link": "/api/v1/people/623474",
+        "nameSlug": "jimmy-herget-623474"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Colorado Rockies designated RHP Jimmy Herget for assignment."
+    },
+    {
+      "id": 950846,
+      "person": {
+        "id": 623474,
+        "fullName": "Jimmy Herget",
+        "link": "/api/v1/people/623474",
+        "nameSlug": "jimmy-herget-623474"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Jimmy Herget elected free agency."
     }
   ]
 }

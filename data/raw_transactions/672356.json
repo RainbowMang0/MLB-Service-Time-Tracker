@@ -1,7 +1,7 @@
 {
   "player_id": 672356,
-  "fetched_at": "2026-11-11T19:19:55Z",
-  "checksum": "sha256:ac4941c68735f75549fac8f7f542df14a68e9fc6a3d7399412bc361ece39e645",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:53a78b4850c06ff1619f5b63909bfb40b96d1268684440e41cb7ea69270edb24",
   "transactions": [
     {
       "id": 296294,
@@ -1694,6 +1694,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "3B Gabriel Arias assigned to Tiburones de La Guaira."
+    },
+    {
+      "id": 950818,
+      "person": {
+        "id": 672356,
+        "fullName": "Gabriel Arias",
+        "link": "/api/v1/people/672356",
+        "nameSlug": "gabriel-arias-672356"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "3B Gabriel Arias elected free agency."
     }
   ]
 }

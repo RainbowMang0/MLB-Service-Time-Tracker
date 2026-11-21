@@ -1,7 +1,7 @@
 {
   "player_id": 695391,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:a0b3b38072e1c2bc8fbfb59b24b65dc93e4e362f64e600f62af2600afcff5dab",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:6f66131dd7d2211c9a05398320e142ab5be0a9104db91b9113ccfefc4d692747",
   "transactions": [
     {
       "id": 506279,
@@ -1261,6 +1261,26 @@
       "typeCode": "CLW",
       "typeDesc": "Claimed Off Waivers",
       "description": "Philadelphia Phillies claimed 3B Brett Harris off waivers from San Francisco Giants."
+    },
+    {
+      "id": 950781,
+      "person": {
+        "id": 695391,
+        "fullName": "Brett Harris",
+        "link": "/api/v1/people/695391",
+        "nameSlug": "brett-harris-695391"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "3B Brett Harris elected free agency."
     }
   ]
 }

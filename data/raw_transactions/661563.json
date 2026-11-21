@@ -1,7 +1,7 @@
 {
   "player_id": 661563,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:97a8a75862b2806fec539caff2f0709baea3489acadfadad70c281bbfc395f5e",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:027f1720306a544b5643d3681c36dafeced777a475777277c4f94b2fc9bce8a3",
   "transactions": [
     {
       "id": 216295,
@@ -1639,6 +1639,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Luis Gil assigned to Tigres del Licey."
+    },
+    {
+      "id": 950778,
+      "person": {
+        "id": 661563,
+        "fullName": "Luis Gil",
+        "link": "/api/v1/people/661563",
+        "nameSlug": "luis-gil-661563"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Luis Gil elected free agency."
     }
   ]
 }

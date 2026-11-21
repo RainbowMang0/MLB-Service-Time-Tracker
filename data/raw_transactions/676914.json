@@ -1,7 +1,7 @@
 {
   "player_id": 676914,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:8ac3c552b16c1e35ff2417a0b77c428ab18f8ec9e8eda86013c3710e5cbfe59d",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:71370a9268c5aebf4acf22e4879b2c8e3db1283c023fd35ce685911d2b391d44",
   "transactions": [
     {
       "id": 320825,
@@ -977,6 +977,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Toronto Blue Jays recalled LF Davis Schneider from Buffalo Bisons."
+    },
+    {
+      "id": 950776,
+      "person": {
+        "id": 676914,
+        "fullName": "Davis Schneider",
+        "link": "/api/v1/people/676914",
+        "nameSlug": "davis-schneider-676914"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LF Davis Schneider elected free agency."
     }
   ]
 }

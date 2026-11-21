@@ -1,7 +1,7 @@
 {
   "player_id": 691008,
-  "fetched_at": "2026-11-18T20:05:22Z",
-  "checksum": "sha256:c77e0583a9902840d38e63b1cd30300b4d3b7d286ad6d476c14b80d6a1e39190",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:0c8213b25b387af32664d1c4048403bce5df67d57674bdb92b75c4e4ac39a60e",
   "transactions": [
     {
       "id": 418683,
@@ -474,6 +474,26 @@
       "typeCode": "DES",
       "typeDesc": "Designated for Assignment",
       "description": "St. Louis Cardinals designated RHP Max Rajcic for assignment."
+    },
+    {
+      "id": 950773,
+      "person": {
+        "id": 691008,
+        "fullName": "Max Rajcic",
+        "link": "/api/v1/people/691008",
+        "nameSlug": "max-rajcic-691008"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Max Rajcic elected free agency."
     }
   ]
 }

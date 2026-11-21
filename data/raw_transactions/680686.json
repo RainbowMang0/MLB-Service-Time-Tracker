@@ -1,7 +1,7 @@
 {
   "player_id": 680686,
-  "fetched_at": "2026-11-17T20:33:14Z",
-  "checksum": "sha256:05e76be37ea7f15ee389543893ed1a2dbb39891205a4271c9d4ff80d01e190c5",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:6ca924a2043dfed1539a352eaa0f26a2db26f4dee229b91ea51c72daa317d92b",
   "transactions": [
     {
       "id": 359384,
@@ -1105,6 +1105,26 @@
       "typeCode": "DES",
       "typeDesc": "Designated for Assignment",
       "description": "Washington Nationals designated RHP Josiah Gray for assignment."
+    },
+    {
+      "id": 950851,
+      "person": {
+        "id": 680686,
+        "fullName": "Josiah Gray",
+        "link": "/api/v1/people/680686",
+        "nameSlug": "josiah-gray-680686"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Josiah Gray elected free agency."
     }
   ]
 }

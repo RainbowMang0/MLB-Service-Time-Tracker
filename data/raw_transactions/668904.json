@@ -1,7 +1,7 @@
 {
   "player_id": 668904,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:fd557dd8f25445de1627556ea91f85432f066ff0cdb0507c0ef16646f224d838",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:0bc7763e64465559ee79107b33a141829d207f8f287f58ca79320b3b58c232b5",
   "transactions": [
     {
       "id": 279992,
@@ -1605,6 +1605,30 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Minnesota Twins recalled 3B Royce Lewis from St. Paul Saints."
+    },
+    {
+      "id": 950798,
+      "person": {
+        "id": 668904,
+        "fullName": "Royce Lewis",
+        "link": "/api/v1/people/668904",
+        "nameSlug": "royce-lewis-668904"
+      },
+      "fromTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Minnesota Twins traded 1B Royce Lewis to Los Angeles Dodgers for RHP Bobby Miller and C Francisco Espinoza."
     }
   ]
 }

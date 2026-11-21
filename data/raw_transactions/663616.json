@@ -1,7 +1,7 @@
 {
   "player_id": 663616,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:ca48e0268fc14e50ead2a5a2501d3754c9fc7ed5254e0df69ac4e92bb3e2e97d",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:7a02dbd82f15975d5dfaf7a6b628c38d0f4bf668c9b1bef670fc153ad6ac7de9",
   "transactions": [
     {
       "id": 366577,
@@ -1257,6 +1257,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Minnesota Twins activated LF Trevor Larnach from the 10-day injured list."
+    },
+    {
+      "id": 950837,
+      "person": {
+        "id": 663616,
+        "fullName": "Trevor Larnach",
+        "link": "/api/v1/people/663616",
+        "nameSlug": "trevor-larnach-663616"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LF Trevor Larnach elected free agency."
     }
   ]
 }

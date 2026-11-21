@@ -1,7 +1,7 @@
 {
   "player_id": 685314,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:d649a4edb4356d1df27801c20046414ecdfe441f7fcf2c066e24ac1cec1bcc4e",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:fff79ccd1b2e3c312da548943735ca7b965ed52a432c6345b8020561092a4a83",
   "transactions": [
     {
       "id": 389982,
@@ -609,6 +609,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Arizona Diamondbacks activated LHP Andrew Saalfrank from the 60-day injured list."
+    },
+    {
+      "id": 950793,
+      "person": {
+        "id": 685314,
+        "fullName": "Andrew Saalfrank",
+        "link": "/api/v1/people/685314",
+        "nameSlug": "andrew-saalfrank-685314"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Andrew Saalfrank elected free agency."
     }
   ]
 }

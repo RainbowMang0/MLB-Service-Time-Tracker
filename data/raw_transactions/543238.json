@@ -1,7 +1,7 @@
 {
   "player_id": 543238,
-  "fetched_at": "2026-11-13T19:19:09Z",
-  "checksum": "sha256:32c00ed095c86858a4e4296c6d4b9abe54eba2631c04d964ac81b3f0dfc7c836",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:8b2a009a1fd4322750ee495b57903b8e6bd336649766d17a603e7d56040f81dd",
   "transactions": [
     {
       "id": 370548,
@@ -2945,6 +2945,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "LHP Anthony Gose assigned to Tomateros de Culiacan."
+    },
+    {
+      "id": 950834,
+      "person": {
+        "id": 543238,
+        "fullName": "Anthony Gose",
+        "link": "/api/v1/people/543238",
+        "nameSlug": "anthony-gose-543238"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Anthony Gose elected free agency."
     }
   ]
 }

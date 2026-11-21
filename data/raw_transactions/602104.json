@@ -1,7 +1,7 @@
 {
   "player_id": 602104,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:11ab8c9b49848623cdc7638f3a3719168ece6890c2da05fb155e4625267e4a84",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:743cfecf993e3571f3cbe890c29a2a2097f9af07a44b17814e77ea65760d37c5",
   "transactions": [
     {
       "id": 78308,
@@ -2232,6 +2232,26 @@
       "typeCode": "REL",
       "typeDesc": "Released",
       "description": "St. Louis Cardinals released 3B Ramón Urías."
+    },
+    {
+      "id": 950820,
+      "person": {
+        "id": 602104,
+        "fullName": "Ramón Urías",
+        "link": "/api/v1/people/602104",
+        "nameSlug": "ramon-urias-602104"
+      },
+      "toTeam": {
+        "id": 675,
+        "name": "Caneros de los Mochis",
+        "link": "/api/v1/teams/675"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Ramón Urías assigned to Caneros de los Mochis."
     }
   ]
 }

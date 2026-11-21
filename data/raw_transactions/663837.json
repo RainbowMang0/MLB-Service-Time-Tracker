@@ -1,7 +1,7 @@
 {
   "player_id": 663837,
-  "fetched_at": "2026-11-18T20:05:22Z",
-  "checksum": "sha256:4ea080024b26078a999ebf893a115d5f56454066c2ca42a903613f27a277eeec",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:8a5129453ef2e33de110219ace79296d1f1a17f00e59ce4fa070c67124e749e0",
   "transactions": [
     {
       "id": 306374,
@@ -1057,6 +1057,26 @@
       "typeCode": "DES",
       "typeDesc": "Designated for Assignment",
       "description": "Detroit Tigers designated CF Matt Vierling for assignment."
+    },
+    {
+      "id": 950797,
+      "person": {
+        "id": 663837,
+        "fullName": "Matt Vierling",
+        "link": "/api/v1/people/663837",
+        "nameSlug": "matt-vierling-663837"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "CF Matt Vierling elected free agency."
     }
   ]
 }

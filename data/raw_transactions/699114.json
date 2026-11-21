@@ -1,7 +1,7 @@
 {
   "player_id": 699114,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:0c784a9f18db75e44b90ab98a6f859f6317b830976cfa4b3f7cd9c832f1a1f16",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:34904d7b050953a9125e2ffd22bc28f8ab7de54bc2364acfe09cb6f39cc3ea23",
   "transactions": [
     {
       "id": 460355,
@@ -590,6 +590,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Cincinnati Reds recalled SS Leo Balcazar from Louisville Bats."
+    },
+    {
+      "id": 950845,
+      "person": {
+        "id": 699114,
+        "fullName": "Leo Balcazar",
+        "link": "/api/v1/people/699114",
+        "nameSlug": "leo-balcazar-699114"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "SS Leo Balcazar elected free agency."
     }
   ]
 }

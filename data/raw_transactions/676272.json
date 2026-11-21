@@ -1,7 +1,7 @@
 {
   "player_id": 676272,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:7535dfc412a3f944745a6e485b5873abe07d5e255017f1adbd234314dc5b2e63",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:5ea7df5db1bbb67d28e2e497fe00a882bd2569d246807d3a5a5bfd6b802bca4c",
   "transactions": [
     {
       "id": 407447,
@@ -1418,6 +1418,30 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Los Angeles Dodgers activated RHP Bobby Miller."
+    },
+    {
+      "id": 950798,
+      "person": {
+        "id": 676272,
+        "fullName": "Bobby Miller",
+        "link": "/api/v1/people/676272",
+        "nameSlug": "bobby-miller-676272"
+      },
+      "fromTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Minnesota Twins traded 1B Royce Lewis to Los Angeles Dodgers for RHP Bobby Miller and C Francisco Espinoza."
     }
   ]
 }

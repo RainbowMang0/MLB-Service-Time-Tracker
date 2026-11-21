@@ -1,7 +1,7 @@
 {
   "player_id": 542340,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:09541c4186074a6406c1a0aaa7a89a0561b2479da5d24f953fbd4e1216aa213f",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:24f77a31e315434ec8e8e38f863ae87f63153ce468e4d949a050517d594f129a",
   "transactions": [
     {
       "id": 13150,
@@ -1633,6 +1633,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Caliente de Durango activated 2B Jonathan Villar from the reserve list."
+    },
+    {
+      "id": 950886,
+      "person": {
+        "id": 542340,
+        "fullName": "Jonathan Villar",
+        "link": "/api/v1/people/542340",
+        "nameSlug": "jonathan-villar-542340"
+      },
+      "toTeam": {
+        "id": 697,
+        "name": "Bravos de Margarita",
+        "link": "/api/v1/teams/697"
+      },
+      "date": "2026-11-21",
+      "effectiveDate": "2026-11-21",
+      "resolutionDate": "2026-11-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Jonathan Villar assigned to Bravos de Margarita."
     }
   ]
 }

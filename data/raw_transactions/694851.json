@@ -1,7 +1,7 @@
 {
   "player_id": 694851,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:f5a2ac68a42943c01fa560e232e233ababbe655e4682b1397465d1d1598c85c9",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:2dde36da1f8d2cf0c0c6ab1386977b5bba9e656b9b330fcf7ca5c7b9986e367f",
   "transactions": [
     {
       "id": 488173,
@@ -1257,6 +1257,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Philadelphia Phillies activated RHP Andrew Hoffmann."
+    },
+    {
+      "id": 950784,
+      "person": {
+        "id": 694851,
+        "fullName": "Andrew Hoffmann",
+        "link": "/api/v1/people/694851",
+        "nameSlug": "andrew-hoffmann-694851"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Andrew Hoffmann elected free agency."
     }
   ]
 }

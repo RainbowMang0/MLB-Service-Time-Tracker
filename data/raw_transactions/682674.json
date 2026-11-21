@@ -1,7 +1,7 @@
 {
   "player_id": 682674,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:96729b7c4f80c22035c84acb0bbafb0e02ca9b5f7a6c9372e5c1379ff33f01a4",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:debbdedbd1475c95f278df80e622aab549fa4fc2ce1dd228b46be61b12b87b9a",
   "transactions": [
     {
       "id": 365660,
@@ -876,6 +876,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "LF Victor Bericoto assigned to Leones del Caracas."
+    },
+    {
+      "id": 950841,
+      "person": {
+        "id": 682674,
+        "fullName": "Victor Bericoto",
+        "link": "/api/v1/people/682674",
+        "nameSlug": "victor-bericoto-682674"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LF Victor Bericoto elected free agency."
     }
   ]
 }

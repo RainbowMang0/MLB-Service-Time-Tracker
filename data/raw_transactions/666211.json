@@ -1,7 +1,7 @@
 {
   "player_id": 666211,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:203c377e7e8ad8583dbdbcd8b3b60f03ab338b759c704bf96a81c05baadb4fa2",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:030d6d5cf8268dcf3149af695fdfb4447e87c66576688ef787559ac7cf8642a4",
   "transactions": [
     {
       "id": 241898,
@@ -2077,6 +2077,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Houston Astros activated LF Taylor Trammell from the paternity list."
+    },
+    {
+      "id": 950771,
+      "person": {
+        "id": 666211,
+        "fullName": "Taylor Trammell",
+        "link": "/api/v1/people/666211",
+        "nameSlug": "taylor-trammell-666211"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LF Taylor Trammell elected free agency."
     }
   ]
 }

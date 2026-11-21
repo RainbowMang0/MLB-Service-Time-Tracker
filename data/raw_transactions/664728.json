@@ -1,7 +1,7 @@
 {
   "player_id": 664728,
-  "fetched_at": "2026-11-19T20:04:15Z",
-  "checksum": "sha256:328658fce855d0b68da68b4ba576cff1bf7be92721fcefaf9f43e1966c3636f9",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:cc974e8d5bde8e0f7651fd7ba4f7146777fc5d751ddce53a0c9a100812ce3ec6",
   "transactions": [
     {
       "id": 358983,
@@ -1021,6 +1021,26 @@
       "typeCode": "DES",
       "typeDesc": "Designated for Assignment",
       "description": "Kansas City Royals designated CF Kyle Isbel for assignment."
+    },
+    {
+      "id": 950836,
+      "person": {
+        "id": 664728,
+        "fullName": "Kyle Isbel",
+        "link": "/api/v1/people/664728",
+        "nameSlug": "kyle-isbel-664728"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "CF Kyle Isbel elected free agency."
     }
   ]
 }

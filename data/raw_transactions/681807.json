@@ -1,7 +1,7 @@
 {
   "player_id": 681807,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:a711f7f16017494d2ad918749c5f5000bfd025d713a7d38dfd74d126ced7dd99",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:b11d516b0dfcf2581a305e949380f84b6ea0d85246a151259473133eb237369a",
   "transactions": [
     {
       "id": 359685,
@@ -1041,6 +1041,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Cleveland Guardians recalled RF David Fry from Columbus Clippers."
+    },
+    {
+      "id": 950774,
+      "person": {
+        "id": 681807,
+        "fullName": "David Fry",
+        "link": "/api/v1/people/681807",
+        "nameSlug": "david-fry-681807"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RF David Fry elected free agency."
     }
   ]
 }

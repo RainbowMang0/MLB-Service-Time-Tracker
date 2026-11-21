@@ -1,7 +1,7 @@
 {
   "player_id": 687223,
-  "fetched_at": "2026-11-17T20:33:14Z",
-  "checksum": "sha256:32b4e8207c87b4fb99fa42951b26abd0549d09c42ba48f7e67d3404894bdba1b",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:f64b93fa377a2fa460b211e0f5fead59425cfc76b8a48e33b0d17e6b4edea870",
   "transactions": [
     {
       "id": 623308,
@@ -1010,6 +1010,26 @@
       "typeCode": "DES",
       "typeDesc": "Designated for Assignment",
       "description": "Washington Nationals designated LHP Carson Palmquist for assignment."
+    },
+    {
+      "id": 950852,
+      "person": {
+        "id": 687223,
+        "fullName": "Carson Palmquist",
+        "link": "/api/v1/people/687223",
+        "nameSlug": "carson-palmquist-687223"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Carson Palmquist elected free agency."
     }
   ]
 }

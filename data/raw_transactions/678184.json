@@ -1,7 +1,7 @@
 {
   "player_id": 678184,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:3e2f697e9eb8e7d0e6c51ca875532f4a696e76195b64a6f477d4edd14c43dea7",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:0ec1bdb2dd410039364f5bbc15c50ede21fc12ffe145757d8b98cdd638fafd86",
   "transactions": [
     {
       "id": 332632,
@@ -533,6 +533,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "San Diego Padres activated RHP Garrett Hawkins."
+    },
+    {
+      "id": 950849,
+      "person": {
+        "id": 678184,
+        "fullName": "Garrett Hawkins",
+        "link": "/api/v1/people/678184",
+        "nameSlug": "garrett-hawkins-678184"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Garrett Hawkins elected free agency."
     }
   ]
 }

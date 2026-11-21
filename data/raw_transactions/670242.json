@@ -1,7 +1,7 @@
 {
   "player_id": 670242,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:3fbcb9c7db73f7c55916eb8fa273f4402133b80606511fdcae4d3481a9da97e7",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:968cecc3a844f787d866c7f4181883134bfbeb38848de1fdb94678bccc7d9971",
   "transactions": [
     {
       "id": 410552,
@@ -1031,6 +1031,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Minnesota Twins recalled RF Matt Wallner from St. Paul Saints."
+    },
+    {
+      "id": 950838,
+      "person": {
+        "id": 670242,
+        "fullName": "Matt Wallner",
+        "link": "/api/v1/people/670242",
+        "nameSlug": "matt-wallner-670242"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RF Matt Wallner elected free agency."
     }
   ]
 }

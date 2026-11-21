@@ -1,7 +1,7 @@
 {
   "player_id": 642657,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:06d2ba6547f4a80533e3936207e950329d2108471ebe16d04ee499cb3740cce3",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:70e3f9a6d0c960bb3670cf93109b9baf57f0e1b041059b8c07a61447c00cc4a8",
   "transactions": [
     {
       "id": 358295,
@@ -1049,6 +1049,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Cristofer Ogando assigned to Toros del Este."
+    },
+    {
+      "id": 950857,
+      "person": {
+        "id": 642657,
+        "fullName": "Cristofer Ogando",
+        "link": "/api/v1/people/642657",
+        "nameSlug": "cristofer-ogando-642657"
+      },
+      "toTeam": {
+        "id": 699,
+        "name": "Tigres de Aragua",
+        "link": "/api/v1/teams/699"
+      },
+      "date": "2026-11-21",
+      "effectiveDate": "2026-11-21",
+      "resolutionDate": "2026-11-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Cristofer Ogando assigned to Tigres de Aragua."
     }
   ]
 }

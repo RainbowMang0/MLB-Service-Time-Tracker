@@ -1,7 +1,7 @@
 {
   "player_id": 683232,
-  "fetched_at": "2026-11-18T20:05:22Z",
-  "checksum": "sha256:c28883a76105ac974254d5c243e9bfb8728af8a9174dde27a742ee21cc8d0dc9",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:69800d2ff065b35610d86cc123c501eebe8fa94ae8745def47abda2b26126f02",
   "transactions": [
     {
       "id": 376154,
@@ -1855,6 +1855,26 @@
       "typeCode": "DES",
       "typeDesc": "Designated for Assignment",
       "description": "Kansas City Royals designated RHP Nick Mears for assignment."
+    },
+    {
+      "id": 950835,
+      "person": {
+        "id": 683232,
+        "fullName": "Nick Mears",
+        "link": "/api/v1/people/683232",
+        "nameSlug": "nick-mears-683232"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Nick Mears elected free agency."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 683766,
-  "fetched_at": "2026-11-18T20:05:22Z",
-  "checksum": "sha256:fe413e9b7465e382aab63dc668dda939d086ed6b677afa7fd4ff8d765507ac90",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:27ed22719b4ce82e910fc81192340a73fb9233c4720108963a33f95ef283da50",
   "transactions": [
     {
       "id": 413545,
@@ -1132,6 +1132,30 @@
       "typeCode": "DES",
       "typeDesc": "Designated for Assignment",
       "description": "San Francisco Giants designated SS Christian Koss for assignment."
+    },
+    {
+      "id": 950791,
+      "person": {
+        "id": 683766,
+        "fullName": "Christian Koss",
+        "link": "/api/v1/people/683766",
+        "nameSlug": "christian-koss-683766"
+      },
+      "fromTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "San Francisco Giants traded SS Christian Koss to Tampa Bay Rays for RHP Cole Stokes."
     }
   ]
 }

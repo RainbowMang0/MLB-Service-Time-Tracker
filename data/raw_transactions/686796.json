@@ -1,7 +1,7 @@
 {
   "player_id": 686796,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:08d234d7e23ee7892c82369f9b1cb2fa2dcad68b532732b285c029a58cae883a",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:6df7264ab1e98ac4ca99c6307036cc48b1d945e6779b01992822bf67978d1844",
   "transactions": [
     {
       "id": 411028,
@@ -925,6 +925,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Arizona Diamondbacks recalled LHP Blake Walston from Reno Aces."
+    },
+    {
+      "id": 950794,
+      "person": {
+        "id": 686796,
+        "fullName": "Blake Walston",
+        "link": "/api/v1/people/686796",
+        "nameSlug": "blake-walston-686796"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Blake Walston elected free agency."
     }
   ]
 }

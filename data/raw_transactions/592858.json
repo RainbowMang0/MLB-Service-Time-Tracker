@@ -1,7 +1,7 @@
 {
   "player_id": 592858,
-  "fetched_at": "2026-11-18T20:05:22Z",
-  "checksum": "sha256:c99f39d40b71295dc33b59e3c28fb7e71ebafc04822d8f58817ad87a35749748",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:1f72bed554a26e9bd33be88ccdd5f922ed062a5affab72609e19e965e921d273",
   "transactions": [
     {
       "id": 122072,
@@ -1389,6 +1389,26 @@
       "typeCode": "DES",
       "typeDesc": "Designated for Assignment",
       "description": "San Francisco Giants designated RHP Rowan Wick for assignment."
+    },
+    {
+      "id": 950840,
+      "person": {
+        "id": 592858,
+        "fullName": "Rowan Wick",
+        "link": "/api/v1/people/592858",
+        "nameSlug": "rowan-wick-592858"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Rowan Wick elected free agency."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 673929,
-  "fetched_at": "2026-11-19T20:04:15Z",
-  "checksum": "sha256:76e712b34b589384e66cb9c56dee7b43fb623d056f09dd744b7f6443527102d7",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:eb6d90dcf0176308159454f868fb713ab0e533dcf6e79ed16ddfcecc08637c4d",
   "transactions": [
     {
       "id": 298329,
@@ -830,6 +830,30 @@
       "typeCode": "DES",
       "typeDesc": "Designated for Assignment",
       "description": "Chicago White Sox designated RHP Jordan Leasure for assignment."
+    },
+    {
+      "id": 950779,
+      "person": {
+        "id": 673929,
+        "fullName": "Jordan Leasure",
+        "link": "/api/v1/people/673929",
+        "nameSlug": "jordan-leasure-673929"
+      },
+      "fromTeam": {
+        "id": 145,
+        "name": "Chicago White Sox",
+        "link": "/api/v1/teams/145"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Chicago White Sox traded RHP Jordan Leasure to Philadelphia Phillies for RHP Christian Coppola."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 676664,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:28fcf1200778e79e8f8b974e53f5d13dddd704a5c6c4b07f030102fa96aa6191",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:3d29cb681ffd9775b29df70a417a11e2288889364cfddc8149ccb058d554af63",
   "transactions": [
     {
       "id": 316551,
@@ -1314,6 +1314,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "San Diego Padres activated LHP JP Sears."
+    },
+    {
+      "id": 950850,
+      "person": {
+        "id": 676664,
+        "fullName": "JP Sears",
+        "link": "/api/v1/people/676664",
+        "nameSlug": "jp-sears-676664"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP JP Sears elected free agency."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 657136,
-  "fetched_at": "2026-11-19T20:04:15Z",
-  "checksum": "sha256:98453bc1468044a9d7d8a6618fdf218a30eccbc242264f2ce080009bd42f876a",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:0cdbab6c6017380850b115a338d4ba094b146007c7b3f3b6e45437e6f5ad4fbc",
   "transactions": [
     {
       "id": 255075,
@@ -1191,6 +1191,26 @@
       "typeCode": "DES",
       "typeDesc": "Designated for Assignment",
       "description": "Boston Red Sox designated C Connor Wong for assignment."
+    },
+    {
+      "id": 950833,
+      "person": {
+        "id": 657136,
+        "fullName": "Connor Wong",
+        "link": "/api/v1/people/657136",
+        "nameSlug": "connor-wong-657136"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Connor Wong elected free agency."
     }
   ]
 }

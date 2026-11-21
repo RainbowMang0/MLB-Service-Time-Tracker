@@ -1,6 +1,6 @@
 {
   "player_id": 543482,
-  "fetched_at": "2026-11-20T19:41:30Z",
+  "fetched_at": "2026-11-21T18:47:39Z",
   "checksum": "sha256:11496e6b7ecc6fbde9a639f5189ff4a6a205902e75dcf86fd8d28b83e6054730",
   "transactions": [
     {
@@ -628,26 +628,6 @@
       "description": "3B Drew Maggi assigned to Oklahoma City Dodgers from Tulsa Drillers."
     },
     {
-      "id": 292057,
-      "person": {
-        "id": 543482,
-        "fullName": "Drew Maggi",
-        "link": "/api/v1/people/543482",
-        "nameSlug": "drew-maggi-543482"
-      },
-      "toTeam": {
-        "id": 669,
-        "name": "Estrellas Orientales",
-        "link": "/api/v1/teams/669"
-      },
-      "date": "2016-11-07",
-      "effectiveDate": "2016-11-07",
-      "resolutionDate": "2016-11-07",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "3B Drew Maggi assigned to Estrellas Orientales."
-    },
-    {
       "id": 292648,
       "person": {
         "id": 543482,
@@ -666,6 +646,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "3B Drew Maggi elected free agency."
+    },
+    {
+      "id": 292057,
+      "person": {
+        "id": 543482,
+        "fullName": "Drew Maggi",
+        "link": "/api/v1/people/543482",
+        "nameSlug": "drew-maggi-543482"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2016-11-07",
+      "effectiveDate": "2016-11-07",
+      "resolutionDate": "2016-11-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Drew Maggi assigned to Estrellas Orientales."
     },
     {
       "id": 295834,
@@ -1332,26 +1332,6 @@
       "description": "3B Drew Maggi elected free agency."
     },
     {
-      "id": 474901,
-      "person": {
-        "id": 543482,
-        "fullName": "Drew Maggi",
-        "link": "/api/v1/people/543482",
-        "nameSlug": "drew-maggi-543482"
-      },
-      "toTeam": {
-        "id": 142,
-        "name": "Minnesota Twins",
-        "link": "/api/v1/teams/142"
-      },
-      "date": "2021-02-08",
-      "effectiveDate": "2021-02-08",
-      "resolutionDate": "2021-02-08",
-      "typeCode": "SFA",
-      "typeDesc": "Signed as Free Agent",
-      "description": "Minnesota Twins signed free agent SS Drew Maggi."
-    },
-    {
       "id": 469870,
       "person": {
         "id": 543482,
@@ -1390,6 +1370,26 @@
       "typeCode": "SFA",
       "typeDesc": "Signed as Free Agent",
       "description": "Minnesota Twins signed free agent 3B Drew Maggi to a minor league contract."
+    },
+    {
+      "id": 474901,
+      "person": {
+        "id": 543482,
+        "fullName": "Drew Maggi",
+        "link": "/api/v1/people/543482",
+        "nameSlug": "drew-maggi-543482"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2021-02-08",
+      "effectiveDate": "2021-02-08",
+      "resolutionDate": "2021-02-08",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent SS Drew Maggi."
     },
     {
       "id": 469542,
@@ -1796,7 +1796,7 @@
       "description": "Pittsburgh Pirates signed free agent SS Drew Maggi to a minor league contract."
     },
     {
-      "id": 679060,
+      "id": 667704,
       "person": {
         "id": 543482,
         "fullName": "Drew Maggi",
@@ -1816,7 +1816,7 @@
       "description": "SS Drew Maggi roster status changed by Pittsburgh Pirates."
     },
     {
-      "id": 667704,
+      "id": 679060,
       "person": {
         "id": 543482,
         "fullName": "Drew Maggi",

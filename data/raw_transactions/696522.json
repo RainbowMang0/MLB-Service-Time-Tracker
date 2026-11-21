@@ -1,7 +1,7 @@
 {
   "player_id": 696522,
-  "fetched_at": "2026-11-18T20:05:22Z",
-  "checksum": "sha256:9049b0ed5b5081ad2422dab584bcf9a68913803d9971995c4ab02d7653d0fdb6",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:73549d434de84600731a3a4c90fece067154358742376216e188c2e781d41853",
   "transactions": [
     {
       "id": 506294,
@@ -662,6 +662,30 @@
       "typeCode": "DES",
       "typeDesc": "Designated for Assignment",
       "description": "Athletics designated RHP Hayden Juenger for assignment."
+    },
+    {
+      "id": 950832,
+      "person": {
+        "id": 696522,
+        "fullName": "Hayden Juenger",
+        "link": "/api/v1/people/696522",
+        "nameSlug": "hayden-juenger-696522"
+      },
+      "fromTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "toTeam": {
+        "id": 400,
+        "name": "Las Vegas Aviators",
+        "link": "/api/v1/teams/400"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "typeCode": "OUT",
+      "typeDesc": "Outrighted",
+      "description": "Athletics sent RHP Hayden Juenger outright to Las Vegas Aviators."
     }
   ]
 }

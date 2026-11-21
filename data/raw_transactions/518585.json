@@ -1,7 +1,7 @@
 {
   "player_id": 518585,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:af7716171b431082f8eb53319de26c80d4810c42e7a588ebc685b04d1510ce1d",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:863100ac288b9d9655e7d156386aed26e15d9431b40f4d2f44d959c12b042ed7",
   "transactions": [
     {
       "id": 28153,
@@ -1731,6 +1731,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "New York Yankees activated RHP Fernando Cruz from the 60-day injured list."
+    },
+    {
+      "id": 950777,
+      "person": {
+        "id": 518585,
+        "fullName": "Fernando Cruz",
+        "link": "/api/v1/people/518585",
+        "nameSlug": "fernando-cruz-518585"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Fernando Cruz elected free agency."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 805725,
-  "fetched_at": "2026-11-18T20:05:22Z",
-  "checksum": "sha256:2139e357459d68359fa29e1837a28ce5c70a8e31db13b862ef326ec8a84a015e",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:6a0664e2612ab8f9c4662deee2bd3d86836351b973940c3b65d75085e8293055",
   "transactions": [
     {
       "id": 643407,
@@ -1115,6 +1115,26 @@
       "typeCode": "DES",
       "typeDesc": "Designated for Assignment",
       "description": "Detroit Tigers designated LHP Jake Miller for assignment."
+    },
+    {
+      "id": 950795,
+      "person": {
+        "id": 805725,
+        "fullName": "Jake Miller",
+        "link": "/api/v1/people/805725",
+        "nameSlug": "jake-miller-805725"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Jake Miller elected free agency."
     }
   ]
 }

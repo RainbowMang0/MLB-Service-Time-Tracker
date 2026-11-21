@@ -1,7 +1,7 @@
 {
   "player_id": 641927,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:99651b78381896b04e2a9f44826ba21411295a60974a3bce17e691044b766f84",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:46a483fd302503bec1b76ab7d7b2ab46f57cf5607b17b46530616e0613c4d53c",
   "transactions": [
     {
       "id": 318979,
@@ -1201,6 +1201,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Minnesota Twins activated RHP Bailey Ober from the 15-day injured list."
+    },
+    {
+      "id": 950839,
+      "person": {
+        "id": 641927,
+        "fullName": "Bailey Ober",
+        "link": "/api/v1/people/641927",
+        "nameSlug": "bailey-ober-641927"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Bailey Ober elected free agency."
     }
   ]
 }

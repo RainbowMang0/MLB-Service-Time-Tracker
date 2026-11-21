@@ -1,7 +1,7 @@
 {
   "player_id": 691330,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:b687a8826c39acaab18fc39dda06bae5e89ef612c583170b2fc3e5bf39ef8c65",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:9d0b2756d11094e644b2c13fb134f434406cd9d40efcde1ab7914b8e4fc5e059",
   "transactions": [
     {
       "id": 415348,
@@ -706,6 +706,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Philadelphia Phillies activated RHP Moisés Chace."
+    },
+    {
+      "id": 950783,
+      "person": {
+        "id": 691330,
+        "fullName": "Moisés Chace",
+        "link": "/api/v1/people/691330",
+        "nameSlug": "moises-chace-691330"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Moisés Chace elected free agency."
     }
   ]
 }

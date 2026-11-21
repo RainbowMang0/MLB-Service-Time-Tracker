@@ -1,7 +1,7 @@
 {
   "player_id": 675627,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:7c5ef1b752bb1c5bf95ed3ec22d70f034bf0540fa6ca964badaac4e129486fe2",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:fe6a4945681cd023716d00c961c0d3e760b45d4faae31d8c9dae1349d7557b7a",
   "transactions": [
     {
       "id": 309695,
@@ -1844,6 +1844,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Atlanta Braves recalled RHP Michael Grove from Gwinnett Stripers."
+    },
+    {
+      "id": 950843,
+      "person": {
+        "id": 675627,
+        "fullName": "Michael Grove",
+        "link": "/api/v1/people/675627",
+        "nameSlug": "michael-grove-675627"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Michael Grove elected free agency."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 663584,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:fc1a7ff54fce8aa0ab25cfd18bf0123e9efa123502a082498f160a3bb93087b1",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:68dad9353fc360560ac3059d0c46180b91bbe5c453fb627c64b70de6b97ae9ed",
   "transactions": [
     {
       "id": 368365,
@@ -1229,6 +1229,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "New York Mets recalled C Hayden Senger from Syracuse Mets."
+    },
+    {
+      "id": 950786,
+      "person": {
+        "id": 663584,
+        "fullName": "Hayden Senger",
+        "link": "/api/v1/people/663584",
+        "nameSlug": "hayden-senger-663584"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "C Hayden Senger elected free agency."
     }
   ]
 }

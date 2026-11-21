@@ -1,7 +1,7 @@
 {
   "player_id": 694820,
-  "fetched_at": "2026-11-17T20:33:14Z",
-  "checksum": "sha256:2d6d4f6d482cddb3c4d354b02a0b40e44c38a38928df50ab8db9aff2ea7202b2",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:166345bbd515bff791c664c78f095bbfd3621bd805cc54f9766316b871a8dd29",
   "transactions": [
     {
       "id": 445749,
@@ -642,6 +642,30 @@
       "typeCode": "DES",
       "typeDesc": "Designated for Assignment",
       "description": "Washington Nationals designated RHP Braxton Roxby for assignment."
+    },
+    {
+      "id": 950817,
+      "person": {
+        "id": 694820,
+        "fullName": "Braxton Roxby",
+        "link": "/api/v1/people/694820",
+        "nameSlug": "braxton-roxby-694820"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Washington Nationals traded RHP Braxton Roxby to Chicago Cubs for cash."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 664776,
-  "fetched_at": "2026-11-18T20:05:22Z",
-  "checksum": "sha256:5325a3bfaf313a59706b71a6e3c4a3b40dc8bb1cdb29134593a3b3571f7b2e3c",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:bf2e21080f1687e8791bc07dd9e43ea206b8f3c8d74d5e0a01b982253373294c",
   "transactions": [
     {
       "id": 317584,
@@ -1803,6 +1803,26 @@
       "typeCode": "DES",
       "typeDesc": "Designated for Assignment",
       "description": "Los Angeles Dodgers designated RHP Jake Cousins for assignment."
+    },
+    {
+      "id": 950847,
+      "person": {
+        "id": 664776,
+        "fullName": "Jake Cousins",
+        "link": "/api/v1/people/664776",
+        "nameSlug": "jake-cousins-664776"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP Jake Cousins elected free agency."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 688692,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:56200c771acd8b1a62b6332e9dcfd0b3f7533dc0f4d156e652ae3bd24ff5ed23",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:0ca61547c4493a746a42dc8f64aaa7349553d77ab8b9c366167194530ae47a62",
   "transactions": [
     {
       "id": 668348,
@@ -386,6 +386,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Washington Nationals recalled LHP Jared Simpson from Rochester Red Wings."
+    },
+    {
+      "id": 950853,
+      "person": {
+        "id": 688692,
+        "fullName": "Jared Simpson",
+        "link": "/api/v1/people/688692",
+        "nameSlug": "jared-simpson-688692"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "LHP Jared Simpson elected free agency."
     }
   ]
 }

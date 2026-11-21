@@ -1,7 +1,7 @@
 {
   "player_id": 695445,
-  "fetched_at": "2026-11-20T19:41:30Z",
-  "checksum": "sha256:e4e251bf190724f6770a1bd92a1a433a29095c3184505e200c81c697f177fdf9",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:b9f0170945fa48efb3fed6b624ba9889356f035771dacfe6ccd89098c59aa9fc",
   "transactions": [
     {
       "id": 504947,
@@ -1034,6 +1034,30 @@
       "typeCode": "DES",
       "typeDesc": "Designated for Assignment",
       "description": "Toronto Blue Jays designated RHP Chase Lee for assignment."
+    },
+    {
+      "id": 950770,
+      "person": {
+        "id": 695445,
+        "fullName": "Chase Lee",
+        "link": "/api/v1/people/695445",
+        "nameSlug": "chase-lee-695445"
+      },
+      "fromTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Toronto Blue Jays traded RHP Chase Lee to Colorado Rockies for cash."
     }
   ]
 }

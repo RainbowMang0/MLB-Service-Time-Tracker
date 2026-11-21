@@ -1,7 +1,7 @@
 {
   "player_id": 670042,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:707af447123cab683b874081d36f17950150031502493b836e88caeb4f111f38",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:984f0c2114253390f91f1b73d7afea14b2ca595e3e2a9a4e11da3626540f1618",
   "transactions": [
     {
       "id": 272445,
@@ -1871,6 +1871,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Seattle Mariners activated RF Luke Raley from the 60-day injured list."
+    },
+    {
+      "id": 950790,
+      "person": {
+        "id": 670042,
+        "fullName": "Luke Raley",
+        "link": "/api/v1/people/670042",
+        "nameSlug": "luke-raley-670042"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RF Luke Raley elected free agency."
     }
   ]
 }

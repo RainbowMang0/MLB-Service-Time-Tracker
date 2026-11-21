@@ -1,7 +1,7 @@
 {
   "player_id": 676130,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:69a553e73854ecebe64d8e5ccb5bd97598a70982beca9a8ed34d0ebd092293a7",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:a2ee0c1925dce3f8b107c40ae6b9cb6b3f7ba5a0d6be1c66022050b11d1fda7f",
   "transactions": [
     {
       "id": 313698,
@@ -1394,6 +1394,26 @@
       "typeCode": "CLW",
       "typeDesc": "Claimed Off Waivers",
       "description": "Texas Rangers claimed RHP José Buttó off waivers from San Francisco Giants."
+    },
+    {
+      "id": 950775,
+      "person": {
+        "id": 676130,
+        "fullName": "José Buttó",
+        "link": "/api/v1/people/676130",
+        "nameSlug": "jose-butto-676130"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RHP José Buttó elected free agency."
     }
   ]
 }

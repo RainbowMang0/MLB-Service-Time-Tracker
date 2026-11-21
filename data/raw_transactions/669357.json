@@ -1,7 +1,7 @@
 {
   "player_id": 669357,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:759355fe9669d862879384348df04f86fb04d160f664bd58d67f74a2f6a0a347",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:774e1ee4cf6ffbe7cfc6ef1bbee64d7bea450a0baa0393397a25bab79f440132",
   "transactions": [
     {
       "id": 326582,
@@ -978,6 +978,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "St. Louis Cardinals recalled 3B Nolan Gorman from Memphis Redbirds."
+    },
+    {
+      "id": 950772,
+      "person": {
+        "id": 669357,
+        "fullName": "Nolan Gorman",
+        "link": "/api/v1/people/669357",
+        "nameSlug": "nolan-gorman-669357"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "3B Nolan Gorman elected free agency."
     }
   ]
 }

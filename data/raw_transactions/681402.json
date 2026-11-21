@@ -1,7 +1,7 @@
 {
   "player_id": 681402,
-  "fetched_at": "2026-11-17T20:33:14Z",
-  "checksum": "sha256:0e2ee07ac4091a2b6e6bae7ac744fc777a5dbd7aed00ec8649361760b9cdaa67",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:fe92f8caccc29a714b47b9137372b523c1c7728b1677c945360ccbcfc63d439b",
   "transactions": [
     {
       "id": 360592,
@@ -1594,6 +1594,30 @@
       "typeCode": "DES",
       "typeDesc": "Designated for Assignment",
       "description": "Washington Nationals designated RHP Gus Varland for assignment."
+    },
+    {
+      "id": 950788,
+      "person": {
+        "id": 681402,
+        "fullName": "Gus Varland",
+        "link": "/api/v1/people/681402",
+        "nameSlug": "gus-varland-681402"
+      },
+      "fromTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "typeCode": "CLW",
+      "typeDesc": "Claimed Off Waivers",
+      "description": "New York Mets claimed RHP Gus Varland off waivers from Washington Nationals."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 670912,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:5de444782f12190ab58877ef49125b9baaf0982dd8d49f4aaeb3227b7189330e",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:f00eb0f2373230bb74cef45a4eb1d9241c577bcdc2652ba7d126e114ad80a591",
   "transactions": [
     {
       "id": 278376,
@@ -1422,6 +1422,30 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Boston Red Sox activated RHP Johan Oviedo from the 60-day injured list."
+    },
+    {
+      "id": 950804,
+      "person": {
+        "id": 670912,
+        "fullName": "Johan Oviedo",
+        "link": "/api/v1/people/670912",
+        "nameSlug": "johan-oviedo-670912"
+      },
+      "fromTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Arizona Diamondbacks traded LHP Luke Dotson and Future Considerations to Boston Red Sox for RHP Johan Oviedo."
     }
   ]
 }

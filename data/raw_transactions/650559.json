@@ -1,7 +1,7 @@
 {
   "player_id": 650559,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:ced69f53b8c49e52b69ddb7ef415fd39b02a5849ba9e5d457da45f40f7dd2d4d",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:82afddd9d5cd73f4d27d5caa0df62f4d13dc131261f55c1b91fbbead0710e7a1",
   "transactions": [
     {
       "id": 179273,
@@ -1536,6 +1536,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RF Bryan De La Cruz assigned to Toros del Este."
+    },
+    {
+      "id": 950782,
+      "person": {
+        "id": 650559,
+        "fullName": "Bryan De La Cruz",
+        "link": "/api/v1/people/650559",
+        "nameSlug": "bryan-de-la-cruz-650559"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "RF Bryan De La Cruz elected free agency."
     }
   ]
 }

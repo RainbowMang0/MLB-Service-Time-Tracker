@@ -1,7 +1,7 @@
 {
   "player_id": 666624,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:324fc9fbac55554619255a32fa84aeaa026dfd992ed1fbb31b1f93f9147ba31d",
+  "fetched_at": "2026-11-21T18:47:39Z",
+  "checksum": "sha256:99f3059d640e03f13d5d6f10fe44582592cd84c840bf7d08a9b35279dd2c30f1",
   "transactions": [
     {
       "id": 248173,
@@ -970,6 +970,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "1B Christopher Morel assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 950785,
+      "person": {
+        "id": 666624,
+        "fullName": "Christopher Morel",
+        "link": "/api/v1/people/666624",
+        "nameSlug": "christopher-morel-666624"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-11-20",
+      "effectiveDate": "2026-11-20",
+      "resolutionDate": "2026-11-20",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "1B Christopher Morel elected free agency."
     }
   ]
 }
