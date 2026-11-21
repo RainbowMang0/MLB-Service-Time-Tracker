@@ -630,5 +630,31 @@
     "team_id": null,
     "from_team_id": null,
     "to_team_id": 145
+  },
+  {
+    "date": "2026-11-17",
+    "description": "Chicago White Sox designated C Joey Bart for assignment.",
+    "team": "Chicago White Sox",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 145,
+    "typeCode": "DES",
+    "typeDesc": "Designated for Assignment",
+    "effectiveDate": "2026-11-17",
+    "resolutionDate": "2026-11-17",
+    "id": 950370
+  },
+  {
+    "date": "2026-11-20",
+    "description": "Chicago Cubs claimed C Joey Bart off waivers from Chicago White Sox.",
+    "team": "Chicago Cubs",
+    "team_id": null,
+    "from_team_id": 145,
+    "to_team_id": 112,
+    "typeCode": "CLW",
+    "typeDesc": "Claimed Off Waivers",
+    "effectiveDate": "2026-11-20",
+    "resolutionDate": null,
+    "id": 950816
   }
 ]

@@ -374,5 +374,31 @@
     "team_id": null,
     "from_team_id": 105,
     "to_team_id": 137
+  },
+  {
+    "date": "2026-11-17",
+    "description": "San Francisco Giants designated SS Christian Koss for assignment.",
+    "team": "San Francisco Giants",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 137,
+    "typeCode": "DES",
+    "typeDesc": "Designated for Assignment",
+    "effectiveDate": "2026-11-17",
+    "resolutionDate": "2026-11-17",
+    "id": 950509
+  },
+  {
+    "date": "2026-11-20",
+    "description": "San Francisco Giants traded SS Christian Koss to Tampa Bay Rays.",
+    "team": "Tampa Bay Rays",
+    "team_id": null,
+    "from_team_id": 137,
+    "to_team_id": 139,
+    "typeCode": "TR",
+    "typeDesc": "Trade",
+    "effectiveDate": "2026-11-20",
+    "resolutionDate": null,
+    "id": 950791
   }
 ]

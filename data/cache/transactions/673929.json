@@ -302,5 +302,31 @@
     "team_id": null,
     "from_team_id": null,
     "to_team_id": 145
+  },
+  {
+    "date": "2026-11-18",
+    "description": "Chicago White Sox designated RHP Jordan Leasure for assignment.",
+    "team": "Chicago White Sox",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 145,
+    "typeCode": "DES",
+    "typeDesc": "Designated for Assignment",
+    "effectiveDate": "2026-11-18",
+    "resolutionDate": "2026-11-18",
+    "id": 950620
+  },
+  {
+    "date": "2026-11-20",
+    "description": "Chicago White Sox traded RHP Jordan Leasure to Philadelphia Phillies.",
+    "team": "Philadelphia Phillies",
+    "team_id": null,
+    "from_team_id": 145,
+    "to_team_id": 143,
+    "typeCode": "TR",
+    "typeDesc": "Trade",
+    "effectiveDate": "2026-11-20",
+    "resolutionDate": null,
+    "id": 950779
   }
 ]

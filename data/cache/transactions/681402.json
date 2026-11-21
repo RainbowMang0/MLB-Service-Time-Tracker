@@ -518,5 +518,31 @@
     "team_id": null,
     "from_team_id": 534,
     "to_team_id": 120
+  },
+  {
+    "date": "2026-11-17",
+    "description": "Washington Nationals designated RHP Gus Varland for assignment.",
+    "team": "Washington Nationals",
+    "team_id": null,
+    "from_team_id": null,
+    "to_team_id": 120,
+    "typeCode": "DES",
+    "typeDesc": "Designated for Assignment",
+    "effectiveDate": "2026-11-17",
+    "resolutionDate": "2026-11-17",
+    "id": 950352
+  },
+  {
+    "date": "2026-11-20",
+    "description": "New York Mets claimed RHP Gus Varland off waivers from Washington Nationals.",
+    "team": "New York Mets",
+    "team_id": null,
+    "from_team_id": 120,
+    "to_team_id": 121,
+    "typeCode": "CLW",
+    "typeDesc": "Claimed Off Waivers",
+    "effectiveDate": "2026-11-20",
+    "resolutionDate": null,
+    "id": 950788
   }
 ]
