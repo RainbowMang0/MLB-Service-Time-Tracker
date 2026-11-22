@@ -1,7 +1,7 @@
 {
   "player_id": 570810,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:c30c0191c5ac61d520a6de67bde5dce23cf6a1f8a0ce6219a9c88179d4ef43d2",
+  "fetched_at": "2026-11-22T23:41:26Z",
+  "checksum": "sha256:2dd35754a7b6bae15ee5f9093f2d5b1278ae8f2bfe94ef1956bf94cf0fa3663e",
   "transactions": [
     {
       "id": 7700,
@@ -417,6 +417,26 @@
       "description": "Lisalverto Bonilla roster status changed by Surprise Saguaros."
     },
     {
+      "id": 175165,
+      "person": {
+        "id": 570810,
+        "fullName": "Lisalverto Bonilla",
+        "link": "/api/v1/people/570810",
+        "nameSlug": "lisalverto-bonilla-570810"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2013-11-20",
+      "effectiveDate": "2013-11-20",
+      "resolutionDate": "2013-11-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Lisalverto Bonilla assigned to Leones del Escogido."
+    },
+    {
       "id": 175054,
       "person": {
         "id": 570810,
@@ -439,26 +459,6 @@
       "typeCode": "SE",
       "typeDesc": "Selected",
       "description": "Texas Rangers selected the contract of Lisalverto Bonilla from Frisco RoughRiders."
-    },
-    {
-      "id": 175165,
-      "person": {
-        "id": 570810,
-        "fullName": "Lisalverto Bonilla",
-        "link": "/api/v1/people/570810",
-        "nameSlug": "lisalverto-bonilla-570810"
-      },
-      "toTeam": {
-        "id": 671,
-        "name": "Leones del Escogido",
-        "link": "/api/v1/teams/671"
-      },
-      "date": "2013-11-20",
-      "effectiveDate": "2013-11-20",
-      "resolutionDate": "2013-11-20",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Lisalverto Bonilla assigned to Leones del Escogido."
     },
     {
       "id": 180708,
@@ -1573,26 +1573,6 @@
       "description": "El Aguila de Veracruz released RHP Lisalverto Bonilla."
     },
     {
-      "id": 667250,
-      "person": {
-        "id": 570810,
-        "fullName": "Lisalverto Bonilla",
-        "link": "/api/v1/people/570810",
-        "nameSlug": "lisalverto-bonilla-570810"
-      },
-      "toTeam": {
-        "id": 1191,
-        "name": "Dominican Republic",
-        "link": "/api/v1/teams/1191"
-      },
-      "date": "2023-01-30",
-      "effectiveDate": "2023-01-30",
-      "resolutionDate": "2023-01-30",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Lisalverto Bonilla assigned to Dominican Republic."
-    },
-    {
       "id": 673746,
       "person": {
         "id": 570810,
@@ -1611,6 +1591,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Dominican Republic activated RHP Lisalverto Bonilla."
+    },
+    {
+      "id": 667250,
+      "person": {
+        "id": 570810,
+        "fullName": "Lisalverto Bonilla",
+        "link": "/api/v1/people/570810",
+        "nameSlug": "lisalverto-bonilla-570810"
+      },
+      "toTeam": {
+        "id": 1191,
+        "name": "Dominican Republic",
+        "link": "/api/v1/teams/1191"
+      },
+      "date": "2023-01-30",
+      "effectiveDate": "2023-01-30",
+      "resolutionDate": "2023-01-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Lisalverto Bonilla assigned to Dominican Republic."
     },
     {
       "id": 729247,
@@ -1751,6 +1751,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Lisalverto Bonilla assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 950383,
+      "person": {
+        "id": 570810,
+        "fullName": "Lisalverto Bonilla",
+        "link": "/api/v1/people/570810",
+        "nameSlug": "lisalverto-bonilla-570810"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2025-11-11",
+      "effectiveDate": "2025-11-11",
+      "resolutionDate": "2025-11-11",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aguilas Cibaenas activated RHP Lisalverto Bonilla."
     }
   ]
 }
