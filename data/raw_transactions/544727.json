@@ -1,7 +1,7 @@
 {
   "player_id": 544727,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:cd5399e178706bdf4e8765713762cab5409eea6a14dfb8378bb07547994f5d11",
+  "fetched_at": "2026-11-22T23:34:10Z",
+  "checksum": "sha256:31c92875f76a603dddf711f776b82f61de9c0c8ac1fa940e049424cb0598bb67",
   "transactions": [
     {
       "id": 23358,
@@ -1015,6 +1015,26 @@
       "description": "New York Mets sent RHP Jeurys Familia on a rehab assignment to Syracuse Mets."
     },
     {
+      "id": 477619,
+      "person": {
+        "id": 544727,
+        "fullName": "Jeurys Familia",
+        "link": "/api/v1/people/544727",
+        "nameSlug": "jeurys-familia-544727"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2019-07-02",
+      "effectiveDate": "2019-07-02",
+      "resolutionDate": "2019-07-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated P Jeurys Familia."
+    },
+    {
       "id": 479286,
       "person": {
         "id": 544727,
@@ -1055,46 +1075,6 @@
       "description": "New York Mets activated P Jeurys Familia."
     },
     {
-      "id": 414725,
-      "person": {
-        "id": 544727,
-        "fullName": "Jeurys Familia",
-        "link": "/api/v1/people/544727",
-        "nameSlug": "jeurys-familia-544727"
-      },
-      "toTeam": {
-        "id": 121,
-        "name": "New York Mets",
-        "link": "/api/v1/teams/121"
-      },
-      "date": "2019-07-02",
-      "effectiveDate": "2019-07-02",
-      "resolutionDate": "2019-07-02",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "New York Mets activated RHP Jeurys Familia from the 10-day injured list."
-    },
-    {
-      "id": 477619,
-      "person": {
-        "id": 544727,
-        "fullName": "Jeurys Familia",
-        "link": "/api/v1/people/544727",
-        "nameSlug": "jeurys-familia-544727"
-      },
-      "toTeam": {
-        "id": 121,
-        "name": "New York Mets",
-        "link": "/api/v1/teams/121"
-      },
-      "date": "2019-07-02",
-      "effectiveDate": "2019-07-02",
-      "resolutionDate": "2019-07-02",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "New York Mets activated P Jeurys Familia."
-    },
-    {
       "id": 479145,
       "person": {
         "id": 544727,
@@ -1113,6 +1093,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "New York Mets activated RHP Jeurys Familia."
+    },
+    {
+      "id": 414725,
+      "person": {
+        "id": 544727,
+        "fullName": "Jeurys Familia",
+        "link": "/api/v1/people/544727",
+        "nameSlug": "jeurys-familia-544727"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2019-07-02",
+      "effectiveDate": "2019-07-02",
+      "resolutionDate": "2019-07-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "New York Mets activated RHP Jeurys Familia from the 10-day injured list."
     },
     {
       "id": 495432,
@@ -1200,7 +1200,7 @@
       "description": "RHP Jeurys Familia elected free agency."
     },
     {
-      "id": 615441,
+      "id": 614903,
       "person": {
         "id": 544727,
         "fullName": "Jeurys Familia",
@@ -1240,7 +1240,7 @@
       "description": "Philadelphia Phillies signed free agent RHP Jeurys Familia."
     },
     {
-      "id": 614903,
+      "id": 615441,
       "person": {
         "id": 544727,
         "fullName": "Jeurys Familia",
@@ -1300,26 +1300,6 @@
       "description": "Philadelphia Phillies released RHP Jeurys Familia."
     },
     {
-      "id": 645273,
-      "person": {
-        "id": 544727,
-        "fullName": "Jeurys Familia",
-        "link": "/api/v1/people/544727",
-        "nameSlug": "jeurys-familia-544727"
-      },
-      "toTeam": {
-        "id": 533,
-        "name": "Worcester Red Sox",
-        "link": "/api/v1/teams/533"
-      },
-      "date": "2022-08-09",
-      "effectiveDate": "2022-08-09",
-      "resolutionDate": "2022-08-09",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Jeurys Familia assigned to Worcester Red Sox."
-    },
-    {
       "id": 645272,
       "person": {
         "id": 544727,
@@ -1338,6 +1318,26 @@
       "typeCode": "SFA",
       "typeDesc": "Signed as Free Agent",
       "description": "Boston Red Sox signed free agent RHP Jeurys Familia to a minor league contract."
+    },
+    {
+      "id": 645273,
+      "person": {
+        "id": 544727,
+        "fullName": "Jeurys Familia",
+        "link": "/api/v1/people/544727",
+        "nameSlug": "jeurys-familia-544727"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2022-08-09",
+      "effectiveDate": "2022-08-09",
+      "resolutionDate": "2022-08-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jeurys Familia assigned to Worcester Red Sox."
     },
     {
       "id": 646202,
@@ -1468,26 +1468,6 @@
       "description": "RHP Jeurys Familia assigned to Gigantes del Cibao."
     },
     {
-      "id": 667907,
-      "person": {
-        "id": 544727,
-        "fullName": "Jeurys Familia",
-        "link": "/api/v1/people/544727",
-        "nameSlug": "jeurys-familia-544727"
-      },
-      "toTeam": {
-        "id": 109,
-        "name": "Arizona Diamondbacks",
-        "link": "/api/v1/teams/109"
-      },
-      "date": "2023-02-03",
-      "effectiveDate": "2023-02-03",
-      "resolutionDate": "2023-02-03",
-      "typeCode": "SFA",
-      "typeDesc": "Signed as Free Agent",
-      "description": "Arizona Diamondbacks signed free agent RHP Jeurys Familia to a minor league contract and invited him to spring training."
-    },
-    {
       "id": 676970,
       "person": {
         "id": 544727,
@@ -1528,6 +1508,26 @@
       "description": "RHP Jeurys Familia assigned to Reno Aces."
     },
     {
+      "id": 667907,
+      "person": {
+        "id": 544727,
+        "fullName": "Jeurys Familia",
+        "link": "/api/v1/people/544727",
+        "nameSlug": "jeurys-familia-544727"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2023-02-03",
+      "effectiveDate": "2023-02-03",
+      "resolutionDate": "2023-02-03",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Arizona Diamondbacks signed free agent RHP Jeurys Familia to a minor league contract and invited him to spring training."
+    },
+    {
       "id": 676969,
       "person": {
         "id": 544727,
@@ -1548,7 +1548,7 @@
       "description": "Reno Aces released RHP Jeurys Familia."
     },
     {
-      "id": 684985,
+      "id": 684711,
       "person": {
         "id": 544727,
         "fullName": "Jeurys Familia",
@@ -1588,7 +1588,7 @@
       "description": "Oakland Athletics signed free agent RHP Jeurys Familia."
     },
     {
-      "id": 684711,
+      "id": 684985,
       "person": {
         "id": 544727,
         "fullName": "Jeurys Familia",
@@ -1746,6 +1746,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Jeurys Familia assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 950387,
+      "person": {
+        "id": 544727,
+        "fullName": "Jeurys Familia",
+        "link": "/api/v1/people/544727",
+        "nameSlug": "jeurys-familia-544727"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2025-10-15",
+      "effectiveDate": "2025-10-15",
+      "resolutionDate": "2025-10-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aguilas Cibaenas activated RHP Jeurys Familia."
     },
     {
       "id": 946597,
