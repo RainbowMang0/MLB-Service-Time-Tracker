@@ -1,7 +1,7 @@
 {
   "player_id": 640492,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:c0de7cf77bd4dba61781be78307197067bdfe357ccf819990ed9f0086406c832",
+  "fetched_at": "2026-11-22T19:09:26Z",
+  "checksum": "sha256:9cc834435c2042bc722db15b422293cbcce9e74c209ba0b8891d5f79613535dd",
   "transactions": [
     {
       "id": 152113,
@@ -2062,6 +2062,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RF José Azócar elected free agency."
+    },
+    {
+      "id": 950895,
+      "person": {
+        "id": 640492,
+        "fullName": "José Azócar",
+        "link": "/api/v1/people/640492",
+        "nameSlug": "jose-azocar-640492"
+      },
+      "toTeam": {
+        "id": 693,
+        "name": "Cardenales de Lara",
+        "link": "/api/v1/teams/693"
+      },
+      "date": "2026-11-21",
+      "effectiveDate": "2026-11-21",
+      "resolutionDate": "2026-11-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF José Azócar assigned to Cardenales de Lara."
     }
   ]
 }

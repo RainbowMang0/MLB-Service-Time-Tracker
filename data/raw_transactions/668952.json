@@ -1,6 +1,6 @@
 {
   "player_id": 668952,
-  "fetched_at": "2026-11-21T18:47:39Z",
+  "fetched_at": "2026-11-22T19:09:26Z",
   "checksum": "sha256:81da9706feb2e3d200923db37e5f4974cd5c212ae4b65e493fdfae8e379f7f46",
   "transactions": [
     {
@@ -144,26 +144,6 @@
       "description": "IF Ryan Kreidler assigned to Detroit Tigers."
     },
     {
-      "id": 468434,
-      "person": {
-        "id": 668952,
-        "fullName": "Ryan Kreidler",
-        "link": "/api/v1/people/668952",
-        "nameSlug": "ryan-kreidler-668952"
-      },
-      "toTeam": {
-        "id": 3303,
-        "name": "Tigers Organization",
-        "link": "/api/v1/teams/3303"
-      },
-      "date": "2021-02-12",
-      "effectiveDate": "2021-02-12",
-      "resolutionDate": "2021-02-12",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "3B Ryan Kreidler assigned to Tigers Organization."
-    },
-    {
       "id": 466175,
       "person": {
         "id": 668952,
@@ -184,7 +164,7 @@
       "description": "3B Ryan Kreidler assigned to Tigers Organization."
     },
     {
-      "id": 475125,
+      "id": 468434,
       "person": {
         "id": 668952,
         "fullName": "Ryan Kreidler",
@@ -192,16 +172,16 @@
         "nameSlug": "ryan-kreidler-668952"
       },
       "toTeam": {
-        "id": 116,
-        "name": "Detroit Tigers",
-        "link": "/api/v1/teams/116"
+        "id": 3303,
+        "name": "Tigers Organization",
+        "link": "/api/v1/teams/3303"
       },
-      "date": "2021-03-10",
-      "effectiveDate": "2021-03-10",
-      "resolutionDate": "2021-03-10",
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
       "typeCode": "ASG",
       "typeDesc": "Assigned",
-      "description": "SS Ryan Kreidler assigned to Detroit Tigers ."
+      "description": "3B Ryan Kreidler assigned to Tigers Organization."
     },
     {
       "id": 473279,
@@ -224,7 +204,27 @@
       "description": "SS Ryan Kreidler assigned to Detroit Tigers ."
     },
     {
-      "id": 489518,
+      "id": 475125,
+      "person": {
+        "id": 668952,
+        "fullName": "Ryan Kreidler",
+        "link": "/api/v1/people/668952",
+        "nameSlug": "ryan-kreidler-668952"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2021-03-10",
+      "effectiveDate": "2021-03-10",
+      "resolutionDate": "2021-03-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Ryan Kreidler assigned to Detroit Tigers ."
+    },
+    {
+      "id": 488679,
       "person": {
         "id": 668952,
         "fullName": "Ryan Kreidler",
@@ -244,7 +244,7 @@
       "description": "SS Ryan Kreidler assigned to Erie SeaWolves."
     },
     {
-      "id": 488679,
+      "id": 489518,
       "person": {
         "id": 668952,
         "fullName": "Ryan Kreidler",
@@ -1433,7 +1433,7 @@
       "description": "St. Paul Saints activated CF Ryan Kreidler."
     },
     {
-      "id": 892960,
+      "id": 893150,
       "person": {
         "id": 668952,
         "fullName": "Ryan Kreidler",
@@ -1457,7 +1457,7 @@
       "description": "Minnesota Twins optioned CF Ryan Kreidler to St. Paul Saints."
     },
     {
-      "id": 893150,
+      "id": 892960,
       "person": {
         "id": 668952,
         "fullName": "Ryan Kreidler",

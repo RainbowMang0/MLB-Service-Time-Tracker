@@ -1,7 +1,7 @@
 {
   "player_id": 547982,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:e22d76ae762c0f9420c6c4e6736c5a4f26c14a2905658986d8815d29dcd8a821",
+  "fetched_at": "2026-11-22T19:09:26Z",
+  "checksum": "sha256:596daab3d1fa0255fcb2e6f3086fe24666472e64238696b354900ddfdfab1706",
   "transactions": [
     {
       "id": 84891,
@@ -1515,6 +1515,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Caneros de los Mochis placed CF Leonys Martin on the reserve list."
+    },
+    {
+      "id": 950912,
+      "person": {
+        "id": 547982,
+        "fullName": "Leonys Martin",
+        "link": "/api/v1/people/547982",
+        "nameSlug": "leonys-martin-547982"
+      },
+      "toTeam": {
+        "id": 680,
+        "name": "Yaquis de Obregon",
+        "link": "/api/v1/teams/680"
+      },
+      "date": "2026-11-21",
+      "effectiveDate": "2026-11-21",
+      "resolutionDate": "2026-11-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Leonys Martin assigned to Yaquis de Obregon."
     }
   ]
 }

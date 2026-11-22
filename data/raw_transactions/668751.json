@@ -1,7 +1,7 @@
 {
   "player_id": 668751,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:809fe18cdd6d09dc5513281b7833a3facc8584e9682b8eda3949b179f4805465",
+  "fetched_at": "2026-11-22T19:09:26Z",
+  "checksum": "sha256:c64698546d3817b32adbed27fef69db0c70fa56be43b88901e06fc1b39f2a30e",
   "transactions": [
     {
       "id": 281071,
@@ -1303,6 +1303,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "LF Cal Mitchell assigned to Yaquis de Obregon."
+    },
+    {
+      "id": 950914,
+      "person": {
+        "id": 668751,
+        "fullName": "Cal Mitchell",
+        "link": "/api/v1/people/668751",
+        "nameSlug": "cal-mitchell-668751"
+      },
+      "toTeam": {
+        "id": 680,
+        "name": "Yaquis de Obregon",
+        "link": "/api/v1/teams/680"
+      },
+      "date": "2026-11-21",
+      "effectiveDate": "2026-11-21",
+      "resolutionDate": "2026-11-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Yaquis de Obregon placed LF Cal Mitchell on the reserve list."
     }
   ]
 }

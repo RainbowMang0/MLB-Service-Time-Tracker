@@ -1,7 +1,7 @@
 {
   "player_id": 663989,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:8fa312b3327c656fb8ff3b14b4b43cfe9658db9c7fa928468a28ff647af6e399",
+  "fetched_at": "2026-11-22T19:09:26Z",
+  "checksum": "sha256:5bcabfe3d08e3b4aa0305bcf0a4ed56aab9ddcd53cd3f3205407c0694849624f",
   "transactions": [
     {
       "id": 235268,
@@ -1784,6 +1784,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Diablos Rojos del Mexico activated LHP Nick Vespi."
+    },
+    {
+      "id": 950892,
+      "person": {
+        "id": 663989,
+        "fullName": "Nick Vespi",
+        "link": "/api/v1/people/663989",
+        "nameSlug": "nick-vespi-663989"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2026-11-21",
+      "effectiveDate": "2026-11-21",
+      "resolutionDate": "2026-11-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Nick Vespi assigned to Leones del Escogido."
     }
   ]
 }

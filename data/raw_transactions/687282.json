@@ -1,7 +1,7 @@
 {
   "player_id": 687282,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:b31c26ed761856002d25d2d1b5f4152b51ec5015a357a045cc2964360ecd9949",
+  "fetched_at": "2026-11-22T19:09:26Z",
+  "checksum": "sha256:fa97470264a9d0e1fdac20fe12c9e140278c6f4ae8c4e80193162c72855c2438",
   "transactions": [
     {
       "id": 493980,
@@ -863,6 +863,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Philadelphia Phillies activated RF Gabriel Rincones Jr.."
+    },
+    {
+      "id": 950897,
+      "person": {
+        "id": 687282,
+        "fullName": "Gabriel Rincones Jr.",
+        "link": "/api/v1/people/687282",
+        "nameSlug": "gabriel-rincones-jr-687282"
+      },
+      "toTeam": {
+        "id": 696,
+        "name": "Navegantes del Magallanes",
+        "link": "/api/v1/teams/696"
+      },
+      "date": "2026-11-21",
+      "effectiveDate": "2026-11-21",
+      "resolutionDate": "2026-11-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Gabriel Rincones Jr. assigned to Navegantes del Magallanes."
     }
   ]
 }
