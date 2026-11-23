@@ -1,7 +1,7 @@
 {
   "player_id": 622569,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:74778ec3ff6962e4f6ded98786661f046c4a7b88e47fb4b75616ed3f3751bde7",
+  "fetched_at": "2026-11-22T23:56:03Z",
+  "checksum": "sha256:3cb720d0d34b0c0ab5315b4e9eeac332c0bf776aa416f27aa2d5b4af7a191cf0",
   "transactions": [
     {
       "id": 120555,
@@ -626,7 +626,27 @@
       "description": "LF Pablo Reyes elected free agency."
     },
     {
-      "id": 459489,
+      "id": 469886,
+      "person": {
+        "id": 622569,
+        "fullName": "Pablo Reyes",
+        "link": "/api/v1/people/622569",
+        "nameSlug": "pablo-reyes-622569"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2021-01-07",
+      "effectiveDate": "2021-01-07",
+      "resolutionDate": "2021-01-07",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Milwaukee Brewers signed free agent OF Pablo Reyes to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 469253,
       "person": {
         "id": 622569,
         "fullName": "Pablo Reyes",
@@ -666,46 +686,6 @@
       "description": "Milwaukee Brewers signed free agent 3B Pablo Reyes."
     },
     {
-      "id": 469253,
-      "person": {
-        "id": 622569,
-        "fullName": "Pablo Reyes",
-        "link": "/api/v1/people/622569",
-        "nameSlug": "pablo-reyes-622569"
-      },
-      "toTeam": {
-        "id": 510,
-        "name": "San Antonio Missions",
-        "link": "/api/v1/teams/510"
-      },
-      "date": "2021-01-07",
-      "effectiveDate": "2021-01-07",
-      "resolutionDate": "2021-01-07",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "LF Pablo Reyes assigned to San Antonio Missions."
-    },
-    {
-      "id": 469886,
-      "person": {
-        "id": 622569,
-        "fullName": "Pablo Reyes",
-        "link": "/api/v1/people/622569",
-        "nameSlug": "pablo-reyes-622569"
-      },
-      "toTeam": {
-        "id": 158,
-        "name": "Milwaukee Brewers",
-        "link": "/api/v1/teams/158"
-      },
-      "date": "2021-01-07",
-      "effectiveDate": "2021-01-07",
-      "resolutionDate": "2021-01-07",
-      "typeCode": "SFA",
-      "typeDesc": "Signed as Free Agent",
-      "description": "Milwaukee Brewers signed free agent OF Pablo Reyes to a minor league contract and invited him to spring training."
-    },
-    {
       "id": 459490,
       "person": {
         "id": 622569,
@@ -724,6 +704,26 @@
       "typeCode": "SFA",
       "typeDesc": "Signed as Free Agent",
       "description": "Milwaukee Brewers signed free agent OF Pablo Reyes to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 459489,
+      "person": {
+        "id": 622569,
+        "fullName": "Pablo Reyes",
+        "link": "/api/v1/people/622569",
+        "nameSlug": "pablo-reyes-622569"
+      },
+      "toTeam": {
+        "id": 510,
+        "name": "San Antonio Missions",
+        "link": "/api/v1/teams/510"
+      },
+      "date": "2021-01-07",
+      "effectiveDate": "2021-01-07",
+      "resolutionDate": "2021-01-07",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Pablo Reyes assigned to San Antonio Missions."
     },
     {
       "id": 469252,
@@ -1122,6 +1122,29 @@
       "description": "Milwaukee Brewers optioned 3B Pablo Reyes to Nashville Sounds."
     },
     {
+      "id": 626297,
+      "person": {
+        "id": 622569,
+        "fullName": "Pablo Reyes",
+        "link": "/api/v1/people/622569",
+        "nameSlug": "pablo-reyes-622569"
+      },
+      "fromTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2022-06-08",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "Milwaukee Brewers recalled 3B Pablo Reyes and  from Nashville Sounds."
+    },
+    {
       "id": 629698,
       "person": {
         "id": 622569,
@@ -1144,29 +1167,6 @@
       "typeCode": "OPT",
       "typeDesc": "Optioned",
       "description": "Milwaukee Brewers optioned 3B Pablo Reyes to Nashville Sounds."
-    },
-    {
-      "id": 626297,
-      "person": {
-        "id": 622569,
-        "fullName": "Pablo Reyes",
-        "link": "/api/v1/people/622569",
-        "nameSlug": "pablo-reyes-622569"
-      },
-      "fromTeam": {
-        "id": 556,
-        "name": "Nashville Sounds",
-        "link": "/api/v1/teams/556"
-      },
-      "toTeam": {
-        "id": 158,
-        "name": "Milwaukee Brewers",
-        "link": "/api/v1/teams/158"
-      },
-      "date": "2022-06-08",
-      "typeCode": "CU",
-      "typeDesc": "Recalled",
-      "description": "Milwaukee Brewers recalled 3B Pablo Reyes and  from Nashville Sounds."
     },
     {
       "id": 633343,
@@ -1332,27 +1332,7 @@
       "description": "3B Pablo Reyes elected free agency."
     },
     {
-      "id": 660963,
-      "person": {
-        "id": 622569,
-        "fullName": "Pablo Reyes",
-        "link": "/api/v1/people/622569",
-        "nameSlug": "pablo-reyes-622569"
-      },
-      "toTeam": {
-        "id": 133,
-        "name": "Athletics",
-        "link": "/api/v1/teams/133"
-      },
-      "date": "2022-11-14",
-      "effectiveDate": "2022-11-14",
-      "resolutionDate": "2022-11-14",
-      "typeCode": "SFA",
-      "typeDesc": "Signed as Free Agent",
-      "description": "Oakland Athletics signed free agent 3B Pablo Reyes to a minor league contract."
-    },
-    {
-      "id": 663761,
+      "id": 679174,
       "person": {
         "id": 622569,
         "fullName": "Pablo Reyes",
@@ -1372,7 +1352,7 @@
       "description": "3B Pablo Reyes roster status changed by Oakland Athletics."
     },
     {
-      "id": 679174,
+      "id": 663761,
       "person": {
         "id": 622569,
         "fullName": "Pablo Reyes",
@@ -1410,6 +1390,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "3B Pablo Reyes assigned to Las Vegas Aviators."
+    },
+    {
+      "id": 660963,
+      "person": {
+        "id": 622569,
+        "fullName": "Pablo Reyes",
+        "link": "/api/v1/people/622569",
+        "nameSlug": "pablo-reyes-622569"
+      },
+      "toTeam": {
+        "id": 133,
+        "name": "Athletics",
+        "link": "/api/v1/teams/133"
+      },
+      "date": "2022-11-14",
+      "effectiveDate": "2022-11-14",
+      "resolutionDate": "2022-11-14",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Oakland Athletics signed free agent 3B Pablo Reyes to a minor league contract."
     },
     {
       "id": 661085,
@@ -1936,26 +1936,6 @@
       "description": "2B Pablo Reyes elected free agency."
     },
     {
-      "id": 803226,
-      "person": {
-        "id": 622569,
-        "fullName": "Pablo Reyes",
-        "link": "/api/v1/people/622569",
-        "nameSlug": "pablo-reyes-622569"
-      },
-      "toTeam": {
-        "id": 668,
-        "name": "Toros del Este",
-        "link": "/api/v1/teams/668"
-      },
-      "date": "2024-10-22",
-      "effectiveDate": "2024-10-22",
-      "resolutionDate": "2024-10-22",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "Toros del Este activated 2B Pablo Reyes."
-    },
-    {
       "id": 802937,
       "person": {
         "id": 622569,
@@ -1976,7 +1956,7 @@
       "description": "2B Pablo Reyes assigned to Toros del Este."
     },
     {
-      "id": 806433,
+      "id": 803226,
       "person": {
         "id": 622569,
         "fullName": "Pablo Reyes",
@@ -1984,16 +1964,16 @@
         "nameSlug": "pablo-reyes-622569"
       },
       "toTeam": {
-        "id": 147,
-        "name": "New York Yankees",
-        "link": "/api/v1/teams/147"
+        "id": 668,
+        "name": "Toros del Este",
+        "link": "/api/v1/teams/668"
       },
-      "date": "2024-11-12",
-      "effectiveDate": "2024-11-12",
-      "resolutionDate": "2024-11-12",
-      "typeCode": "SFA",
-      "typeDesc": "Signed as Free Agent",
-      "description": "New York Yankees signed free agent 2B Pablo Reyes to a minor league contract."
+      "date": "2024-10-22",
+      "effectiveDate": "2024-10-22",
+      "resolutionDate": "2024-10-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Toros del Este activated 2B Pablo Reyes."
     },
     {
       "id": 806434,
@@ -2014,6 +1994,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "2B Pablo Reyes assigned to Scranton/Wilkes-Barre RailRiders."
+    },
+    {
+      "id": 806433,
+      "person": {
+        "id": 622569,
+        "fullName": "Pablo Reyes",
+        "link": "/api/v1/people/622569",
+        "nameSlug": "pablo-reyes-622569"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2024-11-12",
+      "effectiveDate": "2024-11-12",
+      "resolutionDate": "2024-11-12",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Yankees signed free agent 2B Pablo Reyes to a minor league contract."
     },
     {
       "id": 822448,
@@ -2144,26 +2144,6 @@
       "description": "RF Pablo Reyes elected free agency."
     },
     {
-      "id": 849586,
-      "person": {
-        "id": 622569,
-        "fullName": "Pablo Reyes",
-        "link": "/api/v1/people/622569",
-        "nameSlug": "pablo-reyes-622569"
-      },
-      "toTeam": {
-        "id": 552,
-        "name": "Syracuse Mets",
-        "link": "/api/v1/teams/552"
-      },
-      "date": "2025-06-21",
-      "effectiveDate": "2025-06-21",
-      "resolutionDate": "2025-06-21",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RF Pablo Reyes assigned to Syracuse Mets."
-    },
-    {
       "id": 849585,
       "person": {
         "id": 622569,
@@ -2182,6 +2162,26 @@
       "typeCode": "SFA",
       "typeDesc": "Signed as Free Agent",
       "description": "New York Mets signed free agent RF Pablo Reyes to a minor league contract."
+    },
+    {
+      "id": 849586,
+      "person": {
+        "id": 622569,
+        "fullName": "Pablo Reyes",
+        "link": "/api/v1/people/622569",
+        "nameSlug": "pablo-reyes-622569"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2025-06-21",
+      "effectiveDate": "2025-06-21",
+      "resolutionDate": "2025-06-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Pablo Reyes assigned to Syracuse Mets."
     },
     {
       "id": 849725,
@@ -2264,26 +2264,6 @@
       "description": "OF Pablo Reyes roster status changed by San Diego Padres."
     },
     {
-      "id": 876852,
-      "person": {
-        "id": 622569,
-        "fullName": "Pablo Reyes",
-        "link": "/api/v1/people/622569",
-        "nameSlug": "pablo-reyes-622569"
-      },
-      "toTeam": {
-        "id": 4904,
-        "name": "El Paso Chihuahuas",
-        "link": "/api/v1/teams/4904"
-      },
-      "date": "2025-11-06",
-      "effectiveDate": "2025-11-06",
-      "resolutionDate": "2025-11-06",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "OF Pablo Reyes assigned to El Paso Chihuahuas."
-    },
-    {
       "id": 876851,
       "person": {
         "id": 622569,
@@ -2302,6 +2282,26 @@
       "typeCode": "SFA",
       "typeDesc": "Signed as Free Agent",
       "description": "San Diego Padres signed free agent OF Pablo Reyes to a minor league contract."
+    },
+    {
+      "id": 876852,
+      "person": {
+        "id": 622569,
+        "fullName": "Pablo Reyes",
+        "link": "/api/v1/people/622569",
+        "nameSlug": "pablo-reyes-622569"
+      },
+      "toTeam": {
+        "id": 4904,
+        "name": "El Paso Chihuahuas",
+        "link": "/api/v1/teams/4904"
+      },
+      "date": "2025-11-06",
+      "effectiveDate": "2025-11-06",
+      "resolutionDate": "2025-11-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Pablo Reyes assigned to El Paso Chihuahuas."
     },
     {
       "id": 894501,
@@ -2482,6 +2482,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "OF Pablo Reyes assigned to Gigantes del Cibao."
+    },
+    {
+      "id": 950534,
+      "person": {
+        "id": 622569,
+        "fullName": "Pablo Reyes",
+        "link": "/api/v1/people/622569",
+        "nameSlug": "pablo-reyes-622569"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2026-10-17",
+      "effectiveDate": "2026-10-17",
+      "resolutionDate": "2026-10-17",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gigantes del Cibao activated OF Pablo Reyes."
     },
     {
       "id": 949143,

@@ -1,7 +1,7 @@
 {
   "player_id": 625510,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:810aa113bf8bd89e9d46c9aa74cebfe5130e63fb812cf5f015c0304164cd386c",
+  "fetched_at": "2026-11-22T23:56:03Z",
+  "checksum": "sha256:39e6683d7dea52410178e913d9b4c7c97a92a362b513596c8ecc608b86248eff",
   "transactions": [
     {
       "id": 132270,
@@ -112,26 +112,6 @@
       "description": "Pulaski Mariners activated SS Erick Mejia from the 7-day disabled list."
     },
     {
-      "id": 201686,
-      "person": {
-        "id": 625510,
-        "fullName": "Erick Mejia",
-        "link": "/api/v1/people/625510",
-        "nameSlug": "erick-mejia-625510"
-      },
-      "toTeam": {
-        "id": 409,
-        "name": "ACL Mariners",
-        "link": "/api/v1/teams/409"
-      },
-      "date": "2014-06-23",
-      "effectiveDate": "2014-06-23",
-      "resolutionDate": "2014-06-23",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "SS Erick Mejia assigned to AZL Mariners."
-    },
-    {
       "id": 201691,
       "person": {
         "id": 625510,
@@ -150,6 +130,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "AZL Mariners activated SS Erick Mejia."
+    },
+    {
+      "id": 201686,
+      "person": {
+        "id": 625510,
+        "fullName": "Erick Mejia",
+        "link": "/api/v1/people/625510",
+        "nameSlug": "erick-mejia-625510"
+      },
+      "toTeam": {
+        "id": 409,
+        "name": "ACL Mariners",
+        "link": "/api/v1/teams/409"
+      },
+      "date": "2014-06-23",
+      "effectiveDate": "2014-06-23",
+      "resolutionDate": "2014-06-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Erick Mejia assigned to AZL Mariners."
     },
     {
       "id": 199120,
@@ -532,6 +532,26 @@
       "description": "SS Erick Mejia assigned to Oklahoma City Dodgers from Tulsa Drillers."
     },
     {
+      "id": 321439,
+      "person": {
+        "id": 625510,
+        "fullName": "Erick Mejia",
+        "link": "/api/v1/people/625510",
+        "nameSlug": "erick-mejia-625510"
+      },
+      "toTeam": {
+        "id": 260,
+        "name": "Tulsa Drillers",
+        "link": "/api/v1/teams/260"
+      },
+      "date": "2017-06-28",
+      "effectiveDate": "2017-06-28",
+      "resolutionDate": "2017-06-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tulsa Drillers activated SS Erick Mejia."
+    },
+    {
       "id": 320982,
       "person": {
         "id": 625510,
@@ -556,7 +576,7 @@
       "description": "SS Erick Mejia assigned to Tulsa Drillers from Oklahoma City Dodgers."
     },
     {
-      "id": 321439,
+      "id": 339582,
       "person": {
         "id": 625510,
         "fullName": "Erick Mejia",
@@ -564,16 +584,16 @@
         "nameSlug": "erick-mejia-625510"
       },
       "toTeam": {
-        "id": 260,
-        "name": "Tulsa Drillers",
-        "link": "/api/v1/teams/260"
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
       },
-      "date": "2017-06-28",
-      "effectiveDate": "2017-06-28",
-      "resolutionDate": "2017-06-28",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "Tulsa Drillers activated SS Erick Mejia."
+      "date": "2018-01-04",
+      "effectiveDate": "2018-01-04",
+      "resolutionDate": "2018-01-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Erick Mejia assigned to Omaha Storm Chasers."
     },
     {
       "id": 339575,
@@ -598,26 +618,6 @@
       "typeCode": "TR",
       "typeDesc": "Trade",
       "description": "Chicago White Sox Traded 2B Jake Peter to Los Angeles Dodgers; Los Angeles Dodgers Traded cash, RHP Joakim Soria and LHP Luis Avilan to Chicago White Sox; Los Angeles Dodgers Traded SS Erick Mejia and RHP Trevor Oaks to Kansas City Royals and Kansas City Royals Traded RHP Joakim Soria and LHP Scott Alexander to Los Angeles Dodgers."
-    },
-    {
-      "id": 339582,
-      "person": {
-        "id": 625510,
-        "fullName": "Erick Mejia",
-        "link": "/api/v1/people/625510",
-        "nameSlug": "erick-mejia-625510"
-      },
-      "toTeam": {
-        "id": 541,
-        "name": "Omaha Storm Chasers",
-        "link": "/api/v1/teams/541"
-      },
-      "date": "2018-01-04",
-      "effectiveDate": "2018-01-04",
-      "resolutionDate": "2018-01-04",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "SS Erick Mejia assigned to Omaha Storm Chasers."
     },
     {
       "id": 346640,
@@ -664,26 +664,6 @@
       "description": "2B Erick Mejia assigned to Aguilas Cibaenas."
     },
     {
-      "id": 382952,
-      "person": {
-        "id": 625510,
-        "fullName": "Erick Mejia",
-        "link": "/api/v1/people/625510",
-        "nameSlug": "erick-mejia-625510"
-      },
-      "toTeam": {
-        "id": 667,
-        "name": "Aguilas Cibaenas",
-        "link": "/api/v1/teams/667"
-      },
-      "date": "2018-11-10",
-      "effectiveDate": "2018-11-10",
-      "resolutionDate": "2018-11-10",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "2B Erick Mejia roster status changed by Aguilas Cibaenas."
-    },
-    {
       "id": 382953,
       "person": {
         "id": 625510,
@@ -702,6 +682,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "2B Erick Mejia assigned to Tigres del Licey."
+    },
+    {
+      "id": 382952,
+      "person": {
+        "id": 625510,
+        "fullName": "Erick Mejia",
+        "link": "/api/v1/people/625510",
+        "nameSlug": "erick-mejia-625510"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2018-11-10",
+      "effectiveDate": "2018-11-10",
+      "resolutionDate": "2018-11-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "2B Erick Mejia roster status changed by Aguilas Cibaenas."
     },
     {
       "id": 385991,
@@ -924,6 +924,26 @@
       "description": "Kansas City Royals optioned 2B Erick Mejia to Royals Alternate Training Site."
     },
     {
+      "id": 470929,
+      "person": {
+        "id": 625510,
+        "fullName": "Erick Mejia",
+        "link": "/api/v1/people/625510",
+        "nameSlug": "erick-mejia-625510"
+      },
+      "toTeam": {
+        "id": 3300,
+        "name": "Royals Alternate Training Site",
+        "link": "/api/v1/teams/3300"
+      },
+      "date": "2020-09-16",
+      "effectiveDate": "2020-09-16",
+      "resolutionDate": "2020-09-16",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "optioned 2B Erick Mejia to Royals Alternate Training Site."
+    },
+    {
       "id": 451498,
       "person": {
         "id": 625510,
@@ -946,26 +966,6 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Kansas City Royals recalled Erick Mejia from Royals Alternate Training Site."
-    },
-    {
-      "id": 470929,
-      "person": {
-        "id": 625510,
-        "fullName": "Erick Mejia",
-        "link": "/api/v1/people/625510",
-        "nameSlug": "erick-mejia-625510"
-      },
-      "toTeam": {
-        "id": 3300,
-        "name": "Royals Alternate Training Site",
-        "link": "/api/v1/teams/3300"
-      },
-      "date": "2020-09-16",
-      "effectiveDate": "2020-09-16",
-      "resolutionDate": "2020-09-16",
-      "typeCode": "OPT",
-      "typeDesc": "Optioned",
-      "description": "optioned 2B Erick Mejia to Royals Alternate Training Site."
     },
     {
       "id": 451881,
@@ -1096,26 +1096,6 @@
       "description": "Kansas City Royals signed free agent 2B Erick Mejia to a minor league contract."
     },
     {
-      "id": 475052,
-      "person": {
-        "id": 625510,
-        "fullName": "Erick Mejia",
-        "link": "/api/v1/people/625510",
-        "nameSlug": "erick-mejia-625510"
-      },
-      "toTeam": {
-        "id": 118,
-        "name": "Kansas City Royals",
-        "link": "/api/v1/teams/118"
-      },
-      "date": "2021-02-05",
-      "effectiveDate": "2021-02-05",
-      "resolutionDate": "2021-02-05",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "SS Erick Mejia assigned to Kansas City Royals ."
-    },
-    {
       "id": 469982,
       "person": {
         "id": 625510,
@@ -1136,6 +1116,26 @@
       "description": "Kansas City Royals invited non-roster 2B Erick Mejia to spring training."
     },
     {
+      "id": 475052,
+      "person": {
+        "id": 625510,
+        "fullName": "Erick Mejia",
+        "link": "/api/v1/people/625510",
+        "nameSlug": "erick-mejia-625510"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2021-02-05",
+      "effectiveDate": "2021-02-05",
+      "resolutionDate": "2021-02-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Erick Mejia assigned to Kansas City Royals ."
+    },
+    {
       "id": 461695,
       "person": {
         "id": 625510,
@@ -1154,46 +1154,6 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "Kansas City Royals invited non-roster 2B Erick Mejia to spring training."
-    },
-    {
-      "id": 488956,
-      "person": {
-        "id": 625510,
-        "fullName": "Erick Mejia",
-        "link": "/api/v1/people/625510",
-        "nameSlug": "erick-mejia-625510"
-      },
-      "toTeam": {
-        "id": 541,
-        "name": "Omaha Storm Chasers",
-        "link": "/api/v1/teams/541"
-      },
-      "date": "2021-04-29",
-      "effectiveDate": "2021-04-29",
-      "resolutionDate": "2021-04-29",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "SS Erick Mejia assigned to Omaha Storm Chasers."
-    },
-    {
-      "id": 489793,
-      "person": {
-        "id": 625510,
-        "fullName": "Erick Mejia",
-        "link": "/api/v1/people/625510",
-        "nameSlug": "erick-mejia-625510"
-      },
-      "toTeam": {
-        "id": 541,
-        "name": "Omaha Storm Chasers",
-        "link": "/api/v1/teams/541"
-      },
-      "date": "2021-04-29",
-      "effectiveDate": "2021-04-29",
-      "resolutionDate": "2021-04-29",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "SS Erick Mejia assigned to Omaha Storm Chasers."
     },
     {
       "id": 480938,
@@ -1218,6 +1178,46 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "SS Erick Mejia assigned to Omaha Storm Chasers from Royals Alternate Training Site."
+    },
+    {
+      "id": 489793,
+      "person": {
+        "id": 625510,
+        "fullName": "Erick Mejia",
+        "link": "/api/v1/people/625510",
+        "nameSlug": "erick-mejia-625510"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2021-04-29",
+      "effectiveDate": "2021-04-29",
+      "resolutionDate": "2021-04-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Erick Mejia assigned to Omaha Storm Chasers."
+    },
+    {
+      "id": 488956,
+      "person": {
+        "id": 625510,
+        "fullName": "Erick Mejia",
+        "link": "/api/v1/people/625510",
+        "nameSlug": "erick-mejia-625510"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2021-04-29",
+      "effectiveDate": "2021-04-29",
+      "resolutionDate": "2021-04-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Erick Mejia assigned to Omaha Storm Chasers."
     },
     {
       "id": 504889,
@@ -1360,26 +1360,6 @@
       "description": "SS Erick Mejia assigned to Tacoma Rainiers."
     },
     {
-      "id": 611675,
-      "person": {
-        "id": 625510,
-        "fullName": "Erick Mejia",
-        "link": "/api/v1/people/625510",
-        "nameSlug": "erick-mejia-625510"
-      },
-      "toTeam": {
-        "id": 136,
-        "name": "Seattle Mariners",
-        "link": "/api/v1/teams/136"
-      },
-      "date": "2022-03-14",
-      "effectiveDate": "2022-03-14",
-      "resolutionDate": "2022-03-14",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "SS Erick Mejia roster status changed by Seattle Mariners."
-    },
-    {
       "id": 606037,
       "person": {
         "id": 625510,
@@ -1400,7 +1380,7 @@
       "description": "Seattle Mariners invited non-roster SS Erick Mejia to spring training."
     },
     {
-      "id": 662323,
+      "id": 611675,
       "person": {
         "id": 625510,
         "fullName": "Erick Mejia",
@@ -1408,36 +1388,16 @@
         "nameSlug": "erick-mejia-625510"
       },
       "toTeam": {
-        "id": 669,
-        "name": "Estrellas Orientales",
-        "link": "/api/v1/teams/669"
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
       },
-      "date": "2022-10-15",
-      "effectiveDate": "2022-10-15",
-      "resolutionDate": "2022-10-15",
+      "date": "2022-03-14",
+      "effectiveDate": "2022-03-14",
+      "resolutionDate": "2022-03-14",
       "typeCode": "SC",
       "typeDesc": "Status Change",
-      "description": "Estrellas Orientales activated SS Erick Mejia."
-    },
-    {
-      "id": 659804,
-      "person": {
-        "id": 625510,
-        "fullName": "Erick Mejia",
-        "link": "/api/v1/people/625510",
-        "nameSlug": "erick-mejia-625510"
-      },
-      "toTeam": {
-        "id": 669,
-        "name": "Estrellas Orientales",
-        "link": "/api/v1/teams/669"
-      },
-      "date": "2022-10-15",
-      "effectiveDate": "2022-10-15",
-      "resolutionDate": "2022-10-15",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "Estrellas Orientales activated SS Erick Mejia."
+      "description": "SS Erick Mejia roster status changed by Seattle Mariners."
     },
     {
       "id": 656238,
@@ -1480,6 +1440,46 @@
       "description": "Estrellas Orientales activated SS Erick Mejia."
     },
     {
+      "id": 662323,
+      "person": {
+        "id": 625510,
+        "fullName": "Erick Mejia",
+        "link": "/api/v1/people/625510",
+        "nameSlug": "erick-mejia-625510"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2022-10-15",
+      "effectiveDate": "2022-10-15",
+      "resolutionDate": "2022-10-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Estrellas Orientales activated SS Erick Mejia."
+    },
+    {
+      "id": 659804,
+      "person": {
+        "id": 625510,
+        "fullName": "Erick Mejia",
+        "link": "/api/v1/people/625510",
+        "nameSlug": "erick-mejia-625510"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2022-10-15",
+      "effectiveDate": "2022-10-15",
+      "resolutionDate": "2022-10-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Estrellas Orientales activated SS Erick Mejia."
+    },
+    {
       "id": 659803,
       "person": {
         "id": 625510,
@@ -1498,26 +1498,6 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "SS Erick Mejia elected free agency."
-    },
-    {
-      "id": 679143,
-      "person": {
-        "id": 625510,
-        "fullName": "Erick Mejia",
-        "link": "/api/v1/people/625510",
-        "nameSlug": "erick-mejia-625510"
-      },
-      "toTeam": {
-        "id": 120,
-        "name": "Washington Nationals",
-        "link": "/api/v1/teams/120"
-      },
-      "date": "2022-12-01",
-      "effectiveDate": "2022-12-01",
-      "resolutionDate": "2022-12-01",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "SS Erick Mejia roster status changed by Washington Nationals."
     },
     {
       "id": 662324,
@@ -1560,7 +1540,7 @@
       "description": "SS Erick Mejia roster status changed by Washington Nationals."
     },
     {
-      "id": 662325,
+      "id": 679143,
       "person": {
         "id": 625510,
         "fullName": "Erick Mejia",
@@ -1568,16 +1548,16 @@
         "nameSlug": "erick-mejia-625510"
       },
       "toTeam": {
-        "id": 534,
-        "name": "Rochester Red Wings",
-        "link": "/api/v1/teams/534"
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
       },
-      "date": "2022-12-02",
-      "effectiveDate": "2022-12-02",
-      "resolutionDate": "2022-12-02",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "SS Erick Mejia assigned to Rochester Red Wings."
+      "date": "2022-12-01",
+      "effectiveDate": "2022-12-01",
+      "resolutionDate": "2022-12-01",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "SS Erick Mejia roster status changed by Washington Nationals."
     },
     {
       "id": 679987,
@@ -1600,6 +1580,26 @@
       "description": "Rochester Red Wings activated SS Erick Mejia."
     },
     {
+      "id": 662325,
+      "person": {
+        "id": 625510,
+        "fullName": "Erick Mejia",
+        "link": "/api/v1/people/625510",
+        "nameSlug": "erick-mejia-625510"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2022-12-02",
+      "effectiveDate": "2022-12-02",
+      "resolutionDate": "2022-12-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Erick Mejia assigned to Rochester Red Wings."
+    },
+    {
       "id": 679988,
       "person": {
         "id": 625510,
@@ -1620,7 +1620,7 @@
       "description": "Rochester Red Wings placed SS Erick Mejia on the 7-day injured list."
     },
     {
-      "id": 696711,
+      "id": 692504,
       "person": {
         "id": 625510,
         "fullName": "Erick Mejia",
@@ -1645,7 +1645,7 @@
       "description": "Rochester Red Wings sent SS Erick Mejia on a rehab assignment to Wilmington Blue Rocks."
     },
     {
-      "id": 692504,
+      "id": 696711,
       "person": {
         "id": 625510,
         "fullName": "Erick Mejia",
@@ -1998,26 +1998,6 @@
       "description": "RHP Erick Mejia elected free agency."
     },
     {
-      "id": 877371,
-      "person": {
-        "id": 625510,
-        "fullName": "Erick Mejia",
-        "link": "/api/v1/people/625510",
-        "nameSlug": "erick-mejia-625510"
-      },
-      "toTeam": {
-        "id": 120,
-        "name": "Washington Nationals",
-        "link": "/api/v1/teams/120"
-      },
-      "date": "2025-11-08",
-      "effectiveDate": "2025-11-08",
-      "resolutionDate": "2025-11-08",
-      "typeCode": "SFA",
-      "typeDesc": "Signed as Free Agent",
-      "description": "Washington Nationals signed free agent RHP Erick Mejia to a minor league contract."
-    },
-    {
       "id": 877372,
       "person": {
         "id": 625510,
@@ -2036,6 +2016,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Erick Mejia assigned to Rochester Red Wings."
+    },
+    {
+      "id": 877371,
+      "person": {
+        "id": 625510,
+        "fullName": "Erick Mejia",
+        "link": "/api/v1/people/625510",
+        "nameSlug": "erick-mejia-625510"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2025-11-08",
+      "effectiveDate": "2025-11-08",
+      "resolutionDate": "2025-11-08",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Washington Nationals signed free agent RHP Erick Mejia to a minor league contract."
     },
     {
       "id": 889387,
@@ -2166,6 +2166,26 @@
       "description": "Rochester Red Wings placed RHP Erick Mejia on the 7-day injured list retroactive to June 29, 2026."
     },
     {
+      "id": 936011,
+      "person": {
+        "id": 625510,
+        "fullName": "Erick Mejia",
+        "link": "/api/v1/people/625510",
+        "nameSlug": "erick-mejia-625510"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2026-08-06",
+      "effectiveDate": "2026-08-06",
+      "resolutionDate": "2026-08-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Rochester Red Wings transferred RHP Erick Mejia from the 7-day injured list to the 60-day injured list."
+    },
+    {
       "id": 941852,
       "person": {
         "id": 625510,
@@ -2186,7 +2206,7 @@
       "description": "Rochester Red Wings transferred RHP Erick Mejia from the 7-day injured list to the 60-day injured list."
     },
     {
-      "id": 936011,
+      "id": 941851,
       "person": {
         "id": 625510,
         "fullName": "Erick Mejia",
@@ -2194,16 +2214,16 @@
         "nameSlug": "erick-mejia-625510"
       },
       "toTeam": {
-        "id": 534,
-        "name": "Rochester Red Wings",
-        "link": "/api/v1/teams/534"
+        "id": 426,
+        "name": "Wilmington Blue Rocks",
+        "link": "/api/v1/teams/426"
       },
-      "date": "2026-08-06",
-      "effectiveDate": "2026-08-06",
-      "resolutionDate": "2026-08-06",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "Rochester Red Wings transferred RHP Erick Mejia from the 7-day injured list to the 60-day injured list."
+      "date": "2026-09-01",
+      "effectiveDate": "2026-09-01",
+      "resolutionDate": "2026-09-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent RHP Erick Mejia on a rehab assignment to Wilmington Blue Rocks."
     },
     {
       "id": 940520,
@@ -2231,26 +2251,6 @@
       "description": "Rochester Red Wings sent RHP Erick Mejia on a rehab assignment to Wilmington Blue Rocks."
     },
     {
-      "id": 941851,
-      "person": {
-        "id": 625510,
-        "fullName": "Erick Mejia",
-        "link": "/api/v1/people/625510",
-        "nameSlug": "erick-mejia-625510"
-      },
-      "toTeam": {
-        "id": 426,
-        "name": "Wilmington Blue Rocks",
-        "link": "/api/v1/teams/426"
-      },
-      "date": "2026-09-01",
-      "effectiveDate": "2026-09-01",
-      "resolutionDate": "2026-09-01",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "sent RHP Erick Mejia on a rehab assignment to Wilmington Blue Rocks."
-    },
-    {
       "id": 941847,
       "person": {
         "id": 625510,
@@ -2269,26 +2269,6 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Rochester Red Wings activated RHP Erick Mejia from the 60-day injured list."
-    },
-    {
-      "id": 947198,
-      "person": {
-        "id": 625510,
-        "fullName": "Erick Mejia",
-        "link": "/api/v1/people/625510",
-        "nameSlug": "erick-mejia-625510"
-      },
-      "toTeam": {
-        "id": 667,
-        "name": "Aguilas Cibaenas",
-        "link": "/api/v1/teams/667"
-      },
-      "date": "2026-10-28",
-      "effectiveDate": "2026-10-28",
-      "resolutionDate": "2026-10-28",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Erick Mejia assigned to Aguilas Cibaenas."
     },
     {
       "id": 949474,
@@ -2311,6 +2291,26 @@
       "description": "Aguilas Cibaenas activated RHP Erick Mejia."
     },
     {
+      "id": 947198,
+      "person": {
+        "id": 625510,
+        "fullName": "Erick Mejia",
+        "link": "/api/v1/people/625510",
+        "nameSlug": "erick-mejia-625510"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2026-10-28",
+      "effectiveDate": "2026-10-28",
+      "resolutionDate": "2026-10-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Erick Mejia assigned to Aguilas Cibaenas."
+    },
+    {
       "id": 949138,
       "person": {
         "id": 625510,
@@ -2329,6 +2329,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Erick Mejia elected free agency."
+    },
+    {
+      "id": 950662,
+      "person": {
+        "id": 625510,
+        "fullName": "Erick Mejia",
+        "link": "/api/v1/people/625510",
+        "nameSlug": "erick-mejia-625510"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2026-11-16",
+      "effectiveDate": "2026-11-16",
+      "resolutionDate": "2026-11-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Francisco Giants signed free agent RHP Erick Mejia to a minor league contract."
+    },
+    {
+      "id": 950663,
+      "person": {
+        "id": 625510,
+        "fullName": "Erick Mejia",
+        "link": "/api/v1/people/625510",
+        "nameSlug": "erick-mejia-625510"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2026-11-16",
+      "effectiveDate": "2026-11-16",
+      "resolutionDate": "2026-11-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Erick Mejia assigned to Sacramento River Cats."
     }
   ]
 }
